@@ -1,0 +1,51 @@
+# ---------------------------------------------------------------- Unity
+# Pastas geradas pelo editor: nunca entram no repositorio. A Library sozinha
+# tem quase 7 GB e e' reconstruida do zero na primeira vez que cada pessoa
+# abre o projeto.
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
+**/[Rr]ecordings/
+
+# Projetos e solucoes sao gerados pelo Unity a cada abertura
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ---------------------------------------------------------------- editores
+.vs/
+.idea/
+.vscode/
+
+# ---------------------------------------------------------------- builds
+*.apk
+*.aab
+*.app
+*.unitypackage
+sysinfo.txt
+crashlytics-build.properties
+
+# ---------------------------------------------------------------- sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------- trabalho
+# Versoes antigas de arte, que ficam so' na maquina de quem desenhou
+Arte/**/versao_antiga/

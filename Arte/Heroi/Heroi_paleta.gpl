@@ -1,0 +1,22 @@
+GIMP Palette
+Name: Heroi Santa Rita
+Columns: 6
+#
+  0   0   0	contorno #000000
+ 14  14  14	cabelo/camisa 1 #0E0E0E
+ 24  24  24	cabelo/camisa 2 #181818
+ 42  42  42	cabelo/camisa 3 #2A2A2A
+ 63  63  63	cabelo/camisa 4 #3F3F3F
+ 90  90  90	camisa brilho #5A5A5A
+ 75  54  40	pele sombra #4B3628
+107  77  55	pele base #6B4D37
+141 107  77	pele luz #8D6B4D
+168 128  92	pele brilho #A8805C
+ 31  59 109	jeans sombra #1F3B6D
+ 51  93 145	jeans base #335D91
+ 95 127 166	jeans luz #5F7FA6
+134 163 200	jeans brilho #86A3C8
+107  91  67	tenis sombra #6B5B43
+141 122  90	tenis base #8D7A5A
+201 182 143	tenis luz #C9B68F
+230 220 193	tenis brilho #E6DCC1

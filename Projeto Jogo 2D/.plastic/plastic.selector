@@ -1,0 +1,4 @@
+repository "Projeto Jogo 2D/Projeto Jogo 2D@4674197228790@cloud"
+  path "/"
+    br "/main"
+    co "/main"

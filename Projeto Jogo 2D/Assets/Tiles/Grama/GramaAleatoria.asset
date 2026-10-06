@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab545a1abf5061f415ffa2137789fad0, type: 3}
+  m_Name: GramaAleatoria
+  m_EditorClassIdentifier:
+  variantes:
+  - {fileID: 3489991765990530705, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  - {fileID: 4751888099526514777, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  - {fileID: 97882171729268391, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  - {fileID: -3026227379782310514, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  - {fileID: 3111455972757267274, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  - {fileID: -7441183148283909902, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  - {fileID: 8691309091877739015, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  - {fileID: -6780733313361382933, guid: 2f20e94e3587cfe4f2b6d08ca9161e2f, type: 3}
+  espelharHorizontal: 1
+  espelharVertical: 1
+  semente: 0
+  tipoDeColisor: 0

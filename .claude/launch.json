@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "analise-audio",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8765", "--bind", "127.0.0.1", "--directory", "C:\\Users\\artur\\AppData\\Local\\Temp\\claude\\C--Projeto-jogo-2D\\a88c8e84-e4d1-4342-b389-ecdb6a33f568\\scratchpad"],
+      "port": 8765
+    }
+  ]
+}
