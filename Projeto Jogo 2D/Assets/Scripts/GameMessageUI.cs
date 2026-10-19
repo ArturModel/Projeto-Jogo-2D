@@ -52,6 +52,7 @@ public class GameMessageUI : MonoBehaviour
 
     private CanvasGroup group;
     private RectTransform boxRect;
+    private GameObject dialogueBox;
     private GameObject portraitFrame;
     private Image portraitImage;
     private GameObject speakerBadge;
@@ -94,6 +95,7 @@ public class GameMessageUI : MonoBehaviour
         group.blocksRaycasts = false;
 
         Image box = UIFactory.CreateBox(canvas.transform, "Box", "DialogueBox");
+        dialogueBox = box.gameObject;
         boxRect = box.rectTransform;
         boxRect.anchorMin = new Vector2(0.5f, 0f);
         boxRect.anchorMax = new Vector2(0.5f, 0f);
@@ -161,25 +163,25 @@ public class GameMessageUI : MonoBehaviour
         painelInspecao.transform.SetParent(canvas.transform, false);
         RectTransform painelRect = painelInspecao.GetComponent<RectTransform>();
         painelRect.anchorMin = painelRect.anchorMax = new Vector2(0.5f, 0.5f);
-        painelRect.sizeDelta = new Vector2(420f, 244f);
-        painelRect.anchoredPosition = new Vector2(0f, 58f);
+        painelRect.sizeDelta = new Vector2(600f, 330f);
+        painelRect.anchoredPosition = Vector2.zero;
         painelInspecao.GetComponent<Image>().color = new Color(0.10f, 0.085f, 0.07f, 0.98f);
-        painelInspecao.transform.SetAsFirstSibling();
+        painelInspecao.transform.SetAsLastSibling();
 
         tituloInspecao = UIFactory.CreateLabel(painelInspecao.transform, "TituloInspecao", 20f);
         tituloInspecao.alignment = TextAlignmentOptions.Center;
         tituloInspecao.color = new Color(0.97f, 0.87f, 0.62f);
         RectTransform tituloRect = tituloInspecao.rectTransform;
         tituloRect.anchorMin = tituloRect.anchorMax = new Vector2(0.5f, 1f);
-        tituloRect.sizeDelta = new Vector2(390f, 26f);
+        tituloRect.sizeDelta = new Vector2(560f, 28f);
         tituloRect.anchoredPosition = new Vector2(0f, -17f);
 
         GameObject imagemGo = new GameObject("ArteInspecao", typeof(RectTransform), typeof(Image));
         imagemGo.transform.SetParent(painelInspecao.transform, false);
         RectTransform imagemRect = imagemGo.GetComponent<RectTransform>();
         imagemRect.anchorMin = imagemRect.anchorMax = new Vector2(0.5f, 0.5f);
-        imagemRect.sizeDelta = new Vector2(154f, 184f);
-        imagemRect.anchoredPosition = new Vector2(-112f, -10f);
+        imagemRect.sizeDelta = new Vector2(255f, 240f);
+        imagemRect.anchoredPosition = new Vector2(-150f, -6f);
         imagemInspecao = imagemGo.GetComponent<Image>();
         imagemInspecao.preserveAspect = true;
         imagemInspecao.raycastTarget = false;
@@ -190,8 +192,17 @@ public class GameMessageUI : MonoBehaviour
         conteudoInspecao.textWrappingMode = TextWrappingModes.Normal;
         RectTransform conteudoRect = conteudoInspecao.rectTransform;
         conteudoRect.anchorMin = conteudoRect.anchorMax = new Vector2(0.5f, 0.5f);
-        conteudoRect.sizeDelta = new Vector2(216f, 180f);
-        conteudoRect.anchoredPosition = new Vector2(91f, -15f);
+        conteudoRect.sizeDelta = new Vector2(272f, 242f);
+        conteudoRect.anchoredPosition = new Vector2(142f, -10f);
+        TextMeshProUGUI ajudaInspecao = UIFactory.CreateLabel(painelInspecao.transform, "AjudaInspecao", 13f);
+        ajudaInspecao.alignment = TextAlignmentOptions.BottomRight;
+        ajudaInspecao.color = new Color(0.88f, 0.75f, 0.52f);
+        ajudaInspecao.text = "[E] FECHAR";
+        RectTransform ajudaRect = ajudaInspecao.rectTransform;
+        ajudaRect.anchorMin = ajudaRect.anchorMax = new Vector2(1f, 0f);
+        ajudaRect.pivot = new Vector2(1f, 0f);
+        ajudaRect.anchoredPosition = new Vector2(-16f, 9f);
+        ajudaRect.sizeDelta = new Vector2(120f, 22f);
         painelInspecao.SetActive(false);
     }
 
@@ -203,15 +214,32 @@ public class GameMessageUI : MonoBehaviour
             Sprite[] sprites = Resources.LoadAll<Sprite>("Cap1/" + nomeSprite);
             if (sprites.Length > 0) arte = sprites[0];
         }
+        if (arte == null)
+        {
+            string caminho = System.IO.Path.Combine(Application.streamingAssetsPath, nomeSprite + ".png");
+            if (System.IO.File.Exists(caminho))
+            {
+                Texture2D detalhe = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+                if (ImageConversion.LoadImage(detalhe, System.IO.File.ReadAllBytes(caminho)))
+                {
+                    detalhe.filterMode = FilterMode.Point;
+                    arte = Sprite.Create(detalhe, new Rect(0, 0, detalhe.width, detalhe.height),
+                        new Vector2(0.5f, 0.5f), 32f);
+                }
+            }
+        }
         imagemInspecao.sprite = arte;
-        painelInspecao.SetActive(arte != null);
+        painelInspecao.SetActive(true);
+        imagemInspecao.enabled = arte != null;
         tituloInspecao.text = titulo;
         conteudoInspecao.text = transcricao;
-        Show(new[] { new DialogoLinha("MARCUS", "Posso ler os detalhes de perto.", "marcus") }, () =>
+        Show(new[] { new DialogoLinha("", "", "") }, () =>
         {
             painelInspecao.SetActive(false);
+            dialogueBox.SetActive(true);
             aoFechar?.Invoke();
         });
+        dialogueBox.SetActive(false);
     }
 
     public void Show(string mensagem)
@@ -239,6 +267,7 @@ public class GameMessageUI : MonoBehaviour
         }
 
         paginasAtuais = linhas;
+        if (dialogueBox != null) dialogueBox.SetActive(true);
         indicePagina = 0;
         aoFecharCallback = aoFechar;
 

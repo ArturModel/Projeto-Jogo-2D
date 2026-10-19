@@ -58,6 +58,12 @@ public class PrologoVideo : MonoBehaviour
 
     private IEnumerator Start()
     {
+        // A cena ainda carrega o diretor e os objetos clicáveis do protótipo.
+        // Durante o vídeo eles não podem rodar uma segunda chegada em paralelo.
+        PrologoDirector roteiroAntigo = FindAnyObjectByType<PrologoDirector>();
+        if (roteiroAntigo != null) roteiroAntigo.enabled = false;
+        PonteiroCarro ponteiroAntigo = FindAnyObjectByType<PonteiroCarro>();
+        if (ponteiroAntigo != null) ponteiroAntigo.Ativo = false;
         MontarTela();
 
         player = gameObject.AddComponent<VideoPlayer>();

@@ -36,8 +36,8 @@ public class MapaInterativoUI : MonoBehaviour
     private TextMeshProUGUI textoDiarioConteudo;
     private TextMeshProUGUI textoStatusSave;
 
-    private int abaAtiva = 0; // 0 = Radar & Legenda, 1 = Diário (Fatos/Pistas/Hipóteses), 2 = Fichas & Itens
-    private readonly Button[] botoesAba = new Button[3];
+    private int abaAtiva = 0; // 0 = Radar, 1 = Diário, 2 = Fichas, 3 = Legenda legível
+    private readonly Button[] botoesAba = new Button[4];
     private string pontoSelecionadoId = "";
 
     private struct PontoMapa
@@ -348,9 +348,10 @@ public class MapaInterativoUI : MonoBehaviour
         Posicionar(spRect, new Vector2(208f, -6f), new Vector2(188f, 309f));
         sidePanel.GetComponent<Image>().color = new Color(0.09f, 0.08f, 0.07f, 0.98f);
 
-        botoesAba[0] = CriarBotaoAba(sidePanel.transform, "RADAR", new Vector2(-60f, 138f), () => SelecionarAba(0));
-        botoesAba[1] = CriarBotaoAba(sidePanel.transform, "DIÁRIO", new Vector2(0f, 138f), () => SelecionarAba(1));
-        botoesAba[2] = CriarBotaoAba(sidePanel.transform, "FICHAS", new Vector2(60f, 138f), () => SelecionarAba(2));
+        botoesAba[0] = CriarBotaoAba(sidePanel.transform, "RADAR", new Vector2(-66f, 138f), () => SelecionarAba(0));
+        botoesAba[1] = CriarBotaoAba(sidePanel.transform, "DIÁRIO", new Vector2(-22f, 138f), () => SelecionarAba(1));
+        botoesAba[2] = CriarBotaoAba(sidePanel.transform, "FICHAS", new Vector2(22f, 138f), () => SelecionarAba(2));
+        botoesAba[3] = CriarBotaoAba(sidePanel.transform, "LEGENDA", new Vector2(66f, 138f), () => SelecionarAba(3));
 
         textoLocalAtual = CriarTexto("TextoLocal", sidePanel.transform, "", 12, new Color(0.55f, 0.88f, 0.98f), TextAlignmentOptions.TopLeft);
         Posicionar(textoLocalAtual.rectTransform, new Vector2(0f, 108f), new Vector2(174f, 20f));
@@ -400,11 +401,11 @@ public class MapaInterativoUI : MonoBehaviour
     {
         var go = new GameObject("Aba_" + rotulo, typeof(RectTransform), typeof(Image), typeof(Button));
         go.transform.SetParent(pai, false);
-        Posicionar(go.GetComponent<RectTransform>(), pos, new Vector2(56f, 20f));
+        Posicionar(go.GetComponent<RectTransform>(), pos, new Vector2(42f, 20f));
         var img = go.GetComponent<Image>();
         img.color = new Color(0.20f, 0.18f, 0.15f, 1f);
 
-        var txt = CriarTexto("Lbl", go.transform, rotulo, 12, new Color(0.94f, 0.90f, 0.80f), TextAlignmentOptions.Center);
+        var txt = CriarTexto("Lbl", go.transform, rotulo, 9.5f, new Color(0.94f, 0.90f, 0.80f), TextAlignmentOptions.Center);
         UIFactory.Stretch(txt.rectTransform);
         txt.raycastTarget = true;
 
@@ -423,7 +424,7 @@ public class MapaInterativoUI : MonoBehaviour
         bool cenaValida = sceneName == "EntradaDaCidade" || sceneName == "CasaDoAvo" || sceneName == "BarDoZe";
         if (!cenaValida) return;
         if (hudHintText != null)
-            hudHintText.text = GameState.Tem(Flags.MapaDoCarroObtido) ? "[M] Mapa / Diário" : "[E] Pegue o mapa no carro";
+            hudHintText.text = GameState.Tem(Flags.MapaDoCarroObtido) ? "[M] Mapa / Diário" : "";
 
         if (Keyboard.current.mKey.wasPressedThisFrame || Keyboard.current.tabKey.wasPressedThisFrame)
         {
@@ -446,6 +447,7 @@ public class MapaInterativoUI : MonoBehaviour
             if (Keyboard.current.digit1Key.wasPressedThisFrame) SelecionarAba(0);
             if (Keyboard.current.digit2Key.wasPressedThisFrame) SelecionarAba(1);
             if (Keyboard.current.digit3Key.wasPressedThisFrame) SelecionarAba(2);
+            if (Keyboard.current.digit4Key.wasPressedThisFrame) SelecionarAba(3);
 
             AtualizarPosicaoMarcadoresDinamicos();
             AtualizarZoomMapa();
@@ -486,7 +488,7 @@ public class MapaInterativoUI : MonoBehaviour
         if (!GameState.Tem(Flags.MapaDoCarroObtido)) return;
         if (abaInicial >= 0)
         {
-            abaAtiva = Mathf.Clamp(abaInicial, 0, 2);
+            abaAtiva = Mathf.Clamp(abaInicial, 0, 3);
         }
         painelRaiz.SetActive(true);
         SelecionarAba(abaAtiva);
@@ -501,7 +503,7 @@ public class MapaInterativoUI : MonoBehaviour
 
     private void SelecionarAba(int indice)
     {
-        abaAtiva = Mathf.Clamp(indice, 0, 2);
+        abaAtiva = Mathf.Clamp(indice, 0, 3);
         for (int i = 0; i < botoesAba.Length; i++)
         {
             if (botoesAba[i] != null)
@@ -695,6 +697,7 @@ public class MapaInterativoUI : MonoBehaviour
                 : (CheckpointSystem.HasCheckpoint ? "Save: Gravado no último Orelhão [TEL]" : "Save: Nenhum Orelhão usado ainda");
         }
 
+        textoDiarioConteudo.fontSize = abaAtiva == 3 ? 10.5f : 11.5f;
         if (abaAtiva == 0)
         {
             string infoSelecionado = "";
@@ -751,7 +754,7 @@ public class MapaInterativoUI : MonoBehaviour
             }
             textoDiarioConteudo.text = sb.ToString();
         }
-        else
+        else if (abaAtiva == 2)
         {
             var sb = new System.Text.StringBuilder();
             sb.Append("<b>FICHAS DO CLUBE & PROVAS:</b>\n\n");
@@ -776,6 +779,24 @@ public class MapaInterativoUI : MonoBehaviour
             }
 
             textoDiarioConteudo.text = sb.ToString();
+        }
+        else
+        {
+            // Texto independente da arte original: continua nítido em qualquer zoom.
+            textoDiarioConteudo.text =
+                "<b>LEGENDA DO MAPA</b>\n" +
+                "● Jogador (você)\n" +
+                "◆ Personagem / NPC\n" +
+                "▣ Casa ou prédio\n" +
+                "▣ Comércio / serviço\n" +
+                "◎ Local importante\n" +
+                "━━ Caminho principal\n" +
+                "┄┄ Caminho secundário\n" +
+                "▥ Ponte\n" +
+                "≈ Água / rio\n" +
+                "♣ Mata / vegetação\n" +
+                "╫ Cerca ou muro\n\n" +
+                "Roda: aproximar. Botão direito: mover.";
         }
     }
 

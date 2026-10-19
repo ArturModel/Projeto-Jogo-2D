@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -52,11 +53,43 @@ public class PlayerController : MonoBehaviour
     private int facingDirection = DirDown;
     private float interactTimer;
     private string estadoAnimacao;
+    private SpriteRenderer corpo;
+    private Sprite[,] quadrosCaminhada;
+    private float tempoPasso;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
+        corpo = GetComponent<SpriteRenderer>();
+        PrepararCaminhadaMarcus();
+    }
+
+    private void PrepararCaminhadaMarcus()
+    {
+        string arquivo = Path.Combine(Application.streamingAssetsPath, "MarcusWalk.png");
+        if (corpo == null || !File.Exists(arquivo)) return;
+        Texture2D folha = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+        if (!ImageConversion.LoadImage(folha, File.ReadAllBytes(arquivo))) return;
+        folha.filterMode = FilterMode.Point;
+        folha.wrapMode = TextureWrapMode.Clamp;
+        quadrosCaminhada = new Sprite[3, 6];
+        for (int direcao = 0; direcao < 3; direcao++)
+            for (int passo = 0; passo < 6; passo++)
+                quadrosCaminhada[direcao, passo] = Sprite.Create(folha,
+                    new Rect(passo * 64, folha.height - (direcao + 1) * 64, 64, 64),
+                    new Vector2(0.5f, 0.125f), 32f, 0, SpriteMeshType.FullRect);
+
+        // A arte anterior trazia seis quadros no Animator, mas quase todos
+        // eram cópias. O sprite novo já inclui as roupas em cada pose.
+        if (animator != null) animator.enabled = false;
+        if (outfitAnimator != null)
+        {
+            outfitAnimator.enabled = false;
+            SpriteRenderer roupa = outfitAnimator.GetComponent<SpriteRenderer>();
+            if (roupa != null) roupa.enabled = false;
+        }
+        corpo.sprite = quadrosCaminhada[0, 0];
     }
 
     private void Start()
@@ -182,7 +215,7 @@ public class PlayerController : MonoBehaviour
         }
 
         bool isInteracting = interactTimer > 0f;
-        if (isInteracting)
+        if (isInteracting || GameMessageUI.IsShowing)
         {
             moveInput = Vector2.zero;
         }
@@ -197,8 +230,19 @@ public class PlayerController : MonoBehaviour
                     : (moveInput.y > 0f ? DirUp : DirDown);
         }
 
-        UpdateAnimator(animator, isMoving, isInteracting);
-        UpdateAnimator(outfitAnimator, isMoving, isInteracting);
+        if (quadrosCaminhada != null)
+        {
+            if (isMoving) tempoPasso += Time.deltaTime * 8f;
+            else tempoPasso = 0f;
+            int linha = facingDirection == DirUp ? 1 :
+                (facingDirection == DirLeft || facingDirection == DirRight ? 2 : 0);
+            corpo.sprite = quadrosCaminhada[linha, isMoving ? (int)tempoPasso % 6 : 0];
+        }
+        else
+        {
+            UpdateAnimator(animator, isMoving, isInteracting);
+            UpdateAnimator(outfitAnimator, isMoving, isInteracting);
+        }
         string novoEstado = isInteracting ? "Interact" :
             (isMoving ? "Walk" : "Idle") +
             (facingDirection == DirUp ? "Up" : facingDirection == DirDown ? "Down" :
