@@ -25,12 +25,8 @@ public class MainMenuActions : MonoBehaviour
             return;
         }
 
-        CheckpointSystem.RequestSpawnAtCheckpoint();
-
-        string cena = CheckpointSystem.CheckpointScene;
-        SceneFader.Instance.LoadScene(
-            string.IsNullOrEmpty(cena) ? gameplaySceneName : cena
-        );
+        // Abre a seleção dos 5 Slots de Orelhão para o jogador escolher qual save carregar
+        PayphoneCheckpoint.AbrirModalCarregarDoMenu();
     }
 
     public void Opcoes()

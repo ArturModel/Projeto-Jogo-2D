@@ -78,8 +78,8 @@ public class MenuPausa : MonoBehaviour
             return;
         }
 
-        // Se o mapa ou a sinuca estiverem abertos, o ESC pertence a eles.
-        if (!Aberto && (MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing))
+        // Se o mapa, a sinuca ou a seleção de slots do orelhão estiverem abertos, o ESC pertence a eles.
+        if (!Aberto && (MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen))
         {
             return;
         }

@@ -18,22 +18,45 @@ public class ChegadaEmSantaRita : MonoBehaviour
     [SerializeField] private string comSabendoOEndereco = "Bairro das Casas, 40. Preciso seguir pela estrada de asfalto e subir na encruzilhada.";
 
     [TextArea]
-    [SerializeField] private string semSaberOEndereco = "Faz seis anos... Preciso seguir pela estrada à direita e perguntar no Posto onde fica a casa do vô Adílio.";
+    [SerializeField] private string semSaberOEndereco = "Faz seis anos... Primeiro preciso pegar a lanterna e o mapa no meu carro marrom logo ao lado [E].";
 
     [TextArea]
-    [SerializeField] private string objetivo = "Seguir pela estrada para a direita (Leste) até o Posto de Gasolina. (Pressione M para abrir o Mapa)";
+    [SerializeField] private string objetivo = "Examine seu carro marrom estacionado logo ao lado [Tecla E] para pegar a Lanterna e o Mapa de Santa Rita.";
 
     private IEnumerator Start()
     {
         Capitulo1Director.EnsureForCurrentScene();
 
-        if (!GameState.Tem(Flags.ChegouCasaAvo) && string.IsNullOrEmpty(GameState.ObterObjetivo()))
+        if (!GameState.Tem(Flags.MapaDoCarroObtido))
+        {
+            GameState.DefinirObjetivo("Examine o seu carro marrom estacionado logo ao lado [Tecla E] para pegar a Lanterna e o Mapa de Santa Rita.");
+        }
+        else if (!GameState.Tem(Flags.ChegouCasaAvo) && string.IsNullOrEmpty(GameState.ObterObjetivo()))
         {
             GameState.DefinirObjetivo("Seguir pela rodovia para a direita até o Posto de Gasolina e procurar pela casa de Adílio (nº 40).");
         }
 
-        if (!GameState.Tem(Flags.PrologoConcluido) || GameState.Tem(Flags.ChegouCasaAvo))
+        if (GameState.Tem(Flags.ChegouCasaAvo))
         {
+            yield break;
+        }
+
+        yield return new WaitForSeconds(0.6f);
+
+        if (!GameState.Tem(Flags.MapaDoCarroObtido))
+        {
+            Legenda.Dizer("Preciso examinar meu carro marrom logo ao lado [Tecla E] para pegar a lanterna e o mapa de Santa Rita.", 6.0f);
+
+            yield return new WaitForSeconds(0.8f);
+
+            if (!GameState.Tem(Flags.MapaDoCarroObtido) && !GameMessageUI.IsShowing)
+            {
+                GameMessageUI.Instance.Show(
+                    "\"Cheguei à entrada de Santa Rita. A avenida está escura demais.\nAntes de seguir em frente, preciso olhar meu carro marrom estacionado logo aqui ao lado [Tecla E] para pegar a Lanterna e o Mapa da cidade.\"",
+                    "Marcus",
+                    "marcus"
+                );
+            }
             yield break;
         }
 
@@ -48,7 +71,7 @@ public class ChegadaEmSantaRita : MonoBehaviour
 
         yield return new WaitForSeconds(esperaAntesDoObjetivo);
 
-        Legenda.Dizer(objetivo, 4.5f);
+        Legenda.Dizer("Seguir pela estrada para a direita (Leste) até o Posto de Gasolina. (Pressione M para abrir o Mapa)", 4.5f);
     }
 }
 
@@ -1001,10 +1024,22 @@ public class Capitulo1Director : MonoBehaviour
 
     private ZonaId zonaAtual = ZonaId.Zona1_Rodovia;
     public static ZonaId ZonaAtual => instancia != null ? instancia.zonaAtual : ZonaId.Zona1_Rodovia;
+    public static bool EstaEmInterior =>
+        instancia != null &&
+        tabelaZonas.TryGetValue(instancia.zonaAtual, out InfoZona info) &&
+        info.ehInterior;
 
     private GameObject raizMundoCapitulo1;
     private GameObject painelFechamentoCap1;
     private PayphoneCheckpoint templatePayphone;
+    private AudioSource musicaBairro;
+    private AudioSource musicaBar;
+
+    private const float VolumeBairro = 0.48f;
+    private const float VolumeCasaAvo = 0.32f;
+    private const float VolumeBar = 0.48f;
+    private const float VolumeSinuca = 0.31f;
+    private const float VelocidadeFadeMusica = 0.55f;
 
     private static readonly Dictionary<string, Texture2D> cacheTexturas = new Dictionary<string, Texture2D>();
     private static readonly Dictionary<string, Sprite> cacheSprites = new Dictionary<string, Sprite>();
@@ -1274,6 +1309,9 @@ public class Capitulo1Director : MonoBehaviour
     {
         MapaInterativoUI.EnsureInstance();
 
+        if (Application.isPlaying)
+            PrepararMusicasDasZonas();
+
         if (cena == "EntradaDaCidade")
         {
             ConstruirMundoMultiZonas();
@@ -1281,12 +1319,67 @@ public class Capitulo1Director : MonoBehaviour
         }
         else if (cena == "CasaDoAvo")
         {
+            zonaAtual = ZonaId.Interior_CasaDoAvo;
             GarantirElementosCasaDoAvoCenaSeparada();
         }
         else if (cena == "BarDoZe")
         {
+            zonaAtual = ZonaId.Interior_BarDoZe;
             GarantirElementosBarDoZeCenaSeparada();
         }
+    }
+
+    private void PrepararMusicasDasZonas()
+    {
+        if (musicaBairro == null)
+            musicaBairro = CriarFonteMusical("Musica_BairroCasaAvo", "Cap1/Audio/Bairro_Casa_do_Avo_loop");
+        if (musicaBar == null)
+            musicaBar = CriarFonteMusical("Musica_BarDoZe", "Cap1/Audio/Bar_do_Ze_loop");
+    }
+
+    private AudioSource CriarFonteMusical(string nome, string caminho)
+    {
+        AudioClip clipe = Resources.Load<AudioClip>(caminho);
+        if (clipe == null)
+        {
+            Debug.LogWarning("Música não encontrada: " + caminho);
+            return null;
+        }
+
+        GameObject objetoFonte = new GameObject(nome);
+        objetoFonte.transform.SetParent(transform, false);
+        AudioSource fonte = objetoFonte.AddComponent<AudioSource>();
+        fonte.clip = clipe;
+        fonte.loop = true;
+        fonte.playOnAwake = false;
+        fonte.spatialBlend = 0f;
+        fonte.volume = 0f;
+        return fonte;
+    }
+
+    private void Update()
+    {
+        if (!Application.isPlaying) return;
+
+        // A música do bairro continua sem reiniciar ao entrar na casa; no bar
+        // ela só toca no interior. O estado da partida controla a redução de volume.
+        float alvoBairro = zonaAtual == ZonaId.Zona4_Bairro ? VolumeBairro :
+            zonaAtual == ZonaId.Interior_CasaDoAvo ? VolumeCasaAvo : 0f;
+        float alvoBar = zonaAtual == ZonaId.Interior_BarDoZe ?
+            (SinucaMinigameUI.IsShowing ? VolumeSinuca : VolumeBar) : 0f;
+        // O volume geral já é aplicado globalmente pelo AudioListener.
+        float volumeUsuario = Mathf.Clamp01(PlayerPrefs.GetFloat("audio_musica", 1f));
+
+        AtualizarFonteMusical(musicaBairro, alvoBairro * volumeUsuario);
+        AtualizarFonteMusical(musicaBar, alvoBar * volumeUsuario);
+    }
+
+    private static void AtualizarFonteMusical(AudioSource fonte, float alvo)
+    {
+        if (fonte == null) return;
+        if (alvo > 0f && !fonte.isPlaying) fonte.Play();
+        fonte.volume = Mathf.MoveTowards(fonte.volume, alvo, VelocidadeFadeMusica * Time.unscaledDeltaTime);
+        if (alvo <= 0f && fonte.volume <= 0f && fonte.isPlaying) fonte.Stop();
     }
 
     // =========================================================================
@@ -1570,15 +1663,15 @@ public class Capitulo1Director : MonoBehaviour
     {
         switch (t)
         {
-            case TilePiso.Grama: return "Grama";
+            case TilePiso.Grama: return "Grama_tiles";
             case TilePiso.Terra: return "Terra";
             case TilePiso.TerraRachada: return "Terra_Rachada";
             case TilePiso.AsfaltoH_Trinca: return "Asfalto_Trinca";
             case TilePiso.AsfaltoH_Poca: return "Asfalto_Poca";
             case TilePiso.AsfaltoH_Buraco: return "Asfalto_Buraco";
             case TilePiso.AsfaltoV: return "Estrada_Asfalto";
-            case TilePiso.CalcadaNorte: return "Calcada_Faixa";
-            case TilePiso.CalcadaSul: return "Calcada_Faixa";
+            case TilePiso.CalcadaNorte: return "Concreto";
+            case TilePiso.CalcadaSul: return "Concreto";
             case TilePiso.Concreto: return "Concreto";
             case TilePiso.Cruzamento: return "Cruzamento_A";
             case TilePiso.AsfaltoParaTerra: return "Asfalto_ParaTerra";
@@ -1589,7 +1682,7 @@ public class Capitulo1Director : MonoBehaviour
             case TilePiso.ParedeAzulejo: return "WallTile_BlueBeige";
             case TilePiso.ParedePapel: return "WallPaper_Stained";
             case TilePiso.ParedeBar: return "WallPaper_Stained";
-            default: return "Grama";
+            default: return "Grama_tiles";
         }
     }
 
@@ -1601,8 +1694,6 @@ public class Capitulo1Director : MonoBehaviour
         int alturaUnidades,
         Func<int, int, TilePiso> seletorTile)
     {
-        // Um tile de 32 px equivale a uma unidade. Antes cada pequeno piso
-        // ocupava duas unidades, produzindo o xadrez gigante visto no jogo.
         int cols = larguraUnidades;
         int rows = alturaUnidades;
         const int cellPx = 32;
@@ -1642,8 +1733,7 @@ public class Capitulo1Director : MonoBehaviour
             }
         }
 
-        // Sinalização no pavimento, pintada só sobre o asfalto. O cruzamento
-        // continua livre para o jogador distinguir as duas vias.
+        // Sinalização nas ruas asfaltadas externas
         if (nome.StartsWith("Zona1_") || nome.StartsWith("Zona2_") ||
             nome.StartsWith("Zona3_") || nome.StartsWith("Zona5_"))
         {
@@ -1658,8 +1748,7 @@ public class Capitulo1Director : MonoBehaviour
                         piso != TilePiso.Cruzamento) continue;
                     float yUnidade = py / 32f;
                     bool borda = Mathf.Abs(yUnidade - 8.08f) < 0.045f || Mathf.Abs(yUnidade - 11.92f) < 0.045f;
-                    bool eixo = Mathf.Abs(yUnidade - 9.5f) < 0.055f && (px / 96) % 2 == 0;
-                    // Travessia de pedestres diante do mercadinho, na avenida da encruzilhada.
+                    bool eixo = Mathf.Abs(yUnidade - 9.95f) < 0.055f && (px / 80) % 2 == 0;
                     bool faixaPedestres = nome == "Zona3_Encruzilhada" &&
                         px >= 10 * cellPx && px < 14 * cellPx &&
                         yUnidade > 8.23f && yUnidade < 11.77f && (px / 14) % 2 == 0;
@@ -1668,6 +1757,13 @@ public class Capitulo1Director : MonoBehaviour
                 }
             }
         }
+
+        // Acabamento arquitetônico completo para os 4 Interiores (paredes reais com rodapé, lambril/azulejo, cornija e sombra projetada no chão)
+        if (nome.StartsWith("Interior_"))
+        {
+            PintarAcabamentoArquitetonicoInterior(texFinal, nome, cols, rows, cellPx);
+        }
+
         texFinal.Apply(false, false);
 
         GameObject goPiso = new GameObject("Piso_" + nome);
@@ -1686,38 +1782,341 @@ public class Capitulo1Director : MonoBehaviour
         sr.sortingOrder = -20;
     }
 
+    private static void PintarAcabamentoArquitetonicoInterior(Texture2D tex, string nome, int cols, int rows, int cellPx)
+    {
+        int w = tex.width;
+        int h = tex.height;
+        int wallStartY = (rows - 2) * cellPx; // As 2 fileiras superiores formam a parede norte de 64px de altura
+
+        bool isPosto = nome.Contains("Posto");
+        bool isMercado = nome.Contains("Mercadinho");
+        bool isCasaAvo = nome.Contains("CasaDoAvo");
+        bool isBar = nome.Contains("BarDoZe");
+
+        Color32 corRodapeEscuro = new Color32(54, 36, 24, 255);
+        Color32 corRodapeLuz = new Color32(96, 66, 44, 255);
+        Color32 corCornijaTopo = new Color32(42, 30, 22, 255);
+        Color32 corMolduraMeio = isPosto ? new Color32(52, 108, 132, 255) :
+                                 isMercado ? new Color32(62, 112, 78, 255) :
+                                 new Color32(92, 58, 36, 255);
+
+        // 1. Pintar a Parede Norte detalhada (64 pixels de altura: rodapé + lambril/azulejo + faixa + parede superior + cornija)
+        for (int py = wallStartY; py < h; py++)
+        {
+            int wy = py - wallStartY; // 0..63
+            for (int px = 0; px < w; px++)
+            {
+                int ruido = ((px * 13 + wy * 29 + px * wy) % 9) - 4;
+                Color32 c;
+
+                if (wy < 5)
+                {
+                    // Rodapé na base da parede norte
+                    c = (wy == 4) ? corRodapeLuz : corRodapeEscuro;
+                }
+                else if (wy < 28)
+                {
+                    // Metade inferior da parede: Azulejo comercial (Posto/Mercado) ou Lambril de madeira (Casa do Avô / Bar)
+                    if (isPosto || isMercado)
+                    {
+                        bool rejunte = (px % 16 == 0) || (wy % 8 == 0);
+                        Color32 azulejoBase = isPosto ? new Color32(212, 220, 222, 255) : new Color32(224, 216, 198, 255);
+                        Color32 rejunteCor = isPosto ? new Color32(148, 160, 166, 255) : new Color32(164, 152, 134, 255);
+                        c = rejunte ? rejunteCor : AjustarBrilho(azulejoBase, ruido / 2);
+                    }
+                    else
+                    {
+                        // Lambril de madeira canelada vertical
+                        int modX = px % 12;
+                        bool friso = (modX == 0 || modX == 11);
+                        Color32 madeiraBase = isCasaAvo ? new Color32(124, 82, 52, 255) : new Color32(92, 58, 38, 255);
+                        c = friso ? new Color32(58, 36, 22, 255) : AjustarBrilho(madeiraBase, (modX == 2 ? 8 : 0) + ruido / 2);
+                    }
+                }
+                else if (wy < 32)
+                {
+                    // Faixa divisória (Dado rail / Pastilha decorativa)
+                    c = (wy == 31) ? AjustarBrilho(corMolduraMeio, 22) : corMolduraMeio;
+                }
+                else if (wy < 58)
+                {
+                    // Parte superior da parede: Pintura rebocada (Posto/Mercado), Papel de parede listrado clássico (Casa do Avô) ou Tijolo aparente/reboco rústico (Bar do Zé)
+                    if (isCasaAvo)
+                    {
+                        bool listra = (px % 16 < 3);
+                        Color32 papelBase = listra ? new Color32(198, 178, 142, 255) : new Color32(214, 196, 162, 255);
+                        c = AjustarBrilho(papelBase, ruido / 2);
+                    }
+                    else if (isBar)
+                    {
+                        // Parede rústica de bar com tijolinhos aparentes em partes e reboco ocre
+                        int brickRow = (wy - 32) / 6;
+                        int brickX = (px + (brickRow % 2) * 8) % 16;
+                        bool argamassa = ((wy - 32) % 6 == 0) || (brickX == 0);
+                        bool areaTijolo = ((px / 32 + brickRow) % 3 == 0);
+                        if (areaTijolo)
+                        {
+                            c = argamassa ? new Color32(118, 102, 86, 255) : AjustarBrilho(new Color32(146, 78, 54, 255), ruido);
+                        }
+                        else
+                        {
+                            c = AjustarBrilho(new Color32(158, 134, 104, 255), ruido);
+                        }
+                    }
+                    else
+                    {
+                        Color32 tintaSuperior = isPosto ? new Color32(228, 224, 210, 255) : new Color32(234, 222, 194, 255);
+                        c = AjustarBrilho(tintaSuperior, ruido / 2);
+                    }
+                }
+                else
+                {
+                    // Cornija / Viga superior do teto
+                    c = (wy == 58) ? corRodapeLuz : corCornijaTopo;
+                }
+
+                // Pilares de madeira/alvenaria a cada 6 unidades para quebrar a monotonia da parede
+                if ((px < 12 || px >= w - 12 || (px % (6 * cellPx) < 6)) && wy >= 5 && wy < 58)
+                {
+                    c = AjustarBrilho(c, -18);
+                }
+
+                tex.SetPixel(px, py, c);
+            }
+        }
+
+        // 2. Sombra suave projetada pela parede norte sobre o piso (6 pixels abaixo da parede)
+        for (int py = wallStartY - 6; py < wallStartY; py++)
+        {
+            if (py < 0) continue;
+            int dist = wallStartY - py; // 1..6
+            int escurecer = (7 - dist) * 6;
+            for (int px = 0; px < w; px++)
+            {
+                Color32 atual = tex.GetPixel(px, py);
+                tex.SetPixel(px, py, AjustarBrilho(atual, -escurecer));
+            }
+        }
+
+        // 3. Moldura de paredes laterais (Esquerda, Direita) e parede Sul (com abertura para a porta central!)
+        int espessuraBorda = 10;
+        int centroPortaPx = w / 2;
+        int larguraPortaPx = 44; // Abertura da porta de saída no sul
+
+        for (int py = 0; py < wallStartY; py++)
+        {
+            for (int px = 0; px < w; px++)
+            {
+                bool bordaEsq = px < espessuraBorda;
+                bool bordaDir = px >= w - espessuraBorda;
+                bool bordaSul = py < espessuraBorda && Mathf.Abs(px - centroPortaPx) > larguraPortaPx;
+
+                if (bordaEsq || bordaDir || bordaSul)
+                {
+                    bool linhaInternaRodape = (bordaEsq && px >= espessuraBorda - 2) ||
+                                              (bordaDir && px <= w - espessuraBorda + 1) ||
+                                              (bordaSul && py >= espessuraBorda - 2);
+                    tex.SetPixel(px, py, linhaInternaRodape ? corRodapeLuz : corCornijaTopo);
+                }
+                else if (px < espessuraBorda + 4 || px >= w - espessuraBorda - 4)
+                {
+                    // Sombra lateral discreta no chão junto ao rodapé
+                    Color32 atual = tex.GetPixel(px, py);
+                    tex.SetPixel(px, py, AjustarBrilho(atual, -14));
+                }
+            }
+        }
+    }
+
+    private static Color32 AjustarBrilho(Color32 c, int delta)
+    {
+        return new Color32(
+            (byte)Mathf.Clamp(c.r + delta, 0, 255),
+            (byte)Mathf.Clamp(c.g + delta, 0, 255),
+            (byte)Mathf.Clamp(c.b + delta, 0, 255),
+            255
+        );
+    }
+
     private static Color32[] ExtrairBloco32(TilePiso tipo)
     {
         const int cellPx = 32;
         Color32[] result = new Color32[cellPx * cellPx];
+
+        // 1. GRAMA NATURAL CONTÍNUA (Sem bordas quadradas!) usando Grama_tiles.png
+        if (tipo == TilePiso.Grama)
+        {
+            Texture2D texGrama = CarregarTextura("Grama_tiles");
+            if (texGrama != null && texGrama.width >= 48 && texGrama.height >= 48)
+            {
+                for (int y = 0; y < cellPx; y++)
+                {
+                    for (int x = 0; x < cellPx; x++)
+                    {
+                        // Amostra a região central contínua de Grama_tiles.png (sem tocar nas bordas da folha)
+                        int gx = 16 + (x % 32);
+                        int gy = 16 + (y % 32);
+                        Color32 gc = texGrama.GetPixel(gx, gy);
+                        // Suaviza o tom para noite chuvosa de Santa Rita
+                        result[y * cellPx + x] = new Color32(
+                            (byte)Mathf.Clamp((int)(gc.r * 0.78f), 22, 95),
+                            (byte)Mathf.Clamp((int)(gc.g * 0.82f), 42, 125),
+                            (byte)Mathf.Clamp((int)(gc.b * 0.78f), 24, 85),
+                            255);
+                    }
+                }
+                return result;
+            }
+        }
+
+        // 2. CALÇADA DE PEDRA / PASSEIO BRASILEIRO (Cinza de pedra com meio-fio, NUNCA verde!)
+        if (tipo == TilePiso.CalcadaNorte || tipo == TilePiso.CalcadaSul || tipo == TilePiso.Concreto)
+        {
+            for (int y = 0; y < cellPx; y++)
+            {
+                for (int x = 0; x < cellPx; x++)
+                {
+                    int ruido = ((x * 19 + y * 37 + x * y * 5) % 11) - 5;
+                    bool meioFioNorte = (tipo == TilePiso.CalcadaNorte && y < 4);
+                    bool meioFioSul = (tipo == TilePiso.CalcadaSul && y >= cellPx - 4);
+
+                    if (meioFioNorte || meioFioSul)
+                    {
+                        bool sarjetaEscura = (meioFioNorte && y == 0) || (meioFioSul && y == cellPx - 1);
+                        Color32 corGuia = sarjetaEscura
+                            ? new Color32(62, 64, 66, 255)
+                            : new Color32(182, 178, 168, 255);
+                        result[y * cellPx + x] = AjustarBrilho(corGuia, ruido / 2);
+                        continue;
+                    }
+
+                    // Lajotas de pedra/concreto da calçada (16x16 px cada lajota)
+                    int subX = x % 16;
+                    int subY = y % 16;
+                    bool junta = (subX == 0 || subY == 0);
+                    bool biselLuz = (subX == 1 || subY == 15);
+                    bool alterna = (((x / 16) + (y / 16)) % 2 == 0);
+
+                    Color32 pedraBase = alterna
+                        ? new Color32(138, 136, 130, 255)
+                        : new Color32(130, 128, 122, 255);
+
+                    int ajuste = ruido / 2 + (junta ? -24 : (biselLuz ? 8 : 0));
+                    result[y * cellPx + x] = AjustarBrilho(pedraBase, ajuste);
+                }
+            }
+            return result;
+        }
+
+        // 3. ASFALTO DA AVENIDA
         bool asfalto = tipo == TilePiso.AsfaltoH_Trinca || tipo == TilePiso.AsfaltoH_Poca ||
             tipo == TilePiso.AsfaltoH_Buraco || tipo == TilePiso.AsfaltoV || tipo == TilePiso.Cruzamento;
-        bool interior = tipo == TilePiso.InteriorSmall || tipo == TilePiso.InteriorBeige ||
-            tipo == TilePiso.InteriorPatterned || tipo == TilePiso.InteriorBar ||
-            tipo == TilePiso.ParedeAzulejo || tipo == TilePiso.ParedePapel || tipo == TilePiso.ParedeBar;
-        if (asfalto || interior)
+        if (asfalto)
         {
-            Color32 baseCor = asfalto ? new Color32(47, 51, 52, 255) :
-                tipo == TilePiso.InteriorSmall ? new Color32(72, 81, 81, 255) :
-                tipo == TilePiso.InteriorBeige ? new Color32(116, 91, 68, 255) :
-                tipo == TilePiso.InteriorPatterned ? new Color32(91, 68, 57, 255) :
-                tipo == TilePiso.InteriorBar ? new Color32(67, 51, 43, 255) :
-                tipo == TilePiso.ParedeAzulejo ? new Color32(121, 139, 135, 255) :
-                tipo == TilePiso.ParedeBar ? new Color32(80, 59, 46, 255) :
-                new Color32(157, 132, 97, 255);
+            Color32 baseAsfalto = new Color32(46, 50, 52, 255);
             for (int y = 0; y < cellPx; y++)
+            {
                 for (int x = 0; x < cellPx; x++)
                 {
                     int ruido = ((x * 17 + y * 31 + x * y * 3) % 11) - 5;
-                    bool junta = interior && (x == 0 || y == 0);
-                    int brilho = ruido / 3 - (junta ? 17 : 0);
-                    result[y * cellPx + x] = new Color32(
-                        (byte)Mathf.Clamp(baseCor.r + brilho, 0, 255),
-                        (byte)Mathf.Clamp(baseCor.g + brilho, 0, 255),
-                        (byte)Mathf.Clamp(baseCor.b + brilho, 0, 255), 255);
+                    result[y * cellPx + x] = AjustarBrilho(baseAsfalto, ruido / 2);
                 }
+            }
             return result;
         }
+
+        // 4. PISOS INTERNOS REALISTAS (Cerâmica Comercial, Lajota de Mercearia, Assoalho de Tábua Corrida e Piso Rústico de Bar)
+        if (tipo == TilePiso.InteriorSmall || tipo == TilePiso.InteriorBeige)
+        {
+            // Cerâmica esmaltada 16x16 com rejunte, bisel de brilho e leve variação entre peças
+            bool posto = (tipo == TilePiso.InteriorSmall);
+            for (int y = 0; y < cellPx; y++)
+            {
+                for (int x = 0; x < cellPx; x++)
+                {
+                    int tx = x % 16;
+                    int ty = y % 16;
+                    int qx = x / 16;
+                    int qy = y / 16;
+                    bool xadrez = ((qx + qy) % 2 == 0);
+                    bool rejunte = (tx == 0 || ty == 0);
+                    bool biselClaro = !rejunte && (tx == 1 || ty == 15);
+                    bool biselSombra = !rejunte && (tx == 15 || ty == 1);
+                    bool detalheCentro = (tx >= 7 && tx <= 8 && ty >= 7 && ty <= 8);
+
+                    Color32 corPeca;
+                    if (posto)
+                    {
+                        corPeca = xadrez
+                            ? new Color32(196, 190, 176, 255)
+                            : new Color32(178, 172, 158, 255);
+                    }
+                    else
+                    {
+                        corPeca = xadrez
+                            ? new Color32(198, 168, 134, 255)
+                            : new Color32(176, 142, 108, 255);
+                    }
+
+                    int ruido = ((x * 13 + y * 29) % 7) - 3;
+                    int delta = ruido + (rejunte ? -38 : (biselClaro ? 12 : (biselSombra ? -10 : (detalheCentro ? -8 : 0))));
+                    result[y * cellPx + x] = AjustarBrilho(corPeca, delta);
+                }
+            }
+            return result;
+        }
+
+        if (tipo == TilePiso.InteriorPatterned || tipo == TilePiso.InteriorBar)
+        {
+            // Assoalho de tábua corrida de madeira (Casa do Avô Adílio e Bar do Zé)
+            bool bar = (tipo == TilePiso.InteriorBar);
+            for (int y = 0; y < cellPx; y++)
+            {
+                int tabuaIdx = y / 8; // 4 tábuas horizontais de 8px por bloco 32x32
+                int pyTabua = y % 8;
+                int offsetEmenda = (tabuaIdx % 2 == 0) ? 14 : 28;
+
+                for (int x = 0; x < cellPx; x++)
+                {
+                    bool frestaHorizontal = (pyTabua == 0);
+                    bool emendaVertical = (x == offsetEmenda);
+                    bool prego = (pyTabua == 2 || pyTabua == 6) && (x == (offsetEmenda + 2) % 32);
+
+                    Color32 corMadeiraBase;
+                    if (bar)
+                    {
+                        corMadeiraBase = (tabuaIdx % 2 == 0)
+                            ? new Color32(114, 76, 48, 255)
+                            : new Color32(102, 66, 42, 255);
+                    }
+                    else
+                    {
+                        corMadeiraBase = (tabuaIdx % 2 == 0)
+                            ? new Color32(154, 104, 64, 255)
+                            : new Color32(140, 92, 56, 255);
+                    }
+
+                    // Veios longitudinais da madeira
+                    int veio = Mathf.RoundToInt(Mathf.Sin((x + tabuaIdx * 9) * 0.45f + pyTabua * 0.9f) * 6f);
+                    int delta = veio;
+                    if (frestaHorizontal || emendaVertical) delta = -36;
+                    else if (pyTabua == 7) delta += 8; // brilho na borda da tábua
+                    else if (prego) delta = -28;
+
+                    result[y * cellPx + x] = AjustarBrilho(corMadeiraBase, delta);
+                }
+            }
+            return result;
+        }
+
+        if (tipo == TilePiso.ParedeAzulejo || tipo == TilePiso.ParedePapel || tipo == TilePiso.ParedeBar)
+        {
+            // Preenchimento base (sobrescrito em seguida por PintarAcabamentoArquitetonicoInterior)
+            Color32 baseParede = new Color32(180, 168, 148, 255);
+            for (int i = 0; i < result.Length; i++) result[i] = baseParede;
+            return result;
+        }
+
         Texture2D src = CarregarTextura(NomeArquivoTile(tipo));
         bool flipY = (tipo == TilePiso.CalcadaSul);
 
@@ -1733,14 +2132,13 @@ public class Capitulo1Director : MonoBehaviour
         for (int y = 0; y < cellPx; y++)
         {
             int sy = flipY ? (cellPx - 1 - y) : y;
-            int ty = Mathf.Clamp( sy * sh / cellPx, 0, sh - 1);
+            int ty = Mathf.Clamp(sy * sh / cellPx, 0, sh - 1);
             for (int x = 0; x < cellPx; x++)
             {
                 int tx = Mathf.Clamp(x * sw / cellPx, 0, sw - 1);
                 Color c = src.GetPixel(tx, ty);
                 if (c.a < 0.5f)
                 {
-                    // Se o tile tiver canto transparente (ex.: Cruzamento_A), preenche com concreto/terra
                     c = new Color(0.36f, 0.34f, 0.31f, 1f);
                 }
                 result[y * cellPx + x] = c;
@@ -1748,6 +2146,15 @@ public class Capitulo1Director : MonoBehaviour
         }
 
         return result;
+    }
+
+    private static GameObject ColocarArvore(Transform pai, string nome, Vector3 pos, bool pequena = false, bool comColisor = true)
+    {
+        string spriteName = pequena ? "Oak_Tree_Small" : "Oak_Tree";
+        float escala = pequena ? 1.15f : 1.25f;
+        Vector2 colSize = comColisor ? (pequena ? new Vector2(0.7f, 0.5f) : new Vector2(0.95f, 0.65f)) : Vector2.zero;
+        Vector2 colOffset = comColisor ? new Vector2(0f, 0.35f) : Vector2.zero;
+        return ColocarProp(pai, nome, pos, spriteName, 32f, escala, colSize, colOffset, 1);
     }
 
     private static void CriarParedesPerimetro(Transform pai, Vector2 min, Vector2 max, float espessura = 1.2f)
@@ -2101,57 +2508,73 @@ public class Capitulo1Director : MonoBehaviour
 
         CriarPisoDeZona(z.transform, "Zona1_Rodovia", min, 36, 20, (ux, uy) =>
         {
-            // Rodovia de asfalto central (Y = 8..11)
+            // 1. Asfalto/Rua central (Y = 8..11)
             if (uy >= 8 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
-            // Recuo pavimentado para o carro inteiro, fora da faixa de rolamento.
-            if (uy >= 12 && uy <= 15 && ux >= 6 && ux <= 12) return TilePiso.Concreto;
+            // 2. Calçada de pedra contínua na margem Norte (Y = 12..13) e Sul (Y = 6..7)
             if (uy == 12) return TilePiso.CalcadaNorte;
-            // Acostamento de barro e lama nas margens da rodovia (como pedido pelo usuário)
-            if (uy == 6 || uy == 14) return (ux % 4 == 0) ? TilePiso.TerraRachada : TilePiso.Terra;
+            if (uy == 13) return TilePiso.Concreto;
+            // Recuo pavimentado junto à calçada para o carro marrom de Marcus
+            if (uy == 14 && ux >= 6 && ux <= 12) return TilePiso.Concreto;
+            if (uy == 7) return TilePiso.CalcadaSul;
+            if (uy == 6 && ux >= 18 && ux <= 26) return TilePiso.Terra; // acostamento de barro onde caiu a mala
+            if (uy == 6) return TilePiso.Concreto;
+            // 3. Atrás da calçada: Grama natural contínua (com árvores colocadas abaixo!)
             return TilePiso.Grama;
         });
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
 
+        // Árvores na grama atrás da calçada norte e atrás da calçada sul (sequência: Rua -> Calçada -> Grama/Árvores)
+        float[] arvoresNorteZ1 = { 103.0f, 115.2f, 118.0f, 123.5f, 128.2f, 132.0f };
+        for (int i = 0; i < arvoresNorteZ1.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Norte_Z1_" + i, new Vector3(arvoresNorteZ1[i], 15.2f + (i % 2) * 0.8f, 0f), pequena: (i % 3 == 1));
+        }
+        float[] arvoresSulZ1 = { 103.5f, 109.0f, 114.5f, 120.0f, 127.0f, 132.5f };
+        for (int i = 0; i < arvoresSulZ1.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Sul_Z1_" + i, new Vector3(arvoresSulZ1[i], 2.2f + (i % 2) * 0.9f, 0f), pequena: (i % 2 == 1));
+        }
+
         // Carro de Marcus estacionado no recuo pavimentado da rodovia (nunca na grama!)
         ColocarProp(z.transform, "Carro_Marcus_Sprite", new Vector3(108.5f, 12.2f, 0f), "Sedan_Brown", 32f, 1.15f,
             new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Carro_Marcus_Interacao", new Vector3(108.5f, 11.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CarroMarcus, "Examinar meu carro");
+            InteracaoCapitulo1.TipoInteracao.CarroMarcus, "Examinar meu carro [Pegar Lanterna e Mapa]");
 
         // Placa de Entrada de Santa Rita
         ColocarProp(z.transform, "Placa_SantaRita", new Vector3(113.5f, 13.4f, 0f), "PlacaEntrada", 16f, 0.9f,
             new Vector2(2.4f, 0.8f), new Vector2(0f, 0.4f), 2);
 
-        // Abrigo / Parada de Ônibus na Rodovia + Quadro de Avisos
-        ColocarProp(z.transform, "Banco_Rodovia", new Vector3(119.5f, 13.4f, 0f), "Bench_Wood", 32f, 1.1f,
+        // Abrigo / Parada de Ônibus na Calçada + Quadro de Avisos
+        ColocarProp(z.transform, "Banco_Rodovia", new Vector3(119.5f, 13.2f, 0f), "Bench_Wood", 32f, 1.1f,
             new Vector2(1.6f, 0.6f), new Vector2(0f, 0.3f), 1);
-        ColocarProp(z.transform, "Lixeira_Rodovia", new Vector3(121.2f, 13.4f, 0f), "TrashCan", 32f, 1.0f,
+        ColocarProp(z.transform, "Lixeira_Rodovia", new Vector3(121.2f, 13.2f, 0f), "TrashCan", 32f, 1.0f,
             new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 1);
-        ColocarProp(z.transform, "Placa_Horarios_Rodovia", new Vector3(119.5f, 14.1f, 0f), "RoadSign_Blank", 32f, 1.1f,
+        ColocarProp(z.transform, "Placa_Horarios_Rodovia", new Vector3(119.5f, 13.9f, 0f), "RoadSign_Blank", 32f, 1.1f,
             Vector2.zero, Vector2.zero, 1);
-        ColocarInteracao(z.transform, "Interacao_PlacaRodovia", new Vector3(119.5f, 12.9f, 0f),
+        ColocarInteracao(z.transform, "Interacao_PlacaRodovia", new Vector3(119.5f, 12.7f, 0f),
             InteracaoCapitulo1.TipoInteracao.PlacaRodoviaEntrada, "Ler quadro da parada de ônibus");
 
-        // Orelhão #1 (Save Point da Entrada)
-        ColocarOrelhaoSave(z.transform, "Orelhao_Rodovia", "orelhao_entrada_rodovia", new Vector3(126.5f, 13.3f, 0f));
+        // Orelhão #1 (Save Point da Entrada sobre a calçada)
+        ColocarOrelhaoSave(z.transform, "Orelhao_Rodovia", "orelhao_entrada_rodovia", new Vector3(126.5f, 13.1f, 0f));
 
-        // Pista na margem sul de barro: Mala e caixotes abandonados
+        // Pista na margem sul: Mala e caixotes abandonados
         ColocarProp(z.transform, "Caixotes_Barro_Sul", new Vector3(122.5f, 6.6f, 0f), "Caixotes", 16f, 0.85f,
             new Vector2(1.4f, 0.8f), new Vector2(0f, 0.4f), 1);
         ColocarInteracao(z.transform, "Interacao_MalaEstrada", new Vector3(122.5f, 7.3f, 0f),
             InteracaoCapitulo1.TipoInteracao.MalaAbandonadaEstrada, "Examinar mala caída no barro");
 
-        // Postes de luz e fiação ao longo da rodovia
+        // Postes de luz e fiação sobre a calçada de pedra
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_1", new Vector3(106.0f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_2", new Vector3(116.0f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_3", new Vector3(125.0f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_4", new Vector3(133.0f, 13.2f, 0f), luzAmbar);
-        ColocarProp(z.transform, "UtilityPole_Z1_1", new Vector3(111.0f, 13.5f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
-        ColocarProp(z.transform, "UtilityPole_Z1_2", new Vector3(129.5f, 13.5f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
+        ColocarPosteComLuz(z.transform, "Poste_Z1_1", new Vector3(106.0f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z1_2", new Vector3(116.0f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z1_3", new Vector3(125.0f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z1_4", new Vector3(133.0f, 13.0f, 0f), luzAmbar);
+        ColocarProp(z.transform, "UtilityPole_Z1_1", new Vector3(111.0f, 13.3f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
+        ColocarProp(z.transform, "UtilityPole_Z1_2", new Vector3(129.5f, 13.3f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
 
-        // Cerca de madeira na margem sul e seta indicando a saída Leste para o Posto (Zona 2)
+        // Cerca de madeira entre a calçada sul e a mata sul
         for (int x = 104; x <= 130; x += 6)
         {
             ColocarProp(z.transform, "CercaSul_" + x, new Vector3(x, 5.4f, 0f), "WoodFence", 32f, 1.1f, new Vector2(2.2f, 0.5f), new Vector2(0f, 0.25f), 1);
@@ -2173,7 +2596,7 @@ public class Capitulo1Director : MonoBehaviour
     }
 
     // =========================================================================
-    // ZONA 2: POSTO DE GASOLINA & ANTIGA VENDA (Idêntico à Imagem 3!)
+    // ZONA 2: POSTO DE GASOLINA & ANTIGA VENDA (Sequência: Rua -> Calçada -> Estabelecimentos -> Grama e Árvores!)
     // =========================================================================
 
     private void ConstruirZona2_Posto(Transform raiz)
@@ -2185,19 +2608,34 @@ public class Capitulo1Director : MonoBehaviour
 
         CriarPisoDeZona(z.transform, "Zona2_Posto", min, 38, 22, (ux, uy) =>
         {
-            // Avenida de Asfalto (Y = 8..11)
+            // 1. Avenida de Asfalto (Y = 8..11)
             if (uy >= 8 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
-            // Calçada Sul (Y = 6)
-            if (uy == 6) return TilePiso.CalcadaSul;
-            // Calçada Norte e Pátio de Concreto do Posto e da Venda (Y = 12..16)
+            // 2. Calçada Sul de pedra (Y = 6..7) e Calçada Norte de pedra (Y = 12..13)
+            if (uy == 7) return TilePiso.CalcadaSul;
+            if (uy == 6) return TilePiso.Concreto;
             if (uy == 12) return TilePiso.CalcadaNorte;
-            if (uy >= 14 && uy <= 16 && ux >= 6 && ux <= 32) return TilePiso.Concreto;
+            if (uy == 13) return TilePiso.Concreto;
+            // 3. Base pavimentada sob o Posto (ux 7..16) e sob a Antiga Venda (ux 24..32)
+            if (uy == 14 && ((ux >= 7 && ux <= 16) || (ux >= 24 && ux <= 32))) return TilePiso.Concreto;
+            // 4. Atrás das construções e calçadas: Grama natural e árvores!
             return TilePiso.Grama;
         });
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
 
-        // 1. POSTO DE GASOLINA (À esquerda na calçada norte, como na Imagem 3)
+        // Árvores na grama atrás do Posto, entre o Posto e a Venda, e na margem sul (atrás da calçada)
+        float[] arvoresNorteZ2 = { 203.0f, 206.0f, 218.5f, 221.5f, 234.5f, 236.5f };
+        for (int i = 0; i < arvoresNorteZ2.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Norte_Z2_" + i, new Vector3(arvoresNorteZ2[i], 16.5f + (i % 2) * 0.8f, 0f), pequena: (i % 2 == 0));
+        }
+        float[] arvoresSulZ2 = { 204.0f, 210.0f, 216.0f, 222.5f, 229.0f, 234.5f };
+        for (int i = 0; i < arvoresSulZ2.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Sul_Z2_" + i, new Vector3(arvoresSulZ2[i], 2.4f + (i % 2) * 0.9f, 0f), pequena: (i % 3 == 0));
+        }
+
+        // 1. POSTO DE GASOLINA (À esquerda na calçada norte)
         ColocarProp(z.transform, "Predio_Posto", new Vector3(212.0f, 14.2f, 0f), "Posto_Cobertura", 16f, 0.92f,
             new Vector2(6.4f, 2.2f), new Vector2(0f, 1.6f), 2);
         AdicionarLuzPonto(z.transform, new Vector3(212.0f, 15.2f, 0f), new Color(1.0f, 0.88f, 0.65f, 1f), 7.0f, 1.35f);
@@ -2219,33 +2657,33 @@ public class Capitulo1Director : MonoBehaviour
         ColocarInteracao(z.transform, "Bomba_Posto_Interacao", new Vector3(214.0f, 13.8f, 0f),
             InteracaoCapitulo1.TipoInteracao.BombaCombustivelPosto, "Examinar bomba de combustível");
 
-        ColocarProp(z.transform, "Picape_No_Posto", new Vector3(207.8f, 13.6f, 0f), "Picape_Red", 32f, 1.15f,
+        ColocarProp(z.transform, "Picape_No_Posto", new Vector3(207.8f, 13.4f, 0f), "Picape_Red", 32f, 1.15f,
             new Vector2(2.5f, 1.2f), new Vector2(0f, 0.6f), 2);
-        ColocarInteracao(z.transform, "Picape_Posto_Interacao", new Vector3(207.8f, 12.8f, 0f),
+        ColocarInteracao(z.transform, "Picape_Posto_Interacao", new Vector3(207.8f, 12.6f, 0f),
             InteracaoCapitulo1.TipoInteracao.CarroEstacionadoPosto, "Examinar picape no posto");
 
         // Carro estacionado corretamente no meio-fio do asfalto
         ColocarProp(z.transform, "Sedan_Avenida_Posto", new Vector3(220.5f, 11.4f, 0f), "Sedan_Black", 32f, 1.15f,
             new Vector2(2.5f, 1.1f), new Vector2(0f, 0.55f), 2);
 
-        // 2. ANTIGA VENDA (À direita do Posto na mesma avenida, idêntico à Imagem 3!)
+        // 2. ANTIGA VENDA (À direita do Posto na mesma avenida)
         ColocarProp(z.transform, "Predio_Venda_Antiga", new Vector3(228.5f, 14.2f, 0f), "Venda", 16f, 0.90f,
             new Vector2(6.2f, 2.2f), new Vector2(0f, 1.5f), 2);
-        ColocarProp(z.transform, "Caixotes_Venda", new Vector3(224.8f, 14.0f, 0f), "Caixotes", 16f, 0.85f,
+        ColocarProp(z.transform, "Caixotes_Venda", new Vector3(224.8f, 13.8f, 0f), "Caixotes", 16f, 0.85f,
             new Vector2(1.2f, 0.8f), new Vector2(0f, 0.4f), 2);
-        ColocarProp(z.transform, "Banco_Venda", new Vector3(232.2f, 13.8f, 0f), "Bench_Wood", 32f, 1.05f,
+        ColocarProp(z.transform, "Banco_Venda", new Vector3(232.2f, 13.6f, 0f), "Bench_Wood", 32f, 1.05f,
             new Vector2(1.5f, 0.6f), new Vector2(0f, 0.3f), 2);
         ColocarInteracao(z.transform, "Porta_Venda_Antiga", new Vector3(228.5f, 13.6f, 0f),
             InteracaoCapitulo1.TipoInteracao.VendaAntigaFechada, "Examinar antiga Venda");
 
-        // Postes de luz e fiação na calçada (Imagem 3)
+        // Postes de luz e fiação na calçada
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
-        ColocarPosteComLuz(z.transform, "Poste_Z2_1", new Vector3(204.5f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z2_2", new Vector3(217.5f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z2_3", new Vector3(224.0f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z2_4", new Vector3(234.0f, 13.2f, 0f), luzAmbar);
-        ColocarProp(z.transform, "UtilityPole_Z2_1", new Vector3(216.0f, 13.6f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
-        ColocarProp(z.transform, "UtilityPole_Z2_2", new Vector3(233.0f, 13.6f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
+        ColocarPosteComLuz(z.transform, "Poste_Z2_1", new Vector3(204.5f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z2_2", new Vector3(217.5f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z2_3", new Vector3(224.0f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z2_4", new Vector3(234.0f, 13.0f, 0f), luzAmbar);
+        ColocarProp(z.transform, "UtilityPole_Z2_1", new Vector3(216.0f, 13.4f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
+        ColocarProp(z.transform, "UtilityPole_Z2_2", new Vector3(233.0f, 13.4f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
 
         // Gatilhos de Transição Oeste (Zona 1) e Leste (Zona 3: Encruzilhada & Mercadinho)
         ColocarGatilhoTransicao(
@@ -2313,7 +2751,6 @@ public class Capitulo1Director : MonoBehaviour
         );
 
         // Conveniência compacta: geladeira de bebidas, salgadinhos e caixa.
-        // O corredor da porta até o frentista permanece livre.
         ColocarMovelLoja(z.transform, "Geladeira_Bebidas_Posto", new Vector2(203.1f, -51.2f), MovelLoja.Geladeira);
         ColocarMovelLoja(z.transform, "Prateleira_Salgadinhos_Posto", new Vector2(212.9f, -51.2f), MovelLoja.Prateleira);
         ColocarMovelLoja(z.transform, "Prateleira_Viagem_Posto", new Vector2(212.9f, -54.1f), MovelLoja.Prateleira, 2.5f);
@@ -2340,7 +2777,7 @@ public class Capitulo1Director : MonoBehaviour
     }
 
     // =========================================================================
-    // ZONA 3: ENCRUZILHADA & MERCADINHO (Idêntico à Imagem 4!)
+    // ZONA 3: ENCRUZILHADA & MERCADINHO (Sequência: Rua -> Calçada -> Mercadinho/Casas -> Grama e Árvores!)
     // =========================================================================
 
     private void ConstruirZona3_Encruzilhada(Transform raiz)
@@ -2352,21 +2789,37 @@ public class Capitulo1Director : MonoBehaviour
 
         CriarPisoDeZona(z.transform, "Zona3_Encruzilhada", min, 40, 26, (ux, uy) =>
         {
-            // Cruzamento central (X = 18..24, Y = 8..12)
+            // Cruzamento central (X = 18..22, Y = 8..13)
             if (ux >= 18 && ux <= 22 && uy >= 8 && uy <= 13) return TilePiso.Cruzamento;
-            // O ramal de barro encontra o asfalto sem faixas de grama entre os dois.
+            // Subida de barro rumo ao Bairro das Casas (X = 17..23, Y >= 14)
             if (ux >= 18 && ux <= 22 && uy == 14) return TilePiso.AsfaltoParaTerra;
             if (ux >= 17 && ux <= 23 && uy >= 15) return (uy % 5 == 0) ? TilePiso.TerraRachada : TilePiso.Terra;
-            // Avenida de Asfalto Horizontal (Y = 8..11)
+            // 1. Avenida de Asfalto Horizontal (Y = 8..11)
             if (uy >= 8 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
-            // Calçada Sul (Y = 6) e Calçada Norte / Pátio do Mercadinho (Y = 12..16)
-            if (uy == 6) return TilePiso.CalcadaSul;
+            // 2. Calçada Sul de pedra (Y = 6..7) e Calçada Norte de pedra (Y = 12..13)
+            if (uy == 7) return TilePiso.CalcadaSul;
+            if (uy == 6) return TilePiso.Concreto;
             if (uy == 12) return TilePiso.CalcadaNorte;
-            if (uy >= 14 && uy <= 16 && (ux <= 16 || ux >= 24)) return TilePiso.Concreto;
+            if (uy == 13) return TilePiso.Concreto;
+            // 3. Base sob o Mercadinho (ux 6..15) e Casa da Esquina (ux 27..34)
+            if (uy == 14 && ((ux >= 6 && ux <= 15) || (ux >= 27 && ux <= 34))) return TilePiso.Concreto;
+            // 4. Atrás das calçadas e construções: Grama natural e árvores!
             return TilePiso.Grama;
         });
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
+
+        // Árvores na grama atrás do Mercadinho, ao longo da subida do Bairro e atrás da calçada sul
+        float[] arvoresNorteZ3 = { 303.0f, 306.0f, 314.8f, 325.2f, 336.5f };
+        for (int i = 0; i < arvoresNorteZ3.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Norte_Z3_" + i, new Vector3(arvoresNorteZ3[i], 18.2f + (i % 2) * 1.1f, 0f), pequena: (i % 2 == 1));
+        }
+        float[] arvoresSulZ3 = { 304.0f, 310.0f, 316.0f, 321.5f, 331.5f, 336.0f };
+        for (int i = 0; i < arvoresSulZ3.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Sul_Z3_" + i, new Vector3(arvoresSulZ3[i], 2.4f + (i % 2) * 0.8f, 0f), pequena: (i % 3 == 0));
+        }
 
         // 1. MERCADINHO DE 2 ANDARES COM TOLDO LISTRADO AZUL E BRANCO (Imagem 4!)
         ColocarProp(z.transform, "Predio_Mercadinho", new Vector3(311.0f, 13.8f, 0f), "Fachada_Mercadinho", 16f, 0.95f,
@@ -2386,28 +2839,27 @@ public class Capitulo1Director : MonoBehaviour
             automatico: false
         );
 
-        // Engradados de bebida e lixeira ao lado do Mercadinho (Imagem 4)
-        ColocarProp(z.transform, "Engradado_Merc_1", new Vector3(306.5f, 13.8f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Engradado_Merc_2", new Vector3(305.5f, 13.8f, 0f), "BeerCrate_Orange", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Lixeira_Mercadinho", new Vector3(315.4f, 13.8f, 0f), "TrashCan", 32f, 1.05f, new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 2);
+        // Engradados de bebida e lixeira ao lado do Mercadinho (sobre a calçada)
+        ColocarProp(z.transform, "Engradado_Merc_1", new Vector3(306.5f, 13.5f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Engradado_Merc_2", new Vector3(305.5f, 13.5f, 0f), "BeerCrate_Orange", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Lixeira_Mercadinho", new Vector3(315.4f, 13.5f, 0f), "TrashCan", 32f, 1.05f, new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 2);
 
-        // A caminhonete ocupa uma vaga ao sul da avenida; a frente da venda
-        // fica livre para circulação e leitura da fachada.
-        ColocarProp(z.transform, "Picape_Encruzilhada_Sprite", new Vector3(326.0f, 7.0f, 0f), "Picape_Brown", 32f, 1.15f,
+        // Caminhonete estacionada junto ao meio-fio sul
+        ColocarProp(z.transform, "Picape_Encruzilhada_Sprite", new Vector3(326.0f, 7.2f, 0f), "Picape_Brown", 32f, 1.15f,
             new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
-        ColocarInteracao(z.transform, "Picape_Encruzilhada_Interacao", new Vector3(326.0f, 6.2f, 0f),
+        ColocarInteracao(z.transform, "Picape_Encruzilhada_Interacao", new Vector3(326.0f, 6.4f, 0f),
             InteracaoCapitulo1.TipoInteracao.PicapeEncruzilhada, "Examinar caminhonete estacionada");
 
-        // 2. LADO DIREITO DA ENCRUZILHADA (Casa da esquina + Quadro de Avisos + Cerca, Imagem 4)
+        // 2. LADO DIREITO DA ENCRUZILHADA (Casa da esquina + Quadro de Avisos + Cerca)
         ColocarProp(z.transform, "Casa_Esquina_Encruzilhada", new Vector3(330.5f, 14.0f, 0f), "CasaSimples_B", 16f, 0.90f,
             new Vector2(5.6f, 2.2f), new Vector2(0f, 1.4f), 2);
         ColocarProp(z.transform, "Cerca_Esquina", new Vector3(335.5f, 14.0f, 0f), "CercaMadeira", 16f, 0.9f,
             new Vector2(3.4f, 0.6f), new Vector2(0f, 0.35f), 2);
-        ColocarProp(z.transform, "Banco_Encruzilhada", new Vector3(326.5f, 13.6f, 0f), "Bench_Wood", 32f, 1.1f,
+        ColocarProp(z.transform, "Banco_Encruzilhada", new Vector3(326.5f, 13.3f, 0f), "Bench_Wood", 32f, 1.1f,
             new Vector2(1.5f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Mural_Encruzilhada", new Vector3(324.8f, 13.8f, 0f), "RoadSign_Blank", 32f, 1.15f,
+        ColocarProp(z.transform, "Mural_Encruzilhada", new Vector3(324.8f, 13.5f, 0f), "RoadSign_Blank", 32f, 1.15f,
             new Vector2(0.8f, 0.5f), new Vector2(0f, 0.25f), 2);
-        ColocarInteracao(z.transform, "Quadro_Avisos_Interacao", new Vector3(324.8f, 13.1f, 0f),
+        ColocarInteracao(z.transform, "Quadro_Avisos_Interacao", new Vector3(324.8f, 12.9f, 0f),
             InteracaoCapitulo1.TipoInteracao.QuadroAvisosEncruzilhada, "Ler quadro de avisos da comunidade");
 
         // Placa de Seta no início da subida de barro para o Bairro das Casas
@@ -2416,17 +2868,16 @@ public class Capitulo1Director : MonoBehaviour
         ColocarInteracao(z.transform, "Placa_Subida_Interacao", new Vector3(316.8f, 16.9f, 0f),
             InteracaoCapitulo1.TipoInteracao.PlacaSetaBairro, "Ler placa de direção");
 
-        // Postes de luz e fiação na encruzilhada (Imagem 4)
+        // Postes de luz e fiação na encruzilhada
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
-        ColocarPosteComLuz(z.transform, "Poste_Z3_1", new Vector3(304.5f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z3_2", new Vector3(316.5f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z3_3", new Vector3(323.5f, 13.2f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z3_1", new Vector3(304.5f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z3_2", new Vector3(316.5f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z3_3", new Vector3(323.5f, 13.0f, 0f), luzAmbar);
         ColocarPosteComLuz(z.transform, "Poste_Z3_4", new Vector3(317.2f, 21.0f, 0f), luzAmbar);
         ColocarProp(z.transform, "UtilityPole_Z3_1", new Vector3(316.2f, 15.2f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
         ColocarProp(z.transform, "UtilityPole_Z3_2", new Vector3(323.2f, 18.5f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
 
-        // Dois módulos de obra, com cones e seta para a subida do bairro,
-        // fecham a largura inteira da avenida em vez de uma parede invisível.
+        // Barricada de obra fechando a saída leste para o Centro
         ColocarArteInterior(z.transform, "Interdicao_Centro_FaixaSul", new Vector2(336.5f, 7.8f),
             "BarricadaCentro", "WoodFence", 1f, new Vector2(4.4f, 1.8f));
         ColocarArteInterior(z.transform, "Interdicao_Centro_FaixaNorte", new Vector2(336.5f, 9.6f),
@@ -2555,8 +3006,8 @@ public class Capitulo1Director : MonoBehaviour
                 return ((ux + uy) % 4 == 0) ? TilePiso.TerraRachada : TilePiso.Terra;
             }
 
-            // Passeios estreitos de concreto entre o barro da rua e os jardins.
-            if ((uy == 12 && ux >= 6 && ux <= 36) || (uy == 24 && ux >= 6 && ux <= 38))
+            // Calçada / Passeio de pedra diante das casas (sequência: Rua de Barro -> Calçada -> Casas -> Grama/Árvores)
+            if ((uy >= 11 && uy <= 12 && ux >= 6 && ux <= 36) || (uy == 23 && ux >= 6 && ux <= 41))
             {
                 return TilePiso.Concreto;
             }
@@ -2565,6 +3016,23 @@ public class Capitulo1Director : MonoBehaviour
         });
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
+
+        // Árvores na grama atrás das casas do Bairro (Sul, Meio e Norte atrás da Casa do Avô Nº 40)
+        float[] arvoresSulBairro = { 404.0f, 409.5f, 414.5f, 425.5f, 431.5f, 438.0f };
+        for (int i = 0; i < arvoresSulBairro.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Sul_Z4_" + i, new Vector3(arvoresSulBairro[i], 3.2f + (i % 2) * 1.1f, 0f), pequena: (i % 2 == 1));
+        }
+        float[] arvoresMeioBairro = { 404.5f, 413.5f, 425.0f, 436.5f };
+        for (int i = 0; i < arvoresMeioBairro.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Meio_Z4_" + i, new Vector3(arvoresMeioBairro[i], 16.2f + (i % 2) * 0.8f, 0f), pequena: (i % 2 == 0));
+        }
+        float[] arvoresNorteBairro = { 404.0f, 408.5f, 415.0f, 420.5f, 427.0f, 430.5f, 441.0f };
+        for (int i = 0; i < arvoresNorteBairro.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Norte_Z4_" + i, new Vector3(arvoresNorteBairro[i], 28.2f + (i % 2) * 1.2f, 0f), pequena: (i % 3 == 1));
+        }
 
         // --- QUARTEIRÃO SUL DO BAIRRO (Exploração da vizinhança antes de chegar na nº 40) ---
         // Casa Nº 14 (Dona Lurdes) + Van na garagem de terra + Cercas de madeira (Imagem 5)
@@ -2766,16 +3234,31 @@ public class Capitulo1Director : MonoBehaviour
         {
             // Transição do barro do Bairro para o calçamento da Rua Norte (X = 0..6, Y = 8..11)
             if (uy >= 8 && uy <= 11 && ux <= 4) return TilePiso.TerraRachada;
-            if (uy >= 8 && uy <= 11 && ux == 6) return TilePiso.AsfaltoParaTerra;
+            if (uy >= 8 && uy <= 11 && ux == 5) return TilePiso.AsfaltoParaTerra;
             if (uy == 8) return (ux % 6 == 0) ? TilePiso.AsfaltoH_Poca : TilePiso.AsfaltoH_Trinca;
             if (uy >= 9 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
-            if (uy == 6) return TilePiso.CalcadaSul;
+            // Calçada Sul de pedra (Y = 6..7) e Calçada Norte de pedra (Y = 12..13)
+            if (uy == 7) return TilePiso.CalcadaSul;
+            if (uy == 6) return TilePiso.Concreto;
             if (uy == 12) return TilePiso.CalcadaNorte;
-            if (uy >= 14 && uy <= 16 && ux >= 8 && ux <= 30) return TilePiso.Concreto;
+            if (uy == 13) return TilePiso.Concreto;
+            if (uy == 14 && ux >= 12 && ux <= 24) return TilePiso.Concreto;
             return TilePiso.Grama;
         });
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
+
+        // Árvores na grama atrás do Bar do Zé e atrás da calçada sul
+        float[] arvoresNorteZ5 = { 504.0f, 509.0f, 524.5f, 529.5f, 534.5f };
+        for (int i = 0; i < arvoresNorteZ5.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Norte_Z5_" + i, new Vector3(arvoresNorteZ5[i], 16.5f + (i % 2) * 0.9f, 0f), pequena: (i % 2 == 1));
+        }
+        float[] arvoresSulZ5 = { 504.5f, 511.0f, 517.5f, 524.0f, 530.5f };
+        for (int i = 0; i < arvoresSulZ5.Length; i++)
+        {
+            ColocarArvore(z.transform, "Arvore_Sul_Z5_" + i, new Vector3(arvoresSulZ5[i], 2.3f + (i % 2) * 0.9f, 0f), pequena: (i % 2 == 0));
+        }
 
         // Caminhonete do Clube estacionada perto do Bar do Zé (Pista!)
         ColocarProp(z.transform, "Caminhonete_Clube_Bar", new Vector3(509.5f, 11.4f, 0f), "Picape_Black", 32f, 1.15f,
@@ -2789,13 +3272,13 @@ public class Capitulo1Director : MonoBehaviour
         AdicionarLuzPonto(z.transform, new Vector3(518.0f, 14.8f, 0f), new Color(1.0f, 0.72f, 0.38f, 1f), 7.8f, 1.45f);
 
         // Mesas de bar, cadeiras de plástico e engradados na calçada do Bar do Zé
-        ColocarProp(z.transform, "Mesa_Calcada_Bar", new Vector3(513.5f, 13.8f, 0f), "RoundTable_Wood", 32f, 1.1f, new Vector2(1.0f, 0.8f), new Vector2(0f, 0.4f), 2);
-        ColocarProp(z.transform, "Cadeira_Calcada_1", new Vector3(512.4f, 13.8f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Cadeira_Calcada_2", new Vector3(514.6f, 13.8f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Engradados_Bar_Ext", new Vector3(521.8f, 13.8f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Dumpster_Bar_Ext", new Vector3(523.2f, 14.2f, 0f), "Dumpster", 32f, 1.1f, new Vector2(1.4f, 0.9f), new Vector2(0f, 0.45f), 2);
+        ColocarProp(z.transform, "Mesa_Calcada_Bar", new Vector3(513.5f, 13.4f, 0f), "RoundTable_Wood", 32f, 1.1f, new Vector2(1.0f, 0.8f), new Vector2(0f, 0.4f), 2);
+        ColocarProp(z.transform, "Cadeira_Calcada_1", new Vector3(512.4f, 13.4f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Cadeira_Calcada_2", new Vector3(514.6f, 13.4f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Engradados_Bar_Ext", new Vector3(521.8f, 13.5f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Dumpster_Bar_Ext", new Vector3(523.2f, 13.8f, 0f), "Dumpster", 32f, 1.1f, new Vector2(1.4f, 0.9f), new Vector2(0f, 0.45f), 2);
 
-        ColocarInteracao(z.transform, "Placa_Letreiro_BarZe", new Vector3(515.8f, 13.2f, 0f),
+        ColocarInteracao(z.transform, "Placa_Letreiro_BarZe", new Vector3(515.8f, 13.1f, 0f),
             InteracaoCapitulo1.TipoInteracao.PlacaBarDoZe, "Ler letreiro do Bar do Zé");
 
         // Porta para entrar no INTERIOR DO BAR DO ZÉ
@@ -2812,7 +3295,7 @@ public class Capitulo1Director : MonoBehaviour
         );
 
         // Orelhão #2 ao lado do Bar do Zé (Save Point antes do Boss!)
-        ColocarOrelhaoSave(z.transform, "Orelhao_BarDoZe", "orelhao_bar_do_ze", new Vector3(525.8f, 13.4f, 0f));
+        ColocarOrelhaoSave(z.transform, "Orelhao_BarDoZe", "orelhao_bar_do_ze", new Vector3(525.8f, 13.2f, 0f));
 
         // PORTÃO DO CENTRO no final leste da Rua Norte
         Vector3 posPortao = new Vector3(532.5f, 10.0f, 0f);
@@ -2830,8 +3313,8 @@ public class Capitulo1Director : MonoBehaviour
 
         // Postes de luz na Rua Norte
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
-        ColocarPosteComLuz(z.transform, "Poste_Z5_1", new Vector3(505.5f, 13.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z5_2", new Vector3(527.5f, 13.2f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z5_1", new Vector3(505.5f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z5_2", new Vector3(527.5f, 13.0f, 0f), luzAmbar);
 
         // Gatilho de Transição Oeste (-> Zona 4: Bairro das Casas)
         ColocarGatilhoTransicao(

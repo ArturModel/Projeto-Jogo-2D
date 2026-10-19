@@ -23,7 +23,13 @@ public class MapaInterativoUI : MonoBehaviour
 
     private RectTransform mapAreaRect;
     private RectTransform mapViewportRect;
+    private readonly Vector2 mapBaseSize = new Vector2(412f, 309f);
     private float mapZoom = 1f;
+    private bool arrastandoMapa;
+    private Vector2 posInicialClique;
+    private bool arrastouNoCliqueAtual;
+    private bool ocultarBlipsNoMapa;
+    private TextMeshProUGUI textoZoomIndicador;
     private Image mapBackgroundImage;
     private RectTransform playerMarkerRect;
     private Image playerMarkerImage;
@@ -273,23 +279,23 @@ public class MapaInterativoUI : MonoBehaviour
         Posicionar(mRect, Vector2.zero, new Vector2(624f, 348f));
         moldura.GetComponent<Image>().color = new Color(0.13f, 0.11f, 0.09f, 0.99f);
 
-        var titulo = CriarTexto("TituloMapa", moldura.transform, "MAPA TÁTICO — SANTA RITA (2004)", 18, new Color(0.96f, 0.86f, 0.54f), TextAlignmentOptions.Left);
-        Posicionar(titulo.rectTransform, new Vector2(-150f, 160f), new Vector2(300f, 20f));
+        var titulo = CriarTexto("TituloMapa", moldura.transform, "MAPA TÁTICO — SANTA RITA (2004)", 17, new Color(0.96f, 0.86f, 0.54f), TextAlignmentOptions.Left);
+        Posicionar(titulo.rectTransform, new Vector2(-172f, 160f), new Vector2(260f, 20f));
 
-        var subFechar = CriarTexto("SubFechar", moldura.transform, "[M / ESC] Fechar  •  Roda: zoom  •  Arraste: mover", 12, new Color(0.78f, 0.74f, 0.66f), TextAlignmentOptions.Right);
-        Posicionar(subFechar.rectTransform, new Vector2(150f, 160f), new Vector2(300f, 20f));
+        var subFechar = CriarTexto("SubFechar", moldura.transform, "[Roda / + -] Zoom  •  [Segurar Mouse Esq. e Arrastar / WASD] Mover  •  [M / ESC] Fechar", 10.5f, new Color(0.84f, 0.80f, 0.70f), TextAlignmentOptions.Right);
+        Posicionar(subFechar.rectTransform, new Vector2(118f, 160f), new Vector2(368f, 20f));
 
         // Esquerda: Área Gráfica do Mapa 2D em proporção 4:3 fiel à arte original (412 x 309)
         var viewport = new GameObject("MapViewport", typeof(RectTransform), typeof(Image), typeof(RectMask2D));
         viewport.transform.SetParent(moldura.transform, false);
         mapViewportRect = viewport.GetComponent<RectTransform>();
-        Posicionar(mapViewportRect, new Vector2(-98f, -6f), new Vector2(412f, 309f));
+        Posicionar(mapViewportRect, new Vector2(-98f, -6f), mapBaseSize);
         viewport.GetComponent<Image>().color = new Color(0.06f, 0.08f, 0.07f, 1f);
 
         var mapContainer = new GameObject("MapContainer", typeof(RectTransform));
         mapContainer.transform.SetParent(viewport.transform, false);
         mapAreaRect = mapContainer.GetComponent<RectTransform>();
-        Posicionar(mapAreaRect, Vector2.zero, new Vector2(412f, 309f));
+        Posicionar(mapAreaRect, Vector2.zero, mapBaseSize);
 
         var mapArtGo = new GameObject("MapArt", typeof(RectTransform), typeof(Image));
         mapArtGo.transform.SetParent(mapContainer.transform, false);
@@ -341,6 +347,22 @@ public class MapaInterativoUI : MonoBehaviour
         Posicionar(playerLbl.rectTransform, new Vector2(0f, -11f), new Vector2(48f, 12f));
         playerLbl.raycastTarget = false;
 
+        // Barra flutuante de controles de Zoom/Arraste na base do Viewport do Mapa
+        var barraZoom = new GameObject("BarraControlesMapa", typeof(RectTransform), typeof(Image));
+        barraZoom.transform.SetParent(viewport.transform, false);
+        var bzRect = barraZoom.GetComponent<RectTransform>();
+        Posicionar(bzRect, new Vector2(0f, -141f), new Vector2(404f, 22f));
+        barraZoom.GetComponent<Image>().color = new Color(0.05f, 0.05f, 0.06f, 0.88f);
+
+        CriarBotaoControleMapa(barraZoom.transform, "Zoom +", new Vector2(-172f, 0f), new Vector2(52f, 18f), () => AplicarZoomIncremental(1.3f, Vector2.zero));
+        CriarBotaoControleMapa(barraZoom.transform, "Zoom -", new Vector2(-114f, 0f), new Vector2(52f, 18f), () => AplicarZoomIncremental(1f / 1.3f, Vector2.zero));
+        CriarBotaoControleMapa(barraZoom.transform, "1x Tudo", new Vector2(-56f, 0f), new Vector2(54f, 18f), ResetarZoomEPan);
+        CriarBotaoControleMapa(barraZoom.transform, "Focar Você", new Vector2(10f, 0f), new Vector2(70f, 18f), CentralizarNoJogador);
+        CriarBotaoControleMapa(barraZoom.transform, "Ícones On/Off", new Vector2(88f, 0f), new Vector2(78f, 18f), AlternarVisibilidadeBlips);
+
+        textoZoomIndicador = CriarTexto("TxtZoom", barraZoom.transform, "1.0x | Arraste c/ mouse", 10f, new Color(0.92f, 0.84f, 0.56f), TextAlignmentOptions.Right);
+        Posicionar(textoZoomIndicador.rectTransform, new Vector2(164f, 0f), new Vector2(72f, 18f));
+
         // Direita: Painel Lateral (Radar / Diário / Fichas)
         var sidePanel = new GameObject("SidePanel", typeof(RectTransform), typeof(Image));
         sidePanel.transform.SetParent(moldura.transform, false);
@@ -371,6 +393,23 @@ public class MapaInterativoUI : MonoBehaviour
         painelRaiz.SetActive(false);
     }
 
+    private Button CriarBotaoControleMapa(Transform pai, string rotulo, Vector2 pos, Vector2 tam, UnityEngine.Events.UnityAction acao)
+    {
+        var go = new GameObject("BtnMapa_" + rotulo, typeof(RectTransform), typeof(Image), typeof(Button));
+        go.transform.SetParent(pai, false);
+        Posicionar(go.GetComponent<RectTransform>(), pos, tam);
+        var img = go.GetComponent<Image>();
+        img.color = new Color(0.22f, 0.19f, 0.15f, 0.98f);
+
+        var txt = CriarTexto("Lbl", go.transform, rotulo, 9.5f, new Color(0.96f, 0.90f, 0.72f), TextAlignmentOptions.Center);
+        UIFactory.Stretch(txt.rectTransform);
+
+        var btn = go.GetComponent<Button>();
+        btn.targetGraphic = img;
+        btn.onClick.AddListener(acao);
+        return btn;
+    }
+
     private void CriarMarcadorPonto(RectTransform mapRect, PontoMapa p)
     {
         var go = new GameObject("Ponto_" + p.id, typeof(RectTransform), typeof(Image), typeof(Button));
@@ -380,7 +419,7 @@ public class MapaInterativoUI : MonoBehaviour
         r.anchorMax = p.uv;
         r.pivot = new Vector2(0.5f, 0.5f);
         r.anchoredPosition = Vector2.zero;
-        r.sizeDelta = (p.tipo == "clube" || p.tipo == "boss1") ? new Vector2(16f, 16f) : new Vector2(13f, 13f);
+        r.sizeDelta = (p.tipo == "clube" || p.tipo == "boss1") ? new Vector2(15f, 15f) : new Vector2(12f, 12f);
 
         var img = go.GetComponent<Image>();
         img.sprite = GerarIconeBlip(p.tipo, p.cor);
@@ -392,6 +431,7 @@ public class MapaInterativoUI : MonoBehaviour
         btn.targetGraphic = img;
         btn.onClick.AddListener(() =>
         {
+            if (arrastouNoCliqueAtual) return;
             pontoSelecionadoId = idCapturado;
             SelecionarAba(0);
         });
@@ -424,12 +464,16 @@ public class MapaInterativoUI : MonoBehaviour
         bool cenaValida = sceneName == "EntradaDaCidade" || sceneName == "CasaDoAvo" || sceneName == "BarDoZe";
         if (!cenaValida) return;
         if (hudHintText != null)
-            hudHintText.text = GameState.Tem(Flags.MapaDoCarroObtido) ? "[M] Mapa / Diário" : "";
+            hudHintText.text = GameState.Tem(Flags.MapaDoCarroObtido) ? "[M] Mapa / Diário" : "[E] Pegar Mapa no Carro";
 
         if (Keyboard.current.mKey.wasPressedThisFrame || Keyboard.current.tabKey.wasPressedThisFrame)
         {
             if (GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing) return;
-            if (!GameState.Tem(Flags.MapaDoCarroObtido)) return;
+            if (!GameState.Tem(Flags.MapaDoCarroObtido))
+            {
+                Legenda.Dizer("Meu mapa e minha lanterna estão no carro marrom aqui atrás. Preciso examiná-lo com [E].", 3.5f);
+                return;
+            }
 
             if (IsShowing)
                 Fechar();
@@ -454,49 +498,202 @@ public class MapaInterativoUI : MonoBehaviour
         }
     }
 
-    private void AtualizarZoomMapa()
+    private void AlternarVisibilidadeBlips()
     {
-        if (Mouse.current == null || mapViewportRect == null) return;
-        Vector2 mouse = Mouse.current.position.ReadValue();
-        if (!RectTransformUtility.RectangleContainsScreenPoint(mapViewportRect, mouse)) return;
+        ocultarBlipsNoMapa = !ocultarBlipsNoMapa;
+        foreach (var kv in iconesPontos)
+        {
+            if (kv.Value != null)
+                kv.Value.gameObject.SetActive(!ocultarBlipsNoMapa);
+        }
+        for (int i = 0; i < routeDots.Count; i++)
+        {
+            if (routeDots[i] != null)
+                routeDots[i].gameObject.SetActive(!ocultarBlipsNoMapa);
+        }
+        if (objectivePulseRect != null)
+            objectivePulseRect.gameObject.SetActive(!ocultarBlipsNoMapa);
+    }
 
-        if (Mouse.current.scroll.ReadValue().y != 0f)
+    private void ResetarZoomEPan()
+    {
+        mapZoom = 1f;
+        if (mapAreaRect != null)
         {
-            float novoZoom = Mathf.Clamp(mapZoom * (Mouse.current.scroll.ReadValue().y > 0f ? 1.2f : 1f / 1.2f), 1f, 6f);
-            if (!Mathf.Approximately(novoZoom, mapZoom))
-            {
-                RectTransformUtility.ScreenPointToLocalPointInRectangle(mapViewportRect, mouse, null, out Vector2 local);
-                mapAreaRect.anchoredPosition += local * (1f - novoZoom / mapZoom);
-                mapZoom = novoZoom;
-                mapAreaRect.localScale = Vector3.one * mapZoom;
-            }
+            mapAreaRect.localScale = Vector3.one;
+            mapAreaRect.sizeDelta = mapBaseSize;
+            mapAreaRect.anchoredPosition = Vector2.zero;
         }
-        if (Mouse.current.middleButton.isPressed || Mouse.current.rightButton.isPressed)
+        AtualizarIndicadorZoom();
+    }
+
+    private void CentralizarNoJogador()
+    {
+        if (mapAreaRect == null || playerMarkerRect == null) return;
+        if (mapZoom < 2.2f)
         {
-            Canvas canvas = mapViewportRect.GetComponentInParent<Canvas>();
-            float escala = canvas != null ? canvas.scaleFactor : 1f;
-            mapAreaRect.anchoredPosition += Mouse.current.delta.ReadValue() / Mathf.Max(escala, 0.01f);
+            mapZoom = 2.4f;
+            mapAreaRect.localScale = Vector3.one;
+            mapAreaRect.sizeDelta = mapBaseSize * mapZoom;
         }
-        Vector2 limite = mapViewportRect.rect.size * (mapZoom - 1f) * 0.5f;
+        Vector2 uv = playerMarkerRect.anchorMin;
+        Vector2 offsetDoCentro = new Vector2((0.5f - uv.x) * mapBaseSize.x * mapZoom, (0.5f - uv.y) * mapBaseSize.y * mapZoom);
+        mapAreaRect.anchoredPosition = offsetDoCentro;
+        LimitarPanDoMapa();
+        AtualizarIndicadorZoom();
+    }
+
+    private void AplicarZoomIncremental(float fator, Vector2 pontoFocalLocal)
+    {
+        if (mapAreaRect == null) return;
+        float novoZoom = Mathf.Clamp(mapZoom * fator, 1f, 6f);
+        if (!Mathf.Approximately(novoZoom, mapZoom))
+        {
+            float razao = novoZoom / mapZoom;
+            mapAreaRect.anchoredPosition = (mapAreaRect.anchoredPosition - pontoFocalLocal) * razao + pontoFocalLocal;
+            mapZoom = novoZoom;
+            mapAreaRect.localScale = Vector3.one;
+            mapAreaRect.sizeDelta = mapBaseSize * mapZoom;
+            LimitarPanDoMapa();
+            AtualizarIndicadorZoom();
+        }
+    }
+
+    private void LimitarPanDoMapa()
+    {
+        if (mapAreaRect == null) return;
+        Vector2 limite = mapBaseSize * Mathf.Max(0f, mapZoom - 1f) * 0.5f;
         mapAreaRect.anchoredPosition = new Vector2(
             Mathf.Clamp(mapAreaRect.anchoredPosition.x, -limite.x, limite.x),
             Mathf.Clamp(mapAreaRect.anchoredPosition.y, -limite.y, limite.y));
     }
 
+    private void AtualizarIndicadorZoom()
+    {
+        if (textoZoomIndicador != null)
+            textoZoomIndicador.text = $"{mapZoom:0.0}x";
+    }
+
+    private void AtualizarZoomMapa()
+    {
+        if (mapViewportRect == null || mapAreaRect == null) return;
+
+        // Teclado: + / - para zoom, WASD / Setas para mover o mapa, C para centralizar, Z para resetar
+        var kb = Keyboard.current;
+        if (kb != null)
+        {
+            if (kb.equalsKey.wasPressedThisFrame || kb.numpadPlusKey.wasPressedThisFrame)
+                AplicarZoomIncremental(1.25f, Vector2.zero);
+            if (kb.minusKey.wasPressedThisFrame || kb.numpadMinusKey.wasPressedThisFrame)
+                AplicarZoomIncremental(1f / 1.25f, Vector2.zero);
+            if (kb.zKey.wasPressedThisFrame)
+                ResetarZoomEPan();
+            if (kb.cKey.wasPressedThisFrame)
+                CentralizarNoJogador();
+            if (kb.iKey.wasPressedThisFrame)
+                AlternarVisibilidadeBlips();
+
+            Vector2 dirTeclado = Vector2.zero;
+            if (kb.wKey.isPressed || kb.upArrowKey.isPressed) dirTeclado.y -= 1f;
+            if (kb.sKey.isPressed || kb.downArrowKey.isPressed) dirTeclado.y += 1f;
+            if (kb.aKey.isPressed || kb.leftArrowKey.isPressed) dirTeclado.x += 1f;
+            if (kb.dKey.isPressed || kb.rightArrowKey.isPressed) dirTeclado.x -= 1f;
+
+            if (dirTeclado.sqrMagnitude > 0.01f)
+            {
+                if (mapZoom <= 1.01f)
+                {
+                    // Se o jogador tentar mover com WASD em 1x, aplica um leve zoom automático para permitir explorar
+                    AplicarZoomIncremental(1.8f, Vector2.zero);
+                }
+                mapAreaRect.anchoredPosition += dirTeclado.normalized * (240f * Time.unscaledDeltaTime);
+                LimitarPanDoMapa();
+            }
+        }
+
+        if (Mouse.current == null) return;
+        Vector2 mouse = Mouse.current.position.ReadValue();
+        bool dentroDoMapa = RectTransformUtility.RectangleContainsScreenPoint(mapViewportRect, mouse, null);
+
+        // Zoom na roda do mouse focado no cursor
+        float scrollY = Mouse.current.scroll.ReadValue().y;
+        if (dentroDoMapa && Mathf.Abs(scrollY) > 0.01f)
+        {
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(mapViewportRect, mouse, null, out Vector2 local);
+            AplicarZoomIncremental(scrollY > 0f ? 1.22f : (1f / 1.22f), local);
+        }
+
+        // Arrastar segurando o botão ESQUERDO, direito ou do meio do mouse
+        bool botaoPressionado = Mouse.current.leftButton.isPressed ||
+                                Mouse.current.rightButton.isPressed ||
+                                Mouse.current.middleButton.isPressed;
+
+        bool botaoIniciou = Mouse.current.leftButton.wasPressedThisFrame ||
+                            Mouse.current.rightButton.wasPressedThisFrame ||
+                            Mouse.current.middleButton.wasPressedThisFrame;
+
+        if (botaoIniciou && dentroDoMapa)
+        {
+            arrastandoMapa = true;
+            posInicialClique = mouse;
+            arrastouNoCliqueAtual = false;
+        }
+
+        if (!botaoPressionado)
+        {
+            arrastandoMapa = false;
+        }
+
+        if (arrastandoMapa && botaoPressionado)
+        {
+            Vector2 delta = Mouse.current.delta.ReadValue();
+            if (delta.sqrMagnitude > 0.001f)
+            {
+                if (Vector2.Distance(mouse, posInicialClique) > 5f)
+                {
+                    arrastouNoCliqueAtual = true;
+                    // Se o jogador tentar arrastar o mapa com o mouse ainda em 1.0x, dá um zoom suave automático para ele conseguir arrastar!
+                    if (mapZoom <= 1.02f)
+                    {
+                        RectTransformUtility.ScreenPointToLocalPointInRectangle(mapViewportRect, mouse, null, out Vector2 localDrag);
+                        AplicarZoomIncremental(2.0f, localDrag);
+                    }
+                }
+
+                Canvas canvas = mapViewportRect.GetComponentInParent<Canvas>();
+                float escala = (canvas != null && canvas.scaleFactor > 0.01f) ? canvas.scaleFactor : 1f;
+                mapAreaRect.anchoredPosition += delta / escala;
+                LimitarPanDoMapa();
+            }
+        }
+    }
+
     public void Abrir(int abaInicial = -1)
     {
-        if (!GameState.Tem(Flags.MapaDoCarroObtido)) return;
+        if (!GameState.Tem(Flags.MapaDoCarroObtido))
+        {
+            Legenda.Dizer("Meu mapa está no carro marrom logo atrás. Preciso examiná-lo com [E].", 3.5f);
+            return;
+        }
         if (abaInicial >= 0)
         {
             abaAtiva = Mathf.Clamp(abaInicial, 0, 3);
         }
         painelRaiz.SetActive(true);
+        if (mapAreaRect != null)
+        {
+            mapAreaRect.localScale = Vector3.one;
+            mapAreaRect.sizeDelta = mapBaseSize * mapZoom;
+            LimitarPanDoMapa();
+        }
+        AtualizarIndicadorZoom();
         SelecionarAba(abaAtiva);
         AtualizarPosicaoMarcadoresDinamicos();
     }
 
     public void Fechar()
     {
+        arrastandoMapa = false;
         if (painelRaiz != null)
             painelRaiz.SetActive(false);
     }
@@ -785,18 +982,18 @@ public class MapaInterativoUI : MonoBehaviour
             // Texto independente da arte original: continua nítido em qualquer zoom.
             textoDiarioConteudo.text =
                 "<b>LEGENDA DO MAPA</b>\n" +
-                "● Jogador (você)\n" +
-                "◆ Personagem / NPC\n" +
-                "▣ Casa ou prédio\n" +
-                "▣ Comércio / serviço\n" +
-                "◎ Local importante\n" +
-                "━━ Caminho principal\n" +
-                "┄┄ Caminho secundário\n" +
-                "▥ Ponte\n" +
-                "≈ Água / rio\n" +
-                "♣ Mata / vegetação\n" +
-                "╫ Cerca ou muro\n\n" +
-                "Roda: aproximar. Botão direito: mover.";
+                "[o] Jogador (você)\n" +
+                "[+] Personagem / NPC\n" +
+                "[#] Casa ou prédio\n" +
+                "[$] Comércio / serviço\n" +
+                "[*] Local importante\n" +
+                "=== Caminho principal\n" +
+                "--- Caminho secundário\n" +
+                "[=] Ponte\n" +
+                "~~~ Água / rio\n" +
+                "^^^ Mata / vegetação\n" +
+                "||| Cerca ou muro\n\n" +
+                "Roda/+/-: zoom.\nSegure o mouse e arraste: mover.";
         }
     }
 
@@ -806,10 +1003,11 @@ public class MapaInterativoUI : MonoBehaviour
         if (System.IO.File.Exists(pathDisk))
         {
             byte[] bytes = System.IO.File.ReadAllBytes(pathDisk);
-            Texture2D texDisk = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+            Texture2D texDisk = new Texture2D(2, 2, TextureFormat.RGBA32, true);
             if (ImageConversion.LoadImage(texDisk, bytes))
             {
-                texDisk.filterMode = FilterMode.Bilinear;
+                texDisk.filterMode = FilterMode.Trilinear;
+                texDisk.anisoLevel = 8;
                 texDisk.wrapMode = TextureWrapMode.Clamp;
                 return Sprite.Create(texDisk, new Rect(0, 0, texDisk.width, texDisk.height), new Vector2(0.5f, 0.5f), 100f);
             }
