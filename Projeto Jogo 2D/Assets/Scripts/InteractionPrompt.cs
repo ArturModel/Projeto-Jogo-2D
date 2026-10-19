@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // Aviso discreto de "dá pra fazer alguma coisa aqui": uma tecla E e o nome
 // da ação. Aparece só quando há algo ao alcance e some sozinho.
@@ -42,6 +43,18 @@ public class InteractionPrompt : MonoBehaviour
 
         instance = this;
         Build();
+        SceneManager.sceneLoaded += LimparAoTrocarCena;
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this) SceneManager.sceneLoaded -= LimparAoTrocarCena;
+    }
+
+    private void LimparAoTrocarCena(Scene cena, LoadSceneMode modo)
+    {
+        SetTarget(null);
+        if (group != null) group.alpha = 0f;
     }
 
     private void Build()

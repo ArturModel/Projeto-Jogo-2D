@@ -41,14 +41,27 @@ public class MenuPausa : MonoBehaviour
 
     public static bool Aberto { get; private set; }
 
+    public static bool ReduzirEfeitosIntensos
+    {
+        get => PlayerPrefs.GetInt("reduzir_efeitos_intensos", 0) == 1;
+        set
+        {
+            PlayerPrefs.SetInt("reduzir_efeitos_intensos", value ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
+
     private GameObject raiz;
     private CanvasGroup painelOpcoes;
     private GameObject primeiroBotao;
     private AudioSource fonteSom;
     private int quadroDoUltimoEsc = -1;
+    private TMP_Text rotuloStatusSave;
+    private bool aguardandoConfirmacaoSaida;
+    private System.Action acaoConfirmada;
 
-    private const float LarguraPausa = 250f;
-    private const float LarguraOpcoes = 360f;
+    private const float LarguraPausa = 276f;
+    private const float LarguraOpcoes = 370f;
 
     private void Awake()
     {
@@ -61,6 +74,12 @@ public class MenuPausa : MonoBehaviour
         if (Keyboard.current == null ||
             !Keyboard.current.escapeKey.wasPressedThisFrame ||
             quadroDoUltimoEsc == Time.frameCount)
+        {
+            return;
+        }
+
+        // Se o mapa ou a sinuca estiverem abertos, o ESC pertence a eles.
+        if (!Aberto && (MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing))
         {
             return;
         }
@@ -85,6 +104,8 @@ public class MenuPausa : MonoBehaviour
     public void Abrir()
     {
         Aberto = true;
+        aguardandoConfirmacaoSaida = false;
+        AtualizarTextoStatusSave();
         raiz.SetActive(true);
         Time.timeScale = 0f;
 
@@ -97,6 +118,7 @@ public class MenuPausa : MonoBehaviour
     public void Fechar()
     {
         Aberto = false;
+        aguardandoConfirmacaoSaida = false;
         Time.timeScale = 1f;
 
         if (EventSystem.current != null)
@@ -109,12 +131,34 @@ public class MenuPausa : MonoBehaviour
 
     public void VoltarAoMenu()
     {
+        if (GameState.TemProgressoNaoSalvo && !aguardandoConfirmacaoSaida)
+        {
+            aguardandoConfirmacaoSaida = true;
+            if (rotuloStatusSave != null)
+            {
+                rotuloStatusSave.text = "Há progresso não salvo! Clique novamente para sair sem salvar.";
+                rotuloStatusSave.color = new Color(0.92f, 0.38f, 0.32f, 1f);
+            }
+            return;
+        }
+
         Fechar();
         SceneFader.Instance.LoadScene(cenaMenu);
     }
 
     public void Sair()
     {
+        if (GameState.TemProgressoNaoSalvo && !aguardandoConfirmacaoSaida)
+        {
+            aguardandoConfirmacaoSaida = true;
+            if (rotuloStatusSave != null)
+            {
+                rotuloStatusSave.text = "Progresso não salvo! Clique em SAIR novamente para confirmar.";
+                rotuloStatusSave.color = new Color(0.92f, 0.38f, 0.32f, 1f);
+            }
+            return;
+        }
+
         Fechar();
 
 #if UNITY_EDITOR
@@ -122,6 +166,30 @@ public class MenuPausa : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    private void AtualizarTextoStatusSave()
+    {
+        if (rotuloStatusSave == null)
+        {
+            return;
+        }
+
+        if (GameState.TemProgressoNaoSalvo)
+        {
+            rotuloStatusSave.text = "Progresso não salvo (salve em um Orelhão)";
+            rotuloStatusSave.color = new Color(0.86f, 0.66f, 0.34f, 0.95f);
+        }
+        else if (CheckpointSystem.HasCheckpoint)
+        {
+            rotuloStatusSave.text = "Salvo no último Orelhão";
+            rotuloStatusSave.color = new Color(0.58f, 0.76f, 0.58f, 0.95f);
+        }
+        else
+        {
+            rotuloStatusSave.text = "Orelhões salvam a investigação";
+            rotuloStatusSave.color = new Color(0.68f, 0.65f, 0.58f, 0.85f);
+        }
     }
 
     private void OnDestroy()
@@ -168,25 +236,35 @@ public class MenuPausa : MonoBehaviour
         overlay.blocksRaycasts = false;
 
         // --- caixa da pausa ---------------------------------------------
-        CanvasGroup pausa = Caixa(tela, "PainelPausa", new Vector2(LarguraPausa, 210f),
+        CanvasGroup pausa = Caixa(tela, "PainelPausa", new Vector2(LarguraPausa, 252f),
                                   out RectTransform pausaRect);
-        Titulo(pausaRect, "PAUSADO", 72f, LarguraPausa);
-        RectTransform indPausa = Indicador(pausaRect, -LarguraPausa / 2f + 26f);
+        Titulo(pausaRect, "PAUSADO", 92f, LarguraPausa);
+        RectTransform indPausa = Indicador(pausaRect, -LarguraPausa / 2f + 22f);
 
-        Button continuar = Botao(pausaRect, "CONTINUAR", 26f, indPausa);
-        Button opcoes = Botao(pausaRect, "CONFIGURAÇÕES", -4f, indPausa);
-        Button menu = Botao(pausaRect, "MENU PRINCIPAL", -34f, indPausa);
-        Button sair = Botao(pausaRect, "SAIR", -64f, indPausa);
+        Button continuar = Botao(pausaRect, "CONTINUAR", 48f, indPausa);
+        Button mapaBtn = Botao(pausaRect, "MAPA / DIÁRIO (M)", 18f, indPausa);
+        Button opcoes = Botao(pausaRect, "CONFIGURAÇÕES", -12f, indPausa);
+        Button menu = Botao(pausaRect, "MENU PRINCIPAL", -42f, indPausa);
+        Button sair = Botao(pausaRect, "SAIR", -72f, indPausa);
+
+        rotuloStatusSave = Rotulo(pausaRect, "", 13f, new Vector2(0f, -104f),
+                                  new Vector2(LarguraPausa - 24f, 24f), TextAlignmentOptions.Center);
+        rotuloStatusSave.textWrappingMode = TextWrappingModes.Normal;
 
         continuar.onClick.AddListener(Fechar);
+        mapaBtn.onClick.AddListener(() =>
+        {
+            Fechar();
+            MapaInterativoUI.EnsureInstance().Abrir(0);
+        });
         menu.onClick.AddListener(VoltarAoMenu);
         sair.onClick.AddListener(Sair);
         primeiroBotao = continuar.gameObject;
 
         // --- caixa das configurações ------------------------------------
-        painelOpcoes = Caixa(tela, "PainelOpcoes", new Vector2(LarguraOpcoes, 270f),
+        painelOpcoes = Caixa(tela, "PainelOpcoes", new Vector2(LarguraOpcoes, 290f),
                              out RectTransform opcoesRect);
-        TMP_Text tituloOpcoes = Titulo(opcoesRect, "CONFIGURAÇÕES", 106f, LarguraOpcoes);
+        TMP_Text tituloOpcoes = Titulo(opcoesRect, "CONFIGURAÇÕES", 114f, LarguraOpcoes);
         float xInd = -LarguraOpcoes / 2f + 22f;
 
         // categorias
@@ -208,12 +286,15 @@ public class MenuPausa : MonoBehaviour
         // vídeo
         CanvasGroup videoGrupo = SubPainel(opcoesRect, "Video", out RectTransform videoRect);
         RectTransform indVideo = Indicador(videoRect, xInd);
-        Toggle telaCheia = LinhaToggle(videoRect, "TELA CHEIA", 60f, indVideo);
-        TMP_Dropdown resolucao = LinhaDropdown(videoRect, "RESOLUÇÃO", 30f, indVideo);
-        Toggle vsync = LinhaToggle(videoRect, "VSYNC", 0f, indVideo);
-        Slider brilho = LinhaSlider(videoRect, "BRILHO", -30f, 0f, 1f, false, indVideo,
+        Toggle telaCheia = LinhaToggle(videoRect, "TELA CHEIA", 70f, indVideo);
+        TMP_Dropdown resolucao = LinhaDropdown(videoRect, "RESOLUÇÃO", 42f, indVideo);
+        Toggle vsync = LinhaToggle(videoRect, "VSYNC", 14f, indVideo);
+        Slider brilho = LinhaSlider(videoRect, "BRILHO", -14f, 0f, 1f, false, indVideo,
                                     out TMP_Text valorBrilho);
-        Button bVoltarVideo = Botao(videoRect, "VOLTAR", -80f, indVideo);
+        Toggle efeitosSuaves = LinhaToggle(videoRect, "EFEITOS SUAVES", -42f, indVideo);
+        efeitosSuaves.SetIsOnWithoutNotify(ReduzirEfeitosIntensos);
+        efeitosSuaves.onValueChanged.AddListener(v => ReduzirEfeitosIntensos = v);
+        Button bVoltarVideo = Botao(videoRect, "VOLTAR", -86f, indVideo);
 
         // legendas
         CanvasGroup legendasGrupo = SubPainel(opcoesRect, "Legendas", out RectTransform legRect);
@@ -289,13 +370,31 @@ public class MenuPausa : MonoBehaviour
         r.sizeDelta = tamanho;
     }
 
-    // A moldura é a mesma das caixas de diálogo do jogo.
+    // A moldura é a mesma das caixas de diálogo do jogo, com toque de papel envelhecido e flor.
     private CanvasGroup Caixa(Transform pai, string nome, Vector2 tamanho, out RectTransform rect)
     {
         Image caixa = UIFactory.CreateBox(pai, nome, "DialogueBox");
         caixa.raycastTarget = true;
+        caixa.color = new Color(0.95f, 0.90f, 0.80f, 0.98f);
         rect = caixa.rectTransform;
         Posicionar(rect, Vector2.zero, tamanho);
+
+        // Linha de margem vermelha discreta à esquerda (caderno gasto)
+        Image margem = Imagem(rect, "LinhaMargemVermelha", new Color(0.62f, 0.22f, 0.20f, 0.28f));
+        margem.raycastTarget = false;
+        Posicionar(margem.rectTransform, new Vector2(-tamanho.x * 0.5f + 16f, 0f), new Vector2(1.5f, tamanho.y - 24f));
+
+        // Pequena flor seca nos cantos superiores
+        TMP_Text florEsq = Rotulo(rect, "*", 16f, new Vector2(-tamanho.x * 0.5f + 16f, tamanho.y * 0.5f - 14f),
+                                  new Vector2(20f, 20f), TextAlignmentOptions.Center);
+        florEsq.color = new Color(0.76f, 0.34f, 0.32f, 0.65f);
+        florEsq.raycastTarget = false;
+
+        TMP_Text florDir = Rotulo(rect, "*", 16f, new Vector2(tamanho.x * 0.5f - 16f, tamanho.y * 0.5f - 14f),
+                                  new Vector2(20f, 20f), TextAlignmentOptions.Center);
+        florDir.color = new Color(0.76f, 0.34f, 0.32f, 0.65f);
+        florDir.raycastTarget = false;
+
         return caixa.gameObject.AddComponent<CanvasGroup>();
     }
 

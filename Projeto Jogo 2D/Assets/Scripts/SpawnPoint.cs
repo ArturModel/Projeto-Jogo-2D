@@ -16,6 +16,12 @@ public class SpawnPoint : MonoBehaviour
     public string Id => id;
     public int DirecaoInicial => direcaoInicial;
 
+    public void Configurar(string novoId, int novaDirecao = 0)
+    {
+        id = novoId;
+        direcaoInicial = novaDirecao;
+    }
+
     private void OnEnable()
     {
         Registro.Add(this);

@@ -46,10 +46,10 @@ public class PrologoVideo : MonoBehaviour
     [SerializeField]
     private Fala[] falas =
     {
-        new Fala { tempo = 0.3f, texto = "\"Três dias.\"", duracao = 1.2f },
-        new Fala { tempo = 2.35f, texto = "\"Ele nunca ficou três dias sem atender.\"", duracao = 1.8f },
-        new Fala { tempo = 5.0f, texto = "\"Eu devia ter vindo antes.\"", duracao = 1.4f },
-        new Fala { tempo = 7.25f, texto = "\"Certo... vamos descobrir o que aconteceu.\"", duracao = 1.8f },
+        new Fala { tempo = 0.3f, texto = "\"Desde cedo sem atender.\"", duracao = 1.2f },
+        new Fala { tempo = 2.35f, texto = "\"O vô Adílio nunca deixa o telefone tocar até cair.\"", duracao = 1.8f },
+        new Fala { tempo = 5.0f, texto = "\"Seis anos sem voltar pra Santa Rita.\"", duracao = 1.4f },
+        new Fala { tempo = 7.25f, texto = "\"Certo... vamos ver por que ele não atendeu hoje.\"", duracao = 1.8f },
     };
 
     private VideoPlayer player;
@@ -162,6 +162,13 @@ public class PrologoVideo : MonoBehaviour
 
         // O último quadro fica congelado na tela enquanto o fade da cena cobre.
         GameState.Marcar(Flags.PrologoConcluido);
+        GameState.RegistrarNotaDiario(
+            "prologo_chegada_2004",
+            "Chegada a Santa Rita (2004)",
+            "FATO",
+            "Adílio parou de atender o telefone hoje cedo. Peguei meu carro na chuva e voltei a Santa Rita pela primeira vez desde 1998."
+        );
+        GameState.DefinirObjetivo("Ir até a casa de Adílio no Bairro das Casas, nº 40 (Leste).");
         SceneTransition.Ir(cenaSeguinte, entradaNaCena);
     }
 

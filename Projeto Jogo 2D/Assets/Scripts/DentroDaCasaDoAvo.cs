@@ -24,6 +24,8 @@ public class DentroDaCasaDoAvo : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Capitulo1Director.EnsureForCurrentScene();
+
         bool primeiraVez = !GameState.Tem(Flags.ChegouCasaAvo);
         GameState.Marcar(Flags.ChegouCasaAvo);
 
@@ -31,6 +33,14 @@ public class DentroDaCasaDoAvo : MonoBehaviour
         {
             yield break;
         }
+
+        GameState.RegistrarNotaDiario(
+            "casa_adilio_entrada",
+            "Casa de Adílio destrancada",
+            "FATO",
+            "A porta da frente estava destrancada e Adílio não respondeu ao chamado. A rotina parece ter sido interrompida hoje mesmo."
+        );
+        GameState.DefinirObjetivo("Examinar a casa de Adílio (café, cartas, nota fiscal de 2004 e a desordem perto da porta).");
 
         yield return new WaitForSeconds(espera);
         Legenda.Dizer(aoEntrar, 3f);

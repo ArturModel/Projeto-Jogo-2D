@@ -57,20 +57,20 @@ public class PrologoDirector : MonoBehaviour
     [SerializeField]
     private FalaMarcada[] falas =
     {
-        new FalaMarcada { tempo = 6f,  texto = "\"Três dias.\"", duracao = 2.5f },
-        new FalaMarcada { tempo = 10f, texto = "\"Ele nunca ficou três dias sem atender.\"", duracao = 3.5f },
-        new FalaMarcada { tempo = 15f, texto = "\"Talvez eu esteja exagerando.\"", duracao = 3f },
-        new FalaMarcada { tempo = 20f, texto = "\"Eu devia ter vindo antes.\"", duracao = 3.5f },
+        new FalaMarcada { tempo = 6f,  texto = "\"Desde cedo sem atender.\"", duracao = 2.5f },
+        new FalaMarcada { tempo = 10f, texto = "\"O vô Adílio nunca deixa o telefone tocar até cair.\"", duracao = 3.5f },
+        new FalaMarcada { tempo = 15f, texto = "\"Talvez eu esteja exagerando... mas não dava pra esperar até amanhã.\"", duracao = 3.2f },
+        new FalaMarcada { tempo = 20f, texto = "\"Seis anos sem pisar em Santa Rita.\"", duracao = 3.5f },
     };
 
     [TextArea]
-    [SerializeField] private string falaAoReconhecer = "\"Não mudou tanto...\"";
+    [SerializeField] private string falaAoReconhecer = "\"Não mudou tanto desde noventa e oito...\"";
 
     [TextArea]
     [SerializeField] private string falaComplemento = "\"Pelo menos é o que eu lembrava.\"";
 
     [TextArea]
-    [SerializeField] private string falaFinal = "\"Certo... vamos descobrir o que aconteceu.\"";
+    [SerializeField] private string falaFinal = "\"Certo... vamos ver por que o vô não atendeu hoje.\"";
 
     private Image cortina;
     private float relogio;
@@ -348,6 +348,13 @@ public class PrologoDirector : MonoBehaviour
         Legenda.Limpar();
 
         GameState.Marcar(Flags.PrologoConcluido);
+        GameState.RegistrarNotaDiario(
+            "prologo_chegada_2004",
+            "Chegada a Santa Rita (2004)",
+            "FATO",
+            "Adílio parou de atender o telefone hoje cedo. Peguei meu carro na chuva e voltei a Santa Rita pela primeira vez desde 1998."
+        );
+        GameState.DefinirObjetivo("Ir até a casa de Adílio no Bairro das Casas, nº 40 (Leste).");
         SceneTransition.Ir(cenaSeguinte, entradaNaCena);
     }
 }

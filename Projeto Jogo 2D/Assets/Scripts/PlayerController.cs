@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 currentVelocity;
     private int facingDirection = DirDown;
     private float interactTimer;
+    private string estadoAnimacao;
 
     private void Awake()
     {
@@ -60,41 +61,67 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        // Garante que o controlador do Mapa Interativo (tecla M / Tab) esteja ativo na cena.
+        MapaInterativoUI.EnsureInstance();
+        if (flashlight != null) flashlight.gameObject.SetActive(GameState.Tem(Flags.LanternaDoCarroObtida));
+
         // Ordem importa: atravessar uma porta é mais recente que o último
         // checkpoint, então a entrada da porta ganha.
         if (SceneTransition.ConsumirEntrada(out Vector2 entrada, out int direcao))
         {
-            Teleportar(entrada);
-
-            if (direcao >= DirDown && direcao <= DirRight)
-            {
-                facingDirection = direcao;
-            }
-
+            TeleportarPara(entrada, direcao);
             return;
         }
 
         // Vindo de "Continuar": nasce no último orelhão registrado.
         if (CheckpointSystem.ConsumePendingSpawn(out Vector2 spawn))
         {
-            Teleportar(spawn);
+            TeleportarPara(spawn, -1);
+        }
+    }
+
+    public void TeleportarPara(Vector2 destino, int direcao = -1)
+    {
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.position = destino;
+            rb.linearVelocity = Vector2.zero;
+        }
+        transform.position = destino;
+        currentVelocity = Vector2.zero;
+        moveInput = Vector2.zero;
+        estadoAnimacao = null;
+
+        if (direcao >= DirDown && direcao <= DirRight)
+        {
+            facingDirection = direcao;
+            if (facingDirection == DirRight) SetFacingScale(-1f);
+            else if (facingDirection == DirLeft) SetFacingScale(1f);
+        }
+
+        CameraFollow camFollow = FindAnyObjectByType<CameraFollow>();
+        if (camFollow != null)
+        {
+            camFollow.SnapImediatoParaAlvo();
         }
     }
 
     private void Teleportar(Vector2 destino)
     {
-        rb.position = destino;
-        transform.position = destino;
-        currentVelocity = Vector2.zero;
+        TeleportarPara(destino, -1);
     }
 
     private void Update()
     {
-        // Com a pausa aberta o tempo está parado, mas o Update continua rodando:
-        // sem isto o E ainda abriria diálogo por baixo do menu.
-        if (Keyboard.current == null || MenuPausa.Aberto)
+        // Com a pausa, mapa ou minigame de sinuca abertos, o jogador não anda nem interage por baixo.
+        if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing)
         {
             moveInput = Vector2.zero;
+            if (InteractionPrompt.Instance != null)
+            {
+                InteractionPrompt.Instance.SetTarget(null);
+            }
             return;
         }
 
@@ -172,6 +199,18 @@ public class PlayerController : MonoBehaviour
 
         UpdateAnimator(animator, isMoving, isInteracting);
         UpdateAnimator(outfitAnimator, isMoving, isInteracting);
+        string novoEstado = isInteracting ? "Interact" :
+            (isMoving ? "Walk" : "Idle") +
+            (facingDirection == DirUp ? "Up" : facingDirection == DirDown ? "Down" :
+                facingDirection == DirLeft ? "Left" : "Right");
+        if (estadoAnimacao != novoEstado)
+        {
+            if (animator != null && animator.runtimeAnimatorController != null)
+                animator.CrossFadeInFixedTime(novoEstado, 0.06f);
+            if (outfitAnimator != null && outfitAnimator.runtimeAnimatorController != null)
+                outfitAnimator.CrossFadeInFixedTime(novoEstado, 0.06f);
+            estadoAnimacao = novoEstado;
+        }
 
         // A arte "esquerda" é espelhada para representar "direita",
         // já que o pack só traz o perfil voltado para um lado.
@@ -188,6 +227,8 @@ public class PlayerController : MonoBehaviour
 
         if (flashlight != null)
         {
+            if (flashlight.gameObject.activeSelf != GameState.Tem(Flags.LanternaDoCarroObtida))
+                flashlight.gameObject.SetActive(GameState.Tem(Flags.LanternaDoCarroObtida));
             Vector2 direction = FlashlightDirections[facingDirection];
 
             // A origem é a mão do personagem, não o pivô do sprite. A partir
@@ -217,7 +258,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateAnimator(Animator anim, bool isMoving, bool isInteracting)
     {
-        if (anim == null)
+        if (anim == null || anim.runtimeAnimatorController == null)
         {
             return;
         }

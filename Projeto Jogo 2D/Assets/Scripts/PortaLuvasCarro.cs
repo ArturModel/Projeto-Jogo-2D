@@ -27,6 +27,12 @@ public class PortaLuvasCarro : ObjetoCarro
         if (etapa == 0)
         {
             GameState.Marcar(Flags.PrologoAbriuPortaLuvas);
+            GameState.RegistrarNotaDiario(
+                "porta_luvas_endereco",
+                "Endereço de Adílio (Porta-luvas)",
+                "PISTA",
+                "Mapa dobrado no porta-luvas com a letra do avô Adílio: 'Bairro das Casas, nº 40'."
+            );
 
             if (conteudo != null)
             {
@@ -41,6 +47,12 @@ public class PortaLuvasCarro : ObjetoCarro
         if (etapa == 1)
         {
             GameState.Marcar(Flags.PrologoViuFotoAvo);
+            GameState.RegistrarNotaDiario(
+                "porta_luvas_foto",
+                "Fotografia antiga no carro",
+                "PISTA",
+                "Foto de Adílio, minha mãe e eu. Não lembro quem bateu essa foto naquela época."
+            );
             Legenda.Dizer(achados[1], 4f, Legenda.PrioridadeOpcional);
             etapa = 2;
             return;

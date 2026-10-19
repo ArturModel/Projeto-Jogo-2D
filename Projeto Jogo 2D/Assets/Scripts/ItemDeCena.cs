@@ -35,6 +35,7 @@ public class ItemDeCena : Interactable
         if (etapa == 0 && !string.IsNullOrEmpty(flagAoExaminar))
         {
             GameState.Marcar(flagAoExaminar);
+            RegistrarPistaLegada(flagAoExaminar);
         }
 
         GameMessageUI.Instance.Show(falas[Mathf.Min(etapa, falas.Length - 1)]);
@@ -46,7 +47,37 @@ public class ItemDeCena : Interactable
             if (etapa == falas.Length - 1 && !string.IsNullOrEmpty(flagAoTerminar))
             {
                 GameState.Marcar(flagAoTerminar);
+                RegistrarPistaLegada(flagAoTerminar);
             }
         }
+        else if (!string.IsNullOrEmpty(flagAoTerminar))
+        {
+            GameState.Marcar(flagAoTerminar);
+            RegistrarPistaLegada(flagAoTerminar);
+        }
+    }
+
+    private static void RegistrarPistaLegada(string flag)
+    {
+        if (flag == Flags.CasaAvo_LeuBilhete)
+        {
+            GameState.RegistrarNotaDiario(
+                "bilhete_casa_adilio",
+                "Bilhete na cômoda de Adílio",
+                "PISTA",
+                "Um recado deixado na cômoda aponta que Adílio subiu para resolver um assunto urgente perto do Bar do Zé."
+            );
+        }
+        else if (flag == Flags.CasaAvo_OlhouTelefone)
+        {
+            GameState.RegistrarNotaDiario(
+                "telefone_casa_adilio",
+                "Telefone de Adílio fora do gancho",
+                "PISTA",
+                "O aparelho fixo da sala ficou mal encaixado no gancho hoje cedo, explicando por que minhas ligações da estrada não completavam."
+            );
+        }
+
+        InteracaoCapitulo1.VerificarConclusaoPistasCasaAvo();
     }
 }

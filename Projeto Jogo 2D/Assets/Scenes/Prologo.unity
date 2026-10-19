@@ -183,10 +183,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0.4
     y: 0
-    width: 1
-    height: 1
+    width: 0.8
+    height: 0
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -269,8 +269,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_AssetsPPU: 32
   m_RefResolutionX: 512
@@ -293,8 +293,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c261c00d0323ea33fbc541609fe2926a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   alcanceX: 3.4
   alcanceY: 1.8
   suavidade: 6
@@ -311,8 +311,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921c2bfe3742ba9ee12c0f7cd5ac0ccf, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   camera2D: {fileID: 100003}
   camadas:
     serializedVersion: 2
@@ -467,8 +467,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05aa10d88bd915434ed93b16b6c7bb1d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   camadas:
   - nome: chuva
     clipe: {fileID: 8300000, guid: e006185ef17b7e14cad26862a86198f7, type: 3}
@@ -548,8 +548,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24698ed22e2265bdd813038fb4d88989, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   distancia: 0.72
 --- !u!1 &100018
 GameObject:
@@ -685,8 +685,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f3e84c0ae5b703af6ef0227fcd3c90c, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   foco: 5.2
   alturaCamera: 1.15
   distanciaMinima: 1.6
@@ -695,43 +695,43 @@ MonoBehaviour:
   fileiras:
   - nome: faixa
     sprite: {fileID: 21300000, guid: 2d618f069b6f0a7d88ee922bbeab6321, type: 3}
-    lateral: 0.0
-    espacamento: 7.0
+    lateral: 0
+    espacamento: 7
     doisLados: 0
     escala: 0.44
     comecaDesligada: 0
   - nome: cerca
     sprite: {fileID: 21300000, guid: 3c03fc6bcb00c807692aeddd0703c185, type: 3}
     lateral: 5.2
-    espacamento: 4.0
+    espacamento: 4
     doisLados: 1
     escala: 0.63
     comecaDesligada: 0
   - nome: poste
     sprite: {fileID: 21300000, guid: 89aea0cde9c920b802faa749c023010e, type: 3}
-    lateral: 7.0
-    espacamento: 20.0
+    lateral: 7
+    espacamento: 20
     doisLados: 0
     escala: 1.28
     comecaDesligada: 0
   - nome: arvore
     sprite: {fileID: 21300000, guid: a41fad4d9c31f4955567eae898aa2635, type: 3}
-    lateral: 11.0
-    espacamento: 17.0
+    lateral: 11
+    espacamento: 17
     doisLados: 1
     escala: 1.28
     comecaDesligada: 0
   - nome: placa
     sprite: {fileID: 21300000, guid: 6ca00740019354d8d9bd1cfc8650baf5, type: 3}
     lateral: 6.5
-    espacamento: 400.0
+    espacamento: 400
     doisLados: 0
     escala: 0.64
     comecaDesligada: 1
   - nome: casa
     sprite: {fileID: 21300000, guid: 624915e111468e54fadbb58232c67368, type: 3}
-    lateral: 9.0
-    espacamento: 14.0
+    lateral: 9
+    espacamento: 14
     doisLados: 1
     escala: 1.23
     comecaDesligada: 1
@@ -840,11 +840,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99c89527121b5ed73db4c386e588b32d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  velocidade: 9.0
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 9
   inclinacao: -2.2
-  ciclo: 8.0
+  ciclo: 8
 --- !u!1 &100028
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,11 +948,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99c89527121b5ed73db4c386e588b32d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  velocidade: 5.0
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 5
   inclinacao: -1.4
-  ciclo: 12.0
+  ciclo: 12
 --- !u!1 &100032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,8 +1001,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24698ed22e2265bdd813038fb4d88989, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   distancia: 0
 --- !u!1 &100035
 GameObject:
@@ -1416,8 +1416,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e249d60aae6a1df4255156f75377dec, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   palhetas:
   - {fileID: 100044}
   - {fileID: 100047}
@@ -1559,7 +1559,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 5.25, y: 2.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1577,8 +1577,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df83eb716711baf02f6891c24b285b0e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   clareamento: 0.22
   velocidadeDestaque: 8
   camadaEstatica: radio
@@ -1721,7 +1721,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.0625, y: 3.6875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1739,8 +1739,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abcc15911049b703295eecfd43925596, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   clareamento: 0.22
   velocidadeDestaque: 8
   camadaChamada: telefone
@@ -1878,7 +1878,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 4.9375, y: 2.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1988,14 +1988,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d129d0e20383cd8e972e536750958cd, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   clareamento: 0.22
   velocidadeDestaque: 8
   conteudo: {fileID: 100066}
   achados:
-  - 'Um mapa dobrado e uma foto. Bairro das Casas, 40 - a letra e dele.'
-  - 'Ele, a mae e eu. Nao lembro de ninguem tirando essa foto.'
+  - Um mapa dobrado e uma foto. Bairro das Casas, 40 - a letra e dele.
+  - Ele, a mae e eu. Nao lembro de ninguem tirando essa foto.
 --- !u!1 &100068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,8 +2038,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d6ec3eb304a6905399bd43ff5c50ad7, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   estrada: {fileID: 100023}
   limpadores: {fileID: 100049}
   ponteiro: {fileID: 100008}
@@ -2057,33 +2057,21 @@ MonoBehaviour:
   duracaoFreada: 3.5
   pausaAntesDaUltimaFala: 1.6
   falas:
-  - tempo: 6.0
+  - tempo: 6
     texto: '"Tres dias."'
     duracao: 2.5
-  - tempo: 10.0
+  - tempo: 10
     texto: '"Ele nunca ficou tres dias sem atender."'
     duracao: 3.5
-  - tempo: 15.0
+  - tempo: 15
     texto: '"Talvez eu esteja exagerando."'
-    duracao: 3.0
-  - tempo: 20.0
+    duracao: 3
+  - tempo: 20
     texto: '"Eu devia ter vindo antes."'
     duracao: 3.5
   falaAoReconhecer: '"Nao mudou tanto..."'
   falaComplemento: '"Pelo menos e o que eu lembrava."'
   falaFinal: '"Certo... vamos descobrir o que aconteceu."'
---- !u!1660057539 &9223372036854775806
-SceneRoots:
-  m_ObjectHideFlags: 0
-  m_Roots:
-  - {fileID: 100002}
-  - {fileID: 100010}
-  - {fileID: 100013}
-  - {fileID: 100016}
-  - {fileID: 100033}
-  - {fileID: 100069}
-
-  - {fileID: 100072}
 --- !u!1 &100071
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,22 +2114,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4c7e844a6597797c36c2d488a8e5008, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   arquivo: Prologo_teste.mp4
   volume: 1
   cenaSeguinte: EntradaDaCidade
   entradaNaCena: saida_carro
   falas:
   - tempo: 0.3
-    texto: '"Três dias."'
+    texto: '"Desde cedo sem atender."'
     duracao: 1.2
   - tempo: 2.35
-    texto: '"Ele nunca ficou três dias sem atender."'
+    texto: "\"O v\xF4 Ad\xEDlio nunca deixa o telefone tocar at\xE9 cair.\""
     duracao: 1.8
-  - tempo: 5.0
-    texto: '"Eu devia ter vindo antes."'
+  - tempo: 5
+    texto: '"Seis anos sem voltar pra Santa Rita."'
     duracao: 1.4
   - tempo: 7.25
-    texto: '"Certo... vamos descobrir o que aconteceu."'
+    texto: "\"Certo... vamos ver por que ele n\xE3o atendeu hoje.\""
     duracao: 1.8
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 100002}
+  - {fileID: 100010}
+  - {fileID: 100013}
+  - {fileID: 100016}
+  - {fileID: 100033}
+  - {fileID: 100069}
+  - {fileID: 100072}

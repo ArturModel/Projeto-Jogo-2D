@@ -179,6 +179,41 @@ public class Chuva : MonoBehaviour
         LiberarCamada(chao);
     }
 
+    public void DefinirModoInterior(bool emInterior)
+    {
+        desenharChuva = !emInterior;
+        abafado = emInterior;
+
+        if (alta != null && alta.render != null)
+        {
+            alta.render.enabled = !emInterior;
+        }
+        if (chao != null && chao.render != null)
+        {
+            chao.render.enabled = !emInterior;
+        }
+
+        AtualizarFiltroInterior(fonteA, emInterior);
+        AtualizarFiltroInterior(fonteB, emInterior);
+    }
+
+    private void AtualizarFiltroInterior(AudioSource fonte, bool emInterior)
+    {
+        if (fonte == null) return;
+        AudioLowPassFilter filtro = fonte.GetComponent<AudioLowPassFilter>();
+        if (emInterior)
+        {
+            if (filtro == null) filtro = fonte.gameObject.AddComponent<AudioLowPassFilter>();
+            filtro.cutoffFrequency = corteAbafado;
+            filtro.lowpassResonanceQ = 1f;
+            filtro.enabled = true;
+        }
+        else if (filtro != null)
+        {
+            filtro.enabled = false;
+        }
+    }
+
     private void LateUpdate()
     {
         float dt = Time.deltaTime;
