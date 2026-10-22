@@ -41,6 +41,7 @@ public class MapaInterativoUI : MonoBehaviour
     private TextMeshProUGUI textoObjetivoAtual;
     private TextMeshProUGUI textoDiarioConteudo;
     private TextMeshProUGUI textoStatusSave;
+    private ScrollRect diarioScroll;
 
     private int abaAtiva = 0; // 0 = Radar, 1 = Diário, 2 = Fichas, 3 = Legenda legível
     private readonly Button[] botoesAba = new Button[4];
@@ -80,7 +81,7 @@ public class MapaInterativoUI : MonoBehaviour
 
     private static void VerificarCenaECriar(string sceneName)
     {
-        bool cenaExploracao = sceneName == "EntradaDaCidade" || sceneName == "CasaDoAvo" || sceneName == "BarDoZe";
+        bool cenaExploracao = sceneName == "EntradaDaCidade" || sceneName == "CasaDoAvo" || sceneName == "BarDoZe" || Capitulo2Director.CenaDoCapitulo2(sceneName);
         if (!cenaExploracao)
         {
             if (Instance != null && Instance.hudHintGo != null)
@@ -246,6 +247,10 @@ public class MapaInterativoUI : MonoBehaviour
             cor = new Color(0.95f, 0.18f, 0.22f),
             tipo = "clube"
         });
+        pontos.Add(new PontoMapa { id = "igreja", nome = "IGREJA DA MATRIZ", descricao = "Nave e testemunho do padre; acima da praça.", uv = new Vector2(.503f, .712f), cor = new Color(.9f,.83f,.6f), tipo = "centro" });
+        pontos.Add(new PontoMapa { id = "rodoviaria", nome = "RODOVIÁRIA", descricao = "Espera, guichê e telefone do plantão; inferior/leste do Centro.", uv = new Vector2(.609f,.451f), cor = new Color(.6f,.8f,.75f), tipo = "centro" });
+        pontos.Add(new PontoMapa { id = "orelhao_centro", nome = "ORELHÃO DA PRAÇA", descricao = "Save exclusivamente manual, junto aos bancos.", uv = new Vector2(.493f,.541f), cor = new Color(.3f,.95f,.52f), tipo = "orelhao" });
+        pontos.Add(new PontoMapa { id = "orelhao_bocha", nome = "ORELHÃO DA BEIRA-RIO", descricao = "Disponível antes e depois de Tonão; salvar não consome fichas.", uv = new Vector2(.335f,.336f), cor = new Color(.3f,.95f,.52f), tipo = "orelhao" });
     }
 
     private void ConstruirUI()
@@ -379,12 +384,25 @@ public class MapaInterativoUI : MonoBehaviour
         Posicionar(textoLocalAtual.rectTransform, new Vector2(0f, 108f), new Vector2(174f, 20f));
 
         textoObjetivoAtual = CriarTexto("TextoObjetivo", sidePanel.transform, "", 12, new Color(0.98f, 0.84f, 0.38f), TextAlignmentOptions.TopLeft);
-        Posicionar(textoObjetivoAtual.rectTransform, new Vector2(0f, 76f), new Vector2(174f, 40f));
+        Posicionar(textoObjetivoAtual.rectTransform, new Vector2(0f, 73f), new Vector2(174f, 50f));
         textoObjetivoAtual.textWrappingMode = TextWrappingModes.Normal;
 
         textoDiarioConteudo = CriarTexto("TextoConteudo", sidePanel.transform, "", 11.5f, new Color(0.90f, 0.87f, 0.80f), TextAlignmentOptions.TopLeft);
         Posicionar(textoDiarioConteudo.rectTransform, new Vector2(0f, -28f), new Vector2(174f, 164f));
         textoDiarioConteudo.textWrappingMode = TextWrappingModes.Normal;
+        var leituraGo = new GameObject("LeituraRolavel", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
+        leituraGo.transform.SetParent(sidePanel.transform, false);
+        var leituraRect = leituraGo.GetComponent<RectTransform>();
+        Posicionar(leituraRect, new Vector2(0f, -37f), new Vector2(174f, 154f));
+        leituraGo.GetComponent<Image>().color = new Color(.09f,.08f,.07f,.98f);
+        textoDiarioConteudo.transform.SetParent(leituraGo.transform, false);
+        var leituraTexto = textoDiarioConteudo.rectTransform;
+        leituraTexto.anchorMin = new Vector2(0,1); leituraTexto.anchorMax = new Vector2(1,1);
+        leituraTexto.pivot = new Vector2(.5f,1); leituraTexto.anchoredPosition = Vector2.zero; leituraTexto.sizeDelta = Vector2.zero;
+        var tamanhoTexto = textoDiarioConteudo.gameObject.AddComponent<ContentSizeFitter>();
+        tamanhoTexto.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        diarioScroll = leituraGo.GetComponent<ScrollRect>(); diarioScroll.viewport = leituraRect; diarioScroll.content = leituraTexto;
+        diarioScroll.horizontal = false; diarioScroll.movementType = ScrollRect.MovementType.Clamped; diarioScroll.scrollSensitivity = 24;
 
         textoStatusSave = CriarTexto("TextoStatusSave", sidePanel.transform, "", 11f, new Color(0.72f, 0.82f, 0.68f), TextAlignmentOptions.BottomLeft);
         Posicionar(textoStatusSave.rectTransform, new Vector2(0f, -136f), new Vector2(174f, 28f));
@@ -461,14 +479,14 @@ public class MapaInterativoUI : MonoBehaviour
         if (MenuPausa.Aberto) return;
 
         string sceneName = SceneManager.GetActiveScene().name;
-        bool cenaValida = sceneName == "EntradaDaCidade" || sceneName == "CasaDoAvo" || sceneName == "BarDoZe";
+        bool cenaValida = sceneName == "EntradaDaCidade" || sceneName == "CasaDoAvo" || sceneName == "BarDoZe" || Capitulo2Director.CenaDoCapitulo2(sceneName);
         if (!cenaValida) return;
         if (hudHintText != null)
             hudHintText.text = GameState.Tem(Flags.MapaDoCarroObtido) ? "[M] Mapa / Diário" : "[E] Pegar Mapa no Carro";
 
         if (Keyboard.current.mKey.wasPressedThisFrame || Keyboard.current.tabKey.wasPressedThisFrame)
         {
-            if (GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing) return;
+            if (GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing) return;
             if (!GameState.Tem(Flags.MapaDoCarroObtido))
             {
                 Legenda.Dizer("Meu mapa e minha lanterna estão no carro marrom aqui atrás. Preciso examiná-lo com [E].", 3.5f);
@@ -700,6 +718,7 @@ public class MapaInterativoUI : MonoBehaviour
 
     private void SelecionarAba(int indice)
     {
+        if (diarioScroll != null) diarioScroll.verticalNormalizedPosition = 1;
         abaAtiva = Mathf.Clamp(indice, 0, 3);
         for (int i = 0; i < botoesAba.Length; i++)
         {
@@ -813,7 +832,12 @@ public class MapaInterativoUI : MonoBehaviour
         Vector2 playerUV = new Vector2(0.110f, 0.640f);
         string nomeLocal = "Entrada de Santa Rita";
 
-        if (scene == "CasaDoAvo")
+        if (Capitulo2Director.Instance != null)
+        {
+            var playerC2 = FindAnyObjectByType<PlayerController>();
+            Capitulo2Director.Instance.PosicaoNoMapa(playerC2 != null ? playerC2.transform.position : Vector3.zero, out playerUV, out nomeLocal);
+        }
+        else if (scene == "CasaDoAvo")
         {
             playerUV = new Vector2(0.255f, 0.765f);
             nomeLocal = "Interior — Casa de Adílio (Nº 40)";
@@ -876,6 +900,14 @@ public class MapaInterativoUI : MonoBehaviour
 
     private Vector2 ObterUVObjetivoAtual()
     {
+        if (GameState.Tem("c2_iniciado"))
+        {
+            if (GameState.Tem(Capitulo2Director.Vitoria)) return new Vector2(.335f,.336f);
+            if (!GameState.Tem("c2_protocolo_adilio") || !GameState.Tem("c2_registro_manutencao")) return new Vector2(.614f,.592f);
+            if (!GameState.Tem("c2_padre_testemunho")) return new Vector2(.503f,.712f);
+            if (!GameState.Tem("c2_cemiterio_comparado")) return new Vector2(.581f,.861f);
+            return new Vector2(.317f,.334f);
+        }
         if (GameState.Tem(Flags.ZeDerrotadoNaSinuca))
             return new Vector2(0.500f, 0.600f); // Centro de Santa Rita
         if (GameState.Tem(Flags.Pista_RumoBarDoZe) || GameState.Tem(Flags.FalouComAtendenteMercadinho))
@@ -965,10 +997,16 @@ public class MapaInterativoUI : MonoBehaviour
             else
             {
                 sb.Append("<color=#888278>[ ] Ficha #01 — Bar do Zé (Pendente)</color>\n");
-                sb.Append("<color=#888278>[ ] Ficha #02 — Cancha de Bocha</color>\n");
                 sb.Append("<color=#888278>[ ] Ficha #03 — Galpão do Truco</color>\n\n");
             }
 
+            if (GameState.Tem(Capitulo2Director.Ficha))
+            {
+                sb.Append("<color=#FFD848>[*] FICHA #02 — TONÃO / BEIRA-RIO</color>\nMetal gasto, recebido na Bocha. Marca a origem do relato de Tonão; não é chave mágica.\n\n");
+            }
+            else sb.Append("<color=#888278>[ ] Ficha #02 — Sociedade Beira-Rio</color>\n\n");
+            if (GameState.Tem("c2_adilio_recado"))
+                sb.Append("Via de Tonão: Adílio queria perguntar a Amaro quem escolheu as frases. Uma intenção, não um avistamento posterior.\n\n");
             if (GameState.Tem(Flags.Pista_NotaFiscal2004))
             {
                 sb.Append("<color=#98E898>- Cupom do Mercadinho (2004)</color>\n");

@@ -1,0 +1,38 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+PASS Cena carregada EntradaDaCidade
+PASS Cena C1 compilada carrega e cria Marcus.
+PASS Leitura encerra e devolve controle.
+PERF C1 início: 90 frames, média 16,68 ms, máximo 16,98 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
+PASS Leitura encerra e devolve controle.
+PASS Porta de serviço não contorna bloqueio pré-Zé.
+PASS Cena carregada MercadinhoDeposito
+PASS Porta real para MercadinhoDeposito
+PASS Cena carregada EntradaDaCidade
+PASS Porta real para EntradaDaCidade
+PASS Porta de serviço retorna ao interior da loja original.
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_Posto
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_Mercadinho
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_CasaDoAvo
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_BarDoZe
+PASS Leitura encerra e devolve controle.
+PASS Revisita C1 conserva objetivo de C2: NpcAtendenteMercadinho
+PASS Leitura encerra e devolve controle.
+PASS Revisita C1 conserva objetivo de C2: NpcZeBar
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Limiar aprovado de C1 leva ao Centro mantendo consequência.
+PASS Cena carregada RodoviariaSantaRita
+PASS Porta real para RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Cena carregada CemiterioSantaRita
+PASS Porta real para CemiterioSantaRita
+PASS Cena carregada AbrigoCemiterio
+PASS Porta real para AbrigoCemiterio
+PASS Leitura encerra e devolve controle.
+PASS runtime 2026-10-21T23:22:20.5803809Z

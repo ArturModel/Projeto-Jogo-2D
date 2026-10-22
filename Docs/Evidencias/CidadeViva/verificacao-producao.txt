@@ -1,0 +1,12 @@
+PASS cena CentroSantaRita
+PASS cena IgrejaMatriz
+PASS cena PrefeituraSantaRita
+PASS cena RodoviariaSantaRita
+PASS cena MercadinhoDeposito
+PASS cena OficinaRadio
+PASS cena CasaCostureira
+PASS cena SociedadeBeiraRio
+PASS cena AbrigoCemiterio
+PASS cena CemiterioSantaRita
+PASS 98 contratos de produção + regressão de regras/saves em arquivo separado.
+Não certifica aprovação artística, audição humana ou campanha completa sem fixture.

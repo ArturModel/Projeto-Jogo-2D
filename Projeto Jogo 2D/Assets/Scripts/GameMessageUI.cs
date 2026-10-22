@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 [Serializable]
 public struct DialogoLinha
@@ -64,9 +65,11 @@ public class GameMessageUI : MonoBehaviour
     private Image imagemInspecao;
     private TextMeshProUGUI tituloInspecao;
     private TextMeshProUGUI conteudoInspecao;
+    private ScrollRect rolagemInspecao;
     private Coroutine rotina;
 
     private bool aberta;
+    private bool fechando;
     private bool digitando;
     private DialogoLinha[] paginasAtuais;
     private int indicePagina;
@@ -89,6 +92,7 @@ public class GameMessageUI : MonoBehaviour
     private void Build()
     {
         Canvas canvas = UIFactory.CreateCanvas(transform, "DialogueCanvas", 9000);
+        canvas.gameObject.AddComponent<GraphicRaycaster>();
 
         group = canvas.gameObject.AddComponent<CanvasGroup>();
         group.alpha = 0f;
@@ -186,29 +190,46 @@ public class GameMessageUI : MonoBehaviour
         imagemInspecao.preserveAspect = true;
         imagemInspecao.raycastTarget = false;
 
-        conteudoInspecao = UIFactory.CreateLabel(painelInspecao.transform, "Transcricao", 18f);
+        var leitura = new GameObject("AreaLeitura", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
+        leitura.transform.SetParent(painelInspecao.transform, false);
+        var leituraRect = leitura.GetComponent<RectTransform>();
+        leituraRect.sizeDelta = new Vector2(272f, 242f);
+        leituraRect.anchoredPosition = new Vector2(142f, -10f);
+        leitura.GetComponent<Image>().color = new Color(0,0,0,.03f);
+        rolagemInspecao = leitura.GetComponent<ScrollRect>();
+        rolagemInspecao.horizontal = false;
+        rolagemInspecao.movementType = ScrollRect.MovementType.Clamped;
+        rolagemInspecao.scrollSensitivity = 24f;
+        rolagemInspecao.viewport = leituraRect;
+        conteudoInspecao = UIFactory.CreateLabel(leitura.transform, "Transcricao", 18f);
         conteudoInspecao.alignment = TextAlignmentOptions.TopLeft;
         conteudoInspecao.color = new Color(0.96f, 0.91f, 0.81f);
         conteudoInspecao.textWrappingMode = TextWrappingModes.Normal;
         RectTransform conteudoRect = conteudoInspecao.rectTransform;
-        conteudoRect.anchorMin = conteudoRect.anchorMax = new Vector2(0.5f, 0.5f);
-        conteudoRect.sizeDelta = new Vector2(272f, 242f);
-        conteudoRect.anchoredPosition = new Vector2(142f, -10f);
+        conteudoRect.anchorMin = new Vector2(0,1);
+        conteudoRect.anchorMax = new Vector2(1,1);
+        conteudoRect.pivot = new Vector2(.5f,1);
+        conteudoRect.sizeDelta = new Vector2(-4,0);
+        conteudoRect.anchoredPosition = Vector2.zero;
+        var ajustarTexto = conteudoInspecao.gameObject.AddComponent<ContentSizeFitter>();
+        ajustarTexto.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        rolagemInspecao.content = conteudoRect;
         TextMeshProUGUI ajudaInspecao = UIFactory.CreateLabel(painelInspecao.transform, "AjudaInspecao", 13f);
         ajudaInspecao.alignment = TextAlignmentOptions.BottomRight;
         ajudaInspecao.color = new Color(0.88f, 0.75f, 0.52f);
-        ajudaInspecao.text = "[E] FECHAR";
+        ajudaInspecao.text = "[RODA / CIMA / BAIXO] LER   •   [E] FECHAR";
         RectTransform ajudaRect = ajudaInspecao.rectTransform;
         ajudaRect.anchorMin = ajudaRect.anchorMax = new Vector2(1f, 0f);
         ajudaRect.pivot = new Vector2(1f, 0f);
         ajudaRect.anchoredPosition = new Vector2(-16f, 9f);
-        ajudaRect.sizeDelta = new Vector2(120f, 22f);
+        ajudaRect.sizeDelta = new Vector2(460f, 22f);
         painelInspecao.SetActive(false);
     }
 
-    public void ShowInspection(string titulo, string nomeSprite, string transcricao, Action aoFechar = null)
+    public void ShowInspection(string titulo, string nomeSprite, string transcricao, Action aoFechar = null, Sprite arteCustom = null)
     {
-        Sprite arte = Resources.Load<Sprite>("Cap1/" + nomeSprite);
+        SantaRitaSound.Play("inspect", .12f);
+        Sprite arte = arteCustom != null ? arteCustom : Resources.Load<Sprite>("Cap1/" + nomeSprite);
         if (arte == null)
         {
             Sprite[] sprites = Resources.LoadAll<Sprite>("Cap1/" + nomeSprite);
@@ -233,6 +254,9 @@ public class GameMessageUI : MonoBehaviour
         imagemInspecao.enabled = arte != null;
         tituloInspecao.text = titulo;
         conteudoInspecao.text = transcricao;
+        LayoutRebuilder.ForceRebuildLayoutImmediate(conteudoInspecao.rectTransform);
+        Canvas.ForceUpdateCanvases();
+        rolagemInspecao.verticalNormalizedPosition = 1;
         Show(new[] { new DialogoLinha("", "", "") }, () =>
         {
             painelInspecao.SetActive(false);
@@ -240,6 +264,15 @@ public class GameMessageUI : MonoBehaviour
             aoFechar?.Invoke();
         });
         dialogueBox.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!aberta || painelInspecao == null || !painelInspecao.activeSelf || Keyboard.current == null || MenuPausa.Aberto) return;
+        var k = Keyboard.current;
+        float eixo = (k.upArrowKey.isPressed || k.pageUpKey.isPressed ? 1f : 0f) -
+            (k.downArrowKey.isPressed || k.pageDownKey.isPressed ? 1f : 0f);
+        if (eixo != 0) rolagemInspecao.verticalNormalizedPosition = Mathf.Clamp01(rolagemInspecao.verticalNormalizedPosition + eixo * Time.unscaledDeltaTime * .7f);
     }
 
     public void Show(string mensagem)
@@ -266,7 +299,9 @@ public class GameMessageUI : MonoBehaviour
             return;
         }
 
+        if (!aberta) SantaRitaSound.Play("dialogue", .07f);
         paginasAtuais = linhas;
+        fechando = false;
         if (dialogueBox != null) dialogueBox.SetActive(true);
         indicePagina = 0;
         aoFecharCallback = aoFechar;
@@ -306,7 +341,7 @@ public class GameMessageUI : MonoBehaviour
     // aberta: primeiro pulo completa o texto, o segundo avança página ou fecha.
     public void Avancar()
     {
-        if (!aberta)
+        if (!aberta || fechando)
         {
             return;
         }
@@ -322,6 +357,7 @@ public class GameMessageUI : MonoBehaviour
             StopCoroutine(rotina);
         }
 
+        SantaRitaSound.Play("page", .065f);
         indicePagina++;
         if (paginasAtuais != null && indicePagina < paginasAtuais.Length)
         {
@@ -419,8 +455,10 @@ public class GameMessageUI : MonoBehaviour
 
     private IEnumerator Fechar()
     {
+        fechando = true;
         yield return Fade(0f, 0.25f);
         aberta = false;
+        fechando = false;
         digitando = false;
         rotina = null;
 

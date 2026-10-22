@@ -2397,21 +2397,6 @@ MonoBehaviour:
   volume: 0.35
   abafado: 1
   corteAbafado: 750
---- !u!115 &601028114
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: Capitulo1Director
-  m_Namespace: 
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &753386040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,7 +2425,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 753386040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1898187408}
+  m_Script: {fileID: 11500000, guid: 01bb5c743d2a467c9bdaaa41cc384237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteracaoCapitulo1
   interactionRadius: 1.6
@@ -2594,7 +2579,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 914734153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1898187408}
+  m_Script: {fileID: 11500000, guid: 01bb5c743d2a467c9bdaaa41cc384237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteracaoCapitulo1
   interactionRadius: 1.6
@@ -2703,7 +2688,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 924534630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1898187408}
+  m_Script: {fileID: 11500000, guid: 01bb5c743d2a467c9bdaaa41cc384237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteracaoCapitulo1
   interactionRadius: 1.6
@@ -2858,7 +2843,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1022702628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1898187408}
+  m_Script: {fileID: 11500000, guid: 01bb5c743d2a467c9bdaaa41cc384237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteracaoCapitulo1
   interactionRadius: 1.6
@@ -3011,7 +2996,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1410596941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 601028114}
+  m_Script: {fileID: 11500000, guid: 18b70ec0eb824a26bc3a4a34bd4898b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Capitulo1Director
 --- !u!4 &1410596943
@@ -3029,21 +3014,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &1898187408
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: InteracaoCapitulo1
-  m_Namespace: 
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &2101755326
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,7 +3042,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2101755326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1898187408}
+  m_Script: {fileID: 11500000, guid: 01bb5c743d2a467c9bdaaa41cc384237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteracaoCapitulo1
   interactionRadius: 1.6

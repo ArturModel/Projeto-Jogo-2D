@@ -388,8 +388,9 @@ public class PayphoneCheckpoint : Interactable
             }
             else
             {
-                string acao = s_modoApenasCarregar ? "<color=#88847C>[VAZIO]</color>" : "<color=#78D8FF>[GRAVAR AQUI]</color>";
-                s_textosSlot[i].text = $"<b>[{i + 1}] SLOT {i + 1}:</b> <color=#98948C>— Slot Vazio —</color>   {acao}";
+                string status = CheckpointSystem.DescreverSlotIndisponivel(i);
+                string acao = s_modoApenasCarregar ? "<color=#88847C>[INDISPONÍVEL]</color>" : "<color=#78D8FF>[GRAVAR AQUI]</color>";
+                s_textosSlot[i].text = $"<b>[{i + 1}] SLOT {i + 1}:</b> <color=#98948C>{status}</color>   {acao}";
             }
         }
     }
@@ -442,6 +443,14 @@ public class PayphoneCheckpoint : Interactable
 
     private string ProximaFalaContextual()
     {
+        if (Capitulo2Director.CenaDoCapitulo2(SceneManager.GetActiveScene().name))
+        {
+            if (GameState.Tem(Capitulo2Director.Vitoria))
+                return "\"Registro a segunda ficha e o relato de Tonão. O recado do vô menciona Amaro; ainda não sei para onde o levaram.\"";
+            if (GameState.Tem("c2_ajuda_comunicada"))
+                return "\"O plantão recebeu meu relato pelo telefone da Rodoviária. Organizo aqui as pistas antes de continuar.\"";
+            return "\"A linha está funcionando. Guardo no orelhão o que já consegui confirmar sobre a consulta do vô.\"";
+        }
         if (GameState.Tem(Flags.VenceuZeSinuca))
         {
             return "\"A linha continua chiando. Agora tenho a ficha do Clube e o que o Zé deixou escapar: Adilio não saiu de casa por vontade própria.\"";

@@ -49,3 +49,19 @@ desktop.ini
 # ---------------------------------------------------------------- trabalho
 # Versoes antigas de arte, que ficam so' na maquina de quem desenhou
 Arte/**/versao_antiga/
+
+# Capturas, logs e rodadas intermediarias de QA sao artefatos locais.
+# No Git ficam o resumo humano e os resultados finais selecionados.
+*.log
+__pycache__/
+/Docs/Evidencias/**
+!/Docs/Evidencias/**/
+!/Docs/Evidencias/**/*.md
+!/Docs/Evidencias/CidadeViva/verificacao-producao.txt
+!/Docs/Evidencias/CidadeViva/regras-save.txt
+!/Docs/Evidencias/CidadeViva/cenas-acessos.txt
+!/Docs/Evidencias/CidadeViva/PlayerFinal/build-windows.txt
+!/Docs/Evidencias/CidadeViva/PlayerFinal/c1-referencias.txt
+!/Docs/Evidencias/CidadeViva/PlayerFinal/startup-final.txt
+!/Docs/Evidencias/CidadeViva/PlayerQA/RuntimeFinal/runtime-qa.txt
+!/Docs/Evidencias/CidadeViva/PlayerQA/C1Final/runtime-qa.txt

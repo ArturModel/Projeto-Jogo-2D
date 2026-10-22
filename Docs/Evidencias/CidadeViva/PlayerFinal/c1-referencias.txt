@@ -1,0 +1,4 @@
+PASS EntradaDaCidade: componentes possuem MonoScript persistente e classe resolvida.
+PASS CasaDoAvo: componentes possuem MonoScript persistente e classe resolvida.
+PASS BarDoZe: componentes possuem MonoScript persistente e classe resolvida.
+PASS quinze terrenos disponíveis para leitura CPU no player.

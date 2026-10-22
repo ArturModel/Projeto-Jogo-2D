@@ -364,7 +364,16 @@ public class SceneFader : MonoBehaviour
                 "Assets/Scenes/Cidade/EntradaDaCidade.unity",
                 "Assets/Scenes/Cidade/CasaDoAvo.unity",
                 "Assets/Scenes/Cidade/BarDoZe.unity",
-                "Assets/Scenes/GameplayScene.unity"
+                "Assets/Scenes/GameplayScene.unity",
+                "Assets/Scenes/Cidade/CentroSantaRita.unity",
+                "Assets/Scenes/Cidade/IgrejaMatriz.unity",
+                "Assets/Scenes/Cidade/PrefeituraSantaRita.unity",
+                "Assets/Scenes/Cidade/RodoviariaSantaRita.unity",
+                "Assets/Scenes/Cidade/MercadinhoDeposito.unity",
+                "Assets/Scenes/Cidade/OficinaRadio.unity",
+                "Assets/Scenes/Cidade/CasaCostureira.unity",
+                "Assets/Scenes/Cidade/SociedadeBeiraRio.unity",
+                "Assets/Scenes/Cidade/AbrigoCemiterio.unity"
             };
 
             string rootProjeto = Directory.GetParent(Application.dataPath)?.FullName ?? "";

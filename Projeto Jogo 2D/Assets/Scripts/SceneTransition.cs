@@ -8,12 +8,21 @@ using UnityEngine;
 public static class SceneTransition
 {
     private static string entradaPendente;
+    private static Vector2? posicaoPendente;
+    public static void IrParaPosicao(string cena, Vector2 posicao)
+    {
+        entradaPendente = null; posicaoPendente = posicao;
+        SceneFader.Instance.LoadScene(cena);
+    }
 
     // Chamado pela porta. O nome tem que bater com o Id de um SpawnPoint na
     // cena de destino.
     public static void Ir(string cena, string entrada)
     {
+        if (!string.IsNullOrEmpty(entrada) && entrada != "c1_portao_norte" && entrada != "saida_bar_ze")
+            SantaRitaSound.Play("door", .2f);
         entradaPendente = entrada;
+        posicaoPendente = null;
         SceneFader.Instance.LoadScene(cena);
     }
 
@@ -24,6 +33,8 @@ public static class SceneTransition
     {
         posicao = Vector2.zero;
         direcao = -1;
+        if (posicaoPendente.HasValue)
+        { posicao = posicaoPendente.Value; posicaoPendente = null; return true; }
 
         if (string.IsNullOrEmpty(entradaPendente))
         {

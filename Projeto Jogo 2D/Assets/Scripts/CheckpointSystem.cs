@@ -22,10 +22,10 @@ public static class CheckpointSystem
 {
     public const int TotalSlots = 5;
     private const int SaveVersion = 2;
-    private const string PrefKeyPrimary = "SR_ManualSave_V2";
-    private const string PrefKeyBackup = "SR_ManualSave_V2_Bak";
-    private const string PrefKeySlotPrefix = "SR_ManualSave_V2_Slot_";
-    private const string PrefKeyLastSlot = "SR_ManualSave_V2_LastSlot";
+    private static string PrefKeyPrimary => TestPrefix + "SR_ManualSave_V2";
+    private static string PrefKeyBackup => TestPrefix + "SR_ManualSave_V2_Bak";
+    private static string PrefKeySlotPrefix => TestPrefix + "SR_ManualSave_V2_Slot_";
+    private static string PrefKeyLastSlot => TestPrefix + "SR_ManualSave_V2_LastSlot";
 
     private const string KeyExistsLegacy = "checkpoint.exists";
     private const string KeySceneLegacy = "checkpoint.scene";
@@ -35,9 +35,47 @@ public static class CheckpointSystem
     private static bool pendingSpawn;
     private static int pendingSlotIndex = -1;
 
-    private static string PrimaryFilePath => Path.Combine(Application.persistentDataPath, "santa_rita_save_v2.json");
-    private static string BackupFilePath => Path.Combine(Application.persistentDataPath, "santa_rita_save_v2.bak");
-    private static string SlotFilePath(int slot) => Path.Combine(Application.persistentDataPath, $"santa_rita_save_v2_slot_{slot}.json");
+    private static string PrimaryFilePath => Path.Combine(StorageDirectory, "santa_rita_save_v2.json");
+    private static string BackupFilePath => Path.Combine(StorageDirectory, "santa_rita_save_v2.bak");
+    private static string SlotFilePath(int slot) => Path.Combine(StorageDirectory, $"santa_rita_save_v2_slot_{slot}.json");
+    private static string StorageDirectory => testDirectory ?? Application.persistentDataPath;
+    private static string TestPrefix => testDirectory == null ? "" : "SRQA_" + Path.GetFileName(testDirectory) + "_";
+    private static string testDirectory;
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+    // Os testes do save usam arquivo e namespace de preferências próprios.
+    // Não apontar uma execução de QA para os slots pessoais do autor.
+    public static IDisposable BeginIsolatedTests()
+    {
+        if (testDirectory != null) throw new InvalidOperationException("Teste de save já isolado.");
+        var scope = new IsolatedSaveScope(GameState.ExportarSnapshot());
+        testDirectory = Path.Combine(Path.GetTempPath(), "SantaRitaC2SaveTests_" + Guid.NewGuid().ToString("N"));
+        Directory.CreateDirectory(testDirectory);
+        ClearPendingOnly();
+        GameState.ImportarSnapshot(new GameStateSnapshot());
+        return scope;
+    }
+
+    private sealed class IsolatedSaveScope : IDisposable
+    {
+        private readonly GameStateSnapshot anterior;
+        public IsolatedSaveScope(GameStateSnapshot estado) { anterior = estado; }
+        public void Dispose()
+        {
+            if (testDirectory == null) return;
+            PlayerPrefs.DeleteKey(PrefKeyPrimary);
+            PlayerPrefs.DeleteKey(PrefKeyBackup);
+            PlayerPrefs.DeleteKey(PrefKeyLastSlot);
+            for (int i = 0; i < TotalSlots; i++) PlayerPrefs.DeleteKey(PrefKeySlotPrefix + i);
+            string criadaPeloTeste = testDirectory;
+            testDirectory = null;
+            ClearPendingOnly();
+            GameState.ImportarSnapshot(anterior);
+            if (Path.GetFileName(criadaPeloTeste).StartsWith("SantaRitaC2SaveTests_"))
+                Directory.Delete(criadaPeloTeste, true);
+        }
+    }
+#endif
 
     public static bool HasCheckpoint
     {
@@ -69,6 +107,8 @@ public static class CheckpointSystem
         if (!string.IsNullOrEmpty(payphoneId))
         {
             string id = payphoneId.ToLowerInvariant();
+            if (id.Contains("bocha") || id.Contains("beira_rio")) return "Sociedade Beira-Rio (Bocha)";
+            if (id.Contains("centro") || id.Contains("matriz")) return "Centro — Praça da Matriz";
             if (id.Contains("rodovia") || id.Contains("entrada")) return "Rodovia de Entrada";
             if (id.Contains("posto")) return "Avenida Sul (Posto)";
             if (id.Contains("encruzilhada") || id.Contains("mercado")) return "Encruzilhada Central";
@@ -174,6 +214,26 @@ public static class CheckpointSystem
             return true;
 
         return false;
+    }
+
+    // Consulta sem apagar ou regravar saves. As cópias de recuperação continuam
+    // sendo tentadas pelo leitor; só descreve o problema se nenhuma for válida.
+    public static string DescreverSlotIndisponivel(int slotIndex)
+    {
+        string path = SlotFilePath(slotIndex);
+        string json = null;
+        try { if (File.Exists(path)) json = File.ReadAllText(path); }
+        catch { return "Arquivo sem acesso — preservado"; }
+        if (json == null && PlayerPrefs.HasKey(PrefKeySlotPrefix + slotIndex))
+            json = PlayerPrefs.GetString(PrefKeySlotPrefix + slotIndex);
+        if (json == null) return "Slot vazio";
+        try
+        {
+            var d = JsonUtility.FromJson<ManualSaveData>(json);
+            if (d != null && d.versao != SaveVersion) return "Versão incompatível — arquivo preservado";
+        }
+        catch { }
+        return "Save inválido — arquivo preservado";
     }
 
     public static void RequestSpawnAtSlot(int slotIndex)
@@ -301,8 +361,12 @@ public static class CheckpointSystem
             var parsed = JsonUtility.FromJson<ManualSaveData>(json);
             if (parsed == null) return false;
             if (parsed.versao != SaveVersion) return false;
-            if (string.IsNullOrEmpty(parsed.sceneName)) return false;
+            if (parsed.sceneName != "EntradaDaCidade" && parsed.sceneName != "CasaDoAvo" && parsed.sceneName != "BarDoZe" &&
+                !Capitulo2Director.CenaDoCapitulo2(parsed.sceneName)) return false;
+            if (float.IsNaN(parsed.posX) || float.IsInfinity(parsed.posX) ||
+                float.IsNaN(parsed.posY) || float.IsInfinity(parsed.posY)) return false;
             if (parsed.estado == null) parsed.estado = new GameStateSnapshot();
+            if (parsed.estado.versao > 2) return false;
             if (string.IsNullOrEmpty(parsed.localDescricao))
                 parsed.localDescricao = ObterNomeAmigavelOrelhao(parsed.payphoneId, parsed.sceneName);
             data = parsed;

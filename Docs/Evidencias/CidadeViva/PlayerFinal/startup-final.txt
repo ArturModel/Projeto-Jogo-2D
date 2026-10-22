@@ -1,0 +1,6 @@
+Inicialização do player final de 22/10/2026, modo batch, namespace normal sem carregar slot.
+Unity/Mono, PhysX e Direct3D11 inicializaram; processo permaneceu respondendo.
+Erros de script/shader encontrados: 0
+Instância de teste encerrada após observação; não é campanha humana nem prova de saída natural.
+Modo batch reportou fallback de ExclusiveFullscreen para FullscreenWindow e avisos do vídeo H264 já presente. Resoluções/pausa foram exercitadas na build QA interativa.
+PASS: QA Chapter2RuntimeVerification e autoria SantaRitaLivingWorldAuthoring ausentes da assembly final.

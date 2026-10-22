@@ -23,5 +23,32 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameplayScene.unity
     guid: cb2af9c13ba4ce54da648df19de8e36a
+  - enabled: 1
+    path: Assets/Scenes/Cidade/CentroSantaRita.unity
+    guid: d369d6ccfd96e684db388aedf49fe3a4
+  - enabled: 1
+    path: Assets/Scenes/Cidade/IgrejaMatriz.unity
+    guid: 996374b9ac295f94f9fd77337c5c1f34
+  - enabled: 1
+    path: Assets/Scenes/Cidade/PrefeituraSantaRita.unity
+    guid: 1c590686403f1874d98bfc18609ecc46
+  - enabled: 1
+    path: Assets/Scenes/Cidade/RodoviariaSantaRita.unity
+    guid: b32ab95474d5449478482245cdb98b63
+  - enabled: 1
+    path: Assets/Scenes/Cidade/MercadinhoDeposito.unity
+    guid: f7fec3124ce2c9f4d9d38fbd5205faea
+  - enabled: 1
+    path: Assets/Scenes/Cidade/OficinaRadio.unity
+    guid: 33c465d1e2eb7e446b3b95659a9a9076
+  - enabled: 1
+    path: Assets/Scenes/Cidade/CasaCostureira.unity
+    guid: 190b0a282abb1e245a499d34b4b77af1
+  - enabled: 1
+    path: Assets/Scenes/Cidade/SociedadeBeiraRio.unity
+    guid: 908ecd867455a07419d52a74ce24e128
+  - enabled: 1
+    path: Assets/Scenes/Cidade/AbrigoCemiterio.unity
+    guid: df23de0fb5b25794c82354ce05053ecd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

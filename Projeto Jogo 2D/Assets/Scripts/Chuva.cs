@@ -380,6 +380,8 @@ public class Chuva : MonoBehaviour
             return;
         }
 
+        var cover=Physics2D.OverlapPoint(g.alvo);
+        if(cover!=null&&!cover.isTrigger&&cover.GetComponentInParent<PlayerController>()==null)return;
         bool naPoca = DentroDePoca(g.alvo);
         Color luz = BrilhoEm(g.alvo, out float forca);
 
@@ -394,6 +396,9 @@ public class Chuva : MonoBehaviour
             cor = Color.Lerp(corGota, luz, Mathf.Clamp01(forca) * 0.6f),
         });
     }
+
+    public void RespingoDePasso(Vector2 posicao)
+    { NovoRespingo(new Gota { alvo=posicao,peso=.75f }); }
 
     private bool DentroDePoca(Vector2 p)
     {

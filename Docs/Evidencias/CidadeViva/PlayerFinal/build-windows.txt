@@ -1,0 +1,7 @@
+Unity 6000.6.0f1 Windows x64 Player
+Succeeded
+Erros: 0
+Bytes: 222285544
+Duração: 00:01:10.4841639
+Executável: C:\Users\Usuario\Projeto-Jogo-2D\Build\Capitulo2/SantaRita.exe
+UTC: 2026-10-22T03:25:34.4914880Z

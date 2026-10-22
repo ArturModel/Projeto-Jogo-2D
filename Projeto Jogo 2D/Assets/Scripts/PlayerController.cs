@@ -55,17 +55,24 @@ public class PlayerController : MonoBehaviour
     private string estadoAnimacao;
     private SpriteRenderer corpo;
     private Sprite[,] quadrosCaminhada;
+    private Sprite[] quadrosRepouso;
     private Sprite[,] quadrosCaminhadaComLanterna;
     private SpriteRenderer lanternaMaoRenderer;
     private Sprite spriteLanternaHorizontal;
     private Sprite spriteLanternaBaixo;
     private Sprite spriteLanternaCima;
-    private float tempoPasso;
+    private readonly MarcusGait passada = new MarcusGait();
+    private Vector2 ultimaPosicaoAnimacao;
+    private int totalQuadros = 6;
+    public int QuadroCaminhada { get; private set; }
+    public event System.Action PeApoiou;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        ultimaPosicaoAnimacao = rb.position;
         corpo = GetComponent<SpriteRenderer>();
         if (corpo != null)
         {
@@ -187,7 +194,7 @@ public class PlayerController : MonoBehaviour
             return false;
 
         // Regra solicitada: Marcus só fica com a lanterna na rua; em interiores fica SEM lanterna.
-        if (Capitulo1Director.EstaEmInterior)
+        if (Capitulo1Director.EstaEmInterior || (Capitulo2Director.Instance != null && Capitulo2Director.Instance.interior))
             return false;
 
         string cena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
@@ -199,18 +206,25 @@ public class PlayerController : MonoBehaviour
 
     private void PrepararCaminhadaMarcus()
     {
-        string arquivo = Path.Combine(Application.streamingAssetsPath, "MarcusWalk.png");
+        string arquivo = Path.Combine(Application.streamingAssetsPath, "MarcusWalkFluido.png");
+        if (!File.Exists(arquivo)) arquivo = Path.Combine(Application.streamingAssetsPath, "MarcusWalk.png");
         if (corpo == null || !File.Exists(arquivo)) return;
         Texture2D folha = new Texture2D(2, 2, TextureFormat.RGBA32, false);
         if (!ImageConversion.LoadImage(folha, File.ReadAllBytes(arquivo))) return;
         folha.filterMode = FilterMode.Point;
         folha.wrapMode = TextureWrapMode.Clamp;
-        quadrosCaminhada = new Sprite[3, 6];
+        totalQuadros = folha.width >= 512 ? 8 : 6;
+        quadrosCaminhada = new Sprite[3, totalQuadros];
         for (int direcao = 0; direcao < 3; direcao++)
-            for (int passo = 0; passo < 6; passo++)
+            for (int passo = 0; passo < totalQuadros; passo++)
                 quadrosCaminhada[direcao, passo] = Sprite.Create(folha,
                     new Rect(passo * 64, folha.height - (direcao + 1) * 64, 64, 64),
                     new Vector2(0.5f, 0.125f), 32f, 0, SpriteMeshType.FullRect);
+        quadrosRepouso = new Sprite[3];
+        for (int direcao = 0; direcao < 3; direcao++)
+            quadrosRepouso[direcao] = folha.width >= 576 ? Sprite.Create(folha,
+                new Rect(512, folha.height - (direcao + 1) * 64, 64, 64),
+                new Vector2(.5f, .125f), 32f, 0, SpriteMeshType.FullRect) : quadrosCaminhada[direcao, 0];
 
         // A arte anterior trazia seis quadros no Animator, mas quase todos
         // eram cópias. O sprite novo já inclui as roupas em cada pose.
@@ -258,6 +272,8 @@ public class PlayerController : MonoBehaviour
         transform.position = destino;
         currentVelocity = Vector2.zero;
         moveInput = Vector2.zero;
+        ultimaPosicaoAnimacao = destino;
+        passada.Reset();
         estadoAnimacao = null;
 
         if (direcao >= DirDown && direcao <= DirRight)
@@ -282,7 +298,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // Com a pausa, mapa, orelhão ou minigame de sinuca abertos, o jogador não anda nem interage por baixo.
-        if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen)
+        if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen)
         {
             moveInput = Vector2.zero;
             if (InteractionPrompt.Instance != null)
@@ -364,22 +380,12 @@ public class PlayerController : MonoBehaviour
                     : (moveInput.y > 0f ? DirUp : DirDown);
         }
 
-        if (corpo != null && corpo.sortingOrder < 10)
+        if (corpo != null && Capitulo2Director.Instance == null && corpo.sortingOrder < 10)
         {
             corpo.sortingOrder = 10;
         }
 
-        int passoAtual = 0;
-        if (quadrosCaminhada != null)
-        {
-            if (isMoving) tempoPasso += Time.deltaTime * 8f;
-            else tempoPasso = 0f;
-            passoAtual = isMoving ? (int)tempoPasso % 6 : 0;
-            int linha = facingDirection == DirUp ? 1 :
-                (facingDirection == DirLeft || facingDirection == DirRight ? 2 : 0);
-            corpo.sprite = quadrosCaminhada[linha, passoAtual];
-        }
-        else
+        if (quadrosCaminhada == null)
         {
             UpdateAnimator(animator, isMoving, isInteracting);
             UpdateAnimator(outfitAnimator, isMoving, isInteracting);
@@ -390,9 +396,9 @@ public class PlayerController : MonoBehaviour
                 facingDirection == DirLeft ? "Left" : "Right");
         if (estadoAnimacao != novoEstado)
         {
-            if (animator != null && animator.runtimeAnimatorController != null)
+            if (animator != null && animator.isActiveAndEnabled && animator.runtimeAnimatorController != null)
                 animator.CrossFadeInFixedTime(novoEstado, 0.06f);
-            if (outfitAnimator != null && outfitAnimator.runtimeAnimatorController != null)
+            if (outfitAnimator != null && outfitAnimator.isActiveAndEnabled && outfitAnimator.runtimeAnimatorController != null)
                 outfitAnimator.CrossFadeInFixedTime(novoEstado, 0.06f);
             estadoAnimacao = novoEstado;
         }
@@ -410,17 +416,44 @@ public class PlayerController : MonoBehaviour
             SetFacingScale(1f);
         }
 
-        AtualizarLanternaERenderizadorMao(passoAtual, isMoving);
     }
 
     private void LateUpdate()
     {
+        AtualizarPassada();
+        if (corpo != null)
+            corpo.sortingOrder = 1000 - Mathf.RoundToInt(transform.position.y * 10);
+        if (lanternaMaoRenderer != null && corpo != null)
+            lanternaMaoRenderer.sortingOrder = corpo.sortingOrder + (facingDirection == DirUp ? -1 : 1);
         // Garante que ao entrar/sair de um interior ou fechar diálogo a lanterna ligue/desligue imediatamente.
         bool usarLanterna = DeveUsarLanternaAgora();
         if (flashlight != null && flashlight.gameObject.activeSelf != usarLanterna)
             flashlight.gameObject.SetActive(usarLanterna);
         if (lanternaMaoRenderer != null && lanternaMaoRenderer.gameObject.activeSelf != usarLanterna)
             lanternaMaoRenderer.gameObject.SetActive(usarLanterna);
+    }
+
+    private void AtualizarPassada()
+    {
+        Vector2 agora = transform.position; // Posição interpolada, inclusive entre ticks de física.
+        float distancia = Vector2.Distance(agora, ultimaPosicaoAnimacao);
+        ultimaPosicaoAnimacao = agora;
+        // A pausa conserva a pose; diálogo e parada voltam ao repouso sem som.
+        if (Time.timeScale == 0 || MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
+            SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
+        int apoios = 0;
+        passada.Avancar(GameMessageUI.IsShowing ? 0 : distancia, () => apoios++);
+        QuadroCaminhada = passada.Quadro;
+        int quadro = totalQuadros == 8 ? QuadroCaminhada : QuadroCaminhada * totalQuadros / 8;
+        if (quadrosCaminhada != null)
+        {
+            int linha = facingDirection == DirUp ? 1 :
+                (facingDirection == DirLeft || facingDirection == DirRight ? 2 : 0);
+            corpo.sprite = distancia < .0001f || GameMessageUI.IsShowing ? quadrosRepouso[linha] : quadrosCaminhada[linha, quadro];
+        }
+        // Pose já aplicada neste frame: som e imagem compartilham o contato.
+        for (int i = 0; i < apoios; i++) PeApoiou?.Invoke();
+        AtualizarLanternaERenderizadorMao(QuadroCaminhada, distancia > .0001f);
     }
 
     private void AtualizarLanternaERenderizadorMao(int passoAtual, bool isMoving)
@@ -439,11 +472,11 @@ public class PlayerController : MonoBehaviour
 
         // Balanço sutil de 1 pixel na mão acompanhando a passada de caminhada
         float pixel = 1f / Mathf.Max(1, pixelsPerUnit);
-        float bobY = (isMoving && (passoAtual == 1 || passoAtual == 4)) ? pixel : 0f;
+        float bobY = (isMoving && (passoAtual == 3 || passoAtual == 7)) ? pixel : 0f;
         float swingX = 0f;
         if (isMoving && (facingDirection == DirLeft || facingDirection == DirRight))
         {
-            swingX = (passoAtual == 1 || passoAtual == 2) ? pixel : ((passoAtual == 4 || passoAtual == 5) ? -pixel : 0f);
+            swingX = passoAtual < 4 ? pixel : -pixel;
         }
 
         Vector2 offsetMaoMundo;
@@ -512,7 +545,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateAnimator(Animator anim, bool isMoving, bool isInteracting)
     {
-        if (anim == null || anim.runtimeAnimatorController == null)
+        if (anim == null || !anim.isActiveAndEnabled || anim.runtimeAnimatorController == null)
         {
             return;
         }
@@ -534,6 +567,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameMessageUI.IsShowing || MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
+            SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen)
+        { currentVelocity = Vector2.zero; return; }
         // A velocidade nunca muda de uma vez: ganha e perde embalo aos poucos,
         // o que dá o peso de "cada passo é uma decisão".
         Vector2 targetVelocity = moveInput * moveSpeed;

@@ -915,6 +915,7 @@ public class SinucaMinigameUI : MonoBehaviour
                         if (velAlongNormal < 0f)
                         {
                             float impulse = -velAlongNormal * 0.96f;
+                            if (impulse > 5) SantaRitaSound.Play("sinuca", Mathf.Clamp(impulse * .001f, .025f, .2f), 1.1f, .065f);
                             bolas[i].vel -= normal * impulse;
                             bolas[j].vel += normal * impulse;
                         }

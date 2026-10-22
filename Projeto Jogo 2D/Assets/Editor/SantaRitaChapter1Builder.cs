@@ -9,7 +9,6 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[InitializeOnLoad]
 public static class SantaRitaChapter1Builder
 {
     private const string SpritesDir = "Assets/Sprites/Capitulo1";
@@ -23,15 +22,8 @@ public static class SantaRitaChapter1Builder
 
     static SantaRitaChapter1Builder()
     {
-        TryRunAutoSetup();
-        EditorApplication.delayCall += TryRunAutoSetup;
-        EditorApplication.playModeStateChanged += state =>
-        {
-            if (state == PlayModeStateChange.EnteredEditMode)
-            {
-                EditorApplication.delayCall += TryRunAutoSetup;
-            }
-        };
+        // C1 aprovado: autoria somente pelo comando explícito do menu.
+        // Abrir um checkout sem Library não pode reescrever cenas ou saves.
     }
 
     private static void TryRunAutoSetup()
@@ -597,10 +589,12 @@ public static class SantaRitaChapter1Builder
 
     private static void RunAutomatedVerification()
     {
+        using (CheckpointSystem.BeginIsolatedTests())
+        {
         Debug.Log("=== [SANTA RITA] Executando Testes Automatizados de Invariantes R1 ===");
 
         CheckpointSystem.Clear();
-        GameState.Limpar();
+        GameState.ImportarSnapshot(new GameStateSnapshot());
         GameState.Marcar(Flags.ChegouCasaAvo);
         GameState.RegistrarNotaDiario("teste_ram", "Nota em RAM", "FATO", "Apenas na memória da sessão.");
 
@@ -621,7 +615,7 @@ public static class SantaRitaChapter1Builder
             throw new Exception("Falha no Teste 1E: Recarregar o save do orelhão perdeu flag salva antes do orelhão.");
 
         CheckpointSystem.Clear();
-        GameState.Limpar();
+        GameState.ImportarSnapshot(new GameStateSnapshot());
 
         GameObject hostSinuca = new GameObject("TesteSinucaHost");
         SinucaMinigameUI sinuca = hostSinuca.AddComponent<SinucaMinigameUI>();
@@ -637,6 +631,7 @@ public static class SantaRitaChapter1Builder
         UnityEngine.Object.DestroyImmediate(hostSinuca);
 
         Debug.Log("=== [SANTA RITA] Todos os Testes Automatizados Passaram! ===");
+        }
     }
 
     private static void BuildWindows64Player()
