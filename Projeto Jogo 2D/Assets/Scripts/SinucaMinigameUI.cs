@@ -93,7 +93,7 @@ public class SinucaMinigameUI : MonoBehaviour
     private readonly Vector2[] cacapas = new Vector2[6];
 
     private EstadoPartida estado = EstadoPartida.Inativo;
-    private EstadoPartida estadoAnteriorModal = EstadoPartida.MirandoJogador;
+    public static int MaoEmCurso => IsShowing ? instance.maoAtual : 0;
 
     private int maoAtual = 1;
     private int maosVencidasMarcus = 0;
@@ -144,10 +144,23 @@ public class SinucaMinigameUI : MonoBehaviour
 
     public void Fechar()
     {
+        StopAllCoroutines();
+        onVictoryCallback = null;
         if (painelModal != null) painelModal.SetActive(false);
         if (raiz != null) raiz.SetActive(false);
         estado = EstadoPartida.Inativo;
     }
+
+    public void CancelarCargaAoSuspender()
+    {
+        if (estado != EstadoPartida.CarregandoForca) return;
+        forcaNormalizada = 0;
+        if (barraForcaFill != null) barraForcaFill.fillAmount = 0;
+        estado = EstadoPartida.MirandoJogador;
+    }
+
+    private void OnApplicationFocus(bool focus)
+    { if (!focus) CancelarCargaAoSuspender(); }
 
     public static void EnsureInstance()
     {
@@ -374,6 +387,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void ComecarNovaSerie(Action aoVencer)
     {
+        StopAllCoroutines();
         onVictoryCallback = aoVencer;
         maoAtual = 1;
         maosVencidasMarcus = 0;
@@ -402,8 +416,8 @@ public class SinucaMinigameUI : MonoBehaviour
     private void AbrirModalRegrasDuranteJogo()
     {
         if (painelModal.activeSelf) return;
-        estadoAnteriorModal = estado;
-        estado = EstadoPartida.TutorialRegras;
+        // Painel é uma sobreposição. Não substituir o estado da mesa por um
+        // estado de tutorial que uma coroutine poderia restaurar fora de hora.
         MostrarModal(
             "REGRAS — A BOLA MARCADA",
             "• <b>7 Bolas Compartilhadas:</b> Qualquer bola numerada (1 a 7) vale 1 ponto. Quem fizer <b>4 pontos</b> vence a mão.\n" +
@@ -413,7 +427,6 @@ public class SinucaMinigameUI : MonoBehaviour
             () =>
             {
                 painelModal.SetActive(false);
-                estado = estadoAnteriorModal;
             },
             null, null
         );
@@ -537,7 +550,7 @@ public class SinucaMinigameUI : MonoBehaviour
         {
             estado = EstadoPartida.TurnoZePensando;
             txtTurnoStatus.text = "VEZ DE ZÉ: Zé está avaliando a mesa...";
-            StartCoroutine(ExecutarTurnoZeCoroutine());
+            if (Application.isPlaying) StartCoroutine(ExecutarTurnoZeCoroutine());
         }
     }
 
@@ -582,7 +595,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
     void Update()
     {
-        if (!IsShowing) return;
+        if (!IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
         if (MenuPausa.Aberto) return;
         if (painelModal != null && painelModal.activeSelf) return;
 
@@ -744,11 +757,16 @@ public class SinucaMinigameUI : MonoBehaviour
             SincronizarTransformBolas();
             brancaNaMao = false;
             yield return new WaitForSeconds(0.45f);
+            while (MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf))
+                yield return null;
         }
 
         EscolherTacadaZe(out Vector2 direcaoZe, out float velocidadeZe);
         anguloMiraRad = Mathf.Atan2(direcaoZe.y, direcaoZe.x);
         yield return new WaitForSeconds(0.55f);
+        while (MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf))
+            yield return null;
+        if (estado != EstadoPartida.TurnoZePensando) yield break;
 
         ExecutarTacada(direcaoZe, velocidadeZe);
     }
@@ -867,7 +885,7 @@ public class SinucaMinigameUI : MonoBehaviour
                     b.ativa = false;
                     b.vel = Vector2.zero;
                     b.caiuNestaTacada = true;
-                    houveToqueTabelaOuCacapa = true;
+                    if (houvePrimeiroContatoBolaObjeto) houveToqueTabelaOuCacapa = true;
 
                     if (b.numero == 0)
                     {
@@ -882,11 +900,11 @@ public class SinucaMinigameUI : MonoBehaviour
                     continue;
                 }
 
-                if (b.pos.x < -limX) { b.pos.x = -limX; b.vel.x = -b.vel.x * CushionRestitution; houveToqueTabelaOuCacapa = true; }
-                else if (b.pos.x > limX) { b.pos.x = limX; b.vel.x = -b.vel.x * CushionRestitution; houveToqueTabelaOuCacapa = true; }
+                if (b.pos.x < -limX) { b.pos.x = -limX; b.vel.x = -b.vel.x * CushionRestitution; RegistrarTabela(); }
+                else if (b.pos.x > limX) { b.pos.x = limX; b.vel.x = -b.vel.x * CushionRestitution; RegistrarTabela(); }
 
-                if (b.pos.y < -limY) { b.pos.y = -limY; b.vel.y = -b.vel.y * CushionRestitution; houveToqueTabelaOuCacapa = true; }
-                else if (b.pos.y > limY) { b.pos.y = limY; b.vel.y = -b.vel.y * CushionRestitution; houveToqueTabelaOuCacapa = true; }
+                if (b.pos.y < -limY) { b.pos.y = -limY; b.vel.y = -b.vel.y * CushionRestitution; RegistrarTabela(); }
+                else if (b.pos.y > limY) { b.pos.y = limY; b.vel.y = -b.vel.y * CushionRestitution; RegistrarTabela(); }
             }
 
             for (int i = 0; i < bolas.Count; i++)
@@ -1007,7 +1025,7 @@ public class SinucaMinigameUI : MonoBehaviour
             AtualizarTextosHUD();
 
             txtTurnoStatus.text = "FALTA! (" + motivoFalta + ") — Bola na mão para " + (turnoDeMarcus ? "Marcus." : "Zé.");
-            StartCoroutine(AguardarEIniciarProximoTurno(1.6f));
+            AgendarProximoTurno(1.6f);
             return;
         }
 
@@ -1038,7 +1056,18 @@ public class SinucaMinigameUI : MonoBehaviour
         }
 
         brancaNaMao = false;
-        StartCoroutine(AguardarEIniciarProximoTurno(1.1f));
+        AgendarProximoTurno(1.1f);
+    }
+
+    private void RegistrarTabela()
+    {
+        if (houvePrimeiroContatoBolaObjeto) houveToqueTabelaOuCacapa = true;
+    }
+
+    private void AgendarProximoTurno(float segundos)
+    {
+        // EditMode executa o mesmo resolver síncrono sem iniciar uma rotina.
+        if (Application.isPlaying) StartCoroutine(AguardarEIniciarProximoTurno(segundos));
     }
 
     public bool ValidarInvarianteSeteBolas()
@@ -1053,6 +1082,9 @@ public class SinucaMinigameUI : MonoBehaviour
     private IEnumerator AguardarEIniciarProximoTurno(float segundos)
     {
         yield return new WaitForSeconds(segundos);
+        while (MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf))
+            yield return null;
+        if (estado != EstadoPartida.ResolvendoTacada) yield break;
         IniciarTurnoAtual();
     }
 
@@ -1131,14 +1163,13 @@ public class SinucaMinigameUI : MonoBehaviour
                 "FIM DA SÉRIE (" + maosVencidasMarcus + " A " + maosVencidasZe + ") — ZÉ ENCERRA A CONVERSA",
                 "Zé apaga a lâmpada sobre a mesa de sinuca:\n" +
                 "<i>\"Você está com a cabeça em 1998, Marcus. Volte quando tiver firmeza para ouvir o que aconteceu hoje.\"</i>\n\n" +
-                "Deseja retornar ao último <b>Orelhão salvo manualmente</b> ou voltar ao Menu Principal?",
-                "ÚLTIMO ORELHÃO (SAVE)",
+                "Escolha qual <b>registro manual</b> deseja carregar, ou volte ao Menu Principal.",
+                "ESCOLHER SAVE",
                 () =>
                 {
                     painelModal.SetActive(false);
-                    raiz.SetActive(false);
-                    estado = EstadoPartida.Inativo;
-                    CheckpointSystem.RecarregarUltimoSaveManual();
+                    PayphoneCheckpoint.AbrirSelecaoCarregar(ConcluirSerieDerrota, () =>
+                    { raiz.SetActive(false); estado = EstadoPartida.Inativo; });
                 },
                 "MENU PRINCIPAL",
                 () =>
@@ -1337,6 +1368,7 @@ public class SinucaMinigameUI : MonoBehaviour
         r.sizeDelta = tam;
     }
 
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
     public bool SimularTesteDeInvariantes(out string relatorio)
     {
         // 1. Verifica Mão 1: 7 bolas na mesa, 0 pontos, sem bola marcada
@@ -1362,29 +1394,25 @@ public class SinucaMinigameUI : MonoBehaviour
             return false;
         }
 
-        // 3. Simula falta de encaçapar a Bola Marcada: não pode somar ponto e a bola deve voltar pra mesa sem colisão
+        // 3. Mesmo resolver da partida: falta e bola comum caem na mesma tacada.
         int marcada = numeroBolaMarcada;
+        int comum = marcada == 1 ? 2 : 1;
         turnoDeMarcus = true;
         bolas[marcada].ativa = false;
+        bolas[comum].ativa = false;
         bolas[marcada].caiuNestaTacada = true;
         bolasObjetoCaidasNaTacada.Clear();
         bolasObjetoCaidasNaTacada.Add(marcada);
+        bolasObjetoCaidasNaTacada.Add(comum);
         bolaMarcadaCaiuNestaTacada = true;
         brancaCaiuNestaTacada = false;
         houvePrimeiroContatoBolaObjeto = true;
         houveToqueTabelaOuCacapa = true;
 
-        // Executa a lógica síncrona de falta sem precisar de coroutine em EditMode
-        for (int i = 0; i < bolasObjetoCaidasNaTacada.Count; i++)
-        {
-            int num = bolasObjetoCaidasNaTacada[i];
-            BolaMesa b = bolas[num];
-            b.ativa = true;
-            b.vel = Vector2.zero;
-            b.caiuNestaTacada = false;
-            b.pos = EncontrarPosicaoLivreDeterministica(new Vector2(75f + i * 22f, 0f), num);
-        }
-        if (!ValidarInvarianteSeteBolas() || !bolas[marcada].ativa)
+        ResolverFimDaTacada();
+        if (!ValidarInvarianteSeteBolas() || !bolas[marcada].ativa || !bolas[comum].ativa ||
+            pontosMarcus != 0 || pontosZe != 0 || turnoDeMarcus || !brancaNaMao ||
+            !PosicaoValidaSemColisao(bolas[marcada].pos, marcada))
         {
             relatorio = "Falta na Bola Marcada não repôs a bola na mesa preservando soma == 7.";
             return false;
@@ -1407,7 +1435,34 @@ public class SinucaMinigameUI : MonoBehaviour
             return false;
         }
 
-        relatorio = "Invariante 7 bolas (marcus+ze+mesa==7) OK | Mão 1 franca OK | Mão 2 Bola Marcada [X] + reposição sem sobreposição OK | Desativação <2 bolas OK.";
+        // Quarta bola e branca caem juntas: não pode declarar vitória.
+        ConfigurarMao(1); pontosMarcus = 3;
+        for (int i = 1; i <= 4; i++) bolas[i].ativa = false;
+        bolasObjetoCaidasNaTacada.Clear(); bolasObjetoCaidasNaTacada.Add(4);
+        brancaCaiuNestaTacada = true; bolaMarcadaCaiuNestaTacada = false;
+        ResolverFimDaTacada();
+        if (pontosMarcus != 3 || maosVencidasMarcus != 0 || !bolas[4].ativa || !ValidarInvarianteSeteBolas())
+        { relatorio = "Quarta bola + branca não anulou pontuação antes de decidir vencedor."; return false; }
+
+        // Séries completas pelos resultados do resolver (entradas controladas, sem alegar tacadas humanas).
+        foreach (var winners in new[] { new[] { true, true }, new[] { true, false, true }, new[] { false, false } })
+        {
+            maosVencidasMarcus = maosVencidasZe = 0;
+            for (int h = 0; h < winners.Length; h++)
+            {
+                ConfigurarMao(h + 1); turnoDeMarcus = winners[h];
+                numeroBolaMarcada = -1;
+                bolasObjetoCaidasNaTacada.Clear();
+                for (int i = 1; i <= 4; i++) { bolas[i].ativa = false; bolasObjetoCaidasNaTacada.Add(i); }
+                brancaCaiuNestaTacada = bolaMarcadaCaiuNestaTacada = false;
+                houvePrimeiroContatoBolaObjeto = houveToqueTabelaOuCacapa = true;
+                ResolverFimDaTacada();
+            }
+            if (estado != (winners[winners.Length - 1] ? EstadoPartida.FimDeSerieVitoria : EstadoPartida.FimDeSerieDerrota))
+            { relatorio = "Resolver não concluiu série 2–0/2–1/derrota."; return false; }
+        }
+        relatorio = "Resolver real: falta + bola comum; quarta bola + branca; reposição sem sobreposição; série 2–0/2–1 e derrota; invariante 7 bolas; marcada desativa com uma bola.";
         return true;
     }
+#endif
 }

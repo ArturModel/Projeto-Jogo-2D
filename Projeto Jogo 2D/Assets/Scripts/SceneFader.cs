@@ -55,6 +55,7 @@ public class SceneFader : MonoBehaviour
     private TextMeshProUGUI bannerTitulo;
     private TextMeshProUGUI bannerSubtitulo;
     private bool isTransitioning;
+    public static bool IsTransitioning => instance != null && instance.isTransitioning;
     private Coroutine bannerRoutine;
 
     private void Awake()
@@ -340,6 +341,7 @@ public class SceneFader : MonoBehaviour
 
     private static void SincronizarCenasNoEditor()
     {
+#if UNITY_EDITOR
         if (!Application.isEditor)
         {
             return;
@@ -373,7 +375,8 @@ public class SceneFader : MonoBehaviour
                 "Assets/Scenes/Cidade/OficinaRadio.unity",
                 "Assets/Scenes/Cidade/CasaCostureira.unity",
                 "Assets/Scenes/Cidade/SociedadeBeiraRio.unity",
-                "Assets/Scenes/Cidade/AbrigoCemiterio.unity"
+                "Assets/Scenes/Cidade/AbrigoCemiterio.unity",
+                "Assets/Scenes/Cidade/CemiterioSantaRita.unity"
             };
 
             string rootProjeto = Directory.GetParent(Application.dataPath)?.FullName ?? "";
@@ -399,12 +402,24 @@ public class SceneFader : MonoBehaviour
             }
 
             PropertyInfo propScenes = ebsType.GetProperty("scenes", BindingFlags.Public | BindingFlags.Static);
-            propScenes?.SetValue(null, arr, null);
+            // A sincronização antiga reescrevia a lista inteira em cada Play e removia o Cemitério.
+            // Acrescentar os destinos necessários preserva também cenas adicionais configuradas no Editor.
+            var atual=propScenes?.GetValue(null,null) as Array;
+            var merge=new List<object>();
+            if(atual!=null)foreach(var item in atual)
+            {
+                string path=sceneType.GetProperty("path").GetValue(item,null) as string;
+                if(!validPaths.Contains(path))merge.Add(item);
+            }
+            foreach(var item in arr)merge.Add(item);
+            var final=Array.CreateInstance(sceneType,merge.Count);for(int i=0;i<merge.Count;i++)final.SetValue(merge[i],i);
+            propScenes?.SetValue(null, final, null);
         }
         catch
         {
             // Ignora silenciosamente fora do Editor
         }
+#endif
     }
 
     public static void CarregarCenaSegura(string sceneName)

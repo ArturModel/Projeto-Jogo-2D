@@ -50,5 +50,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cidade/AbrigoCemiterio.unity
     guid: df23de0fb5b25794c82354ce05053ecd
+  - enabled: 1
+    path: Assets/Scenes/Cidade/CemiterioSantaRita.unity
+    guid: 91321dc07f1f6294582ad788a6b62f1d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

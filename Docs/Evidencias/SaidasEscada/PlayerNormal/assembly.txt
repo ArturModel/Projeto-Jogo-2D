@@ -1,0 +1,2 @@
+QA/autoria inesperados: 0
+Componentes de produção presentes: SantaRitaExitThreshold, SantaRitaActorElevation, SantaRitaRoomCutaway, SantaRitaShallowStairs

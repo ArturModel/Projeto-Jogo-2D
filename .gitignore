@@ -65,3 +65,36 @@ __pycache__/
 !/Docs/Evidencias/CidadeViva/PlayerFinal/startup-final.txt
 !/Docs/Evidencias/CidadeViva/PlayerQA/RuntimeFinal/runtime-qa.txt
 !/Docs/Evidencias/CidadeViva/PlayerQA/C1Final/runtime-qa.txt
+!/Docs/Evidencias/C2R2/PlayerQA_Final/runtime-qa.txt
+!/Docs/Evidencias/C2R2/PlayerQA_Final/build-qa.txt
+!/Docs/Evidencias/C2R2/PlayerQA_Final/cenas-acessos.txt
+!/Docs/Evidencias/C2R2/C1RegressaoFinal/runtime-qa.txt
+!/Docs/Evidencias/C2R2/PlayerNormal/assembly.txt
+!/Docs/Evidencias/C2R2/PlayerNormal/saves-preservados.txt
+
+# Resultados finais da Bocha; imagens e rodadas intermediárias continuam locais.
+!/Docs/Evidencias/BochaPerspectiva/fisica.txt
+!/Docs/Evidencias/BochaPerspectiva/regras-save.txt
+!/Docs/Evidencias/BochaPerspectiva/cenas-acessos.txt
+!/Docs/Evidencias/BochaPerspectiva/PlayerQA/build-qa.txt
+!/Docs/Evidencias/BochaPerspectiva/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/BochaPerspectiva/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/BochaPerspectiva/PlayerNormal/assembly.txt
+!/Docs/Evidencias/BochaPerspectiva/PlayerNormal/saves-preservados.txt
+!/Docs/Evidencias/BochaPerspectiva/PlayerNormal/smoke.txt
+
+# Revisão de saídas e escada: somente resultados finais selecionados.
+!/Docs/Evidencias/SaidasEscada/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/SaidasEscada/PlayerQA/build-qa.txt
+!/Docs/Evidencias/SaidasEscada/PlayerQA/cenas-acessos.txt
+!/Docs/Evidencias/SaidasEscada/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/SaidasEscada/PlayerNormal/assembly.txt
+!/Docs/Evidencias/SaidasEscada/PlayerNormal/saves-preservados.txt
+!/Docs/Evidencias/SaidasEscada/PlayerNormal/smoke.txt
+
+# Regressão da tecla E nas entradas: sem capturas/logs intermediários em Changes.
+!/Docs/Evidencias/PortasE/Editor/runtime-qa.txt
+!/Docs/Evidencias/PortasE/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/PortasE/PlayerQA/build-qa.txt
+!/Docs/Evidencias/PortasE/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/PortasE/preservacao.txt

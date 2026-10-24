@@ -1,0 +1,6 @@
+PASS Player normal Windows x64 abriu menu e seleção de slot por clique.
+PASS Fixture explícita isolada carregou SociedadeBeiraRio; escada, bancos sul, iluminação e recorte renderizados na câmera normal.
+PASS Build normal e QA têm o mesmo SHA256 de C#/cenas/dados/texturas/materiais/metas.
+QA funcional de movimento e partida: 167 verificações no executável Development.
+Limite: a segunda inspeção normal por fixture dentro da cancha foi encerrada após intervenção/minimização da janela; não contabilizada como prova.
+Não é campanha legítima nem aprovação artística pelo autor.

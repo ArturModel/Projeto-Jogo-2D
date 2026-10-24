@@ -8,6 +8,39 @@ public sealed class Capitulo2Audio : MonoBehaviour
     private static Capitulo2Audio instance;
     private readonly AudioSource[] fontes = new AudioSource[3];
     private int regiao;
+    private static AudioClip resposta;
+    private static GameObject radioFeedback;
+    public static AudioClip RespostaAbafada()
+    {
+        if(resposta!=null)return resposta;
+        const int hz=22050;var data=new float[hz*2];var rng=new System.Random(1917);float filtro=0;
+        for(int i=0;i<data.Length;i++)
+        {
+            float t=i/(float)hz;filtro=Mathf.Lerp(filtro,(float)rng.NextDouble()*2-1,.018f);
+            float env=Mathf.Pow(Mathf.Sin(Mathf.PI*t/2),2)*Mathf.Exp(-t*.9f);
+            data[i]=(filtro*.6f+Mathf.Sin(t*2*Mathf.PI*83)*.06f)*env;
+        }
+        resposta=AudioClip.Create("C2_RespostaAbafada_SoproOriginal",data.Length,1,hz,false);resposta.SetData(data,0);return resposta;
+    }
+
+    public static void TocarRadio(int faixa)
+    {
+        if(radioFeedback!=null)
+        {var old=radioFeedback.GetComponent<AudioSource>();old.Stop();Destroy(old.clip);Destroy(radioFeedback);}
+        var go=new GameObject("Radio_Retorno_"+faixa);var source=go.AddComponent<AudioSource>();source.playOnAwake=false;
+        radioFeedback=go;
+        const int hz=22050;var data=new float[hz*2];var rng=new System.Random(83+faixa);float filtro=0;
+        for(int i=0;i<data.Length;i++)
+        {
+            float t=i/(float)hz;filtro=Mathf.Lerp(filtro,(float)rng.NextDouble()*2-1,faixa==1?.6f:.08f);
+            float env=Mathf.Clamp01(t*30)*Mathf.Clamp01((2-t)*8);
+            float som=faixa==1?filtro*.23f:faixa==0?filtro*.06f+Mathf.Sin(t*2*Mathf.PI*440)*.035f:
+                ((t>.2f&&t<.45f)||(t>.7f&&t<.95f)?Mathf.Sin(t*2*Mathf.PI*660)*.15f:0);
+            data[i]=som*env;
+        }
+        var clip=AudioClip.Create("Radio_"+new[]{"FM_sinal_distante","AM_chiado","LOCAL_dois_tons"}[faixa],data.Length,1,hz,false);clip.SetData(data,0);
+        source.clip=clip;source.volume=PlayerPrefs.GetFloat("audio_efeitos",1)*.65f;source.Play();Destroy(go,2.2f);Destroy(clip,2.3f);
+    }
     public static void Definir(int assinatura)
     {
         if (instance == null)

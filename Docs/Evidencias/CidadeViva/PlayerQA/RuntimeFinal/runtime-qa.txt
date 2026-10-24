@@ -1,5 +1,5 @@
 QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
-PASS Invariantes anteriores da Sinuca: Invariante 7 bolas (marcus+ze+mesa==7) OK | Mão 1 franca OK | Mão 2 Bola Marcada [X] + reposição sem sobreposição OK | Desativação <2 bolas OK.
+PASS Invariantes anteriores da Sinuca: Resolver real: falta + bola comum; quarta bola + branca; reposição sem sobreposição; série 2–0/2–1 e derrota; invariante 7 bolas; marcada desativa com uma bola.
 PASS Sinuca: tacada física conta ponto pelo resolver real.
 PASS Sinuca: resolução da última caçapa encerra série 2-0 sem terceira mão forçada.
 PASS Sinuca: resolução da última caçapa encerra série 2-1 sem terceira mão forçada.
@@ -11,17 +11,20 @@ PASS Transição C1 → C2 preserva ficha e inicia capítulo.
 Planta Centro capturada com câmera de inspeção temporária; câmera normal restaurada.
 PASS Leitura encerra e devolve controle.
 PASS Input real move Marcus com oito poses e interpolação.
-PASS Cada evento de passo coincide com quadro de apoio 0/4: 0,4,0,4,0,4,0,4
+PASS Cada evento de passo coincide com quadro de apoio 0/4: 0,4,0,4,0,4,0
 PASS Repouso não dispara passos extras.
-PERF C2 Centro: 90 frames, média 16,67 ms, máximo 16,74 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
+PERF C2 Centro: 90 frames, média 16,67 ms, máximo 16,77 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
 PASS Leitura encerra e devolve controle.
 PASS Cena carregada IgrejaMatriz
 PASS Porta real para IgrejaMatriz
+PASS Mapa real marca Marcus na região explorada: IgrejaMatriz
 PASS Leitura encerra e devolve controle.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Cena carregada CemiterioSantaRita
 PASS Porta real para CemiterioSantaRita
+PASS Mapa real marca Marcus na região explorada: CemiterioSantaRita
 PASS Leitura encerra e devolve controle.
 PASS Cemitério antes da Prefeitura: comparação independente da ordem.
 PASS Save antigo do Cemitério aceita leitura sem regravar arquivo.
@@ -29,20 +32,26 @@ PASS Cena carregada CemiterioSantaRita
 PASS Posição antiga é transferida à cena independente do Cemitério.
 PASS Cena carregada AbrigoCemiterio
 PASS Porta real para AbrigoCemiterio
+PASS Mapa real marca Marcus na região explorada: AbrigoCemiterio
 PASS Leitura encerra e devolve controle.
 PASS Cena carregada CemiterioSantaRita
 PASS Porta real para CemiterioSantaRita
+PASS Mapa real marca Marcus na região explorada: CemiterioSantaRita
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Cena carregada SociedadeBeiraRio
 PASS Porta real para SociedadeBeiraRio
+PASS Mapa real marca Marcus na região explorada: SociedadeBeiraRio
 PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
 PASS Tonão cedo fornece requisitos, sem liberar duelo.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Cena carregada PrefeituraSantaRita
 PASS Porta real para PrefeituraSantaRita
+PASS Mapa real marca Marcus na região explorada: PrefeituraSantaRita
 PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
 PASS Documento longo possui conteúdo rolável, sem texto cortado no painel.
@@ -50,9 +59,11 @@ PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Caminho crítico pronto sem rádio/costura ou outras linhas opcionais.
 PASS Cena carregada RodoviariaSantaRita
 PASS Porta real para RodoviariaSantaRita
+PASS Mapa real marca Marcus na região explorada: RodoviariaSantaRita
 PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
@@ -62,13 +73,17 @@ PASS Leitura encerra e devolve controle.
 PASS Pequena história da Rodoviária conclui por observação, conversa e retorno.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Cena carregada MercadinhoDeposito
 PASS Porta real para MercadinhoDeposito
+PASS Mapa real marca Marcus na região explorada: MercadinhoDeposito
 PASS Leitura encerra e devolve controle.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Cena carregada OficinaRadio
 PASS Porta real para OficinaRadio
+PASS Mapa real marca Marcus na região explorada: OficinaRadio
 PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
@@ -78,8 +93,10 @@ PASS Leitura encerra e devolve controle.
 PASS Retorno à Mila leva em conta desenho e teste, com memória de Júlia em vida.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Cena carregada CasaCostureira
 PASS Porta real para CasaCostureira
+PASS Mapa real marca Marcus na região explorada: CasaCostureira
 PASS Leitura encerra e devolve controle.
 PASS Celina não sabe o testemunho só porque Marcus o ouviu.
 PASS Leitura encerra e devolve controle.
@@ -87,8 +104,10 @@ PASS Leitura encerra e devolve controle.
 PASS Marcus compartilha testemunho; Celina distingue a encomenda de um relato e anota a cópia de consulta.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Cena carregada SociedadeBeiraRio
 PASS Porta real para SociedadeBeiraRio
+PASS Mapa real marca Marcus na região explorada: SociedadeBeiraRio
 PASS Leitura encerra e devolve controle.
 PASS Leitura encerra e devolve controle.
 PASS Consequência da costura chega à Nair somente por Marcus.
@@ -97,13 +116,14 @@ PASS Diálogo inicia UI real da Bocha.
 PASS Modal de pausa mantém física parada.
 PASS Troca de resolução pausa sem gastar bocha ou mover balim.
 PASS Perda de foco cancela carga e pausa sem consumir estoque.
-PASS Vitória real da sessão após lançamentos/IA; 8 lançamentos Marcus.
+PASS Vitória real da sessão após lançamentos/IA; 12 lançamentos Marcus.
 PASS Leitura encerra e devolve controle.
 PASS Segunda ficha concedida pela consequência.
 PASS Leitura encerra e devolve controle.
 PASS Revisita da Bocha não duplica recompensa/diário.
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Vitória sem orelhão descartada ao carregar fixture anterior.
 PASS Leitura encerra e devolve controle.
 PASS Orelhão real salva segunda ficha no slot isolado.
@@ -116,19 +136,22 @@ PASS Cena carregada EntradaDaCidade
 PASS Porta real para EntradaDaCidade
 PASS Volta à Rua Norte preserva as duas fichas.
 PASS Retorno a C1 mantém uma instância de chuva.
-PERF C1 Rua Norte (mesma build): 90 frames, média 16,67 ms, máximo 16,80 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
+PERF C1 Rua Norte (mesma build): 90 frames, média 16,68 ms, máximo 16,92 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
 PASS Cena carregada CentroSantaRita
 PASS Cena carregada MercadinhoDeposito
 PASS Porta real para MercadinhoDeposito
+PASS Mapa real marca Marcus na região explorada: MercadinhoDeposito
 PASS Cena carregada EntradaDaCidade
 PASS Porta real para EntradaDaCidade
 PASS Segundo caminho retorna à loja de C1 pelo Mercadinho.
 PASS Cena carregada MercadinhoDeposito
 PASS Porta real para MercadinhoDeposito
+PASS Mapa real marca Marcus na região explorada: MercadinhoDeposito
 PASS Cena carregada CentroSantaRita
 PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
 PASS Ida e volta pelos dois acessos conserva o mundo e as fichas.
 PASS Derrota real na UI oferece último orelhão manual.
 PASS Derrota sem save oferece menu, sem inventar checkpoint.
 Capturas automáticas da build observam apresentação; não avaliam diversão, audição humana ou T01.
-PASS runtime 2026-10-21T23:13:13.1616168Z
+PASS runtime 2026-10-22T18:19:56.2345677Z

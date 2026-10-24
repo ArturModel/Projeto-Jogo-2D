@@ -1,0 +1,6 @@
+Normal Player metadata
+QA runtime presente: False
+Autoria R2 presente: False
+Autoria C1 presente: False
+NPC work presente: True
+Layout migration presente: True

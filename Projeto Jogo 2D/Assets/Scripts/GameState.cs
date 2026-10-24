@@ -59,6 +59,12 @@ public static class GameState
     public static bool TemProgressoNaoSalvo => progressoNaoSalvo;
     public static string ObjetivoAtual => objetivoAtualSessao;
     public static string ObterObjetivo() => objetivoAtualSessao;
+    // Preferência em RAM, incluída somente no snapshot do orelhão. Saves antigos: apagada.
+    public static bool LanternaLigada => Tem(Flags.LanternaDoCarroObtida) && Numero("equipamento.lanterna_ligada") == 1;
+    public static void AlternarLanterna()
+    {
+        if (Tem(Flags.LanternaDoCarroObtida)) DefinirNumero("equipamento.lanterna_ligada", LanternaLigada ? 0 : 1);
+    }
 
     public static void DefinirObjetivo(string novoObjetivo)
     {
@@ -142,9 +148,13 @@ public static class GameState
         {
             if (diarioSessao[i].id == id)
             {
+                if (diarioSessao[i].categoria == categoria && diarioSessao[i].titulo == titulo &&
+                    diarioSessao[i].descricao == descricao) return;
                 diarioSessao[i].categoria = categoria;
                 diarioSessao[i].titulo = titulo;
                 diarioSessao[i].descricao = descricao;
+                progressoNaoSalvo = true;
+                OnEstadoAlterado?.Invoke();
                 return;
             }
         }
@@ -186,12 +196,12 @@ public static class GameState
         else if (flag == Flags.ExaminouCafeCasa || flag == "viu_chaleira")
         {
             RegistrarDiario("pista_cafe_passado", "pista", "Café passado hoje",
-                "A chaleira e o bule no fogão mostram café passado recentemente. A rotina foi interrompida há poucas horas.");
+                "O bule ainda guarda calor e há café na xícara. Isso sugere uso recente; não permite saber quando Adílio saiu nem por quê.");
         }
         else if (flag == Flags.ExaminouCartasCasa)
         {
             RegistrarDiario("pista_cartas_mesa", "pista", "Correspondências na mesa",
-                "Envelopes abertos de 2004 e contas em dia sobre a mesa. Adilio não planejava viajar.");
+                "As cartas de baralho ficaram sobre a mesa, no meio de uma partida de paciência. Não sei se Adílio pretendia continuar depois.");
         }
         else if (flag == Flags.ExaminouDesordemCasa)
         {
@@ -202,13 +212,13 @@ public static class GameState
         {
             RegistrarDiario("pista_recibo_mercadinho", "pista", "Cupom do Mercadinho (2004)",
                 "Recibo emitido hoje no Mercadinho da encruzilhada. Alguém lá deve ter visto Adilio ou quem o procurava.");
-            if (!Tem(Flags.FalouAtendenteMercadinho))
+            if (!Tem(Flags.OuviuRelatoAtendente))
                 DefinirObjetivo("Levar o recibo ao Mercadinho na encruzilhada.");
         }
-        else if (flag == Flags.FalouAtendenteMercadinho)
+        else if (flag == Flags.OuviuRelatoAtendente)
         {
             RegistrarDiario("pista_relato_mercadinho", "pista", "Desconhecido no Mercadinho",
-                "O atendente contou que um desconhecido perguntou por Adilio hoje e já tinha sido visto conversando com Zé no bar da rua norte.");
+                "Ao apresentar o cupom, ouvi da atendente que uma caminhonete escura levava Adílio para a Rua Norte, perto do Bar do Zé. Ela não ouviu a conversa dentro do veículo nem sabe o que aconteceu depois.");
             if (!Tem(Flags.VenceuZeSinuca))
                 DefinirObjetivo("Ir ao Bar do Zé na rua norte e questionar Zé.");
         }
@@ -228,6 +238,10 @@ public static class GameState
     {
         progressoNaoSalvo = false;
     }
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+    internal static void RestaurarIndicadorDeProgresso(bool pendente) => progressoNaoSalvo = pendente;
+#endif
 
     public static GameStateSnapshot ExportarSnapshot()
     {
@@ -336,6 +350,11 @@ public static class GameState
     public static void Limpar()
     {
         ResetarMemoriaSilencioso();
+        if (CheckpointSystem.EmArmazenamentoDeTeste)
+        {
+            OnEstadoAlterado?.Invoke();
+            return;
+        }
 
         // Limpa eventuais chaves legadas que versões antigas gravaram direto no PlayerPrefs
         string bruto = PlayerPrefs.GetString(ChaveIndiceLegado, string.Empty);
@@ -390,6 +409,8 @@ public static class Flags
 
     public const string FalouAtendenteMercadinho = "falou_atendente_mercadinho";
     public const string FalouComAtendenteMercadinho = FalouAtendenteMercadinho;
+    public const string ApresentouReciboAtendente = "apresentou_recibo_atendente";
+    public const string OuviuRelatoAtendente = "ouviu_relato_atendente";
 
     public const string EntrouNoBarDoZe = "entrou_no_bar_do_ze";
     public const string ConheceuZeBar = "conheceu_ze_bar";

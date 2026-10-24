@@ -14,7 +14,7 @@ using UnityEngine.InputSystem.LowLevel;
 
 // Somente Editor/Development e somente com argumento explícito. Não é entrada
 // da campanha nem atalho de jogador. Saves possuem namespace temporário próprio.
-public sealed class Chapter2RuntimeVerification : MonoBehaviour
+public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
 {
     private readonly List<string> report=new List<string>();
     private IDisposable isolation;
@@ -24,7 +24,7 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Init()
     {
-        if(!Environment.GetCommandLineArgs().Contains("-srC2QA")&&!Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")&&!Environment.GetCommandLineArgs().Contains("-srC2PerfQA"))return;
+        if(!Environment.GetCommandLineArgs().Contains("-srPortalQA")&&!Environment.GetCommandLineArgs().Contains("-srAccessQA")&&!Environment.GetCommandLineArgs().Contains("-srC2QA")&&!Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")&&!Environment.GetCommandLineArgs().Contains("-srC2PerfQA")&&!Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")&&!Environment.GetCommandLineArgs().Contains("-srC2R2QA")&&!Environment.GetCommandLineArgs().Contains("-srBochaQA"))return;
         var g=new GameObject("C2_Runtime_QA_Explicit");DontDestroyOnLoad(g);g.AddComponent<Chapter2RuntimeVerification>();
     }
     private void Start()
@@ -35,7 +35,7 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
         isolation=CheckpointSystem.BeginIsolatedTests();
         File.WriteAllText(Path.Combine(folder,"runtime-progresso.txt"),"Início QA "+DateTime.UtcNow.ToString("O")+"\n");
         report.Add("QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.");
-        StartCoroutine(Guard(Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")?C1LoadSmoke():Environment.GetCommandLineArgs().Contains("-srC2PerfQA")?PerformancePair():Run()));
+        StartCoroutine(Guard(portalForce||Environment.GetCommandLineArgs().Contains("-srPortalQA")?RunPortalRegression():accessForce||Environment.GetCommandLineArgs().Contains("-srAccessQA")?RunAccesses():bochaForce||Environment.GetCommandLineArgs().Contains("-srBochaQA")?RunBochaPerspective():r2Force||Environment.GetCommandLineArgs().Contains("-srC2R2QA")?RunR2():Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")?SaveIsolationProbe():Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")?C1LoadSmoke():Environment.GetCommandLineArgs().Contains("-srC2PerfQA")?PerformancePair():Run()));
     }
     private void Error(string msg,string stack,LogType type)
     {if(type==LogType.Exception||type==LogType.Error){failed=true;report.Add("ERROR "+msg+"\n"+stack);}}
@@ -53,11 +53,21 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
         }
     }
     private void Check(bool ok,string text){report.Add((ok?"PASS ":"FAIL ")+text);File.AppendAllText(Path.Combine(folder,"runtime-progresso.txt"),(ok?"PASS ":"FAIL ")+text+"\n");if(!ok)throw new Exception(text);}
+    private IEnumerator SaveIsolationProbe()
+    {
+        yield return null;
+        Check(!CheckpointSystem.HasCheckpoint,"Namespace novo não lê os slots pessoais.");
+        CheckpointSystem.SaveSlot(4,"EntradaDaCidade",Vector2.zero,"qa_limpeza");
+        Check(CheckpointSystem.TryLoadSlot(4,out _),"Save temporário realmente persistido antes de limpar.");
+        Finish(); // A verificação externa confere os valores SRQA após encerrar o processo.
+    }
     private IEnumerator C1LoadSmoke()
     {
         yield return new WaitForSecondsRealtime(2);SceneFader.Instance.LoadScene("EntradaDaCidade");yield return AwaitScene("EntradaDaCidade");
         Check(FindAnyObjectByType<PlayerController>()!=null,"Cena C1 compilada carrega e cria Marcus.");
         yield return CloseText();yield return Capture("smoke-c1");yield return Performance("C1 início");
+        yield return C1InvestigationRegression();
+        yield return SinucaPauseRegression();
         var service=FindObjectsByType<Capitulo2Portal>().First(p=>p.cenaDestino=="MercadinhoDeposito");
         yield return Place(service.transform.position+Vector3.down*.6f);service.Interact();yield return CloseText();
         Check(SceneManager.GetActiveScene().name=="EntradaDaCidade","Porta de serviço não contorna bloqueio pré-Zé.");
@@ -144,9 +154,9 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
         yield return Use("encomenda_faixa");yield return Use("celina");
         Check(GameState.Tem("c2_costura_reinterpretada"),"Marcus compartilha testemunho; Celina distingue a encomenda de um relato e anota a cópia de consulta.");yield return ExitToCenter();
         yield return Place(new Vector2(5,2.7f));yield return Capture("10-beira-rio");
-        yield return Travel("SociedadeBeiraRio");yield return Place(new Vector2(12,24));yield return Capture("11-sociedade-cancha");
-        yield return Place(new Vector2(12,33.5f));yield return Capture("11-cancha-cabeceira");
-        yield return Place(new Vector2(12,17.5f));yield return Capture("11-cancha-acesso-salao");
+        yield return Travel("SociedadeBeiraRio");yield return Place(new Vector2(17,7));yield return Capture("11-sociedade-cancha");
+        yield return Place(new Vector2(26,16));yield return Capture("11-cancha-cabeceira");
+        yield return Place(new Vector2(7,7.5f));yield return Capture("11-cancha-acesso-salao");
         yield return Use("nair");yield return Use("nair");Check(GameState.Tem("c2_nair_faixa_conversada"),"Consequência da costura chega à Nair somente por Marcus.");
         yield return Use("bocha");Check(BochaMinigameUI.IsShowing,"Diálogo inicia UI real da Bocha.");
         Click("DUELAR ATÉ 6 PONTOS");yield return null;Click("LER A CANCHA");yield return null;
@@ -176,7 +186,7 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
                 Invoke(ui,"Lancar",BochaSide.Marcus,shot.x,shot.velocidade);shots++;
                 if(shots==5){Time.timeScale=1;yield return Capture("13-bocha-piso-marcas");Time.timeScale=6;}
             }
-            if(ActiveButton("CARREGAR ÚLTIMO ORELHÃO"))throw new Exception("QA perdeu duelo; ajustar análise, não placar.");
+            if(ActiveButton("ESCOLHER SAVE"))throw new Exception("QA perdeu duelo; ajustar análise, não placar.");
             yield return null;
         }
         Time.timeScale=1;
@@ -239,7 +249,7 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
     {
         var ui=BochaMinigameUI.Instance;ui.Abrir(null);Click("DUELAR ATÉ 6 PONTOS");yield return null;Click("LER A CANCHA");
         Time.timeScale=6;float end=Time.realtimeSinceStartup+150;
-        while(!ActiveButton("CARREGAR ÚLTIMO ORELHÃO")&&Time.realtimeSinceStartup<end)
+        while(!ActiveButton("ESCOLHER SAVE")&&Time.realtimeSinceStartup<end)
         {
             if(ActiveButton("PRÓXIMA MÃO"))Click("PRÓXIMA MÃO");
             else if(ActiveButton("REPETIR A MÃO"))Click("REPETIR A MÃO");
@@ -247,12 +257,12 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
             yield return null;
         }
         Time.timeScale=1;
-        Check(Field<BochaMatch>(ui,"partida").Vencedor==BochaSide.Tonao&&ActiveButton("CARREGAR ÚLTIMO ORELHÃO"),"Derrota real na UI oferece último orelhão manual.");
+        Check(Field<BochaMatch>(ui,"partida").Vencedor==BochaSide.Tonao&&ActiveButton("ESCOLHER SAVE"),"Derrota real na UI oferece seleção explícita de save.");
         yield return Capture("19-derrota-com-save");
         // Clear() só cancela spawn pendente por contrato; não apaga saves.
         // Um novo escopo temporário vazio exercita o caso sem save pessoal.
         isolation.Dispose();isolation=CheckpointSystem.BeginIsolatedTests();Invoke(ui,"Derrota");yield return null;
-        Check(!CheckpointSystem.HasCheckpoint&&!ActiveButton("CARREGAR ÚLTIMO ORELHÃO")&&ActiveButton("MENU PRINCIPAL"),"Derrota sem save oferece menu, sem inventar checkpoint.");
+        Check(!CheckpointSystem.HasCheckpoint&&!ActiveButton("ESCOLHER SAVE")&&ActiveButton("MENU PRINCIPAL"),"Derrota sem save oferece menu, sem inventar checkpoint.");
         yield return Capture("20-derrota-sem-save");ui.Fechar();
     }
     private IEnumerator Travel(string target)
@@ -261,6 +271,15 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
         yield return Place(portal.transform.position+Vector3.down*.6f);yield return new WaitForSecondsRealtime(1.6f);
         if(SceneManager.GetActiveScene().name!=target&&portal!=null)portal.Interact();yield return AwaitScene(target);
         Check(SceneManager.GetActiveScene().name==target,"Porta real para "+target);
+        if (Capitulo2Director.Instance != null)
+        {
+            var map = MapaInterativoUI.EnsureInstance(); map.Abrir(0); yield return null;
+            var player = FindAnyObjectByType<PlayerController>();
+            Capitulo2Director.Instance.PosicaoNoMapa(player.transform.position, out Vector2 expected, out _);
+            Check(MapaInterativoUI.IsShowing && Vector2.Distance(Field<RectTransform>(map,"playerMarkerRect").anchorMin, expected) < .0001f,
+                "Mapa real marca Marcus na região explorada: " + target);
+            map.Fechar();
+        }
     }
     private IEnumerator ExitToCenter()=>Travel("CentroSantaRita");
     private IEnumerator AwaitScene(string name)
@@ -320,7 +339,7 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
     {
         var ui=SinucaMinigameUI.Instance;ui.IniciarDuelo(null);
         Check(ui.SimularTesteDeInvariantes(out var oldReport),"Invariantes anteriores da Sinuca: "+oldReport);
-        ui.StopAllCoroutines();Invoke(ui,"ConfigurarMao",1);Field<GameObject>(ui,"painelModal").SetActive(false);
+        ui.IniciarDuelo(null);ui.StopAllCoroutines();Invoke(ui,"ConfigurarMao",1);Field<GameObject>(ui,"painelModal").SetActive(false);
         var balls=Field<IList>(ui,"bolas");
         // Tacada física real: branca alcança a 1, que cai na caçapa do meio.
         void Put(int i,string f,object val)=>balls[i].GetType().GetField(f).SetValue(balls[i],val);
@@ -350,6 +369,81 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
         Check(!CheckpointSystem.HasCheckpoint,"Regressão da Sinuca não cria save.");
     }
 
+    private IEnumerator C1InvestigationRegression()
+    {
+        var director = Capitulo1Director.Instance;
+        var items = FindObjectsByType<InteracaoCapitulo1>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var shop = items.First(i => i.Tipo == InteracaoCapitulo1.TipoInteracao.NpcAtendenteMercadinho);
+        GameState.ImportarSnapshot(new GameStateSnapshot());
+        GameState.Marcar(Flags.ChegouCasaAvo);
+        director.TransicionarPara(Capitulo1Director.ZonaId.Interior_Mercadinho, shop.transform.position + Vector3.down, 1);
+        yield return new WaitForSecondsRealtime(1.5f); yield return CloseText();
+        shop.Interact(); yield return null;
+        Check(!GameState.Tem(Flags.OuviuRelatoAtendente) && !GameState.ObterEntradasDiario().Any(d => d.id == "pista_relato_mercadinho"),
+            "Atendente antes do recibo não transmite testemunho nem cria diário antecipado.");
+        Check(!Field<DialogoLinha[]>(GameMessageUI.Instance,"paginasAtuais").Any(l => l.texto.Contains("esta nota fiscal")),
+            "Visitar a casa não apresenta cupom inexistente na conversa real.");
+        yield return CloseText();
+        var receipt = items.First(i => i.Tipo == InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004);
+        director.TransicionarPara(Capitulo1Director.ZonaId.Interior_CasaDoAvo, receipt.transform.position + Vector3.down, 1);
+        yield return new WaitForSecondsRealtime(1.5f); yield return CloseText();
+        receipt.Interact(); yield return CloseText();
+        Check(GameState.Tem(Flags.AchouReciboMercadinho) && !GameState.Tem(Flags.OuviuRelatoAtendente), "Coleta real do cupom precede testemunho.");
+        director.TransicionarPara(Capitulo1Director.ZonaId.Interior_Mercadinho, shop.transform.position + Vector3.down, 1);
+        yield return new WaitForSecondsRealtime(1.5f); shop.Interact(); yield return null;
+        Check(!GameState.Tem(Flags.OuviuRelatoAtendente), "Abrir fala não equivale a ouvir o relato completo.");
+        yield return CloseText();
+        Check(GameState.Tem(Flags.ApresentouReciboAtendente) && GameState.Tem(Flags.OuviuRelatoAtendente), "Fechamento da conversa real persiste apresentação e testemunho.");
+        shop.Interact(); yield return CloseText();
+        Check(GameState.ObterEntradasDiario().Count(d => d.id == "pista_relato_mercadinho") == 1, "Revisita não duplica relato.");
+        GameState.ImportarSnapshot(new GameStateSnapshot());
+    }
+
+    private IEnumerator SinucaPauseRegression()
+    {
+        Capitulo1Director.Instance.TransicionarPara(Capitulo1Director.ZonaId.Interior_BarDoZe, new Vector2(509,-56.8f), 1);
+        yield return new WaitForSecondsRealtime(1.5f); yield return CloseText();
+        var ui = SinucaMinigameUI.Instance; var keyboard = Keyboard.current;
+        ui.IniciarDuelo(null); Field<GameObject>(ui,"painelModal").SetActive(false);
+        Invoke(ui,"IniciarTurnoAtual");
+        Invoke(ui,"ExecutarTacada", Vector2.right, 200f);
+        InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.Escape)); yield return null;
+        InputSystem.QueueStateEvent(keyboard,new KeyboardState()); yield return new WaitForSecondsRealtime(.15f);
+        Check(MenuPausa.Aberto && Time.timeScale == 0, "Esc real abre pausa global sobre a Sinuca.");
+        var balls = Field<IList>(ui,"bolas");
+        Vector2 position = (Vector2)balls[0].GetType().GetField("pos").GetValue(balls[0]);
+        yield return new WaitForSecondsRealtime(.35f);
+        Check(position == (Vector2)balls[0].GetType().GetField("pos").GetValue(balls[0]), "Bola em movimento permanece congelada na pausa.");
+        InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.Escape)); yield return null;
+        InputSystem.QueueStateEvent(keyboard,new KeyboardState()); yield return new WaitForSecondsRealtime(.15f);
+        Check(!MenuPausa.Aberto && Time.timeScale == 1, "Esc real retoma a Sinuca.");
+        ui.Fechar();
+        foreach (bool ballInHand in new[] { false, true })
+        {
+            ui.IniciarDuelo(null); Field<GameObject>(ui,"painelModal").SetActive(false);
+            Set(ui,"turnoDeMarcus",false); Set(ui,"brancaNaMao",ballInHand);
+            Invoke(ui,"ContinuarInicioTurno");
+            yield return new WaitForSecondsRealtime(1.2f);
+            Invoke(ui,"AbrirModalRegrasDuranteJogo");
+            yield return new WaitForSecondsRealtime(.9f);
+            Check(Field<object>(ui,"estado").ToString() == "TurnoZePensando", "IA aguarda regras durante " + (ballInHand ? "posicionamento" : "preparação final") + ".");
+            Field<Button>(ui,"btnModalPrimario").onClick.Invoke();
+            yield return new WaitForSecondsRealtime(.8f);
+            Check(Field<object>(ui,"estado").ToString() != "TurnoZePensando", "Fechar regras permite uma tacada sem restaurar estado antigo.");
+            ui.Fechar();
+        }
+        ui.IniciarDuelo(null); Invoke(ui,"ConfigurarMao",2);
+        yield return new WaitForSecondsRealtime(1);
+        var ambience = FindAnyObjectByType<SantaRitaBarAudio>(); var layers = Field<AudioSource[]>(ambience,"layers");
+        bool effects = PlayerPrefs.GetFloat("audio_efeitos",1) > 0;
+        Check(layers[0].volume < .001f && (effects ? layers[1].volume > 0 && layers[1].isPlaying : layers[1].volume == 0),
+            "Segunda mão silencia murmúrio e toca água real, respeitando volume de efeitos.");
+        Invoke(ui,"ConfigurarMao",3); yield return new WaitForSecondsRealtime(1);
+        Check(layers[2].loop && layers[2].clip != null && (effects ? layers[2].volume > 0 : layers[2].volume == 0), "Terceira mão acrescenta camada de chuva.");
+        ui.Fechar();
+        Check(!CheckpointSystem.HasCheckpoint, "Investigação e pausa usam apenas RAM/namespace de QA.");
+    }
+
     public static BochaShot BestShot(BochaSimulation table)
     {
         var best=new BochaShot();float score=float.NegativeInfinity;var aims=new List<Vector2>{table.bolas[0].pos};
@@ -357,8 +451,9 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
         foreach(var aim in aims)foreach(float lane in new[]{-2.2f,-1.1f,0,1.1f,2.2f})
             for(float offset=-.65f;offset<=1.85f;offset+=.125f)
             {
-                var delta=aim-new Vector2(lane,.65f);float power=Mathf.Sqrt(3.7f*delta.magnitude)+offset;
-                var copy=table.Clone();copy.bolas.Add(new BochaBall{lado=BochaSide.Marcus,raio=.18f,massa=1,pos=new Vector2(lane,.65f),vel=delta.normalized*power});copy.RepousarParaPrevisao();
+                var delta=aim-new Vector2(lane,.65f);float power=Mathf.Sqrt(2*BochaSimulation.ResistenciaRolagem*delta.magnitude)+offset;
+                Vector2 velocity=delta.normalized*power;
+                var copy=table.Clone();copy.bolas.Add(new BochaBall{lado=BochaSide.Marcus,raio=.18f,massa=1,pos=new Vector2(lane,.65f),vel=velocity,giro=new Vector3(velocity.y,0,-velocity.x)/.18f});copy.RepousarParaPrevisao();
                 if(!copy.bolas[0].valida)continue;
                 float own=BochaMatch.MelhorDistancia(copy,BochaSide.Marcus),enemy=BochaMatch.MelhorDistancia(copy,BochaSide.Tonao);
                 float val=-Mathf.Min(own,20)+(own<enemy?3:0)+Mathf.Min(enemy,3)*.4f;
@@ -371,6 +466,9 @@ public sealed class Chapter2RuntimeVerification : MonoBehaviour
     {
         if(isolation==null)return;Time.timeScale=1;Application.logMessageReceived-=Error;isolation.Dispose();isolation=null;
         report.Add((failed?"FAIL":"PASS")+" runtime "+DateTime.UtcNow.ToString("O"));File.WriteAllLines(Path.Combine(folder,"runtime-qa.txt"),report);Application.Quit(failed?1:0);
+#if UNITY_EDITOR
+        if(Application.isEditor)UnityEditor.EditorApplication.isPlaying=false;
+#endif
     }
 }
 #endif

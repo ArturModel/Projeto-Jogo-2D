@@ -78,8 +78,8 @@ public class MenuPausa : MonoBehaviour
             return;
         }
 
-        // Se o mapa, a sinuca ou a seleção de slots do orelhão estiverem abertos, o ESC pertence a eles.
-        if (!Aberto && (MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen))
+        // Sinuca usa esta pausa global; mapa/Bocha/orelhão possuem fechamento próprio.
+        if (!Aberto && (MapaInterativoUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen))
         {
             return;
         }
@@ -103,6 +103,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Abrir()
     {
+        if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.CancelarCargaAoSuspender();
         Aberto = true;
         aguardandoConfirmacaoSaida = false;
         AtualizarTextoStatusSave();
@@ -142,6 +143,7 @@ public class MenuPausa : MonoBehaviour
             return;
         }
 
+        if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.Fechar();
         Fechar();
         SceneFader.Instance.LoadScene(cenaMenu);
     }

@@ -467,25 +467,25 @@ public class InteracaoCapitulo1 : Interactable
             return;
         }
 
-        if (GameState.Tem(Flags.ChegouCasaAvo) || GameState.Tem(Flags.Pista_NotaFiscal2004) || GameState.Tem(Flags.Pista_CasaAvoCompleta))
+        if (GameState.Tem(Flags.OuviuRelatoAtendente))
         {
-            GameState.Marcar(Flags.Pista_RumoBarDoZe);
-            GameState.RegistrarNotaDiario(
-                "atendente_bar_do_ze",
-                "Testemunho da Atendente no Mercadinho",
-                "PISTA",
-                "Dentro do Mercadinho, a atendente confirmou o cupom de hoje e contou que viu Adílio subindo para os lados do Bar do Zé na Rua Norte cercado por dois homens do Clube."
-            );
-            GameState.DefinirObjetivo("Subir pelo Bairro das Casas até a Rua Norte e confrontar Zé no Bar do Zé.");
+            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
+            {
+                new DialogoLinha("ATENDENTE", "A Rua Norte é a de cima. Foi a última vez que vi a caminhonete. Depois voltei às entregas; não sei onde foram parar.", "atendente")
+            });
+            return;
+        }
 
+        if (GameState.Tem(Flags.Pista_NotaFiscal2004))
+        {
             GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
             {
                 new DialogoLinha("MARCUS", "Sou Marcus, neto do Adílio. Estive na casa dele agora. A porta estava destrancada e achei esta nota fiscal daqui com um aviso sobre o Bar do Zé.", "marcus"),
                 new DialogoLinha("ATENDENTE", "Fala baixo, Marcus... Seu Adílio comprou esse café comigo hoje à tarde. Ele estava tenso, disse que tinham mexido nos arquivos da noite de 1998.", "atendente"),
                 new DialogoLinha("ATENDENTE", "Pouco antes do temporal desabar, vi a caminhonete escura do Clube descer do Bairro das Casas levando ele pro alto da Rua Norte, bem na porta do Bar do Zé.", "atendente"),
-                new DialogoLinha("MARCUS", "Então é no Bar do Zé que eu vou achar a resposta. Fica subindo até o fim do Bairro das Casas, à direita, não é?", "marcus"),
-                new DialogoLinha("ATENDENTE", "Isso mesmo. Mas cuidado: o Zé controla o portão pro Centro e não abre a boca pra ninguém sem apostar na mesa de sinuca dele.", "atendente")
-            });
+                new DialogoLinha("MARCUS", "Você viu com quem ele estava?", "marcus"),
+                new DialogoLinha("ATENDENTE", "Dois homens. De onde eu estava não dava para ouvir. A Rua Norte fica no alto do Bairro; pergunta lá, talvez o Zé tenha visto mais perto.", "atendente")
+            }, ConfirmarTestemunhoAtendente);
         }
         else
         {
@@ -505,6 +505,16 @@ public class InteracaoCapitulo1 : Interactable
                 new DialogoLinha("ATENDENTE", "Sobe pela estrada de barro ali fora na encruzilhada até a casa dele, no número 40. Se achar qualquer coisa estranha lá, volta aqui e me avisa!", "atendente")
             });
         }
+    }
+
+    // Só o fechamento da conversa que apresenta o documento transmite o relato.
+    public static void ConfirmarTestemunhoAtendente()
+    {
+        if (!GameState.Tem(Flags.AchouReciboMercadinho)) return;
+        GameState.Marcar(Flags.ApresentouReciboAtendente);
+        GameState.Marcar(Flags.OuviuRelatoAtendente);
+        GameState.Marcar(Flags.Pista_RumoBarDoZe);
+        GameState.DefinirObjetivo("Procurar Zé no bar da Rua Norte e perguntar pela passagem de Adílio.");
     }
 
     private void InteragirCadernoMercadinho()
@@ -578,11 +588,11 @@ public class InteracaoCapitulo1 : Interactable
             "pista_cafe_hoje",
             "Café passado hoje mesmo",
             "PISTA",
-            "A garrafa térmica e a xícara na cozinha de Adílio ainda guardam calor e cheiro de café fresco. A rotina foi interrompida hoje, poucas horas antes da minha chegada."
+            "O bule e a xícara ainda guardam calor e cheiro de café. Não sei há quanto tempo foram deixados ali."
         );
 
         GameMessageUI.Instance.ShowInspection("CAFÉ AINDA MORNO", "Interior_PiaAvo",
-            "A xícara está pela metade e o bule ainda está morno. Adílio passou café hoje mesmo: ele estava em casa até poucas horas antes da minha chegada.",
+            "A xícara está pela metade e o bule guarda um pouco de calor. O vô costuma terminar o café. Pode ter se afastado por um momento... mas para onde?",
             VerificarConclusaoPistasCasaAvo);
     }
 
@@ -593,11 +603,11 @@ public class InteracaoCapitulo1 : Interactable
             "pista_cartas_mesa",
             "Paciência interrompida na mesa",
             "PISTA",
-            "As cartas de baralho de Adílio ficaram espalhadas no meio de uma partida solitária, indicando que alguém bateu à porta e o fez levantar no meio do jogo."
+            "As cartas de baralho ficaram espalhadas no meio de uma partida solitária. Pode ter sido interrompida, mas não vi o que aconteceu."
         );
 
         GameMessageUI.Instance.ShowInspection("PACIÊNCIA INTERROMPIDA", "Interior_MesaCartas",
-            "O baralho de Adílio ficou espalhado no meio de uma partida. Ele nunca deixava as cartas fora da caixa antes de sair. Alguém o interrompeu.",
+            "O baralho ficou no meio de uma partida. Lembro do vô guardando as cartas antes de sair. É estranho encontrar assim; talvez pretendesse voltar logo.",
             VerificarConclusaoPistasCasaAvo);
     }
 
@@ -630,7 +640,7 @@ public class InteracaoCapitulo1 : Interactable
         GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
         {
             new DialogoLinha("MARCUS", "O resto da casa está em ordem, mas aqui perto da porta o banco tombou e há pegadas de barro molhado que não são do calçado dele.", "marcus"),
-            new DialogoLinha("MARCUS", "O casaco de chuva dele ficou no prego. Ele não saiu voluntariamente.", "marcus")
+            new DialogoLinha("MARCUS", "O casaco de chuva dele ficou no prego. Ele pode ter saído com pressa. Preciso descobrir o que aconteceu aqui.", "marcus")
         }, VerificarConclusaoPistasCasaAvo);
     }
 
@@ -646,7 +656,7 @@ public class InteracaoCapitulo1 : Interactable
         GameState.Marcar(Flags.CasaAvo_OlhouTelefone);
         GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
         {
-            new DialogoLinha("MARCUS", "O fone está caído ao lado da base, emitindo um tom de ocupado constante. Ele tentou discar para alguém quando bateram na porta.", "marcus")
+            new DialogoLinha("MARCUS", "O fone está caído ao lado da base. Isso explica o ocupado. Será que uma ligação foi interrompida? Só olhando o aparelho não consigo saber quando nem quem estava usando.", "marcus")
         }, VerificarConclusaoPistasCasaAvo);
     }
 
@@ -663,15 +673,17 @@ public class InteracaoCapitulo1 : Interactable
         if (cont >= 3 && !GameState.Tem(Flags.Pista_CasaAvoCompleta))
         {
             GameState.Marcar(Flags.Pista_CasaAvoCompleta);
-            GameState.Marcar(Flags.Pista_RumoBarDoZe);
             GameState.RegistrarNotaDiario(
                 "hipotese_casa_adilio",
-                "Rotina interrompida — bilhete para a Rua Norte",
+                "Rotina possivelmente interrompida",
                 "HIPÓTESE",
-                "O café morno, a nota fiscal de hoje (2004), as cartas interrompidas e o banco caído sugerem uma saída inesperada. Ainda não sei o motivo. O bilhete aponta para o Bar do Zé, na Rua Norte."
+                "Os detalhes que examinei na casa sugerem uma saída inesperada. Ainda não sei o motivo nem posso concluir que alguém levou Adílio."
             );
-            GameState.DefinirObjetivo("Sair da casa de Adílio e subir pela saída nordeste do Bairro até a Rua Norte / Bar do Zé (ou confirmar no Mercadinho).");
-            Legenda.Dizer("O bilhete fala da Rua Norte. Talvez alguém tenha visto o vô por lá.", 4f, Legenda.PrioridadeCritica);
+        }
+        if (GameState.Tem(Flags.CasaAvo_LeuBilhete) && !GameState.Tem(Flags.ZeDerrotadoNaSinuca))
+        {
+            GameState.Marcar(Flags.Pista_RumoBarDoZe);
+            GameState.DefinirObjetivo("Conferir o cupom no Mercadinho ou procurar o Bar do Zé citado no bilhete.");
         }
     }
 
@@ -726,7 +738,7 @@ public class InteracaoCapitulo1 : Interactable
 
         GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
         {
-            new DialogoLinha("FREQUENTADOR", "Cuidado com a segunda mão na mesa do Zé, rapaz. Ele sempre escolhe uma bola pra marcar com giz. Se você derrubar a bola marcada, perde a vez e dá ponto pra ele.", "adilio"),
+            new DialogoLinha("FREQUENTADOR", "Cuidado com a segunda mão. O Zé marca uma bola com giz. Se ela cair, a tacada não vale ponto, as bolas caídas voltam e o outro fica com a branca na mão.", "adilio"),
             new DialogoLinha("MARCUS", "Obrigado pelo aviso. Só preciso que ele abra o bico sobre o meu avô.", "marcus")
         });
     }
@@ -765,11 +777,11 @@ public class InteracaoCapitulo1 : Interactable
         var linhasPreDuelo = new List<DialogoLinha>
         {
             new DialogoLinha("ZÉ", "Olha só quem a chuva trouxe de volta pra Santa Rita. O neto do seu Adílio.", "ze"),
-            new DialogoLinha("MARCUS", "Onde está o meu avô, Zé? Na casa dele o café ainda estava morno, o banco perto da porta tombou e encontrei o teu nome anotado num cupom de hoje.", "marcus"),
+            new DialogoLinha("MARCUS", GameState.Tem(Flags.CasaAvo_LeuBilhete) ? "Estou procurando o vô. Encontrei teu nome numa anotação dele. Vocês conversaram hoje?" : "Estou procurando o seu Adílio. Ele não atende o telefone. Você viu ele hoje?", "marcus"),
             new DialogoLinha("ZÉ", "Teu avô apareceu aqui hoje mais cedo, sim. Veio fazer pergunta que ninguém nesta cidade quer ouvir desde aquela madrugada de noventa e oito.", "ze"),
-            new DialogoLinha("MARCUS", "Quem levou ele daqui? Ele não saiu daquela casa por vontade própria.", "marcus"),
+            new DialogoLinha("MARCUS", "Ele saiu daqui sozinho? Para onde foi?", "marcus"),
             new DialogoLinha("ZÉ", "Quer que eu abra o portão do Centro e te diga quem carregou o velho? Então pega o taco, garoto. Melhor de três na minha mesa.", "ze"),
-            new DialogoLinha("ZÉ", "Sete bolas, quatro pontos levam a mão. Mas a partir da segunda mão vale a regra da casa: quando eu marcar uma bola, ESSA FICA NA MESA. Encaçapou a marcada, entrega o ponto e a bola volta pro pano.", "ze")
+            new DialogoLinha("ZÉ", "Sete bolas, quatro pontos levam a mão. A partir da segunda, ESSA FICA NA MESA. Derrubou a marcada, tua tacada não vale ponto, repõe as que caíram e deixa a branca na mão do outro. Vale pra mim também.", "ze")
         };
 
         GameMessageUI.Instance.ShowDialogue(linhasPreDuelo, IniciarPartidaSinucaComZe);
@@ -805,7 +817,7 @@ public class InteracaoCapitulo1 : Interactable
         var linhasPosVitoria = new List<DialogoLinha>
         {
             new DialogoLinha("ZÉ", "...Você tem o pulso firme do velho Adílio. Palavra dada na mesa não volta atrás.", "ze"),
-            new DialogoLinha("ZÉ", "Pega. Essa é uma Ficha do Clube — `ficha_clube_ze_01`. Sem esse metal no bolso, as portas lá pra cima nem te enxergam.", "ze"),
+            new DialogoLinha("ZÉ", "Pega. É uma Ficha do Clube. Mostra no atendimento lá em cima; vão saber que tu falou comigo.", "ze"),
             new DialogoLinha("MARCUS", "Agora fala a verdade, Zé. O que fizeram com o meu avô hoje?", "marcus"),
             new DialogoLinha("ZÉ", "Teu avô não saiu de casa porque quis, Marcus. Ele descobriu que alguém mexeu nos registros antigos da estrada — daquela noite das 03:17 em noventa e oito.", "ze"),
             new DialogoLinha("ZÉ", "Dois homens desceram do Centro hoje à tarde e levaram ele passando pelo portão aqui do lado. Eu já destranquei a grade lá fora. O resto é entre você e o que sobrou desta cidade.", "ze")

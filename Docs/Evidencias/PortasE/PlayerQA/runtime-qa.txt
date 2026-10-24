@@ -1,0 +1,64 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+Fixture em RAM: progressão C1 liberada e reposicionamentos nas portas. E pelo Input System/PlayerController real; relógio da última transição semeado para reproduzir a tentativa descartada. Saves pessoais isolados.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Prompt e E selecionam entrada de SociedadeBeiraRio
+PASS E abre SociedadeBeiraRio mesmo logo após outra transição.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS E sai de SociedadeBeiraRio sem bloqueio por relógio reiniciado.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Prompt e E selecionam entrada de IgrejaMatriz
+PASS E abre IgrejaMatriz mesmo logo após outra transição.
+PASS Cena carregada IgrejaMatriz
+PASS Leitura encerra e devolve controle.
+PASS E sai de IgrejaMatriz sem bloqueio por relógio reiniciado.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Prompt e E selecionam entrada de PrefeituraSantaRita
+PASS E abre PrefeituraSantaRita mesmo logo após outra transição.
+PASS Cena carregada PrefeituraSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E sai de PrefeituraSantaRita sem bloqueio por relógio reiniciado.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Prompt e E selecionam entrada de RodoviariaSantaRita
+PASS E abre RodoviariaSantaRita mesmo logo após outra transição.
+PASS Cena carregada RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E sai de RodoviariaSantaRita sem bloqueio por relógio reiniciado.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Prompt e E selecionam entrada de MercadinhoDeposito
+PASS E abre MercadinhoDeposito mesmo logo após outra transição.
+PASS Cena carregada MercadinhoDeposito
+PASS Leitura encerra e devolve controle.
+PASS E sai de MercadinhoDeposito sem bloqueio por relógio reiniciado.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Prompt e E selecionam entrada de OficinaRadio
+PASS E abre OficinaRadio mesmo logo após outra transição.
+PASS Cena carregada OficinaRadio
+PASS Leitura encerra e devolve controle.
+PASS E sai de OficinaRadio sem bloqueio por relógio reiniciado.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Prompt e E selecionam entrada de CasaCostureira
+PASS E abre CasaCostureira mesmo logo após outra transição.
+PASS Cena carregada CasaCostureira
+PASS Leitura encerra e devolve controle.
+PASS E sai de CasaCostureira sem bloqueio por relógio reiniciado.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Portais possuem reset explícito ao iniciar Play.
+PASS Nova sessão libera primeira passagem automática.
+PASS Passagem automática conserva proteção contra retorno imediato.
+PASS Relógio recuado não prende passagem automática indefinidamente.
+PASS Segundo portal durante fade não sobrescreve a entrada pendente.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS Leitura continua bloqueando transição sob a interface.
+PASS Leitura encerra e devolve controle.
+PASS Entradas, saídas e reinício do relógio não gravam checkpoint.
+PASS runtime 2026-10-23T19:06:38.1577315Z

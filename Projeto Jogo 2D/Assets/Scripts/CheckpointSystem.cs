@@ -41,6 +41,7 @@ public static class CheckpointSystem
     private static string StorageDirectory => testDirectory ?? Application.persistentDataPath;
     private static string TestPrefix => testDirectory == null ? "" : "SRQA_" + Path.GetFileName(testDirectory) + "_";
     private static string testDirectory;
+    public static bool EmArmazenamentoDeTeste => testDirectory != null;
 
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
     // Os testes do save usam arquivo e namespace de preferências próprios.
@@ -59,6 +60,9 @@ public static class CheckpointSystem
     private sealed class IsolatedSaveScope : IDisposable
     {
         private readonly GameStateSnapshot anterior;
+        private readonly bool progressoPendente = GameState.TemProgressoNaoSalvo;
+        private readonly bool spawnPendente = pendingSpawn;
+        private readonly int slotPendente = pendingSlotIndex;
         public IsolatedSaveScope(GameStateSnapshot estado) { anterior = estado; }
         public void Dispose()
         {
@@ -67,10 +71,13 @@ public static class CheckpointSystem
             PlayerPrefs.DeleteKey(PrefKeyBackup);
             PlayerPrefs.DeleteKey(PrefKeyLastSlot);
             for (int i = 0; i < TotalSlots; i++) PlayerPrefs.DeleteKey(PrefKeySlotPrefix + i);
+            PlayerPrefs.Save(); // Persistir também a remoção do namespace temporário.
             string criadaPeloTeste = testDirectory;
             testDirectory = null;
             ClearPendingOnly();
             GameState.ImportarSnapshot(anterior);
+            GameState.RestaurarIndicadorDeProgresso(progressoPendente);
+            pendingSpawn = spawnPendente; pendingSlotIndex = slotPendente;
             if (Path.GetFileName(criadaPeloTeste).StartsWith("SantaRitaC2SaveTests_"))
                 Directory.Delete(criadaPeloTeste, true);
         }
@@ -209,8 +216,9 @@ public static class CheckpointSystem
         if (PlayerPrefs.HasKey(prefKey) && TryParseAndValidateJson(PlayerPrefs.GetString(prefKey), out data))
             return true;
 
-        // Compatibilidade: se for o slot 0 e existir um save antigo sem slot separado, espelha no Slot 1
-        if (slotIndex == 0 && TryLoadPrimaryOnly(out data))
+        // Somente o formato anterior aos slots pode ocupar o primeiro slot.
+        // O arquivo geral moderno é a cópia do último slot usado, não outro slot.
+        if (slotIndex == 0 && TryLoadPrimaryOnly(out data, legacyOnly: true))
             return true;
 
         return false;
@@ -310,17 +318,18 @@ public static class CheckpointSystem
         return true;
     }
 
-    private static bool TryLoadPrimaryOnly(out ManualSaveData data)
+    private static bool TryLoadPrimaryOnly(out ManualSaveData data, bool legacyOnly = false)
     {
         data = null;
-        if (TryReadAndValidateFile(PrimaryFilePath, out data))
+        if (TryReadAndValidateFile(PrimaryFilePath, out data) && (!legacyOnly || data.slotIndex == -1))
             return true;
-        if (TryReadAndValidateFile(BackupFilePath, out data))
+        if (TryReadAndValidateFile(BackupFilePath, out data) && (!legacyOnly || data.slotIndex == -1))
             return true;
-        if (PlayerPrefs.HasKey(PrefKeyPrimary) && TryParseAndValidateJson(PlayerPrefs.GetString(PrefKeyPrimary), out data))
+        if (PlayerPrefs.HasKey(PrefKeyPrimary) && TryParseAndValidateJson(PlayerPrefs.GetString(PrefKeyPrimary), out data) && (!legacyOnly || data.slotIndex == -1))
             return true;
-        if (PlayerPrefs.HasKey(PrefKeyBackup) && TryParseAndValidateJson(PlayerPrefs.GetString(PrefKeyBackup), out data))
+        if (PlayerPrefs.HasKey(PrefKeyBackup) && TryParseAndValidateJson(PlayerPrefs.GetString(PrefKeyBackup), out data) && (!legacyOnly || data.slotIndex == -1))
             return true;
+        data = null;
         return false;
     }
 
@@ -358,9 +367,10 @@ public static class CheckpointSystem
         if (string.IsNullOrWhiteSpace(json)) return false;
         try
         {
-            var parsed = JsonUtility.FromJson<ManualSaveData>(json);
-            if (parsed == null) return false;
+            var parsed = new ManualSaveData { slotIndex = -1, versao = 0 };
+            JsonUtility.FromJsonOverwrite(json, parsed);
             if (parsed.versao != SaveVersion) return false;
+            if (parsed.slotIndex < -1 || parsed.slotIndex >= TotalSlots) return false;
             if (parsed.sceneName != "EntradaDaCidade" && parsed.sceneName != "CasaDoAvo" && parsed.sceneName != "BarDoZe" &&
                 !Capitulo2Director.CenaDoCapitulo2(parsed.sceneName)) return false;
             if (float.IsNaN(parsed.posX) || float.IsInfinity(parsed.posX) ||

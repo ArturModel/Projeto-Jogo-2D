@@ -1,0 +1,176 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+Acessos: fixture de progressão em RAM; posições de aproximação declaradas; E e movimento pelo Input System real. Nenhum save pessoal.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS SociedadeBeiraRio: soleiras de chão sem obstáculo nem DoorFrame.
+PASS SociedadeBeiraRio: saída deliberada, sem revelar destino pelo prompt.
+PASS SociedadeBeiraRio: aproximação não dispara transição involuntária.
+PASS SociedadeBeiraRio: E alcança a saída.
+PASS Cena carregada CentroSantaRita
+PASS SociedadeBeiraRio: E preserva destino e retorno.
+PASS Cena carregada IgrejaMatriz
+PASS Leitura encerra e devolve controle.
+PASS IgrejaMatriz: soleiras de chão sem obstáculo nem DoorFrame.
+PASS IgrejaMatriz: saída deliberada, sem revelar destino pelo prompt.
+PASS IgrejaMatriz: aproximação não dispara transição involuntária.
+PASS IgrejaMatriz: E alcança a saída.
+PASS Cena carregada CentroSantaRita
+PASS IgrejaMatriz: E preserva destino e retorno.
+PASS Cena carregada PrefeituraSantaRita
+PASS Leitura encerra e devolve controle.
+PASS PrefeituraSantaRita: soleiras de chão sem obstáculo nem DoorFrame.
+PASS PrefeituraSantaRita: saída deliberada, sem revelar destino pelo prompt.
+PASS PrefeituraSantaRita: aproximação não dispara transição involuntária.
+PASS PrefeituraSantaRita: E alcança a saída.
+PASS Cena carregada CentroSantaRita
+PASS PrefeituraSantaRita: E preserva destino e retorno.
+PASS Cena carregada RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS RodoviariaSantaRita: soleiras de chão sem obstáculo nem DoorFrame.
+PASS RodoviariaSantaRita: saída deliberada, sem revelar destino pelo prompt.
+PASS RodoviariaSantaRita: aproximação não dispara transição involuntária.
+PASS RodoviariaSantaRita: E alcança a saída.
+PASS Cena carregada CentroSantaRita
+PASS RodoviariaSantaRita: E preserva destino e retorno.
+PASS Cena carregada MercadinhoDeposito
+PASS Leitura encerra e devolve controle.
+PASS MercadinhoDeposito: soleiras de chão sem obstáculo nem DoorFrame.
+PASS MercadinhoDeposito: saída deliberada, sem revelar destino pelo prompt.
+PASS MercadinhoDeposito: aproximação não dispara transição involuntária.
+PASS MercadinhoDeposito: E alcança a saída.
+PASS Cena carregada CentroSantaRita
+PASS MercadinhoDeposito: E preserva destino e retorno.
+PASS Cena carregada OficinaRadio
+PASS Leitura encerra e devolve controle.
+PASS OficinaRadio: soleiras de chão sem obstáculo nem DoorFrame.
+PASS OficinaRadio: saída deliberada, sem revelar destino pelo prompt.
+PASS OficinaRadio: aproximação não dispara transição involuntária.
+PASS OficinaRadio: E alcança a saída.
+PASS Cena carregada CentroSantaRita
+PASS OficinaRadio: E preserva destino e retorno.
+PASS Cena carregada CasaCostureira
+PASS Leitura encerra e devolve controle.
+PASS CasaCostureira: soleiras de chão sem obstáculo nem DoorFrame.
+PASS CasaCostureira: saída deliberada, sem revelar destino pelo prompt.
+PASS CasaCostureira: aproximação não dispara transição involuntária.
+PASS CasaCostureira: E alcança a saída.
+PASS Cena carregada CentroSantaRita
+PASS CasaCostureira: E preserva destino e retorno.
+PASS Cena carregada AbrigoCemiterio
+PASS Leitura encerra e devolve controle.
+PASS AbrigoCemiterio: soleiras de chão sem obstáculo nem DoorFrame.
+PASS AbrigoCemiterio: saída deliberada, sem revelar destino pelo prompt.
+PASS AbrigoCemiterio: aproximação não dispara transição involuntária.
+PASS AbrigoCemiterio: E alcança a saída.
+PASS Cena carregada CemiterioSantaRita
+PASS AbrigoCemiterio: E preserva destino e retorno.
+PASS Cena carregada MercadinhoDeposito
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS Depósito preserva a porta de serviço e o ponto de retorno à loja C1.
+PASS Leitura encerra e devolve controle.
+PASS Interior_Posto: capacho nativo e saída contextual.
+PASS Interior_Posto: E devolve à região original.
+PASS Leitura encerra e devolve controle.
+PASS Interior_Mercadinho: capacho nativo e saída contextual.
+PASS Interior_Mercadinho: E devolve à região original.
+PASS Leitura encerra e devolve controle.
+PASS Interior_CasaDoAvo: capacho nativo e saída contextual.
+PASS Interior_CasaDoAvo: E devolve à região original.
+PASS Leitura encerra e devolve controle.
+PASS Interior_BarDoZe: capacho nativo e saída contextual.
+PASS Interior_BarDoZe: E devolve à região original.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS Cancha: escada aberta de três degraus na mesma cena, sem porta.
+PASS Cadência reduz apenas na escada; passada segue deslocamento real.
+PASS Longe da escada, parede e cobertura da sala permanecem visíveis.
+PASS Desnível de três espelhos projeta Marcus 15 pixels abaixo, sem trocar quadros da caminhada.
+PASS Marcus reduz 10% de escala ao descer, sem encolher colisões do cenário.
+PASS Aproximação abre visão apenas da cancha; colisões permanecem.
+PASS Recorte visual não remove as paredes físicas.
+PASS Desce a escada por movimento, sem corte de cena.
+PASS Sobe de volta ao salão sem bloqueio. y=5,674562
+PASS Ao subir, corpo e colisão retornam ao nível do salão.
+PASS Cancha explorável reduzida de 22 para 19 de comprimento; partida preservada.
+PASS Bancos nas duas laterais, correspondentes à sala da partida.
+PASS Revisão de acessos e escada não cria save automático.
+Fixture declarada: entrada direta na Sociedade e prática; mouse virtual pelo Input System/EventSystem real. Não é percurso de campanha.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS Sala da cancha tem divisória visível e colisão, conectada ao salão.
+PASS Marcus atravessa a escada do salão para a sala por movimento real.
+PASS Marcus permanece inteiro à frente da parede do fundo.
+PASS Câmera: esquerda física aparece à esquerda.
+PASS Minimapa: mesma lateral da cabeceira e fundo no alto.
+PASS Vista geral: lançamento da esquerda para a direita.
+PASS Sem botão de lançar ou ajuste de força concorrente.
+PASS Cursor mais ao fundo aumenta linha de mira.
+Carga parada: mínimo 0,04112587, máximo 0,9998056, subidas 198, descidas 180, inversões 4
+PASS Clique parado aumenta força sem lançar nem gastar bocha.
+PASS Segurar além do máximo faz força descer.
+PASS Segurar continuamente repete subidas e descidas.
+PASS Soltar clique parado lança exatamente uma bocha.
+PASS Release não duplica lançamento.
+PASS Pausa realmente congela a física.
+PASS Perder foco cancela carga e release tardio, sem consumir.
+PASS Troca de vista durante carga cancela sem lançamento.
+PASS Consulta superior não arma nem lança.
+PASS Soltar fora da cancha cancela sem gastar.
+PASS Trocar tipo cancela carga sem release fantasma.
+PASS Zoom aproxima sem mudar coordenadas físicas.
+PASS Zoom limitado mantém consulta legível.
+PASS Resolução cancela carga e pausa: (1024, 768)
+PASS Interface completa dentro da tela (1024, 768)
+PASS Resolução cancela carga e pausa: (1920, 1080)
+PASS Interface completa dentro da tela (1920, 1080)
+PASS Resolução cancela carga e pausa: (1280, 720)
+PASS Interface completa dentro da tela (1280, 720)
+PASS A move posição e bocha para a esquerda visível.
+PASS D move para a direita.
+PASS Input completo lança modo Ponto
+PASS Altura inicial correta em Ponto
+PASS Rolagem deixa marca real no saibro: Ponto
+PASS Input completo lança modo Rafa
+PASS Altura inicial correta em Rafa
+PASS Rolagem deixa marca real no saibro: Rafa
+PASS Input completo lança modo Volo
+PASS Altura inicial correta em Volo
+PASS Voo não desenha rastro no ar.
+PASS Sair remove também fundo opaco da Bocha.
+PASS Leitura encerra e devolve controle.
+PASS Interação e diálogo reais abrem a Bocha na sala.
+PASS Sessão completa até seis com IA e física reais; Marcus lançou 8 vezes. Apenas tempo/decisão de mira automatizados.
+PASS Leitura encerra e devolve controle.
+PASS Consequência entrega a ficha depois da vitória.
+PASS Leitura encerra e devolve controle.
+PASS Revisita não duplica recompensa ou diário.
+PASS Vitória não salva automaticamente.
+PASS Colisão física na cabeceira rebate antes do evento sonoro.
+Áudio resposta: 2,00 s, RMS 0,0143, pico 0,065
+PASS Resposta abafada audível agendada após impacto real, distinta da colisão.
+PASS Resposta usa clip próprio não vazio e sem clipping.
+PASS F em RAM não regrava a preferência do slot manual anterior.
+PASS Derrota Bocha abre escolha explícita de cinco slots.
+PASS Cancelar volta à derrota Bocha.
+PASS Cena carregada SociedadeBeiraRio
+PASS Escolha carrega slot 1 mesmo sendo slot 5 o último gravado.
+PASS Derrota Sinuca abre o mesmo seletor.
+PASS Cancelar volta à derrota Sinuca.
+PASS Cena carregada CentroSantaRita
+PASS Sinuca carrega exatamente o slot escolhido.
+PASS Cena carregada SociedadeBeiraRio
+PASS Save antigo da cancha é adaptado para área conectada à saída: (8.00, 16.00)
+PASS Migração espacial registrada em RAM sem regravar save.
+PASS Bocha sem save oferece menu, sem retorno automático.
+PASS Sinuca sem save não inventa checkpoint.
+AI síncrona: 0 bochas + balim, 7,58 ms; velocidade 5,21
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+AI síncrona: 4 bochas + balim, 30,84 ms; velocidade 5,36
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+AI síncrona: 7 bochas + balim, 55,13 ms; velocidade 9,42
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+PASS Prática e UI não criaram checkpoint.
+Aprovação de diversão, arte e audição pelo autor permanece pendente.
+PASS runtime 2026-10-23T18:30:26.6796097Z

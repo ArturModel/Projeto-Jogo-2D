@@ -386,6 +386,7 @@ public class Capitulo1Director : MonoBehaviour
     private void Update()
     {
         if (!Application.isPlaying) return;
+        SantaRitaBarAudio.DefinirContexto(zonaAtual == ZonaId.Interior_BarDoZe, SinucaMinigameUI.MaoEmCurso);
 
         // A música do bairro continua sem reiniciar ao entrar na casa; no bar
         // ela só toca no interior. O estado da partida controla a redução de volume.
@@ -426,20 +427,8 @@ public class Capitulo1Director : MonoBehaviour
             templatePayphone = orelhaoOrig.GetComponent<PayphoneCheckpoint>();
         }
 
-        // A cena serializada ainda contém a cidade protótipo. Os carros dela
-        // ficavam desenhados sobre os da cidade construída abaixo.
-        string[] raizesPreservadas =
-        {
-            "Player", "Global Light 2D", "Main Camera", "Flashlight",
-            "MenuPausa", "Chuva", "Capitulo1Director", "Ato I",
-            "Saida do Carro", "Entrada da Casa", "Spawn_SaidaBarDoZe"
-        };
-        foreach (GameObject raizLegada in SceneManager.GetActiveScene().GetRootGameObjects())
-        {
-            if (Array.IndexOf(raizesPreservadas, raizLegada.name) < 0)
-                raizLegada.SetActive(false);
-        }
-
+        // Ocultar apenas os objetos conhecidos do protótipo. Novas raízes de
+        // autoria continuam ativas, mesmo sem fazer parte do montador de C1.
         // Compatibilidade com cenas anteriores que tinham parte do cenário em filhos.
         string[] objetosAntigosParaOcultar =
         {
@@ -1783,11 +1772,9 @@ public class Capitulo1Director : MonoBehaviour
 
         // Iluminação interna quente
         AdicionarLuzPonto(z.transform, new Vector3(208.0f, -53.5f, 0f), new Color(1.0f, 0.94f, 0.80f, 1f), 10.0f, 1.1f);
-        ColocarTapete(z.transform, "Capacho_Posto", new Vector2(208f, -57.6f),
-            new Vector2(2.6f, 1.2f), new Color32(37, 45, 43, 255), new Color32(104, 115, 99, 255));
 
         // Porta de saída no sul da sala
-        ColocarProp(z.transform, "PortaFrame_Posto", new Vector3(208.0f, -59.2f, 0f), "DoorFrame", 32f, 1.2f, Vector2.zero, Vector2.zero, 1);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_Posto",new Vector2(208,-59.2f),"SaidaComercio",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_Posto",
@@ -1985,11 +1972,9 @@ public class Capitulo1Director : MonoBehaviour
 
         // Iluminação interna quente de mercearia
         AdicionarLuzPonto(z.transform, new Vector3(309.0f, -53.0f, 0f), new Color(1.0f, 0.93f, 0.78f, 1f), 11.0f, 1.15f);
-        ColocarTapete(z.transform, "Capacho_Mercadinho", new Vector2(309f, -57.6f),
-            new Vector2(3.2f, 1.2f), new Color32(100, 51, 42, 255), new Color32(156, 105, 70, 255));
 
         // Porta de saída no sul
-        ColocarProp(z.transform, "PortaFrame_Mercadinho", new Vector3(309.0f, -59.2f, 0f), "DoorFrame", 32f, 1.2f, Vector2.zero, Vector2.zero, 1);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_Mercadinho",new Vector2(309,-59.2f),"SaidaComercio",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_Mercadinho",
@@ -2228,7 +2213,7 @@ public class Capitulo1Director : MonoBehaviour
             new Vector2(5.0f, 3.0f), new Color32(94, 49, 41, 255), new Color32(145, 101, 73, 255));
 
         // Porta de saída no sul da casa
-        ColocarProp(z.transform, "PortaFrame_CasaAvo", new Vector3(409.0f, -59.2f, 0f), "DoorFrame", 32f, 1.2f, Vector2.zero, Vector2.zero, 1);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_CasaAvo",new Vector2(409,-59.2f),"SaidaCasa",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_CasaAvo",
@@ -2412,11 +2397,9 @@ public class Capitulo1Director : MonoBehaviour
 
         // Iluminação quente de sinuca e bar
         AdicionarLuzPonto(z.transform, new Vector3(509.0f, -52.8f, 0f), new Color(1.0f, 0.84f, 0.52f, 1f), 11.5f, 1.25f);
-        ColocarTapete(z.transform, "Capacho_Bar", new Vector2(509f, -57.6f),
-            new Vector2(2.9f, 1.2f), new Color32(70, 44, 30, 255), new Color32(119, 86, 51, 255));
 
         // Porta de saída no sul do Bar
-        ColocarProp(z.transform, "PortaFrame_BarDoZe", new Vector3(509.0f, -59.2f, 0f), "DoorFrame", 32f, 1.2f, Vector2.zero, Vector2.zero, 1);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_BarDoZe",new Vector2(509,-59.2f),"SaidaSociedade",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_BarDoZe",
@@ -2561,8 +2544,8 @@ public class Capitulo1Director : MonoBehaviour
 
         TextMeshProUGUI corpo = UIFactory.CreateLabel(rt, "Resumo", 15f);
         corpo.text =
-            "• FATO CONFIRMADO: Adílio não saiu de casa voluntariamente hoje. O café morno e o banco tombado provam que sua rotina foi interrompida à força.\n\n" +
-            "• RECOMPENSA OBTIDA: Ficha do Clube #01 (ficha_clube_ze_01), conquistada ao derrotar Zé na Melhor de 3 sob a regra 'A Bola Marcada'.\n\n" +
+            "• TESTEMUNHO: Zé diz que Adílio foi levado contra a vontade. O café e a desordem levantaram suspeitas; ainda preciso confrontar o relato com outras fontes.\n\n" +
+            "• RECOMPENSA OBTIDA: Ficha do Clube entregue por Zé, conquistada ao derrotar Zé na Melhor de 3 sob a regra 'A Bola Marcada'.\n\n" +
             "• PRÓXIMO PASSO: Com o portão norte destrancado, Marcus avança para o Centro de Santa Rita em direção aos quatro cantos da cidade e ao Clube no topo.";
         corpo.color = new Color(0.22f, 0.18f, 0.14f, 1f);
         corpo.alignment = TextAlignmentOptions.TopLeft;

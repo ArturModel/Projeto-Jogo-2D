@@ -1,0 +1,298 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+R2: fixture em RAM + input e callbacks reais; reposicionamentos são explícitos. Não é campanha legítima.
+PASS Cena carregada CentroSantaRita
+PASS Apresentação real mila; vitória prévia=False
+PASS Consequência não antecede leitura mila
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação mila
+PASS Opcional real alcançável após apresentação mila; vitória=False
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada mila
+PASS Reação depois do opcional mila
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura mila
+PASS Reação não repete para sempre mila
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real mila; vitória prévia=True
+PASS Consequência não antecede leitura mila
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação mila
+PASS Opcional real alcançável após apresentação mila; vitória=True
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada mila
+PASS Reação depois do opcional mila
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura mila
+PASS Reação não repete para sempre mila
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real celina; vitória prévia=False
+PASS Consequência não antecede leitura celina
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação celina
+PASS Opcional real alcançável após apresentação celina; vitória=False
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada celina
+PASS Reação depois do opcional celina
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura celina
+PASS Reação não repete para sempre celina
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real celina; vitória prévia=True
+PASS Consequência não antecede leitura celina
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação celina
+PASS Opcional real alcançável após apresentação celina; vitória=True
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada celina
+PASS Reação depois do opcional celina
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura celina
+PASS Reação não repete para sempre celina
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real alcina; vitória prévia=False
+PASS Consequência não antecede leitura alcina
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação alcina
+PASS Opcional real alcançável após apresentação alcina; vitória=False
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada alcina
+PASS Reação depois do opcional alcina
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura alcina
+PASS Reação não repete para sempre alcina
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real alcina; vitória prévia=True
+PASS Consequência não antecede leitura alcina
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação alcina
+PASS Opcional real alcançável após apresentação alcina; vitória=True
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada alcina
+PASS Reação depois do opcional alcina
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura alcina
+PASS Reação não repete para sempre alcina
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real nair; vitória prévia=False
+PASS Consequência não antecede leitura nair
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação nair
+PASS Opcional real alcançável após apresentação nair; vitória=False
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada nair
+PASS Reação depois do opcional nair
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura nair
+PASS Reação não repete para sempre nair
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real nair; vitória prévia=True
+PASS Consequência não antecede leitura nair
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação nair
+PASS Opcional real alcançável após apresentação nair; vitória=True
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada nair
+PASS Reação depois do opcional nair
+PASS Leitura encerra e devolve controle.
+PASS Reação única registrada somente após leitura nair
+PASS Reação não repete para sempre nair
+PASS Leitura encerra e devolve controle.
+PASS Apresentação real rodo_motorista; vitória prévia=False
+PASS Consequência não antecede leitura rodo_motorista
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação rodo_motorista
+PASS Opcional real alcançável após apresentação rodo_motorista; vitória=False
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada rodo_motorista
+PASS Apresentação real rodo_motorista; vitória prévia=True
+PASS Consequência não antecede leitura rodo_motorista
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação rodo_motorista
+PASS Opcional real alcançável após apresentação rodo_motorista; vitória=True
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada rodo_motorista
+PASS Apresentação real rodo_passageira; vitória prévia=False
+PASS Consequência não antecede leitura rodo_passageira
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação rodo_passageira
+PASS Opcional real alcançável após apresentação rodo_passageira; vitória=False
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada rodo_passageira
+PASS Apresentação real rodo_passageira; vitória prévia=True
+PASS Consequência não antecede leitura rodo_passageira
+PASS Leitura encerra e devolve controle.
+PASS Callback da apresentação rodo_passageira
+PASS Opcional real alcançável após apresentação rodo_passageira; vitória=True
+PASS Leitura encerra e devolve controle.
+PASS Consequência do ramo executada rodo_passageira
+PASS Telefone tardio começa pela primeira comunicação, não atualização inexistente.
+PASS Leitura encerra e devolve controle.
+PASS Primeira comunicação conclui callback.
+PASS Cena carregada SociedadeBeiraRio
+PASS Porta real para SociedadeBeiraRio
+PASS Mapa real marca Marcus na região explorada: SociedadeBeiraRio
+PASS Tonão percorre postos reais, com poses e alvo seguindo o corpo.
+PASS Interação segue Tonão.
+PASS Conversa interrompe trabalho/movimento.
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada IgrejaMatriz
+PASS Porta real para IgrejaMatriz
+PASS Mapa real marca Marcus na região explorada: IgrejaMatriz
+PASS Planta e migração registradas: IgrejaMatriz
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada PrefeituraSantaRita
+PASS Porta real para PrefeituraSantaRita
+PASS Mapa real marca Marcus na região explorada: PrefeituraSantaRita
+PASS Planta e migração registradas: PrefeituraSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Protocolo não é entregue antes do atendimento.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada RodoviariaSantaRita
+PASS Porta real para RodoviariaSantaRita
+PASS Mapa real marca Marcus na região explorada: RodoviariaSantaRita
+PASS Planta e migração registradas: RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada MercadinhoDeposito
+PASS Porta real para MercadinhoDeposito
+PASS Mapa real marca Marcus na região explorada: MercadinhoDeposito
+PASS Planta e migração registradas: MercadinhoDeposito
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada OficinaRadio
+PASS Porta real para OficinaRadio
+PASS Mapa real marca Marcus na região explorada: OficinaRadio
+PASS Planta e migração registradas: OficinaRadio
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Retorno LOCAL do rádio conclui interação real.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada CasaCostureira
+PASS Porta real para CasaCostureira
+PASS Mapa real marca Marcus na região explorada: CasaCostureira
+PASS Planta e migração registradas: CasaCostureira
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada CemiterioSantaRita
+PASS Porta real para CemiterioSantaRita
+PASS Mapa real marca Marcus na região explorada: CemiterioSantaRita
+PASS Percepção ligada por referência serializada ao jazigo real.
+PASS Janela com foco para input F: cemiterio
+PASS F liga uma vez: cemiterio
+PASS Feixe visível após F: cemiterio
+PASS Uma fonte de equipamento em cemiterio
+PASS Segurar F não alterna repetidamente.
+PASS Leitura suprime apresentação e conserva preferência.
+PASS F bloqueado na leitura.
+PASS Leitura encerra e devolve controle.
+PASS F bloqueado no mapa.
+PASS F bloqueado na seleção de saves.
+PASS Pausa real aberta para teste de equipamento.
+PASS F bloqueado na pausa.
+PASS F antes da aquisição não fornece equipamento.
+PASS Save antigo com equipamento e sem preferência começa apagado.
+PASS Leitura encerra e devolve controle.
+PASS Leitura do jazigo dispara percepção no alvo serializado real.
+PASS Cena carregada AbrigoCemiterio
+PASS Porta real para AbrigoCemiterio
+PASS Mapa real marca Marcus na região explorada: AbrigoCemiterio
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CemiterioSantaRita
+PASS Porta real para CemiterioSantaRita
+PASS Mapa real marca Marcus na região explorada: CemiterioSantaRita
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Janela com foco para input F: centro
+PASS F liga uma vez: centro
+PASS Feixe visível após F: centro
+PASS Uma fonte de equipamento em centro
+PASS Segurar F não alterna repetidamente.
+PASS Leitura suprime apresentação e conserva preferência.
+PASS F bloqueado na leitura.
+PASS Leitura encerra e devolve controle.
+PASS F bloqueado no mapa.
+PASS F bloqueado na seleção de saves.
+PASS Pausa real aberta para teste de equipamento.
+PASS F bloqueado na pausa.
+PASS F antes da aquisição não fornece equipamento.
+PASS Save antigo com equipamento e sem preferência começa apagado.
+PASS Leitura encerra e devolve controle.
+PASS Input real move Marcus com oito poses e interpolação.
+PASS Cada evento de passo coincide com quadro de apoio 0/4: 0,4,0,4,0,4
+PASS Repouso não dispara passos extras.
+PASS Pose equipada andar/parar na direção 1
+PASS Lente e origem coincidem ao virar/parar, inclusive perfil → vertical: 1
+PASS Pose equipada andar/parar na direção 0
+PASS Lente e origem coincidem ao virar/parar, inclusive perfil → vertical: 0
+PASS Pose equipada andar/parar na direção 2
+PASS Lente e origem coincidem ao virar/parar, inclusive perfil → vertical: 2
+PASS Pose equipada andar/parar na direção 3
+PASS Lente e origem coincidem ao virar/parar, inclusive perfil → vertical: 3
+PASS Pose equipada andar/parar na direção 1
+PASS Lente e origem coincidem ao virar/parar, inclusive perfil → vertical: 1
+PASS Pose equipada andar/parar na direção 0
+PASS Lente e origem coincidem ao virar/parar, inclusive perfil → vertical: 0
+PASS Cena carregada SociedadeBeiraRio
+PASS Porta real para SociedadeBeiraRio
+PASS Mapa real marca Marcus na região explorada: SociedadeBeiraRio
+PASS Colisão física na cabeceira rebate antes do evento sonoro.
+Áudio resposta: 2,00 s, RMS 0,0143, pico 0,065
+PASS Resposta abafada audível agendada após impacto real, distinta da colisão.
+PASS Resposta usa clip próprio não vazio e sem clipping.
+PASS F em RAM não regrava a preferência do slot manual anterior.
+PASS Derrota Bocha abre escolha explícita de cinco slots.
+PASS Cancelar volta à derrota Bocha.
+PASS Cena carregada SociedadeBeiraRio
+PASS Escolha carrega slot 1 mesmo sendo slot 5 o último gravado.
+PASS Derrota Sinuca abre o mesmo seletor.
+PASS Cancelar volta à derrota Sinuca.
+PASS Cena carregada CentroSantaRita
+PASS Sinuca carrega exatamente o slot escolhido.
+PASS Cena carregada SociedadeBeiraRio
+PASS Save antigo da cancha é adaptado para área conectada à saída: (15.00, 16.15)
+PASS Migração espacial registrada em RAM sem regravar save.
+PASS Bocha sem save oferece menu, sem retorno automático.
+PASS Sinuca sem save não inventa checkpoint.
+AI síncrona: 0 bochas + balim, 4,33 ms; velocidade 9,24
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+AI síncrona: 4 bochas + balim, 18,06 ms; velocidade 9,28
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+AI síncrona: 7 bochas + balim, 50,32 ms; velocidade 8,42
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+Não certifica aprovação artística, audição humana, balanceamento ou percurso sem fixture.
+PASS runtime 2026-10-22T20:29:01.2021599Z

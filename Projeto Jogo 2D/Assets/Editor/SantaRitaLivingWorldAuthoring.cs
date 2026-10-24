@@ -13,6 +13,69 @@ using Object=UnityEngine.Object;
 public static class SantaRitaLivingWorldAuthoring
 {
     const string Folder="Assets/Scenes/Cidade/";
+    [MenuItem("Santa Rita/Cidade/Aplicar correção geográfica R1 (preservar composição)")]
+    public static void CorrectApprovedGeography()
+    {
+        if (EditorApplication.isPlaying || Enumerable.Range(0, SceneManager.sceneCount).Any(i => SceneManager.GetSceneAt(i).isDirty))
+            throw new Exception("Pare Play e preserve as cenas não salvas antes da correção.");
+        var setup = EditorSceneManager.GetSceneManagerSetup();
+        try
+        {
+            var scene = EditorSceneManager.OpenScene(Folder + "CentroSantaRita.unity");
+            var building = GameObject.Find("Prefeitura");
+            if (building == null) throw new Exception("Fachada da Prefeitura não localizada; cena preservada.");
+            Vector2 old = building.transform.position;
+            Vector2 delta = SantaRitaGeography.Prefeitura - old;
+            if (delta.sqrMagnitude > .001f)
+            {
+                var portal = Object.FindObjectsByType<Capitulo2Portal>().Single(p => p.cenaDestino == "PrefeituraSantaRita");
+                var spawn = Object.FindObjectsByType<SpawnPoint>().Single(p => p.Id == "volta_PrefeituraSantaRita");
+                building.transform.position = SantaRitaGeography.Prefeitura;
+                portal.transform.position = SantaRitaGeography.EntradaPrefeitura;
+                spawn.transform.position = SantaRitaGeography.RetornoPrefeitura;
+                foreach (var t in scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)))
+                {
+                    if (t == building.transform || t == portal.transform || t == spawn.transform) continue;
+                    // Só letreiro, luz e vasos pertencentes à fachada, sem deslocar ruas ou moradores.
+                    if ((t.name.StartsWith("Letreiro_PREFEITURA") || t.name.StartsWith("Luz") || t.name.StartsWith("Jardim")) &&
+                        Vector2.Distance(t.position, old) < 7)
+                        t.position += (Vector3)delta;
+                }
+                var terrain = GameObject.Find("Terreno").GetComponent<Tilemap>();
+                var grass = AssetDatabase.LoadAssetAtPath<Tile>("Assets/Art/Capitulo2/Tiles/Grama.asset");
+                var sidewalk = AssetDatabase.LoadAssetAtPath<Tile>("Assets/Art/Capitulo2/Tiles/Calcada.asset");
+                var dirt = AssetDatabase.LoadAssetAtPath<Tile>("Assets/Art/Capitulo2/Tiles/Terra.asset");
+                if (grass == null || sidewalk == null || dirt == null) throw new Exception("Terrenos necessários ausentes.");
+                for (int x = 64; x <= 74; x++) for (int y = 42; y < 44; y++) terrain.SetTile(new Vector3Int(x,y,0), grass);
+                for (int x = 61; x <= 89; x++) for (int y = 61; y < 64; y++) terrain.SetTile(new Vector3Int(x,y,0), dirt);
+                for (int x = 83; x <= 93; x++) for (int y = 64; y < 66; y++) terrain.SetTile(new Vector3Int(x,y,0), sidewalk);
+                // A vegetação que ocupava o antigo terreno da Escola abre espaço para a Prefeitura.
+                foreach (var sr in Object.FindObjectsByType<SpriteRenderer>().Where(s => s.name.StartsWith("Arvore") &&
+                    s.transform.position.x > 80 && s.transform.position.x < 95 && s.transform.position.y > 59 && s.transform.position.y < 76).ToArray())
+                { sr.transform.position += Vector3.up * 17; }
+                foreach (var sr in building.GetComponentsInChildren<SpriteRenderer>().Where(s => !s.name.StartsWith("AO_")))
+                    sr.sortingOrder = 1000 - Mathf.RoundToInt(sr.transform.position.y * 10);
+                EditorSceneManager.MarkSceneDirty(scene); EditorSceneManager.SaveScene(scene);
+            }
+            foreach (var sr in building.GetComponentsInChildren<SpriteRenderer>().Where(s => s.name.StartsWith("AO_")))
+                if (sr.sortingOrder != -2500) { sr.sortingOrder = -2500; EditorSceneManager.MarkSceneDirty(scene); }
+            foreach (var sr in Object.FindObjectsByType<SpriteRenderer>().Where(s => s.name.StartsWith("Arvore")))
+            {
+                int order = 1000 - Mathf.RoundToInt(sr.transform.position.y * 10);
+                if (sr.sortingOrder != order) { sr.sortingOrder = order; EditorSceneManager.MarkSceneDirty(scene); }
+            }
+            if (scene.isDirty) EditorSceneManager.SaveScene(scene);
+            foreach (string name in SantaRitaChapter2Authoring.Scenes)
+            {
+                scene = EditorSceneManager.OpenScene(Folder + name + ".unity");
+                var director = Object.FindAnyObjectByType<Capitulo2Director>();
+                Vector2 uv = SantaRitaGeography.UV(SantaRitaGeography.IdDaCena(name));
+                if (director.uvNoMapa == uv) continue;
+                director.uvNoMapa = uv; EditorSceneManager.MarkSceneDirty(scene); EditorSceneManager.SaveScene(scene);
+            }
+        }
+        finally { EditorSceneManager.RestoreSceneManagerSetup(setup); }
+    }
     static Transform dressing;
     static Material material;
     static Sprite Art(string key)

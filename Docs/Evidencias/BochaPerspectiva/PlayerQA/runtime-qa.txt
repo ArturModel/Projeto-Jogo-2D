@@ -1,0 +1,79 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+Fixture declarada: entrada direta na Sociedade e prática; mouse virtual pelo Input System/EventSystem real. Não é percurso de campanha.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS Sala da cancha tem divisória visível e colisão, conectada ao salão.
+PASS Marcus atravessa a porta do salão para a sala por movimento real.
+PASS Marcus permanece inteiro à frente da parede do fundo.
+PASS Câmera: esquerda física aparece à esquerda.
+PASS Minimapa: mesma lateral da cabeceira e fundo no alto.
+PASS Vista geral: lançamento da esquerda para a direita.
+PASS Sem botão de lançar ou ajuste de força concorrente.
+PASS Cursor mais ao fundo aumenta linha de mira.
+Carga parada: mínimo 0,04473327, máximo 0,9956755, subidas 197, descidas 178, inversões 4
+PASS Clique parado aumenta força sem lançar nem gastar bocha.
+PASS Segurar além do máximo faz força descer.
+PASS Segurar continuamente repete subidas e descidas.
+PASS Soltar clique parado lança exatamente uma bocha.
+PASS Release não duplica lançamento.
+PASS Pausa realmente congela a física.
+PASS Perder foco cancela carga e release tardio, sem consumir.
+PASS Troca de vista durante carga cancela sem lançamento.
+PASS Consulta superior não arma nem lança.
+PASS Soltar fora da cancha cancela sem gastar.
+PASS Trocar tipo cancela carga sem release fantasma.
+PASS Zoom aproxima sem mudar coordenadas físicas.
+PASS Zoom limitado mantém consulta legível.
+PASS Resolução cancela carga e pausa: (1024, 768)
+PASS Interface completa dentro da tela (1024, 768)
+PASS Resolução cancela carga e pausa: (1920, 1080)
+PASS Interface completa dentro da tela (1920, 1080)
+PASS Resolução cancela carga e pausa: (1280, 720)
+PASS Interface completa dentro da tela (1280, 720)
+PASS A move posição e bocha para a esquerda visível.
+PASS D move para a direita.
+PASS Input completo lança modo Ponto
+PASS Altura inicial correta em Ponto
+PASS Rolagem deixa marca real no saibro: Ponto
+PASS Input completo lança modo Rafa
+PASS Altura inicial correta em Rafa
+PASS Rolagem deixa marca real no saibro: Rafa
+PASS Input completo lança modo Volo
+PASS Altura inicial correta em Volo
+PASS Voo não desenha rastro no ar.
+PASS Sair remove também fundo opaco da Bocha.
+PASS Leitura encerra e devolve controle.
+PASS Interação e diálogo reais abrem a Bocha na sala.
+PASS Sessão completa até seis com IA e física reais; Marcus lançou 8 vezes. Apenas tempo/decisão de mira automatizados.
+PASS Leitura encerra e devolve controle.
+PASS Consequência entrega a ficha depois da vitória.
+PASS Leitura encerra e devolve controle.
+PASS Revisita não duplica recompensa ou diário.
+PASS Vitória não salva automaticamente.
+PASS Colisão física na cabeceira rebate antes do evento sonoro.
+Áudio resposta: 2,00 s, RMS 0,0143, pico 0,065
+PASS Resposta abafada audível agendada após impacto real, distinta da colisão.
+PASS Resposta usa clip próprio não vazio e sem clipping.
+PASS F em RAM não regrava a preferência do slot manual anterior.
+PASS Derrota Bocha abre escolha explícita de cinco slots.
+PASS Cancelar volta à derrota Bocha.
+PASS Cena carregada SociedadeBeiraRio
+PASS Escolha carrega slot 1 mesmo sendo slot 5 o último gravado.
+PASS Derrota Sinuca abre o mesmo seletor.
+PASS Cancelar volta à derrota Sinuca.
+PASS Cena carregada CentroSantaRita
+PASS Sinuca carrega exatamente o slot escolhido.
+PASS Cena carregada SociedadeBeiraRio
+PASS Save antigo da cancha é adaptado para área conectada à saída: (15.00, 7.00)
+PASS Migração espacial registrada em RAM sem regravar save.
+PASS Bocha sem save oferece menu, sem retorno automático.
+PASS Sinuca sem save não inventa checkpoint.
+AI síncrona: 0 bochas + balim, 14,03 ms; velocidade 5,21
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+AI síncrona: 4 bochas + balim, 58,26 ms; velocidade 5,36
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+AI síncrona: 7 bochas + balim, 100,16 ms; velocidade 9,42
+PASS Decisão AI medida, sem travamento excessivo (limite 500 ms).
+PASS Prática e UI não criaram checkpoint.
+Aprovação de diversão, arte e audição pelo autor permanece pendente.
+PASS runtime 2026-10-23T16:40:18.5107489Z

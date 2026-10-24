@@ -1,0 +1,6 @@
+PASS menu e selecao de save por clique na build comum.
+PASS fixture isolada carregada em SociedadeBeiraRio e sala observada na camera real.
+PASS nenhum erro/exception detectado no log de startup e carregamento.
+LIMIT injeção externa de E nao reconhecida apos foco; nao se afirma partida manual completa no Player comum.
+PASS sessao e inputs cobertos no Development com mesmo hash de conteudo.
+PASS autoria/QA ausentes do assembly comum; perfil e preferencias originais restaurados.

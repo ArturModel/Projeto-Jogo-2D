@@ -1,49 +1,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct BochaShot { public float x; public Vector2 velocidade; public string intencao; }
-
 public static class BochaAI
 {
-    // Avalia aproximação, retirada e balim na mesma física. O erro é aplicado
-    // ao lançamento, antes da simulação real, e nunca corrige o resultado.
-    public static BochaShot Escolher(BochaSimulation mesa, int estoque, System.Random rng)
+    public static double UltimaDecisaoMs { get; private set; }
+    public static int UltimosCandidatos { get; private set; }
+    // Orçamento limitado. Estima a força para gerar candidatos, mas pontua
+    // cada um no MESMO kernel. Não puxa uma bola nem corrige a mira no ar.
+    public static BochaShot Escolher(BochaSimulation mesa,int estoque,System.Random rng)
     {
-        var alvos = new List<Vector2> { mesa.bolas[0].pos };
-        foreach (var b in mesa.bolas)
-            if (b.valida && b.lado == BochaSide.Marcus) alvos.Add(b.pos);
-        var melhor = new BochaShot();
-        float melhorValor = float.NegativeInfinity;
-        foreach (Vector2 alvo in alvos)
-            foreach (float x in new[] { -1.8f, 0f, 1.8f })
-                foreach (float extra in new[] { -0.16f, 0.14f, 1.8f })
+        var timer=System.Diagnostics.Stopwatch.StartNew();UltimosCandidatos=0;
+        Vector2 balim=mesa.bolas[0].pos,target=balim;
+        float nearest=float.PositiveInfinity;
+        foreach(var b in mesa.bolas)if(b.valida&&b.lado==BochaSide.Marcus)
+        {float distance=BochaMatch.Distancia(b,mesa.bolas[0]);if(distance<nearest){nearest=distance;target=b.pos;}}
+        var shots=new List<BochaShot>(25);
+        foreach(float x in new[]{-1.7f,0,1.7f})
+        {
+            Vector2 delta=balim-new Vector2(x,.65f);float power=BochaLaunch.ForcaPonto(delta.magnitude);
+            foreach(float offset in new[]{-.025f,0,.025f})shots.Add(BochaLaunch.Preparar(BochaThrowType.Ponto,x,delta,power+offset));
+        }
+        if(!float.IsPositiveInfinity(nearest))
+        {
+            foreach(float x in new[]{-1.4f,1.4f})
+            {
+                Vector2 delta=target-new Vector2(x,.65f);
+                float p=(Mathf.Sqrt(2*BochaSimulation.ResistenciaRolagem*delta.magnitude)/.77f+1.2f-3.8f)/8.7f;
+                foreach(float offset in new[]{-.025f,.035f})shots.Add(BochaLaunch.Preparar(BochaThrowType.Rafa,x,delta,p+offset));
+                // Volo é uma opção quando uma bocha protege o caminho direto.
+                float lo=0,hi=1;
+                for(int i=0;i<12;i++)
                 {
-                    Vector2 origem = new Vector2(x, 0.65f), delta = alvo - origem;
-                    float baseV = Mathf.Sqrt(2f * 1.85f * delta.magnitude);
-                    bool atravessaFaixa = mesa.faixaUmida.width > 0 &&
-                        mesa.faixaUmida.Contains(Vector2.Lerp(origem, alvo, 0.62f));
-                    float v = Mathf.Clamp(baseV + extra + (atravessaFaixa ? 0.75f : 0f), 2f, 12.5f);
-                    var sim = mesa.Clone();
-                    sim.bolas.Add(new BochaBall { id = sim.bolas.Count, lado = BochaSide.Tonao,
-                        raio = BochaSimulation.RaioBocha, massa = 1f, pos = origem, vel = delta.normalized * v });
-                    sim.RepousarParaPrevisao();
-                    if (!sim.bolas[0].valida) continue; // Anular não é estratégia preferida.
-                    float nossa = BochaMatch.MelhorDistancia(sim, BochaSide.Tonao);
-                    float rival = BochaMatch.MelhorDistancia(sim, BochaSide.Marcus);
-                    float valor = -Mathf.Min(nossa, 12f) + (nossa < rival ? 2.4f : 0f);
-                    if (!float.IsPositiveInfinity(rival)) valor += Mathf.Min(rival, 3f) * 0.45f;
-                    foreach (var b in sim.bolas)
-                        if (b.valida && b.lado == BochaSide.Tonao && BochaMatch.Distancia(b, sim.bolas[0]) < rival) valor += 0.12f;
-                    if (valor <= melhorValor) continue;
-                    melhorValor = valor;
-                    melhor = new BochaShot { x = x, velocidade = delta.normalized * v,
-                        intencao = extra > 1f ? "Tonão prepara uma retirada." : "Tonão procura encostar e proteger a posição." };
+                    float mid=(lo+hi)*.5f;var s=BochaLaunch.Preparar(BochaThrowType.Volo,x,delta,mid);
+                    float flight=(s.vertical+Mathf.Sqrt(s.vertical*s.vertical+2*BochaSimulation.Gravidade*s.altura))/BochaSimulation.Gravidade;
+                    if(s.velocidade.magnitude*flight<delta.magnitude)lo=mid;else hi=mid;
                 }
-        if (melhor.velocidade == Vector2.zero)
-            melhor = new BochaShot { x = 0, velocidade = new Vector2(0, 7.4f), intencao = "Tonão mede a cancha." };
-        float erroAngulo = ((float)rng.NextDouble() - 0.5f) * (estoque <= 1 ? 1.6f : 2.2f);
-        melhor.velocidade = Quaternion.Euler(0, 0, erroAngulo) * melhor.velocidade;
-        melhor.velocidade *= 0.975f + (float)rng.NextDouble() * 0.05f;
-        return melhor;
+                shots.Add(BochaLaunch.Preparar(BochaThrowType.Volo,x,delta,(lo+hi)*.5f));
+            }
+        }
+        BochaShot best=shots[0];float score=float.NegativeInfinity;
+        foreach(var shot in shots)
+        {
+            var sim=mesa.Clone();sim.bolas.Add(new BochaBall{id=sim.bolas.Count,lado=BochaSide.Tonao,raio=.18f,massa=1,
+                pos=new Vector2(shot.x,.65f),vel=shot.velocidade,altura=shot.altura,vertical=shot.vertical,giro=shot.giro});
+            sim.RepousarParaPrevisao();UltimosCandidatos++;
+            if(sim.IsMoving||!sim.bolas[0].valida)continue;
+            float own=BochaMatch.MelhorDistancia(sim,BochaSide.Tonao),rival=BochaMatch.MelhorDistancia(sim,BochaSide.Marcus);
+            float value=-Mathf.Min(own,15)+(own<rival?2.4f:0);
+            if(!float.IsPositiveInfinity(rival))value+=Mathf.Min(rival,3)*.38f;
+            foreach(var b in sim.bolas)if(b.valida&&b.lado==BochaSide.Tonao&&BochaMatch.Distancia(b,sim.bolas[0])<rival-.01f)value+=.18f;
+            if(value<=score)continue;score=value;best=shot;
+        }
+        // Erro humano pequeno e explícito antes da partida simular o lançamento.
+        float error=((float)rng.NextDouble()-.5f)*(estoque<=1?1.1f:1.7f);
+        best.velocidade=Quaternion.Euler(0,0,error)*best.velocidade;
+        best.velocidade*=.985f+(float)rng.NextDouble()*.03f;
+        best.giro=new Vector3(best.velocidade.y,0,-best.velocidade.x)/.18f*(best.tipo==BochaThrowType.Ponto?1:best.tipo==BochaThrowType.Rafa?.2f:.1f);
+        best.intencao=best.tipo==BochaThrowType.Ponto?"Tonão procura encostar no balim.":best.tipo==BochaThrowType.Rafa?"Tonão prepara uma batida rasteira.":"Tonão mede a queda de um volo.";
+        UltimaDecisaoMs=timer.Elapsed.TotalMilliseconds;return best;
     }
 }

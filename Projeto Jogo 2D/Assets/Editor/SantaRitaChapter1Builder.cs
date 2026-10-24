@@ -18,74 +18,18 @@ public static class SantaRitaChapter1Builder
     private const string EntradaScenePath = "Assets/Scenes/Cidade/EntradaDaCidade.unity";
     private const string CasaDoAvoScenePath = "Assets/Scenes/Cidade/CasaDoAvo.unity";
     private const string PrologoScenePath = "Assets/Scenes/Prologo.unity";
-    private const string TriggerVersion = "v3_cap1_r1";
-
-    static SantaRitaChapter1Builder()
-    {
-        // C1 aprovado: autoria somente pelo comando explícito do menu.
-        // Abrir um checkout sem Library não pode reescrever cenas ou saves.
-    }
-
-    private static void TryRunAutoSetup()
-    {
-        if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling)
-            return;
-
-        string resultPath = Path.GetFullPath(Path.Combine(Application.dataPath, "../Library/cap1_builder_result.txt"));
-        if (!File.Exists(resultPath) || !File.ReadAllText(resultPath).Contains($"SUCCESS {TriggerVersion}"))
-        {
-            try
-            {
-                ExecuteSetupAndTests(buildPlayer: false);
-                File.WriteAllText(resultPath, $"SUCCESS {TriggerVersion} at {DateTime.Now:O}\nScenes updated, sprites configured, EditorBuildSettings updated, and all R1 automated tests passed.");
-            }
-            catch (Exception ex)
-            {
-                File.WriteAllText(resultPath, $"ERROR {TriggerVersion} at {DateTime.Now:O}\n{ex}");
-                Debug.LogError($"[SANTA RITA] Erro no auto-setup: {ex}");
-            }
-        }
-    }
-
-    [MenuItem("Santa Rita/Build & Validate Capítulo 1 Vertical Slice")]
-    public static void BuildAndValidateAll()
-    {
-        ExecuteSetupAndTests(buildPlayer: true);
-    }
+    // O montador R1 foi aposentado: validar/compilar nunca reautora o C1 aprovado.
+    // Sem callback de abertura e sem marcador em Library que autorize reconstrução.
+    [MenuItem("Santa Rita/Validar Capítulo 1 e compilar (preservar autoria)")]
+    public static void BuildAndValidateAll() => ExecuteSetupAndTests(true);
 
     public static void ExecuteSetupAndTests(bool buildPlayer)
     {
-        Debug.Log("=== [SANTA RITA] Iniciando Build & Validação do Capítulo 1 (Vertical Slice R1 v3) ===");
-
-        string cenaOriginal = SceneManager.GetActiveScene().path;
-
-        EnsureDirectories();
-        GenerateInteriorAndPropSprites();
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-        ConfigureSpriteImporters();
-
-        UpdatePrologoScene();
-        CreateOrUpdateBarDoZeScene();
-        UpdateCasaDoAvoScene();
-        UpdateEntradaDaCidadeScene();
-        UpdateBuildSettings();
-
-        if (!string.IsNullOrEmpty(cenaOriginal) && File.Exists(cenaOriginal))
-        {
-            EditorSceneManager.OpenScene(cenaOriginal, OpenSceneMode.Single);
-        }
-
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-
+        if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling ||
+            Enumerable.Range(0, SceneManager.sceneCount).Any(i => SceneManager.GetSceneAt(i).isDirty))
+            throw new InvalidOperationException("Pare Play e preserve as cenas não salvas antes da validação.");
         RunAutomatedVerification();
-        if (buildPlayer)
-        {
-            BuildWindows64Player();
-        }
-
-        Debug.Log("=== [SANTA RITA] Build & Validação v3 Concluídos com Sucesso! ===");
+        if (buildPlayer) BuildWindows64Player();
     }
 
     private static void EnsureDirectories()
@@ -218,115 +162,6 @@ public static class SantaRitaChapter1Builder
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
         }
-    }
-
-    private static void CreateOrUpdateBarDoZeScene()
-    {
-        if (File.Exists(BarDoZeScenePath))
-        {
-            AssetDatabase.DeleteAsset(BarDoZeScenePath);
-        }
-        AssetDatabase.CopyAsset(CasaDoAvoScenePath, BarDoZeScenePath);
-        AssetDatabase.Refresh();
-
-        Scene scene = EditorSceneManager.OpenScene(BarDoZeScenePath, OpenSceneMode.Single);
-
-        DentroDaCasaDoAvo dentroAvo = UnityEngine.Object.FindAnyObjectByType<DentroDaCasaDoAvo>();
-        if (dentroAvo != null)
-        {
-            UnityEngine.Object.DestroyImmediate(dentroAvo.gameObject);
-        }
-
-        DoorTrigger porta = UnityEngine.Object.FindAnyObjectByType<DoorTrigger>();
-        if (porta != null)
-        {
-            SerializedObject soPorta = new SerializedObject(porta);
-            soPorta.FindProperty("cenaDestino").stringValue = "EntradaDaCidade";
-            soPorta.FindProperty("entrada").stringValue = "saida_bar_ze";
-            soPorta.FindProperty("textoDoPrompt").stringValue = "Sair para a Rua Norte";
-            soPorta.ApplyModifiedPropertiesWithoutUndo();
-        }
-
-        SpawnPoint spawn = UnityEngine.Object.FindAnyObjectByType<SpawnPoint>();
-        if (spawn != null)
-        {
-            SerializedObject soSpawn = new SerializedObject(spawn);
-            soSpawn.FindProperty("id").stringValue = "entrada_bar";
-            soSpawn.FindProperty("direcaoInicial").intValue = 1; // DirUp
-            soSpawn.ApplyModifiedPropertiesWithoutUndo();
-        }
-
-        string[] moveisCasa = { "Cama", "Guarda_Roupa", "Xicara", "Bilhete", "Telefone", "Cruz", "Retrato", "Poltrona", "Mesa",
-                                "Pista_Cartas_Mesa", "Pista_NotaFiscal_2004", "Pista_Desordem_Porta" };
-        foreach (string nomeMovel in moveisCasa)
-        {
-            GameObject go = GameObject.Find(nomeMovel);
-            if (go != null)
-            {
-                UnityEngine.Object.DestroyImmediate(go);
-            }
-        }
-
-        GameObject chao = GameObject.Find("Chao");
-        if (chao != null)
-        {
-            SpriteRenderer srChao = chao.GetComponent<SpriteRenderer>();
-            if (srChao != null)
-            {
-                srChao.color = new Color(0.72f, 0.56f, 0.42f, 1f);
-            }
-        }
-
-        Transform moveisParent = GameObject.Find("Moveis")?.transform;
-
-        // Mesa de Sinuca no centro do salão (0, -4.8)
-        Sprite mesaSprite = AssetDatabase.LoadAssetAtPath<Sprite>(Path.Combine(SpritesDir, "Mesa_Sinuca_TopDown.png"));
-        GameObject mesaGo = CreateSceneSpriteObject("Mesa_Sinuca_Trigger", new Vector3(0f, -4.8f, 0f), mesaSprite, 4, moveisParent);
-        BoxCollider2D mesaCol = mesaGo.AddComponent<BoxCollider2D>();
-        mesaCol.size = new Vector2(2.6f, 1.3f);
-        mesaCol.offset = new Vector2(0f, 0.7f);
-        InteracaoCapitulo1 intMesa = mesaGo.AddComponent<InteracaoCapitulo1>();
-        intMesa.Configurar(InteracaoCapitulo1.TipoInteracao.MesaSinucaBar, "");
-
-        // NPC Zé ao lado da mesa de sinuca (2.0, -4.5)
-        Sprite zeSprite = AssetDatabase.LoadAssetAtPath<Sprite>(Path.Combine(SpritesDir, "Npc_Ze.png"));
-        GameObject zeGo = CreateSceneSpriteObject("NPC_Ze", new Vector3(2.0f, -4.5f, 0f), zeSprite, 6, moveisParent);
-        BoxCollider2D zeCol = zeGo.AddComponent<BoxCollider2D>();
-        zeCol.size = new Vector2(0.8f, 0.5f);
-        zeCol.offset = new Vector2(0f, 0.25f);
-        InteracaoCapitulo1 intZe = zeGo.AddComponent<InteracaoCapitulo1>();
-        intZe.Configurar(InteracaoCapitulo1.TipoInteracao.NpcZeBar, "");
-
-        // Frequentador do Bar (-2.6, -2.4)
-        Sprite freqSprite = AssetDatabase.LoadAssetAtPath<Sprite>(Path.Combine(SpritesDir, "Npc_Frequentador.png"));
-        GameObject freqGo = CreateSceneSpriteObject("NPC_Frequentador_Bar", new Vector3(-2.6f, -2.4f, 0f), freqSprite, 6, moveisParent);
-        BoxCollider2D freqCol = freqGo.AddComponent<BoxCollider2D>();
-        freqCol.size = new Vector2(0.8f, 0.5f);
-        freqCol.offset = new Vector2(0f, 0.25f);
-        freqGo.AddComponent<InteracaoCapitulo1>().Configurar(InteracaoCapitulo1.TipoInteracao.NpcFrequentadorBar, "Conversar com o Frequentador");
-
-        // Balcão do Bar (-4.2, -1.2)
-        Sprite balcaoSprite = AssetDatabase.LoadAssetAtPath<Sprite>(Path.Combine(SpritesDir, "Balcao_Bar.png"));
-        GameObject balcaoGo = CreateSceneSpriteObject("Balcao_Bar_Trigger", new Vector3(-4.2f, -1.2f, 0f), balcaoSprite, 3, moveisParent);
-        BoxCollider2D balcaoCol = balcaoGo.AddComponent<BoxCollider2D>();
-        balcaoCol.size = new Vector2(2.8f, 0.8f);
-        balcaoCol.offset = new Vector2(0f, 0.4f);
-        InteracaoCapitulo1 intBalcao = balcaoGo.AddComponent<InteracaoCapitulo1>();
-        intBalcao.Configurar(InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe, "Examinar balcão do bar");
-
-        // Quadro de Regras na parede (4.2, 0.5)
-        Sprite quadroSprite = AssetDatabase.LoadAssetAtPath<Sprite>(Path.Combine(SpritesDir, "Quadro_Regras_Sinuca.png"));
-        GameObject quadroGo = CreateSceneSpriteObject("Quadro_Regras_Trigger", new Vector3(4.2f, 0.5f, 0f), quadroSprite, 3, moveisParent);
-        InteracaoCapitulo1 intQuadro = quadroGo.AddComponent<InteracaoCapitulo1>();
-        intQuadro.Configurar(InteracaoCapitulo1.TipoInteracao.QuadroRegrasSinuca, "Ler regras da mesa");
-
-        if (UnityEngine.Object.FindAnyObjectByType<Capitulo1Director>() == null)
-        {
-            new GameObject("Capitulo1Director").AddComponent<Capitulo1Director>();
-        }
-
-        EditorSceneManager.MarkSceneDirty(scene);
-        EditorSceneManager.SaveScene(scene);
     }
 
     private static void UpdateCasaDoAvoScene()

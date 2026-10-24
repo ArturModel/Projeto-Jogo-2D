@@ -1,1 +1,1 @@
-PASS 114 verificações: Bocha/regras/física e save isolado. 2026-10-22T03:23:27.2861445Z
+PASS 125 verificações: Bocha/regras/física e save isolado. 2026-10-22T18:21:20.9292447Z

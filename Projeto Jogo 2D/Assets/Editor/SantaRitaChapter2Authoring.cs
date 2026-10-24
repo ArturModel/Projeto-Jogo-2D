@@ -31,9 +31,14 @@ public static class SantaRitaChapter2Authoring
     public static void Run()
     {
         bool regenerate = Environment.GetCommandLineArgs().Contains("-srRegenerateC2");
+        if (EditorApplication.isPlaying || Enumerable.Range(0, SceneManager.sceneCount).Any(i => SceneManager.GetSceneAt(i).isDirty))
+            throw new InvalidOperationException("Pare Play e preserve as cenas não salvas antes da autoria.");
+        var sceneSetup = EditorSceneManager.GetSceneManagerSetup();
         try
         {
-            ConfigureArt();
+            // Criar cenas ausentes não autoriza reimportar a arte já aprovada.
+            // Reautoria de importadores só na execução específica de regeneração.
+            if (regenerate) ConfigureArt();
             source = EditorSceneManager.OpenScene("Assets/Scenes/Cidade/EntradaDaCidade.unity", OpenSceneMode.Single);
             connections.Clear(); connections.Add("cena,porta,destino,spawn,x,y,condicao");
             foreach (string name in Scenes)
@@ -64,6 +69,7 @@ public static class SantaRitaChapter2Authoring
             if (Application.isBatchMode) EditorApplication.Exit(0);
         }
         catch(Exception ex) { Debug.LogException(ex); if(Application.isBatchMode) EditorApplication.Exit(1); else throw; }
+        finally { if (!Application.isBatchMode) EditorSceneManager.RestoreSceneManagerSetup(sceneSetup); }
     }
 
     private static void ConfigureArt()
@@ -140,7 +146,8 @@ public static class SantaRitaChapter2Authoring
         RectTiles(new RectInt(-2,2,16,12),"Terra");RectTiles(new RectInt(15,47,12,9),"Calcada");
 
         Building("Igreja",new Vector2(44.8f,64),"IGREJA DA MATRIZ","IgrejaMatriz",new Vector2(44.8f,61.5f));
-        Building("Prefeitura",new Vector2(69,44),"PREFEITURA","PrefeituraSantaRita",new Vector2(69,41.5f));
+        Building("Prefeitura",SantaRitaGeography.Prefeitura,"PREFEITURA","PrefeituraSantaRita",SantaRitaGeography.RetornoPrefeitura);
+        Road(new Vector2(60,62),SantaRitaGeography.RetornoPrefeitura,3,true);
         Building("Rodoviaria",new Vector2(68,22),"RODOVIÁRIA","RodoviariaSantaRita",new Vector2(68,19.5f));
         Building("Sociedade",new Vector2(5,5),"SOCIEDADE BEIRA-RIO","SociedadeBeiraRio",new Vector2(5,2.6f));
         Building("OficinaRadio",new Vector2(11.2f,33.6f),"RÁDIOS • CONSERTOS","OficinaRadio",new Vector2(11.2f,31.2f));
@@ -215,15 +222,12 @@ public static class SantaRitaChapter2Authoring
         var sizes=new Dictionary<string,Vector2> { {"IgrejaMatriz",new Vector2(22,26)}, {"PrefeituraSantaRita",new Vector2(24,22)},
             {"RodoviariaSantaRita",new Vector2(26,20)}, {"MercadinhoDeposito",new Vector2(20,18)}, {"OficinaRadio",new Vector2(18,16)},
             {"CasaCostureira",new Vector2(18,18)}, {"SociedadeBeiraRio",new Vector2(24,40)}, {"AbrigoCemiterio",new Vector2(16,14)} };
-        var positions=new Dictionary<string,Vector2> { {"IgrejaMatriz",new Vector2(.503f,.712f)}, {"PrefeituraSantaRita",new Vector2(.614f,.592f)},
-            {"RodoviariaSantaRita",new Vector2(.609f,.451f)}, {"MercadinhoDeposito",new Vector2(.39f,.6f)}, {"OficinaRadio",new Vector2(.348f,.503f)},
-            {"CasaCostureira",new Vector2(.397f,.471f)}, {"SociedadeBeiraRio",new Vector2(.317f,.334f)}, {"AbrigoCemiterio",new Vector2(.659f,.917f)} };
         Vector2 size=sizes[name];float mid=size.x*.5f;
         var titles=new Dictionary<string,string>{{"SociedadeBeiraRio","Sociedade Beira-Rio — Salão e Cancha"},{"MercadinhoDeposito","Mercadinho Santa Rita — Depósito"},
             {"IgrejaMatriz","Igreja da Matriz"},{"PrefeituraSantaRita","Prefeitura de Santa Rita"},{"RodoviariaSantaRita","Rodoviária de Santa Rita"},
             {"OficinaRadio","Oficina de Rádio — Mila"},{"CasaCostureira","Casa de Costura — Celina"},{"AbrigoCemiterio","Abrigo das Velas — Cemitério"}};
         string title=titles[name];
-        Setup(name,Vector2.zero,size,title,true,positions[name],name=="SociedadeBeiraRio"?2:name=="AbrigoCemiterio"?1:0,new Vector2(mid,3));
+        Setup(name,Vector2.zero,size,title,true,SantaRitaGeography.UV(SantaRitaGeography.IdDaCena(name)),name=="SociedadeBeiraRio"?2:name=="AbrigoCemiterio"?1:0,new Vector2(mid,3));
         string piso=name=="IgrejaMatriz"?"PisoCreme":name=="PrefeituraSantaRita"?"PisoVerde":name=="RodoviariaSantaRita"?"PisoCinza":name=="MercadinhoDeposito"?"PisoCinza":"Madeira";
         RectTiles(new RectInt(0,0,(int)size.x,(int)size.y),piso);
         Walls(size);

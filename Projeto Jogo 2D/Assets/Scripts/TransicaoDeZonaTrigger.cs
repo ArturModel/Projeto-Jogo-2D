@@ -18,7 +18,7 @@ public class TransicaoDeZonaTrigger : Interactable
     private bool exigirCasaAvoVisitada;
     private float cooldownAte;
 
-    public override string Prompt => automaticoAoEncostar ? "Seguir" : "Abrir porta";
+    public override string Prompt => automaticoAoEncostar ? "Seguir" : promptTexto.StartsWith("Sair") ? "Sair" : "Abrir porta";
 
     public void Configurar(
         Capitulo1Director.ZonaId destino,

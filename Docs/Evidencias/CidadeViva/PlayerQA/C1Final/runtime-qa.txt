@@ -2,7 +2,30 @@ QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T0
 PASS Cena carregada EntradaDaCidade
 PASS Cena C1 compilada carrega e cria Marcus.
 PASS Leitura encerra e devolve controle.
-PERF C1 início: 90 frames, média 16,68 ms, máximo 16,98 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
+PERF C1 início: 90 frames, média 16,76 ms, máximo 24,65 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
+PASS Leitura encerra e devolve controle.
+PASS Atendente antes do recibo não transmite testemunho nem cria diário antecipado.
+PASS Visitar a casa não apresenta cupom inexistente na conversa real.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Coleta real do cupom precede testemunho.
+PASS Abrir fala não equivale a ouvir o relato completo.
+PASS Leitura encerra e devolve controle.
+PASS Fechamento da conversa real persiste apresentação e testemunho.
+PASS Leitura encerra e devolve controle.
+PASS Revisita não duplica relato.
+PASS Leitura encerra e devolve controle.
+PASS Esc real abre pausa global sobre a Sinuca.
+PASS Bola em movimento permanece congelada na pausa.
+PASS Esc real retoma a Sinuca.
+PASS IA aguarda regras durante preparação final.
+PASS Fechar regras permite uma tacada sem restaurar estado antigo.
+PASS IA aguarda regras durante posicionamento.
+PASS Fechar regras permite uma tacada sem restaurar estado antigo.
+PASS Segunda mão silencia murmúrio e toca água real, respeitando volume de efeitos.
+PASS Terceira mão acrescenta camada de chuva.
+PASS Investigação e pausa usam apenas RAM/namespace de QA.
 PASS Leitura encerra e devolve controle.
 PASS Porta de serviço não contorna bloqueio pré-Zé.
 PASS Cena carregada MercadinhoDeposito
@@ -35,4 +58,4 @@ PASS Porta real para CemiterioSantaRita
 PASS Cena carregada AbrigoCemiterio
 PASS Porta real para AbrigoCemiterio
 PASS Leitura encerra e devolve controle.
-PASS runtime 2026-10-21T23:22:20.5803809Z
+PASS runtime 2026-10-22T18:12:22.6327226Z

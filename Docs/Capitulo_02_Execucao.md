@@ -1,5 +1,15 @@
 # Capítulo 2 — execução e evidências
 
+## Bocha e sala da Sociedade — 23/10/2026
+
+[Implementação e plano](Bocha_Perspectiva_Execucao.md), [QA/PO e limitações](Evidencias/BochaPerspectiva/Relatorio.md). Vista em perspectiva, Ponto/Rafa/Volo, força oscilante por clique segurado, soltura para lançar, mira por cursor, minimapa e vista geral da esquerda para a direita. Cancha agora é uma sala fechada conectada ao salão, com circulação e materiais coerentes com a partida. Sem mecânica de água; fatos históricos sobre inundação permanecem. Saves e regras autorais preservados.
+
+## Consolidação R2 — 22/10/2026
+
+Execução desta etapa em [Consolidação C2 R2](Consolidacao_C2_R2.md): oito interiores recompostos por função, Sociedade horizontal/compacta, atividades em estações, lanterna manual F com poses editáveis, fontes/conversas revistas e seleção de slot após derrota na Sinuca/Bocha. Dez cenas e acessos validados. Player comum atualizado, zero erros; 290 checks R2 e 63 checks C1 no executável QA. Cópia intacta do save antigo C1 carregada no Player comum. Saves originais preservados.
+
+O índice reúne revisão/hash, antes/depois, pares de iluminação no Player comum, vídeos e limitações de input da automação. Campanha legítima completa e aprovação artística/sonora continuam separadas; Escola/C3 não foram criados. Os registros abaixo anteriores a R2 são históricos.
+
 ## Autoridade e baseline
 
 - Pedido de implementação completo: `Prompt_Codex_Capitulo_02_R1.md`, diretriz `Capitulo_02_Diretriz_Exploracao.md` e `Referencias/Mapa_Capitulo_02_Delimitacao_Aprovada.png`.
@@ -27,7 +37,7 @@ Coordenadas abaixo são unidades de produção, não medidas oficiais da ilustra
 | Fundos do Mercadinho | (20, 50) | Oeste da praça; depósito do mesmo comércio, ligação de serviço com C1 só após Zé |
 | Praça da Matriz | (44, 40) | Núcleo central, ruas integradas e dois acessos de residências existentes |
 | Igreja | (45, 67) | Acima da praça, abaixo/sudoeste do Cemitério |
-| Prefeitura | (69, 48) | Leste do Centro, entre praça e aproximação do Clube; seguir letreiro da referência mais recente |
+| Prefeitura | (88, 66) | Nordeste da praça, no antigo local marcado Escola, conforme troca aprovada na Bíblia R1 §11. Acesso e retorno em `SantaRitaGeography`. |
 | Rodoviária | (68, 25) | Inferior/leste do núcleo; acesso público e telefone |
 | Cemitério | (62, 91) | Norte do Centro, a leste do Bar; portão e abrigo local, sem túmulo de Lucas |
 | Sociedade Beira-Rio | (4, 6) | Sudoeste, na margem urbana do rio; salão, cancha e orelhão |
@@ -70,7 +80,7 @@ Rolagem/remoção compartilham física. Piso normal na primeira mão; faixa de u
 - [x] M0a — fontes lidas, baseline e decisão da Escola registrados.
 - [x] M0b — cenas compiladas de C1, portas/revisitas e contrato de saves exercitados com dados isolados; T01 legítimo continua separado.
 - [x] M1 — Bocha base: 75 verificações executadas no Unity; física, regras, saves isolados e partidas completas com vitória/derrota da IA.
-- [x] M2 — nove cenas prontas, oito interiores, portas e comparação da planta com a referência; acesso de serviço da loja original exercitado.
+- [x] M2 — dez cenas prontas, oito interiores, portas e comparação da planta com a referência; acesso de serviço da loja original exercitado.
 - [x] M3 — caminho crítico atravessado em build, Bocha real e segunda ficha/recado únicos.
 - [x] M4 — rádio, costura, comparação fora de ordem, revisitas de C1 e diário executados/revisados.
 - [x] M5 — IA vence/perde na simulação; vitória e derrota na UI real, tutorial e efeitos integrados. Avaliação humana de tensão/diversão pendente.
@@ -84,7 +94,7 @@ Leitura concluída: prompt C2, diretriz, Bíblia R1, relatórios C1, estado/save
 ### Execuções atuais
 
 - `regras-save.txt`: PASS 74 (2026-10-21 03:41 UTC). Inclui duas partidas completas de Bocha pelo kernel real: Tonão vence uma estratégia fraca e perde para busca tática mais precisa, sem alterar bolas/placar depois do lançamento.
-- `cenas-acessos.txt`: nove cenas inspecionadas, referências novas sem missing scripts/sprites; interações e spawns alcançáveis pela malha de colisão amostrada a cada 0,5 unidade, raio 0,24. Acesso à sala pública da Prefeitura conferido no estado liberado pelo atendimento. Não substitui avaliação humana de circulação.
+- `cenas-acessos.txt`: dez cenas inspecionadas, referências novas sem missing scripts/sprites; interações e spawns alcançáveis pela malha de colisão amostrada a cada 0,5 unidade, raio 0,24. Acesso à sala pública da Prefeitura conferido no estado liberado pelo atendimento. Não substitui avaliação humana de circulação.
 - Primeira build de teste bem-sucedida: Unity 6000.6.0f1, Windows x64, DX11, Development; 267.523.542 bytes, zero erros, 2026-10-21 03:55:59 UTC (`build-qa.txt`).
 - `runtime-qa-primeira-validacao.txt`: 75 linhas, percurso automatizado em build desde fixture C1 pós-Zé até confronto e consequência; passou. Usa portas reais, interações, IA e orelhão, com reposicionamento de QA entre pontos e aceleração explícita da partida. **Não certifica T01 nem um save legítimo pós-Zé obtido por playtest.**
 - Evidência de falha encontrada e corrigida: E repetido reiniciava o fade de fechamento da leitura; adicionado estado `fechando`. O percurso posterior conseguiu fechar as leituras e devolver controle.

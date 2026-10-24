@@ -1,6 +1,9 @@
-Inicialização do player final de 22/10/2026, modo batch, namespace normal sem carregar slot.
-Unity/Mono, PhysX e Direct3D11 inicializaram; processo permaneceu respondendo.
-Erros de script/shader encontrados: 0
-Instância de teste encerrada após observação; não é campanha humana nem prova de saída natural.
-Modo batch reportou fallback de ExclusiveFullscreen para FullscreenWindow e avisos do vídeo H264 já presente. Resoluções/pausa foram exercitadas na build QA interativa.
-PASS: QA Chapter2RuntimeVerification e autoria SantaRitaLivingWorldAuthoring ausentes da assembly final.
+PASS startup do Player comum — Unity 6000.6.0f1 / Windows x64 / D3D11
+UTC: 2026-10-22T18:29:01.4986071Z
+Build: 2026-10-22T18:26:29.6959015Z; commit base fbd2d420150adb82978cee649e632ef31b100e61 + alterações locais
+Unity/Mono, Direct3D 11 e PhysX inicializados; processo respondeu. Encerrado pelo verificador.
+Nenhuma exceção gerenciada ou erro de shader observado nesta abertura. Não equivale a campanha/inspeção visual interativa.
+Metadata Cecil: Chapter2RuntimeVerification ausente; SantaRitaLivingWorldAuthoring ausente; SimularTesteDeInvariantes ausente.
+Metadata Cecil: SantaRitaBarAudio e SantaRitaGeography presentes.
+SaveIsolationProbe: gravação temporária real, fechamento do processo, resíduos SRQA=0 no player e no Editor.
+Saves pessoais: cinco arquivos com hashes preservados; resíduos antigos do namespace exclusivo QA arquivados e removidos.

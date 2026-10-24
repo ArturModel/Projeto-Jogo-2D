@@ -1,5 +1,5 @@
 Eixos de rua: seis amostras verificadas após todos os acessos de terra/passeios.
-CentroSantaRita: 18 interações; 35127 células acessíveis; limites (-20.00, -8.00) / (96.00, 85.00)
+CentroSantaRita: 18 interações; 35153 células acessíveis; limites (-20.00, -8.00) / (96.00, 85.00)
 IgrejaMatriz: 4 interações; 1704 células acessíveis; limites (0.00, 0.00) / (22.00, 26.00)
 PrefeituraSantaRita: 6 interações; 1470 células acessíveis; limites (0.00, 0.00) / (24.00, 22.00)
 RodoviariaSantaRita: 7 interações; 1566 células acessíveis; limites (0.00, 0.00) / (26.00, 20.00)

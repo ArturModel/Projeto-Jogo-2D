@@ -1,6 +1,7 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
@@ -26,11 +27,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Lanterna")]
     [SerializeField] private Transform flashlight;
-    [SerializeField] private float flashlightDistance = 0.3f;
-
-    // Altura da mão a partir dos pés (o pivô do sprite agora está nos pés).
-    [SerializeField] private float flashlightHandHeight = 1f;
-
     // Mesmo grid dos sprites. A luz precisa andar de pixel em pixel junto com
     // eles: se ela desliza suave enquanto os sprites saltam, o degradê escorrega
     // em relação às bordas e aparece um contorno tremendo durante o movimento.
@@ -57,10 +53,10 @@ public class PlayerController : MonoBehaviour
     private Sprite[,] quadrosCaminhada;
     private Sprite[] quadrosRepouso;
     private Sprite[,] quadrosCaminhadaComLanterna;
-    private SpriteRenderer lanternaMaoRenderer;
-    private Sprite spriteLanternaHorizontal;
-    private Sprite spriteLanternaBaixo;
-    private Sprite spriteLanternaCima;
+    private Sprite[] repousoComLanterna;
+    private bool focoLanternaPronto;
+    public bool LanternaVisivel => DeveUsarLanternaAgora();
+    public int DirecaoAtual => facingDirection;
     private readonly MarcusGait passada = new MarcusGait();
     private Vector2 ultimaPosicaoAnimacao;
     private int totalQuadros = 6;
@@ -80,128 +76,46 @@ public class PlayerController : MonoBehaviour
             corpo.sortingOrder = 10;
         }
         PrepararCaminhadaMarcus();
-        CriarLanternaNaMao();
+        PrepararPosesLanterna();
+        PrepararFeixeLanterna();
     }
 
-    private void CriarLanternaNaMao()
+    private void PrepararFeixeLanterna()
     {
-        // Cria sprites em pixel art da lanterna preta/prateada com lente amarela acesa
-        spriteLanternaHorizontal = GerarSpriteLanterna(0);
-        spriteLanternaBaixo = GerarSpriteLanterna(1);
-        spriteLanternaCima = GerarSpriteLanterna(2);
-
-        GameObject goLanternaMao = new GameObject("LanternaNaMao");
-        goLanternaMao.transform.SetParent(transform, false);
-        lanternaMaoRenderer = goLanternaMao.AddComponent<SpriteRenderer>();
-        lanternaMaoRenderer.sprite = spriteLanternaBaixo;
-        lanternaMaoRenderer.sortingOrder = 11;
-        goLanternaMao.SetActive(false);
-    }
-
-    private static Sprite GerarSpriteLanterna(int orientacao)
-    {
-        // 0 = horizontal (apontando para a esquerda no espaço local, pois DirRight espelha localScale.x = -1)
-        // 1 = baixo
-        // 2 = cima
-        int w = 12, h = 12;
-        Texture2D tex = new Texture2D(w, h, TextureFormat.RGBA32, false)
-        {
-            filterMode = FilterMode.Point,
-            wrapMode = TextureWrapMode.Clamp
-        };
-        Color[] clear = new Color[w * h];
-        tex.SetPixels(clear);
-
-        Color32 maoPele = new Color32(214, 162, 126, 255);
-        Color32 corpoMetal = new Color32(42, 46, 52, 255);
-        Color32 anelPrata = new Color32(150, 158, 168, 255);
-        Color32 lenteLuz = new Color32(255, 244, 175, 255);
-        Color32 borda = new Color32(18, 20, 24, 255);
-
-        if (orientacao == 0)
-        {
-            // Mão segurando cabo (direita -> lente na esquerda, x=2..8, y=4..7)
-            for (int x = 3; x <= 8; x++)
-            {
-                tex.SetPixel(x, 4, borda);
-                tex.SetPixel(x, 5, corpoMetal);
-                tex.SetPixel(x, 6, corpoMetal);
-                tex.SetPixel(x, 7, borda);
-            }
-            // Mão de Marcus segurando o corpo da lanterna
-            tex.SetPixel(6, 5, maoPele);
-            tex.SetPixel(7, 5, maoPele);
-            tex.SetPixel(6, 6, maoPele);
-            // Anel prateado e lente frontal na esquerda (x=2, x=1)
-            tex.SetPixel(3, 5, anelPrata);
-            tex.SetPixel(3, 6, anelPrata);
-            tex.SetPixel(2, 4, anelPrata);
-            tex.SetPixel(2, 5, lenteLuz);
-            tex.SetPixel(2, 6, lenteLuz);
-            tex.SetPixel(2, 7, anelPrata);
-            tex.SetPixel(1, 5, lenteLuz);
-            tex.SetPixel(1, 6, lenteLuz);
-        }
-        else if (orientacao == 1)
-        {
-            // Apontando para baixo (y=8 cabo/mão -> y=2 lente)
-            for (int y = 3; y <= 8; y++)
-            {
-                tex.SetPixel(4, y, borda);
-                tex.SetPixel(5, y, corpoMetal);
-                tex.SetPixel(6, y, corpoMetal);
-                tex.SetPixel(7, y, borda);
-            }
-            tex.SetPixel(5, 6, maoPele);
-            tex.SetPixel(6, 6, maoPele);
-            tex.SetPixel(5, 7, maoPele);
-            tex.SetPixel(5, 3, anelPrata);
-            tex.SetPixel(6, 3, anelPrata);
-            tex.SetPixel(4, 2, anelPrata);
-            tex.SetPixel(5, 2, lenteLuz);
-            tex.SetPixel(6, 2, lenteLuz);
-            tex.SetPixel(7, 2, anelPrata);
-            tex.SetPixel(5, 1, lenteLuz);
-            tex.SetPixel(6, 1, lenteLuz);
-        }
-        else
-        {
-            // Apontando para cima (y=3 cabo/mão -> y=9 lente)
-            for (int y = 3; y <= 8; y++)
-            {
-                tex.SetPixel(4, y, borda);
-                tex.SetPixel(5, y, corpoMetal);
-                tex.SetPixel(6, y, corpoMetal);
-                tex.SetPixel(7, y, borda);
-            }
-            tex.SetPixel(5, 4, maoPele);
-            tex.SetPixel(6, 4, maoPele);
-            tex.SetPixel(5, 8, anelPrata);
-            tex.SetPixel(6, 8, anelPrata);
-            tex.SetPixel(5, 9, lenteLuz);
-            tex.SetPixel(6, 9, lenteLuz);
-            tex.SetPixel(5, 10, lenteLuz);
-            tex.SetPixel(6, 10, lenteLuz);
-        }
-
-        tex.Apply();
-        return Sprite.Create(tex, new Rect(0, 0, w, h), new Vector2(0.5f, 0.5f), 32f);
+        // Cenas C2 antigas copiavam o ator sem a luz externa do rig C1.
+        // O equipamento pertence ao ator em todas as cenas, com uma única fonte.
+        if(flashlight==null)
+        {var go=new GameObject("FeixeLanternaMarcus");go.transform.SetParent(transform,false);flashlight=go.transform;}
+        var light=flashlight.GetComponent<Light2D>()??flashlight.gameObject.AddComponent<Light2D>();
+        light.lightType=Light2D.LightType.Point;light.pointLightInnerRadius=1.1f;light.pointLightOuterRadius=7.2f;
+        light.pointLightInnerAngle=28;light.pointLightOuterAngle=66;light.intensity=1.6f;
+        light.color=new Color(1,.94f,.78f);light.falloffIntensity=.4f;light.shadowIntensity=.85f;
+        flashlight.gameObject.SetActive(false);
     }
 
     private static bool DeveUsarLanternaAgora()
     {
-        if (!GameState.Tem(Flags.LanternaDoCarroObtida))
-            return false;
+        return GameState.LanternaLigada && Application.isFocused && !BloqueiaEquipamento();
+    }
 
-        // Regra solicitada: Marcus só fica com a lanterna na rua; em interiores fica SEM lanterna.
-        if (Capitulo1Director.EstaEmInterior || (Capitulo2Director.Instance != null && Capitulo2Director.Instance.interior))
-            return false;
+    private static bool BloqueiaEquipamento() => MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
+        GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing ||
+        PayphoneCheckpoint.IsSaveUIOpen || SceneFader.IsTransitioning || Time.timeScale == 0;
 
-        string cena = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        if (cena == "CasaDoAvo" || cena == "BarDoZe")
-            return false;
+    private void OnApplicationFocus(bool foco) { focoLanternaPronto = false; }
 
-        return true;
+    private void PrepararPosesLanterna()
+    {
+        string path = Path.Combine(Application.streamingAssetsPath, "MarcusLanterna.png");
+        if (!File.Exists(path)) { Debug.LogError("Poses de Marcus com lanterna ausentes."); return; }
+        var sheet = new Texture2D(2,2,TextureFormat.RGBA32,false);
+        ImageConversion.LoadImage(sheet, File.ReadAllBytes(path)); sheet.filterMode=FilterMode.Point; sheet.wrapMode=TextureWrapMode.Clamp;
+        quadrosCaminhadaComLanterna = new Sprite[3,8]; repousoComLanterna = new Sprite[3];
+        for(int row=0;row<3;row++) for(int frame=0;frame<9;frame++)
+        {
+            var pose=Sprite.Create(sheet,new Rect(frame*64,sheet.height-(row+1)*64,64,64),new Vector2(.5f,.125f),32,0,SpriteMeshType.FullRect);
+            if(frame<8)quadrosCaminhadaComLanterna[row,frame]=pose;else repousoComLanterna[row]=pose;
+        }
     }
 
     private void PrepararCaminhadaMarcus()
@@ -244,12 +158,13 @@ public class PlayerController : MonoBehaviour
         MapaInterativoUI.EnsureInstance();
         bool usarLanterna = DeveUsarLanternaAgora();
         if (flashlight != null) flashlight.gameObject.SetActive(usarLanterna);
-        if (lanternaMaoRenderer != null) lanternaMaoRenderer.gameObject.SetActive(usarLanterna);
 
         // Ordem importa: atravessar uma porta é mais recente que o último
         // checkpoint, então a entrada da porta ganha.
         if (SceneTransition.ConsumirEntrada(out Vector2 entrada, out int direcao))
         {
+            var layout=FindAnyObjectByType<SantaRitaRoomLayout>();
+            if(layout!=null)GameState.Marcar(layout.versionFlag);
             TeleportarPara(entrada, direcao);
             return;
         }
@@ -257,8 +172,12 @@ public class PlayerController : MonoBehaviour
         // Vindo de "Continuar": nasce no último orelhão registrado.
         if (CheckpointSystem.ConsumePendingSpawn(out Vector2 spawn))
         {
+            var layout = FindAnyObjectByType<SantaRitaRoomLayout>();
+            if(layout!=null)spawn=layout.AdaptSavedPosition(spawn);
             TeleportarPara(spawn, -1);
         }
+        var planta=FindAnyObjectByType<SantaRitaRoomLayout>();
+        if(planta!=null)GameState.Marcar(planta.versionFlag);
     }
 
     public void TeleportarPara(Vector2 destino, int direcao = -1)
@@ -279,8 +198,7 @@ public class PlayerController : MonoBehaviour
         if (direcao >= DirDown && direcao <= DirRight)
         {
             facingDirection = direcao;
-            if (facingDirection == DirRight) SetFacingScale(-1f);
-            else if (facingDirection == DirLeft) SetFacingScale(1f);
+            SetFacingScale(facingDirection == DirRight ? -1f : 1f);
         }
 
         CameraFollow camFollow = FindAnyObjectByType<CameraFollow>();
@@ -297,6 +215,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // Só um pressionamento novo, após foco e liberação da tecla. UI não muda a preferência.
+        var teclado = Keyboard.current;
+        if(teclado != null && !teclado.fKey.isPressed) focoLanternaPronto = Application.isFocused;
+        if(teclado != null && focoLanternaPronto && Application.isFocused && !BloqueiaEquipamento() && teclado.fKey.wasPressedThisFrame)
+        { GameState.AlternarLanterna(); focoLanternaPronto = false; }
         // Com a pausa, mapa, orelhão ou minigame de sinuca abertos, o jogador não anda nem interage por baixo.
         if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen)
         {
@@ -415,6 +338,7 @@ public class PlayerController : MonoBehaviour
         {
             SetFacingScale(1f);
         }
+        else SetFacingScale(1f); // Frente/costas têm mão e lente próprias, sem herdar o espelho do perfil.
 
     }
 
@@ -423,14 +347,10 @@ public class PlayerController : MonoBehaviour
         AtualizarPassada();
         if (corpo != null)
             corpo.sortingOrder = 1000 - Mathf.RoundToInt(transform.position.y * 10);
-        if (lanternaMaoRenderer != null && corpo != null)
-            lanternaMaoRenderer.sortingOrder = corpo.sortingOrder + (facingDirection == DirUp ? -1 : 1);
-        // Garante que ao entrar/sair de um interior ou fechar diálogo a lanterna ligue/desligue imediatamente.
+        // Supressão temporária não altera a preferência guardada no GameState.
         bool usarLanterna = DeveUsarLanternaAgora();
         if (flashlight != null && flashlight.gameObject.activeSelf != usarLanterna)
             flashlight.gameObject.SetActive(usarLanterna);
-        if (lanternaMaoRenderer != null && lanternaMaoRenderer.gameObject.activeSelf != usarLanterna)
-            lanternaMaoRenderer.gameObject.SetActive(usarLanterna);
     }
 
     private void AtualizarPassada()
@@ -449,88 +369,32 @@ public class PlayerController : MonoBehaviour
         {
             int linha = facingDirection == DirUp ? 1 :
                 (facingDirection == DirLeft || facingDirection == DirRight ? 2 : 0);
-            corpo.sprite = distancia < .0001f || GameMessageUI.IsShowing ? quadrosRepouso[linha] : quadrosCaminhada[linha, quadro];
+            bool equipada=DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna!=null;
+            corpo.sprite = distancia < .0001f || GameMessageUI.IsShowing ?
+                (equipada?repousoComLanterna[linha]:quadrosRepouso[linha]) :
+                (equipada?quadrosCaminhadaComLanterna[linha,QuadroCaminhada]:quadrosCaminhada[linha,quadro]);
         }
         // Pose já aplicada neste frame: som e imagem compartilham o contato.
         for (int i = 0; i < apoios; i++) PeApoiou?.Invoke();
-        AtualizarLanternaERenderizadorMao(QuadroCaminhada, distancia > .0001f);
+        AtualizarFeixeLanterna(QuadroCaminhada, distancia > .0001f);
     }
 
-    private void AtualizarLanternaERenderizadorMao(int passoAtual, bool isMoving)
+    private void AtualizarFeixeLanterna(int quadro, bool andando)
     {
-        bool usarLanterna = DeveUsarLanternaAgora();
-
-        if (flashlight != null && flashlight.gameObject.activeSelf != usarLanterna)
-            flashlight.gameObject.SetActive(usarLanterna);
-        if (lanternaMaoRenderer != null && lanternaMaoRenderer.gameObject.activeSelf != usarLanterna)
-            lanternaMaoRenderer.gameObject.SetActive(usarLanterna);
-
-        if (!usarLanterna)
-            return;
-
-        Vector2 direction = FlashlightDirections[facingDirection];
-
-        // Balanço sutil de 1 pixel na mão acompanhando a passada de caminhada
-        float pixel = 1f / Mathf.Max(1, pixelsPerUnit);
-        float bobY = (isMoving && (passoAtual == 3 || passoAtual == 7)) ? pixel : 0f;
-        float swingX = 0f;
-        if (isMoving && (facingDirection == DirLeft || facingDirection == DirRight))
-        {
-            swingX = passoAtual < 4 ? pixel : -pixel;
-        }
-
-        Vector2 offsetMaoMundo;
-        switch (facingDirection)
-        {
-            case DirLeft:
-                offsetMaoMundo = new Vector2(-0.19f - swingX, 0.44f + bobY);
-                break;
-            case DirRight:
-                offsetMaoMundo = new Vector2(0.19f + swingX, 0.44f + bobY);
-                break;
-            case DirUp:
-                offsetMaoMundo = new Vector2(0.14f, 0.48f + bobY);
-                break;
-            default: // DirDown
-                offsetMaoMundo = new Vector2(-0.14f, 0.41f + bobY);
-                break;
-        }
-
-        Vector2 posMaoMundo = SnapToPixel((Vector2)transform.position + offsetMaoMundo);
-
-        if (lanternaMaoRenderer != null)
-        {
-            if (facingDirection == DirLeft || facingDirection == DirRight)
-                lanternaMaoRenderer.sprite = spriteLanternaHorizontal;
-            else if (facingDirection == DirUp)
-                lanternaMaoRenderer.sprite = spriteLanternaCima;
-            else
-                lanternaMaoRenderer.sprite = spriteLanternaBaixo;
-
-            // Como transform.localScale.x fica -1 quando DirRight, mantemos localScale = 1 para que
-            // spriteLanternaHorizontal espelhe automaticamente para a direita quando DirRight!
-            // Já para DirDown / DirUp compensamos o sinal de localScale.x.
-            float parentSign = transform.localScale.x < 0f ? -1f : 1f;
-            if (facingDirection == DirLeft || facingDirection == DirRight)
-                lanternaMaoRenderer.transform.localScale = Vector3.one;
-            else
-                lanternaMaoRenderer.transform.localScale = new Vector3(parentSign, 1f, 1f);
-
-            lanternaMaoRenderer.transform.position = posMaoMundo;
-            lanternaMaoRenderer.sortingOrder = (facingDirection == DirUp) ? 9 : 11;
-        }
-
-        if (flashlight != null)
-        {
-            // A luz nasce exatamente na lente frontal da lanterna na mão de Marcus
-            Vector2 pontaLanterna = SnapToPixel(posMaoMundo + direction * 0.14f);
-            flashlight.position = pontaLanterna;
-
-            float angle =
-                Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg +
-                flashlightAngleOffset;
-            flashlight.rotation = Quaternion.Euler(0f, 0f, angle);
-        }
+        bool visivel = DeveUsarLanternaAgora();
+        if (flashlight == null) return;
+        flashlight.gameObject.SetActive(visivel);
+        if (!visivel) return;
+        // As coordenadas são as lentes desenhadas na folha Aseprite (64 px, pivô nos pés).
+        int bob = andando ? new[] {0,1,0,-1,0,1,0,-1}[quadro] + 1 : 0;
+        Vector2 lente = facingDirection == DirDown ? new Vector2(40,46+bob) :
+            facingDirection == DirUp ? new Vector2(40,28+bob) : new Vector2(16,36+bob);
+        Vector2 offset = new Vector2((lente.x-32)/32f,(56-lente.y)/32f);
+        if (facingDirection == DirRight) offset.x = -offset.x;
+        flashlight.position = SnapToPixel((Vector2)transform.position + offset);
+        Vector2 direcao = FlashlightDirections[facingDirection];
+        if(flashlight.parent==transform)flashlight.localScale=new Vector3(1/transform.localScale.x,1/transform.localScale.y,1);
+        flashlight.rotation=Quaternion.Euler(0,0,Mathf.Atan2(direcao.y,direcao.x)*Mathf.Rad2Deg+flashlightAngleOffset);
     }
 
     private Vector2 SnapToPixel(Vector2 posicao)
@@ -572,7 +436,7 @@ public class PlayerController : MonoBehaviour
         { currentVelocity = Vector2.zero; return; }
         // A velocidade nunca muda de uma vez: ganha e perde embalo aos poucos,
         // o que dá o peso de "cada passo é uma decisão".
-        Vector2 targetVelocity = moveInput * moveSpeed;
+        Vector2 targetVelocity = moveInput * (moveSpeed * SantaRitaShallowStairs.SpeedAt(rb.position));
 
         float rate = targetVelocity.sqrMagnitude > currentVelocity.sqrMagnitude
             ? acceleration

@@ -8,6 +8,137 @@ using UnityEngine;
 // Dados de save sempre isolados; não depende dos slots do autor.
 public static class Chapter2Verification
 {
+    [MenuItem("Santa Rita/Capítulo 2/Auditar retornos antigos (isolado)")]
+    public static void AuditOldFeedback()
+    {
+        if (EditorApplication.isPlaying) throw new Exception("Execute fora de Play; dados pessoais são preservados.");
+        var results = new System.Collections.Generic.List<string>();
+        void Verify(string name, Action test)
+        {
+            try { test(); results.Add("PASS " + name); checks++; }
+            catch (Exception ex) { results.Add("FAIL " + name + ": " + ex.GetBaseException().Message); }
+        }
+        void Require(bool value, string message) { if (!value) throw new Exception(message); }
+        using (CheckpointSystem.BeginIsolatedTests())
+        {
+            Verify("Atualização do diário", () =>
+            {
+                GameState.RegistrarDiario("audit", "pista", "Antes", "Antes");
+                GameState.ConfirmarSaveManual(); int notifications = 0;
+                Action listener = () => notifications++;
+                GameState.OnEstadoAlterado += listener;
+                try
+                {
+                    GameState.RegistrarDiario("audit", "pista", "Depois", "Depois");
+                    Require(GameState.TemProgressoNaoSalvo && notifications == 1, "Nota alterada não marcou progresso/notificou UI.");
+                }
+                finally { GameState.OnEstadoAlterado -= listener; }
+            });
+            Verify("Conversa genérica sem testemunho", () =>
+            {
+                GameState.ImportarSnapshot(new GameStateSnapshot());
+                GameState.Marcar(Flags.FalouAtendenteMercadinho);
+                Require(!GameState.ObterEntradasDiario().Any(d => d.id == "pista_relato_mercadinho"), "Relato revelado sem ouvi-lo.");
+            });
+            Verify("Slot moderno não duplica no primeiro", () =>
+            {
+                CheckpointSystem.SaveSlot(2, "EntradaDaCidade", Vector2.zero, "orelhao_bar");
+                Require(CheckpointSystem.TryLoadSlot(2, out _) && !CheckpointSystem.TryLoadSlot(0, out _), "Save do slot 3 apareceu no slot 1.");
+                CheckpointSystem.Clear();
+                Require(CheckpointSystem.TryLoadSlot(2, out _), "Clear não pode apagar save.");
+            });
+            Verify("Legado sem slot continua disponível", () =>
+            {
+                var path = (string)typeof(CheckpointSystem).GetProperty("PrimaryFilePath", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic).GetValue(null);
+                File.WriteAllText(path, "{\"versao\":2,\"sceneName\":\"EntradaDaCidade\",\"estado\":{\"versao\":2}}");
+                Require(CheckpointSystem.TryLoadSlot(0, out var old) && old.slotIndex == -1, "Compatibilidade sem slot foi perdida.");
+            });
+            Verify("Recibo e testemunho separados", () =>
+            {
+                GameState.ImportarSnapshot(new GameStateSnapshot());
+                GameState.Marcar(Flags.ChegouCasaAvo);
+                InteracaoCapitulo1.ConfirmarTestemunhoAtendente();
+                Require(!GameState.Tem(Flags.OuviuRelatoAtendente), "Casa visitada se passou por cupom coletado.");
+                GameState.Marcar(Flags.AchouReciboMercadinho);
+                Require(!GameState.Tem(Flags.OuviuRelatoAtendente), "Coleta se passou por testemunho ouvido.");
+                InteracaoCapitulo1.ConfirmarTestemunhoAtendente();
+                Require(GameState.Tem(Flags.ApresentouReciboAtendente) && GameState.Tem(Flags.OuviuRelatoAtendente) &&
+                    GameState.ObterEntradasDiario().Count(d => d.id == "pista_relato_mercadinho") == 1, "Relato legítimo não persistiu.");
+                InteracaoCapitulo1.ConfirmarTestemunhoAtendente();
+                Require(GameState.ObterEntradasDiario().Count(d => d.id == "pista_relato_mercadinho") == 1, "Revisita duplicou relato.");
+            });
+            Verify("Casa fora de ordem não inventa bilhete", () =>
+            {
+                GameState.ImportarSnapshot(new GameStateSnapshot());
+                GameState.Marcar(Flags.ExaminouCafeCasa); GameState.Marcar(Flags.ExaminouCartasCasa);
+                GameState.Marcar(Flags.ExaminouDesordemCasa);
+                InteracaoCapitulo1.VerificarConclusaoPistasCasaAvo();
+                Require(!GameState.Tem(Flags.Pista_RumoBarDoZe), "Três pistas sem bilhete revelaram o Bar.");
+                Require(SantaRitaGeography.ObjetivoAtual() == SantaRitaGeography.UV("casa_avo"), "Objetivo sem documento saiu da casa.");
+            });
+        }
+        var host = new GameObject("QA_Sinuca_Retornos");
+        try
+        {
+            var ui = host.AddComponent<SinucaMinigameUI>(); ui.IniciarDuelo(null);
+            var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+            var type = typeof(SinucaMinigameUI);
+            void Set(string name, object value) => type.GetField(name, flags).SetValue(ui, value);
+            object Get(string name) => type.GetField(name, flags).GetValue(ui);
+            object Call(string name, params object[] args) => type.GetMethod(name, flags).Invoke(ui, args);
+            Verify("Tabela anterior ao contato não valida", () =>
+            {
+                var balls = (System.Collections.IList)Get("bolas");
+                var ball = balls[0]; var bt = ball.GetType();
+                bt.GetField("pos").SetValue(ball, new Vector2(202, 0));
+                bt.GetField("vel").SetValue(ball, new Vector2(30, 0));
+                Call("SimularFisicaMesa", .001f);
+                Require(!(bool)Get("houveToqueTabelaOuCacapa"), "Tabela antes do primeiro contato foi contabilizada.");
+            });
+            Verify("Regras durante preparação final da IA", () =>
+            {
+                ((GameObject)Get("painelModal")).SetActive(false);
+                Set("brancaNaMao", false); Set("turnoDeMarcus", false);
+                var stateType = Get("estado").GetType();
+                Set("estado", Enum.Parse(stateType, "TurnoZePensando"));
+                var ai = (System.Collections.IEnumerator)Call("ExecutarTurnoZeCoroutine");
+                ai.MoveNext(); ai.MoveNext(); // espera inicial e preparação do taco
+                Call("AbrirModalRegrasDuranteJogo");
+                ai.MoveNext();
+                Require(Get("estado").ToString() != "BolasEmMovimento", "IA bateu com regras abertas; fechar restaura estado ultrapassado.");
+            });
+            Verify("Resolver real da Sinuca", () =>
+            { Require(ui.SimularTesteDeInvariantes(out string details), details); results.Add(details); });
+        }
+        finally { UnityEngine.Object.DestroyImmediate(host); }
+        Verify("Geografia aprovada e objetivo sem antecipação", () =>
+        {
+            Require(SantaRitaGeography.UV("capela").x > .45f && SantaRitaGeography.UV("capela").x < .6f, "Capela fora do meio inferior.");
+            Require(SantaRitaGeography.UV("prefeitura").x > SantaRitaGeography.UV("escola").x, "Troca Prefeitura/Escola não preservada.");
+        });
+        Verify("Áudio da segunda e terceira mãos", () =>
+        {
+            Require(SantaRitaBarAudio.VolumeDaCamada(0, 1) > 0 && SantaRitaBarAudio.VolumeDaCamada(0, 2) == 0 &&
+                SantaRitaBarAudio.VolumeDaCamada(1, 2) > 0 && SantaRitaBarAudio.VolumeDaCamada(2, 3) > 0, "Eventos de áudio não acompanham as mãos.");
+            for (int layer = 0; layer < 3; layer++)
+            {
+                var clip = SantaRitaBarAudio.CriarTextura(layer);
+                try
+                {
+                    var data = new float[clip.samples]; clip.GetData(data, 0);
+                    float peak = data.Max(v => Mathf.Abs(v));
+                    Require(clip.length == 16 && peak > .02f && peak < .9f && Mathf.Abs(data[0]) < .001f && Mathf.Abs(data[data.Length - 1]) < .001f,
+                        "Textura vazia, com clipping ou borda descontínua: " + layer);
+                }
+                finally { UnityEngine.Object.DestroyImmediate(clip); }
+            }
+        });
+        string report = string.Join("\n", results);
+        File.WriteAllText(Path.Combine(Application.dataPath, "../Library/sr-feedback-audit.txt"), report);
+        Debug.Log(report);
+        if (results.Any(r => r.StartsWith("FAIL"))) throw new Exception("Retornos antigos: há regressões. Library/sr-feedback-audit.txt");
+    }
+
     private static int checks;
     private static void Check(bool value, string message)
     { if (!value) throw new Exception(message); checks++; }
@@ -18,7 +149,7 @@ public static class Chapter2Verification
         checks = 0;
         try
         {
-            Rules(); Physics(); Gait(); Narrative(); Saves(); Matches();
+            Rules(); Physics(); Gait(); Narrative(); Saves(); Matches(); AuditOldFeedback();
             string report = "PASS " + checks + " verificações: Bocha/regras/física e save isolado. " + DateTime.UtcNow.ToString("O");
             Debug.Log(report);
             string evidencias = Environment.GetEnvironmentVariable("SR_EVIDENCE_DIR") ??
@@ -71,18 +202,18 @@ public static class Chapter2Verification
     private static void Physics()
     {
         var sim = new BochaMatch().CriarMao(); var match = new BochaMatch();
-        Check(match.Lancar(sim, BochaSide.Marcus, 0, new Vector2(-.32f, 6.9f)), "Lançamento normal.");
+        Check(match.Lancar(sim, BochaSide.Marcus, 0, new Vector2(-.23f, 4.9f)), "Lançamento normal.");
         sim.RepousarParaPrevisao();
         Check(!sim.IsMoving && sim.bolas[1].valida, "Repouso e validade.");
         Check(BochaMatch.MelhorDistancia(sim, BochaSide.Marcus) < 2f, "Aproximação alcançável.");
         var dry = new BochaSimulation(); dry.bolas.Add(BochaBall.Balim(new Vector2(2, 18)));
         dry.bolas.Add(new BochaBall { lado = BochaSide.Marcus, massa = 1, raio = .18f,
             pos = new Vector2(0, .65f), vel = new Vector2(0, 7) });
-        var wet = dry.Clone(); wet.faixaUmida = new Rect(-3, 5, 6, 5);
-        dry.RepousarParaPrevisao(); wet.RepousarParaPrevisao();
-        Check(wet.bolas[1].pos.y < dry.bolas[1].pos.y - .5f, "Piso úmido desacelera.");
-        var clone = wet.Clone();
-        Check(clone.faixaUmida == wet.faixaUmida && clone.Impacto == null, "IA compartilha piso, sem efeitos reais.");
+        var other = dry.Clone();
+        dry.RepousarParaPrevisao(); other.RepousarParaPrevisao();
+        Check(other.bolas[1].pos == dry.bolas[1].pos, "Piso uniforme e previsão determinística.");
+        var clone = other.Clone();
+        Check(clone.Impacto == null && clone.Contato == null, "IA compartilha física sem efeitos reais.");
         var hit = new BochaSimulation(); hit.bolas.Add(BochaBall.Balim(new Vector2(0, 10)));
         hit.bolas.Add(new BochaBall { lado = BochaSide.Marcus, massa = 1, raio = .18f,
             pos = new Vector2(0, 1), vel = new Vector2(0, 14) });
@@ -184,7 +315,7 @@ public static class Chapter2Verification
                 {
                     var side=match.Proximo(sim);
                     BochaShot shot=side==BochaSide.Tonao?BochaAI.Escolher(sim,4-match.usadas[1],rng):skilled?Chapter2RuntimeVerification.BestShot(sim):new BochaShot{x=2.3f,velocidade=new Vector2(0,3.5f)};
-                    Check(match.Lancar(sim,side,shot.x,shot.velocidade),"Partida completa: lançamento válido.");shots++;sim.RepousarParaPrevisao();
+                    Check(match.Lancar(sim,side,shot),"Partida completa: lançamento válido.");shots++;sim.RepousarParaPrevisao();
                     if(shots>250)throw new Exception("Partida de Bocha sem progressão.");
                 }
                 match.Resolver(sim);

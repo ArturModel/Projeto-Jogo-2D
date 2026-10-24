@@ -1,0 +1,11 @@
+Eixos de rua: seis amostras verificadas após todos os acessos de terra/passeios.
+CentroSantaRita: 18 interações; 35155 células acessíveis; limites (-20.00, -8.00) / (96.00, 85.00)
+IgrejaMatriz: 4 interações; 1131 células acessíveis; limites (0.00, 0.00) / (18.00, 22.00)
+PrefeituraSantaRita: 6 interações; 954 células acessíveis; limites (0.00, 0.00) / (20.00, 17.00)
+RodoviariaSantaRita: 7 interações; 933 células acessíveis; limites (0.00, 0.00) / (22.00, 15.00)
+MercadinhoDeposito: 4 interações; 586 células acessíveis; limites (0.00, 0.00) / (16.00, 14.00)
+OficinaRadio: 4 interações; 547 células acessíveis; limites (0.00, 0.00) / (16.00, 13.00)
+CasaCostureira: 3 interações; 600 células acessíveis; limites (0.00, 0.00) / (16.00, 14.00)
+SociedadeBeiraRio: 7 interações; 851 células acessíveis; limites (0.00, 0.00) / (30.00, 19.00)
+AbrigoCemiterio: 3 interações; 347 células acessíveis; limites (0.00, 0.00) / (13.00, 11.00)
+CemiterioSantaRita: 4 interações; 4321 células acessíveis; limites (43.00, 82.00) / (88.00, 111.00)

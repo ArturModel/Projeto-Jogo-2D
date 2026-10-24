@@ -35,6 +35,7 @@ public class PayphoneCheckpoint : Interactable
     private static PayphoneCheckpoint s_orelhaoAtivo;
     private static Vector2 s_savePosAtivo;
     private static bool s_modoApenasCarregar;
+    private static System.Action s_aoCancelar, s_antesDeCarregar;
     private static readonly Button[] s_botoesSlot = new Button[CheckpointSystem.TotalSlots];
     private static readonly TextMeshProUGUI[] s_textosSlot = new TextMeshProUGUI[CheckpointSystem.TotalSlots];
     private static TextMeshProUGUI s_tituloModal;
@@ -47,6 +48,7 @@ public class PayphoneCheckpoint : Interactable
         s_modalGo = null;
         s_audioSource = null;
         s_orelhaoAtivo = null;
+        s_aoCancelar = s_antesDeCarregar = null;
     }
 
     public string PayphoneId => payphoneId;
@@ -76,9 +78,16 @@ public class PayphoneCheckpoint : Interactable
 
     public static void AbrirModalCarregarDoMenu()
     {
+        AbrirSelecaoCarregar(null, null);
+    }
+
+    // Cancelar uma escolha feita na derrota devolve ao resultado, sem retomar o duelo perdido.
+    public static void AbrirSelecaoCarregar(System.Action aoCancelar, System.Action antesDeCarregar)
+    {
         s_orelhaoAtivo = null;
         s_modoApenasCarregar = true;
-        TocarSomAtenderOrelhao();
+        s_aoCancelar = aoCancelar;
+        s_antesDeCarregar = antesDeCarregar;
         AbrirModalSlots(true);
     }
 
@@ -269,7 +278,7 @@ public class PayphoneCheckpoint : Interactable
         if (s_tituloModal != null)
         {
             s_tituloModal.text = apenasCarregar
-                ? "ORELHÃO — ESCOLHA O SLOT PARA CARREGAR"
+                ? "ESCOLHA O REGISTRO PARA CARREGAR"
                 : "ORELHÃO TELEFÔNICO — ESCOLHA UM SLOT PARA SALVAR";
         }
 
@@ -290,6 +299,9 @@ public class PayphoneCheckpoint : Interactable
         if (s_modalGo != null)
             s_modalGo.SetActive(false);
         IsSaveUIOpen = false;
+        var cancelar = s_aoCancelar;
+        s_aoCancelar = s_antesDeCarregar = null;
+        cancelar?.Invoke();
     }
 
     private static void GarantirModalCriado()
@@ -406,7 +418,10 @@ public class PayphoneCheckpoint : Interactable
                 return;
             }
             TocarSomConfirmarGancho();
+            var antes = s_antesDeCarregar;
+            s_aoCancelar = s_antesDeCarregar = null;
             FecharModalSlots();
+            antes?.Invoke();
             CheckpointSystem.CarregarSlot(slotIndex);
             return;
         }
@@ -453,17 +468,17 @@ public class PayphoneCheckpoint : Interactable
         }
         if (GameState.Tem(Flags.VenceuZeSinuca))
         {
-            return "\"A linha continua chiando. Agora tenho a ficha do Clube e o que o Zé deixou escapar: Adilio não saiu de casa por vontade própria.\"";
+            return "\"A linha continua chiando. Tenho a ficha do Clube e o relato de Zé: ele diz que levaram Adílio contra a vontade. Ainda preciso conferir o que aconteceu.\"";
         }
 
-        if (GameState.Tem(Flags.FalouAtendenteMercadinho))
+        if (GameState.Tem(Flags.OuviuRelatoAtendente))
         {
-            return "\"Só estática na linha. Se um desconhecido perguntou por Adilio no mercadinho e esteve com o Zé antes, a resposta está no bar da rua norte.\"";
+            return "\"Só estática na linha. A atendente viu a caminhonete com Adílio perto do Bar do Zé. Preciso perguntar a ele o que viu.\"";
         }
 
         if (GameState.Tem(Flags.AchouReciboMercadinho) || GameState.Tem(Flags.ExaminouDesordemCasa))
         {
-            return "\"Sem linha limpa para fora da cidade. Com o café passado hoje e o tapete revirado na sala, não posso dar meia-volta.\"";
+            return "\"Sem linha limpa para fora da cidade. O vô continua sem responder. Vou conferir as pistas que encontrei antes de tirar conclusões.\"";
         }
 
         if (falas == null || falas.Length == 0)

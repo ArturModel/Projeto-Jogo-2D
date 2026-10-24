@@ -1,5 +1,9 @@
 # Santa Rita — evolução da produção
 
+23/10/2026 — [Bocha: perspectiva, controles e sala da Sociedade](Bocha_Perspectiva_Execucao.md). Materiais Aseprite compartilhados, ambiente fechado, orientação corrigida e carga por clique; [QA/PO](Evidencias/BochaPerspectiva/Relatorio.md) registra testes, builds e limites. Sem aprovação artística presumida.
+
+Consolidação C2 R2 em 22/10/2026: [plano, implementação e evidências](Consolidacao_C2_R2.md). Sociedade com cancha horizontal, oito interiores recompostos, rotinas em superfícies de trabalho, poses de lanterna manual e comparações na build comum. Fontes Aseprite/procedência mantidas. 290 verificações R2 e 63 C1 no executável QA, Player normal sem erros; nenhuma aprovação artística, audição ou campanha integral inferida desses resultados. Contagens históricas abaixo não substituem esse registro.
+
 Revisão posterior de cidade/interiores, concluída tecnicamente em 22/10/2026: critérios em `Revisao_Cidade_Viva.md`, técnicas e limites em `Matriz_Tecnicas_Arte.md`, capturas/testes/build em `Evidencias/CidadeViva/Relatorio.md`. A revisão substitui a composição anterior da praça, separa o cemitério e mantém os dois retornos a C1. Aprovação artística pelo autor permanece separada.
 
 Pedido autorizado em 21/10/2026. Preservar mapa vigente, saves e progressão de C1/C2; Escola permanece no próximo capítulo.
@@ -36,3 +40,7 @@ Pedido autorizado em 21/10/2026. Preservar mapa vigente, saves e progressão de 
 - 84 contratos de produção, 114 checks de regras/física/caminhada/narrativa/saves; 109 checks no executável C2 e 17 no smoke C1. Development e Player final compilados com zero erros.
 - Capturas, GIF e tentativas históricas foram arquivados fora do projeto na limpeza solicitada pelo autor. Resumo e resultados atuais em `Docs/Evidencias/CidadeViva/Relatorio.md`; organização em `Docs/Evidencias/README.md`.
 - Avaliação artística final, audição e campanha legítima sem fixture permanecem distintas dos testes automatizados; nenhuma aprovação do autor foi presumida.
+
+## Saídas e profundidade da Sociedade — 23/10/2026
+
+Revisão localizada de soleiras/capachos, escada rasa com projeção/escala dos atores, recorte da parede/forro, luz local e bancos nas duas laterais. [Plano, 167 verificações no Player QA, build normal e limites](Saidas_Escada_Execucao.md). Saves pessoais e alterações anteriores preservados; avaliação artística pelo autor permanece pendente.

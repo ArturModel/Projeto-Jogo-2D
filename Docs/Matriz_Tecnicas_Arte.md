@@ -1,5 +1,11 @@
 # Técnicas de arte — implementação verificável
 
+23/10/2026, saídas/escada: soleiras e capachos nativos; projeção de três espelhos, escala de Marcus até 90%, pés/lanterna/sombra sincronizados e recorte localizado da fachada/forro por proximidade. Parede física permanece ativa; luz e tintura locais distinguem o nível baixo. Bancos nas duas laterais e cancha explorável compactada. É composição/projeção 2D, sem conversão para física 3D. [Execução e evidências](Saidas_Escada_Execucao.md).
+
+Bocha, 23/10/2026: geometria com projeção em perspectiva no Canvas, esferas com altura/rotação física, sombras de contato e marcas no saibro. Luz e matéria dessa vista são calculadas por vértice com atlas original Aseprite, sem trocar o renderer 2D do mundo. A sala explorável usa o mesmo saibro/madeira, Sprite-Lit/Light2D e divisórias reais. Não é SSAO, PBR ou decal URP 3D. [Evidências](Evidencias/BochaPerspectiva/Relatorio.md).
+
+R2, 22/10/2026: lanterna passou a equipamento manual F, com poses completas de Marcus em vez de mão genérica desenhada por código. Lente ancorada por pose/quadro, oito poses e repouso nas quatro direções; mantidos `MarcusGait` e apoios 0/4. Fontes Aseprite, rotinas, plantas e comparação de iluminação/câmera real estão em [Consolidação C2 R2](Consolidacao_C2_R2.md). Cemitério mantém orientação sem F; feixe melhora detalhes próximos. Não foi instalado pacote extra para simular melhoria visual.
+
 A skill descreve o procedimento. Os arquivos e cenas abaixo são a implementação. A adoção de uma técnica deve melhorar legibilidade, composição ou atmosfera na câmera real; nomes de pacotes não substituem esse resultado.
 
 | Termo citado pelo autor | Aplicação real | Limite / verificação |

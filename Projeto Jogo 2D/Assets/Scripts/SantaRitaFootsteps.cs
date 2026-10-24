@@ -30,6 +30,7 @@ public sealed class SantaRitaFootsteps : MonoBehaviour
             else if (name.Contains("madeira")) surface = "wood";
             break;
         }
+        if(SantaRitaShallowStairs.SpeedAt(now)<1)surface="concrete";
         variant = (variant + 1) % 3;
         if(!Capitulo1Director.EstaEmInterior&&(Capitulo2Director.Instance==null||!Capitulo2Director.Instance.interior))
         {var rain=FindAnyObjectByType<Chuva>();if(rain!=null)rain.RespingoDePasso(now);}

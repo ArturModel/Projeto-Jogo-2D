@@ -37,12 +37,6 @@ public sealed class BochaMatch
         Vector2[] posicoes = { new Vector2(-0.6f, 13.3f), new Vector2(0.55f, 14.1f),
             new Vector2(0f, 12.6f), new Vector2(-1.0f, 14.6f) };
         sim.bolas.Add(BochaBall.Balim(posicoes[Mao % posicoes.Length]));
-        if (Mao > 0)
-        {
-            // Anunciada antes da mira e imutável até a resolução da mão.
-            sim.faixaUmida = Mao % 2 == 1 ? new Rect(-2.85f, 7.4f, 3.2f, 2.1f) :
-                new Rect(-0.35f, 8.8f, 3.2f, 2.2f);
-        }
         return sim;
     }
 
@@ -53,7 +47,9 @@ public sealed class BochaMatch
             return false;
         usadas[(int)lado]++;
         UltimoLancador = lado;
-        bool valido = Mathf.Abs(x) <= BochaSimulation.MeiaLargura - BochaSimulation.RaioBocha &&
+        bool valido = !float.IsNaN(x) && !float.IsNaN(velocidade.x) && !float.IsNaN(velocidade.y) &&
+            !float.IsInfinity(x) && !float.IsInfinity(velocidade.x) && !float.IsInfinity(velocidade.y) &&
+            Mathf.Abs(x) <= BochaSimulation.MeiaLargura - BochaSimulation.RaioBocha &&
             velocidade.y > 0f && velocidade.magnitude <= BochaSimulation.VelocidadeMaxima;
         var bola = new BochaBall
         {
@@ -61,7 +57,22 @@ public sealed class BochaMatch
             pos = new Vector2(x, 0.65f), vel = valido ? velocidade : Vector2.zero, valida = valido
         };
         sim.bolas.Add(bola);
+        if(valido)bola.giro=new Vector3(velocidade.y,0,-velocidade.x)/bola.raio;
         return true; // Um lançamento inválido também gasta estoque.
+    }
+
+    public bool Lancar(BochaSimulation sim, BochaSide lado, BochaShot shot)
+    {
+        if (!Lancar(sim, lado, shot.x, shot.velocidade)) return false;
+        var b=sim.bolas[sim.bolas.Count-1];
+        bool finite = !float.IsNaN(shot.altura) && !float.IsNaN(shot.vertical) &&
+            !float.IsInfinity(shot.altura) && !float.IsInfinity(shot.vertical) &&
+            shot.altura>=0 && shot.altura<=2 && shot.vertical>=0 && shot.vertical<=8 &&
+            !float.IsNaN(shot.giro.sqrMagnitude) && !float.IsInfinity(shot.giro.sqrMagnitude);
+        if(!finite){b.valida=false;b.vel=Vector2.zero;return true;}
+        b.altura=shot.altura;b.vertical=shot.vertical;
+        if(shot.giro!=Vector3.zero)b.giro=shot.giro;
+        return true;
     }
 
     public BochaSide Proximo(BochaSimulation sim)

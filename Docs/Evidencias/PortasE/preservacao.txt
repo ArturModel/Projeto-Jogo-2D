@@ -1,0 +1,9 @@
+PASS save pessoal intacto: santa_rita_save_v2_slot_0.json
+PASS save pessoal intacto: santa_rita_save_v2_slot_1.json
+PASS save pessoal intacto: santa_rita_save_v2_slot_4.json
+PASS save pessoal intacto: santa_rita_save_v2.bak
+PASS save pessoal intacto: santa_rita_save_v2.json
+PASS namespace SRQA residual: 0
+PASS snapshot em RAM igual ao original antes de retomar E.
+PASS E pelo Input System entrou em SociedadeBeiraRio; fade concluído; Marcus (5, 2.4); sem modal.
+PASS cinco hashes de saves pessoais reconferidos após a entrada.

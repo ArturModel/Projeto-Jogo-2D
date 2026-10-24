@@ -1,0 +1,28 @@
+PASS Raspada varrida: caso antigo de tunneling transfere impulso.
+PASS Batida frontal igual massa transfere velocidade com restituição.
+PASS Impulso conserva momento horizontal, descontada resistência do piso.
+PASS Colisão dissipa energia translacional.
+PASS Guia/cabeceira devolve bocha eixo 0
+PASS Repouso contido, sem desaparecer.
+PASS Guia/cabeceira devolve bocha eixo 1
+PASS Repouso contido, sem desaparecer.
+PASS Guia/cabeceira devolve balim eixo 0
+PASS Repouso contido, sem desaparecer.
+PASS Guia/cabeceira devolve balim eixo 1
+PASS Repouso contido, sem desaparecer.
+PASS Ponto: mais força produz maior alcance antes da cabeceira 0,15
+PASS Ponto: mais força produz maior alcance antes da cabeceira 0,35
+PASS Ponto: mais força produz maior alcance antes da cabeceira 0,55
+PASS Ponto: mais força produz maior alcance antes da cabeceira 0,75
+PASS Todos repousam no saibro: Ponto
+PASS Altura e queda coerentes com modo Ponto
+PASS Todos repousam no saibro: Rafa
+PASS Altura e queda coerentes com modo Rafa
+PASS Todos repousam no saibro: Volo
+PASS Altura e queda coerentes com modo Volo
+PASS Altura participa do contato: voo passa acima de obstáculo.
+PASS Mesmo segundo físico em 60 ou 120 chamadas.
+PASS Previsão copia estado sem áudio nem mutação da partida.
+PASS Pilha no canto converge sem explosão numérica.
+PASS Passo NaN é recusado.
+PASS Carga sobe, desce e repete sem saturar no máximo.

@@ -33,12 +33,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "A água baixou neste ralo?",
           "retratoId": "marcus"
         },
         {
           "falante": "CHICO",
-          "texto": "Consegui fazer a água correr deste lado. Do outro, vou ter que levantar a grelha amanhã.",
+          "texto": "Deste lado, sim. Amanhã vai ter que levantar a grelha do outro. Hoje já molhei até o forro da bota.",
           "retratoId": "frequentador"
         }
       ],
@@ -50,7 +50,7 @@
       "id": "placa_praca",
       "title": "Boletim municipal arquivado — 1990",
       "flag": "c2_placa_praca",
-      "prompt": "Ler homenagem de Júlia",
+      "prompt": "Consultar boletim antigo",
       "kind": "examine",
       "lines": [
         {
@@ -121,12 +121,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Posso juntar à minha cópia o que Tonão me contou?",
           "retratoId": "marcus"
         },
         {
           "falante": "CLARICE",
-          "texto": "Um depoimento pode esclarecer o que uma frase esconde, mas eu não vou alterar o original sem registrar a fonte. Você pode guardar a cópia e a declaração de Tonão separadamente.",
+          "texto": "Posso anexar uma declaração com o nome dele e a data. O papel antigo fica no arquivo. Sente ali, eu separo outra folha.",
           "retratoId": "clarice"
         }
       ],
@@ -222,27 +222,27 @@
       "lines": [
         {
           "falante": "MARCUS",
-          "texto": "Padre, posso perguntar uma coisa? Sou Marcus. Estou conferindo um registro da noite de Júlia. O senhor estava lá?",
+          "texto": "Padre, sou Marcus, neto do Adílio. Estou procurando ele. Posso falar um instante?",
           "retratoId": "marcus"
         },
         {
           "falante": "PADRE BENTO",
-          "texto": "Estava. Eu sou Bento. Pode entrar, só vou afastar estes bancos da goteira. Que parte do registro você quer conferir?",
+          "texto": "Pode. Eu sou Bento. Só vou afastar estes bancos da goteira. O que aconteceu?",
           "retratoId": "bento"
         },
         {
           "falante": "MARCUS",
-          "texto": "Escreveram que ela foi encontrada sem resposta. Eu era menino, mas lembro da voz dela. Meu avô andou procurando esses papéis.",
+          "texto": "Ele sumiu. E desde que cheguei só consigo lembrar daquela noite, a da Júlia. Eu lembro da voz dela. O senhor estava lá?",
           "retratoId": "marcus"
         },
         {
           "falante": "PADRE BENTO",
-          "texto": "Mas eu conversei com ela. Júlia perguntou se podia apoiar o pé num degrau. Eu dizia para esperar. Acreditei que já tinham chamado ajuda.",
+          "texto": "Estava. Eu conversei com ela. Júlia perguntou se podia apoiar o pé num degrau. Eu dizia para esperar. Acreditei que já tinham chamado ajuda.",
           "retratoId": "bento"
         },
         {
           "falante": "MARCUS",
-          "texto": "Eu lembro da voz dela. Eu vinha evitando juntar essa lembrança às frases do registro.",
+          "texto": "Eu vinha repetindo que não deu tempo. Mas lembro da voz dela. Eu estava lá ouvindo.",
           "retratoId": "marcus"
         },
         {
@@ -261,12 +261,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Tonão lembrou que ela ainda respondia. O senhor estava perto.",
           "retratoId": "marcus"
         },
         {
           "falante": "PADRE BENTO",
-          "texto": "Se Tonão reconheceu a demora, não cabe usar minha presença como desculpa para ela. Fiquei perto. Ainda assim, havia outra coisa que eu podia ter feito.",
+          "texto": "Perto o bastante para ouvir. Eu devia ter saído dali para procurar ajuda. Ficar junto não fez isso por ela.",
           "retratoId": "bento"
         }
       ],
@@ -358,12 +358,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Passei de novo no jazigo da Júlia.",
           "retratoId": "marcus"
         },
         {
           "falante": "ALCINA",
-          "texto": "Trouxeram flores para Júlia por muitos anos. Isso podia ser carinho e silêncio ao mesmo tempo. Se encontrou palavras diferentes, guarde de quem elas vieram.",
+          "texto": "Está precisando limpar o vidro. Amanhã trago um pano seco; com este vento só espalha a água.",
           "retratoId": "alcina"
         }
       ],
@@ -442,7 +442,7 @@
       "id": "caderno_velas",
       "title": "Livro de manutenção do abrigo",
       "flag": "c2_caderno_velas",
-      "prompt": "Examinar caderno de doações de velas",
+      "prompt": "Ler livro de manutenção",
       "kind": "examine",
       "lines": [
         {
@@ -470,12 +470,12 @@
       "lines": [
         {
           "falante": "MARCUS",
-          "texto": "Capas de chuva, um banco, panos secos e caixas de velas. É o apoio deste cemitério, não a Capela de São Roque que fica do outro lado do rio.",
+          "texto": "Capas de chuva secando, um banco e as caixas de velas. Tem barro fresco nos pés da mesa.",
           "retratoId": "marcus"
         },
         {
           "falante": "MARCUS",
-          "texto": "Alguém deixou duas canecas para a ronda. A sensação de estar sendo observado não transforma esses objetos em prova.",
+          "texto": "Duas canecas usadas perto do caderno. Ainda fazem a ronda mesmo com este tempo.",
           "retratoId": "marcus"
         }
       ],
@@ -522,12 +522,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Se alguém perguntar por Adílio, o senhor pode deixar recado neste número?",
           "retratoId": "marcus"
         },
         {
           "falante": "DARIO",
-          "texto": "Uma intenção de falar com Amaro não é passagem comprada. Vou continuar atento. Não vou transformar a falta de bilhete em certeza de que ele não saiu.",
+          "texto": "Deixa comigo. Este é o número do guichê? Vou prender aqui junto da escala, para o outro plantonista ver.",
           "retratoId": "dario"
         }
       ],
@@ -572,26 +572,26 @@
         },
         {
           "falante": "MARCUS",
-          "texto": "Digo meu nome, o endereço do vô e o que encontrei. Separo os sinais que vi na casa do relato de Zé sobre homens que o levaram. Explico que ainda estou tentando localizar Adílio.",
+          "texto": "Informo meu nome, o endereço do vô e os sinais que encontrei na casa. Conto também o que Zé viu no portão do bar. O plantonista pede que eu repita o horário e o nome de quem falou comigo.",
           "retratoId": "marcus"
         },
         {
           "falante": "MARCUS",
-          "texto": "Combinamos que qualquer retorno será recebido no telefone da Rodoviária. A conversa não me deu uma localização nem resolveu a ausência. Pelo menos a informação saiu daqui; posso continuar buscando uma pista concreta.",
+          "texto": "Ele registra o relato e confirma o número da Rodoviária para retorno. Dário prende o número do protocolo ao lado do telefone.",
           "retratoId": "marcus"
         }
       ],
       "repeat": [
         {
           "falante": "MARCUS",
-          "texto": "Dario verifica o aparelho. Ainda não há retorno. O relato já foi feito; repetir a chamada não cria uma notícia de Adílio.",
+          "texto": "Dário consulta o papel preso ao telefone. Ainda não ligaram de volta.",
           "retratoId": "marcus"
         }
       ],
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Acrescento ao recado que Adílio tinha uma pergunta para Amaro. Digo claramente que isso é um plano anotado, não um avistamento no Galpão.",
+          "texto": "Peço para acrescentarem ao protocolo a pergunta que Adílio deixou para Amaro. Leio a anotação; o plantonista confirma que registrou as palavras e a origem do papel.",
           "retratoId": "marcus"
         }
       ],
@@ -633,17 +633,17 @@
         },
         {
           "falante": "ATENDENTE",
-          "texto": "Estou aqui na loja, fechando o estoque. É a mesma porta de serviço; não tem outro balcão deste lado. A frente continua na encruzilhada.",
+          "texto": "Espera um pouco que estou contando as caixas. Pode falar daí mesmo.",
           "retratoId": "atendente"
         },
         {
           "falante": "MARCUS",
-          "texto": "No cemitério falaram das velas que o vô levou.",
+          "texto": "O pedido que ele deixou hoje ainda está aqui?",
           "retratoId": "marcus"
         },
         {
           "falante": "ATENDENTE",
-          "texto": "Separei uma caixa branca para ele junto do café. O romaneio está no depósito. Isso só conta a compra; quem passou na rua, eu não consigo ver daqui.",
+          "texto": "Separei o café e as velas brancas. Confere a prancheta, na mesa do depósito. Depois deixei tudo no balcão para ele.",
           "retratoId": "atendente"
         }
       ],
@@ -657,12 +657,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Se o vô aparecer aqui, pede para deixar notícia no guichê da Rodoviária?",
           "retratoId": "marcus"
         },
         {
           "falante": "ATENDENTE",
-          "texto": "Seu avô perguntava pelas palavras dos outros, e você está fazendo isso também. Não sei onde ele está; se alguém procurar por vocês, peço para deixar recado na Rodoviária.",
+          "texto": "Peço, sim. Vou escrever no verso da nota, senão amanhã trocam o turno e se perde.",
           "retratoId": "atendente"
         }
       ],
@@ -684,14 +684,14 @@
         },
         {
           "falante": "MARCUS",
-          "texto": "Uma entrega registrada não mostra quem o acompanhou depois. Se eu juntar o papel ao relato de Alcina, consigo reconstruir uma visita, não um sequestro inteiro.",
+          "texto": "Café e velas. É a compra dele, com a letra da atendente no canto. Ainda preciso saber o que fez depois de sair da loja.",
           "retratoId": "marcus"
         }
       ],
       "art": "Exames/DocumentoVisitas",
       "category": "fato",
       "source": "Prancheta de estoque do único Mercadinho Santa Rita.",
-      "diary": "O romaneio confirma café e velas brancas separados para Adílio. Com o caderno do Cemitério, sustenta uma parte da rotina anterior à ausência."
+      "diary": "O romaneio registra café e uma caixa de velas brancas separados para Adílio. Não registra trajeto nem visita ao Cemitério."
     },
     {
       "id": "mila",
@@ -717,7 +717,7 @@
         },
         {
           "falante": "MILA",
-          "texto": "É uma reprodução que deixaram para a oficina. Ela queria ampliar o som da praça. Eu guardo porque a piada do rádio teimoso continua servindo. O aparelho da bancada está em teste; se mexer, deixa na faixa LOCAL que eu preciso conferir o retorno.",
+          "texto": "É uma reprodução que deixaram para a oficina. Ela queria ampliar o som da praça. Guardei por causa da piada do rádio teimoso. Esse aí está em teste: deixa na faixa LOCAL. Se voltar dois tons, o circuito respondeu.",
           "retratoId": "mila"
         }
       ],
@@ -749,12 +749,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Conseguiu terminar aquele aparelho?",
           "retratoId": "marcus"
         },
         {
           "falante": "MILA",
-          "texto": "Tonão sabe fazer muita coisa. O difícil para ele sempre foi aceitar outra mão na ferramenta. Isso é uma opinião minha, não uma prova de onde está Adílio.",
+          "texto": "Falta o chiado da tomada. Tonão ia querer abrir de novo e achar o defeito sozinho. O difícil sempre foi aceitar outra mão na ferramenta.",
           "retratoId": "mila"
         }
       ],
@@ -836,7 +836,7 @@
       "lines": [],
       "category": "fato",
       "source": "Pequena resolução no rádio de teste de Mila.",
-      "diary": "Ajustei o seletor para LOCAL seguindo a etiqueta. O retorno voltou sem aumentar o volume; Mila recordou o humor de Júlia com os aparelhos."
+      "diary": "O retorno LOCAL respondeu com dois tons de teste. Mila conseguiu conferir o circuito do aparelho."
     },
     {
       "id": "celina",
@@ -894,12 +894,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "A senhora ainda vai terminar a faixa?",
           "retratoId": "marcus"
         },
         {
           "falante": "CELINA",
-          "texto": "Uma homenagem pode ficar pequena sem diminuir a pessoa. Talvez assim sobre espaço para uma pergunta que antes não cabia.",
+          "texto": "Vou, mas preciso desmanchar essa barra primeiro. A frase pode esperar mais um pouco.",
           "retratoId": "celina"
         }
       ],
@@ -997,7 +997,7 @@
         },
         {
           "falante": "MARCUS",
-          "texto": "Falar. Sou Marcus, neto do Adílio. Disseram que eles conversaram.",
+          "texto": "Falar. Sou Marcus, neto do Adílio. Ele costuma aparecer por aqui?",
           "retratoId": "marcus"
         },
         {
@@ -1016,12 +1016,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Tonão guardou a última bola sem pedir outra mão.",
           "retratoId": "marcus"
         },
         {
           "falante": "NAIR",
-          "texto": "Vou deixar o portão e a luz do orelhão acesos. Tonão não pediu para arrumar as bolas de novo. Dessa vez parece que escutou o fim da própria frase.",
+          "texto": "Pedi isso tantas vezes... A água ainda está quente. Senta um pouco antes de sair na chuva.",
           "retratoId": "nair"
         }
       ],
@@ -1097,7 +1097,7 @@
       "lines": [
         {
           "falante": "MARCUS",
-          "texto": "Tonão? Sou Marcus, neto do Adílio. Disseram que ele esteve aqui.",
+          "texto": "Tonão? Sou Marcus, neto do Adílio. Ele esteve aqui hoje?",
           "retratoId": "marcus"
         },
         {
@@ -1107,7 +1107,7 @@
         },
         {
           "falante": "MARCUS",
-          "texto": "Ele sumiu. Zé falou de uns homens no portão. Estou tentando entender os papéis que ele procurou.",
+          "texto": "Ele sumiu. Zé falou de uns homens no portão. Estou tentando saber por onde ele andou antes disso.",
           "retratoId": "marcus"
         },
         {
@@ -1139,12 +1139,12 @@
       "after": [
         {
           "falante": "MARCUS",
-          "texto": "Conversei com Tonão. Ele confirmou que Júlia respondia enquanto trocavam as cordas. Também me deu uma cópia do recado do meu avô.",
+          "texto": "Vou levar a pergunta do vô adiante. Se eu precisar conferir esta via, posso voltar?",
           "retratoId": "marcus"
         },
         {
           "falante": "TONÃO",
-          "texto": "A via que te dei foi escrita antes de ele desaparecer. Não vou fingir que uma anotação me faz saber onde Adílio está agora. E não vou chamar outra tentativa de resposta.",
+          "texto": "Pode. A original fica aqui. Não tenho mais nada para esconder debaixo de outra tentativa.",
           "retratoId": "tonao"
         }
       ],
@@ -1197,12 +1197,12 @@
       "lines": [
         {
           "falante": "MARCUS",
-          "texto": "Duas cordas atuais, grampos e uma morsa. São ferramentas de uso da Sociedade; não são automaticamente as cordas de 1990.",
+          "texto": "Duas cordas enroladas, grampos e uma morsa. A bancada tem sulcos fundos nas bordas; a madeira junto do pano está mais clara de tanto esfregar.",
           "retratoId": "marcus"
         },
         {
           "falante": "MARCUS",
-          "texto": "A força não desfaz uma escolha anterior. Ainda assim, retirar uma bocha com força pode ser uma boa jogada. Não preciso transformar todo gesto num julgamento.",
+          "texto": "As pontas estão aparadas e presas com fita. Tonão mantém o material pronto para outra troca.",
           "retratoId": "marcus"
         }
       ],
@@ -1225,7 +1225,7 @@
         },
         {
           "falante": "MARCUS",
-          "texto": "Guias laterais rebatem pouco. As cabeceiras de madeira fecham a cancha: bochas e balim batem e voltam, perdendo velocidade. Encostar no fundo não elimina a bola. A faixa de umidade, quando anunciada, desacelera igualmente todas as bolas.",
+          "texto": "O saibro é uniforme. Ponto é para encostar; rafa bate rasteiro; volo passa por cima e cai no alvo. As guias e cabeceiras de madeira devolvem bochas e balim, perdendo velocidade. Encostar no fundo não elimina a bola. Meça depois que tudo parar.",
           "retratoId": "marcus"
         }
       ],

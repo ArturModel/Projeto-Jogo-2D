@@ -1,0 +1,13 @@
+PASS save pessoal intacto: santa_rita_save_v2_slot_0.json 35D28668BC8C9DD01BC6EA625BC511A13F9C1425818C4BD71A1F55D6B235FF70
+PASS save pessoal intacto: santa_rita_save_v2_slot_1.json 443BDD883E286C7FF949AE6C50FAE0DFC5E4FCC48FFF51F15BC9FC6E98FBEDCD
+PASS save pessoal intacto: santa_rita_save_v2_slot_4.json 52077A2907B65D78F3F996C14D3EFF8C58D75CF01F6C0BF5D9F508A1E964A014
+PASS save pessoal intacto: santa_rita_save_v2.bak 5892560BDA9D2729322B8BCD5D2DD130858726C6BFD0309096A510EE489C3BEB
+PASS save pessoal intacto: santa_rita_save_v2.json 52077A2907B65D78F3F996C14D3EFF8C58D75CF01F6C0BF5D9F508A1E964A014
+PASS perfil original restaurado, sem junction.
+PASS preferências originais restauradas.
+SRQA residual: 0
+Snapshot em RAM restaurado: True
+Cena: SociedadeBeiraRio
+Posicao: (5.08, 5.22, 0.00)
+Progresso nao salvo: True
+Nenhum save manual foi gravado pela restauracao.

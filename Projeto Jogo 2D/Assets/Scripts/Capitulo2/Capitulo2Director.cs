@@ -30,6 +30,7 @@ public sealed class Capitulo2Director : MonoBehaviour
     public Vector2 limiteMin, limiteMax;
     public Vector2 uvNoMapa;
     public int assinaturaAudio;
+    public SpriteRenderer memorialPercepcao;
     private PlayerController jogador;
     private static bool reconciliando;
     private static readonly Dictionary<string, C2InteractionData> conteudo = new Dictionary<string, C2InteractionData>();
@@ -42,9 +43,7 @@ public sealed class Capitulo2Director : MonoBehaviour
         GameState.OnEstadoAlterado += AtualizarInvestigacao;
     }
 
-    public static bool CenaDoCapitulo2(string nome) => nome == "CentroSantaRita" || nome == "IgrejaMatriz" ||
-        nome == "PrefeituraSantaRita" || nome == "RodoviariaSantaRita" || nome == "MercadinhoDeposito" ||
-        nome == "OficinaRadio" || nome == "CasaCostureira" || nome == "SociedadeBeiraRio" || nome == "AbrigoCemiterio" || nome == "CemiterioSantaRita";
+    public static bool CenaDoCapitulo2(string nome) => SantaRitaGeography.CenaC2(nome);
 
     private void Awake()
     { Instance = this; CarregarConteudo(); }
@@ -106,6 +105,8 @@ public sealed class Capitulo2Director : MonoBehaviour
         if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
         C2InteractionData d = Dados(id);
         if (d == null) { Debug.LogError("Interação C2 sem conteúdo: " + id); return; }
+        if(id=="protocolo"&&!GameState.Tem("c2_prefeitura_atendimento"))
+        {GameMessageUI.Instance.Show("Os papéis estão voltados para o lado da funcionária. Vou pedir para consultar o pedido do vô.","MARCUS","marcus");return;}
         if (d.kind == "bocha")
         {
             if (GameState.Tem(Vitoria)) { Dialogo(d.after); return; }
@@ -126,9 +127,10 @@ public sealed class Capitulo2Director : MonoBehaviour
         {
             int faixa = (GameState.Numero("c2_radio_faixa") + 1) % 3;
             GameState.DefinirNumero("c2_radio_faixa", faixa);
-            string[] opcoes = { "FM / música distante", "AM / estática", "LOCAL / voz de teste" };
+            Capitulo2Audio.TocarRadio(faixa);
+            string[] opcoes = { "FM / sinal distante", "AM / estática", "LOCAL / retorno de teste" };
             GameMessageUI.Instance.ShowInspection("SELETOR DE FAIXA", "Radio", "Faixa selecionada: " + opcoes[faixa] +
-                "\n\nA etiqueta de Mila pede FAIXA LOCAL para testar o retorno de voz. O rádio não é uma gravação de 1990.",
+                "\n\nA etiqueta de Mila pede FAIXA LOCAL: o retorno de teste deve soar em dois tons curtos.",
                 () => { if (faixa == 2) { GameState.Marcar("c2_radio_restaurado"); Nota(d); } }, arteExame);
             return;
         }
@@ -145,15 +147,25 @@ public sealed class Capitulo2Director : MonoBehaviour
         if (d.branches != null) foreach (var b in d.branches)
             if (b.Disponivel) { ramo = b; break; }
         if (d.kind == "phone") PayphoneCheckpoint.TocarSomAtenderOrelhao();
-        DialogoLinha[] linhas = GameState.Tem(Vitoria) && d.after?.Length > 0 ? d.after :
-            ramo != null ? ramo.lines :
+        string reacao = "c2_reacao_vitoria_" + id;
+        bool usarRamo = visto && ramo != null;
+        bool usarReacao = visto && !usarRamo && GameState.Tem(Vitoria) && !GameState.Tem(reacao) && d.after?.Length > 0;
+        DialogoLinha[] linhas = !visto ? d.lines : usarRamo ? ramo.lines : usarReacao ? d.after :
             visto && !string.IsNullOrEmpty(d.ifFlag) && GameState.Tem(d.ifFlag) && d.whenFlag?.Length > 0 ? d.whenFlag :
             visto && d.repeat?.Length > 0 ? d.repeat : d.lines;
+        bool primeiraChamadaTardia=id=="telefone_rodo"&&!visto&&GameState.Tem(Vitoria);
+        if(primeiraChamadaTardia)
+        {
+            var chamada=new List<DialogoLinha>(linhas);
+            chamada.Add(new DialogoLinha("MARCUS","Leio também a pergunta que o vô deixou para Amaro. O plantonista anota junto do primeiro relato e confirma o número do guichê para retorno.","marcus"));
+            linhas=chamada.ToArray();
+        }
         Action concluir = () =>
         {
             if (!string.IsNullOrEmpty(d.flag)) GameState.Marcar(d.flag);
             Nota(d); AtualizarInvestigacao();
-            if (ramo != null && !(GameState.Tem(Vitoria) && d.after?.Length > 0))
+            if (usarReacao||primeiraChamadaTardia) GameState.Marcar(reacao);
+            if (usarRamo)
             {
                 if (!string.IsNullOrEmpty(ramo.flag)) GameState.Marcar(ramo.flag);
                 if (!string.IsNullOrEmpty(ramo.diary)) GameState.RegistrarNotaDiario(ramo.flag,
@@ -236,10 +248,13 @@ public sealed class Capitulo2Director : MonoBehaviour
 
     public bool PosicaoNoMapa(Vector3 pos, out Vector2 uv, out string local)
     {
-        local = nomeLocal; uv = uvNoMapa;
+        local = nomeLocal;
+        string scene = SceneManager.GetActiveScene().name;
+        string landmark = SantaRitaGeography.IdDaCena(scene);
+        uv = landmark != null ? SantaRitaGeography.UV(landmark) : uvNoMapa;
         if (!interior)
         {
-            uv = new Vector2((pos.x / .32f + 200) / 676f, 1f - (355 - pos.y / .32f) / 503f);
+            uv = SantaRitaGeography.MundoC2ParaUV(pos);
             local = SceneManager.GetActiveScene().name == "CemiterioSantaRita" ? "Cemitério municipal" : pos.y < 17 && pos.x < 25 ? "Sociedade Beira-Rio — Margem urbana" : nomeLocal;
         }
         return true;

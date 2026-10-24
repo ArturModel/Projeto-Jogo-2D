@@ -1,0 +1,66 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+PASS Cena carregada EntradaDaCidade
+PASS Cena C1 compilada carrega e cria Marcus.
+PASS Leitura encerra e devolve controle.
+PERF C1 início: 90 frames, média 16,71 ms, máximo 18,81 ms; 1280x720, vSync=0, target=60, janela QA; inclui carga do host.
+PASS Leitura encerra e devolve controle.
+PASS Atendente antes do recibo não transmite testemunho nem cria diário antecipado.
+PASS Visitar a casa não apresenta cupom inexistente na conversa real.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Coleta real do cupom precede testemunho.
+PASS Abrir fala não equivale a ouvir o relato completo.
+PASS Leitura encerra e devolve controle.
+PASS Fechamento da conversa real persiste apresentação e testemunho.
+PASS Leitura encerra e devolve controle.
+PASS Revisita não duplica relato.
+PASS Leitura encerra e devolve controle.
+PASS Esc real abre pausa global sobre a Sinuca.
+PASS Bola em movimento permanece congelada na pausa.
+PASS Esc real retoma a Sinuca.
+PASS IA aguarda regras durante preparação final.
+PASS Fechar regras permite uma tacada sem restaurar estado antigo.
+PASS IA aguarda regras durante posicionamento.
+PASS Fechar regras permite uma tacada sem restaurar estado antigo.
+PASS Segunda mão silencia murmúrio e toca água real, respeitando volume de efeitos.
+PASS Terceira mão acrescenta camada de chuva.
+PASS Investigação e pausa usam apenas RAM/namespace de QA.
+PASS Leitura encerra e devolve controle.
+PASS Porta de serviço não contorna bloqueio pré-Zé.
+PASS Cena carregada MercadinhoDeposito
+PASS Porta real para MercadinhoDeposito
+PASS Mapa real marca Marcus na região explorada: MercadinhoDeposito
+PASS Cena carregada EntradaDaCidade
+PASS Porta real para EntradaDaCidade
+PASS Porta de serviço retorna ao interior da loja original.
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_Posto
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_Mercadinho
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_CasaDoAvo
+PASS Leitura encerra e devolve controle.
+PASS Composição C1 ativa: Interior_BarDoZe
+PASS Leitura encerra e devolve controle.
+PASS Revisita C1 conserva objetivo de C2: NpcAtendenteMercadinho
+PASS Leitura encerra e devolve controle.
+PASS Revisita C1 conserva objetivo de C2: NpcZeBar
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Limiar aprovado de C1 leva ao Centro mantendo consequência.
+PASS Cena carregada RodoviariaSantaRita
+PASS Porta real para RodoviariaSantaRita
+PASS Mapa real marca Marcus na região explorada: RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Porta real para CentroSantaRita
+PASS Mapa real marca Marcus na região explorada: CentroSantaRita
+PASS Cena carregada CemiterioSantaRita
+PASS Porta real para CemiterioSantaRita
+PASS Mapa real marca Marcus na região explorada: CemiterioSantaRita
+PASS Cena carregada AbrigoCemiterio
+PASS Porta real para AbrigoCemiterio
+PASS Mapa real marca Marcus na região explorada: AbrigoCemiterio
+PASS Leitura encerra e devolve controle.
+PASS runtime 2026-10-22T20:52:05.0227845Z

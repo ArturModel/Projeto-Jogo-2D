@@ -15,6 +15,24 @@ public static class Chapter2BuildVerification
     public static bool ForcarDevelopment { get; set; }
     public static string Evidence => Environment.GetEnvironmentVariable("SR_EVIDENCE_DIR") ?? Path.GetFullPath(Path.Combine(Application.dataPath,"../../Docs/Evidencias/Capitulo2"));
 
+    // Cenas novas precisam existir também na lista persistida, além do Editor.
+    // Registrar referências não reautora o conteúdo das cenas.
+    public static void RegisterCampaignScenes()
+    {
+        var scenes = EditorBuildSettings.scenes.ToList();
+        var required = new[] { "Assets/Scenes/MainMenu.unity", "Assets/Scenes/Prologo.unity",
+            "Assets/Scenes/Cidade/EntradaDaCidade.unity", "Assets/Scenes/Cidade/CasaDoAvo.unity", "Assets/Scenes/Cidade/BarDoZe.unity" }
+            .Concat(SantaRitaChapter2Authoring.Scenes.Select(n => "Assets/Scenes/Cidade/" + n + ".unity"));
+        foreach (string path in required)
+        {
+            if (!File.Exists(path)) throw new Exception("Cena da campanha ausente: " + path);
+            int index = scenes.FindIndex(s => s.path == path);
+            if (index < 0) scenes.Add(new EditorBuildSettingsScene(path, true));
+            else if (!scenes[index].enabled) scenes[index] = new EditorBuildSettingsScene(path, true);
+        }
+        EditorBuildSettings.scenes = scenes.ToArray(); AssetDatabase.SaveAssets();
+    }
+
     private static void ApprovedScenes()
     {
         var report=new List<string>();
@@ -48,7 +66,17 @@ public static class Chapter2BuildVerification
     [MenuItem("Santa Rita/Capítulo 2/Verificar cenas e acessos")]
     public static void Scenes()
     {
+        RequireSavedScenes();
         var report = new List<string>(); int errors=0;
+        var spawns = new Dictionary<string,HashSet<string>>();
+        foreach(var build in EditorBuildSettings.scenes.Where(s=>s.enabled&&s.path.EndsWith(".unity")))
+        {
+            var destination=EditorSceneManager.OpenScene(build.path,OpenSceneMode.Single);
+            spawns[destination.name]=new HashSet<string>(destination.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<SpawnPoint>(true)).Select(s=>s.Id));
+        }
+        // Dois retornos são compostos pelo diretor C1 em runtime. Contrato explícito, também exercitado no Player.
+        if(spawns.TryGetValue("EntradaDaCidade",out var dynamicC1))
+        {dynamicC1.Add("retorno_deposito");dynamicC1.Add("saida_bar_ze");}
         foreach(string name in SantaRitaChapter2Authoring.Scenes)
         {
             var scene=EditorSceneManager.OpenScene("Assets/Scenes/Cidade/"+name+".unity",OpenSceneMode.Single);
@@ -60,8 +88,18 @@ public static class Chapter2BuildVerification
                 if(sr!=null&&sr.sprite==null){errors++;report.Add("FAIL sprite "+name+"/"+g.name);}
             }
             var d=UnityEngine.Object.FindAnyObjectByType<Capitulo2Director>();
+            if(name=="CemiterioSantaRita"&&d.memorialPercepcao==null){errors++;report.Add("FAIL referência serializada da percepção do jazigo.");}
+            if (Vector2.Distance(d.uvNoMapa, SantaRitaGeography.UV(SantaRitaGeography.IdDaCena(name))) > .0001f)
+            { errors++; report.Add("FAIL geografia serializada " + name); }
             if(name=="CentroSantaRita")
             {
+                var prefeitura = GameObject.Find("Prefeitura");
+                var entry = UnityEngine.Object.FindObjectsByType<Capitulo2Portal>().Single(p => p.cenaDestino == "PrefeituraSantaRita");
+                var back = UnityEngine.Object.FindObjectsByType<SpawnPoint>().Single(p => p.Id == "volta_PrefeituraSantaRita");
+                if (Vector2.Distance(prefeitura.transform.position, SantaRitaGeography.Prefeitura) > .001f ||
+                    Vector2.Distance(entry.transform.position, SantaRitaGeography.EntradaPrefeitura) > .001f ||
+                    Vector2.Distance(back.transform.position, SantaRitaGeography.RetornoPrefeitura) > .001f)
+                { errors++; report.Add("FAIL posição/acesso/retorno da Prefeitura R1."); }
                 var map=GameObject.Find("Terreno").GetComponent<Tilemap>();
                 foreach(var p in new[]{new Vector3Int(31,45,0),new Vector3Int(31,56,0),new Vector3Int(31,70,0),new Vector3Int(60,50,0),new Vector3Int(60,68,0),new Vector3Int(70,37,0)})
                     if(!AssetDatabase.GetAssetPath(map.GetTile(p)).Contains("Asfalto")){errors++;report.Add("FAIL rua perdeu asfalto em "+p);}
@@ -77,6 +115,12 @@ public static class Chapter2BuildVerification
             int items=0;
             foreach(var it in roots.SelectMany(g=>g.GetComponentsInChildren<Interactable>()))
             {
+                if (it is Capitulo2Portal portal && !string.IsNullOrEmpty(portal.cenaDestino) &&
+                    !EditorBuildSettings.scenes.Any(s => s.enabled && Path.GetFileNameWithoutExtension(s.path) == portal.cenaDestino))
+                { errors++; report.Add("FAIL destino não incluído na build " + name + "/" + it.name + " → " + portal.cenaDestino); }
+                if(it is Capitulo2Portal targetPortal && !string.IsNullOrEmpty(targetPortal.entradaDestino) &&
+                    (!spawns.TryGetValue(targetPortal.cenaDestino,out var ids)||!ids.Contains(targetPortal.entradaDestino)))
+                {errors++;report.Add("FAIL spawn de destino "+name+"/"+targetPortal.name+" → "+targetPortal.cenaDestino+"/"+targetPortal.entradaDestino);}
                 items++;
                 bool access=false;
                 foreach(var p in reachable)if(Vector2.Distance(p,it.transform.position)<it.InteractionRadius-.15f){access=true;break;}
@@ -112,9 +156,12 @@ public static class Chapter2BuildVerification
 
     public static void Run()
     {
+        RequireSavedScenes();
+        RegisterCampaignScenes();
         var originalScenes=EditorBuildSettings.scenes;
         var originalApis=PlayerSettings.GetGraphicsAPIs(BuildTarget.StandaloneWindows64);
         bool originalAuto=PlayerSettings.GetUseDefaultGraphicsAPIs(BuildTarget.StandaloneWindows64);
+        var originalPreloaded=PlayerSettings.GetPreloadedAssets();
         try
         {
             ApprovedScenes();
@@ -131,7 +178,8 @@ public static class Chapter2BuildVerification
             bool qa=ForcarDevelopment || Environment.GetCommandLineArgs().Contains("-srDevelopment");
             var result=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=EditorBuildSettings.scenes.Where(s=>s.enabled).Select(s=>s.path).ToArray(),
                 locationPathName=Path.Combine(output,"SantaRita.exe"),target=BuildTarget.StandaloneWindows64,options=(qa?BuildOptions.Development:BuildOptions.None)|(Environment.GetCommandLineArgs().Contains("-srCleanBuild")?BuildOptions.CleanBuildCache:BuildOptions.None)});
-            string text="Unity "+Application.unityVersion+" Windows x64 "+(qa?"Development QA":"Player")+"\n"+result.summary.result+"\nErros: "+result.summary.totalErrors+"\nBytes: "+result.summary.totalSize+"\nDuração: "+result.summary.totalTime+"\nExecutável: "+output+"/SantaRita.exe\nUTC: "+DateTime.UtcNow.ToString("O");
+            string text="Unity "+Application.unityVersion+" Windows x64 "+(qa?"Development QA":"Player")+"\n"+result.summary.result+"\nErros: "+result.summary.totalErrors+"\nBytes: "+result.summary.totalSize+"\nDuração: "+result.summary.totalTime+"\nExecutável: "+output+"/SantaRita.exe\nUTC: "+DateTime.UtcNow.ToString("O")+
+                "\nCommit base: " + Revision() + " (inclui alterações locais desta revisão)\nSHA256 C#/cenas/dados/texturas/materiais/metas: " + SourceHash() + "\nSO do Editor: " + SystemInfo.operatingSystem + "\nTarget: StandaloneWindows64 / D3D11";
             Directory.CreateDirectory(Evidence);File.WriteAllText(Path.Combine(Evidence,qa?"build-qa.txt":"build-windows.txt"),text);Debug.Log(text);
             if(result.summary.result!=BuildResult.Succeeded)throw new Exception("Build Windows falhou.");
             if(Application.isBatchMode)EditorApplication.Exit(0);
@@ -142,6 +190,44 @@ public static class Chapter2BuildVerification
             EditorBuildSettings.scenes=originalScenes;
             PlayerSettings.SetGraphicsAPIs(BuildTarget.StandaloneWindows64,originalApis);
             PlayerSettings.SetUseDefaultGraphicsAPIs(BuildTarget.StandaloneWindows64,originalAuto);
+            PlayerSettings.SetPreloadedAssets(originalPreloaded);
+            AssetDatabase.SaveAssets();
+        }
+    }
+
+    private static string Revision()
+    {
+        string dir = Path.GetFullPath(Path.Combine(Application.dataPath, "../../.git"));
+        string head = File.ReadAllText(Path.Combine(dir, "HEAD")).Trim();
+        if (!head.StartsWith("ref: ")) return head;
+        string name = head.Substring(5), path = Path.Combine(dir, name);
+        if (File.Exists(path)) return File.ReadAllText(path).Trim();
+        string packed = Path.Combine(dir, "packed-refs");
+        return File.Exists(packed) ? File.ReadLines(packed).FirstOrDefault(l => l.EndsWith(" " + name))?.Split(' ')[0] ?? head : head;
+    }
+
+    private static void RequireSavedScenes()
+    {
+        if (EditorApplication.isPlaying || Enumerable.Range(0, UnityEngine.SceneManagement.SceneManager.sceneCount)
+            .Any(i => UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).isDirty))
+            throw new Exception("Pare Play e preserve as cenas não salvas antes da verificação/build.");
+    }
+
+    private static string SourceHash()
+    {
+        using (var hash = System.Security.Cryptography.SHA256.Create())
+        {
+            var buffer=new byte[65536];
+            foreach (var file in Directory.GetFiles(Application.dataPath, "*", SearchOption.AllDirectories)
+                .Where(p => new[]{".cs",".unity",".json",".png",".mat",".shader",".asset",".meta"}.Contains(Path.GetExtension(p).ToLowerInvariant())).OrderBy(p => p, StringComparer.Ordinal))
+            {
+                byte[] name = System.Text.Encoding.UTF8.GetBytes(file.Substring(Application.dataPath.Length).Replace('\\', '/') + "\n");
+                hash.TransformBlock(name,0,name.Length,null,0);
+                using(var stream=File.OpenRead(file))
+                {int count;while((count=stream.Read(buffer,0,buffer.Length))>0)hash.TransformBlock(buffer,0,count,null,0);}
+            }
+            hash.TransformFinalBlock(Array.Empty<byte>(),0,0);
+            return BitConverter.ToString(hash.Hash).Replace("-", "").ToLowerInvariant();
         }
     }
 }

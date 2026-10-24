@@ -126,7 +126,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "entrada",
             nome = "ENTRADA / CARRO DE MARCUS",
             descricao = "Rodovia de chegada a Santa Rita. O carro de Marcus ficou estacionado antes da subida.",
-            uv = new Vector2(0.110f, 0.640f),
+            uv = SantaRitaGeography.UV("entrada"),
             cor = new Color(0.45f, 0.82f, 1.00f),
             tipo = "inicio"
         });
@@ -135,7 +135,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "posto",
             nome = "POSTO DA ENTRADA",
             descricao = "Posto logo na chegada. O frentista conhece a rotina dos moradores e dá referências das ruas.",
-            uv = new Vector2(0.145f, 0.630f),
+            uv = SantaRitaGeography.UV("posto"),
             cor = new Color(0.98f, 0.82f, 0.32f),
             tipo = "posto"
         });
@@ -144,7 +144,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "orelhao_sul",
             nome = "ORELHÃO (AVENIDA / VENDA)",
             descricao = "Telefone público com linha interna ativa. Único meio de salvar o progresso manualmente.",
-            uv = new Vector2(0.208f, 0.618f),
+            uv = SantaRitaGeography.UV("orelhao_sul"),
             cor = new Color(0.30f, 0.95f, 0.52f),
             tipo = "orelhao"
         });
@@ -153,7 +153,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "mercadinho",
             nome = "MERCADINHO SANTA RITA",
             descricao = "Venda da encruzilhada. A atendente viu Adílio comprar café e velas hoje cedo.",
-            uv = new Vector2(0.378f, 0.595f),
+            uv = SantaRitaGeography.UV("mercadinho"),
             cor = new Color(0.98f, 0.64f, 0.24f),
             tipo = "mercado"
         });
@@ -161,8 +161,8 @@ public class MapaInterativoUI : MonoBehaviour
         {
             id = "casa_avo",
             nome = "CASA DE ADÍLIO (BAIRRO, Nº 40)",
-            descricao = "Casa do avô de Marcus no Bairro das Casas. Café morno na mesa, nota de 2004 e sinais de saída forçada.",
-            uv = new Vector2(0.255f, 0.765f),
+            descricao = "Casa do avô de Marcus no Bairro das Casas. Endereço do avô no Bairro das Casas.",
+            uv = SantaRitaGeography.UV("casa_avo"),
             cor = new Color(1.00f, 0.88f, 0.34f),
             tipo = "casa"
         });
@@ -171,7 +171,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "bar_ze",
             nome = "BAR DO ZÉ [1º CHEFE — SINUCA]",
             descricao = "Bar na Rua Norte. Zé guarda o portão do Centro e exige duelo Melhor de 3 ('A Bola Marcada').",
-            uv = new Vector2(0.398f, 0.885f),
+            uv = SantaRitaGeography.UV("bar_ze"),
             cor = new Color(0.98f, 0.32f, 0.28f),
             tipo = "boss1"
         });
@@ -180,7 +180,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "orelhao_bar",
             nome = "ORELHÃO (RUA NORTE / BAR DO ZÉ)",
             descricao = "Telefone público ao lado do Bar do Zé. Recomendado salvar antes da partida de sinuca.",
-            uv = new Vector2(0.435f, 0.865f),
+            uv = SantaRitaGeography.UV("orelhao_bar"),
             cor = new Color(0.30f, 0.95f, 0.52f),
             tipo = "orelhao"
         });
@@ -189,7 +189,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "centro",
             nome = "CENTRO DE SANTA RITA",
             descricao = "Coração da cidade. Bloqueado pelo portão da Rua Norte até derrotar Zé e obter a 1ª Ficha do Clube.",
-            uv = new Vector2(0.500f, 0.600f),
+            uv = SantaRitaGeography.UV("centro"),
             cor = new Color(0.88f, 0.84f, 0.74f),
             tipo = "centro"
         });
@@ -198,7 +198,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "canto_se",
             nome = "CANCHA DE BOCHA [CANTO SUDOESTE]",
             descricao = "Reduto tradicionalista no canto sul. Um dos chefes guardiões das Fichas do Clube.",
-            uv = new Vector2(0.325f, 0.355f),
+            uv = SantaRitaGeography.UV("canto_se"),
             cor = new Color(0.75f, 0.58f, 0.42f),
             tipo = "boss_canto"
         });
@@ -207,7 +207,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "capela",
             nome = "CAPELA ANTIGA [EXTREMO SUL]",
             descricao = "Capela isolada ao sul da mata. Guarda registros paroquiais da noite de 1998.",
-            uv = new Vector2(0.790f, 0.175f),
+            uv = SantaRitaGeography.UV("capela"),
             cor = new Color(0.75f, 0.58f, 0.42f),
             tipo = "boss_canto"
         });
@@ -216,7 +216,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "truco",
             nome = "GALPÃO DO TRUCO [CANTO SUDESTE]",
             descricao = "Galpão nos fundos da cidade onde corre o jogo pesado de Truco.",
-            uv = new Vector2(0.855f, 0.335f),
+            uv = SantaRitaGeography.UV("truco"),
             cor = new Color(0.75f, 0.58f, 0.42f),
             tipo = "boss_canto"
         });
@@ -225,7 +225,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "cemiterio",
             nome = "CEMITÉRIO MUNICIPAL [NORTE]",
             descricao = "Cemitério silencioso na encosta norte, entre o Bar do Zé e o Clube.",
-            uv = new Vector2(0.605f, 0.885f),
+            uv = SantaRitaGeography.UV("cemiterio"),
             cor = new Color(0.68f, 0.66f, 0.72f),
             tipo = "boss_canto"
         });
@@ -234,7 +234,7 @@ public class MapaInterativoUI : MonoBehaviour
             id = "prefeitura",
             nome = "PREFEITURA / ARQUIVO",
             descricao = "Passagem institucional entre o Centro e a colina do Clube de Santa Rita.",
-            uv = new Vector2(0.622f, 0.595f),
+            uv = SantaRitaGeography.UV("prefeitura"),
             cor = new Color(0.78f, 0.72f, 0.58f),
             tipo = "boss_canto"
         });
@@ -243,14 +243,14 @@ public class MapaInterativoUI : MonoBehaviour
             id = "clube",
             nome = "CLUBE DE SANTA RITA [CHEFE FINAL]",
             descricao = "No extremo oposto à entrada da cidade. Onde a cúpula se reúne e a verdade sobre as 03:17 é guardada.",
-            uv = new Vector2(0.868f, 0.715f),
+            uv = SantaRitaGeography.UV("clube"),
             cor = new Color(0.95f, 0.18f, 0.22f),
             tipo = "clube"
         });
-        pontos.Add(new PontoMapa { id = "igreja", nome = "IGREJA DA MATRIZ", descricao = "Nave e testemunho do padre; acima da praça.", uv = new Vector2(.503f, .712f), cor = new Color(.9f,.83f,.6f), tipo = "centro" });
-        pontos.Add(new PontoMapa { id = "rodoviaria", nome = "RODOVIÁRIA", descricao = "Espera, guichê e telefone do plantão; inferior/leste do Centro.", uv = new Vector2(.609f,.451f), cor = new Color(.6f,.8f,.75f), tipo = "centro" });
-        pontos.Add(new PontoMapa { id = "orelhao_centro", nome = "ORELHÃO DA PRAÇA", descricao = "Save exclusivamente manual, junto aos bancos.", uv = new Vector2(.493f,.541f), cor = new Color(.3f,.95f,.52f), tipo = "orelhao" });
-        pontos.Add(new PontoMapa { id = "orelhao_bocha", nome = "ORELHÃO DA BEIRA-RIO", descricao = "Disponível antes e depois de Tonão; salvar não consome fichas.", uv = new Vector2(.335f,.336f), cor = new Color(.3f,.95f,.52f), tipo = "orelhao" });
+        pontos.Add(new PontoMapa { id = "igreja", nome = "IGREJA DA MATRIZ", descricao = "Nave e testemunho do padre; acima da praça.", uv = SantaRitaGeography.UV("igreja"), cor = new Color(.9f,.83f,.6f), tipo = "centro" });
+        pontos.Add(new PontoMapa { id = "rodoviaria", nome = "RODOVIÁRIA", descricao = "Espera, guichê e telefone do plantão; inferior/leste do Centro.", uv = SantaRitaGeography.UV("rodoviaria"), cor = new Color(.6f,.8f,.75f), tipo = "centro" });
+        pontos.Add(new PontoMapa { id = "orelhao_centro", nome = "ORELHÃO DA PRAÇA", descricao = "Save exclusivamente manual, junto aos bancos.", uv = SantaRitaGeography.UV("orelhao_centro"), cor = new Color(.3f,.95f,.52f), tipo = "orelhao" });
+        pontos.Add(new PontoMapa { id = "orelhao_bocha", nome = "ORELHÃO DA BEIRA-RIO", descricao = "Disponível antes e depois de Tonão; salvar não consome fichas.", uv = SantaRitaGeography.UV("orelhao_bocha"), cor = new Color(.3f,.95f,.52f), tipo = "orelhao" });
     }
 
     private void ConstruirUI()
@@ -308,6 +308,10 @@ public class MapaInterativoUI : MonoBehaviour
         mapBackgroundImage = mapArtGo.GetComponent<Image>();
         mapBackgroundImage.sprite = CarregarOuGerarArteMapa();
         mapBackgroundImage.preserveAspect = false;
+        // Bíblia R1 corrige os letreiros da imagem histórica. Texto TMP mantém
+        // nitidez no zoom e o arquivo da arte permanece intacto.
+        RotuloCanonico("PREFEITURA", new Vector2(.705f, .704f));
+        RotuloCanonico("ESCOLA", new Vector2(.622f, .610f));
 
         // Trilha pontilhada estilo GPS (do jogador até o objetivo atual)
         Sprite dotSprite = GerarIconePontoRota();
@@ -426,6 +430,18 @@ public class MapaInterativoUI : MonoBehaviour
         btn.targetGraphic = img;
         btn.onClick.AddListener(acao);
         return btn;
+    }
+
+    private void RotuloCanonico(string texto, Vector2 uv)
+    {
+        var go = new GameObject("Rotulo_" + texto, typeof(RectTransform), typeof(Image));
+        go.transform.SetParent(mapAreaRect, false);
+        var rect = go.GetComponent<RectTransform>(); rect.anchorMin = rect.anchorMax = uv;
+        rect.sizeDelta = new Vector2(37, 8); rect.anchoredPosition = Vector2.zero;
+        go.GetComponent<Image>().color = new Color(.04f, .055f, .045f, 1);
+        go.GetComponent<Image>().raycastTarget = false;
+        var label = CriarTexto("Nome", go.transform, texto, 5.5f, new Color(.88f, .86f, .75f), TextAlignmentOptions.Center);
+        UIFactory.Stretch(label.rectTransform); label.raycastTarget = false;
     }
 
     private void CriarMarcadorPonto(RectTransform mapRect, PontoMapa p)
@@ -737,94 +753,8 @@ public class MapaInterativoUI : MonoBehaviour
     /// Converte a coordenada do mundo nas 5 Zonas Externas e 4 Interiores do Capítulo 1
     /// para a coordenada UV exata nas estradas da arte oficial de Santa Rita (MapaSantaRitaArte.jpg).
     /// </summary>
-    private Vector2 ConverterMundoParaUV(Vector3 pos, out string nomeLocal)
-    {
-        float x = pos.x;
-        float y = pos.y;
-
-        Capitulo1Director.ZonaId zona = Capitulo1Director.ZonaAtual;
-        if (Capitulo1Director.TryObterInfoZona(zona, out Capitulo1Director.InfoZona info))
-        {
-            float tX = Mathf.InverseLerp(info.min.x + 2f, info.max.x - 2f, x);
-            float tY = Mathf.InverseLerp(info.min.y + 2f, info.max.y - 2f, y);
-
-            switch (zona)
-            {
-                case Capitulo1Director.ZonaId.Zona1_Rodovia:
-                {
-                    float u = Mathf.Lerp(0.085f, 0.132f, tX);
-                    float v = Mathf.Lerp(0.642f, 0.634f, tX);
-                    nomeLocal = "Rodovia de Entrada — Santa Rita";
-                    return new Vector2(u, v);
-                }
-
-                case Capitulo1Director.ZonaId.Zona2_Posto:
-                {
-                    float u = Mathf.Lerp(0.138f, 0.228f, tX);
-                    float v = Mathf.Lerp(0.633f, 0.616f, tX);
-                    nomeLocal = tX < 0.58f ? "Avenida Sul — Posto de Gasolina" : "Avenida Sul — Antiga Venda";
-                    return new Vector2(u, v);
-                }
-
-                case Capitulo1Director.ZonaId.Interior_Posto:
-                {
-                    nomeLocal = "Interior — Conveniência do Posto";
-                    return new Vector2(0.145f, 0.630f);
-                }
-
-                case Capitulo1Director.ZonaId.Zona3_Encruzilhada:
-                {
-                    float u = Mathf.Lerp(0.245f, 0.382f, tX);
-                    float v = Mathf.Lerp(0.612f, 0.595f, tX) + Mathf.Max(0f, tY - 0.45f) * 0.13f;
-                    if (tY > 0.62f)
-                        nomeLocal = "Subida de Barro para o Bairro";
-                    else if (tX > 0.45f)
-                        nomeLocal = "Encruzilhada — Mercadinho Santa Rita";
-                    else
-                        nomeLocal = "Encruzilhada Principal";
-                    return new Vector2(Mathf.Clamp(u, 0.05f, 0.95f), Mathf.Clamp(v, 0.08f, 0.94f));
-                }
-
-                case Capitulo1Director.ZonaId.Interior_Mercadinho:
-                {
-                    nomeLocal = "Interior — Mercadinho Santa Rita";
-                    return new Vector2(0.378f, 0.595f);
-                }
-
-                case Capitulo1Director.ZonaId.Zona4_Bairro:
-                {
-                    float u = Mathf.Lerp(0.185f, 0.285f, tX);
-                    float v = Mathf.Lerp(0.725f, 0.795f, tY);
-                    bool pertoCasaAvo = x >= 424f && x <= 438f && y >= 15f && y <= 27f;
-                    nomeLocal = pertoCasaAvo ? "Bairro das Casas — Casa de Adílio (Nº 40)" : "Bairro das Casas (Ruas de Barro)";
-                    return new Vector2(u, v);
-                }
-
-                case Capitulo1Director.ZonaId.Interior_CasaDoAvo:
-                {
-                    nomeLocal = "Interior — Casa de Adílio (Nº 40)";
-                    return new Vector2(0.255f, 0.765f);
-                }
-
-                case Capitulo1Director.ZonaId.Zona5_RuaNorteBar:
-                {
-                    float u = Mathf.Lerp(0.345f, 0.465f, tX);
-                    float v = Mathf.Lerp(0.855f, 0.885f, 1f - Mathf.Abs(tX - 0.5f) * 1.5f);
-                    nomeLocal = tX > 0.78f ? "Rua Norte — Portão de Acesso ao Centro" : "Rua Norte — Exterior do Bar do Zé";
-                    return new Vector2(u, v);
-                }
-
-                case Capitulo1Director.ZonaId.Interior_BarDoZe:
-                {
-                    nomeLocal = "Interior — Bar do Zé (Mesa de Sinuca)";
-                    return new Vector2(0.398f, 0.885f);
-                }
-            }
-        }
-
-        nomeLocal = "Entrada de Santa Rita";
-        return new Vector2(0.110f, 0.640f);
-    }
+    private Vector2 ConverterMundoParaUV(Vector3 pos, out string nomeLocal) =>
+        SantaRitaGeography.ConverterCapitulo1(pos, out nomeLocal);
 
     private void AtualizarPosicaoMarcadoresDinamicos()
     {
@@ -839,12 +769,12 @@ public class MapaInterativoUI : MonoBehaviour
         }
         else if (scene == "CasaDoAvo")
         {
-            playerUV = new Vector2(0.255f, 0.765f);
+            playerUV = SantaRitaGeography.UV("casa_avo");
             nomeLocal = "Interior — Casa de Adílio (Nº 40)";
         }
         else if (scene == "BarDoZe")
         {
-            playerUV = new Vector2(0.398f, 0.885f);
+            playerUV = SantaRitaGeography.UV("bar_ze");
             nomeLocal = "Interior — Bar do Zé (Mesa de Sinuca)";
         }
         else
@@ -898,24 +828,7 @@ public class MapaInterativoUI : MonoBehaviour
             textoObjetivoAtual.text = "OBJETIVO: " + objStr;
     }
 
-    private Vector2 ObterUVObjetivoAtual()
-    {
-        if (GameState.Tem("c2_iniciado"))
-        {
-            if (GameState.Tem(Capitulo2Director.Vitoria)) return new Vector2(.335f,.336f);
-            if (!GameState.Tem("c2_protocolo_adilio") || !GameState.Tem("c2_registro_manutencao")) return new Vector2(.614f,.592f);
-            if (!GameState.Tem("c2_padre_testemunho")) return new Vector2(.503f,.712f);
-            if (!GameState.Tem("c2_cemiterio_comparado")) return new Vector2(.581f,.861f);
-            return new Vector2(.317f,.334f);
-        }
-        if (GameState.Tem(Flags.ZeDerrotadoNaSinuca))
-            return new Vector2(0.500f, 0.600f); // Centro de Santa Rita
-        if (GameState.Tem(Flags.Pista_RumoBarDoZe) || GameState.Tem(Flags.FalouComAtendenteMercadinho))
-            return new Vector2(0.398f, 0.885f); // Bar do Zé
-        if (GameState.Tem(Flags.Pista_NotaFiscal2004) || GameState.Tem(Flags.ChegouCasaAvo))
-            return new Vector2(0.378f, 0.595f); // Mercadinho
-        return new Vector2(0.255f, 0.765f);     // Casa de Adílio
-    }
+    private Vector2 ObterUVObjetivoAtual() => SantaRitaGeography.ObjetivoAtual();
 
     private void AtualizarPainelLateral()
     {

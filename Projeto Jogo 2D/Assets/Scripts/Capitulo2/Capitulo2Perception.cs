@@ -24,7 +24,8 @@ public sealed class Capitulo2Perception : MonoBehaviour
         }
         else
         {
-            var memorial=GameObject.Find("Memoria_Julia");var sr=memorial!=null?memorial.GetComponent<SpriteRenderer>():null;
+            var sr=Capitulo2Director.Instance!=null?Capitulo2Director.Instance.memorialPercepcao:null;
+            if(sr==null)Debug.LogError("Percepção do Cemitério sem referência serializada ao jazigo.");
             if(sr!=null)
             {
                 Color original=sr.color;float elapsed=0;
