@@ -1,0 +1,356 @@
+{
+  "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs": {
+    "mtime": 1793041229.2134023,
+    "seen": 1793044751.304551,
+    "ast_hash": "3d61e5f8dc0a005d5895367ef0e173f7",
+    "semantic_hash": "3d61e5f8dc0a005d5895367ef0e173f7"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs": {
+    "mtime": 1793041229.2280872,
+    "seen": 1793044751.3045537,
+    "ast_hash": "b0fb616ff7a7baa0c62baf4ba32f446e",
+    "semantic_hash": "b0fb616ff7a7baa0c62baf4ba32f446e"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.304555,
+    "ast_hash": "75d0d4e304f41e8c297b48942e27ba1d",
+    "semantic_hash": "75d0d4e304f41e8c297b48942e27ba1d"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045554,
+    "ast_hash": "22e0dad9496ab78b9b3568035ed253b8",
+    "semantic_hash": "22e0dad9496ab78b9b3568035ed253b8"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045561,
+    "ast_hash": "abc1eaf88d433f8eb4e68b5105264c03",
+    "semantic_hash": "abc1eaf88d433f8eb4e68b5105264c03"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045566,
+    "ast_hash": "eb0d47df31a08d93d412598ba988f0ca",
+    "semantic_hash": "eb0d47df31a08d93d412598ba988f0ca"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.304557,
+    "ast_hash": "5b4c729c3a3829c9d1a5f243a01b022a",
+    "semantic_hash": "5b4c729c3a3829c9d1a5f243a01b022a"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045573,
+    "ast_hash": "15d85fd7d48fb5b82ebf010c54b1bb1f",
+    "semantic_hash": "15d85fd7d48fb5b82ebf010c54b1bb1f"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.304558,
+    "ast_hash": "7dfd077537e9325568f681c86d301963",
+    "semantic_hash": "7dfd077537e9325568f681c86d301963"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Chuva.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045583,
+    "ast_hash": "37b705aa662749d12689b533c8bd4506",
+    "semantic_hash": "37b705aa662749d12689b533c8bd4506"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045588,
+    "ast_hash": "6aeb3bc59cc5cec4ff4d4ea51f3dba0f",
+    "semantic_hash": "6aeb3bc59cc5cec4ff4d4ea51f3dba0f"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045597,
+    "ast_hash": "23fc5028dd159a0bf98eb2278cbbffaf",
+    "semantic_hash": "23fc5028dd159a0bf98eb2278cbbffaf"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.30456,
+    "ast_hash": "5e863d9fa37007e513e6f41f15d07fbf",
+    "semantic_hash": "5e863d9fa37007e513e6f41f15d07fbf"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045602,
+    "ast_hash": "2170791b5ddf50d154eafa879ee8ec3b",
+    "semantic_hash": "2170791b5ddf50d154eafa879ee8ec3b"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045607,
+    "ast_hash": "e876fd09d1500f9593210a2d6ecf7ebe",
+    "semantic_hash": "e876fd09d1500f9593210a2d6ecf7ebe"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/GameState.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045611,
+    "ast_hash": "16f8dcd0fecad33e51ed0018a851d685",
+    "semantic_hash": "16f8dcd0fecad33e51ed0018a851d685"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Interactable.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045616,
+    "ast_hash": "1a7418774a02f117c9f5cd3bb3a05551",
+    "semantic_hash": "1a7418774a02f117c9f5cd3bb3a05551"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045619,
+    "ast_hash": "82822a989607e82311014aaead455530",
+    "semantic_hash": "82822a989607e82311014aaead455530"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045623,
+    "ast_hash": "8d0e53a59af529fa20aedd59141b58d3",
+    "semantic_hash": "8d0e53a59af529fa20aedd59141b58d3"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Legenda.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.304563,
+    "ast_hash": "2c31ffd83f21521d0cfbed49d20db579",
+    "semantic_hash": "2c31ffd83f21521d0cfbed49d20db579"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045635,
+    "ast_hash": "1cc53172cfa3bb9b96ebf4a658207a3f",
+    "semantic_hash": "1cc53172cfa3bb9b96ebf4a658207a3f"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs": {
+    "mtime": 1793041229.2292237,
+    "seen": 1793044751.3045638,
+    "ast_hash": "fb9b05e60dbcaf76b31670e54bd81490",
+    "semantic_hash": "fb9b05e60dbcaf76b31670e54bd81490"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045642,
+    "ast_hash": "320fc7dc8e3583d23ff36a997ecdb72a",
+    "semantic_hash": "320fc7dc8e3583d23ff36a997ecdb72a"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045647,
+    "ast_hash": "9d1feba84156c525dcbca4822e1e2c68",
+    "semantic_hash": "9d1feba84156c525dcbca4822e1e2c68"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.304565,
+    "ast_hash": "943beecc2a09bcd5e0ffc48a4f9b80ad",
+    "semantic_hash": "943beecc2a09bcd5e0ffc48a4f9b80ad"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045654,
+    "ast_hash": "d33fb891abd1ad7fc263911f8eeca604",
+    "semantic_hash": "d33fb891abd1ad7fc263911f8eeca604"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045657,
+    "ast_hash": "9db0c632e1873c31d3fad7fe4170d4e2",
+    "semantic_hash": "9db0c632e1873c31d3fad7fe4170d4e2"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045664,
+    "ast_hash": "55a2e82688830037ba31618ea4920717",
+    "semantic_hash": "55a2e82688830037ba31618ea4920717"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045666,
+    "ast_hash": "7bbec983ccb92c5c96431ec89e18af77",
+    "semantic_hash": "7bbec983ccb92c5c96431ec89e18af77"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045669,
+    "ast_hash": "31acef438932c19d86435039bf4a1387",
+    "semantic_hash": "31acef438932c19d86435039bf4a1387"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045673,
+    "ast_hash": "a7ad82ac174205769ae77c7002fadfe2",
+    "semantic_hash": "a7ad82ac174205769ae77c7002fadfe2"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045678,
+    "ast_hash": "e7b532a135a9679c99e0e176d3d673cf",
+    "semantic_hash": "e7b532a135a9679c99e0e176d3d673cf"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.304568,
+    "ast_hash": "8009883bc900ebf519e8a45d136ff499",
+    "semantic_hash": "8009883bc900ebf519e8a45d136ff499"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045685,
+    "ast_hash": "08431db8c20f4edf1ea5fe338dcb2c5f",
+    "semantic_hash": "08431db8c20f4edf1ea5fe338dcb2c5f"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.304569,
+    "ast_hash": "7c04b0c2dfd2f774b2819a3a7f5e8bb4",
+    "semantic_hash": "7c04b0c2dfd2f774b2819a3a7f5e8bb4"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045692,
+    "ast_hash": "829cd5e24da256df9abbc5907e6cd72a",
+    "semantic_hash": "829cd5e24da256df9abbc5907e6cd72a"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.30457,
+    "ast_hash": "14524f4cd3eac2ac55b88acddcac4198",
+    "semantic_hash": "14524f4cd3eac2ac55b88acddcac4198"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045704,
+    "ast_hash": "c0bb5ac24cc3b8b4d4eb2e26854e2703",
+    "semantic_hash": "c0bb5ac24cc3b8b4d4eb2e26854e2703"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045707,
+    "ast_hash": "a2db7f7ceafc428c1efe01a2ccf0887f",
+    "semantic_hash": "a2db7f7ceafc428c1efe01a2ccf0887f"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045712,
+    "ast_hash": "cb49b179c7887183dc9fa787e489fe4e",
+    "semantic_hash": "cb49b179c7887183dc9fa787e489fe4e"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045714,
+    "ast_hash": "43143c5eb70c5a83b82853837f57ab71",
+    "semantic_hash": "43143c5eb70c5a83b82853837f57ab71"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/TileAleatorio.cs": {
+    "mtime": 1793041229.230087,
+    "seen": 1793044751.3045719,
+    "ast_hash": "5343115f898fb130322cd29e162c223e",
+    "semantic_hash": "5343115f898fb130322cd29e162c223e"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs": {
+    "mtime": 1793041229.2310872,
+    "seen": 1793044751.3045723,
+    "ast_hash": "b3cd150ec67f9f835851526a9b0d52ba",
+    "semantic_hash": "b3cd150ec67f9f835851526a9b0d52ba"
+  },
+  "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs": {
+    "mtime": 1793041229.2310872,
+    "seen": 1793044751.3045735,
+    "ast_hash": "d16852e9e9cc66fa0dd204911563289a",
+    "semantic_hash": "d16852e9e9cc66fa0dd204911563289a"
+  },
+  "Projeto Jogo 2D/Packages/manifest.json": {
+    "mtime": 1793041229.2552333,
+    "seen": 1793044751.3045738,
+    "ast_hash": "55b864f3d87a311841fc64c58aa038fe",
+    "semantic_hash": "55b864f3d87a311841fc64c58aa038fe"
+  },
+  "Projeto Jogo 2D/Packages/packages-lock.json": {
+    "mtime": 1793041229.2559767,
+    "seen": 1793044751.3045743,
+    "ast_hash": "29f8391001633264d1915048232a7d58",
+    "semantic_hash": "29f8391001633264d1915048232a7d58"
+  },
+  "Projeto Jogo 2D/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json": {
+    "mtime": 1793041229.2561631,
+    "seen": 1793044751.3045747,
+    "ast_hash": "f4988debef69723381b17eb7606d9421",
+    "semantic_hash": "f4988debef69723381b17eb7606d9421"
+  },
+  "Projeto Jogo 2D/ProjectSettings/SceneTemplateSettings.json": {
+    "mtime": 1793041229.2561631,
+    "seen": 1793044751.304575,
+    "ast_hash": "eeb26e313b89cd9334b828428a4847ef",
+    "semantic_hash": "eeb26e313b89cd9334b828428a4847ef"
+  },
+  "Docs/SANTA_RITA_PROJECT_AUDIT.md": {
+    "mtime": 1793041229.1569686,
+    "seen": 1793044751.3045754,
+    "ast_hash": "fbf22636e912e5660f2353dacda652dc",
+    "semantic_hash": "fbf22636e912e5660f2353dacda652dc"
+  },
+  "Docs/SANTA_RITA_VERTICAL_SLICE_REPORT.md": {
+    "mtime": 1793041229.1571615,
+    "seen": 1793044751.304576,
+    "ast_hash": "eec47d86823009935e5d76caae699aee",
+    "semantic_hash": "eec47d86823009935e5d76caae699aee"
+  },
+  "README.md": {
+    "mtime": 1793049104.6511285,
+    "seen": 1793049141.8406413,
+    "ast_hash": "625c32511beef227231a8afd6627e79b",
+    "semantic_hash": ""
+  },
+  "scripts/graphify-refresh.sh": {
+    "mtime": 1793045325.4007597,
+    "seen": 1793045462.8724093,
+    "ast_hash": "fe9c6624dbe0ada4527fe7b478ae05e0",
+    "semantic_hash": ""
+  },
+  "scripts/graphify-setup.sh": {
+    "mtime": 1793045317.8467598,
+    "seen": 1793045462.8724098,
+    "ast_hash": "8b4c3e237862ba2c51cc41460f70c673",
+    "semantic_hash": ""
+  },
+  "scripts/graphify-validate.sh": {
+    "mtime": 1793045336.2877593,
+    "seen": 1793045462.8724103,
+    "ast_hash": "b3d509962659a7669c29614da80c950a",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/ProjectSettings/ProjectVersion.txt": {
+    "mtime": 1793041229.2561631,
+    "seen": 1793045462.872412,
+    "ast_hash": "8bdd27036501357bfe53aa9a6336a9eb",
+    "semantic_hash": ""
+  },
+  "docs/GRAPHIFY-OBSIDIAN-OPERACAO.md": {
+    "mtime": 1793045371.5177581,
+    "seen": 1793045462.872413,
+    "ast_hash": "42b304f26f11d44d1e9f57e0ecfbcbf7",
+    "semantic_hash": ""
+  },
+  "docs/PLAN-SETUP-GRAPHIFY-OBSIDIAN.md": {
+    "mtime": 1793045531.4737532,
+    "seen": 1793049141.8406422,
+    "ast_hash": "3e7f45261129e10a58503b401816c784",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1793049068.0841572,
+    "seen": 1793049141.8406377,
+    "ast_hash": "72536f029b9793b378ce25a70c617cc9",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1793049070.2661555,
+    "seen": 1793049141.8406386,
+    "ast_hash": "ef7d92fd6b646189ff8e809e463dbc5c",
+    "semantic_hash": ""
+  }
+}

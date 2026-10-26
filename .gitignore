@@ -49,3 +49,11 @@ desktop.ini
 # ---------------------------------------------------------------- trabalho
 # Versoes antigas de arte, que ficam so' na maquina de quem desenhou
 Arte/**/versao_antiga/
+
+# ---------------------------------------------------------------- graphify & obsidian
+graphify-out/.graphify_*
+graphify-out/cost.json
+graphify-out/cache/
+graphify-out/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+docs/architecture-vault/.obsidian/
+

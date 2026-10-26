@@ -1,0 +1,55 @@
+# .graphifyignore — Regras de Exclusão do Graphify
+# Protege o índice contra binários pesados, caches do Unity e dados de interface
+
+# Caches e arquivos temporários do Unity
+**/Library/
+**/Temp/
+**/Logs/
+**/UserSettings/
+**/.plastic/
+**/obj/
+**/Build/
+**/Builds/
+
+# Mídia pesada (imagens, áudios, vídeos, fontes e spritesheets)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.psd
+*.aseprite
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+*.ogg
+*.ttf
+*.otf
+*.asset
+*.mat
+*.prefab
+*.unity
+*.meta
+
+# Pastas de assets de arte e mídia
+Arte/
+**/Assets/Art/
+**/Assets/Sprites/
+**/Assets/Videos/
+**/Assets/Audio/
+**/Assets/Fonts/
+**/Assets/TextMesh Pro/
+**/Assets/Animations/
+**/Assets/TilePalettes/
+**/Assets/Tiles/
+**/Assets/Resources/
+**/Assets/RenderTextures/
+
+# Saídas e metadados de agentes / ferramentas
+graphify-out/
+docs/architecture-vault/
+docs/ai-memory/
+.agents/
+.claude/
+.git/

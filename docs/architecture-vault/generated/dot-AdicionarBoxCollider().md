@@ -1,0 +1,25 @@
+---
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
+type: "code"
+community: "Capitulo1Director"
+location: "L2179"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Capitulo1Director
+---
+
+# .AdicionarBoxCollider()
+
+## Connections
+- [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirInterior4_BarDoZe()]] - `calls` [EXTRACTED]
+- [[dot-CriarParedesPerimetro()]] - `calls` [EXTRACTED]
+- [[BoxCollider2D]] - `references` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[GameObject_3]] - `references` [EXTRACTED]
+- [[Vector2_3]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

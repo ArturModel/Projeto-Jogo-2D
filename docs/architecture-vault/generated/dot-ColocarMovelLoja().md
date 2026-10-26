@@ -1,0 +1,25 @@
+---
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
+type: "code"
+community: "Capitulo1Director"
+location: "L2282"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Capitulo1Director
+---
+
+# .ColocarMovelLoja()
+
+## Connections
+- [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
+- [[dot-Pintar()]] - `calls` [INFERRED]
+- [[BoxCollider2D]] - `references` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[MovelLoja_1]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[Transform_2]] - `references` [EXTRACTED]
+- [[Vector2_3]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

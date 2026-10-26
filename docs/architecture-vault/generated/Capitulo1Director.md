@@ -1,0 +1,88 @@
+---
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
+type: "code"
+community: "Capitulo1Director"
+location: "L994"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Capitulo1Director
+---
+
+# Capitulo1Director
+
+## Connections
+- [[dot-AbrirPainelFechamento()]] - `method` [EXTRACTED]
+- [[dot-AdicionarBoxCollider()]] - `method` [EXTRACTED]
+- [[dot-AdicionarLuzPonto()]] - `method` [EXTRACTED]
+- [[dot-AjustarBrilho()]] - `method` [EXTRACTED]
+- [[dot-AjustarLuzGlobal()]] - `method` [EXTRACTED]
+- [[dot-AoCarregarCenaRuntime()]] - `method` [EXTRACTED]
+- [[dot-AplicarEstadoDaZona()]] - `method` [EXTRACTED]
+- [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `method` [EXTRACTED]
+- [[dot-AtualizarFonteMusical()]] - `method` [EXTRACTED]
+- [[dot-AtualizarSpawnPointExistente()]] - `method` [EXTRACTED]
+- [[dot-CarregarSprite()]] - `method` [EXTRACTED]
+- [[dot-CarregarTextura()]] - `method` [EXTRACTED]
+- [[dot-ColocarArteInterior()]] - `method` [EXTRACTED]
+- [[dot-ColocarArvore()]] - `method` [EXTRACTED]
+- [[dot-ColocarGatilhoTransicao()]] - `method` [EXTRACTED]
+- [[dot-ColocarInteracao()]] - `method` [EXTRACTED]
+- [[dot-ColocarMovelLoja()]] - `method` [EXTRACTED]
+- [[dot-ColocarOrelhaoSave()]] - `method` [EXTRACTED]
+- [[dot-ColocarPosteComLuz()]] - `method` [EXTRACTED]
+- [[dot-ColocarProp()]] - `method` [EXTRACTED]
+- [[dot-ColocarTapete()]] - `method` [EXTRACTED]
+- [[dot-ConfigurarCenaAtual()]] - `method` [EXTRACTED]
+- [[dot-ConstruirInterior1_Posto()]] - `method` [EXTRACTED]
+- [[dot-ConstruirInterior2_Mercadinho()]] - `method` [EXTRACTED]
+- [[dot-ConstruirInterior3_CasaDoAvo()]] - `method` [EXTRACTED]
+- [[dot-ConstruirInterior4_BarDoZe()]] - `method` [EXTRACTED]
+- [[dot-ConstruirMundoMultiZonas()]] - `method` [EXTRACTED]
+- [[dot-ConstruirZona1_Rodovia()]] - `method` [EXTRACTED]
+- [[dot-ConstruirZona2_Posto()]] - `method` [EXTRACTED]
+- [[dot-ConstruirZona3_Encruzilhada()]] - `method` [EXTRACTED]
+- [[dot-ConstruirZona4_Bairro()]] - `method` [EXTRACTED]
+- [[dot-ConstruirZona5_RuaNorteBar()]] - `method` [EXTRACTED]
+- [[dot-CreateOrUpdateBarDoZeScene()]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoFechamento()]] - `method` [EXTRACTED]
+- [[dot-CriarFonteMusical()]] - `method` [EXTRACTED]
+- [[dot-CriarParedesPerimetro()]] - `method` [EXTRACTED]
+- [[dot-CriarPisoDeZona()]] - `method` [EXTRACTED]
+- [[dot-DispararChegadaCasaDoAvo()]] - `method` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `method` [EXTRACTED]
+- [[dot-ExtrairBloco32()]] - `method` [EXTRACTED]
+- [[dot-GarantirElementosBarDoZeCenaSeparada()]] - `method` [EXTRACTED]
+- [[dot-GarantirElementosCasaDoAvoCenaSeparada()]] - `method` [EXTRACTED]
+- [[dot-MostrarTelaFechamentoCapitulo1()]] - `method` [EXTRACTED]
+- [[dot-NarracaoEntradaCasaAvoRoutine()]] - `method` [EXTRACTED]
+- [[dot-NomeArquivoTile()]] - `method` [EXTRACTED]
+- [[dot-OnSceneLoaded()]] - `method` [EXTRACTED]
+- [[dot-PintarAcabamentoArquitetonicoInterior()]] - `method` [EXTRACTED]
+- [[dot-PosicionarJogadorInicialRoutine()]] - `method` [EXTRACTED]
+- [[dot-PrepararMusicasDasZonas()]] - `method` [EXTRACTED]
+- [[dot-ResetStatic()_1]] - `method` [EXTRACTED]
+- [[dot-TransicionarPara()]] - `method` [EXTRACTED]
+- [[dot-TryObterInfoZona()]] - `method` [EXTRACTED]
+- [[dot-Update()_2]] - `method` [EXTRACTED]
+- [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
+- [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
+- [[AudioSource_1]] - `references` [EXTRACTED]
+- [[ChegadaEmSantaRita.cs]] - `contains` [EXTRACTED]
+- [[Dictionary]] - `references` [EXTRACTED]
+- [[EstaEmInterior]] - `defines` [EXTRACTED]
+- [[GameObject_3]] - `references` [EXTRACTED]
+- [[InfoZona_1]] - `references` [EXTRACTED]
+- [[InfoZona]] - `contains` [EXTRACTED]
+- [[Instance_1]] - `defines` [EXTRACTED]
+- [[MonoBehaviour]] - `inherits` [EXTRACTED]
+- [[MovelLoja]] - `contains` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `references` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
+- [[TilePiso]] - `contains` [EXTRACTED]
+- [[ZonaAtual]] - `defines` [EXTRACTED]
+- [[ZonaId_1]] - `references` [EXTRACTED]
+- [[ZonaId]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

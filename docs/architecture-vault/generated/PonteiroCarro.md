@@ -1,0 +1,27 @@
+---
+source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+type: "code"
+community: "unityengine"
+location: "L8"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/unityengine
+---
+
+# PonteiroCarro
+
+## Connections
+- [[dot-Awake()_7]] - `method` [EXTRACTED]
+- [[dot-Procurar()]] - `method` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Update()_5]] - `method` [EXTRACTED]
+- [[Ativo]] - `defines` [EXTRACTED]
+- [[Camera_1]] - `references` [EXTRACTED]
+- [[LayerMask]] - `references` [EXTRACTED]
+- [[MonoBehaviour]] - `inherits` [EXTRACTED]
+- [[ObjetoCarro]] - `references` [EXTRACTED]
+- [[PonteiroCarro.cs]] - `contains` [EXTRACTED]
+- [[PrologoDirector]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/unityengine
