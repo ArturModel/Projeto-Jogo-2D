@@ -1,0 +1,22 @@
+---
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
+type: "code"
+community: "Community 0"
+location: "L173"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_0
+---
+
+# .ObterEntradasDiario()
+
+## Connections
+- [[dot-AtualizarPainelLateral()]] - `calls` [EXTRACTED]
+- [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
+- [[dot-C1InvestigationRegression()]] - `calls` [EXTRACTED]
+- [[EntradaDiario]] - `references` [EXTRACTED]
+- [[GameState]] - `method` [EXTRACTED]
+- [[IReadOnlyList]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_0

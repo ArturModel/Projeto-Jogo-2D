@@ -1,0 +1,83 @@
+---
+source_file: ""
+type: "code"
+community: "Community 16"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_16
+---
+
+# SpriteRenderer
+
+## Connections
+- [[dot-Add()]] - `references` [EXTRACTED]
+- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-ApplyC1()]] - `references` [EXTRACTED]
+- [[dot-Atualizar()]] - `references` [EXTRACTED]
+- [[dot-Awake()_10]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
+- [[dot-Awake()_9]] - `references` [EXTRACTED]
+- [[dot-Awake()_17]] - `references` [EXTRACTED]
+- [[dot-BoundaryForest()]] - `references` [EXTRACTED]
+- [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
+- [[dot-Cemetery()]] - `references` [EXTRACTED]
+- [[dot-ColocarArteInterior()]] - `references` [EXTRACTED]
+- [[dot-ColocarInteracao()]] - `references` [EXTRACTED]
+- [[dot-ColocarMovelLoja()]] - `references` [EXTRACTED]
+- [[dot-ColocarProp()]] - `references` [EXTRACTED]
+- [[dot-ColocarTapete()]] - `references` [EXTRACTED]
+- [[dot-CompactCourt()]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
+- [[dot-CorrectApprovedGeography()]] - `references` [EXTRACTED]
+- [[dot-Costura()]] - `references` [EXTRACTED]
+- [[dot-Create()]] - `references` [EXTRACTED]
+- [[dot-CreateCemetery()]] - `references` [EXTRACTED]
+- [[dot-CreateSceneSpriteObject()]] - `references` [EXTRACTED]
+- [[dot-CriarCamada()]] - `references` [EXTRACTED]
+- [[dot-CriarPisoDeZona()]] - `references` [EXTRACTED]
+- [[dot-DecorateTerrain()]] - `references` [EXTRACTED]
+- [[dot-DetectarLimitesDaRegiao()]] - `references` [EXTRACTED]
+- [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
+- [[dot-EncloseCourt()]] - `references` [EXTRACTED]
+- [[dot-Exteriors()]] - `references` [EXTRACTED]
+- [[dot-Interior()]] - `references` [EXTRACTED]
+- [[dot-KeepOverTable()]] - `references` [EXTRACTED]
+- [[dot-Move()]] - `references` [EXTRACTED]
+- [[dot-Paint()]] - `references` [EXTRACTED]
+- [[dot-Paper()]] - `references` [EXTRACTED]
+- [[dot-PaperOnTable()]] - `references` [EXTRACTED]
+- [[dot-PrepararCaminhadaMarcus()]] - `references` [EXTRACTED]
+- [[dot-Prop()]] - `references` [EXTRACTED]
+- [[dot-Prop()_2]] - `references` [EXTRACTED]
+- [[dot-Prop()_1]] - `references` [EXTRACTED]
+- [[dot-Replace()]] - `references` [EXTRACTED]
+- [[dot-Replace()_1]] - `references` [EXTRACTED]
+- [[dot-RunAccesses()]] - `references` [EXTRACTED]
+- [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
+- [[dot-Scenes()]] - `references` [EXTRACTED]
+- [[dot-Sociedade()]] - `references` [EXTRACTED]
+- [[dot-Solid()]] - `references` [EXTRACTED]
+- [[dot-Solid()_1]] - `references` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Start()_10]] - `references` [EXTRACTED]
+- [[dot-Start()_11]] - `references` [EXTRACTED]
+- [[dot-Start()_8]] - `references` [EXTRACTED]
+- [[dot-Walls()]] - `references` [EXTRACTED]
+- [[Camada_1]] - `references` [EXTRACTED]
+- [[Capitulo2Director]] - `references` [EXTRACTED]
+- [[Fileira]] - `references` [EXTRACTED]
+- [[ObjetoCarro]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[PortaLuvasCarro]] - `references` [EXTRACTED]
+- [[SantaRitaActorElevation]] - `references` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `references` [EXTRACTED]
+- [[SantaRitaForeground]] - `references` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `references` [EXTRACTED]
+- [[SantaRitaRoomCutaway]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_16

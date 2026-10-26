@@ -1,0 +1,23 @@
+---
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+type: "code"
+community: "Community 3"
+location: "L746"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_3
+---
+
+# .ExecutarTurnoZeCoroutine()
+
+## Connections
+- [[dot-ContinuarInicioTurno()]] - `calls` [EXTRACTED]
+- [[dot-EncontrarPosicaoLivreDeterministica()]] - `calls` [EXTRACTED]
+- [[dot-EscolherTacadaZe()]] - `calls` [EXTRACTED]
+- [[dot-ExecutarTacada()]] - `calls` [EXTRACTED]
+- [[dot-SincronizarTransformBolas()]] - `calls` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_3

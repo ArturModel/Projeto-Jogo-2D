@@ -1,0 +1,85 @@
+# .graphifyignore — Regras de Exclusão do Graphify
+# Protege o índice contra binários pesados, caches do Unity e dados de interface
+
+# Caches e arquivos temporários do Unity
+**/Library/
+**/Temp/
+**/Logs/
+**/UserSettings/
+**/.plastic/
+**/obj/
+**/Build/
+**/Builds/
+
+# Mídia pesada (imagens, áudios, vídeos, fontes e spritesheets)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.psd
+*.aseprite
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+*.ogg
+*.ttf
+*.otf
+*.asset
+*.mat
+*.prefab
+*.unity
+*.meta
+
+# Pastas de assets de arte e mídia
+Arte/
+**/Assets/Art/
+**/Assets/Sprites/
+**/Assets/Videos/
+**/Assets/Audio/
+**/Assets/Fonts/
+**/Assets/TextMesh Pro/
+**/Assets/Animations/
+**/Assets/TilePalettes/
+**/Assets/Tiles/
+**/Assets/Resources/
+**/Assets/RenderTextures/
+
+# Saídas e metadados de agentes / ferramentas
+graphify-out/
+docs/architecture-vault/
+docs/ai-memory/
+.agents/
+.claude/
+.git/
+
+# Segredos, credenciais e dumps
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+secrets/
+*.bak
+*.dump
+backups/
+**/.obsidian/
+
+# Project-specific private/derived areas
+Build/
+Builds/
+**/PackageCache/
+**/Packages/
+**/Evidencias/
+private/
+**/santa_rita_save*
+**/SRQA*
+
+# AST-only index: never parse Markdown code fences or index the index itself.
+*.md
+**/architecture-vault/
+**/ai-memory/
+Tools/QA/

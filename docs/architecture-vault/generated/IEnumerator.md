@@ -1,0 +1,81 @@
+---
+source_file: ""
+type: "code"
+community: "Community 0"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_0
+---
+
+# IEnumerator
+
+## Connections
+- [[dot-AguardarEIniciarProximoTurno()]] - `references` [EXTRACTED]
+- [[dot-Aparecer()]] - `references` [EXTRACTED]
+- [[dot-AteOTempo()]] - `references` [EXTRACTED]
+- [[dot-AwaitScene()]] - `references` [EXTRACTED]
+- [[dot-BannerRoutine()]] - `references` [EXTRACTED]
+- [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
+- [[dot-C1InvestigationRegression()]] - `references` [EXTRACTED]
+- [[dot-C1LoadSmoke()]] - `references` [EXTRACTED]
+- [[dot-Capture()]] - `references` [EXTRACTED]
+- [[dot-CloseText()]] - `references` [EXTRACTED]
+- [[dot-Curvar()]] - `references` [EXTRACTED]
+- [[dot-DefeatUI()]] - `references` [EXTRACTED]
+- [[dot-Desacelerar()]] - `references` [EXTRACTED]
+- [[dot-DialogueR2()]] - `references` [EXTRACTED]
+- [[dot-Digitar()]] - `references` [EXTRACTED]
+- [[dot-Executar()]] - `references` [EXTRACTED]
+- [[dot-ExecutarTurnoZeCoroutine()]] - `references` [EXTRACTED]
+- [[dot-ExitToCenter()]] - `references` [EXTRACTED]
+- [[dot-Fade()]] - `references` [EXTRACTED]
+- [[dot-FadeIn()]] - `references` [EXTRACTED]
+- [[dot-FadeTo()]] - `references` [EXTRACTED]
+- [[dot-Fechar()_1]] - `references` [EXTRACTED]
+- [[dot-FlashlightR2()]] - `references` [EXTRACTED]
+- [[dot-FlashlightWalkR2()]] - `references` [EXTRACTED]
+- [[dot-Flicker()]] - `references` [EXTRACTED]
+- [[dot-FullBochaPerspective()]] - `references` [EXTRACTED]
+- [[dot-Guard()]] - `references` [EXTRACTED]
+- [[dot-Legendar()]] - `references` [EXTRACTED]
+- [[dot-Ligar()_1]] - `references` [EXTRACTED]
+- [[dot-NarracaoEntradaCasaAvoRoutine()]] - `references` [EXTRACTED]
+- [[dot-NewBochaPractice()]] - `references` [EXTRACTED]
+- [[dot-Performance()]] - `references` [EXTRACTED]
+- [[dot-PerformancePair()]] - `references` [EXTRACTED]
+- [[dot-Place()]] - `references` [EXTRACTED]
+- [[dot-PlanCapture()]] - `references` [EXTRACTED]
+- [[dot-PointerBocha()]] - `references` [EXTRACTED]
+- [[dot-PosicionarJogadorInicialRoutine()]] - `references` [EXTRACTED]
+- [[dot-RespostaAbafada()]] - `references` [EXTRACTED]
+- [[dot-Revelar()]] - `references` [EXTRACTED]
+- [[dot-Rodar()_1]] - `references` [EXTRACTED]
+- [[dot-Rodar()]] - `references` [EXTRACTED]
+- [[dot-RotinaPagina()]] - `references` [EXTRACTED]
+- [[dot-RoutineR2()]] - `references` [EXTRACTED]
+- [[dot-Run()]] - `references` [EXTRACTED]
+- [[dot-RunAccesses()]] - `references` [EXTRACTED]
+- [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
+- [[dot-RunPortalRegression()]] - `references` [EXTRACTED]
+- [[dot-RunR2()]] - `references` [EXTRACTED]
+- [[dot-SaveIsolationProbe()]] - `references` [EXTRACTED]
+- [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
+- [[dot-SlotsR2()]] - `references` [EXTRACTED]
+- [[dot-Start()_1]] - `references` [EXTRACTED]
+- [[dot-Start()_12]] - `references` [EXTRACTED]
+- [[dot-Start()_2]] - `references` [EXTRACTED]
+- [[dot-Start()_13]] - `references` [EXTRACTED]
+- [[dot-TapR2()]] - `references` [EXTRACTED]
+- [[dot-TransitionRoutine()]] - `references` [EXTRACTED]
+- [[dot-Transmitir()]] - `references` [EXTRACTED]
+- [[dot-Travel()]] - `references` [EXTRACTED]
+- [[dot-TrocarPainel()]] - `references` [EXTRACTED]
+- [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
+- [[dot-Use()]] - `references` [EXTRACTED]
+- [[dot-WalkAccess()]] - `references` [EXTRACTED]
+- [[dot-WalkAccessFilm()]] - `references` [EXTRACTED]
+- [[dot-Walking()]] - `references` [EXTRACTED]
+- [[dot-ZoneTransitionRoutine()]] - `references` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_0

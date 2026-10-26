@@ -43,13 +43,14 @@ git config merge.unityyamlmerge.recursive binary
 ```
 
 (No macOS o caminho é `/Applications/Unity/Hub/Editor/6000.6.0f1/Unity.app/Contents/Tools/UnityYAMLMerge`.)
+(No Linux o caminho é `~/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Tools/UnityYAMLMerge`.)
 
 ---
 
 ## Como trabalhamos
 
 **Uma cena por pessoa de cada vez.** Cena é o arquivo que mais dá conflito.
-Avise no grupo antes de abrir `EntradaDaCidade`, `CasaDoAvo`, `MainMenu` ou
+Avise no grupo antes de abrir `EntradaDaCidade`, `CasaDoAvo`, `BarDoZe`, `MainMenu` ou
 `Prologo`. Se precisar mexer em duas coisas ao mesmo tempo, transforme o
 pedaço em **prefab** e edite o prefab.
 
@@ -86,13 +87,46 @@ git push -u origin arte/casa-do-avo
 
 Paletas em `Arte/Chao/Chao_paleta.gpl` e `Arte/Heroi/Heroi_paleta.gpl`.
 
+---
+
+## Desenvolvimento com IA: Graphify + Obsidian
+
+C1 e C2 até Bocha e consequência imediata já estão implementados. Capítulos organizam a produção de um mundo conectado; Escola permanece adiada. Consulte o [estado atual](docs/ai-memory/CURRENT_STATE.md) e os [critérios de produção](Docs/Producao_Artistica_Execucao.md).
+
+Graphify é um índice estrutural dos fontes atuais; Obsidian organiza notas curadas em `manual/` e símbolos regeneráveis em `generated/`. Código/cenas, mapa/Bíblia e decisões recentes do autor prevalecem sobre resumos antigos.
+
+### Preparar e atualizar no Windows
+
+```powershell
+uv tool install graphifyy==0.9.96
+uv tool update-shell
+.\scripts\graphify-setup.ps1
+.\scripts\graphify-refresh.ps1
+.\scripts\graphify-validate.ps1
+```
+
+No Bash, use `bash scripts/graphify-setup.sh`, `graphify-refresh.sh` e `graphify-validate.sh`. Os scripts compartilham a mesma implementação local, propagam falhas e verificam cobertura dos C#, hashes e saídas. Não instalam hooks nem executam LLMs. Atualização de texto exige revisão das notas curadas; extração AST não interpreta prosa.
+
+No [Obsidian](https://obsidian.md/download), abra `docs/architecture-vault` como cofre. Use `generated/graph.canvas` ou Ctrl+G. As regras em `AGENTS.md` pedem atualização após mudanças estruturais; nenhum serviço em segundo plano é instalado.
+
+[Operação e consultas](docs/GRAPHIFY-OBSIDIAN-OPERACAO.md) · [Resultado da integração ao C2](docs/GRAPHIFY-INTEGRACAO-C2.md).
+
+---
+
 ## Pastas
 
 ```
-Projeto Jogo 2D/        projeto Unity
-  Assets/Art/           arte importada
-  Assets/Scenes/        cenas
-  Assets/Scripts/       código
-  Assets/Tiles/         tiles e Tile Palettes
-Arte/                   arquivos de trabalho (Aseprite, guias, paletas)
+Projeto Jogo 2D/              projeto Unity
+  Assets/Art/                 arte importada
+  Assets/Scenes/              cenas C1/C2 (Centro, Cemitério, Sociedade e demais interiores)
+  Assets/Scripts/             scripts C# de C1/C2, gameplay, UI, áudio, persistência e QA
+  Assets/Editor/              autoria explícita e validação C1/C2 (não regenerar cenas sem necessidade)
+  Assets/Tiles/               tiles e Tile Palettes
+Arte/                         arquivos de trabalho (Aseprite, guias, paletas)
+Docs/                         relatórios de auditoria canônica R1 e Vertical Slice
+docs/architecture-vault/      cofre do Obsidian (manual/ + generated/ + graph.canvas)
+docs/ai-memory/               memória persistente de contexto para agentes de IA
+graphify-out/                 grafo de conhecimento estrutural (graph.json, GRAPH_REPORT.md, graph.html)
+scripts/                      scripts multiplataforma (.sh e .ps1) de setup, refresh e validação
+AGENTS.md / CLAUDE.md         regras automáticas de governança para agentes de IA
 ```
