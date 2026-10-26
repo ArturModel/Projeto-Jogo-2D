@@ -11,6 +11,6 @@ tags:
 # List
 
 ## Connections
-- [[CamadaDeLuz]] - `references` [EXTRACTED]
+- [[VideoSettingsController]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/VideoSettingsController

@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.imageconversion"
-location: "L419"
+community: "com.unity.modules.tetgen"
+location: "L580"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimageconversion
+  - community/comunitymodulestetgen
 ---
 
 # depth
 
 ## Connections
-- [[com.unity.modules.screencapture]] - `contains` [EXTRACTED]
+- [[com.unity.modules.wind]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
+#graphify/code #graphify/EXTRACTED #community/comunitymodulestetgen

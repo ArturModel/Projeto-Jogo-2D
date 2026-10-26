@@ -1,17 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.collab-proxy"
-location: "L110"
+community: "com.unity.mathematics"
+location: "L458"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitycollab-proxy
+  - community/comunitymathematics
 ---
 
 # dependencies
 
 ## Connections
-- [[com.unity.collab-proxy]] - `contains` [EXTRACTED]
+- [[com.unity.modules.physics2d_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.tilemap_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitycollab-proxy
+#graphify/code #graphify/EXTRACTED #community/comunitymathematics

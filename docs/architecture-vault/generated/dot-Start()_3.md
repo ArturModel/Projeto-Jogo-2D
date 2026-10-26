@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "VideoSettingsController"
-location: "L20"
+community: "PrologoDirector"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/PrologoDirector
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
-- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
-- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

@@ -16,6 +16,6 @@ tags:
 - [[dot-TryObterInfoZona()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[Vector2_12]] - `references` [EXTRACTED]
-- [[Vector3_4]] - `references` [EXTRACTED]
+- [[Vector3_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

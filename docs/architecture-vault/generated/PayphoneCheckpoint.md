@@ -25,7 +25,7 @@ tags:
 - [[dot-GarantirModalCriado()]] - `method` [EXTRACTED]
 - [[dot-GerarClipAtenderEDiscarOrelhao()]] - `method` [EXTRACTED]
 - [[dot-GerarClipConfirmarSaveGancho()]] - `method` [EXTRACTED]
-- [[dot-Interact()_4]] - `method` [EXTRACTED]
+- [[dot-Interact()_3]] - `method` [EXTRACTED]
 - [[dot-Posicionar()_2]] - `method` [EXTRACTED]
 - [[dot-ProximaFalaContextual()]] - `method` [EXTRACTED]
 - [[dot-ResetStatic()_3]] - `method` [EXTRACTED]
@@ -43,8 +43,8 @@ tags:
 - [[PayphoneCheckpoint.cs]] - `contains` [EXTRACTED]
 - [[PayphoneId]] - `defines` [EXTRACTED]
 - [[PayphoneSlotInputWatcher]] - `contains` [EXTRACTED]
-- [[Prompt_4]] - `defines` [EXTRACTED]
+- [[Prompt_3]] - `defines` [EXTRACTED]
 - [[TextMeshProUGUI_3]] - `references` [EXTRACTED]
-- [[Vector2_6]] - `references` [EXTRACTED]
+- [[Vector2_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

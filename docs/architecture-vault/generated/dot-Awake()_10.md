@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "VideoSettingsController"
-location: "L36"
+community: "PrologoDirector"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/PrologoDirector
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
-- [[Light2D_1]] - `references` [EXTRACTED]
+- [[dot-MontarCortina()]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

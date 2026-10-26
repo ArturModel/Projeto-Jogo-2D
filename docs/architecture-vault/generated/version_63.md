@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.accessibility"
-location: "L305"
+community: "com.unity.collab-proxy"
+location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesaccessibility
+  - community/comunitycollab-proxy
 ---
 
 # version
 
 ## Connections
-- [[com.unity.modules.accessibility]] - `contains` [EXTRACTED]
+- [[com.unity.collab-proxy]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesaccessibility
+#graphify/code #graphify/EXTRACTED #community/comunitycollab-proxy

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "InteractionPrompt"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/InteractionPrompt
 ---
 
 # LoadSceneMode
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-LimparAoTrocarCena()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/InteractionPrompt

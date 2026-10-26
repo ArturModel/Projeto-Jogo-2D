@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.audio"
-location: "L340"
+community: "com.unity.2d.common"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesaudio
+  - community/comunity2dcommon
 ---
 
 # depth
 
 ## Connections
-- [[com.unity.modules.assetbundle_1]] - `contains` [EXTRACTED]
+- [[com.unity.2d.sprite_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio
+#graphify/code #graphify/EXTRACTED #community/comunity2dcommon

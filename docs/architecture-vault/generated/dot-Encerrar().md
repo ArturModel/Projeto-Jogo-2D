@@ -18,7 +18,7 @@ tags:
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[dot-Rodar()]] - `calls` [EXTRACTED]
-- [[dot-Update()_9]] - `calls` [EXTRACTED]
+- [[dot-Update()_10]] - `calls` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

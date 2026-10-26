@@ -12,9 +12,9 @@ tags:
 # .MostrarImediatamente()
 
 ## Connections
-- [[dot-Awake()_4]] - `calls` [EXTRACTED]
+- [[dot-Awake()_3]] - `calls` [EXTRACTED]
 - [[CanvasGroup_3]] - `references` [EXTRACTED]
 - [[OptionsPanelController]] - `method` [EXTRACTED]
-- [[RectTransform_2]] - `references` [EXTRACTED]
+- [[RectTransform_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/OptionsPanelController

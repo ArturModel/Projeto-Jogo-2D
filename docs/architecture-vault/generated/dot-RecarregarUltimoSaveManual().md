@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "CheckpointSystem"
+community: "MainMenuActions"
 location: "L241"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/MainMenuActions
 ---
 
 # .RecarregarUltimoSaveManual()
@@ -17,4 +17,4 @@ tags:
 - [[dot-TryLoadManualSave()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

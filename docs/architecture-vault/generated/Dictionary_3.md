@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AudioAmbiente"
+community: "PrologoDirector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioAmbiente
+  - community/PrologoDirector
 ---
 
 # Dictionary
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[AudioAmbiente]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioAmbiente
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

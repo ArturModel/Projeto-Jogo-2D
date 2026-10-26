@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "AudioAmbiente"
-location: "L28"
+community: "InteractionPrompt"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioAmbiente
+  - community/InteractionPrompt
 ---
 
 # Instance
 
 ## Connections
-- [[AudioAmbiente]] - `defines` [EXTRACTED]
+- [[InteractionPrompt]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioAmbiente
+#graphify/code #graphify/EXTRACTED #community/InteractionPrompt

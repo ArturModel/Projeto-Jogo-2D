@@ -22,7 +22,7 @@ members: 55
 - [[com.unity.inputsystem_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.learn.iet-framework_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.accessibility_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.adaptiveperformance_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
+- [[com.unity.modules.adaptiveperformance]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.ai]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.androidjni_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.animation_2]] - concept - Projeto Jogo 2D/Packages/manifest.json
@@ -40,7 +40,7 @@ members: 55
 - [[com.unity.modules.screencapture_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.terrain_2]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.terrainphysics_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.tetgen]] - concept - Projeto Jogo 2D/Packages/manifest.json
+- [[com.unity.modules.tetgen_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.tilemap_2]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.timelinefoundation_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.ui_2]] - concept - Projeto Jogo 2D/Packages/manifest.json
@@ -56,7 +56,7 @@ members: 55
 - [[com.unity.modules.vehicles_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.video_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.modules.wind_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.xr_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
+- [[com.unity.modules.xr]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.render-pipelines.universal_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.test-framework_2]] - concept - Projeto Jogo 2D/Packages/manifest.json
 - [[com.unity.timeline_1]] - concept - Projeto Jogo 2D/Packages/manifest.json
@@ -72,7 +72,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_dependencies_1]]
+- 1 edge to [[_COMMUNITY_dependencies_2]]
 
 ## Top bridge nodes
 - [[manifest.json]] - degree 55, connects to 1 community

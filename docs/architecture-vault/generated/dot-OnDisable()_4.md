@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "SubtitleSettingsController"
-location: "L125"
+community: "PlayerController"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SubtitleSettingsController
+  - community/PlayerController
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[SubtitleSettingsController]] - `method` [EXTRACTED]
+- [[Interactable]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SubtitleSettingsController
+#graphify/code #graphify/EXTRACTED #community/PlayerController

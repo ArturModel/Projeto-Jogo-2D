@@ -13,15 +13,15 @@ members: 15
 - [[dot-OnSelect()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
 - [[dot-ReiniciarSelecao()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
 - [[dot-Vincular()_3]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
-- [[AudioClip_3]] - code
-- [[AudioSource_3]] - code
+- [[AudioClip_4]] - code
+- [[AudioSource_4]] - code
 - [[BaseEventData]] - code
 - [[GameObject_7]] - code
 - [[IPointerEnterHandler]] - code
 - [[ISelectHandler]] - code
 - [[MenuItemSelector]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
 - [[PointerEventData]] - code
-- [[RectTransform_6]] - code
+- [[RectTransform_7]] - code
 - [[RuntimeInitializeOnLoadMethod_4]] - code
 
 ## Live Query (requires Dataview plugin)

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
 type: "code"
-community: "MonoBehaviour"
+community: "MainMenuActions"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/MainMenuActions
 ---
 
 # MainMenuActions.cs
@@ -15,4 +15,4 @@ tags:
 - [[MainMenuActions]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

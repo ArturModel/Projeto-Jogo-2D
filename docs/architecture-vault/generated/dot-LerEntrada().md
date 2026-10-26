@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
 type: "code"
-community: "OlharPrimeiraPessoa"
+community: "MonoBehaviour"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OlharPrimeiraPessoa
+  - community/MonoBehaviour
 ---
 
 # .LerEntrada()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-Update()_17]] - `calls` [EXTRACTED]
 - [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
-- [[Vector2_13]] - `references` [EXTRACTED]
+- [[Vector2_15]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OlharPrimeiraPessoa
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

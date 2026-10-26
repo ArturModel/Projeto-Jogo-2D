@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PrologoVideo"
+community: "PrologoDirector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/PrologoDirector
 ---
 
 # Image
 
 ## Connections
-- [[dot-MontarTela()]] - `references` [EXTRACTED]
+- [[dot-MontarCortina()]] - `references` [EXTRACTED]
+- [[PrologoDirector]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

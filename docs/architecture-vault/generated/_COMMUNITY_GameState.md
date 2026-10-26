@@ -1,21 +1,17 @@
 ---
 type: community
-members: 23
+members: 19
 ---
 
 # GameState
 
-**Members:** 23 nodes
+**Members:** 19 nodes
 
 ## Members
+- [[dot-AtualizarPainelLateral()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
 - [[dot-DefinirTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-ExportarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Limpar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-NovoJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
 - [[dot-ObterEntradasDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-ObterObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-ResetarMemoriaSilencioso()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-RestaurarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-Texto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[Arquitetura de Estado em RAM na Sessão (GameState)]] - rationale - Docs/SANTA_RITA_VERTICAL_SLICE_REPORT.md
 - [[Dictionary_1]] - code
@@ -42,17 +38,15 @@ SORT file.name ASC
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_InteracaoCapitulo1]]
 - 6 edges to [[_COMMUNITY_CheckpointSystem]]
-- 3 edges to [[_COMMUNITY_SinucaMinigameUI]]
+- 3 edges to [[_COMMUNITY_dot-SaveSlot]]
+- 3 edges to [[_COMMUNITY_MapaInterativoUI]]
 - 3 edges to [[_COMMUNITY_unityengine]]
 - 2 edges to [[_COMMUNITY_dot-AoClicarSlot]]
-- 2 edges to [[_COMMUNITY_dot-SaveSlot]]
-- 2 edges to [[_COMMUNITY_MapaInterativoUI]]
-- 1 edge to [[_COMMUNITY_CameraFollow]]
-- 1 edge to [[_COMMUNITY_MonoBehaviour]]
+- 2 edges to [[_COMMUNITY_MainMenuActions]]
 
 ## Top bridge nodes
-- [[GameState]] - degree 26, connects to 4 communities
+- [[GameState]] - degree 26, connects to 6 communities
 - [[GameStateSnapshot]] - degree 10, connects to 2 communities
 - [[EntradaDiario]] - degree 7, connects to 2 communities
-- [[dot-ObterObjetivo()]] - degree 3, connects to 2 communities
-- [[dot-NovoJogo()]] - degree 3, connects to 2 communities
+- [[dot-AtualizarPainelLateral()]] - degree 4, connects to 2 communities
+- [[GameState.cs]] - degree 9, connects to 1 community

@@ -1,22 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.render-pipelines.core"
+community: "com.unity.burst"
 location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityrender-pipelinescore
+  - community/comunityburst
 ---
 
 # com.unity.shadergraph
 
 ## Connections
-- [[dependencies_2]] - `contains` [EXTRACTED]
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_4]] - `contains` [EXTRACTED]
-- [[depth_5]] - `contains` [EXTRACTED]
-- [[source_5]] - `contains` [EXTRACTED]
-- [[version_5]] - `contains` [EXTRACTED]
+- [[dependencies_5]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_7]] - `contains` [EXTRACTED]
+- [[depth_7]] - `contains` [EXTRACTED]
+- [[source_7]] - `contains` [EXTRACTED]
+- [[version_7]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityrender-pipelinescore
+#graphify/code #graphify/EXTRACTED #community/comunityburst

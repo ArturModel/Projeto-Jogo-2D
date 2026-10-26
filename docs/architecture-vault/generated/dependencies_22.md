@@ -1,18 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "dependencies"
-location: "L564"
+community: "com.unity.modules.physics"
+location: "L443"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/comunitymodulesphysics
 ---
 
 # dependencies
 
 ## Connections
 - [[com.unity.modules.physics_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.vehicles]] - `contains` [EXTRACTED]
+- [[com.unity.modules.terrain_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.terrainphysics]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

@@ -1,17 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "GameMessageUI"
+community: "OptionsPanelController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/OptionsPanelController
 ---
 
 # RectTransform
 
 ## Connections
-- [[dot-Build()]] - `references` [EXTRACTED]
-- [[GameMessageUI]] - `references` [EXTRACTED]
+- [[dot-EsconderImediatamente()]] - `references` [EXTRACTED]
+- [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]
+- [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

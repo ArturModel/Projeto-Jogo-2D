@@ -1,23 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SinucaMinigameUI"
+community: "PayphoneCheckpoint"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/PayphoneCheckpoint
 ---
 
 # Vector2
 
 ## Connections
-- [[dot-CriarBotaoModal()]] - `references` [EXTRACTED]
-- [[dot-EncontrarPosicaoLivreDeterministica()]] - `references` [EXTRACTED]
-- [[dot-EscolherTacadaZe()]] - `references` [EXTRACTED]
-- [[dot-ExecutarTacada()]] - `references` [EXTRACTED]
-- [[dot-PosicaoValidaSemColisao()]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `references` [EXTRACTED]
-- [[BolaMesa]] - `references` [EXTRACTED]
-- [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_2]] - `references` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

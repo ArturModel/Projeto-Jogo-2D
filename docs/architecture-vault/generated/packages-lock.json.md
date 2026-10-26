@@ -15,7 +15,7 @@ tags:
 - [[com.unity.2d.common]] - `imports` [EXTRACTED]
 - [[com.unity.2d.sprite]] - `imports` [EXTRACTED]
 - [[com.unity.2d.tilemap]] - `imports` [EXTRACTED]
-- [[com.unity.burst]] - `imports` [EXTRACTED]
+- [[com.unity.burst_1]] - `imports` [EXTRACTED]
 - [[com.unity.collections]] - `imports` [EXTRACTED]
 - [[com.unity.editorcoroutines]] - `imports` [EXTRACTED]
 - [[com.unity.ext.nunit]] - `imports` [EXTRACTED]
@@ -42,7 +42,7 @@ tags:
 - [[com.unity.modules.unitywebrequestassetbundle]] - `imports` [EXTRACTED]
 - [[com.unity.modules.unitywebrequestaudio]] - `imports` [EXTRACTED]
 - [[com.unity.nuget.mono-cecil]] - `imports` [EXTRACTED]
-- [[com.unity.profiling.core]] - `imports` [EXTRACTED]
+- [[com.unity.profiling.core_1]] - `imports` [EXTRACTED]
 - [[com.unity.render-pipelines.core_1]] - `imports` [EXTRACTED]
 - [[com.unity.render-pipelines.universal-config_1]] - `imports` [EXTRACTED]
 - [[com.unity.searcher_1]] - `imports` [EXTRACTED]
@@ -51,6 +51,6 @@ tags:
 - [[com.unity.test-framework]] - `imports` [EXTRACTED]
 - [[com.unity.test-framework.performance]] - `imports` [EXTRACTED]
 - [[com.unity.ugui]] - `imports` [EXTRACTED]
-- [[dependencies_23]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/packages-lockjson

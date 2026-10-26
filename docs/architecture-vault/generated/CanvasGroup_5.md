@@ -11,7 +11,7 @@ tags:
 # CanvasGroup
 
 ## Connections
-- [[dot-Build()_1]] - `references` [EXTRACTED]
-- [[InteractionPrompt]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[Legenda]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Legenda

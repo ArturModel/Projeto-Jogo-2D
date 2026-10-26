@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MenuItemSelector"
+community: "PrologoDirector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MenuItemSelector
+  - community/PrologoDirector
 ---
 
 # AudioClip
 
 ## Connections
-- [[dot-Vincular()_3]] - `references` [EXTRACTED]
-- [[MenuItemSelector]] - `references` [EXTRACTED]
+- [[Camada]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MenuItemSelector
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

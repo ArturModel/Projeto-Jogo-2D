@@ -12,11 +12,11 @@ tags:
 # com.unity.2d.psdimporter
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_7]] - `contains` [EXTRACTED]
-- [[depth_8]] - `contains` [EXTRACTED]
-- [[source_8]] - `contains` [EXTRACTED]
-- [[url_3]] - `contains` [EXTRACTED]
-- [[version_8]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_11]] - `contains` [EXTRACTED]
+- [[depth_11]] - `contains` [EXTRACTED]
+- [[source_11]] - `contains` [EXTRACTED]
+- [[url_5]] - `contains` [EXTRACTED]
+- [[version_11]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunity2dcommon

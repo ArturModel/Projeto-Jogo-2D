@@ -1,22 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.uielements"
+community: "com.unity.2d.common"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesuielements
+  - community/comunity2dcommon
 ---
 
 # com.unity.2d.animation
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_36]] - `contains` [EXTRACTED]
-- [[depth_36]] - `contains` [EXTRACTED]
-- [[source_36]] - `contains` [EXTRACTED]
-- [[url_7]] - `contains` [EXTRACTED]
-- [[version_36]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_8]] - `contains` [EXTRACTED]
+- [[depth_8]] - `contains` [EXTRACTED]
+- [[source_8]] - `contains` [EXTRACTED]
+- [[url_2]] - `contains` [EXTRACTED]
+- [[version_8]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesuielements
+#graphify/code #graphify/EXTRACTED #community/comunity2dcommon

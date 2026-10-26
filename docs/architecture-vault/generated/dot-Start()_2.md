@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "CameraFollow"
-location: "L41"
+community: "VideoSettingsController"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CameraFollow
+  - community/VideoSettingsController
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
+- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
+- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
+- [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CameraFollow
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

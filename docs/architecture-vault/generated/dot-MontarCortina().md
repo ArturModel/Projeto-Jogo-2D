@@ -12,10 +12,10 @@ tags:
 # .MontarCortina()
 
 ## Connections
-- [[dot-Awake()_11]] - `calls` [EXTRACTED]
+- [[dot-Awake()_10]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[Image_5]] - `references` [EXTRACTED]
+- [[Image_6]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrologoDirector

@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "LimpadorParabrisa"
+community: "PrologoDirector"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LimpadorParabrisa
+  - community/PrologoDirector
 ---
 
 # .AplicarAngulo()
 
 ## Connections
-- [[dot-Update()_16]] - `calls` [EXTRACTED]
+- [[dot-Update()_9]] - `calls` [EXTRACTED]
 - [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LimpadorParabrisa
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

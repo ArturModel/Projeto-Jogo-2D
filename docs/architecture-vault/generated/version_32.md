@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
 community: "com.unity.modules.jsonserialize"
-location: "L426"
+location: "L496"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # version
 
 ## Connections
-- [[com.unity.modules.subsystems_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.unityanalytics]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

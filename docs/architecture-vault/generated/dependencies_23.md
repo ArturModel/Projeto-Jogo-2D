@@ -1,88 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "dependencies"
-location: "L2"
+community: "com.unity.modules.physics"
+location: "L564"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/comunitymodulesphysics
 ---
 
 # dependencies
 
 ## Connections
-- [[com.unity.2d.animation]] - `contains` [EXTRACTED]
-- [[com.unity.2d.aseprite]] - `contains` [EXTRACTED]
-- [[com.unity.2d.common_1]] - `contains` [EXTRACTED]
-- [[com.unity.2d.psdimporter]] - `contains` [EXTRACTED]
-- [[com.unity.2d.sprite_1]] - `contains` [EXTRACTED]
-- [[com.unity.2d.spriteshape]] - `contains` [EXTRACTED]
-- [[com.unity.2d.tilemap_1]] - `contains` [EXTRACTED]
-- [[com.unity.2d.tilemap.extras]] - `contains` [EXTRACTED]
-- [[com.unity.2d.tooling]] - `contains` [EXTRACTED]
-- [[com.unity.burst_1]] - `contains` [EXTRACTED]
-- [[com.unity.collab-proxy]] - `contains` [EXTRACTED]
-- [[com.unity.collections_1]] - `contains` [EXTRACTED]
-- [[com.unity.editorcoroutines_1]] - `contains` [EXTRACTED]
-- [[com.unity.ext.nunit_1]] - `contains` [EXTRACTED]
-- [[com.unity.graph-authoring]] - `contains` [EXTRACTED]
-- [[com.unity.ide.rider]] - `contains` [EXTRACTED]
-- [[com.unity.ide.visualstudio]] - `contains` [EXTRACTED]
-- [[com.unity.inputsystem]] - `contains` [EXTRACTED]
-- [[com.unity.learn.iet-framework]] - `contains` [EXTRACTED]
-- [[com.unity.mathematics_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.accessibility]] - `contains` [EXTRACTED]
-- [[com.unity.modules.adaptiveperformance]] - `contains` [EXTRACTED]
-- [[com.unity.modules.ai_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.androidjni]] - `contains` [EXTRACTED]
-- [[com.unity.modules.animation_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.assetbundle_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.audio_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.cloth]] - `contains` [EXTRACTED]
-- [[com.unity.modules.director_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.hierarchycore_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.imageconversion_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.imgui_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.jsonserialize_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.particlesystem_1]] - `contains` [EXTRACTED]
 - [[com.unity.modules.physics_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.physics2d_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.physicscore2d_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.screencapture]] - `contains` [EXTRACTED]
-- [[com.unity.modules.subsystems_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.terrain_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.terrainphysics]] - `contains` [EXTRACTED]
-- [[com.unity.modules.tetgen_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.tilemap_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.timelinefoundation]] - `contains` [EXTRACTED]
-- [[com.unity.modules.ui_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.uielements_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.umbra_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.unityanalytics]] - `contains` [EXTRACTED]
-- [[com.unity.modules.unitywebrequest_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.unitywebrequestassetbundle_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.unitywebrequestaudio_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.unitywebrequesttexture]] - `contains` [EXTRACTED]
-- [[com.unity.modules.unitywebrequestwww]] - `contains` [EXTRACTED]
-- [[com.unity.modules.vectorgraphics]] - `contains` [EXTRACTED]
 - [[com.unity.modules.vehicles]] - `contains` [EXTRACTED]
-- [[com.unity.modules.video]] - `contains` [EXTRACTED]
-- [[com.unity.modules.wind]] - `contains` [EXTRACTED]
-- [[com.unity.modules.xr]] - `contains` [EXTRACTED]
-- [[com.unity.nuget.mono-cecil_1]] - `contains` [EXTRACTED]
-- [[com.unity.profiling.core_1]] - `contains` [EXTRACTED]
-- [[com.unity.render-pipelines.core]] - `contains` [EXTRACTED]
-- [[com.unity.render-pipelines.universal]] - `contains` [EXTRACTED]
-- [[com.unity.render-pipelines.universal-config]] - `contains` [EXTRACTED]
-- [[com.unity.searcher]] - `contains` [EXTRACTED]
-- [[com.unity.settings-manager_1]] - `contains` [EXTRACTED]
-- [[com.unity.shadergraph]] - `contains` [EXTRACTED]
-- [[com.unity.test-framework_1]] - `contains` [EXTRACTED]
-- [[com.unity.test-framework.performance_1]] - `contains` [EXTRACTED]
-- [[com.unity.timeline]] - `contains` [EXTRACTED]
-- [[com.unity.ugui_1]] - `contains` [EXTRACTED]
-- [[com.unity.visualscripting]] - `contains` [EXTRACTED]
-- [[packages-lock.json]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

@@ -15,7 +15,7 @@ tags:
 - [[dot-AbrirModalCarregarDoMenu()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarTextosDosSlots()]] - `calls` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_4]] - `calls` [EXTRACTED]
+- [[dot-Interact()_3]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

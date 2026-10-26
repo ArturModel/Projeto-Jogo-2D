@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: ".DetectarLimitesDaRegiao"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DetectarLimitesDaRegiao
+  - community/PlayerController
 ---
 
 # TilemapRenderer
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-DetectarLimitesDaRegiao()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DetectarLimitesDaRegiao
+#graphify/code #graphify/EXTRACTED #community/PlayerController

@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "PrologoDirector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/PrologoDirector
 ---
 
 # Transform
 
 ## Connections
-- [[dot-CreateBox()]] - `references` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `references` [EXTRACTED]
-- [[dot-CreateLabel()]] - `references` [EXTRACTED]
+- [[LimpadorParabrisa]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

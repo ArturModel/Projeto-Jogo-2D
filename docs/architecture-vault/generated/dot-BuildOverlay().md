@@ -12,12 +12,12 @@ tags:
 # .BuildOverlay()
 
 ## Connections
-- [[dot-Awake()_2]] - `calls` [EXTRACTED]
+- [[dot-Awake()_1]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[Canvas]] - `references` [EXTRACTED]
+- [[Canvas_1]] - `references` [EXTRACTED]
 - [[CanvasGroup_1]] - `references` [EXTRACTED]
-- [[CanvasScaler]] - `references` [EXTRACTED]
-- [[Image_1]] - `references` [EXTRACTED]
+- [[CanvasScaler_1]] - `references` [EXTRACTED]
+- [[Image_2]] - `references` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SceneFader

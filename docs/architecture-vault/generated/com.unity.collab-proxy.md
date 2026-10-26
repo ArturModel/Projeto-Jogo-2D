@@ -12,11 +12,11 @@ tags:
 # com.unity.collab-proxy
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_62]] - `contains` [EXTRACTED]
-- [[depth_62]] - `contains` [EXTRACTED]
-- [[source_62]] - `contains` [EXTRACTED]
-- [[url_14]] - `contains` [EXTRACTED]
-- [[version_62]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_63]] - `contains` [EXTRACTED]
+- [[depth_63]] - `contains` [EXTRACTED]
+- [[source_63]] - `contains` [EXTRACTED]
+- [[url_15]] - `contains` [EXTRACTED]
+- [[version_63]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitycollab-proxy

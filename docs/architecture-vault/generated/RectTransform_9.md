@@ -1,21 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MapaInterativoUI"
+community: ".CreateLabel"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/CreateLabel
 ---
 
 # RectTransform
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
-- [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
-- [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
-- [[dot-CriarMarcadorPonto()]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
-- [[MapaInterativoUI]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/CreateLabel

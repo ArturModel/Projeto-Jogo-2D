@@ -1,20 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MenuPausa"
+community: ".CreateCanvas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MenuPausa
+  - community/CreateCanvas
 ---
 
 # Image
 
 ## Connections
-- [[dot-Botao()]] - `references` [EXTRACTED]
-- [[dot-Imagem()]] - `references` [EXTRACTED]
-- [[dot-LinhaDropdown()]] - `references` [EXTRACTED]
-- [[dot-LinhaSlider()]] - `references` [EXTRACTED]
-- [[dot-LinhaToggle()]] - `references` [EXTRACTED]
+- [[dot-CreateBox()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MenuPausa
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

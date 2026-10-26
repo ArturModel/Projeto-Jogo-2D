@@ -13,16 +13,17 @@
   - `EntradaDaCidade.unity`: Mundo multi-zonas gerenciado por `Capitulo1Director` (5 Zonas Externas + 4 Interiores: Posto, Mercadinho, Casa do Avô nº 40 e Bar do Zé), Orelhões de save manual e Mapa Interativo (`MapaInterativoUI`).
   - `CasaDoAvo.unity`: Investigação da rotina interrompida no mesmo dia (café morno, cartas, recibo de 2004 do Mercadinho, desordem perto da porta e telefone fora do gancho).
   - `BarDoZe.unity`: Confronto com o Zé, minigame de sinuca em série Melhor de 3 (`SinucaMinigameUI` com a regra *"A Bola Marcada"*), entrega da Ficha do Clube #01 e liberação do Limiar do Centro.
-- **Grafo, Cofre Obsidian e Governança de IA:**
+- **Grafo, Cofre Obsidian e Governança Multiplataforma de IA (Alinhado ao Roteiro Universal v2.0 e Prompt Mestre v2):**
   - Grafo completo em `graphify-out/` (`graph.json`, `GRAPH_REPORT.md`, `graph.html`).
-  - Cofre Obsidian em `docs/architecture-vault/` com `generated/` (1.650+ notas atômicas e `graph.canvas`) e `manual/` (`Visao_Geral_Arquitetura.md`, `Catalogo_Completo_Scripts.md`, `Mapa_Cenas_Zonas_E_Fluxo_Cap1.md`, `Guia_Trabalho_Com_IA.md`).
-  - Governança multi-agente configurada na raiz via `AGENTS.md`, `CLAUDE.md` e `.agents/rules/project-context.md`.
-  - `README.md` atualizado com instruções passo a passo para toda a equipe instalar e utilizar o Graphify + Obsidian junto com IA.
+  - Cofre Obsidian em `docs/architecture-vault/` com `generated/` (1.700+ notas atômicas e `graph.canvas`) e `manual/` (`Visao_Geral_Arquitetura.md`, `Catalogo_Completo_Scripts.md`, `Mapa_Cenas_Zonas_E_Fluxo_Cap1.md`, `Guia_Trabalho_Com_IA.md`).
+  - Governança multi-agente configurada na raiz via `AGENTS.md` (com marcadores `<!-- BEGIN/END memoria-projeto -->`), `CLAUDE.md` (com `@AGENTS.md`) e `.agents/rules/project-context.md`.
+  - Scripts idempotentes multiplataforma em `scripts/`: `.sh` (Linux/macOS/WSL) e `.ps1` (Windows PowerShell).
+  - `README.md` e `docs/GRAPHIFY-OBSIDIAN-OPERACAO.md` atualizados com instruções completas para Windows e Linux.
 
 ---
 
 ## 2. Trabalho em Andamento [Verificado]
-- Branch dedicada `chore/graphify-obsidian-setup` pronta e publicada no GitHub (`origin/chore/graphify-obsidian-setup`) com todos os artefatos do Graphify, cofre Obsidian, `AGENTS.md` e guia no `README.md`.
+- Branch dedicada `chore/graphify-obsidian-setup` sincronizada e publicada no GitHub (`origin/chore/graphify-obsidian-setup`).
 
 ---
 

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "OptionsPanelController"
+community: "MenuPausa"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/MenuPausa
 ---
 
 # RectTransform
 
 ## Connections
-- [[dot-Vincular()]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `references` [EXTRACTED]
+- [[dot-Stretch()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/MenuPausa

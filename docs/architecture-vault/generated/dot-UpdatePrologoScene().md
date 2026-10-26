@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "PrologoVideo"
+community: "MonoBehaviour"
 location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/MonoBehaviour
 ---
 
 # .UpdatePrologoScene()
@@ -17,4 +17,4 @@ tags:
 - [[PrologoVideo]] - `references` [EXTRACTED]
 - [[SantaRitaChapter1Builder]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

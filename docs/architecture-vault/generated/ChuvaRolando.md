@@ -12,10 +12,10 @@ tags:
 # ChuvaRolando
 
 ## Connections
-- [[dot-Awake()_9]] - `method` [EXTRACTED]
-- [[dot-Update()_6]] - `method` [EXTRACTED]
+- [[dot-Awake()_16]] - `method` [EXTRACTED]
+- [[dot-Update()_16]] - `method` [EXTRACTED]
 - [[ChuvaRolando.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
-- [[Vector3_3]] - `references` [EXTRACTED]
+- [[Vector3_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MonoBehaviour

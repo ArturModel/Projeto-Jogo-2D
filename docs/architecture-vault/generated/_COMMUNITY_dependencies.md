@@ -1,39 +1,24 @@
 ---
 type: community
-members: 26
+members: 11
 ---
 
 # dependencies
 
-**Members:** 26 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[com.unity.modules.cloth]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.physics_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.terrain_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.terrainphysics]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.vehicles]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_18]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_19]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_20]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_21]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_22]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_23]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_19]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_20]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_21]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_22]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_23]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_19]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_20]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_21]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_22]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_23]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_19]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_20]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_21]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_22]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_23]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.ugui_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.visualscripting]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_56]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_57]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_57]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_58]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_57]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_58]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[url_13]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_57]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_58]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,27 +28,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_com.unity.modules.imgui]]
-- 8 edges to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 7 edges to [[_COMMUNITY_com.unity.modules.audio]]
-- 6 edges to [[_COMMUNITY_com.unity.render-pipelines.core]]
-- 6 edges to [[_COMMUNITY_com.unity.2d.common]]
-- 5 edges to [[_COMMUNITY_com.unity.test-framework]]
-- 4 edges to [[_COMMUNITY_com.unity.burst]]
-- 4 edges to [[_COMMUNITY_com.unity.modules.animation]]
-- 3 edges to [[_COMMUNITY_com.unity.settings-manager]]
-- 3 edges to [[_COMMUNITY_com.unity.modules.uielements]]
-- 3 edges to [[_COMMUNITY_com.unity.modules.imageconversion]]
-- 3 edges to [[_COMMUNITY_com.unity.modules.physics2d]]
-- 3 edges to [[_COMMUNITY_com.unity.2d.tilemap]]
-- 1 edge to [[_COMMUNITY_packages-lock.json]]
-- 1 edge to [[_COMMUNITY_com.unity.collab-proxy]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.accessibility]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.ai]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.tetgen]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.umbra]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.wind]]
+- 2 edges to [[_COMMUNITY_dependencies_1]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.physics]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.imgui]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.ui]]
+- 1 edge to [[_COMMUNITY_com.unity.mathematics]]
 
 ## Top bridge nodes
-- [[dependencies_23]] - degree 72, connects to 20 communities
-- [[com.unity.modules.physics_1]] - degree 11, connects to 2 communities
+- [[dependencies_56]] - degree 6, connects to 5 communities
+- [[com.unity.ugui_1]] - degree 6, connects to 1 community
+- [[com.unity.visualscripting]] - degree 6, connects to 1 community
+- [[dependencies_57]] - degree 3, connects to 1 community

@@ -17,6 +17,6 @@ tags:
 - [[GameObject_2]] - `references` [EXTRACTED]
 - [[IEnumerator_5]] - `references` [EXTRACTED]
 - [[OptionsPanelController]] - `method` [EXTRACTED]
-- [[RectTransform_2]] - `references` [EXTRACTED]
+- [[RectTransform_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/OptionsPanelController

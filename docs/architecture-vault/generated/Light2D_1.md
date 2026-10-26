@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "VideoSettingsController"
+community: "CamadaDeLuz"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/CamadaDeLuz
 ---
 
 # Light2D
 
 ## Connections
-- [[dot-Awake()_10]] - `references` [EXTRACTED]
+- [[dot-Awake()_5]] - `references` [EXTRACTED]
 - [[CamadaDeLuz]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/CamadaDeLuz

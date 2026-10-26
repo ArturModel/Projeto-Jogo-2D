@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "GameState"
 location: "L888"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/GameState
 ---
 
 # .AtualizarPainelLateral()
@@ -17,4 +17,4 @@ tags:
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/GameState

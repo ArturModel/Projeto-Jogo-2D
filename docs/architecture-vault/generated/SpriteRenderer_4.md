@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EstradaScroller"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EstradaScroller
+  - community/PlayerController
 ---
 
 # SpriteRenderer
 
 ## Connections
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
-- [[Fileira]] - `references` [EXTRACTED]
+- [[dot-DetectarLimitesDaRegiao()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EstradaScroller
+#graphify/code #graphify/EXTRACTED #community/PlayerController

@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-CriarLanternaNaMao()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
-- [[Sprite_3]] - `references` [EXTRACTED]
+- [[Sprite_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PlayerController

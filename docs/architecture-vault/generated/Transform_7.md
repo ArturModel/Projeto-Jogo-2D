@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EstradaScroller"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EstradaScroller
+  - community/PlayerController
 ---
 
 # Transform
 
 ## Connections
-- [[Fileira]] - `references` [EXTRACTED]
+- [[CameraFollow]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EstradaScroller
+#graphify/code #graphify/EXTRACTED #community/PlayerController

@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "LimpadorParabrisa"
+community: "MapaInterativoUI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LimpadorParabrisa
+  - community/MapaInterativoUI
 ---
 
 # Transform
 
 ## Connections
-- [[LimpadorParabrisa]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LimpadorParabrisa
+#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

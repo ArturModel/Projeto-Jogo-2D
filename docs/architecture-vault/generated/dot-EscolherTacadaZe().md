@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-ExecutarTurnoZeCoroutine()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
-- [[Vector2_5]] - `references` [EXTRACTED]
+- [[Vector2_4]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

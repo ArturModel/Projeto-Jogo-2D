@@ -12,7 +12,7 @@ tags:
 # SceneFader
 
 ## Connections
-- [[dot-Awake()_2]] - `method` [EXTRACTED]
+- [[dot-Awake()_1]] - `method` [EXTRACTED]
 - [[dot-BannerRoutine()]] - `method` [EXTRACTED]
 - [[dot-Bootstrap()]] - `method` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `method` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[dot-LoadScene()]] - `method` [EXTRACTED]
 - [[dot-MostrarBannerArea()]] - `method` [EXTRACTED]
 - [[dot-OnDestroy()_1]] - `method` [EXTRACTED]
-- [[dot-OnSceneLoaded()_1]] - `method` [EXTRACTED]
+- [[dot-OnSceneLoaded()]] - `method` [EXTRACTED]
 - [[dot-ResetStatic()]] - `method` [EXTRACTED]
 - [[dot-ResolverCaminhoCena()]] - `method` [EXTRACTED]
 - [[dot-SincronizarCenasNoEditor()]] - `method` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "InteracaoCapitulo1"
+community: "SceneFader"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/SceneFader
 ---
 
 # Scene
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-OnSceneLoaded()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/SceneFader

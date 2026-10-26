@@ -12,10 +12,10 @@ tags:
 # com.unity.modules.accessibility
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_63]] - `contains` [EXTRACTED]
-- [[depth_63]] - `contains` [EXTRACTED]
-- [[source_63]] - `contains` [EXTRACTED]
-- [[version_63]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_65]] - `contains` [EXTRACTED]
+- [[depth_65]] - `contains` [EXTRACTED]
+- [[source_65]] - `contains` [EXTRACTED]
+- [[version_65]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesaccessibility

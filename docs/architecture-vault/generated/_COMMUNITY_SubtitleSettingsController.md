@@ -12,11 +12,11 @@ members: 15
 - [[dot-AlterarFundo()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-AlterarTamanho()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-AplicarPreview()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[dot-OnDisable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
+- [[dot-OnDisable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-Start()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-Vincular()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[FundoEscuroAtivo]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[Image_7]] - code
+- [[Image_8]] - code
 - [[LegendasAtivas]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[MultiplicadorTamanho]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[Slider_3]] - code

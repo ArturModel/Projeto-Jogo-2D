@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Avancar()]] - `method` [EXTRACTED]
-- [[dot-Awake()_5]] - `method` [EXTRACTED]
+- [[dot-Awake()_4]] - `method` [EXTRACTED]
 - [[dot-Build()]] - `method` [EXTRACTED]
 - [[dot-ConfigurarRetratoEFalante()]] - `method` [EXTRACTED]
 - [[dot-Digitar()]] - `method` [EXTRACTED]
@@ -33,12 +33,12 @@ tags:
 - [[Dictionary_2]] - `references` [EXTRACTED]
 - [[GameMessageUI.cs]] - `contains` [EXTRACTED]
 - [[GameObject_4]] - `references` [EXTRACTED]
-- [[Image_2]] - `references` [EXTRACTED]
+- [[Image_3]] - `references` [EXTRACTED]
 - [[Instance_2]] - `defines` [EXTRACTED]
 - [[IsShowing]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
-- [[RectTransform_3]] - `references` [EXTRACTED]
-- [[Sprite_1]] - `references` [EXTRACTED]
+- [[RectTransform_4]] - `references` [EXTRACTED]
+- [[Sprite_2]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/GameMessageUI

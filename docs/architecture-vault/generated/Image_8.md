@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "SubtitleSettingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/SubtitleSettingsController
 ---
 
 # Image
 
 ## Connections
-- [[dot-AbrirPainelFechamento()]] - `references` [EXTRACTED]
-- [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_5]] - `references` [EXTRACTED]
+- [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/SubtitleSettingsController

@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "InteracaoCapitulo1"
-location: "L1206"
+community: "SceneFader"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/SceneFader
 ---
 
 # .OnSceneLoaded()
 
 ## Connections
-- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[dot-FadeIn()]] - `calls` [EXTRACTED]
 - [[LoadSceneMode]] - `references` [EXTRACTED]
 - [[Scene]] - `references` [EXTRACTED]
+- [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/SceneFader

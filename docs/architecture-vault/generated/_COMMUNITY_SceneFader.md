@@ -8,7 +8,7 @@ members: 31
 **Members:** 31 nodes
 
 ## Members
-- [[dot-Awake()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[dot-Awake()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-BannerRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-Bootstrap()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-BuildOverlay()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
@@ -19,7 +19,7 @@ members: 31
 - [[dot-LoadScene()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-MostrarBannerArea()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-OnDestroy()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[dot-OnSceneLoaded()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[dot-OnSceneLoaded()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ResetStatic()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ResolverCaminhoCena()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-SincronizarCenasNoEditor()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
@@ -27,16 +27,16 @@ members: 31
 - [[dot-TransitionRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ZoneTransitionRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[Action_1]] - code
-- [[Canvas]] - code
+- [[Canvas_1]] - code
 - [[CanvasGroup_1]] - code
-- [[CanvasScaler]] - code
+- [[CanvasScaler_1]] - code
 - [[Coroutine]] - code
 - [[IEnumerator_3]] - code
-- [[Image_1]] - code
+- [[Image_2]] - code
 - [[Instance]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[LoadSceneMode_1]] - code
+- [[LoadSceneMode]] - code
 - [[RuntimeInitializeOnLoadMethod]] - code
-- [[Scene_1]] - code
+- [[Scene]] - code
 - [[SceneFader]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[TextMeshProUGUI]] - code
 
@@ -50,7 +50,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_MonoBehaviour]]
 - 1 edge to [[_COMMUNITY_unityengine]]
-- 1 edge to [[_COMMUNITY_Legenda]]
+- 1 edge to [[_COMMUNITY_dot-CreateLabel]]
 
 ## Top bridge nodes
 - [[SceneFader]] - degree 24, connects to 2 communities

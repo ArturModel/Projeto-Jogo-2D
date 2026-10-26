@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
 type: "code"
-community: "SantaRitaChapter1Builder"
+community: "PlayerController"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SantaRitaChapter1Builder
+  - community/PlayerController
 ---
 
 # .OnTriggerEnter2D()
@@ -17,4 +17,4 @@ tags:
 - [[DoorTrigger]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SantaRitaChapter1Builder
+#graphify/code #graphify/EXTRACTED #community/PlayerController

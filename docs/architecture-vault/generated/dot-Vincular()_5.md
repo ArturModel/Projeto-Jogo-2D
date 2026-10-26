@@ -12,7 +12,7 @@ tags:
 # .Vincular()
 
 ## Connections
-- [[Image_7]] - `references` [EXTRACTED]
+- [[Image_8]] - `references` [EXTRACTED]
 - [[Slider_3]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `method` [EXTRACTED]
 - [[TMP_Text_3]] - `references` [EXTRACTED]

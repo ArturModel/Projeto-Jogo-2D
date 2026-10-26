@@ -6,6 +6,25 @@
 
 ---
 
+## [2026-10-26] — Alinhamento Integral com Roteiro Universal v2.0 e Prompt Mestre v2 (Multiplataforma Windows + Linux)
+
+### Objetivo da Tarefa
+Verificar os documentos de referência do usuário (*Roteiro Universal v2.0* e *Prompt Mestre v2*) e incorporar todos os requisitos faltantes para que os colegas (especialmente em Windows PowerShell e múltiplos agentes como Claude Code, Codex e Cursor) tenham suporte completo.
+
+### Arquivos Criados / Modificados
+- **Scripts PowerShell para Windows (`scripts/*.ps1`):**
+  - `scripts/graphify-setup.ps1`, `scripts/graphify-refresh.ps1`, `scripts/graphify-validate.ps1`.
+- **Governança e Segurança (`AGENTS.md`, `CLAUDE.md`, `.graphifyignore`, `.gitignore`):**
+  - Adicionados marcadores `<!-- BEGIN/END memoria-projeto -->` em `AGENTS.md`, diretiva `@AGENTS.md` em `CLAUDE.md`, regras de segurança contra prompt injection, distinção CLI vs. Skill e exclusão de segredos/certificados (`.env*`, `.pem`, `.key`, `.p12`, `.pfx`, `**/.obsidian/workspace*.json`).
+- **Documentação (`README.md`, `docs/GRAPHIFY-OBSIDIAN-OPERACAO.md`):**
+  - Adicionados comandos de instalação via `winget` / PowerShell no Windows, matriz de integração por agente e tabela de solução de problemas.
+
+### Validações Realizadas
+1. Execução de `./scripts/graphify-refresh.sh` e `./scripts/graphify-validate.sh` (0 erros).
+2. Commit e push atualizados na branch `chore/graphify-obsidian-setup`.
+
+---
+
 ## [2026-10-26] — Detalhamento Completo dos 44 Scripts no Obsidian/Graphify, Criação do AGENTS.md e Publicação da Branch no GitHub
 
 ### Objetivo da Tarefa

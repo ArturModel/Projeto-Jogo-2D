@@ -13,8 +13,8 @@ members: 29
 - [[dot-AbrirOpcoes()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[dot-AbrirPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[dot-AbrirVideo()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-Awake()_3]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-Awake()_4]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
+- [[dot-Awake()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
+- [[dot-Awake()_3]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[dot-ConfigurarGrupo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[dot-EsconderImediatamente()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[dot-FecharOpcoes()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
@@ -33,8 +33,8 @@ members: 29
 - [[IEnumerator_5]] - code
 - [[MenuPanelTransition]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[OptionsPanelController]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[RectTransform_1]] - code
 - [[RectTransform_2]] - code
+- [[RectTransform_3]] - code
 - [[TMP_Text_1]] - code
 - [[Vector2_2]] - code
 

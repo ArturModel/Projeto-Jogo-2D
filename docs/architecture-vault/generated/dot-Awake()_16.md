@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
-community: "LimpadorParabrisa"
-location: "L36"
+community: "MonoBehaviour"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LimpadorParabrisa
+  - community/MonoBehaviour
 ---
 
 # .Awake()
 
 ## Connections
-- [[LimpadorParabrisa]] - `method` [EXTRACTED]
+- [[ChuvaRolando]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LimpadorParabrisa
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

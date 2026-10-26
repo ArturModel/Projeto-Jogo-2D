@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.physics2d"
-location: "L69"
+community: "dependencies"
+location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics2d
+  - community/dependencies
 ---
 
 # url
 
 ## Connections
-- [[com.unity.2d.spriteshape]] - `contains` [EXTRACTED]
+- [[com.unity.visualscripting]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics2d
+#graphify/code #graphify/EXTRACTED #community/dependencies

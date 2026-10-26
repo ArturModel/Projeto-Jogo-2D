@@ -1,16 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "SceneFader"
+community: "MenuPausa"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/MenuPausa
 ---
 
 # Image
 
 ## Connections
-- [[dot-BuildOverlay()]] - `references` [EXTRACTED]
+- [[dot-Botao()]] - `references` [EXTRACTED]
+- [[dot-Imagem()]] - `references` [EXTRACTED]
+- [[dot-LinhaDropdown()]] - `references` [EXTRACTED]
+- [[dot-LinhaSlider()]] - `references` [EXTRACTED]
+- [[dot-LinhaToggle()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/MenuPausa

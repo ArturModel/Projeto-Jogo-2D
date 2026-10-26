@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AbrirOpcoes()]] - `method` [EXTRACTED]
-- [[dot-Awake()_3]] - `method` [EXTRACTED]
+- [[dot-Awake()_2]] - `method` [EXTRACTED]
 - [[dot-ConfigurarGrupo()]] - `method` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-FecharOpcoes()]] - `method` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[MenuPanelTransition.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[OptionsPanelController]] - `references` [EXTRACTED]
-- [[RectTransform_1]] - `references` [EXTRACTED]
+- [[RectTransform_2]] - `references` [EXTRACTED]
 - [[Vector2_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/OptionsPanelController

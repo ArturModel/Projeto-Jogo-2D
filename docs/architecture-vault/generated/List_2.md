@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Interactable"
+community: "CamadaDeLuz"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Interactable
+  - community/CamadaDeLuz
 ---
 
 # List
 
 ## Connections
-- [[Interactable]] - `references` [EXTRACTED]
+- [[CamadaDeLuz]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Interactable
+#graphify/code #graphify/EXTRACTED #community/CamadaDeLuz

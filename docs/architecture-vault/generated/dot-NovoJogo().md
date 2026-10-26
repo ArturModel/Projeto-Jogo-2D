@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
 type: "code"
-community: "GameState"
+community: "MainMenuActions"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/MainMenuActions
 ---
 
 # .NovoJogo()
@@ -16,4 +16,4 @@ tags:
 - [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[MainMenuActions]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

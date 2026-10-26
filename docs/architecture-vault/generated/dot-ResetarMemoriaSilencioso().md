@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "GameState"
+community: "MainMenuActions"
 location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/MainMenuActions
 ---
 
 # .ResetarMemoriaSilencioso()
@@ -16,4 +16,4 @@ tags:
 - [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

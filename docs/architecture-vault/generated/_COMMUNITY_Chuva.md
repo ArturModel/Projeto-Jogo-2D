@@ -23,7 +23,7 @@ members: 53
 - [[dot-DesenharPocas()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-DesenharRespingo()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-GarantirCamadas()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-LateUpdate()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
+- [[dot-LateUpdate()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-LiberarCamada()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-Limpar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-MetadeDaTela()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
@@ -32,7 +32,7 @@ members: 53
 - [[dot-NovoRespingo()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-OnDestroy()_4]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-OnDisable()_5]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
+- [[dot-OnEnable()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-ParaPixel()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-Pintar()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-Simular()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
@@ -60,7 +60,7 @@ members: 53
 - [[Respingo_1]] - code
 - [[SpriteRenderer_6]] - code
 - [[Texture2D_2]] - code
-- [[Vector2_14]] - code
+- [[Vector2_13]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -71,7 +71,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Capitulo1Director]]
-- 1 edge to [[_COMMUNITY_AudioAmbiente]]
+- 1 edge to [[_COMMUNITY_PrologoDirector]]
 - 1 edge to [[_COMMUNITY_MonoBehaviour]]
 - 1 edge to [[_COMMUNITY_unityengine]]
 

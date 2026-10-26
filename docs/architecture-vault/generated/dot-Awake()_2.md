@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
-community: "SceneFader"
-location: "L60"
+community: "OptionsPanelController"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/OptionsPanelController
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
-- [[dot-FadeIn()]] - `calls` [EXTRACTED]
-- [[SceneFader]] - `method` [EXTRACTED]
+- [[dot-ConfigurarGrupo()]] - `calls` [EXTRACTED]
+- [[MenuPanelTransition]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

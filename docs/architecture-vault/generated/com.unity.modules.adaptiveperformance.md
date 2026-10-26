@@ -1,21 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
-type: "code"
-community: "com.unity.modules.jsonserialize"
-location: "L310"
+source_file: "Projeto Jogo 2D/Packages/manifest.json"
+type: "concept"
+community: "manifest.json"
+location: "L22"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/manifestjson
 ---
 
 # com.unity.modules.adaptiveperformance
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_29]] - `contains` [EXTRACTED]
-- [[depth_29]] - `contains` [EXTRACTED]
-- [[source_29]] - `contains` [EXTRACTED]
-- [[version_29]] - `contains` [EXTRACTED]
+- [[manifest.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/concept #graphify/EXTRACTED #community/manifestjson

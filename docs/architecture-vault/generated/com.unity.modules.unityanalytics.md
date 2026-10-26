@@ -12,10 +12,10 @@ tags:
 # com.unity.modules.unityanalytics
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_34]] - `contains` [EXTRACTED]
-- [[depth_34]] - `contains` [EXTRACTED]
-- [[source_34]] - `contains` [EXTRACTED]
-- [[version_34]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_31]] - `contains` [EXTRACTED]
+- [[depth_32]] - `contains` [EXTRACTED]
+- [[source_32]] - `contains` [EXTRACTED]
+- [[version_32]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: ".SaveSlot"
+community: "PayphoneCheckpoint"
 location: "L375"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SaveSlot
+  - community/PayphoneCheckpoint
 ---
 
 # .AtualizarTextosDosSlots()
@@ -17,4 +17,4 @@ tags:
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SaveSlot
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

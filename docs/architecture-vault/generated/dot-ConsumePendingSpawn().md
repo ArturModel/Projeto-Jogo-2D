@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
+- [[dot-Start()_9]] - `calls` [EXTRACTED]
 - [[dot-TryLoadManualSave()]] - `calls` [EXTRACTED]
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
-- [[Vector2_10]] - `references` [EXTRACTED]
+- [[Vector2_11]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CheckpointSystem

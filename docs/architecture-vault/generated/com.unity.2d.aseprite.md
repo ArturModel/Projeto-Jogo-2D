@@ -12,11 +12,11 @@ tags:
 # com.unity.2d.aseprite
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_5]] - `contains` [EXTRACTED]
-- [[depth_6]] - `contains` [EXTRACTED]
-- [[source_6]] - `contains` [EXTRACTED]
-- [[url_1]] - `contains` [EXTRACTED]
-- [[version_6]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_9]] - `contains` [EXTRACTED]
+- [[depth_9]] - `contains` [EXTRACTED]
+- [[source_9]] - `contains` [EXTRACTED]
+- [[url_3]] - `contains` [EXTRACTED]
+- [[version_9]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunity2dcommon

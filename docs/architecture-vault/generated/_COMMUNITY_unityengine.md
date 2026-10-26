@@ -21,7 +21,7 @@ members: 80
 - [[AudioAmbiente.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
 - [[AudioSettingsController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[CamadaDeLuz.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[Camera_1]] - code
+- [[Camera]] - code
 - [[CameraFollow.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 - [[CelularCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
 - [[CheckpointSystem.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
@@ -97,36 +97,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 7 edges to [[_COMMUNITY_MonoBehaviour]]
-- 3 edges to [[_COMMUNITY_Legenda]]
-- 3 edges to [[_COMMUNITY_SantaRitaChapter1Builder]]
+- 9 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 9 edges to [[_COMMUNITY_MonoBehaviour]]
+- 5 edges to [[_COMMUNITY_PrologoDirector]]
+- 5 edges to [[_COMMUNITY_PlayerController]]
 - 3 edges to [[_COMMUNITY_GameState]]
 - 2 edges to [[_COMMUNITY_OptionsPanelController]]
 - 2 edges to [[_COMMUNITY_CheckpointSystem]]
-- 2 edges to [[_COMMUNITY_Capitulo1Director]]
-- 2 edges to [[_COMMUNITY_PrologoDirector]]
 - 2 edges to [[_COMMUNITY_PrologoVideo]]
-- 2 edges to [[_COMMUNITY_VideoSettingsController]]
-- 1 edge to [[_COMMUNITY_CameraFollow]]
+- 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
 - 1 edge to [[_COMMUNITY_MenuPausa]]
 - 1 edge to [[_COMMUNITY_SceneFader]]
+- 1 edge to [[_COMMUNITY_Capitulo1Director]]
 - 1 edge to [[_COMMUNITY_GameMessageUI]]
-- 1 edge to [[_COMMUNITY_Interactable]]
+- 1 edge to [[_COMMUNITY_CamadaDeLuz]]
 - 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
 - 1 edge to [[_COMMUNITY_PayphoneCheckpoint]]
+- 1 edge to [[_COMMUNITY_VideoSettingsController]]
 - 1 edge to [[_COMMUNITY_MenuItemSelector]]
 - 1 edge to [[_COMMUNITY_AudioSettingsController]]
 - 1 edge to [[_COMMUNITY_SubtitleSettingsController]]
-- 1 edge to [[_COMMUNITY_PlayerController]]
-- 1 edge to [[_COMMUNITY_EstradaScroller]]
-- 1 edge to [[_COMMUNITY_AudioAmbiente]]
+- 1 edge to [[_COMMUNITY_Legenda]]
+- 1 edge to [[_COMMUNITY_InteractionPrompt]]
 - 1 edge to [[_COMMUNITY_MapaInterativoUI]]
 - 1 edge to [[_COMMUNITY_TileAleatorio]]
-- 1 edge to [[_COMMUNITY_OlharPrimeiraPessoa]]
 - 1 edge to [[_COMMUNITY_Chuva]]
-- 1 edge to [[_COMMUNITY_dot-ConsumirEntrada]]
-- 1 edge to [[_COMMUNITY_LimpadorParabrisa]]
+- 1 edge to [[_COMMUNITY_MainMenuActions]]
 
 ## Top bridge nodes
 - [[unityengine]] - degree 44, connects to 6 communities

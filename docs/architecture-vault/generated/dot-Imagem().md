@@ -15,7 +15,7 @@ tags:
 - [[dot-Caixa()]] - `calls` [EXTRACTED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 - [[Transform_1]] - `references` [EXTRACTED]
 

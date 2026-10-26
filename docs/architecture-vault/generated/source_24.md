@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.test-framework"
-location: "L133"
+community: "com.unity.modules.physics"
+location: "L563"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/comunitymodulesphysics
 ---
 
 # source
 
 ## Connections
-- [[com.unity.ext.nunit_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.vehicles]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

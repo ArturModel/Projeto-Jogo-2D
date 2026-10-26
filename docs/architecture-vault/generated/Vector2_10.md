@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: ".SaveSlot"
+community: "Legenda"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SaveSlot
+  - community/Legenda
 ---
 
 # Vector2
 
 ## Connections
-- [[dot-ConsumePendingSpawn()]] - `references` [EXTRACTED]
-- [[dot-Save()]] - `references` [EXTRACTED]
-- [[dot-SaveSlot()]] - `references` [EXTRACTED]
+- [[Legenda]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SaveSlot
+#graphify/code #graphify/EXTRACTED #community/Legenda

@@ -53,3 +53,17 @@ docs/ai-memory/
 .agents/
 .claude/
 .git/
+
+# Segredos, credenciais e dumps
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+secrets/
+*.bak
+*.dump
+backups/
+**/.obsidian/

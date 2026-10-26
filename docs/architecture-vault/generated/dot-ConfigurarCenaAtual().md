@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Capitulo1Director"
 location: "L1308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Capitulo1Director
 ---
 
 # .ConfigurarCenaAtual()
@@ -21,4 +21,4 @@ tags:
 - [[dot-PrepararMusicasDasZonas()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

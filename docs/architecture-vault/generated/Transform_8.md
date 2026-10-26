@@ -1,18 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MapaInterativoUI"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/PlayerController
 ---
 
 # Transform
 
 ## Connections
-- [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
-- [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/PlayerController

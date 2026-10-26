@@ -11,18 +11,18 @@ members: 15
 - [[com.unity.2d.tilemap_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.2d.tilemap.extras]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.modules.tilemap_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_52]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_53]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_52]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_53]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_54]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_52]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_53]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_54]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[url_12]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_52]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_53]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_54]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_46]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_47]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_47]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_48]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_49]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_47]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_48]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_49]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[url_11]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_47]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_48]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_49]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,15 +32,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_dependencies]]
+- 3 edges to [[_COMMUNITY_dependencies_1]]
 - 2 edges to [[_COMMUNITY_com.unity.2d.common]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.uielements]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.physics2d]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.imgui]]
+- 1 edge to [[_COMMUNITY_com.unity.mathematics]]
 
 ## Top bridge nodes
 - [[com.unity.2d.tilemap_1]] - degree 8, connects to 2 communities
 - [[com.unity.modules.tilemap_1]] - degree 7, connects to 2 communities
 - [[com.unity.2d.tilemap.extras]] - degree 6, connects to 1 community
-- [[dependencies_53]] - degree 4, connects to 1 community
-- [[dependencies_52]] - degree 3, connects to 1 community
+- [[dependencies_47]] - degree 4, connects to 1 community
+- [[dependencies_46]] - degree 3, connects to 1 community

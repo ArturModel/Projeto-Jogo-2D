@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "EstradaScroller"
+community: "Legenda"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EstradaScroller
+  - community/Legenda
 ---
 
 # List
 
 ## Connections
-- [[Fileira]] - `references` [EXTRACTED]
+- [[Legenda]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EstradaScroller
+#graphify/code #graphify/EXTRACTED #community/Legenda

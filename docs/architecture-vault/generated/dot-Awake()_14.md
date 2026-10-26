@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Legenda"
-location: "L57"
+community: "InteractionPrompt"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/InteractionPrompt
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[dot-Build()_1]] - `calls` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/InteractionPrompt

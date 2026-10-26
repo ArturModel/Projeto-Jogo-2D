@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-ResolverRetrato()]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
-- [[Sprite_1]] - `references` [EXTRACTED]
+- [[Sprite_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/GameMessageUI

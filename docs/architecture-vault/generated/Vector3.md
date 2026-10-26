@@ -1,17 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "CameraFollow"
+community: "Capitulo1Director"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CameraFollow
+  - community/Capitulo1Director
 ---
 
 # Vector3
 
 ## Connections
-- [[dot-AplicarClampBordas()]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `references` [EXTRACTED]
+- [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
+- [[dot-AtualizarSpawnPointExistente()]] - `references` [EXTRACTED]
+- [[dot-ColocarArvore()]] - `references` [EXTRACTED]
+- [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
+- [[dot-ColocarInteracao()]] - `references` [EXTRACTED]
+- [[dot-ColocarOrelhaoSave()]] - `references` [EXTRACTED]
+- [[dot-ColocarPosteComLuz()]] - `references` [EXTRACTED]
+- [[dot-ColocarProp()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CameraFollow
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

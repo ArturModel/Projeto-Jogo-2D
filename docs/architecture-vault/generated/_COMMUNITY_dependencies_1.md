@@ -1,68 +1,34 @@
 ---
 type: community
-members: 55
+members: 21
 ---
 
 # dependencies
 
-**Members:** 55 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[com.unity.2d.animation_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.2d.aseprite_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.2d.psdimporter_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.2d.sprite_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.2d.spriteshape_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.2d.tilemap_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.2d.tilemap.extras_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.2d.tooling_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.collab-proxy_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.ide.rider_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.ide.visualstudio_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.inputsystem_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.learn.iet-framework_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.accessibility_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.adaptiveperformance_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.ai_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.androidjni_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.animation_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.assetbundle_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.audio_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.cloth_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.director_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.imageconversion_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.imgui_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.jsonserialize_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.particlesystem_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.physics_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.physics2d_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.physicscore2d_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.screencapture_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.terrain_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.terrainphysics_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.tetgen_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.tilemap_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.timelinefoundation_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.ui_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.uielements_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.umbra_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.unityanalytics_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.unitywebrequest_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.unitywebrequestassetbundle_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.unitywebrequestaudio_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.unitywebrequesttexture_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.unitywebrequestwww_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.vectorgraphics_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.vehicles_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.video_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.wind_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.modules.xr_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.render-pipelines.universal_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.test-framework_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.timeline_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.ugui_3]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[com.unity.visualscripting_2]] - code - Projeto Jogo 2D/Packages/manifest.json
-- [[dependencies_72]] - code - Projeto Jogo 2D/Packages/manifest.json
+- [[com.unity.modules.adaptiveperformance_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.modules.ai_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.modules.subsystems_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.modules.xr_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_66]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_67]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_68]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_69]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_70]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_66]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_67]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_68]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_69]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_66]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_67]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_68]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_69]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_66]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_67]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_68]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_69]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -72,7 +38,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_manifest.json]]
+- 8 edges to [[_COMMUNITY_com.unity.burst]]
+- 7 edges to [[_COMMUNITY_com.unity.2d.common]]
+- 6 edges to [[_COMMUNITY_com.unity.modules.physics]]
+- 6 edges to [[_COMMUNITY_com.unity.modules.jsonserialize]]
+- 5 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
+- 4 edges to [[_COMMUNITY_com.unity.test-framework]]
+- 4 edges to [[_COMMUNITY_com.unity.modules.imgui]]
+- 4 edges to [[_COMMUNITY_com.unity.modules.audio]]
+- 4 edges to [[_COMMUNITY_com.unity.mathematics]]
+- 3 edges to [[_COMMUNITY_com.unity.settings-manager]]
+- 3 edges to [[_COMMUNITY_com.unity.modules.ui]]
+- 3 edges to [[_COMMUNITY_com.unity.2d.tilemap]]
+- 3 edges to [[_COMMUNITY_com.unity.modules.imageconversion]]
+- 2 edges to [[_COMMUNITY_com.unity.ext.nunit]]
+- 2 edges to [[_COMMUNITY_com.unity.modules.tetgen]]
+- 2 edges to [[_COMMUNITY_dependencies]]
+- 1 edge to [[_COMMUNITY_packages-lock.json]]
+- 1 edge to [[_COMMUNITY_com.unity.collab-proxy]]
+- 1 edge to [[_COMMUNITY_com.unity.2d.tooling]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.accessibility]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.umbra]]
 
 ## Top bridge nodes
-- [[dependencies_72]] - degree 55, connects to 1 community
+- [[dependencies_70]] - degree 72, connects to 21 communities
+- [[dependencies_69]] - degree 4, connects to 2 communities
+- [[dependencies_68]] - degree 2, connects to 1 community

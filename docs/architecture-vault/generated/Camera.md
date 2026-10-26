@@ -1,19 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CameraFollow"
+community: "unityengine"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CameraFollow
+  - community/unityengine
 ---
 
 # Camera
 
 ## Connections
-- [[dot-Awake()]] - `references` [EXTRACTED]
-- [[dot-GarantirFundoEscuroCamera()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `references` [EXTRACTED]
+- [[PonteiroCarro]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CameraFollow
+#graphify/code #graphify/EXTRACTED #community/unityengine

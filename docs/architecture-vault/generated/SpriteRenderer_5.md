@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: ".DetectarLimitesDaRegiao"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/DetectarLimitesDaRegiao
+  - community/PlayerController
 ---
 
 # SpriteRenderer
 
 ## Connections
-- [[dot-DetectarLimitesDaRegiao()]] - `references` [EXTRACTED]
+- [[dot-Awake()_12]] - `references` [EXTRACTED]
+- [[dot-CriarLanternaNaMao()]] - `references` [EXTRACTED]
+- [[dot-PrepararCaminhadaMarcus()]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/DetectarLimitesDaRegiao
+#graphify/code #graphify/EXTRACTED #community/PlayerController

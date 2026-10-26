@@ -17,10 +17,10 @@ tags:
 - [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Button_1]] - `references` [EXTRACTED]
-- [[Image_3]] - `references` [EXTRACTED]
-- [[RectTransform_4]] - `references` [EXTRACTED]
+- [[Image_4]] - `references` [EXTRACTED]
+- [[RectTransform_5]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[Transform_3]] - `references` [EXTRACTED]
-- [[Vector2_5]] - `references` [EXTRACTED]
+- [[Vector2_4]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

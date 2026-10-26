@@ -17,6 +17,6 @@ tags:
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[ItemDeCena.cs]] - `contains` [EXTRACTED]
-- [[Prompt_1]] - `defines` [EXTRACTED]
+- [[Prompt_2]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

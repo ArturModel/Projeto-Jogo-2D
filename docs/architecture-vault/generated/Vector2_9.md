@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/PlayerController
 ---
 
 # Vector2
 
 ## Connections
-- [[UIFactory]] - `references` [EXTRACTED]
+- [[dot-ConsumirEntrada()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/PlayerController

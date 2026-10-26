@@ -12,7 +12,7 @@ tags:
 # com.unity.modules.umbra
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
 - [[dependencies_71]] - `contains` [EXTRACTED]
 - [[depth_70]] - `contains` [EXTRACTED]
 - [[source_70]] - `contains` [EXTRACTED]

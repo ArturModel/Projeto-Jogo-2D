@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "MonoBehaviour"
-location: "L29"
+community: "PlayerController"
+location: "L416"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/PlayerController
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/PlayerController

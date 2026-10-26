@@ -11,6 +11,8 @@ tags:
 # Vector3
 
 ## Connections
-- [[ChuvaRolando]] - `references` [EXTRACTED]
+- [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
+- [[dot-CreateNpcObject()]] - `references` [EXTRACTED]
+- [[dot-CreateSceneSpriteObject()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MonoBehaviour

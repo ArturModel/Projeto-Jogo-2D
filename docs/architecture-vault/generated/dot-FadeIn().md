@@ -12,9 +12,9 @@ tags:
 # .FadeIn()
 
 ## Connections
-- [[dot-Awake()_2]] - `calls` [EXTRACTED]
+- [[dot-Awake()_1]] - `calls` [EXTRACTED]
 - [[dot-FadeTo()]] - `calls` [EXTRACTED]
-- [[dot-OnSceneLoaded()_1]] - `calls` [EXTRACTED]
+- [[dot-OnSceneLoaded()]] - `calls` [EXTRACTED]
 - [[dot-TransitionRoutine()]] - `calls` [EXTRACTED]
 - [[IEnumerator_3]] - `references` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]

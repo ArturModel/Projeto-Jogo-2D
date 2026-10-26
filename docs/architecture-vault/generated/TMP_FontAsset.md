@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: ".CreateCanvas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/CreateCanvas
 ---
 
 # TMP_FontAsset
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[UIFactory]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

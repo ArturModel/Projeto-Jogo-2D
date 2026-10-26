@@ -17,7 +17,7 @@ tags:
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[dot-Selecionavel()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
+- [[Image_1]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 

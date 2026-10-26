@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "PrologoVideo"
-location: "L149"
+community: "PrologoDirector"
+location: "L329"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/PrologoDirector
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[dot-Encerrar()]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

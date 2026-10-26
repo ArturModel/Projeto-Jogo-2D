@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Capitulo1Director"
+community: "InteracaoCapitulo1"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/InteracaoCapitulo1
 ---
 
 # TransicaoDeZonaTrigger
@@ -19,8 +19,8 @@ tags:
 - [[dot-TentarTransicionar()]] - `method` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_2]] - `defines` [EXTRACTED]
+- [[Prompt_1]] - `defines` [EXTRACTED]
 - [[Vector2_3]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

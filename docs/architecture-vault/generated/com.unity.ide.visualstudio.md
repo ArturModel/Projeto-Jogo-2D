@@ -12,11 +12,11 @@ tags:
 # com.unity.ide.visualstudio
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_26]] - `contains` [EXTRACTED]
-- [[depth_26]] - `contains` [EXTRACTED]
-- [[source_26]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_25]] - `contains` [EXTRACTED]
+- [[depth_25]] - `contains` [EXTRACTED]
+- [[source_25]] - `contains` [EXTRACTED]
 - [[url_6]] - `contains` [EXTRACTED]
-- [[version_26]] - `contains` [EXTRACTED]
+- [[version_25]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitytest-framework

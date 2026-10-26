@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs"
 type: "code"
-community: ".ConsumirEntrada"
+community: "PlayerController"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsumirEntrada
+  - community/PlayerController
 ---
 
 # SceneTransition.cs
@@ -15,4 +15,4 @@ tags:
 - [[SceneTransition]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsumirEntrada
+#graphify/code #graphify/EXTRACTED #community/PlayerController

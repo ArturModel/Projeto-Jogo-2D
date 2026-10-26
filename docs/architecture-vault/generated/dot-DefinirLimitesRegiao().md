@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "CameraFollow"
+community: "PlayerController"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CameraFollow
+  - community/PlayerController
 ---
 
 # .DefinirLimitesRegiao()
@@ -16,6 +16,6 @@ tags:
 - [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
 - [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
 - [[CameraFollow]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[Vector2_6]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CameraFollow
+#graphify/code #graphify/EXTRACTED #community/PlayerController

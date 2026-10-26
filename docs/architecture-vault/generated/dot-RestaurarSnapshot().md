@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "GameState"
+community: "CheckpointSystem"
 location: "L265"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/CheckpointSystem
 ---
 
 # .RestaurarSnapshot()
@@ -16,4 +16,4 @@ tags:
 - [[GameState]] - `method` [EXTRACTED]
 - [[GameStateSnapshot]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/CheckpointSystem

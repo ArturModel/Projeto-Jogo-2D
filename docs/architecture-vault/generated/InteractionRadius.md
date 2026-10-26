@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "Interactable"
+community: "PlayerController"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Interactable
+  - community/PlayerController
 ---
 
 # InteractionRadius
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Interactable]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Interactable
+#graphify/code #graphify/EXTRACTED #community/PlayerController

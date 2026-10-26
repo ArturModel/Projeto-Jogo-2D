@@ -1,16 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "Interactable"
+community: "SinucaMinigameUI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Interactable
+  - community/SinucaMinigameUI
 ---
 
 # Vector2
 
 ## Connections
-- [[dot-FindNearest()]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoModal()]] - `references` [EXTRACTED]
+- [[dot-EncontrarPosicaoLivreDeterministica()]] - `references` [EXTRACTED]
+- [[dot-EscolherTacadaZe()]] - `references` [EXTRACTED]
+- [[dot-ExecutarTacada()]] - `references` [EXTRACTED]
+- [[dot-PosicaoValidaSemColisao()]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_1]] - `references` [EXTRACTED]
+- [[BolaMesa]] - `references` [EXTRACTED]
+- [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Interactable
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

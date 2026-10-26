@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "Interactable"
-location: "L21"
+community: "CamadaDeLuz"
+location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Interactable
+  - community/CamadaDeLuz
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[Interactable]] - `method` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Interactable
+#graphify/code #graphify/EXTRACTED #community/CamadaDeLuz

@@ -1,16 +1,16 @@
 ---
 type: community
-members: 47
+members: 49
 ---
 
 # MenuPausa
 
-**Members:** 47 nodes
+**Members:** 49 nodes
 
 ## Members
 - [[dot-Abrir()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-AtualizarTextoStatusSave()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-Awake()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Awake()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Botao()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Caixa()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Construir()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
@@ -26,6 +26,7 @@ members: 47
 - [[dot-Rotulo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Sair()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Selecionavel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Stretch()]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
 - [[dot-SubPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Titulo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Update()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
@@ -42,10 +43,11 @@ members: 47
 - [[GameObject]] - code
 - [[Graphic]] - code
 - [[GraphicRaycaster]] - code
-- [[Image]] - code
+- [[Image_1]] - code
 - [[InputSystemUIInputModule]] - code
 - [[MenuPausa]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[RectTransform]] - code
+- [[RectTransform_1]] - code
 - [[ReduzirEfeitosIntensos]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[Selectable]] - code
 - [[Slider]] - code
@@ -65,8 +67,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_OptionsPanelController]]
-- 3 edges to [[_COMMUNITY_Legenda]]
+- 3 edges to [[_COMMUNITY_dot-CreateCanvas]]
+- 3 edges to [[_COMMUNITY_dot-CreateLabel]]
 - 3 edges to [[_COMMUNITY_MapaInterativoUI]]
+- 3 edges to [[_COMMUNITY_SinucaMinigameUI]]
 - 1 edge to [[_COMMUNITY_MonoBehaviour]]
 - 1 edge to [[_COMMUNITY_unityengine]]
 - 1 edge to [[_COMMUNITY_VideoSettingsController]]
@@ -74,10 +78,15 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_AudioSettingsController]]
 - 1 edge to [[_COMMUNITY_SubtitleSettingsController]]
 - 1 edge to [[_COMMUNITY_PlayerController]]
+- 1 edge to [[_COMMUNITY_GameMessageUI]]
+- 1 edge to [[_COMMUNITY_InteractionPrompt]]
+- 1 edge to [[_COMMUNITY_PayphoneCheckpoint]]
+- 1 edge to [[_COMMUNITY_PrologoDirector]]
+- 1 edge to [[_COMMUNITY_PrologoVideo]]
 
 ## Top bridge nodes
-- [[dot-Construir()]] - degree 29, connects to 7 communities
+- [[dot-Stretch()]] - degree 18, connects to 9 communities
+- [[dot-Construir()]] - degree 29, connects to 6 communities
 - [[MenuPausa]] - degree 34, connects to 2 communities
 - [[dot-Rotulo()]] - degree 15, connects to 1 community
 - [[dot-Caixa()]] - degree 10, connects to 1 community
-- [[dot-LinhaToggle()]] - degree 9, connects to 1 community

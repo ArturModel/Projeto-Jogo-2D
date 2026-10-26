@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "SantaRitaChapter1Builder"
-location: "L32"
+community: "PlayerController"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SantaRitaChapter1Builder
+  - community/PlayerController
 ---
 
 # Prompt
 
 ## Connections
-- [[DoorTrigger]] - `defines` [EXTRACTED]
+- [[Interactable]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SantaRitaChapter1Builder
+#graphify/code #graphify/EXTRACTED #community/PlayerController

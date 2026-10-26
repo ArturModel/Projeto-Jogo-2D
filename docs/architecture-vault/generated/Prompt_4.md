@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
 type: "code"
-community: "PayphoneCheckpoint"
-location: "L62"
+community: "PlayerController"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PayphoneCheckpoint
+  - community/PlayerController
 ---
 
 # Prompt
 
 ## Connections
-- [[PayphoneCheckpoint]] - `defines` [EXTRACTED]
+- [[DoorTrigger]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint
+#graphify/code #graphify/EXTRACTED #community/PlayerController

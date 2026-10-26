@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Abrir()]] - `calls` [EXTRACTED]
-- [[dot-Awake()_1]] - `calls` [EXTRACTED]
+- [[dot-Awake()]] - `calls` [EXTRACTED]
 - [[dot-Botao()]] - `calls` [EXTRACTED]
 - [[dot-Caixa()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]

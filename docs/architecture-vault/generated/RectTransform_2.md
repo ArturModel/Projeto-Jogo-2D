@@ -11,8 +11,7 @@ tags:
 # RectTransform
 
 ## Connections
-- [[dot-EsconderImediatamente()]] - `references` [EXTRACTED]
-- [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]
-- [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
+- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[MenuPanelTransition]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/OptionsPanelController

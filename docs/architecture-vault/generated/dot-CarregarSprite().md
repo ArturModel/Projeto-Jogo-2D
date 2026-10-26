@@ -16,7 +16,7 @@ tags:
 - [[dot-ColocarInteracao()]] - `calls` [EXTRACTED]
 - [[dot-ColocarProp()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
+- [[Sprite_1]] - `references` [EXTRACTED]
 - [[Vector2_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Capitulo1Director

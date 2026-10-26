@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Interactable"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Interactable
+  - community/PlayerController
 ---
 
 # Animator
@@ -14,4 +14,4 @@ tags:
 - [[dot-UpdateAnimator()]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Interactable
+#graphify/code #graphify/EXTRACTED #community/PlayerController

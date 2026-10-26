@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "OptionsPanelController"
-location: "L34"
+community: "GameMessageUI"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/GameMessageUI
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-EsconderImediatamente()]] - `calls` [EXTRACTED]
-- [[dot-MostrarImediatamente()]] - `calls` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
+- [[dot-Build()]] - `calls` [EXTRACTED]
+- [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/GameMessageUI

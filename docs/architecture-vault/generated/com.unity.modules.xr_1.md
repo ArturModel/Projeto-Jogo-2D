@@ -1,17 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Packages/manifest.json"
-type: "concept"
-community: "manifest.json"
-location: "L56"
+source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
+type: "code"
+community: "dependencies"
+location: "L584"
 tags:
-  - graphify/concept
+  - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/dependencies
 ---
 
 # com.unity.modules.xr
 
 ## Connections
-- [[manifest.json]] - `imports` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_69]] - `contains` [EXTRACTED]
+- [[depth_69]] - `contains` [EXTRACTED]
+- [[source_69]] - `contains` [EXTRACTED]
+- [[version_69]] - `contains` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/dependencies

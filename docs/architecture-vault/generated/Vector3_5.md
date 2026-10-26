@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "OlharPrimeiraPessoa"
+community: "MonoBehaviour"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OlharPrimeiraPessoa
+  - community/MonoBehaviour
 ---
 
 # Vector3
 
 ## Connections
-- [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
+- [[ChuvaRolando]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OlharPrimeiraPessoa
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

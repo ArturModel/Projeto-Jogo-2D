@@ -1,17 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "MonoBehaviour"
-location: "L26"
+community: "SinucaMinigameUI"
+location: "L583"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/SinucaMinigameUI
 ---
 
 # .Update()
 
 ## Connections
-- [[ChuvaRolando]] - `method` [EXTRACTED]
+- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

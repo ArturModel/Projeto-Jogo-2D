@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-setup.sh"
 type: "code"
-community: "graphify-setup.sh"
+community: "graphify-setup.sh script"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/graphify-setupsh
+  - community/graphify-setupsh_script
 ---
 
 # graphify-setup.sh
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphify-setup.sh script]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/graphify-setupsh
+#graphify/code #graphify/EXTRACTED #community/graphify-setupsh_script

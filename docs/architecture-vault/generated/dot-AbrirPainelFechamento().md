@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Legenda"
+community: ".CreateLabel"
 location: "L3465"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/CreateLabel
 ---
 
 # .AbrirPainelFechamento()
@@ -20,6 +20,6 @@ tags:
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[GraphicRaycaster_3]] - `references` [EXTRACTED]
-- [[Image_8]] - `references` [EXTRACTED]
+- [[Image_9]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/CreateLabel

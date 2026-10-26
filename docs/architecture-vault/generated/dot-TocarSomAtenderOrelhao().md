@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AbrirModalCarregarDoMenu()]] - `calls` [EXTRACTED]
 - [[dot-GarantirAudioOrelhao()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_4]] - `calls` [EXTRACTED]
+- [[dot-Interact()_3]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

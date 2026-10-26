@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "MonoBehaviour"
-location: "L19"
+community: "PrologoDirector"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/PrologoDirector
 ---
 
 # .Awake()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
+- [[AudioSource_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

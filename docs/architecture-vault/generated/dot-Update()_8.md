@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "VideoSettingsController"
-location: "L60"
+community: "PrologoDirector"
+location: "L138"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/PrologoDirector
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

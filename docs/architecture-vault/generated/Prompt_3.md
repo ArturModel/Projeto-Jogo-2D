@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Interactable"
-location: "L29"
+community: "PayphoneCheckpoint"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Interactable
+  - community/PayphoneCheckpoint
 ---
 
 # Prompt
 
 ## Connections
-- [[Interactable]] - `defines` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Interactable
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

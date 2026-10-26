@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
-community: "LimpadorParabrisa"
-location: "L41"
+community: "MonoBehaviour"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LimpadorParabrisa
+  - community/MonoBehaviour
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AnguloEm()]] - `calls` [EXTRACTED]
-- [[dot-AplicarAngulo()]] - `calls` [EXTRACTED]
-- [[LimpadorParabrisa]] - `method` [EXTRACTED]
+- [[ChuvaRolando]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LimpadorParabrisa
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

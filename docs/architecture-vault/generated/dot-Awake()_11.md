@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "PrologoDirector"
-location: "L80"
+community: "PlayerController"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoDirector
+  - community/PlayerController
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-MontarCortina()]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
+- [[Camera_1]] - `references` [EXTRACTED]
+- [[CameraFollow]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoDirector
+#graphify/code #graphify/EXTRACTED #community/PlayerController

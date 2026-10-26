@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AlterarResolucao()]] - `calls` [EXTRACTED]
 - [[dot-AlterarTelaCheia()]] - `calls` [EXTRACTED]
-- [[dot-Start()_3]] - `calls` [EXTRACTED]
+- [[dot-Start()_2]] - `calls` [EXTRACTED]
 - [[VideoSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/VideoSettingsController

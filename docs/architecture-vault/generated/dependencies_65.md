@@ -1,21 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.burst"
-location: "L117"
+community: "com.unity.modules.accessibility"
+location: "L308"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/comunitymodulesaccessibility
 ---
 
 # dependencies
 
 ## Connections
-- [[com.unity.burst_1]] - `contains` [EXTRACTED]
-- [[com.unity.collections_1]] - `contains` [EXTRACTED]
-- [[com.unity.nuget.mono-cecil_1]] - `contains` [EXTRACTED]
-- [[com.unity.test-framework_1]] - `contains` [EXTRACTED]
-- [[com.unity.test-framework.performance_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.accessibility]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesaccessibility

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
+- [[dot-Start()_9]] - `calls` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

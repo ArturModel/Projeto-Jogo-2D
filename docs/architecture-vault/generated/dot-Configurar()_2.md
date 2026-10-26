@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
 type: "code"
-community: "SantaRitaChapter1Builder"
+community: "MonoBehaviour"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SantaRitaChapter1Builder
+  - community/MonoBehaviour
 ---
 
 # .Configurar()
@@ -15,4 +15,4 @@ tags:
 - [[dot-AtualizarSpawnPointExistente()]] - `calls` [INFERRED]
 - [[SpawnPoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SantaRitaChapter1Builder
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

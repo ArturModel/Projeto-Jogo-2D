@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.jsonserialize"
-location: "L465"
+community: "com.unity.modules.imgui"
+location: "L163"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/comunitymodulesimgui
 ---
 
 # source
 
 ## Connections
-- [[com.unity.modules.timelinefoundation]] - `contains` [EXTRACTED]
+- [[com.unity.inputsystem]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui

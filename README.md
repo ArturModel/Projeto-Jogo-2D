@@ -93,33 +93,44 @@ Paletas em `Arte/Chao/Chao_paleta.gpl` e `Arte/Heroi/Heroi_paleta.gpl`.
 
 Este repositório já vem configurado com um grafo de conhecimento (**Graphify**), um cofre navegável (**Obsidian**) e regras automáticas de agentes (**`AGENTS.md`**, **`CLAUDE.md`** e **`.agents/rules/`**) para que qualquer IA compreenda toda a arquitetura antes de alterar o código e mantenha a documentação sincronizada ao final de cada prompt.
 
+> **Importante:** O pacote oficial no PyPI chama-se **`graphifyy`** (com dois `y`), enquanto o comando no terminal é `graphify`. O grafo e o cofre funcionam como índice estrutural rápido, mas **o código-fonte C# é sempre a fonte da verdade**.
+
 ### 1. Como instalar o Graphify e o Obsidian na sua máquina
 
-#### Passo A — Instalar o Graphify CLI (Python 3.10+)
-Recomendamos instalar via [`uv`](https://docs.astral.sh/uv/) (ou `pipx` / `pip`):
+#### Passo A — Instalar o `uv` e o Graphify CLI (Python 3.10+)
 
-```bash
-# Se ainda não tiver o uv instalado (Linux / macOS):
-curl -LsSf https://astral.sh/uv/install.sh | sh
+**No Windows (PowerShell):**
+```powershell
+# 1. Instale o uv (gerenciador de ferramentas Python):
+winget install --id astral-sh.uv -e
+# (Feche e reabra o PowerShell após instalar o uv)
 
-# No Windows (PowerShell):
-# powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-
-# Instale o Graphify CLI (pacote graphifyy):
+# 2. Instale o Graphify oficial (pacote graphifyy com dois 'y'):
 uv tool install graphifyy
+uv tool update-shell
 
-# Verifique se está funcionando:
+# 3. Verifique a instalação e o ambiente do projeto:
 graphify --version
+.\scripts\graphify-setup.ps1
 ```
-*(Alternativa com pip tradicional: `pip install graphifyy`)*
 
-No Linux/macOS, você também pode rodar o script automático de verificação do projeto:
+**No Linux / macOS / WSL2 (Bash):**
 ```bash
+# 1. Instale o uv (se ainda não tiver):
+curl -LsSf https://astral.sh/uv/install.sh | sh
+export PATH="$HOME/.local/bin:$PATH"
+
+# 2. Instale o Graphify oficial (pacote graphifyy com dois 'y'):
+uv tool install graphifyy
+uv tool update-shell
+
+# 3. Verifique a instalação e o ambiente do projeto:
+graphify --version
 ./scripts/graphify-setup.sh
 ```
 
 #### Passo B — Instalar e abrir o Cofre no Obsidian
-1. Baixe e instale o [Obsidian](https://obsidian.md/) (Windows, macOS ou Linux via Flatpak/AppImage).
+1. Baixe e instale o [Obsidian](https://obsidian.md/download) (Windows, macOS ou Linux).
 2. Abra o Obsidian e clique em **"Abrir pasta como cofre"** (*Open folder as vault*).
 3. Selecione a pasta **`docs/architecture-vault`** dentro deste repositório:
    ```text
@@ -131,12 +142,12 @@ No Linux/macOS, você também pode rodar o script automático de verificação d
      - `Catalogo_Completo_Scripts.md` — Descrição completa de todos os **44 scripts C#** (~15.010 linhas).
      - `Mapa_Cenas_Zonas_E_Fluxo_Cap1.md` — As 5 cenas, as 9 zonas/interiores do `Capitulo1Director` e a cadeia de flags.
      - `Guia_Trabalho_Com_IA.md` — Guia rápido de comandos e uso com IA.
-   - **`generated/`**:Mais de **1.650 notas atômicas** geradas automaticamente para cada classe, método e enum do jogo, além do mapa visual interativo **`generated/graph.canvas`**.
+   - **`generated/`**: Mais de **1.700 notas atômicas** geradas automaticamente para cada classe, método e enum do jogo, além do mapa visual interativo **`generated/graph.canvas`**.
    - Pressione **`Ctrl + G`** (ou `Cmd + G`) no Obsidian para abrir o **Graph View** e navegar visualmente pelas conexões do código!
 
-### 2. Como usar no dia a dia com IA (Antigravity, Claude Code, Cursor, Copilot, Windsurf)
+### 2. Como usar no dia a dia com IA (Antigravity, Claude Code, Codex, Cursor, Copilot, Windsurf)
 
-Graças aos arquivos **`AGENTS.md`**, **`CLAUDE.md`** e **`.agents/rules/project-context.md`** na raiz do projeto, o agente de IA já recebe instruções automáticas para seguir este ciclo em **todo novo prompt**:
+Graças aos arquivos **`AGENTS.md`**, **`CLAUDE.md`** (que importa `@AGENTS.md`) e **`.agents/rules/project-context.md`** na raiz do projeto, o agente de IA já recebe instruções automáticas para seguir este ciclo em **todo novo prompt**:
 
 1. **No início de cada prompt (Busca Obrigatória):**
    - A IA lê o estado atual em `docs/ai-memory/INDEX.md` e `docs/ai-memory/CURRENT_STATE.md`.
@@ -144,13 +155,11 @@ Graças aos arquivos **`AGENTS.md`**, **`CLAUDE.md`** e **`.agents/rules/project
    - A IA executa buscas no grafo (`graphify query "<pergunta>"`, `graphify path "<A>" "<B>" --undirected`, `graphify explain "<Classe>"`) antes de abrir ou editar arquivos `.cs`.
 2. **No final de cada execução (Atualização Obrigatória):**
    - Após modificar qualquer script C# ou arquitetura, a IA roda:
-     ```bash
-     ./scripts/graphify-refresh.sh
-     ./scripts/graphify-validate.sh
-     ```
+     - **Linux / macOS:** `./scripts/graphify-refresh.sh` e `./scripts/graphify-validate.sh`
+     - **Windows (PowerShell):** `.\scripts\graphify-refresh.ps1` e `.\scripts\graphify-validate.ps1`
    - E atualiza tanto o cofre do Obsidian (`docs/architecture-vault/manual/` e `generated/`) quanto a memória persistente (`docs/ai-memory/CURRENT_STATE.md` e `CHANGELOG_AI.md`).
 
-> **Dica:** Se você editar algum script C# manualmente no VS Code / Rider / Visual Studio sem usar IA, basta rodar `./scripts/graphify-refresh.sh` (ou `graphify update . && graphify export obsidian --dir docs/architecture-vault/generated`) antes de commitar para deixar o grafo e o Obsidian atualizados para os colegas!
+> **Dica para outros agentes:** Se você usa Claude Code, Codex ou Cursor e quiser instalar os hooks/skills locais da sua ferramenta, basta rodar `graphify claude install`, `graphify codex install` ou `graphify cursor install` na raiz do projeto (consulte `docs/GRAPHIFY-OBSIDIAN-OPERACAO.md` para detalhes).
 
 ---
 
@@ -168,6 +177,6 @@ Docs/                         relatórios de auditoria canônica R1 e Vertical S
 docs/architecture-vault/      cofre do Obsidian (manual/ + generated/ + graph.canvas)
 docs/ai-memory/               memória persistente de contexto para agentes de IA
 graphify-out/                 grafo de conhecimento estrutural (graph.json, GRAPH_REPORT.md, graph.html)
-scripts/                      scripts de setup, refresh e validação do Graphify + Obsidian
+scripts/                      scripts multiplataforma (.sh e .ps1) de setup, refresh e validação
 AGENTS.md / CLAUDE.md         regras automáticas de governança para agentes de IA
 ```

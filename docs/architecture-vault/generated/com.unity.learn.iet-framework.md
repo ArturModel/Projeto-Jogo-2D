@@ -12,11 +12,11 @@ tags:
 # com.unity.learn.iet-framework
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_43]] - `contains` [EXTRACTED]
-- [[depth_44]] - `contains` [EXTRACTED]
-- [[source_44]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_40]] - `contains` [EXTRACTED]
+- [[depth_42]] - `contains` [EXTRACTED]
+- [[source_42]] - `contains` [EXTRACTED]
 - [[url_9]] - `contains` [EXTRACTED]
-- [[version_44]] - `contains` [EXTRACTED]
+- [[version_42]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitysettings-manager

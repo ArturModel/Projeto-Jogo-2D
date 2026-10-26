@@ -11,7 +11,7 @@ members: 40
 - [[com.unity.2d.common]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.2d.sprite]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.2d.tilemap]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.burst]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.burst_1]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.collections]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.editorcoroutines]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.ext.nunit]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
@@ -38,7 +38,7 @@ members: 40
 - [[com.unity.modules.unitywebrequestassetbundle]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.modules.unitywebrequestaudio]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.nuget.mono-cecil]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.profiling.core]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.profiling.core_1]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.render-pipelines.core_1]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.render-pipelines.universal-config_1]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.searcher_1]] - concept - Projeto Jogo 2D/Packages/packages-lock.json
@@ -57,7 +57,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_dependencies]]
+- 1 edge to [[_COMMUNITY_dependencies_1]]
 
 ## Top bridge nodes
 - [[packages-lock.json]] - degree 40, connects to 1 community

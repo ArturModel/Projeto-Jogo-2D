@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Capitulo1Director"
+community: ".CreateCanvas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/CreateCanvas
 ---
 
 # Sprite
 
 ## Connections
-- [[dot-CarregarSprite()]] - `references` [EXTRACTED]
-- [[Capitulo1Director]] - `references` [EXTRACTED]
+- [[dot-LoadSprite()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

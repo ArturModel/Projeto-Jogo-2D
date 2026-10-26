@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
-- [[RectTransform_5]] - `references` [EXTRACTED]
-- [[Vector2_6]] - `references` [EXTRACTED]
+- [[RectTransform_6]] - `references` [EXTRACTED]
+- [[Vector2_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

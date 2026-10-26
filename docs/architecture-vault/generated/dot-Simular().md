@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_3]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_2]] - `calls` [EXTRACTED]
 - [[dot-MetadeDaTela()]] - `calls` [EXTRACTED]
 - [[dot-NovaGota()]] - `calls` [EXTRACTED]
 - [[dot-NovoRespingo()]] - `calls` [EXTRACTED]

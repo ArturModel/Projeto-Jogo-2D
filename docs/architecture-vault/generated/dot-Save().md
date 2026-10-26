@@ -17,6 +17,6 @@ tags:
 - [[dot-SaveSlot()]] - `calls` [EXTRACTED]
 - [[2. Regras Inegociáveis de Domínio do Jogo (Revisão Canônica R1)]] - `references` [INFERRED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
-- [[Vector2_10]] - `references` [EXTRACTED]
+- [[Vector2_11]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SaveSlot

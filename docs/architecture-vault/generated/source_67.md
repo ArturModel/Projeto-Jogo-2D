@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.burst"
-location: "L195"
+community: "dependencies"
+location: "L321"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/dependencies
 ---
 
 # source
 
 ## Connections
-- [[com.unity.profiling.core_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.ai_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/dependencies

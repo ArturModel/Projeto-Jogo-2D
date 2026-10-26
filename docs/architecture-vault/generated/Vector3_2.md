@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "MonoBehaviour"
+community: "MapaInterativoUI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/MapaInterativoUI
 ---
 
 # Vector3
 
 ## Connections
-- [[CamadaParallax]] - `references` [EXTRACTED]
+- [[dot-ConverterMundoParaUV()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

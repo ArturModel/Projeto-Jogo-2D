@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: ".CreateLabel"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/CreateLabel
 ---
 
 # Image
 
 ## Connections
-- [[dot-CreateBox()]] - `references` [EXTRACTED]
+- [[dot-AbrirPainelFechamento()]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/CreateLabel

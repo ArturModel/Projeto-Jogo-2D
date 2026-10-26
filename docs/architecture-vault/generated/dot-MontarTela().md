@@ -16,7 +16,7 @@ tags:
 - [[dot-Start()_5]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[AspectRatioFitter]] - `references` [EXTRACTED]
-- [[Image_6]] - `references` [EXTRACTED]
+- [[Image_7]] - `references` [EXTRACTED]
 - [[PrologoVideo]] - `method` [EXTRACTED]
 - [[RawImage_1]] - `references` [EXTRACTED]
 

@@ -23,9 +23,9 @@ tags:
 - [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
 - [[Button_2]] - `references` [EXTRACTED]
 - [[GraphicRaycaster_2]] - `references` [EXTRACTED]
-- [[Image_4]] - `references` [EXTRACTED]
+- [[Image_5]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 - [[PayphoneSlotInputWatcher_1]] - `references` [EXTRACTED]
-- [[RectTransform_5]] - `references` [EXTRACTED]
+- [[RectTransform_6]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

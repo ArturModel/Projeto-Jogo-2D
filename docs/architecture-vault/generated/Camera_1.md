@@ -1,16 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "unityengine"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/PlayerController
 ---
 
 # Camera
 
 ## Connections
-- [[PonteiroCarro]] - `references` [EXTRACTED]
+- [[dot-Awake()_11]] - `references` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()]] - `references` [EXTRACTED]
+- [[CameraFollow]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/PlayerController

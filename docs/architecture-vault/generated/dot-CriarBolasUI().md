@@ -17,8 +17,8 @@ tags:
 - [[dot-CriarTexto()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[BolaMesa]] - `calls` [EXTRACTED]
-- [[Image_3]] - `references` [EXTRACTED]
-- [[RectTransform_4]] - `references` [EXTRACTED]
+- [[Image_4]] - `references` [EXTRACTED]
+- [[RectTransform_5]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

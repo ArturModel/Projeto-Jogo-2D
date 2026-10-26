@@ -12,10 +12,10 @@ tags:
 # com.unity.modules.vectorgraphics
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_49]] - `contains` [EXTRACTED]
-- [[depth_49]] - `contains` [EXTRACTED]
-- [[source_49]] - `contains` [EXTRACTED]
-- [[version_49]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_34]] - `contains` [EXTRACTED]
+- [[depth_36]] - `contains` [EXTRACTED]
+- [[source_36]] - `contains` [EXTRACTED]
+- [[version_36]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui

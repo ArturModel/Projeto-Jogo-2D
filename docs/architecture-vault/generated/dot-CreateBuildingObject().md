@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "SantaRitaChapter1Builder"
+community: "MonoBehaviour"
 location: "L565"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SantaRitaChapter1Builder
+  - community/MonoBehaviour
 ---
 
 # .CreateBuildingObject()
@@ -18,7 +18,7 @@ tags:
 - [[GameObject_9]] - `references` [EXTRACTED]
 - [[SantaRitaChapter1Builder]] - `method` [EXTRACTED]
 - [[Sprite_8]] - `references` [EXTRACTED]
-- [[Vector2_15]] - `references` [EXTRACTED]
-- [[Vector3_6]] - `references` [EXTRACTED]
+- [[Vector2_14]] - `references` [EXTRACTED]
+- [[Vector3_3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SantaRitaChapter1Builder
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

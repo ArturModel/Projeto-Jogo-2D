@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.2d.tilemap"
-location: "L73"
+community: "com.unity.modules.imageconversion"
+location: "L530"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunity2dtilemap
+  - community/comunitymodulesimageconversion
 ---
 
 # depth
 
 ## Connections
-- [[com.unity.2d.tilemap_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.unitywebrequesttexture]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunity2dtilemap
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion

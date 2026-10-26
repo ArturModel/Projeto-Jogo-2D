@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "SantaRitaChapter1Builder"
+community: "MonoBehaviour"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SantaRitaChapter1Builder
+  - community/MonoBehaviour
 ---
 
 # SantaRitaChapter1Builder
@@ -41,4 +41,4 @@ tags:
 - [[dot-WritePng()]] - `method` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SantaRitaChapter1Builder
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

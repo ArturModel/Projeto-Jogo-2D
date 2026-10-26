@@ -1,19 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "PlayerController"
+community: "PrologoDirector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/PrologoDirector
 ---
 
 # SpriteRenderer
 
 ## Connections
-- [[dot-Awake()_12]] - `references` [EXTRACTED]
-- [[dot-CriarLanternaNaMao()]] - `references` [EXTRACTED]
-- [[dot-PrepararCaminhadaMarcus()]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[Fileira]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

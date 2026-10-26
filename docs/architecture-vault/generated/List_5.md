@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "VideoSettingsController"
+community: "PrologoDirector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/PrologoDirector
 ---
 
 # List
 
 ## Connections
-- [[VideoSettingsController]] - `references` [EXTRACTED]
+- [[Fileira]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

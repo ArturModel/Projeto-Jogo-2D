@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-ResolverFimDaTacada()]] - `calls` [EXTRACTED]
 - [[dot-SincronizarTransformBolas()]] - `calls` [EXTRACTED]
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
+- [[dot-Update()_6]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

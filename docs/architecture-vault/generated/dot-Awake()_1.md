@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "MenuPausa"
-location: "L66"
+community: "SceneFader"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MenuPausa
+  - community/SceneFader
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [EXTRACTED]
-- [[MenuPausa]] - `method` [EXTRACTED]
+- [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
+- [[dot-FadeIn()]] - `calls` [EXTRACTED]
+- [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MenuPausa
+#graphify/code #graphify/EXTRACTED #community/SceneFader

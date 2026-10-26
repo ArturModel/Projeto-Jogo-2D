@@ -1,22 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "Interactable"
-location: "L282"
+community: "CamadaDeLuz"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Interactable
+  - community/CamadaDeLuz
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarLanternaERenderizadorMao()]] - `calls` [EXTRACTED]
-- [[dot-FindNearest()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_3]] - `calls` [INFERRED]
-- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
-- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
+- [[dot-Aplicar()]] - `calls` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Interactable
+#graphify/code #graphify/EXTRACTED #community/CamadaDeLuz

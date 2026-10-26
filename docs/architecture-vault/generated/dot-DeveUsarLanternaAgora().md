@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-AtualizarLanternaERenderizadorMao()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_2]] - `calls` [EXTRACTED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_1]] - `calls` [EXTRACTED]
+- [[dot-Start()_9]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 

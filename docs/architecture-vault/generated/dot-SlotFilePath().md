@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "CheckpointSystem"
+community: ".SaveSlot"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/SaveSlot
 ---
 
 # .SlotFilePath()
@@ -16,4 +16,4 @@ tags:
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/SaveSlot

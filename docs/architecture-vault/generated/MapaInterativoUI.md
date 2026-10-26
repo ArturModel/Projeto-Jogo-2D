@@ -57,7 +57,7 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PontoMapa_1]] - `references` [EXTRACTED]
 - [[PontoMapa]] - `contains` [EXTRACTED]
-- [[RectTransform_9]] - `references` [EXTRACTED]
+- [[RectTransform_10]] - `references` [EXTRACTED]
 - [[Sistema de Mapa Interativo (Tecla M  Caderno de Bolso)]] - `implements` [EXTRACTED]
 - [[TextMeshProUGUI_7]] - `references` [EXTRACTED]
 - [[Vector2_12]] - `references` [EXTRACTED]

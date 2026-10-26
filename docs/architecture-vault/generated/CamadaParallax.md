@@ -12,11 +12,11 @@ tags:
 # CamadaParallax
 
 ## Connections
-- [[dot-Awake()_8]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_1]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_15]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_3]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_3]] - `method` [EXTRACTED]
 - [[CamadaParallax.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
-- [[Vector3_2]] - `references` [EXTRACTED]
+- [[Vector3_4]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MonoBehaviour

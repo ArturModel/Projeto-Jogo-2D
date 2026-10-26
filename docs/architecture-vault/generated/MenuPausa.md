@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Abrir()]] - `method` [EXTRACTED]
 - [[dot-AtualizarTextoStatusSave()]] - `method` [EXTRACTED]
-- [[dot-Awake()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()]] - `method` [EXTRACTED]
 - [[dot-Botao()]] - `method` [EXTRACTED]
 - [[dot-Caixa()]] - `method` [EXTRACTED]
 - [[dot-Construir()]] - `method` [EXTRACTED]

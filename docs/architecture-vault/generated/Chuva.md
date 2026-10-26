@@ -28,7 +28,7 @@ tags:
 - [[dot-DesenharPocas()]] - `method` [EXTRACTED]
 - [[dot-DesenharRespingo()]] - `method` [EXTRACTED]
 - [[dot-GarantirCamadas()]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_3]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_2]] - `method` [EXTRACTED]
 - [[dot-LiberarCamada()]] - `method` [EXTRACTED]
 - [[dot-Limpar()_2]] - `method` [EXTRACTED]
 - [[dot-MetadeDaTela()]] - `method` [EXTRACTED]
@@ -37,7 +37,7 @@ tags:
 - [[dot-NovoRespingo()]] - `method` [EXTRACTED]
 - [[dot-OnDestroy()_4]] - `method` [EXTRACTED]
 - [[dot-OnDisable()_5]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_3]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_2]] - `method` [EXTRACTED]
 - [[dot-ParaPixel()]] - `method` [EXTRACTED]
 - [[dot-Pintar()]] - `method` [EXTRACTED]
 - [[dot-Simular()]] - `method` [EXTRACTED]
@@ -60,6 +60,6 @@ tags:
 - [[Poca]] - `contains` [EXTRACTED]
 - [[Respingo_1]] - `references` [EXTRACTED]
 - [[Respingo]] - `contains` [EXTRACTED]
-- [[Vector2_14]] - `references` [EXTRACTED]
+- [[Vector2_13]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Chuva

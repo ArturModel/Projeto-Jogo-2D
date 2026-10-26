@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.settings-manager"
-location: "L171"
+community: "com.unity.modules.ui"
+location: "L369"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitysettings-manager
+  - community/comunitymodulesui
 ---
 
 # depth
 
 ## Connections
-- [[com.unity.learn.iet-framework]] - `contains` [EXTRACTED]
+- [[com.unity.modules.hierarchycore_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitysettings-manager
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesui

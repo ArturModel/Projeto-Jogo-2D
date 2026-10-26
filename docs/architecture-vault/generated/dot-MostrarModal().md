@@ -18,7 +18,7 @@ tags:
 - [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirSerieVitoria()]] - `calls` [EXTRACTED]
 - [[dot-IniciarTurnoAtual()]] - `calls` [EXTRACTED]
-- [[RectTransform_4]] - `references` [EXTRACTED]
+- [[RectTransform_5]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[UnityAction]] - `references` [EXTRACTED]
 

@@ -1,19 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.test-framework"
-location: "L266"
+community: "com.unity.modules.jsonserialize"
+location: "L328"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/comunitymodulesjsonserialize
 ---
 
 # dependencies
 
 ## Connections
+- [[com.unity.modules.androidjni]] - `contains` [EXTRACTED]
 - [[com.unity.modules.jsonserialize_1]] - `contains` [EXTRACTED]
-- [[com.unity.test-framework_1]] - `contains` [EXTRACTED]
-- [[com.unity.test-framework.performance_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

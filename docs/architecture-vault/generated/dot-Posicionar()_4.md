@@ -16,7 +16,7 @@ tags:
 - [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
-- [[RectTransform_9]] - `references` [EXTRACTED]
+- [[RectTransform_10]] - `references` [EXTRACTED]
 - [[Vector2_12]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SceneFader"
+community: ".CreateCanvas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/CreateCanvas
 ---
 
 # CanvasScaler
 
 ## Connections
-- [[dot-BuildOverlay()]] - `references` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

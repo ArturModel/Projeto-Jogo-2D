@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "SinucaMinigameUI"
+community: "MainMenuActions"
 location: "L1122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/MainMenuActions
 ---
 
 # .ConcluirSerieDerrota()
@@ -19,4 +19,4 @@ tags:
 - [[dot-RecarregarUltimoSaveManual()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

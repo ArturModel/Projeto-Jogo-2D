@@ -1,17 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.wind"
-location: "L582"
+community: "dependencies"
+location: "L298"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymoduleswind
+  - community/dependencies
 ---
 
 # dependencies
 
 ## Connections
-- [[com.unity.modules.wind]] - `contains` [EXTRACTED]
+- [[com.unity.modules.jsonserialize_1]] - `contains` [EXTRACTED]
+- [[com.unity.ugui_1]] - `contains` [EXTRACTED]
+- [[com.unity.visualscripting]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymoduleswind
+#graphify/code #graphify/EXTRACTED #community/dependencies

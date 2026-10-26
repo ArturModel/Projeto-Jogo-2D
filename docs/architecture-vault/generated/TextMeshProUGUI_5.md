@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "InteractionPrompt"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/InteractionPrompt
 ---
 
 # TextMeshProUGUI
 
 ## Connections
-- [[Legenda]] - `references` [EXTRACTED]
+- [[InteractionPrompt]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/InteractionPrompt

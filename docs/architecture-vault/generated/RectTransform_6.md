@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "MenuItemSelector"
+community: "PayphoneCheckpoint"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MenuItemSelector
+  - community/PayphoneCheckpoint
 ---
 
 # RectTransform
 
 ## Connections
-- [[dot-Vincular()_3]] - `references` [EXTRACTED]
-- [[MenuItemSelector]] - `references` [EXTRACTED]
+- [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MenuItemSelector
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

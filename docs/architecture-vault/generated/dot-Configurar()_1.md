@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "SantaRitaChapter1Builder"
+community: "MonoBehaviour"
 location: "L216"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/SantaRitaChapter1Builder
+  - community/MonoBehaviour
 ---
 
 # .Configurar()
@@ -18,4 +18,4 @@ tags:
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 - [[TipoInteracao_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/SantaRitaChapter1Builder
+#graphify/code #graphify/INFERRED #community/MonoBehaviour

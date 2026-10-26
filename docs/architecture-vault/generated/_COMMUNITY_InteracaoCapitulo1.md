@@ -1,25 +1,22 @@
 ---
 type: community
-members: 81
+members: 76
 ---
 
 # InteracaoCapitulo1
 
-**Members:** 81 nodes
+**Members:** 76 nodes
 
 ## Members
 - [[dot-AoVencerZeNaSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-Ativar()]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
 - [[dot-Ativar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[dot-ConfigurarCenaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-DefinirObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-DispararChegadaCasaDoAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-Dizer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Encerrar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
 - [[dot-Encerrar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-EnsureForCurrentScene()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[dot-GarantirElementosBarDoZeCenaSeparada()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-IniciarPartidaSinucaComZe()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-Interact()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-Interact()_1]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
@@ -60,9 +57,7 @@ members: 81
 - [[dot-Ligar()]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
 - [[dot-Limpar()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Marcar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-MostrarTelaFechamentoCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-NarracaoEntradaCasaAvoRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[dot-OnSceneLoaded()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-OnTriggerEnter2D()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-RegistrarDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-RegistrarNotaDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
@@ -84,11 +79,11 @@ members: 81
 - [[InteracaoCapitulo1]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 - [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[LoadSceneMode]] - code
 - [[Prompt]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[Scene]] - code
+- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[Prompt_2]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 - [[Tipo]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[TransicaoDeZonaTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -98,26 +93,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 23 edges to [[_COMMUNITY_Capitulo1Director]]
-- 8 edges to [[_COMMUNITY_unityengine]]
-- 8 edges to [[_COMMUNITY_SantaRitaChapter1Builder]]
+- 20 edges to [[_COMMUNITY_Capitulo1Director]]
+- 10 edges to [[_COMMUNITY_PlayerController]]
+- 9 edges to [[_COMMUNITY_unityengine]]
+- 8 edges to [[_COMMUNITY_MonoBehaviour]]
 - 8 edges to [[_COMMUNITY_GameState]]
 - 7 edges to [[_COMMUNITY_GameMessageUI]]
 - 6 edges to [[_COMMUNITY_PrologoDirector]]
 - 6 edges to [[_COMMUNITY_MapaInterativoUI]]
-- 5 edges to [[_COMMUNITY_PlayerController]]
 - 4 edges to [[_COMMUNITY_PrologoVideo]]
-- 3 edges to [[_COMMUNITY_Legenda]]
 - 3 edges to [[_COMMUNITY_SinucaMinigameUI]]
-- 2 edges to [[_COMMUNITY_Interactable]]
-- 2 edges to [[_COMMUNITY_MonoBehaviour]]
+- 2 edges to [[_COMMUNITY_Legenda]]
 - 1 edge to [[_COMMUNITY_TipoInteracao]]
-- 1 edge to [[_COMMUNITY_dot-ConsumirEntrada]]
 - 1 edge to [[_COMMUNITY_dot-AoClicarSlot]]
 
 ## Top bridge nodes
 - [[dot-Tem()]] - degree 24, connects to 6 communities
 - [[InteracaoCapitulo1]] - degree 47, connects to 5 communities
 - [[dot-Dizer()]] - degree 16, connects to 5 communities
-- [[dot-Marcar()]] - degree 26, connects to 3 communities
-- [[DialogoLinha]] - degree 32, connects to 2 communities
+- [[dot-Marcar()]] - degree 26, connects to 4 communities
+- [[TransicaoDeZonaTrigger]] - degree 10, connects to 3 communities

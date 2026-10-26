@@ -31,6 +31,6 @@ tags:
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[TipoInteracao_1]] - `references` [EXTRACTED]
 - [[Transform_2]] - `references` [EXTRACTED]
-- [[Vector3_1]] - `references` [EXTRACTED]
+- [[Vector3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Capitulo1Director

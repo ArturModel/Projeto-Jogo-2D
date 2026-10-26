@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "SubtitleSettingsController"
+community: "PrologoVideo"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SubtitleSettingsController
+  - community/PrologoVideo
 ---
 
 # Image
 
 ## Connections
-- [[dot-Vincular()_5]] - `references` [EXTRACTED]
-- [[SubtitleSettingsController]] - `references` [EXTRACTED]
+- [[dot-MontarTela()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SubtitleSettingsController
+#graphify/code #graphify/EXTRACTED #community/PrologoVideo

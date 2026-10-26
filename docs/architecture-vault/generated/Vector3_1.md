@@ -1,23 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Capitulo1Director"
+community: "PlayerController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/PlayerController
 ---
 
 # Vector3
 
 ## Connections
-- [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
-- [[dot-AtualizarSpawnPointExistente()]] - `references` [EXTRACTED]
-- [[dot-ColocarArvore()]] - `references` [EXTRACTED]
-- [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
-- [[dot-ColocarInteracao()]] - `references` [EXTRACTED]
-- [[dot-ColocarOrelhaoSave()]] - `references` [EXTRACTED]
-- [[dot-ColocarPosteComLuz()]] - `references` [EXTRACTED]
-- [[dot-ColocarProp()]] - `references` [EXTRACTED]
+- [[dot-AplicarClampBordas()]] - `references` [EXTRACTED]
+- [[CameraFollow]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/PlayerController

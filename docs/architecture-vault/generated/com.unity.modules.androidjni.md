@@ -12,10 +12,10 @@ tags:
 # com.unity.modules.androidjni
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_30]] - `contains` [EXTRACTED]
-- [[depth_30]] - `contains` [EXTRACTED]
-- [[source_30]] - `contains` [EXTRACTED]
-- [[version_30]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_28]] - `contains` [EXTRACTED]
+- [[depth_29]] - `contains` [EXTRACTED]
+- [[source_29]] - `contains` [EXTRACTED]
+- [[version_29]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

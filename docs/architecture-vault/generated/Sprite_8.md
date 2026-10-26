@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SantaRitaChapter1Builder"
+community: "MonoBehaviour"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SantaRitaChapter1Builder
+  - community/MonoBehaviour
 ---
 
 # Sprite
@@ -18,4 +18,4 @@ tags:
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SantaRitaChapter1Builder
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

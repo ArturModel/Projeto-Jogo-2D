@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-Awake()_12]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
-- [[SpriteRenderer_3]] - `references` [EXTRACTED]
+- [[SpriteRenderer_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PlayerController

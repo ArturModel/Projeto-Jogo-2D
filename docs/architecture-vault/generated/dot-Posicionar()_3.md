@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "EstradaScroller"
+community: "PrologoDirector"
 location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EstradaScroller
+  - community/PrologoDirector
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-Update()_12]] - `calls` [EXTRACTED]
+- [[dot-Update()_8]] - `calls` [EXTRACTED]
 - [[EstradaScroller]] - `method` [EXTRACTED]
 - [[Fileira_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EstradaScroller
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

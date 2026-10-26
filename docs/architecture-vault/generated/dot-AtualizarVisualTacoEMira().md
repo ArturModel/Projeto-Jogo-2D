@@ -12,7 +12,7 @@ tags:
 # .AtualizarVisualTacoEMira()
 
 ## Connections
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
+- [[dot-Update()_6]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

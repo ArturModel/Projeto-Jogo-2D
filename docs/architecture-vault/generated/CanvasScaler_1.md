@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "SceneFader"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/SceneFader
 ---
 
 # CanvasScaler
 
 ## Connections
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-BuildOverlay()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/SceneFader

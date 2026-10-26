@@ -11,6 +11,6 @@ tags:
 # TextMeshProUGUI
 
 ## Connections
-- [[InteractionPrompt]] - `references` [EXTRACTED]
+- [[Legenda]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Legenda

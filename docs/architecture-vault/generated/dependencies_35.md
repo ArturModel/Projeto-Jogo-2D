@@ -1,20 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.jsonserialize"
-location: "L588"
+community: "com.unity.modules.audio"
+location: "L348"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/comunitymodulesaudio
 ---
 
 # dependencies
 
 ## Connections
-- [[com.unity.modules.jsonserialize_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.physics_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.subsystems_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.xr]] - `contains` [EXTRACTED]
+- [[com.unity.modules.audio_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio

@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[dot-AtualizarLanternaERenderizadorMao()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
-- [[Vector2_7]] - `references` [EXTRACTED]
+- [[Vector2_8]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PlayerController

@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.burst"
-location: "L190"
+community: "com.unity.collab-proxy"
+location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/comunitycollab-proxy
 ---
 
 # url
 
 ## Connections
-- [[com.unity.nuget.mono-cecil_1]] - `contains` [EXTRACTED]
+- [[com.unity.collab-proxy]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/comunitycollab-proxy

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "MenuItemSelector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/MenuItemSelector
 ---
 
 # RectTransform
 
 ## Connections
-- [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_3]] - `references` [EXTRACTED]
+- [[MenuItemSelector]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/MenuItemSelector

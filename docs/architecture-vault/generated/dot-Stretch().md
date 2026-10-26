@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "MenuPausa"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/MenuPausa
 ---
 
 # .Stretch()
@@ -28,7 +28,7 @@ tags:
 - [[dot-MontarCortina()]] - `calls` [EXTRACTED]
 - [[dot-MontarTela()]] - `calls` [EXTRACTED]
 - [[dot-SubPainel()]] - `calls` [EXTRACTED]
-- [[RectTransform_10]] - `references` [EXTRACTED]
+- [[RectTransform_1]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/MenuPausa

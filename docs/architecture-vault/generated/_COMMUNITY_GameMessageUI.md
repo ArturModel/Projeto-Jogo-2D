@@ -9,7 +9,7 @@ members: 28
 
 ## Members
 - [[dot-Avancar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Awake()_5]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Awake()_4]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[dot-Build()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[dot-ConfigurarRetratoEFalante()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[dot-Digitar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
@@ -29,12 +29,12 @@ members: 28
 - [[GameMessageUI]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[GameObject_4]] - code
 - [[IEnumerator_6]] - code
-- [[Image_2]] - code
+- [[Image_3]] - code
 - [[Instance_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[IsShowing]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[List_1]] - code
-- [[RectTransform_3]] - code
-- [[Sprite_1]] - code
+- [[RectTransform_4]] - code
+- [[Sprite_2]] - code
 - [[TextMeshProUGUI_1]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -46,14 +46,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 3 edges to [[_COMMUNITY_Legenda]]
+- 2 edges to [[_COMMUNITY_dot-CreateCanvas]]
 - 1 edge to [[_COMMUNITY_MonoBehaviour]]
 - 1 edge to [[_COMMUNITY_unityengine]]
-- 1 edge to [[_COMMUNITY_MapaInterativoUI]]
+- 1 edge to [[_COMMUNITY_MenuPausa]]
+- 1 edge to [[_COMMUNITY_dot-CreateLabel]]
 
 ## Top bridge nodes
 - [[GameMessageUI]] - degree 28, connects to 3 communities
-- [[dot-Build()]] - degree 9, connects to 2 communities
+- [[dot-Build()]] - degree 9, connects to 3 communities
 - [[dot-Show()]] - degree 9, connects to 1 community
 - [[dot-ShowDialogue()]] - degree 5, connects to 1 community
 - [[dot-ShowInspection()]] - degree 5, connects to 1 community

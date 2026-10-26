@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PlayerController"
+community: "SinucaMinigameUI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/SinucaMinigameUI
 ---
 
 # Sprite
 
 ## Connections
-- [[dot-GerarSpriteLanterna()]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[dot-CriarSpriteCirculo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "CameraFollow"
-location: "L34"
+community: "MenuPausa"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CameraFollow
+  - community/MenuPausa
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[Camera]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
+- [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CameraFollow
+#graphify/code #graphify/EXTRACTED #community/MenuPausa

@@ -43,6 +43,6 @@ tags:
 - [[dot-TentarTransicionar()]] - `calls` [INFERRED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[GameMessageUI.cs]] - `contains` [EXTRACTED]
-- [[Sprite_1]] - `references` [EXTRACTED]
+- [[Sprite_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/InteracaoCapitulo1

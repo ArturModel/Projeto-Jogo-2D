@@ -18,13 +18,13 @@ tags:
 - [[dot-ReiniciarSelecao()]] - `method` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
 - [[dot-Vincular()_3]] - `method` [EXTRACTED]
-- [[AudioClip_3]] - `references` [EXTRACTED]
-- [[AudioSource_3]] - `references` [EXTRACTED]
+- [[AudioClip_4]] - `references` [EXTRACTED]
+- [[AudioSource_4]] - `references` [EXTRACTED]
 - [[GameObject_7]] - `references` [EXTRACTED]
 - [[IPointerEnterHandler]] - `implements` [EXTRACTED]
 - [[ISelectHandler]] - `implements` [EXTRACTED]
 - [[MenuItemSelector.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
-- [[RectTransform_6]] - `references` [EXTRACTED]
+- [[RectTransform_7]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MenuItemSelector

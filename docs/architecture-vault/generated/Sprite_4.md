@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "PrologoDirector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/PrologoDirector
 ---
 
 # Sprite
 
 ## Connections
-- [[dot-LoadSprite()]] - `references` [EXTRACTED]
+- [[Fileira]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

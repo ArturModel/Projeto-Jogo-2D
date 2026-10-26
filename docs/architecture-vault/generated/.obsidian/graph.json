@@ -8,7 +8,7 @@
       }
     },
     {
-      "query": "tag:#community/CameraFollow",
+      "query": "tag:#community/CreateCanvas",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -64,7 +64,7 @@
       }
     },
     {
-      "query": "tag:#community/SantaRitaChapter1Builder",
+      "query": "tag:#community/MonoBehaviour",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -78,7 +78,7 @@
       }
     },
     {
-      "query": "tag:#community/comunityrender-pipelinescore",
+      "query": "tag:#community/comunityburst",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -127,14 +127,14 @@
       }
     },
     {
-      "query": "tag:#community/comunitymodulesaudio",
+      "query": "tag:#community/comunitymodulesunitywebrequest",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/dependencies",
+      "query": "tag:#community/comunitymodulesphysics",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -155,7 +155,7 @@
       }
     },
     {
-      "query": "tag:#community/Interactable",
+      "query": "tag:#community/CamadaDeLuz",
       "color": {
         "a": 1,
         "rgb": 14767961
@@ -183,7 +183,7 @@
       }
     },
     {
-      "query": "tag:#community/comunitymodulesuielements",
+      "query": "tag:#community/comunitymodulesimgui",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -197,14 +197,14 @@
       }
     },
     {
-      "query": "tag:#community/comunitymodulesanimation",
+      "query": "tag:#community/comunitymodulesaudio",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/MonoBehaviour",
+      "query": "tag:#community/MainMenuActions",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -239,7 +239,7 @@
       }
     },
     {
-      "query": "tag:#community/comunitymodulesimgui",
+      "query": "tag:#community/comunitymodulesui",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -267,7 +267,7 @@
       }
     },
     {
-      "query": "tag:#community/1_ANTES_de_Responder_ou_Alterar_Qualquer_C\u00f3digo_In\u00edcio_de_Todo_Prompt",
+      "query": "tag:#community/AGENTSmd__Governan\u00e7a_Obrigat\u00f3ria_de_IA_Graphify__Obsidian__Mem\u00f3ria_Persistente",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -302,7 +302,7 @@
       }
     },
     {
-      "query": "tag:#community/EstradaScroller",
+      "query": "tag:#community/InteractionPrompt",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -316,14 +316,14 @@
       }
     },
     {
-      "query": "tag:#community/DetectarLimitesDaRegiao",
+      "query": "tag:#community/comunityextnunit",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/comunitymoduleswind",
+      "query": "tag:#community/comunitymodulestetgen",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -337,21 +337,21 @@
       }
     },
     {
-      "query": "tag:#community/ConsumirEntrada",
+      "query": "tag:#community/dependencies",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/AudioAmbiente",
+      "query": "tag:#community/CreateLabel",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/comunitymodulesphysics2d",
+      "query": "tag:#community/comunitymathematics",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -393,14 +393,14 @@
       }
     },
     {
-      "query": "tag:#community/LimpadorParabrisa",
+      "query": "tag:#community/MovelLoja",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/OlharPrimeiraPessoa",
+      "query": "tag:#community/comunity2dtooling",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -414,21 +414,21 @@
       }
     },
     {
-      "query": "tag:#community/comunityburst",
+      "query": "tag:#community/graphify-refreshps1",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/comunitymodulesai",
+      "query": "tag:#community/dependencies",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/comunitymodulestetgen",
+      "query": "tag:#community/graphify-setupps1",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -449,28 +449,35 @@
       }
     },
     {
-      "query": "tag:#community/Manual_de_Opera\u00e7\u00e3o_e_Governan\u00e7a__Graphify__Obsidian__Antigravity",
+      "query": "tag:#community/Manual_de_Opera\u00e7\u00e3o_e_Governan\u00e7a__Graphify__Obsidian__Agentes_de_IA",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/graphify-refreshsh",
+      "query": "tag:#community/graphify-validateps1",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/graphify-refreshsh_script",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/graphify-setupsh",
+      "query": "tag:#community/graphify-setupsh_script",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/graphify-validatesh",
+      "query": "tag:#community/graphify-validatesh_script",
       "color": {
         "a": 1,
         "rgb": 7780274

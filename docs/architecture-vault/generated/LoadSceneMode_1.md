@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SceneFader"
+community: "Capitulo1Director"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Capitulo1Director
 ---
 
 # LoadSceneMode
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-OnSceneLoaded()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

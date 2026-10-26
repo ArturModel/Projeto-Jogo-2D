@@ -300,9 +300,9 @@
     "semantic_hash": "eec47d86823009935e5d76caae699aee"
   },
   "README.md": {
-    "mtime": 1793049104.6511285,
-    "seen": 1793049141.8406413,
-    "ast_hash": "625c32511beef227231a8afd6627e79b",
+    "mtime": 1793049479.113746,
+    "seen": 1793049522.1918411,
+    "ast_hash": "91c86a203a87e152f6e93bb5c17b2cb4",
     "semantic_hash": ""
   },
   "scripts/graphify-refresh.sh": {
@@ -330,9 +330,9 @@
     "semantic_hash": ""
   },
   "docs/GRAPHIFY-OBSIDIAN-OPERACAO.md": {
-    "mtime": 1793045371.5177581,
-    "seen": 1793045462.872413,
-    "ast_hash": "42b304f26f11d44d1e9f57e0ecfbcbf7",
+    "mtime": 1793049477.4017482,
+    "seen": 1793049522.1918418,
+    "ast_hash": "b60054c0ca8b8757daa913e4c61172b3",
     "semantic_hash": ""
   },
   "docs/PLAN-SETUP-GRAPHIFY-OBSIDIAN.md": {
@@ -342,15 +342,33 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1793049068.0841572,
-    "seen": 1793049141.8406377,
-    "ast_hash": "72536f029b9793b378ce25a70c617cc9",
+    "mtime": 1793049429.9908118,
+    "seen": 1793049522.1918354,
+    "ast_hash": "8db08574b94268ca7a50a02d8b02ae33",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1793049070.2661555,
-    "seen": 1793049141.8406386,
-    "ast_hash": "ef7d92fd6b646189ff8e809e463dbc5c",
+    "mtime": 1793049432.3278086,
+    "seen": 1793049522.1918364,
+    "ast_hash": "de4742fe0b7f13997e11f1ff528016de",
+    "semantic_hash": ""
+  },
+  "scripts/graphify-refresh.ps1": {
+    "mtime": 1793049383.5178792,
+    "seen": 1793049522.1918259,
+    "ast_hash": "5ba5df3a951023cd23977f05fa8fefb9",
+    "semantic_hash": ""
+  },
+  "scripts/graphify-setup.ps1": {
+    "mtime": 1793049380.8428833,
+    "seen": 1793049522.1918302,
+    "ast_hash": "893e77d0ab290f95d3ea689e533f3e06",
+    "semantic_hash": ""
+  },
+  "scripts/graphify-validate.ps1": {
+    "mtime": 1793049385.5258763,
+    "seen": 1793049522.191833,
+    "ast_hash": "e2230868e65e0d3a36b4faeecb1a7b3a",
     "semantic_hash": ""
   }
 }

@@ -11,9 +11,6 @@ tags:
 # Vector2
 
 ## Connections
-- [[dot-SnapToPixel()]] - `references` [EXTRACTED]
-- [[dot-Teleportar()]] - `references` [EXTRACTED]
-- [[dot-TeleportarPara()]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[dot-FindNearest()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PlayerController

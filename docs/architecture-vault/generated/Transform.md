@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "CameraFollow"
+community: ".CreateCanvas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CameraFollow
+  - community/CreateCanvas
 ---
 
 # Transform
 
 ## Connections
-- [[CameraFollow]] - `references` [EXTRACTED]
+- [[dot-CreateBox()]] - `references` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `references` [EXTRACTED]
+- [[dot-CreateLabel()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CameraFollow
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

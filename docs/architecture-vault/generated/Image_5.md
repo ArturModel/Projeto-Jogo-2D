@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "PrologoDirector"
+community: "PayphoneCheckpoint"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoDirector
+  - community/PayphoneCheckpoint
 ---
 
 # Image
 
 ## Connections
-- [[dot-MontarCortina()]] - `references` [EXTRACTED]
-- [[PrologoDirector]] - `references` [EXTRACTED]
+- [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoDirector
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

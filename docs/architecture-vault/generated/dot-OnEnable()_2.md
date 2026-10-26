@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "VideoSettingsController"
-location: "L50"
+community: "Chuva"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/Chuva
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/Chuva

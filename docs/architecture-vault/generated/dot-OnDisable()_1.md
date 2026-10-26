@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
 community: "VideoSettingsController"
-location: "L55"
+location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .OnDisable()
 
 ## Connections
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[VideoSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/VideoSettingsController

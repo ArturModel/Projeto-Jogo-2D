@@ -11,6 +11,6 @@ tags:
 # CanvasScaler
 
 ## Connections
-- [[dot-CreateCanvas()]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Legenda

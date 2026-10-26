@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "AudioAmbiente"
+community: "MenuItemSelector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioAmbiente
+  - community/MenuItemSelector
 ---
 
 # AudioSource
 
 ## Connections
-- [[dot-Awake()_15]] - `references` [EXTRACTED]
-- [[Camada]] - `references` [EXTRACTED]
+- [[dot-Vincular()_3]] - `references` [EXTRACTED]
+- [[MenuItemSelector]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioAmbiente
+#graphify/code #graphify/EXTRACTED #community/MenuItemSelector

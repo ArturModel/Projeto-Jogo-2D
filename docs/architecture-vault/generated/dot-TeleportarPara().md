@@ -15,12 +15,12 @@ tags:
 - [[dot-PosicionarJogadorInicialRoutine()]] - `calls` [INFERRED]
 - [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
 - [[dot-SnapImediatoParaAlvo()]] - `calls` [INFERRED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
+- [[dot-Start()_9]] - `calls` [EXTRACTED]
 - [[dot-Teleportar()]] - `calls` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `calls` [INFERRED]
 - [[CameraFollow]] - `references` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 - [[Rigidbody2D]] - `references` [EXTRACTED]
-- [[Vector2_7]] - `references` [EXTRACTED]
+- [[Vector2_8]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PlayerController

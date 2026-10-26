@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "AudioSettingsController"
-location: "L145"
+community: "SubtitleSettingsController"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/SubtitleSettingsController
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[SubtitleSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/SubtitleSettingsController

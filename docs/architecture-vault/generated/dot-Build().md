@@ -12,14 +12,14 @@ tags:
 # .Build()
 
 ## Connections
-- [[dot-Awake()_5]] - `calls` [EXTRACTED]
+- [[dot-Awake()_4]] - `calls` [EXTRACTED]
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[CanvasGroup_4]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
-- [[Image_2]] - `references` [EXTRACTED]
-- [[RectTransform_3]] - `references` [EXTRACTED]
+- [[Image_3]] - `references` [EXTRACTED]
+- [[RectTransform_4]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/GameMessageUI

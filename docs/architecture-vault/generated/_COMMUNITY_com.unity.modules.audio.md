@@ -1,48 +1,33 @@
 ---
 type: community
-members: 35
+members: 20
 ---
 
 # com.unity.modules.audio
 
-**Members:** 35 nodes
+**Members:** 20 nodes
 
 ## Members
-- [[com.unity.modules.assetbundle_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 - [[com.unity.modules.audio_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.unitywebrequest_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.unitywebrequestassetbundle_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.unitywebrequestaudio_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.unitywebrequestwww]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[com.unity.modules.video]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_11]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_12]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_13]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_14]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_15]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_16]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_17]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_12]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_13]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_14]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_15]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_16]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_17]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_18]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_12]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_13]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_14]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_15]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_16]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_17]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_18]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_12]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_13]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_14]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_15]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_16]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_17]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_18]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.modules.director_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.modules.particlesystem_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.timeline]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_35]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_36]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_37]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_38]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_37]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_38]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_39]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_40]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_37]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_38]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_39]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_40]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_37]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_38]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_39]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_40]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,15 +37,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_dependencies]]
-- 2 edges to [[_COMMUNITY_com.unity.modules.imageconversion]]
-- 2 edges to [[_COMMUNITY_com.unity.modules.imgui]]
-- 2 edges to [[_COMMUNITY_com.unity.modules.animation]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
+- 4 edges to [[_COMMUNITY_dependencies_1]]
+- 2 edges to [[_COMMUNITY_com.unity.2d.common]]
+- 2 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.ui]]
+- 1 edge to [[_COMMUNITY_dependencies]]
 
 ## Top bridge nodes
-- [[com.unity.modules.audio_1]] - degree 11, connects to 3 communities
-- [[com.unity.modules.unitywebrequest_1]] - degree 11, connects to 3 communities
-- [[dependencies_16]] - degree 7, connects to 1 community
-- [[com.unity.modules.assetbundle_1]] - degree 7, connects to 1 community
-- [[com.unity.modules.unitywebrequestassetbundle_1]] - degree 6, connects to 1 community
+- [[com.unity.modules.audio_1]] - degree 11, connects to 4 communities
+- [[com.unity.modules.director_1]] - degree 6, connects to 1 community
+- [[com.unity.modules.particlesystem_1]] - degree 6, connects to 1 community
+- [[dependencies_38]] - degree 5, connects to 1 community
+- [[com.unity.timeline]] - degree 5, connects to 1 community

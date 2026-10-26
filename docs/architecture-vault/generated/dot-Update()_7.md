@@ -1,21 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "SinucaMinigameUI"
-location: "L583"
+community: "PrologoDirector"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/PrologoDirector
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
-- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

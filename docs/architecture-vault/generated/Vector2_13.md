@@ -1,17 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "OlharPrimeiraPessoa"
+community: "Chuva"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OlharPrimeiraPessoa
+  - community/Chuva
 ---
 
 # Vector2
 
 ## Connections
-- [[dot-LerEntrada()]] - `references` [EXTRACTED]
-- [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
+- [[dot-BrilhoEm()]] - `references` [EXTRACTED]
+- [[dot-DentroDePoca()]] - `references` [EXTRACTED]
+- [[dot-MetadeDaTela()]] - `references` [EXTRACTED]
+- [[dot-ParaPixel()]] - `references` [EXTRACTED]
+- [[Chuva]] - `references` [EXTRACTED]
+- [[Gota]] - `references` [EXTRACTED]
+- [[Poca]] - `references` [EXTRACTED]
+- [[Respingo]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OlharPrimeiraPessoa
+#graphify/code #graphify/EXTRACTED #community/Chuva

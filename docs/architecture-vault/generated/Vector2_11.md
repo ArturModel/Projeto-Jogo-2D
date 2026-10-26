@@ -1,16 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: ".ConsumirEntrada"
+community: ".SaveSlot"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/ConsumirEntrada
+  - community/SaveSlot
 ---
 
 # Vector2
 
 ## Connections
-- [[dot-ConsumirEntrada()]] - `references` [EXTRACTED]
+- [[dot-ConsumePendingSpawn()]] - `references` [EXTRACTED]
+- [[dot-Save()]] - `references` [EXTRACTED]
+- [[dot-SaveSlot()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/ConsumirEntrada
+#graphify/code #graphify/EXTRACTED #community/SaveSlot

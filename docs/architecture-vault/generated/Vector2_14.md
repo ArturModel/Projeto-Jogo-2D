@@ -1,23 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Chuva"
+community: "MonoBehaviour"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Chuva
+  - community/MonoBehaviour
 ---
 
 # Vector2
 
 ## Connections
-- [[dot-BrilhoEm()]] - `references` [EXTRACTED]
-- [[dot-DentroDePoca()]] - `references` [EXTRACTED]
-- [[dot-MetadeDaTela()]] - `references` [EXTRACTED]
-- [[dot-ParaPixel()]] - `references` [EXTRACTED]
-- [[Chuva]] - `references` [EXTRACTED]
-- [[Gota]] - `references` [EXTRACTED]
-- [[Poca]] - `references` [EXTRACTED]
-- [[Respingo]] - `references` [EXTRACTED]
+- [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Chuva
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

@@ -1,17 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "CameraFollow"
+community: ".CreateCanvas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CameraFollow
+  - community/CreateCanvas
 ---
 
 # Vector2
 
 ## Connections
-- [[dot-DefinirLimitesRegiao()]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `references` [EXTRACTED]
+- [[UIFactory]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CameraFollow
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

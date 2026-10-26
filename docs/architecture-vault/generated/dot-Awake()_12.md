@@ -16,6 +16,6 @@ tags:
 - [[dot-PrepararCaminhadaMarcus()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 - [[Rigidbody2D]] - `references` [EXTRACTED]
-- [[SpriteRenderer_3]] - `references` [EXTRACTED]
+- [[SpriteRenderer_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PlayerController

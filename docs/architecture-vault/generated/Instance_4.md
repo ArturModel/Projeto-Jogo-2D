@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "Legenda"
-location: "L12"
+community: "PrologoDirector"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/PrologoDirector
 ---
 
 # Instance
 
 ## Connections
-- [[InteractionPrompt]] - `defines` [EXTRACTED]
+- [[AudioAmbiente]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
 community: "InteracaoCapitulo1"
-location: "L26"
+location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # Prompt
 
 ## Connections
-- [[ItemDeCena]] - `defines` [EXTRACTED]
+- [[TransicaoDeZonaTrigger]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

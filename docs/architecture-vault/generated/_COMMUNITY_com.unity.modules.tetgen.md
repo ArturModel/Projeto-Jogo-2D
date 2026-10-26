@@ -1,18 +1,23 @@
 ---
 type: community
-members: 5
+members: 10
 ---
 
 # com.unity.modules.tetgen
 
-**Members:** 5 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[com.unity.modules.tetgen_1]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[dependencies_70]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[depth_69]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[source_69]] - code - Projeto Jogo 2D/Packages/packages-lock.json
-- [[version_69]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.modules.tetgen]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[com.unity.modules.wind]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_54]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[dependencies_55]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_55]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[depth_56]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_55]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[source_56]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_55]] - code - Projeto Jogo 2D/Packages/packages-lock.json
+- [[version_56]] - code - Projeto Jogo 2D/Packages/packages-lock.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,7 +27,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_dependencies]]
+- 2 edges to [[_COMMUNITY_dependencies_1]]
 
 ## Top bridge nodes
-- [[com.unity.modules.tetgen_1]] - degree 5, connects to 1 community
+- [[com.unity.modules.tetgen]] - degree 5, connects to 1 community
+- [[com.unity.modules.wind]] - degree 5, connects to 1 community

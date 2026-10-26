@@ -1,17 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.imageconversion"
-location: "L529"
+community: "dependencies"
+location: "L283"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimageconversion
+  - community/dependencies
 ---
 
 # version
 
 ## Connections
-- [[com.unity.modules.unitywebrequesttexture]] - `contains` [EXTRACTED]
+- [[com.unity.ugui_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
+#graphify/code #graphify/EXTRACTED #community/dependencies

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 75
+members: 74
 ---
 
 # Capitulo1Director
 
-**Members:** 75 nodes
+**Members:** 74 nodes
 
 ## Members
 - [[dot-AdicionarBoxCollider()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
@@ -28,6 +28,7 @@ members: 75
 - [[dot-ColocarProp()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-ColocarTapete()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-Configurar()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-ConfigurarCenaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-ConstruirInterior1_Posto()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-ConstruirInterior2_Mercadinho()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-ConstruirInterior3_CasaDoAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
@@ -41,9 +42,13 @@ members: 75
 - [[dot-CriarFonteMusical()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-CriarParedesPerimetro()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-CriarPisoDeZona()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-EnsureForCurrentScene()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-ExtrairBloco32()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-GarantirElementosBarDoZeCenaSeparada()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-GarantirElementosCasaDoAvoCenaSeparada()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-MostrarTelaFechamentoCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-NomeArquivoTile()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-OnSceneLoaded()_1]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-PintarAcabamentoArquitetonicoInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-PosicionarJogadorInicialRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[dot-PrepararMusicasDasZonas()]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
@@ -53,8 +58,6 @@ members: 75
 - [[AudioClip_1]] - code
 - [[AudioSource_1]] - code
 - [[BoxCollider2D]] - code
-- [[CaixaMercado]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[CaixaPosto]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[Capitulo1Director]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[Color_1]] - code
 - [[Color32]] - code
@@ -62,25 +65,21 @@ members: 75
 - [[EstaEmInterior]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[Func]] - code
 - [[GameObject_3]] - code
-- [[Geladeira]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[Hortifruti]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[InfoZona]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[InfoZona_1]] - code
 - [[Instance_1]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[Light2D]] - code
-- [[MovelLoja]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[LoadSceneMode_1]] - code
 - [[MovelLoja_1]] - code
-- [[Prateleira]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[Prompt_2]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[RuntimeInitializeOnLoadMethod_1]] - code
-- [[Sprite]] - code
+- [[Scene_1]] - code
+- [[Sprite_1]] - code
 - [[SpriteRenderer]] - code
 - [[Texture2D]] - code
 - [[TilePiso_1]] - code
 - [[Transform_2]] - code
-- [[TransicaoDeZonaTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[Vector2_3]] - code
-- [[Vector3_1]] - code
+- [[Vector3]] - code
 - [[ZonaAtual]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
 - [[ZonaId_1]] - code
 
@@ -92,23 +91,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 23 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 7 edges to [[_COMMUNITY_SantaRitaChapter1Builder]]
+- 20 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 8 edges to [[_COMMUNITY_MonoBehaviour]]
+- 5 edges to [[_COMMUNITY_PlayerController]]
 - 4 edges to [[_COMMUNITY_PayphoneCheckpoint]]
-- 3 edges to [[_COMMUNITY_Legenda]]
+- 4 edges to [[_COMMUNITY_dot-CreateLabel]]
 - 3 edges to [[_COMMUNITY_Chuva]]
-- 2 edges to [[_COMMUNITY_CameraFollow]]
-- 2 edges to [[_COMMUNITY_unityengine]]
-- 2 edges to [[_COMMUNITY_PlayerController]]
-- 1 edge to [[_COMMUNITY_MonoBehaviour]]
+- 1 edge to [[_COMMUNITY_unityengine]]
 - 1 edge to [[_COMMUNITY_TilePiso]]
+- 1 edge to [[_COMMUNITY_MovelLoja]]
 - 1 edge to [[_COMMUNITY_ZonaId]]
-- 1 edge to [[_COMMUNITY_Interactable]]
 - 1 edge to [[_COMMUNITY_MapaInterativoUI]]
 
 ## Top bridge nodes
 - [[Capitulo1Director]] - degree 72, connects to 8 communities
-- [[TransicaoDeZonaTrigger]] - degree 10, connects to 3 communities
 - [[dot-AplicarEstadoDaZona()]] - degree 9, connects to 3 communities
 - [[dot-ColocarInteracao()]] - degree 20, connects to 2 communities
-- [[dot-ConstruirMundoMultiZonas()]] - degree 15, connects to 2 communities
+- [[Vector2_3]] - degree 14, connects to 2 communities
+- [[dot-ConfigurarCenaAtual()]] - degree 8, connects to 2 communities

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "Chuva"
-location: "L170"
+community: "MonoBehaviour"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Chuva
+  - community/MonoBehaviour
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[Chuva]] - `method` [EXTRACTED]
+- [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Chuva
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

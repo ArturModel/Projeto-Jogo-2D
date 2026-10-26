@@ -1,21 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
-type: "code"
-community: "com.unity.modules.tetgen"
-location: "L448"
+source_file: "Projeto Jogo 2D/Packages/manifest.json"
+type: "concept"
+community: "manifest.json"
+location: "L40"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/comunitymodulestetgen
+  - community/manifestjson
 ---
 
 # com.unity.modules.tetgen
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_70]] - `contains` [EXTRACTED]
-- [[depth_69]] - `contains` [EXTRACTED]
-- [[source_69]] - `contains` [EXTRACTED]
-- [[version_69]] - `contains` [EXTRACTED]
+- [[manifest.json]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulestetgen
+#graphify/concept #graphify/EXTRACTED #community/manifestjson

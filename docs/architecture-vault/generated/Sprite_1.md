@@ -1,20 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "GameMessageUI"
+community: "Capitulo1Director"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Capitulo1Director
 ---
 
 # Sprite
 
 ## Connections
-- [[dot-GerarRetratoPixelArt()]] - `references` [EXTRACTED]
-- [[dot-ResolverRetrato()]] - `references` [EXTRACTED]
-- [[dot-ShowInspection()]] - `references` [EXTRACTED]
-- [[DialogoLinha]] - `references` [EXTRACTED]
-- [[GameMessageUI]] - `references` [EXTRACTED]
+- [[dot-CarregarSprite()]] - `references` [EXTRACTED]
+- [[Capitulo1Director]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

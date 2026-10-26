@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "SinucaMinigameUI"
+community: "MainMenuActions"
 location: "L323"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/MainMenuActions
 ---
 
 # .Clear()
@@ -17,4 +17,4 @@ tags:
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

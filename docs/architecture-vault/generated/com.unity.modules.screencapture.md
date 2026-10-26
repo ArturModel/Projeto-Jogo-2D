@@ -12,10 +12,10 @@ tags:
 # com.unity.modules.screencapture
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_55]] - `contains` [EXTRACTED]
-- [[depth_56]] - `contains` [EXTRACTED]
-- [[source_56]] - `contains` [EXTRACTED]
-- [[version_56]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_49]] - `contains` [EXTRACTED]
+- [[depth_51]] - `contains` [EXTRACTED]
+- [[source_51]] - `contains` [EXTRACTED]
+- [[version_51]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion

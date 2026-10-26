@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "InteractionPrompt"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/InteractionPrompt
 ---
 
 # CanvasGroup
 
 ## Connections
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
-- [[Legenda]] - `references` [EXTRACTED]
+- [[dot-Build()_1]] - `references` [EXTRACTED]
+- [[InteractionPrompt]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/InteractionPrompt

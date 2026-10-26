@@ -12,10 +12,10 @@ tags:
 # com.unity.modules.unitywebrequesttexture
 
 ## Connections
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_56]] - `contains` [EXTRACTED]
-- [[depth_57]] - `contains` [EXTRACTED]
-- [[source_57]] - `contains` [EXTRACTED]
-- [[version_57]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_50]] - `contains` [EXTRACTED]
+- [[depth_52]] - `contains` [EXTRACTED]
+- [[source_52]] - `contains` [EXTRACTED]
+- [[version_52]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion

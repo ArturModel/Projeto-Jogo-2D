@@ -1,18 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "EstradaScroller"
-location: "L80"
+community: "PlayerController"
+location: "L227"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EstradaScroller
+  - community/PlayerController
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Construir()_2]] - `calls` [EXTRACTED]
-- [[EstradaScroller]] - `method` [EXTRACTED]
+- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
+- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
+- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EstradaScroller
+#graphify/code #graphify/EXTRACTED #community/PlayerController

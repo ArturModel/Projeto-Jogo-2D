@@ -16,6 +16,6 @@ tags:
 - [[CanvasGroup_2]] - `references` [EXTRACTED]
 - [[GameObject_1]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `method` [EXTRACTED]
-- [[RectTransform_1]] - `references` [EXTRACTED]
+- [[RectTransform_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/OptionsPanelController

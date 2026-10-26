@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
 community: "com.unity.2d.common"
-location: "L44"
+location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # version
 
 ## Connections
-- [[com.unity.2d.psdimporter]] - `contains` [EXTRACTED]
+- [[com.unity.2d.animation]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunity2dcommon

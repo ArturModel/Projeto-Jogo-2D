@@ -1,22 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.2d.common"
-location: "L20"
+community: "com.unity.burst"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunity2dcommon
+  - community/comunityburst
 ---
 
 # dependencies
 
 ## Connections
-- [[com.unity.2d.aseprite]] - `contains` [EXTRACTED]
-- [[com.unity.2d.common_1]] - `contains` [EXTRACTED]
-- [[com.unity.2d.sprite_1]] - `contains` [EXTRACTED]
-- [[com.unity.2d.tilemap_1]] - `contains` [EXTRACTED]
-- [[com.unity.mathematics_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.animation_1]] - `contains` [EXTRACTED]
+- [[com.unity.render-pipelines.core]] - `contains` [EXTRACTED]
+- [[com.unity.render-pipelines.universal]] - `contains` [EXTRACTED]
+- [[com.unity.render-pipelines.universal-config]] - `contains` [EXTRACTED]
+- [[com.unity.shadergraph]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunity2dcommon
+#graphify/code #graphify/EXTRACTED #community/comunityburst

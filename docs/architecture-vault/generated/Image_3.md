@@ -1,21 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "SinucaMinigameUI"
+community: "GameMessageUI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/GameMessageUI
 ---
 
 # Image
 
 ## Connections
-- [[dot-ConstruirModal()]] - `references` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
-- [[dot-CriarBolasUI()]] - `references` [EXTRACTED]
-- [[dot-CriarBotaoModal()]] - `references` [EXTRACTED]
-- [[BolaMesa]] - `references` [EXTRACTED]
-- [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[dot-Build()]] - `references` [EXTRACTED]
+- [[GameMessageUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/GameMessageUI

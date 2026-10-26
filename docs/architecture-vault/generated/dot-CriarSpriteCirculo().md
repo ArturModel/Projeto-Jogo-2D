@@ -16,6 +16,6 @@ tags:
 - [[dot-CriarBolasUI()]] - `calls` [EXTRACTED]
 - [[Color_3]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
-- [[Sprite_2]] - `references` [EXTRACTED]
+- [[Sprite_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

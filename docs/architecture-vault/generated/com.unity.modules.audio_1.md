@@ -12,16 +12,16 @@ tags:
 # com.unity.modules.audio
 
 ## Connections
-- [[dependencies_39]] - `contains` [EXTRACTED]
-- [[dependencies_15]] - `contains` [EXTRACTED]
-- [[dependencies_16]] - `contains` [EXTRACTED]
+- [[dependencies_36]] - `contains` [EXTRACTED]
 - [[dependencies_17]] - `contains` [EXTRACTED]
-- [[dependencies_41]] - `contains` [EXTRACTED]
-- [[dependencies_50]] - `contains` [EXTRACTED]
-- [[dependencies_23]] - `contains` [EXTRACTED]
-- [[dependencies_12]] - `contains` [EXTRACTED]
-- [[depth_13]] - `contains` [EXTRACTED]
-- [[source_13]] - `contains` [EXTRACTED]
-- [[version_13]] - `contains` [EXTRACTED]
+- [[dependencies_18]] - `contains` [EXTRACTED]
+- [[dependencies_45]] - `contains` [EXTRACTED]
+- [[dependencies_38]] - `contains` [EXTRACTED]
+- [[dependencies_56]] - `contains` [EXTRACTED]
+- [[dependencies_70]] - `contains` [EXTRACTED]
+- [[dependencies_35]] - `contains` [EXTRACTED]
+- [[depth_37]] - `contains` [EXTRACTED]
+- [[source_37]] - `contains` [EXTRACTED]
+- [[version_37]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio

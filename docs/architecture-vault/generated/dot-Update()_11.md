@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Legenda"
-location: "L111"
+community: "PrologoVideo"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/PrologoVideo
 ---
 
 # .Update()
 
 ## Connections
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/PrologoVideo

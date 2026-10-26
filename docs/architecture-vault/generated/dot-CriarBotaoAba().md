@@ -19,8 +19,8 @@ tags:
 - [[Button_4]] - `references` [EXTRACTED]
 - [[Image_10]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
-- [[RectTransform_9]] - `references` [EXTRACTED]
-- [[Transform_8]] - `references` [EXTRACTED]
+- [[RectTransform_10]] - `references` [EXTRACTED]
+- [[Transform_9]] - `references` [EXTRACTED]
 - [[UnityAction_2]] - `references` [EXTRACTED]
 - [[Vector2_12]] - `references` [EXTRACTED]
 

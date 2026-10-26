@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "LimpadorParabrisa"
+community: "PrologoDirector"
 location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/LimpadorParabrisa
+  - community/PrologoDirector
 ---
 
 # .Suavizar()
@@ -15,4 +15,4 @@ tags:
 - [[dot-AnguloEm()]] - `calls` [EXTRACTED]
 - [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/LimpadorParabrisa
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

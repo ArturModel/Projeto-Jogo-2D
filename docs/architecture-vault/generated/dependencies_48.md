@@ -1,23 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Packages/packages-lock.json"
 type: "code"
-community: "com.unity.modules.imgui"
-location: "L480"
+community: "com.unity.modules.imageconversion"
+location: "L377"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimgui
+  - community/comunitymodulesimageconversion
 ---
 
 # dependencies
 
 ## Connections
-- [[com.unity.modules.animation_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.hierarchycore_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.imgui_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.jsonserialize_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.physics_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.ui_1]] - `contains` [EXTRACTED]
-- [[com.unity.modules.uielements_1]] - `contains` [EXTRACTED]
+- [[com.unity.modules.imageconversion_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
