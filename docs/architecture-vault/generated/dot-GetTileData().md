@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/TileAleatorio.cs"
 type: "code"
-community: "Community 47"
+community: "EstadoPartida"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_47
+  - community/EstadoPartida
 ---
 
 # .GetTileData()
@@ -18,4 +18,4 @@ tags:
 - [[TileData]] - `references` [EXTRACTED]
 - [[Vector3Int]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_47
+#graphify/code #graphify/EXTRACTED #community/EstadoPartida

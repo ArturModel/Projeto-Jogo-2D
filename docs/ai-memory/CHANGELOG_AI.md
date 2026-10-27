@@ -1,3 +1,11 @@
+# Auditoria Pós-Merge, Governança Reforçada e Histórico de Planos — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_merge-main-auditoria-governanca.md`](../ai-plans/2026-10-27_lucamontini_merge-main-auditoria-governanca.md)
+- **Resumo:** Pull da `main` realizado após merge de Patrick Dotto. Análise de diferenças confirmou que nenhum código ou asset foi perdido (C1 + C2 intactos com 93 scripts). Corrigida a diluição das regras de governança que havia ocorrido no merge: restaurado checklist obrigatório em `AGENTS.md` e regras de agente (`.agents/rules/`). Implementado sistema obrigatório de registro de planos executados por prompt em `docs/ai-plans/` contendo autor do GitHub e data. Graphify local atualizado para `0.9.96` e validado com sucesso (`./scripts/graphify-refresh.sh` e `./scripts/graphify-validate.sh` PASS).
+
+---
+
 # Integração ao progresso local — 26/10/2026
 
 Resolução do merge Graphify/Obsidian sobre main local `86b7c02`: união de gitignore, preservação das regras de produção, atualização da memória/cofre para C2 até Bocha e consequência, inventário dos 93 C#, índice AST limpo e ferramentas portáveis com validação real e propagação de falhas. Escola adiada, retornos C1, saves/slots, lanterna F, escada/ambientes e correção E preservados. Nenhum arquivo Unity alterado; licença de áudio preexistente mantida fora do merge. [Resultado e testes](../GRAPHIFY-INTEGRACAO-C2.md).

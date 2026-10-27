@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 10"
+community: "MenuPausa"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_10
+  - community/MenuPausa
 ---
 
 # TipoInteracao
@@ -49,4 +49,4 @@ tags:
 - [[VendaAntigaFechada]] - `case_of` [EXTRACTED]
 - [[VizinhaDonaLurdes]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_10
+#graphify/code #graphify/EXTRACTED #community/MenuPausa

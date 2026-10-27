@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "Community 50"
+community: "com.unity.mathematics"
 location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/comunitymathematics
 ---
 
 # .Suavizar()
@@ -15,4 +15,4 @@ tags:
 - [[dot-AnguloEm()]] - `calls` [EXTRACTED]
 - [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/comunitymathematics

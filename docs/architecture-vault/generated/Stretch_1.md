@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 20"
+community: "GameState"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/GameState
 ---
 
 # Stretch
@@ -14,4 +14,4 @@ tags:
 - [[dot-Edge()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/GameState

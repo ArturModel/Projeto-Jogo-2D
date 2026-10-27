@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 8"
+community: "Chuva"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Chuva
 ---
 
 # AudioMixerGroup
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Chuva]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Chuva

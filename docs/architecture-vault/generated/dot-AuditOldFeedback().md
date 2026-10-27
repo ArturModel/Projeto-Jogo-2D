@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 14"
+community: "TipoInteracao"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/TipoInteracao
 ---
 
 # .AuditOldFeedback()
@@ -34,4 +34,4 @@ tags:
 - [[MenuItem]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/TipoInteracao

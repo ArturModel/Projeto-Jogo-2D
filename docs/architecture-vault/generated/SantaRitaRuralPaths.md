@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs"
 type: "code"
-community: "Community 20"
+community: "GameState"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/GameState
 ---
 
 # SantaRitaRuralPaths
@@ -18,4 +18,4 @@ tags:
 - [[SantaRitaRuralPaths.cs]] - `contains` [EXTRACTED]
 - [[Stretch]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/GameState

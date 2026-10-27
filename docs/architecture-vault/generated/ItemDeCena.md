@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
 type: "code"
-community: "Community 30"
+community: "PayphoneCheckpoint"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/PayphoneCheckpoint
 ---
 
 # ItemDeCena
@@ -19,4 +19,4 @@ tags:
 - [[ItemDeCena.cs]] - `contains` [EXTRACTED]
 - [[Prompt_7]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

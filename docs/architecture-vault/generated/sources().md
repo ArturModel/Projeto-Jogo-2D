@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-project.py"
 type: "code"
-community: "Community 32"
+community: "com.unity.settings-manager"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/comunitysettings-manager
 ---
 
 # sources()
@@ -15,4 +15,4 @@ tags:
 - [[fingerprint()]] - `calls` [EXTRACTED]
 - [[graphify-project.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+#graphify/code #graphify/EXTRACTED #community/comunitysettings-manager

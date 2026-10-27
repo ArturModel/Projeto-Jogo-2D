@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 25"
+community: "TilePiso"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/TilePiso
 ---
 
 # .Definir()
@@ -16,4 +16,4 @@ tags:
 - [[dot-Update()_9]] - `calls` [EXTRACTED]
 - [[Capitulo2Audio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/TilePiso

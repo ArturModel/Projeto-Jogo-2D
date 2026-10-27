@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 36"
+community: "MenuItemSelector"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/MenuItemSelector
 ---
 
 # Fala
@@ -14,4 +14,4 @@ tags:
 - [[Legenda]] - `references` [EXTRACTED]
 - [[PrologoVideo]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/MenuItemSelector

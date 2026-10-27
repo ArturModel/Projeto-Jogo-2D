@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 31"
+community: "VideoSettingsController"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/VideoSettingsController
 ---
 
 # ForcarDevelopment
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Chapter2BuildVerification]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

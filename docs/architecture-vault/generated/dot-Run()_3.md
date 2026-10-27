@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs"
 type: "code"
-community: "Community 4"
+community: "PlayerController"
 location: "L9"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/PlayerController
 ---
 
 # .Run()
@@ -26,4 +26,4 @@ tags:
 - [[BochaPerspectiveVerification]] - `method` [EXTRACTED]
 - [[BochaSimulation]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/PlayerController

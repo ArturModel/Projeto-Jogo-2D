@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 49"
+community: ".CreateLabel"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/CreateLabel
 ---
 
 # .Init()
@@ -15,4 +15,4 @@ tags:
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/CreateLabel

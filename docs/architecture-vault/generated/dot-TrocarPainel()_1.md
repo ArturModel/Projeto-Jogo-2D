@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "Community 24"
+community: "com.unity.modules.jsonserialize"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/comunitymodulesjsonserialize
 ---
 
 # .TrocarPainel()
@@ -19,4 +19,4 @@ tags:
 - [[OptionsPanelController]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

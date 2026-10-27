@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs"
 type: "code"
-community: "Community 1"
+community: ".CreateCanvas"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/CreateCanvas
 ---
 
 # .OnPreprocessTexture()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SantaRitaArtImporter]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 11"
+community: "com.unity.burst"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/comunityburst
 ---
 
 # MenuItem
@@ -29,4 +29,4 @@ tags:
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/comunityburst

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 2"
+community: "Capitulo1Director"
 location: "L1957"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Capitulo1Director
 ---
 
 # .ConstruirInterior2_Mercadinho()
@@ -27,4 +27,4 @@ tags:
 - [[Capitulo2Portal]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

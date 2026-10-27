@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 37"
+community: "AudioSettingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_37
+  - community/AudioSettingsController
 ---
 
 # Scene
@@ -19,4 +19,4 @@ tags:
 - [[dot-Setup()]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+#graphify/code #graphify/EXTRACTED #community/AudioSettingsController

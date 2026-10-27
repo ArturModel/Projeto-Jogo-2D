@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/interior-thresholds.lua"
 type: "code"
-community: "Community 60"
+community: "dependencies"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_60
+  - community/dependencies
 ---
 
 # interior-thresholds.lua
@@ -16,4 +16,4 @@ tags:
 - [[c()_2]] - `contains` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+#graphify/code #graphify/EXTRACTED #community/dependencies

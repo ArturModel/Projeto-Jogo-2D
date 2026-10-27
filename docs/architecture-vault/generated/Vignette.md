@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "com.unity.modules.unitywebrequest"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/comunitymodulesunitywebrequest
 ---
 
 # Vignette
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

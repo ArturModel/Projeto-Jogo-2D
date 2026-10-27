@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
 type: "code"
-community: "Community 30"
+community: "PayphoneCheckpoint"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/PayphoneCheckpoint
 ---
 
 # DoorTrigger
@@ -20,4 +20,4 @@ tags:
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[Prompt_5]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

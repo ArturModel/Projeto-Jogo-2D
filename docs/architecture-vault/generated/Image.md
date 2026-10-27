@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 7"
+community: "dependencies"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/dependencies
 ---
 
 # Image
@@ -48,4 +48,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/dependencies

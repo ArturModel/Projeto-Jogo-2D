@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
 type: "code"
-community: "Community 7"
+community: "dependencies"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/dependencies
 ---
 
 # .Stretch()
@@ -33,4 +33,4 @@ tags:
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/dependencies

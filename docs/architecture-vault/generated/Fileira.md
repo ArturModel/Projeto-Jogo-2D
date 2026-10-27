@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 18"
+community: "com.unity.modules.unitywebrequest"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/comunitymodulesunitywebrequest
 ---
 
 # Fileira
@@ -18,4 +18,4 @@ tags:
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

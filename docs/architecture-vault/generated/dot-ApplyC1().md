@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs"
 type: "code"
-community: "Community 16"
+community: "OptionsPanelController"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/OptionsPanelController
 ---
 
 # .ApplyC1()
@@ -20,4 +20,4 @@ tags:
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

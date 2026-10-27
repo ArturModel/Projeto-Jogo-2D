@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
 type: "code"
-community: "Community 33"
+community: "PrologoDirector"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/PrologoDirector
 ---
 
 # .Update()
@@ -16,4 +16,4 @@ tags:
 - [[dot-Procurar()]] - `calls` [EXTRACTED]
 - [[PonteiroCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

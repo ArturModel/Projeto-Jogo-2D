@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 4"
+community: "PlayerController"
 location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/PlayerController
 ---
 
 # Evento
@@ -16,4 +16,4 @@ tags:
 - [[dot-TestarPlano()]] - `calls` [EXTRACTED]
 - [[BochaSimulation]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/PlayerController

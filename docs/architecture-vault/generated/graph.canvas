@@ -3,7 +3,7 @@
     {
       "id": "g0",
       "type": "group",
-      "label": "Community 0",
+      "label": "InteracaoCapitulo1",
       "x": 0,
       "y": 0,
       "width": 2420,
@@ -1093,7 +1093,7 @@
     {
       "id": "g1",
       "type": "group",
-      "label": "Community 1",
+      "label": ".CreateCanvas",
       "x": 2500,
       "y": 0,
       "width": 2420,
@@ -2030,7 +2030,7 @@
     {
       "id": "g2",
       "type": "group",
-      "label": "Community 2",
+      "label": "Capitulo1Director",
       "x": 5000,
       "y": 0,
       "width": 2420,
@@ -2958,7 +2958,7 @@
     {
       "id": "g3",
       "type": "group",
-      "label": "Community 3",
+      "label": "SinucaMinigameUI",
       "x": 7500,
       "y": 0,
       "width": 1980,
@@ -3571,7 +3571,7 @@
     {
       "id": "g4",
       "type": "group",
-      "label": "Community 4",
+      "label": "PlayerController",
       "x": 9560,
       "y": 0,
       "width": 1980,
@@ -4184,7 +4184,7 @@
     {
       "id": "g5",
       "type": "group",
-      "label": "Community 5",
+      "label": "MapaInterativoUI",
       "x": 11620,
       "y": 0,
       "width": 1980,
@@ -4779,7 +4779,7 @@
     {
       "id": "g6",
       "type": "group",
-      "label": "Community 6",
+      "label": "manifest.json",
       "x": 13680,
       "y": 0,
       "width": 1760,
@@ -5275,7 +5275,7 @@
     {
       "id": "g7",
       "type": "group",
-      "label": "Community 7",
+      "label": "dependencies",
       "x": 15520,
       "y": 0,
       "width": 1540,
@@ -5699,7 +5699,7 @@
     {
       "id": "g8",
       "type": "group",
-      "label": "Community 8",
+      "label": "Chuva",
       "x": 17140,
       "y": 0,
       "width": 1540,
@@ -6105,7 +6105,7 @@
     {
       "id": "g9",
       "type": "group",
-      "label": "Community 9",
+      "label": "MonoBehaviour",
       "x": 18760,
       "y": 0,
       "width": 1540,
@@ -6502,7 +6502,7 @@
     {
       "id": "g10",
       "type": "group",
-      "label": "Community 10",
+      "label": "MenuPausa",
       "x": 0,
       "y": 1300,
       "width": 1320,
@@ -6836,7 +6836,7 @@
     {
       "id": "g11",
       "type": "group",
-      "label": "Community 11",
+      "label": "com.unity.burst",
       "x": 2500,
       "y": 1300,
       "width": 1320,
@@ -7143,7 +7143,7 @@
     {
       "id": "g12",
       "type": "group",
-      "label": "Community 12",
+      "label": "packages-lock.json",
       "x": 5000,
       "y": 1300,
       "width": 1320,
@@ -7441,7 +7441,7 @@
     {
       "id": "g13",
       "type": "group",
-      "label": "Community 13",
+      "label": "com.unity.2d.common",
       "x": 7500,
       "y": 1300,
       "width": 1320,
@@ -7730,7 +7730,7 @@
     {
       "id": "g14",
       "type": "group",
-      "label": "Community 14",
+      "label": "TipoInteracao",
       "x": 9560,
       "y": 1300,
       "width": 1320,
@@ -8010,7 +8010,7 @@
     {
       "id": "g15",
       "type": "group",
-      "label": "Community 15",
+      "label": "SceneFader",
       "x": 11620,
       "y": 1300,
       "width": 1320,
@@ -8281,7 +8281,7 @@
     {
       "id": "g16",
       "type": "group",
-      "label": "Community 16",
+      "label": "OptionsPanelController",
       "x": 13680,
       "y": 1300,
       "width": 1320,
@@ -8552,7 +8552,7 @@
     {
       "id": "g17",
       "type": "group",
-      "label": "Community 17",
+      "label": "CheckpointSystem",
       "x": 15520,
       "y": 1300,
       "width": 1320,
@@ -8814,7 +8814,7 @@
     {
       "id": "g18",
       "type": "group",
-      "label": "Community 18",
+      "label": "com.unity.modules.unitywebrequest",
       "x": 17140,
       "y": 1300,
       "width": 1100,
@@ -9049,7 +9049,7 @@
     {
       "id": "g19",
       "type": "group",
-      "label": "Community 19",
+      "label": "com.unity.modules.physics",
       "x": 18760,
       "y": 1300,
       "width": 1100,
@@ -9257,7 +9257,7 @@
     {
       "id": "g20",
       "type": "group",
-      "label": "Community 20",
+      "label": "GameState",
       "x": 0,
       "y": 2100,
       "width": 1100,
@@ -9456,7 +9456,7 @@
     {
       "id": "g21",
       "type": "group",
-      "label": "Community 21",
+      "label": "GameMessageUI",
       "x": 2500,
       "y": 2100,
       "width": 1100,
@@ -9646,7 +9646,7 @@
     {
       "id": "g22",
       "type": "group",
-      "label": "Community 22",
+      "label": "CamadaDeLuz",
       "x": 5000,
       "y": 2100,
       "width": 1100,
@@ -9836,7 +9836,7 @@
     {
       "id": "g23",
       "type": "group",
-      "label": "Community 23",
+      "label": "com.unity.test-framework",
       "x": 7500,
       "y": 2100,
       "width": 1100,
@@ -10017,7 +10017,7 @@
     {
       "id": "g24",
       "type": "group",
-      "label": "Community 24",
+      "label": "com.unity.modules.jsonserialize",
       "x": 9560,
       "y": 2100,
       "width": 1100,
@@ -10198,7 +10198,7 @@
     {
       "id": "g25",
       "type": "group",
-      "label": "Community 25",
+      "label": "TilePiso",
       "x": 11620,
       "y": 2100,
       "width": 1100,
@@ -10379,7 +10379,7 @@
     {
       "id": "g26",
       "type": "group",
-      "label": "Community 26",
+      "label": "com.unity.modules.imgui",
       "x": 13680,
       "y": 2100,
       "width": 1100,
@@ -10560,7 +10560,7 @@
     {
       "id": "g27",
       "type": "group",
-      "label": "Community 27",
+      "label": "unityengine",
       "x": 15520,
       "y": 2100,
       "width": 1100,
@@ -10732,7 +10732,7 @@
     {
       "id": "g28",
       "type": "group",
-      "label": "Community 28",
+      "label": "com.unity.modules.audio",
       "x": 17140,
       "y": 2100,
       "width": 1100,
@@ -10895,7 +10895,7 @@
     {
       "id": "g29",
       "type": "group",
-      "label": "Community 29",
+      "label": "MainMenuActions",
       "x": 18760,
       "y": 2100,
       "width": 1100,
@@ -11058,7 +11058,7 @@
     {
       "id": "g30",
       "type": "group",
-      "label": "Community 30",
+      "label": "PayphoneCheckpoint",
       "x": 0,
       "y": 2800,
       "width": 1100,
@@ -11221,7 +11221,7 @@
     {
       "id": "g31",
       "type": "group",
-      "label": "Community 31",
+      "label": "VideoSettingsController",
       "x": 2500,
       "y": 2800,
       "width": 880,
@@ -11375,7 +11375,7 @@
     {
       "id": "g32",
       "type": "group",
-      "label": "Community 32",
+      "label": "com.unity.settings-manager",
       "x": 5000,
       "y": 2800,
       "width": 880,
@@ -11520,7 +11520,7 @@
     {
       "id": "g33",
       "type": "group",
-      "label": "Community 33",
+      "label": "PrologoDirector",
       "x": 7500,
       "y": 2800,
       "width": 880,
@@ -11665,7 +11665,7 @@
     {
       "id": "g34",
       "type": "group",
-      "label": "Community 34",
+      "label": "com.unity.modules.ui",
       "x": 9560,
       "y": 2800,
       "width": 880,
@@ -11792,7 +11792,7 @@
     {
       "id": "g35",
       "type": "group",
-      "label": "Community 35",
+      "label": "PrologoVideo",
       "x": 11620,
       "y": 2800,
       "width": 880,
@@ -11919,7 +11919,7 @@
     {
       "id": "g36",
       "type": "group",
-      "label": "Community 36",
+      "label": "MenuItemSelector",
       "x": 13680,
       "y": 2800,
       "width": 880,
@@ -12037,7 +12037,7 @@
     {
       "id": "g37",
       "type": "group",
-      "label": "Community 37",
+      "label": "AudioSettingsController",
       "x": 15520,
       "y": 2800,
       "width": 880,
@@ -12155,7 +12155,7 @@
     {
       "id": "g38",
       "type": "group",
-      "label": "Community 38",
+      "label": "AGENTS.md \u2014 Governan\u00e7a Obrigat\u00f3ria de IA (Graphify + Obsidian + Mem\u00f3ria Persistente)",
       "x": 17140,
       "y": 2800,
       "width": 880,
@@ -12273,7 +12273,7 @@
     {
       "id": "g39",
       "type": "group",
-      "label": "Community 39",
+      "label": "SubtitleSettingsController",
       "x": 18760,
       "y": 2800,
       "width": 880,
@@ -12391,7 +12391,7 @@
     {
       "id": "g40",
       "type": "group",
-      "label": "Community 40",
+      "label": "com.unity.2d.tilemap",
       "x": 0,
       "y": 3400,
       "width": 880,
@@ -12500,7 +12500,7 @@
     {
       "id": "g41",
       "type": "group",
-      "label": "Community 41",
+      "label": "com.unity.modules.imageconversion",
       "x": 2500,
       "y": 3400,
       "width": 880,
@@ -12609,7 +12609,7 @@
     {
       "id": "g42",
       "type": "group",
-      "label": "Community 42",
+      "label": "Legenda",
       "x": 5000,
       "y": 3400,
       "width": 880,
@@ -12709,7 +12709,7 @@
     {
       "id": "g43",
       "type": "group",
-      "label": "Community 43",
+      "label": "InteractionPrompt",
       "x": 7500,
       "y": 3400,
       "width": 880,
@@ -12809,7 +12809,7 @@
     {
       "id": "g44",
       "type": "group",
-      "label": "Community 44",
+      "label": ".SaveSlot",
       "x": 9560,
       "y": 3400,
       "width": 880,
@@ -12909,7 +12909,7 @@
     {
       "id": "g45",
       "type": "group",
-      "label": "Community 45",
+      "label": "com.unity.ext.nunit",
       "x": 11620,
       "y": 3400,
       "width": 660,
@@ -13000,7 +13000,7 @@
     {
       "id": "g46",
       "type": "group",
-      "label": "Community 46",
+      "label": "com.unity.modules.tetgen",
       "x": 13680,
       "y": 3400,
       "width": 660,
@@ -13091,7 +13091,7 @@
     {
       "id": "g47",
       "type": "group",
-      "label": "Community 47",
+      "label": "EstadoPartida",
       "x": 15520,
       "y": 3400,
       "width": 660,
@@ -13173,7 +13173,7 @@
     {
       "id": "g48",
       "type": "group",
-      "label": "Community 48",
+      "label": "dependencies",
       "x": 17140,
       "y": 3400,
       "width": 660,
@@ -13255,7 +13255,7 @@
     {
       "id": "g49",
       "type": "group",
-      "label": "Community 49",
+      "label": ".CreateLabel",
       "x": 18760,
       "y": 3400,
       "width": 660,
@@ -13337,7 +13337,7 @@
     {
       "id": "g50",
       "type": "group",
-      "label": "Community 50",
+      "label": "com.unity.mathematics",
       "x": 0,
       "y": 3900,
       "width": 660,
@@ -13419,7 +13419,7 @@
     {
       "id": "g51",
       "type": "group",
-      "label": "Community 51",
+      "label": "ZonaId",
       "x": 2500,
       "y": 3900,
       "width": 660,
@@ -13483,7 +13483,7 @@
     {
       "id": "g52",
       "type": "group",
-      "label": "Community 52",
+      "label": "com.unity.collab-proxy",
       "x": 5000,
       "y": 3900,
       "width": 660,
@@ -13547,7 +13547,7 @@
     {
       "id": "g53",
       "type": "group",
-      "label": "Community 53",
+      "label": "TileAleatorio",
       "x": 7500,
       "y": 3900,
       "width": 660,
@@ -13611,7 +13611,7 @@
     {
       "id": "g54",
       "type": "group",
-      "label": "Community 54",
+      "label": ".AoClicarSlot",
       "x": 9560,
       "y": 3900,
       "width": 660,
@@ -13675,7 +13675,7 @@
     {
       "id": "g55",
       "type": "group",
-      "label": "Community 55",
+      "label": "Plano de Implementa\u00e7\u00e3o \u2014 Setup Graphify + Obsidian + Antigravity",
       "x": 11620,
       "y": 3900,
       "width": 660,
@@ -13739,7 +13739,7 @@
     {
       "id": "g56",
       "type": "group",
-      "label": "Community 56",
+      "label": "MovelLoja",
       "x": 13680,
       "y": 3900,
       "width": 660,
@@ -13794,7 +13794,7 @@
     {
       "id": "g57",
       "type": "group",
-      "label": "Community 57",
+      "label": "com.unity.2d.tooling",
       "x": 15520,
       "y": 3900,
       "width": 600,
@@ -13840,7 +13840,7 @@
     {
       "id": "g58",
       "type": "group",
-      "label": "Community 58",
+      "label": "com.unity.modules.accessibility",
       "x": 17140,
       "y": 3900,
       "width": 600,
@@ -13886,7 +13886,7 @@
     {
       "id": "g59",
       "type": "group",
-      "label": "Community 59",
+      "label": "graphify-refresh.ps1",
       "x": 18760,
       "y": 3900,
       "width": 600,
@@ -13932,7 +13932,7 @@
     {
       "id": "g60",
       "type": "group",
-      "label": "Community 60",
+      "label": "dependencies",
       "x": 0,
       "y": 4400,
       "width": 600,
@@ -13978,7 +13978,7 @@
     {
       "id": "g61",
       "type": "group",
-      "label": "Community 61",
+      "label": "graphify-setup.ps1",
       "x": 2500,
       "y": 4400,
       "width": 600,
@@ -14024,7 +14024,7 @@
     {
       "id": "g62",
       "type": "group",
-      "label": "Community 62",
+      "label": "com.unity.modules.umbra",
       "x": 5000,
       "y": 4400,
       "width": 600,
@@ -14070,7 +14070,7 @@
     {
       "id": "g63",
       "type": "group",
-      "label": "Community 63",
+      "label": "Cadeia de Investiga\u00e7\u00e3o e Pistas do Cap\u00edtulo 1",
       "x": 7500,
       "y": 4400,
       "width": 600,
@@ -14116,7 +14116,7 @@
     {
       "id": "g64",
       "type": "group",
-      "label": "Community 64",
+      "label": "Manual de Opera\u00e7\u00e3o e Governan\u00e7a \u2014 Graphify + Obsidian + Agentes de IA",
       "x": 9560,
       "y": 4400,
       "width": 600,
@@ -14153,7 +14153,7 @@
     {
       "id": "g65",
       "type": "group",
-      "label": "Community 65",
+      "label": "graphify-validate.ps1",
       "x": 11620,
       "y": 4400,
       "width": 600,
@@ -14357,7 +14357,7 @@
     {
       "id": "g71",
       "type": "group",
-      "label": "Community 71",
+      "label": "graphify-refresh.sh script",
       "x": 2500,
       "y": 4880,
       "width": 600,
@@ -14385,7 +14385,7 @@
     {
       "id": "g72",
       "type": "group",
-      "label": "Community 72",
+      "label": "graphify-setup.sh script",
       "x": 5000,
       "y": 4880,
       "width": 600,
@@ -14404,7 +14404,7 @@
     {
       "id": "g73",
       "type": "group",
-      "label": "Community 73",
+      "label": "graphify-validate.sh script",
       "x": 7500,
       "y": 4880,
       "width": 600,

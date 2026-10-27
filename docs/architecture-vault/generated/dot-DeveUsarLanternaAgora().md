@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 5"
+community: "MapaInterativoUI"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/MapaInterativoUI
 ---
 
 # .DeveUsarLanternaAgora()
@@ -19,4 +19,4 @@ tags:
 - [[dot-Start()_16]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

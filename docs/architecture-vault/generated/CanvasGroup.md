@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 24"
+community: "com.unity.modules.jsonserialize"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/comunitymodulesjsonserialize
 ---
 
 # CanvasGroup
@@ -33,4 +33,4 @@ tags:
 - [[OptionsPanelController]] - `references` [EXTRACTED]
 - [[SceneFader]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

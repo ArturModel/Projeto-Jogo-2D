@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
 type: "code"
-community: "Community 6"
+community: "manifest.json"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/manifestjson
 ---
 
 # OlharPrimeiraPessoa
@@ -21,4 +21,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/manifestjson

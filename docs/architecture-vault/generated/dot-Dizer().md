@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 41"
+community: "com.unity.modules.imageconversion"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/comunitymodulesimageconversion
 ---
 
 # .Dizer()
@@ -30,4 +30,4 @@ tags:
 - [[dot-Update()_26]] - `calls` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion

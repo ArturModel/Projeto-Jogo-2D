@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
 type: "code"
-community: "Community 30"
+community: "PayphoneCheckpoint"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/PayphoneCheckpoint
 ---
 
 # .Interact()
@@ -16,4 +16,4 @@ tags:
 - [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
 - [[ItemDeCena]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 39"
+community: "SubtitleSettingsController"
 location: "L47"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_39
+  - community/SubtitleSettingsController
 ---
 
 # .SetView()
@@ -19,4 +19,4 @@ tags:
 - [[BochaCameraView]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_39
+#graphify/code #graphify/INFERRED #community/SubtitleSettingsController

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 31"
+community: "VideoSettingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/VideoSettingsController
 ---
 
 # TilemapCollider2D
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

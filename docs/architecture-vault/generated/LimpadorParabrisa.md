@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "Community 50"
+community: "com.unity.mathematics"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/comunitymathematics
 ---
 
 # LimpadorParabrisa
@@ -23,4 +23,4 @@ tags:
 - [[PrologoDirector]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/comunitymathematics

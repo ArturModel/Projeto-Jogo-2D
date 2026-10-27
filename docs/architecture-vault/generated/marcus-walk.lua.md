@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/marcus-walk.lua"
 type: "code"
-community: "Community 62"
+community: "com.unity.modules.umbra"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_62
+  - community/comunitymodulesumbra
 ---
 
 # marcus-walk.lua
@@ -16,4 +16,4 @@ tags:
 - [[leg()]] - `contains` [EXTRACTED]
 - [[line()_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_62
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesumbra

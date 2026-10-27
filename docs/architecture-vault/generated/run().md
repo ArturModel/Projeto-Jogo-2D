@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-project.py"
 type: "code"
-community: "Community 32"
+community: "com.unity.settings-manager"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/comunitysettings-manager
 ---
 
 # run()
@@ -17,4 +17,4 @@ tags:
 - [[subprocess]] - `calls` [EXTRACTED]
 - [[validate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+#graphify/code #graphify/EXTRACTED #community/comunitysettings-manager

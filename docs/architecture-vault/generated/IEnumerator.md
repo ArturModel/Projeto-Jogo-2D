@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 0"
+community: "InteracaoCapitulo1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/InteracaoCapitulo1
 ---
 
 # IEnumerator
@@ -78,4 +78,4 @@ tags:
 - [[dot-Walking()]] - `references` [EXTRACTED]
 - [[dot-ZoneTransitionRoutine()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

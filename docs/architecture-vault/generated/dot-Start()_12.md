@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Community 41"
+community: "com.unity.modules.imageconversion"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/comunitymodulesimageconversion
 ---
 
 # .Start()
@@ -20,4 +20,4 @@ tags:
 - [[ChegadaEmSantaRita]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion

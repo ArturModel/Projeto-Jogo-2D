@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
 type: "code"
-community: "Community 54"
+community: ".AoClicarSlot"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/AoClicarSlot
 ---
 
 # EventsPlayed
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SantaRitaSound]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/AoClicarSlot

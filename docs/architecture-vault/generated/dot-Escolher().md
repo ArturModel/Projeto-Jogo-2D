@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs"
 type: "code"
-community: "Community 4"
+community: "PlayerController"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/PlayerController
 ---
 
 # .Escolher()
@@ -27,4 +27,4 @@ tags:
 - [[BochaSimulation]] - `references` [EXTRACTED]
 - [[Random]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/PlayerController

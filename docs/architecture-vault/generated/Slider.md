@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 15"
+community: "SceneFader"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/SceneFader
 ---
 
 # Slider
@@ -20,4 +20,4 @@ tags:
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/SceneFader

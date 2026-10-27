@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 7"
+community: "dependencies"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/dependencies
 ---
 
 # .CenaDoCapitulo2()
@@ -20,4 +20,4 @@ tags:
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/dependencies

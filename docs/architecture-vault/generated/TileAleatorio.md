@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/TileAleatorio.cs"
 type: "code"
-community: "Community 47"
+community: "EstadoPartida"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_47
+  - community/EstadoPartida
 ---
 
 # TileAleatorio
@@ -19,4 +19,4 @@ tags:
 - [[TileAleatorio.cs]] - `contains` [EXTRACTED]
 - [[TileBase]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_47
+#graphify/code #graphify/EXTRACTED #community/EstadoPartida

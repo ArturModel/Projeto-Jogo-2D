@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 28"
+community: "com.unity.modules.audio"
 location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/comunitymodulesaudio
 ---
 
 # .CriarImpactoMadeira()
@@ -16,4 +16,4 @@ tags:
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
+community: "CheckpointSystem"
 location: "L332"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/CheckpointSystem
 ---
 
 # .Label()
@@ -21,4 +21,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/CheckpointSystem

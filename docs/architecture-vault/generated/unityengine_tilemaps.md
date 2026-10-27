@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: ".CreateCanvas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/CreateCanvas
 ---
 
 # unityengine_tilemaps
@@ -24,4 +24,4 @@ tags:
 - [[SantaRitaSound.cs]] - `imports` [EXTRACTED]
 - [[TileAleatorio.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/CreateCanvas

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: ".CreateCanvas"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/CreateCanvas
 ---
 
 # system_linq
@@ -28,4 +28,4 @@ tags:
 - [[SantaRitaMcpSetup.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/CreateCanvas

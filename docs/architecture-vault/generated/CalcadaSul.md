@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 22"
+community: "CamadaDeLuz"
 location: "L661"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_22
+  - community/CamadaDeLuz
 ---
 
 # CalcadaSul
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[TilePiso]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_22
+#graphify/code #graphify/EXTRACTED #community/CamadaDeLuz

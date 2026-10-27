@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 29"
+community: "MainMenuActions"
 location: "L310"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/MainMenuActions
 ---
 
 # .RespostaAbafada()
@@ -17,4 +17,4 @@ tags:
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

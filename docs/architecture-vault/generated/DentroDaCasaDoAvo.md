@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
 type: "code"
-community: "Community 42"
+community: "Legenda"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Legenda
 ---
 
 # DentroDaCasaDoAvo
@@ -16,4 +16,4 @@ tags:
 - [[DentroDaCasaDoAvo.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Legenda

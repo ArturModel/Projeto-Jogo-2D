@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 34"
+community: "com.unity.modules.ui"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/comunitymodulesui
 ---
 
 # AudioSettingsController
@@ -29,4 +29,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesui

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 20"
+community: "GameState"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/GameState
 ---
 
 # Material
@@ -32,4 +32,4 @@ tags:
 - [[SantaRitaC2Consolidation]] - `references` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/GameState

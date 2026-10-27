@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 8"
+community: "Chuva"
 location: "L788"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Chuva
 ---
 
 # .CriarFonte()
@@ -17,4 +17,4 @@ tags:
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Chuva

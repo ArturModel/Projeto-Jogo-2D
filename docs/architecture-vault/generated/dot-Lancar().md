@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: "Community 4"
+community: "PlayerController"
 location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/PlayerController
 ---
 
 # .Lancar()
@@ -22,4 +22,4 @@ tags:
 - [[BochaSimulation]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/PlayerController

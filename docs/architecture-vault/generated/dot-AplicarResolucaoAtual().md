@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "Community 15"
+community: "SceneFader"
 location: "L137"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/SceneFader
 ---
 
 # .AplicarResolucaoAtual()
@@ -17,4 +17,4 @@ tags:
 - [[dot-Start()_4]] - `calls` [EXTRACTED]
 - [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/SceneFader

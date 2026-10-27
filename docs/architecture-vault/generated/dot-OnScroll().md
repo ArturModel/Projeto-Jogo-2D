@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 51"
+community: "ZonaId"
 location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/ZonaId
 ---
 
 # .OnScroll()
@@ -15,4 +15,4 @@ tags:
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/ZonaId

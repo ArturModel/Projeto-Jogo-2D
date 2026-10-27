@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 8"
+community: "Chuva"
 location: "L424"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Chuva
 ---
 
 # .BuscarLuzes()
@@ -17,4 +17,4 @@ tags:
 - [[Chuva]] - `method` [EXTRACTED]
 - [[Light2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Chuva

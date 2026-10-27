@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
 type: "code"
-community: "Community 18"
+community: "com.unity.modules.unitywebrequest"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/comunitymodulesunitywebrequest
 ---
 
 # .Run()
@@ -28,4 +28,4 @@ tags:
 - [[TilemapRenderer]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

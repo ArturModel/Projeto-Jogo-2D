@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 48"
+community: "dependencies"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/dependencies
 ---
 
 # Fileira
@@ -15,4 +15,4 @@ tags:
 - [[dot-Posicionar()_3]] - `references` [EXTRACTED]
 - [[EstradaScroller]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/dependencies

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs"
 type: "code"
-community: "Community 20"
+community: "GameState"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/GameState
 ---
 
 # .Apply()
@@ -20,4 +20,4 @@ tags:
 - [[SantaRitaWorldLighting]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/GameState

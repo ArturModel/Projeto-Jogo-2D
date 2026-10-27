@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 6"
+community: "manifest.json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/manifestjson
 ---
 
 # RectInt
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-RectTiles()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/manifestjson

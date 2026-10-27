@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 7"
+community: "dependencies"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/dependencies
 ---
 
 # Button
@@ -31,4 +31,4 @@ tags:
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/dependencies

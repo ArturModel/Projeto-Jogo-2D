@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "Community 5"
+community: "MapaInterativoUI"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/MapaInterativoUI
 ---
 
 # SantaRitaShallowStairs
@@ -23,4 +23,4 @@ tags:
 - [[Rect]] - `references` [EXTRACTED]
 - [[SantaRitaShallowStairs.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

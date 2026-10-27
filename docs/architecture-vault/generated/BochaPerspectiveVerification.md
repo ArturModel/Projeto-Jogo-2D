@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs"
 type: "code"
-community: "Community 4"
+community: "PlayerController"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/PlayerController
 ---
 
 # BochaPerspectiveVerification
@@ -15,4 +15,4 @@ tags:
 - [[dot-Run()_3]] - `method` [EXTRACTED]
 - [[BochaPerspectiveVerification.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/PlayerController

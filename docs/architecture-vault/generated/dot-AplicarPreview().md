@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "Community 15"
+community: "SceneFader"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/SceneFader
 ---
 
 # .AplicarPreview()
@@ -18,4 +18,4 @@ tags:
 - [[dot-Start()_3]] - `calls` [EXTRACTED]
 - [[SubtitleSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/SceneFader

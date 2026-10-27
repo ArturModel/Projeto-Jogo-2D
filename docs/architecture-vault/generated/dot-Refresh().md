@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 40"
+community: "com.unity.2d.tilemap"
 location: "L335"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_40
+  - community/comunity2dtilemap
 ---
 
 # .Refresh()
@@ -16,4 +16,4 @@ tags:
 - [[dot-AtualizarTela()]] - `calls` [INFERRED]
 - [[BochaMapGraphic]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_40
+#graphify/code #graphify/INFERRED #community/comunity2dtilemap

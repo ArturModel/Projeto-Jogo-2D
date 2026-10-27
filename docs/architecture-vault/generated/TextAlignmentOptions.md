@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 3"
+community: "SinucaMinigameUI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/SinucaMinigameUI
 ---
 
 # TextAlignmentOptions
@@ -16,4 +16,4 @@ tags:
 - [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
 - [[dot-Rotulo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 20"
+community: "GameState"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/GameState
 ---
 
 # Light2D
@@ -31,4 +31,4 @@ tags:
 - [[Chuva]] - `references` [EXTRACTED]
 - [[SantaRitaRimLight]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/GameState

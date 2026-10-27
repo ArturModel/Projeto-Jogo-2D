@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 5"
+community: "MapaInterativoUI"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/MapaInterativoUI
 ---
 
 # .AlternarLanterna()
@@ -17,4 +17,4 @@ tags:
 - [[dot-Update()_21]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

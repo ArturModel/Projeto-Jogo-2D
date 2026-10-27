@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 40"
+community: "com.unity.2d.tilemap"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/comunity2dtilemap
 ---
 
 # MaskableGraphic
@@ -14,4 +14,4 @@ tags:
 - [[BochaCourtView]] - `inherits` [EXTRACTED]
 - [[BochaMapGraphic]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/comunity2dtilemap

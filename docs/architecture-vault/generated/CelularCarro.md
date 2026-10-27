@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
-community: "Community 41"
+community: "com.unity.modules.imageconversion"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/comunitymodulesimageconversion
 ---
 
 # CelularCarro
@@ -18,4 +18,4 @@ tags:
 - [[Disponivel_2]] - `defines` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion

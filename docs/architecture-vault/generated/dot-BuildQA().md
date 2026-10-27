@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
 type: "code"
-community: "Community 31"
+community: "VideoSettingsController"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/VideoSettingsController
 ---
 
 # .BuildQA()
@@ -16,4 +16,4 @@ tags:
 - [[MenuItem]] - `references` [EXTRACTED]
 - [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

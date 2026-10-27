@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 5"
+community: "MapaInterativoUI"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/MapaInterativoUI
 ---
 
 # .Awake()
@@ -16,4 +16,4 @@ tags:
 - [[Camera]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
-community: "Community 12"
+community: "packages-lock.json"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/packages-lockjson
 ---
 
 # .Vincular()
@@ -18,4 +18,4 @@ tags:
 - [[MenuPanelTransition]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/packages-lockjson

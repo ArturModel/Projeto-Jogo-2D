@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/pool-table.lua"
 type: "code"
-community: "Community 63"
+community: "Cadeia de Investigação e Pistas do Capítulo 1"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_63
+  - community/Cadeia_de_Investigação_e_Pistas_do_Capítulo_1
 ---
 
 # color()
@@ -16,4 +16,4 @@ tags:
 - [[pool-table.lua]] - `contains` [EXTRACTED]
 - [[rect()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_63
+#graphify/code #graphify/EXTRACTED #community/Cadeia_de_Investigação_e_Pistas_do_Capítulo_1

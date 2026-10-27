@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 2"
+community: "Capitulo1Director"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Capitulo1Director
 ---
 
 # Texture2D
@@ -26,4 +26,4 @@ tags:
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

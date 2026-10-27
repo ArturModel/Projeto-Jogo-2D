@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/grass-material.lua"
 type: "code"
-community: "Community 59"
+community: "graphify-refresh.ps1"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_59
+  - community/graphify-refreshps1
 ---
 
 # put()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[grass-material.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_59
+#graphify/code #graphify/EXTRACTED #community/graphify-refreshps1

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs"
 type: "code"
-community: "Community 44"
+community: ".SaveSlot"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/SaveSlot
 ---
 
 # BochaShot
@@ -28,4 +28,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/SaveSlot

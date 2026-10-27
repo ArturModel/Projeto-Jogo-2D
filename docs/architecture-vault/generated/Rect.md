@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 5"
+community: "MapaInterativoUI"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/MapaInterativoUI
 ---
 
 # Rect
@@ -15,4 +15,4 @@ tags:
 - [[SantaRitaRoomCutaway]] - `references` [EXTRACTED]
 - [[SantaRitaShallowStairs]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI

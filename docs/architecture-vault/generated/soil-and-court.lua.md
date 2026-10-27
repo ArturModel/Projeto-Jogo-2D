@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/soil-and-court.lua"
 type: "code"
-community: "Community 71"
+community: "graphify-refresh.sh script"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_71
+  - community/graphify-refreshsh_script
 ---
 
 # soil-and-court.lua
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rgb()_3]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_71
+#graphify/code #graphify/EXTRACTED #community/graphify-refreshsh_script

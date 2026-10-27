@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 23"
+community: "com.unity.test-framework"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/comunitytest-framework
 ---
 
 # .Construir()
@@ -19,4 +19,4 @@ tags:
 - [[CanvasScaler]] - `references` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/comunitytest-framework

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 8"
+community: "Chuva"
 location: "L570"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Chuva
 ---
 
 # .Desenhar()
@@ -20,4 +20,4 @@ tags:
 - [[dot-Limpar()_2]] - `calls` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Chuva

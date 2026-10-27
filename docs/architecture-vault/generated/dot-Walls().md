@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs"
 type: "code"
-community: "Community 11"
+community: "com.unity.burst"
 location: "L259"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/comunityburst
 ---
 
 # .Walls()
@@ -21,4 +21,4 @@ tags:
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/comunityburst

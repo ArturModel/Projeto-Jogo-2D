@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/c2-npc-work.lua"
 type: "code"
-community: "Community 58"
+community: "com.unity.modules.accessibility"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_58
+  - community/comunitymodulesaccessibility
 ---
 
 # c2-npc-work.lua
@@ -16,4 +16,4 @@ tags:
 - [[line()]] - `contains` [EXTRACTED]
 - [[rect()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_58
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesaccessibility

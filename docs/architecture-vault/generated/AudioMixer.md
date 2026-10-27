@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 34"
+community: "com.unity.modules.ui"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/comunitymodulesui
 ---
 
 # AudioMixer
@@ -17,4 +17,4 @@ tags:
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesui

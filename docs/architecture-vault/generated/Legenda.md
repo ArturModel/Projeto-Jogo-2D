@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 36"
+community: "MenuItemSelector"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/MenuItemSelector
 ---
 
 # Legenda
@@ -30,4 +30,4 @@ tags:
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/MenuItemSelector

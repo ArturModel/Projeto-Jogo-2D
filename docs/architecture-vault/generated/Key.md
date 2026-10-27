@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 0"
+community: "InteracaoCapitulo1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/InteracaoCapitulo1
 ---
 
 # Key
@@ -15,4 +15,4 @@ tags:
 - [[dot-WalkAccess()]] - `references` [EXTRACTED]
 - [[dot-WalkAccessFilm()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
-community: "Community 24"
+community: "com.unity.modules.jsonserialize"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/comunitymodulesjsonserialize
 ---
 
 # MenuPanelTransition
@@ -28,4 +28,4 @@ tags:
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

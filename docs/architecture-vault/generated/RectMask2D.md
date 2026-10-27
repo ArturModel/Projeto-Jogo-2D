@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 17"
+community: "CheckpointSystem"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/CheckpointSystem
 ---
 
 # RectMask2D
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/CheckpointSystem

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "Community 20"
+community: "GameState"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/GameState
 ---
 
 # SantaRitaAtmosphere
@@ -24,4 +24,4 @@ tags:
 - [[SantaRitaAtmosphere.cs]] - `contains` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/GameState

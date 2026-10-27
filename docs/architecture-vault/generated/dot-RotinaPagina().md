@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 21"
+community: "GameMessageUI"
 location: "L372"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/GameMessageUI
 ---
 
 # .RotinaPagina()
@@ -21,4 +21,4 @@ tags:
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/GameMessageUI

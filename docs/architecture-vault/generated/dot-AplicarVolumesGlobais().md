@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 34"
+community: "com.unity.modules.ui"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/comunitymodulesui
 ---
 
 # .AplicarVolumesGlobais()
@@ -19,4 +19,4 @@ tags:
 - [[AudioMixer]] - `references` [EXTRACTED]
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesui

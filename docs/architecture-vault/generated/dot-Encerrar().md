@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 14"
+community: "TipoInteracao"
 location: "L339"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/TipoInteracao
 ---
 
 # .Encerrar()
@@ -21,4 +21,4 @@ tags:
 - [[dot-Update()_5]] - `calls` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/TipoInteracao

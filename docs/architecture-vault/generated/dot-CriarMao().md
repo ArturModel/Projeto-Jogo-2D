@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: "Community 4"
+community: "PlayerController"
 location: "L31"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/PlayerController
 ---
 
 # .CriarMao()
@@ -21,4 +21,4 @@ tags:
 - [[BochaMatch]] - `method` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/PlayerController

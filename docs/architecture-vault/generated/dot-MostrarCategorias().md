@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "Community 24"
+community: "com.unity.modules.jsonserialize"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/comunitymodulesjsonserialize
 ---
 
 # .MostrarCategorias()
@@ -16,4 +16,4 @@ tags:
 - [[dot-Update()_8]] - `calls` [EXTRACTED]
 - [[OptionsPanelController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

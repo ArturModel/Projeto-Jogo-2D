@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "com.unity.modules.unitywebrequest"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/comunitymodulesunitywebrequest
 ---
 
 # Tile
@@ -24,4 +24,4 @@ tags:
 - [[dot-Tile()]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 47"
+community: "EstadoPartida"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_47
+  - community/EstadoPartida
 ---
 
 # ColliderType
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[TileAleatorio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_47
+#graphify/code #graphify/EXTRACTED #community/EstadoPartida

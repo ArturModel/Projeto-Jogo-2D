@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 14"
+community: "TipoInteracao"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/TipoInteracao
 ---
 
 # .Marcar()
@@ -61,4 +61,4 @@ tags:
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/TipoInteracao

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 31"
+community: "VideoSettingsController"
 location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/VideoSettingsController
 ---
 
 # .Revision()
@@ -15,4 +15,4 @@ tags:
 - [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[Chapter2BuildVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

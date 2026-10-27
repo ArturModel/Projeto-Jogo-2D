@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs"
 type: "code"
-community: "Community 44"
+community: ".SaveSlot"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/SaveSlot
 ---
 
 # .ForcaPonto()
@@ -15,4 +15,4 @@ tags:
 - [[dot-Escolher()]] - `calls` [EXTRACTED]
 - [[BochaLaunch]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/SaveSlot

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 6"
+community: "manifest.json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/manifestjson
 ---
 
 # Vector2
@@ -148,4 +148,4 @@ tags:
 - [[UIFactory]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/manifestjson

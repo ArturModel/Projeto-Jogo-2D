@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 41"
+community: "com.unity.modules.imageconversion"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/comunitymodulesimageconversion
 ---
 
 # .ObterObjetivo()
@@ -17,4 +17,4 @@ tags:
 - [[dot-Start()_12]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion

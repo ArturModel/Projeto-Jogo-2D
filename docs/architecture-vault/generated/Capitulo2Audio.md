@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 29"
+community: "MainMenuActions"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/MainMenuActions
 ---
 
 # Capitulo2Audio
@@ -24,4 +24,4 @@ tags:
 - [[GameObject]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/MainMenuActions

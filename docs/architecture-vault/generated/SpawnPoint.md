@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
 type: "code"
-community: "Community 2"
+community: "Capitulo1Director"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Capitulo1Director
 ---
 
 # SpawnPoint
@@ -30,4 +30,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SpawnPoint.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

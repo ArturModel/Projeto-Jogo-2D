@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 42"
+community: "Legenda"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Legenda
 ---
 
 # MonoBehaviour
@@ -66,4 +66,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Legenda

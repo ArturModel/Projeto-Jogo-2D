@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
 type: "code"
-community: "Community 54"
+community: ".AoClicarSlot"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/AoClicarSlot
 ---
 
 # .Install()
@@ -15,4 +15,4 @@ tags:
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/AoClicarSlot

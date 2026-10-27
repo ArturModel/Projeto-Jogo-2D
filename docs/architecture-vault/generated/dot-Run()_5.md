@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
-community: "Community 6"
+community: "manifest.json"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/manifestjson
 ---
 
 # .Run()
@@ -19,4 +19,4 @@ tags:
 - [[MenuItem]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/manifestjson

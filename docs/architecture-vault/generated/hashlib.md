@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 32"
+community: "com.unity.settings-manager"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/comunitysettings-manager
 ---
 
 # hashlib
@@ -14,4 +14,4 @@ tags:
 - [[fingerprint()]] - `calls` [EXTRACTED]
 - [[graphify-project.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_32
+#graphify/concept #graphify/EXTRACTED #community/comunitysettings-manager

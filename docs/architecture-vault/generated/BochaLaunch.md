@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs"
 type: "code"
-community: "Community 44"
+community: ".SaveSlot"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/SaveSlot
 ---
 
 # BochaLaunch
@@ -16,4 +16,4 @@ tags:
 - [[dot-Preparar()_1]] - `method` [EXTRACTED]
 - [[BochaShot.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/SaveSlot

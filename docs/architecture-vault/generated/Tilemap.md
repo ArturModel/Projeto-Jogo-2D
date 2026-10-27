@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "com.unity.modules.unitywebrequest"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/comunitymodulesunitywebrequest
 ---
 
 # Tilemap
@@ -31,4 +31,4 @@ tags:
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
 - [[SantaRitaFootsteps]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

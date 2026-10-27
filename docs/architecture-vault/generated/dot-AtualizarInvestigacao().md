@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 14"
+community: "TipoInteracao"
 location: "L204"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/TipoInteracao
 ---
 
 # .AtualizarInvestigacao()
@@ -20,4 +20,4 @@ tags:
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/TipoInteracao

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 4"
+community: "PlayerController"
 location: "L169"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/PlayerController
 ---
 
 # .Rules()
@@ -25,4 +25,4 @@ tags:
 - [[BochaSimulation]] - `calls` [INFERRED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/PlayerController

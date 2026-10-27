@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "Community 18"
+community: "com.unity.modules.unitywebrequest"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/comunitymodulesunitywebrequest
 ---
 
 # Capitulo2Interactable
@@ -25,4 +25,4 @@ tags:
 - [[Prompt_1]] - `defines` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

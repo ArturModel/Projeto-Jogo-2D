@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 19"
+community: "com.unity.modules.physics"
 location: "L329"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/comunitymodulesphysics
 ---
 
 # .Update()
@@ -15,4 +15,4 @@ tags:
 - [[dot-Encerrar()]] - `calls` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

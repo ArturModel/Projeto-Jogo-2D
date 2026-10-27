@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 2"
+community: "Capitulo1Director"
 location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Capitulo1Director
 ---
 
 # .Configurar()
@@ -17,4 +17,4 @@ tags:
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 - [[TipoInteracao_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
