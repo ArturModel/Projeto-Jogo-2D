@@ -1,11 +1,11 @@
 ---
 type: community
-members: 32
+members: 30
 ---
 
 # packages-lock.json
 
-**Members:** 32 nodes
+**Members:** 30 nodes
 
 ## Members
 - [[dot-Abrir()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
@@ -29,14 +29,12 @@ members: 32
 - [[dot-SubPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Titulo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Update()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-Vincular()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[dot-VoltarAoMenu()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[Aberto]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[EventSystem]] - code
 - [[Graphic]] - code
 - [[InputSystemUIInputModule]] - code
 - [[MenuPausa]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[RectTransform]] - code
 - [[ReduzirEfeitosIntensos]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[Selectable]] - code
 - [[TMP_Text]] - code
@@ -49,28 +47,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_dependencies_1]]
-- 15 edges to [[_COMMUNITY_com.unity.modules.jsonserialize]]
+- 24 edges to [[_COMMUNITY_Community 23]]
+- 10 edges to [[_COMMUNITY_com.unity.modules.jsonserialize]]
 - 9 edges to [[_COMMUNITY_SceneFader]]
-- 9 edges to [[_COMMUNITY_SinucaMinigameUI]]
-- 7 edges to [[_COMMUNITY_com.unity.test-framework]]
-- 5 edges to [[_COMMUNITY_Capitulo1Director]]
-- 4 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 3 edges to [[_COMMUNITY_com.unity.ext.nunit]]
+- 4 edges to [[_COMMUNITY_Capitulo1Director]]
+- 3 edges to [[_COMMUNITY_Community 54]]
 - 3 edges to [[_COMMUNITY_manifest.json]]
-- 2 edges to [[_COMMUNITY_GameMessageUI]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.ui]]
-- 2 edges to [[_COMMUNITY_MainMenuActions]]
 - 2 edges to [[_COMMUNITY_MonoBehaviour]]
-- 2 edges to [[_COMMUNITY_CheckpointSystem]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
+- 2 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 1 edge to [[_COMMUNITY_GameMessageUI]]
 - 1 edge to [[_COMMUNITY_Legenda]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
-- 1 edge to [[_COMMUNITY_AudioSettingsController]]
+- 1 edge to [[_COMMUNITY_com.unity.ext.nunit]]
+- 1 edge to [[_COMMUNITY_dependencies_1]]
 
 ## Top bridge nodes
-- [[RectTransform]] - degree 43, connects to 9 communities
-- [[MenuPausa]] - degree 34, connects to 9 communities
+- [[MenuPausa]] - degree 34, connects to 8 communities
 - [[dot-Construir()]] - degree 28, connects to 6 communities
-- [[dot-Rotulo()]] - degree 15, connects to 4 communities
 - [[dot-Caixa()]] - degree 10, connects to 4 communities
+- [[dot-Rotulo()]] - degree 15, connects to 3 communities
+- [[TMP_Text]] - degree 12, connects to 3 communities

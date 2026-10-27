@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
 community: ".CreateLabel"
-location: "L44"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 25"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_25
 ---
 
 # MarcusGait
@@ -19,4 +19,4 @@ tags:
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[Quadro]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_25

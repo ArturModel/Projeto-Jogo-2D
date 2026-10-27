@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "AudioSettingsController"
-location: "L111"
+community: "PrologoVideo"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/PrologoVideo
 ---
 
 # .Update()
 
 ## Connections
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/PrologoVideo

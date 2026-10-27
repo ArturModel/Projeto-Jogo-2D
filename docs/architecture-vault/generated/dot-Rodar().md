@@ -1,29 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "com.unity.modules.physics"
-location: "L103"
+community: "Community 13"
+location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/Community_13
 ---
 
 # .Rodar()
 
 ## Connections
-- [[dot-AteOTempo()]] - `calls` [EXTRACTED]
-- [[dot-Curvar()]] - `calls` [EXTRACTED]
-- [[dot-Definir()]] - `calls` [INFERRED]
-- [[dot-Desacelerar()]] - `calls` [EXTRACTED]
-- [[dot-Disparar()]] - `calls` [INFERRED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Encerrar()]] - `calls` [EXTRACTED]
-- [[dot-Ligar()]] - `calls` [INFERRED]
-- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
-- [[dot-Revelar()]] - `calls` [EXTRACTED]
-- [[dot-Start()_6]] - `calls` [EXTRACTED]
+- [[dot-Aparecer()]] - `calls` [EXTRACTED]
+- [[dot-Enfileirar()]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/Community_13

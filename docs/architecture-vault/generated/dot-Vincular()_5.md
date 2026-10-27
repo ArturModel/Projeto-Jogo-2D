@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
 type: "code"
-community: "com.unity.ext.nunit"
+community: "Community 54"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityextnunit
+  - community/Community_54
 ---
 
 # .Vincular()
@@ -17,4 +17,4 @@ tags:
 - [[MenuItemSelector]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityextnunit
+#graphify/code #graphify/EXTRACTED #community/Community_54

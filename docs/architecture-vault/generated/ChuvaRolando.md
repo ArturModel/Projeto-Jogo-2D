@@ -12,8 +12,8 @@ tags:
 # ChuvaRolando
 
 ## Connections
-- [[dot-Awake()_14]] - `method` [EXTRACTED]
-- [[dot-Update()_18]] - `method` [EXTRACTED]
+- [[dot-Awake()_16]] - `method` [EXTRACTED]
+- [[dot-Update()_19]] - `method` [EXTRACTED]
 - [[ChuvaRolando.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]

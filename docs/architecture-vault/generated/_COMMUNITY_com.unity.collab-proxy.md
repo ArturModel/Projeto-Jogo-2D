@@ -23,7 +23,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_CheckpointSystem]]
+- 1 edge to [[_COMMUNITY_Community 39]]
 
 ## Top bridge nodes
 - [[Fase]] - degree 6, connects to 1 community

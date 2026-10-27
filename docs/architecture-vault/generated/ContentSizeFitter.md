@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.test-framework"
+community: "dependencies"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/dependencies
 ---
 
 # ContentSizeFitter
@@ -14,4 +14,4 @@ tags:
 - [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/dependencies

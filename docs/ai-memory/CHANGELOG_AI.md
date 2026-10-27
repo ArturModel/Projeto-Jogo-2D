@@ -1,3 +1,35 @@
+# Correção de Race Condition e Suporte Multiplataforma MCP Unity — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_correcao-race-condition-mcp-linux.md`](../ai-plans/2026-10-27_lucamontini_correcao-race-condition-mcp-linux.md)
+- **Resumo:** Refatorado `SantaRitaMcpSetup.cs` para suportar nativamente Linux/macOS e Windows. Eliminada a condição de corrida (*race condition*) que causava o erro vermelho `[WebSocket] Connection failed` e aviso `Failed to start MCP transport: Http` na abertura do Unity. O bootstrap agora apenas ajusta o ambiente (`~/.local/bin/uvx`, separador `:`, remoção de `.exe`) e delega a conexão ordenada ao `HttpAutoStartHandler` nativo do pacote MCP. Validação Graphify e Obsidian com status PASS.
+
+---
+
+# Correção de Erros e Avisos de Abertura no Unity 6 (Linux) — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_correcao-warnings-e-erros-unity6.md`](../ai-plans/2026-10-27_lucamontini_correcao-warnings-e-erros-unity6.md)
+- **Resumo:** Criação da branch isolada `fix/unity6-startup-warnings-errors`. Resolvidos avisos de API obsoleta `FindObjectsSortMode` (CS0618) no Unity 6, campos não lidos (CS0414), diretiva `DEVELOPMENT_BUILD` (UAC0009 migrada para `DEBUG`), aviso UAC0005 no MCP setup, metadados da fonte TextMeshPro (v4), transcodificação de vídeo para Linux e eliminação dos erros críticos e NullReferenceExceptions do Plastic SCM / Unity Version Control (configurado `m_Mode: Visible Meta Files`, removido `com.unity.collab-proxy` e pasta residual `.plastic/`). Validação completa Graphify e Obsidian com status PASS.
+
+---
+
+# Resolução de Espelho APT, Instalação do Git LFS e Checkout de Assets — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_instalacao-git-lfs-e-pull-assets.md`](../ai-plans/2026-10-27_lucamontini_instalacao-git-lfs-e-pull-assets.md)
+- **Resumo:** Resolução de erro HTTP 403 do espelho APT `mirror.uepg.br`. Baixado pacote oficial diretamente de `archive.ubuntu.com`, extraído e instalado `git-lfs` em `~/.local/bin/git-lfs`. Inicializado LFS (`git lfs install`), baixados 1.438 objetos (167 MB) via `git lfs pull` e realizado checkout de 1.769 objetos (172 MB) via `git lfs checkout`. Texturas e áudios validados como binários reais intactos. Projeto 100% pronto para abertura no Unity 6000.6.0f1. Validação de governança Graphify e Obsidian com status PASS.
+
+---
+
+# Verificação de Branch e Pré-Requisitos para Abertura no Unity — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_verificacao-branch-e-pre-requisitos-unity.md`](../ai-plans/2026-10-27_lucamontini_verificacao-branch-e-pre-requisitos-unity.md)
+- **Resumo:** Verificação da branch ativa (`main`) e auditoria de pré-requisitos antes de abrir o Unity. Detectada ausência do pacote `git-lfs` no Linux Mint com assets binários presentes apenas como ponteiros de ~130 bytes; estruturado passo a passo de correção (`sudo apt install git-lfs`, `git lfs install`, `git lfs pull`) para evitar corrupção de importação na biblioteca do Unity 6000.6.0f1. Validação de governança Graphify e Obsidian concluída com PASS.
+
+---
+
 # Auditoria Pós-Merge, Governança Reforçada e Histórico de Planos — 27/10/2026
 
 - **Autor:** @lucamontini (Luca Dalla Lana)

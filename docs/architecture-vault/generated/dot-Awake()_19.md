@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "MovelLoja"
-location: "L19"
+community: "com.unity.mathematics"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MovelLoja
+  - community/comunitymathematics
 ---
 
 # .Awake()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MovelLoja
+#graphify/code #graphify/EXTRACTED #community/comunitymathematics

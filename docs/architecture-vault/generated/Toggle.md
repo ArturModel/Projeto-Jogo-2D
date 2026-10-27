@@ -12,8 +12,8 @@ tags:
 
 ## Connections
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
+- [[dot-Vincular()]] - `references` [EXTRACTED]
 - [[dot-Vincular()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 

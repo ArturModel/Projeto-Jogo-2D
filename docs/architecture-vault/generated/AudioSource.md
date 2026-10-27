@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "MainMenuActions"
+community: "Community 54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MainMenuActions
+  - community/Community_54
 ---
 
 # AudioSource
@@ -13,9 +13,9 @@ tags:
 ## Connections
 - [[dot-AtualizarFiltroInterior()]] - `references` [EXTRACTED]
 - [[dot-AtualizarFonteMusical()]] - `references` [EXTRACTED]
-- [[dot-Awake()_1]] - `references` [EXTRACTED]
+- [[dot-Awake()_5]] - `references` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-CriarFonte()]] - `references` [EXTRACTED]
 - [[dot-CriarFonteMusical()]] - `references` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[dot-GarantirAudioOrelhao()]] - `references` [EXTRACTED]
 - [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
 - [[dot-TocarRadio()]] - `references` [EXTRACTED]
-- [[dot-Update()_11]] - `references` [EXTRACTED]
+- [[dot-Update()_23]] - `references` [EXTRACTED]
 - [[dot-Vincular()_5]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[Camada]] - `references` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[SantaRitaBarAudio]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MainMenuActions
+#graphify/code #graphify/EXTRACTED #community/Community_54

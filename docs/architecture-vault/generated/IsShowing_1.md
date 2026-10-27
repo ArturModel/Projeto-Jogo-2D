@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L48"
+community: "SinucaMinigameUI"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/SinucaMinigameUI
 ---
 
 # IsShowing
 
 ## Connections
-- [[GameMessageUI]] - `defines` [EXTRACTED]
+- [[SinucaMinigameUI]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

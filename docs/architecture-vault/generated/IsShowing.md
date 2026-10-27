@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "CheckpointSystem"
-location: "L13"
+community: "GameMessageUI"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/GameMessageUI
 ---
 
 # IsShowing
 
 ## Connections
-- [[BochaMinigameUI]] - `defines` [EXTRACTED]
+- [[GameMessageUI]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/GameMessageUI

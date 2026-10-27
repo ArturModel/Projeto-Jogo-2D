@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "AudioSettingsController"
+community: "Community 56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/Community_56
 ---
 
 # LoadSceneMode
@@ -17,4 +17,4 @@ tags:
 - [[dot-OnSceneLoaded()_1]] - `references` [EXTRACTED]
 - [[dot-OnSceneLoaded()_2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_56

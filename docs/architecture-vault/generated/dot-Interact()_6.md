@@ -1,19 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "PayphoneCheckpoint"
-location: "L28"
+community: "VideoSettingsController"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PayphoneCheckpoint
+  - community/VideoSettingsController
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
-- [[ItemDeCena]] - `method` [EXTRACTED]
+- [[dot-Ir()]] - `calls` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()_1]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[Capitulo2Portal]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

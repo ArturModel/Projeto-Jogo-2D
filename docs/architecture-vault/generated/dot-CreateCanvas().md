@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
 type: "code"
-community: "com.unity.test-framework"
+community: "Community 23"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/Community_23
 ---
 
 # .CreateCanvas()
@@ -15,8 +15,8 @@ tags:
 - [[dot-AbrirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-Build()]] - `calls` [EXTRACTED]
 - [[dot-Build()_1]] - `calls` [EXTRACTED]
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[dot-Construir()_2]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/Community_23

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
 community: "com.unity.modules.audio"
-location: "L123"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED

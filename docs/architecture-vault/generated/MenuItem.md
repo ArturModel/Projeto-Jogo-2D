@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.burst"
+community: "VideoSettingsController"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/VideoSettingsController
 ---
 
 # MenuItem
@@ -17,7 +17,7 @@ tags:
 - [[dot-BuildAndValidateAll()]] - `references` [EXTRACTED]
 - [[dot-BuildFinalLivingWorld()]] - `references` [EXTRACTED]
 - [[dot-BuildQA()]] - `references` [EXTRACTED]
-- [[dot-Configure()]] - `references` [EXTRACTED]
+- [[dot-ConectarManualmente()]] - `references` [EXTRACTED]
 - [[dot-CorrectApprovedGeography()]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
@@ -25,8 +25,8 @@ tags:
 - [[dot-Pilot()]] - `references` [EXTRACTED]
 - [[dot-Run()_4]] - `references` [EXTRACTED]
 - [[dot-Run()_5]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

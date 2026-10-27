@@ -22,7 +22,7 @@ tags:
 - [[dot-Use()]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_1]] - `defines` [EXTRACTED]
+- [[Prompt_2]] - `defines` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

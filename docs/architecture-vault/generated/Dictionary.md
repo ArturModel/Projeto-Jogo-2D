@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "unityengine"
+community: "com.unity.modules.unitywebrequest"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/comunitymodulesunitywebrequest
 ---
 
 # Dictionary
@@ -22,4 +22,4 @@ tags:
 - [[SantaRitaGeography]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "com.unity.modules.unitywebrequest"
+community: "VideoSettingsController"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/VideoSettingsController
 ---
 
 # .CorrectApprovedGeography()
@@ -24,4 +24,4 @@ tags:
 - [[Tilemap]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

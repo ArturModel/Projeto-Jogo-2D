@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs"
 type: "code"
-community: ".CreateCanvas"
-location: "L17"
+community: "Community 84"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_84
 ---
 
 # .WaitForEditor()
 
 ## Connections
-- [[dot-Configure()]] - `calls` [EXTRACTED]
+- [[dot-ConfigureEnvironment()]] - `calls` [EXTRACTED]
 - [[SantaRitaMcpSetup]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCanvas
+#graphify/code #graphify/EXTRACTED #community/Community_84

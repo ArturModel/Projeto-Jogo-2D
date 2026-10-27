@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "SubtitleSettingsController"
+community: "Community 39"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SubtitleSettingsController
+  - community/Community_39
 ---
 
 # .ProximoTurno()
@@ -16,7 +16,7 @@ tags:
 - [[dot-Proximo()]] - `calls` [INFERRED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[dot-SetView()]] - `calls` [INFERRED]
-- [[dot-Update()_3]] - `calls` [EXTRACTED]
+- [[dot-Update()_4]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SubtitleSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_39

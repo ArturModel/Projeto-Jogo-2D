@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "AudioSettingsController"
+community: "Community 56"
 location: "L223"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/Community_56
 ---
 
 # .OnSceneLoaded()
@@ -17,4 +17,4 @@ tags:
 - [[LoadSceneMode]] - `references` [EXTRACTED]
 - [[Scene]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_56

@@ -1,22 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L66"
+community: "Legenda"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Legenda
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-PrepararCaminhadaMarcus()]] - `calls` [EXTRACTED]
-- [[dot-PrepararFeixeLanterna()]] - `calls` [EXTRACTED]
-- [[dot-PrepararPosesLanterna()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[Rigidbody2D]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[ChuvaRolando]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Legenda

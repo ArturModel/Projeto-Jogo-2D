@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 36"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_36
 ---
 
 # .ApoiarPe()
@@ -17,4 +17,4 @@ tags:
 - [[Chuva]] - `references` [EXTRACTED]
 - [[SantaRitaFootsteps]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_36

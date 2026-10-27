@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
 community: "InteracaoCapitulo1"
-location: "L297"
+location: "L299"
 tags:
   - graphify/code
   - graphify/EXTRACTED

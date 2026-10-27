@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-Construir()_3]] - `method` [EXTRACTED]
-- [[dot-Ligar()]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_3]] - `method` [EXTRACTED]
-- [[dot-Start()_14]] - `method` [EXTRACTED]
-- [[dot-Update()_20]] - `method` [EXTRACTED]
+- [[dot-Ligar()_1]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `method` [EXTRACTED]
+- [[dot-Start()_16]] - `method` [EXTRACTED]
+- [[dot-Update()_21]] - `method` [EXTRACTED]
 - [[Curvatura]] - `defines` [EXTRACTED]
 - [[EstradaScroller.cs]] - `contains` [EXTRACTED]
 - [[Fileira_1]] - `references` [EXTRACTED]

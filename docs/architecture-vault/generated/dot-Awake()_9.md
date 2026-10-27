@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "unityengine"
-location: "L24"
+community: "com.unity.modules.jsonserialize"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/comunitymodulesjsonserialize
 ---
 
 # .Awake()
 
 ## Connections
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-EsconderImediatamente()]] - `calls` [EXTRACTED]
+- [[dot-MostrarImediatamente()]] - `calls` [EXTRACTED]
+- [[OptionsPanelController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

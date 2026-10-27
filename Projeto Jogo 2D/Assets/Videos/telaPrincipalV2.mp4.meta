@@ -12,7 +12,9 @@ VideoClipImporter:
   flipVertical: 0
   flipHorizontal: 0
   importAudio: 1
-  targetSettings: {}
+  targetSettings:
+    Standalone:
+      enableTranscoding: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

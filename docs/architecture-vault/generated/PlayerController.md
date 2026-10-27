@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 5"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_5
 ---
 
 # PlayerController
@@ -14,12 +14,12 @@ tags:
 ## Connections
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-Apply()]] - `references` [EXTRACTED]
-- [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-AtualizarFeixeLanterna()]] - `method` [EXTRACTED]
 - [[dot-AtualizarPassada()]] - `method` [EXTRACTED]
 - [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `references` [EXTRACTED]
-- [[dot-Awake()_9]] - `references` [EXTRACTED]
-- [[dot-Awake()_16]] - `method` [EXTRACTED]
+- [[dot-Awake()_4]] - `references` [EXTRACTED]
+- [[dot-Awake()_17]] - `method` [EXTRACTED]
 - [[dot-Blocked()]] - `references` [EXTRACTED]
 - [[dot-BloqueiaEquipamento()]] - `method` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `references` [EXTRACTED]
@@ -31,13 +31,13 @@ tags:
 - [[dot-FlashlightWalkR2()]] - `references` [EXTRACTED]
 - [[dot-Free()]] - `references` [EXTRACTED]
 - [[dot-Interact()_4]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_4]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_6]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()]] - `references` [EXTRACTED]
 - [[dot-LateUpdate()_7]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_5]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_8]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_6]] - `method` [EXTRACTED]
 - [[dot-NovoRespingo()]] - `references` [EXTRACTED]
 - [[dot-OnApplicationFocus()_2]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_4]] - `references` [EXTRACTED]
+- [[dot-OnEnable()_3]] - `references` [EXTRACTED]
 - [[dot-OnScene()]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()_1]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()_2]] - `references` [EXTRACTED]
@@ -56,18 +56,18 @@ tags:
 - [[dot-SlotsR2()]] - `references` [EXTRACTED]
 - [[dot-SnapImediatoParaAlvo()]] - `references` [EXTRACTED]
 - [[dot-SnapToPixel()]] - `method` [EXTRACTED]
-- [[dot-Start()_15]] - `references` [EXTRACTED]
+- [[dot-Start()_4]] - `references` [EXTRACTED]
 - [[dot-Start()_1]] - `references` [EXTRACTED]
-- [[dot-Start()_5]] - `references` [EXTRACTED]
-- [[dot-Start()_10]] - `references` [EXTRACTED]
+- [[dot-Start()_7]] - `references` [EXTRACTED]
+- [[dot-Start()_8]] - `references` [EXTRACTED]
 - [[dot-Start()_17]] - `references` [EXTRACTED]
-- [[dot-Start()_16]] - `method` [EXTRACTED]
+- [[dot-Start()_12]] - `method` [EXTRACTED]
 - [[dot-Teleportar()]] - `method` [EXTRACTED]
 - [[dot-TeleportarPara()]] - `method` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `references` [EXTRACTED]
 - [[dot-Travel()]] - `references` [EXTRACTED]
-- [[dot-Update()_22]] - `references` [EXTRACTED]
-- [[dot-Update()_21]] - `method` [EXTRACTED]
+- [[dot-Update()_16]] - `references` [EXTRACTED]
+- [[dot-Update()_13]] - `method` [EXTRACTED]
 - [[dot-UpdateAnimator()]] - `method` [EXTRACTED]
 - [[dot-WalkAccessFilm()]] - `references` [EXTRACTED]
 - [[dot-Walking()]] - `references` [EXTRACTED]
@@ -89,4 +89,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_5

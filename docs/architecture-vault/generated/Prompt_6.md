@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "PayphoneCheckpoint"
-location: "L29"
+community: "VideoSettingsController"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PayphoneCheckpoint
+  - community/VideoSettingsController
 ---
 
 # Prompt
 
 ## Connections
-- [[Interactable]] - `defines` [EXTRACTED]
+- [[Capitulo2Portal]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint
+#graphify/code #graphify/EXTRACTED #community/VideoSettingsController

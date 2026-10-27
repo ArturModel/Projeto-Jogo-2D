@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "packages-lock.json"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/Community_23
 ---
 
 # RectTransform
@@ -32,10 +32,10 @@ tags:
 - [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]
 - [[dot-MostrarModal()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
-- [[dot-Posicionar()]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_1]] - `references` [EXTRACTED]
+- [[dot-Posicionar()]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_2]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `references` [EXTRACTED]
 - [[dot-RotuloCanonico()]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
@@ -45,7 +45,7 @@ tags:
 - [[dot-Travel()]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
 - [[dot-Vincular()_5]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[MenuPanelTransition]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/Community_23

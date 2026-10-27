@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "Capitulo1Director"
-location: "L21"
+community: "com.unity.modules.unitywebrequest"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/comunitymodulesunitywebrequest
 ---
 
 # Prompt
 
 ## Connections
-- [[TransicaoDeZonaTrigger]] - `defines` [EXTRACTED]
+- [[Capitulo2Interactable]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

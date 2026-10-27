@@ -1,84 +1,87 @@
-# Graph Report - Projeto-Jogo-2D  (2026-10-26)
+# Graph Report - Projeto-Jogo-2D  (2026-10-27)
 
 ## Corpus Check
-- 121 files · ~85,522 words
+- 121 files · ~85,718 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 9 file(s) not represented in the graph (top: (none) 3, .toml 1, .csv 1)
 
 ## Summary
-- 1529 nodes · 4864 edges · 83 communities (40 shown, 43 thin omitted)
+- 1530 nodes · 4867 edges · 85 communities (38 shown, 47 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 214 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `86b7c02d`
+- Built from commit: `a403ed4d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- IEnumerator
-- unityengine
+- InteracaoCapitulo1
+- .CreateCanvas
 - Capitulo1Director
 - SinucaMinigameUI
-- BochaSimulation
 - PlayerController
-- Vector2
-- MapaInterativoUI
+- PlayerController
+- manifest.json
+- dependencies
 - Chuva
-- BochaCourtView
-- TipoInteracao
-- SantaRitaC2Consolidation
-- RectTransform
+- MonoBehaviour
+- MenuPausa
+- com.unity.burst
+- packages-lock.json
 - InteracaoCapitulo1
-- VideoSettingsController
-- SpriteRenderer
-- BochaMinigameUI
-- Sprite
-- PrologoDirector
-- Material
-- GameMessageUI
-- TilePiso
-- .GarantirModalCriado
-- CanvasGroup
-- Capitulo2Director
+- CameraFollow
 - SceneFader
-- Capitulo2Portal
-- PayphoneCheckpoint
-- AudioSource
+- OptionsPanelController
+- com.unity.modules.unitywebrequest
+- com.unity.modules.physics
+- GameState
+- GameMessageUI
+- CamadaDeLuz
+- RectTransform
+- com.unity.modules.jsonserialize
+- .TeleportarPara
+- com.unity.modules.imgui
+- Capitulo2Gate
+- com.unity.modules.audio
+- SantaRitaBarAudio
 - Interactable
-- .Scenes
-- graphify-project.py
-- ObjetoCarro
-- AudioSettingsController
-- .Exteriors
+- VideoSettingsController
+- com.unity.settings-manager
+- PrologoDirector
+- com.unity.modules.ui
+- PrologoVideo
+- SantaRitaShallowStairs
+- InteractionPrompt
+- AGENTS.md — Governança Obrigatória de IA (Graphify + Obsidian + Memória Persistente)
+- BochaMinigameUI
+- com.unity.2d.tilemap
+- Tilemap
 - Legenda
 - InteractionPrompt
-- CamadaDeLuz
-- BochaMapGraphic
-- .Dizer
-- MonoBehaviour
-- ZonaId
-- BochaShot
-- MenuItemSelector
-- PrologoVideo
+- .SaveSlot
+- com.unity.ext.nunit
+- com.unity.modules.tetgen
+- EstadoPartida
+- dependencies
+- com.unity.mathematics
+- SantaRitaRoomCutaway
+- com.unity.collab-proxy
 - TileAleatorio
-- EstradaScroller
-- LimpadorParabrisa
-- Fase
-- MainMenuActions
-- SantaRitaSound
-- c2-workstations.lua
-- CamadaParallax
-- BochaCameraView
-- c2-npc-work.lua
-- marcus-flashlight.lua
-- marcus-walk.lua
-- pool-table.lua
-- graphify-refresh.sh
-- graphify-setup.sh
+- AudioSource
+- Plano de Implementação — Setup Graphify + Obsidian + Antigravity
+- com.unity.2d.tooling
+- com.unity.modules.accessibility
+- graphify-setup.ps1
+- com.unity.modules.umbra
+- Cadeia de Investigação e Pistas do Capítulo 1
+- Manual de Operação e Governança — Graphify + Obsidian + Agentes de IA
+- graphify-validate.ps1
 - graphify-validate.sh
 - bocha-court-atlas.lua
 - market-stock.lua
+- DoorTrigger
+- SantaRitaMcpSetup
 
 ## God Nodes (most connected - your core abstractions)
 1. `PlayerController` - 76 edges
@@ -107,187 +110,179 @@
 ## Import Cycles
 - None detected.
 
-## Communities (83 total, 43 thin omitted)
+## Communities (85 total, 47 thin omitted)
 
-### Community 0 - "IEnumerator"
+### Community 0 - "InteracaoCapitulo1"
 Cohesion: 0.06
 Nodes (25): Chapter2RuntimeVerification, CheckpointSystem, BackupFilePath, CheckpointScene, EmArmazenamentoDeTeste, HasCheckpoint, PrefKeyBackup, PrefKeyLastSlot (+17 more)
 
-### Community 1 - "unityengine"
-Cohesion: 0.07
-Nodes (3): SantaRitaArtImporter, SantaRitaMcpSetup, SantaRitaWorldLighting
-
 ### Community 2 - "Capitulo1Director"
-Cohesion: 0.06
+Cohesion: 0.07
 Nodes (17): SantaRitaChapter1Builder, Capitulo1Director, EstaEmInterior, Instance, ZonaAtual, InfoZona, MovelLoja, CaixaMercado (+9 more)
 
 ### Community 3 - "SinucaMinigameUI"
 Cohesion: 0.07
-Nodes (17): BolaMesa, EstadoPartida, BolasEmMovimento, CarregandoForca, FimDeMao, FimDeSerieDerrota, FimDeSerieVitoria, Inativo (+9 more)
+Nodes (16): EstadoPartida, BolasEmMovimento, CarregandoForca, FimDeMao, FimDeSerieDerrota, FimDeSerieVitoria, Inativo, MirandoJogador (+8 more)
 
-### Community 4 - "BochaSimulation"
+### Community 4 - "PlayerController"
 Cohesion: 0.08
 Nodes (27): BochaPerspectiveVerification, Chapter2Verification, BochaAI, UltimaDecisaoMs, UltimosCandidatos, BochaHandResult, BochaMatch, Iniciador (+19 more)
 
 ### Community 5 - "PlayerController"
-Cohesion: 0.05
-Nodes (14): CameraFollow, LimiteMax, LimiteMin, MarcusGait, Quadro, PlayerController, DirecaoAtual, LanternaVisivel (+6 more)
+Cohesion: 0.15
+Nodes (5): PlayerController, DirecaoAtual, LanternaVisivel, QuadroCaminhada, SantaRitaExitThreshold
 
-### Community 6 - "Vector2"
-Cohesion: 0.11
+### Community 6 - "manifest.json"
+Cohesion: 0.12
 Nodes (6): SantaRitaChapter2Authoring, OlharPrimeiraPessoa, Deslocamento, SantaRitaGeography, SantaRitaRoomLayout, SceneTransition
 
-### Community 7 - "MapaInterativoUI"
-Cohesion: 0.11
+### Community 7 - "dependencies"
+Cohesion: 0.13
 Nodes (4): MapaInterativoUI, Instance, IsShowing, PontoMapa
 
 ### Community 8 - "Chuva"
 Cohesion: 0.10
 Nodes (5): Camada, Chuva, Gota, Poca, Respingo
 
-### Community 9 - "BochaCourtView"
+### Community 9 - "MonoBehaviour"
 Cohesion: 0.11
 Nodes (9): BochaCourtView, AimDistance, mainTexture, TrackCount, View, Zoom, Face, Track (+1 more)
 
-### Community 10 - "TipoInteracao"
+### Community 10 - "MenuPausa"
 Cohesion: 0.06
 Nodes (36): TipoInteracao, BalcaoBarDoZe, BombaCombustivelPosto, CadernoFiadoMercadinho, CaixaCorreioAvo, CaminhoneteClubeBar, CarroEstacionadoPosto, CarroMarcus (+28 more)
 
-### Community 12 - "RectTransform"
-Cohesion: 0.17
+### Community 12 - "packages-lock.json"
+Cohesion: 0.16
 Nodes (3): MenuPausa, Aberto, ReduzirEfeitosIntensos
 
 ### Community 13 - "InteracaoCapitulo1"
-Cohesion: 0.16
-Nodes (4): DialogoLinha, InteracaoCapitulo1, Prompt, Tipo
+Cohesion: 0.05
+Nodes (19): C2ContentData, C2DialogueBranch, Disponivel, C2InteractionData, Capitulo2Director, Instance, ProntoParaBocha, CelularCarro (+11 more)
 
-### Community 15 - "VideoSettingsController"
+### Community 14 - "CameraFollow"
+Cohesion: 0.32
+Nodes (3): CameraFollow, LimiteMax, LimiteMin
+
+### Community 15 - "SceneFader"
 Cohesion: 0.11
 Nodes (5): SubtitleSettingsController, FundoEscuroAtivo, LegendasAtivas, MultiplicadorTamanho, VideoSettingsController
 
-### Community 16 - "SpriteRenderer"
-Cohesion: 0.19
-Nodes (3): SantaRitaLivingWorldAuthoring, SantaRitaForeground, SantaRitaPlaceDressing
+### Community 16 - "OptionsPanelController"
+Cohesion: 0.16
+Nodes (4): SantaRitaLivingWorldAuthoring, SantaRitaForeground, SantaRitaNpcRoutine, SantaRitaPlaceDressing
 
-### Community 17 - "BochaMinigameUI"
-Cohesion: 0.18
-Nodes (3): BochaMinigameUI, Instance, IsShowing
-
-### Community 18 - "Sprite"
-Cohesion: 0.15
-Nodes (4): SantaRitaArtProduction, Capitulo2Interactable, Prompt, Fileira
-
-### Community 19 - "PrologoDirector"
+### Community 18 - "com.unity.modules.unitywebrequest"
 Cohesion: 0.14
-Nodes (5): AudioAmbiente, Instance, Camada, FalaMarcada, PrologoDirector
+Nodes (6): SantaRitaArtProduction, Capitulo2Interactable, Prompt, SantaRitaActorElevation, VisualDepth, VisualScale
 
-### Community 20 - "Material"
-Cohesion: 0.15
-Nodes (4): SantaRitaRuralPaths, Stretch, SantaRitaAtmosphere, SantaRitaRimLight
+### Community 19 - "com.unity.modules.physics"
+Cohesion: 0.16
+Nodes (4): AudioAmbiente, Instance, FalaMarcada, PrologoDirector
+
+### Community 20 - "GameState"
+Cohesion: 0.14
+Nodes (3): SantaRitaAtmosphere, SantaRitaRimLight, SantaRitaWorldLighting
 
 ### Community 21 - "GameMessageUI"
 Cohesion: 0.20
 Nodes (3): GameMessageUI, Instance, IsShowing
 
-### Community 22 - "TilePiso"
+### Community 22 - "CamadaDeLuz"
 Cohesion: 0.10
 Nodes (20): TilePiso, AsfaltoH_Buraco, AsfaltoH_Poca, AsfaltoH_Trinca, AsfaltoParaTerra, AsfaltoV, CalcadaNorte, CalcadaSul (+12 more)
 
-### Community 25 - "Capitulo2Director"
-Cohesion: 0.16
-Nodes (7): C2ContentData, C2DialogueBranch, Disponivel, C2InteractionData, Capitulo2Director, Instance, ProntoParaBocha
+### Community 23 - "RectTransform"
+Cohesion: 0.15
+Nodes (3): BolaMesa, UIFactory, Font
 
-### Community 26 - "SceneFader"
+### Community 26 - "com.unity.modules.imgui"
 Cohesion: 0.20
 Nodes (3): SceneFader, Instance, IsTransitioning
 
-### Community 27 - "Capitulo2Portal"
-Cohesion: 0.12
-Nodes (6): Capitulo2Gate, Capitulo2Portal, Prompt, SantaRitaActorElevation, VisualDepth, VisualScale
-
-### Community 28 - "PayphoneCheckpoint"
-Cohesion: 0.20
+### Community 28 - "com.unity.modules.audio"
+Cohesion: 0.22
 Nodes (4): PayphoneCheckpoint, IsSaveUIOpen, PayphoneId, Prompt
 
 ### Community 30 - "Interactable"
+Cohesion: 0.18
+Nodes (3): Interactable, InteractionRadius, Prompt
+
+### Community 31 - "VideoSettingsController"
 Cohesion: 0.14
-Nodes (7): DoorTrigger, Prompt, Interactable, InteractionRadius, Prompt, ItemDeCena, Prompt
+Nodes (6): Chapter2BuildVerification, Evidence, ForcarDevelopment, SantaRitaProductionVerification, Capitulo2Portal, Prompt
 
-### Community 31 - ".Scenes"
-Cohesion: 0.22
-Nodes (4): Chapter2BuildVerification, Evidence, ForcarDevelopment, SantaRitaProductionVerification
-
-### Community 32 - "graphify-project.py"
+### Community 32 - "com.unity.settings-manager"
 Cohesion: 0.26
 Nodes (6): command(), fingerprint(), main(), run(), sources(), validate()
 
-### Community 33 - "ObjetoCarro"
+### Community 33 - "PrologoDirector"
 Cohesion: 0.16
 Nodes (6): ObjetoCarro, Apontado, Disponivel, PonteiroCarro, Ativo, PortaLuvasCarro
 
-### Community 35 - ".Exteriors"
-Cohesion: 0.19
-Nodes (5): SantaRitaNpcRoutine, SantaRitaNpcWork, StationIndex, Working, Station
+### Community 35 - "PrologoVideo"
+Cohesion: 0.25
+Nodes (4): SantaRitaNpcWork, StationIndex, Working, Station
 
-### Community 36 - "Legenda"
-Cohesion: 0.23
-Nodes (4): Fala, Legenda, Instance, RadioCarro
+### Community 39 - "BochaMinigameUI"
+Cohesion: 0.20
+Nodes (3): BochaMinigameUI, Instance, IsShowing
 
-### Community 41 - ".Dizer"
-Cohesion: 0.22
-Nodes (3): CelularCarro, Disponivel, ChegadaEmSantaRita
+### Community 42 - "Legenda"
+Cohesion: 0.13
+Nodes (6): CamadaParallax, Capitulo2Perception, ChegadaEmSantaRita, ChuvaRolando, DentroDaCasaDoAvo, PayphoneSlotInputWatcher
 
-### Community 42 - "MonoBehaviour"
-Cohesion: 0.22
-Nodes (4): Capitulo2Perception, ChuvaRolando, DentroDaCasaDoAvo, PayphoneSlotInputWatcher
-
-### Community 43 - "ZonaId"
+### Community 43 - "InteractionPrompt"
 Cohesion: 0.20
 Nodes (10): ZonaId, Interior_BarDoZe, Interior_CasaDoAvo, Interior_Mercadinho, Interior_Posto, Zona1_Rodovia, Zona2_Posto, Zona3_Encruzilhada (+2 more)
 
-### Community 44 - "BochaShot"
-Cohesion: 0.27
+### Community 44 - ".SaveSlot"
+Cohesion: 0.24
 Nodes (6): BochaLaunch, BochaShot, BochaThrowType, Ponto, Rafa, Volo
 
-### Community 48 - "EstradaScroller"
-Cohesion: 0.39
-Nodes (3): EstradaScroller, Curvatura, Velocidade
+### Community 48 - "dependencies"
+Cohesion: 0.29
+Nodes (4): EstradaScroller, Curvatura, Velocidade, Fileira
 
-### Community 52 - "Fase"
+### Community 52 - "com.unity.collab-proxy"
 Cohesion: 0.33
 Nodes (6): Fase, Carregando, Mira, Resultado, Rolagem, Tonando
 
-### Community 55 - "c2-workstations.lua"
+### Community 54 - "AudioSource"
+Cohesion: 0.20
+Nodes (4): Camada, Capitulo2Audio, SantaRitaSound, EventsPlayed
+
+### Community 55 - "Plano de Implementação — Setup Graphify + Obsidian + Antigravity"
 Cohesion: 0.53
 Nodes (4): box(), c(), rect(), table()
 
-### Community 57 - "BochaCameraView"
-Cohesion: 0.50
+### Community 57 - "com.unity.2d.tooling"
+Cohesion: 0.33
 Nodes (4): BochaCameraView, Alvo, Lancamento, Superior
 
-### Community 63 - "pool-table.lua"
+### Community 63 - "Cadeia de Investigação e Pistas do Capítulo 1"
 Cohesion: 0.83
 Nodes (3): color(), dot(), rect()
 
 ## Knowledge Gaps
 - **193 isolated node(s):** `ForcarDevelopment`, `Evidence`, `Instance`, `Nome`, `LimiteMin` (+188 more)
   These have ≤1 connection - possible missing edges. (Counts symbols only; 345 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **47 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SinucaMinigameUI` connect `SinucaMinigameUI` to `unityengine`, `Capitulo1Director`, `Vector2`, `MapaInterativoUI`, `Chuva`, `MonoBehaviour`, `RectTransform`, `.Marcar`, `RuntimeInitializeOnLoadMethod`, `GameMessageUI`?**
-  _High betweenness centrality (0.085) - this node is a cross-community bridge._
+- **Why does `SinucaMinigameUI` connect `SinucaMinigameUI` to `.CreateCanvas`, `Capitulo1Director`, `manifest.json`, `Chuva`, `Legenda`, `InteracaoCapitulo1`, `.CreateLabel`, `GameMessageUI`, `RectTransform`?**
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
 - **What connects `ForcarDevelopment`, `Evidence`, `Instance` to the rest of the system?**
   _193 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `IEnumerator` be split into smaller, more focused modules?**
+- **Should `InteracaoCapitulo1` be split into smaller, more focused modules?**
   _Cohesion score 0.05896358543417367 - nodes in this community are weakly interconnected._
-- **Why does `Capitulo1Director` connect `Capitulo1Director` to `unityengine`, `InteractionPrompt`, `MapaInterativoUI`, `.Dizer`, `MonoBehaviour`, `ZonaId`, `.Marcar`, `RuntimeInitializeOnLoadMethod`, `Sprite`, `TilePiso`, `Capitulo2Portal`, `PayphoneCheckpoint`, `AudioSource`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
-- **Should `unityengine` be split into smaller, more focused modules?**
-  _Cohesion score 0.06910336950314107 - nodes in this community are weakly interconnected._
-- **Why does `BochaMinigameUI` connect `BochaMinigameUI` to `unityengine`, `Capitulo1Director`, `SinucaMinigameUI`, `BochaSimulation`, `Vector2`, `MapaInterativoUI`, `Chuva`, `BochaCourtView`, `MonoBehaviour`, `BochaMapGraphic`, `.CancelarCarga`, `BochaShot`, `RectTransform`, `Fase`, `GameMessageUI`, `PayphoneCheckpoint`, `AudioSource`?**
-  _High betweenness centrality (0.066) - this node is a cross-community bridge._
+- **Why does `Capitulo1Director` connect `Capitulo1Director` to `.CreateCanvas`, `Legenda`, `InteractionPrompt`, `InteracaoCapitulo1`, `CameraFollow`, `.CreateLabel`, `com.unity.modules.unitywebrequest`, `AudioSource`, `RectTransform`, `Scene`, `.TeleportarPara`, `CamadaDeLuz`, `com.unity.modules.audio`?**
+  _High betweenness centrality (0.071) - this node is a cross-community bridge._
+- **Should `.CreateCanvas` be split into smaller, more focused modules?**
+  _Cohesion score 0.07532084998948033 - nodes in this community are weakly interconnected._
+- **Why does `BochaMinigameUI` connect `BochaMinigameUI` to `.CreateCanvas`, `Capitulo1Director`, `PlayerController`, `manifest.json`, `Chuva`, `MonoBehaviour`, `Legenda`, `com.unity.2d.tilemap`, `.SaveSlot`, `CheckpointSystem`, `com.unity.collab-proxy`, `GameMessageUI`, `AudioSource`, `RectTransform`, `com.unity.2d.tooling`?**
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **Should `Capitulo1Director` be split into smaller, more focused modules?**
-  _Cohesion score 0.0627062706270627 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06572164948453608 - nodes in this community are weakly interconnected._

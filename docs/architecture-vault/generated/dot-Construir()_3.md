@@ -12,7 +12,7 @@ tags:
 # .Construir()
 
 ## Connections
-- [[dot-Start()_14]] - `calls` [EXTRACTED]
+- [[dot-Start()_16]] - `calls` [EXTRACTED]
 - [[EstradaScroller]] - `method` [EXTRACTED]
 - [[Fileira_1]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]

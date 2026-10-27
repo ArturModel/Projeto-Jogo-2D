@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "com.unity.modules.imageconversion"
-location: "L21"
+community: "PrologoDirector"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimageconversion
+  - community/PrologoDirector
 ---
 
 # Disponivel
 
 ## Connections
-- [[CelularCarro]] - `defines` [EXTRACTED]
+- [[ObjetoCarro]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

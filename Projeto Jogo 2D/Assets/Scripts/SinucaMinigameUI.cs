@@ -1368,7 +1368,7 @@ public class SinucaMinigameUI : MonoBehaviour
         r.sizeDelta = tam;
     }
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if UNITY_EDITOR || DEBUG
     public bool SimularTesteDeInvariantes(out string relatorio)
     {
         // 1. Verifica Mão 1: 7 bolas na mesa, 0 pontos, sem bola marcada

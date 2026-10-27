@@ -11,6 +11,6 @@ tags:
 # ParticleSystemRenderer
 
 ## Connections
-- [[dot-Start()_7]] - `references` [EXTRACTED]
+- [[dot-Start()_10]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/GameState

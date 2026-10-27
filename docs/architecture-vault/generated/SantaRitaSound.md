@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
 type: "code"
-community: ".AoClicarSlot"
+community: "Community 54"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AoClicarSlot
+  - community/Community_54
 ---
 
 # SantaRitaSound
@@ -24,4 +24,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AoClicarSlot
+#graphify/code #graphify/EXTRACTED #community/Community_54

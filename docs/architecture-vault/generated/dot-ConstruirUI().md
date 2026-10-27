@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "SinucaMinigameUI"
+community: "Community 23"
 location: "L190"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/Community_23
 ---
 
 # .ConstruirUI()
@@ -16,10 +16,10 @@ tags:
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-CriarBolasUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarSpriteCirculo()]] - `calls` [EXTRACTED]
-- [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
 - [[dot-EnsureInstance()]] - `calls` [INFERRED]
 - [[dot-IniciarDuelo()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/Community_23

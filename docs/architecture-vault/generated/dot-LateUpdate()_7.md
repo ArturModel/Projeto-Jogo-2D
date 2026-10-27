@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L16"
+community: "Community 5"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_5
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-Apply()_5]] - `calls` [EXTRACTED]
-- [[dot-ShouldReveal()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_5

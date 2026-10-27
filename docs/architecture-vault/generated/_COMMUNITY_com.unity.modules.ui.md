@@ -17,7 +17,7 @@ members: 13
 - [[dot-GarantirValoresPadraoAudiveis()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-InicializarAudioGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-OnDisable()_5]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-Start()_9]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Start()_13]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-Vincular()_4]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[AudioMixer]] - code
 - [[AudioSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs

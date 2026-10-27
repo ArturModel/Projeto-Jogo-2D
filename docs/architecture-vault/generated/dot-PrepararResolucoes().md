@@ -12,7 +12,7 @@ tags:
 # .PrepararResolucoes()
 
 ## Connections
-- [[dot-Start()_4]] - `calls` [EXTRACTED]
+- [[dot-Start()_6]] - `calls` [EXTRACTED]
 - [[VideoSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SceneFader

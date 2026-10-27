@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "PayphoneCheckpoint"
+community: "Community 30"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PayphoneCheckpoint
+  - community/Community_30
 ---
 
 # Interactable
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
 - [[dot-FindNearest()]] - `method` [EXTRACTED]
-- [[dot-Interact()_7]] - `method` [EXTRACTED]
+- [[dot-Interact()_5]] - `method` [EXTRACTED]
 - [[dot-OnDisable()_4]] - `method` [EXTRACTED]
 - [[dot-OnDrawGizmosSelected()]] - `method` [EXTRACTED]
 - [[dot-OnEnable()_2]] - `method` [EXTRACTED]
@@ -30,7 +30,7 @@ tags:
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `inherits` [EXTRACTED]
-- [[Prompt_6]] - `defines` [EXTRACTED]
+- [[Prompt_5]] - `defines` [EXTRACTED]
 - [[TransicaoDeZonaTrigger]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint
+#graphify/code #graphify/EXTRACTED #community/Community_30

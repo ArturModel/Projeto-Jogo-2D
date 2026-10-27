@@ -10,9 +10,9 @@ members: 8
 ## Members
 - [[dot-AnguloEm()]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
 - [[dot-AplicarAngulo()]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
-- [[dot-Awake()_18]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
+- [[dot-Awake()_19]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
 - [[dot-Suavizar()]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
-- [[dot-Update()_23]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
+- [[dot-Update()_22]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
 - [[Ativo_1]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
 - [[LimpadorParabrisa]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs
 - [[LimpadorParabrisa.cs]] - code - Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs

@@ -12,7 +12,7 @@ tags:
 # .Revision()
 
 ## Connections
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
+- [[dot-Run()_1]] - `calls` [EXTRACTED]
 - [[Chapter2BuildVerification]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/VideoSettingsController

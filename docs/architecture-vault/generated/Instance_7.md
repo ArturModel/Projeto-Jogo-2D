@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "MenuItemSelector"
-location: "L32"
+community: "Community 37"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MenuItemSelector
+  - community/Community_37
 ---
 
 # Instance
 
 ## Connections
-- [[Legenda]] - `defines` [EXTRACTED]
+- [[InteractionPrompt]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MenuItemSelector
+#graphify/code #graphify/EXTRACTED #community/Community_37

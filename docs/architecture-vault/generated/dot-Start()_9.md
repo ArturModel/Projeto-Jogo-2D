@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "com.unity.modules.ui"
-location: "L90"
+community: "com.unity.modules.physics"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesui
+  - community/comunitymodulesphysics
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
-- [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
-- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesui
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

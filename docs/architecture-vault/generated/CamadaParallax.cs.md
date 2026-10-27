@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "MovelLoja"
+community: "Legenda"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MovelLoja
+  - community/Legenda
 ---
 
 # CamadaParallax.cs
@@ -15,4 +15,4 @@ tags:
 - [[CamadaParallax]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MovelLoja
+#graphify/code #graphify/EXTRACTED #community/Legenda

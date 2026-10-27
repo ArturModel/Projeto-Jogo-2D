@@ -1,17 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "MovelLoja"
-location: "L29"
+community: "Community 51"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MovelLoja
+  - community/Community_51
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[dot-Apply()_5]] - `calls` [EXTRACTED]
+- [[dot-ShouldReveal()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MovelLoja
+#graphify/code #graphify/EXTRACTED #community/Community_51

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "PrologoVideo"
+community: "OptionsPanelController"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/OptionsPanelController
 ---
 
 # SantaRitaNpcRoutine
@@ -16,19 +16,19 @@ tags:
 - [[dot-Center()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
 - [[dot-Interior()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_3]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_2]] - `method` [EXTRACTED]
 - [[dot-NPC()]] - `references` [EXTRACTED]
 - [[dot-PrepareTools()]] - `method` [EXTRACTED]
 - [[dot-Rodoviaria()]] - `references` [EXTRACTED]
 - [[dot-Routine()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-Sociedade()]] - `references` [EXTRACTED]
-- [[dot-Start()_11]] - `references` [EXTRACTED]
-- [[dot-Start()_10]] - `method` [EXTRACTED]
+- [[dot-Start()_14]] - `references` [EXTRACTED]
+- [[dot-Start()_8]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaNpcRoutine.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

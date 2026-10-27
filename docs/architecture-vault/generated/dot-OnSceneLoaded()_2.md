@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "AudioSettingsController"
+community: "Community 56"
 location: "L177"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/Community_56
 ---
 
 # .OnSceneLoaded()
@@ -17,4 +17,4 @@ tags:
 - [[Scene]] - `references` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_56

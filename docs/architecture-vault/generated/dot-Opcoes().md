@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
 type: "code"
 community: "TileAleatorio"
-location: "L32"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED

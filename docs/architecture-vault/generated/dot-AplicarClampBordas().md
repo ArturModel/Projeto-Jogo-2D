@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 14"
 location: "L267"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_14
 ---
 
 # .AplicarClampBordas()
 
 ## Connections
-- [[dot-LateUpdate()_4]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()]] - `calls` [EXTRACTED]
 - [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
 - [[CameraFollow]] - `method` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_14

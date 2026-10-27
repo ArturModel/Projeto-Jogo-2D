@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs"
 type: "code"
-community: "manifest.json"
+community: "Capitulo1Director"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Capitulo1Director
 ---
 
 # .ConverterCapitulo1()
@@ -18,4 +18,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

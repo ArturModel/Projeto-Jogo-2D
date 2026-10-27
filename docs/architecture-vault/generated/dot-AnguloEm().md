@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Suavizar()]] - `calls` [EXTRACTED]
-- [[dot-Update()_23]] - `calls` [EXTRACTED]
+- [[dot-Update()_22]] - `calls` [EXTRACTED]
 - [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymathematics

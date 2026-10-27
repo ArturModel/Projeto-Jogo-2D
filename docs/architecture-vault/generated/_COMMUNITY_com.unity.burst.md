@@ -1,11 +1,11 @@
 ---
 type: community
-members: 33
+members: 35
 ---
 
 # com.unity.burst
 
-**Members:** 33 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[dot-Abrigo()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
@@ -19,6 +19,7 @@ members: 33
 - [[dot-DrawCourtStair()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
 - [[dot-Empty()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[dot-EncloseCourt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
+- [[dot-Exteriors()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[dot-Igreja()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[dot-ImportAccessArt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
 - [[dot-Interaction()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
@@ -39,8 +40,9 @@ members: 33
 - [[dot-Spawn()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[dot-UpdateAccesses()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
 - [[dot-Walls()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
-- [[MenuItem]] - code
 - [[SantaRitaC2Consolidation]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
+- [[ShadowCaster2D]] - code
+- [[Tile]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -50,24 +52,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
+- 18 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
 - 17 edges to [[_COMMUNITY_Capitulo1Director]]
-- 14 edges to [[_COMMUNITY_PrologoVideo]]
-- 11 edges to [[_COMMUNITY_OptionsPanelController]]
-- 9 edges to [[_COMMUNITY_manifest.json]]
-- 6 edges to [[_COMMUNITY_GameState]]
-- 4 edges to [[_COMMUNITY_TilePiso]]
-- 4 edges to [[_COMMUNITY_unityengine]]
-- 4 edges to [[_COMMUNITY_MapaInterativoUI]]
-- 3 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 3 edges to [[_COMMUNITY_VideoSettingsController]]
+- 16 edges to [[_COMMUNITY_OptionsPanelController]]
+- 10 edges to [[_COMMUNITY_VideoSettingsController]]
+- 10 edges to [[_COMMUNITY_manifest.json]]
+- 5 edges to [[_COMMUNITY_Community 41]]
+- 5 edges to [[_COMMUNITY_Community 13]]
+- 5 edges to [[_COMMUNITY_PrologoVideo]]
+- 4 edges to [[_COMMUNITY_GameState]]
+- 2 edges to [[_COMMUNITY_dot-CreateCanvas]]
+- 2 edges to [[_COMMUNITY_Community 5]]
 - 2 edges to [[_COMMUNITY_MonoBehaviour]]
-- 1 edge to [[_COMMUNITY_TipoInteracao]]
-- 1 edge to [[_COMMUNITY_PlayerController]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 51]]
 
 ## Top bridge nodes
-- [[MenuItem]] - degree 17, connects to 9 communities
-- [[dot-Apply()]] - degree 26, connects to 6 communities
-- [[dot-EncloseCourt()]] - degree 22, connects to 6 communities
-- [[SantaRitaC2Consolidation]] - degree 38, connects to 5 communities
-- [[dot-DrawCourtStair()]] - degree 11, connects to 5 communities
+- [[dot-EncloseCourt()]] - degree 22, connects to 8 communities
+- [[dot-Exteriors()]] - degree 21, connects to 8 communities
+- [[dot-Apply()]] - degree 26, connects to 7 communities
+- [[dot-DrawCourtStair()]] - degree 11, connects to 6 communities
+- [[Tile]] - degree 12, connects to 5 communities

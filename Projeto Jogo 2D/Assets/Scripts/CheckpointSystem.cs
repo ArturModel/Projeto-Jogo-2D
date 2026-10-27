@@ -43,7 +43,7 @@ public static class CheckpointSystem
     private static string testDirectory;
     public static bool EmArmazenamentoDeTeste => testDirectory != null;
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if UNITY_EDITOR || DEBUG
     // Os testes do save usam arquivo e namespace de preferências próprios.
     // Não apontar uma execução de QA para os slots pessoais do autor.
     public static IDisposable BeginIsolatedTests()

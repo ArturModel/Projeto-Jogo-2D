@@ -1,24 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L155"
+community: "dependencies"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/dependencies
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
-- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
-- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/dependencies

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "MenuItemSelector"
+community: "com.unity.modules.tetgen"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MenuItemSelector
+  - community/comunitymodulestetgen
 ---
 
 # Fala
@@ -14,4 +14,4 @@ tags:
 - [[Legenda]] - `references` [EXTRACTED]
 - [[PrologoVideo]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MenuItemSelector
+#graphify/code #graphify/EXTRACTED #community/comunitymodulestetgen

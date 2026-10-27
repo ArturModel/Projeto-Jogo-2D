@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "SceneFader"
-location: "L20"
+community: "Community 14"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_14
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
-- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
-- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
+- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
+- [[CameraFollow]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_14

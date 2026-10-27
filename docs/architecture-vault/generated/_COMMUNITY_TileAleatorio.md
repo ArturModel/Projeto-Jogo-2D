@@ -25,8 +25,8 @@ SORT file.name ASC
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Legenda]]
 - 1 edge to [[_COMMUNITY_InteracaoCapitulo1]]
-- 1 edge to [[_COMMUNITY_TipoInteracao]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
+- 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
 
 ## Top bridge nodes

@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[SantaRitaMcpSetup]] - `contains` [EXTRACTED]
 - [[system]] - `imports` [EXTRACTED]
+- [[system_io]] - `imports` [EXTRACTED]
 - [[system_linq]] - `imports` [EXTRACTED]
 - [[system_reflection]] - `imports` [EXTRACTED]
 - [[system_threading_tasks]] - `imports` [EXTRACTED]

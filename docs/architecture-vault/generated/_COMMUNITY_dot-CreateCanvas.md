@@ -1,16 +1,14 @@
 ---
 type: community
-members: 103
+members: 98
 ---
 
 # .CreateCanvas
 
-**Members:** 103 nodes
+**Members:** 98 nodes
 
 ## Members
-- [[dot-Configure()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[dot-OnPreprocessTexture()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
-- [[dot-WaitForEditor()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[AssetPostprocessor]] - code
 - [[AudioAmbiente.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
 - [[AudioSettingsController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
@@ -66,7 +64,6 @@ members: 103
 - [[SantaRitaFootsteps.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
 - [[SantaRitaGeography.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
 - [[SantaRitaLivingWorldAuthoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
-- [[SantaRitaMcpSetup]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[SantaRitaMcpSetup.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[SantaRitaNpcWork.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
 - [[SantaRitaProductionVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
@@ -75,8 +72,6 @@ members: 103
 - [[SantaRitaRuralPaths.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
 - [[SantaRitaShallowStairs.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
 - [[SantaRitaSound.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
-- [[SantaRitaWorldLighting]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs
-- [[SantaRitaWorldLighting.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs
 - [[SceneFader.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[SinucaMinigameUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[SpawnPoint.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
@@ -121,55 +116,58 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 10 edges to [[_COMMUNITY_Community 13]]
 - 9 edges to [[_COMMUNITY_PlayerController]]
-- 7 edges to [[_COMMUNITY_MapaInterativoUI]]
+- 5 edges to [[_COMMUNITY_Legenda]]
 - 5 edges to [[_COMMUNITY_manifest.json]]
-- 4 edges to [[_COMMUNITY_GameState]]
+- 4 edges to [[_COMMUNITY_OptionsPanelController]]
 - 4 edges to [[_COMMUNITY_Capitulo1Director]]
-- 4 edges to [[_COMMUNITY_TilePiso]]
-- 3 edges to [[_COMMUNITY_com.unity.burst]]
-- 3 edges to [[_COMMUNITY_OptionsPanelController]]
-- 3 edges to [[_COMMUNITY_unityengine]]
-- 3 edges to [[_COMMUNITY_PayphoneCheckpoint]]
+- 3 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
+- 3 edges to [[_COMMUNITY_GameState]]
+- 3 edges to [[_COMMUNITY_VideoSettingsController]]
 - 3 edges to [[_COMMUNITY_PrologoDirector]]
-- 3 edges to [[_COMMUNITY_Legenda]]
-- 2 edges to [[_COMMUNITY_com.unity.2d.common]]
+- 2 edges to [[_COMMUNITY_com.unity.burst]]
 - 2 edges to [[_COMMUNITY_SceneFader]]
-- 2 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.physics]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 2 edges to [[_COMMUNITY_MainMenuActions]]
-- 2 edges to [[_COMMUNITY_VideoSettingsController]]
-- 2 edges to [[_COMMUNITY_PrologoVideo]]
-- 2 edges to [[_COMMUNITY_MenuItemSelector]]
-- 2 edges to [[_COMMUNITY_com.unity.modules.imageconversion]]
+- 2 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_packages-lock.json]]
-- 1 edge to [[_COMMUNITY_CheckpointSystem]]
+- 1 edge to [[_COMMUNITY_Community 14]]
 - 1 edge to [[_COMMUNITY_GameMessageUI]]
-- 1 edge to [[_COMMUNITY_com.unity.test-framework]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 25]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.imgui]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
 - 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
+- 1 edge to [[_COMMUNITY_Community 30]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.ui]]
-- 1 edge to [[_COMMUNITY_AudioSettingsController]]
+- 1 edge to [[_COMMUNITY_PrologoVideo]]
+- 1 edge to [[_COMMUNITY_Community 37]]
 - 1 edge to [[_COMMUNITY_AGENTS.md — Governança Obrigatória de IA (Graphify + Obsidian + Memória Persistente)]]
+- 1 edge to [[_COMMUNITY_Community 39]]
 - 1 edge to [[_COMMUNITY_com.unity.2d.tilemap]]
+- 1 edge to [[_COMMUNITY_Community 41]]
 - 1 edge to [[_COMMUNITY_com.unity.ext.nunit]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.tetgen]]
 - 1 edge to [[_COMMUNITY_EstadoPartida]]
 - 1 edge to [[_COMMUNITY_dependencies]]
-- 1 edge to [[_COMMUNITY_dot-AoClicarSlot]]
 - 1 edge to [[_COMMUNITY_com.unity.2d.tooling]]
 - 1 edge to [[_COMMUNITY_dependencies_1]]
 - 1 edge to [[_COMMUNITY_Chuva]]
+- 1 edge to [[_COMMUNITY_Community 84]]
 - 1 edge to [[_COMMUNITY_MonoBehaviour]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 29]]
 - 1 edge to [[_COMMUNITY_dot-SaveSlot]]
 - 1 edge to [[_COMMUNITY_com.unity.mathematics]]
+- 1 edge to [[_COMMUNITY_Community 51]]
 - 1 edge to [[_COMMUNITY_TileAleatorio]]
-- 1 edge to [[_COMMUNITY_MovelLoja]]
+- 1 edge to [[_COMMUNITY_Community 83]]
 
 ## Top bridge nodes
-- [[unityengine]] - degree 93, connects to 17 communities
+- [[unityengine]] - degree 93, connects to 18 communities
 - [[BochaCourtView.cs]] - degree 8, connects to 3 communities
 - [[system_collections_generic]] - degree 35, connects to 2 communities
 - [[system]] - degree 34, connects to 2 communities

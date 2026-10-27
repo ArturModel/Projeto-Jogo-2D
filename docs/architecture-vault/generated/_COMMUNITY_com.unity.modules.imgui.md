@@ -8,7 +8,7 @@ members: 19
 **Members:** 19 nodes
 
 ## Members
-- [[dot-Awake()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[dot-Awake()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-BannerRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-Bootstrap()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-CarregarCenaSegura()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
@@ -17,7 +17,7 @@ members: 19
 - [[dot-Flicker()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-LoadScene()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-MostrarBannerArea()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[dot-OnDestroy()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[dot-OnDestroy()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ResetStatic()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ResolverCaminhoCena()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-SincronizarCenasNoEditor()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
@@ -37,18 +37,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 6 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 2 edges to [[_COMMUNITY_AudioSettingsController]]
-- 2 edges to [[_COMMUNITY_com.unity.test-framework]]
+- 3 edges to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 56]]
 - 2 edges to [[_COMMUNITY_dot-CreateLabel]]
 - 2 edges to [[_COMMUNITY_GameMessageUI]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 1 edge to [[_COMMUNITY_MenuItemSelector]]
-- 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
+- 1 edge to [[_COMMUNITY_Community 13]]
 - 1 edge to [[_COMMUNITY_Legenda]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
 
 ## Top bridge nodes
-- [[SceneFader]] - degree 25, connects to 7 communities
+- [[SceneFader]] - degree 25, connects to 6 communities
 - [[dot-ZoneTransitionRoutine()]] - degree 7, connects to 2 communities
 - [[dot-FadeIn()]] - degree 6, connects to 2 communities
 - [[dot-TransitionRoutine()]] - degree 7, connects to 1 community

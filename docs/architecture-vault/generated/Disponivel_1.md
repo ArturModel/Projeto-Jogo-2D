@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
-community: "PrologoDirector"
-location: "L22"
+community: "Community 13"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoDirector
+  - community/Community_13
 ---
 
 # Disponivel
 
 ## Connections
-- [[ObjetoCarro]] - `defines` [EXTRACTED]
+- [[CelularCarro]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoDirector
+#graphify/code #graphify/EXTRACTED #community/Community_13

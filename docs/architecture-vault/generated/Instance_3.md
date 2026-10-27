@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L33"
+community: "Capitulo1Director"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Capitulo1Director
 ---
 
 # Instance
 
 ## Connections
-- [[GameMessageUI]] - `defines` [EXTRACTED]
+- [[Capitulo1Director]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

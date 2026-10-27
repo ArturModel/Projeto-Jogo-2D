@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "TilePiso"
-location: "L44"
+community: "com.unity.modules.physics"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TilePiso
+  - community/comunitymodulesphysics
 ---
 
 # .Definir()
 
 ## Connections
-- [[dot-Start()_1]] - `calls` [EXTRACTED]
-- [[dot-Update()_9]] - `calls` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [INFERRED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TilePiso
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

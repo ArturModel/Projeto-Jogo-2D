@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs"
 type: "code"
-community: "PrologoVideo"
+community: "com.unity.burst"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/comunityburst
 ---
 
 # .Exteriors()
@@ -34,4 +34,4 @@ tags:
 - [[Tile]] - `references` [EXTRACTED]
 - [[Tilemap]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/comunityburst

@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L31"
+community: "com.unity.mathematics"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/comunitymathematics
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[dot-AnguloEm()]] - `calls` [EXTRACTED]
+- [[dot-AplicarAngulo()]] - `calls` [EXTRACTED]
+- [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/comunitymathematics

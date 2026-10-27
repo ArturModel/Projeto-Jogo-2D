@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
 community: "PrologoDirector"
-location: "L19"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # .Awake()
 
 ## Connections
-- [[PonteiroCarro]] - `method` [EXTRACTED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrologoDirector

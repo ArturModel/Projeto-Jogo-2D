@@ -85,24 +85,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 29 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 10 edges to [[_COMMUNITY_CheckpointSystem]]
 - 9 edges to [[_COMMUNITY_dot-CreateCanvas]]
 - 9 edges to [[_COMMUNITY_MonoBehaviour]]
-- 8 edges to [[_COMMUNITY_dot-SaveSlot]]
-- 5 edges to [[_COMMUNITY_TipoInteracao]]
-- 4 edges to [[_COMMUNITY_SubtitleSettingsController]]
+- 9 edges to [[_COMMUNITY_dot-SaveSlot]]
+- 8 edges to [[_COMMUNITY_Community 39]]
+- 7 edges to [[_COMMUNITY_Community 13]]
+- 6 edges to [[_COMMUNITY_CheckpointSystem]]
 - 3 edges to [[_COMMUNITY_manifest.json]]
-- 2 edges to [[_COMMUNITY_TilePiso]]
-- 2 edges to [[_COMMUNITY_com.unity.2d.tilemap]]
-- 2 edges to [[_COMMUNITY_MapaInterativoUI]]
-- 2 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
+- 3 edges to [[_COMMUNITY_VideoSettingsController]]
+- 2 edges to [[_COMMUNITY_Community 25]]
 - 1 edge to [[_COMMUNITY_GameMessageUI]]
+- 1 edge to [[_COMMUNITY_com.unity.2d.tilemap]]
 - 1 edge to [[_COMMUNITY_Chuva]]
-- 1 edge to [[_COMMUNITY_com.unity.burst]]
 
 ## Top bridge nodes
-- [[BochaSimulation]] - degree 42, connects to 6 communities
-- [[BochaMatch]] - degree 26, connects to 3 communities
+- [[BochaSimulation]] - degree 42, connects to 7 communities
 - [[BochaBall]] - degree 24, connects to 3 communities
 - [[BochaSide]] - degree 15, connects to 3 communities
-- [[dot-Run()_4]] - degree 10, connects to 3 communities
+- [[dot-Escolher()]] - degree 14, connects to 3 communities
+- [[BochaMatch]] - degree 26, connects to 2 communities

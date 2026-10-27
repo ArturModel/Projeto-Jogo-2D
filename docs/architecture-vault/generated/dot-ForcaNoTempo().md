@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Run()_3]] - `calls` [EXTRACTED]
-- [[dot-Update()_3]] - `calls` [EXTRACTED]
+- [[dot-Update()_4]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/CheckpointSystem

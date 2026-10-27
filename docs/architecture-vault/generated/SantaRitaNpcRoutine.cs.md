@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "PrologoVideo"
+community: "OptionsPanelController"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/OptionsPanelController
 ---
 
 # SantaRitaNpcRoutine.cs
@@ -15,4 +15,4 @@ tags:
 - [[SantaRitaNpcRoutine]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

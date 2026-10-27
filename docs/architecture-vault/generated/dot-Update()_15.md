@@ -12,8 +12,8 @@ tags:
 # .Update()
 
 ## Connections
-- [[dot-Ativar()]] - `calls` [INFERRED]
-- [[dot-Procurar()]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_3]] - `calls` [INFERRED]
+- [[dot-Procurar()_1]] - `calls` [EXTRACTED]
 - [[PonteiroCarro]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PrologoDirector

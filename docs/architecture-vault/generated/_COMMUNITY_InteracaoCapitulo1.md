@@ -34,7 +34,6 @@ members: 120
 - [[dot-ExportarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-FecharModalSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 - [[dot-Field()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-FindNearest()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
 - [[dot-Finish()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-FlashlightR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
 - [[dot-FlashlightWalkR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
@@ -47,6 +46,7 @@ members: 120
 - [[dot-Numero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-ObterEntradasDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-ObterNomeAmigavelOrelhao()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-ObterObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-Performance()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-PerformancePair()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-Place()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
@@ -137,45 +137,47 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 46 edges to [[_COMMUNITY_TipoInteracao]]
+- 56 edges to [[_COMMUNITY_Community 13]]
 - 29 edges to [[_COMMUNITY_PlayerController]]
-- 23 edges to [[_COMMUNITY_MapaInterativoUI]]
-- 12 edges to [[_COMMUNITY_dependencies_1]]
-- 11 edges to [[_COMMUNITY_com.unity.modules.audio]]
+- 14 edges to [[_COMMUNITY_Community 5]]
+- 11 edges to [[_COMMUNITY_Community 23]]
 - 10 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 10 edges to [[_COMMUNITY_manifest.json]]
-- 9 edges to [[_COMMUNITY_Capitulo1Director]]
-- 7 edges to [[_COMMUNITY_unityengine]]
+- 10 edges to [[_COMMUNITY_com.unity.modules.audio]]
+- 9 edges to [[_COMMUNITY_SinucaMinigameUI]]
+- 9 edges to [[_COMMUNITY_manifest.json]]
+- 8 edges to [[_COMMUNITY_Capitulo1Director]]
+- 8 edges to [[_COMMUNITY_dependencies_1]]
 - 6 edges to [[_COMMUNITY_Chuva]]
+- 6 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
 - 6 edges to [[_COMMUNITY_com.unity.modules.imgui]]
-- 5 edges to [[_COMMUNITY_MonoBehaviour]]
-- 5 edges to [[_COMMUNITY_com.unity.modules.imageconversion]]
-- 5 edges to [[_COMMUNITY_MainMenuActions]]
-- 5 edges to [[_COMMUNITY_TilePiso]]
 - 5 edges to [[_COMMUNITY_com.unity.modules.physics]]
-- 4 edges to [[_COMMUNITY_com.unity.2d.common]]
-- 4 edges to [[_COMMUNITY_packages-lock.json]]
-- 4 edges to [[_COMMUNITY_SinucaMinigameUI]]
+- 4 edges to [[_COMMUNITY_MonoBehaviour]]
+- 4 edges to [[_COMMUNITY_Community 30]]
+- 4 edges to [[_COMMUNITY_VideoSettingsController]]
+- 4 edges to [[_COMMUNITY_Community 54]]
 - 4 edges to [[_COMMUNITY_GameMessageUI]]
 - 3 edges to [[_COMMUNITY_Legenda]]
-- 3 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
-- 3 edges to [[_COMMUNITY_com.unity.test-framework]]
-- 3 edges to [[_COMMUNITY_MenuItemSelector]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 2 edges to [[_COMMUNITY_Community 36]]
 - 2 edges to [[_COMMUNITY_com.unity.2d.tilemap]]
+- 2 edges to [[_COMMUNITY_packages-lock.json]]
 - 2 edges to [[_COMMUNITY_OptionsPanelController]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 25]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.jsonserialize]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.tetgen]]
 - 1 edge to [[_COMMUNITY_dot-CreateLabel]]
-- 1 edge to [[_COMMUNITY_PayphoneCheckpoint]]
+- 1 edge to [[_COMMUNITY_Community 29]]
 - 1 edge to [[_COMMUNITY_PrologoVideo]]
+- 1 edge to [[_COMMUNITY_Community 51]]
 - 1 edge to [[_COMMUNITY_SceneFader]]
-- 1 edge to [[_COMMUNITY_SubtitleSettingsController]]
+- 1 edge to [[_COMMUNITY_com.unity.2d.tooling]]
 - 1 edge to [[_COMMUNITY_GameState]]
 - 1 edge to [[_COMMUNITY_TileAleatorio]]
 
 ## Top bridge nodes
-- [[IEnumerator]] - degree 66, connects to 12 communities
-- [[dot-RunBochaPerspective()]] - degree 40, connects to 11 communities
+- [[dot-RunBochaPerspective()]] - degree 40, connects to 12 communities
+- [[IEnumerator]] - degree 66, connects to 10 communities
+- [[dot-RunAccesses()]] - degree 25, connects to 9 communities
 - [[Chapter2RuntimeVerification]] - degree 63, connects to 6 communities
 - [[dot-SlotsR2()]] - degree 27, connects to 6 communities
-- [[dot-Run()]] - degree 38, connects to 5 communities

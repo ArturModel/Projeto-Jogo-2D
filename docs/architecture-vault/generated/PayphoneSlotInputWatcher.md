@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
 community: "Legenda"
-location: "L527"
+location: "L529"
 tags:
   - graphify/code
   - graphify/EXTRACTED

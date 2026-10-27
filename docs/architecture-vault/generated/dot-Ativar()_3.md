@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "com.unity.modules.imageconversion"
-location: "L25"
+community: "PrologoDirector"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimageconversion
+  - community/PrologoDirector
 ---
 
 # .Ativar()
 
 ## Connections
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[PortaLuvasCarro]] - `method` [EXTRACTED]
+- [[dot-Update()_15]] - `calls` [INFERRED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

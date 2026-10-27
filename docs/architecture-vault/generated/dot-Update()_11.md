@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
-community: "MainMenuActions"
-location: "L54"
+community: "Community 29"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MainMenuActions
+  - community/Community_29
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[dot-CriarAmbiencia()]] - `calls` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[dot-VolumeDaCamada()]] - `calls` [EXTRACTED]
+- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MainMenuActions
+#graphify/code #graphify/EXTRACTED #community/Community_29

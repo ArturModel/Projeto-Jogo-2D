@@ -22,10 +22,10 @@ members: 29
 - [[dot-OnDisable()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-OnDisable()_1]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 - [[dot-PrepararResolucoes()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-Start()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[dot-Start()_4]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-Vincular()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[dot-Vincular()_2]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
+- [[dot-Start()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
+- [[dot-Start()_6]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
+- [[dot-Vincular()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
+- [[dot-Vincular()_1]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 - [[AspectRatioFitter]] - code
 - [[FundoEscuroAtivo]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[LegendasAtivas]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
@@ -47,18 +47,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_packages-lock.json]]
-- 4 edges to [[_COMMUNITY_dependencies_1]]
+- 5 edges to [[_COMMUNITY_Community 23]]
 - 2 edges to [[_COMMUNITY_Legenda]]
 - 2 edges to [[_COMMUNITY_dot-CreateCanvas]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.ui]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.tetgen]]
 - 1 edge to [[_COMMUNITY_Chuva]]
 - 1 edge to [[_COMMUNITY_InteracaoCapitulo1]]
-- 1 edge to [[_COMMUNITY_com.unity.test-framework]]
 
 ## Top bridge nodes
 - [[VideoSettingsController]] - degree 20, connects to 4 communities
 - [[SubtitleSettingsController]] - degree 17, connects to 4 communities
 - [[Slider]] - degree 8, connects to 3 communities
-- [[dot-MontarTela()]] - degree 7, connects to 3 communities
-- [[dot-Vincular()_1]] - degree 5, connects to 2 communities
+- [[dot-MontarTela()]] - degree 7, connects to 2 communities
+- [[dot-Vincular()]] - degree 5, connects to 2 communities

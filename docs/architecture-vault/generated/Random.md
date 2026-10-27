@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CheckpointSystem"
+community: "Community 39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/Community_39
 ---
 
 # Random
@@ -14,4 +14,4 @@ tags:
 - [[dot-Escolher()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/Community_39

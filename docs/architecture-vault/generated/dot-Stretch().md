@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
 type: "code"
-community: "dependencies"
+community: "Community 23"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_23
 ---
 
 # .Stretch()
@@ -15,7 +15,7 @@ tags:
 - [[dot-AbrirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-Build()]] - `calls` [EXTRACTED]
 - [[dot-Build()_1]] - `calls` [EXTRACTED]
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_23

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "TipoInteracao"
+community: "SinucaMinigameUI"
 location: "L425"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TipoInteracao
+  - community/SinucaMinigameUI
 ---
 
 # .RunAutomatedVerification()
@@ -28,4 +28,4 @@ tags:
 - [[SantaRitaChapter1Builder]] - `method` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TipoInteracao
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

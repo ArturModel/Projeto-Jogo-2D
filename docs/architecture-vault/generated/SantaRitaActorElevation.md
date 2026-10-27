@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "unityengine"
+community: "com.unity.modules.unitywebrequest"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/comunitymodulesunitywebrequest
 ---
 
 # SantaRitaActorElevation
 
 ## Connections
-- [[dot-Awake()_9]] - `method` [EXTRACTED]
+- [[dot-Awake()_4]] - `method` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_2]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_4]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_3]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_2]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[VisualDepth]] - `defines` [EXTRACTED]
 - [[VisualScale]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

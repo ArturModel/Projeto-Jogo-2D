@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "com.unity.modules.jsonserialize"
-location: "L29"
+community: "com.unity.modules.physics"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/comunitymodulesphysics
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ConfigurarGrupo()]] - `calls` [EXTRACTED]
-- [[MenuPanelTransition]] - `method` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

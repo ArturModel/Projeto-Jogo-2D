@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 51"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_51
 ---
 
 # .ShouldReveal()
 
 ## Connections
-- [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_8]] - `calls` [EXTRACTED]
 - [[dot-Start()_17]] - `calls` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_51

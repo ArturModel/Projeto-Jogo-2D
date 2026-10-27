@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "dependencies"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_23
 ---
 
 # Image
@@ -17,7 +17,7 @@ tags:
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
@@ -39,7 +39,7 @@ tags:
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-RotuloCanonico()]] - `references` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_1]] - `references` [EXTRACTED]
+- [[dot-Vincular()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
@@ -48,4 +48,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_23

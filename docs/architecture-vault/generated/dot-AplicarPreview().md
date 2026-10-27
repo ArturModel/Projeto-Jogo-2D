@@ -15,7 +15,7 @@ tags:
 - [[dot-AlterarAtivacao()]] - `calls` [EXTRACTED]
 - [[dot-AlterarFundo()]] - `calls` [EXTRACTED]
 - [[dot-AlterarTamanho()]] - `calls` [EXTRACTED]
-- [[dot-Start()_3]] - `calls` [EXTRACTED]
+- [[dot-Start()_5]] - `calls` [EXTRACTED]
 - [[SubtitleSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/SceneFader

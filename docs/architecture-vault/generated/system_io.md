@@ -28,6 +28,7 @@ tags:
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter2Authoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaMcpSetup.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]

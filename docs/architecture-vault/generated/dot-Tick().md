@@ -12,7 +12,7 @@ tags:
 # .Tick()
 
 ## Connections
-- [[dot-Update()_3]] - `calls` [INFERRED]
+- [[dot-Update()_4]] - `calls` [INFERRED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/MonoBehaviour

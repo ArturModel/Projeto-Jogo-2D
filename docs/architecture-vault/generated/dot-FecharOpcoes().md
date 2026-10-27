@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-TrocarPainel()]] - `calls` [EXTRACTED]
-- [[dot-Update()_8]] - `calls` [INFERRED]
+- [[dot-Update()_10]] - `calls` [INFERRED]
 - [[MenuPanelTransition]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

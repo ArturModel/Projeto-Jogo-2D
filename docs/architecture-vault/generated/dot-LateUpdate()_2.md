@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "unityengine"
-location: "L31"
+community: "OptionsPanelController"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/OptionsPanelController
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-ElevationAt()]] - `calls` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 25"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_25
 ---
 
 # Quadro
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MarcusGait]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_25

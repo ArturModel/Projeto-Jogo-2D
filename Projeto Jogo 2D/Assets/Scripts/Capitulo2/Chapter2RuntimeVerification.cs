@@ -1,4 +1,4 @@
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if UNITY_EDITOR || DEBUG
 using System;
 using System.IO;
 using System.Linq;
@@ -372,7 +372,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
     private IEnumerator C1InvestigationRegression()
     {
         var director = Capitulo1Director.Instance;
-        var items = FindObjectsByType<InteracaoCapitulo1>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        var items = FindObjectsByType<InteracaoCapitulo1>(FindObjectsInactive.Include);
         var shop = items.First(i => i.Tipo == InteracaoCapitulo1.TipoInteracao.NpcAtendenteMercadinho);
         GameState.ImportarSnapshot(new GameStateSnapshot());
         GameState.Marcar(Flags.ChegouCasaAvo);

@@ -1,22 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
-community: "SceneFader"
-location: "L49"
+community: "com.unity.modules.jsonserialize"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/comunitymodulesjsonserialize
 ---
 
 # .Vincular()
 
 ## Connections
-- [[RawImage]] - `references` [EXTRACTED]
-- [[Slider]] - `references` [EXTRACTED]
-- [[TMP_Dropdown]] - `references` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
-- [[Toggle]] - `references` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [INFERRED]
+- [[CanvasGroup]] - `references` [EXTRACTED]
+- [[GameObject]] - `references` [EXTRACTED]
+- [[MenuPanelTransition]] - `method` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

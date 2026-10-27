@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "com.unity.modules.physics"
-location: "L85"
+community: "SceneFader"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/SceneFader
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Rodar()]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
+- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
+- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
+- [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/SceneFader

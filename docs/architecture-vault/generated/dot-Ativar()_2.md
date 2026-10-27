@@ -1,20 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs"
 type: "code"
-community: "com.unity.modules.imageconversion"
-location: "L23"
+community: "Community 13"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimageconversion
+  - community/Community_13
 ---
 
 # .Ativar()
 
 ## Connections
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Ligar()_1]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[CelularCarro]] - `method` [EXTRACTED]
+- [[dot-Transmitir()]] - `calls` [EXTRACTED]
+- [[RadioCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
+#graphify/code #graphify/EXTRACTED #community/Community_13

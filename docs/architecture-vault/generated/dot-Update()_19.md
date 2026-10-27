@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
-community: "com.unity.modules.tetgen"
-location: "L149"
+community: "Legenda"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulestetgen
+  - community/Legenda
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[ChuvaRolando]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulestetgen
+#graphify/code #graphify/EXTRACTED #community/Legenda

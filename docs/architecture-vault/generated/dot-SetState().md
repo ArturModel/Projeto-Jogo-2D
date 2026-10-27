@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "com.unity.2d.tilemap"
+community: ".SaveSlot"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunity2dtilemap
+  - community/SaveSlot
 ---
 
 # .SetState()
@@ -18,4 +18,4 @@ tags:
 - [[BochaShot]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunity2dtilemap
+#graphify/code #graphify/EXTRACTED #community/SaveSlot
