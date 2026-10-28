@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs"
 type: "code"
-community: "GameState"
+community: ".CreateCanvas"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/CreateCanvas
 ---
 
 # SantaRitaWorldLighting.cs
@@ -15,4 +15,4 @@ tags:
 - [[SantaRitaWorldLighting]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/CreateCanvas

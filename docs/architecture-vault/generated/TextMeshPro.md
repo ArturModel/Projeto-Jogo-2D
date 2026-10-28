@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "VideoSettingsController"
+community: "com.unity.modules.unitywebrequest"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/comunitymodulesunitywebrequest
 ---
 
 # TextMeshPro
@@ -13,6 +13,6 @@ tags:
 ## Connections
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-LabelWorld()]] - `references` [EXTRACTED]
-- [[dot-Run()_2]] - `references` [EXTRACTED]
+- [[dot-Run()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

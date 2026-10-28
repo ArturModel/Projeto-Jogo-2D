@@ -12,12 +12,12 @@ members: 12
 - [[dot-Achar()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 - [[dot-Apagar()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 - [[dot-Aplicar()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Awake()_14]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
+- [[dot-Awake()_13]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 - [[dot-Definir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-OnDisable()_9]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-OnEnable()_5]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
+- [[dot-OnDisable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
+- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 - [[dot-Trocar()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Update()_18]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
+- [[dot-Update()_16]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 - [[CamadaDeLuz]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 - [[Nome]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 
@@ -36,4 +36,4 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[CamadaDeLuz]] - degree 15, connects to 4 communities
-- [[dot-Awake()_14]] - degree 3, connects to 1 community
+- [[dot-Awake()_13]] - degree 3, connects to 1 community

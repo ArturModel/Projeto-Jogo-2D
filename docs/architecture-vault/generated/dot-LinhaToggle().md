@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "packages-lock.json"
-location: "L496"
+location: "L587"
 tags:
   - graphify/code
   - graphify/EXTRACTED

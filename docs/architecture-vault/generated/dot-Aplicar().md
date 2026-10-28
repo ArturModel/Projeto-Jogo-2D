@@ -12,9 +12,9 @@ tags:
 # .Aplicar()
 
 ## Connections
-- [[dot-Awake()_14]] - `calls` [EXTRACTED]
+- [[dot-Awake()_13]] - `calls` [EXTRACTED]
 - [[dot-Definir()_2]] - `calls` [EXTRACTED]
-- [[dot-Update()_18]] - `calls` [EXTRACTED]
+- [[dot-Update()_16]] - `calls` [EXTRACTED]
 - [[CamadaDeLuz]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente

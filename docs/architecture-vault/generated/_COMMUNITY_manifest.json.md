@@ -1,11 +1,11 @@
 ---
 type: community
-members: 53
+members: 57
 ---
 
 # manifest.json
 
-**Members:** 53 nodes
+**Members:** 57 nodes
 
 ## Members
 - [[dot-AdaptSavedPosition()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomLayout.cs
@@ -15,6 +15,8 @@ members: 53
 - [[dot-Building()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-CenaC2()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
 - [[dot-ConfigureArt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
+- [[dot-ConverterCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
+- [[dot-ConverterMundoParaUV()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
 - [[dot-Crosswalk()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Depth()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Exterior()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
@@ -33,6 +35,7 @@ members: 53
 - [[dot-MundoC2ParaUV()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
 - [[dot-NPC()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-ObjetivoAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
+- [[dot-ObterUVObjetivoAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
 - [[dot-Phone()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Portal()_2]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-PosicaoNoMapa()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
@@ -52,6 +55,7 @@ members: 53
 - [[dot-Wall()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Walls()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[Deslocamento]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
+- [[Dictionary]] - code
 - [[MeshRenderer]] - code
 - [[OlharPrimeiraPessoa]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
 - [[RectInt]] - code
@@ -70,43 +74,42 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 23 edges to [[_COMMUNITY_Capitulo1Director]]
-- 13 edges to [[_COMMUNITY_Community 13]]
-- 10 edges to [[_COMMUNITY_Community 23]]
+- 27 edges to [[_COMMUNITY_Capitulo1Director]]
+- 16 edges to [[_COMMUNITY_dependencies_1]]
+- 15 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 13 edges to [[_COMMUNITY_Community 5]]
 - 10 edges to [[_COMMUNITY_Chuva]]
 - 10 edges to [[_COMMUNITY_com.unity.burst]]
-- 10 edges to [[_COMMUNITY_MonoBehaviour]]
+- 9 edges to [[_COMMUNITY_OptionsPanelController]]
 - 9 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
-- 9 edges to [[_COMMUNITY_VideoSettingsController]]
-- 9 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 9 edges to [[_COMMUNITY_dependencies_1]]
-- 6 edges to [[_COMMUNITY_OptionsPanelController]]
+- 6 edges to [[_COMMUNITY_Community 23]]
+- 6 edges to [[_COMMUNITY_Community 25]]
 - 5 edges to [[_COMMUNITY_SinucaMinigameUI]]
 - 5 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 5 edges to [[_COMMUNITY_Community 25]]
-- 4 edges to [[_COMMUNITY_Community 39]]
-- 4 edges to [[_COMMUNITY_Community 41]]
-- 3 edges to [[_COMMUNITY_Community 14]]
+- 5 edges to [[_COMMUNITY_Community 14]]
+- 5 edges to [[_COMMUNITY_MonoBehaviour]]
+- 5 edges to [[_COMMUNITY_VideoSettingsController]]
+- 4 edges to [[_COMMUNITY_GameState]]
+- 4 edges to [[_COMMUNITY_Community 27]]
+- 4 edges to [[_COMMUNITY_packages-lock.json]]
+- 3 edges to [[_COMMUNITY_CheckpointSystem]]
 - 3 edges to [[_COMMUNITY_PlayerController]]
-- 3 edges to [[_COMMUNITY_dot-SaveSlot]]
-- 3 edges to [[_COMMUNITY_Community 5]]
-- 3 edges to [[_COMMUNITY_packages-lock.json]]
-- 3 edges to [[_COMMUNITY_GameState]]
+- 3 edges to [[_COMMUNITY_Community 41]]
 - 2 edges to [[_COMMUNITY_com.unity.modules.audio]]
+- 2 edges to [[_COMMUNITY_dot-SaveSlot]]
 - 2 edges to [[_COMMUNITY_Community 56]]
 - 2 edges to [[_COMMUNITY_Legenda]]
 - 2 edges to [[_COMMUNITY_com.unity.2d.tilemap]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.physics]]
+- 1 edge to [[_COMMUNITY_GameMessageUI]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 1 edge to [[_COMMUNITY_Community 27]]
-- 1 edge to [[_COMMUNITY_PrologoVideo]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_CheckpointSystem]]
-- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 35]]
 - 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 
 ## Top bridge nodes
-- [[Vector2]] - degree 136, connects to 28 communities
-- [[SantaRitaChapter2Authoring]] - degree 39, connects to 8 communities
-- [[dot-Setup()]] - degree 10, connects to 6 communities
+- [[Vector2]] - degree 137, connects to 24 communities
+- [[Dictionary]] - degree 10, connects to 8 communities
+- [[SantaRitaChapter2Authoring]] - degree 39, connects to 7 communities
 - [[SantaRitaRoomLayout]] - degree 11, connects to 5 communities
-- [[dot-Solid()_1]] - degree 11, connects to 4 communities
+- [[dot-Setup()]] - degree 10, connects to 5 communities

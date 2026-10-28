@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "GameState"
-location: "L29"
+community: "com.unity.modules.jsonserialize"
+location: "L270"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/comunitymodulesjsonserialize
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Interior()_1]] - `calls` [EXTRACTED]
-- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
+- [[dot-FecharOpcoes()]] - `calls` [INFERRED]
+- [[dot-MostrarCategorias()]] - `calls` [EXTRACTED]
+- [[OptionsPanelController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

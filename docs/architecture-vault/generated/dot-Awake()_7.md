@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L80"
+community: "Community 25"
+location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_25
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Build()]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
+- [[dot-CarregarConteudo()]] - `calls` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_25

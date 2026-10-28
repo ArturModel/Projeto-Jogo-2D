@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "PrologoVideo"
+community: "Community 35"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/Community_35
 ---
 
 # SantaRitaNpcWork
@@ -18,8 +18,8 @@ tags:
 - [[dot-NPC()]] - `references` [EXTRACTED]
 - [[dot-OnDisable()_6]] - `method` [EXTRACTED]
 - [[dot-RoutineR2()]] - `references` [EXTRACTED]
-- [[dot-Start()_14]] - `method` [EXTRACTED]
-- [[dot-Update()_16]] - `method` [EXTRACTED]
+- [[dot-Start()_12]] - `method` [EXTRACTED]
+- [[dot-Update()_21]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaNpcWork.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[StationIndex]] - `defines` [EXTRACTED]
 - [[Working]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/Community_35

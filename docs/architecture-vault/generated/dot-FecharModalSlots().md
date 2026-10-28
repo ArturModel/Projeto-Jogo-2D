@@ -16,7 +16,7 @@ tags:
 - [[dot-FlashlightR2()]] - `calls` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[dot-Update()_1]] - `calls` [EXTRACTED]
+- [[dot-Update()_10]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

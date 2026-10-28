@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Apply()_1]] - `references` [EXTRACTED]
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_1]] - `method` [EXTRACTED]
-- [[dot-Start()_7]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()]] - `method` [EXTRACTED]
+- [[dot-Start()_6]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaForeground.cs]] - `contains` [EXTRACTED]

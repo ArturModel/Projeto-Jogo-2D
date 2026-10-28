@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "com.unity.modules.unitywebrequest"
+community: "Community 27"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_27
 ---
 
 # VisualScale
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SantaRitaActorElevation]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_27

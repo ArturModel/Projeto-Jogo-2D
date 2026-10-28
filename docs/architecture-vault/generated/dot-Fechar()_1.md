@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L456"
+community: "packages-lock.json"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/packages-lockjson
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-Avancar()]] - `calls` [EXTRACTED]
-- [[dot-Fade()]] - `calls` [EXTRACTED]
-- [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-Sair()]] - `calls` [EXTRACTED]
+- [[dot-Update()_1]] - `calls` [EXTRACTED]
+- [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
+- [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/packages-lockjson

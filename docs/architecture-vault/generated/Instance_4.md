@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L33"
+community: "Community 23"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_23
 ---
 
 # Instance
 
 ## Connections
-- [[GameMessageUI]] - `defines` [EXTRACTED]
+- [[InteractionPrompt]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_23

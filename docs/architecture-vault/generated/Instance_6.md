@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "SinucaMinigameUI"
-location: "L23"
+community: "com.unity.modules.imgui"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/comunitymodulesimgui
 ---
 
 # Instance
 
 ## Connections
-- [[SinucaMinigameUI]] - `defines` [EXTRACTED]
+- [[SceneFader]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui

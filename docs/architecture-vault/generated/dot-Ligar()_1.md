@@ -1,18 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
-community: "dependencies"
-location: "L88"
+community: "Community 34"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_34
 ---
 
 # .Ligar()
 
 ## Connections
-- [[dot-Rodar()_1]] - `calls` [INFERRED]
-- [[EstradaScroller]] - `method` [EXTRACTED]
+- [[dot-Ativar()_1]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[CelularCarro]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_34

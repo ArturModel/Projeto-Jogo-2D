@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 39"
+community: ".SaveSlot"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/SaveSlot
 ---
 
 # .Abrir()
@@ -19,4 +19,4 @@ tags:
 - [[Action]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/SaveSlot

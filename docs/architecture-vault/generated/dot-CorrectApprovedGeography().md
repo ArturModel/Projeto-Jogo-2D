@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "VideoSettingsController"
+community: "OptionsPanelController"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/OptionsPanelController
 ---
 
 # .CorrectApprovedGeography()
@@ -24,4 +24,4 @@ tags:
 - [[Tilemap]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

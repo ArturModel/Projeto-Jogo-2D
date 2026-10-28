@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
 type: "code"
-community: "Community 27"
-location: "L9"
+community: "Capitulo1Director"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_27
+  - community/Capitulo1Director
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[Capitulo2Gate]] - `method` [EXTRACTED]
+- [[SpawnPoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_27
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

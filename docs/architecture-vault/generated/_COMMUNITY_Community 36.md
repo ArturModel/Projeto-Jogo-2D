@@ -1,23 +1,25 @@
 ---
 type: community
-members: 10
+members: 12
 ---
 
 # Community 36
 
-**Members:** 10 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[dot-ApoiarPe()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-FixedUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-OnDisable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-OnDisable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-OnEnable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[dot-SpeedAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[Rect]] - code
-- [[SantaRitaFootsteps]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[SantaRitaShallowStairs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-Aparecer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Ativar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
+- [[dot-Awake()_12]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Enfileirar()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Rodar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Transmitir()]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
+- [[Coroutine]] - code
+- [[Fala]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[Fala_2]] - code
+- [[Instance_8]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[Legenda]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[RadioCarro]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,24 +29,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 41]]
-- 2 edges to [[_COMMUNITY_Legenda]]
+- 3 edges to [[_COMMUNITY_Community 23]]
+- 3 edges to [[_COMMUNITY_Community 34]]
+- 3 edges to [[_COMMUNITY_InteracaoCapitulo1]]
 - 2 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 2 edges to [[_COMMUNITY_Chuva]]
-- 2 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
-- 1 edge to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_com.unity.burst]]
-- 1 edge to [[_COMMUNITY_GameState]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 54]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_GameMessageUI]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.imgui]]
+- 1 edge to [[_COMMUNITY_PrologoDirector]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
+- 1 edge to [[_COMMUNITY_Chuva]]
 - 1 edge to [[_COMMUNITY_manifest.json]]
-- 1 edge to [[_COMMUNITY_com.unity.2d.tilemap]]
+- 1 edge to [[_COMMUNITY_Legenda]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.tetgen]]
 
 ## Top bridge nodes
-- [[SantaRitaShallowStairs]] - degree 10, connects to 6 communities
-- [[SantaRitaFootsteps]] - degree 9, connects to 6 communities
-- [[dot-SpeedAt()]] - degree 5, connects to 2 communities
-- [[dot-ApoiarPe()]] - degree 4, connects to 2 communities
-- [[dot-OnEnable()_3]] - degree 3, connects to 2 communities
+- [[Legenda]] - degree 17, connects to 8 communities
+- [[RadioCarro]] - degree 5, connects to 2 communities
+- [[dot-Transmitir()]] - degree 4, connects to 2 communities
+- [[Coroutine]] - degree 4, connects to 2 communities
+- [[dot-Enfileirar()]] - degree 4, connects to 1 community

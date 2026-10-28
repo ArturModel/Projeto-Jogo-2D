@@ -19,7 +19,7 @@ tags:
 - [[dot-Physics()]] - `calls` [INFERRED]
 - [[dot-RepousarParaPrevisao()]] - `calls` [EXTRACTED]
 - [[dot-Run()_3]] - `calls` [INFERRED]
-- [[dot-Update()_4]] - `calls` [INFERRED]
+- [[dot-Update()_2]] - `calls` [INFERRED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PlayerController

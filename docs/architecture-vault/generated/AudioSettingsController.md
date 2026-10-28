@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "com.unity.modules.ui"
+community: "SceneFader"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesui
+  - community/SceneFader
 ---
 
 # AudioSettingsController
@@ -21,12 +21,12 @@ tags:
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-GarantirValoresPadraoAudiveis()]] - `method` [EXTRACTED]
 - [[dot-InicializarAudioGlobal()]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_5]] - `method` [EXTRACTED]
-- [[dot-Start()_13]] - `method` [EXTRACTED]
-- [[dot-Vincular()_4]] - `method` [EXTRACTED]
+- [[dot-OnDisable()]] - `method` [EXTRACTED]
+- [[dot-Start()_3]] - `method` [EXTRACTED]
+- [[dot-Vincular()_1]] - `method` [EXTRACTED]
 - [[AudioMixer]] - `references` [EXTRACTED]
 - [[AudioSettingsController.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesui
+#graphify/code #graphify/EXTRACTED #community/SceneFader

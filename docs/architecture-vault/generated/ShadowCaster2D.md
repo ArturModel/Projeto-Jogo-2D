@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.burst"
+community: "com.unity.modules.unitywebrequest"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/comunitymodulesunitywebrequest
 ---
 
 # ShadowCaster2D
@@ -14,6 +14,6 @@ tags:
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-Cast()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
-- [[dot-Run()_2]] - `references` [EXTRACTED]
+- [[dot-Run()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest

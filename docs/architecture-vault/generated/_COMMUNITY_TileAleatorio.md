@@ -1,15 +1,14 @@
 ---
 type: community
-members: 6
+members: 5
 ---
 
 # TileAleatorio
 
-**Members:** 6 nodes
+**Members:** 5 nodes
 
 ## Members
 - [[dot-Continuar()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[dot-NovoJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
 - [[dot-Opcoes()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
 - [[dot-Sair()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
 - [[MainMenuActions]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
@@ -26,11 +25,9 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Legenda]]
 - 1 edge to [[_COMMUNITY_InteracaoCapitulo1]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
-- 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
 
 ## Top bridge nodes
-- [[dot-NovoJogo()]] - degree 3, connects to 2 communities
-- [[MainMenuActions]] - degree 6, connects to 1 community
+- [[MainMenuActions]] - degree 6, connects to 2 communities
 - [[dot-Continuar()]] - degree 2, connects to 1 community
 - [[MainMenuActions.cs]] - degree 2, connects to 1 community

@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[dot-AtualizarFiltroInterior()]] - `references` [EXTRACTED]
 - [[dot-AtualizarFonteMusical()]] - `references` [EXTRACTED]
-- [[dot-Awake()_5]] - `references` [EXTRACTED]
+- [[dot-Awake()_1]] - `references` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
 - [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]

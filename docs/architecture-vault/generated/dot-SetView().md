@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "com.unity.2d.tooling"
+community: "Community 39"
 location: "L47"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/comunity2dtooling
+  - community/Community_39
 ---
 
 # .SetView()
@@ -19,4 +19,4 @@ tags:
 - [[BochaCameraView]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/comunity2dtooling
+#graphify/code #graphify/INFERRED #community/Community_39

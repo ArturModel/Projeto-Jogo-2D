@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-BallColor()]] - `references` [EXTRACTED]
 - [[dot-EfetuarLancamento()]] - `references` [EXTRACTED]
-- [[dot-Lancar()_2]] - `references` [EXTRACTED]
 - [[dot-Lancar()]] - `references` [EXTRACTED]
 - [[dot-Lancar()_1]] - `references` [EXTRACTED]
+- [[dot-Lancar()_2]] - `references` [EXTRACTED]
 - [[dot-MelhorDistancia()]] - `references` [EXTRACTED]
 - [[dot-Outro()]] - `references` [EXTRACTED]
 - [[dot-Proximo()]] - `references` [EXTRACTED]

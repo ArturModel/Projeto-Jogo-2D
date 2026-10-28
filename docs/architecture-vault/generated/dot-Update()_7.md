@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Capitulo1Director"
-location: "L386"
+community: "Community 23"
+location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_23
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_23

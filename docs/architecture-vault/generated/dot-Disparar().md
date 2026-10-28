@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Curvar()]] - `calls` [INFERRED]
-- [[dot-Rodar()_1]] - `calls` [INFERRED]
+- [[dot-Rodar()]] - `calls` [INFERRED]
 - [[AudioAmbiente]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/comunitymodulesphysics

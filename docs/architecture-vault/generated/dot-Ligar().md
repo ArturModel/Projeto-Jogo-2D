@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 13"
-location: "L52"
+community: "com.unity.modules.physics"
+location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/comunitymodulesphysics
 ---
 
 # .Ligar()
 
 ## Connections
-- [[dot-Ativar()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[CelularCarro]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-Rodar()]] - `calls` [INFERRED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "PrologoVideo"
-location: "L31"
+community: "AGENTS.md — Governança Obrigatória de IA (Graphify + Obsidian + Memória Persistente)"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[dot-Aplicar()]] - `calls` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente

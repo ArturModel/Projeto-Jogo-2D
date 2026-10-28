@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "VideoSettingsController"
+community: "OptionsPanelController"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/OptionsPanelController
 ---
 
 # Capitulo2Portal.cs
@@ -15,4 +15,4 @@ tags:
 - [[Capitulo2Portal]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/OptionsPanelController

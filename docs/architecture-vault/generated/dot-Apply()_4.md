@@ -1,23 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs"
 type: "code"
-community: "Community 41"
-location: "L12"
+community: "GameState"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/GameState
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-Center()]] - `calls` [EXTRACTED]
-- [[dot-Paint()]] - `calls` [EXTRACTED]
+- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
-- [[SantaRitaRuralPaths]] - `method` [EXTRACTED]
-- [[Stretch]] - `calls` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `references` [EXTRACTED]
+- [[SantaRitaWorldLighting]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/GameState

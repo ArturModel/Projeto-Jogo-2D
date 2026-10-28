@@ -12,5 +12,6 @@ tags:
 
 ## Connections
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
+- [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/packages-lockjson

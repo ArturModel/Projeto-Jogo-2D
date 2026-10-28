@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "GameState"
-location: "L13"
+community: "Legenda"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/Legenda
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[Light2D]] - `references` [EXTRACTED]
-- [[SantaRitaRimLight]] - `method` [EXTRACTED]
+- [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/Legenda

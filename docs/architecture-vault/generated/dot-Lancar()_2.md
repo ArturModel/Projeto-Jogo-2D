@@ -1,21 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: ".SaveSlot"
-location: "L239"
+community: "PlayerController"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SaveSlot
+  - community/PlayerController
 ---
 
 # .Lancar()
 
 ## Connections
-- [[dot-EfetuarLancamento()]] - `calls` [EXTRACTED]
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
-- [[BochaShot]] - `calls` [INFERRED]
+- [[dot-EfetuarLancamento()]] - `calls` [INFERRED]
+- [[dot-Lancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Matches()]] - `calls` [INFERRED]
+- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[BochaMatch]] - `method` [EXTRACTED]
+- [[BochaShot]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[BochaSimulation]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SaveSlot
+#graphify/code #graphify/EXTRACTED #community/PlayerController

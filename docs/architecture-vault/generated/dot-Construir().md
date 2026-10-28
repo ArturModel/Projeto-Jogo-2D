@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "packages-lock.json"
-location: "L211"
+location: "L212"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,13 +14,14 @@ tags:
 ## Connections
 - [[dot-Awake()]] - `calls` [EXTRACTED]
 - [[dot-Botao()]] - `calls` [EXTRACTED]
+- [[dot-BotaoPausa()]] - `calls` [EXTRACTED]
 - [[dot-Caixa()]] - `calls` [EXTRACTED]
+- [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Fechar()]] - `calls` [EXTRACTED]
 - [[dot-GarantirEventSystem()]] - `calls` [EXTRACTED]
 - [[dot-Imagem()]] - `calls` [EXTRACTED]
 - [[dot-Indicador()]] - `calls` [EXTRACTED]
+- [[dot-IndicadorPausa()]] - `calls` [EXTRACTED]
 - [[dot-LinhaDropdown()]] - `calls` [EXTRACTED]
 - [[dot-LinhaSlider()]] - `calls` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `calls` [EXTRACTED]
@@ -29,8 +30,9 @@ tags:
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[dot-SubPainel()]] - `calls` [EXTRACTED]
 - [[dot-Titulo()]] - `calls` [EXTRACTED]
-- [[dot-Vincular()_2]] - `calls` [INFERRED]
+- [[dot-TituloPausa()]] - `calls` [EXTRACTED]
 - [[dot-Vincular()_3]] - `calls` [INFERRED]
+- [[dot-Vincular()_4]] - `calls` [INFERRED]
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]

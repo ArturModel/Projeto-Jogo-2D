@@ -18,7 +18,7 @@ tags:
 - [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
 - [[dot-OnApplicationFocus()_1]] - `calls` [EXTRACTED]
 - [[dot-Regras()]] - `calls` [EXTRACTED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_2]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_39

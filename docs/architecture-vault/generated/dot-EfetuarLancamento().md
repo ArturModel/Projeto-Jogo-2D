@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-AtualizarTela()]] - `calls` [EXTRACTED]
 - [[dot-EntradaTeclado()]] - `calls` [EXTRACTED]
-- [[dot-Lancar()_2]] - `calls` [EXTRACTED]
-- [[dot-Lancar()_1]] - `calls` [INFERRED]
+- [[dot-Lancar()]] - `calls` [EXTRACTED]
+- [[dot-Lancar()_2]] - `calls` [INFERRED]
 - [[dot-SoltarArraste()]] - `calls` [EXTRACTED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_2]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[BochaShot]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]

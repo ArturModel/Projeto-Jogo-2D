@@ -12,9 +12,9 @@ members: 9
 - [[dot-MapPoint()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-OnPopulateMesh()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Quad()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Refresh()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[BochaMapGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[MaskableGraphic]] - code
+- [[Rect]] - code
 - [[Simulation]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[VertexHelper]] - code
 
@@ -26,18 +26,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_MonoBehaviour]]
-- 3 edges to [[_COMMUNITY_Community 39]]
+- 4 edges to [[_COMMUNITY_MonoBehaviour]]
 - 2 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 2 edges to [[_COMMUNITY_dependencies_1]]
 - 2 edges to [[_COMMUNITY_manifest.json]]
-- 1 edge to [[_COMMUNITY_PlayerController]]
-- 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
 - 1 edge to [[_COMMUNITY_CheckpointSystem]]
-- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_PlayerController]]
+- 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
+- 1 edge to [[_COMMUNITY_dot-SaveSlot]]
+- 1 edge to [[_COMMUNITY_Legenda]]
+- 1 edge to [[_COMMUNITY_Community 5]]
 
 ## Top bridge nodes
-- [[BochaMapGraphic]] - degree 12, connects to 4 communities
+- [[BochaMapGraphic]] - degree 12, connects to 6 communities
 - [[dot-Circle()]] - degree 5, connects to 2 communities
-- [[dot-Quad()]] - degree 5, connects to 2 communities
 - [[dot-MapPoint()]] - degree 4, connects to 2 communities
-- [[dot-Refresh()]] - degree 3, connects to 2 communities
+- [[Rect]] - degree 3, connects to 2 communities
+- [[dot-OnPopulateMesh()]] - degree 6, connects to 1 community

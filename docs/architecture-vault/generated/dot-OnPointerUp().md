@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "CheckpointSystem"
+community: "MonoBehaviour"
 location: "L322"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/MonoBehaviour
 ---
 
 # .OnPointerUp()
@@ -15,4 +15,4 @@ tags:
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

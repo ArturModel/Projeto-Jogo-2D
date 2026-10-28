@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 39"
-location: "L13"
+community: "SinucaMinigameUI"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/SinucaMinigameUI
 ---
 
 # IsShowing
 
 ## Connections
-- [[BochaMinigameUI]] - `defines` [EXTRACTED]
+- [[SinucaMinigameUI]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

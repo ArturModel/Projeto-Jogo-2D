@@ -8,7 +8,7 @@ members: 19
 **Members:** 19 nodes
 
 ## Members
-- [[dot-Awake()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[dot-Awake()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-BannerRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-Bootstrap()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-CarregarCenaSegura()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
@@ -24,7 +24,7 @@ members: 19
 - [[dot-TransicionarParaZona()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-TransitionRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ZoneTransitionRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[Instance_5]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[Instance_6]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[IsTransitioning]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[SceneFader]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 
@@ -42,7 +42,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_dot-CreateLabel]]
 - 2 edges to [[_COMMUNITY_GameMessageUI]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 - 1 edge to [[_COMMUNITY_Legenda]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
 

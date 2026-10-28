@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.modules.tetgen"
+community: "Community 36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulestetgen
+  - community/Community_36
 ---
 
 # Fala
@@ -14,4 +14,4 @@ tags:
 - [[Legenda]] - `references` [EXTRACTED]
 - [[PrologoVideo]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulestetgen
+#graphify/code #graphify/EXTRACTED #community/Community_36

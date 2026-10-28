@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "com.unity.2d.tilemap"
+community: ".SaveSlot"
 location: "L335"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/comunity2dtilemap
+  - community/SaveSlot
 ---
 
 # .Refresh()
@@ -16,4 +16,4 @@ tags:
 - [[dot-AtualizarTela()]] - `calls` [INFERRED]
 - [[BochaMapGraphic]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/comunity2dtilemap
+#graphify/code #graphify/INFERRED #community/SaveSlot

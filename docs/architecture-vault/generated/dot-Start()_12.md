@@ -1,24 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "Community 25"
-location: "L155"
+community: "Community 35"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_35
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
-- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
-- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_35

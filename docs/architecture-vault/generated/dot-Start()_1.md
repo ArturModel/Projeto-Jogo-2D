@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 13"
+community: "Community 14"
 location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_14
 ---
 
 # .Start()
 
 ## Connections
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
-- [[dot-Definir()]] - `calls` [EXTRACTED]
+- [[dot-Definir()_1]] - `calls` [EXTRACTED]
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
 - [[dot-IrParaPosicao()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaRimLight]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_14

@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-CriarTextura()]] - `method` [EXTRACTED]
 - [[dot-DefinirContexto()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_5]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_6]] - `method` [EXTRACTED]
 - [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
-- [[dot-Update()_11]] - `method` [EXTRACTED]
+- [[dot-Update()_12]] - `method` [EXTRACTED]
 - [[dot-VolumeDaCamada()]] - `method` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "CheckpointSystem"
+community: "MonoBehaviour"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/MonoBehaviour
 ---
 
 # PointerEventData
@@ -23,4 +23,4 @@ tags:
 - [[dot-SoltarArraste()]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/MonoBehaviour

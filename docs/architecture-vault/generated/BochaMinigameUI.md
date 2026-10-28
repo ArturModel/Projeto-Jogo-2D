@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 39"
+community: "CheckpointSystem"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/CheckpointSystem
 ---
 
 # BochaMinigameUI
@@ -30,7 +30,7 @@ tags:
 - [[dot-ImpactoReal()]] - `method` [EXTRACTED]
 - [[dot-IniciarArraste()]] - `method` [EXTRACTED]
 - [[dot-Label()]] - `method` [EXTRACTED]
-- [[dot-Lancar()_2]] - `method` [EXTRACTED]
+- [[dot-Lancar()]] - `method` [EXTRACTED]
 - [[dot-MostrarModal()_1]] - `method` [EXTRACTED]
 - [[dot-MoverMira()]] - `method` [EXTRACTED]
 - [[dot-MudarVista()]] - `method` [EXTRACTED]
@@ -47,7 +47,7 @@ tags:
 - [[dot-RespostaAbafada()]] - `method` [EXTRACTED]
 - [[dot-SoltarArraste()]] - `method` [EXTRACTED]
 - [[dot-TextoDistancia()]] - `method` [EXTRACTED]
-- [[dot-Update()_4]] - `method` [EXTRACTED]
+- [[dot-Update()_2]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
@@ -63,8 +63,8 @@ tags:
 - [[Fase]] - `contains` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[Instance_8]] - `defines` [EXTRACTED]
-- [[IsShowing_2]] - `defines` [EXTRACTED]
+- [[Instance]] - `defines` [EXTRACTED]
+- [[IsShowing]] - `defines` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Random]] - `references` [EXTRACTED]
@@ -72,4 +72,4 @@ tags:
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/CheckpointSystem

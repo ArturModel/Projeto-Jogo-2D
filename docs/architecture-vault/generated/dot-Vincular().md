@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "SceneFader"
+community: "packages-lock.json"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/packages-lockjson
 ---
 
 # .Vincular()
@@ -18,4 +18,4 @@ tags:
 - [[TMP_Text]] - `references` [EXTRACTED]
 - [[Toggle]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/packages-lockjson

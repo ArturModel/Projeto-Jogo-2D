@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 29"
-location: "L89"
+community: "Community 27"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_27
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
+- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_27

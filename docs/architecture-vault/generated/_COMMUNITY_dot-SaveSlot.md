@@ -1,16 +1,17 @@
 ---
 type: community
-members: 11
+members: 12
 ---
 
 # .SaveSlot
 
-**Members:** 11 nodes
+**Members:** 12 nodes
 
 ## Members
+- [[dot-Abrir()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-ForcaPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
-- [[dot-Lancar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-Preparar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[dot-Refresh()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-SetState()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[BochaLaunch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[BochaShot]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
@@ -28,16 +29,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_PlayerController]]
-- 6 edges to [[_COMMUNITY_CheckpointSystem]]
-- 4 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_MonoBehaviour]]
-- 3 edges to [[_COMMUNITY_manifest.json]]
+- 10 edges to [[_COMMUNITY_CheckpointSystem]]
+- 8 edges to [[_COMMUNITY_PlayerController]]
+- 2 edges to [[_COMMUNITY_MonoBehaviour]]
+- 2 edges to [[_COMMUNITY_manifest.json]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_com.unity.2d.tilemap]]
+- 1 edge to [[_COMMUNITY_Capitulo1Director]]
+- 1 edge to [[_COMMUNITY_GameMessageUI]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
 
 ## Top bridge nodes
 - [[BochaShot]] - degree 15, connects to 5 communities
-- [[dot-SetState()]] - degree 5, connects to 4 communities
-- [[dot-Lancar()_2]] - degree 5, connects to 4 communities
 - [[dot-Preparar()_1]] - degree 7, connects to 3 communities
-- [[BochaThrowType]] - degree 8, connects to 2 communities
+- [[dot-Abrir()_1]] - degree 6, connects to 3 communities
+- [[dot-SetState()]] - degree 5, connects to 3 communities
+- [[dot-Refresh()]] - degree 3, connects to 2 communities

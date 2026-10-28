@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Legenda"
-location: "L26"
+community: "dependencies"
+location: "L138"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/dependencies
 ---
 
 # .Update()
 
 ## Connections
-- [[ChuvaRolando]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/dependencies

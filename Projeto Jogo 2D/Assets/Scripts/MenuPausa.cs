@@ -60,7 +60,8 @@ public class MenuPausa : MonoBehaviour
     private bool aguardandoConfirmacaoSaida;
     private System.Action acaoConfirmada;
 
-    private const float LarguraPausa = 276f;
+    private const float LarguraPausa = 246f;
+    private const float AlturaPausa = 280f;
     private const float LarguraOpcoes = 370f;
 
     private void Awake()
@@ -237,28 +238,23 @@ public class MenuPausa : MonoBehaviour
         overlay.alpha = 0f;
         overlay.blocksRaycasts = false;
 
-        // --- caixa da pausa ---------------------------------------------
-        CanvasGroup pausa = Caixa(tela, "PainelPausa", new Vector2(LarguraPausa, 252f),
-                                  out RectTransform pausaRect);
-        Titulo(pausaRect, "PAUSADO", 92f, LarguraPausa);
-        RectTransform indPausa = Indicador(pausaRect, -LarguraPausa / 2f + 22f);
+        // --- caixa da pausa (placa de ferro oxidada à esquerda) --------
+        CanvasGroup pausa = CaixaPausa(tela, "PainelPausa", new Vector2(LarguraPausa, AlturaPausa),
+                                       out RectTransform pausaRect);
+        TituloPausa(pausaRect, "PAUSADO", 96f, LarguraPausa);
+        RectTransform indPausa = IndicadorPausa(pausaRect);
 
-        Button continuar = Botao(pausaRect, "CONTINUAR", 48f, indPausa);
-        Button mapaBtn = Botao(pausaRect, "MAPA / DIÁRIO (M)", 18f, indPausa);
-        Button opcoes = Botao(pausaRect, "CONFIGURAÇÕES", -12f, indPausa);
-        Button menu = Botao(pausaRect, "MENU PRINCIPAL", -42f, indPausa);
-        Button sair = Botao(pausaRect, "SAIR", -72f, indPausa);
+        Button continuar = BotaoPausa(pausaRect, "Continuar", 44f, indPausa);
+        Button opcoes = BotaoPausa(pausaRect, "Configurações", 12f, indPausa);
+        Button menu = BotaoPausa(pausaRect, "Menu Principal", -20f, indPausa);
+        Button sair = BotaoPausa(pausaRect, "Sair", -52f, indPausa);
 
-        rotuloStatusSave = Rotulo(pausaRect, "", 13f, new Vector2(0f, -104f),
-                                  new Vector2(LarguraPausa - 24f, 24f), TextAlignmentOptions.Center);
+        rotuloStatusSave = Rotulo(pausaRect, "", 11f, new Vector2(10f, -102f),
+                                  new Vector2(LarguraPausa - 50f, 22f), TextAlignmentOptions.Center);
+        rotuloStatusSave.color = new Color(0.65f, 0.62f, 0.56f, 0.75f);
         rotuloStatusSave.textWrappingMode = TextWrappingModes.Normal;
 
         continuar.onClick.AddListener(Fechar);
-        mapaBtn.onClick.AddListener(() =>
-        {
-            Fechar();
-            MapaInterativoUI.EnsureInstance().Abrir(0);
-        });
         menu.onClick.AddListener(VoltarAoMenu);
         sair.onClick.AddListener(Sair);
         primeiroBotao = continuar.gameObject;
@@ -370,6 +366,101 @@ public class MenuPausa : MonoBehaviour
         r.pivot = new Vector2(0.5f, 0.5f);
         r.anchoredPosition = posicao;
         r.sizeDelta = tamanho;
+    }
+
+    // A placa de ferro oxidada do menu de pausa com o lírio gravado no canto, ancorada à esquerda
+    private CanvasGroup CaixaPausa(Transform pai, string nome, Vector2 tamanho, out RectTransform rect)
+    {
+        GameObject go = new GameObject(nome, typeof(RectTransform), typeof(Image), typeof(CanvasGroup));
+        go.transform.SetParent(pai, false);
+        Image img = go.GetComponent<Image>();
+        Sprite spr = UIFactory.LoadSprite("PainelPausa_Fundo");
+        if (spr != null)
+        {
+            img.sprite = spr;
+            img.type = Image.Type.Simple;
+            img.color = Color.white;
+        }
+        else
+        {
+            img.color = new Color(0.12f, 0.11f, 0.10f, 0.95f);
+        }
+        img.raycastTarget = true;
+        rect = go.GetComponent<RectTransform>();
+        Posicionar(rect, new Vector2(-160f, 0f), tamanho);
+        return go.GetComponent<CanvasGroup>();
+    }
+
+    private TMP_Text TituloPausa(RectTransform pai, string texto, float y, float largura)
+    {
+        TMP_Text titulo = Rotulo(pai, texto, 28f, new Vector2(0f, y),
+                                 new Vector2(largura - 40f, 34f), TextAlignmentOptions.Center);
+        titulo.color = new Color(0.88f, 0.85f, 0.78f, 1f);
+
+        Sprite sprLinha = UIFactory.LoadSprite("PainelPausa_Linha");
+        if (sprLinha != null)
+        {
+            GameObject linhaGo = new GameObject("LinhaVermelha", typeof(RectTransform), typeof(Image));
+            linhaGo.transform.SetParent(pai, false);
+            Image linhaImg = linhaGo.GetComponent<Image>();
+            linhaImg.sprite = sprLinha;
+            linhaImg.color = Color.white;
+            linhaImg.raycastTarget = false;
+            Posicionar((RectTransform)linhaGo.transform, new Vector2(0f, y - 18f), new Vector2(110f, 3f));
+        }
+
+        return titulo;
+    }
+
+    private RectTransform IndicadorPausa(RectTransform pai)
+    {
+        GameObject go = new GameObject("IndicadorSelecao", typeof(RectTransform), typeof(Image));
+        go.transform.SetParent(pai, false);
+        Image img = go.GetComponent<Image>();
+        Sprite spr = UIFactory.LoadSprite("PainelPausa_Selecao");
+        if (spr != null)
+        {
+            img.sprite = spr;
+            img.type = Image.Type.Simple;
+            img.color = Color.white;
+        }
+        else
+        {
+            img.color = new Color(0.88f, 0.78f, 0.62f, 0.9f);
+        }
+        img.raycastTarget = false;
+        RectTransform rt = go.GetComponent<RectTransform>();
+        Posicionar(rt, new Vector2(0f, 44f), new Vector2(196f, 30f));
+        return rt;
+    }
+
+    private void SelecionavelPausa(Selectable s, Graphic alvo, RectTransform indicador)
+    {
+        s.targetGraphic = alvo;
+        ColorBlock cores = s.colors;
+        cores.normalColor = new Color(0.86f, 0.84f, 0.78f, 1f);
+        cores.highlightedColor = new Color(0.12f, 0.10f, 0.08f, 1f);
+        cores.selectedColor = new Color(0.12f, 0.10f, 0.08f, 1f);
+        cores.pressedColor = new Color(0.25f, 0.18f, 0.14f, 1f);
+        cores.fadeDuration = 0.05f;
+        s.colors = cores;
+
+        s.gameObject.AddComponent<MenuItemSelector>().Vincular(indicador, fonteSom, somSelecao);
+    }
+
+    private Button BotaoPausa(RectTransform pai, string texto, float y, RectTransform indicador)
+    {
+        GameObject go = new GameObject(texto, typeof(RectTransform), typeof(Image), typeof(Button));
+        go.transform.SetParent(pai, false);
+        Posicionar((RectTransform)go.transform, new Vector2(0f, y), new Vector2(196f, 30f));
+        go.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
+
+        TMP_Text rotulo = Rotulo(go.transform, texto, 20f, new Vector2(8f, 0f),
+                                 new Vector2(170f, 26f), TextAlignmentOptions.Center);
+
+        Button botao = go.GetComponent<Button>();
+        SelecionavelPausa(botao, rotulo, indicador);
+        return botao;
     }
 
     // A moldura é a mesma das caixas de diálogo do jogo, com toque de papel envelhecido e flor.

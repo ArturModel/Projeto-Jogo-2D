@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
 type: "code"
-community: "OptionsPanelController"
-location: "L8"
+community: "GameState"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/GameState
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[SantaRitaForeground]] - `method` [EXTRACTED]
+- [[Light2D]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/GameState

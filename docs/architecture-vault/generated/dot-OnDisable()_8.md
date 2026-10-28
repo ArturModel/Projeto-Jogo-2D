@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "Community 36"
+community: "Legenda"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Legenda
 ---
 
 # .OnDisable()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Legenda

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 39"
+community: "CheckpointSystem"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/CheckpointSystem
 ---
 
 # Fase
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/CheckpointSystem

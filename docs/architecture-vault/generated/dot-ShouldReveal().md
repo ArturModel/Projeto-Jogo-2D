@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "Community 51"
+community: "Community 5"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_5
 ---
 
 # .ShouldReveal()
@@ -16,4 +16,4 @@ tags:
 - [[dot-Start()_17]] - `calls` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_5

@@ -1,3 +1,27 @@
+# Remoção Definitiva dos Resquícios de "Menu Principal" e "Sair" — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_remocao-resquicios-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_remocao-resquicios-menu-pausa.md)
+- **Resumo:** Eliminados de forma definitiva os últimos resquícios das palavras "Menu Principal" e "Sair" que permaneciam visíveis no fundo da placa (`PainelPausa_Fundo.png`). A causa foi identificada: o script anterior havia iniciado a varredura inferior em `x = 165` para poupar o lírio, mas o lírio termina em `x <= 85` e os textos começavam em `x = 131`, deixando uma faixa de 34 pixels intocada. Corrigido o início da varredura para `x = 100`, cobrindo 100% da área de texto (reduzindo os pixels residuais a exatamente 0) e preservando todos os 1.083 pixels do lírio botânico. Validação Graphify e Obsidian com status PASS (93 scripts C# íntegros).
+
+---
+
+# Limpeza Definitiva do Fundo do Menu de Pausa — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_limpeza-fundo-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_limpeza-fundo-menu-pausa.md)
+- **Resumo:** Eliminados de forma definitiva todos os resquícios de texto (ghost letters) que estavam impressos nos sprites do fundo da placa (`PainelPausa_Fundo.png`) e na barra de seleção (`PainelPausa_Selecao.png`). Reconstruída a textura densa de ardósia escura com varredura contínua sobrepondo 100% da área de texto (reduzindo pixels residuais de 4.819 para 0), preservando integralmente o desenho botânico do lírio, a moldura oxidada com parafusos e a seta vermelha ▶ sem nenhum resquício da letra "C". Validação Graphify e Obsidian com status PASS (93 scripts C# íntegros).
+
+---
+
+# Redesign do Menu de Pausa (Estilo Vintage / Placa Enferrujada) — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_redesign-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_redesign-menu-pausa.md)
+- **Resumo:** Implementado o novo design e posicionamento do Menu de Pausa em conformidade com o mockup de arte aprovado pela equipe. Extraídas e limpas as camadas do mockup em sprites modulares (`PainelPausa_Fundo.png`, `PainelPausa_Selecao.png` e `PainelPausa_Linha.png`) com transparência e metadados de Sprite 2D. Atualizado `MenuPausa.cs` para ancorar a placa no terço esquerdo da tela (deixando Marcus e a chuva visíveis à direita), renderizar a placa de metal oxidado com a flor, a linha divisória vermelha, 4 botões estritos ao mockup (`Continuar`, `Configurações`, `Menu Principal`, `Sair`) e a barra de seleção em papiro envelhecido com a seta vermelha que desliza para o botão focado, com contraste automático de cor de texto. Validação Graphify e Obsidian com status PASS (93 scripts C# íntegros).
+
+---
+
 # Diagnóstico e Resolução de Conflito de Porta (8080) MCP Unity — 28/10/2026
 
 - **Autor:** @lucamontini (Luca Dalla Lana)

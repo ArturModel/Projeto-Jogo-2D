@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "com.unity.modules.imgui"
-location: "L61"
+community: "PrologoDirector"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimgui
+  - community/PrologoDirector
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
-- [[dot-FadeIn()]] - `calls` [EXTRACTED]
-- [[SceneFader]] - `method` [EXTRACTED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

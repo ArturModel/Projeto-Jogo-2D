@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
-community: "Community 37"
-location: "L111"
+community: "Legenda"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_37
+  - community/Legenda
 ---
 
 # .Update()
 
 ## Connections
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[ChuvaRolando]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+#graphify/code #graphify/EXTRACTED #community/Legenda

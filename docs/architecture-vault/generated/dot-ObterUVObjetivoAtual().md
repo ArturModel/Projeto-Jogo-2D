@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "dependencies"
+community: "manifest.json"
 location: "L831"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/manifestjson
 ---
 
 # .ObterUVObjetivoAtual()
@@ -17,4 +17,4 @@ tags:
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/manifestjson

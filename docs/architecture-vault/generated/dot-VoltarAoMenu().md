@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "packages-lock.json"
-location: "L133"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .VoltarAoMenu()
 
 ## Connections
-- [[dot-Fechar()]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_1]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/packages-lockjson

@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs"
 type: "code"
-community: "PrologoDirector"
-location: "L46"
+community: "Community 36"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoDirector
+  - community/Community_36
 ---
 
 # .Ativar()
 
 ## Connections
-- [[dot-Update()_15]] - `calls` [INFERRED]
-- [[ObjetoCarro]] - `method` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Transmitir()]] - `calls` [EXTRACTED]
+- [[RadioCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoDirector
+#graphify/code #graphify/EXTRACTED #community/Community_36

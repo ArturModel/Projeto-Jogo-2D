@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "com.unity.modules.physics"
-location: "L80"
+community: "com.unity.modules.jsonserialize"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/comunitymodulesjsonserialize
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-MontarCortina()]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[dot-EsconderImediatamente()]] - `calls` [EXTRACTED]
+- [[dot-MostrarImediatamente()]] - `calls` [EXTRACTED]
+- [[OptionsPanelController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize

@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "packages-lock.json"
-location: "L119"
+community: "InteracaoCapitulo1"
+location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/InteracaoCapitulo1
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [EXTRACTED]
-- [[dot-Sair()]] - `calls` [EXTRACTED]
-- [[dot-Update()_2]] - `calls` [EXTRACTED]
-- [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
-- [[MenuPausa]] - `method` [EXTRACTED]
+- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1

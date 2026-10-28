@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "com.unity.modules.ui"
+community: "SceneFader"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesui
+  - community/SceneFader
 ---
 
 # .AplicarVolumeEmMixer()
@@ -17,4 +17,4 @@ tags:
 - [[AudioMixer]] - `references` [EXTRACTED]
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesui
+#graphify/code #graphify/EXTRACTED #community/SceneFader

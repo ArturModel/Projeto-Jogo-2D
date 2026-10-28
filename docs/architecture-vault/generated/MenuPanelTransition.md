@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-AbrirOpcoes()]] - `method` [EXTRACTED]
-- [[dot-Awake()_8]] - `method` [EXTRACTED]
+- [[dot-Awake()_5]] - `method` [EXTRACTED]
 - [[dot-ConfigurarGrupo()]] - `method` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-FecharOpcoes()]] - `method` [EXTRACTED]
 - [[dot-TrocarPainel()]] - `method` [EXTRACTED]
-- [[dot-Vincular()_3]] - `references` [EXTRACTED]
-- [[dot-Vincular()_2]] - `method` [EXTRACTED]
+- [[dot-Vincular()_4]] - `references` [EXTRACTED]
+- [[dot-Vincular()_3]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[MenuPanelTransition.cs]] - `contains` [EXTRACTED]

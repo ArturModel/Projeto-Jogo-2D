@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "com.unity.2d.tooling"
+community: "CheckpointSystem"
 location: "L235"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunity2dtooling
+  - community/CheckpointSystem
 ---
 
 # .MudarVista()
@@ -18,8 +18,8 @@ tags:
 - [[dot-EntradaTeclado()]] - `calls` [EXTRACTED]
 - [[dot-PodeConsultar()]] - `calls` [EXTRACTED]
 - [[dot-SetView()]] - `calls` [INFERRED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_2]] - `calls` [EXTRACTED]
 - [[BochaCameraView]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunity2dtooling
+#graphify/code #graphify/EXTRACTED #community/CheckpointSystem

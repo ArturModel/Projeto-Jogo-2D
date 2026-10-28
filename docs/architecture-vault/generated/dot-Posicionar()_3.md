@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 23"
-location: "L1362"
+community: "dependencies"
+location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/dependencies
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoModal()]] - `calls` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
+- [[Fileira_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/dependencies

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SceneFader"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_23
 ---
 
 # AspectRatioFitter
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-MontarTela()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_23

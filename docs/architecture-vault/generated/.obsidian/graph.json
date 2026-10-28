@@ -183,20 +183,6 @@
       }
     },
     {
-      "query": "tag:#community/comunitymodulesui",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/PrologoVideo",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
       "query": "tag:#community/AGENTSmd__Governan\u00e7a_Obrigat\u00f3ria_de_IA_Graphify__Obsidian__Mem\u00f3ria_Persistente",
       "color": {
         "a": 1,

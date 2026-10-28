@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "Community 13"
-location: "L23"
+community: "PrologoDirector"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/PrologoDirector
 ---
 
 # .Ativar()
 
 ## Connections
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Ligar()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[CelularCarro]] - `method` [EXTRACTED]
+- [[dot-Update()_15]] - `calls` [INFERRED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/PrologoDirector

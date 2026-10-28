@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 37"
-location: "L12"
+community: "SinucaMinigameUI"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_37
+  - community/SinucaMinigameUI
 ---
 
 # Instance
 
 ## Connections
-- [[InteractionPrompt]] - `defines` [EXTRACTED]
+- [[SinucaMinigameUI]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

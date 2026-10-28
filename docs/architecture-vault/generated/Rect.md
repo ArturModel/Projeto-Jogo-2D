@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 36"
+community: "com.unity.2d.tilemap"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/comunity2dtilemap
 ---
 
 # Rect
@@ -15,4 +15,4 @@ tags:
 - [[SantaRitaRoomCutaway]] - `references` [EXTRACTED]
 - [[SantaRitaShallowStairs]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/comunity2dtilemap

@@ -62,34 +62,32 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_manifest.json]]
+- 7 edges to [[_COMMUNITY_Capitulo1Director]]
 - 6 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 5 edges to [[_COMMUNITY_Capitulo1Director]]
-- 5 edges to [[_COMMUNITY_MonoBehaviour]]
+- 5 edges to [[_COMMUNITY_dependencies_1]]
 - 4 edges to [[_COMMUNITY_Community 54]]
-- 3 edges to [[_COMMUNITY_Community 14]]
-- 2 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 36]]
+- 3 edges to [[_COMMUNITY_Community 5]]
+- 3 edges to [[_COMMUNITY_GameState]]
+- 2 edges to [[_COMMUNITY_Legenda]]
 - 2 edges to [[_COMMUNITY_OptionsPanelController]]
-- 2 edges to [[_COMMUNITY_GameState]]
 - 1 edge to [[_COMMUNITY_SceneFader]]
+- 1 edge to [[_COMMUNITY_CheckpointSystem]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.physics]]
 - 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
 - 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 - 1 edge to [[_COMMUNITY_AGENTS.md — Governança Obrigatória de IA (Graphify + Obsidian + Memória Persistente)]]
-- 1 edge to [[_COMMUNITY_Community 39]]
 - 1 edge to [[_COMMUNITY_PlayerController]]
-- 1 edge to [[_COMMUNITY_dependencies]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_dependencies_1]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
-- 1 edge to [[_COMMUNITY_Legenda]]
+- 1 edge to [[_COMMUNITY_Community 14]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
+- 1 edge to [[_COMMUNITY_MonoBehaviour]]
 - 1 edge to [[_COMMUNITY_GameMessageUI]]
 - 1 edge to [[_COMMUNITY_VideoSettingsController]]
 
 ## Top bridge nodes
 - [[List]] - degree 21, connects to 16 communities
-- [[Chuva]] - degree 53, connects to 11 communities
+- [[Chuva]] - degree 53, connects to 10 communities
 - [[dot-Pintar()]] - degree 8, connects to 2 communities
 - [[Camada_1]] - degree 7, connects to 2 communities
 - [[dot-BrilhoEm()]] - degree 6, connects to 2 communities

@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "AGENTS.md — Governança Obrigatória de IA (Graphify + Obsidian + Memória Persistente)"
-location: "L36"
+community: "Legenda"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente
+  - community/Legenda
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
+- [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente
+#graphify/code #graphify/EXTRACTED #community/Legenda

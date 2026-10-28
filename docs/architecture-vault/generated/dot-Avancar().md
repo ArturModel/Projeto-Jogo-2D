@@ -12,7 +12,7 @@ tags:
 # .Avancar()
 
 ## Connections
-- [[dot-Fechar()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
 - [[dot-Play()]] - `calls` [EXTRACTED]
 - [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]

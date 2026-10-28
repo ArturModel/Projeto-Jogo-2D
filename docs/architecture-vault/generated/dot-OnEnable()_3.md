@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "Community 36"
-location: "L10"
+community: "AGENTS.md — Governança Obrigatória de IA (Graphify + Obsidian + Memória Persistente)"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaFootsteps]] - `method` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente

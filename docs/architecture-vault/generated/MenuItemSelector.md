@@ -17,6 +17,7 @@ tags:
 - [[dot-OnSelect()]] - `method` [EXTRACTED]
 - [[dot-ReiniciarSelecao()]] - `method` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
+- [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
 - [[dot-Vincular()_5]] - `method` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]

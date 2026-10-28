@@ -13,9 +13,9 @@ tags:
 ## Connections
 - [[dot-LinhaSlider()]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_4]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
 - [[dot-Vincular()_1]] - `references` [EXTRACTED]
+- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "MonoBehaviour"
+community: "dependencies"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/dependencies
 ---
 
 # Color
@@ -18,9 +18,9 @@ tags:
 - [[dot-Circle()]] - `references` [EXTRACTED]
 - [[dot-ColocarPosteComLuz()]] - `references` [EXTRACTED]
 - [[dot-CriarSpriteCirculo()]] - `references` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-Disc()]] - `references` [EXTRACTED]
 - [[dot-FillRect()]] - `references` [EXTRACTED]
 - [[dot-GerarIconeBlip()]] - `references` [EXTRACTED]
@@ -46,4 +46,4 @@ tags:
 - [[SantaRitaForeground]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/dependencies

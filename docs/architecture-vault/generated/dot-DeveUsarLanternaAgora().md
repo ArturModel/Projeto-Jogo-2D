@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarPassada()]] - `calls` [EXTRACTED]
 - [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
 - [[dot-LateUpdate()_6]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
+- [[dot-Start()_16]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

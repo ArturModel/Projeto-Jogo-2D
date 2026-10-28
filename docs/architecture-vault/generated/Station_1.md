@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "PrologoVideo"
+community: "Community 35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/Community_35
 ---
 
 # Station
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SantaRitaNpcWork]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/Community_35

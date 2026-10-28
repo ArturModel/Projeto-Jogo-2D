@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 13"
+community: "Community 14"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_14
 ---
 
 # .Tem()
@@ -29,7 +29,7 @@ tags:
 - [[dot-DispararChegadaCasaDoAvo()]] - `calls` [EXTRACTED]
 - [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
 - [[dot-GarantirElementosBarDoZeCenaSeparada()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_6]] - `calls` [EXTRACTED]
+- [[dot-Interact()_1]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
 - [[dot-InteragirCarroMarcus()]] - `calls` [EXTRACTED]
@@ -48,13 +48,13 @@ tags:
 - [[dot-SincronizarDiarioAutomaticoPorFlag()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[dot-Start()_1]] - `calls` [EXTRACTED]
+- [[dot-Start()_10]] - `calls` [EXTRACTED]
 - [[dot-Start()_2]] - `calls` [EXTRACTED]
-- [[dot-Start()_3]] - `calls` [EXTRACTED]
 - [[dot-TentarTransicionar()]] - `calls` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `calls` [EXTRACTED]
 - [[dot-Update()_26]] - `calls` [EXTRACTED]
-- [[dot-Update()_16]] - `calls` [EXTRACTED]
+- [[dot-Update()_21]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_14

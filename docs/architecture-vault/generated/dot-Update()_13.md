@@ -1,23 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 30"
-location: "L216"
+community: "SinucaMinigameUI"
+location: "L596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/SinucaMinigameUI
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
-- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
-- [[dot-FindNearest()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_5]] - `calls` [INFERRED]
-- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
-- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
+- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI

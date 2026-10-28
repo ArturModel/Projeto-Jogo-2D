@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 23"
+community: "packages-lock.json"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/packages-lockjson
 ---
 
 # Image
@@ -15,8 +15,10 @@ tags:
 - [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
+- [[dot-BotaoPausa()]] - `references` [EXTRACTED]
 - [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
+- [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
@@ -30,6 +32,7 @@ tags:
 - [[dot-CriarMarcadorPonto()]] - `references` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 - [[dot-Imagem()]] - `references` [EXTRACTED]
+- [[dot-IndicadorPausa()]] - `references` [EXTRACTED]
 - [[dot-LinhaDropdown()]] - `references` [EXTRACTED]
 - [[dot-LinhaSlider()]] - `references` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
@@ -39,6 +42,7 @@ tags:
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-RotuloCanonico()]] - `references` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `references` [EXTRACTED]
+- [[dot-TituloPausa()]] - `references` [EXTRACTED]
 - [[dot-Vincular()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
@@ -48,4 +52,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/packages-lockjson

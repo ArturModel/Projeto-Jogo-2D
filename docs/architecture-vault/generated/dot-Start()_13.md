@@ -1,19 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "com.unity.modules.ui"
-location: "L90"
+community: "com.unity.modules.tetgen"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesui
+  - community/comunitymodulestetgen
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
-- [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
-- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
+- [[dot-Legendar()]] - `calls` [EXTRACTED]
+- [[dot-MontarTela()]] - `calls` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[PonteiroCarro]] - `references` [EXTRACTED]
+- [[PrologoDirector]] - `references` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[VideoPlayer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesui
+#graphify/code #graphify/EXTRACTED #community/comunitymodulestetgen

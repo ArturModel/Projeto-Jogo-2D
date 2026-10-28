@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "Community 13"
-location: "L80"
+community: "com.unity.modules.physics"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/comunitymodulesphysics
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Definir()]] - `calls` [EXTRACTED]
-- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics

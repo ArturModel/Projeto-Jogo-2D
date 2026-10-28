@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "com.unity.modules.ui"
+community: "SceneFader"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesui
+  - community/SceneFader
 ---
 
 # .AplicarVolume()
@@ -16,7 +16,7 @@ tags:
 - [[dot-AlterarVolumeGeral()]] - `calls` [EXTRACTED]
 - [[dot-AlterarVolumeMusica()]] - `calls` [EXTRACTED]
 - [[dot-AplicarVolumeEmMixer()]] - `calls` [EXTRACTED]
-- [[dot-Start()_13]] - `calls` [EXTRACTED]
+- [[dot-Start()_3]] - `calls` [EXTRACTED]
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesui
+#graphify/code #graphify/EXTRACTED #community/SceneFader

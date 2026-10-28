@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "MonoBehaviour"
+community: "Capitulo1Director"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/Capitulo1Director
 ---
 
 # Vector3
@@ -52,4 +52,4 @@ tags:
 - [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/Capitulo1Director

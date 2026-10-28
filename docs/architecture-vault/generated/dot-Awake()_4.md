@@ -1,22 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "com.unity.modules.unitywebrequest"
-location: "L24"
+community: "Community 23"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_23
 ---
 
 # .Awake()
 
 ## Connections
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-Build()_1]] - `calls` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_23

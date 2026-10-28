@@ -1,18 +1,18 @@
 ---
 type: community
-members: 97
+members: 99
 ---
 
 # Capitulo1Director
 
-**Members:** 97 nodes
+**Members:** 99 nodes
 
 ## Members
 - [[dot-AdicionarBoxCollider()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-AdicionarLuzPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-AjustarBrilho()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-AjustarLuzGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AtualizarFonteMusical()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-AplicarEstadoDaZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-AtualizarSpawnPointExistente()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-BuildAndValidateAll()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-BuildWindows64Player()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -31,6 +31,7 @@ members: 97
 - [[dot-Configurar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-Configurar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
 - [[dot-Configurar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
+- [[dot-ConfigurarCenaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ConfigureSpriteImporters()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-ConstruirInterior1_Posto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ConstruirInterior2_Mercadinho()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
@@ -42,7 +43,6 @@ members: 97
 - [[dot-ConstruirZona3_Encruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ConstruirZona4_Bairro()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ConstruirZona5_RuaNorteBar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConverterCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
 - [[dot-Create()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
 - [[dot-CreateBuildingObject()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-CreateNpcObject()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -57,11 +57,13 @@ members: 97
 - [[dot-GenerateInteriorAndPropSprites()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-Interact()_3]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
 - [[dot-NomeArquivoTile()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-OnDisable()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
+- [[dot-OnDisable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
 - [[dot-OnDrawGizmos()]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
 - [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
 - [[dot-OnTriggerEnter2D()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
 - [[dot-PintarAcabamentoArquitetonicoInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-PosicionarJogadorInicialRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-PrepararMusicasDasZonas()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-RemoveIfExists()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveBarCounterPng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveCardsCluePng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -72,7 +74,6 @@ members: 97
 - [[dot-SaveRulesBoardPng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-TentarTransicionar()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
 - [[dot-TryObterInfoZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Update()_7]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-UpdateBuildSettings()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-UpdateCasaDoAvoScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-UpdateEntradaDaCidadeScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -91,7 +92,7 @@ members: 97
 - [[Id]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
 - [[InfoZona]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[InfoZona_1]] - code
-- [[Instance_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[Instance_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[MovelLoja]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[MovelLoja_1]] - code
 - [[Prateleira]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
@@ -103,6 +104,7 @@ members: 97
 - [[TipoInteracao_1]] - code
 - [[Transform]] - code
 - [[TransicaoDeZonaTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
+- [[Vector3]] - code
 - [[ZonaAtual]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[ZonaId_1]] - code
 
@@ -114,47 +116,48 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 23 edges to [[_COMMUNITY_OptionsPanelController]]
-- 23 edges to [[_COMMUNITY_manifest.json]]
-- 21 edges to [[_COMMUNITY_Community 13]]
+- 27 edges to [[_COMMUNITY_manifest.json]]
+- 22 edges to [[_COMMUNITY_OptionsPanelController]]
 - 17 edges to [[_COMMUNITY_com.unity.burst]]
-- 17 edges to [[_COMMUNITY_MonoBehaviour]]
-- 14 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
-- 12 edges to [[_COMMUNITY_Community 23]]
-- 9 edges to [[_COMMUNITY_VideoSettingsController]]
-- 8 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 14 edges to [[_COMMUNITY_MonoBehaviour]]
+- 13 edges to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
+- 13 edges to [[_COMMUNITY_InteracaoCapitulo1]]
+- 12 edges to [[_COMMUNITY_Community 14]]
+- 12 edges to [[_COMMUNITY_Community 5]]
+- 9 edges to [[_COMMUNITY_Community 23]]
+- 9 edges to [[_COMMUNITY_GameState]]
+- 9 edges to [[_COMMUNITY_dependencies_1]]
+- 7 edges to [[_COMMUNITY_Chuva]]
+- 6 edges to [[_COMMUNITY_Community 13]]
 - 6 edges to [[_COMMUNITY_com.unity.modules.audio]]
 - 6 edges to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 5 edges to [[_COMMUNITY_Community 14]]
-- 5 edges to [[_COMMUNITY_Community 54]]
-- 5 edges to [[_COMMUNITY_Chuva]]
-- 5 edges to [[_COMMUNITY_Community 39]]
-- 4 edges to [[_COMMUNITY_packages-lock.json]]
+- 6 edges to [[_COMMUNITY_Community 35]]
+- 6 edges to [[_COMMUNITY_PlayerController]]
+- 5 edges to [[_COMMUNITY_packages-lock.json]]
+- 5 edges to [[_COMMUNITY_Legenda]]
 - 4 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 3 edges to [[_COMMUNITY_SinucaMinigameUI]]
-- 3 edges to [[_COMMUNITY_Legenda]]
-- 3 edges to [[_COMMUNITY_Community 25]]
-- 3 edges to [[_COMMUNITY_GameState]]
-- 3 edges to [[_COMMUNITY_Community 5]]
-- 3 edges to [[_COMMUNITY_dependencies_1]]
-- 3 edges to [[_COMMUNITY_Community 41]]
-- 2 edges to [[_COMMUNITY_dot-CreateLabel]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.tetgen]]
+- 4 edges to [[_COMMUNITY_Community 54]]
+- 4 edges to [[_COMMUNITY_Community 34]]
+- 4 edges to [[_COMMUNITY_VideoSettingsController]]
+- 4 edges to [[_COMMUNITY_Community 41]]
+- 3 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_CheckpointSystem]]
+- 1 edge to [[_COMMUNITY_com.unity.modules.physics]]
 - 1 edge to [[_COMMUNITY_InteractionPrompt]]
 - 1 edge to [[_COMMUNITY_CamadaDeLuz]]
+- 1 edge to [[_COMMUNITY_dot-CreateLabel]]
 - 1 edge to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_Community 30]]
 - 1 edge to [[_COMMUNITY_GameMessageUI]]
-- 1 edge to [[_COMMUNITY_PrologoVideo]]
+- 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
+- 1 edge to [[_COMMUNITY_dot-SaveSlot]]
 - 1 edge to [[_COMMUNITY_com.unity.ext.nunit]]
-- 1 edge to [[_COMMUNITY_dependencies]]
 - 1 edge to [[_COMMUNITY_com.unity.mathematics]]
-- 1 edge to [[_COMMUNITY_Community 83]]
-- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 27]]
 
 ## Top bridge nodes
-- [[GameObject]] - degree 41, connects to 15 communities
-- [[Transform]] - degree 60, connects to 14 communities
-- [[Capitulo1Director]] - degree 71, connects to 13 communities
+- [[GameObject]] - degree 41, connects to 17 communities
+- [[Capitulo1Director]] - degree 71, connects to 14 communities
+- [[Transform]] - degree 61, connects to 14 communities
 - [[SpawnPoint]] - degree 17, connects to 8 communities
-- [[BoxCollider2D]] - degree 30, connects to 6 communities
+- [[Vector3]] - degree 40, connects to 7 communities

@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
 community: "Legenda"
-location: "L19"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .Awake()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[ChuvaRolando]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Legenda

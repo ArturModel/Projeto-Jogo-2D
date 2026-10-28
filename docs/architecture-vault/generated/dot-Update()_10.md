@@ -1,19 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "com.unity.modules.jsonserialize"
-location: "L270"
+community: "com.unity.modules.audio"
+location: "L531"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/comunitymodulesaudio
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-FecharOpcoes()]] - `calls` [INFERRED]
-- [[dot-MostrarCategorias()]] - `calls` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
+- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
+- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
+- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio

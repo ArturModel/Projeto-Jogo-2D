@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoModal()]] - `calls` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
+- [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]

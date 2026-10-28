@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "dependencies"
+community: "manifest.json"
 location: "L756"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/manifestjson
 ---
 
 # .ConverterMundoParaUV()
@@ -18,4 +18,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/manifestjson

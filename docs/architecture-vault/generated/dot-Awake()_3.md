@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 14"
-location: "L34"
+community: "GameMessageUI"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/GameMessageUI
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[Camera]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
+- [[dot-Build()]] - `calls` [EXTRACTED]
+- [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/GameMessageUI

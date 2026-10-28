@@ -1,20 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
 type: "code"
-community: "VideoSettingsController"
-location: "L13"
+community: "Community 30"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/Community_30
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()_1]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[Capitulo2Portal]] - `method` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
+- [[ItemDeCena]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_30

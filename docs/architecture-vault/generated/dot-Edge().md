@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs"
 type: "code"
-community: "Community 41"
+community: "GameState"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/GameState
 ---
 
 # .Edge()
@@ -17,4 +17,4 @@ tags:
 - [[Stretch_1]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/GameState

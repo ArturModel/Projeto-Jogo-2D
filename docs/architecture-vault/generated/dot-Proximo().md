@@ -12,7 +12,7 @@ tags:
 # .Proximo()
 
 ## Connections
-- [[dot-Lancar()]] - `calls` [EXTRACTED]
+- [[dot-Lancar()_1]] - `calls` [EXTRACTED]
 - [[dot-Matches()]] - `calls` [INFERRED]
 - [[dot-MelhorDistancia()]] - `calls` [EXTRACTED]
 - [[dot-Outro()]] - `calls` [EXTRACTED]

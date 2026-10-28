@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 23"
+community: "dependencies"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/dependencies
 ---
 
 # UnityAction
@@ -16,4 +16,4 @@ tags:
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 - [[dot-MostrarModal()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/dependencies

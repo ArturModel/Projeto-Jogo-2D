@@ -1,11 +1,11 @@
 ---
 type: community
-members: 58
+members: 43
 ---
 
 # SinucaMinigameUI
 
-**Members:** 58 nodes
+**Members:** 43 nodes
 
 ## Members
 - [[dot-AbrirModalRegrasDuranteJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -18,7 +18,6 @@ members: 58
 - [[dot-AtualizarVisualBolasMarcadas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AtualizarVisualTacoEMira()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CancelarCargaAoSuspender()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Clear()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-ComecarNovaSerie()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ConcluirMao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ConcluirSerieDerrota()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -30,7 +29,6 @@ members: 58
 - [[dot-EscolherTacadaZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ExecutarTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ExecutarTurnoZeCoroutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Fechar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-InicializarCacapas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-IniciarConfronto()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-IniciarDuelo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -42,30 +40,17 @@ members: 58
 - [[dot-PosicionarBolasDeterministico()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-RegistrarTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ResolverFimDaTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-RunAutomatedVerification()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SimularFisicaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-SimularTesteDeInvariantes()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-SincronizarTransformBolas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Update()_12]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Update()_13]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ValidarInvarianteSeteBolas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[BolaMesa_1]] - code
-- [[BolasEmMovimento]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[CarregandoForca]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[EstadoPartida]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[EstadoPartida_1]] - code
-- [[FimDeMao]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[FimDeSerieDerrota]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[FimDeSerieVitoria]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Inativo]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Instance_6]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[IsShowing_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[Instance_7]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[IsShowing_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[MaoEmCurso]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[MirandoJogador]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[PosicionandoBranca]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[ResolvendoTacada]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[SinucaMinigameUI]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[TurnoZePensando]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[TutorialRegras]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -75,23 +60,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Community 23]]
+- 13 edges to [[_COMMUNITY_Community 23]]
 - 9 edges to [[_COMMUNITY_InteracaoCapitulo1]]
 - 5 edges to [[_COMMUNITY_manifest.json]]
-- 5 edges to [[_COMMUNITY_Community 13]]
 - 4 edges to [[_COMMUNITY_GameMessageUI]]
-- 3 edges to [[_COMMUNITY_Capitulo1Director]]
+- 2 edges to [[_COMMUNITY_dependencies_1]]
+- 1 edge to [[_COMMUNITY_Capitulo1Director]]
+- 1 edge to [[_COMMUNITY_packages-lock.json]]
 - 1 edge to [[_COMMUNITY_Chuva]]
 - 1 edge to [[_COMMUNITY_Legenda]]
 - 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
+- 1 edge to [[_COMMUNITY_Community 37]]
 - 1 edge to [[_COMMUNITY_dot-CreateLabel]]
 - 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
-- 1 edge to [[_COMMUNITY_TileAleatorio]]
 - 1 edge to [[_COMMUNITY_Community 54]]
 
 ## Top bridge nodes
-- [[SinucaMinigameUI]] - degree 65, connects to 9 communities
-- [[dot-RunAutomatedVerification()]] - degree 15, connects to 3 communities
-- [[dot-Clear()]] - degree 5, connects to 3 communities
+- [[SinucaMinigameUI]] - degree 65, connects to 12 communities
+- [[dot-IniciarDuelo()]] - degree 6, connects to 3 communities
+- [[dot-MostrarModal()]] - degree 9, connects to 2 communities
 - [[dot-ConcluirSerieDerrota()]] - degree 6, connects to 2 communities
-- [[dot-IniciarDuelo()]] - degree 6, connects to 2 communities
+- [[dot-ComecarNovaSerie()]] - degree 7, connects to 1 community

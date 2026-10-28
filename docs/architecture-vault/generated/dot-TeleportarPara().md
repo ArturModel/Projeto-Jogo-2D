@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 25"
+community: "Community 5"
 location: "L183"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_5
 ---
 
 # .TeleportarPara()
@@ -16,7 +16,7 @@ tags:
 - [[dot-Reset()]] - `calls` [INFERRED]
 - [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
 - [[dot-SnapImediatoParaAlvo()]] - `calls` [INFERRED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
+- [[dot-Start()_16]] - `calls` [EXTRACTED]
 - [[dot-Teleportar()]] - `calls` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `calls` [INFERRED]
 - [[CameraFollow]] - `references` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[Rigidbody2D]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_5

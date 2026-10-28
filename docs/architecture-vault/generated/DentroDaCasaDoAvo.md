@@ -12,7 +12,7 @@ tags:
 # DentroDaCasaDoAvo
 
 ## Connections
-- [[dot-Start()_3]] - `method` [EXTRACTED]
+- [[dot-Start()_2]] - `method` [EXTRACTED]
 - [[DentroDaCasaDoAvo.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 

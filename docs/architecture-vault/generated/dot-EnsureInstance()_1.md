@@ -13,11 +13,10 @@ tags:
 
 ## Connections
 - [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
-- [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-InicializarPontos()]] - `calls` [EXTRACTED]
 - [[dot-Start()_1]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
+- [[dot-Start()_16]] - `calls` [EXTRACTED]
 - [[dot-Travel()]] - `calls` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
