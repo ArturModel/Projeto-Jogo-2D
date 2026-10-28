@@ -64,7 +64,8 @@ public static class SantaRitaMcpSetup
         try
         {
             EditorPrefs.SetBool("MCPForUnity.UseHttpTransport", true);
-            EditorPrefs.SetString("MCPForUnity.HttpUrl", "http://127.0.0.1:8080");
+            // Usar porta 8088 para evitar conflitos com aplicações web/Java/Spring Boot locais (que usam 8080)
+            EditorPrefs.SetString("MCPForUnity.HttpUrl", "http://127.0.0.1:8088");
             EditorPrefs.SetBool("MCPForUnity.AutoStartOnLoad", true);
 
             bool isWindows = Application.platform == RuntimePlatform.WindowsEditor;

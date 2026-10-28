@@ -1,7 +1,7 @@
-# Graph Report - Projeto-Jogo-2D  (2026-10-27)
+# Graph Report - Projeto-Jogo-2D  (2026-10-28)
 
 ## Corpus Check
-- 121 files · ~85,718 words
+- 121 files · ~85,733 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 9 file(s) not represented in the graph (top: (none) 3, .toml 1, .csv 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a403ed4d`
+- Built from commit: `baae3e43`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

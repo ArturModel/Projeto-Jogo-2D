@@ -1,3 +1,11 @@
+# Diagnóstico e Resolução de Conflito de Porta (8080) MCP Unity — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_diagnostico-conflito-porta-8080-mcp.md`](../ai-plans/2026-10-28_lucamontini_diagnostico-conflito-porta-8080-mcp.md)
+- **Resumo:** Diagnosticada a causa do erro de conexão do MCP no Unity: a porta `8080` estava sendo ocupada pelo backend Java Spring Boot (`BffKickstartApplication`, PID 124682) do desenvolvedor. A sonda TCP do Unity detectava a porta aberta pelo Spring Boot, assumia falsamente que o servidor MCP estava pronto e tentava handshake WebSocket em `/hub/plugin`, recebendo HTTP 404 da aplicação Java. Alterada a porta padrão do MCP em `SantaRitaMcpSetup.cs` para a porta dedicada `8088`, eliminando qualquer colisão com servidores locais de trabalho. Validação Graphify e Obsidian com status PASS.
+
+---
+
 # Correção de Race Condition e Suporte Multiplataforma MCP Unity — 27/10/2026
 
 - **Autor:** @lucamontini (Luca Dalla Lana)
