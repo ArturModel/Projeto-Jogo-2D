@@ -40,7 +40,7 @@ public class DentroDaCasaDoAvo : MonoBehaviour
             "FATO",
             "A porta da frente estava destrancada e Adílio não respondeu ao chamado. A rotina parece ter sido interrompida hoje mesmo."
         );
-        GameState.DefinirObjetivo("Examinar a casa de Adílio (café, cartas, nota fiscal de 2004 e a desordem perto da porta).");
+        GameState.DefinirObjetivo("Descobrir o que aconteceu na casa do vô.");
 
         yield return new WaitForSeconds(espera);
         Legenda.Dizer(aoEntrar, 3f);

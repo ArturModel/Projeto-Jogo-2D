@@ -91,7 +91,6 @@ public static class GameState
         if (alterou)
         {
             progressoNaoSalvo = true;
-            SincronizarDiarioAutomaticoPorFlag(flag);
             OnEstadoAlterado?.Invoke();
         }
     }
@@ -173,63 +172,6 @@ public static class GameState
     public static IReadOnlyList<EntradaDiario> ObterEntradasDiario()
     {
         return diarioSessao;
-    }
-
-    private static void SincronizarDiarioAutomaticoPorFlag(string flag)
-    {
-        if (flag == Flags.PrologoAbriuPortaLuvas)
-        {
-            RegistrarDiario("fato_endereco_adilio", "fato", "Endereço anotado",
-                "No porta-luvas do carro havia um mapa dobrado de Santa Rita com a anotação de Adilio: Bairro das Casas, 40.");
-        }
-        else if (flag == Flags.FalouFrentista)
-        {
-            RegistrarDiario("fato_posto_frentista", "fato", "Relato no Posto",
-                "O frentista reconheceu meu carro e confirmou que Adilio mora subindo para o Bairro das Casas.");
-        }
-        else if (flag == Flags.ChegouCasaAvo)
-        {
-            RegistrarDiario("fato_casa_destrancada", "fato", "Casa de Adilio vazia",
-                "Adilio parou de responder hoje (2004). A porta estava destrancada e ele não está em casa.");
-            DefinirObjetivo("Examinar os sinais na casa de Adilio.");
-        }
-        else if (flag == Flags.ExaminouCafeCasa || flag == "viu_chaleira")
-        {
-            RegistrarDiario("pista_cafe_passado", "pista", "Café passado hoje",
-                "O bule ainda guarda calor e há café na xícara. Isso sugere uso recente; não permite saber quando Adílio saiu nem por quê.");
-        }
-        else if (flag == Flags.ExaminouCartasCasa)
-        {
-            RegistrarDiario("pista_cartas_mesa", "pista", "Correspondências na mesa",
-                "As cartas de baralho ficaram sobre a mesa, no meio de uma partida de paciência. Não sei se Adílio pretendia continuar depois.");
-        }
-        else if (flag == Flags.ExaminouDesordemCasa)
-        {
-            RegistrarDiario("pista_desordem_localizada", "interpretacao", "Desordem localizada na sala",
-                "O tapete está dobrado na ponta e a cadeira/sofá está levemente fora de lugar. Sem sangue ou objetos quebrados, mas sugere resistência ou saída às pressas.");
-        }
-        else if (flag == Flags.AchouReciboMercadinho)
-        {
-            RegistrarDiario("pista_recibo_mercadinho", "pista", "Cupom do Mercadinho (2004)",
-                "Recibo emitido hoje no Mercadinho da encruzilhada. Alguém lá deve ter visto Adilio ou quem o procurava.");
-            if (!Tem(Flags.OuviuRelatoAtendente))
-                DefinirObjetivo("Levar o recibo ao Mercadinho na encruzilhada.");
-        }
-        else if (flag == Flags.OuviuRelatoAtendente)
-        {
-            RegistrarDiario("pista_relato_mercadinho", "pista", "Desconhecido no Mercadinho",
-                "Ao apresentar o cupom, ouvi da atendente que uma caminhonete escura levava Adílio para a Rua Norte, perto do Bar do Zé. Ela não ouviu a conversa dentro do veículo nem sabe o que aconteceu depois.");
-            if (!Tem(Flags.VenceuZeSinuca))
-                DefinirObjetivo("Ir ao Bar do Zé na rua norte e questionar Zé.");
-        }
-        else if (flag == Flags.VenceuZeSinuca)
-        {
-            RegistrarDiario("pista_relato_ze", "interpretacao", "O que Zé deixou escapar",
-                "Após perder duas mãos na sinuca, Zé admitiu que o homem que perguntou por Adilio não veio a passeio e que meu avô jamais sairia de casa à noite deixando o café na mesa por vontade própria.");
-            RegistrarDiario(Flags.FichaZeObtida, "item", "Ficha do Clube (Origem: Zé)",
-                "Ficha metálica com a insígnia do Clube de Santa Rita entregue por Zé após a série de sinuca.");
-            DefinirObjetivo("Seguir para o Centro da cidade (ou salvar no Orelhão do bar antes de avançar).");
-        }
     }
 
     // --- snapshots para o CheckpointSystem ---------------------------

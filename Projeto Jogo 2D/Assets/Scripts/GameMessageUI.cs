@@ -48,8 +48,18 @@ public class GameMessageUI : MonoBehaviour
     public static bool IsShowing => instance != null && instance.aberta;
 
     [Header("Ritmo da digitação")]
-    [SerializeField] private float letrasPorSegundo = 24f;
+    [SerializeField] private float letrasPorSegundo = 17f;
     [SerializeField] private float pausaFinal = 8f;
+
+    // Layout do texto (unidades do canvas 640x360). Padding = esquerda, baixo,
+    // direita, cima; a direita deixa a coluna da tecla E livre.
+    private const float TamanhoFonte = 18f;
+    private static readonly Vector4 PaddingTexto = new Vector4(12f, 10f, 32f, 9f);
+    private const float LarguraRetrato = 64f;
+    private const float LarguraInspecao = 560f;
+    private const float AlturaInspecao = 292f;
+    private const float MargemInspecao = 18f;
+    private const float LadoArte = 196f;
 
     private CanvasGroup group;
     private RectTransform boxRect;
@@ -60,12 +70,16 @@ public class GameMessageUI : MonoBehaviour
     private TextMeshProUGUI speakerLabel;
     private TextMeshProUGUI label;
     private RectTransform textRect;
-    private TextMeshProUGUI dica;
+    private Image dica;
     private GameObject painelInspecao;
     private Image imagemInspecao;
     private TextMeshProUGUI tituloInspecao;
     private TextMeshProUGUI conteudoInspecao;
     private ScrollRect rolagemInspecao;
+    private TextMeshProUGUI etiquetaInspecao;
+    private TextMeshProUGUI ajudaInspecao;
+    private RectTransform arteFrameInspecao;
+    private RectTransform leituraInspecao;
     private Coroutine rotina;
 
     private bool aberta;
@@ -98,7 +112,7 @@ public class GameMessageUI : MonoBehaviour
         group.alpha = 0f;
         group.blocksRaycasts = false;
 
-        Image box = UIFactory.CreateBox(canvas.transform, "Box", "DialogueBox");
+        Image box = UIFactory.CreateBox(canvas.transform, "Box", "CaixaDialogo");
         dialogueBox = box.gameObject;
         boxRect = box.rectTransform;
         boxRect.anchorMin = new Vector2(0.5f, 0f);
@@ -107,20 +121,21 @@ public class GameMessageUI : MonoBehaviour
         boxRect.anchoredPosition = new Vector2(0f, 16f);
         boxRect.sizeDelta = new Vector2(460f, 82f);
 
-        // Crachá com o nome do falante acima da caixa
+        // Aba preta com o nome do falante, colada no canto superior esquerdo da caixa
         speakerBadge = new GameObject("SpeakerBadge", typeof(RectTransform), typeof(Image));
         speakerBadge.transform.SetParent(box.transform, false);
         RectTransform badgeRect = speakerBadge.GetComponent<RectTransform>();
         badgeRect.anchorMin = new Vector2(0f, 1f);
         badgeRect.anchorMax = new Vector2(0f, 1f);
         badgeRect.pivot = new Vector2(0f, 0f);
-        badgeRect.anchoredPosition = new Vector2(10f, -2f);
-        badgeRect.sizeDelta = new Vector2(140f, 20f);
-        speakerBadge.GetComponent<Image>().color = new Color(0.11f, 0.09f, 0.08f, 0.96f);
+        badgeRect.anchoredPosition = Vector2.zero;
+        badgeRect.sizeDelta = new Vector2(128f, 20f);
+        speakerBadge.GetComponent<Image>().color = new Color32(7, 7, 8, 255);
 
         speakerLabel = UIFactory.CreateLabel(speakerBadge.transform, "SpeakerName", 16f);
         speakerLabel.alignment = TextAlignmentOptions.MidlineLeft;
-        speakerLabel.color = new Color(0.95f, 0.78f, 0.42f, 1f);
+        // Vermelho de sangue seco: a única cor quente da caixa.
+        speakerLabel.color = new Color32(170, 72, 64, 255);
         RectTransform spRect = speakerLabel.rectTransform;
         UIFactory.Stretch(spRect);
         spRect.offsetMin = new Vector2(8f, 1f);
@@ -135,7 +150,7 @@ public class GameMessageUI : MonoBehaviour
         pfRect.pivot = new Vector2(0f, 0.5f);
         pfRect.anchoredPosition = new Vector2(12f, 0f);
         pfRect.sizeDelta = new Vector2(58f, 58f);
-        portraitFrame.GetComponent<Image>().color = new Color(0.18f, 0.15f, 0.13f, 0.96f);
+        portraitFrame.GetComponent<Image>().color = new Color32(4, 4, 5, 245);
 
         GameObject pGo = new GameObject("PortraitImg", typeof(RectTransform), typeof(Image));
         pGo.transform.SetParent(portraitFrame.transform, false);
@@ -147,89 +162,166 @@ public class GameMessageUI : MonoBehaviour
         portraitImage.preserveAspect = true;
         portraitImage.raycastTarget = false;
 
-        label = UIFactory.CreateLabel(box.transform, "Texto", 19f);
+        // Texto quebra linha dentro da caixa e, se ainda não couber, vira
+        // páginas do TMP que o jogador avança com E (nada vaza da caixa).
+        label = UIFactory.CreateLabel(box.transform, "Texto", TamanhoFonte);
         label.alignment = TextAlignmentOptions.TopLeft;
+        label.textWrappingMode = TextWrappingModes.Normal;
+        label.overflowMode = TextOverflowModes.Page;
+        label.lineSpacing = 0f;
+        label.color = new Color32(204, 199, 186, 255);
         textRect = label.rectTransform;
         UIFactory.Stretch(textRect);
-        textRect.offsetMin = new Vector2(14f, 14f);
-        textRect.offsetMax = new Vector2(-14f, -10f);
+        textRect.offsetMin = new Vector2(PaddingTexto.x, PaddingTexto.y);
+        textRect.offsetMax = new Vector2(-PaddingTexto.z, -PaddingTexto.w);
 
-        dica = UIFactory.CreateLabel(box.transform, "Dica", 16f);
-        dica.alignment = TextAlignmentOptions.BottomRight;
-        dica.color = new Color(0.85f, 0.75f, 0.48f, 1f);
-        dica.text = "[E]";
+        // A mesma tecla E da interação, no canto inferior direito da caixa.
+        GameObject dicaGo = new GameObject("Dica", typeof(RectTransform), typeof(Image));
+        dicaGo.transform.SetParent(box.transform, false);
+        dica = dicaGo.GetComponent<Image>();
+        dica.sprite = UIFactory.LoadSprite("TeclaE");
+        dica.raycastTarget = false;
         RectTransform dicaRect = dica.rectTransform;
-        UIFactory.Stretch(dicaRect);
-        dicaRect.offsetMin = new Vector2(0f, 6f);
-        dicaRect.offsetMax = new Vector2(-12f, 0f);
+        dicaRect.anchorMin = dicaRect.anchorMax = dicaRect.pivot = new Vector2(1f, 0f);
+        dicaRect.sizeDelta = new Vector2(17f, 17f);
+        dicaRect.anchoredPosition = new Vector2(-8f, 8f);
 
+        // Tela de inspeção: escurece o jogo, usa a mesma moldura da caixa de
+        // diálogo e separa o que está no objeto (texto claro) do que Marcus
+        // pensa sobre ele (itálico dourado). Sem arte, o texto ocupa a largura toda.
         painelInspecao = new GameObject("InspecaoDetalhada", typeof(RectTransform), typeof(Image));
         painelInspecao.transform.SetParent(canvas.transform, false);
-        RectTransform painelRect = painelInspecao.GetComponent<RectTransform>();
-        painelRect.anchorMin = painelRect.anchorMax = new Vector2(0.5f, 0.5f);
-        painelRect.sizeDelta = new Vector2(600f, 330f);
-        painelRect.anchoredPosition = Vector2.zero;
-        painelInspecao.GetComponent<Image>().color = new Color(0.10f, 0.085f, 0.07f, 0.98f);
+        RectTransform fundoRect = painelInspecao.GetComponent<RectTransform>();
+        UIFactory.Stretch(fundoRect);
+        painelInspecao.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.62f);
         painelInspecao.transform.SetAsLastSibling();
 
-        tituloInspecao = UIFactory.CreateLabel(painelInspecao.transform, "TituloInspecao", 20f);
-        tituloInspecao.alignment = TextAlignmentOptions.Center;
+        Image moldura = UIFactory.CreateBox(painelInspecao.transform, "MolduraInspecao", "CaixaDialogo");
+        RectTransform painelRect = moldura.rectTransform;
+        painelRect.anchorMin = painelRect.anchorMax = painelRect.pivot = new Vector2(0.5f, 0.5f);
+        painelRect.sizeDelta = new Vector2(LarguraInspecao, AlturaInspecao);
+        painelRect.anchoredPosition = new Vector2(0f, 6f);
+
+        etiquetaInspecao = UIFactory.CreateLabel(painelRect, "EtiquetaInspecao", 13f);
+        etiquetaInspecao.alignment = TextAlignmentOptions.TopLeft;
+        PosicionarNoTopo(etiquetaInspecao.rectTransform, new Vector2(MargemInspecao, -10f), new Vector2(LarguraInspecao - MargemInspecao * 2f, 14f));
+
+        tituloInspecao = UIFactory.CreateLabel(painelRect, "TituloInspecao", 21f);
+        tituloInspecao.alignment = TextAlignmentOptions.TopLeft;
+        tituloInspecao.textWrappingMode = TextWrappingModes.NoWrap;
+        tituloInspecao.overflowMode = TextOverflowModes.Ellipsis;
         tituloInspecao.color = new Color(0.97f, 0.87f, 0.62f);
-        RectTransform tituloRect = tituloInspecao.rectTransform;
-        tituloRect.anchorMin = tituloRect.anchorMax = new Vector2(0.5f, 1f);
-        tituloRect.sizeDelta = new Vector2(560f, 28f);
-        tituloRect.anchoredPosition = new Vector2(0f, -17f);
+        PosicionarNoTopo(tituloInspecao.rectTransform, new Vector2(MargemInspecao, -23f), new Vector2(LarguraInspecao - MargemInspecao * 2f, 24f));
+
+        Image divisor = new GameObject("Divisor", typeof(RectTransform), typeof(Image)).GetComponent<Image>();
+        divisor.transform.SetParent(painelRect, false);
+        divisor.color = new Color(0.62f, 0.50f, 0.34f, 0.55f);
+        divisor.raycastTarget = false;
+        PosicionarNoTopo(divisor.rectTransform, new Vector2(MargemInspecao, -50f), new Vector2(LarguraInspecao - MargemInspecao * 2f, 1f));
+
+        GameObject arteFrameGo = new GameObject("MolduraArte", typeof(RectTransform), typeof(Image));
+        arteFrameGo.transform.SetParent(painelRect, false);
+        arteFrameGo.GetComponent<Image>().color = new Color32(10, 9, 8, 235);
+        arteFrameGo.GetComponent<Image>().raycastTarget = false;
+        arteFrameInspecao = arteFrameGo.GetComponent<RectTransform>();
+        PosicionarNoTopo(arteFrameInspecao, new Vector2(MargemInspecao, -58f), new Vector2(LadoArte, LadoArte));
 
         GameObject imagemGo = new GameObject("ArteInspecao", typeof(RectTransform), typeof(Image));
-        imagemGo.transform.SetParent(painelInspecao.transform, false);
+        imagemGo.transform.SetParent(arteFrameInspecao, false);
         RectTransform imagemRect = imagemGo.GetComponent<RectTransform>();
-        imagemRect.anchorMin = imagemRect.anchorMax = new Vector2(0.5f, 0.5f);
-        imagemRect.sizeDelta = new Vector2(255f, 240f);
-        imagemRect.anchoredPosition = new Vector2(-150f, -6f);
+        UIFactory.Stretch(imagemRect);
+        imagemRect.offsetMin = new Vector2(8f, 8f);
+        imagemRect.offsetMax = new Vector2(-8f, -8f);
         imagemInspecao = imagemGo.GetComponent<Image>();
         imagemInspecao.preserveAspect = true;
         imagemInspecao.raycastTarget = false;
 
         var leitura = new GameObject("AreaLeitura", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
-        leitura.transform.SetParent(painelInspecao.transform, false);
-        var leituraRect = leitura.GetComponent<RectTransform>();
-        leituraRect.sizeDelta = new Vector2(272f, 242f);
-        leituraRect.anchoredPosition = new Vector2(142f, -10f);
-        leitura.GetComponent<Image>().color = new Color(0,0,0,.03f);
+        leitura.transform.SetParent(painelRect, false);
+        leituraInspecao = leitura.GetComponent<RectTransform>();
+        leitura.GetComponent<Image>().color = new Color(0, 0, 0, .03f);
         rolagemInspecao = leitura.GetComponent<ScrollRect>();
         rolagemInspecao.horizontal = false;
         rolagemInspecao.movementType = ScrollRect.MovementType.Clamped;
         rolagemInspecao.scrollSensitivity = 24f;
-        rolagemInspecao.viewport = leituraRect;
-        conteudoInspecao = UIFactory.CreateLabel(leitura.transform, "Transcricao", 18f);
+        rolagemInspecao.viewport = leituraInspecao;
+        conteudoInspecao = UIFactory.CreateLabel(leitura.transform, "Transcricao", 17f);
         conteudoInspecao.alignment = TextAlignmentOptions.TopLeft;
-        conteudoInspecao.color = new Color(0.96f, 0.91f, 0.81f);
+        conteudoInspecao.color = new Color(0.94f, 0.90f, 0.82f);
         conteudoInspecao.textWrappingMode = TextWrappingModes.Normal;
+        conteudoInspecao.lineSpacing = 4f;
         RectTransform conteudoRect = conteudoInspecao.rectTransform;
-        conteudoRect.anchorMin = new Vector2(0,1);
-        conteudoRect.anchorMax = new Vector2(1,1);
-        conteudoRect.pivot = new Vector2(.5f,1);
-        conteudoRect.sizeDelta = new Vector2(-4,0);
+        conteudoRect.anchorMin = new Vector2(0, 1);
+        conteudoRect.anchorMax = new Vector2(1, 1);
+        conteudoRect.pivot = new Vector2(.5f, 1);
+        conteudoRect.sizeDelta = new Vector2(-6, 0);
         conteudoRect.anchoredPosition = Vector2.zero;
         var ajustarTexto = conteudoInspecao.gameObject.AddComponent<ContentSizeFitter>();
         ajustarTexto.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
         rolagemInspecao.content = conteudoRect;
-        TextMeshProUGUI ajudaInspecao = UIFactory.CreateLabel(painelInspecao.transform, "AjudaInspecao", 13f);
+
+        ajudaInspecao = UIFactory.CreateLabel(painelRect, "AjudaInspecao", 13f);
         ajudaInspecao.alignment = TextAlignmentOptions.BottomRight;
         ajudaInspecao.color = new Color(0.88f, 0.75f, 0.52f);
-        ajudaInspecao.text = "[RODA / CIMA / BAIXO] LER   •   [E] FECHAR";
         RectTransform ajudaRect = ajudaInspecao.rectTransform;
-        ajudaRect.anchorMin = ajudaRect.anchorMax = new Vector2(1f, 0f);
-        ajudaRect.pivot = new Vector2(1f, 0f);
-        ajudaRect.anchoredPosition = new Vector2(-16f, 9f);
-        ajudaRect.sizeDelta = new Vector2(460f, 22f);
+        ajudaRect.anchorMin = ajudaRect.anchorMax = ajudaRect.pivot = new Vector2(1f, 0f);
+        ajudaRect.anchoredPosition = new Vector2(-MargemInspecao, 9f);
+        ajudaRect.sizeDelta = new Vector2(LarguraInspecao - MargemInspecao * 2f, 14f);
         painelInspecao.SetActive(false);
     }
 
-    public void ShowInspection(string titulo, string nomeSprite, string transcricao, Action aoFechar = null, Sprite arteCustom = null)
+    private static void PosicionarNoTopo(RectTransform r, Vector2 pos, Vector2 tamanho)
+    {
+        r.anchorMin = r.anchorMax = r.pivot = new Vector2(0f, 1f);
+        r.anchoredPosition = pos;
+        r.sizeDelta = tamanho;
+    }
+
+    // pensamento: o que Marcus conclui ou sente (aparece separado, em itálico).
+    // etiqueta: linha curta acima do título, ex. "PISTA · ANOTADA NO DIÁRIO".
+    public void ShowInspection(string titulo, string nomeSprite, string transcricao, Action aoFechar = null, Sprite arteCustom = null,
+        string pensamento = null, string etiqueta = null)
     {
         SantaRitaSound.Play("inspect", .12f);
-        Sprite arte = arteCustom != null ? arteCustom : Resources.Load<Sprite>("Cap1/" + nomeSprite);
+        Sprite arte = arteCustom != null ? arteCustom : CarregarArteInspecao(nomeSprite);
+        bool temArte = arte != null;
+
+        imagemInspecao.sprite = arte;
+        arteFrameInspecao.gameObject.SetActive(temArte);
+        float xTexto = temArte ? MargemInspecao + LadoArte + 14f : MargemInspecao;
+        PosicionarNoTopo(leituraInspecao, new Vector2(xTexto, -58f),
+            new Vector2(LarguraInspecao - xTexto - MargemInspecao, LadoArte));
+
+        bool anotada = !string.IsNullOrEmpty(etiqueta) && etiqueta.ToUpperInvariant().Contains("DIÁRIO");
+        etiquetaInspecao.text = string.IsNullOrEmpty(etiqueta) ? "EXAMINAR" : etiqueta.ToUpperInvariant();
+        etiquetaInspecao.color = anotada ? new Color32(152, 232, 152, 255) : new Color32(150, 138, 118, 255);
+        tituloInspecao.text = titulo;
+
+        string corpo = transcricao ?? string.Empty;
+        if (!string.IsNullOrEmpty(pensamento))
+            corpo += (corpo.Length > 0 ? "\n\n" : string.Empty) + "<color=#D2B27A><i>" + pensamento + "</i></color>";
+        conteudoInspecao.text = corpo;
+
+        painelInspecao.SetActive(true);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(conteudoInspecao.rectTransform);
+        Canvas.ForceUpdateCanvases();
+        rolagemInspecao.verticalNormalizedPosition = 1;
+        bool rola = conteudoInspecao.preferredHeight > leituraInspecao.rect.height + 1f;
+        ajudaInspecao.text = rola ? "[CIMA/BAIXO] LER MAIS    [E] FECHAR" : "[E] FECHAR";
+
+        Show(new[] { new DialogoLinha("", "", "") }, () =>
+        {
+            painelInspecao.SetActive(false);
+            dialogueBox.SetActive(true);
+            aoFechar?.Invoke();
+        });
+        dialogueBox.SetActive(false);
+    }
+
+    private static Sprite CarregarArteInspecao(string nomeSprite)
+    {
+        if (string.IsNullOrEmpty(nomeSprite)) return null;
+        Sprite arte = Resources.Load<Sprite>("Cap1/" + nomeSprite);
         if (arte == null)
         {
             Sprite[] sprites = Resources.LoadAll<Sprite>("Cap1/" + nomeSprite);
@@ -249,21 +341,7 @@ public class GameMessageUI : MonoBehaviour
                 }
             }
         }
-        imagemInspecao.sprite = arte;
-        painelInspecao.SetActive(true);
-        imagemInspecao.enabled = arte != null;
-        tituloInspecao.text = titulo;
-        conteudoInspecao.text = transcricao;
-        LayoutRebuilder.ForceRebuildLayoutImmediate(conteudoInspecao.rectTransform);
-        Canvas.ForceUpdateCanvases();
-        rolagemInspecao.verticalNormalizedPosition = 1;
-        Show(new[] { new DialogoLinha("", "", "") }, () =>
-        {
-            painelInspecao.SetActive(false);
-            dialogueBox.SetActive(true);
-            aoFechar?.Invoke();
-        });
-        dialogueBox.SetActive(false);
+        return arte;
     }
 
     private void Update()
@@ -358,6 +436,14 @@ public class GameMessageUI : MonoBehaviour
         }
 
         SantaRitaSound.Play("page", .065f);
+
+        // Fala longa: mostra o resto dela antes de ir para a próxima.
+        if (label.pageToDisplay < label.textInfo.pageCount)
+        {
+            rotina = StartCoroutine(RotinaContinuacao());
+            return;
+        }
+
         indicePagina++;
         if (paginasAtuais != null && indicePagina < paginasAtuais.Length)
         {
@@ -376,7 +462,7 @@ public class GameMessageUI : MonoBehaviour
 
         ConfigurarRetratoEFalante(atual);
         label.text = string.Empty;
-        dica.alpha = 0f;
+        dica.enabled = false;
 
         if (primeiraAbertura)
             yield return Fade(1f, 0.16f);
@@ -385,10 +471,11 @@ public class GameMessageUI : MonoBehaviour
 
         yield return Digitar(atual.texto ?? string.Empty);
 
-        dica.alpha = 1f;
+        dica.enabled = true;
 
-        // Só fecha sozinho se for uma única linha simples sem callback de sequência
-        if (paginasAtuais.Length == 1 && aoFecharCallback == null)
+        // Só fecha sozinho se for uma única linha simples, que coube numa
+        // página, sem callback de sequência
+        if (paginasAtuais.Length == 1 && aoFecharCallback == null && label.textInfo.pageCount <= 1)
         {
             float espera = 0f;
             while (espera < pausaFinal && aberta)
@@ -417,25 +504,43 @@ public class GameMessageUI : MonoBehaviour
         if (temRetrato)
         {
             portraitImage.sprite = retrato;
-            textRect.offsetMin = new Vector2(78f, 14f);
+            textRect.offsetMin = new Vector2(PaddingTexto.x + LarguraRetrato, PaddingTexto.y);
         }
         else
         {
-            textRect.offsetMin = new Vector2(14f, 14f);
+            textRect.offsetMin = new Vector2(PaddingTexto.x, PaddingTexto.y);
         }
+    }
+
+    private IEnumerator RotinaContinuacao()
+    {
+        dica.enabled = false;
+        label.pageToDisplay++;
+        yield return DigitarPaginaAtual();
+        dica.enabled = true;
     }
 
     private IEnumerator Digitar(string textoCompleto)
     {
-        digitando = true;
         label.text = textoCompleto;
-        label.maxVisibleCharacters = 0;
+        label.pageToDisplay = 1;
+        yield return DigitarPaginaAtual();
+    }
 
+    // Digita só os caracteres da página do TMP que está na tela.
+    private IEnumerator DigitarPaginaAtual()
+    {
+        digitando = true;
+        label.maxVisibleCharacters = 0;
         label.ForceMeshUpdate();
-        int total = label.textInfo.characterCount;
+
+        TMP_TextInfo info = label.textInfo;
+        int pagina = Mathf.Clamp(label.pageToDisplay - 1, 0, Mathf.Max(0, info.pageCount - 1));
+        int visiveis = info.pageCount > 0 ? info.pageInfo[pagina].firstCharacterIndex : 0;
+        int total = info.pageCount > 0 ? info.pageInfo[pagina].lastCharacterIndex + 1 : info.characterCount;
+        label.maxVisibleCharacters = visiveis;
 
         float porLetra = 1f / Mathf.Max(1f, letrasPorSegundo);
-        int visiveis = 0;
 
         while (visiveis < total)
         {

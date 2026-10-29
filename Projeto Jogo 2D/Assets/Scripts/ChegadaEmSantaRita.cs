@@ -17,22 +17,25 @@ public class ChegadaEmSantaRita : MonoBehaviour
     [SerializeField] private string comSabendoOEndereco = "Bairro das Casas, 40. Preciso seguir pela estrada de asfalto e subir na encruzilhada.";
 
     [TextArea]
-    [SerializeField] private string semSaberOEndereco = "Faz seis anos... Primeiro preciso pegar a lanterna e o mapa no meu carro marrom logo ao lado [E].";
+    [SerializeField] private string semSaberOEndereco = "Faz tempo. Acho que a casa dele era subindo.";
 
     [TextArea]
-    [SerializeField] private string objetivo = "Examine seu carro marrom estacionado logo ao lado [Tecla E] para pegar a Lanterna e o Mapa de Santa Rita.";
+    [SerializeField] private string objetivo = "Pegar a lanterna no carro.";
 
     private IEnumerator Start()
     {
         Capitulo1Director.EnsureForCurrentScene();
 
+        // A chegada não explica nada: o jogador fica parado na chuva, ouve a
+        // cidade e só então Marcus lembra da lanterna. A tecla E flutuando
+        // sobre o carro é o único tutorial.
         if (!GameState.Tem(Flags.MapaDoCarroObtido))
         {
-            GameState.DefinirObjetivo(objetivo);
+            GameState.DefinirObjetivo("Pegar a lanterna no carro.");
         }
         else if (!GameState.Tem(Flags.ChegouCasaAvo) && string.IsNullOrEmpty(GameState.ObterObjetivo()))
         {
-            GameState.DefinirObjetivo("Seguir pela rodovia para a direita até o Posto de Gasolina e procurar pela casa de Adílio (nº 40).");
+            GameState.DefinirObjetivo("Ir até a casa do vô, no Bairro das Casas, nº 40.");
         }
 
         if (GameState.Tem(Flags.ChegouCasaAvo))
@@ -40,26 +43,14 @@ public class ChegadaEmSantaRita : MonoBehaviour
             yield break;
         }
 
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(esperaAntesDaFala);
 
         if (!GameState.Tem(Flags.MapaDoCarroObtido))
         {
-            Legenda.Dizer("Preciso examinar meu carro marrom logo ao lado [Tecla E] para pegar a lanterna e o mapa de Santa Rita.", 6.0f);
-
-            yield return new WaitForSeconds(0.8f);
-
-            if (!GameState.Tem(Flags.MapaDoCarroObtido) && !GameMessageUI.IsShowing)
-            {
-                GameMessageUI.Instance.Show(
-                    "\"Cheguei à entrada de Santa Rita. A avenida está escura demais.\nAntes de seguir em frente, preciso olhar meu carro marrom estacionado logo aqui ao lado [Tecla E] para pegar a Lanterna e o Mapa da cidade.\"",
-                    "Marcus",
-                    "marcus"
-                );
-            }
+            if (!GameMessageUI.IsShowing)
+                Legenda.Dizer("\"Escuro demais. A lanterna ficou no porta-luvas.\"", 4f);
             yield break;
         }
-
-        yield return new WaitForSeconds(esperaAntesDaFala);
 
         Legenda.Dizer(
             GameState.Tem(Flags.PrologoAbriuPortaLuvas)
@@ -67,10 +58,6 @@ public class ChegadaEmSantaRita : MonoBehaviour
                 : semSaberOEndereco,
             3.8f
         );
-
-        yield return new WaitForSeconds(esperaAntesDoObjetivo);
-
-        Legenda.Dizer("Seguir pela estrada para a direita (Leste) até o Posto de Gasolina. (Pressione M para abrir o Mapa)", 4.5f);
     }
 }
 
