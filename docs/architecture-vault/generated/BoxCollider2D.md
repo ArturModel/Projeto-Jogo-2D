@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # BoxCollider2D
@@ -42,4 +42,4 @@ tags:
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

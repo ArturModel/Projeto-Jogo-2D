@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "OptionsPanelController"
+community: "Community 16"
 location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/Community_16
 ---
 
 # .Lamp()
@@ -17,4 +17,4 @@ tags:
 - [[Light2D]] - `references` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/Community_16

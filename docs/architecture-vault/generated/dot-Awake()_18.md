@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "Community 5"
-location: "L21"
+community: "Community 50"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_50
 ---
 
 # .Awake()
 
 ## Connections
-- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_50

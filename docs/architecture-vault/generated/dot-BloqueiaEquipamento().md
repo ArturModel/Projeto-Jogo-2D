@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-Update()_20]] - `calls` [EXTRACTED]
+- [[dot-Update()_22]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

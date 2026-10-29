@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # Transform
@@ -13,10 +13,10 @@ tags:
 ## Connections
 - [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
 - [[dot-Apply()]] - `references` [EXTRACTED]
-- [[dot-Apply()_3]] - `references` [EXTRACTED]
+- [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-ApprovedScenes()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
-- [[dot-Caixa()]] - `references` [EXTRACTED]
+- [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Center()]] - `references` [EXTRACTED]
 - [[dot-ColocarArteInterior()]] - `references` [EXTRACTED]
@@ -51,9 +51,9 @@ tags:
 - [[dot-CriarBotaoModal()]] - `references` [EXTRACTED]
 - [[dot-CriarParedesPerimetro()]] - `references` [EXTRACTED]
 - [[dot-CriarPisoDeZona()]] - `references` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-FlashlightWalkR2()]] - `references` [EXTRACTED]
 - [[dot-Imagem()]] - `references` [EXTRACTED]
 - [[dot-Label()]] - `references` [EXTRACTED]
@@ -73,4 +73,4 @@ tags:
 - [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
 - [[Station]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "OptionsPanelController"
+community: "Community 16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/Community_16
 ---
 
 # SpriteRenderer
@@ -14,13 +14,13 @@ tags:
 - [[dot-Add()]] - `references` [EXTRACTED]
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-Apply()_1]] - `references` [EXTRACTED]
-- [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
 - [[dot-Atualizar()]] - `references` [EXTRACTED]
-- [[dot-Awake()_10]] - `references` [EXTRACTED]
-- [[dot-Awake()_17]] - `references` [EXTRACTED]
 - [[dot-Awake()_9]] - `references` [EXTRACTED]
-- [[dot-Awake()_18]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
+- [[dot-Awake()_3]] - `references` [EXTRACTED]
+- [[dot-Awake()_17]] - `references` [EXTRACTED]
 - [[dot-BoundaryForest()]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
@@ -62,11 +62,11 @@ tags:
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
 - [[dot-Start()_6]] - `references` [EXTRACTED]
+- [[dot-Start()_7]] - `references` [EXTRACTED]
 - [[dot-Start()_11]] - `references` [EXTRACTED]
-- [[dot-Start()_12]] - `references` [EXTRACTED]
-- [[dot-Start()_9]] - `references` [EXTRACTED]
+- [[dot-Start()_10]] - `references` [EXTRACTED]
 - [[dot-Walls()]] - `references` [EXTRACTED]
-- [[Camada_1]] - `references` [EXTRACTED]
+- [[Camada]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `references` [EXTRACTED]
 - [[Fileira]] - `references` [EXTRACTED]
 - [[ObjetoCarro]] - `references` [EXTRACTED]
@@ -80,4 +80,4 @@ tags:
 - [[SantaRitaRimLight]] - `references` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/Community_16

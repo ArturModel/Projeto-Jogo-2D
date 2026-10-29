@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "PlayerController"
+community: "Community 27"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/Community_27
 ---
 
 # .TestarPlano()
@@ -17,4 +17,4 @@ tags:
 - [[Evento]] - `calls` [EXTRACTED]
 - [[Evento_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/Community_27

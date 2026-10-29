@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: ".SaveSlot"
+community: "Community 37"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SaveSlot
+  - community/Community_37
 ---
 
 # .SetState()
@@ -18,4 +18,4 @@ tags:
 - [[BochaShot]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SaveSlot
+#graphify/code #graphify/EXTRACTED #community/Community_37

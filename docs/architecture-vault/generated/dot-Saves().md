@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 4"
 location: "L275"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_4
 ---
 
 # .Saves()
@@ -26,4 +26,4 @@ tags:
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 - [[GameStateSnapshot]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_4

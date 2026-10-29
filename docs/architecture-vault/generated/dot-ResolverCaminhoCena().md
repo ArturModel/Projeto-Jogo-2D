@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "com.unity.modules.imgui"
+community: "Community 26"
 location: "L311"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimgui
+  - community/Community_26
 ---
 
 # .ResolverCaminhoCena()
@@ -15,4 +15,4 @@ tags:
 - [[dot-CarregarCenaSegura()]] - `calls` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui
+#graphify/code #graphify/EXTRACTED #community/Community_26

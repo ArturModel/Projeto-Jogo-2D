@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 21"
 location: "L391"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_21
 ---
 
 # .ClearPendingOnly()
@@ -17,4 +17,4 @@ tags:
 - [[dot-Run()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_21

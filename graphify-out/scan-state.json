@@ -46,7 +46,7 @@
     "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs": "1c0d1417c8d16bcbfbe07a686090f1882ef9a9745739de04be623eff6112b0b4",
     "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs": "e7e633e680c4d00fdf2f1f4b7efd437b4455322ba51ee05e7f48b2ae66947494",
     "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs": "59f65bc2db67c1ff7f94ccef55dcbac86aadc14c594a34e20a9ffe06dd059784",
-    "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs": "ce5ed89d3f4b0cfd27fd412459148691000c377a7a0da96f63a8aba0ce059203",
+    "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs": "bd9be80859a93deae7700abf73ad8be8875087991641c590c125eac65baa4033",
     "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs": "139c357ca86c9324c135dd15bb18b9f0af52c5499f716073277637bf7973048b",
     "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs": "12bb37b455c03d8232e647167bcd732fc4e4d79dd9189e22a163567598b43f7a",
     "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs": "9c7a4d085f954d94cb7a166c68426aa533f368c1c78e36d7baff8c4dda3fb0dc",
@@ -92,7 +92,7 @@
     "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs": "bfa471733766a149775c877ea9f34d04e9db2fdaf5c184d2a94a0d4310db922a",
     "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs": "2db15bd5a107ea0b581de79b62ccd5516642d34d319a614fad5ddb67f19fe756",
     "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs": "f7f71bd3c0fa8bca6fc3a0e880ec6963f310fcc4b36010c799d91426d634e91d",
-    "Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs": "ae61992c23166aa1754bfdfdc9a60f7331271b536523619acdf6b600850b1a24",
+    "Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs": "cb2cabd8890c6b49cc87231799e292d210c28421f2227d62772a526c89851507",
     "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs": "d466011d6d0c66a746e836efce639d160b68ed34a314af713131562e47977ff8",
     "Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs": "a3dae3cd174e6d9b1781ff614338e110ee1e3080e079e70683d1f6192a01167e"
   }

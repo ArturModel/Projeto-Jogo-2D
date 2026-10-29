@@ -1,26 +1,40 @@
 ---
 type: community
-members: 13
+members: 27
 ---
 
 # Community 34
 
-**Members:** 13 nodes
+**Members:** 27 nodes
 
 ## Members
-- [[dot-AoCarregarCenaRuntime()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Ativar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[dot-Ativar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs
-- [[dot-Dizer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-EnsureForCurrentScene()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-IniciarPartidaSinucaComZe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Ligar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[dot-NarracaoEntradaCasaAvoRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ObterObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Start()_10]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[CelularCarro]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[ChegadaEmSantaRita]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[Disponivel_2]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[dot-Abrir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-AlternarVisibilidadeBlips()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-AplicarZoomIncremental()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-AtualizarIndicadorZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-AtualizarPainelLateral()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-AtualizarZoomMapa()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-AutoBootstrap()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-CenaDoCapitulo2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-CentralizarNoJogador()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-ConverterMundoParaUV()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-CriarMarcadorPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-EnsureInstance()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-Fechar()_4]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-FecharSeAberto()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-InicializarPontos()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-LimitarPanDoMapa()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-ObterUVObjetivoAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-ResetarZoomEPan()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-SelecionarAba()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-Update()_14]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-VerificarCenaECriar()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[Instance_7]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[IsShowing_3]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[MapaInterativoUI]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[PontoMapa]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[PontoMapa_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,24 +44,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 14]]
-- 5 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 4 edges to [[_COMMUNITY_Capitulo1Director]]
-- 3 edges to [[_COMMUNITY_Community 36]]
-- 3 edges to [[_COMMUNITY_dependencies_1]]
-- 2 edges to [[_COMMUNITY_PrologoDirector]]
-- 2 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 2 edges to [[_COMMUNITY_com.unity.modules.physics]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Legenda]]
+- 20 edges to [[_COMMUNITY_Community 23]]
+- 10 edges to [[_COMMUNITY_Community 6]]
+- 6 edges to [[_COMMUNITY_Community 14]]
+- 4 edges to [[_COMMUNITY_Community 2]]
+- 4 edges to [[_COMMUNITY_Community 18]]
+- 3 edges to [[_COMMUNITY_Community 21]]
+- 3 edges to [[_COMMUNITY_Community 54]]
+- 3 edges to [[_COMMUNITY_Community 9]]
+- 3 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 26]]
 - 1 edge to [[_COMMUNITY_Community 25]]
-- 1 edge to [[_COMMUNITY_dot-CreateLabel]]
-- 1 edge to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.tetgen]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 24]]
 
 ## Top bridge nodes
-- [[dot-Dizer()]] - degree 17, connects to 6 communities
-- [[dot-EnsureForCurrentScene()]] - degree 6, connects to 3 communities
-- [[dot-NarracaoEntradaCasaAvoRoutine()]] - degree 4, connects to 3 communities
-- [[dot-Start()_10]] - degree 7, connects to 2 communities
-- [[CelularCarro]] - degree 5, connects to 2 communities
+- [[MapaInterativoUI]] - degree 49, connects to 11 communities
+- [[dot-EnsureInstance()_1]] - degree 8, connects to 5 communities
+- [[dot-CenaDoCapitulo2()]] - degree 7, connects to 5 communities
+- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - degree 9, connects to 4 communities
+- [[dot-Abrir()_2]] - degree 9, connects to 2 communities

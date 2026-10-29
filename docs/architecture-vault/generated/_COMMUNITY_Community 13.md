@@ -1,11 +1,11 @@
 ---
 type: community
-members: 31
+members: 35
 ---
 
 # Community 13
 
-**Members:** 31 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[dot-Interact()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -22,7 +22,10 @@ members: 31
 - [[dot-InteragirMalaAbandonada()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirMoradorBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirPicapeEncruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirPistaCafe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirPistaCartas()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirPistaDesordem()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirPistaNotaFiscal()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirPlacaBar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirPlacaRodovia()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirPlacaSetaBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -35,6 +38,7 @@ members: 31
 - [[dot-InteragirVendaAntiga()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirVizinhaLurdes()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirZeOuSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-RegistrarNotaDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[DialogoLinha]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[InteracaoCapitulo1]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[Prompt]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -48,21 +52,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 35 edges to [[_COMMUNITY_Community 14]]
-- 6 edges to [[_COMMUNITY_GameMessageUI]]
-- 6 edges to [[_COMMUNITY_Capitulo1Director]]
-- 5 edges to [[_COMMUNITY_Community 25]]
-- 4 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 2 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 1 edge to [[_COMMUNITY_MenuPausa]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
+- 33 edges to [[_COMMUNITY_Community 14]]
+- 7 edges to [[_COMMUNITY_Community 3]]
+- 7 edges to [[_COMMUNITY_Community 40]]
+- 6 edges to [[_COMMUNITY_Community 25]]
+- 5 edges to [[_COMMUNITY_Community 2]]
+- 3 edges to [[_COMMUNITY_Community 21]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 10]]
+- 1 edge to [[_COMMUNITY_Community 18]]
 - 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 34]]
 - 1 edge to [[_COMMUNITY_Community 54]]
 
 ## Top bridge nodes
-- [[InteracaoCapitulo1]] - degree 49, connects to 7 communities
-- [[DialogoLinha]] - degree 39, connects to 7 communities
+- [[DialogoLinha]] - degree 39, connects to 9 communities
+- [[InteracaoCapitulo1]] - degree 49, connects to 8 communities
+- [[dot-RegistrarNotaDiario()]] - degree 30, connects to 6 communities
+- [[dot-Interact()]] - degree 35, connects to 2 communities
 - [[dot-InteragirCarroMarcus()]] - degree 7, connects to 2 communities
-- [[dot-Interact()]] - degree 35, connects to 1 community
-- [[dot-InteragirZeOuSinuca()]] - degree 6, connects to 1 community

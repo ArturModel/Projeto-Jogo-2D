@@ -1,22 +1,38 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 23"
-location: "L69"
+community: "Community 17"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_17
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Awake()_12]] - `calls` [EXTRACTED]
+- [[dot-Botao()_1]] - `calls` [EXTRACTED]
+- [[dot-ChangeZoom()]] - `calls` [INFERRED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
+- [[dot-CriarImpactoMadeira()]] - `calls` [EXTRACTED]
+- [[dot-EscolherTipo()]] - `calls` [EXTRACTED]
+- [[dot-Label()]] - `calls` [EXTRACTED]
+- [[dot-MudarVista()]] - `calls` [EXTRACTED]
+- [[dot-Painel()]] - `calls` [EXTRACTED]
+- [[dot-PodeConsultar()]] - `calls` [EXTRACTED]
+- [[dot-Regras()]] - `calls` [EXTRACTED]
+- [[dot-Stretch()]] - `calls` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[BochaCourtView]] - `references` [EXTRACTED]
+- [[BochaMapGraphic]] - `references` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
+- [[Button]] - `references` [EXTRACTED]
 - [[CanvasScaler]] - `references` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[GraphicRaycaster]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[RectMask2D]] - `references` [EXTRACTED]
+- [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_17

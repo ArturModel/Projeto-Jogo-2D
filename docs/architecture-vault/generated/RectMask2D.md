@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 41"
+community: "Community 17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/Community_17
 ---
 
 # RectMask2D
 
 ## Connections
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/Community_17

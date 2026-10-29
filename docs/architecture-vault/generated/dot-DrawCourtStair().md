@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs"
 type: "code"
-community: "com.unity.burst"
+community: "Community 11"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/Community_11
 ---
 
 # .DrawCourtStair()
@@ -24,4 +24,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/Community_11

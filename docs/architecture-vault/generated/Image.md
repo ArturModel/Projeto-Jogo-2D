@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "packages-lock.json"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/Community_23
 ---
 
 # Image
@@ -16,13 +16,14 @@ tags:
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
+- [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CreateBox()]] - `references` [EXTRACTED]
 - [[dot-CriarBolasUI()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
@@ -33,15 +34,16 @@ tags:
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 - [[dot-Imagem()]] - `references` [EXTRACTED]
 - [[dot-IndicadorPausa()]] - `references` [EXTRACTED]
-- [[dot-LinhaDropdown()]] - `references` [EXTRACTED]
 - [[dot-LinhaSlider()]] - `references` [EXTRACTED]
+- [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
 - [[dot-MontarCortina()]] - `references` [EXTRACTED]
 - [[dot-MontarTela()]] - `references` [EXTRACTED]
-- [[dot-MostrarModal()_1]] - `references` [EXTRACTED]
+- [[dot-MostrarModal()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-RotuloCanonico()]] - `references` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `references` [EXTRACTED]
+- [[dot-Titulo()]] - `references` [EXTRACTED]
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
 - [[dot-Vincular()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
@@ -52,4 +54,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/Community_23

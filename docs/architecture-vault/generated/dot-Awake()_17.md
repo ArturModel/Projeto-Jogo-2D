@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
 community: "Community 5"
-location: "L66"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,7 @@ tags:
 # .Awake()
 
 ## Connections
-- [[dot-PrepararCaminhadaMarcus()]] - `calls` [EXTRACTED]
-- [[dot-PrepararFeixeLanterna()]] - `calls` [EXTRACTED]
-- [[dot-PrepararPosesLanterna()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[Rigidbody2D]] - `references` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

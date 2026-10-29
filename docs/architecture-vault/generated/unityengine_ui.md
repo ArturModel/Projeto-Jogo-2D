@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: ".CreateCanvas"
+community: "Community 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_1
 ---
 
 # unityengine_ui
@@ -34,4 +34,4 @@ tags:
 - [[UIFactory.cs]] - `imports` [EXTRACTED]
 - [[VideoSettingsController.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CreateCanvas
+#graphify/concept #graphify/EXTRACTED #community/Community_1

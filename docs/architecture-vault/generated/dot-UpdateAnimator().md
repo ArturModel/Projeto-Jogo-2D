@@ -12,7 +12,7 @@ tags:
 # .UpdateAnimator()
 
 ## Connections
-- [[dot-Update()_20]] - `calls` [EXTRACTED]
+- [[dot-Update()_22]] - `calls` [EXTRACTED]
 - [[Animator]] - `references` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SceneFader"
+community: "Community 38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_38
 ---
 
 # AudioMixer
@@ -13,8 +13,8 @@ tags:
 ## Connections
 - [[dot-AplicarVolumeEmMixer()]] - `references` [EXTRACTED]
 - [[dot-AplicarVolumesGlobais()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_1]] - `references` [EXTRACTED]
+- [[dot-Vincular()_4]] - `references` [EXTRACTED]
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_38

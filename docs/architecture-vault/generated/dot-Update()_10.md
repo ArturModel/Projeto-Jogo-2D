@@ -1,20 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "com.unity.modules.audio"
-location: "L531"
+community: "Community 3"
+location: "L269"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesaudio
+  - community/Community_3
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
-- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
-- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
+- [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio
+#graphify/code #graphify/EXTRACTED #community/Community_3

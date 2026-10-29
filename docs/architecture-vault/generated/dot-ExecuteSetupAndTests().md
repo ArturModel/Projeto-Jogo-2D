@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # .ExecuteSetupAndTests()
@@ -17,4 +17,4 @@ tags:
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter1Builder]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

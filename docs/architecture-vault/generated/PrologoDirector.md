@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "com.unity.modules.physics"
+community: "Community 19"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/Community_19
 ---
 
 # PrologoDirector
@@ -22,7 +22,7 @@ tags:
 - [[dot-Revelar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()]] - `method` [EXTRACTED]
 - [[dot-Start()_13]] - `references` [EXTRACTED]
-- [[dot-Start()_7]] - `method` [EXTRACTED]
+- [[dot-Start()_8]] - `method` [EXTRACTED]
 - [[dot-Update()_4]] - `method` [EXTRACTED]
 - [[dot-UpdatePrologoScene()]] - `references` [EXTRACTED]
 - [[EstradaScroller]] - `references` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[PonteiroCarro]] - `references` [EXTRACTED]
 - [[PrologoDirector.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/Community_19

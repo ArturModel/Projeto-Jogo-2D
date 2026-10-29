@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "MonoBehaviour"
+community: "Community 9"
 location: "L252"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/Community_9
 ---
 
 # .CriarSala()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Awake()_21]] - `calls` [EXTRACTED]
 - [[dot-Box()_1]] - `calls` [EXTRACTED]
-- [[dot-Quad()_1]] - `calls` [EXTRACTED]
+- [[dot-Quad()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/Community_9

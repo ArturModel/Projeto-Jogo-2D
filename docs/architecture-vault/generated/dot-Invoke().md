@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 0"
 location: "L334"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_0
 ---
 
 # .Invoke()
@@ -22,4 +22,4 @@ tags:
 - [[dot-SlotsR2()]] - `calls` [INFERRED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_0

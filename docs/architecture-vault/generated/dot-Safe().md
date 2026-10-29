@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs"
 type: "code"
-community: "com.unity.burst"
+community: "Community 35"
 location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/Community_35
 ---
 
 # .Safe()
@@ -19,4 +19,4 @@ tags:
 - [[dot-UpdateAccesses()]] - `calls` [INFERRED]
 - [[SantaRitaC2Consolidation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/Community_35

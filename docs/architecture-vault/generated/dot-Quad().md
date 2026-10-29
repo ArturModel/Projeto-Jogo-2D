@@ -1,21 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "com.unity.2d.tilemap"
-location: "L349"
+community: "Community 9"
+location: "L227"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunity2dtilemap
+  - community/Community_9
 ---
 
 # .Quad()
 
 ## Connections
-- [[dot-OnPopulateMesh()]] - `calls` [EXTRACTED]
-- [[BochaMapGraphic]] - `method` [EXTRACTED]
+- [[dot-Box()_1]] - `calls` [EXTRACTED]
+- [[dot-CriarSala()]] - `calls` [EXTRACTED]
+- [[dot-RoomLight()]] - `calls` [EXTRACTED]
+- [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[Rect]] - `references` [EXTRACTED]
-- [[VertexHelper]] - `references` [EXTRACTED]
+- [[Face]] - `calls` [EXTRACTED]
+- [[V]] - `calls` [EXTRACTED]
+- [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunity2dtilemap
+#graphify/code #graphify/EXTRACTED #community/Community_9

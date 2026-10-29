@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "manifest.json"
+community: "Community 20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_20
 ---
 
 # Dictionary
@@ -22,4 +22,4 @@ tags:
 - [[SantaRitaGeography]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_20

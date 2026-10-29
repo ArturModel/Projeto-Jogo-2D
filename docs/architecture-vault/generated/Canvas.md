@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 23"
+community: "Community 24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_24
 ---
 
 # Canvas
@@ -16,4 +16,4 @@ tags:
 - [[dot-CreateCanvas()]] - `references` [EXTRACTED]
 - [[dot-PlanCapture()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_24

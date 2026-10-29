@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs"
 type: "code"
-community: "manifest.json"
+community: "Community 6"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_6
 ---
 
 # .UV()
@@ -23,4 +23,4 @@ tags:
 - [[SantaRitaGeography]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_6

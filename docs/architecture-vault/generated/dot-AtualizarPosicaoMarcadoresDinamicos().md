@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "dependencies"
+community: "Community 34"
 location: "L759"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_34
 ---
 
 # .AtualizarPosicaoMarcadoresDinamicos()
@@ -17,9 +17,9 @@ tags:
 - [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-ObterUVObjetivoAtual()]] - `calls` [EXTRACTED]
 - [[dot-UV()]] - `calls` [EXTRACTED]
-- [[dot-Update()_26]] - `calls` [EXTRACTED]
+- [[dot-Update()_14]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_34

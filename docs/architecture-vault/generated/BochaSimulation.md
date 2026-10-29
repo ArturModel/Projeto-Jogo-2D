@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "PlayerController"
+community: "Community 27"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/Community_27
 ---
 
 # BochaSimulation
 
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [INFERRED]
-- [[dot-Aplicar()_1]] - `method` [EXTRACTED]
+- [[dot-Aplicar()]] - `method` [EXTRACTED]
 - [[dot-AvancarComContatos()]] - `method` [EXTRACTED]
 - [[dot-BestShot()]] - `references` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
@@ -38,7 +38,7 @@ tags:
 - [[dot-Resolver()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
 - [[dot-Run()]] - `references` [EXTRACTED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[dot-Run()_2]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-SetState()]] - `references` [EXTRACTED]
 - [[dot-Step()]] - `method` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[IsMoving]] - `defines` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/Community_27

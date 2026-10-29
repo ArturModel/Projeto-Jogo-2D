@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "com.unity.modules.audio"
+community: "Community 42"
 location: "L529"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesaudio
+  - community/Community_42
 ---
 
 # PayphoneSlotInputWatcher
 
 ## Connections
-- [[dot-Update()_10]] - `method` [EXTRACTED]
+- [[dot-Update()_9]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio
+#graphify/code #graphify/EXTRACTED #community/Community_42

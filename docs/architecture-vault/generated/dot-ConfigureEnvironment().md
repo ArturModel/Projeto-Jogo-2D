@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[dot-ConectarManualmente()]] - `calls` [EXTRACTED]
-- [[dot-WaitForEditor()]] - `calls` [EXTRACTED]
 - [[SantaRitaMcpSetup]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_84

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "manifest.json"
+community: "Community 6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_6
 ---
 
 # MeshRenderer
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-LabelWorld()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_6

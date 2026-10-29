@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 14"
+community: "Community 13"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_13
 ---
 
 # .RegistrarNotaDiario()
 
 ## Connections
 - [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
-- [[dot-Ativar()_2]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_1]] - `calls` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirBocha()]] - `calls` [EXTRACTED]
 - [[dot-DispararChegadaCasaDoAvo()]] - `calls` [EXTRACTED]
@@ -39,8 +39,8 @@ tags:
 - [[dot-RegistrarDiario()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
-- [[dot-Start()_2]] - `calls` [EXTRACTED]
+- [[dot-Start()_3]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_13

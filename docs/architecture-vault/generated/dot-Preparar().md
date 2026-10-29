@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "CheckpointSystem"
+community: "Community 37"
 location: "L199"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/Community_37
 ---
 
 # .Preparar()
@@ -19,4 +19,4 @@ tags:
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[BochaShot]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/Community_37

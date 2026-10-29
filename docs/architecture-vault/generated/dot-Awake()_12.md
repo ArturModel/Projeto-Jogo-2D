@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "Community 36"
-location: "L57"
+community: "Community 38"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_38
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[Light2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_38

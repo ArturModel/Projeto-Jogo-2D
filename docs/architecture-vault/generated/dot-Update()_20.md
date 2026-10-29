@@ -1,23 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 5"
-location: "L216"
+community: "Community 46"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_46
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
-- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
-- [[dot-FindNearest()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_7]] - `calls` [INFERRED]
-- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
-- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_46

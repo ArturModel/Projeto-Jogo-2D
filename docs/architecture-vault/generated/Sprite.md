@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.modules.unitywebrequest"
+community: "Community 18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_18
 ---
 
 # Sprite
@@ -17,7 +17,7 @@ tags:
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Art()]] - `references` [EXTRACTED]
 - [[dot-Art()_1]] - `references` [EXTRACTED]
-- [[dot-Awake()_9]] - `references` [EXTRACTED]
+- [[dot-Awake()_3]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-CarregarOuGerarArteMapa()]] - `references` [EXTRACTED]
 - [[dot-CarregarSprite()]] - `references` [EXTRACTED]
@@ -65,4 +65,4 @@ tags:
 - [[SantaRitaNpcWork]] - `references` [EXTRACTED]
 - [[TileAleatorio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_18

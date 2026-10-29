@@ -1,19 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 29"
-location: "L386"
+community: "Community 3"
+location: "L596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_3
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_3

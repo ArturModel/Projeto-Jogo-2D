@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "com.unity.modules.imgui"
+community: "Community 26"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimgui
+  - community/Community_26
 ---
 
 # SceneFader
 
 ## Connections
-- [[dot-Awake()_8]] - `method` [EXTRACTED]
+- [[dot-Awake()_7]] - `method` [EXTRACTED]
 - [[dot-BannerRoutine()]] - `method` [EXTRACTED]
 - [[dot-Bootstrap()]] - `method` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `method` [EXTRACTED]
@@ -32,10 +32,10 @@ tags:
 - [[dot-ZoneTransitionRoutine()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Coroutine]] - `references` [EXTRACTED]
-- [[Instance_6]] - `defines` [EXTRACTED]
+- [[Instance_4]] - `defines` [EXTRACTED]
 - [[IsTransitioning]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SceneFader.cs]] - `contains` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui
+#graphify/code #graphify/EXTRACTED #community/Community_26

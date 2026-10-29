@@ -10,7 +10,7 @@ members: 12
 ## Members
 - [[dot-Aparecer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Ativar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
-- [[dot-Awake()_12]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Awake()_11]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Enfileirar()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Rodar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Transmitir()]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
@@ -29,19 +29,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 23]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 3 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 2 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 2 edges to [[_COMMUNITY_Community 14]]
-- 1 edge to [[_COMMUNITY_GameMessageUI]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.imgui]]
-- 1 edge to [[_COMMUNITY_PrologoDirector]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.jsonserialize]]
-- 1 edge to [[_COMMUNITY_Chuva]]
-- 1 edge to [[_COMMUNITY_manifest.json]]
-- 1 edge to [[_COMMUNITY_Legenda]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.tetgen]]
+- 4 edges to [[_COMMUNITY_Community 14]]
+- 3 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 
 ## Top bridge nodes
 - [[Legenda]] - degree 17, connects to 8 communities

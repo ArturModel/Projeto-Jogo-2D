@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -19,7 +19,7 @@ public static class SantaRitaMcpSetup
     {
         if (EditorApplication.isCompiling || EditorApplication.isUpdating) return;
         EditorApplication.update -= WaitForEditor;
-        ConfigureEnvironment();
+        ConectarManualmente();
     }
 
     [MenuItem("Santa Rita/Ferramentas/Conectar Unity MCP local")]
@@ -44,7 +44,7 @@ public static class SantaRitaMcpSetup
             if (!isReachable)
             {
                 server.GetType().GetMethod("StartLocalHttpServer").Invoke(server, new object[] { true });
-                await Task.Delay(1000);
+                await Task.Delay(1500);
             }
 
             bool isRunning = (bool)bridge.GetType().GetProperty("IsRunning").GetValue(bridge);
@@ -67,6 +67,7 @@ public static class SantaRitaMcpSetup
             // Usar porta 8088 para evitar conflitos com aplicações web/Java/Spring Boot locais (que usam 8080)
             EditorPrefs.SetString("MCPForUnity.HttpUrl", "http://127.0.0.1:8088");
             EditorPrefs.SetBool("MCPForUnity.AutoStartOnLoad", true);
+            EditorPrefs.SetBool("MCPForUnity.HttpServerLaunchConfirmed", true);
 
             bool isWindows = Application.platform == RuntimePlatform.WindowsEditor;
             string home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
@@ -74,20 +75,36 @@ public static class SantaRitaMcpSetup
             if (isWindows)
             {
                 var tools = Path.Combine(home, ".santarita");
+                var localBin = Path.Combine(home, ".local", "bin");
+                var localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                var wingetUv = Path.Combine(localAppData, @"Microsoft\WinGet\Packages\astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe");
+
                 string uvxPath = Path.Combine(tools, "bin", "uvx.exe");
+                string localUvx = Path.Combine(localBin, "uvx.exe");
+                string wingetUvx = Path.Combine(wingetUv, "uvx.exe");
+
                 if (File.Exists(uvxPath))
-                {
                     EditorPrefs.SetString("MCPForUnity.UvxPath", uvxPath);
-                }
+                else if (File.Exists(localUvx))
+                    EditorPrefs.SetString("MCPForUnity.UvxPath", localUvx);
+                else if (File.Exists(wingetUvx))
+                    EditorPrefs.SetString("MCPForUnity.UvxPath", wingetUvx);
 
                 var path = Environment.GetEnvironmentVariable("PATH") ?? "";
                 string winPython = Path.Combine(tools, "python", "cpython-3.12.15-windows-x86_64-none");
                 string winBin = Path.Combine(tools, "bin");
-                if (!path.Contains(winBin))
-                    Environment.SetEnvironmentVariable("PATH", winBin + ";" + winPython + ";" + path);
+                string[] searchDirs = { winBin, winPython, localBin, wingetUv };
+                foreach (var dir in searchDirs)
+                {
+                    if (Directory.Exists(dir) && !path.Contains(dir))
+                        path = dir + ";" + path;
+                }
+                Environment.SetEnvironmentVariable("PATH", path);
 
-                Environment.SetEnvironmentVariable("UV_PYTHON_INSTALL_DIR", Path.Combine(tools, "python"));
-                Environment.SetEnvironmentVariable("UV_CACHE_DIR", Path.Combine(tools, "uv-cache"));
+                if (Directory.Exists(Path.Combine(tools, "python")))
+                    Environment.SetEnvironmentVariable("UV_PYTHON_INSTALL_DIR", Path.Combine(tools, "python"));
+                if (Directory.Exists(Path.Combine(tools, "uv-cache")))
+                    Environment.SetEnvironmentVariable("UV_CACHE_DIR", Path.Combine(tools, "uv-cache"));
             }
             else
             {

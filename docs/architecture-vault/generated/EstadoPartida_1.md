@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SinucaMinigameUI"
+community: "Community 3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/Community_3
 ---
 
 # EstadoPartida
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/Community_3

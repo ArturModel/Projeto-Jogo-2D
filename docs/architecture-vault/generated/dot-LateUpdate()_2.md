@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 27"
+community: "Community 20"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_27
+  - community/Community_20
 ---
 
 # .LateUpdate()
@@ -16,4 +16,4 @@ tags:
 - [[Light2D]] - `references` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_27
+#graphify/code #graphify/EXTRACTED #community/Community_20

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "GameMessageUI"
+community: "Community 3"
 location: "L342"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_3
 ---
 
 # .Avancar()
@@ -17,4 +17,4 @@ tags:
 - [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_3

@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ConfigureEnvironment()]] - `calls` [EXTRACTED]
+- [[dot-WaitForEditor()]] - `calls` [EXTRACTED]
 - [[MenuItem]] - `references` [EXTRACTED]
 - [[SantaRitaMcpSetup]] - `method` [EXTRACTED]
 

@@ -1,22 +1,43 @@
 ---
 type: community
-members: 9
+members: 30
 ---
 
 # Community 29
 
-**Members:** 9 nodes
+**Members:** 30 nodes
 
 ## Members
-- [[dot-AtualizarFonteMusical()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-CriarTextura()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-DefinirContexto()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-OnDestroy()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-Update()_11]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Update()_12]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-VolumeDaCamada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[SantaRitaBarAudio]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[SantaRitaBarAudio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[dot-ConfirmarSaveManual()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-ConsumePendingSpawn()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-DescreverSlotIndisponivel()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-ObterNomeAmigavelOrelhao()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-RecarregarUltimoSaveManual()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-RequestSpawnAtCheckpoint()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-RequestSpawnAtSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-Save()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-Save()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-SaveSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-SlotFilePath()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-TryLoadManualSave()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-TryLoadPrimaryOnly()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-TryLoadSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-TryParseAndValidateJson()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-TryReadAndValidateFile()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[BackupFilePath]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[CheckpointScene]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[CheckpointSystem]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[EmArmazenamentoDeTeste]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[HasCheckpoint]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[ManualSaveData]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[PrefKeyBackup]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[PrefKeyLastSlot]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[PrefKeyPrimary]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[PrefKeySlotPrefix]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[PrimaryFilePath]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[StorageDirectory]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[TestPrefix]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[UltimoSlotUsado]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,15 +47,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 54]]
-- 3 edges to [[_COMMUNITY_InteracaoCapitulo1]]
-- 2 edges to [[_COMMUNITY_Capitulo1Director]]
-- 1 edge to [[_COMMUNITY_Legenda]]
-- 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
+- 11 edges to [[_COMMUNITY_Community 21]]
+- 7 edges to [[_COMMUNITY_Community 28]]
+- 5 edges to [[_COMMUNITY_Community 0]]
+- 5 edges to [[_COMMUNITY_Community 4]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 3 edges to [[_COMMUNITY_Community 3]]
+- 3 edges to [[_COMMUNITY_Community 14]]
+- 3 edges to [[_COMMUNITY_Community 54]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 34]]
 
 ## Top bridge nodes
-- [[SantaRitaBarAudio]] - degree 9, connects to 3 communities
-- [[dot-CriarTextura()]] - degree 4, connects to 2 communities
-- [[dot-AtualizarFonteMusical()]] - degree 3, connects to 2 communities
-- [[dot-DefinirContexto()]] - degree 4, connects to 1 community
-- [[dot-Update()_11]] - degree 3, connects to 1 community
+- [[dot-SaveSlot()]] - degree 14, connects to 6 communities
+- [[dot-TryLoadSlot()]] - degree 17, connects to 5 communities
+- [[CheckpointSystem]] - degree 33, connects to 4 communities
+- [[dot-ConsumePendingSpawn()]] - degree 7, connects to 3 communities
+- [[dot-RequestSpawnAtSlot()]] - degree 5, connects to 3 communities

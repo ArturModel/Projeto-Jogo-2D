@@ -1,20 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "Community 54"
-location: "L54"
+community: "Community 50"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_50
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[dot-CriarAmbiencia()]] - `calls` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[dot-AnguloEm()]] - `calls` [EXTRACTED]
+- [[dot-AplicarAngulo()]] - `calls` [EXTRACTED]
+- [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_50

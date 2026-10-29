@@ -1,25 +1,21 @@
 ---
 type: community
-members: 12
+members: 8
 ---
 
 # Community 39
 
-**Members:** 12 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[dot-CancelarCarga()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Comecar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Derrota()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Fechar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-MostrarModal()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-NovaMao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-OnApplicationFocus()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Pausar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-ProximoTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Regras()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-ResolverMao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-SetView()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Awake()_13]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-Build()_1]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-LimparAoTrocarCena()]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-OnDestroy()_5]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-SetTarget()]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-Update()_17]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[Instance_9]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[InteractionPrompt]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,19 +25,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_CheckpointSystem]]
-- 4 edges to [[_COMMUNITY_PlayerController]]
-- 4 edges to [[_COMMUNITY_Community 41]]
-- 2 edges to [[_COMMUNITY_dot-SaveSlot]]
-- 1 edge to [[_COMMUNITY_com.unity.2d.tooling]]
-- 1 edge to [[_COMMUNITY_MonoBehaviour]]
-- 1 edge to [[_COMMUNITY_InteracaoCapitulo1]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
-- 1 edge to [[_COMMUNITY_packages-lock.json]]
+- 6 edges to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 24]]
+- 2 edges to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
-- [[dot-MostrarModal()_1]] - degree 12, connects to 4 communities
-- [[dot-SetView()]] - degree 6, connects to 4 communities
-- [[dot-Comecar()]] - degree 7, connects to 3 communities
-- [[dot-Regras()]] - degree 10, connects to 2 communities
-- [[dot-ResolverMao()]] - degree 10, connects to 2 communities
+- [[InteractionPrompt]] - degree 12, connects to 4 communities
+- [[dot-Build()_1]] - degree 7, connects to 2 communities
+- [[dot-LimparAoTrocarCena()]] - degree 4, connects to 1 community
+- [[dot-SetTarget()]] - degree 3, connects to 1 community

@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-Aparecer()]] - `method` [EXTRACTED]
-- [[dot-Awake()_12]] - `method` [EXTRACTED]
-- [[dot-Construir()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_11]] - `method` [EXTRACTED]
+- [[dot-Construir()_2]] - `method` [EXTRACTED]
 - [[dot-Dizer()]] - `method` [EXTRACTED]
 - [[dot-Enfileirar()]] - `method` [EXTRACTED]
 - [[dot-Limpar()_1]] - `method` [EXTRACTED]

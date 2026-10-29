@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "com.unity.modules.unitywebrequest"
-location: "L7"
+community: "Community 35"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_35
 ---
 
 # Prompt
 
 ## Connections
-- [[Capitulo2Interactable]] - `defines` [EXTRACTED]
+- [[Capitulo2Portal]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_35

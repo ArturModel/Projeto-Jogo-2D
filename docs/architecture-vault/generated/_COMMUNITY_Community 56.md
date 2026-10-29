@@ -1,19 +1,15 @@
 ---
 type: community
-members: 6
+members: 2
 ---
 
 # Community 56
 
-**Members:** 6 nodes
+**Members:** 2 nodes
 
 ## Members
-- [[dot-OnScene()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
-- [[dot-OnSceneLoaded()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-OnSceneLoaded()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-OnSceneLoaded()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[LoadSceneMode]] - code
-- [[Scene]] - code
+- [[dot-Error()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
+- [[LogType]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,18 +19,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_com.unity.modules.imgui]]
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_manifest.json]]
-- 2 edges to [[_COMMUNITY_dependencies_1]]
-- 2 edges to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Capitulo1Director]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 0]]
 
 ## Top bridge nodes
-- [[Scene]] - degree 7, connects to 2 communities
-- [[dot-OnScene()]] - degree 5, connects to 2 communities
-- [[dot-OnSceneLoaded()]] - degree 4, connects to 2 communities
-- [[LoadSceneMode]] - degree 5, connects to 1 community
-- [[dot-OnSceneLoaded()_1]] - degree 4, connects to 1 community
+- [[dot-Error()]] - degree 2, connects to 1 community

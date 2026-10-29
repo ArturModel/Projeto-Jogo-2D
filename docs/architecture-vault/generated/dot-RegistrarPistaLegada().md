@@ -12,7 +12,7 @@ tags:
 # .RegistrarPistaLegada()
 
 ## Connections
-- [[dot-Interact()_6]] - `calls` [EXTRACTED]
+- [[dot-Interact()_1]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[ItemDeCena]] - `method` [EXTRACTED]

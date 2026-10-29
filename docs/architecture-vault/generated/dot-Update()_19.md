@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "dependencies"
-location: "L138"
+community: "Community 45"
+location: "L737"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_45
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
-- [[EstradaScroller]] - `method` [EXTRACTED]
+- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Retroceder()]] - `calls` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_45

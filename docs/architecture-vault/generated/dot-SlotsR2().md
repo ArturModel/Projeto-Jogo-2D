@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 28"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_28
 ---
 
 # .SlotsR2()
@@ -40,4 +40,4 @@ tags:
 - [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_28

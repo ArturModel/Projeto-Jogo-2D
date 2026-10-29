@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "com.unity.modules.jsonserialize"
-location: "L270"
+community: "Community 25"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/Community_25
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-FecharOpcoes()]] - `calls` [INFERRED]
-- [[dot-MostrarCategorias()]] - `calls` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
+- [[dot-Definir()_1]] - `calls` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/Community_25

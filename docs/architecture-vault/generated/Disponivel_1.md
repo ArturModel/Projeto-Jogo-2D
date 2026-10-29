@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "PrologoDirector"
-location: "L22"
+community: "Community 25"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoDirector
+  - community/Community_25
 ---
 
 # Disponivel
 
 ## Connections
-- [[ObjetoCarro]] - `defines` [EXTRACTED]
+- [[C2DialogueBranch]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoDirector
+#graphify/code #graphify/EXTRACTED #community/Community_25

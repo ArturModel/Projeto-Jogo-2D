@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # Texture2D
@@ -22,8 +22,8 @@ tags:
 - [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-WritePng()]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
-- [[Camada_1]] - `references` [EXTRACTED]
+- [[Camada]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

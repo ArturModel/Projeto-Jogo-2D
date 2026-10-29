@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "dependencies"
+community: "Community 9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_9
 ---
 
 # Color
@@ -18,9 +18,9 @@ tags:
 - [[dot-Circle()]] - `references` [EXTRACTED]
 - [[dot-ColocarPosteComLuz()]] - `references` [EXTRACTED]
 - [[dot-CriarSpriteCirculo()]] - `references` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-Disc()]] - `references` [EXTRACTED]
 - [[dot-FillRect()]] - `references` [EXTRACTED]
 - [[dot-GerarIconeBlip()]] - `references` [EXTRACTED]
@@ -28,8 +28,8 @@ tags:
 - [[dot-Line()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-Pintar()]] - `references` [EXTRACTED]
-- [[dot-Quad()_1]] - `references` [EXTRACTED]
 - [[dot-Quad()]] - `references` [EXTRACTED]
+- [[dot-Quad()_1]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
 - [[dot-RoomLight()]] - `references` [EXTRACTED]
 - [[dot-Solid()]] - `references` [EXTRACTED]
@@ -46,4 +46,4 @@ tags:
 - [[SantaRitaForeground]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_9

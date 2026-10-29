@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "dependencies"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_23
 ---
 
 # Button
@@ -16,9 +16,10 @@ tags:
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
+- [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-Click()]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
@@ -32,4 +33,4 @@ tags:
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_23

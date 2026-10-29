@@ -12,7 +12,7 @@ tags:
 # .WaitForEditor()
 
 ## Connections
-- [[dot-ConfigureEnvironment()]] - `calls` [EXTRACTED]
+- [[dot-ConectarManualmente()]] - `calls` [EXTRACTED]
 - [[SantaRitaMcpSetup]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_84

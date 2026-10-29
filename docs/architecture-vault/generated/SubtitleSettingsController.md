@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "SceneFader"
+community: "Community 15"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_15
 ---
 
 # SubtitleSettingsController
@@ -17,7 +17,7 @@ tags:
 - [[dot-AlterarTamanho()]] - `method` [EXTRACTED]
 - [[dot-AplicarPreview()]] - `method` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_1]] - `method` [EXTRACTED]
+- [[dot-OnDisable()]] - `method` [EXTRACTED]
 - [[dot-Start()_4]] - `method` [EXTRACTED]
 - [[dot-Vincular()]] - `method` [EXTRACTED]
 - [[FundoEscuroAtivo]] - `defines` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[TMP_Text]] - `references` [EXTRACTED]
 - [[Toggle]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_15

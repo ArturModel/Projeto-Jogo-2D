@@ -12,7 +12,7 @@ tags:
 # .CarregarConteudo()
 
 ## Connections
-- [[dot-Awake()_7]] - `calls` [EXTRACTED]
+- [[dot-Awake()_6]] - `calls` [EXTRACTED]
 - [[dot-Dados()]] - `calls` [EXTRACTED]
 - [[C2ContentData]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]

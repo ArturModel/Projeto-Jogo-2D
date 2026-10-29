@@ -15,7 +15,6 @@ tags:
 - [[dot-AbrirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-Build()]] - `calls` [EXTRACTED]
 - [[dot-Build()_1]] - `calls` [EXTRACTED]
-- [[dot-Caixa()]] - `calls` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
 - [[dot-LoadSprite()]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]

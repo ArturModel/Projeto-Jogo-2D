@@ -12,12 +12,12 @@ tags:
 
 ## Connections
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
 - [[dot-CreateLabel()]] - `references` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-Label()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]

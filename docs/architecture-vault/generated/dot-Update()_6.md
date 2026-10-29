@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L269"
+community: "Community 20"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_20
 ---
 
 # .Update()
 
 ## Connections
-- [[GameMessageUI]] - `method` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_20

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 location: "L529"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # .SavePoolTablePng()
@@ -18,4 +18,4 @@ tags:
 - [[dot-WritePng()]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter1Builder]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

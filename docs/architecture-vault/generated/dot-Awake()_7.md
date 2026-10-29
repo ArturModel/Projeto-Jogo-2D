@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "Community 25"
-location: "L48"
+community: "Community 26"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_26
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-CarregarConteudo()]] - `calls` [EXTRACTED]
-- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
+- [[dot-FadeIn()]] - `calls` [EXTRACTED]
+- [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_26

@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "GameState"
-location: "L29"
+community: "Community 2"
+location: "L386"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/Community_2
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Interior()_1]] - `calls` [EXTRACTED]
-- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
+- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/Community_2

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
 type: "code"
-community: "com.unity.modules.unitywebrequest"
+community: "Community 18"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_18
 ---
 
 # SantaRitaArtProduction
@@ -21,4 +21,4 @@ tags:
 - [[dot-NeutralSprite()]] - `method` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_18

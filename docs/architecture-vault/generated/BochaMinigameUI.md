@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "CheckpointSystem"
+community: "Community 17"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CheckpointSystem
+  - community/Community_17
 ---
 
 # BochaMinigameUI
@@ -19,23 +19,23 @@ tags:
 - [[dot-Botao()_1]] - `method` [EXTRACTED]
 - [[dot-CancelarCarga()]] - `method` [EXTRACTED]
 - [[dot-Comecar()]] - `method` [EXTRACTED]
-- [[dot-Construir()_2]] - `method` [EXTRACTED]
+- [[dot-Construir()_1]] - `method` [EXTRACTED]
 - [[dot-ContatoReal()]] - `method` [EXTRACTED]
 - [[dot-Derrota()]] - `method` [EXTRACTED]
 - [[dot-EfetuarLancamento()]] - `method` [EXTRACTED]
 - [[dot-EntradaTeclado()]] - `method` [EXTRACTED]
 - [[dot-EscolherTipo()]] - `method` [EXTRACTED]
-- [[dot-Fechar()_3]] - `method` [EXTRACTED]
+- [[dot-Fechar()_1]] - `method` [EXTRACTED]
 - [[dot-ForcaNoTempo()]] - `method` [EXTRACTED]
 - [[dot-ImpactoReal()]] - `method` [EXTRACTED]
 - [[dot-IniciarArraste()]] - `method` [EXTRACTED]
 - [[dot-Label()]] - `method` [EXTRACTED]
 - [[dot-Lancar()]] - `method` [EXTRACTED]
-- [[dot-MostrarModal()_1]] - `method` [EXTRACTED]
+- [[dot-MostrarModal()]] - `method` [EXTRACTED]
 - [[dot-MoverMira()]] - `method` [EXTRACTED]
 - [[dot-MudarVista()]] - `method` [EXTRACTED]
 - [[dot-NovaMao()]] - `method` [EXTRACTED]
-- [[dot-OnApplicationFocus()_1]] - `method` [EXTRACTED]
+- [[dot-OnApplicationFocus()]] - `method` [EXTRACTED]
 - [[dot-Painel()]] - `method` [EXTRACTED]
 - [[dot-Pausar()]] - `method` [EXTRACTED]
 - [[dot-PodeConsultar()]] - `method` [EXTRACTED]
@@ -72,4 +72,4 @@ tags:
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CheckpointSystem
+#graphify/code #graphify/EXTRACTED #community/Community_17

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "VideoSettingsController"
+community: "Community 35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/Community_35
 ---
 
 # MenuItem
@@ -29,4 +29,4 @@ tags:
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_35

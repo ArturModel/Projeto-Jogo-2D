@@ -21,9 +21,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_dot-CreateCanvas]]
-- 1 edge to [[_COMMUNITY_VideoSettingsController]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 35]]
 
 ## Top bridge nodes
 - [[SantaRitaMcpSetup]] - degree 4, connects to 1 community
-- [[dot-ConectarManualmente()]] - degree 3, connects to 1 community
+- [[dot-ConectarManualmente()]] - degree 4, connects to 1 community

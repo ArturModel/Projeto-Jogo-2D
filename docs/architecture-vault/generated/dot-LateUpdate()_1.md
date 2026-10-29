@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "GameState"
-location: "L13"
+community: "Community 16"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/Community_16
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[Light2D]] - `references` [EXTRACTED]
-- [[SantaRitaRimLight]] - `method` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/Community_16

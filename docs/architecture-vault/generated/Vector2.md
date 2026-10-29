@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "manifest.json"
+community: "Community 6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_6
 ---
 
 # Vector2
@@ -18,10 +18,10 @@ tags:
 - [[dot-Balim()]] - `references` [EXTRACTED]
 - [[dot-Blocked()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
+- [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-Box()]] - `references` [EXTRACTED]
 - [[dot-BrilhoEm()]] - `references` [EXTRACTED]
 - [[dot-Building()]] - `references` [EXTRACTED]
-- [[dot-Caixa()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-CarregarSprite()]] - `references` [EXTRACTED]
 - [[dot-Circle()]] - `references` [EXTRACTED]
@@ -85,10 +85,10 @@ tags:
 - [[dot-Portal()_1]] - `references` [EXTRACTED]
 - [[dot-PosicaoNoMapa()]] - `references` [EXTRACTED]
 - [[dot-PosicaoValidaSemColisao()]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
-- [[dot-Posicionar()]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_1]] - `references` [EXTRACTED]
+- [[dot-Posicionar()]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_2]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `references` [EXTRACTED]
 - [[dot-Preparar()_1]] - `references` [EXTRACTED]
 - [[dot-Project()]] - `references` [EXTRACTED]
 - [[dot-ProjectReady()]] - `references` [EXTRACTED]
@@ -149,4 +149,4 @@ tags:
 - [[UIFactory]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_6

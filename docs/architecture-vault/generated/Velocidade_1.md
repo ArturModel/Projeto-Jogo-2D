@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "dependencies"
+community: "Community 48"
 location: "L67"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_48
 ---
 
 # Velocidade
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[EstradaScroller]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_48

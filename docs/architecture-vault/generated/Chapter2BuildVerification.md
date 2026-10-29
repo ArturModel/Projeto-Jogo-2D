@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "VideoSettingsController"
+community: "Community 31"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/Community_31
 ---
 
 # Chapter2BuildVerification
@@ -18,11 +18,11 @@ tags:
 - [[dot-RegisterCampaignScenes()]] - `method` [EXTRACTED]
 - [[dot-RequireSavedScenes()]] - `method` [EXTRACTED]
 - [[dot-Revision()]] - `method` [EXTRACTED]
-- [[dot-Run()_2]] - `method` [EXTRACTED]
+- [[dot-Run()_3]] - `method` [EXTRACTED]
 - [[dot-Scenes()]] - `method` [EXTRACTED]
 - [[dot-SourceHash()]] - `method` [EXTRACTED]
 - [[Chapter2BuildVerification.cs]] - `contains` [EXTRACTED]
 - [[Evidence]] - `defines` [EXTRACTED]
 - [[ForcarDevelopment]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_31

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "MonoBehaviour"
+community: "Community 9"
 location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/Community_9
 ---
 
 # .CourtPoint()
@@ -18,4 +18,4 @@ tags:
 - [[Camera]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/Community_9

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "OptionsPanelController"
+community: "Community 16"
 location: "L135"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/Community_16
 ---
 
 # .Routine()
@@ -18,4 +18,4 @@ tags:
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 - [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/Community_16

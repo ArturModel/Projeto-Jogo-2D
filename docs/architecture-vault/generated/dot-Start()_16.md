@@ -1,24 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 5"
-location: "L155"
+community: "Community 6"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_6
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
-- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
-- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
+- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
+- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
+- [[CameraFollow]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_6

@@ -11,7 +11,7 @@ tags:
 # Rigidbody2D
 
 ## Connections
-- [[dot-Awake()_17]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
 - [[dot-Place()]] - `references` [EXTRACTED]
 - [[dot-TeleportarPara()]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]

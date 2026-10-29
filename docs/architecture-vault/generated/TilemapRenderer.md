@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.modules.unitywebrequest"
+community: "Community 18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_18
 ---
 
 # TilemapRenderer
@@ -18,4 +18,4 @@ tags:
 - [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_18

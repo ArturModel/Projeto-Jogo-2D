@@ -62,7 +62,7 @@ public class MenuPausa : MonoBehaviour
 
     private const float LarguraPausa = 246f;
     private const float AlturaPausa = 280f;
-    private const float LarguraOpcoes = 370f;
+    private const float LarguraOpcoes = 246f;
 
     private void Awake()
     {
@@ -180,17 +180,17 @@ public class MenuPausa : MonoBehaviour
 
         if (GameState.TemProgressoNaoSalvo)
         {
-            rotuloStatusSave.text = "Progresso não salvo (salve em um Orelhão)";
+            rotuloStatusSave.text = "Progresso não salvo";
             rotuloStatusSave.color = new Color(0.86f, 0.66f, 0.34f, 0.95f);
         }
         else if (CheckpointSystem.HasCheckpoint)
         {
-            rotuloStatusSave.text = "Salvo no último Orelhão";
+            rotuloStatusSave.text = "Jogo salvo";
             rotuloStatusSave.color = new Color(0.58f, 0.76f, 0.58f, 0.95f);
         }
         else
         {
-            rotuloStatusSave.text = "Orelhões salvam a investigação";
+            rotuloStatusSave.text = "Progresso não salvo";
             rotuloStatusSave.color = new Color(0.68f, 0.65f, 0.58f, 0.85f);
         }
     }
@@ -249,8 +249,8 @@ public class MenuPausa : MonoBehaviour
         Button menu = BotaoPausa(pausaRect, "Menu Principal", -20f, indPausa);
         Button sair = BotaoPausa(pausaRect, "Sair", -52f, indPausa);
 
-        rotuloStatusSave = Rotulo(pausaRect, "", 11f, new Vector2(10f, -102f),
-                                  new Vector2(LarguraPausa - 50f, 22f), TextAlignmentOptions.Center);
+        rotuloStatusSave = Rotulo(pausaRect, "", 11f, new Vector2(0f, -105f),
+                                  new Vector2(LarguraPausa - 30f, 22f), TextAlignmentOptions.Center);
         rotuloStatusSave.color = new Color(0.65f, 0.62f, 0.56f, 0.75f);
         rotuloStatusSave.textWrappingMode = TextWrappingModes.Normal;
 
@@ -259,54 +259,61 @@ public class MenuPausa : MonoBehaviour
         sair.onClick.AddListener(Sair);
         primeiroBotao = continuar.gameObject;
 
-        // --- caixa das configurações ------------------------------------
-        painelOpcoes = Caixa(tela, "PainelOpcoes", new Vector2(LarguraOpcoes, 290f),
-                             out RectTransform opcoesRect);
-        TMP_Text tituloOpcoes = Titulo(opcoesRect, "CONFIGURAÇÕES", 114f, LarguraOpcoes);
-        float xInd = -LarguraOpcoes / 2f + 22f;
+        // --- caixa das configurações (mesma placa de ferro à esquerda) --
+        painelOpcoes = CaixaPausa(tela, "PainelOpcoes", new Vector2(LarguraPausa, AlturaPausa),
+                                  out RectTransform opcoesRect);
+        TMP_Text tituloOpcoes = Titulo(opcoesRect, "CONFIGURAÇÕES", 92f, LarguraPausa);
+        float xInd = -88f;
 
-        // categorias
+        // categorias (mesmo estilo de botões e papiro da pausa)
         CanvasGroup categorias = SubPainel(opcoesRect, "Categorias", out RectTransform catRect);
-        RectTransform indCat = Indicador(catRect, xInd);
-        Button bAudio = Botao(catRect, "ÁUDIO", 44f, indCat);
-        Button bVideo = Botao(catRect, "VÍDEO", 14f, indCat);
-        Button bLegendas = Botao(catRect, "LEGENDAS", -16f, indCat);
-        Button bVoltarCat = Botao(catRect, "VOLTAR", -76f, indCat);
+        RectTransform indCat = IndicadorPausa(catRect);
+        Button bAudio = BotaoPausa(catRect, "Áudio", 44f, indCat);
+        Button bVideo = BotaoPausa(catRect, "Vídeo", 12f, indCat);
+        Button bLegendas = BotaoPausa(catRect, "Legendas", -20f, indCat);
+        Button bVoltarCat = BotaoPausa(catRect, "Voltar", -52f, indCat);
 
         // áudio
         CanvasGroup audioGrupo = SubPainel(opcoesRect, "Audio", out RectTransform audioRect);
         RectTransform indAudio = Indicador(audioRect, xInd);
-        Slider geral = LinhaSlider(audioRect, "VOLUME GERAL", 54f, 0f, 1f, false, indAudio, out _);
-        Slider musica = LinhaSlider(audioRect, "MÚSICA", 24f, 0f, 1f, false, indAudio, out _);
-        Slider efeitos = LinhaSlider(audioRect, "EFEITOS", -6f, 0f, 1f, false, indAudio, out _);
-        Button bVoltarAudio = Botao(audioRect, "VOLTAR", -76f, indAudio);
+        Slider geral = LinhaSlider(audioRect, "VOLUME GERAL", 44f, 0f, 1f, false, indAudio, out _);
+        Slider musica = LinhaSlider(audioRect, "MÚSICA", 12f, 0f, 1f, false, indAudio, out _);
+        Slider efeitos = LinhaSlider(audioRect, "EFEITOS", -20f, 0f, 1f, false, indAudio, out _);
+        Button bVoltarAudio = Botao(audioRect, "VOLTAR", -58f, indAudio);
 
         // vídeo
         CanvasGroup videoGrupo = SubPainel(opcoesRect, "Video", out RectTransform videoRect);
         RectTransform indVideo = Indicador(videoRect, xInd);
-        Toggle telaCheia = LinhaToggle(videoRect, "TELA CHEIA", 70f, indVideo);
-        TMP_Dropdown resolucao = LinhaDropdown(videoRect, "RESOLUÇÃO", 42f, indVideo);
-        Toggle vsync = LinhaToggle(videoRect, "VSYNC", 14f, indVideo);
-        Slider brilho = LinhaSlider(videoRect, "BRILHO", -14f, 0f, 1f, false, indVideo,
+        Toggle telaCheia = LinhaToggle(videoRect, "TELA CHEIA", 48f, indVideo);
+        TMP_Dropdown resolucao = LinhaStepperResolucao(videoRect, "RESOLUÇÃO", 24f, indVideo);
+        Toggle vsync = LinhaToggle(videoRect, "VSYNC", 0f, indVideo);
+        Slider brilho = LinhaSlider(videoRect, "BRILHO", -24f, 0f, 1f, false, indVideo,
                                     out TMP_Text valorBrilho);
-        Toggle efeitosSuaves = LinhaToggle(videoRect, "EFEITOS SUAVES", -42f, indVideo);
+        Toggle efeitosSuaves = LinhaToggle(videoRect, "EFEITOS SUAVES", -48f, indVideo);
         efeitosSuaves.SetIsOnWithoutNotify(ReduzirEfeitosIntensos);
         efeitosSuaves.onValueChanged.AddListener(v => ReduzirEfeitosIntensos = v);
-        Button bVoltarVideo = Botao(videoRect, "VOLTAR", -86f, indVideo);
+        Button bVoltarVideo = Botao(videoRect, "VOLTAR", -74f, indVideo);
 
         // legendas
         CanvasGroup legendasGrupo = SubPainel(opcoesRect, "Legendas", out RectTransform legRect);
         RectTransform indLeg = Indicador(legRect, xInd);
-        Toggle ativas = LinhaToggle(legRect, "LEGENDAS ATIVAS", 60f, indLeg);
-        Slider tamanho = LinhaSlider(legRect, "TAMANHO", 30f, 50f, 150f, true, indLeg,
+        Toggle ativas = LinhaToggle(legRect, "LEGENDAS ATIVAS", 48f, indLeg);
+        Slider tamanho = LinhaSlider(legRect, "TAMANHO", 22f, 50f, 150f, true, indLeg,
                                      out TMP_Text valorTamanho);
-        Toggle fundoLegenda = LinhaToggle(legRect, "FUNDO ESCURO", 0f, indLeg);
+        Toggle fundoLegenda = LinhaToggle(legRect, "FUNDO ESCURO", -4f, indLeg);
 
-        Image fundoPreview = Imagem(legRect, "FundoPreview", new Color(0f, 0f, 0f, 0.65f));
-        Posicionar(fundoPreview.rectTransform, new Vector2(0f, -36f), new Vector2(230f, 28f));
-        TMP_Text preview = Rotulo(legRect, "Exemplo de legenda", 18f, new Vector2(0f, -36f),
-                                  new Vector2(230f, 28f), TextAlignmentOptions.Center);
-        Button bVoltarLeg = Botao(legRect, "VOLTAR", -80f, indLeg);
+        // Card refinado de preview de legenda
+        Image molduraPreview = Imagem(legRect, "MolduraPreview", new Color(0.35f, 0.30f, 0.25f, 0.6f));
+        Posicionar(molduraPreview.rectTransform, new Vector2(0f, -36f), new Vector2(144f, 20f));
+        molduraPreview.raycastTarget = false;
+
+        Image fundoPreview = Imagem(molduraPreview.transform, "FundoPreview", new Color(0.04f, 0.04f, 0.04f, 0.85f));
+        Posicionar(fundoPreview.rectTransform, Vector2.zero, new Vector2(142f, 18f));
+        fundoPreview.raycastTarget = false;
+
+        TMP_Text preview = Rotulo(molduraPreview.transform, "Exemplo de legenda", 13f, Vector2.zero,
+                                  new Vector2(140f, 18f), TextAlignmentOptions.Center);
+        Button bVoltarLeg = Botao(legRect, "VOLTAR", -74f, indLeg);
 
         // --- a lógica do menu principal ---------------------------------
         MenuPanelTransition transicao = raiz.AddComponent<MenuPanelTransition>();
@@ -393,6 +400,21 @@ public class MenuPausa : MonoBehaviour
 
     private TMP_Text TituloPausa(RectTransform pai, string texto, float y, float largura)
     {
+        Sprite sprTitulo = UIFactory.LoadSprite("PainelPausa_Titulo");
+        if (sprTitulo != null)
+        {
+            GameObject tituloGo = new GameObject("TituloGrafico", typeof(RectTransform), typeof(Image));
+            tituloGo.transform.SetParent(pai, false);
+            Image tituloImg = tituloGo.GetComponent<Image>();
+            tituloImg.sprite = sprTitulo;
+            tituloImg.color = Color.white;
+            tituloImg.raycastTarget = false;
+            // O sprite de título contém o carimbo estilizado 'PAUSADO' e a linha vermelha rústica original.
+            // Proporções: 243x78 px -> em UI proporcional à placa 246x280 fica 132x42 px.
+            Posicionar((RectTransform)tituloGo.transform, new Vector2(0f, 85f), new Vector2(132f, 42f));
+            return null;
+        }
+
         TMP_Text titulo = Rotulo(pai, texto, 28f, new Vector2(0f, y),
                                  new Vector2(largura - 40f, 34f), TextAlignmentOptions.Center);
         titulo.color = new Color(0.88f, 0.85f, 0.78f, 1f);
@@ -455,40 +477,14 @@ public class MenuPausa : MonoBehaviour
         Posicionar((RectTransform)go.transform, new Vector2(0f, y), new Vector2(196f, 30f));
         go.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
 
-        TMP_Text rotulo = Rotulo(go.transform, texto, 20f, new Vector2(8f, 0f),
-                                 new Vector2(170f, 26f), TextAlignmentOptions.Center);
+        // Alinhado à esquerda com recuo de 37f para posicionar o texto ao lado da seta do papiro.
+        // Assim 'Continuar', 'Configurações', 'Menu Principal' e 'Sair' formam uma coluna uniforme e fiel ao protótipo.
+        TMP_Text rotulo = Rotulo(go.transform, texto, 20f, new Vector2(14f, 0f),
+                                 new Vector2(150f, 26f), TextAlignmentOptions.MidlineLeft);
 
         Button botao = go.GetComponent<Button>();
         SelecionavelPausa(botao, rotulo, indicador);
         return botao;
-    }
-
-    // A moldura é a mesma das caixas de diálogo do jogo, com toque de papel envelhecido e flor.
-    private CanvasGroup Caixa(Transform pai, string nome, Vector2 tamanho, out RectTransform rect)
-    {
-        Image caixa = UIFactory.CreateBox(pai, nome, "DialogueBox");
-        caixa.raycastTarget = true;
-        caixa.color = new Color(0.95f, 0.90f, 0.80f, 0.98f);
-        rect = caixa.rectTransform;
-        Posicionar(rect, Vector2.zero, tamanho);
-
-        // Linha de margem vermelha discreta à esquerda (caderno gasto)
-        Image margem = Imagem(rect, "LinhaMargemVermelha", new Color(0.62f, 0.22f, 0.20f, 0.28f));
-        margem.raycastTarget = false;
-        Posicionar(margem.rectTransform, new Vector2(-tamanho.x * 0.5f + 16f, 0f), new Vector2(1.5f, tamanho.y - 24f));
-
-        // Pequena flor seca nos cantos superiores
-        TMP_Text florEsq = Rotulo(rect, "*", 16f, new Vector2(-tamanho.x * 0.5f + 16f, tamanho.y * 0.5f - 14f),
-                                  new Vector2(20f, 20f), TextAlignmentOptions.Center);
-        florEsq.color = new Color(0.76f, 0.34f, 0.32f, 0.65f);
-        florEsq.raycastTarget = false;
-
-        TMP_Text florDir = Rotulo(rect, "*", 16f, new Vector2(tamanho.x * 0.5f - 16f, tamanho.y * 0.5f - 14f),
-                                  new Vector2(20f, 20f), TextAlignmentOptions.Center);
-        florDir.color = new Color(0.76f, 0.34f, 0.32f, 0.65f);
-        florDir.raycastTarget = false;
-
-        return caixa.gameObject.AddComponent<CanvasGroup>();
     }
 
     private static CanvasGroup SubPainel(RectTransform pai, string nome, out RectTransform rect)
@@ -514,15 +510,28 @@ public class MenuPausa : MonoBehaviour
 
     private TMP_Text Titulo(RectTransform pai, string texto, float y, float largura)
     {
-        TMP_Text titulo = Rotulo(pai, texto, 30f, new Vector2(0f, y),
-                                 new Vector2(largura - 20f, 36f), TextAlignmentOptions.Center);
-        titulo.color = corDestaque;
+        TMP_Text titulo = Rotulo(pai, texto, 24f, new Vector2(0f, y),
+                                 new Vector2(largura - 30f, 32f), TextAlignmentOptions.Center);
+        titulo.color = new Color(0.88f, 0.85f, 0.78f, 1f);
+
+        Sprite sprLinha = UIFactory.LoadSprite("PainelPausa_Linha");
+        if (sprLinha != null)
+        {
+            GameObject linhaGo = new GameObject("LinhaVermelha", typeof(RectTransform), typeof(Image));
+            linhaGo.transform.SetParent(pai, false);
+            Image linhaImg = linhaGo.GetComponent<Image>();
+            linhaImg.sprite = sprLinha;
+            linhaImg.color = Color.white;
+            linhaImg.raycastTarget = false;
+            Posicionar((RectTransform)linhaGo.transform, new Vector2(0f, y - 18f), new Vector2(110f, 3f));
+        }
+
         return titulo;
     }
 
     private RectTransform Indicador(RectTransform pai, float x)
     {
-        TMP_Text seta = Rotulo(pai, ">", 22f, new Vector2(x, 0f), new Vector2(20f, 26f),
+        TMP_Text seta = Rotulo(pai, ">", 20f, new Vector2(x, 0f), new Vector2(18f, 24f),
                                TextAlignmentOptions.Center);
         seta.color = corDestaque;
         return seta.rectTransform;
@@ -546,11 +555,11 @@ public class MenuPausa : MonoBehaviour
     {
         GameObject go = new GameObject(texto, typeof(RectTransform), typeof(Image), typeof(Button));
         go.transform.SetParent(pai, false);
-        Posicionar((RectTransform)go.transform, new Vector2(0f, y), new Vector2(210f, 26f));
+        Posicionar((RectTransform)go.transform, new Vector2(0f, y), new Vector2(160f, 24f));
         go.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);   // só área de clique
 
-        TMP_Text rotulo = Rotulo(go.transform, texto, 22f, Vector2.zero,
-                                 new Vector2(210f, 26f), TextAlignmentOptions.Center);
+        TMP_Text rotulo = Rotulo(go.transform, texto, 16f, Vector2.zero,
+                                 new Vector2(160f, 24f), TextAlignmentOptions.Center);
 
         Button botao = go.GetComponent<Button>();
         Selecionavel(botao, rotulo, indicador);
@@ -560,18 +569,23 @@ public class MenuPausa : MonoBehaviour
     private Slider LinhaSlider(RectTransform pai, string texto, float y, float min, float max,
                                bool inteiros, RectTransform indicador, out TMP_Text valor)
     {
-        Rotulo(pai, texto, 18f, new Vector2(-72f, y), new Vector2(140f, 24f),
-               TextAlignmentOptions.Left);
+        Rotulo(pai, texto, 13f, new Vector2(-36f, y), new Vector2(88f, 20f),
+               TextAlignmentOptions.MidlineLeft);
 
         GameObject go = DefaultControls.CreateSlider(new DefaultControls.Resources());
         go.transform.SetParent(pai, false);
-        Posicionar((RectTransform)go.transform, new Vector2(60f, y), new Vector2(110f, 10f));
+        Posicionar((RectTransform)go.transform, new Vector2(36f, y), new Vector2(52f, 6f));
 
-        go.transform.Find("Background").GetComponent<Image>().color = corControle;
-        go.transform.Find("Fill Area/Fill").GetComponent<Image>().color = corDestaque * 0.8f;
+        // Trilho com contraste nítido (visível de 0% a 100%)
+        Image trilho = go.transform.Find("Background").GetComponent<Image>();
+        trilho.color = new Color(0.22f, 0.20f, 0.18f, 1f);
+
+        Image preenchimento = go.transform.Find("Fill Area/Fill").GetComponent<Image>();
+        preenchimento.color = new Color(0.86f, 0.66f, 0.34f, 1f);
+
         Image alca = go.transform.Find("Handle Slide Area/Handle").GetComponent<Image>();
-        alca.rectTransform.sizeDelta = new Vector2(8f, 6f);
-        alca.color = corTexto;
+        alca.rectTransform.sizeDelta = new Vector2(5f, 10f);
+        alca.color = new Color(0.88f, 0.85f, 0.78f, 1f);
 
         Slider slider = go.GetComponent<Slider>();
         slider.minValue = min;
@@ -579,68 +593,196 @@ public class MenuPausa : MonoBehaviour
         slider.wholeNumbers = inteiros;
         Selecionavel(slider, alca, indicador);
 
-        valor = Rotulo(pai, "", 18f, new Vector2(145f, y), new Vector2(48f, 24f),
-                       TextAlignmentOptions.Right);
+        valor = Rotulo(pai, "", 12f, new Vector2(76f, y), new Vector2(24f, 20f),
+                       TextAlignmentOptions.MidlineRight);
         return slider;
     }
 
     private Toggle LinhaToggle(RectTransform pai, string texto, float y, RectTransform indicador)
     {
-        Rotulo(pai, texto, 18f, new Vector2(-72f, y), new Vector2(140f, 24f),
-               TextAlignmentOptions.Left);
+        Rotulo(pai, texto, 13f, new Vector2(-36f, y), new Vector2(88f, 20f),
+               TextAlignmentOptions.MidlineLeft);
 
         GameObject go = DefaultControls.CreateToggle(new DefaultControls.Resources());
         go.transform.SetParent(pai, false);
-        Posicionar((RectTransform)go.transform, new Vector2(20f, y), new Vector2(18f, 18f));
+        Posicionar((RectTransform)go.transform, new Vector2(45f, y), new Vector2(16f, 16f));
 
         // o rótulo padrão é Text legado; o texto da linha já está ao lado
         Destroy(go.transform.Find("Label").gameObject);
 
-        Image caixa = go.transform.Find("Background").GetComponent<Image>();
-        caixa.color = corControle;
-        UIFactory.Stretch(caixa.rectTransform);
+        // Moldura externa da caixa (bronze/ferro escovado com bom contraste)
+        Image moldura = go.transform.Find("Background").GetComponent<Image>();
+        moldura.color = new Color(0.42f, 0.38f, 0.32f, 1f);
+        UIFactory.Stretch(moldura.rectTransform);
+
+        // Fundo escavado interno (cavidade escura com 1px de respiro)
+        Image cavidade = Imagem(moldura.transform, "Cavidade", new Color(0.08f, 0.07f, 0.06f, 1f));
+        Posicionar(cavidade.rectTransform, Vector2.zero, new Vector2(14f, 14f));
+        cavidade.raycastTarget = false;
+
+        // Indicador de marcação centralizado proporcional
         Image marca = go.transform.Find("Background/Checkmark").GetComponent<Image>();
         marca.color = corDestaque;
+        marca.transform.SetParent(cavidade.transform, false);
+        Posicionar(marca.rectTransform, Vector2.zero, new Vector2(8f, 8f));
 
         Toggle toggle = go.GetComponent<Toggle>();
-        Selecionavel(toggle, caixa, indicador);
+        Selecionavel(toggle, moldura, indicador);
         return toggle;
     }
 
-    private TMP_Dropdown LinhaDropdown(RectTransform pai, string texto, float y,
-                                       RectTransform indicador)
+    private TMP_Dropdown LinhaStepperResolucao(RectTransform pai, string texto, float y,
+                                               RectTransform indicador)
     {
-        Rotulo(pai, texto, 18f, new Vector2(-72f, y), new Vector2(140f, 24f),
-               TextAlignmentOptions.Left);
+        Rotulo(pai, texto, 13f, new Vector2(-36f, y), new Vector2(88f, 20f),
+               TextAlignmentOptions.MidlineLeft);
 
-        GameObject go = TMP_DefaultControls.CreateDropdown(new TMP_DefaultControls.Resources());
-        go.transform.SetParent(pai, false);
-        Posicionar((RectTransform)go.transform, new Vector2(80f, y), new Vector2(150f, 22f));
+        // Container do seletor horizontal (stepper)
+        GameObject container = new GameObject("StepperResolucao", typeof(RectTransform));
+        container.transform.SetParent(pai, false);
+        Posicionar((RectTransform)container.transform, new Vector2(48f, y), new Vector2(86f, 18f));
 
-        TMP_Dropdown dropdown = go.GetComponent<TMP_Dropdown>();
-        Image fundo = go.GetComponent<Image>();
-        fundo.color = corControle;
+        // Cria dropdown base (invisível na tela, apenas gerencia opções e eventos com VideoSettingsController)
+        GameObject goDropdown = TMP_DefaultControls.CreateDropdown(new TMP_DefaultControls.Resources());
+        goDropdown.transform.SetParent(container.transform, false);
+        Posicionar((RectTransform)goDropdown.transform, Vector2.zero, new Vector2(86f, 18f));
+        goDropdown.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
+        Transform arrow = goDropdown.transform.Find("Arrow");
+        if (arrow != null) arrow.gameObject.SetActive(false);
+        Transform label = goDropdown.transform.Find("Label");
+        if (label != null) label.gameObject.SetActive(false);
+        TMP_Dropdown dropdown = goDropdown.GetComponent<TMP_Dropdown>();
+        dropdown.template.gameObject.SetActive(false);
 
-        foreach (TMP_Text t in go.GetComponentsInChildren<TMP_Text>(true))
-        {
-            if (UIFactory.Font != null)
-            {
-                t.font = UIFactory.Font;
-            }
+        // Moldura do stepper
+        Image moldura = Imagem(container.transform, "Moldura", new Color(0.35f, 0.30f, 0.25f, 0.8f));
+        Posicionar(moldura.rectTransform, Vector2.zero, new Vector2(86f, 18f));
+        moldura.raycastTarget = false;
 
-            t.fontSize = 16f;
-            t.color = corTexto;
-        }
+        // Fundo interno escavado
+        Image fundoInterno = Imagem(moldura.transform, "Fundo", new Color(0.08f, 0.07f, 0.06f, 0.95f));
+        Posicionar(fundoInterno.rectTransform, Vector2.zero, new Vector2(84f, 16f));
+        fundoInterno.raycastTarget = false;
 
-        dropdown.template.GetComponent<Image>().color = corControle;
-        Transform item = dropdown.template.Find("Viewport/Content/Item");
-        if (item != null)
-        {
-            item.Find("Item Background").GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.08f);
-            item.Find("Item Checkmark").GetComponent<Image>().color = corDestaque;
-        }
+        // Texto central da resolução
+        TMP_Text textoResolucao = Rotulo(container.transform, "", 11f, Vector2.zero,
+                                         new Vector2(56f, 16f), TextAlignmentOptions.Center);
+        textoResolucao.color = corTexto;
 
-        Selecionavel(dropdown, fundo, indicador);
+        HorizontalStepperNavigation nav = goDropdown.AddComponent<HorizontalStepperNavigation>();
+        nav.Configurar(dropdown, textoResolucao, fonteSom, somSelecao);
+
+        // Botões laterais '<' e '>' para clique com mouse
+        BotaoSeta(container.transform, "<", new Vector2(-34f, 0f), nav.Retroceder);
+        BotaoSeta(container.transform, ">", new Vector2(34f, 0f), nav.Avancar);
+
+        Selecionavel(dropdown, moldura, indicador);
         return dropdown;
+    }
+
+    private Button BotaoSeta(Transform pai, string seta, Vector2 pos, System.Action acao)
+    {
+        GameObject go = new GameObject("Btn_" + seta, typeof(RectTransform), typeof(Image), typeof(Button));
+        go.transform.SetParent(pai, false);
+        Posicionar((RectTransform)go.transform, pos, new Vector2(16f, 16f));
+        go.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
+
+        TMP_Text rotulo = Rotulo(go.transform, seta, 13f, Vector2.zero, new Vector2(16f, 16f),
+                                 TextAlignmentOptions.Center);
+        rotulo.color = corTexto;
+
+        Button btn = go.GetComponent<Button>();
+        ColorBlock cb = btn.colors;
+        cb.normalColor = Color.white;
+        cb.highlightedColor = corDestaque;
+        cb.pressedColor = corDestaque * 0.8f;
+        btn.colors = cb;
+        btn.targetGraphic = rotulo;
+        if (acao != null)
+        {
+            btn.onClick.AddListener(new UnityAction(acao));
+        }
+        return btn;
+    }
+}
+
+public class HorizontalStepperNavigation : MonoBehaviour, ISelectHandler, IDeselectHandler
+{
+    private TMP_Dropdown dropdown;
+    private TMP_Text texto;
+    private AudioSource audioSource;
+    private AudioClip somSelecao;
+    private bool selecionado;
+
+    public void Configurar(TMP_Dropdown d, TMP_Text t, AudioSource fonte, AudioClip som)
+    {
+        dropdown = d;
+        texto = t;
+        audioSource = fonte;
+        somSelecao = som;
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        selecionado = true;
+        if (texto != null) texto.color = new Color(0.95f, 0.72f, 0.36f, 1f);
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        selecionado = false;
+        if (texto != null) texto.color = new Color(0.88f, 0.86f, 0.80f, 1f);
+    }
+
+    private void Update()
+    {
+        if (dropdown == null || texto == null) return;
+
+        if (dropdown.options != null && dropdown.options.Count > 0 &&
+            dropdown.value >= 0 && dropdown.value < dropdown.options.Count)
+        {
+            string nomeOpcao = dropdown.options[dropdown.value].text;
+            if (texto.text != nomeOpcao)
+            {
+                texto.text = nomeOpcao;
+            }
+        }
+
+        if (!selecionado || Keyboard.current == null) return;
+
+        if (Keyboard.current.leftArrowKey.wasPressedThisFrame || Keyboard.current.aKey.wasPressedThisFrame)
+        {
+            Retroceder();
+        }
+        else if (Keyboard.current.rightArrowKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame)
+        {
+            Avancar();
+        }
+    }
+
+    public void Retroceder()
+    {
+        if (dropdown != null && dropdown.value > 0)
+        {
+            dropdown.value--;
+            TocarSom();
+        }
+    }
+
+    public void Avancar()
+    {
+        if (dropdown != null && dropdown.options != null && dropdown.value < dropdown.options.Count - 1)
+        {
+            dropdown.value++;
+            TocarSom();
+        }
+    }
+
+    private void TocarSom()
+    {
+        if (audioSource != null && somSelecao != null)
+        {
+            audioSource.PlayOneShot(somSelecao);
+        }
     }
 }

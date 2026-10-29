@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # Vector3
 
 ## Connections
 - [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
-- [[dot-Aplicar()_1]] - `references` [EXTRACTED]
+- [[dot-Aplicar()]] - `references` [EXTRACTED]
 - [[dot-AplicarClampBordas()]] - `references` [EXTRACTED]
 - [[dot-AtualizarSpawnPointExistente()]] - `references` [EXTRACTED]
 - [[dot-Box()_1]] - `references` [EXTRACTED]
@@ -34,7 +34,7 @@ tags:
 - [[dot-PosicaoNoMapa()]] - `references` [EXTRACTED]
 - [[dot-Project()]] - `references` [EXTRACTED]
 - [[dot-ProjectReady()]] - `references` [EXTRACTED]
-- [[dot-Quad()_1]] - `references` [EXTRACTED]
+- [[dot-Quad()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
 - [[dot-RoomLight()]] - `references` [EXTRACTED]
 - [[dot-ScreenBocha()]] - `references` [EXTRACTED]
@@ -52,4 +52,4 @@ tags:
 - [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
 type: "code"
-community: "Community 27"
+community: "Community 31"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_27
+  - community/Community_31
 ---
 
 # Capitulo2Gate
@@ -15,10 +15,10 @@ tags:
 - [[dot-Atualizar()]] - `method` [EXTRACTED]
 - [[dot-Interior()_2]] - `references` [EXTRACTED]
 - [[dot-OnDisable()_4]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_1]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_2]] - `method` [EXTRACTED]
 - [[dot-Prefeitura()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[Capitulo2Gate.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_27
+#graphify/code #graphify/EXTRACTED #community/Community_31

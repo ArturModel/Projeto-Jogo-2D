@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Legenda"
+community: "Community 42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/Community_42
 ---
 
 # MonoBehaviour
@@ -30,6 +30,7 @@ tags:
 - [[DentroDaCasaDoAvo]] - `inherits` [EXTRACTED]
 - [[EstradaScroller]] - `inherits` [EXTRACTED]
 - [[GameMessageUI]] - `inherits` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `inherits` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[InteractionPrompt]] - `inherits` [EXTRACTED]
 - [[Legenda]] - `inherits` [EXTRACTED]
@@ -66,4 +67,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/Community_42

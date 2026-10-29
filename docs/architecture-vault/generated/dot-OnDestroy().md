@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "packages-lock.json"
+community: "Community 12"
 location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/Community_12
 ---
 
 # .OnDestroy()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/Community_12

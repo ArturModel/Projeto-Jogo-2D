@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "AGENTS.md — Governança Obrigatória de IA (Graphify + Obsidian + Memória Persistente)"
+community: "Community 38"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente
+  - community/Community_38
 ---
 
 # .OnEnable()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AGENTSmd__Governança_Obrigatória_de_IA_Graphify__Obsidian__Memória_Persistente
+#graphify/code #graphify/EXTRACTED #community/Community_38

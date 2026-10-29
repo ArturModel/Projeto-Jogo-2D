@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
 type: "code"
-community: "manifest.json"
+community: "Community 6"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_6
 ---
 
 # .Awake()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_6

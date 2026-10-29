@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
 type: "code"
-community: "com.unity.ext.nunit"
+community: "Community 54"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityextnunit
+  - community/Community_54
 ---
 
 # .ReiniciarSelecao()
@@ -15,4 +15,4 @@ tags:
 - [[MenuItemSelector]] - `method` [EXTRACTED]
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityextnunit
+#graphify/code #graphify/EXTRACTED #community/Community_54

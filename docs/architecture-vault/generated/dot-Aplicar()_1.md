@@ -1,23 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "PlayerController"
-location: "L152"
+community: "Community 38"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/Community_38
 ---
 
 # .Aplicar()
 
 ## Connections
-- [[dot-Colidir()]] - `calls` [EXTRACTED]
-- [[dot-Forcas()]] - `calls` [EXTRACTED]
-- [[dot-Rebater()]] - `calls` [EXTRACTED]
-- [[dot-Velocidade()]] - `calls` [EXTRACTED]
-- [[BochaBall]] - `references` [EXTRACTED]
-- [[BochaSimulation]] - `method` [EXTRACTED]
-- [[Vector3]] - `references` [EXTRACTED]
+- [[dot-Awake()_12]] - `calls` [EXTRACTED]
+- [[dot-Definir()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_16]] - `calls` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/Community_38

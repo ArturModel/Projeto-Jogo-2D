@@ -1,19 +1,20 @@
 ---
 type: community
-members: 6
+members: 7
 ---
 
 # Community 41
 
-**Members:** 6 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[dot-Botao()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-ChangeZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Construir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Label()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Painel()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[RectMask2D]] - code
+- [[dot-ApoiarPe()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
+- [[dot-FixedUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-OnDisable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-OnEnable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-SpeedAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[Rect]] - code
+- [[SantaRitaShallowStairs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,22 +24,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Community 23]]
-- 7 edges to [[_COMMUNITY_CheckpointSystem]]
-- 4 edges to [[_COMMUNITY_Community 39]]
-- 4 edges to [[_COMMUNITY_Capitulo1Director]]
-- 3 edges to [[_COMMUNITY_dependencies_1]]
-- 3 edges to [[_COMMUNITY_packages-lock.json]]
-- 3 edges to [[_COMMUNITY_manifest.json]]
-- 3 edges to [[_COMMUNITY_Community 54]]
-- 2 edges to [[_COMMUNITY_MonoBehaviour]]
-- 1 edge to [[_COMMUNITY_com.unity.2d.tilemap]]
-- 1 edge to [[_COMMUNITY_InteracaoCapitulo1]]
-- 1 edge to [[_COMMUNITY_GameMessageUI]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 11]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 9]]
 
 ## Top bridge nodes
-- [[dot-Construir()_2]] - degree 22, connects to 8 communities
-- [[dot-Botao()_1]] - degree 11, connects to 7 communities
-- [[dot-Painel()]] - degree 9, connects to 7 communities
-- [[dot-Label()]] - degree 8, connects to 5 communities
-- [[dot-ChangeZoom()]] - degree 3, connects to 2 communities
+- [[SantaRitaShallowStairs]] - degree 10, connects to 6 communities
+- [[dot-ApoiarPe()]] - degree 4, connects to 3 communities
+- [[dot-SpeedAt()]] - degree 5, connects to 2 communities
+- [[Rect]] - degree 3, connects to 2 communities
+- [[dot-FixedUpdate()]] - degree 2, connects to 1 community

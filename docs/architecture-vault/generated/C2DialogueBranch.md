@@ -15,6 +15,6 @@ tags:
 - [[C2InteractionData]] - `references` [EXTRACTED]
 - [[Capitulo2Director.cs]] - `contains` [EXTRACTED]
 - [[DialogoLinha]] - `references` [EXTRACTED]
-- [[Disponivel]] - `defines` [EXTRACTED]
+- [[Disponivel_1]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_25

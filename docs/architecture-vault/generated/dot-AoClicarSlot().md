@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 28"
 location: "L412"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_28
 ---
 
 # .AoClicarSlot()
@@ -24,7 +24,7 @@ tags:
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
-- [[dot-Update()_10]] - `calls` [EXTRACTED]
+- [[dot-Update()_9]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_28

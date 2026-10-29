@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "Legenda"
+community: "Community 49"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/Community_49
 ---
 
 # .LateUpdate()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/Community_49

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
 type: "code"
-community: "OptionsPanelController"
-location: "L12"
+community: "Community 30"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/Community_30
 ---
 
 # Prompt
 
 ## Connections
-- [[Capitulo2Portal]] - `defines` [EXTRACTED]
+- [[ItemDeCena]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/Community_30

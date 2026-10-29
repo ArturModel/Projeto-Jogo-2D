@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Chuva"
+community: "Community 8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Chuva
+  - community/Community_8
 ---
 
 # PixelPerfectCamera
@@ -14,4 +14,4 @@ tags:
 - [[dot-PlanCapture()]] - `references` [EXTRACTED]
 - [[dot-Start()_18]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Chuva
+#graphify/code #graphify/EXTRACTED #community/Community_8

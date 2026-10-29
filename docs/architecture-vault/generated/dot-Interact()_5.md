@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 30"
-location: "L34"
+community: "Community 54"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_54
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Atravessar()]] - `calls` [EXTRACTED]
-- [[DoorTrigger]] - `method` [EXTRACTED]
+- [[dot-AbrirModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomAtenderOrelhao()]] - `calls` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_54

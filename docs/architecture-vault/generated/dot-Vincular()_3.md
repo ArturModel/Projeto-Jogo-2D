@@ -1,12 +1,12 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "com.unity.modules.jsonserialize"
-location: "L46"
+community: "Community 24"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/Community_24
 ---
 
 # .Vincular()
@@ -15,7 +15,8 @@ tags:
 - [[dot-Construir()]] - `calls` [INFERRED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
+- [[MenuPanelTransition]] - `references` [EXTRACTED]
+- [[OptionsPanelController]] - `method` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/Community_24

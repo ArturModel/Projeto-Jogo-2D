@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "com.unity.settings-manager"
+community: "Community 32"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/comunitysettings-manager
+  - community/Community_32
 ---
 
 # sys
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[graphify-project.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/comunitysettings-manager
+#graphify/concept #graphify/EXTRACTED #community/Community_32

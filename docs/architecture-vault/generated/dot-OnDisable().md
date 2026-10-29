@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "SceneFader"
-location: "L145"
+community: "Community 15"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_15
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[SubtitleSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_15

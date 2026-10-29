@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/marcus-flashlight.lua"
 type: "code"
-community: "graphify-setup.ps1"
+community: "Community 61"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/graphify-setupps1
+  - community/Community_61
 ---
 
 # rect()
@@ -15,4 +15,4 @@ tags:
 - [[line()_1]] - `calls` [EXTRACTED]
 - [[marcus-flashlight.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/graphify-setupps1
+#graphify/code #graphify/EXTRACTED #community/Community_61

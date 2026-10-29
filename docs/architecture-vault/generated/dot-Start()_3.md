@@ -1,19 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
 type: "code"
-community: "SceneFader"
-location: "L90"
+community: "Community 14"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_14
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
-- [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
-- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_14

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
 type: "code"
-community: ".CreateCanvas"
+community: "Community 1"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_1
 ---
 
 # SantaRitaArtProduction.cs
@@ -26,4 +26,4 @@ tags:
 - [[unityengine_scenemanagement]] - `imports` [EXTRACTED]
 - [[unityengine_tilemaps]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCanvas
+#graphify/code #graphify/EXTRACTED #community/Community_1

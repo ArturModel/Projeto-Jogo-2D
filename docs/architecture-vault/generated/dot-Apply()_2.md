@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
 type: "code"
-community: "com.unity.modules.unitywebrequest"
+community: "Community 18"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_18
 ---
 
 # .Apply()
@@ -38,4 +38,4 @@ tags:
 - [[Volume]] - `references` [EXTRACTED]
 - [[VolumeProfile]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_18

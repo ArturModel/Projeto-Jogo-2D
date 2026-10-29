@@ -1,25 +1,26 @@
 ---
 type: community
-members: 12
+members: 13
 ---
 
 # Community 37
 
-**Members:** 12 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[BolasEmMovimento]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[CarregandoForca]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[EstadoPartida]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[FimDeMao]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[FimDeSerieDerrota]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[FimDeSerieVitoria]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Inativo]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[MirandoJogador]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[PosicionandoBranca]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[ResolvendoTacada]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[TurnoZePensando]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[TutorialRegras]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Escolher()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
+- [[dot-ForcaPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[dot-Preparar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-Preparar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[dot-SetState()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[BochaLaunch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[BochaShot]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[BochaShot.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[BochaThrowType]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[Ponto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[Rafa]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[Random]] - code
+- [[Volo]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,7 +30,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_SinucaMinigameUI]]
+- 12 edges to [[_COMMUNITY_Community 17]]
+- 7 edges to [[_COMMUNITY_Community 27]]
+- 7 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 2]]
 
 ## Top bridge nodes
-- [[EstadoPartida]] - degree 12, connects to 1 community
+- [[BochaShot]] - degree 15, connects to 5 communities
+- [[dot-Escolher()]] - degree 14, connects to 4 communities
+- [[dot-SetState()]] - degree 5, connects to 3 communities
+- [[dot-Preparar()_1]] - degree 7, connects to 2 communities
+- [[BochaThrowType]] - degree 8, connects to 1 community

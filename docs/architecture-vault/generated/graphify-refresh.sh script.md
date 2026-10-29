@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-refresh.sh"
 type: "code"
-community: "Manual de Operação e Governança — Graphify + Obsidian + Agentes de IA"
+community: "Community 64"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Manual_de_Operação_e_Governança__Graphify__Obsidian__Agentes_de_IA
+  - community/Community_64
 ---
 
 # graphify-refresh.sh script
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphify-refresh.sh]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Manual_de_Operação_e_Governança__Graphify__Obsidian__Agentes_de_IA
+#graphify/code #graphify/EXTRACTED #community/Community_64

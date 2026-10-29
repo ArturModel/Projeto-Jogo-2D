@@ -12,7 +12,8 @@ tags:
 
 ## Connections
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Configurar()_3]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-CriarAmbiencia()]] - `references` [EXTRACTED]
 - [[dot-CriarFonteMusical()]] - `references` [EXTRACTED]
 - [[dot-CriarImpactoMadeira()]] - `references` [EXTRACTED]
@@ -24,9 +25,10 @@ tags:
 - [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-Vincular()_5]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
-- [[Camada]] - `references` [EXTRACTED]
+- [[Camada_1]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `references` [EXTRACTED]
 - [[MenuItemSelector]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]

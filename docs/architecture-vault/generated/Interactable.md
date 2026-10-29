@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "Community 30"
+community: "Community 7"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_7
 ---
 
 # Interactable
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
 - [[dot-FindNearest()]] - `method` [EXTRACTED]
-- [[dot-Interact()_7]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_5]] - `method` [EXTRACTED]
+- [[dot-Interact()_3]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_9]] - `method` [EXTRACTED]
 - [[dot-OnDrawGizmosSelected()]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_2]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_6]] - `method` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-SetTarget()]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable]] - `inherits` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[Prompt_6]] - `defines` [EXTRACTED]
 - [[TransicaoDeZonaTrigger]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_7

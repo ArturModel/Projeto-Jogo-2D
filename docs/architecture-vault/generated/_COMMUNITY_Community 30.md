@@ -1,30 +1,18 @@
 ---
 type: community
-members: 17
+members: 5
 ---
 
 # Community 30
 
-**Members:** 17 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[dot-Atravessar()]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[dot-Interact()_5]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[dot-Interact()_6]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[dot-OnDisable()_5]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-OnDrawGizmosSelected()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-OnEnable()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-OnTriggerEnter2D()_2]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
+- [[dot-Interact()_1]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 - [[dot-RegistrarPistaLegada()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[DoorTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[DoorTrigger.cs]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[InteractionRadius]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
 - [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 - [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[Prompt_5]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[Prompt_6]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[Prompt_7]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,24 +22,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Community 14]]
-- 3 edges to [[_COMMUNITY_Capitulo1Director]]
-- 3 edges to [[_COMMUNITY_dot-CreateCanvas]]
-- 2 edges to [[_COMMUNITY_OptionsPanelController]]
-- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 - 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.unitywebrequest]]
-- 1 edge to [[_COMMUNITY_com.unity.modules.audio]]
-- 1 edge to [[_COMMUNITY_Chuva]]
-- 1 edge to [[_COMMUNITY_VideoSettingsController]]
-- 1 edge to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Legenda]]
-- 1 edge to [[_COMMUNITY_InteracaoCapitulo1]]
-- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[Interactable]] - degree 20, connects to 12 communities
-- [[dot-OnTriggerEnter2D()_2]] - degree 4, connects to 2 communities
-- [[DoorTrigger]] - degree 7, connects to 1 community
-- [[ItemDeCena]] - degree 6, connects to 1 community
-- [[dot-Atravessar()]] - degree 5, connects to 1 community
+- [[ItemDeCena]] - degree 6, connects to 2 communities
+- [[dot-RegistrarPistaLegada()]] - degree 4, connects to 2 communities
+- [[dot-Interact()_1]] - degree 3, connects to 1 community
+- [[ItemDeCena.cs]] - degree 2, connects to 1 community

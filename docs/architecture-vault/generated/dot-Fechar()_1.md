@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "packages-lock.json"
-location: "L120"
+community: "Community 17"
+location: "L297"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/Community_17
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-Sair()]] - `calls` [EXTRACTED]
-- [[dot-Update()_1]] - `calls` [EXTRACTED]
-- [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
-- [[MenuPausa]] - `method` [EXTRACTED]
+- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
+- [[dot-Derrota()]] - `calls` [EXTRACTED]
+- [[dot-Pausar()]] - `calls` [EXTRACTED]
+- [[dot-ResolverMao()]] - `calls` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/Community_17

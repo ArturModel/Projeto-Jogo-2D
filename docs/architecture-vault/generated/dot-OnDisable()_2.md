@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
 type: "code"
-community: "SceneFader"
-location: "L187"
+community: "Community 18"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_18
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[SantaRitaFootsteps]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_18

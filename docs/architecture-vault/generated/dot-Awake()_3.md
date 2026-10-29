@@ -1,18 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L80"
+community: "Community 20"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_20
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Build()]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
+- [[Collider2D]] - `references` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_20

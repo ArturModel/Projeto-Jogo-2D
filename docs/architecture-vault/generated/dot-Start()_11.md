@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
 community: "Community 35"
-location: "L12"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,8 @@ tags:
 # .Start()
 
 ## Connections
-- [[dot-PrepareTools()]] - `calls` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_35

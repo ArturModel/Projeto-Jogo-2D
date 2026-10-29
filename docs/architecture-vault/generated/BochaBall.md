@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "PlayerController"
+community: "Community 27"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/Community_27
 ---
 
 # BochaBall
 
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [INFERRED]
-- [[dot-Aplicar()_1]] - `references` [EXTRACTED]
+- [[dot-Aplicar()]] - `references` [EXTRACTED]
 - [[dot-Balim()]] - `method` [EXTRACTED]
 - [[dot-BestShot()]] - `calls` [INFERRED]
 - [[dot-BochaAudioR2()]] - `calls` [INFERRED]
@@ -26,7 +26,7 @@ tags:
 - [[dot-Posicao()]] - `references` [EXTRACTED]
 - [[dot-Rebater()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[dot-Run()_2]] - `calls` [INFERRED]
 - [[dot-Velocidade()]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[Vector3]] - `references` [EXTRACTED]
 - [[Velocidade]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/Community_27

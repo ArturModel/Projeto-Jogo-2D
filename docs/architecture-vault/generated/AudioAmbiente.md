@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "com.unity.modules.physics"
+community: "Community 19"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/Community_19
 ---
 
 # AudioAmbiente
@@ -22,9 +22,9 @@ tags:
 - [[dot-Update()_3]] - `method` [EXTRACTED]
 - [[AudioAmbiente.cs]] - `contains` [EXTRACTED]
 - [[Camada_2]] - `references` [EXTRACTED]
-- [[Camada]] - `contains` [EXTRACTED]
+- [[Camada_1]] - `contains` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
 - [[Instance_1]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/Community_19
