@@ -12,9 +12,9 @@ tags:
 # OlharPrimeiraPessoa
 
 ## Connections
-- [[dot-Awake()_19]] - `method` [EXTRACTED]
+- [[dot-Awake()_20]] - `method` [EXTRACTED]
 - [[dot-LerEntrada()]] - `method` [EXTRACTED]
-- [[dot-Update()_24]] - `method` [EXTRACTED]
+- [[dot-Update()_25]] - `method` [EXTRACTED]
 - [[Deslocamento]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[OlharPrimeiraPessoa.cs]] - `contains` [EXTRACTED]

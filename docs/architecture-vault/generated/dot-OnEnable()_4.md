@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
 type: "code"
-community: "Community 42"
-location: "L24"
+community: "Community 5"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_5
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaFootsteps]] - `method` [EXTRACTED]
+- [[Tilemap]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_5

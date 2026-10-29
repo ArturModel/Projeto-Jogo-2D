@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 7"
-location: "L561"
+community: "Community 34"
+location: "L728"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_34
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-Avancar()_2]] - `calls` [EXTRACTED]
-- [[dot-Fade()]] - `calls` [EXTRACTED]
-- [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-FecharSeAberto()]] - `calls` [EXTRACTED]
+- [[dot-Travel()]] - `calls` [INFERRED]
+- [[dot-Update()_16]] - `calls` [EXTRACTED]
+- [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_34

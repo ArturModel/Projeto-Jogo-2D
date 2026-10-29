@@ -294,8 +294,8 @@
     "semantic_hash": ""
   },
   "scripts/graphify-refresh.ps1": {
-    "mtime": 1793313768.6224442,
-    "seen": 1793314808.6967213,
+    "mtime": 1793317838.9926367,
+    "seen": 1793318130.7254002,
     "ast_hash": "c3eb84f8a11e7bd6bb7b844b2ea61eb2",
     "semantic_hash": ""
   },
@@ -306,8 +306,8 @@
     "semantic_hash": ""
   },
   "scripts/graphify-validate.ps1": {
-    "mtime": 1793313761.1267402,
-    "seen": 1793314808.6967268,
+    "mtime": 1793317838.9936378,
+    "seen": 1793318130.7254086,
     "ast_hash": "e02b23454625dc5de7ed2f906f6567c0",
     "semantic_hash": ""
   },
@@ -384,8 +384,8 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs": {
-    "mtime": 1793314634.5536778,
-    "seen": 1793314808.6964254,
+    "mtime": 1793317838.578955,
+    "seen": 1793318130.72519,
     "ast_hash": "77d6327766be748a5a20cff88631c629",
     "semantic_hash": ""
   },
@@ -438,9 +438,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs": {
-    "mtime": 1793054269.6339717,
-    "seen": 1793313718.349893,
-    "ast_hash": "ced18a60452988b24c7c8a40af9bc695",
+    "mtime": 1793318103.6586816,
+    "seen": 1793318130.725211,
+    "ast_hash": "dc18b85c09749879caeb66e6b7030767",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs": {
@@ -558,9 +558,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs": {
-    "mtime": 1793314677.9249864,
-    "seen": 1793314808.6964953,
-    "ast_hash": "cc416f45a06bf2f41a9886a57642c2dd",
+    "mtime": 1793318081.077934,
+    "seen": 1793318130.7253194,
+    "ast_hash": "635ef9d044d098c1725abbd64bd43375",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs": {
@@ -726,8 +726,8 @@
     "semantic_hash": ""
   },
   "scripts/graphify-project.py": {
-    "mtime": 1793313752.9134204,
-    "seen": 1793314808.6967196,
+    "mtime": 1793317838.9926367,
+    "seen": 1793318130.725398,
     "ast_hash": "3153ad38873d27f0bd120db34cb059d8",
     "semantic_hash": ""
   },

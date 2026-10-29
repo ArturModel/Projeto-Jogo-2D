@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
 - [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
-- [[dot-Ativar()_1]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_2]] - `calls` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarLinhaDoTempo()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirBocha()]] - `calls` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[dot-RegistrarDiario()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
-- [[dot-Start()_9]] - `calls` [EXTRACTED]
+- [[dot-Start()_11]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 

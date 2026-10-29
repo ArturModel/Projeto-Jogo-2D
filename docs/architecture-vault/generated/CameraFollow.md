@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AplicarClampBordas()]] - `method` [EXTRACTED]
 - [[dot-AplicarEstadoDaZona()]] - `references` [EXTRACTED]
-- [[dot-Awake()_15]] - `method` [EXTRACTED]
+- [[dot-Awake()_16]] - `method` [EXTRACTED]
 - [[dot-DefinirLimitesRegiao()]] - `method` [EXTRACTED]
 - [[dot-DetectarLimitesDaRegiao()]] - `method` [EXTRACTED]
 - [[dot-GarantirFundoEscuroCamera()]] - `method` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[dot-PlanCapture()]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
 - [[dot-SnapImediatoParaAlvo()]] - `method` [EXTRACTED]
-- [[dot-Start()_10]] - `references` [EXTRACTED]
+- [[dot-Start()_12]] - `references` [EXTRACTED]
 - [[dot-Start()_15]] - `method` [EXTRACTED]
 - [[dot-TeleportarPara()]] - `references` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]

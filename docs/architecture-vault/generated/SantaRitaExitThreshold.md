@@ -12,7 +12,7 @@ tags:
 # SantaRitaExitThreshold
 
 ## Connections
-- [[dot-Awake()_17]] - `method` [EXTRACTED]
+- [[dot-Awake()_18]] - `method` [EXTRACTED]
 - [[dot-Create()]] - `method` [EXTRACTED]
 - [[dot-LateUpdate()_8]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]

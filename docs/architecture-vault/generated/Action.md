@@ -11,9 +11,9 @@ tags:
 # Action
 
 ## Connections
-- [[dot-Abrir()_2]] - `references` [EXTRACTED]
+- [[dot-Abrir()_1]] - `references` [EXTRACTED]
 - [[dot-AbrirSelecaoCarregar()]] - `references` [EXTRACTED]
-- [[dot-Avancar()_1]] - `references` [EXTRACTED]
+- [[dot-Avancar()_2]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-ComecarNovaSerie()]] - `references` [EXTRACTED]

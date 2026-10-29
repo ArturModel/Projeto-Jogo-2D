@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-AtualizarMira()]] - `references` [EXTRACTED]
-- [[dot-Awake()_15]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
 - [[dot-CourtPoint()]] - `references` [EXTRACTED]
 - [[dot-GarantirFundoEscuroCamera()]] - `references` [EXTRACTED]
 - [[dot-LateUpdate()_6]] - `references` [EXTRACTED]

@@ -1,18 +1,15 @@
 ---
 type: community
-members: 12
+members: 9
 ---
 
 # Community 37
 
-**Members:** 12 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[dot-Abrir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Lancar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-ForcaPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[dot-Preparar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
-- [[dot-Refresh()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-SetState()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[BochaLaunch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[BochaShot]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[BochaShot.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
@@ -29,19 +26,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Community 4]]
-- 7 edges to [[_COMMUNITY_Community 27]]
-- 6 edges to [[_COMMUNITY_Community 17]]
-- 3 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 29]]
+- 8 edges to [[_COMMUNITY_Community 17]]
+- 7 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 9]]
 - 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 3]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[BochaShot]] - degree 15, connects to 6 communities
-- [[dot-Lancar()]] - degree 5, connects to 4 communities
+- [[BochaShot]] - degree 15, connects to 5 communities
 - [[dot-Preparar()_1]] - degree 7, connects to 3 communities
-- [[dot-SetState()]] - degree 5, connects to 3 communities
-- [[BochaThrowType]] - degree 8, connects to 2 communities
+- [[BochaThrowType]] - degree 8, connects to 1 community
+- [[BochaShot.cs]] - degree 4, connects to 1 community
+- [[dot-ForcaPonto()]] - degree 2, connects to 1 community

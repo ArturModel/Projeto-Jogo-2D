@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "Community 31"
+community: "Community 40"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_40
 ---
 
 # Capitulo2Portal
@@ -24,7 +24,7 @@ tags:
 - [[dot-Portal()_2]] - `references` [EXTRACTED]
 - [[dot-Portal()_1]] - `references` [EXTRACTED]
 - [[dot-ResetSession()]] - `method` [EXTRACTED]
-- [[dot-Run()_2]] - `references` [EXTRACTED]
+- [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-RunPortalRegression()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[Prompt_7]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_40

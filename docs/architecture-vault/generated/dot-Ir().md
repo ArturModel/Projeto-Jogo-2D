@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs"
 type: "code"
-community: "Community 21"
+community: "Community 46"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_46
 ---
 
 # .Ir()
@@ -22,7 +22,7 @@ tags:
 - [[dot-Play()]] - `calls` [EXTRACTED]
 - [[dot-RunPortalRegression()]] - `calls` [EXTRACTED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
-- [[dot-Start()_10]] - `calls` [EXTRACTED]
+- [[dot-Start()_12]] - `calls` [EXTRACTED]
 - [[SceneTransition]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_46

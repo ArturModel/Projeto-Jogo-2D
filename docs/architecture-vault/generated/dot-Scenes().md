@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 31"
+community: "Community 6"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_6
 ---
 
 # .Scenes()
@@ -17,7 +17,7 @@ tags:
 - [[dot-Flood()]] - `calls` [EXTRACTED]
 - [[dot-IdDaCena()]] - `calls` [EXTRACTED]
 - [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
-- [[dot-Run()_1]] - `calls` [EXTRACTED]
+- [[dot-Run()_4]] - `calls` [EXTRACTED]
 - [[dot-UV()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `references` [EXTRACTED]
 - [[Capitulo2Gate]] - `references` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[TilemapCollider2D]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_6

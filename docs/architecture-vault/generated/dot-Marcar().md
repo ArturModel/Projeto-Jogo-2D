@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 13"
+community: "Community 44"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_44
 ---
 
 # .Marcar()
 
 ## Connections
 - [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
-- [[dot-Ativar()]] - `calls` [EXTRACTED]
 - [[dot-Ativar()_1]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_2]] - `calls` [EXTRACTED]
 - [[dot-Ativar()_3]] - `calls` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
 - [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
@@ -60,12 +60,12 @@ tags:
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[dot-Start()_10]] - `calls` [EXTRACTED]
-- [[dot-Start()_9]] - `calls` [EXTRACTED]
+- [[dot-Start()_12]] - `calls` [EXTRACTED]
+- [[dot-Start()_11]] - `calls` [EXTRACTED]
 - [[dot-Start()_16]] - `calls` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[dot-ZeDesconversa()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_44

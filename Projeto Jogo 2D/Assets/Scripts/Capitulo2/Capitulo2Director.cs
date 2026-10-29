@@ -71,6 +71,9 @@ public sealed class Capitulo2Director : MonoBehaviour
         var chuva = FindAnyObjectByType<Chuva>(); if (chuva != null) chuva.DefinirModoInterior(interior);
         Capitulo2Audio.Definir(assinaturaAudio);
         MapaInterativoUI.EnsureInstance();
+        // Veste os interiores de C2 com props autenticos existentes (Art/Props/).
+        // So executa em cenas de interior; inofensivo se GameObjects esperados nao existirem.
+        if (interior) SantaRitaPlaceDressing.ApplyC2();
         AtualizarInvestigacao();
     }
 

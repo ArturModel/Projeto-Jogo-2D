@@ -12,7 +12,7 @@ tags:
 # .RecordContacts()
 
 ## Connections
-- [[dot-Update()_8]] - `calls` [INFERRED]
+- [[dot-Update()_3]] - `calls` [INFERRED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Track]] - `calls` [EXTRACTED]
 

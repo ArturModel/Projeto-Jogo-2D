@@ -12,13 +12,13 @@ tags:
 # .Travel()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [INFERRED]
+- [[dot-Abrir()_2]] - `calls` [INFERRED]
 - [[dot-AwaitScene()]] - `calls` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
 - [[dot-ExitToCenter()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_3]] - `calls` [INFERRED]
+- [[dot-Fechar()_4]] - `calls` [INFERRED]
 - [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]

@@ -1,19 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 24"
-location: "L270"
+community: "Community 2"
+location: "L390"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_2
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-FecharOpcoes()]] - `calls` [INFERRED]
-- [[dot-MostrarCategorias()]] - `calls` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
+- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarTeclasPainelFechamento()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_2

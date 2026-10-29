@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-BotaoSeta()]] - `calls` [EXTRACTED]
-- [[dot-Configurar()_3]] - `calls` [INFERRED]
+- [[dot-Configurar()_2]] - `calls` [INFERRED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-Imagem()]] - `calls` [EXTRACTED]
 - [[dot-Posicionar()]] - `calls` [EXTRACTED]

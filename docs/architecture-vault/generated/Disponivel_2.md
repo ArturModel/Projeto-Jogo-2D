@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
-community: "Community 33"
-location: "L22"
+community: "Community 36"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_36
 ---
 
 # Disponivel
 
 ## Connections
-- [[ObjetoCarro]] - `defines` [EXTRACTED]
+- [[CelularCarro]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_36

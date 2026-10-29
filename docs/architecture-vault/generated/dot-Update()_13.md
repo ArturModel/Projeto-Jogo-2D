@@ -1,17 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 28"
-location: "L41"
+community: "Community 3"
+location: "L596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_3
 ---
 
 # .Update()
 
 ## Connections
-- [[SantaRitaSound]] - `method` [EXTRACTED]
+- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_3

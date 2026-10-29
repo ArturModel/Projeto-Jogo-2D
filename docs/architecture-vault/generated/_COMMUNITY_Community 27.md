@@ -1,28 +1,30 @@
 ---
 type: community
-members: 15
+members: 17
 ---
 
 # Community 27
 
-**Members:** 15 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[dot-Arrastar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-AtualizarMira()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-AtualizarTela()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-EfetuarLancamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-EntradaTeclado()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-EscolherTipo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-ForcaNoTempo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-IniciarArraste()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-MoverMira()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-PodeMirar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Preparar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-SoltarArraste()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-TextoDistancia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Update()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[Keyboard]] - code
+- [[dot-Aplicar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-AvancarComContatos()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-Colidir()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-ContatoReal()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-Mover()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-Notificar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-Rebater()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-TestarPlano()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-Velocidade()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[BochaContact]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[BochaContactType]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[BochaSimulation.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[Bochas]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[Evento]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[Evento_1]] - code
+- [[Madeira]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[Saibro]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,18 +34,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Community 17]]
-- 7 edges to [[_COMMUNITY_Community 37]]
-- 7 edges to [[_COMMUNITY_Community 9]]
-- 6 edges to [[_COMMUNITY_Community 4]]
-- 5 edges to [[_COMMUNITY_Community 57]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 23]]
+- 18 edges to [[_COMMUNITY_Community 4]]
+- 4 edges to [[_COMMUNITY_Community 2]]
+- 3 edges to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 17]]
 
 ## Top bridge nodes
-- [[dot-AtualizarTela()]] - degree 17, connects to 5 communities
-- [[dot-Update()_8]] - degree 15, connects to 4 communities
-- [[dot-AtualizarMira()]] - degree 9, connects to 4 communities
-- [[dot-EfetuarLancamento()]] - degree 9, connects to 3 communities
-- [[dot-EscolherTipo()]] - degree 7, connects to 3 communities
+- [[dot-Aplicar()]] - degree 7, connects to 2 communities
+- [[BochaSimulation.cs]] - degree 7, connects to 2 communities
+- [[BochaContact]] - degree 6, connects to 2 communities
+- [[dot-Notificar()]] - degree 6, connects to 2 communities
+- [[dot-Velocidade()]] - degree 5, connects to 2 communities

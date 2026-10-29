@@ -1,11 +1,11 @@
 ---
 type: community
-members: 53
+members: 45
 ---
 
 # Community 26
 
-**Members:** 53 nodes
+**Members:** 45 nodes
 
 ## Members
 - [[dot-Atravessar()]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
@@ -16,7 +16,6 @@ members: 53
 - [[dot-FadeIn()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-FadeTo()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-Flicker()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[dot-Init()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-Interact()_4]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
 - [[dot-LateUpdate()_3]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
 - [[dot-LimparAoTrocarCena()]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
@@ -24,22 +23,16 @@ members: 53
 - [[dot-MostrarBannerArea()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-OnDestroy()_3]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
 - [[dot-OnDestroy()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[dot-OnDisable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnDisable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
 - [[dot-OnDrawGizmosSelected()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-OnEnable()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
 - [[dot-OnScene()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
 - [[dot-OnSceneLoaded()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-OnSceneLoaded()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
 - [[dot-OnSceneLoaded()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-OnTriggerEnter2D()_1]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
 - [[dot-Posicionar()_4]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
-- [[dot-PrepararSessao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-ResetSession()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs
-- [[dot-ResetStatic()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ResetStatic()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-ResetStatic()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-ResetStatic()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
-- [[dot-ResetStatic()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-ResetStatic()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ResolverCaminhoCena()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-SetTarget()]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
 - [[dot-SincronizarCenasNoEditor()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
@@ -58,7 +51,6 @@ members: 53
 - [[Prompt_4]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
 - [[Prompt_5]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
 - [[Renderer]] - code
-- [[RuntimeInitializeOnLoadMethod]] - code
 - [[Scene]] - code
 - [[SceneFader]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 
@@ -70,32 +62,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Community 0]]
-- 5 edges to [[_COMMUNITY_Community 21]]
-- 5 edges to [[_COMMUNITY_Community 28]]
+- 7 edges to [[_COMMUNITY_Community 0]]
 - 5 edges to [[_COMMUNITY_Community 39]]
-- 4 edges to [[_COMMUNITY_Community 2]]
 - 4 edges to [[_COMMUNITY_Community 1]]
 - 4 edges to [[_COMMUNITY_Community 5]]
-- 4 edges to [[_COMMUNITY_Community 34]]
-- 3 edges to [[_COMMUNITY_Community 31]]
+- 3 edges to [[_COMMUNITY_Community 6]]
 - 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 3]]
+- 2 edges to [[_COMMUNITY_Community 2]]
+- 2 edges to [[_COMMUNITY_Community 21]]
+- 2 edges to [[_COMMUNITY_Community 40]]
 - 2 edges to [[_COMMUNITY_Community 24]]
 - 2 edges to [[_COMMUNITY_Community 23]]
-- 2 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 45]]
+- 2 edges to [[_COMMUNITY_Community 3]]
 - 1 edge to [[_COMMUNITY_Community 13]]
 - 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 - 1 edge to [[_COMMUNITY_Community 8]]
 - 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 31]]
 - 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 
 ## Top bridge nodes
-- [[Interactable]] - degree 22, connects to 12 communities
+- [[Interactable]] - degree 22, connects to 13 communities
 - [[SceneFader]] - degree 25, connects to 6 communities
 - [[InteractionPrompt]] - degree 13, connects to 5 communities
-- [[RuntimeInitializeOnLoadMethod]] - degree 14, connects to 4 communities
 - [[dot-ZoneTransitionRoutine()]] - degree 7, connects to 2 communities
+- [[dot-FadeIn()]] - degree 6, connects to 2 communities

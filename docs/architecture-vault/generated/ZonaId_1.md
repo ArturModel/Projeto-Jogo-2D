@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[dot-AplicarEstadoDaZona()]] - `references` [EXTRACTED]
 - [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
-- [[dot-Configurar()_2]] - `references` [EXTRACTED]
+- [[dot-Configurar()_1]] - `references` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `references` [EXTRACTED]
 - [[dot-TryObterInfoZona()]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]

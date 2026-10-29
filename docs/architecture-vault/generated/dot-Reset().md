@@ -12,7 +12,7 @@ tags:
 # .Reset()
 
 ## Connections
-- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Avancar()_2]] - `calls` [EXTRACTED]
 - [[dot-TeleportarPara()]] - `calls` [INFERRED]
 - [[MarcusGait]] - `method` [EXTRACTED]
 

@@ -12,12 +12,12 @@ tags:
 # .AtualizarPosicaoMarcadoresDinamicos()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
 - [[dot-ConverterMundoParaUV()]] - `calls` [EXTRACTED]
 - [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-ObterUVObjetivoAtual()]] - `calls` [EXTRACTED]
 - [[dot-UV()]] - `calls` [EXTRACTED]
-- [[dot-Update()_17]] - `calls` [EXTRACTED]
+- [[dot-Update()_16]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]

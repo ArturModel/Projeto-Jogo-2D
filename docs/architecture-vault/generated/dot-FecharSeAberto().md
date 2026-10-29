@@ -12,7 +12,7 @@ tags:
 # .FecharSeAberto()
 
 ## Connections
-- [[dot-Fechar()_3]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_4]] - `calls` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

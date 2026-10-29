@@ -8,7 +8,7 @@ members: 9
 **Members:** 9 nodes
 
 ## Members
-- [[dot-Construir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Construir()_3]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
 - [[dot-Ligar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
 - [[dot-Posicionar()_5]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
 - [[dot-Start()_14]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
@@ -34,5 +34,5 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[EstradaScroller]] - degree 12, connects to 4 communities
-- [[dot-Construir()_2]] - degree 4, connects to 1 community
+- [[dot-Construir()_3]] - degree 4, connects to 1 community
 - [[dot-Ligar()_1]] - degree 2, connects to 1 community

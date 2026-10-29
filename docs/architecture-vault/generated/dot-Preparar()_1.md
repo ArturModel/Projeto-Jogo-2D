@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Escolher()]] - `calls` [EXTRACTED]
 - [[dot-Preparar()]] - `calls` [EXTRACTED]
-- [[dot-Run()_3]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[BochaLaunch]] - `method` [EXTRACTED]
 - [[BochaShot]] - `calls` [EXTRACTED]
 - [[BochaThrowType]] - `references` [EXTRACTED]

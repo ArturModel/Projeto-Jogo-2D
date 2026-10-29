@@ -12,7 +12,7 @@ tags:
 # .AtualizarFonteMusical()
 
 ## Connections
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_6]] - `calls` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
 type: "code"
-community: "Community 40"
-location: "L9"
+community: "Community 5"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_5
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[Capitulo2Gate]] - `method` [EXTRACTED]
+- [[SantaRitaFootsteps]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_5

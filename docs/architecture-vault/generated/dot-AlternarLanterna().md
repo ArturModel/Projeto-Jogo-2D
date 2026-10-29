@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Update()_21]] - `calls` [EXTRACTED]
+- [[dot-Update()_22]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

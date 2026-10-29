@@ -12,7 +12,7 @@ tags:
 # EstradaScroller
 
 ## Connections
-- [[dot-Construir()_2]] - `method` [EXTRACTED]
+- [[dot-Construir()_3]] - `method` [EXTRACTED]
 - [[dot-Ligar()_1]] - `method` [EXTRACTED]
 - [[dot-Posicionar()_5]] - `method` [EXTRACTED]
 - [[dot-Start()_14]] - `method` [EXTRACTED]

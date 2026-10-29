@@ -12,14 +12,14 @@ tags:
 # ObjetoCarro
 
 ## Connections
-- [[dot-Ativar()_2]] - `method` [EXTRACTED]
-- [[dot-Awake()_8]] - `method` [EXTRACTED]
+- [[dot-Ativar()]] - `method` [EXTRACTED]
+- [[dot-Awake()_9]] - `method` [EXTRACTED]
 - [[dot-Procurar()]] - `references` [EXTRACTED]
-- [[dot-Update()_15]] - `method` [EXTRACTED]
+- [[dot-Update()_14]] - `method` [EXTRACTED]
 - [[Apontado]] - `defines` [EXTRACTED]
 - [[CelularCarro]] - `inherits` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[Disponivel_2]] - `defines` [EXTRACTED]
+- [[Disponivel_1]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[ObjetoCarro.cs]] - `contains` [EXTRACTED]
 - [[PonteiroCarro]] - `references` [EXTRACTED]

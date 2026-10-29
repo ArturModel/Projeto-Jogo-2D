@@ -12,7 +12,7 @@ tags:
 # .GarantirFundoEscuroCamera()
 
 ## Connections
-- [[dot-Awake()_15]] - `calls` [EXTRACTED]
+- [[dot-Awake()_16]] - `calls` [EXTRACTED]
 - [[dot-DefinirLimitesRegiao()]] - `calls` [EXTRACTED]
 - [[dot-LateUpdate()_6]] - `calls` [EXTRACTED]
 - [[dot-Start()_15]] - `calls` [EXTRACTED]

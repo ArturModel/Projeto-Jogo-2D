@@ -12,7 +12,7 @@ tags:
 # .Interact()
 
 ## Connections
-- [[dot-Update()_21]] - `calls` [INFERRED]
+- [[dot-Update()_22]] - `calls` [INFERRED]
 - [[Interactable]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

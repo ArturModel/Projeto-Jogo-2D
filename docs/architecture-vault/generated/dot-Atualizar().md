@@ -12,7 +12,7 @@ tags:
 # .Atualizar()
 
 ## Connections
-- [[dot-OnEnable()_3]] - `calls` [EXTRACTED]
+- [[dot-OnEnable()_2]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[Capitulo2Gate]] - `method` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]

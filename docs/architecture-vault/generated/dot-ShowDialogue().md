@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 7"
+community: "Community 3"
 location: "L367"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_3
 ---
 
 # .ShowDialogue()
@@ -18,4 +18,4 @@ tags:
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_3

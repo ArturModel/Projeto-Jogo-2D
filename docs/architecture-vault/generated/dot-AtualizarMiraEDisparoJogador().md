@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-ExecutarTacada()]] - `calls` [EXTRACTED]
 - [[dot-MouseDentroDaMesa()]] - `calls` [EXTRACTED]
-- [[dot-Update()_14]] - `calls` [EXTRACTED]
+- [[dot-Update()_13]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_3

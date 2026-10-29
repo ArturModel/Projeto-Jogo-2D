@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()]] - `calls` [EXTRACTED]
 - [[dot-NovaMao()]] - `calls` [EXTRACTED]
 - [[dot-Pausar()]] - `calls` [EXTRACTED]

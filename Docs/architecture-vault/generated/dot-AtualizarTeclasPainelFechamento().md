@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-FecharPainelFechamento()]] - `calls` [EXTRACTED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_6]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

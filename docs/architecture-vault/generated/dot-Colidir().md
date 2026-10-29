@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 4"
+community: "Community 27"
 location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_27
 ---
 
 # .Colidir()
@@ -18,4 +18,4 @@ tags:
 - [[BochaBall]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_27

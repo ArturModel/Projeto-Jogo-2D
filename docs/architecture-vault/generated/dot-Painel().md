@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Botao()_1]] - `calls` [EXTRACTED]
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

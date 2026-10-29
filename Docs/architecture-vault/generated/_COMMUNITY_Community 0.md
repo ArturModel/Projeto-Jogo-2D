@@ -1,14 +1,18 @@
 ---
 type: community
-members: 114
+members: 131
 ---
 
 # Community 0
 
-**Members:** 114 nodes
+**Members:** 131 nodes
 
 ## Members
+- [[dot-AIPerformanceR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
 - [[dot-ActiveButton()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
+- [[dot-AoClicarSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[dot-AtualizarTextosDosSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[dot-AuditOldFeedback()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
 - [[dot-AwaitScene()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-BeginIsolatedTests()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-BochaAudioR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
@@ -16,7 +20,9 @@ members: 114
 - [[dot-C1LoadSmoke()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-Capture()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-CarregarSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-CenaDoCapitulo2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
 - [[dot-Check()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
+- [[dot-Clear()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-ClearPendingOnly()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-Click()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-CloseText()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
@@ -31,6 +37,7 @@ members: 114
 - [[dot-Error()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-ExitToCenter()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-ExportarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-FecharModalSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 - [[dot-Field()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-FindNearest()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
 - [[dot-Finish()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
@@ -42,13 +49,19 @@ members: 114
 - [[dot-Invoke()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-Limpar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-NewBochaPractice()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
+- [[dot-NovoJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
+- [[dot-Numero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-ObterEntradasDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-ObterNomeAmigavelOrelhao()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-Performance()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-PerformancePair()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-Place()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-PlanCapture()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-PointerBocha()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
 - [[dot-Project()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-ProximaFalaContextual()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 - [[dot-RecarregarUltimoSaveManual()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-RegistrarDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-RequestSpawnAtCheckpoint()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-RequestSpawnAtSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-ResetarMemoriaSilencioso()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
@@ -57,6 +70,7 @@ members: 114
 - [[dot-RoutineR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
 - [[dot-Run()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-RunAccesses()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs
+- [[dot-RunAutomatedVerification()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-RunBochaPerspective()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
 - [[dot-RunPortalRegression()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/PortalRuntimeVerification.cs
 - [[dot-RunR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
@@ -64,6 +78,7 @@ members: 114
 - [[dot-Save()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-SaveIsolationProbe()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-SaveSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-Saves()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
 - [[dot-ScreenBocha()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
 - [[dot-Set()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-SinucaPauseRegression()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
@@ -84,6 +99,7 @@ members: 114
 - [[dot-TryParseAndValidateJson()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-TryReadAndValidateFile()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-Update()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
+- [[dot-Update()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 - [[dot-Use()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
 - [[dot-WalkAccess()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs
 - [[dot-WalkAccessFilm()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs
@@ -104,6 +120,7 @@ members: 114
 - [[IDisposable]] - code
 - [[IEnumerator]] - code
 - [[IList]] - code
+- [[IReadOnlyList]] - code
 - [[IsolatedSaveScope]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[Key]] - code
 - [[LanternaLigada]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
@@ -131,46 +148,48 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 29 edges to [[_COMMUNITY_Community 4]]
-- 28 edges to [[_COMMUNITY_Community 21]]
+- 26 edges to [[_COMMUNITY_Community 4]]
 - 23 edges to [[_COMMUNITY_Community 5]]
-- 22 edges to [[_COMMUNITY_Community 28]]
-- 15 edges to [[_COMMUNITY_Community 13]]
-- 13 edges to [[_COMMUNITY_Community 6]]
+- 16 edges to [[_COMMUNITY_Community 44]]
+- 15 edges to [[_COMMUNITY_Community 3]]
+- 15 edges to [[_COMMUNITY_Community 6]]
+- 14 edges to [[_COMMUNITY_Community 30]]
 - 10 edges to [[_COMMUNITY_Community 1]]
-- 9 edges to [[_COMMUNITY_Community 3]]
-- 8 edges to [[_COMMUNITY_Community 26]]
-- 8 edges to [[_COMMUNITY_Community 25]]
-- 8 edges to [[_COMMUNITY_Community 2]]
-- 8 edges to [[_COMMUNITY_Community 23]]
+- 10 edges to [[_COMMUNITY_Community 25]]
+- 10 edges to [[_COMMUNITY_Community 23]]
+- 9 edges to [[_COMMUNITY_Community 31]]
+- 8 edges to [[_COMMUNITY_Community 21]]
+- 7 edges to [[_COMMUNITY_Community 40]]
+- 7 edges to [[_COMMUNITY_Community 26]]
+- 7 edges to [[_COMMUNITY_Community 34]]
 - 6 edges to [[_COMMUNITY_Community 8]]
-- 6 edges to [[_COMMUNITY_Community 7]]
-- 5 edges to [[_COMMUNITY_Community 9]]
-- 5 edges to [[_COMMUNITY_Community 34]]
+- 6 edges to [[_COMMUNITY_Community 9]]
+- 6 edges to [[_COMMUNITY_Community 24]]
+- 6 edges to [[_COMMUNITY_Community 46]]
+- 5 edges to [[_COMMUNITY_Community 18]]
+- 5 edges to [[_COMMUNITY_Community 28]]
 - 5 edges to [[_COMMUNITY_Community 19]]
-- 4 edges to [[_COMMUNITY_Community 31]]
-- 4 edges to [[_COMMUNITY_Community 16]]
-- 3 edges to [[_COMMUNITY_Community 18]]
+- 4 edges to [[_COMMUNITY_Community 42]]
+- 4 edges to [[_COMMUNITY_Community 2]]
+- 4 edges to [[_COMMUNITY_Community 36]]
+- 3 edges to [[_COMMUNITY_Community 13]]
 - 3 edges to [[_COMMUNITY_Community 29]]
-- 3 edges to [[_COMMUNITY_Community 36]]
-- 2 edges to [[_COMMUNITY_Community 42]]
-- 2 edges to [[_COMMUNITY_Community 40]]
+- 3 edges to [[_COMMUNITY_Community 49]]
+- 2 edges to [[_COMMUNITY_Community 7]]
 - 2 edges to [[_COMMUNITY_Community 12]]
-- 2 edges to [[_COMMUNITY_Community 57]]
-- 2 edges to [[_COMMUNITY_Community 24]]
-- 2 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 46]]
+- 2 edges to [[_COMMUNITY_Community 16]]
+- 2 edges to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 45]]
 - 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 11]]
 - 1 edge to [[_COMMUNITY_Community 15]]
 - 1 edge to [[_COMMUNITY_Community 20]]
 - 1 edge to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 38]]
 - 1 edge to [[_COMMUNITY_Community 14]]
-- 1 edge to [[_COMMUNITY_Community 17]]
 
 ## Top bridge nodes
-- [[IEnumerator]] - degree 69, connects to 14 communities
-- [[dot-RunBochaPerspective()]] - degree 40, connects to 11 communities
-- [[dot-SlotsR2()]] - degree 27, connects to 8 communities
+- [[IEnumerator]] - degree 69, connects to 12 communities
+- [[dot-RunBochaPerspective()]] - degree 40, connects to 12 communities
+- [[dot-AuditOldFeedback()]] - degree 21, connects to 8 communities
+- [[dot-Run()]] - degree 38, connects to 7 communities
 - [[GameState]] - degree 27, connects to 7 communities
-- [[dot-RunAccesses()]] - degree 25, connects to 7 communities

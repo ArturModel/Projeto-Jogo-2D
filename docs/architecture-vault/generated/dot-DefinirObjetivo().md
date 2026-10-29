@@ -20,8 +20,8 @@ tags:
 - [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
 - [[dot-InteragirCarroMarcus()]] - `calls` [EXTRACTED]
 - [[dot-InteragirZe()]] - `calls` [EXTRACTED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
-- [[dot-Start()_9]] - `calls` [EXTRACTED]
+- [[dot-Start()_10]] - `calls` [EXTRACTED]
+- [[dot-Start()_11]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 

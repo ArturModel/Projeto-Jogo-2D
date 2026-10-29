@@ -12,7 +12,7 @@ tags:
 # ChegadaEmSantaRita
 
 ## Connections
-- [[dot-Start()_8]] - `method` [EXTRACTED]
+- [[dot-Start()_10]] - `method` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 

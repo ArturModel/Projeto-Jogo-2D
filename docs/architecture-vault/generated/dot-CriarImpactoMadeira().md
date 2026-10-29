@@ -12,7 +12,7 @@ tags:
 # .CriarImpactoMadeira()
 
 ## Connections
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `method` [EXTRACTED]
 

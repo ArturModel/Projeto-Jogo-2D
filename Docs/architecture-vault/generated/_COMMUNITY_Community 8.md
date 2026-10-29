@@ -73,13 +73,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 6]]
+- 12 edges to [[_COMMUNITY_Community 6]]
 - 6 edges to [[_COMMUNITY_Community 0]]
-- 5 edges to [[_COMMUNITY_Community 2]]
 - 5 edges to [[_COMMUNITY_Community 5]]
 - 5 edges to [[_COMMUNITY_Community 20]]
+- 4 edges to [[_COMMUNITY_Community 2]]
 - 4 edges to [[_COMMUNITY_Community 28]]
 - 4 edges to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 3]]
 - 2 edges to [[_COMMUNITY_Community 42]]
 - 2 edges to [[_COMMUNITY_Community 1]]
 - 2 edges to [[_COMMUNITY_Community 16]]
@@ -89,17 +90,14 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Community 19]]
 - 1 edge to [[_COMMUNITY_Community 26]]
 - 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 3]]
 - 1 edge to [[_COMMUNITY_Community 34]]
 - 1 edge to [[_COMMUNITY_Community 36]]
 - 1 edge to [[_COMMUNITY_Community 4]]
 - 1 edge to [[_COMMUNITY_Community 25]]
 - 1 edge to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 31]]
-- 1 edge to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
-- [[List]] - degree 21, connects to 15 communities
+- [[List]] - degree 21, connects to 12 communities
 - [[Chuva]] - degree 53, connects to 9 communities
 - [[CamadaDeLuz]] - degree 15, connects to 3 communities
 - [[dot-Pintar()]] - degree 8, connects to 2 communities

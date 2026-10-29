@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 21"
+community: "Community 30"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_30
 ---
 
 # .Tem()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
 - [[dot-AdaptSavedPosition()]] - `calls` [EXTRACTED]
 - [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
 - [[dot-Atravessar()]] - `calls` [EXTRACTED]
@@ -50,14 +50,14 @@ tags:
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
+- [[dot-Start()_12]] - `calls` [EXTRACTED]
 - [[dot-Start()_10]] - `calls` [EXTRACTED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
-- [[dot-Start()_9]] - `calls` [EXTRACTED]
+- [[dot-Start()_11]] - `calls` [EXTRACTED]
 - [[dot-TentarTransicionar()]] - `calls` [EXTRACTED]
-- [[dot-Update()_17]] - `calls` [EXTRACTED]
-- [[dot-Update()_22]] - `calls` [EXTRACTED]
+- [[dot-Update()_16]] - `calls` [EXTRACTED]
+- [[dot-Update()_23]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[dot-ZeDesconversa()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_30

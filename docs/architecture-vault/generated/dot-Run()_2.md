@@ -1,31 +1,29 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs"
 type: "code"
-community: "Community 31"
-location: "L52"
+community: "Community 4"
+location: "L9"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_31
+  - graphify/INFERRED
+  - community/Community_4
 ---
 
 # .Run()
 
 ## Connections
+- [[dot-Balim()]] - `calls` [EXTRACTED]
 - [[dot-Check()_1]] - `calls` [INFERRED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[Capitulo2Portal]] - `references` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
-- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
-- [[ShadowCaster2D]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[TextMeshPro]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[dot-Clone()_1]] - `calls` [INFERRED]
+- [[dot-CriarMao()]] - `calls` [INFERRED]
+- [[dot-ForcaNoTempo()]] - `calls` [EXTRACTED]
+- [[dot-Lancar()_2]] - `calls` [INFERRED]
+- [[dot-Preparar()_1]] - `calls` [EXTRACTED]
+- [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
+- [[dot-Step()]] - `calls` [INFERRED]
+- [[BochaBall]] - `calls` [INFERRED]
+- [[BochaMatch]] - `calls` [INFERRED]
+- [[BochaPerspectiveVerification]] - `method` [EXTRACTED]
+- [[BochaSimulation]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/INFERRED #community/Community_4

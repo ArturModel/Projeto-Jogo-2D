@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
-- [[dot-Configurar()_2]] - `method` [EXTRACTED]
+- [[dot-Configurar()_1]] - `method` [EXTRACTED]
 - [[dot-Interact()_2]] - `method` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]

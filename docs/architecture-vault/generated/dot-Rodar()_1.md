@@ -22,7 +22,7 @@ tags:
 - [[dot-Ligar()_1]] - `calls` [INFERRED]
 - [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[dot-Revelar()]] - `calls` [EXTRACTED]
-- [[dot-Start()_5]] - `calls` [EXTRACTED]
+- [[dot-Start()_7]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 

@@ -1,19 +1,24 @@
 ---
 type: community
-members: 6
+members: 11
 ---
 
 # Community 38
 
-**Members:** 6 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-Continuar()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[dot-NovoJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[dot-Opcoes()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[dot-Sair()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[MainMenuActions]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[MainMenuActions.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
+- [[dot-Avancar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Configurar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-OnDeselect()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-OnSelect()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Retroceder()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-TocarSom()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Update()_17]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[BaseEventData]] - code
+- [[HorizontalStepperNavigation]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[IDeselectHandler]] - code
+- [[ISelectHandler]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,14 +28,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 6 edges to [[_COMMUNITY_Community 28]]
+- 4 edges to [[_COMMUNITY_Community 12]]
+- 2 edges to [[_COMMUNITY_Community 15]]
 - 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 3]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[dot-NovoJogo()]] - degree 3, connects to 2 communities
-- [[MainMenuActions]] - degree 6, connects to 1 community
-- [[dot-Continuar()]] - degree 2, connects to 1 community
-- [[MainMenuActions.cs]] - degree 2, connects to 1 community
+- [[HorizontalStepperNavigation]] - degree 16, connects to 5 communities
+- [[dot-Configurar()_2]] - degree 6, connects to 3 communities
+- [[BaseEventData]] - degree 3, connects to 1 community
+- [[ISelectHandler]] - degree 2, connects to 1 community

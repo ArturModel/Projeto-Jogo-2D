@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Build()_1]] - `calls` [EXTRACTED]
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]

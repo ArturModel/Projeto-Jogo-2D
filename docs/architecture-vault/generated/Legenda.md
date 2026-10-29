@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-Aparecer()]] - `method` [EXTRACTED]
-- [[dot-Awake()_10]] - `method` [EXTRACTED]
-- [[dot-Construir()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_11]] - `method` [EXTRACTED]
+- [[dot-Construir()_2]] - `method` [EXTRACTED]
 - [[dot-Dizer()]] - `method` [EXTRACTED]
 - [[dot-Enfileirar()]] - `method` [EXTRACTED]
 - [[dot-Limpar()_1]] - `method` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[Coroutine]] - `references` [EXTRACTED]
 - [[Fala_2]] - `references` [EXTRACTED]
 - [[Fala]] - `contains` [EXTRACTED]
-- [[Instance_9]] - `defines` [EXTRACTED]
+- [[Instance_10]] - `defines` [EXTRACTED]
 - [[Legenda.cs]] - `contains` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 39
+members: 40
 ---
 
 # Community 15
 
-**Members:** 39 nodes
+**Members:** 40 nodes
 
 ## Members
 - [[dot-AlterarAtivacao()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
@@ -45,6 +45,7 @@ members: 39
 - [[Resolution]] - code
 - [[Slider]] - code
 - [[SubtitleSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
+- [[TMP_Dropdown]] - code
 - [[Toggle]] - code
 - [[VideoSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 
@@ -56,18 +57,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Community 12]]
+- 13 edges to [[_COMMUNITY_Community 12]]
 - 3 edges to [[_COMMUNITY_Community 42]]
 - 3 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 28]]
+- 2 edges to [[_COMMUNITY_Community 38]]
 - 1 edge to [[_COMMUNITY_Community 8]]
 - 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 45]]
 - 1 edge to [[_COMMUNITY_Community 39]]
 
 ## Top bridge nodes
-- [[VideoSettingsController]] - degree 20, connects to 5 communities
+- [[VideoSettingsController]] - degree 20, connects to 4 communities
 - [[SubtitleSettingsController]] - degree 17, connects to 3 communities
 - [[AudioSettingsController]] - degree 16, connects to 3 communities
 - [[Slider]] - degree 8, connects to 2 communities
-- [[dot-Vincular()_2]] - degree 6, connects to 2 communities
+- [[TMP_Dropdown]] - degree 5, connects to 2 communities

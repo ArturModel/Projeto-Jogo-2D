@@ -12,7 +12,7 @@ tags:
 # .AplicarAngulo()
 
 ## Connections
-- [[dot-Update()_23]] - `calls` [EXTRACTED]
+- [[dot-Update()_24]] - `calls` [EXTRACTED]
 - [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_50

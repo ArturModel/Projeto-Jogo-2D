@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
 type: "code"
-community: "Community 39"
+community: "Community 23"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_23
 ---
 
 # .CreateLabel()
@@ -15,7 +15,7 @@ tags:
 - [[dot-Build()]] - `calls` [EXTRACTED]
 - [[dot-Build()_1]] - `calls` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_23

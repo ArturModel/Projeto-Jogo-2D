@@ -1,22 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
 type: "code"
-community: "Community 28"
-location: "L717"
+community: "Community 6"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_6
 ---
 
 # .Configurar()
 
 ## Connections
-- [[dot-LinhaStepperResolucao()]] - `calls` [INFERRED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
-- [[TMP_Dropdown]] - `references` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
+- [[dot-AtualizarSpawnPointExistente()]] - `calls` [INFERRED]
+- [[SpawnPoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_6

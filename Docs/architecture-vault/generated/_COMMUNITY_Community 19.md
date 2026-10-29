@@ -1,11 +1,11 @@
 ---
 type: community
-members: 22
+members: 21
 ---
 
 # Community 19
 
-**Members:** 22 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[dot-AteOTempo()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
@@ -16,16 +16,15 @@ members: 22
 - [[dot-Desacelerar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
 - [[dot-Disparar()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
 - [[dot-DispararFalasVencidas()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
-- [[dot-Encerrar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
-- [[dot-Limpar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Pitch()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
 - [[dot-Revelar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
 - [[dot-Rodar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
-- [[dot-Start()_5]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
+- [[dot-Start()_7]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
 - [[dot-Tocando()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
-- [[dot-Update()_2]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
-- [[dot-Update()_3]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
+- [[dot-Update()_4]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
+- [[dot-Update()_5]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
 - [[AudioAmbiente]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
+- [[Camada]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
 - [[FalaMarcada]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
 - [[FalaMarcada_1]] - code
 - [[Instance_2]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
@@ -39,27 +38,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 6 edges to [[_COMMUNITY_Community 46]]
 - 5 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 21]]
+- 3 edges to [[_COMMUNITY_Community 28]]
 - 2 edges to [[_COMMUNITY_Community 42]]
 - 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 28]]
 - 2 edges to [[_COMMUNITY_Community 48]]
-- 2 edges to [[_COMMUNITY_Community 46]]
 - 2 edges to [[_COMMUNITY_Community 39]]
-- 2 edges to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 8]]
 - 1 edge to [[_COMMUNITY_Community 12]]
 - 1 edge to [[_COMMUNITY_Community 50]]
 - 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 25]]
 
 ## Top bridge nodes
 - [[PrologoDirector]] - degree 21, connects to 8 communities
-- [[AudioAmbiente]] - degree 14, connects to 5 communities
-- [[dot-Rodar()_1]] - degree 13, connects to 3 communities
-- [[dot-Encerrar()]] - degree 8, connects to 3 communities
-- [[dot-Limpar()_1]] - degree 4, connects to 2 communities
+- [[AudioAmbiente]] - degree 14, connects to 4 communities
+- [[dot-Rodar()_1]] - degree 13, connects to 4 communities
+- [[dot-Curvar()]] - degree 6, connects to 1 community
+- [[dot-AteOTempo()]] - degree 5, connects to 1 community

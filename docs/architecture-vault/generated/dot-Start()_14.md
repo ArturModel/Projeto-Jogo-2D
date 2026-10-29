@@ -12,7 +12,7 @@ tags:
 # .Start()
 
 ## Connections
-- [[dot-Construir()_2]] - `calls` [EXTRACTED]
+- [[dot-Construir()_3]] - `calls` [EXTRACTED]
 - [[EstradaScroller]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_48

@@ -12,7 +12,7 @@ tags:
 # .PrepararPosesLanterna()
 
 ## Connections
-- [[dot-Awake()_16]] - `calls` [EXTRACTED]
+- [[dot-Awake()_17]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

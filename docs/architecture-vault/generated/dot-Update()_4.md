@@ -1,20 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "Community 2"
-location: "L390"
+community: "Community 19"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_19
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarTeclasPainelFechamento()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_19

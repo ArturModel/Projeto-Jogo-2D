@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
 - [[dot-ElevationAt()]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_5]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_2]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_4]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_1]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-SpeedAt()]] - `method` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]

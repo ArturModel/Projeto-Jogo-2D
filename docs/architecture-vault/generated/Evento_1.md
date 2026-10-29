@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 4"
+community: "Community 27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_27
 ---
 
 # Evento
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-TestarPlano()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_27

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "Community 6"
-location: "L40"
+community: "Community 50"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_50
 ---
 
 # .Awake()
 
 ## Connections
-- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
+- [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_50

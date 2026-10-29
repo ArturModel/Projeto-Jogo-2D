@@ -12,7 +12,7 @@ tags:
 # PortaLuvasCarro
 
 ## Connections
-- [[dot-Ativar()_1]] - `method` [EXTRACTED]
+- [[dot-Ativar()_2]] - `method` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[PortaLuvasCarro.cs]] - `contains` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]

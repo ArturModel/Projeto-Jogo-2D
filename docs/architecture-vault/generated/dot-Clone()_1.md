@@ -16,7 +16,7 @@ tags:
 - [[dot-Clone()]] - `calls` [INFERRED]
 - [[dot-Escolher()]] - `calls` [INFERRED]
 - [[dot-Physics()]] - `calls` [INFERRED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[dot-Run()_2]] - `calls` [INFERRED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Community_4

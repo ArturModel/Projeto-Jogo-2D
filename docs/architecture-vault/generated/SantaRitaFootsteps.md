@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-ApoiarPe()]] - `method` [EXTRACTED]
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_8]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_5]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_7]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_4]] - `method` [EXTRACTED]
 - [[dot-OnScene()]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]

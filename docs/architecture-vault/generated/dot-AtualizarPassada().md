@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarFeixeLanterna()]] - `calls` [EXTRACTED]
-- [[dot-Avancar()_1]] - `calls` [INFERRED]
+- [[dot-Avancar()_2]] - `calls` [INFERRED]
 - [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
 - [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]

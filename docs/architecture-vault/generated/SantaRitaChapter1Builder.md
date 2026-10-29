@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "Community 2"
+community: "Community 7"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_7
 ---
 
 # SantaRitaChapter1Builder
@@ -39,4 +39,4 @@ tags:
 - [[dot-WritePng()]] - `method` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_7

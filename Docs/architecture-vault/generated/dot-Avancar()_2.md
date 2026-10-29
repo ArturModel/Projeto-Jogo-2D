@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs"
 type: "code"
-community: "Community 7"
-location: "L420"
+community: "Community 5"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_5
 ---
 
 # .Avancar()
 
 ## Connections
-- [[dot-Fechar()_4]] - `calls` [EXTRACTED]
-- [[dot-Play()]] - `calls` [EXTRACTED]
-- [[dot-RotinaContinuacao()]] - `calls` [EXTRACTED]
-- [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
+- [[dot-AtualizarPassada()]] - `calls` [INFERRED]
+- [[dot-Gait()]] - `calls` [INFERRED]
+- [[dot-Reset()]] - `calls` [EXTRACTED]
+- [[Action]] - `references` [EXTRACTED]
+- [[MarcusGait]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_5

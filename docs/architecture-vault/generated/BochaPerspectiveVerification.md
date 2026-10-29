@@ -12,7 +12,7 @@ tags:
 # BochaPerspectiveVerification
 
 ## Connections
-- [[dot-Run()_3]] - `method` [EXTRACTED]
+- [[dot-Run()_2]] - `method` [EXTRACTED]
 - [[BochaPerspectiveVerification.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_4

@@ -12,7 +12,7 @@ tags:
 # .ColocarGatilhoTransicao()
 
 ## Connections
-- [[dot-Configurar()_2]] - `calls` [INFERRED]
+- [[dot-Configurar()_1]] - `calls` [INFERRED]
 - [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]

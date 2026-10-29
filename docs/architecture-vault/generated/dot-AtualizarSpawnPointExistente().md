@@ -12,7 +12,7 @@ tags:
 # .AtualizarSpawnPointExistente()
 
 ## Connections
-- [[dot-Configurar()_1]] - `calls` [INFERRED]
+- [[dot-Configurar()_3]] - `calls` [INFERRED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirMundoMultiZonas()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]

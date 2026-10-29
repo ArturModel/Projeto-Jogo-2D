@@ -1,26 +1,25 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 4"
-location: "L146"
+community: "Community 6"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_6
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
-- [[dot-Gait()]] - `calls` [EXTRACTED]
-- [[dot-Matches()]] - `calls` [EXTRACTED]
-- [[dot-Narrative()]] - `calls` [EXTRACTED]
-- [[dot-Physics()]] - `calls` [EXTRACTED]
-- [[dot-Rules()]] - `calls` [EXTRACTED]
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
-- [[dot-Saves()]] - `calls` [EXTRACTED]
-- [[Chapter2Verification]] - `method` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
+- [[dot-ApprovedScenes()]] - `calls` [EXTRACTED]
+- [[dot-BuildFinalLivingWorld()]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()]] - `calls` [EXTRACTED]
+- [[dot-RegisterCampaignScenes()]] - `calls` [EXTRACTED]
+- [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
+- [[dot-Revision()]] - `calls` [EXTRACTED]
+- [[dot-Scenes()]] - `calls` [EXTRACTED]
+- [[dot-SourceHash()]] - `calls` [EXTRACTED]
+- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_6

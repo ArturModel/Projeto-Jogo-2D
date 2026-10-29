@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
 type: "code"
 community: "Community 28"
-location: "L531"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,6 @@ tags:
 # .Update()
 
 ## Connections
-- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
-- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
-- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
+- [[SantaRitaSound]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_28
