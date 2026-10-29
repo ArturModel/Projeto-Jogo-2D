@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "AudioSettingsController"
-location: "L49"
+community: "Community 46"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/Community_46
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_46

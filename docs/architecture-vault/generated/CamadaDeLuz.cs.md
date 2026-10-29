@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: ".CreateCanvas"
+community: "Community 1"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_1
 ---
 
 # CamadaDeLuz.cs
@@ -17,4 +17,4 @@ tags:
 - [[unityengine]] - `imports` [EXTRACTED]
 - [[unityengine_rendering_universal]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCanvas
+#graphify/code #graphify/EXTRACTED #community/Community_1

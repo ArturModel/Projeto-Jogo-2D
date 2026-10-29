@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "SceneFader"
+community: "Community 15"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_15
 ---
 
 # VideoSettingsController
@@ -21,8 +21,8 @@ tags:
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-OnDisable()_1]] - `method` [EXTRACTED]
 - [[dot-PrepararResolucoes()]] - `method` [EXTRACTED]
-- [[dot-Start()_4]] - `method` [EXTRACTED]
-- [[dot-Vincular()_2]] - `method` [EXTRACTED]
+- [[dot-Start()_5]] - `method` [EXTRACTED]
+- [[dot-Vincular()_1]] - `method` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[RawImage]] - `references` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[Toggle]] - `references` [EXTRACTED]
 - [[VideoSettingsController.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_15

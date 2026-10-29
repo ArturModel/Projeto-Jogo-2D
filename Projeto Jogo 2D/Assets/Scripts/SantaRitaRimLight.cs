@@ -13,7 +13,7 @@ public sealed class SantaRitaRimLight : MonoBehaviour
     void LateUpdate()
     {
         if(rim==null)return;
-        if(Time.unscaledTime>nextScan){nextScan=Time.unscaledTime+2;lights=FindObjectsByType<Light2D>(FindObjectsSortMode.None);}
+        if(Time.unscaledTime>nextScan){nextScan=Time.unscaledTime+2;lights=FindObjectsByType<Light2D>();}
         Light2D best=null;float strength=0;
         if(lights!=null)foreach(var l in lights)
         {

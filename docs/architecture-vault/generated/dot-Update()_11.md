@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "MainMenuActions"
-location: "L54"
+community: "Community 3"
+location: "L596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MainMenuActions
+  - community/Community_3
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[dot-CriarAmbiencia()]] - `calls` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MainMenuActions
+#graphify/code #graphify/EXTRACTED #community/Community_3

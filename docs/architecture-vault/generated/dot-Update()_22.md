@@ -1,19 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L31"
+community: "Community 5"
+location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_5
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
+- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
+- [[dot-FindNearest()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_3]] - `calls` [INFERRED]
+- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
+- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_5

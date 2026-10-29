@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "TilePiso"
-location: "L27"
+community: "Community 26"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TilePiso
+  - community/Community_26
 ---
 
 # Instance
 
 ## Connections
-- [[Capitulo2Director]] - `defines` [EXTRACTED]
+- [[SceneFader]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TilePiso
+#graphify/code #graphify/EXTRACTED #community/Community_26

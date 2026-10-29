@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 21"
 location: "L350"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_21
 ---
 
 # .Limpar()
@@ -19,4 +19,4 @@ tags:
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_21

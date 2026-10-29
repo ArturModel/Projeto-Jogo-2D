@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L14"
+community: "Community 7"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_7
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
+- [[Interactable]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_7

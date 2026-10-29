@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 0"
 location: "L226"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_0
 ---
 
 # .Walking()
@@ -21,4 +21,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_0

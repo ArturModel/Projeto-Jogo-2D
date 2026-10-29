@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "dependencies"
+community: "Community 23"
 location: "L2569"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_23
 ---
 
 # .CriarBotaoFechamento()
@@ -22,4 +22,4 @@ tags:
 - [[UnityAction]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_23

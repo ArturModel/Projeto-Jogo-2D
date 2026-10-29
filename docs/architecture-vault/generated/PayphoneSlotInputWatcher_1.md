@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.test-framework"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/Community_23
 ---
 
 # PayphoneSlotInputWatcher
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/Community_23

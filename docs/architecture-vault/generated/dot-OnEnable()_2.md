@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
 type: "code"
-community: "PayphoneCheckpoint"
-location: "L16"
+community: "Community 31"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PayphoneCheckpoint
+  - community/Community_31
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[Interactable]] - `method` [EXTRACTED]
+- [[dot-Atualizar()]] - `calls` [EXTRACTED]
+- [[Capitulo2Gate]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint
+#graphify/code #graphify/EXTRACTED #community/Community_31

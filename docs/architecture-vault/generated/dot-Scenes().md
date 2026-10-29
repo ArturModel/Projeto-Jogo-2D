@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "VideoSettingsController"
+community: "Community 31"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/VideoSettingsController
+  - community/Community_31
 ---
 
 # .Scenes()
@@ -17,7 +17,7 @@ tags:
 - [[dot-Flood()]] - `calls` [EXTRACTED]
 - [[dot-IdDaCena()]] - `calls` [EXTRACTED]
 - [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
 - [[dot-UV()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `references` [EXTRACTED]
 - [[Capitulo2Gate]] - `references` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[TilemapCollider2D]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/VideoSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_31

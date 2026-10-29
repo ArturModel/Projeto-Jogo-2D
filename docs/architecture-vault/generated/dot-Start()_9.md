@@ -1,19 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "com.unity.modules.ui"
-location: "L90"
+community: "Community 20"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesui
+  - community/Community_20
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
-- [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
-- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[ParticleSystem]] - `references` [EXTRACTED]
+- [[ParticleSystemRenderer]] - `references` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesui
+#graphify/code #graphify/EXTRACTED #community/Community_20

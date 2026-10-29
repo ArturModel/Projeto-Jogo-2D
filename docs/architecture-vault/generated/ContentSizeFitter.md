@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.test-framework"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/Community_23
 ---
 
 # ContentSizeFitter
 
 ## Connections
 - [[dot-Build()]] - `references` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/Community_23

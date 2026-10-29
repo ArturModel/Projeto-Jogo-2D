@@ -1,21 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
 type: "code"
-community: "SinucaMinigameUI"
-location: "L596"
+community: "Community 33"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/Community_33
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
-- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-Ativar()_2]] - `calls` [INFERRED]
+- [[dot-Procurar()]] - `calls` [EXTRACTED]
+- [[PonteiroCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/Community_33

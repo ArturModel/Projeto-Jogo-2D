@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: ".CreateCanvas"
+community: "Community 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_1
 ---
 
 # unityeditor_build_reporting
@@ -14,4 +14,4 @@ tags:
 - [[Chapter2BuildVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CreateCanvas
+#graphify/concept #graphify/EXTRACTED #community/Community_1

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "EstadoPartida"
+community: "Community 47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/EstadoPartida
+  - community/Community_47
 ---
 
 # Vector3Int
@@ -14,4 +14,4 @@ tags:
 - [[dot-Embaralhar()]] - `references` [EXTRACTED]
 - [[dot-GetTileData()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/EstadoPartida
+#graphify/code #graphify/EXTRACTED #community/Community_47

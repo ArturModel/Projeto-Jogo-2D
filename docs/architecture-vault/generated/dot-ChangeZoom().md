@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "MonoBehaviour"
+community: "Community 9"
 location: "L48"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/MonoBehaviour
+  - community/Community_9
 ---
 
 # .ChangeZoom()
@@ -16,4 +16,4 @@ tags:
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/MonoBehaviour
+#graphify/code #graphify/INFERRED #community/Community_9

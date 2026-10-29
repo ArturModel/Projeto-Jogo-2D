@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "com.unity.modules.audio"
-location: "L387"
+community: "Community 54"
+location: "L389"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesaudio
+  - community/Community_54
 ---
 
 # .AtualizarTextosDosSlots()
@@ -18,4 +18,4 @@ tags:
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio
+#graphify/code #graphify/EXTRACTED #community/Community_54

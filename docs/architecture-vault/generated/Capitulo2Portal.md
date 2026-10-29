@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "unityengine"
+community: "Community 35"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/Community_35
 ---
 
 # Capitulo2Portal
@@ -17,9 +17,9 @@ tags:
 - [[dot-ConstruirInterior2_Mercadinho()]] - `references` [EXTRACTED]
 - [[dot-CorrectApprovedGeography()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
-- [[dot-Interact()_1]] - `method` [EXTRACTED]
+- [[dot-Interact()_2]] - `method` [EXTRACTED]
 - [[dot-Interior()]] - `references` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()_1]] - `method` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()]] - `method` [EXTRACTED]
 - [[dot-Portal()]] - `references` [EXTRACTED]
 - [[dot-Portal()_2]] - `references` [EXTRACTED]
 - [[dot-Portal()_1]] - `references` [EXTRACTED]
@@ -32,6 +32,6 @@ tags:
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 - [[Capitulo2Portal.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_3]] - `defines` [EXTRACTED]
+- [[Prompt_2]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/Community_35

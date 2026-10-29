@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: "PlayerController"
+community: "Community 4"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/Community_4
 ---
 
 # .Distancia()
@@ -19,4 +19,4 @@ tags:
 - [[BochaBall]] - `references` [EXTRACTED]
 - [[BochaMatch]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/Community_4

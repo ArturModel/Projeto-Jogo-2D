@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "PrologoDirector"
-location: "L27"
+community: "Community 35"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoDirector
+  - community/Community_35
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Ativar()]] - `calls` [INFERRED]
-- [[dot-Procurar()]] - `calls` [EXTRACTED]
-- [[PonteiroCarro]] - `method` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoDirector
+#graphify/code #graphify/EXTRACTED #community/Community_35

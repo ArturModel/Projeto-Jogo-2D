@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "com.unity.modules.imageconversion"
+community: "Community 14"
 location: "L611"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimageconversion
+  - community/Community_14
 ---
 
 # .NarracaoEntradaCasaAvoRoutine()
@@ -17,4 +17,4 @@ tags:
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
+#graphify/code #graphify/EXTRACTED #community/Community_14

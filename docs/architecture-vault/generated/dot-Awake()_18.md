@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
-community: "com.unity.mathematics"
+community: "Community 50"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymathematics
+  - community/Community_50
 ---
 
 # .Awake()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymathematics
+#graphify/code #graphify/EXTRACTED #community/Community_50

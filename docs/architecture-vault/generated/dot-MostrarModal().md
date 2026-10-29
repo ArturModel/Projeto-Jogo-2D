@@ -1,25 +1,28 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "SinucaMinigameUI"
-location: "L1308"
+community: "Community 17"
+location: "L316"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/Community_17
 ---
 
 # .MostrarModal()
 
 ## Connections
-- [[dot-AbrirModalRegrasDuranteJogo()]] - `calls` [EXTRACTED]
-- [[dot-ComecarNovaSerie()]] - `calls` [EXTRACTED]
-- [[dot-ConcluirMao()]] - `calls` [EXTRACTED]
-- [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
-- [[dot-ConcluirSerieVitoria()]] - `calls` [EXTRACTED]
-- [[dot-IniciarTurnoAtual()]] - `calls` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
-- [[UnityAction]] - `references` [EXTRACTED]
+- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
+- [[dot-Botao()_1]] - `calls` [EXTRACTED]
+- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
+- [[dot-Comecar()]] - `calls` [EXTRACTED]
+- [[dot-Derrota()]] - `calls` [EXTRACTED]
+- [[dot-Label()]] - `calls` [EXTRACTED]
+- [[dot-Painel()]] - `calls` [EXTRACTED]
+- [[dot-Pausar()]] - `calls` [EXTRACTED]
+- [[dot-Regras()]] - `calls` [EXTRACTED]
+- [[dot-ResolverMao()]] - `calls` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/Community_17

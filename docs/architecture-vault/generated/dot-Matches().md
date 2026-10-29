@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "PlayerController"
+community: "Community 4"
 location: "L306"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/PlayerController
+  - community/Community_4
 ---
 
 # .Matches()
@@ -16,7 +16,7 @@ tags:
 - [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CriarMao()]] - `calls` [INFERRED]
 - [[dot-Escolher()]] - `calls` [EXTRACTED]
-- [[dot-Lancar()_1]] - `calls` [INFERRED]
+- [[dot-Lancar()_2]] - `calls` [INFERRED]
 - [[dot-Proximo()]] - `calls` [INFERRED]
 - [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
 - [[dot-Resolver()]] - `calls` [INFERRED]
@@ -25,4 +25,4 @@ tags:
 - [[BochaShot]] - `calls` [INFERRED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/PlayerController
+#graphify/code #graphify/INFERRED #community/Community_4

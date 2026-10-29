@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: ".CreateLabel"
+community: "Community 54"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateLabel
+  - community/Community_54
 ---
 
 # .ResetStatic()
@@ -15,4 +15,4 @@ tags:
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateLabel
+#graphify/code #graphify/EXTRACTED #community/Community_54

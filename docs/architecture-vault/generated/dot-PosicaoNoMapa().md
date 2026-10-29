@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "manifest.json"
+community: "Community 6"
 location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_6
 ---
 
 # .PosicaoNoMapa()
@@ -19,4 +19,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_6

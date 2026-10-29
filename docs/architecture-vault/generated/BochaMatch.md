@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: "PlayerController"
+community: "Community 4"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/Community_4
 ---
 
 # BochaMatch
@@ -17,8 +17,8 @@ tags:
 - [[dot-CriarMao()]] - `method` [EXTRACTED]
 - [[dot-DefeatUI()]] - `references` [EXTRACTED]
 - [[dot-Distancia()]] - `method` [EXTRACTED]
-- [[dot-Lancar()]] - `method` [EXTRACTED]
 - [[dot-Lancar()_1]] - `method` [EXTRACTED]
+- [[dot-Lancar()_2]] - `method` [EXTRACTED]
 - [[dot-Matches()]] - `calls` [INFERRED]
 - [[dot-Medir()]] - `method` [EXTRACTED]
 - [[dot-MelhorDistancia()]] - `method` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[dot-Resolver()]] - `method` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
 - [[dot-Run()]] - `references` [EXTRACTED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[dot-Run()_2]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BochaRules.cs]] - `contains` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[UltimoLancador]] - `defines` [EXTRACTED]
 - [[Vencedor]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/Community_4

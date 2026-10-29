@@ -429,7 +429,7 @@ public class Chuva : MonoBehaviour
 
         HashSet<Sprite> vistas = new HashSet<Sprite>();
 
-        foreach (Light2D luz in FindObjectsByType<Light2D>(FindObjectsSortMode.None))
+        foreach (Light2D luz in FindObjectsByType<Light2D>())
         {
             if (!luz.isActiveAndEnabled)
             {

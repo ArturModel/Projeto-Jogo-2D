@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "SceneFader"
+community: "Community 15"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_15
 ---
 
 # .MontarTela()
@@ -20,4 +20,4 @@ tags:
 - [[PrologoVideo]] - `method` [EXTRACTED]
 - [[RawImage]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_15

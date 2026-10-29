@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "MainMenuActions"
-location: "L89"
+community: "Community 39"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MainMenuActions
+  - community/Community_39
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MainMenuActions
+#graphify/code #graphify/EXTRACTED #community/Community_39

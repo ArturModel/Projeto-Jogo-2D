@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 21"
 location: "L372"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_21
 ---
 
 # .C1InvestigationRegression()
@@ -26,4 +26,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_21

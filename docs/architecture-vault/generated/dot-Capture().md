@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 0"
 location: "L307"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/InteracaoCapitulo1
+  - community/Community_0
 ---
 
 # .Capture()
@@ -29,4 +29,4 @@ tags:
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/InteracaoCapitulo1
+#graphify/code #graphify/INFERRED #community/Community_0

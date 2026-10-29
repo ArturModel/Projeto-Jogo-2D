@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
-community: "MainMenuActions"
+community: "Community 54"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MainMenuActions
+  - community/Community_54
 ---
 
 # .CriarTextura()
@@ -17,4 +17,4 @@ tags:
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MainMenuActions
+#graphify/code #graphify/EXTRACTED #community/Community_54

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "AudioSettingsController"
-location: "L12"
+community: "Community 36"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/Community_36
 ---
 
 # Instance
 
 ## Connections
-- [[InteractionPrompt]] - `defines` [EXTRACTED]
+- [[Legenda]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_36

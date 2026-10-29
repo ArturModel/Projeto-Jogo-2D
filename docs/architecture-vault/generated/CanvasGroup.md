@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.modules.jsonserialize"
+community: "Community 24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/Community_24
 ---
 
 # CanvasGroup
@@ -15,7 +15,7 @@ tags:
 - [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-Build()_1]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
-- [[dot-Caixa()]] - `references` [EXTRACTED]
+- [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-ConfigurarGrupo()]] - `references` [EXTRACTED]
 - [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]
 - [[dot-SubPainel()]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[dot-Vincular()_3]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[InteractionPrompt]] - `references` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[OptionsPanelController]] - `references` [EXTRACTED]
 - [[SceneFader]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/Community_24

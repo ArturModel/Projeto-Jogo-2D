@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "GameState"
+community: "Community 20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/Community_20
 ---
 
 # Light2D
@@ -15,7 +15,7 @@ tags:
 - [[dot-AjustarLuzGlobal()]] - `references` [EXTRACTED]
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-Apply()]] - `references` [EXTRACTED]
-- [[dot-Awake()_13]] - `references` [EXTRACTED]
+- [[dot-Awake()_12]] - `references` [EXTRACTED]
 - [[dot-BuscarLuzes()]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
@@ -23,7 +23,7 @@ tags:
 - [[dot-Lamp()]] - `references` [EXTRACTED]
 - [[dot-Lamp()_1]] - `references` [EXTRACTED]
 - [[dot-LateUpdate()_2]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_1]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_3]] - `references` [EXTRACTED]
 - [[dot-Light()]] - `references` [EXTRACTED]
 - [[dot-PrepararFeixeLanterna()]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[Chuva]] - `references` [EXTRACTED]
 - [[SantaRitaRimLight]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/Community_20

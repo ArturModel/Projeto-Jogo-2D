@@ -1,3 +1,155 @@
+# Refinamento Visual e Acessibilidade dos Controles dos Menus — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_refinamento-visual-controles-menus.md`](../ai-plans/2026-10-28_lucamontini_refinamento-visual-controles-menus.md)
+- **Resumo:** Executadas as melhorias visuais e de acessibilidade solicitadas. A flor/planta no canto inferior esquerdo foi totalmente removida de `PainelPausa_Fundo.png` por inpainting cirúrgico e microrruído calibrado, unificando a placa de ardósia oxidada sem resquícios. As caixas de seleção (toggles) ganharam moldura bronze com cavidade escura e indicador proporcional âmbar de 8×8 px. As barras (sliders) ganharam trilho visível de 0% a 100% e cursor ergonômico. O seletor de resolução foi transformado em um Stepper Horizontal elegante (`< 1920 x 1080 >`) com suporte a setas e teclas A/D, eliminando a lista suspensa e a barra de rolagem branca. O preview de legendas recebeu moldura estilizada translúcida, extinguindo a tarja preta crua. Validação completa com `.\scripts\graphify-validate.ps1` (PASS em 93 scripts).
+
+---
+
+# Correção de Glifo Unicode do Indicador de Submenus — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_correcao-glifo-indicador-menu.md`](../ai-plans/2026-10-28_lucamontini_correcao-glifo-indicador-menu.md)
+- **Resumo:** Diagnosticados e sanados os avisos no console após o teste in-game. O aviso referente ao caractere `\u25B6` (`▶`) vinha do método `Indicador` em `MenuPausa.cs`: a fonte pixel art bitmap `VT323-Regular Bitmap` não contém esse glifo específico no seu atlas, gerando fallback para quadrado `\u25A1`. Foi restaurado o caractere nativo `">"` com `corDestaque` (âmbar vintage), fiel ao protótipo e 100% suportado pela fonte. O aviso de `Color primaries 0` foi esclarecido como metadado benigno de vídeo no Windows Media Foundation, sem relação com os menus. Validação completa com `.\scripts\graphify-validate.ps1` (PASS em 93 scripts).
+
+---
+
+# Redesign do Menu de Configurações e Submenus (Áudio, Vídeo, Legendas) — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_redesign-menu-configuracoes.md`](../ai-plans/2026-10-28_lucamontini_redesign-menu-configuracoes.md)
+- **Resumo:** Unificada a identidade visual do Menu de Configurações e seus submenus (Áudio, Vídeo, Legendas) à placa metálica oxidada do Menu de Pausa. O painel de opções foi movido do centro (`x = 0f`) para o terço esquerdo da tela (`x = -160f`, tamanho `246×280` px), reutilizando 100% dos assets validados (`PainelPausa_Fundo.png`, `PainelPausa_Selecao.png` e `PainelPausa_Linha.png`). A transição entre pausa e configurações ocorre suavemente no mesmo quadrante. Categorias adotou botões idênticos aos da pausa com papiro e seta vermelha, e os submenus ganharam layout refinado para largura interna de 192px com indicador `▶` e controles em tons bronze/carvão. Removido o método legado `Caixa`. Validação completa com `.\scripts\graphify-validate.ps1` (PASS em 93 scripts).
+
+---
+
+# Remoção da Faixa Residual Atrás de Configurações — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_remocao-retangulo-configuracoes.md`](../ai-plans/2026-10-28_lucamontini_remocao-retangulo-configuracoes.md)
+- **Resumo:** Eliminada definitivamente a faixa retangular bege que permanecia atrás de "Configurações" em `PainelPausa_Fundo.png`. O diagnóstico identificou que o script anterior continha uma trava de flor em `y >= 231`, que classificou erroneamente o canto do papiro como flor. Corrigido o limite (a flor autêntica só inicia em `y = 288`), cobrindo 100% da faixa de `y = 183` a `240` com ardósia lisa e inpaint perimetral, reduzindo a contagem de pixels beges na zona de "Configurações" a exatamente 0. O lírio botânico permanece 100% íntegro. Validação completa com `.\scripts\graphify-validate.ps1` (PASS em 93 scripts).
+
+---
+
+# Remoção de Costuras Retangulares no Menu de Pausa — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_remocao-costuras-fundo-pausa.md`](../ai-plans/2026-10-28_lucamontini_remocao-costuras-fundo-pausa.md)
+- **Resumo:** Eliminadas definitivamente as duas costuras retangulares no fundo metálico do Menu de Pausa (o degrau entre Continuar/Configurações e a linha horizontal entre Menu Principal/Progresso não salvo). O inpainting cirúrgico foi aplicado diretamente na placa autêntica via OpenCV Telea, removendo os glifos de texto e unificando a antiga faixa de seleção com amostra de ardósia ajustada à vizinhança e inpainting perimetral de 3px, reduzindo o gradiente das antigas emendas para nível de ruído natural ($1.9$ a $5.4$). Também foi regenerado `PainelPausa_Selecao.png` por inpainting direto dos 1.400 pixels de "Continuar", extinguindo os artefatos de ladrilhamento de 50px que ficavam visíveis ao lado de "Sair". Validação integral com `.\scripts\graphify-validate.ps1` (PASS nos 93 scripts C#).
+
+---
+
+# Fidelidade Visual do Menu de Pausa ao Protótipo Conceitual — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_fidelidade-visual-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_fidelidade-visual-menu-pausa.md)
+- **Resumo:** Restaurada a fidelidade visual absoluta do Menu de Pausa ao protótipo conceitual aprovado. Reextraído o sprite `PainelPausa_Fundo.png` em suas dimensões integrais (`456×520` px), recuperando a borda direita oxidada e rebites (23px anteriormente cortados) com síntese de ardósia (0 resquícios de texto) e flor botânica 100% preservada. Criado `PainelPausa_Titulo.png` com o carimbo vintage serifado e linha vermelha rústica. Em `MenuPausa.cs`, ajustado `TituloPausa` para carregar o grafismo fiel, alinhados os botões à esquerda (`TextAlignmentOptions.MidlineLeft` com recuo de 37f da margem do botão) formando coluna uniforme ao lado da seta `▶` do papiro, e centralizado o status de save em `(0f, -105f)` com texto limpo (`"Progresso não salvo"` e `"Jogo salvo"`). Validação com `.\scripts\graphify-validate.ps1` (PASS em 93 scripts).
+
+---
+
+# Sincronização da Branch Remota e Novo Menu de Pausa — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_sincronizacao-branch-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_sincronizacao-branch-menu-pausa.md)
+- **Resumo:** Sincronizados com sucesso os commits de `origin/fix/unity6-startup-warnings-errors` na branch de trabalho local. Integrado o redesign final do Menu de Pausa (`fe8c098`: `PainelPausa_Fundo.png`, `PainelPausa_Linha.png`, `PainelPausa_Selecao.png` e novo `MenuPausa.cs`), além da porta 8088 do MCP e remoção do Plastic SCM. Adicionada compatibilidade completa Windows no `SantaRitaMcpSetup.cs` para localizar `uvx.exe` em `~/.local/bin` e iniciar o servidor headless de forma coordenada.
+
+---
+
+# Diagnóstico: Branch de Trabalho e Redesign do Menu de Pausa — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_diagnostico-branch-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_diagnostico-branch-menu-pausa.md)
+- **Resumo:** Investigado o motivo pelo qual o jogo exibia o menu de pausa antigo e o aviso de codec do MP4. Confirmado que o trabalho do novo menu de pausa subiu corretamente ao GitHub no commit `fe8c098`, porém sob o nome de branch `origin/fix/unity6-startup-warnings-errors` (com `fix/`), enquanto a branch local ativa foi criada como `unity6-startup-warnings-errors` (sem `fix/`) a partir da `main`. O aviso do Windows Media Foundation foi esclarecido como fallback benigno de metadados de cor.
+
+---
+
+# Desativação do UVC e Ajuste de Inicialização do Unity MCP — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_desativar-uvc-ajuste-mcp.md`](../ai-plans/2026-10-28_lucamontini_desativar-uvc-ajuste-mcp.md)
+- **Resumo:** Desativação definitiva do Unity Version Control (Plastic SCM) com transição para `Visible Meta Files` em `VersionControlSettings.asset` e remoção do pacote `com.unity.collab-proxy` de `manifest.json`. No `SantaRitaMcpSetup.cs`, adicionada localização dinâmica de executáveis `uvx.exe` (`~/.local/bin`, WinGet e `.santarita`), injeção dinâmica de PATH no processo do Editor e inicialização coordenada do servidor HTTP headless antes do WebSocket client para permitir conexão autônoma do Unity MCP com Antigravity/Gemini. Validação completa com `.\scripts\graphify-validate.ps1` (PASS nos 93 scripts).
+
+---
+
+# Esclarecimento de Ambiente: Graphify e Obsidian no Windows — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_esclarecimento-ambiente-graphify-obsidian.md`](../ai-plans/2026-10-28_lucamontini_esclarecimento-ambiente-graphify-obsidian.md)
+- **Resumo:** Esclarecido ao autor o status do Graphify e do Obsidian no ambiente Windows. O Graphify CLI foi provisionado via `uv tool` com Python 3.12 isolado em `~/.local/bin`, permitindo validação (`PASS`) e consultas (`graphify query`) locais sem necessidade de instalação manual. Confirmado que o cofre do Obsidian já existe completo em `docs/architecture-vault/`.
+
+---
+
+# Verificação de Acesso e Branch Git — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_verificacao-acesso-branch.md`](../ai-plans/2026-10-28_lucamontini_verificacao-acesso-branch.md)
+- **Resumo:** Verificação de acesso à pasta do jogo (`Projeto Jogo 2D`) e da branch git ativa (`unity6-startup-warnings-errors`). Ajustada a robustez de detecção do interpretador Python/uv nos scripts PowerShell (`scripts/graphify-refresh.ps1` e `scripts/graphify-validate.ps1`) para contornar o stub do Windows Store (`exit 9009`). Validação completa executada com sucesso (`.\scripts\graphify-validate.ps1` PASS em todos os 93 scripts C#).
+
+---
+
+# Remoção Definitiva dos Resquícios de "Menu Principal" e "Sair" — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_remocao-resquicios-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_remocao-resquicios-menu-pausa.md)
+- **Resumo:** Eliminados de forma definitiva os últimos resquícios das palavras "Menu Principal" e "Sair" que permaneciam visíveis no fundo da placa (`PainelPausa_Fundo.png`). A causa foi identificada: o script anterior havia iniciado a varredura inferior em `x = 165` para poupar o lírio, mas o lírio termina em `x <= 85` e os textos começavam em `x = 131`, deixando uma faixa de 34 pixels intocada. Corrigido o início da varredura para `x = 100`, cobrindo 100% da área de texto (reduzindo os pixels residuais a exatamente 0) e preservando todos os 1.083 pixels do lírio botânico. Validação Graphify e Obsidian com status PASS (93 scripts C# íntegros).
+
+---
+
+# Limpeza Definitiva do Fundo do Menu de Pausa — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_limpeza-fundo-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_limpeza-fundo-menu-pausa.md)
+- **Resumo:** Eliminados de forma definitiva todos os resquícios de texto (ghost letters) que estavam impressos nos sprites do fundo da placa (`PainelPausa_Fundo.png`) e na barra de seleção (`PainelPausa_Selecao.png`). Reconstruída a textura densa de ardósia escura com varredura contínua sobrepondo 100% da área de texto (reduzindo pixels residuais de 4.819 para 0), preservando integralmente o desenho botânico do lírio, a moldura oxidada com parafusos e a seta vermelha ▶ sem nenhum resquício da letra "C". Validação Graphify e Obsidian com status PASS (93 scripts C# íntegros).
+
+---
+
+# Redesign do Menu de Pausa (Estilo Vintage / Placa Enferrujada) — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_redesign-menu-pausa.md`](../ai-plans/2026-10-28_lucamontini_redesign-menu-pausa.md)
+- **Resumo:** Implementado o novo design e posicionamento do Menu de Pausa em conformidade com o mockup de arte aprovado pela equipe. Extraídas e limpas as camadas do mockup em sprites modulares (`PainelPausa_Fundo.png`, `PainelPausa_Selecao.png` e `PainelPausa_Linha.png`) com transparência e metadados de Sprite 2D. Atualizado `MenuPausa.cs` para ancorar a placa no terço esquerdo da tela (deixando Marcus e a chuva visíveis à direita), renderizar a placa de metal oxidado com a flor, a linha divisória vermelha, 4 botões estritos ao mockup (`Continuar`, `Configurações`, `Menu Principal`, `Sair`) e a barra de seleção em papiro envelhecido com a seta vermelha que desliza para o botão focado, com contraste automático de cor de texto. Validação Graphify e Obsidian com status PASS (93 scripts C# íntegros).
+
+---
+
+# Diagnóstico e Resolução de Conflito de Porta (8080) MCP Unity — 28/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-28_lucamontini_diagnostico-conflito-porta-8080-mcp.md`](../ai-plans/2026-10-28_lucamontini_diagnostico-conflito-porta-8080-mcp.md)
+- **Resumo:** Diagnosticada a causa do erro de conexão do MCP no Unity: a porta `8080` estava sendo ocupada pelo backend Java Spring Boot (`BffKickstartApplication`, PID 124682) do desenvolvedor. A sonda TCP do Unity detectava a porta aberta pelo Spring Boot, assumia falsamente que o servidor MCP estava pronto e tentava handshake WebSocket em `/hub/plugin`, recebendo HTTP 404 da aplicação Java. Alterada a porta padrão do MCP em `SantaRitaMcpSetup.cs` para a porta dedicada `8088`, eliminando qualquer colisão com servidores locais de trabalho. Validação Graphify e Obsidian com status PASS.
+
+---
+
+# Correção de Race Condition e Suporte Multiplataforma MCP Unity — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_correcao-race-condition-mcp-linux.md`](../ai-plans/2026-10-27_lucamontini_correcao-race-condition-mcp-linux.md)
+- **Resumo:** Refatorado `SantaRitaMcpSetup.cs` para suportar nativamente Linux/macOS e Windows. Eliminada a condição de corrida (*race condition*) que causava o erro vermelho `[WebSocket] Connection failed` e aviso `Failed to start MCP transport: Http` na abertura do Unity. O bootstrap agora apenas ajusta o ambiente (`~/.local/bin/uvx`, separador `:`, remoção de `.exe`) e delega a conexão ordenada ao `HttpAutoStartHandler` nativo do pacote MCP. Validação Graphify e Obsidian com status PASS.
+
+---
+
+# Correção de Erros e Avisos de Abertura no Unity 6 (Linux) — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_correcao-warnings-e-erros-unity6.md`](../ai-plans/2026-10-27_lucamontini_correcao-warnings-e-erros-unity6.md)
+- **Resumo:** Criação da branch isolada `fix/unity6-startup-warnings-errors`. Resolvidos avisos de API obsoleta `FindObjectsSortMode` (CS0618) no Unity 6, campos não lidos (CS0414), diretiva `DEVELOPMENT_BUILD` (UAC0009 migrada para `DEBUG`), aviso UAC0005 no MCP setup, metadados da fonte TextMeshPro (v4), transcodificação de vídeo para Linux e eliminação dos erros críticos e NullReferenceExceptions do Plastic SCM / Unity Version Control (configurado `m_Mode: Visible Meta Files`, removido `com.unity.collab-proxy` e pasta residual `.plastic/`). Validação completa Graphify e Obsidian com status PASS.
+
+---
+
+# Resolução de Espelho APT, Instalação do Git LFS e Checkout de Assets — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_instalacao-git-lfs-e-pull-assets.md`](../ai-plans/2026-10-27_lucamontini_instalacao-git-lfs-e-pull-assets.md)
+- **Resumo:** Resolução de erro HTTP 403 do espelho APT `mirror.uepg.br`. Baixado pacote oficial diretamente de `archive.ubuntu.com`, extraído e instalado `git-lfs` em `~/.local/bin/git-lfs`. Inicializado LFS (`git lfs install`), baixados 1.438 objetos (167 MB) via `git lfs pull` e realizado checkout de 1.769 objetos (172 MB) via `git lfs checkout`. Texturas e áudios validados como binários reais intactos. Projeto 100% pronto para abertura no Unity 6000.6.0f1. Validação de governança Graphify e Obsidian com status PASS.
+
+---
+
+# Verificação de Branch e Pré-Requisitos para Abertura no Unity — 27/10/2026
+
+- **Autor:** @lucamontini (Luca Dalla Lana)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-27_lucamontini_verificacao-branch-e-pre-requisitos-unity.md`](../ai-plans/2026-10-27_lucamontini_verificacao-branch-e-pre-requisitos-unity.md)
+- **Resumo:** Verificação da branch ativa (`main`) e auditoria de pré-requisitos antes de abrir o Unity. Detectada ausência do pacote `git-lfs` no Linux Mint com assets binários presentes apenas como ponteiros de ~130 bytes; estruturado passo a passo de correção (`sudo apt install git-lfs`, `git lfs install`, `git lfs pull`) para evitar corrupção de importação na biblioteca do Unity 6000.6.0f1. Validação de governança Graphify e Obsidian concluída com PASS.
+
+---
+
 # Auditoria Pós-Merge, Governança Reforçada e Histórico de Planos — 27/10/2026
 
 - **Autor:** @lucamontini (Luca Dalla Lana)

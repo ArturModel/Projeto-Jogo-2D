@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "MonoBehaviour"
+community: "Community 9"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/Community_9
 ---
 
 # BochaCourtView
@@ -26,11 +26,11 @@ tags:
 - [[dot-OnPointerDown()]] - `method` [EXTRACTED]
 - [[dot-OnPointerMove()]] - `method` [EXTRACTED]
 - [[dot-OnPointerUp()]] - `method` [EXTRACTED]
-- [[dot-OnPopulateMesh()_1]] - `method` [EXTRACTED]
+- [[dot-OnPopulateMesh()]] - `method` [EXTRACTED]
 - [[dot-OnScroll()]] - `method` [EXTRACTED]
 - [[dot-Project()]] - `method` [EXTRACTED]
 - [[dot-ProjectReady()]] - `method` [EXTRACTED]
-- [[dot-Quad()_1]] - `method` [EXTRACTED]
+- [[dot-Quad()]] - `method` [EXTRACTED]
 - [[dot-RecordContacts()]] - `method` [EXTRACTED]
 - [[dot-Ring()]] - `method` [EXTRACTED]
 - [[dot-RoomLight()]] - `method` [EXTRACTED]
@@ -73,4 +73,4 @@ tags:
 - [[Zoom]] - `defines` [EXTRACTED]
 - [[mainTexture]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/Community_9

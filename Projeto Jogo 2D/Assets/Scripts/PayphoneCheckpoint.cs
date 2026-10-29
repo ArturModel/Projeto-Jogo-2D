@@ -26,7 +26,9 @@ public class PayphoneCheckpoint : Interactable
         "\"Preciso descobrir por conta própria onde Adilio esteve hoje.\""
     };
 
+#pragma warning disable CS0414
     [SerializeField] private string textoDeSave = "Progresso salvo manualmente no orelhão.";
+#pragma warning restore CS0414
 
     private static GameObject s_modalGo;
     private static AudioSource s_audioSource;

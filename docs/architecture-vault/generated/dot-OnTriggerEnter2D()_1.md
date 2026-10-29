@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
 type: "code"
-community: "unityengine"
-location: "L26"
+community: "Community 7"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/Community_7
 ---
 
 # .OnTriggerEnter2D()
 
 ## Connections
-- [[dot-Interact()_1]] - `calls` [EXTRACTED]
-- [[Capitulo2Portal]] - `method` [EXTRACTED]
+- [[dot-Atravessar()]] - `calls` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
+- [[DoorTrigger]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/Community_7

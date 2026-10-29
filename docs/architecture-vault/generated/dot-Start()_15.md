@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L41"
+community: "Community 5"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_5
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
+- [[dot-Apply()_5]] - `calls` [EXTRACTED]
+- [[dot-ShouldReveal()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_5

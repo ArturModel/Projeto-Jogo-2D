@@ -239,7 +239,7 @@ public static class GameState
         progressoNaoSalvo = false;
     }
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if UNITY_EDITOR || DEBUG
     internal static void RestaurarIndicadorDeProgresso(bool pendente) => progressoNaoSalvo = pendente;
 #endif
 

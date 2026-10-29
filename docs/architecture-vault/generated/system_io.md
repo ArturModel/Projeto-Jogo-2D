@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: ".CreateCanvas"
+community: "Community 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_1
 ---
 
 # system_io
@@ -28,9 +28,10 @@ tags:
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter2Authoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaMcpSetup.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
 - [[TransicaoDeZonaTrigger.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CreateCanvas
+#graphify/concept #graphify/EXTRACTED #community/Community_1

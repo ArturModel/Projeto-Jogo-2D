@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "GameMessageUI"
-location: "L456"
+community: "Community 17"
+location: "L297"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_17
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-Avancar()]] - `calls` [EXTRACTED]
-- [[dot-Fade()]] - `calls` [EXTRACTED]
-- [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
+- [[dot-Derrota()]] - `calls` [EXTRACTED]
+- [[dot-Pausar()]] - `calls` [EXTRACTED]
+- [[dot-ResolverMao()]] - `calls` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_17

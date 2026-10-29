@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 0"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_0
 ---
 
 # IEnumerator
@@ -32,14 +32,14 @@ tags:
 - [[dot-Fade()]] - `references` [EXTRACTED]
 - [[dot-FadeIn()]] - `references` [EXTRACTED]
 - [[dot-FadeTo()]] - `references` [EXTRACTED]
-- [[dot-Fechar()_1]] - `references` [EXTRACTED]
+- [[dot-Fechar()_2]] - `references` [EXTRACTED]
 - [[dot-FlashlightR2()]] - `references` [EXTRACTED]
 - [[dot-FlashlightWalkR2()]] - `references` [EXTRACTED]
 - [[dot-Flicker()]] - `references` [EXTRACTED]
 - [[dot-FullBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-Guard()]] - `references` [EXTRACTED]
 - [[dot-Legendar()]] - `references` [EXTRACTED]
-- [[dot-Ligar()_1]] - `references` [EXTRACTED]
+- [[dot-Ligar()]] - `references` [EXTRACTED]
 - [[dot-NarracaoEntradaCasaAvoRoutine()]] - `references` [EXTRACTED]
 - [[dot-NewBochaPractice()]] - `references` [EXTRACTED]
 - [[dot-Performance()]] - `references` [EXTRACTED]
@@ -63,8 +63,8 @@ tags:
 - [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
 - [[dot-SlotsR2()]] - `references` [EXTRACTED]
 - [[dot-Start()_1]] - `references` [EXTRACTED]
-- [[dot-Start()_12]] - `references` [EXTRACTED]
 - [[dot-Start()_2]] - `references` [EXTRACTED]
+- [[dot-Start()_3]] - `references` [EXTRACTED]
 - [[dot-Start()_13]] - `references` [EXTRACTED]
 - [[dot-TapR2()]] - `references` [EXTRACTED]
 - [[dot-TransitionRoutine()]] - `references` [EXTRACTED]
@@ -78,4 +78,4 @@ tags:
 - [[dot-Walking()]] - `references` [EXTRACTED]
 - [[dot-ZoneTransitionRoutine()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_0

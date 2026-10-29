@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "com.unity.modules.tetgen"
-location: "L149"
+community: "Community 45"
+location: "L737"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulestetgen
+  - community/Community_45
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Retroceder()]] - `calls` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulestetgen
+#graphify/code #graphify/EXTRACTED #community/Community_45

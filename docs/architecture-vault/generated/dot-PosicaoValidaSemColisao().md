@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "SinucaMinigameUI"
+community: "Community 3"
 location: "L1241"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/Community_3
 ---
 
 # .PosicaoValidaSemColisao()
@@ -18,4 +18,4 @@ tags:
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/Community_3

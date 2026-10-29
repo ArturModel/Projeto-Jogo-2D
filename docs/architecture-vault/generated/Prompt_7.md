@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "PayphoneCheckpoint"
-location: "L26"
+community: "Community 7"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PayphoneCheckpoint
+  - community/Community_7
 ---
 
 # Prompt
 
 ## Connections
-- [[ItemDeCena]] - `defines` [EXTRACTED]
+- [[TransicaoDeZonaTrigger]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PayphoneCheckpoint
+#graphify/code #graphify/EXTRACTED #community/Community_7

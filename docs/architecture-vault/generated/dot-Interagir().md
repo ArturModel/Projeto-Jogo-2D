@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "TilePiso"
+community: "Community 14"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TilePiso
+  - community/Community_14
 ---
 
 # .Interagir()
@@ -28,4 +28,4 @@ tags:
 - [[DialogoLinha]] - `calls` [INFERRED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TilePiso
+#graphify/code #graphify/EXTRACTED #community/Community_14

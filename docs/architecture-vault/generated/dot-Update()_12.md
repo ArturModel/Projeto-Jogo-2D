@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "MainMenuActions"
-location: "L37"
+community: "Community 33"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MainMenuActions
+  - community/Community_33
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-VolumeDaCamada()]] - `calls` [EXTRACTED]
-- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MainMenuActions
+#graphify/code #graphify/EXTRACTED #community/Community_33

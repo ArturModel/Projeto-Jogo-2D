@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
-community: "Legenda"
+community: "Community 42"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Legenda
+  - community/Community_42
 ---
 
 # ChuvaRolando
@@ -18,4 +18,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Legenda
+#graphify/code #graphify/EXTRACTED #community/Community_42

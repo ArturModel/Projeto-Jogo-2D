@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
 type: "code"
-community: "com.unity.modules.unitywebrequest"
+community: "Community 18"
 location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesunitywebrequest
+  - community/Community_18
 ---
 
 # .ApplyMacroTiles()
@@ -18,4 +18,4 @@ tags:
 - [[Tile]] - `references` [EXTRACTED]
 - [[Tilemap]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesunitywebrequest
+#graphify/code #graphify/EXTRACTED #community/Community_18

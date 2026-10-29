@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "dependencies"
+community: "Community 34"
 location: "L611"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_34
 ---
 
 # .AtualizarZoomMapa()
@@ -17,8 +17,8 @@ tags:
 - [[dot-CentralizarNoJogador()]] - `calls` [EXTRACTED]
 - [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
 - [[dot-ResetarZoomEPan()]] - `calls` [EXTRACTED]
-- [[dot-Update()_26]] - `calls` [EXTRACTED]
+- [[dot-Update()_14]] - `calls` [EXTRACTED]
 - [[Canvas]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_34

@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-setup.sh"
 type: "code"
-community: "graphify-validate.ps1"
+community: "Community 65"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/graphify-validateps1
+  - community/Community_65
 ---
 
 # graphify-setup.sh script
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphify-setup.sh]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/graphify-validateps1
+#graphify/code #graphify/EXTRACTED #community/Community_65

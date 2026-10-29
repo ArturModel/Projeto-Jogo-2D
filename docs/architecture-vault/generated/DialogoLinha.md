@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "com.unity.2d.common"
+community: "Community 13"
 location: "L9"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/comunity2dcommon
+  - community/Community_13
 ---
 
 # DialogoLinha
@@ -52,4 +52,4 @@ tags:
 - [[GameMessageUI.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/comunity2dcommon
+#graphify/code #graphify/INFERRED #community/Community_13

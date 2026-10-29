@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 5"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_5
 ---
 
 # .LateUpdate()
@@ -17,4 +17,4 @@ tags:
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_5

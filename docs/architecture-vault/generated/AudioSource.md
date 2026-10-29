@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "MainMenuActions"
+community: "Community 54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MainMenuActions
+  - community/Community_54
 ---
 
 # AudioSource
@@ -15,6 +15,7 @@ tags:
 - [[dot-AtualizarFonteMusical()]] - `references` [EXTRACTED]
 - [[dot-Awake()_1]] - `references` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
+- [[dot-Configurar()_3]] - `references` [EXTRACTED]
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-CriarFonte()]] - `references` [EXTRACTED]
@@ -25,17 +26,18 @@ tags:
 - [[dot-GarantirAudioOrelhao()]] - `references` [EXTRACTED]
 - [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
 - [[dot-TocarRadio()]] - `references` [EXTRACTED]
-- [[dot-Update()_11]] - `references` [EXTRACTED]
+- [[dot-Update()_24]] - `references` [EXTRACTED]
 - [[dot-Vincular()_5]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
-- [[Camada]] - `references` [EXTRACTED]
+- [[Camada_1]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `references` [EXTRACTED]
 - [[MenuItemSelector]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MainMenuActions
+#graphify/code #graphify/EXTRACTED #community/Community_54

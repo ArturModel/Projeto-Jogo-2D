@@ -1,12 +1,12 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "TipoInteracao"
+community: "Community 14"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TipoInteracao
+  - community/Community_14
 ---
 
 # .Start()
@@ -15,10 +15,9 @@ tags:
 - [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
+- [[ChegadaEmSantaRita]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TipoInteracao
+#graphify/code #graphify/EXTRACTED #community/Community_14

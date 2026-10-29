@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "unityengine"
-location: "L12"
+community: "Community 53"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/unityengine
+  - community/Community_53
 ---
 
 # Prompt
 
 ## Connections
-- [[Capitulo2Portal]] - `defines` [EXTRACTED]
+- [[Capitulo2Interactable]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/unityengine
+#graphify/code #graphify/EXTRACTED #community/Community_53

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
 type: "code"
-community: "AudioSettingsController"
+community: "Community 26"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/AudioSettingsController
+  - community/Community_26
 ---
 
 # .OnScene()
@@ -18,4 +18,4 @@ tags:
 - [[SantaRitaSound]] - `method` [EXTRACTED]
 - [[Scene]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/AudioSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_26

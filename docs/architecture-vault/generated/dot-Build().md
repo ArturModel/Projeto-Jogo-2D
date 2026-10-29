@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "com.unity.test-framework"
+community: "Community 23"
 location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/Community_23
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_3]] - `calls` [EXTRACTED]
+- [[dot-Awake()_8]] - `calls` [EXTRACTED]
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[ScrollRect]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/Community_23

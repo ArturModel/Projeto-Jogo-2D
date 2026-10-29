@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs"
 type: "code"
-community: "com.unity.burst"
+community: "Community 35"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/Community_35
 ---
 
 # .UpdateAccesses()
@@ -22,4 +22,4 @@ tags:
 - [[SantaRitaC2Consolidation]] - `method` [EXTRACTED]
 - [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/Community_35

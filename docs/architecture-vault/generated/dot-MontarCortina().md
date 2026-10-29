@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "dependencies"
+community: "Community 23"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_23
 ---
 
 # .MontarCortina()
@@ -18,4 +18,4 @@ tags:
 - [[Image]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_23

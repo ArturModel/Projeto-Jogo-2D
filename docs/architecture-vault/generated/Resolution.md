@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "SceneFader"
+community: "Community 15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_15
 ---
 
 # Resolution
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_15

@@ -1,20 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "InteracaoCapitulo1"
-location: "L529"
+community: "Community 12"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_12
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
-- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
-- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
+- [[dot-Abrir()]] - `calls` [EXTRACTED]
+- [[dot-Fechar()]] - `calls` [EXTRACTED]
+- [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_12

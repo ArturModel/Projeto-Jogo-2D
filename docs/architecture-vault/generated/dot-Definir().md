@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "com.unity.modules.physics"
+community: "Community 19"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/Community_19
 ---
 
 # .Definir()
@@ -15,4 +15,4 @@ tags:
 - [[dot-Rodar()]] - `calls` [INFERRED]
 - [[AudioAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/Community_19

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "dependencies"
+community: "Community 34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_34
 ---
 
 # PontoMapa
@@ -14,4 +14,4 @@ tags:
 - [[dot-CriarMarcadorPonto()]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_34

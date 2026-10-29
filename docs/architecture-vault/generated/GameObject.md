@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # GameObject
@@ -38,7 +38,7 @@ tags:
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[dot-Vincular()_3]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

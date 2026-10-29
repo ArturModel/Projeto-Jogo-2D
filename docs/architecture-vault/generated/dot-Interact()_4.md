@@ -1,20 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "com.unity.modules.audio"
-location: "L66"
+community: "Community 53"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesaudio
+  - community/Community_53
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-AbrirModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-TocarSomAtenderOrelhao()]] - `calls` [EXTRACTED]
-- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[Capitulo2Interactable]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio
+#graphify/code #graphify/EXTRACTED #community/Community_53

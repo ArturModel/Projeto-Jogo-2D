@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "com.unity.burst"
+community: "Community 35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunityburst
+  - community/Community_35
 ---
 
 # MenuItem
@@ -17,7 +17,7 @@ tags:
 - [[dot-BuildAndValidateAll()]] - `references` [EXTRACTED]
 - [[dot-BuildFinalLivingWorld()]] - `references` [EXTRACTED]
 - [[dot-BuildQA()]] - `references` [EXTRACTED]
-- [[dot-Configure()]] - `references` [EXTRACTED]
+- [[dot-ConectarManualmente()]] - `references` [EXTRACTED]
 - [[dot-CorrectApprovedGeography()]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunityburst
+#graphify/code #graphify/EXTRACTED #community/Community_35

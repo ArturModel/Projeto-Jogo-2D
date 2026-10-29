@@ -1,20 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs"
 type: "code"
-community: "com.unity.modules.imageconversion"
-location: "L25"
+community: "Community 36"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimageconversion
+  - community/Community_36
 ---
 
 # .Ativar()
 
 ## Connections
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[PortaLuvasCarro]] - `method` [EXTRACTED]
+- [[dot-Transmitir()]] - `calls` [EXTRACTED]
+- [[RadioCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimageconversion
+#graphify/code #graphify/EXTRACTED #community/Community_36

@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "GameState"
-location: "L9"
+community: "Community 16"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/Community_16
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Interior()_1]] - `calls` [EXTRACTED]
+- [[dot-PrepareTools()]] - `calls` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
-- [[ParticleSystem]] - `references` [EXTRACTED]
-- [[ParticleSystemRenderer]] - `references` [EXTRACTED]
-- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/Community_16

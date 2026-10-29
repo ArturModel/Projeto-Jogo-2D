@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "packages-lock.json"
-location: "L133"
+community: "Community 12"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/Community_12
 ---
 
 # .VoltarAoMenu()
@@ -15,4 +15,4 @@ tags:
 - [[dot-Fechar()]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/Community_12

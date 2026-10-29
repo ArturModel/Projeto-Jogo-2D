@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
 type: "code"
-community: "TileAleatorio"
+community: "Community 42"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TileAleatorio
+  - community/Community_42
 ---
 
 # MainMenuActions.cs
@@ -15,4 +15,4 @@ tags:
 - [[MainMenuActions]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TileAleatorio
+#graphify/code #graphify/EXTRACTED #community/Community_42

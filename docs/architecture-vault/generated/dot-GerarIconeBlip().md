@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "dependencies"
+community: "Community 9"
 location: "L992"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_9
 ---
 
 # .GerarIconeBlip()
@@ -17,4 +17,4 @@ tags:
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_9

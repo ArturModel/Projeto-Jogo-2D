@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "GameState"
+community: "Community 20"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameState
+  - community/Community_20
 ---
 
 # .Update()
@@ -15,4 +15,4 @@ tags:
 - [[dot-Interior()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameState
+#graphify/code #graphify/EXTRACTED #community/Community_20

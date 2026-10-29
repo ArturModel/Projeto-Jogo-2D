@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "PrologoVideo"
-location: "L60"
+community: "Community 38"
+location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/Community_38
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/Community_38

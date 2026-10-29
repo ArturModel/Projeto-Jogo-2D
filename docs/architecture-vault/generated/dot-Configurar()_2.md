@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Capitulo1Director"
+community: "Community 2"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capitulo1Director
+  - community/Community_2
 ---
 
 # .Configurar()
@@ -17,4 +17,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capitulo1Director
+#graphify/code #graphify/EXTRACTED #community/Community_2

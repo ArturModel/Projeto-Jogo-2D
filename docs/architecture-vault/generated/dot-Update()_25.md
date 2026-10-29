@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
-community: "manifest.json"
-location: "L45"
+community: "Community 54"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_54
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-LerEntrada()]] - `calls` [EXTRACTED]
-- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
+- [[dot-VolumeDaCamada()]] - `calls` [EXTRACTED]
+- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_54

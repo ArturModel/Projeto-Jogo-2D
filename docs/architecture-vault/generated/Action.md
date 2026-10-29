@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "GameMessageUI"
+community: "Community 3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_3
 ---
 
 # Action
@@ -13,8 +13,9 @@ tags:
 ## Connections
 - [[dot-Abrir()_1]] - `references` [EXTRACTED]
 - [[dot-AbrirSelecaoCarregar()]] - `references` [EXTRACTED]
-- [[dot-Avancar()_1]] - `references` [EXTRACTED]
+- [[dot-Avancar()_2]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
+- [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-ComecarNovaSerie()]] - `references` [EXTRACTED]
 - [[dot-Dialogo()]] - `references` [EXTRACTED]
 - [[dot-IniciarConfronto()]] - `references` [EXTRACTED]
@@ -33,4 +34,4 @@ tags:
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_3

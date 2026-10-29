@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "TipoInteracao"
+community: "Community 14"
 location: "L447"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TipoInteracao
+  - community/Community_14
 ---
 
 # .InteragirAtendenteMercadinho()
@@ -20,4 +20,4 @@ tags:
 - [[DialogoLinha]] - `calls` [INFERRED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TipoInteracao
+#graphify/code #graphify/EXTRACTED #community/Community_14

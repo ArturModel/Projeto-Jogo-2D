@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "TilePiso"
-location: "L80"
+community: "Community 28"
+location: "L531"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TilePiso
+  - community/Community_28
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Definir()_1]] - `calls` [EXTRACTED]
-- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
+- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
+- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TilePiso
+#graphify/code #graphify/EXTRACTED #community/Community_28

@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "OptionsPanelController"
+community: "Community 16"
 location: "L199"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/OptionsPanelController
+  - community/Community_16
 ---
 
 # .Center()
 
 ## Connections
 - [[dot-Apply()_1]] - `calls` [EXTRACTED]
-- [[dot-Apply()_3]] - `calls` [EXTRACTED]
+- [[dot-Apply()_4]] - `calls` [EXTRACTED]
 - [[dot-Delete()]] - `calls` [EXTRACTED]
 - [[dot-Interaction()_1]] - `calls` [EXTRACTED]
 - [[dot-Lamp()_1]] - `calls` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[Tilemap]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/OptionsPanelController
+#graphify/code #graphify/EXTRACTED #community/Community_16

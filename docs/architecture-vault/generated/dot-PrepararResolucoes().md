@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "SceneFader"
+community: "Community 15"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_15
 ---
 
 # .PrepararResolucoes()
 
 ## Connections
-- [[dot-Start()_4]] - `calls` [EXTRACTED]
+- [[dot-Start()_5]] - `calls` [EXTRACTED]
 - [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_15

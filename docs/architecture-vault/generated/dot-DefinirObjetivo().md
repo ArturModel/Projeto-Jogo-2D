@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "TipoInteracao"
+community: "Community 14"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TipoInteracao
+  - community/Community_14
 ---
 
 # .DefinirObjetivo()
@@ -22,10 +22,10 @@ tags:
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
 - [[dot-InteragirFrentista()]] - `calls` [EXTRACTED]
 - [[dot-SincronizarDiarioAutomaticoPorFlag()]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
 - [[dot-Start()_2]] - `calls` [EXTRACTED]
+- [[dot-Start()_3]] - `calls` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TipoInteracao
+#graphify/code #graphify/EXTRACTED #community/Community_14

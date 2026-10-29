@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "com.unity.modules.physics"
-location: "L329"
+community: "Community 2"
+location: "L386"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/Community_2
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Encerrar()]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/Community_2

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs"
 type: "code"
-community: ".SaveSlot"
+community: "Community 37"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SaveSlot
+  - community/Community_37
 ---
 
 # BochaShot
@@ -15,8 +15,8 @@ tags:
 - [[dot-BestShot()]] - `references` [EXTRACTED]
 - [[dot-EfetuarLancamento()]] - `references` [EXTRACTED]
 - [[dot-Escolher()]] - `references` [EXTRACTED]
-- [[dot-Lancar()_1]] - `references` [EXTRACTED]
-- [[dot-Lancar()_2]] - `calls` [INFERRED]
+- [[dot-Lancar()_2]] - `references` [EXTRACTED]
+- [[dot-Lancar()]] - `calls` [INFERRED]
 - [[dot-Matches()]] - `calls` [INFERRED]
 - [[dot-Preparar()_1]] - `calls` [EXTRACTED]
 - [[dot-Preparar()]] - `references` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SaveSlot
+#graphify/code #graphify/EXTRACTED #community/Community_37

@@ -1,24 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "GameMessageUI"
+community: "Community 3"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/GameMessageUI
+  - community/Community_3
 ---
 
 # GameMessageUI
 
 ## Connections
 - [[dot-Avancar()]] - `method` [EXTRACTED]
-- [[dot-Awake()_3]] - `method` [EXTRACTED]
+- [[dot-Awake()_8]] - `method` [EXTRACTED]
 - [[dot-Build()]] - `method` [EXTRACTED]
 - [[dot-ConfigurarRetratoEFalante()]] - `method` [EXTRACTED]
 - [[dot-Digitar()]] - `method` [EXTRACTED]
 - [[dot-Fade()]] - `method` [EXTRACTED]
-- [[dot-Fechar()_1]] - `method` [EXTRACTED]
+- [[dot-Fechar()_2]] - `method` [EXTRACTED]
 - [[dot-GerarRetratoPixelArt()]] - `method` [EXTRACTED]
 - [[dot-ParseLinhaAutomatica()]] - `method` [EXTRACTED]
 - [[dot-ResolverRetrato()]] - `method` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[dot-Show()_1]] - `method` [EXTRACTED]
 - [[dot-ShowDialogue()]] - `method` [EXTRACTED]
 - [[dot-ShowInspection()]] - `method` [EXTRACTED]
-- [[dot-Update()_7]] - `method` [EXTRACTED]
+- [[dot-Update()_10]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Coroutine]] - `references` [EXTRACTED]
@@ -37,7 +37,7 @@ tags:
 - [[GameMessageUI.cs]] - `contains` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[Instance_3]] - `defines` [EXTRACTED]
+- [[Instance_5]] - `defines` [EXTRACTED]
 - [[IsShowing_1]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/GameMessageUI
+#graphify/code #graphify/EXTRACTED #community/Community_3

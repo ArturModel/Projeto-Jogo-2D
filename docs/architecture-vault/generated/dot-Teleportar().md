@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 6"
 location: "L211"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_6
 ---
 
 # .Teleportar()
@@ -16,4 +16,4 @@ tags:
 - [[PlayerController]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_6

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 41"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_41
 ---
 
 # .SpeedAt()
@@ -18,4 +18,4 @@ tags:
 - [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_41

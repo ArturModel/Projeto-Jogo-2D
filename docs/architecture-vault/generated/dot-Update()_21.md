@@ -1,23 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L216"
+community: "Community 48"
+location: "L138"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_48
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
-- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
-- [[dot-FindNearest()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_7]] - `calls` [INFERRED]
-- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
-- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_48

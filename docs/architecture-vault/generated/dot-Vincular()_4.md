@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "com.unity.modules.ui"
+community: "Community 38"
 location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesui
+  - community/Community_38
 ---
 
 # .Vincular()
@@ -17,4 +17,4 @@ tags:
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesui
+#graphify/code #graphify/EXTRACTED #community/Community_38

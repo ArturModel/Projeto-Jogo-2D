@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "dependencies"
+community: "Community 23"
 location: "L2505"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_23
 ---
 
 # .AbrirPainelFechamento()
@@ -21,4 +21,4 @@ tags:
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_23

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "dependencies"
+community: "Community 34"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/dependencies
+  - community/Community_34
 ---
 
 # MapaInterativoUI
@@ -22,12 +22,12 @@ tags:
 - [[dot-AutoBootstrap()]] - `method` [EXTRACTED]
 - [[dot-CarregarOuGerarArteMapa()]] - `method` [EXTRACTED]
 - [[dot-CentralizarNoJogador()]] - `method` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `method` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `method` [EXTRACTED]
 - [[dot-ConverterMundoParaUV()]] - `method` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `method` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `method` [EXTRACTED]
 - [[dot-CriarMarcadorPonto()]] - `method` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `method` [EXTRACTED]
+- [[dot-CriarTexto()]] - `method` [EXTRACTED]
 - [[dot-EnsureInstance()_1]] - `method` [EXTRACTED]
 - [[dot-Fechar()_4]] - `method` [EXTRACTED]
 - [[dot-FecharSeAberto()]] - `method` [EXTRACTED]
@@ -39,18 +39,18 @@ tags:
 - [[dot-LimitarPanDoMapa()]] - `method` [EXTRACTED]
 - [[dot-ObterUVObjetivoAtual()]] - `method` [EXTRACTED]
 - [[dot-OnSceneLoaded()_1]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_1]] - `method` [EXTRACTED]
 - [[dot-ResetStatic()_2]] - `method` [EXTRACTED]
 - [[dot-ResetarZoomEPan()]] - `method` [EXTRACTED]
 - [[dot-RotuloCanonico()]] - `method` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `method` [EXTRACTED]
-- [[dot-Update()_26]] - `method` [EXTRACTED]
+- [[dot-Update()_14]] - `method` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `method` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[Instance_9]] - `defines` [EXTRACTED]
+- [[Instance_7]] - `defines` [EXTRACTED]
 - [[IsShowing_3]] - `defines` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 - [[MapaInterativoUI.cs]] - `contains` [EXTRACTED]
@@ -62,4 +62,4 @@ tags:
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/dependencies
+#graphify/code #graphify/EXTRACTED #community/Community_34

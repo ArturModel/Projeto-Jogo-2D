@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "SinucaMinigameUI"
+community: "Community 3"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SinucaMinigameUI
+  - community/Community_3
 ---
 
 # SinucaMinigameUI
@@ -29,27 +29,27 @@ tags:
 - [[dot-ConcluirSerieVitoria()]] - `method` [EXTRACTED]
 - [[dot-ConfigurarMao()]] - `method` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `method` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `method` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `method` [EXTRACTED]
 - [[dot-ContinuarInicioTurno()]] - `method` [EXTRACTED]
 - [[dot-CriarBolasUI()]] - `method` [EXTRACTED]
 - [[dot-CriarBotaoModal()]] - `method` [EXTRACTED]
 - [[dot-CriarSpriteCirculo()]] - `method` [EXTRACTED]
-- [[dot-CriarTexto()_1]] - `method` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `method` [EXTRACTED]
 - [[dot-EncontrarPosicaoLivreDeterministica()]] - `method` [EXTRACTED]
 - [[dot-EnsureInstance()]] - `method` [EXTRACTED]
 - [[dot-EscolherTacadaZe()]] - `method` [EXTRACTED]
 - [[dot-ExecutarTacada()]] - `method` [EXTRACTED]
 - [[dot-ExecutarTurnoZeCoroutine()]] - `method` [EXTRACTED]
-- [[dot-Fechar()_2]] - `method` [EXTRACTED]
+- [[dot-Fechar()_3]] - `method` [EXTRACTED]
 - [[dot-InicializarCacapas()]] - `method` [EXTRACTED]
 - [[dot-IniciarConfronto()]] - `method` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `method` [EXTRACTED]
 - [[dot-IniciarTurnoAtual()]] - `method` [EXTRACTED]
-- [[dot-MostrarModal()]] - `method` [EXTRACTED]
+- [[dot-MostrarModal()_1]] - `method` [EXTRACTED]
 - [[dot-MouseDentroDaMesa()]] - `method` [EXTRACTED]
-- [[dot-OnApplicationFocus()]] - `method` [EXTRACTED]
+- [[dot-OnApplicationFocus()_1]] - `method` [EXTRACTED]
 - [[dot-PosicaoValidaSemColisao()]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_2]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `method` [EXTRACTED]
 - [[dot-PosicionarBolasDeterministico()]] - `method` [EXTRACTED]
 - [[dot-RegistrarTabela()]] - `method` [EXTRACTED]
 - [[dot-ResetStatic()_4]] - `method` [EXTRACTED]
@@ -58,7 +58,7 @@ tags:
 - [[dot-SimularFisicaMesa()]] - `method` [EXTRACTED]
 - [[dot-SimularTesteDeInvariantes()]] - `method` [EXTRACTED]
 - [[dot-SincronizarTransformBolas()]] - `method` [EXTRACTED]
-- [[dot-Update()_13]] - `method` [EXTRACTED]
+- [[dot-Update()_11]] - `method` [EXTRACTED]
 - [[dot-ValidarInvarianteSeteBolas()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[BolaMesa_1]] - `references` [EXTRACTED]
@@ -78,4 +78,4 @@ tags:
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SinucaMinigameUI
+#graphify/code #graphify/EXTRACTED #community/Community_3

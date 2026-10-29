@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L13"
+community: "Community 49"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_49
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
+- [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_49

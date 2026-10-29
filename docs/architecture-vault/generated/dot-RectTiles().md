@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
-community: "manifest.json"
+community: "Community 6"
 location: "L505"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/manifestjson
+  - community/Community_6
 ---
 
 # .RectTiles()
@@ -19,4 +19,4 @@ tags:
 - [[RectInt]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/manifestjson
+#graphify/code #graphify/EXTRACTED #community/Community_6

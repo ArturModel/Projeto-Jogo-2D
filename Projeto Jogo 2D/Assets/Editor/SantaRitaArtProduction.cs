@@ -47,9 +47,9 @@ public static class SantaRitaArtProduction
                 var scene = EditorSceneManager.OpenScene("Assets/Scenes/Cidade/" + name + ".unity");
                 bool inside = name != "CentroSantaRita" && name != "CemiterioSantaRita";
                 if(name=="RodoviariaSantaRita") BusStationRoutine(lit);
-                foreach (var text in Object.FindObjectsByType<TextMeshPro>(FindObjectsSortMode.None))
+                foreach (var text in Object.FindObjectsByType<TextMeshPro>())
                     if (text.gameObject.name.StartsWith("Letreiro_")) Object.DestroyImmediate(text.gameObject);
-                foreach (var sprite in Object.FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
+                foreach (var sprite in Object.FindObjectsByType<SpriteRenderer>())
                 {
                     if (sprite.name.StartsWith("AO_")) continue;
                     if (sprite.name == "Canteiro") { Object.DestroyImmediate(sprite.gameObject); continue; }
@@ -97,8 +97,8 @@ public static class SantaRitaArtProduction
                         }
                     }
                 }
-                foreach (var map in Object.FindObjectsByType<TilemapRenderer>(FindObjectsSortMode.None)) map.sharedMaterial = lit;
-                foreach (var light in Object.FindObjectsByType<Light2D>(FindObjectsSortMode.None))
+                foreach (var map in Object.FindObjectsByType<TilemapRenderer>()) map.sharedMaterial = lit;
+                foreach (var light in Object.FindObjectsByType<Light2D>())
                 {
                     if (light.lightType == Light2D.LightType.Global)
                     { light.intensity = inside ? .78f : .66f; light.color = inside ? new Color(.92f,.91f,.82f) : new Color(.71f,.79f,.88f); }

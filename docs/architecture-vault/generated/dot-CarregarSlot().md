@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "InteracaoCapitulo1"
+community: "Community 28"
 location: "L296"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteracaoCapitulo1
+  - community/Community_28
 ---
 
 # .CarregarSlot()
@@ -19,4 +19,4 @@ tags:
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteracaoCapitulo1
+#graphify/code #graphify/EXTRACTED #community/Community_28

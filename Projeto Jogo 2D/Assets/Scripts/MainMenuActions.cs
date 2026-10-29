@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class MainMenuActions : MonoBehaviour
 {
+#pragma warning disable CS0414
     [SerializeField] private string gameplaySceneName = "GameplayScene";
+#pragma warning restore CS0414
 
     // Partida nova começa na estrada; "Continuar" volta direto para o
     // orelhão salvo, sem repetir a abertura.

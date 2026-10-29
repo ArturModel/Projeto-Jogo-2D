@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "com.unity.2d.common"
+community: "Community 13"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunity2dcommon
+  - community/Community_13
 ---
 
 # InteracaoCapitulo1
@@ -62,4 +62,4 @@ tags:
 - [[TipoInteracao_1]] - `references` [EXTRACTED]
 - [[TipoInteracao]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunity2dcommon
+#graphify/code #graphify/EXTRACTED #community/Community_13

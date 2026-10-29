@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "SubtitleSettingsController"
-location: "L297"
+community: "Community 3"
+location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SubtitleSettingsController
+  - community/Community_3
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
-- [[dot-Derrota()]] - `calls` [EXTRACTED]
-- [[dot-Pausar()]] - `calls` [EXTRACTED]
-- [[dot-ResolverMao()]] - `calls` [EXTRACTED]
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SubtitleSettingsController
+#graphify/code #graphify/EXTRACTED #community/Community_3

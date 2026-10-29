@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs"
 type: "code"
-community: ".CreateCanvas"
+community: "Community 1"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_1
 ---
 
 # SantaRitaArtImporter
@@ -16,4 +16,4 @@ tags:
 - [[AssetPostprocessor]] - `inherits` [EXTRACTED]
 - [[SantaRitaArtImporter.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCanvas
+#graphify/code #graphify/EXTRACTED #community/Community_1

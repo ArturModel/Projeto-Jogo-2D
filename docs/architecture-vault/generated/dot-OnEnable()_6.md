@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "MovelLoja"
-location: "L24"
+community: "Community 7"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MovelLoja
+  - community/Community_7
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[Interactable]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MovelLoja
+#graphify/code #graphify/EXTRACTED #community/Community_7

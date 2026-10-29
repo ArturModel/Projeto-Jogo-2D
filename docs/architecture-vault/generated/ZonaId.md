@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "InteractionPrompt"
+community: "Community 43"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InteractionPrompt
+  - community/Community_43
 ---
 
 # ZonaId
@@ -23,4 +23,4 @@ tags:
 - [[Zona4_Bairro]] - `case_of` [EXTRACTED]
 - [[Zona5_RuaNorteBar]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InteractionPrompt
+#graphify/code #graphify/EXTRACTED #community/Community_43

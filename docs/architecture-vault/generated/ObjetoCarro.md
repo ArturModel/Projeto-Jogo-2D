@@ -1,25 +1,25 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "PrologoDirector"
+community: "Community 33"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoDirector
+  - community/Community_33
 ---
 
 # ObjetoCarro
 
 ## Connections
-- [[dot-Ativar()]] - `method` [EXTRACTED]
-- [[dot-Awake()_10]] - `method` [EXTRACTED]
+- [[dot-Ativar()_2]] - `method` [EXTRACTED]
+- [[dot-Awake()_9]] - `method` [EXTRACTED]
 - [[dot-Procurar()]] - `references` [EXTRACTED]
-- [[dot-Update()_14]] - `method` [EXTRACTED]
+- [[dot-Update()_12]] - `method` [EXTRACTED]
 - [[Apontado]] - `defines` [EXTRACTED]
 - [[CelularCarro]] - `inherits` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[Disponivel_1]] - `defines` [EXTRACTED]
+- [[Disponivel_2]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[ObjetoCarro.cs]] - `contains` [EXTRACTED]
 - [[PonteiroCarro]] - `references` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[RadioCarro]] - `inherits` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoDirector
+#graphify/code #graphify/EXTRACTED #community/Community_33

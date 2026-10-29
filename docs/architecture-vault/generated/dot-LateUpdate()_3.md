@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
 type: "code"
-community: "PrologoVideo"
-location: "L20"
+community: "Community 20"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PrologoVideo
+  - community/Community_20
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
+- [[Light2D]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PrologoVideo
+#graphify/code #graphify/EXTRACTED #community/Community_20

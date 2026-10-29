@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "packages-lock.json"
-location: "L46"
+community: "Community 15"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/Community_15
 ---
 
 # .Vincular()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [INFERRED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[Slider]] - `references` [EXTRACTED]
+- [[SubtitleSettingsController]] - `method` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
+- [[Toggle]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/Community_15

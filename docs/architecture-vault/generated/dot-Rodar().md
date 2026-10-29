@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "com.unity.modules.physics"
+community: "Community 19"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesphysics
+  - community/Community_19
 ---
 
 # .Rodar()
@@ -19,11 +19,11 @@ tags:
 - [[dot-Disparar()]] - `calls` [INFERRED]
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()]] - `calls` [EXTRACTED]
-- [[dot-Ligar()]] - `calls` [INFERRED]
+- [[dot-Ligar()_1]] - `calls` [INFERRED]
 - [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[dot-Revelar()]] - `calls` [EXTRACTED]
-- [[dot-Start()_6]] - `calls` [EXTRACTED]
+- [[dot-Start()_8]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesphysics
+#graphify/code #graphify/EXTRACTED #community/Community_19

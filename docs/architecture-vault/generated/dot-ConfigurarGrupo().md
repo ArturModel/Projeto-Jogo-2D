@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
-community: "com.unity.modules.jsonserialize"
+community: "Community 24"
 location: "L171"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesjsonserialize
+  - community/Community_24
 ---
 
 # .ConfigurarGrupo()
 
 ## Connections
-- [[dot-Awake()_5]] - `calls` [EXTRACTED]
+- [[dot-Awake()_4]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesjsonserialize
+#graphify/code #graphify/EXTRACTED #community/Community_24

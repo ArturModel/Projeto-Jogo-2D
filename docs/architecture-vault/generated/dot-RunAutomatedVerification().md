@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "TipoInteracao"
+community: "Community 3"
 location: "L425"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TipoInteracao
+  - community/Community_3
 ---
 
 # .RunAutomatedVerification()
@@ -15,7 +15,7 @@ tags:
 - [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
 - [[dot-Clear()]] - `calls` [EXTRACTED]
 - [[dot-ExecuteSetupAndTests()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_2]] - `calls` [INFERRED]
+- [[dot-Fechar()_3]] - `calls` [INFERRED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [INFERRED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[SantaRitaChapter1Builder]] - `method` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TipoInteracao
+#graphify/code #graphify/EXTRACTED #community/Community_3

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
 type: "code"
-community: "MapaInterativoUI"
+community: "Community 6"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_6
 ---
 
 # .Procurar()
@@ -15,4 +15,4 @@ tags:
 - [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
 - [[SpawnPoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_6

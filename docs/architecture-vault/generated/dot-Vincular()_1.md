@@ -1,21 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "SceneFader"
-location: "L85"
+community: "Community 15"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/SceneFader
+  - community/Community_15
 ---
 
 # .Vincular()
 
 ## Connections
-- [[Image]] - `references` [EXTRACTED]
+- [[RawImage]] - `references` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
-- [[SubtitleSettingsController]] - `method` [EXTRACTED]
+- [[TMP_Dropdown]] - `references` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
 - [[Toggle]] - `references` [EXTRACTED]
+- [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/SceneFader
+#graphify/code #graphify/EXTRACTED #community/Community_15

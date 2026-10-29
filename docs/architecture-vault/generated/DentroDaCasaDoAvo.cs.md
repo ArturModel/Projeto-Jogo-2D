@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
 type: "code"
-community: ".CreateCanvas"
+community: "Community 1"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CreateCanvas
+  - community/Community_1
 ---
 
 # DentroDaCasaDoAvo.cs
@@ -16,4 +16,4 @@ tags:
 - [[system_collections]] - `imports` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CreateCanvas
+#graphify/code #graphify/EXTRACTED #community/Community_1

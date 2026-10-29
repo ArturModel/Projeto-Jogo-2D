@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "com.unity.modules.audio"
-location: "L273"
+community: "Community 54"
+location: "L275"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesaudio
+  - community/Community_54
 ---
 
 # .AbrirModalSlots()
@@ -15,7 +15,7 @@ tags:
 - [[dot-AbrirSelecaoCarregar()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarTextosDosSlots()]] - `calls` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_4]] - `calls` [EXTRACTED]
+- [[dot-Interact()_5]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesaudio
+#graphify/code #graphify/EXTRACTED #community/Community_54

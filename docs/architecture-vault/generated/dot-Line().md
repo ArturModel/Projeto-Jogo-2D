@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "MonoBehaviour"
+community: "Community 9"
 location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MonoBehaviour
+  - community/Community_9
 ---
 
 # .Line()
 
 ## Connections
-- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()]] - `calls` [EXTRACTED]
 - [[dot-Ring()]] - `calls` [EXTRACTED]
 - [[dot-SolidV()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[Face]] - `calls` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MonoBehaviour
+#graphify/code #graphify/EXTRACTED #community/Community_9

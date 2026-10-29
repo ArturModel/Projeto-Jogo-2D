@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "TilePiso"
+community: "Community 25"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TilePiso
+  - community/Community_25
 ---
 
 # C2DialogueBranch
@@ -15,6 +15,6 @@ tags:
 - [[C2InteractionData]] - `references` [EXTRACTED]
 - [[Capitulo2Director.cs]] - `contains` [EXTRACTED]
 - [[DialogoLinha]] - `references` [EXTRACTED]
-- [[Disponivel]] - `defines` [EXTRACTED]
+- [[Disponivel_1]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TilePiso
+#graphify/code #graphify/EXTRACTED #community/Community_25

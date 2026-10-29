@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "MapaInterativoUI"
-location: "L10"
+community: "Community 41"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/MapaInterativoUI
+  - community/Community_41
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaFootsteps]] - `method` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
+- [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/MapaInterativoUI
+#graphify/code #graphify/EXTRACTED #community/Community_41

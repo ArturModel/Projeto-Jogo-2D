@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Chuva"
+community: "Community 8"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Chuva
+  - community/Community_8
 ---
 
 # Chuva
@@ -50,7 +50,7 @@ tags:
 - [[AudioMixerGroup]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Camada_2]] - `references` [EXTRACTED]
-- [[Camada_1]] - `contains` [EXTRACTED]
+- [[Camada]] - `contains` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[Chuva.cs]] - `contains` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
@@ -66,4 +66,4 @@ tags:
 - [[Respingo]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Chuva
+#graphify/code #graphify/EXTRACTED #community/Community_8

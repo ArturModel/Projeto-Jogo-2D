@@ -28,7 +28,7 @@ public class ChegadaEmSantaRita : MonoBehaviour
 
         if (!GameState.Tem(Flags.MapaDoCarroObtido))
         {
-            GameState.DefinirObjetivo("Examine o seu carro marrom estacionado logo ao lado [Tecla E] para pegar a Lanterna e o Mapa de Santa Rita.");
+            GameState.DefinirObjetivo(objetivo);
         }
         else if (!GameState.Tem(Flags.ChegouCasaAvo) && string.IsNullOrEmpty(GameState.ObterObjetivo()))
         {

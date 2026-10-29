@@ -240,7 +240,7 @@ public static class SantaRitaChapter1Builder
             }
         }
 
-        PayphoneCheckpoint[] payphones = UnityEngine.Object.FindObjectsByType<PayphoneCheckpoint>(FindObjectsSortMode.None);
+        PayphoneCheckpoint[] payphones = UnityEngine.Object.FindObjectsByType<PayphoneCheckpoint>();
         foreach (PayphoneCheckpoint pp in payphones)
         {
             SerializedObject soPp = new SerializedObject(pp);

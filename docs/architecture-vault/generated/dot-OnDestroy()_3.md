@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "com.unity.modules.imgui"
-location: "L80"
+community: "Community 25"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitymodulesimgui
+  - community/Community_25
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SceneFader]] - `method` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitymodulesimgui
+#graphify/code #graphify/EXTRACTED #community/Community_25

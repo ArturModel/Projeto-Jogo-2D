@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "TipoInteracao"
+community: "Community 40"
 location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/TipoInteracao
+  - community/Community_40
 ---
 
 # .Limpar()
@@ -17,4 +17,4 @@ tags:
 - [[dot-Rodar()]] - `calls` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TipoInteracao
+#graphify/code #graphify/EXTRACTED #community/Community_40

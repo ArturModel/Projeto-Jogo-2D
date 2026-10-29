@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "packages-lock.json"
+community: "Community 12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/packages-lockjson
+  - community/Community_12
 ---
 
 # Selectable
 
 ## Connections
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
+- [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/packages-lockjson
+#graphify/code #graphify/EXTRACTED #community/Community_12

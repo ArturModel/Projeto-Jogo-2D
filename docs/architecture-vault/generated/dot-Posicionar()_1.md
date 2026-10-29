@@ -1,20 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "com.unity.test-framework"
-location: "L518"
+community: "Community 23"
+location: "L1102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/comunitytest-framework
+  - community/Community_23
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
-- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
+- [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/comunitytest-framework
+#graphify/code #graphify/EXTRACTED #community/Community_23

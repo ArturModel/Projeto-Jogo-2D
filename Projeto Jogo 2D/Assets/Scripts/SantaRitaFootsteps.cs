@@ -11,7 +11,7 @@ public sealed class SantaRitaFootsteps : MonoBehaviour
     {
         player = GetComponent<PlayerController>();
         if (player != null) player.PeApoiou += ApoiarPe;
-        maps = FindObjectsByType<Tilemap>(FindObjectsSortMode.None);
+        maps = FindObjectsByType<Tilemap>();
     }
     private void OnDisable() { if (player != null) player.PeApoiou -= ApoiarPe; }
     private void ApoiarPe()

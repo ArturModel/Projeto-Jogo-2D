@@ -1,24 +1,25 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: "PlayerController"
-location: "L64"
+community: "Community 4"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/PlayerController
+  - community/Community_4
 ---
 
 # .Lancar()
 
 ## Connections
-- [[dot-EfetuarLancamento()]] - `calls` [INFERRED]
-- [[dot-Lancar()]] - `calls` [EXTRACTED]
-- [[dot-Matches()]] - `calls` [INFERRED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[dot-Lancar()_2]] - `calls` [EXTRACTED]
+- [[dot-Physics()]] - `calls` [INFERRED]
+- [[dot-Proximo()]] - `calls` [EXTRACTED]
+- [[dot-Rules()]] - `calls` [INFERRED]
+- [[BochaBall]] - `calls` [INFERRED]
 - [[BochaMatch]] - `method` [EXTRACTED]
-- [[BochaShot]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PlayerController
+#graphify/code #graphify/EXTRACTED #community/Community_4
