@@ -18,6 +18,7 @@ tags:
 - [[Capitulo1Director.cs]] - `imports` [EXTRACTED]
 - [[Chapter2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `imports` [EXTRACTED]
+- [[DicaDeTecla.cs]] - `imports` [EXTRACTED]
 - [[GameMessageUI.cs]] - `imports` [EXTRACTED]
 - [[InteracaoCapitulo1.cs]] - `imports` [EXTRACTED]
 - [[InteractionPrompt.cs]] - `imports` [EXTRACTED]

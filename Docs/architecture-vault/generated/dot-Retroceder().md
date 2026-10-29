@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 45"
+community: "Community 28"
 location: "L763"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_28
 ---
 
 # .Retroceder()
 
 ## Connections
 - [[dot-TocarSom()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_10]] - `calls` [EXTRACTED]
 - [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_28

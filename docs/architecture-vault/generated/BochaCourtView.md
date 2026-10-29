@@ -12,12 +12,12 @@ tags:
 # BochaCourtView
 
 ## Connections
-- [[dot-Awake()_21]] - `method` [EXTRACTED]
+- [[dot-Awake()_22]] - `method` [EXTRACTED]
 - [[dot-BallColor()]] - `method` [EXTRACTED]
 - [[dot-Box()_1]] - `method` [EXTRACTED]
 - [[dot-CameraBasis()]] - `method` [EXTRACTED]
 - [[dot-ChangeZoom()]] - `method` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-CourtPoint()]] - `method` [EXTRACTED]
 - [[dot-CriarSala()]] - `method` [EXTRACTED]
 - [[dot-Disc()]] - `method` [EXTRACTED]
@@ -26,11 +26,11 @@ tags:
 - [[dot-OnPointerDown()]] - `method` [EXTRACTED]
 - [[dot-OnPointerMove()]] - `method` [EXTRACTED]
 - [[dot-OnPointerUp()]] - `method` [EXTRACTED]
-- [[dot-OnPopulateMesh()]] - `method` [EXTRACTED]
+- [[dot-OnPopulateMesh()_1]] - `method` [EXTRACTED]
 - [[dot-OnScroll()]] - `method` [EXTRACTED]
 - [[dot-Project()]] - `method` [EXTRACTED]
 - [[dot-ProjectReady()]] - `method` [EXTRACTED]
-- [[dot-Quad()]] - `method` [EXTRACTED]
+- [[dot-Quad()_1]] - `method` [EXTRACTED]
 - [[dot-RecordContacts()]] - `method` [EXTRACTED]
 - [[dot-Ring()]] - `method` [EXTRACTED]
 - [[dot-RoomLight()]] - `method` [EXTRACTED]

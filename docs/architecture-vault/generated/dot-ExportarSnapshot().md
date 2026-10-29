@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 21"
-location: "L246"
+community: "Community 0"
+location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_0
 ---
 
 # .ExportarSnapshot()
@@ -25,4 +25,4 @@ tags:
 - [[ParNumero]] - `calls` [EXTRACTED]
 - [[ParTexto]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_0

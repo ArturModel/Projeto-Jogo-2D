@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
+community: "Community 27"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_27
 ---
 
 # .Arrastar()
@@ -18,4 +18,4 @@ tags:
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_27

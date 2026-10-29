@@ -1,28 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
 type: "code"
-community: "Community 23"
-location: "L92"
+community: "Community 14"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_14
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_8]] - `calls` [EXTRACTED]
-- [[dot-CreateBox()]] - `calls` [EXTRACTED]
+- [[dot-Awake()_1]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[ContentSizeFitter]] - `references` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
+- [[DicaDeTecla]] - `method` [EXTRACTED]
+- [[HorizontalLayoutGroup]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
+- [[LayoutElement]] - `references` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
-- [[ScrollRect]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_14

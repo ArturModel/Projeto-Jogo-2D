@@ -1,11 +1,11 @@
 ---
 type: community
-members: 24
+members: 20
 ---
 
 # Community 24
 
-**Members:** 24 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[dot-AbrirAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
@@ -15,21 +15,17 @@ members: 24
 - [[dot-AbrirVideo()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[dot-Awake()_4]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[dot-Awake()_5]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-BuildOverlay()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
 - [[dot-ConfigurarGrupo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-Construir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-EsconderImediatamente()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[dot-FecharOpcoes()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[dot-MostrarCategorias()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[dot-MostrarImediatamente()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[dot-TrocarPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[dot-TrocarPainel()_1]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-Update()_7]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-Vincular()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-Vincular()_3]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[Canvas]] - code
+- [[dot-Update()_6]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
+- [[dot-Vincular()_3]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
+- [[dot-Vincular()_4]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 - [[CanvasGroup]] - code
-- [[CanvasScaler]] - code
 - [[MenuPanelTransition]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
 - [[OptionsPanelController]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
 
@@ -41,23 +37,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Community 23]]
-- 10 edges to [[_COMMUNITY_Community 12]]
+- 9 edges to [[_COMMUNITY_Community 12]]
 - 6 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 26]]
-- 3 edges to [[_COMMUNITY_Community 36]]
-- 3 edges to [[_COMMUNITY_Community 0]]
+- 6 edges to [[_COMMUNITY_Community 23]]
+- 4 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 14]]
 - 2 edges to [[_COMMUNITY_Community 42]]
 - 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 26]]
+- 2 edges to [[_COMMUNITY_Community 0]]
 - 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
-- [[CanvasGroup]] - degree 21, connects to 6 communities
+- [[CanvasGroup]] - degree 23, connects to 7 communities
 - [[MenuPanelTransition]] - degree 15, connects to 6 communities
 - [[OptionsPanelController]] - degree 18, connects to 4 communities
 - [[dot-TrocarPainel()_1]] - degree 6, connects to 3 communities
-- [[dot-Vincular()_2]] - degree 5, connects to 3 communities
+- [[dot-Vincular()_3]] - degree 5, connects to 3 communities

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "Community 31"
-location: "L9"
+community: "Community 26"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_26
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[Capitulo2Gate]] - `method` [EXTRACTED]
+- [[Interactable]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_26

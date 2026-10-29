@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs"
 type: "code"
-community: "Community 14"
+community: "Community 30"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_30
 ---
 
 # .Ativar()
@@ -17,4 +17,4 @@ tags:
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[PortaLuvasCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_30

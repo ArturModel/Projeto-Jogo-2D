@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 38"
+community: "Community 15"
 location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_15
 ---
 
 # .AlterarVolumeGeral()
@@ -15,4 +15,4 @@ tags:
 - [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_15

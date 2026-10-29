@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "Community 30"
-location: "L26"
+community: "Community 18"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_18
 ---
 
 # Prompt
 
 ## Connections
-- [[ItemDeCena]] - `defines` [EXTRACTED]
+- [[Capitulo2Interactable]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_18

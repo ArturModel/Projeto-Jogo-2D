@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 54"
+community: "Community 28"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_28
 ---
 
 # PayphoneCheckpoint
@@ -30,7 +30,7 @@ tags:
 - [[dot-Phone()]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_2]] - `method` [EXTRACTED]
 - [[dot-ProximaFalaContextual()]] - `method` [EXTRACTED]
-- [[dot-ResetStatic()_3]] - `method` [EXTRACTED]
+- [[dot-ResetStatic()_2]] - `method` [EXTRACTED]
 - [[dot-Run()]] - `references` [EXTRACTED]
 - [[dot-TocarSomAtenderOrelhao()]] - `method` [EXTRACTED]
 - [[dot-TocarSomConfirmarGancho()]] - `method` [EXTRACTED]
@@ -46,8 +46,8 @@ tags:
 - [[PayphoneCheckpoint.cs]] - `contains` [EXTRACTED]
 - [[PayphoneId]] - `defines` [EXTRACTED]
 - [[PayphoneSlotInputWatcher]] - `contains` [EXTRACTED]
-- [[Prompt_4]] - `defines` [EXTRACTED]
+- [[Prompt_6]] - `defines` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_28

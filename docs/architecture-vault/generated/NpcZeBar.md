@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
 community: "Community 10"
-location: "L42"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED

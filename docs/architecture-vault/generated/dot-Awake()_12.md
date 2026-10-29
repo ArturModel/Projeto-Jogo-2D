@@ -1,19 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 38"
-location: "L36"
+community: "Community 40"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_40
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
+- [[Collider2D]] - `references` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_40

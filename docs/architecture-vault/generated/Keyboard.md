@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 17"
+community: "Community 27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_27
 ---
 
 # Keyboard
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-EntradaTeclado()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_27

@@ -18,7 +18,7 @@ def command(name):
     if found:
         return found
     suffix = ".exe" if os.name == "nt" else ""
-    for folder in [Path.home()/".local/bin", Path.home()/".santarita/bin"]:
+    for folder in [Path.home()/".local/bin", Path.home()/".santarita/bin", Path(sys.prefix)/"Scripts"]:
         candidate = folder/(name+suffix)
         if candidate.is_file():
             return str(candidate)

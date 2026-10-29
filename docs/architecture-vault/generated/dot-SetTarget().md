@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 39"
-location: "L95"
+community: "Community 26"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_26
 ---
 
 # .SetTarget()
@@ -16,4 +16,4 @@ tags:
 - [[Interactable]] - `references` [EXTRACTED]
 - [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_26

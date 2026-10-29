@@ -12,7 +12,7 @@ tags:
 # .Gait()
 
 ## Connections
-- [[dot-Avancar()_2]] - `calls` [INFERRED]
+- [[dot-Avancar()_1]] - `calls` [INFERRED]
 - [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-Run()_4]] - `calls` [EXTRACTED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]

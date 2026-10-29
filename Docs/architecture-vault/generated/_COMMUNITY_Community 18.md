@@ -1,33 +1,29 @@
 ---
 type: community
-members: 25
+members: 21
 ---
 
 # Community 18
 
-**Members:** 25 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[dot-Apply()_2]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
 - [[dot-ApplyMacroTiles()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
 - [[dot-BusStationRoutine()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-CarregarOuGerarArteMapa()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
 - [[dot-ContactShadow()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
 - [[dot-DecorateTerrain()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
+- [[dot-DetectarLimitesDaRegiao()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 - [[dot-EdgeTile()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-GerarIconeAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-GerarIconeJogador()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-GerarIconePontoRota()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-Interact()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
 - [[dot-NeutralSprite()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-OnDisable()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-Run()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
+- [[Capitulo2Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
+- [[Capitulo2Interactable.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
 - [[ColorAdjustments]] - code
+- [[Fileira]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
 - [[SantaRitaArtProduction]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[SantaRitaFootsteps]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[ShadowCaster2D]] - code
 - [[Sprite]] - code
-- [[TextMeshPro]] - code
 - [[Tilemap]] - code
 - [[TilemapRenderer]] - code
 - [[Vignette]] - code
@@ -42,37 +38,31 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Community 2]]
-- 12 edges to [[_COMMUNITY_Community 35]]
-- 11 edges to [[_COMMUNITY_Community 6]]
-- 10 edges to [[_COMMUNITY_Community 11]]
-- 10 edges to [[_COMMUNITY_Community 16]]
-- 7 edges to [[_COMMUNITY_Community 20]]
-- 5 edges to [[_COMMUNITY_Community 23]]
-- 4 edges to [[_COMMUNITY_Community 5]]
-- 4 edges to [[_COMMUNITY_Community 3]]
-- 4 edges to [[_COMMUNITY_Community 34]]
-- 3 edges to [[_COMMUNITY_Community 44]]
+- 14 edges to [[_COMMUNITY_Community 11]]
+- 12 edges to [[_COMMUNITY_Community 16]]
+- 9 edges to [[_COMMUNITY_Community 2]]
+- 8 edges to [[_COMMUNITY_Community 6]]
+- 8 edges to [[_COMMUNITY_Community 20]]
+- 8 edges to [[_COMMUNITY_Community 5]]
+- 7 edges to [[_COMMUNITY_Community 31]]
+- 5 edges to [[_COMMUNITY_Community 35]]
+- 5 edges to [[_COMMUNITY_Community 7]]
+- 5 edges to [[_COMMUNITY_Community 34]]
+- 3 edges to [[_COMMUNITY_Community 0]]
+- 3 edges to [[_COMMUNITY_Community 40]]
 - 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 31]]
-- 2 edges to [[_COMMUNITY_Community 53]]
-- 2 edges to [[_COMMUNITY_Community 4]]
-- 1 edge to [[_COMMUNITY_Community 13]]
+- 2 edges to [[_COMMUNITY_Community 25]]
+- 2 edges to [[_COMMUNITY_Community 41]]
 - 1 edge to [[_COMMUNITY_Community 26]]
-- 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 41]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 48]]
 - 1 edge to [[_COMMUNITY_Community 47]]
-- 1 edge to [[_COMMUNITY_Community 12]]
-- 1 edge to [[_COMMUNITY_Community 14]]
-- 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 39]]
 
 ## Top bridge nodes
-- [[Sprite]] - degree 53, connects to 17 communities
-- [[dot-Apply()_2]] - degree 25, connects to 7 communities
-- [[dot-Run()_1]] - degree 15, connects to 7 communities
-- [[Tilemap]] - degree 19, connects to 6 communities
-- [[SantaRitaFootsteps]] - degree 9, connects to 5 communities
+- [[Sprite]] - degree 54, connects to 16 communities
+- [[Tilemap]] - degree 19, connects to 7 communities
+- [[dot-Apply()_2]] - degree 25, connects to 6 communities
+- [[Capitulo2Interactable]] - degree 12, connects to 5 communities
+- [[Fileira]] - degree 5, connects to 4 communities

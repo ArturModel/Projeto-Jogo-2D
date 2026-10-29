@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Procurar()_1]] - `calls` [EXTRACTED]
-- [[dot-Start()_17]] - `calls` [EXTRACTED]
+- [[dot-Start()_16]] - `calls` [EXTRACTED]
 - [[SceneTransition]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

@@ -21,6 +21,7 @@ tags:
 - [[Chapter2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `imports` [EXTRACTED]
 - [[DentroDaCasaDoAvo.cs]] - `imports` [EXTRACTED]
+- [[DicaDeTecla.cs]] - `imports` [EXTRACTED]
 - [[GameMessageUI.cs]] - `imports` [EXTRACTED]
 - [[InteracaoCapitulo1.cs]] - `imports` [EXTRACTED]
 - [[InteriorAccessRuntimeVerification.cs]] - `imports` [EXTRACTED]

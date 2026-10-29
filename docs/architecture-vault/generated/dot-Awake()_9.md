@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
 type: "code"
 community: "Community 33"
-location: "L24"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,6 @@ tags:
 # .Awake()
 
 ## Connections
-- [[ObjetoCarro]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[PonteiroCarro]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_33

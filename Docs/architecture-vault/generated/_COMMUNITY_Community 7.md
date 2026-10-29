@@ -1,31 +1,37 @@
 ---
 type: community
-members: 18
+members: 24
 ---
 
 # Community 7
 
-**Members:** 18 nodes
+**Members:** 24 nodes
 
 ## Members
-- [[dot-Atravessar()]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[dot-Interact()_6]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[dot-Interact()_7]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[dot-OnDisable()_9]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-OnDrawGizmosSelected()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-OnEnable()_6]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-OnTriggerEnter2D()_1]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[dot-OnTriggerEnter2D()_2]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[dot-TentarTransicionar()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[Collider2D]] - code
-- [[DoorTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[DoorTrigger.cs]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[InteractionRadius]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[Prompt_5]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
-- [[Prompt_6]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[Prompt_7]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[TransicaoDeZonaTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
+- [[dot-Avancar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Awake()_20]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-CarregarArteInspecao()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ConfigurarRetratoEFalante()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Digitar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-DigitarPaginaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Fade()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Fechar()_4]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-GerarRetratoPixelArt()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ParseLinhaAutomatica()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Play()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
+- [[dot-ResolverRetrato()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-RotinaContinuacao()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-RotinaPagina()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Show()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Show()_1]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Show()_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ShowDialogue()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ShowInspection()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Update()_25]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[GameMessageUI]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[Instance_10]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[IsShowing_3]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[Vector4]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -35,29 +41,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 5]]
-- 3 edges to [[_COMMUNITY_Community 31]]
-- 3 edges to [[_COMMUNITY_Community 1]]
-- 3 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 14]]
-- 2 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 20]]
-- 2 edges to [[_COMMUNITY_Community 40]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 35]]
-- 1 edge to [[_COMMUNITY_Community 53]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 42]]
+- 6 edges to [[_COMMUNITY_Community 25]]
+- 6 edges to [[_COMMUNITY_Community 3]]
+- 6 edges to [[_COMMUNITY_Community 0]]
+- 5 edges to [[_COMMUNITY_Community 18]]
+- 4 edges to [[_COMMUNITY_Community 39]]
+- 3 edges to [[_COMMUNITY_Community 28]]
+- 2 edges to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 - 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 8]]
 
 ## Top bridge nodes
-- [[Interactable]] - degree 20, connects to 13 communities
-- [[Collider2D]] - degree 10, connects to 6 communities
-- [[TransicaoDeZonaTrigger]] - degree 11, connects to 4 communities
-- [[dot-Atravessar()]] - degree 5, connects to 2 communities
-- [[dot-TentarTransicionar()]] - degree 5, connects to 2 communities
+- [[GameMessageUI]] - degree 37, connects to 13 communities
+- [[dot-Play()]] - degree 10, connects to 5 communities
+- [[dot-ShowInspection()]] - degree 8, connects to 4 communities
+- [[dot-ShowDialogue()]] - degree 5, connects to 3 communities
+- [[dot-Show()_1]] - degree 8, connects to 2 communities

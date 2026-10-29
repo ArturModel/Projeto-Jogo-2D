@@ -16,7 +16,7 @@ tags:
 - [[dot-Proximo()]] - `calls` [INFERRED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[dot-SetView()]] - `calls` [INFERRED]
-- [[dot-Update()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_8]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

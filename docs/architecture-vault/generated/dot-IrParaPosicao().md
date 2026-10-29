@@ -12,7 +12,7 @@ tags:
 # .IrParaPosicao()
 
 ## Connections
-- [[dot-Start()_1]] - `calls` [EXTRACTED]
+- [[dot-Start()_10]] - `calls` [EXTRACTED]
 - [[SceneTransition]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 20"
-location: "L13"
+community: "Community 26"
+location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_26
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[Light2D]] - `references` [EXTRACTED]
-- [[SantaRitaRimLight]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_26

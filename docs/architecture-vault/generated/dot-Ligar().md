@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
-community: "Community 14"
+community: "Community 30"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_30
 ---
 
 # .Ligar()
@@ -18,4 +18,4 @@ tags:
 - [[CelularCarro]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_30

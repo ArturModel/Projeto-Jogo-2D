@@ -1,19 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "Community 16"
-location: "L7"
+community: "Community 20"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_20
 ---
 
 # .Start()
 
 ## Connections
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaForeground]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[ParticleSystem]] - `references` [EXTRACTED]
+- [[ParticleSystemRenderer]] - `references` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_20

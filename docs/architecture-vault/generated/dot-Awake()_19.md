@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
 type: "code"
 community: "Community 6"
-location: "L34"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,6 @@ tags:
 # .Awake()
 
 ## Connections
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[Camera]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
+- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_6

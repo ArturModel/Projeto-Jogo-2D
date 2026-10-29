@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 20"
-location: "L36"
+community: "Community 25"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_25
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_25

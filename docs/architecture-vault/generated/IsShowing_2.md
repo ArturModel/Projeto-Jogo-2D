@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 3"
-location: "L32"
+community: "Community 34"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_34
 ---
 
 # IsShowing
 
 ## Connections
-- [[SinucaMinigameUI]] - `defines` [EXTRACTED]
+- [[MapaInterativoUI]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_34

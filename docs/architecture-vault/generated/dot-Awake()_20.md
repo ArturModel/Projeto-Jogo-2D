@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 6"
-location: "L40"
+community: "Community 7"
+location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_7
 ---
 
 # .Awake()
 
 ## Connections
-- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
+- [[dot-Build()_1]] - `calls` [EXTRACTED]
+- [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_7

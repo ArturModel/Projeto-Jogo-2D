@@ -12,7 +12,7 @@ tags:
 # .LerEntrada()
 
 ## Connections
-- [[dot-Update()_27]] - `calls` [EXTRACTED]
+- [[dot-Update()_24]] - `calls` [EXTRACTED]
 - [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

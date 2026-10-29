@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 21"
+community: "Community 0"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_0
 ---
 
 # GameState.cs
@@ -22,4 +22,4 @@ tags:
 - [[system_collections_generic]] - `imports` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_0

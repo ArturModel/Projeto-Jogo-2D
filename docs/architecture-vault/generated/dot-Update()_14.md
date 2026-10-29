@@ -1,25 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 34"
-location: "L492"
+community: "Community 3"
+location: "L596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_3
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
-- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_4]] - `calls` [EXTRACTED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-AtualizarMiraEDisparoJogador()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-SimularFisicaMesa()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_3

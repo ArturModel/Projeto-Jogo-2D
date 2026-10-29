@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "Community 35"
-location: "L31"
+community: "Community 33"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_35
+  - community/Community_33
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_35
+#graphify/code #graphify/EXTRACTED #community/Community_33

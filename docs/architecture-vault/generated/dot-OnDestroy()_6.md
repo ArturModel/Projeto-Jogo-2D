@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 46"
-location: "L181"
+community: "Community 40"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_40
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_40

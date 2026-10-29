@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 6"
+community: "Community 5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_5
 ---
 
 # Camera
@@ -13,12 +13,12 @@ tags:
 ## Connections
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-AtualizarMira()]] - `references` [EXTRACTED]
-- [[dot-Awake()_19]] - `references` [EXTRACTED]
+- [[dot-Awake()_15]] - `references` [EXTRACTED]
 - [[dot-CourtPoint()]] - `references` [EXTRACTED]
 - [[dot-GarantirFundoEscuroCamera()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_8]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_6]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]
 - [[PonteiroCarro]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_5

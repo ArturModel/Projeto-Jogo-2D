@@ -12,7 +12,7 @@ tags:
 # .Disc()
 
 ## Connections
-- [[dot-OnPopulateMesh()]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
 - [[dot-SolidV()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

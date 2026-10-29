@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 33"
-location: "L19"
+community: "Community 39"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_39
 ---
 
 # .Awake()
 
 ## Connections
-- [[PonteiroCarro]] - `method` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_39

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoModal()]] - `calls` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]

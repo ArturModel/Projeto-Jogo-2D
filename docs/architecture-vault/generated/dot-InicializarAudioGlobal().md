@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 38"
+community: "Community 15"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_15
 ---
 
 # .InicializarAudioGlobal()
@@ -17,4 +17,4 @@ tags:
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_15

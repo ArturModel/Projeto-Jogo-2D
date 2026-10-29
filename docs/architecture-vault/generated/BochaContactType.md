@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 27"
+community: "Community 4"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_27
+  - community/Community_4
 ---
 
 # BochaContactType
@@ -19,4 +19,4 @@ tags:
 - [[Madeira]] - `case_of` [EXTRACTED]
 - [[Saibro]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_27
+#graphify/code #graphify/EXTRACTED #community/Community_4

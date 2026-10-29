@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
 community: "Community 15"
-location: "L187"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .OnDisable()
 
 ## Connections
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[SubtitleSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_15

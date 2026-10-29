@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 54"
-location: "L63"
+community: "Community 26"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_26
 ---
 
 # .ResetStatic()
 
 ## Connections
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_26

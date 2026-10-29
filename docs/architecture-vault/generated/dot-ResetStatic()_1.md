@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 54"
-location: "L207"
+community: "Community 26"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_26
 ---
 
 # .ResetStatic()
 
 ## Connections
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_26

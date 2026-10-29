@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 15"
+community: "Community 39"
 location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_39
 ---
 
 # .MontarTela()
@@ -20,4 +20,4 @@ tags:
 - [[PrologoVideo]] - `method` [EXTRACTED]
 - [[RawImage]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_39

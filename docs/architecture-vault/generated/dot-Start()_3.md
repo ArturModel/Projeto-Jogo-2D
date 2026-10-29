@@ -1,24 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "Community 14"
-location: "L25"
+community: "Community 15"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_15
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
+- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
+- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
+- [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_15

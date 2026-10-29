@@ -11,7 +11,7 @@ tags:
 # Texture2D
 
 ## Connections
-- [[dot-Awake()_21]] - `references` [EXTRACTED]
+- [[dot-Awake()_22]] - `references` [EXTRACTED]
 - [[dot-CarregarOuGerarArteMapa()]] - `references` [EXTRACTED]
 - [[dot-CarregarTextura()]] - `references` [EXTRACTED]
 - [[dot-ClearTex()]] - `references` [EXTRACTED]
@@ -19,10 +19,10 @@ tags:
 - [[dot-FillRect()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
 - [[dot-PintarAcabamentoArquitetonicoInterior()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-WritePng()]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
-- [[Camada]] - `references` [EXTRACTED]
+- [[Camada_1]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
 

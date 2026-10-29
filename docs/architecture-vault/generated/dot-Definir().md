@@ -12,7 +12,7 @@ tags:
 # .Definir()
 
 ## Connections
-- [[dot-Rodar()]] - `calls` [INFERRED]
+- [[dot-Rodar()_1]] - `calls` [INFERRED]
 - [[AudioAmbiente]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_19

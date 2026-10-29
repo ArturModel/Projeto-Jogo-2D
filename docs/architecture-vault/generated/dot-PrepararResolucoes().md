@@ -12,7 +12,7 @@ tags:
 # .PrepararResolucoes()
 
 ## Connections
-- [[dot-Start()_5]] - `calls` [EXTRACTED]
+- [[dot-Start()_3]] - `calls` [EXTRACTED]
 - [[VideoSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_15

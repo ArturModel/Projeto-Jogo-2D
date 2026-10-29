@@ -17,8 +17,8 @@ tags:
 - [[dot-Narrative()]] - `calls` [EXTRACTED]
 - [[dot-Physics()]] - `calls` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [INFERRED]
 - [[dot-Run()_2]] - `calls` [INFERRED]
-- [[dot-Run()_1]] - `calls` [INFERRED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 

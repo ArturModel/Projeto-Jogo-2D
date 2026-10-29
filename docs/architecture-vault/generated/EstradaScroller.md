@@ -12,11 +12,11 @@ tags:
 # EstradaScroller
 
 ## Connections
-- [[dot-Construir()_3]] - `method` [EXTRACTED]
+- [[dot-Construir()_2]] - `method` [EXTRACTED]
 - [[dot-Ligar()_1]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_5]] - `method` [EXTRACTED]
 - [[dot-Start()_14]] - `method` [EXTRACTED]
-- [[dot-Update()_21]] - `method` [EXTRACTED]
+- [[dot-Update()_20]] - `method` [EXTRACTED]
 - [[Curvatura]] - `defines` [EXTRACTED]
 - [[EstradaScroller.cs]] - `contains` [EXTRACTED]
 - [[Fileira_1]] - `references` [EXTRACTED]

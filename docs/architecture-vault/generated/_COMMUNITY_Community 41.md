@@ -1,20 +1,19 @@
 ---
 type: community
-members: 7
+members: 6
 ---
 
 # Community 41
 
-**Members:** 7 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[dot-ApoiarPe()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-FixedUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-OnDisable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[dot-OnEnable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[dot-SpeedAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[Rect]] - code
-- [[SantaRitaShallowStairs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-Add()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
+- [[dot-ApplyC1()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
+- [[dot-ApplyExteriorC1()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
+- [[dot-Replace()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
+- [[SantaRitaPlaceDressing]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
+- [[SantaRitaPlaceDressing.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,22 +23,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 11]]
-- 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 1]]
+- 6 edges to [[_COMMUNITY_Community 16]]
+- 2 edges to [[_COMMUNITY_Community 2]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 35]]
 - 1 edge to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[SantaRitaShallowStairs]] - degree 10, connects to 6 communities
-- [[dot-ApoiarPe()]] - degree 4, connects to 3 communities
-- [[dot-SpeedAt()]] - degree 5, connects to 2 communities
-- [[Rect]] - degree 3, connects to 2 communities
-- [[dot-FixedUpdate()]] - degree 2, connects to 1 community
+- [[dot-ApplyC1()]] - degree 9, connects to 4 communities
+- [[dot-Add()]] - degree 7, connects to 3 communities
+- [[dot-Replace()_1]] - degree 6, connects to 2 communities
+- [[SantaRitaPlaceDressing.cs]] - degree 2, connects to 1 community

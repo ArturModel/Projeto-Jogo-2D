@@ -1,25 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 34"
-location: "L705"
+community: "Community 37"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_37
 ---
 
 # .Abrir()
 
 ## Connections
-- [[dot-AtualizarIndicadorZoom()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Travel()]] - `calls` [INFERRED]
-- [[dot-Update()_14]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-Comecar()]] - `calls` [EXTRACTED]
+- [[dot-MostrarModal()]] - `calls` [EXTRACTED]
+- [[dot-Refresh()]] - `calls` [INFERRED]
+- [[dot-SetState()]] - `calls` [INFERRED]
+- [[Action]] - `references` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_37

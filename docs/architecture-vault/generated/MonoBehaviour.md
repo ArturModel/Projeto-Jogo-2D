@@ -28,6 +28,7 @@ tags:
 - [[Chuva]] - `inherits` [EXTRACTED]
 - [[ChuvaRolando]] - `inherits` [EXTRACTED]
 - [[DentroDaCasaDoAvo]] - `inherits` [EXTRACTED]
+- [[DicaDeTecla]] - `inherits` [EXTRACTED]
 - [[EstradaScroller]] - `inherits` [EXTRACTED]
 - [[GameMessageUI]] - `inherits` [EXTRACTED]
 - [[HorizontalStepperNavigation]] - `inherits` [EXTRACTED]

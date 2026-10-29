@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 15"
-location: "L20"
+community: "Community 19"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_19
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
-- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
-- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_19

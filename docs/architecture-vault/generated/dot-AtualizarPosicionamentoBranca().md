@@ -15,7 +15,7 @@ tags:
 - [[dot-MouseDentroDaMesa()]] - `calls` [EXTRACTED]
 - [[dot-PosicaoValidaSemColisao()]] - `calls` [EXTRACTED]
 - [[dot-SincronizarTransformBolas()]] - `calls` [EXTRACTED]
-- [[dot-Update()_11]] - `calls` [EXTRACTED]
+- [[dot-Update()_14]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_3

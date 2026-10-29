@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 9"
+community: "Community 29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_29
 ---
 
 # MaskableGraphic
@@ -14,4 +14,4 @@ tags:
 - [[BochaCourtView]] - `inherits` [EXTRACTED]
 - [[BochaMapGraphic]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_29

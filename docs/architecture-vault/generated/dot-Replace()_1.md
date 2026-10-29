@@ -1,21 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs"
 type: "code"
-community: "Community 16"
-location: "L40"
+community: "Community 41"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_41
 ---
 
 # .Replace()
 
 ## Connections
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
+- [[dot-ApplyExteriorC1()]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_41

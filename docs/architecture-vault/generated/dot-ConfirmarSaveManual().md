@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 29"
-location: "L237"
+community: "Community 0"
+location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_0
 ---
 
 # .ConfirmarSaveManual()
@@ -16,4 +16,4 @@ tags:
 - [[dot-SaveSlot()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_0

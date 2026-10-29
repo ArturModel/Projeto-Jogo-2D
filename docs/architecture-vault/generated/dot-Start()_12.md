@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "Community 38"
-location: "L90"
+community: "Community 35"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_35
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
-- [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
-- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_35

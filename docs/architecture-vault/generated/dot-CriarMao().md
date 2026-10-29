@@ -17,7 +17,7 @@ tags:
 - [[dot-NovaMao()]] - `calls` [INFERRED]
 - [[dot-Physics()]] - `calls` [INFERRED]
 - [[dot-Rules()]] - `calls` [INFERRED]
-- [[dot-Run()_2]] - `calls` [INFERRED]
+- [[dot-Run()_3]] - `calls` [INFERRED]
 - [[BochaMatch]] - `method` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 

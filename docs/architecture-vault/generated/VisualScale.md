@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 20"
+community: "Community 40"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_40
 ---
 
 # VisualScale
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SantaRitaActorElevation]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_40

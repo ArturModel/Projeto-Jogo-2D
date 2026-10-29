@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Bootstrap()]] - `calls` [EXTRACTED]
 - [[dot-CarregarCenaSegura()]] - `calls` [EXTRACTED]
-- [[dot-ResetStatic()]] - `calls` [EXTRACTED]
+- [[dot-ResetStatic()_3]] - `calls` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_26

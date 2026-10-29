@@ -12,7 +12,7 @@ tags:
 # .Botao()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()_3]] - `calls` [EXTRACTED]
 - [[dot-Label()]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()]] - `calls` [EXTRACTED]
 - [[dot-Painel()]] - `calls` [EXTRACTED]

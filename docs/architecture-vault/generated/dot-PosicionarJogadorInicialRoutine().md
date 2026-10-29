@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 2"
-location: "L498"
+community: "Community 5"
+location: "L503"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_5
 ---
 
 # .PosicionarJogadorInicialRoutine()
@@ -19,4 +19,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_5

@@ -12,8 +12,8 @@ tags:
 # .Definir()
 
 ## Connections
-- [[dot-Start()_1]] - `calls` [EXTRACTED]
-- [[dot-Update()_8]] - `calls` [EXTRACTED]
+- [[dot-Start()_10]] - `calls` [EXTRACTED]
+- [[dot-Update()_7]] - `calls` [EXTRACTED]
 - [[Capitulo2Audio]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_25

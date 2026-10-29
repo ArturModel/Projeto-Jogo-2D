@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
 type: "code"
-community: "Community 38"
-location: "L60"
+community: "Community 33"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_33
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[dot-Ativar()_2]] - `calls` [INFERRED]
+- [[dot-Procurar()]] - `calls` [EXTRACTED]
+- [[PonteiroCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_33

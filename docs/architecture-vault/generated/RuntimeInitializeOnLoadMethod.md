@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 54"
+community: "Community 26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_26
 ---
 
 # RuntimeInitializeOnLoadMethod
@@ -20,10 +20,10 @@ tags:
 - [[dot-PrepararSessao()]] - `references` [EXTRACTED]
 - [[dot-ReiniciarSelecao()]] - `references` [EXTRACTED]
 - [[dot-ResetSession()]] - `references` [EXTRACTED]
+- [[dot-ResetStatic()]] - `references` [EXTRACTED]
 - [[dot-ResetStatic()_1]] - `references` [EXTRACTED]
 - [[dot-ResetStatic()_2]] - `references` [EXTRACTED]
 - [[dot-ResetStatic()_3]] - `references` [EXTRACTED]
-- [[dot-ResetStatic()]] - `references` [EXTRACTED]
 - [[dot-ResetStatic()_4]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_26

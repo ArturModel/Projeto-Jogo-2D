@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "Community 39"
-location: "L36"
+community: "Community 42"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_42
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Build()_1]] - `calls` [EXTRACTED]
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_42

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "Community 7"
-location: "L32"
+community: "Community 26"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_26
 ---
 
 # Prompt
 
 ## Connections
-- [[DoorTrigger]] - `defines` [EXTRACTED]
+- [[Interactable]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_26

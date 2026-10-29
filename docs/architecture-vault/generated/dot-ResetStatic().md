@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 26"
-location: "L18"
+location: "L209"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,7 @@ tags:
 # .ResetStatic()
 
 ## Connections
-- [[dot-SincronizarCenasNoEditor()]] - `calls` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
-- [[SceneFader]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_26

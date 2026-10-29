@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "Community 35"
-location: "L60"
+community: "Community 29"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_35
+  - community/Community_29
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_35
+#graphify/code #graphify/EXTRACTED #community/Community_29

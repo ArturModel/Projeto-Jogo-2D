@@ -1,19 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs"
 type: "code"
-community: "Community 45"
-location: "L772"
+community: "Community 5"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_5
 ---
 
 # .Avancar()
 
 ## Connections
-- [[dot-TocarSom()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
+- [[dot-AtualizarPassada()]] - `calls` [INFERRED]
+- [[dot-Gait()]] - `calls` [INFERRED]
+- [[dot-Reset()]] - `calls` [EXTRACTED]
+- [[Action]] - `references` [EXTRACTED]
+- [[MarcusGait]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_5

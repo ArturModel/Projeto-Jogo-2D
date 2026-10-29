@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 49"
-location: "L19"
+community: "Community 5"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_5
 ---
 
 # .Awake()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
+- [[Camera]] - `references` [EXTRACTED]
+- [[CameraFollow]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_5

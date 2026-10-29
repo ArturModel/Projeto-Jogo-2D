@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 2"
-location: "L566"
+community: "Community 5"
+location: "L568"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_5
 ---
 
 # .AplicarEstadoDaZona()
@@ -22,4 +22,4 @@ tags:
 - [[Chuva]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_5

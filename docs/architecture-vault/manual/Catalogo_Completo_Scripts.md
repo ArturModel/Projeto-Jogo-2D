@@ -1,6 +1,6 @@
 # Catálogo dos scripts C# atuais
 
-Inventário em 26/10/2026: **93 arquivos C# versionados** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
+Inventário em 29/10/2026: **94 arquivos C# versionados** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44/93 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
 
 | Arquivo | Tipos declarados (amostra) |
 |---|---|
@@ -46,6 +46,7 @@ Inventário em 26/10/2026: **93 arquivos C# versionados** em Assets/Scripts e As
 | [Scripts/Chuva.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Chuva.cs) | `Chuva`, `Poca`, `Gota`, `Respingo`, `Camada` |
 | [Scripts/ChuvaRolando.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/ChuvaRolando.cs) | `ChuvaRolando` |
 | [Scripts/DentroDaCasaDoAvo.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/DentroDaCasaDoAvo.cs) | `DentroDaCasaDoAvo` |
+| [Scripts/DicaDeTecla.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/DicaDeTecla.cs) | `DicaDeTecla` |
 | [Scripts/DoorTrigger.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/DoorTrigger.cs) | `DoorTrigger` |
 | [Scripts/EstradaScroller.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/EstradaScroller.cs) | `EstradaScroller`, `Fileira` |
 | [Scripts/GameMessageUI.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/GameMessageUI.cs) | `DialogoLinha`, `GameMessageUI` |

@@ -16,7 +16,7 @@ tags:
 - [[dot-CriarMao()]] - `calls` [EXTRACTED]
 - [[dot-Physics()]] - `calls` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [EXTRACTED]
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
 - [[BochaBall]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

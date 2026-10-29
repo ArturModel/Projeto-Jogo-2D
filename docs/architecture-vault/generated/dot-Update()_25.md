@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 54"
-location: "L37"
+community: "Community 7"
+location: "L347"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_7
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-VolumeDaCamada()]] - `calls` [EXTRACTED]
-- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
+- [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_7

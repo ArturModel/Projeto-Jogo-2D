@@ -1,23 +1,26 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 14"
-location: "L447"
+community: "Community 13"
+location: "L455"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_13
 ---
 
 # .InteragirAtendenteMercadinho()
 
 ## Connections
-- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Anotar()]] - `calls` [EXTRACTED]
+- [[dot-Falar()]] - `calls` [EXTRACTED]
 - [[dot-Interact()]] - `calls` [EXTRACTED]
+- [[dot-JaNoDiario()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-Marcus()]] - `calls` [EXTRACTED]
+- [[dot-Pensa()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [INFERRED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_13

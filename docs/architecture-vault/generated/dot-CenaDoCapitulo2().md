@@ -15,8 +15,8 @@ tags:
 - [[dot-CenaC2()]] - `calls` [EXTRACTED]
 - [[dot-ProximaFalaContextual()]] - `calls` [EXTRACTED]
 - [[dot-TryParseAndValidateJson()]] - `calls` [EXTRACTED]
-- [[dot-Update()_24]] - `calls` [EXTRACTED]
-- [[dot-Update()_14]] - `calls` [EXTRACTED]
+- [[dot-Update()_9]] - `calls` [EXTRACTED]
+- [[dot-Update()_17]] - `calls` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 

@@ -12,8 +12,8 @@ tags:
 # .Interior()
 
 ## Connections
-- [[dot-Start()_9]] - `calls` [EXTRACTED]
-- [[dot-Update()_6]] - `calls` [EXTRACTED]
+- [[dot-Start()_6]] - `calls` [EXTRACTED]
+- [[dot-Update()_5]] - `calls` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_20

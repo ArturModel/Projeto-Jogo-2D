@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
+community: "Community 27"
 location: "L279"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_27
 ---
 
 # .AtualizarTela()
@@ -26,8 +26,8 @@ tags:
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[dot-SetState()]] - `calls` [INFERRED]
 - [[dot-TextoDistancia()]] - `calls` [EXTRACTED]
-- [[dot-Update()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_8]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_27

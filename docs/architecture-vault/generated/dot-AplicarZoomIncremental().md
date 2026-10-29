@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarIndicadorZoom()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 20"
+community: "Community 40"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_40
 ---
 
 # SantaRitaActorElevation
 
 ## Connections
-- [[dot-Awake()_3]] - `method` [EXTRACTED]
+- [[dot-Awake()_12]] - `method` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_2]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_1]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_1]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_6]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[VisualDepth]] - `defines` [EXTRACTED]
 - [[VisualScale]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_40

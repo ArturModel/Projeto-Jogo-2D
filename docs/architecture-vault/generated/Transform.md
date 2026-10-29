@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
 - [[dot-Apply()]] - `references` [EXTRACTED]
-- [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-ApprovedScenes()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
@@ -60,7 +60,7 @@ tags:
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
 - [[dot-Rotulo()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `references` [EXTRACTED]
 - [[Fileira]] - `references` [EXTRACTED]

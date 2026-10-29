@@ -302,6 +302,8 @@ public class Capitulo1Director : MonoBehaviour
     {
         var final = Resources.Load<Sprite>("Art/Characters/" + nomeArquivo);
         if (final == null) final = Resources.Load<Sprite>("Art/Buildings/" + nomeArquivo);
+        if (final == null) final = Resources.Load<Sprite>("Art/Props/" + nomeArquivo);
+        if (final == null) final = Resources.Load<Sprite>("Art/World/" + nomeArquivo);
         if (final == null && (nomeArquivo == "Oak_Tree" || nomeArquivo == "Oak_Tree_Small"))
             final = Resources.Load<Sprite>("Art/World/" + (nomeArquivo == "Oak_Tree" ? "Tree_A" : "Tree_B"));
         if (final != null) return final;
