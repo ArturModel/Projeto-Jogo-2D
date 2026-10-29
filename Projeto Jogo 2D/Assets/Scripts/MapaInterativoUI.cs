@@ -188,7 +188,7 @@ public class MapaInterativoUI : MonoBehaviour
         {
             id = "centro",
             nome = "CENTRO DE SANTA RITA",
-            descricao = "Coração da cidade. Bloqueado pelo portão da Rua Norte até derrotar Zé e obter a 1ª Ficha do Clube.",
+            descricao = "Coração da cidade. O portão da Rua Norte está trancado por causa da obra.",
             uv = SantaRitaGeography.UV("centro"),
             cor = new Color(0.88f, 0.84f, 0.74f),
             tipo = "centro"
@@ -497,15 +497,15 @@ public class MapaInterativoUI : MonoBehaviour
         string sceneName = SceneManager.GetActiveScene().name;
         bool cenaValida = sceneName == "EntradaDaCidade" || sceneName == "CasaDoAvo" || sceneName == "BarDoZe" || Capitulo2Director.CenaDoCapitulo2(sceneName);
         if (!cenaValida) return;
-        if (hudHintText != null)
-            hudHintText.text = GameState.Tem(Flags.MapaDoCarroObtido) ? "[M] Mapa / Diário" : "[E] Pegar Mapa no Carro";
+        // Sem legenda fixa no canto: o M é ensinado uma vez pelo DicaDeTecla.
+        if (hudHintGo != null && hudHintGo.activeSelf) hudHintGo.SetActive(false);
 
         if (Keyboard.current.mKey.wasPressedThisFrame || Keyboard.current.tabKey.wasPressedThisFrame)
         {
             if (GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing) return;
             if (!GameState.Tem(Flags.MapaDoCarroObtido))
             {
-                Legenda.Dizer("Meu mapa e minha lanterna estão no carro marrom aqui atrás. Preciso examiná-lo com [E].", 3.5f);
+                Legenda.Dizer("\"O mapa ficou no carro.\"", 2.5f);
                 return;
             }
 
@@ -706,7 +706,7 @@ public class MapaInterativoUI : MonoBehaviour
     {
         if (!GameState.Tem(Flags.MapaDoCarroObtido))
         {
-            Legenda.Dizer("Meu mapa está no carro marrom logo atrás. Preciso examiná-lo com [E].", 3.5f);
+            Legenda.Dizer("\"O mapa ficou no carro.\"", 2.5f);
             return;
         }
         if (abaInicial >= 0)
@@ -857,7 +857,7 @@ public class MapaInterativoUI : MonoBehaviour
 
             string statusCentro = GameState.Tem(Flags.ZeDerrotadoNaSinuca)
                 ? "<color=#58E878>Portão do Centro: DESTRANCADO</color>"
-                : "<color=#F06858>Portão do Centro: TRANCADO por Zé</color>";
+                : "<color=#F06858>Portão do Centro: TRANCADO (obra)</color>";
 
             textoDiarioConteudo.text =
                 infoSelecionado +
@@ -890,6 +890,8 @@ public class MapaInterativoUI : MonoBehaviour
                 var e = entradas[i];
                 if (e.categoria == "item") continue;
                 string catUpper = (e.categoria ?? "").ToUpperInvariant();
+                // "interpretacao" é como o GameState guarda as hipóteses.
+                if (catUpper.Contains("INTERP") || catUpper.Contains("HIP")) catUpper = "HIPÓTESE";
                 string tagCor = catUpper.Contains("FATO") ? "#88C8F0" : (catUpper.Contains("HIP") ? "#E8B068" : "#98E898");
                 sb.Append("<color=").Append(tagCor).Append(">[").Append(catUpper).Append("] ").Append(e.titulo).Append(":</color>\n");
                 sb.Append(e.descricao).Append("\n\n");
@@ -903,9 +905,8 @@ public class MapaInterativoUI : MonoBehaviour
 
             if (GameState.Tem(Flags.RecebeuFichaClubeZe))
             {
-                sb.Append("<color=#FFD848>[*] FICHA DO CLUBE #01 (ZÉ)</color>\n");
-                sb.Append("ID: ficha_clube_ze_01\n");
-                sb.Append("Ficha metálica cunhada pelo Clube de Santa Rita, conquistada de Zé na Melhor de 3 da Sinuca. Abre acesso ao Centro.\n\n");
+                sb.Append("<color=#FFD848>[*] FICHA DO SALÃO #01 (ZÉ)</color>\n");
+                sb.Append("Ficha de latão do salão do Clube, entregue por Zé depois da melhor de três. \"Quem for do Clube vai saber que tu sentou na minha mesa.\" Não é chave de nada.\n\n");
             }
             else
             {
@@ -922,8 +923,8 @@ public class MapaInterativoUI : MonoBehaviour
                 sb.Append("Via de Tonão: Adílio queria perguntar a Amaro quem escolheu as frases. Uma intenção, não um avistamento posterior.\n\n");
             if (GameState.Tem(Flags.Pista_NotaFiscal2004))
             {
-                sb.Append("<color=#98E898>- Cupom do Mercadinho (2004)</color>\n");
-                sb.Append("Emitido hoje cedo; traz anotação de Adílio sobre o Bar do Zé.\n");
+                sb.Append("<color=#98E898>- Cupom do Mercadinho (19/10, 18h10)</color>\n");
+                sb.Append("Café, velas e fósforo. No verso, a lápis, um aviso sobre o homem de capa.\n");
             }
 
             textoDiarioConteudo.text = sb.ToString();

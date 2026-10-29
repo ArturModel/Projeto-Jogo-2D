@@ -48,6 +48,8 @@ public class Capitulo1Director : MonoBehaviour
 
     private GameObject raizMundoCapitulo1;
     private GameObject painelFechamentoCap1;
+    private TextMeshProUGUI textoAvisoSaveFechamento;
+    private float painelFechamentoAbertoEm;
     private PayphoneCheckpoint templatePayphone;
     private AudioSource musicaBairro;
     private AudioSource musicaBar;
@@ -386,6 +388,7 @@ public class Capitulo1Director : MonoBehaviour
     private void Update()
     {
         if (!Application.isPlaying) return;
+        AtualizarTeclasPainelFechamento();
         SantaRitaBarAudio.DefinirContexto(zonaAtual == ZonaId.Interior_BarDoZe, SinucaMinigameUI.MaoEmCurso);
 
         // A música do bairro continua sem reiniciar ao entrar na casa; no bar
@@ -554,11 +557,8 @@ public class Capitulo1Director : MonoBehaviour
             }
             else if (destino == ZonaId.Interior_BarDoZe)
             {
+                // O objetivo só muda quando Marcus tiver algo concreto para perguntar ao Zé.
                 GameState.Marcar(Flags.EntrouNoBarDoZe);
-                if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca))
-                {
-                    GameState.DefinirObjetivo("Confrontar Zé na mesa de sinuca (Melhor de 3 — 'A Bola Marcada').");
-                }
             }
         });
     }
@@ -600,20 +600,21 @@ public class Capitulo1Director : MonoBehaviour
 
         GameState.RegistrarNotaDiario(
             "casa_adilio_entrada",
-            "Casa de Adílio destrancada (Nº 40)",
+            "Casa do vô destrancada",
             "FATO",
-            "A porta da frente da casa nº 40 estava destrancada e Adílio não respondeu ao chamado. A rotina parece ter sido interrompida hoje mesmo."
+            "A porta da casa 40 estava destrancada, as luzes acesas, e o vô não respondeu."
         );
-        GameState.DefinirObjetivo("Examinar as pistas dentro da casa de Adílio (café, cartas, nota fiscal de 2004 e banco caído).");
+        if (!GameState.Tem(Flags.OuviuRelatoAtendente) && !GameState.Tem(Flags.ZeDerrotadoNaSinuca))
+            GameState.DefinirObjetivo("Descobrir o que aconteceu na casa do vô.");
         StartCoroutine(NarracaoEntradaCasaAvoRoutine());
     }
 
     private IEnumerator NarracaoEntradaCasaAvoRoutine()
     {
         yield return new WaitForSeconds(0.8f);
-        Legenda.Dizer("\"A porta estava destrancada... Vô Adílio?\"", 3.2f);
-        yield return new WaitForSeconds(3.5f);
-        Legenda.Dizer("Examine os objetos da casa para descobrir o que aconteceu hoje.", 4.0f);
+        Legenda.Dizer("\"Vô? ...Vô Adílio?\"", 3.0f);
+        yield return new WaitForSeconds(3.3f);
+        Legenda.Dizer("\"A porta aberta. Tudo aceso. E ninguém.\"", 3.5f);
     }
 
     private static void AjustarLuzGlobal(bool emInterior)
@@ -1579,7 +1580,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Carro_Marcus_Sprite", new Vector3(108.5f, 12.2f, 0f), "Sedan_Brown", 32f, 1.15f,
             new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Carro_Marcus_Interacao", new Vector3(108.5f, 11.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CarroMarcus, "Examinar meu carro [Pegar Lanterna e Mapa]");
+            InteracaoCapitulo1.TipoInteracao.CarroMarcus, "");
 
         // Placa de Entrada de Santa Rita
         ColocarProp(z.transform, "Placa_SantaRita", new Vector3(113.5f, 13.4f, 0f), "PlacaEntrada", 16f, 0.9f,
@@ -1593,7 +1594,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Placa_Horarios_Rodovia", new Vector3(119.5f, 13.9f, 0f), "RoadSign_Blank", 32f, 1.1f,
             Vector2.zero, Vector2.zero, 1);
         ColocarInteracao(z.transform, "Interacao_PlacaRodovia", new Vector3(119.5f, 12.7f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PlacaRodoviaEntrada, "Ler quadro da parada de ônibus");
+            InteracaoCapitulo1.TipoInteracao.PlacaRodoviaEntrada, "");
 
         // Orelhão #1 (Save Point da Entrada sobre a calçada)
         ColocarOrelhaoSave(z.transform, "Orelhao_Rodovia", "orelhao_entrada_rodovia", new Vector3(126.5f, 13.1f, 0f));
@@ -1602,7 +1603,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Caixotes_Barro_Sul", new Vector3(122.5f, 6.6f, 0f), "Caixotes", 16f, 0.85f,
             new Vector2(1.4f, 0.8f), new Vector2(0f, 0.4f), 1);
         ColocarInteracao(z.transform, "Interacao_MalaEstrada", new Vector3(122.5f, 7.3f, 0f),
-            InteracaoCapitulo1.TipoInteracao.MalaAbandonadaEstrada, "Examinar mala caída no barro");
+            InteracaoCapitulo1.TipoInteracao.MalaAbandonadaEstrada, "");
 
         // Postes de luz e fiação sobre a calçada de pedra
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
@@ -1694,12 +1695,12 @@ public class Capitulo1Director : MonoBehaviour
 
         // Bomba de combustível e picape estacionada no pátio de concreto do posto
         ColocarInteracao(z.transform, "Bomba_Posto_Interacao", new Vector3(214.0f, 13.8f, 0f),
-            InteracaoCapitulo1.TipoInteracao.BombaCombustivelPosto, "Examinar bomba de combustível");
+            InteracaoCapitulo1.TipoInteracao.BombaCombustivelPosto, "");
 
         ColocarProp(z.transform, "Picape_No_Posto", new Vector3(207.8f, 13.4f, 0f), "Picape_Red", 32f, 1.15f,
             new Vector2(2.5f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Picape_Posto_Interacao", new Vector3(207.8f, 12.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CarroEstacionadoPosto, "Examinar picape no posto");
+            InteracaoCapitulo1.TipoInteracao.CarroEstacionadoPosto, "");
 
         // Carro estacionado corretamente no meio-fio do asfalto
         ColocarProp(z.transform, "Sedan_Avenida_Posto", new Vector3(220.5f, 11.4f, 0f), "Sedan_Black", 32f, 1.15f,
@@ -1713,7 +1714,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Banco_Venda", new Vector3(232.2f, 13.6f, 0f), "Bench_Wood", 32f, 1.05f,
             new Vector2(1.5f, 0.6f), new Vector2(0f, 0.3f), 2);
         ColocarInteracao(z.transform, "Porta_Venda_Antiga", new Vector3(228.5f, 13.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.VendaAntigaFechada, "Examinar antiga Venda");
+            InteracaoCapitulo1.TipoInteracao.VendaAntigaFechada, "");
 
         // Postes de luz e fiação na calçada
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
@@ -1804,13 +1805,13 @@ public class Capitulo1Director : MonoBehaviour
 
         // FRENTISTA dentro da loja de conveniência atrás do balcão!
         ColocarInteracao(z.transform, "NPC_Frentista_Interior", new Vector3(208.0f, -51.5f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcFrentista, "Conversar com o Frentista", "Npc_Frentista", 32f, 1.0f, 2, solido: true);
+            InteracaoCapitulo1.TipoInteracao.NpcFrentista, "", "Npc_Frentista", 32f, 1.0f, 2, solido: true);
 
         // Interações extras no balcão do Posto
         ColocarInteracao(z.transform, "Livro_Plantao_Posto", new Vector3(206.5f, -53.0f, 0f),
-            InteracaoCapitulo1.TipoInteracao.LivroRegistroPosto, "Ler livro de plantão do Posto");
+            InteracaoCapitulo1.TipoInteracao.LivroRegistroPosto, "");
         ColocarInteracao(z.transform, "TV_Portatil_Posto", new Vector3(209.6f, -53.0f, 0f),
-            InteracaoCapitulo1.TipoInteracao.TvPortatilPosto, "Olhar TV portátil");
+            InteracaoCapitulo1.TipoInteracao.TvPortatilPosto, "");
     }
 
     // =========================================================================
@@ -1885,7 +1886,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Picape_Encruzilhada_Sprite", new Vector3(326.0f, 7.2f, 0f), "Picape_Brown", 32f, 1.15f,
             new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Picape_Encruzilhada_Interacao", new Vector3(326.0f, 6.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PicapeEncruzilhada, "Examinar caminhonete estacionada");
+            InteracaoCapitulo1.TipoInteracao.PicapeEncruzilhada, "");
 
         // 2. LADO DIREITO DA ENCRUZILHADA (Casa da esquina + Quadro de Avisos + Cerca)
         ColocarProp(z.transform, "Casa_Esquina_Encruzilhada", new Vector3(330.5f, 14.0f, 0f), "CasaSimples_B", 16f, 0.90f,
@@ -1897,13 +1898,13 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Mural_Encruzilhada", new Vector3(324.8f, 13.5f, 0f), "RoadSign_Blank", 32f, 1.15f,
             new Vector2(0.8f, 0.5f), new Vector2(0f, 0.25f), 2);
         ColocarInteracao(z.transform, "Quadro_Avisos_Interacao", new Vector3(324.8f, 12.9f, 0f),
-            InteracaoCapitulo1.TipoInteracao.QuadroAvisosEncruzilhada, "Ler quadro de avisos da comunidade");
+            InteracaoCapitulo1.TipoInteracao.QuadroAvisosEncruzilhada, "");
 
         // Placa de Seta no início da subida de barro para o Bairro das Casas
         ColocarProp(z.transform, "Placa_Subida_Bairro", new Vector3(316.8f, 17.5f, 0f), "ArrowSign", 32f, 1.2f,
             new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 2);
         ColocarInteracao(z.transform, "Placa_Subida_Interacao", new Vector3(316.8f, 16.9f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PlacaSetaBairro, "Ler placa de direção");
+            InteracaoCapitulo1.TipoInteracao.PlacaSetaBairro, "");
 
         // Postes de luz e fiação na encruzilhada
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
@@ -1922,7 +1923,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarArteInterior(z.transform, "Interdicao_Centro_Passeio", new Vector2(336.5f, 11.4f),
             "BarricadaCentro", "WoodFence", 1f, new Vector2(4.4f, 1.8f));
         ColocarInteracao(z.transform, "Interacao_Interdicao_Centro", new Vector3(333.6f, 10.1f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CentroBloqueioObra, "Ler interdição da avenida");
+            InteracaoCapitulo1.TipoInteracao.CentroBloqueioObra, "");
 
         // Gatilhos de Transição: Oeste (-> Zona 2: Posto) e Noroeste pela estrada de terra (-> Zona 4: Bairro das Casas)
         ColocarGatilhoTransicao(
@@ -2002,13 +2003,13 @@ public class Capitulo1Director : MonoBehaviour
 
         // ATENDENTE dentro do Mercadinho atrás do balcão!
         ColocarInteracao(z.transform, "NPC_Atendente_Interior", new Vector3(309.0f, -50.9f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcAtendenteMercadinho, "Conversar com a Atendente", "Npc_Atendente", 32f, 1.0f, 2, solido: true);
+            InteracaoCapitulo1.TipoInteracao.NpcAtendenteMercadinho, "", "Npc_Atendente", 32f, 1.0f, 2, solido: true);
 
         // Pistas dentro do Mercadinho: Caderno de entregas e Gôndola de suprimentos
         ColocarInteracao(z.transform, "Caderno_Mercadinho_Interacao", new Vector3(307.4f, -52.5f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CadernoFiadoMercadinho, "Ler caderno de entregas no balcão");
+            InteracaoCapitulo1.TipoInteracao.CadernoFiadoMercadinho, "");
         ColocarInteracao(z.transform, "Prateleiras_Mercadinho_Interacao", new Vector3(314.5f, -55.0f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PrateleirasMercadinho, "Examinar prateleiras do Mercadinho");
+            InteracaoCapitulo1.TipoInteracao.PrateleirasMercadinho, "");
         // Serviço do MESMO comércio: porta traseira só utilizável após Zé.
         var servico = new GameObject("Porta_Servico_Centro");
         servico.transform.SetParent(z.transform, false);
@@ -2088,7 +2089,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Van_Garagem_Casa14", new Vector3(415.0f, 12.2f, 0f), "Van_White", 32f, 1.1f,
             new Vector2(2.4f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Porta_Casa_14_Lurdes", new Vector3(410.5f, 12.0f, 0f),
-            InteracaoCapitulo1.TipoInteracao.VizinhaDonaLurdes, "Bater na porta (Casa nº 14)");
+            InteracaoCapitulo1.TipoInteracao.VizinhaDonaLurdes, "");
         ColocarProp(z.transform, "Jardim_Casa14", new Vector3(407.5f, 13.6f, 0f), "PlanterBox", 32f, 1.15f,
             Vector2.zero, Vector2.zero, 2);
 
@@ -2102,7 +2103,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Jardim_Casa22", new Vector3(432.5f, 13.6f, 0f), "PlanterBox", 32f, 1.15f,
             Vector2.zero, Vector2.zero, 2);
         ColocarInteracao(z.transform, "Pista_Rastros_Bairro", new Vector3(425.8f, 11.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.GalpaoBairroPista, "Examinar rastros na lama (Casa nº 22)");
+            InteracaoCapitulo1.TipoInteracao.GalpaoBairroPista, "");
 
         // --- QUARTEIRÃO NORTE DO BAIRRO (Rua da Casa do Avô Adílio — Nº 40, Imagem 5!) ---
         // Casa Nº 32 (Esquerda) + Seu Ramiro na varanda
@@ -2113,7 +2114,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Jardim_Casa32", new Vector3(408.0f, 25.4f, 0f), "PlanterBox", 32f, 1.15f,
             Vector2.zero, Vector2.zero, 2);
         ColocarInteracao(z.transform, "NPC_SeuRamiro_Bairro", new Vector3(414.8f, 23.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcMoradorBairro, "Conversar com Seu Ramiro", "Npc_Ramiro", 32f, 1.0f, 2, solido: true);
+            InteracaoCapitulo1.TipoInteracao.NpcMoradorBairro, "", "Npc_Ramiro", 32f, 1.0f, 2, solido: true);
 
         // CASA DO AVÔ ADÍLIO — Nº 40 (Destaque central no Bairro das Casas!)
         ColocarProp(z.transform, "Predio_CasaDoAvo_40", new Vector3(423.5f, 24.4f, 0f), "CasaAvo", 16f, 0.96f,
@@ -2131,7 +2132,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "CaixaCorreio_40_Sprite", new Vector3(426.6f, 23.6f, 0f), "CaixaCorreio", 16f, 0.9f,
             new Vector2(0.7f, 0.6f), new Vector2(0f, 0.3f), 2);
         ColocarInteracao(z.transform, "CaixaCorreio_40_Interacao", new Vector3(426.6f, 23.0f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CaixaCorreioAvo, "Examinar caixa de correio (Nº 40)");
+            InteracaoCapitulo1.TipoInteracao.CaixaCorreioAvo, "");
 
         // Porta para entrar no INTERIOR DA CASA DO AVÔ ADÍLIO (Nº 40)
         ColocarGatilhoTransicao(
@@ -2232,13 +2233,13 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Relogio_Avo", new Vector3(407.0f, -47.4f, 0f), "WallClock", 32f, 1.1f, Vector2.zero, Vector2.zero, 2);
         ColocarProp(z.transform, "Foto_Familia_Avo", new Vector3(409.0f, -47.5f, 0f), "FramedPhoto", 32f, 1.2f, Vector2.zero, Vector2.zero, 2);
         ColocarInteracao(z.transform, "Interacao_Retrato_Avo", new Vector3(409.0f, -48.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.RetratoFamiliaCasaAvo, "Examinar retrato de família (1998)");
+            InteracaoCapitulo1.TipoInteracao.RetratoFamiliaCasaAvo, "");
 
         // 1. COZINHA (Canto Noroeste): Pia + Armário + PISTA 1 (Café passado hoje mesmo)
         ColocarArteInterior(z.transform, "Bancada_Cozinha_Avo", new Vector2(404.0f, -49.2f),
             "Interior_PiaAvo", "Sink", 1.0f, new Vector2(3.3f, 0.9f));
         ColocarInteracao(z.transform, "Pista_1_Cafe_Morno", new Vector3(404.2f, -50.2f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaCafeCasaAvo, "Examinar bule e xícara de café");
+            InteracaoCapitulo1.TipoInteracao.PistaCafeCasaAvo, "");
 
         // 2. SALA CENTRAL: Mesa de Madeira + Poltrona + TV + PISTA 2 (Cartas de paciência interrompidas)
         ColocarArteInterior(z.transform, "Mesa_Cartas_Avo", new Vector2(409.0f, -52.5f),
@@ -2247,21 +2248,21 @@ public class Capitulo1Director : MonoBehaviour
             "Interior_PoltronaAvo", "Armchair", 0.78f, new Vector2(1.5f, 0.9f));
         ColocarProp(z.transform, "TV_Sala_Avo", new Vector3(403.2f, -53.8f, 0f), "TV_Old", 32f, 1.2f, new Vector2(1.2f, 0.9f), new Vector2(0f, 0.45f), 2);
         ColocarInteracao(z.transform, "Pista_2_Cartas_Mesa", new Vector3(409.0f, -53.3f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaCartasCasaAvo, "Examinar cartas na mesa");
+            InteracaoCapitulo1.TipoInteracao.PistaCartasCasaAvo, "");
 
         // 3. QUARTO / ESCRITÓRIO (Lado Leste): Cama + Cômoda Escura + Rádio + Telefone + PISTA 3 (Nota Fiscal de 2004 e Bilhete do Bar do Zé)
         ColocarProp(z.transform, "Cama_Avo", new Vector3(415.0f, -50.2f, 0f), "Bed", 32f, 1.25f, new Vector2(1.8f, 2.2f), new Vector2(0f, 1.0f), 2);
         ColocarProp(z.transform, "Comoda_Avo", new Vector3(412.4f, -49.4f, 0f), "Cabinet_Dark", 32f, 1.25f, new Vector2(1.6f, 0.9f), new Vector2(0f, 0.45f), 2);
         ColocarProp(z.transform, "Radio_Avo", new Vector3(412.4f, -48.6f, 0f), "Radio", 32f, 1.0f, Vector2.zero, Vector2.zero, 3);
         ColocarInteracao(z.transform, "Pista_3_NotaFiscal_2004", new Vector3(412.4f, -50.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004, "Ler nota fiscal (2004) e bilhete");
+            InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004, "");
         ColocarInteracao(z.transform, "Interacao_Telefone_Avo", new Vector3(414.6f, -53.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.TelefoneCasaAvo, "Examinar telefone fixo");
+            InteracaoCapitulo1.TipoInteracao.TelefoneCasaAvo, "");
 
         // 4. ENTRADA DA CASA (Perto da porta sul): PISTA 4 (Banqueta caída e marcas de barro)
         ColocarProp(z.transform, "Banqueta_Caida_Avo", new Vector3(406.6f, -56.8f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
         ColocarInteracao(z.transform, "Pista_4_Desordem_Porta", new Vector3(406.6f, -56.2f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaDesordemPorta, "Examinar banco caído e pegadas");
+            InteracaoCapitulo1.TipoInteracao.PistaDesordemPorta, "");
     }
 
     // =========================================================================
@@ -2309,7 +2310,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Caminhonete_Clube_Bar", new Vector3(509.5f, 11.4f, 0f), "Picape_Black", 32f, 1.15f,
             new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Interacao_Caminhonete_Clube", new Vector3(509.5f, 10.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CaminhoneteClubeBar, "Examinar caminhonete escura");
+            InteracaoCapitulo1.TipoInteracao.CaminhoneteClubeBar, "");
 
         // FACHADA DO BAR DO ZÉ
         ColocarProp(z.transform, "Predio_Fachada_BarDoZe", new Vector3(518.0f, 14.0f, 0f), "Fachada_BarDoZe", 16f, 0.94f,
@@ -2324,7 +2325,7 @@ public class Capitulo1Director : MonoBehaviour
         ColocarProp(z.transform, "Dumpster_Bar_Ext", new Vector3(523.2f, 13.8f, 0f), "Dumpster", 32f, 1.1f, new Vector2(1.4f, 0.9f), new Vector2(0f, 0.45f), 2);
 
         ColocarInteracao(z.transform, "Placa_Letreiro_BarZe", new Vector3(515.8f, 13.1f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PlacaBarDoZe, "Ler letreiro do Bar do Zé");
+            InteracaoCapitulo1.TipoInteracao.PlacaBarDoZe, "");
 
         // Porta para entrar no INTERIOR DO BAR DO ZÉ
         ColocarGatilhoTransicao(
@@ -2418,12 +2419,12 @@ public class Capitulo1Director : MonoBehaviour
         ColocarArteInterior(z.transform, "Balcao_Bar_Sprite", new Vector2(504.8f, -50.8f),
             "Interior_BalcaoBar", "Balcao_Bar", 0.96f, new Vector2(3.8f, 1.0f));
         ColocarInteracao(z.transform, "Balcao_Bar_Interacao", new Vector3(504.8f, -51.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe, "Examinar balcão do bar");
+            InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe, "");
 
         // Quadro de Regras da Sinuca na parede
         ColocarProp(z.transform, "Quadro_Regras_Sprite", new Vector3(513.5f, -48.6f, 0f), "Quadro_Regras_Sinuca", 32f, 1.15f, Vector2.zero, Vector2.zero, 3);
         ColocarInteracao(z.transform, "Quadro_Regras_Interacao", new Vector3(513.5f, -49.8f, 0f),
-            InteracaoCapitulo1.TipoInteracao.QuadroRegrasSinuca, "Ler regras da mesa");
+            InteracaoCapitulo1.TipoInteracao.QuadroRegrasSinuca, "");
 
         // Mesas laterais e engradados no canto do bar
         ColocarProp(z.transform, "Mesa_Bar_Esq", new Vector3(503.2f, -55.0f, 0f), "RoundTable_Wood", 32f, 1.15f, new Vector2(1.1f, 0.8f), new Vector2(0f, 0.4f), 2);
@@ -2442,7 +2443,7 @@ public class Capitulo1Director : MonoBehaviour
 
         // FREQUENTADOR perto do balcão
         ColocarInteracao(z.transform, "NPC_Frequentador_Interior", new Vector3(505.8f, -52.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcFrequentadorBar, "Conversar com o Frequentador", "Npc_Frequentador", 32f, 1.0f, 2, solido: true);
+            InteracaoCapitulo1.TipoInteracao.NpcFrequentadorBar, "", "Npc_Frequentador", 32f, 1.0f, 2, solido: true);
     }
 
     // =========================================================================
@@ -2453,34 +2454,30 @@ public class Capitulo1Director : MonoBehaviour
     {
         AjustarLuzGlobal(true);
         ColocarInteracao(transform, "Pista_Cafe_Hoje", new Vector3(-2.6f, 1.3f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaCafeCasaAvo, "Examinar bule de café");
+            InteracaoCapitulo1.TipoInteracao.PistaCafeCasaAvo, "");
         ColocarInteracao(transform, "Pista_Cartas_Mesa", new Vector3(-0.65f, -4.15f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaCartasCasaAvo, "Examinar cartas na mesa");
+            InteracaoCapitulo1.TipoInteracao.PistaCartasCasaAvo, "");
         ColocarInteracao(transform, "Pista_NotaFiscal_2004", new Vector3(2.8f, -0.2f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004, "Ler nota fiscal (2004)");
+            InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004, "");
         ColocarInteracao(transform, "Pista_Desordem_Porta", new Vector3(-1.8f, -8.5f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PistaDesordemPorta, "Examinar banco caído");
+            InteracaoCapitulo1.TipoInteracao.PistaDesordemPorta, "");
     }
 
     private void GarantirElementosBarDoZeCenaSeparada()
     {
         AjustarLuzGlobal(true);
         GameState.Marcar(Flags.EntrouNoBarDoZe);
-        if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca))
-        {
-            GameState.DefinirObjetivo("Confrontar Zé e vencê-lo na Melhor de 3 da Sinuca ('A Bola Marcada').");
-        }
 
         ColocarInteracao(transform, "NPC_Ze", new Vector3(2.0f, -4.5f, 0f),
             InteracaoCapitulo1.TipoInteracao.NpcZeBar, "", "Npc_Ze", 32f, 1.0f, 2, solido: true);
         ColocarInteracao(transform, "NPC_Frequentador_Bar", new Vector3(-2.6f, -2.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcFrequentadorBar, "Conversar com o Frequentador", "Npc_Frequentador", 32f, 1.0f, 2, solido: true);
+            InteracaoCapitulo1.TipoInteracao.NpcFrequentadorBar, "", "Npc_Frequentador", 32f, 1.0f, 2, solido: true);
         ColocarInteracao(transform, "Mesa_Sinuca_Trigger", new Vector3(0f, -4.8f, 0f),
             InteracaoCapitulo1.TipoInteracao.MesaSinucaBar, "");
         ColocarInteracao(transform, "Balcao_Bar_Trigger", new Vector3(-4.2f, -1.2f, 0f),
-            InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe, "Examinar balcão");
+            InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe, "");
         ColocarInteracao(transform, "Quadro_Regras_Trigger", new Vector3(4.2f, 0.5f, 0f),
-            InteracaoCapitulo1.TipoInteracao.QuadroRegrasSinuca, "Ler regras da mesa");
+            InteracaoCapitulo1.TipoInteracao.QuadroRegrasSinuca, "");
     }
 
     public static void AtualizarEstadoPortaoCentroNaCena()
@@ -2496,74 +2493,123 @@ public class Capitulo1Director : MonoBehaviour
         }
     }
 
+    // Avança para o Centro (capítulo 2). Também é usado pelas verificações do capítulo 2.
     public static void MostrarTelaFechamentoCapitulo1()
     {
         if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca)) return;
         SceneTransition.Ir("CentroSantaRita", "c1_portao_norte");
     }
 
-    private void AbrirPainelFechamento()
+    public static bool PainelFechamentoAberto =>
+        instancia != null && instancia.painelFechamentoCap1 != null && instancia.painelFechamentoCap1.activeSelf;
+
+    // Tela de fim do capítulo 1, na primeira vez que Marcus chega ao portão
+    // aberto. O jogador escolhe seguir para o Centro ou ficar (e salvar antes).
+    public static void MostrarPainelFimCapitulo1()
     {
-        if (painelFechamentoCap1 != null)
+        if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca)) return;
+        GameState.Marcar(Flags.Capitulo1Concluido);
+        if (instancia == null)
         {
-            painelFechamentoCap1.SetActive(true);
+            MostrarTelaFechamentoCapitulo1();
             return;
         }
+        instancia.AbrirPainelFechamento();
+    }
 
+    private void AbrirPainelFechamento()
+    {
+        if (painelFechamentoCap1 == null)
+            ConstruirPainelFechamento();
+
+        textoAvisoSaveFechamento.text = GameState.TemProgressoNaoSalvo
+            ? "<color=#E8B068>O que você descobriu desde o último orelhão ainda não foi salvo. O orelhão fica ao lado do bar.</color>"
+            : "<color=#98E898>Progresso salvo no orelhão.</color>";
+        painelFechamentoCap1.SetActive(true);
+        painelFechamentoAbertoEm = Time.unscaledTime;
+    }
+
+    private void FecharPainelFechamento(bool seguirParaCentro)
+    {
+        if (painelFechamentoCap1 == null || !painelFechamentoCap1.activeSelf) return;
+        painelFechamentoCap1.SetActive(false);
+        if (seguirParaCentro)
+        {
+            MostrarTelaFechamentoCapitulo1();
+        }
+        else
+        {
+            Legenda.Dizer("O portão fica aberto. O orelhão está ao lado do bar.", 4f);
+        }
+    }
+
+    private void AtualizarTeclasPainelFechamento()
+    {
+        if (!PainelFechamentoAberto || Time.unscaledTime - painelFechamentoAbertoEm < 0.4f) return;
+        var teclado = UnityEngine.InputSystem.Keyboard.current;
+        if (teclado == null) return;
+        if (teclado.digit1Key.wasPressedThisFrame || teclado.numpad1Key.wasPressedThisFrame)
+            FecharPainelFechamento(true);
+        else if (teclado.digit2Key.wasPressedThisFrame || teclado.numpad2Key.wasPressedThisFrame)
+            FecharPainelFechamento(false);
+    }
+
+    private void ConstruirPainelFechamento()
+    {
         Canvas canvas = UIFactory.CreateCanvas(transform, "FechamentoCapitulo1Canvas", 9600);
         canvas.gameObject.AddComponent<GraphicRaycaster>();
         painelFechamentoCap1 = canvas.gameObject;
 
         Image fundo = new GameObject("FundoEscuro", typeof(RectTransform)).AddComponent<Image>();
         fundo.transform.SetParent(canvas.transform, false);
-        fundo.color = new Color(0.03f, 0.03f, 0.04f, 0.96f);
+        fundo.color = new Color(0.02f, 0.02f, 0.03f, 0.94f);
         UIFactory.Stretch(fundo.rectTransform);
 
-        Image moldura = UIFactory.CreateBox(canvas.transform, "MolduraCapitulo1", "DialogueBox");
-        moldura.color = new Color(0.94f, 0.89f, 0.79f, 0.99f);
+        Image moldura = UIFactory.CreateBox(canvas.transform, "MolduraCapitulo1", "CaixaDialogo");
         RectTransform rt = moldura.rectTransform;
         rt.anchorMin = rt.anchorMax = rt.pivot = new Vector2(0.5f, 0.5f);
-        rt.sizeDelta = new Vector2(540f, 310f);
+        rt.sizeDelta = new Vector2(560f, 320f);
         rt.anchoredPosition = Vector2.zero;
 
-        TextMeshProUGUI subtitulo = UIFactory.CreateLabel(rt, "Subtitulo", 14f);
+        TextMeshProUGUI subtitulo = CriarTextoFechamento(rt, "Subtitulo", 14f, new Vector2(0f, 128f), new Vector2(500f, 18f));
         subtitulo.text = "SANTA RITA — A NOITE DAS 03:17";
-        subtitulo.color = new Color(0.58f, 0.22f, 0.20f, 1f);
+        subtitulo.color = new Color32(170, 72, 64, 255);
         subtitulo.alignment = TextAlignmentOptions.Center;
-        subtitulo.rectTransform.anchorMin = subtitulo.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-        subtitulo.rectTransform.sizeDelta = new Vector2(480f, 24f);
-        subtitulo.rectTransform.anchoredPosition = new Vector2(0f, 118f);
 
-        TextMeshProUGUI titulo = UIFactory.CreateLabel(rt, "Titulo", 24f);
+        TextMeshProUGUI titulo = CriarTextoFechamento(rt, "Titulo", 24f, new Vector2(0f, 104f), new Vector2(520f, 28f));
         titulo.text = "FIM DO CAPÍTULO 1 — A MESA DO ZÉ";
-        titulo.color = new Color(0.18f, 0.14f, 0.10f, 1f);
+        titulo.color = new Color(0.97f, 0.87f, 0.62f, 1f);
         titulo.alignment = TextAlignmentOptions.Center;
-        titulo.rectTransform.anchorMin = titulo.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-        titulo.rectTransform.sizeDelta = new Vector2(490f, 32f);
-        titulo.rectTransform.anchoredPosition = new Vector2(0f, 88f);
 
-        TextMeshProUGUI corpo = UIFactory.CreateLabel(rt, "Resumo", 15f);
+        TextMeshProUGUI corpo = CriarTextoFechamento(rt, "Resumo", 15f, new Vector2(0f, 6f), new Vector2(500f, 150f));
         corpo.text =
-            "• TESTEMUNHO: Zé diz que Adílio foi levado contra a vontade. O café e a desordem levantaram suspeitas; ainda preciso confrontar o relato com outras fontes.\n\n" +
-            "• RECOMPENSA OBTIDA: Ficha do Clube entregue por Zé, conquistada ao derrotar Zé na Melhor de 3 sob a regra 'A Bola Marcada'.\n\n" +
-            "• PRÓXIMO PASSO: Com o portão norte destrancado, Marcus avança para o Centro de Santa Rita em direção aos quatro cantos da cidade e ao Clube no topo.";
-        corpo.color = new Color(0.22f, 0.18f, 0.14f, 1f);
+            "• Zé viu dois homens levarem o vô pelo portão do Centro. \"Ele não queria ir.\"\n" +
+            "• Um deles é o homem de capa, que andou perguntando pela diretoria do Clube de 1990.\n" +
+            "• Zé admitiu que sabia do piso do salão naquela noite, e mandou a música continuar.\n" +
+            "• Você guardou a ficha do salão.";
+        corpo.color = new Color(0.92f, 0.88f, 0.80f, 1f);
         corpo.alignment = TextAlignmentOptions.TopLeft;
         corpo.textWrappingMode = TextWrappingModes.Normal;
-        corpo.rectTransform.anchorMin = corpo.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-        corpo.rectTransform.sizeDelta = new Vector2(468f, 146f);
-        corpo.rectTransform.anchoredPosition = new Vector2(0f, -2f);
+        corpo.lineSpacing = 6f;
 
-        CriarBotaoFechamento(rt, "CONTINUAR EXPLORANDO", new Vector2(-115f, -114f), () =>
-        {
-            painelFechamentoCap1.SetActive(false);
-        });
+        textoAvisoSaveFechamento = CriarTextoFechamento(rt, "AvisoSave", 13f, new Vector2(0f, -86f), new Vector2(500f, 32f));
+        textoAvisoSaveFechamento.alignment = TextAlignmentOptions.Center;
+        textoAvisoSaveFechamento.textWrappingMode = TextWrappingModes.Normal;
 
-        CriarBotaoFechamento(rt, "VOLTAR AO MENU", new Vector2(115f, -114f), () =>
-        {
-            painelFechamentoCap1.SetActive(false);
-            SceneFader.Instance.LoadScene("MainMenu");
-        });
+        CriarBotaoFechamento(rt, "[1] SEGUIR PARA O CENTRO", new Vector2(-122f, -126f), () => FecharPainelFechamento(true));
+        CriarBotaoFechamento(rt, "[2] FICAR NA RUA NORTE", new Vector2(122f, -126f), () => FecharPainelFechamento(false));
+
+        painelFechamentoCap1.SetActive(false);
+    }
+
+    private static TextMeshProUGUI CriarTextoFechamento(RectTransform pai, string nome, float tamanho, Vector2 pos, Vector2 tam)
+    {
+        TextMeshProUGUI t = UIFactory.CreateLabel(pai, nome, tamanho);
+        RectTransform r = t.rectTransform;
+        r.anchorMin = r.anchorMax = r.pivot = new Vector2(0.5f, 0.5f);
+        r.sizeDelta = tam;
+        r.anchoredPosition = pos;
+        return t;
     }
 
     private static void CriarBotaoFechamento(RectTransform pai, string texto, Vector2 pos, UnityEngine.Events.UnityAction acao)
@@ -2572,7 +2618,7 @@ public class Capitulo1Director : MonoBehaviour
         go.transform.SetParent(pai, false);
         RectTransform r = (RectTransform)go.transform;
         r.anchorMin = r.anchorMax = r.pivot = new Vector2(0.5f, 0.5f);
-        r.sizeDelta = new Vector2(200f, 34f);
+        r.sizeDelta = new Vector2(224f, 32f);
         r.anchoredPosition = pos;
 
         Image img = go.GetComponent<Image>();

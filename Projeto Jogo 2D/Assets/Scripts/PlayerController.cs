@@ -100,7 +100,8 @@ public class PlayerController : MonoBehaviour
 
     private static bool BloqueiaEquipamento() => MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
         GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing ||
-        PayphoneCheckpoint.IsSaveUIOpen || SceneFader.IsTransitioning || Time.timeScale == 0;
+        PayphoneCheckpoint.IsSaveUIOpen || SceneFader.IsTransitioning || Time.timeScale == 0 ||
+        Capitulo1Director.PainelFechamentoAberto;
 
     private void OnApplicationFocus(bool foco) { focoLanternaPronto = false; }
 
@@ -221,7 +222,8 @@ public class PlayerController : MonoBehaviour
         if(teclado != null && focoLanternaPronto && Application.isFocused && !BloqueiaEquipamento() && teclado.fKey.wasPressedThisFrame)
         { GameState.AlternarLanterna(); focoLanternaPronto = false; }
         // Com a pausa, mapa, orelhão ou minigame de sinuca abertos, o jogador não anda nem interage por baixo.
-        if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen)
+        if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
+            Capitulo1Director.PainelFechamentoAberto)
         {
             moveInput = Vector2.zero;
             if (InteractionPrompt.Instance != null)
@@ -432,7 +434,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         if (GameMessageUI.IsShowing || MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
-            SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen)
+            SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
+            Capitulo1Director.PainelFechamentoAberto)
         { currentVelocity = Vector2.zero; return; }
         // A velocidade nunca muda de uma vez: ganha e perde embalo aos poucos,
         // o que dá o peso de "cada passo é uma decisão".

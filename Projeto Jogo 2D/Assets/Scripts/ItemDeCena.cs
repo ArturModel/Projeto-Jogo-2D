@@ -63,9 +63,9 @@ public class ItemDeCena : Interactable
         {
             GameState.RegistrarNotaDiario(
                 "bilhete_casa_adilio",
-                "Bilhete na cômoda de Adílio",
+                "Papel na cômoda de Adílio",
                 "PISTA",
-                "Um recado deixado na cômoda aponta que Adílio subiu para resolver um assunto urgente perto do Bar do Zé."
+                "Um papel dobrado na cômoda, com a letra do vô. Preciso descobrir a que se refere."
             );
         }
         else if (flag == Flags.CasaAvo_OlhouTelefone)
@@ -74,7 +74,7 @@ public class ItemDeCena : Interactable
                 "telefone_casa_adilio",
                 "Telefone de Adílio fora do gancho",
                 "PISTA",
-                "O aparelho fixo da sala ficou mal encaixado no gancho hoje cedo, explicando por que minhas ligações da estrada não completavam."
+                "O fone da sala está pendurado pelo fio. Na estrada, a ligação começou a dar ocupado por volta das oito e meia: foi quando o fone caiu."
             );
         }
 

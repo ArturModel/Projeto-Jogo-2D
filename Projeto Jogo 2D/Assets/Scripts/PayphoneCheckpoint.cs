@@ -470,17 +470,17 @@ public class PayphoneCheckpoint : Interactable
         }
         if (GameState.Tem(Flags.VenceuZeSinuca))
         {
-            return "\"A linha continua chiando. Tenho a ficha do Clube e o relato de Zé: ele diz que levaram Adílio contra a vontade. Ainda preciso conferir o que aconteceu.\"";
+            return "\"A linha continua chiando. O Zé viu levarem o vô pelo portão do Centro. Ele não queria ir.\"";
         }
 
         if (GameState.Tem(Flags.OuviuRelatoAtendente))
         {
-            return "\"Só estática na linha. A atendente viu a caminhonete com Adílio perto do Bar do Zé. Preciso perguntar a ele o que viu.\"";
+            return "\"Só estática na linha. O homem de capa sentou na mesa do Zé. O Zé sabe mais do que diz.\"";
         }
 
         if (GameState.Tem(Flags.AchouReciboMercadinho) || GameState.Tem(Flags.ExaminouDesordemCasa))
         {
-            return "\"Sem linha limpa para fora da cidade. O vô continua sem responder. Vou conferir as pistas que encontrei antes de tirar conclusões.\"";
+            return "\"Sem linha pra fora da cidade. Na casa do vô continua dando ocupado. Antes de concluir qualquer coisa, preciso juntar o que eu já sei.\"";
         }
 
         if (falas == null || falas.Length == 0)

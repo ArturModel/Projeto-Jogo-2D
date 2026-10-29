@@ -8,6 +8,26 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// Cadeia de pistas do Capítulo 1. Cada pessoa sabe uma parte só, e cada
+// objeto mostra o que está nele; quem junta as partes é o jogador.
+//
+// Linha do tempo interna (terça, 19/10/2004), para os vestígios não se contradizerem:
+//   qui 14/10, 16h  A atendente entrega engradados no Bar do Zé e vê um homem
+//                   de capa na mesa dos fundos com Zé. Os dois param de falar.
+//   seg 18/10       O homem de capa pergunta no mercadinho onde Adílio mora.
+//   07h40           Adílio compra querosene no posto, a pé, como sempre.
+//   à tarde         O homem de capa volta ao mercadinho e pergunta a rua.
+//   18h10           Adílio compra café e velas. A atendente escreve um aviso
+//                   no verso do cupom.
+//   ~20h30          Três batidas fortes na casa 40 (Dona Lurdes). Perto da
+//                   porta o banco cai e o fone sai do gancho: a linha passa a
+//                   dar ocupado (Marcus, na estrada).
+//   ~20h40          Farol parado na frente da casa por dez minutos; depois o
+//                   motor sobe a ladeira (Seu Ramiro).
+//   ~20h50          Nos fundos do bar, Zé vê dois homens levarem Adílio pelo
+//                   portão do Centro; um abre o cadeado com chave. Zé tranca a
+//                   porta dos fundos (o freguês nota "lá pelas nove").
+//   ~21h30          Marcus chega. O carro afoga na baixada da entrada.
 public class InteracaoCapitulo1 : Interactable
 {
     public enum TipoInteracao
@@ -49,6 +69,20 @@ public class InteracaoCapitulo1 : Interactable
         CentroBloqueioObra
     }
 
+    // Pistas novas do capítulo 1 (as antigas continuam em Flags, no GameState).
+    public const string Pista_QuerosenePosto = "pista_querosene_posto";
+    public const string Pista_BatidasLurdes = "pista_batidas_lurdes";
+    public const string Pista_FarolRamiro = "pista_farol_ramiro";
+    public const string Pista_PneusBairro = "pista_pneus_bairro";
+    public const string Pista_RastroPortao = "pista_rastro_portao";
+    public const string Pista_FundosTrancados = "pista_fundos_trancados";
+    public const string Pista_FotoSalao1990 = "pista_foto_salao_1990";
+    public const string ZeDesconversou = "ze_desconversou";
+    public const string ConheceuFrentista = "c1_frentista_reconheceu";
+
+    private const string EtiquetaNova = "Pista · anotada no diário";
+    private const string EtiquetaRevisita = "Pista";
+
     [SerializeField] private TipoInteracao tipo;
     [SerializeField] private string promptCustomizado = "";
 
@@ -73,80 +107,83 @@ public class InteracaoCapitulo1 : Interactable
                 return promptCustomizado;
             }
 
+            bool zeDerrotado = GameState.Tem(Flags.ZeDerrotadoNaSinuca);
+            bool desafioAceito = GameState.Tem(Flags.FalouComZeAntesDaSinuca);
+
             switch (tipo)
             {
                 case TipoInteracao.CarroMarcus:
-                    return "Examinar meu carro";
+                    return GameState.Tem(Flags.MapaDoCarroObtido) ? "Olhar o carro" : "Abrir o porta-luvas";
                 case TipoInteracao.PlacaRodoviaEntrada:
-                    return "Ler quadro da parada de ônibus";
+                    return "Ler o quadro da parada";
                 case TipoInteracao.MalaAbandonadaEstrada:
-                    return "Examinar mala caída no barro";
+                    return "Olhar a mala no barro";
                 case TipoInteracao.BombaCombustivelPosto:
-                    return "Examinar bomba de combustível";
+                    return "Olhar a bomba";
                 case TipoInteracao.CarroEstacionadoPosto:
-                    return "Examinar picape no posto";
+                    return "Olhar a picape";
                 case TipoInteracao.VendaAntigaFechada:
-                    return "Examinar antiga Venda";
+                    return "Ler a tabuleta da porta";
                 case TipoInteracao.NpcFrentista:
-                    return "Conversar com o Frentista";
+                    return "Falar com o frentista";
                 case TipoInteracao.LivroRegistroPosto:
-                    return "Ler livro de plantão do Posto";
+                    return "Ler o caderno do balcão";
                 case TipoInteracao.TvPortatilPosto:
-                    return "Olhar TV portátil";
+                    return "Olhar a TV";
                 case TipoInteracao.PicapeEncruzilhada:
-                    return "Examinar caminhonete no meio-fio";
+                    return "Olhar a picape de entrega";
                 case TipoInteracao.QuadroAvisosEncruzilhada:
-                    return "Ler quadro de avisos da comunidade";
+                    return "Ler o mural";
                 case TipoInteracao.PlacaSetaBairro:
-                    return "Ler placa de direção";
+                    return "Ler a placa";
                 case TipoInteracao.NpcAtendenteMercadinho:
-                    return "Conversar com a Atendente";
+                    return "Falar com a atendente";
                 case TipoInteracao.CadernoFiadoMercadinho:
-                    return "Ler caderno de entregas no balcão";
+                    return "Ler o caderno de vendas";
                 case TipoInteracao.PrateleirasMercadinho:
-                    return "Examinar prateleiras do Mercadinho";
+                    return "Olhar as prateleiras";
                 case TipoInteracao.VizinhaDonaLurdes:
-                    return "Bater na porta (Casa nº 14)";
+                    return "Bater na porta (nº 14)";
                 case TipoInteracao.GalpaoBairroPista:
-                    return "Examinar rastros na lama (Casa nº 22)";
+                    return "Olhar as marcas no barro";
                 case TipoInteracao.NpcMoradorBairro:
-                    return "Conversar com Seu Ramiro";
+                    return "Falar com o vizinho";
                 case TipoInteracao.CaixaCorreioAvo:
-                    return "Examinar caixa de correio (Nº 40)";
+                    return "Olhar a caixa de correio";
                 case TipoInteracao.PistaCafeCasaAvo:
-                    return "Examinar bule e xícara de café";
+                    return "Olhar o bule e a xícara";
                 case TipoInteracao.PistaCartasCasaAvo:
-                    return "Examinar cartas na mesa";
+                    return "Olhar as cartas na mesa";
                 case TipoInteracao.PistaNotaFiscal2004:
-                    return "Ler nota fiscal (2004) e bilhete";
+                    return "Olhar o papel amassado";
                 case TipoInteracao.PistaDesordemPorta:
-                    return "Examinar banco caído e pegadas";
+                    return "Olhar perto da porta";
                 case TipoInteracao.RetratoFamiliaCasaAvo:
-                    return "Examinar retrato de família (1998)";
+                    return "Olhar o porta-retrato";
                 case TipoInteracao.TelefoneCasaAvo:
-                    return "Examinar telefone fixo";
+                    return "Olhar o telefone";
                 case TipoInteracao.CaminhoneteClubeBar:
-                    return "Examinar caminhonete escura";
+                    return "Olhar a caminhonete";
                 case TipoInteracao.PlacaBarDoZe:
-                    return "Ler letreiro do Bar do Zé";
+                    return "Ler o letreiro";
                 case TipoInteracao.NpcZeBar:
-                    return GameState.Tem(Flags.ZeDerrotadoNaSinuca) ? "Falar com Zé" : "Desafiar Zé";
+                    return !zeDerrotado && desafioAceito ? "Jogar a melhor de três" : "Falar com Zé";
                 case TipoInteracao.MesaSinucaBar:
-                    return GameState.Tem(Flags.ZeDerrotadoNaSinuca) ? "Examinar mesa de sinuca" : "Jogar Sinuca contra Zé";
+                    return !zeDerrotado && desafioAceito ? "Jogar a melhor de três" : "Olhar a mesa de sinuca";
                 case TipoInteracao.BalcaoBarDoZe:
-                    return "Examinar balcão do bar";
+                    return "Olhar atrás do balcão";
                 case TipoInteracao.QuadroRegrasSinuca:
-                    return "Ler regras da mesa";
+                    return "Ler as regras da casa";
                 case TipoInteracao.LimiarCentro:
-                    return GameState.Tem(Flags.ZeDerrotadoNaSinuca) ? "Avançar para o Centro" : "Examinar portão do Centro";
+                    return zeDerrotado ? "Atravessar o portão" : "Olhar o portão";
                 case TipoInteracao.CentroBloqueioObra:
-                    return "Ler interdição da avenida";
+                    return "Ler o aviso da obra";
                 case TipoInteracao.PortaEntradaBarDoZe:
-                    return "Entrar no Bar do Zé";
+                    return "Entrar no bar";
                 case TipoInteracao.NpcFrequentadorBar:
-                    return "Conversar com o Frequentador";
+                    return "Falar com o freguês";
                 default:
-                    return "Examinar";
+                    return "Olhar";
             }
         }
     }
@@ -155,509 +192,539 @@ public class InteracaoCapitulo1 : Interactable
     {
         switch (tipo)
         {
-            case TipoInteracao.CarroMarcus:
-                InteragirCarroMarcus();
-                break;
-            case TipoInteracao.PlacaRodoviaEntrada:
-                InteragirPlacaRodovia();
-                break;
-            case TipoInteracao.MalaAbandonadaEstrada:
-                InteragirMalaAbandonada();
-                break;
-            case TipoInteracao.BombaCombustivelPosto:
-                InteragirBombaPosto();
-                break;
-            case TipoInteracao.CarroEstacionadoPosto:
-                InteragirCarroPosto();
-                break;
-            case TipoInteracao.VendaAntigaFechada:
-                InteragirVendaAntiga();
-                break;
-            case TipoInteracao.NpcFrentista:
-                InteragirFrentista();
-                break;
-            case TipoInteracao.LivroRegistroPosto:
-                InteragirLivroPosto();
-                break;
-            case TipoInteracao.TvPortatilPosto:
-                InteragirTvPosto();
-                break;
-            case TipoInteracao.PicapeEncruzilhada:
-                InteragirPicapeEncruzilhada();
-                break;
-            case TipoInteracao.QuadroAvisosEncruzilhada:
-                InteragirQuadroEncruzilhada();
-                break;
-            case TipoInteracao.PlacaSetaBairro:
-                InteragirPlacaSetaBairro();
-                break;
-            case TipoInteracao.NpcAtendenteMercadinho:
-                InteragirAtendenteMercadinho();
-                break;
-            case TipoInteracao.CadernoFiadoMercadinho:
-                InteragirCadernoMercadinho();
-                break;
-            case TipoInteracao.PrateleirasMercadinho:
-                InteragirPrateleirasMercadinho();
-                break;
-            case TipoInteracao.VizinhaDonaLurdes:
-                InteragirVizinhaLurdes();
-                break;
-            case TipoInteracao.GalpaoBairroPista:
-                InteragirGalpaoBairro();
-                break;
-            case TipoInteracao.NpcMoradorBairro:
-                InteragirMoradorBairro();
-                break;
-            case TipoInteracao.CaixaCorreioAvo:
-                InteragirCaixaCorreioAvo();
-                break;
-            case TipoInteracao.PistaCafeCasaAvo:
-                InteragirPistaCafe();
-                break;
-            case TipoInteracao.PistaCartasCasaAvo:
-                InteragirPistaCartas();
-                break;
-            case TipoInteracao.PistaNotaFiscal2004:
-                InteragirPistaNotaFiscal();
-                break;
-            case TipoInteracao.PistaDesordemPorta:
-                InteragirPistaDesordem();
-                break;
-            case TipoInteracao.RetratoFamiliaCasaAvo:
-                InteragirRetratoFamilia();
-                break;
-            case TipoInteracao.TelefoneCasaAvo:
-                InteragirTelefoneCasaAvo();
-                break;
-            case TipoInteracao.CaminhoneteClubeBar:
-                InteragirCaminhoneteClube();
-                break;
-            case TipoInteracao.PlacaBarDoZe:
-                InteragirPlacaBar();
-                break;
-            case TipoInteracao.NpcZeBar:
-            case TipoInteracao.MesaSinucaBar:
-                InteragirZeOuSinuca();
-                break;
-            case TipoInteracao.BalcaoBarDoZe:
-                InteragirBalcaoBar();
-                break;
-            case TipoInteracao.QuadroRegrasSinuca:
-                InteragirQuadroRegras();
-                break;
-            case TipoInteracao.LimiarCentro:
-                InteragirLimiarCentro();
-                break;
-            case TipoInteracao.CentroBloqueioObra:
-                GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-                {
-                    new DialogoLinha("MARCUS", "A avenida para o Centro está interditada para reparo do pavimento. A placa orienta o desvio pela rua de barro do Bairro das Casas.", "marcus"),
-                    new DialogoLinha("MARCUS", "Preciso chegar à casa do vô primeiro. Depois posso seguir pela Rua Norte.", "marcus")
-                });
-                break;
-            case TipoInteracao.PortaEntradaBarDoZe:
-                if (Capitulo1Director.Instance != null)
-                {
-                    Capitulo1Director.Instance.TransicionarPara(
-                        Capitulo1Director.ZonaId.Interior_BarDoZe,
-                        new Vector2(509.0f, -57.2f),
-                        1
-                    );
-                }
-                else
-                {
-                    SceneTransition.Ir("BarDoZe", "entrada_bar");
-                }
-                break;
-            case TipoInteracao.NpcFrequentadorBar:
-                InteragirFrequentadorBar();
-                break;
+            case TipoInteracao.CarroMarcus: InteragirCarroMarcus(); break;
+            case TipoInteracao.PlacaRodoviaEntrada: InteragirPlacaRodovia(); break;
+            case TipoInteracao.MalaAbandonadaEstrada: InteragirMalaAbandonada(); break;
+            case TipoInteracao.BombaCombustivelPosto: InteragirBombaPosto(); break;
+            case TipoInteracao.CarroEstacionadoPosto: InteragirCarroPosto(); break;
+            case TipoInteracao.VendaAntigaFechada: InteragirVendaAntiga(); break;
+            case TipoInteracao.NpcFrentista: InteragirFrentista(); break;
+            case TipoInteracao.LivroRegistroPosto: InteragirLivroPosto(); break;
+            case TipoInteracao.TvPortatilPosto: InteragirTvPosto(); break;
+            case TipoInteracao.PicapeEncruzilhada: InteragirPicapeEncruzilhada(); break;
+            case TipoInteracao.QuadroAvisosEncruzilhada: InteragirQuadroEncruzilhada(); break;
+            case TipoInteracao.PlacaSetaBairro: InteragirPlacaSetaBairro(); break;
+            case TipoInteracao.NpcAtendenteMercadinho: InteragirAtendenteMercadinho(); break;
+            case TipoInteracao.CadernoFiadoMercadinho: InteragirCadernoMercadinho(); break;
+            case TipoInteracao.PrateleirasMercadinho: InteragirPrateleirasMercadinho(); break;
+            case TipoInteracao.VizinhaDonaLurdes: InteragirVizinhaLurdes(); break;
+            case TipoInteracao.GalpaoBairroPista: InteragirMarcasBarro(); break;
+            case TipoInteracao.NpcMoradorBairro: InteragirMoradorBairro(); break;
+            case TipoInteracao.CaixaCorreioAvo: InteragirCaixaCorreioAvo(); break;
+            case TipoInteracao.PistaCafeCasaAvo: InteragirPistaCafe(); break;
+            case TipoInteracao.PistaCartasCasaAvo: InteragirPistaCartas(); break;
+            case TipoInteracao.PistaNotaFiscal2004: InteragirPistaNotaFiscal(); break;
+            case TipoInteracao.PistaDesordemPorta: InteragirPistaDesordem(); break;
+            case TipoInteracao.RetratoFamiliaCasaAvo: InteragirRetratoFamilia(); break;
+            case TipoInteracao.TelefoneCasaAvo: InteragirTelefoneCasaAvo(); break;
+            case TipoInteracao.CaminhoneteClubeBar: InteragirCaminhoneteBar(); break;
+            case TipoInteracao.PlacaBarDoZe: InteragirPlacaBar(); break;
+            case TipoInteracao.NpcZeBar: InteragirZe(); break;
+            case TipoInteracao.MesaSinucaBar: InteragirMesaSinuca(); break;
+            case TipoInteracao.BalcaoBarDoZe: InteragirBalcaoBar(); break;
+            case TipoInteracao.QuadroRegrasSinuca: InteragirQuadroRegras(); break;
+            case TipoInteracao.LimiarCentro: InteragirLimiarCentro(); break;
+            case TipoInteracao.CentroBloqueioObra: InteragirAvisoObra(); break;
+            case TipoInteracao.PortaEntradaBarDoZe: EntrarNoBar(); break;
+            case TipoInteracao.NpcFrequentadorBar: InteragirFrequentadorBar(); break;
         }
     }
 
+    // =========================================================================
+    // Utilidades
+    // =========================================================================
+
+    private static DialogoLinha Marcus(string texto) => new DialogoLinha("MARCUS", texto, "marcus");
+
+    // Pensamento de Marcus: mesma caixa, em itálico, para não parecer fala.
+    private static DialogoLinha Pensa(string texto) => new DialogoLinha("MARCUS", "<i>" + texto + "</i>", "marcus");
+
+    private static void Falar(params DialogoLinha[] linhas) => Falar(null, linhas);
+
+    private static void Falar(Action aoFechar, params DialogoLinha[] linhas)
+    {
+        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>(linhas), aoFechar);
+    }
+
+    private static bool JaNoDiario(string id)
+    {
+        var entradas = GameState.ObterEntradasDiario();
+        for (int i = 0; i < entradas.Count; i++)
+        {
+            if (entradas[i].id == id) return true;
+        }
+        return false;
+    }
+
+    // Registra a nota e diz se ela é nova (a tela de inspeção avisa "anotada no diário").
+    private static bool Anotar(string id, string titulo, string categoria, string descricao)
+    {
+        bool nova = !JaNoDiario(id);
+        GameState.RegistrarNotaDiario(id, titulo, categoria, descricao);
+        return nova;
+    }
+
+    private static string Etiqueta(bool nova) => nova ? EtiquetaNova : EtiquetaRevisita;
+
+    // =========================================================================
+    // Zona 1: rodovia de entrada
+    // =========================================================================
+
     private void InteragirCarroMarcus()
     {
-        bool jaViuPortaLuvas = GameState.Tem(Flags.MapaDoCarroObtido);
+        bool primeiraVez = !GameState.Tem(Flags.MapaDoCarroObtido);
         GameState.Marcar(Flags.PrologoAbriuPortaLuvas);
         GameState.Marcar(Flags.MapaDoCarroObtido);
         GameState.Marcar(Flags.LanternaDoCarroObtida);
-        SantaRitaSound.Play("pickup", .13f);
-        GameState.RegistrarNotaDiario(
+        SantaRitaSound.Play(primeiraVez ? "door" : "inspect", .13f);
+
+        if (!primeiraVez)
+        {
+            Falar(Marcus("Não pega. Afogou na baixada e vai ficar aí até a água baixar."));
+            return;
+        }
+
+        if (!GameState.Tem(Flags.ChegouCasaAvo))
+            GameState.DefinirObjetivo("Ir até a casa do vô, no Bairro das Casas, nº 40.");
+
+        Anotar(
             "porta_luvas_endereco",
-            "Endereço de Adílio (Porta-luvas)",
-            "PISTA",
-            "Mapa dobrado no porta-luvas com a letra do avô Adílio: 'Bairro das Casas, nº 40 (seguindo o asfalto até a encruzilhada e subindo a rua de barro)'."
+            "Carro afogado na entrada",
+            "FATO",
+            "O motor afogou na baixada alagada da entrada. Sigo a pé. Levei a lanterna e o mapa da cidade que o vô me deu quando fui embora: 'Bairro das Casas, 40. Segue o asfalto e sobe no barro.'"
         );
 
-        var linhas = new List<DialogoLinha>
+        Falar(() =>
         {
-            new DialogoLinha("MARCUS", "Meu carro. Estacionei no acostamento logo na entrada de Santa Rita; o motor ainda estala de quente na chuva.", "marcus"),
-            new DialogoLinha("MARCUS", jaViuPortaLuvas
-                ? "O mapa e a lanterna já estão comigo. Bairro das Casas, nº 40."
-                : "Peguei o mapa dobrado no porta-luvas e a lanterna no banco. Bairro das Casas, nº 40. Posso abrir o mapa com M.", "marcus")
-        };
-        GameMessageUI.Instance.ShowDialogue(linhas);
+            DicaDeTecla.Mostrar("F", "Lanterna", () => GameState.LanternaLigada);
+            DicaDeTecla.Mostrar("M", "Mapa", () => MapaInterativoUI.IsShowing, 8f);
+        },
+            Marcus("Afogou de vez na baixada. Daqui eu sigo a pé."),
+            Marcus("A lanterna estava no porta-luvas, embaixo do mapa da cidade que o vô me deu quando eu fui embora."),
+            Marcus("No verso, a letra dele: \"Bairro das Casas, 40. Segue o asfalto e sobe no barro.\"")
+        );
     }
 
     private void InteragirPlacaRodovia()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "Um abrigo de ônibus velho na entrada da cidade. O cartaz da prefeitura avisa: 'Linhas noturnas suspensas. Em caso de queda de linha telefônica no Bairro das Casas, utilize os orelhões públicos da avenida.'", "marcus"),
-            new DialogoLinha("MARCUS", "À direita na avenida já dá para ver a claridade do Posto de Gasolina.", "marcus")
-        });
+        GameMessageUI.Instance.ShowInspection("QUADRO DA PARADA", "RoadSign_Blank",
+            "PARADA SANTA RITA — ENTRADA\n\nÚltimo ônibus: 19h40.\nLinhas noturnas suspensas durante a obra da avenida do Centro.\n\nColado no canto, um adesivo quase apagado:\n\"SANTA RITA JAMAIS ABANDONA OS SEUS\"",
+            pensamento: "Esse adesivo está em todo canto desde que eu era guri.");
     }
 
     private void InteragirMalaAbandonada()
     {
-        GameState.RegistrarNotaDiario(
-            "mala_estrada_1998",
-            "Mala abandonada na beira da rodovia",
-            "PISTA",
-            "Uma mala caída no barro da entrada continha um recorte plastificado de outubro de 1998 sobre o silêncio em torno da noite das 03:17."
+        Falar(
+            Marcus("Uma mala velha atolada no barro, aberta e vazia."),
+            Marcus("A etiqueta da rodoviária desmanchou com a chuva. Só sobrou o ano: 98."),
+            Pensa("Alguém saiu daqui com pressa. Ou nunca chegou a sair.")
         );
-
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "Uma mala velha caída no barro da sarjeta, como se alguém tivesse saído da cidade às pressas.", "marcus"),
-            new DialogoLinha("MARCUS", "Dentro há um recorte plastificado do jornal de Santa Rita de 1998: 'Relógio da praça parou às 03:17 — diretoria do Clube nega incidentes'.", "marcus")
-        });
     }
+
+    // =========================================================================
+    // Zona 2 e interior: posto
+    // =========================================================================
 
     private void InteragirBombaPosto()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "O marcador mecânico da bomba parou em 45 litros. O bico ainda cheira a diesel fresco.", "marcus"),
-            new DialogoLinha("MARCUS", "A luz da loja de conveniência do posto está acesa. O frentista deve estar lá dentro se abrigando da chuva.", "marcus")
-        });
+        GameMessageUI.Instance.ShowInspection("BOMBA DE DIESEL", null,
+            "O mostrador mecânico parou em 45,0 litros. O bico ainda pinga.",
+            pensamento: "Alguém encheu um tanque grande hoje. Caminhão, talvez.");
     }
 
     private void InteragirCarroPosto()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "Uma caminhonete vermelha estacionada sob a cobertura do posto. Os pneus estão limpos — quem dirige isso não subiu pro barro do bairro hoje.", "marcus")
-        });
+        Falar(Marcus("A picape do posto. Galões vazios e uma lona encharcada na caçamba."));
     }
 
     private void InteragirVendaAntiga()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "A antiga Venda de madeira da entrada está fechada com cadeado.", "marcus"),
-            new DialogoLinha("MARCUS", "Há uma tabuleta pregada na porta: 'Mudamos para o prédio de dois andares do MERCADINHO, seguindo reto pela avenida de asfalto até a Encruzilhada'.", "marcus")
-        });
+        Falar(
+            Marcus("A venda onde o vô comprava fumo de corda quando eu era guri. Cadeado na porta."),
+            Marcus("Tem uma tabuleta pregada: \"MUDAMOS PRO MERCADINHO — na encruzilhada, seguindo a avenida\".")
+        );
     }
 
     private void InteragirFrentista()
     {
-        bool primeiraVez = !GameState.Tem(Flags.FalouComFrentista);
-        GameState.Marcar(Flags.FalouComFrentista);
-
-        GameState.RegistrarNotaDiario(
-            "frentista_posto",
-            "Relato do Frentista na Conveniência do Posto",
-            "PISTA",
-            "Dentro da conveniência do Posto, o frentista confirmou que Adílio mora no Bairro das Casas, nº 40 (seguindo o asfalto para a direita até a Encruzilhada do Mercadinho e subindo a rua de barro)."
-        );
-
         if (GameState.Tem(Flags.ZeDerrotadoNaSinuca))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("MARCUS", "Zé abriu o portão do Centro. Vou seguir por lá procurando o vô.", "marcus"),
-                new DialogoLinha("FRENTISTA", "Então vai com cuidado. Daqui eu só vi o movimento da avenida; não sei como está mais adiante.", "frentista"),
-                new DialogoLinha("MARCUS", "Não vou parar até encontrar o meu avô.", "marcus")
-            });
+            Falar(
+                Marcus("O Zé viu levarem o vô pelo portão do Centro. Hoje, perto das nove."),
+                new DialogoLinha("FRENTISTA", "...Eu não sei o suficiente pra me meter nisso, Marcus. Nunca sei.", "frentista"),
+                new DialogoLinha("FRENTISTA", "Vai com cuidado.", "frentista")
+            );
             return;
         }
 
-        if (GameState.Tem(Flags.Pista_CasaAvoCompleta))
+        if (!GameState.Tem(ConheceuFrentista))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("MARCUS", "A casa do meu avô estava destrancada, o café ainda morno e um banco caído na porta. Parece que interromperam alguma coisa.", "marcus"),
-                new DialogoLinha("FRENTISTA", "Com uma chuva dessas, seu Adílio jamais deixaria a porta aberta... Fala com a atendente dentro do Mercadinho na Encruzilhada ou sobe direto pro Bar do Zé na Rua Norte.", "frentista")
-            });
+            GameState.Marcar(ConheceuFrentista);
+            GameState.Marcar(Flags.FalouComFrentista);
+            GameState.Marcar(Pista_QuerosenePosto);
+            Anotar(
+                "frentista_posto",
+                "Frentista: o vô passou cedo",
+                "PISTA",
+                "O frentista me reconheceu. Viu o vô às sete e pouco, a pé, comprando querosene pro lampião. O vô disse que ia faltar luz com o temporal."
+            );
+            AtualizarLinhaDoTempo();
+
+            Falar(
+                new DialogoLinha("FRENTISTA", "Boa noite. Tô fechando o caixa, mas se for só gasolina...", "frentista"),
+                new DialogoLinha("FRENTISTA", "Espera. Tu é o neto do Adílio. O Marcus.", "frentista"),
+                Marcus("Sou eu. Faz tempo."),
+                new DialogoLinha("FRENTISTA", "Seis anos, por aí. Desde aquela... desde que tu foi embora.", "frentista"),
+                Marcus("O vô não atende o telefone desde cedo. De noite começou a dar ocupado. Você viu ele hoje?"),
+                new DialogoLinha("FRENTISTA", "Cedo, sim. Sete e pouco, a pé, como sempre. Levou um litro de querosene pro lampião.", "frentista"),
+                new DialogoLinha("FRENTISTA", "Disse que ia faltar luz com esse temporal. Depois disso não passou mais aqui.", "frentista"),
+                Marcus("Meu carro afogou na baixada da entrada."),
+                new DialogoLinha("FRENTISTA", "Com essa água, só amanhã. Deixa lá que ninguém mexe. Vai ver o teu avô, guri.", "frentista")
+            );
             return;
         }
 
-        if (primeiraVez)
+        if (GameState.Tem(Flags.Pista_CasaAvoCompleta) && !GameState.Tem(Flags.AchouReciboMercadinho))
         {
-            GameState.DefinirObjetivo("Sair do Posto e seguir pela avenida para a direita até a Encruzilhada do Mercadinho.");
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("FRENTISTA", "Boa noite, chefia! Entra aí, sacode esse guarda-chuva que lá fora o temporal não está pra brincadeira.", "frentista"),
-                new DialogoLinha("MARCUS", "Boa noite. Estou procurando meu avô, o seu Adílio. Liguei o dia inteiro e o telefone dele só dá ocupado.", "marcus"),
-                new DialogoLinha("FRENTISTA", "Adílio da casa quarenta? Conheço das entregas. Hoje não veio aqui. Só estou acabando de fechar o caixa antes de baixar a porta.", "frentista"),
-                new DialogoLinha("MARCUS", "É ele. Vou tentar na casa. A subida é depois do mercado?", "marcus"),
-                new DialogoLinha("FRENTISTA", "Isso, segue o asfalto até a encruzilhada e pega a rua de barro. Vai com cuidado na curva; uma caminhonete do Clube passou levantando água ali mais cedo.", "frentista")
-            });
+            Falar(
+                Marcus("A casa do vô estava aberta. Café pela metade, e nem sinal dele."),
+                new DialogoLinha("FRENTISTA", "Aberta? Com essa chuva?", "frentista"),
+                new DialogoLinha("FRENTISTA", "Olha, eu só vi ele de manhã. Ele faz as compras no mercadinho todo fim de tarde. Se alguém viu ele depois de mim, foi lá.", "frentista")
+            );
+            return;
         }
-        else
-        {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("FRENTISTA", "Segue pela avenida de asfalto para a direita até a Encruzilhada do Mercadinho. Subindo a rua de barro você chega no Bairro das Casas (nº 40).", "frentista")
-            });
-        }
+
+        Falar(new DialogoLinha("FRENTISTA", "Sete e pouco, um litro de querosene. Foi a última vez que eu vi o teu avô.", "frentista"));
     }
 
     private void InteragirLivroPosto()
     {
-        GameState.RegistrarNotaDiario(
+        GameState.Marcar(Pista_QuerosenePosto);
+        bool nova = Anotar(
             "livro_plantao_posto",
-            "Registro de abastecimento no Posto",
+            "Caderno do posto: querosene às 07h40",
             "PISTA",
-            "O caderno do balcão do posto registra que uma caminhonete escura ligada ao Clube abasteceu ao anoitecer e subiu em direção ao Bairro das Casas."
+            "O caderno de plantão do posto registra: '07:40 — Querosene 1 L — Seu Adílio, nº 40 (pago)'. Ele se preparou para passar a noite em casa sem luz."
         );
+        AtualizarLinhaDoTempo();
 
-        GameMessageUI.Instance.ShowInspection("LIVRO DE PLANTÃO", "Bilhete",
-            "21:30 — Caminhonete preta. Clube Santa Rita. Pagamento em dinheiro. Seguiu para o Bairro das Casas.");
+        GameMessageUI.Instance.ShowInspection("CADERNO DE PLANTÃO", "Bilhete",
+            "TERÇA, 19/10/2004\n\n06:55  Leite e pão — D. Cida (fiado)\n07:40  Querosene 1 L — Seu Adílio, nº 40 (pago)\n12:10  Gasolina 20 L — picape da obra\n17:30  Diesel 45 L — caminhão de entrega\n19:05  Bomba 2 desligada (chuva)",
+            pensamento: "Querosene pro lampião. O vô se preparou pra passar a noite em casa.",
+            etiqueta: Etiqueta(nova));
     }
 
     private void InteragirTvPosto()
     {
-        GameMessageUI.Instance.ShowInspection("TV PORTÁTIL DO POSTO", "TV_Old",
-            "Uma TV pequena de tubo em cima do balcão. O sinal regional oscila a cada trovão lá fora.");
+        GameMessageUI.Instance.ShowInspection("TV DO BALCÃO", "TV_Old",
+            "Jornal regional, imagem chiando a cada trovão:\n\n\"...temporal na serra derrubou linhas telefônicas. Interurbano instável até amanhã...\"",
+            pensamento: "Por isso o celular não pega aqui.");
     }
+
+    // =========================================================================
+    // Zona 3 e interior: encruzilhada e mercadinho
+    // =========================================================================
 
     private void InteragirPicapeEncruzilhada()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "Uma caminhonete estacionada no meio-fio em frente ao Mercadinho. Os paralamas estão carregados com o barro avermelhado da subida do bairro.", "marcus")
-        });
+        GameMessageUI.Instance.ShowInspection("PICAPE DE ENTREGA", null,
+            "Picape do mercadinho, engradados vazios amarrados na caçamba.\n\nNo painel, um bloco de anotações:\n\"Qui — Bar do Zé (R. Norte), 6 engr.\"",
+            pensamento: "O mercadinho entrega até no bar lá de cima.");
     }
 
     private void InteragirQuadroEncruzilhada()
     {
         GameMessageUI.Instance.ShowInspection("MURAL DA ENCRUZILHADA", "RoadSign_Blank",
-            "Avisos de missa e contas atrasadas.\n\nA carvão: 'Depois da meia-noite, o portão do Centro só abre com Ficha do Clube'.");
+            "AVISO DA PREFEITURA\nObra na avenida do Centro. O portão da Rua Norte fica trancado das 20h às 6h. Chave reserva no Bar do Zé.\n\nMissa de sétimo dia — sexta, 19h.\n\nVende-se fogão a lenha. Tratar no nº 22.");
     }
 
     private void InteragirPlacaSetaBairro()
     {
         GameMessageUI.Instance.ShowInspection("PLACA DE DIREÇÃO", "ArrowSign",
-            "↖ BAIRRO DAS CASAS\nNúmeros 10 a 50\n\n↑ RUA NORTE\nBar do Zé");
+            "SUBIDA DE BARRO\nBairro das Casas — nº 10 a 50\n\nPELO ALTO DO BAIRRO\nRua Norte");
+    }
+
+    private void InteragirAvisoObra()
+    {
+        Falar(
+            Marcus("\"AVENIDA INTERDITADA — OBRA. Pedestres para o Centro: portão da Rua Norte.\""),
+            Pensa("O caminho pro Centro é pelo alto. E de noite fica trancado.")
+        );
     }
 
     private void InteragirAtendenteMercadinho()
     {
         if (GameState.Tem(Capitulo2Director.Vitoria))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("MARCUS", "Tonão guardou um recado do vô. Ainda não sei onde ele está. Se aparecer notícia, posso receber pela Rodoviária.", "marcus"),
+            Falar(
+                Marcus("Tonão guardou um recado do vô. Ainda não sei onde ele está. Se aparecer notícia, posso receber pela Rodoviária."),
                 new DialogoLinha("ATENDENTE", "Está bem. Se alguém vier perguntar por ele, vou pedir que deixe o recado lá.", "atendente")
-            });
+            );
             return;
         }
         GameState.Marcar(Flags.FalouComAtendenteMercadinho);
 
         if (GameState.Tem(Flags.ZeDerrotadoNaSinuca))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("MARCUS", "Falei com Zé. Ele me deu esta ficha e disse que levaram o vô pelo portão do Centro.", "marcus"),
-                new DialogoLinha("ATENDENTE", "Essa ficha é da mesa dele. Eu não vi o portão, só a passagem aqui pela rua. Se souber do Adílio, deixa notícia, por favor.", "atendente")
-            });
+            Falar(
+                Marcus("O Zé viu. Levaram o vô pelo portão do Centro, e o homem de capa estava junto."),
+                new DialogoLinha("ATENDENTE", "Meu Deus... Eu devia ter falado alguma coisa antes. Pra alguém.", "atendente"),
+                new DialogoLinha("ATENDENTE", "Se achar o seu Adílio, volta aqui e me conta. Por favor.", "atendente")
+            );
             return;
         }
 
         if (GameState.Tem(Flags.OuviuRelatoAtendente))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("ATENDENTE", "A Rua Norte é a de cima. Foi a última vez que vi a caminhonete. Depois voltei às entregas; não sei onde foram parar.", "atendente")
-            });
+            Falar(new DialogoLinha("ATENDENTE", "Já te contei tudo o que eu sei. O homem de capa, a mesa dos fundos do Zé. Não vi mais nada depois que fechei, às sete.", "atendente"));
             return;
         }
 
-        if (GameState.Tem(Flags.Pista_NotaFiscal2004))
+        if (GameState.Tem(Flags.AchouReciboMercadinho))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("MARCUS", "Sou Marcus, neto do Adílio. Estive na casa dele agora. A porta estava destrancada e achei esta nota fiscal daqui com um aviso sobre o Bar do Zé.", "marcus"),
-                new DialogoLinha("ATENDENTE", "Fala baixo, Marcus... Seu Adílio comprou esse café comigo hoje à tarde. Ele estava tenso, disse que tinham mexido nos arquivos da noite de 1998.", "atendente"),
-                new DialogoLinha("ATENDENTE", "Pouco antes do temporal desabar, vi a caminhonete escura do Clube descer do Bairro das Casas levando ele pro alto da Rua Norte, bem na porta do Bar do Zé.", "atendente"),
-                new DialogoLinha("MARCUS", "Você viu com quem ele estava?", "marcus"),
-                new DialogoLinha("ATENDENTE", "Dois homens. De onde eu estava não dava para ouvir. A Rua Norte fica no alto do Bairro; pergunta lá, talvez o Zé tenha visto mais perto.", "atendente")
-            }, ConfirmarTestemunhoAtendente);
-        }
-        else
-        {
-            GameState.RegistrarNotaDiario(
-                "atendente_rotina_hoje",
-                "Compras de Adílio hoje no Mercadinho",
-                "FATO",
-                "A atendente do Mercadinho contou que Adílio esteve na loja hoje mesmo comprando café e velas antes de subir a estrada de barro de volta para o Bairro das Casas (nº 40)."
+            // Só quem leu o aviso no verso do cupom ganha a confiança dela.
+            Falar(ConfirmarTestemunhoAtendente,
+                Marcus("Isto estava no chão da casa do meu avô. O aviso no verso é seu?"),
+                new DialogoLinha("ATENDENTE", "...É. Fui eu que escrevi. Ele está bem?", "atendente"),
+                Marcus("A casa estava aberta e ele não está lá. Quem é o homem de capa?"),
+                new DialogoLinha("ATENDENTE", "Não sei o nome. Entrou aqui ontem perguntando onde o seu Adílio morava. Eu disse que não sabia.", "atendente"),
+                new DialogoLinha("ATENDENTE", "Hoje à tarde voltou e perguntou de novo, a rua dessa vez. Não tirou o capuz. Aí eu avisei o seu Adílio no cupom.", "atendente"),
+                Marcus("Você já tinha visto esse homem antes?"),
+                new DialogoLinha("ATENDENTE", "Uma vez. Quinta-feira, quando fui levar os engradados no Bar do Zé. Ele estava na mesa dos fundos, conversando com o Zé.", "atendente"),
+                new DialogoLinha("ATENDENTE", "Quando eu entrei, os dois pararam de falar.", "atendente"),
+                Marcus("E o meu avô, depois das seis?"),
+                new DialogoLinha("ATENDENTE", "Não vi mais. Fechei às sete.", "atendente")
             );
-            GameState.DefinirObjetivo("Sair do Mercadinho e subir a estrada de barro na Encruzilhada até o Bairro das Casas (Casa nº 40).");
-
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("ATENDENTE", "Boa noite. Pode entrar, ainda estou conferindo as entregas. Está precisando de alguma coisa?", "atendente"),
-                new DialogoLinha("MARCUS", "Sou Marcus, neto do Adílio. Você viu meu avô hoje? Liguei desde cedo e ele não atende.", "marcus"),
-                new DialogoLinha("ATENDENTE", "Vi sim! Ele esteve aqui hoje mesmo, levou pó de café e um maço de velas. Subiu pela rua de terra aqui do lado de volta pro Bairro das Casas.", "atendente"),
-                new DialogoLinha("ATENDENTE", "Sobe pela estrada de barro ali fora na encruzilhada até a casa dele, no número 40. Se achar qualquer coisa estranha lá, volta aqui e me avisa!", "atendente")
-            });
+            return;
         }
+
+        bool primeiraVez = !JaNoDiario("atendente_rotina_hoje");
+        Anotar(
+            "atendente_rotina_hoje",
+            "Mercadinho: o vô passou no fim da tarde",
+            "FATO",
+            "A atendente disse que o vô passou no fim da tarde, levou o de sempre e foi pra casa. Hesitou quando perguntei se havia algo diferente."
+        );
+
+        if (!primeiraVez)
+        {
+            Falar(new DialogoLinha("ATENDENTE", "Já disse, moço. Ele passou no fim da tarde, como todo dia. Vou fechar.", "atendente"));
+            return;
+        }
+
+        Falar(
+            new DialogoLinha("ATENDENTE", "Boa noite. Já vou fechar.", "atendente"),
+            Marcus("Sou o Marcus, neto do seu Adílio, da casa 40. Você viu ele hoje?"),
+            new DialogoLinha("ATENDENTE", "Neto...? Passou aqui no fim da tarde, como todo dia. Levou o de sempre e foi pra casa.", "atendente"),
+            Marcus("Notou alguma coisa diferente?"),
+            new DialogoLinha("ATENDENTE", "...Não. Boa noite, moço.", "atendente"),
+            Pensa("Ela pensou antes de responder. Não confia em mim.")
+        );
     }
 
-    // Só o fechamento da conversa que apresenta o documento transmite o relato.
+    // Só o fechamento da conversa que apresenta o cupom transmite o relato.
     public static void ConfirmarTestemunhoAtendente()
     {
         if (!GameState.Tem(Flags.AchouReciboMercadinho)) return;
         GameState.Marcar(Flags.ApresentouReciboAtendente);
         GameState.Marcar(Flags.OuviuRelatoAtendente);
         GameState.Marcar(Flags.Pista_RumoBarDoZe);
-        GameState.DefinirObjetivo("Procurar Zé no bar da Rua Norte e perguntar pela passagem de Adílio.");
+        GameState.RegistrarNotaDiario(
+            "pista_relato_mercadinho",
+            "O homem de capa",
+            "PISTA",
+            "A atendente escreveu o aviso do cupom. Um homem de capa, que não tira o capuz, perguntou ontem e hoje onde o vô morava. Ela já o tinha visto uma vez: quinta-feira, na mesa dos fundos do Bar do Zé, conversando com o Zé. Os dois pararam de falar quando ela entrou."
+        );
+        GameState.DefinirObjetivo("Descobrir quem é o homem de capa.");
     }
 
     private void InteragirCadernoMercadinho()
     {
-        GameState.RegistrarNotaDiario(
-            "caderno_entregas_mercadinho",
-            "Caderno de Vendas do Mercadinho (2004)",
-            "PISTA",
-            "O livro-caixa do Mercadinho comprova que Adílio fez compras hoje (Outubro de 2004) e registra remessas de bebidas para o Bar do Zé na Rua Norte."
-        );
-
-        GameMessageUI.Instance.ShowInspection("CADERNO DO MERCADINHO", "Bilhete",
-            "19/10/2004 — Adílio, Bairro das Casas, 40. Café torrado e velas: pago.\n\nRemessa de engradados — Bar do Zé, Rua Norte.");
+        GameMessageUI.Instance.ShowInspection("CADERNO DE VENDAS", "Bilhete",
+            "OUTUBRO\n\nQui 14 — Bar do Zé (R. Norte): 6 engradados. Entregue às 16h.\nSeg 18 — Pão, leite, fumo.\nTer 19 — Adílio (nº 40): café, velas, fósforo. Pago. 18h10.",
+            pensamento: "Seis e dez. A última compra do dia.");
     }
 
     private void InteragirPrateleirasMercadinho()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "Prateleiras abastecidas com enlatados, café, pilhas e velas. O cheiro de café moído aqui dentro é idêntico ao que o vô Adílio sempre comprava.", "marcus")
-        });
+        Falar(Marcus("Café Santa Rita, o mesmo pacote amarelo que o vô deixava em cima da geladeira."));
     }
+
+    // =========================================================================
+    // Zona 4: bairro
+    // =========================================================================
 
     private void InteragirVizinhaLurdes()
     {
-        GameState.RegistrarNotaDiario(
-            "vizinha_lurdes_relato",
-            "Relato da Vizinha (Casa nº 14)",
-            "PISTA",
-            "Dona Lurdes, moradora da entrada do Bairro das Casas, ouviu batidas pesadas e vozes perto da casa nº 40 antes do temporal apertar."
-        );
-
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
+        if (GameState.Tem(Pista_BatidasLurdes))
         {
-            new DialogoLinha("DONA LURDES (ATRÁS DA PORTA)", "Quem está batendo a essa hora?! ...Ah, é o neto do seu Adílio!", "atendente"),
-            new DialogoLinha("MARCUS", "Dona Lurdes, desculpe incomodar. A senhora viu o meu avô hoje?", "marcus"),
-            new DialogoLinha("DONA LURDES (ATRÁS DA PORTA)", "Menino, mais cedo ouvi um carro pesado subir essa lama toda e parar lá na rua de cima, perto da casa 40. Depois ouvi vozes grossas e passos subindo pro lado do Bar do Zé!", "atendente"),
-            new DialogoLinha("DONA LURDES (ATRÁS DA PORTA)", "Segue subindo esta rua de barro que a casa 40 do teu avô fica logo no quarteirão de cima, ao lado do Seu Ramiro!", "atendente")
-        });
+            Falar(new DialogoLinha("DONA LURDES", "Já disse o que eu ouvi, menino. Oito e meia, três batidas. Vai com Deus.", "lurdes"));
+            return;
+        }
+
+        GameState.Marcar(Pista_BatidasLurdes);
+        Anotar(
+            "vizinha_lurdes_relato",
+            "Dona Lurdes: batidas às 20h30",
+            "PISTA",
+            "Dona Lurdes (nº 14) ouviu três batidas fortes na porta da casa 40 por volta das oito e meia. Depois a chuva apertou e ela não ouviu mais nada. Não viu quem era."
+        );
+        AtualizarLinhaDoTempo();
+
+        Falar(
+            new DialogoLinha("DONA LURDES", "Quem é? Eu não abro porta de noite.", "lurdes"),
+            Marcus("Sou o Marcus, neto do seu Adílio, da casa 40."),
+            new DialogoLinha("DONA LURDES", "O neto... Ai, menino. Bateram lá na casa dele hoje. Umas oito e meia, que eu olhei o relógio da cozinha.", "lurdes"),
+            new DialogoLinha("DONA LURDES", "Três batidas, forte, de quem não tem paciência. Depois a chuva apertou e eu não ouvi mais nada.", "lurdes"),
+            Marcus("A senhora viu quem era?"),
+            new DialogoLinha("DONA LURDES", "Eu não abro a cortina de noite, meu filho. Nem a cortina, nem a porta.", "lurdes")
+        );
     }
 
-    private void InteragirGalpaoBairro()
+    private void InteragirMarcasBarro()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "O barro aqui na esquina está revirado por pneus largos de caminhonete. O rastro sobe direto para a rua da casa do vô Adílio e continua para o nordeste.", "marcus")
-        });
+        GameState.Marcar(Pista_PneusBairro);
+        bool nova = Anotar(
+            "pista_pneus_bairro",
+            "Pneus de carro pesado no barro",
+            "PISTA",
+            "Na esquina do nº 22, marcas fundas de pneu largo, ainda com água parada dentro. Um carro pesado subiu a rua do vô hoje à noite."
+        );
+
+        GameMessageUI.Instance.ShowInspection("MARCAS NO BARRO", null,
+            "Marcas de pneu largo, fundas, ainda com água parada dentro. A chuva não teve tempo de apagar.\n\nO rastro sobe a rua, na direção da casa do vô.",
+            pensamento: "Carro pesado. E passou aqui hoje à noite.",
+            etiqueta: Etiqueta(nova));
     }
 
     private void InteragirMoradorBairro()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
+        if (GameState.Tem(Pista_FarolRamiro))
         {
-            new DialogoLinha("MARCUS", "Boa noite. O senhor conhece Adílio, da casa quarenta? Sou o neto dele.", "marcus"),
-            new DialogoLinha("SEU RAMIRO", "Conheço, somos vizinhos. Ramiro. Estava recolhendo a lenha antes da chuva apertar. A casa dele fica logo ali, depois da cerca.", "adilio"),
-            new DialogoLinha("MARCUS", "O senhor viu se alguém esteve na casa dele hoje?", "marcus"),
-            new DialogoLinha("SEU RAMIRO", "Vi uma caminhonete escura parar aí na frente da casa 40 mais cedo. Depois ouvi passos apressados subindo a ladeira de barro lá da direita, que dá na Rua Norte e no Bar do Zé.", "adilio")
-        });
+            Falar(new DialogoLinha("SEU RAMIRO", "Farol parado na frente da casa, uns dez minutos, e depois o motor subindo a ladeira. Foi o que eu vi.", "ramiro"));
+            return;
+        }
+
+        GameState.Marcar(Pista_FarolRamiro);
+        Anotar(
+            "ramiro_farol",
+            "Seu Ramiro: farol parado às 20h40",
+            "PISTA",
+            "Seu Ramiro, vizinho do vô, viu um farol parado na frente da casa 40 lá pelas nove menos vinte, por uns dez minutos. Depois ouviu o motor forçando na ladeira, subindo. Não viu ninguém."
+        );
+        AtualizarLinhaDoTempo();
+
+        Falar(
+            new DialogoLinha("VIZINHO", "Boa noite. Tu não é daqui... ou é?", "ramiro"),
+            Marcus("Marcus. Neto do Adílio, da casa 40."),
+            new DialogoLinha("SEU RAMIRO", "Ramiro. Sou vizinho do teu avô faz trinta anos. Ele fala de ti.", "ramiro"),
+            Marcus("O senhor viu alguém na casa dele hoje?"),
+            new DialogoLinha("SEU RAMIRO", "Gente não vi. Eu estava no galpão, recolhendo a lenha. Lá pelas nove menos vinte vi um farol parado na frente da casa dele. Coisa de dez minutos.", "ramiro"),
+            new DialogoLinha("SEU RAMIRO", "Depois ouvi o motor forçando na ladeira, subindo. Teu avô não recebe visita de noite.", "ramiro")
+        );
     }
 
     private void InteragirCaixaCorreioAvo()
     {
-        GameMessageUI.Instance.ShowInspection("CAIXA DE CORREIO", "CaixaCorreio",
-            "Família Adílio\nBairro das Casas, nº 40\n\nA madeira está úmida da chuva. É aqui.");
+        Falar(Marcus("\"ADÍLIO — Nº 40\", pintado à mão. É aqui."));
     }
+
+    // =========================================================================
+    // Interior: casa de Adílio
+    // =========================================================================
 
     private void InteragirPistaCafe()
     {
         GameState.Marcar(Flags.Pista_CafeAindaQuente);
-        GameState.RegistrarNotaDiario(
+        bool nova = Anotar(
             "pista_cafe_hoje",
-            "Café passado hoje mesmo",
+            "Café pela metade, ainda morno",
             "PISTA",
-            "O bule e a xícara ainda guardam calor e cheiro de café. Não sei há quanto tempo foram deixados ali."
+            "A xícara está pela metade e o bule ainda guarda calor. O vô nunca deixa café na xícara."
         );
 
-        GameMessageUI.Instance.ShowInspection("CAFÉ AINDA MORNO", "Interior_PiaAvo",
-            "A xícara está pela metade e o bule guarda um pouco de calor. O vô costuma terminar o café. Pode ter se afastado por um momento... mas para onde?",
-            VerificarConclusaoPistasCasaAvo);
+        GameMessageUI.Instance.ShowInspection("BULE E XÍCARA", "Interior_PiaAvo",
+            "Xícara pela metade, ainda morna por fora. O bule também guarda um resto de calor.",
+            VerificarConclusaoPistasCasaAvo,
+            pensamento: "O vô nunca deixa café pela metade. Ele estava aqui há pouco tempo.",
+            etiqueta: Etiqueta(nova));
     }
 
     private void InteragirPistaCartas()
     {
         GameState.Marcar(Flags.Pista_CartasMesa);
-        GameState.RegistrarNotaDiario(
+        bool nova = Anotar(
             "pista_cartas_mesa",
-            "Paciência interrompida na mesa",
+            "Paciência largada no meio",
             "PISTA",
-            "As cartas de baralho ficaram espalhadas no meio de uma partida solitária. Pode ter sido interrompida, mas não vi o que aconteceu."
+            "A paciência ficou no meio, com um ás fora do monte. O vô sempre termina o jogo antes de levantar."
         );
 
-        GameMessageUI.Instance.ShowInspection("PACIÊNCIA INTERROMPIDA", "Interior_MesaCartas",
-            "O baralho ficou no meio de uma partida. Lembro do vô guardando as cartas antes de sair. É estranho encontrar assim; talvez pretendesse voltar logo.",
-            VerificarConclusaoPistasCasaAvo);
+        GameMessageUI.Instance.ShowInspection("PACIÊNCIA NA MESA", "Interior_MesaCartas",
+            "Partida de paciência no meio. Um ás largado fora do monte, virado pra cima.",
+            VerificarConclusaoPistasCasaAvo,
+            pensamento: "Ele sempre termina a paciência antes de levantar. Alguma coisa fez ele largar o jogo.",
+            etiqueta: Etiqueta(nova));
     }
 
     private void InteragirPistaNotaFiscal()
     {
         GameState.Marcar(Flags.Pista_NotaFiscal2004);
-        GameState.Marcar(Flags.CasaAvo_LeuBilhete);
-        GameState.RegistrarNotaDiario(
+        bool nova = Anotar(
             "pista_nota_2004",
-            "Nota Fiscal de 2004 e anotação do Bar do Zé",
+            "Cupom com um aviso no verso",
             "PISTA",
-            "Cupom do Mercadinho Santa Rita datado de hoje (2004). No verso, a letra firme de Adílio: 'Rua Norte — Bar do Zé. Não aceitar recado do Clube'."
+            "Cupom do Mercadinho Santa Rita, hoje às 18h10: café, velas e fósforo. No verso, a lápis, letra de mulher: 'Seu Adílio, aquele homem de capa voltou a perguntar onde o senhor mora. Não falei nada. Cuidado.'"
         );
+        AtualizarLinhaDoTempo();
 
-        GameMessageUI.Instance.ShowInspection("NOTA E BILHETE", "Bilhete",
-            "Cupom do Mercadinho Santa Rita, 19/10/2004.\n\nNo verso, a letra de Adílio: 'Rua Norte — Bar do Zé. Não aceitar recado do Clube'.",
-            VerificarConclusaoPistasCasaAvo);
+        GameMessageUI.Instance.ShowInspection("CUPOM AMASSADO", "Bilhete",
+            "MERCADINHO SANTA RITA\n19/10/2004 — 18:10\nCafé torrado 500 g\nVelas (maço)\nFósforo\nTOTAL R$ 7,40\n\nNo verso, a lápis:\n\"Seu Adílio, aquele homem de capa voltou a perguntar onde o senhor mora. Não falei nada. Cuidado.\"",
+            VerificarConclusaoPistasCasaAvo,
+            pensamento: "Letra de mulher. Alguém no mercadinho tentou avisar o vô.",
+            etiqueta: Etiqueta(nova));
     }
 
     private void InteragirPistaDesordem()
     {
         GameState.Marcar(Flags.Pista_DesordemPorta);
-        GameState.RegistrarNotaDiario(
+        bool nova = Anotar(
             "pista_desordem_porta",
-            "Desordem localizada junto à porta",
+            "Pegadas de bota e casaco no prego",
             "PISTA",
-            "A casa está arrumada, exceto perto da entrada: um banco derrubado, marcas de lama recente e o casaco ainda no cabide."
+            "Perto da porta: banco tombado e barro de dois pares de bota de sola grossa, maiores que o chinelo do vô. Entram e saem. O casaco de chuva dele continua no prego."
         );
 
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "O resto da casa está em ordem, mas aqui perto da porta o banco tombou e há pegadas de barro molhado que não são do calçado dele.", "marcus"),
-            new DialogoLinha("MARCUS", "O casaco de chuva dele ficou no prego. Ele pode ter saído com pressa. Preciso descobrir o que aconteceu aqui.", "marcus")
-        }, VerificarConclusaoPistasCasaAvo);
+        GameMessageUI.Instance.ShowInspection("PERTO DA PORTA", null,
+            "O banco está tombado. No piso, barro molhado: dois pares de pegadas de bota, sola grossa, maiores que o chinelo do vô. Vão da porta até aqui e voltam.\n\nO casaco de chuva dele continua no prego.",
+            VerificarConclusaoPistasCasaAvo,
+            pensamento: "Ninguém sai nesse temporal sem casaco. A não ser que não tenha tido tempo de pegar.",
+            etiqueta: Etiqueta(nova));
     }
 
     private void InteragirRetratoFamilia()
     {
-        GameMessageUI.Instance.ShowInspection("RETRATO DE FAMÍLIA", "FramedPhoto",
-            "Adílio, minha mãe e eu, antes de 1998. Atrás da moldura: uma chave enferrujada e '03:17' escrito a lápis.",
-            VerificarConclusaoPistasCasaAvo);
+        GameMessageUI.Instance.ShowInspection("PORTA-RETRATO", "FramedPhoto",
+            "Natal de 1997. O vô, a mãe e eu na varanda desta casa.\n\nAtrás, a letra dele: \"Que o guri volte.\"",
+            pensamento: "Fui embora no ano seguinte. Não voltei.");
     }
 
     private void InteragirTelefoneCasaAvo()
     {
         GameState.Marcar(Flags.CasaAvo_OlhouTelefone);
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "O fone está caído ao lado da base. Isso explica o ocupado. Será que uma ligação foi interrompida? Só olhando o aparelho não consigo saber quando nem quem estava usando.", "marcus")
-        }, VerificarConclusaoPistasCasaAvo);
+        bool nova = Anotar(
+            "telefone_casa_adilio",
+            "Fone fora do gancho",
+            "PISTA",
+            "O fone da sala está pendurado pelo fio. Na estrada, a ligação começou a dar ocupado por volta das oito e meia: foi quando o fone caiu."
+        );
+        AtualizarLinhaDoTempo();
+
+        GameMessageUI.Instance.ShowInspection("TELEFONE DA SALA", "TelefoneForaDoGancho",
+            "O fone está pendurado pelo fio, quase no chão. O tom de ocupado sai baixinho do aparelho.",
+            VerificarConclusaoPistasCasaAvo,
+            pensamento: "Começou a dar ocupado lá pelas oito e meia, quando eu ainda estava na estrada. Foi a essa hora que o fone caiu.",
+            etiqueta: Etiqueta(nova));
     }
 
     public static void VerificarConclusaoPistasCasaAvo()
@@ -665,126 +732,296 @@ public class InteracaoCapitulo1 : Interactable
         int cont = 0;
         if (GameState.Tem(Flags.Pista_CafeAindaQuente)) cont++;
         if (GameState.Tem(Flags.Pista_CartasMesa)) cont++;
-        if (GameState.Tem(Flags.Pista_NotaFiscal2004)) cont++;
         if (GameState.Tem(Flags.Pista_DesordemPorta)) cont++;
-        if (GameState.Tem(Flags.CasaAvo_LeuBilhete)) cont++;
         if (GameState.Tem(Flags.CasaAvo_OlhouTelefone)) cont++;
+        if (GameState.Tem(Flags.Pista_NotaFiscal2004) || GameState.Tem(Flags.CasaAvo_LeuBilhete)) cont++;
 
         if (cont >= 3 && !GameState.Tem(Flags.Pista_CasaAvoCompleta))
         {
             GameState.Marcar(Flags.Pista_CasaAvoCompleta);
             GameState.RegistrarNotaDiario(
                 "hipotese_casa_adilio",
-                "Rotina possivelmente interrompida",
+                "A noite do vô foi interrompida",
                 "HIPÓTESE",
-                "Os detalhes que examinei na casa sugerem uma saída inesperada. Ainda não sei o motivo nem posso concluir que alguém levou Adílio."
+                "Café pela metade, paciência largada, banco caído, fone fora do gancho. Ele estava em casa, sem pressa, e alguma coisa interrompeu a noite. Ainda não sei o quê, nem quem."
             );
         }
-        if (GameState.Tem(Flags.CasaAvo_LeuBilhete) && !GameState.Tem(Flags.ZeDerrotadoNaSinuca))
-        {
-            GameState.Marcar(Flags.Pista_RumoBarDoZe);
-            GameState.DefinirObjetivo("Conferir o cupom no Mercadinho ou procurar o Bar do Zé citado no bilhete.");
-        }
+
+        if (GameState.Tem(Flags.ZeDerrotadoNaSinuca) || GameState.Tem(Flags.OuviuRelatoAtendente)) return;
+
+        if (GameState.Tem(Flags.Pista_NotaFiscal2004))
+            GameState.DefinirObjetivo("Descobrir quem escreveu o aviso no verso do cupom.");
+        else if (GameState.Tem(Flags.Pista_CasaAvoCompleta))
+            GameState.DefinirObjetivo("Descobrir o que interrompeu a noite do vô.");
     }
 
-    private void InteragirCaminhoneteClube()
+    // Junta os horários que o jogador já descobriu. Só aparece com dois ou mais.
+    public static void AtualizarLinhaDoTempo()
     {
-        GameState.RegistrarNotaDiario(
-            "caminhonete_clube_bar_ze",
-            "Caminhonete do Clube em frente ao Bar do Zé",
-            "PISTA",
-            "A mesma caminhonete escura vista no Posto e no Bairro das Casas esteve parada na Rua Norte, junto ao Bar do Zé e ao Portão do Centro."
-        );
+        var linhas = new List<string>();
+        if (GameState.Tem(Pista_QuerosenePosto))
+            linhas.Add("07h40 — Compra querosene no posto, a pé.");
+        if (GameState.Tem(Flags.Pista_NotaFiscal2004))
+            linhas.Add("18h10 — Compra café e velas no mercadinho. Alguém o avisa sobre o homem de capa.");
+        if (GameState.Tem(Pista_BatidasLurdes))
+            linhas.Add("~20h30 — Três batidas fortes na porta da casa 40 (Dona Lurdes).");
+        if (GameState.Tem(Flags.CasaAvo_OlhouTelefone))
+            linhas.Add("~20h30 — O telefone começa a dar ocupado: o fone caiu do gancho.");
+        if (GameState.Tem(Pista_FarolRamiro))
+            linhas.Add("~20h40 — Farol parado na frente da casa por dez minutos; o motor sobe a ladeira (Seu Ramiro).");
+        if (GameState.Tem(Flags.ZeDerrotadoNaSinuca))
+            linhas.Add("~20h50 — Zé vê dois homens levarem o vô pelo portão do Centro.");
+        else if (GameState.Tem(Pista_FundosTrancados))
+            linhas.Add("~21h — Zé tranca a porta dos fundos do bar (freguês).");
 
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "Uma caminhonete escura estacionada na Rua Norte, bem perto do Bar do Zé. No vidro há um selo metálico do Clube de Santa Rita.", "marcus"),
-            new DialogoLinha("MARCUS", "Os pneus têm barro vermelho, como o da rua do vô. Pode ter passado por lá. Isso sozinho não me diz quem estava dentro.", "marcus")
-        });
+        if (linhas.Count < 2) return;
+
+        GameState.RegistrarNotaDiario(
+            "linha_do_tempo_adilio",
+            "Linha do tempo do dia do vô",
+            "HIPÓTESE",
+            string.Join("\n", linhas)
+        );
+    }
+
+    // =========================================================================
+    // Zona 5: Rua Norte e portão do Centro
+    // =========================================================================
+
+    private void InteragirCaminhoneteBar()
+    {
+        Falar(
+            Marcus("Uma caminhonete velha com engradados vazios na caçamba. Deve ser do bar."),
+            Marcus("O chão embaixo dela está seco. Ela não saiu daqui desde antes da chuva.")
+        );
     }
 
     private void InteragirPlacaBar()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "'BAR DO ZÉ — SINUCA E BEBIDAS'. A luz amarela lá dentro está acesa e dá pra ouvir o estalo seco das bolas de bilhar.", "marcus")
-        });
+        Falar(Marcus("\"BAR DO ZÉ — SINUCA E BEBIDAS\". Luz amarela lá dentro e o estalo seco das bolas."));
     }
+
+    private void EntrarNoBar()
+    {
+        if (Capitulo1Director.Instance != null)
+        {
+            Capitulo1Director.Instance.TransicionarPara(
+                Capitulo1Director.ZonaId.Interior_BarDoZe,
+                new Vector2(509.0f, -57.2f),
+                1
+            );
+        }
+        else
+        {
+            SceneTransition.Ir("BarDoZe", "entrada_bar");
+        }
+    }
+
+    private void InteragirLimiarCentro()
+    {
+        if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca))
+        {
+            GameState.Marcar(Pista_RastroPortao);
+            Anotar(
+                "pista_rastro_portao",
+                "Rastro de pneu atravessa o portão do Centro",
+                "PISTA",
+                "O portão da Rua Norte tem corrente nova e cadeado da prefeitura. Marcas de pneu largo passam rente a ele e seguem do outro lado. Alguém abriu esse portão hoje à noite."
+            );
+            Falar(
+                Marcus("Portão de ferro. Corrente nova, cadeado da prefeitura."),
+                Marcus("No barro, marcas de pneu largo passam rente ao portão e continuam do outro lado."),
+                Pensa("Alguém abriu isso hoje à noite. E fechou de novo.")
+            );
+            return;
+        }
+
+        // Depois do capítulo 2 começar, ou depois da tela de fim, o portão é só passagem.
+        if (GameState.Tem("c2_iniciado") || GameState.Tem(Flags.Capitulo1Concluido))
+        {
+            Falar(Capitulo1Director.MostrarTelaFechamentoCapitulo1, Marcus("O cadeado continua aberto."));
+            return;
+        }
+
+        Falar(Capitulo1Director.MostrarPainelFimCapitulo1,
+            Marcus("O cadeado está aberto. Do outro lado, a avenida do Centro some na neblina."),
+            Marcus("As marcas de pneu seguem por ali.")
+        );
+    }
+
+    // =========================================================================
+    // Interior: Bar do Zé
+    // =========================================================================
 
     private void InteragirBalcaoBar()
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "Garrafas empoeiradas, um cinzeiro cheio e um caderno de fiado onde metade dos nomes foi riscada a caneta preta.", "marcus")
-        });
+        GameState.Marcar(Pista_FotoSalao1990);
+        bool nova = Anotar(
+            "pista_foto_salao_1990",
+            "Foto do salão do Clube, 1990",
+            "PISTA",
+            "Atrás do balcão do Zé, uma foto do salão do Clube lotado, faixa 'NOITE DE JOGOS — 1990'. Zé aparece de avental, servindo."
+        );
+
+        GameMessageUI.Instance.ShowInspection("ATRÁS DO BALCÃO", "FramedPhoto",
+            "Entre as garrafas, uma foto desbotada: o salão do Clube lotado, faixa \"NOITE DE JOGOS — 1990\". No canto, Zé de avental, servindo.\n\nEmbaixo, um caderno de fiado com metade dos nomes riscados.",
+            pensamento: "Noventa. Eu estava nessa noite.",
+            etiqueta: Etiqueta(nova));
     }
 
     private void InteragirQuadroRegras()
     {
-        GameMessageUI.Instance.ShowInspection("REGRAS DA MESA", "Quadro_Regras_Sinuca",
-            "MELHOR DE 3\n7 bolas na mesa. Quem fizer 4 leva a mão.\n\nA partir da 2ª mão, o dono marca uma bola [X]: ESSA FICA NA MESA.");
+        GameMessageUI.Instance.ShowInspection("REGRAS DA CASA", "Quadro_Regras_Sinuca",
+            "MELHOR DE TRÊS.\n\nSete bolas na mesa. Quem fizer quatro leva a mão.\n\nDa segunda mão em diante, o dono marca uma bola com giz [X]: ESSA FICA NA MESA.\n\nDerrubou a marcada: a tacada não vale, as bolas voltam e a branca vai pra mão do outro.");
     }
 
     private void InteragirFrequentadorBar()
     {
         if (GameState.Tem(Flags.ZeDerrotadoNaSinuca))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("FREQUENTADOR", "Nunca achei que ia ver alguém limpar a mesa do Zé respeitando a bola marcada. O velho Adílio ia ficar orgulhoso.", "adilio")
-            });
+            Falar(new DialogoLinha("FREGUÊS", "Ninguém ganha do Zé na mesa dele. Vai com cuidado lá fora, guri.", "frequentador"));
             return;
         }
 
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
+        var linhas = new List<DialogoLinha>();
+        if (!GameState.Tem(Pista_FundosTrancados))
         {
-            new DialogoLinha("FREQUENTADOR", "Cuidado com a segunda mão. O Zé marca uma bola com giz. Se ela cair, a tacada não vale ponto, as bolas caídas voltam e o outro fica com a branca na mão.", "adilio"),
-            new DialogoLinha("MARCUS", "Obrigado pelo aviso. Só preciso que ele abra o bico sobre o meu avô.", "marcus")
-        });
+            GameState.Marcar(Pista_FundosTrancados);
+            Anotar(
+                "frequentador_fundos",
+                "Zé trancou os fundos por volta das 21h",
+                "PISTA",
+                "Um freguês do bar contou que, lá pelas nove, o Zé foi nos fundos, voltou branco e passou a tranca na porta de trás com o bar aberto. Nunca tinha visto ele fazer isso."
+            );
+            AtualizarLinhaDoTempo();
+
+            linhas.Add(new DialogoLinha("FREGUÊS", "Tu é o neto do Adílio? Tem a cara dele.", "frequentador"));
+            linhas.Add(Marcus("Viu meu avô hoje?"));
+            linhas.Add(new DialogoLinha("FREGUÊS", "Aqui não. Mas olha... lá pelas nove o Zé foi nos fundos ver não sei o quê.", "frequentador"));
+            linhas.Add(new DialogoLinha("FREGUÊS", "Voltou branco feito cal e passou a tranca na porta de trás. Com o bar aberto. Nunca vi ele fazer isso.", "frequentador"));
+            linhas.Add(new DialogoLinha("FREGUÊS", "Não diz que fui eu que falei.", "frequentador"));
+        }
+        else if (!GameState.Tem(Flags.FalouComZeAntesDaSinuca))
+        {
+            linhas.Add(new DialogoLinha("FREGUÊS", "Fala baixo. O Zé tá olhando pra cá.", "frequentador"));
+        }
+
+        if (GameState.Tem(Flags.FalouComZeAntesDaSinuca))
+        {
+            linhas.Add(new DialogoLinha("FREGUÊS", "Vai jogar com ele? Cuidado na segunda mão. Ele marca uma bola com giz.", "frequentador"));
+            linhas.Add(new DialogoLinha("FREGUÊS", "Às vezes vale mais deixar a branca difícil pra ele do que arriscar perto da marcada.", "frequentador"));
+        }
+
+        Falar(linhas.ToArray());
     }
 
-    private void InteragirZeOuSinuca()
+    private void InteragirMesaSinuca()
+    {
+        if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca) && GameState.Tem(Flags.FalouComZeAntesDaSinuca))
+        {
+            InteragirZe();
+            return;
+        }
+
+        Falar(Marcus("Feltro remendado, tabela gasta. O Zé não tira o olho de mim."));
+    }
+
+    private void InteragirZe()
     {
         if (GameState.Tem("c2_registro_manutencao"))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha> {
-                new DialogoLinha("MARCUS", "A cópia de manutenção registra outras tentativas. O padre ouviu Júlia responder.", "marcus"),
+            Falar(
+                Marcus("A cópia de manutenção registra outras tentativas. O padre ouviu Júlia responder."),
                 new DialogoLinha("ZÉ", "Eu queria o salão funcionando. Não vou dizer que vi cada tentativa. Sobre teu avô, contei a passagem pelo portão; não sei o que aconteceu depois dali.", "ze")
-            });
+            );
             return;
         }
         GameState.Marcar(Flags.EntrouNoBarDoZe);
 
         if (GameState.Tem(Flags.ZeDerrotadoNaSinuca))
         {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("ZÉ", "Já te entreguei a Ficha do Clube e já destranquei o portão pro Centro lá fora na Rua Norte, garoto. Não me pede pra ir junto.", "ze"),
-                new DialogoLinha("MARCUS", "Seu Adílio esteve aqui hoje e foi levado porque não aceitou calar a boca sobre 1998. Eu vou até o fim.", "marcus"),
-                new DialogoLinha("ZÉ", "Então guarda bem essa ficha no bolso e usa o orelhão lá fora antes de cruzar pro Centro.", "ze")
-            });
+            Falar(
+                new DialogoLinha("ZÉ", "Já te disse o que eu vi. O portão tá aberto.", "ze"),
+                new DialogoLinha("ZÉ", "Se tu tem juízo, usa o orelhão lá fora antes de atravessar.", "ze")
+            );
             return;
         }
 
+        if (GameState.Tem(Flags.FalouComZeAntesDaSinuca))
+        {
+            Falar(IniciarPartidaSinucaComZe, new DialogoLinha("ZÉ", "A mesa tá pronta. Pega o taco.", "ze"));
+            return;
+        }
+
+        if (!GameState.Tem(Flags.OuviuRelatoAtendente))
+        {
+            ZeDesconversa();
+            return;
+        }
+
+        // Marcus agora tem algo concreto: o homem de capa sentou na mesa do Zé.
         GameState.Marcar(Flags.FalouComZeAntesDaSinuca);
-        GameState.RegistrarNotaDiario(
+        Anotar(
             "confronto_ze_bar",
-            "O Desafio do Bar do Zé",
+            "Zé aceitou falar, do jeito dele",
             "FATO",
-            "Zé admitiu que Adílio esteve no bar hoje, mas exige uma partida Melhor de 3 na sinuca (com a regra 'A Bola Marcada / Essa Fica na Mesa') antes de entregar a ficha e abrir passagem para o Centro."
+            "Quando citei o homem de capa, Zé não negou. Disse que só conta o que viu hoje se eu ganhar dele na sinuca, melhor de três."
+        );
+        GameState.DefinirObjetivo("Vencer Zé na sinuca (melhor de três).");
+
+        var linhas = new List<DialogoLinha>();
+        if (!GameState.Tem(ZeDesconversou))
+            linhas.Add(new DialogoLinha("ZÉ", "Olha quem a chuva trouxe. O neto do Adílio.", "ze"));
+        linhas.Add(Marcus("Quinta-feira um homem de capa sentou aqui com você. Hoje ele andou perguntando onde o vô morava."));
+        linhas.Add(new DialogoLinha("ZÉ", "Muita gente senta na minha mesa.", "ze"));
+        if (GameState.Tem(Pista_FundosTrancados))
+        {
+            linhas.Add(Marcus("E hoje, lá pelas nove, você trancou os fundos com o bar aberto."));
+            linhas.Add(new DialogoLinha("ZÉ", "...Tu andou conversando bastante pra quem acabou de chegar.", "ze"));
+        }
+        linhas.Add(Marcus("Meu avô sumiu hoje à noite. Eu não saio daqui sem resposta."));
+        linhas.Add(new DialogoLinha("ZÉ", "Então pega um taco. Aqui dentro a conversa é do meu jeito.", "ze"));
+        linhas.Add(new DialogoLinha("ZÉ", "Melhor de três. Ganhou, eu te conto o que eu vi hoje. Perdeu, tu pega teu carro e volta pra capital.", "ze"));
+        linhas.Add(Marcus("O carro afogou na entrada."));
+        linhas.Add(new DialogoLinha("ZÉ", "Então volta a pé.", "ze"));
+        linhas.Add(new DialogoLinha("ZÉ", "Sete bolas, quatro pontos levam a mão. Da segunda em diante eu marco uma com giz: essa fica na mesa.", "ze"));
+        linhas.Add(new DialogoLinha("ZÉ", "Derrubou a marcada, a tacada não vale, as bolas voltam e a branca vai pra mão do outro. Vale pra mim também.", "ze"));
+
+        Falar(IniciarPartidaSinucaComZe, linhas.ToArray());
+    }
+
+    private void ZeDesconversa()
+    {
+        if (GameState.Tem(ZeDesconversou))
+        {
+            if (GameState.Tem(Pista_FundosTrancados))
+            {
+                Falar(
+                    Marcus("Lá pelas nove você trancou os fundos com o bar aberto. O que viu lá fora?"),
+                    new DialogoLinha("ZÉ", "Tranquei porque chove pra dentro. Próxima pergunta.", "ze"),
+                    Pensa("Não basta. Preciso saber quem andou rondando o vô antes de hoje.")
+                );
+                return;
+            }
+
+            Falar(new DialogoLinha("ZÉ", "Já te falei. Bebe ou vai embora.", "ze"));
+            return;
+        }
+
+        GameState.Marcar(ZeDesconversou);
+        Anotar(
+            "ze_desconversou",
+            "Zé desconversou",
+            "FATO",
+            "Contei ao Zé que o vô sumiu. Ele não perguntou o que aconteceu. Só mandou eu beber ou ir embora."
         );
 
-        var linhasPreDuelo = new List<DialogoLinha>
-        {
-            new DialogoLinha("ZÉ", "Olha só quem a chuva trouxe de volta pra Santa Rita. O neto do seu Adílio.", "ze"),
-            new DialogoLinha("MARCUS", GameState.Tem(Flags.CasaAvo_LeuBilhete) ? "Estou procurando o vô. Encontrei teu nome numa anotação dele. Vocês conversaram hoje?" : "Estou procurando o seu Adílio. Ele não atende o telefone. Você viu ele hoje?", "marcus"),
-            new DialogoLinha("ZÉ", "Teu avô apareceu aqui hoje mais cedo, sim. Veio fazer pergunta que ninguém nesta cidade quer ouvir desde aquela madrugada de noventa e oito.", "ze"),
-            new DialogoLinha("MARCUS", "Ele saiu daqui sozinho? Para onde foi?", "marcus"),
-            new DialogoLinha("ZÉ", "Quer que eu abra o portão do Centro e te diga quem carregou o velho? Então pega o taco, garoto. Melhor de três na minha mesa.", "ze"),
-            new DialogoLinha("ZÉ", "Sete bolas, quatro pontos levam a mão. A partir da segunda, ESSA FICA NA MESA. Derrubou a marcada, tua tacada não vale ponto, repõe as que caíram e deixa a branca na mão do outro. Vale pra mim também.", "ze")
-        };
-
-        GameMessageUI.Instance.ShowDialogue(linhasPreDuelo, IniciarPartidaSinucaComZe);
+        Falar(
+            new DialogoLinha("ZÉ", "Olha quem a chuva trouxe. O neto do Adílio.", "ze"),
+            Marcus("O vô sumiu. A casa está aberta, o café pela metade. Você viu ele hoje?"),
+            new DialogoLinha("ZÉ", "Aqui é bar, guri. Eu vejo copo e mesa. Quer beber, senta. Quer delegado, é no Centro, e o Centro tá fechado.", "ze"),
+            Pensa("Ele nem perguntou o que aconteceu. Preciso de alguma coisa concreta antes de insistir.")
+        );
     }
 
     private void IniciarPartidaSinucaComZe()
@@ -793,7 +1030,7 @@ public class InteracaoCapitulo1 : Interactable
             aoVencer: AoVencerZeNaSinuca,
             aoPerder: () =>
             {
-                Legenda.Dizer("Zé continua guardando o caminho para o Centro.", 3.5f, Legenda.PrioridadeCritica);
+                Legenda.Dizer("Zé recolhe as bolas. A conversa acabou, por enquanto.", 3.5f, Legenda.PrioridadeCritica);
             }
         );
     }
@@ -807,65 +1044,53 @@ public class InteracaoCapitulo1 : Interactable
 
         GameState.RegistrarNotaDiario(
             "vitoria_ze_ficha_clube",
-            "Ficha do Clube e Confissão de Zé",
+            "Zé viu levarem o vô",
             "PISTA",
-            "Derrotei Zé na sinuca (Melhor de 3). Ele entregou a Ficha do Clube #01 e confirmou que Adílio não saiu voluntariamente: homens ligados ao Clube o levaram pelo portão do Centro porque ele voltou a mexer na noite de 1998."
+            "Lá pelas 20h50, da porta dos fundos do bar, Zé viu uma caminhonete parar no portão do Centro. Dois homens tiraram o vô da cabine e o levaram pelo portão; um deles abriu o cadeado com chave. Zé: 'Ele não queria ir.' Depois trancou a porta dos fundos."
         );
-
-        GameState.DefinirObjetivo("Sair do Bar do Zé e atravessar o portão no fim da Rua Norte rumo ao Centro.");
-
-        var linhasPosVitoria = new List<DialogoLinha>
-        {
-            new DialogoLinha("ZÉ", "...Você tem o pulso firme do velho Adílio. Palavra dada na mesa não volta atrás.", "ze"),
-            new DialogoLinha("ZÉ", "Pega. É uma Ficha do Clube. Mostra no atendimento lá em cima; vão saber que tu falou comigo.", "ze"),
-            new DialogoLinha("MARCUS", "Agora fala a verdade, Zé. O que fizeram com o meu avô hoje?", "marcus"),
-            new DialogoLinha("ZÉ", "Teu avô não saiu de casa porque quis, Marcus. Ele descobriu que alguém mexeu nos registros antigos da estrada — daquela noite das 03:17 em noventa e oito.", "ze"),
-            new DialogoLinha("ZÉ", "Dois homens desceram do Centro hoje à tarde e levaram ele passando pelo portão aqui do lado. Eu já destranquei a grade lá fora. O resto é entre você e o que sobrou desta cidade.", "ze")
-        };
-
-        GameMessageUI.Instance.ShowDialogue(linhasPosVitoria, () =>
-        {
-            Legenda.Dizer("Recebido: Ficha do Clube (Zé). Portão do Centro desbloqueado! Pressione M para ver o Mapa/Diário.", 5f, Legenda.PrioridadeCritica);
-            Capitulo1Director.AtualizarEstadoPortaoCentroNaCena();
-        });
-    }
-
-    private void InteragirLimiarCentro()
-    {
-        if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca))
-        {
-            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>
-            {
-                new DialogoLinha("MARCUS", "O portão de ferro que dá acesso ao Centro de Santa Rita está trancado com corrente.", "marcus"),
-                new DialogoLinha("MARCUS", "A fechadura tem o mesmo emblema do letreiro do Bar do Zé aqui ao lado. Preciso resolver isso com o Zé lá dentro primeiro.", "marcus")
-            });
-            return;
-        }
-
-        GameState.Marcar(Flags.LimiarCentroDesbloqueado);
-        GameState.Marcar(Flags.Capitulo1Concluido);
         GameState.RegistrarNotaDiario(
-            "capitulo1_concluido_limiar",
-            "Limiar do Centro Atravessado",
-            "FATO",
-            "Com a Ficha do Clube conquistada no Bar do Zé e a confirmação de que Adílio foi levado contra a vontade, cruzei o portão rumo ao Centro de Santa Rita."
+            "pista_relato_mercadinho",
+            "O homem de capa",
+            "PISTA",
+            "Perguntou ontem e hoje no mercadinho onde o vô morava. Na quinta, sentou com o Zé, quis saber quem ainda está vivo da diretoria do Clube de 1990 e perguntou do vô. Hoje estava entre os que levaram o vô pelo portão do Centro."
         );
+        GameState.RegistrarNotaDiario(
+            "ze_salao_1990",
+            "O que o Zé sabia em 1990",
+            "FATO",
+            "Zé admitiu que a diretoria sabia que o piso do salão estava podre sobre a cisterna. Consertar era fechar o salão. Naquela noite de 1990, ele mandou a música continuar."
+        );
+        GameState.RegistrarNotaDiario(
+            Flags.FichaZeObtida,
+            "Ficha do salão #01 (Zé)",
+            "ITEM",
+            "Ficha de latão do salão do Clube, número 01 riscado à mão. Zé me deu depois da sinuca. Não abre porta nenhuma: mostra a quem é do Clube que eu sentei na mesa dele."
+        );
+        AtualizarLinhaDoTempo();
 
-        var linhasFechamento = new List<DialogoLinha>
-        {
-            new DialogoLinha("MARCUS", "A corrente cedeu. Do outro lado da neblina começam os casarões do Centro e a subida para o Clube.", "marcus"),
-            new DialogoLinha("MARCUS", "Eu tenho a primeira Ficha do Clube e sei que o vô Adílio foi levado hoje porque chegou perto demais da verdade sobre 1998.", "marcus")
-        };
+        GameState.DefinirObjetivo("Atravessar o portão do Centro. Antes, posso salvar no orelhão da Rua Norte.");
 
-        GameMessageUI.Instance.ShowDialogue(linhasFechamento, () =>
+        Falar(() =>
         {
-            Capitulo1Director.MostrarTelaFechamentoCapitulo1();
-        });
+            Legenda.Dizer("Recebido: Ficha do salão. O portão do Centro está destrancado.", 5f, Legenda.PrioridadeCritica);
+            Capitulo1Director.AtualizarEstadoPortaoCentroNaCena();
+        },
+            new DialogoLinha("ZÉ", "...Tu segura o taco igual o teu avô. Palavra dada na mesa não volta.", "ze"),
+            Marcus("Então fala. O que você viu?"),
+            new DialogoLinha("ZÉ", "Fui nos fundos lá pelas nove menos dez. Chuva entrando pela porta. Vi uma caminhonete parar no portão do Centro, farol baixo.", "ze"),
+            new DialogoLinha("ZÉ", "Dois homens tiraram o teu avô da cabine. Um deles abriu o cadeado com chave. Eu vi levarem ele. Ele não queria ir.", "ze"),
+            Marcus("E você trancou a porta."),
+            new DialogoLinha("ZÉ", "Tranquei.", "ze"),
+            Marcus("Quem eram?"),
+            new DialogoLinha("ZÉ", "Um eu nunca vi. O outro, de capa, sentou nessa mesa quinta-feira. Quis saber quem ainda está vivo da diretoria do Clube de noventa. E perguntou do Adílio.", "ze"),
+            Marcus("Por que alguém ia querer saber de noventa?"),
+            new DialogoLinha("ZÉ", "Porque tem gente que não esquece.", "ze"),
+            new DialogoLinha("ZÉ", "O piso do salão estava podre fazia dois invernos. Infiltração, a cisterna embaixo. A diretoria sabia. Eu sabia.", "ze"),
+            new DialogoLinha("ZÉ", "Arrumar era fechar o salão. Fechar o salão era matar a única coisa que ainda juntava esta cidade. Então, naquela noite, eu mandei a música continuar.", "ze"),
+            new DialogoLinha("ZÉ", "Uma cidade inteira não pode acabar por causa de uma decisão, guri. ...Tu estava lá também. Não me olha assim.", "ze"),
+            Marcus("..."),
+            new DialogoLinha("ZÉ", "Pega. Ficha do salão. Quem for do Clube vai saber que tu sentou na minha mesa.", "ze"),
+            new DialogoLinha("ZÉ", "A chave do portão fica aqui desde a obra. Vou abrir pra ti. O que tem do outro lado, eu não sei. Isso é tudo que eu vi.", "ze")
+        );
     }
 }
-
-/// <summary>
-/// Diretor do Capítulo 1: Constrói e gerencia as 5 Zonas Externas ("cenas/quadrados" separados por cortes de fade)
-/// e os 4 Interiores Exploráveis (Conveniência do Posto, Mercadinho, Casa do Avô Adílio nº 40 e Bar do Zé),
-/// fiéis às Imagens 3, 4 e 5 e ao Mapa Oficial (`MapaSantaRitaArte.jpg`).
-/// </summary>
