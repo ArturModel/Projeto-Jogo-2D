@@ -12,7 +12,6 @@ tags:
 # .CreateLabel()
 
 ## Connections
-- [[dot-AbrirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-Build()]] - `calls` [EXTRACTED]
 - [[dot-Build()_1]] - `calls` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
@@ -21,6 +20,7 @@ tags:
 - [[dot-CriarTexto()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
+- [[dot-CriarTextoFechamento()]] - `calls` [EXTRACTED]
 - [[dot-Label()]] - `calls` [EXTRACTED]
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
 community: "Community 3"
-location: "L531"
+location: "L636"
 tags:
   - graphify/code
   - graphify/EXTRACTED

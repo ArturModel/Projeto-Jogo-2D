@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
 community: "Community 13"
-location: "L154"
+location: "L191"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,20 +12,23 @@ tags:
 # .Interact()
 
 ## Connections
+- [[dot-EntrarNoBar()]] - `calls` [EXTRACTED]
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
+- [[dot-InteragirAvisoObra()]] - `calls` [EXTRACTED]
 - [[dot-InteragirBalcaoBar()]] - `calls` [EXTRACTED]
 - [[dot-InteragirBombaPosto()]] - `calls` [EXTRACTED]
 - [[dot-InteragirCadernoMercadinho()]] - `calls` [EXTRACTED]
 - [[dot-InteragirCaixaCorreioAvo()]] - `calls` [EXTRACTED]
-- [[dot-InteragirCaminhoneteClube()]] - `calls` [EXTRACTED]
+- [[dot-InteragirCaminhoneteBar()]] - `calls` [EXTRACTED]
 - [[dot-InteragirCarroMarcus()]] - `calls` [EXTRACTED]
 - [[dot-InteragirCarroPosto()]] - `calls` [EXTRACTED]
 - [[dot-InteragirFrentista()]] - `calls` [EXTRACTED]
 - [[dot-InteragirFrequentadorBar()]] - `calls` [EXTRACTED]
-- [[dot-InteragirGalpaoBairro()]] - `calls` [EXTRACTED]
 - [[dot-InteragirLimiarCentro()]] - `calls` [EXTRACTED]
 - [[dot-InteragirLivroPosto()]] - `calls` [EXTRACTED]
 - [[dot-InteragirMalaAbandonada()]] - `calls` [EXTRACTED]
+- [[dot-InteragirMarcasBarro()]] - `calls` [EXTRACTED]
+- [[dot-InteragirMesaSinuca()]] - `calls` [EXTRACTED]
 - [[dot-InteragirMoradorBairro()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPicapeEncruzilhada()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPistaCafe()]] - `calls` [EXTRACTED]
@@ -43,9 +46,7 @@ tags:
 - [[dot-InteragirTvPosto()]] - `calls` [EXTRACTED]
 - [[dot-InteragirVendaAntiga()]] - `calls` [EXTRACTED]
 - [[dot-InteragirVizinhaLurdes()]] - `calls` [EXTRACTED]
-- [[dot-InteragirZeOuSinuca()]] - `calls` [EXTRACTED]
-- [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[DialogoLinha]] - `calls` [INFERRED]
+- [[dot-InteragirZe()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

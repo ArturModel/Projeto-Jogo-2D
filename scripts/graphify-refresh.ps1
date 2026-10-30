@@ -11,6 +11,10 @@ $wingetUvDir = Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Packages\astral-sh.
 if ((Test-Path $wingetUvDir) -and ($env:Path -notlike "*$wingetUvDir*")) {
     $env:Path = "$wingetUvDir;$env:Path"
 }
+$pyScripts = Join-Path $env:LOCALAPPDATA 'Python\pythoncore-3.14-64\Scripts'
+if ((Test-Path $pyScripts) -and ($env:Path -notlike "*$pyScripts*")) {
+    $env:Path = "$pyScripts;$env:Path"
+}
 
 $graphifyPython = Get-Command python -ErrorAction SilentlyContinue
 if ($graphifyPython) {

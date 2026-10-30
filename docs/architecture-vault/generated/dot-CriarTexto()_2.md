@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[dot-CriarBolasUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoModal()]] - `calls` [EXTRACTED]

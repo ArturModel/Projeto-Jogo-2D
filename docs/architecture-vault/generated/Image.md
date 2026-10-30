@@ -1,29 +1,31 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 23"
+community: "Community 12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_12
 ---
 
 # Image
 
 ## Connections
-- [[dot-AbrirPainelFechamento()]] - `references` [EXTRACTED]
 - [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-Build()]] - `references` [EXTRACTED]
+- [[dot-Build()_1]] - `references` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
+- [[dot-ConstruirPainelFechamento()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 - [[dot-CreateBox()]] - `references` [EXTRACTED]
 - [[dot-CriarBolasUI()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
@@ -45,13 +47,14 @@ tags:
 - [[dot-SelecionarAba()]] - `references` [EXTRACTED]
 - [[dot-Titulo()]] - `references` [EXTRACTED]
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_1]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
+- [[DicaDeTecla]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_12

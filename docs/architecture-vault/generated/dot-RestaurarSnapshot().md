@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 21"
-location: "L279"
+community: "Community 0"
+location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_0
 ---
 
 # .RestaurarSnapshot()
@@ -16,4 +16,4 @@ tags:
 - [[GameState]] - `method` [EXTRACTED]
 - [[GameStateSnapshot]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_0

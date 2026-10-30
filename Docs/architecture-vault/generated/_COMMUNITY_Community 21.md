@@ -1,45 +1,29 @@
 ---
 type: community
-members: 32
+members: 16
 ---
 
 # Community 21
 
-**Members:** 32 nodes
+**Members:** 16 nodes
 
 ## Members
-- [[dot-AlternarLanterna()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-BeginIsolatedTests()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-C1InvestigationRegression()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-ClearPendingOnly()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-DefinirTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Dispose()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-ExportarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-ImportarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Limpar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-NovoJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[dot-ObterEntradasDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-AoCarregarCenaRuntime()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-ConfirmarTestemunhoAtendente()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-DefinirObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-DispararChegadaCasaDoAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-EnsureForCurrentScene()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Interact()_3]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[dot-NarracaoEntradaCasaAvoRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ObterObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-ResetarMemoriaSilencioso()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-RestaurarIndicadorDeProgresso()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-RestaurarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Texto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[EntradaDiario]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[Fileira]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[Flags]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[GameState]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[GameState.cs]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[GameStateSnapshot]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[HashSet]] - code
-- [[IDisposable]] - code
-- [[IReadOnlyList]] - code
-- [[IsolatedSaveScope]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[LanternaLigada]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[List]] - code
-- [[ObjetivoAtual]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[ParNumero]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[ParTexto]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[TemProgressoNaoSalvo]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-RegistrarPistaLegada()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[dot-Start()_10]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-Start()_11]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
+- [[dot-VerificarConclusaoPistasCasaAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[ChegadaEmSantaRita]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[Prompt_3]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -49,37 +33,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Community 0]]
-- 14 edges to [[_COMMUNITY_Community 14]]
-- 11 edges to [[_COMMUNITY_Community 29]]
-- 7 edges to [[_COMMUNITY_Community 28]]
-- 7 edges to [[_COMMUNITY_Community 3]]
-- 6 edges to [[_COMMUNITY_Community 4]]
-- 3 edges to [[_COMMUNITY_Community 13]]
-- 3 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 3 edges to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 27]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 41]]
-- 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 6]]
+- 8 edges to [[_COMMUNITY_Community 0]]
+- 6 edges to [[_COMMUNITY_Community 30]]
+- 6 edges to [[_COMMUNITY_Community 25]]
+- 5 edges to [[_COMMUNITY_Community 2]]
+- 5 edges to [[_COMMUNITY_Community 44]]
+- 4 edges to [[_COMMUNITY_Community 13]]
+- 3 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 26]]
+- 2 edges to [[_COMMUNITY_Community 46]]
 - 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 45]]
 - 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 34]]
 
 ## Top bridge nodes
-- [[List]] - degree 21, connects to 15 communities
-- [[dot-ImportarSnapshot()]] - degree 21, connects to 6 communities
-- [[dot-BeginIsolatedTests()]] - degree 14, connects to 6 communities
-- [[GameState]] - degree 28, connects to 5 communities
-- [[GameStateSnapshot]] - degree 17, connects to 4 communities
+- [[dot-Start()_11]] - degree 8, connects to 6 communities
+- [[dot-DefinirObjetivo()]] - degree 12, connects to 5 communities
+- [[dot-DispararChegadaCasaDoAvo()]] - degree 7, connects to 5 communities
+- [[dot-VerificarConclusaoPistasCasaAvo()]] - degree 7, connects to 5 communities
+- [[dot-ConfirmarTestemunhoAtendente()]] - degree 6, connects to 5 communities

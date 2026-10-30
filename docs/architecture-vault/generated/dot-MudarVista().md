@@ -18,7 +18,7 @@ tags:
 - [[dot-EntradaTeclado()]] - `calls` [EXTRACTED]
 - [[dot-PodeConsultar()]] - `calls` [EXTRACTED]
 - [[dot-SetView()]] - `calls` [INFERRED]
-- [[dot-Update()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_3]] - `calls` [EXTRACTED]
 - [[BochaCameraView]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 

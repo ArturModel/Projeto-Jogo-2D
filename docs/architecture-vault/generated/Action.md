@@ -18,6 +18,7 @@ tags:
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-ComecarNovaSerie()]] - `references` [EXTRACTED]
 - [[dot-Dialogo()]] - `references` [EXTRACTED]
+- [[dot-Falar()_1]] - `references` [EXTRACTED]
 - [[dot-IniciarConfronto()]] - `references` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `references` [EXTRACTED]
 - [[dot-Show()_1]] - `references` [EXTRACTED]

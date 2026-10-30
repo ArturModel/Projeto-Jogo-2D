@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
-- [[Camada]] - `calls` [EXTRACTED]
+- [[Camada_1]] - `calls` [EXTRACTED]
 - [[Camada_2]] - `references` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 - [[Color32]] - `references` [EXTRACTED]

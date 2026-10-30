@@ -12,7 +12,7 @@ tags:
 # .CriarBolasUI()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarSpriteCirculo()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]

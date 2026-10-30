@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
 community: "Community 24"
-location: "L52"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,8 +15,7 @@ tags:
 - [[dot-Construir()]] - `calls` [INFERRED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `references` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
+- [[MenuPanelTransition]] - `method` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_24

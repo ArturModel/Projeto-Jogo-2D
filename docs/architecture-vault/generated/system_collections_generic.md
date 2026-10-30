@@ -25,6 +25,7 @@ tags:
 - [[Chapter2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `imports` [EXTRACTED]
 - [[Chuva.cs]] - `imports` [EXTRACTED]
+- [[DicaDeTecla.cs]] - `imports` [EXTRACTED]
 - [[EstradaScroller.cs]] - `imports` [EXTRACTED]
 - [[GameMessageUI.cs]] - `imports` [EXTRACTED]
 - [[GameState.cs]] - `imports` [EXTRACTED]

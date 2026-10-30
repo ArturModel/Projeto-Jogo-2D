@@ -12,7 +12,7 @@ tags:
 # .ConstruirModal()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoModal()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
 - [[dot-Posicionar()_3]] - `calls` [EXTRACTED]

@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[dot-Interact()]] - `calls` [EXTRACTED]
-- [[DialogoLinha]] - `calls` [INFERRED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

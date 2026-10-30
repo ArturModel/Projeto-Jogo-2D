@@ -19,7 +19,7 @@ tags:
 - [[dot-Narrative()]] - `method` [EXTRACTED]
 - [[dot-Physics()]] - `method` [EXTRACTED]
 - [[dot-Rules()]] - `method` [EXTRACTED]
-- [[dot-Run()_4]] - `method` [EXTRACTED]
+- [[dot-Run()_3]] - `method` [EXTRACTED]
 - [[dot-Saves()]] - `method` [EXTRACTED]
 - [[Chapter2Verification.cs]] - `contains` [EXTRACTED]
 

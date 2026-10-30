@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
 type: "code"
-community: "Community 53"
-location: "L19"
+community: "Community 26"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_53
+  - community/Community_26
 ---
 
 # .Interact()
 
 ## Connections
-- [[Capitulo2Interactable]] - `method` [EXTRACTED]
+- [[dot-Atravessar()]] - `calls` [EXTRACTED]
+- [[DoorTrigger]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_53
+#graphify/code #graphify/EXTRACTED #community/Community_26

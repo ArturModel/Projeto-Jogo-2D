@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 31"
+community: "Community 6"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_6
 ---
 
 # .RegisterCampaignScenes()
 
 ## Connections
-- [[dot-Run()_3]] - `calls` [EXTRACTED]
+- [[dot-Run()_4]] - `calls` [EXTRACTED]
 - [[Chapter2BuildVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_6

@@ -12,7 +12,7 @@ tags:
 # SceneFader
 
 ## Connections
-- [[dot-Awake()_7]] - `method` [EXTRACTED]
+- [[dot-Awake()_12]] - `method` [EXTRACTED]
 - [[dot-BannerRoutine()]] - `method` [EXTRACTED]
 - [[dot-Bootstrap()]] - `method` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `method` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[dot-ZoneTransitionRoutine()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Coroutine]] - `references` [EXTRACTED]
-- [[Instance_4]] - `defines` [EXTRACTED]
+- [[Instance_6]] - `defines` [EXTRACTED]
 - [[IsTransitioning]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SceneFader.cs]] - `contains` [EXTRACTED]

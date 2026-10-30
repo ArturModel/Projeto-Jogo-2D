@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
 community: "Community 15"
-location: "L49"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,10 @@ tags:
 # .Vincular()
 
 ## Connections
-- [[RawImage]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
-- [[TMP_Dropdown]] - `references` [EXTRACTED]
+- [[SubtitleSettingsController]] - `method` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
 - [[Toggle]] - `references` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_15

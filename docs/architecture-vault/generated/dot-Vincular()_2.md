@@ -1,21 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
 type: "code"
-community: "Community 24"
-location: "L46"
+community: "Community 15"
+location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_15
 ---
 
 # .Vincular()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [INFERRED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
+- [[RawImage]] - `references` [EXTRACTED]
+- [[Slider]] - `references` [EXTRACTED]
+- [[TMP_Dropdown]] - `references` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
+- [[Toggle]] - `references` [EXTRACTED]
+- [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_15

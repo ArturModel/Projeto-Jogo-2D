@@ -1,18 +1,24 @@
 ---
 type: community
-members: 5
+members: 11
 ---
 
 # Community 30
 
-**Members:** 5 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-Interact()_1]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[dot-RegistrarPistaLegada()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[dot-AoVencerZeNaSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-AtualizarEstadoPortaoCentroNaCena()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-AtualizarLinhaDoTempo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirFrentista()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirFrequentadorBar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirMoradorBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirVizinhaLurdes()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-Tem()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[C2DialogueBranch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[DialogoLinha]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[Disponivel]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,14 +28,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 14]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 1]]
+- 31 edges to [[_COMMUNITY_Community 13]]
+- 14 edges to [[_COMMUNITY_Community 0]]
+- 12 edges to [[_COMMUNITY_Community 25]]
+- 12 edges to [[_COMMUNITY_Community 44]]
+- 6 edges to [[_COMMUNITY_Community 3]]
+- 6 edges to [[_COMMUNITY_Community 21]]
+- 4 edges to [[_COMMUNITY_Community 2]]
+- 3 edges to [[_COMMUNITY_Community 40]]
+- 3 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 46]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 
 ## Top bridge nodes
-- [[ItemDeCena]] - degree 6, connects to 2 communities
-- [[dot-RegistrarPistaLegada()]] - degree 4, connects to 2 communities
-- [[dot-Interact()_1]] - degree 3, connects to 1 community
-- [[ItemDeCena.cs]] - degree 2, connects to 1 community
+- [[dot-Tem()]] - degree 47, connects to 11 communities
+- [[DialogoLinha]] - degree 26, connects to 7 communities
+- [[dot-AoVencerZeNaSinuca()]] - degree 10, connects to 5 communities
+- [[dot-AtualizarLinhaDoTempo()]] - degree 11, connects to 3 communities
+- [[dot-InteragirFrentista()]] - degree 9, connects to 2 communities

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
 community: "Community 5"
-location: "L121"
+location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .PrepararCaminhadaMarcus()
 
 ## Connections
-- [[dot-Awake()_16]] - `calls` [EXTRACTED]
+- [[dot-Awake()_17]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 

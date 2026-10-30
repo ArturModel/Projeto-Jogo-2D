@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 45"
-location: "L737"
+community: "Community 46"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_46
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
-- [[dot-Retroceder()]] - `calls` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_46

@@ -1,20 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 13"
-location: "L584"
+community: "Community 44"
+location: "L636"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_44
 ---
 
 # .InteragirPistaCafe()
 
 ## Connections
+- [[dot-Anotar()]] - `calls` [EXTRACTED]
+- [[dot-Etiqueta()]] - `calls` [EXTRACTED]
 - [[dot-Interact()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_44

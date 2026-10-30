@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
 type: "code"
-community: "Community 17"
-location: "L14"
+community: "Community 14"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_14
 ---
 
 # Instance
 
 ## Connections
-- [[BochaMinigameUI]] - `defines` [EXTRACTED]
+- [[DicaDeTecla]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_14

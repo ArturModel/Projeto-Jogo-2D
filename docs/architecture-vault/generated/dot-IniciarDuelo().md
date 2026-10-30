@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ComecarNovaSerie()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-InicializarCacapas()]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
 - [[Action]] - `references` [EXTRACTED]

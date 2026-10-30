@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
 community: "Community 15"
-location: "L85"
+location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,9 @@ tags:
 # .Vincular()
 
 ## Connections
-- [[Image]] - `references` [EXTRACTED]
+- [[dot-AplicarVolumesGlobais()]] - `calls` [EXTRACTED]
+- [[AudioMixer]] - `references` [EXTRACTED]
+- [[AudioSettingsController]] - `method` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
-- [[SubtitleSettingsController]] - `method` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
-- [[Toggle]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_15

@@ -25,6 +25,7 @@ tags:
 - [[Chapter2Verification.cs]] - `imports` [EXTRACTED]
 - [[CheckpointSystem.cs]] - `imports` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `imports` [EXTRACTED]
+- [[DicaDeTecla.cs]] - `imports` [EXTRACTED]
 - [[GameMessageUI.cs]] - `imports` [EXTRACTED]
 - [[GameState.cs]] - `imports` [EXTRACTED]
 - [[InteracaoCapitulo1.cs]] - `imports` [EXTRACTED]

@@ -41,6 +41,7 @@ tags:
 - [[Chuva.cs]] - `imports` [EXTRACTED]
 - [[ChuvaRolando.cs]] - `imports` [EXTRACTED]
 - [[DentroDaCasaDoAvo.cs]] - `imports` [EXTRACTED]
+- [[DicaDeTecla.cs]] - `imports` [EXTRACTED]
 - [[DoorTrigger.cs]] - `imports` [EXTRACTED]
 - [[EstradaScroller.cs]] - `imports` [EXTRACTED]
 - [[GameMessageUI.cs]] - `imports` [EXTRACTED]

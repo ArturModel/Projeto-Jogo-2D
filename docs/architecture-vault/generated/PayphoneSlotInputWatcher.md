@@ -12,7 +12,7 @@ tags:
 # PayphoneSlotInputWatcher
 
 ## Connections
-- [[dot-Update()_9]] - `method` [EXTRACTED]
+- [[dot-Update()_1]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `contains` [EXTRACTED]
 

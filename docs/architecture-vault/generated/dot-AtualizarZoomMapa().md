@@ -17,7 +17,7 @@ tags:
 - [[dot-CentralizarNoJogador()]] - `calls` [EXTRACTED]
 - [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
 - [[dot-ResetarZoomEPan()]] - `calls` [EXTRACTED]
-- [[dot-Update()_14]] - `calls` [EXTRACTED]
+- [[dot-Update()_16]] - `calls` [EXTRACTED]
 - [[Canvas]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

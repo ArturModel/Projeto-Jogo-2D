@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 27"
+community: "Community 4"
 location: "L220"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_27
+  - community/Community_4
 ---
 
 # .RepousarParaPrevisao()
@@ -20,4 +20,4 @@ tags:
 - [[dot-Step()]] - `calls` [EXTRACTED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_27
+#graphify/code #graphify/INFERRED #community/Community_4

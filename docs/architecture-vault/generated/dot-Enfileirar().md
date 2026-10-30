@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
+- [[dot-Rodar()_2]] - `calls` [EXTRACTED]
 - [[Fala]] - `calls` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 

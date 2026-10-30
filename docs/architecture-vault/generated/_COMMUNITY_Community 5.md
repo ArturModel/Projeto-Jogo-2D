@@ -1,43 +1,72 @@
 ---
 type: community
-members: 32
+members: 61
 ---
 
 # Community 5
 
-**Members:** 32 nodes
+**Members:** 61 nodes
 
 ## Members
+- [[dot-AlternarLanterna()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-AplicarClampBordas()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-AplicarEstadoDaZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-ApoiarPe()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
 - [[dot-Apply()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 - [[dot-AtualizarFeixeLanterna()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
 - [[dot-AtualizarPassada()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-Awake()_16]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-Awake()_17]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
+- [[dot-Avancar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[dot-Awake()_16]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-Awake()_17]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-Awake()_18]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
 - [[dot-BloqueiaEquipamento()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-DefinirLimitesRegiao()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 - [[dot-DeveUsarLanternaAgora()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-Interact()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
-- [[dot-LateUpdate()_5]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-LateUpdate()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-LateUpdate()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-FixedUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-GarantirFundoEscuroCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-Interact()_7]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-LateUpdate()_6]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-LateUpdate()_7]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-LateUpdate()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
+- [[dot-LateUpdate()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 - [[dot-OnApplicationFocus()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-OnDisable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
+- [[dot-OnEnable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
+- [[dot-PosicionarJogadorInicialRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-PrepararCaminhadaMarcus()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
 - [[dot-PrepararFeixeLanterna()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
 - [[dot-PrepararPosesLanterna()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-Reset()]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
 - [[dot-SetFacingScale()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
 - [[dot-ShouldReveal()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-SnapImediatoParaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 - [[dot-SnapToPixel()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-Start()_15]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-SpeedAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-Start()_15]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-Start()_16]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-Start()_17]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-Teleportar()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-TeleportarPara()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-TransicionarPara()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-Update()_22]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-Update()_23]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
 - [[dot-UpdateAnimator()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
 - [[Animator]] - code
+- [[Camera]] - code
+- [[CameraFollow]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 - [[DirecaoAtual]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
 - [[LanternaVisivel]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[LimiteMax]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[LimiteMin]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[MarcusGait]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
 - [[Opacity]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 - [[PlayerController]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[Quadro]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
 - [[QuadroCaminhada]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
 - [[Rigidbody2D]] - code
 - [[SantaRitaExitThreshold]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
 - [[SantaRitaExitThreshold.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
+- [[SantaRitaFootsteps]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
 - [[SantaRitaRoomCutaway]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 - [[SantaRitaRoomCutaway.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 
@@ -49,33 +78,36 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Community 0]]
-- 13 edges to [[_COMMUNITY_Community 6]]
+- 23 edges to [[_COMMUNITY_Community 0]]
+- 15 edges to [[_COMMUNITY_Community 6]]
+- 13 edges to [[_COMMUNITY_Community 2]]
 - 9 edges to [[_COMMUNITY_Community 16]]
-- 4 edges to [[_COMMUNITY_Community 18]]
-- 4 edges to [[_COMMUNITY_Community 20]]
-- 3 edges to [[_COMMUNITY_Community 2]]
+- 8 edges to [[_COMMUNITY_Community 18]]
+- 6 edges to [[_COMMUNITY_Community 1]]
+- 5 edges to [[_COMMUNITY_Community 42]]
+- 5 edges to [[_COMMUNITY_Community 8]]
+- 4 edges to [[_COMMUNITY_Community 26]]
+- 3 edges to [[_COMMUNITY_Community 25]]
+- 3 edges to [[_COMMUNITY_Community 40]]
 - 3 edges to [[_COMMUNITY_Community 11]]
-- 3 edges to [[_COMMUNITY_Community 7]]
-- 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 51]]
-- 2 edges to [[_COMMUNITY_Community 31]]
-- 2 edges to [[_COMMUNITY_Community 14]]
-- 2 edges to [[_COMMUNITY_Community 41]]
-- 1 edge to [[_COMMUNITY_Community 25]]
-- 1 edge to [[_COMMUNITY_Community 40]]
-- 1 edge to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 54]]
+- 2 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 20]]
+- 2 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 33]]
 - 1 edge to [[_COMMUNITY_Community 35]]
-- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 17]]
 - 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 9]]
 
 ## Top bridge nodes
-- [[PlayerController]] - degree 76, connects to 22 communities
+- [[PlayerController]] - degree 76, connects to 15 communities
+- [[CameraFollow]] - degree 22, connects to 7 communities
 - [[SantaRitaRoomCutaway]] - degree 13, connects to 6 communities
-- [[SantaRitaExitThreshold]] - degree 8, connects to 4 communities
-- [[dot-Update()_22]] - degree 7, connects to 2 communities
-- [[Rigidbody2D]] - degree 4, connects to 2 communities
+- [[Camera]] - degree 9, connects to 5 communities
+- [[SantaRitaFootsteps]] - degree 9, connects to 4 communities

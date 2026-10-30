@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-Apply()_5]] - `method` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_7]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_9]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-ShouldReveal()]] - `method` [EXTRACTED]
-- [[dot-Start()_15]] - `method` [EXTRACTED]
+- [[dot-Start()_17]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Opacity]] - `defines` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]

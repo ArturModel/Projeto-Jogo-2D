@@ -12,7 +12,7 @@ tags:
 # .CriarSpriteCirculo()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarBolasUI()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]

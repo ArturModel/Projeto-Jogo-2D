@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 2"
-location: "L635"
+location: "L638"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .AtualizarSpawnPointExistente()
 
 ## Connections
-- [[dot-Configurar()_1]] - `calls` [INFERRED]
+- [[dot-Configurar()_3]] - `calls` [INFERRED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirMundoMultiZonas()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]

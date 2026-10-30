@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
 community: "Community 5"
-location: "L14"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,10 @@ tags:
 # .Start()
 
 ## Connections
-- [[dot-Apply()_5]] - `calls` [EXTRACTED]
-- [[dot-ShouldReveal()]] - `calls` [EXTRACTED]
+- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
+- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
+- [[CameraFollow]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 2"
-location: "L332"
+location: "L336"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .ConfigurarCenaAtual()
 
 ## Connections
-- [[dot-Apply()_3]] - `calls` [EXTRACTED]
+- [[dot-Apply()_4]] - `calls` [EXTRACTED]
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirMundoMultiZonas()]] - `calls` [EXTRACTED]

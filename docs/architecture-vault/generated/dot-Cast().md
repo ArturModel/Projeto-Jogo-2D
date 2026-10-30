@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs"
 type: "code"
-community: "Community 11"
+community: "Community 18"
 location: "L240"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Community_18
 ---
 
 # .Cast()
@@ -21,4 +21,4 @@ tags:
 - [[SantaRitaC2Consolidation]] - `method` [EXTRACTED]
 - [[ShadowCaster2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Community_18

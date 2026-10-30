@@ -1,17 +1,16 @@
 ---
 type: community
-members: 4
+members: 3
 ---
 
 # Community 51
 
-**Members:** 4 nodes
+**Members:** 3 nodes
 
 ## Members
-- [[dot-Avancar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
-- [[dot-Reset()]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
-- [[MarcusGait]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
-- [[Quadro]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[BochaAI]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
+- [[UltimaDecisaoMs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
+- [[UltimosCandidatos]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,13 +20,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 4]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[MarcusGait]] - degree 6, connects to 3 communities
-- [[dot-Avancar()_2]] - degree 5, connects to 3 communities
-- [[dot-Reset()]] - degree 3, connects to 1 community
+- [[BochaAI]] - degree 4, connects to 2 communities

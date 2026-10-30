@@ -1,41 +1,26 @@
 ---
 type: community
-members: 28
+members: 13
 ---
 
 # Community 14
 
-**Members:** 28 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[dot-AoVencerZeNaSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Ativar()]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[dot-Ativar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs
-- [[dot-AtualizarEstadoPortaoCentroNaCena()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AtualizarInvestigacao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-AuditOldFeedback()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
-- [[dot-ConfirmarTestemunhoAtendente()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-DefinirObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-DispararChegadaCasaDoAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Dizer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-IniciarPartidaSinucaComZe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Interagir()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-InteragirAtendenteMercadinho()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirFrentista()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Ligar()]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[dot-Marcar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-NarracaoEntradaCasaAvoRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Ocorrencia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-RegistrarDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-SincronizarDiarioAutomaticoPorFlag()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Start()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-Start()_2]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[dot-Start()_3]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
-- [[dot-Tem()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-TransicionarPara()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-VerificarConclusaoPistasCasaAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[CelularCarro]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[Disponivel]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[dot-Awake()_1]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[dot-Build()]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[dot-Mostrar()]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[dot-Rodar()]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[ContentSizeFitter]] - code
+- [[DicaDeTecla]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[Func]] - code
+- [[HorizontalLayoutGroup]] - code
+- [[Instance]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[LayoutElement]] - code
+- [[Pedido]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[Pedido_1]] - code
+- [[Queue]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,37 +30,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 33 edges to [[_COMMUNITY_Community 13]]
-- 21 edges to [[_COMMUNITY_Community 0]]
-- 14 edges to [[_COMMUNITY_Community 21]]
-- 12 edges to [[_COMMUNITY_Community 2]]
-- 9 edges to [[_COMMUNITY_Community 25]]
-- 9 edges to [[_COMMUNITY_Community 6]]
-- 9 edges to [[_COMMUNITY_Community 40]]
-- 6 edges to [[_COMMUNITY_Community 34]]
-- 5 edges to [[_COMMUNITY_Community 4]]
-- 5 edges to [[_COMMUNITY_Community 28]]
-- 4 edges to [[_COMMUNITY_Community 3]]
-- 4 edges to [[_COMMUNITY_Community 36]]
-- 4 edges to [[_COMMUNITY_Community 54]]
-- 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 29]]
-- 3 edges to [[_COMMUNITY_Community 7]]
-- 2 edges to [[_COMMUNITY_Community 33]]
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 35]]
-- 2 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 19]]
+- 4 edges to [[_COMMUNITY_Community 23]]
+- 3 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 24]]
+- 2 edges to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 42]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 31]]
-- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 34]]
 
 ## Top bridge nodes
-- [[dot-Tem()]] - degree 44, connects to 14 communities
-- [[dot-Marcar()]] - degree 48, connects to 12 communities
-- [[dot-Start()_1]] - degree 13, connects to 8 communities
-- [[dot-AuditOldFeedback()]] - degree 21, connects to 7 communities
-- [[dot-Interagir()]] - degree 15, connects to 6 communities
+- [[DicaDeTecla]] - degree 14, connects to 5 communities
+- [[dot-Build()]] - degree 10, connects to 4 communities
+- [[dot-Rodar()]] - degree 4, connects to 2 communities
+- [[ContentSizeFitter]] - degree 3, connects to 2 communities
+- [[dot-Mostrar()]] - degree 5, connects to 1 community

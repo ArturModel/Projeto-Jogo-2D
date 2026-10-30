@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[InteractionPrompt]] - `contains` [EXTRACTED]
-- [[tmpro]] - `imports` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 - [[unityengine_scenemanagement]] - `imports` [EXTRACTED]
 - [[unityengine_ui]] - `imports` [EXTRACTED]

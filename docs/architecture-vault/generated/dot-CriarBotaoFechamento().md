@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 23"
-location: "L2569"
+location: "L2617"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .CriarBotaoFechamento()
 
 ## Connections
-- [[dot-AbrirPainelFechamento()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]

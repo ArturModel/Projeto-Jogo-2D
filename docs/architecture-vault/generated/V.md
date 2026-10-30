@@ -12,7 +12,7 @@ tags:
 # V
 
 ## Connections
-- [[dot-Quad()]] - `calls` [EXTRACTED]
+- [[dot-Quad()_1]] - `calls` [EXTRACTED]
 - [[dot-SolidV()]] - `calls` [EXTRACTED]
 - [[dot-Sphere()]] - `calls` [EXTRACTED]
 - [[dot-Triangle()]] - `calls` [EXTRACTED]

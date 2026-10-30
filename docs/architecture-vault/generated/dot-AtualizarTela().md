@@ -26,7 +26,7 @@ tags:
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[dot-SetState()]] - `calls` [INFERRED]
 - [[dot-TextoDistancia()]] - `calls` [EXTRACTED]
-- [[dot-Update()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_3]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 

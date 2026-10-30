@@ -1,3 +1,19 @@
+# Adição e Harmonização de Sprites nos Cenários (Flora e Props) — 29/10/2026
+
+- **Autor:** @Venturini01 (Ariel Venturini)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-29_Venturini01_adicao-sprites-cenarios-flora-props.md`](../ai-plans/2026-10-29_Venturini01_adicao-sprites-cenarios-flora-props.md)
+- **Resumo:** Analisado o acervo visual existente em `Assets/Resources/Art/World/` e `Assets/Resources/Art/Props/`. Realizada a substituição de props genéricos provisórios no exterior de C1 (bancos `Bench_Wood` e placas `RoadSign_Blank` substituídos por `BancoPraca.png` e `QuadroAvisos.png`). Adicionados sprites de alta fidelidade regional (Araucárias sulistas `Araucaria.png`, samambaias `Fern.png`, arbustos `Shrub.png`, tufos de capim `GrassClump.png` e canteiros `Flowers.png`) ao longo das 5 zonas de C1 (`EntradaDaCidade`), além de grelhas pluviais de sarjeta e fardos de entrega em `SantaRitaPlaceDressing.cs`. Todos os elementos receberam material lit `WorldLit`, profundidade por Y e suporte a caminhada sob copas com `SantaRitaForeground`. Compilação .NET e validação Graphify concluídas com êxito (`PASS: 94 scripts`).
+
+---
+
+# Leitura de Contexto, Lore e Alinhamento de Arquitetura — 29/10/2026
+
+- **Autor:** @Venturini01 (Ariel Venturini)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-29_Venturini01_leitura-contexto-conversa-lore-projeto.md`](../ai-plans/2026-10-29_Venturini01_leitura-contexto-conversa-lore-projeto.md)
+- **Resumo:** Concluída a leitura aprofundada dos arquivos do arquivo `Conversa.zip` (histórico de conversas do WhatsApp do grupo UNESC com 1.116 linhas, bíblia consolidada v5.0 de lore com backgrounds, roteiros revisados em PDF e assets compartilhados) e de toda a árvore do projeto Unity 2D (`Projeto Jogo 2D/Assets/`, cenas C1/C2, contratos de persistência e governança). Configurado o ambiente local com `graphifyy==0.9.96` no Python 3.14 do usuário e ajustados os scripts de lifecycle (`graphify-project.py`, `graphify-refresh.ps1` e `graphify-validate.ps1`) para descoberta automática de binários em Windows. Atualizado o catálogo de scripts para 94 fontes C# com a inclusão de `DicaDeTecla.cs`. Validação executada com sucesso (`.\scripts\graphify-validate.ps1` PASS em 94 scripts).
+
+---
+
 # Refinamento Visual e Acessibilidade dos Controles dos Menus — 28/10/2026
 
 - **Autor:** @lucamontini (Luca Dalla Lana)

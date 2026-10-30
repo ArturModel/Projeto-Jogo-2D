@@ -13,18 +13,18 @@ tags:
 
 ## Connections
 - [[dot-AteOTempo()]] - `references` [EXTRACTED]
-- [[dot-Awake()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_2]] - `method` [EXTRACTED]
 - [[dot-Curvar()]] - `references` [EXTRACTED]
 - [[dot-Definir()]] - `method` [EXTRACTED]
 - [[dot-Disparar()]] - `method` [EXTRACTED]
 - [[dot-Pitch()]] - `method` [EXTRACTED]
 - [[dot-Tocando()]] - `method` [EXTRACTED]
-- [[dot-Update()_3]] - `method` [EXTRACTED]
+- [[dot-Update()_4]] - `method` [EXTRACTED]
 - [[AudioAmbiente.cs]] - `contains` [EXTRACTED]
 - [[Camada_2]] - `references` [EXTRACTED]
-- [[Camada_1]] - `contains` [EXTRACTED]
+- [[Camada]] - `contains` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
-- [[Instance_1]] - `defines` [EXTRACTED]
+- [[Instance_2]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_19

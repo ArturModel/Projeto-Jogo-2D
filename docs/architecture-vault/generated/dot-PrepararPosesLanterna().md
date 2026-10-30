@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
 community: "Community 5"
-location: "L107"
+location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .PrepararPosesLanterna()
 
 ## Connections
-- [[dot-Awake()_16]] - `calls` [EXTRACTED]
+- [[dot-Awake()_17]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

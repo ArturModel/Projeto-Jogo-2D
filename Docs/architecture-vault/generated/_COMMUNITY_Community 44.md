@@ -1,19 +1,24 @@
 ---
 type: community
-members: 6
+members: 11
 ---
 
 # Community 44
 
-**Members:** 6 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-Apply()_4]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
-- [[dot-Edge()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
-- [[dot-Paint()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
-- [[SantaRitaRuralPaths]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
-- [[Stretch]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
-- [[Stretch_1]] - code
+- [[dot-Anotar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-Etiqueta()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirBalcaoBar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirLivroPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirMarcasBarro()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirPistaCafe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirPistaCartas()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirPistaDesordem()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirPistaNotaFiscal()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-InteragirTelefoneCasaAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-Marcar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,17 +28,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 18]]
-- 3 edges to [[_COMMUNITY_Community 2]]
-- 2 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 16]]
-- 2 edges to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 35]]
+- 29 edges to [[_COMMUNITY_Community 13]]
+- 16 edges to [[_COMMUNITY_Community 0]]
+- 12 edges to [[_COMMUNITY_Community 30]]
+- 6 edges to [[_COMMUNITY_Community 25]]
+- 5 edges to [[_COMMUNITY_Community 21]]
+- 4 edges to [[_COMMUNITY_Community 36]]
+- 3 edges to [[_COMMUNITY_Community 46]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[dot-Paint()]] - degree 11, connects to 5 communities
-- [[dot-Apply()_4]] - degree 7, connects to 4 communities
-- [[SantaRitaRuralPaths]] - degree 5, connects to 1 community
-- [[dot-Edge()]] - degree 4, connects to 1 community
-- [[Stretch]] - degree 3, connects to 1 community
+- [[dot-Marcar()]] - degree 55, connects to 10 communities
+- [[dot-Anotar()]] - degree 20, connects to 3 communities
+- [[dot-InteragirLivroPosto()]] - degree 6, connects to 2 communities
+- [[dot-InteragirPistaNotaFiscal()]] - degree 6, connects to 2 communities
+- [[dot-InteragirTelefoneCasaAvo()]] - degree 6, connects to 2 communities

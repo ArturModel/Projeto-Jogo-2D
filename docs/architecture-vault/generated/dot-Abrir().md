@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarTextoStatusSave()]] - `calls` [EXTRACTED]
-- [[dot-Update()_1]] - `calls` [EXTRACTED]
+- [[dot-Update()_2]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_12

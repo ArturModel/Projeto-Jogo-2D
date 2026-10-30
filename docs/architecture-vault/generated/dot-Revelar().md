@@ -12,7 +12,7 @@ tags:
 # .Revelar()
 
 ## Connections
-- [[dot-Rodar()]] - `calls` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 

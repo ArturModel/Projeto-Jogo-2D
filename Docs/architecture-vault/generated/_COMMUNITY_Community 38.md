@@ -1,38 +1,24 @@
 ---
 type: community
-members: 25
+members: 11
 ---
 
 # Community 38
 
-**Members:** 25 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-Acender()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Achar()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-AlterarVolumeEfeitos()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-AlterarVolumeGeral()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-AlterarVolumeMusica()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-Apagar()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Aplicar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-AplicarVolume()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-AplicarVolumeEmMixer()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-AplicarVolumesGlobais()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-Awake()_12]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Definir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-GarantirValoresPadraoAudiveis()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-InicializarAudioGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-OnDisable()_6]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-OnDisable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Start()_12]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-Trocar()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Update()_16]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[dot-Vincular()_4]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[AudioMixer]] - code
-- [[AudioSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[CamadaDeLuz]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
-- [[Nome]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
+- [[dot-Avancar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Configurar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-OnDeselect()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-OnSelect()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Retroceder()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-TocarSom()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Update()_17]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[BaseEventData]] - code
+- [[HorizontalStepperNavigation]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[IDeselectHandler]] - code
+- [[ISelectHandler]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,17 +28,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 12]]
+- 6 edges to [[_COMMUNITY_Community 28]]
+- 4 edges to [[_COMMUNITY_Community 12]]
 - 2 edges to [[_COMMUNITY_Community 15]]
-- 2 edges to [[_COMMUNITY_Community 42]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[AudioSettingsController]] - degree 16, connects to 4 communities
-- [[CamadaDeLuz]] - degree 15, connects to 4 communities
-- [[AudioMixer]] - degree 5, connects to 1 community
-- [[dot-InicializarAudioGlobal()]] - degree 4, connects to 1 community
-- [[dot-Vincular()_4]] - degree 4, connects to 1 community
+- [[HorizontalStepperNavigation]] - degree 16, connects to 5 communities
+- [[dot-Configurar()_2]] - degree 6, connects to 3 communities
+- [[BaseEventData]] - degree 3, connects to 1 community
+- [[ISelectHandler]] - degree 2, connects to 1 community

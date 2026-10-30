@@ -12,7 +12,7 @@ tags:
 # .EnsureInstance()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [INFERRED]
+- [[dot-ConstruirUI()]] - `calls` [INFERRED]
 - [[dot-InicializarCacapas()]] - `calls` [INFERRED]
 - [[dot-IniciarConfronto()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
