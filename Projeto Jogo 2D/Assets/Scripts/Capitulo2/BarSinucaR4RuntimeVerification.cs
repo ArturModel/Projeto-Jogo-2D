@@ -75,8 +75,8 @@ public sealed partial class Chapter2RuntimeVerification
         {
             Capitulo1Director.InfoZona info;Capitulo1Director.TryObterInfoZona(zone,out info);
             director.TransicionarPara(zone,(info.min+info.max)*.5f,0);yield return new WaitForSecondsRealtime(1.6f);yield return CloseText();
-            var mat=FindObjectsByType<SantaRitaExitThreshold>(FindObjectsSortMode.None).OrderBy(x=>Vector2.Distance(x.transform.position,(info.min+info.max)*.5f)).First();
-            var exit=FindObjectsByType<TransicaoDeZonaTrigger>(FindObjectsSortMode.None).Where(x=>x.Prompt=="Sair").OrderBy(x=>Vector2.Distance(x.transform.position,mat.transform.position)).First();
+            var mat=FindObjectsByType<SantaRitaExitThreshold>().OrderBy(x=>Vector2.Distance(x.transform.position,(info.min+info.max)*.5f)).First();
+            var exit=FindObjectsByType<TransicaoDeZonaTrigger>().Where(x=>x.Prompt=="Sair").OrderBy(x=>Vector2.Distance(x.transform.position,mat.transform.position)).First();
             var bounds=mat.GetComponent<SpriteRenderer>().bounds;Vector2 feet=bounds.center;
             Check(!exit.CanInteractAt(feet+Vector2.up*1.1f),"Saída exige pés no tapete: "+zone);
             yield return Place(feet);Check(Interactable.FindNearest(feet)==exit,"Tapete seleciona saída C1: "+zone);
@@ -87,8 +87,8 @@ public sealed partial class Chapter2RuntimeVerification
         foreach(string room in new[]{"SociedadeBeiraRio","IgrejaMatriz","PrefeituraSantaRita","RodoviariaSantaRita","MercadinhoDeposito","OficinaRadio","CasaCostureira"})
         {
             SceneTransition.Ir(room,"centro");yield return AwaitScene(room);yield return CloseText();
-            var exit=FindObjectsByType<Capitulo2Portal>(FindObjectsSortMode.None).First(x=>x.saidaInterior);
-            var mat=FindObjectsByType<SantaRitaExitThreshold>(FindObjectsSortMode.None).OrderBy(x=>Vector2.Distance(x.transform.position,exit.transform.position)).First();
+            var exit=FindObjectsByType<Capitulo2Portal>().First(x=>x.saidaInterior);
+            var mat=FindObjectsByType<SantaRitaExitThreshold>().OrderBy(x=>Vector2.Distance(x.transform.position,exit.transform.position)).First();
             Vector2 feet=mat.GetComponent<SpriteRenderer>().bounds.center;
             Check(!exit.CanInteractAt(feet+Vector2.up*1.1f),"Saída exige pés no tapete: "+room);
             yield return Place(feet);Check(Interactable.FindNearest(feet)==exit,"Tapete seleciona saída C2: "+room);
@@ -163,20 +163,20 @@ public sealed partial class Chapter2RuntimeVerification
         sinucaMouse=InputSystem.AddDevice<Mouse>("R4RegressionMouse");
         sinucaR4Keyboard=InputSystem.AddDevice<Keyboard>("R4RegressionKeyboard");
         sinucaR4Keyboard.MakeCurrent();
-        var car=FindObjectsByType<InteracaoCapitulo1>(FindObjectsSortMode.None).First(x=>x.Tipo==InteracaoCapitulo1.TipoInteracao.CarroMarcus);
+        var car=FindObjectsByType<InteracaoCapitulo1>().First(x=>x.Tipo==InteracaoCapitulo1.TipoInteracao.CarroMarcus);
         car.Interact();yield return CloseText();
         Check(GameState.Tem(Flags.LanternaDoCarroObtida)&&!GameState.Tem(Flags.MapaDoCarroObtido),"Carro entrega lanterna sem mapa em sessão nova");
         Check(SantaRitaInventory.SlotCount==5&&SantaRitaInventory.HasItem(0)&&!SantaRitaInventory.HasItem(1),"Cinco slots com propriedade derivada do snapshot");
         MapaInterativoUI.EnsureInstance().Abrir();yield return null;
         Check(MapaInterativoUI.IsShowing&&Field<int>(MapaInterativoUI.Instance,"abaAtiva")==1,"Diário acessível antes de obter mapa");MapaInterativoUI.FecharSeAberto();
-        var receipt=FindObjectsByType<InteracaoCapitulo1>(FindObjectsSortMode.None).First(x=>x.Tipo==InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004);
+        var receipt=FindObjectsByType<InteracaoCapitulo1>().First(x=>x.Tipo==InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004);
         receipt.Interact();yield return new WaitForSecondsRealtime(.3f);
         Check(!GameState.Tem(Flags.AchouReciboMercadinho),"Examinar não coleta recibo automaticamente");
         yield return Capture("recibo-antes-coleta");
         yield return ClickR4(GameObject.Find("AcaoDoObjeto").GetComponentInChildren<Button>());
         yield return CloseText();
         Check(SantaRitaInventory.HasItem(2),"Clique PEGAR coloca recibo no inventário");
-        var merchant=FindObjectsByType<InteracaoCapitulo1>(FindObjectsSortMode.None).First(x=>x.Tipo==InteracaoCapitulo1.TipoInteracao.NpcAtendenteMercadinho);
+        var merchant=FindObjectsByType<InteracaoCapitulo1>().First(x=>x.Tipo==InteracaoCapitulo1.TipoInteracao.NpcAtendenteMercadinho);
         merchant.Interact();yield return new WaitForSecondsRealtime(.3f);
         yield return ClickR4(GameObject.Find("AcaoDoObjeto").GetComponentInChildren<Button>());yield return CloseText();
         Check(GameState.Tem(Flags.ApresentouReciboAtendente)&&!SantaRitaInventory.HasItem(2),"Entrega explícita conduz testemunho e retira original");

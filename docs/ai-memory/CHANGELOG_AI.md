@@ -357,3 +357,5 @@ Marcus ciclo limpo concluído tecnicamente: 33 verificações + PASS, builds sem
 02/11 — [Lanterna de costas](../ai-plans/2026-11-02_PatrickDotto_lanterna-costas.md), correção pontual em validação.
 
 Lanterna-costas concluída: captura e QA PASS, builds sem erros/hash igual, índices 112 e saves intactos.
+
+02/11 — [Console limpo](../ai-plans/2026-11-02_PatrickDotto_console-limpo.md): APIs obsoletas e campo não utilizado removidos.

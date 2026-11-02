@@ -361,7 +361,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
             Set(ui,"maosVencidasMarcus",1);Set(ui,"maosVencidasZe",split?1:0);Set(ui,"pontosMarcus",3);Set(ui,"pontosZe",0);Set(ui,"turnoDeMarcus",true);
             for(int i=1;i<=4;i++)Put(i,"ativa",false);
             var fallen=Field<List<int>>(ui,"bolasObjetoCaidasNaTacada");fallen.Clear();fallen.Add(4);
-            Set(ui,"brancaCaiuNestaTacada",false);Set(ui,"bolaMarcadaCaiuNestaTacada",false);Set(ui,"houvePrimeiroContatoBolaObjeto",true);Set(ui,"houveToqueTabelaOuCacapa",true);
+            Set(ui,"brancaCaiuNestaTacada",false);Set(ui,"houvePrimeiroContatoBolaObjeto",true);Set(ui,"houveToqueTabelaOuCacapa",true);
             Invoke(ui,"ResolverFimDaTacada");
             Check(Field<int>(ui,"maosVencidasMarcus")==2&&Field<int>(ui,"maosVencidasZe")== (split?1:0)&&Field<object>(ui,"estado").ToString()=="FimDeSerieVitoria",
                 "Sinuca: resolução da última caçapa encerra série "+(split?"2-1":"2-0")+" sem terceira mão forçada.");
@@ -369,7 +369,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
         ui.IniciarDuelo(null);ui.StopAllCoroutines();Invoke(ui,"ConfigurarMao",2);
         Set(ui,"turnoDeMarcus",true);Set(ui,"numeroBolaMarcada",1);Put(1,"ativa",false);Put(2,"ativa",false);
         var simultaneous=Field<List<int>>(ui,"bolasObjetoCaidasNaTacada");simultaneous.Clear();simultaneous.Add(1);simultaneous.Add(2);
-        Set(ui,"bolaMarcadaCaiuNestaTacada",true);Set(ui,"brancaCaiuNestaTacada",false);Set(ui,"houvePrimeiroContatoBolaObjeto",true);Set(ui,"houveToqueTabelaOuCacapa",true);
+        Set(ui,"brancaCaiuNestaTacada",false);Set(ui,"houvePrimeiroContatoBolaObjeto",true);Set(ui,"houveToqueTabelaOuCacapa",true);
         Invoke(ui,"ResolverFimDaTacada");
         Check(Field<int>(ui,"pontosMarcus")==0&&ui.ValidarInvarianteSeteBolas()&&Field<bool>(ui,"brancaNaMao"),"Sinuca: marcada + legal simultâneas anulam pontos e repõem pelo resolver real.");
         ui.StopAllCoroutines();ui.Fechar();

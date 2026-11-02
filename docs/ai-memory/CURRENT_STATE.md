@@ -70,3 +70,5 @@ Trilhas C2 fornecidas integradas por cena e inventário protegido contra ícone 
 02/11 — Ciclo limpo de Marcus substitui transformações acumuladas do ciclo anterior: duas pernas articuladas completas por pose; lanterna regenerada e alpha validado nas 102 células, loader rejeita dados inválidos. Export-Marcus.ps1 reproduz exportação em sequência. Player QA 33 verificações + PASS, 4 direções/repouso com/sem equipamento, builds/hash iguais; plano marcus-ciclo-limpo.
 
 02/11 — Ajuste pontual lanterna de costas: corpo oculta o objeto, feixe e estado permanecem ativos; outras direções preservadas. QA 33 + PASS e builds sem erros/hash igual, plano lanterna-costas.
+
+02/11 — Console: chamadas FindObjectsSortMode.None substituídas por overload atual, campo legado sem leitura removido com referências QA. Compilação real C# sem avisos/erros; índices 112.

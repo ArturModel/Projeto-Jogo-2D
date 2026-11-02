@@ -161,7 +161,7 @@ public class SinucaMinigameUI : MonoBehaviour
     private bool houvePrimeiroContatoBolaObjeto = false;
     private bool houveToqueTabelaOuCacapa = false;
     private bool brancaCaiuNestaTacada = false;
-    private bool bolaMarcadaCaiuNestaTacada = false;
+
     private readonly List<int> bolasObjetoCaidasNaTacada = new List<int>();
 
     // Terror psicológico contextual do Bar do Zé e síntese de áudio por evento
@@ -1750,7 +1750,7 @@ public class SinucaMinigameUI : MonoBehaviour
         bolaCantada = turnoDeMarcus && cantadaManual>0 ? cantadaManual : cantada.atingeBola ? cantada.numeroBolaAlvo : regrasBrasileiras != null ? regrasBrasileiras.OnBall : 1;
         houveToqueTabelaOuCacapa = false;
         brancaCaiuNestaTacada = false;
-        bolaMarcadaCaiuNestaTacada = false;
+
         bolasObjetoCaidasNaTacada.Clear();
 
         for (int i = 0; i < bolas.Count; i++)
@@ -2045,8 +2045,6 @@ public class SinucaMinigameUI : MonoBehaviour
         {
             if (!bolasObjetoCaidasNaTacada.Contains(indiceBola))
                 bolasObjetoCaidasNaTacada.Add(indiceBola);
-            if (indiceBola == numeroBolaMarcada)
-                bolaMarcadaCaiuNestaTacada = true;
         }
     }
 

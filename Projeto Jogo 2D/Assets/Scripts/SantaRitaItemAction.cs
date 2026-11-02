@@ -7,7 +7,7 @@ public sealed class SantaRitaItemAction : MonoBehaviour
 {
     public static void Oferecer(string text, Action action)
     {
-        foreach (var old in FindObjectsByType<SantaRitaItemAction>(FindObjectsSortMode.None)) Destroy(old.gameObject);
+        foreach (var old in FindObjectsByType<SantaRitaItemAction>()) Destroy(old.gameObject);
         var canvas=UIFactory.CreateCanvas(null,"AcaoDoObjeto",9100);
         canvas.gameObject.AddComponent<GraphicRaycaster>();
         var host=canvas.gameObject.AddComponent<SantaRitaItemAction>();
