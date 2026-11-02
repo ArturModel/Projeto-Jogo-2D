@@ -111,12 +111,31 @@ public class PlayerController : MonoBehaviour
         if (!File.Exists(path)) { Debug.LogError("Poses de Marcus com lanterna ausentes."); return; }
         var sheet = new Texture2D(2,2,TextureFormat.RGBA32,false);
         ImageConversion.LoadImage(sheet, File.ReadAllBytes(path)); sheet.filterMode=FilterMode.Point; sheet.wrapMode=TextureWrapMode.Clamp;
-        quadrosCaminhadaComLanterna = new Sprite[3,8]; repousoComLanterna = new Sprite[3];
-        for(int row=0;row<3;row++) for(int frame=0;frame<9;frame++)
+        int frames=sheet.width/64-1;
+        if(!ValidarFolhaMarcus(sheet,frames)){Debug.LogError("Folha da lanterna invalida; preservando corpo sem retangulo opaco.");return;}
+        quadrosCaminhadaComLanterna = new Sprite[3,frames]; repousoComLanterna = new Sprite[3];
+        for(int row=0;row<3;row++) for(int frame=0;frame<=frames;frame++)
         {
             var pose=Sprite.Create(sheet,new Rect(frame*64,sheet.height-(row+1)*64,64,64),new Vector2(.5f,.125f),32,0,SpriteMeshType.FullRect);
-            if(frame<8)quadrosCaminhadaComLanterna[row,frame]=pose;else repousoComLanterna[row]=pose;
+            if(frame<frames)quadrosCaminhadaComLanterna[row,frame]=pose;else repousoComLanterna[row]=pose;
         }
+    }
+
+    private static bool ValidarFolhaMarcus(Texture2D sheet,int frames)
+    {
+        if((frames!=8&&frames!=16)||sheet.width!=(frames+1)*64||sheet.height!=192)return false;
+        var pixels=sheet.GetPixels32();
+        for(int row=0;row<3;row++)for(int f=0;f<=frames;f++)
+        {
+            int count=0;
+            for(int y=0;y<64;y++)for(int x=0;x<64;x++)
+            {
+                byte alpha=pixels[(row*64+y)*sheet.width+f*64+x].a;
+                if(alpha>32){if(x==0||x==63||y==0||y==63)return false;count++;}
+            }
+            if(count<180||count>1400)return false;
+        }
+        return true;
     }
 
     private void PrepararCaminhadaMarcus()
@@ -128,7 +147,8 @@ public class PlayerController : MonoBehaviour
         if (!ImageConversion.LoadImage(folha, File.ReadAllBytes(arquivo))) return;
         folha.filterMode = FilterMode.Point;
         folha.wrapMode = TextureWrapMode.Clamp;
-        totalQuadros = folha.width >= 512 ? 8 : 6;
+        totalQuadros = folha.width >= 1088 ? 16 : folha.width >= 512 ? 8 : 6;
+        if(folha.width>=576&&!ValidarFolhaMarcus(folha,totalQuadros)){Debug.LogError("Folha de caminhada invalida.");return;}
         quadrosCaminhada = new Sprite[3, totalQuadros];
         for (int direcao = 0; direcao < 3; direcao++)
             for (int passo = 0; passo < totalQuadros; passo++)
@@ -138,7 +158,7 @@ public class PlayerController : MonoBehaviour
         quadrosRepouso = new Sprite[3];
         for (int direcao = 0; direcao < 3; direcao++)
             quadrosRepouso[direcao] = folha.width >= 576 ? Sprite.Create(folha,
-                new Rect(512, folha.height - (direcao + 1) * 64, 64, 64),
+                new Rect(totalQuadros*64, folha.height - (direcao + 1) * 64, 64, 64),
                 new Vector2(.5f, .125f), 32f, 0, SpriteMeshType.FullRect) : quadrosCaminhada[direcao, 0];
 
         // A arte anterior trazia seis quadros no Animator, mas quase todos
@@ -363,22 +383,24 @@ public class PlayerController : MonoBehaviour
         // A pausa conserva a pose; diálogo e parada voltam ao repouso sem som.
         if (Time.timeScale == 0 || MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
             SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
+        bool andando = !GameMessageUI.IsShowing && (distancia >= .0001f || currentVelocity.sqrMagnitude > .0001f);
+        if(!andando)passada.Reset();
         int apoios = 0;
         passada.Avancar(GameMessageUI.IsShowing ? 0 : distancia, () => apoios++);
         QuadroCaminhada = passada.Quadro;
-        int quadro = totalQuadros == 8 ? QuadroCaminhada : QuadroCaminhada * totalQuadros / 8;
+        int quadro = totalQuadros == 16 ? passada.QuadroDetalhado : totalQuadros == 8 ? QuadroCaminhada : QuadroCaminhada * totalQuadros / 8;
         if (quadrosCaminhada != null)
         {
             int linha = facingDirection == DirUp ? 1 :
                 (facingDirection == DirLeft || facingDirection == DirRight ? 2 : 0);
-            bool equipada=DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna!=null;
-            corpo.sprite = distancia < .0001f || GameMessageUI.IsShowing ?
+            bool equipada=linha!=1 && DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna!=null; // De costas, o corpo oculta o objeto; o feixe continua ativo.
+            corpo.sprite = !andando ?
                 (equipada?repousoComLanterna[linha]:quadrosRepouso[linha]) :
-                (equipada?quadrosCaminhadaComLanterna[linha,QuadroCaminhada]:quadrosCaminhada[linha,quadro]);
+                (equipada?quadrosCaminhadaComLanterna[linha,quadrosCaminhadaComLanterna.GetLength(1)==16?passada.QuadroDetalhado:QuadroCaminhada]:quadrosCaminhada[linha,quadro]);
         }
         // Pose já aplicada neste frame: som e imagem compartilham o contato.
         for (int i = 0; i < apoios; i++) PeApoiou?.Invoke();
-        AtualizarFeixeLanterna(QuadroCaminhada, distancia > .0001f);
+        AtualizarFeixeLanterna(totalQuadros==16?passada.QuadroDetalhado:QuadroCaminhada, andando);
     }
 
     private void AtualizarFeixeLanterna(int quadro, bool andando)
@@ -388,7 +410,7 @@ public class PlayerController : MonoBehaviour
         flashlight.gameObject.SetActive(visivel);
         if (!visivel) return;
         // As coordenadas são as lentes desenhadas na folha Aseprite (64 px, pivô nos pés).
-        int bob = andando ? new[] {0,1,0,-1,0,1,0,-1}[quadro] + 1 : 0;
+        int bob = andando ? -Mathf.RoundToInt(Mathf.Pow(Mathf.Sin(quadro*Mathf.PI/(totalQuadros==16?8f:4f)),2)) : 0;
         Vector2 lente = facingDirection == DirDown ? new Vector2(40,46+bob) :
             facingDirection == DirUp ? new Vector2(40,28+bob) : new Vector2(16,36+bob);
         Vector2 offset = new Vector2((lente.x-32)/32f,(56-lente.y)/32f);

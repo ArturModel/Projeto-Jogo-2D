@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 23"
-location: "L520"
+location: "L2773"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,15 @@ tags:
 # .Posicionar()
 
 ## Connections
-- [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
-- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
+- [[dot-AtualizarTextosHUD()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirPainelEfeitoOpcional()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
+- [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoHUD()]] - `calls` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_23

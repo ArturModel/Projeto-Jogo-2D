@@ -1,22 +1,28 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 3"
-location: "L435"
+community: "Community 100"
+location: "L887"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_100
 ---
 
 # .ConfigurarMao()
 
 ## Connections
+- [[dot-AplicarPercepcaoPorMao()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarBarraForcaVisual()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarTextosHUD()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
 - [[dot-ComecarNovaSerie()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirMao()]] - `calls` [EXTRACTED]
-- [[dot-PosicionarBolasDeterministico()]] - `calls` [EXTRACTED]
-- [[dot-SimularTesteDeInvariantes()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[dot-SelecionarEfeitoBranca()]] - `calls` [EXTRACTED]
+- [[dot-SincronizarTransformBolas()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[SinuquinhaRules]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_100

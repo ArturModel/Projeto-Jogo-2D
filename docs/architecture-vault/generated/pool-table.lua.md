@@ -12,7 +12,7 @@ tags:
 # pool-table.lua
 
 ## Connections
-- [[color()_1]] - `contains` [EXTRACTED]
+- [[color()]] - `contains` [EXTRACTED]
 - [[dot()]] - `contains` [EXTRACTED]
 - [[rect()_3]] - `contains` [EXTRACTED]
 

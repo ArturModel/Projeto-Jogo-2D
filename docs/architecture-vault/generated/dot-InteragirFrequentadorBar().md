@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 30"
-location: "L878"
+community: "Community 86"
+location: "L890"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_86
 ---
 
 # .InteragirFrequentadorBar()
@@ -22,4 +22,4 @@ tags:
 - [[DialogoLinha]] - `calls` [INFERRED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_86

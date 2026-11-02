@@ -1,0 +1,12 @@
+PASS original intacto: Centro_loop.ogg
+PASS original intacto: Cemiterio_loop.ogg
+PASS original intacto: Bocha_loop.ogg
+PASS nenhum ponteiro LFS sem materializar em Assets
+PASS PNG real: CuiaBar
+PASS PNG real: Inter1994Detalhe
+PASS compilacao C# com referencias Unity via resposta Bee; somente avisos existentes.
+PASS MCP reconectado ao projeto correto; Resources.Load CuiaBar nao nulo.
+PASS Player QA: 137 verificacoes + encerramento; arte/inventario e trilhas em onze visitas a cenas.
+PASS loop real atravessando fim dos OGGs; volume/filtro/contexto e preferencia musical.
+PASS builds QA/normal sem erros; hash de Assets identico, QA/autoria excluidos do normal.
+LIMITES ensaio completo no Player QA, nao no Editor; nao equivale a audicao subjetiva nem campanha completa.

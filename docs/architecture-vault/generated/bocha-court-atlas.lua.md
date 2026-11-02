@@ -12,7 +12,7 @@ tags:
 # bocha-court-atlas.lua
 
 ## Connections
-- [[box()_2]] - `contains` [EXTRACTED]
+- [[box()_4]] - `contains` [EXTRACTED]
 - [[rgb()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_67

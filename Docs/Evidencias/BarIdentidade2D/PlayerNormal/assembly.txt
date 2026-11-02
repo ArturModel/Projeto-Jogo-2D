@@ -1,0 +1,3 @@
+PASS Player normal sem tipos de autoria/QA
+PASS Mesmo SHA256 de fontes/cenas/dados/texturas/materiais/metas entre QA e Player normal
+SHA256 C#/cenas/dados/texturas/materiais/metas: f8a49adb2fd08208adc6d42d20c9ff0da6acee1fe2c41b853d37161eb1b392fc

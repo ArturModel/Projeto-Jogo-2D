@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 3"
+community: "Community 36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_36
 ---
 
 # Action
@@ -16,11 +16,13 @@ tags:
 - [[dot-Avancar()_2]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
+- [[dot-CaptureArt()]] - `references` [EXTRACTED]
 - [[dot-ComecarNovaSerie()]] - `references` [EXTRACTED]
 - [[dot-Dialogo()]] - `references` [EXTRACTED]
 - [[dot-Falar()_1]] - `references` [EXTRACTED]
 - [[dot-IniciarConfronto()]] - `references` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `references` [EXTRACTED]
+- [[dot-Oferecer()]] - `references` [EXTRACTED]
 - [[dot-Show()_1]] - `references` [EXTRACTED]
 - [[dot-Show()_2]] - `references` [EXTRACTED]
 - [[dot-ShowDialogue()]] - `references` [EXTRACTED]
@@ -33,6 +35,9 @@ tags:
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
+- [[SantaRitaItemHover]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[SinucaSpinSelector]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_36

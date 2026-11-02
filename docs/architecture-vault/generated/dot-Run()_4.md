@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
 community: "Community 6"
-location: "L157"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,14 +12,11 @@ tags:
 # .Run()
 
 ## Connections
-- [[dot-ApprovedScenes()]] - `calls` [EXTRACTED]
-- [[dot-BuildFinalLivingWorld()]] - `calls` [EXTRACTED]
-- [[dot-BuildQA()]] - `calls` [EXTRACTED]
-- [[dot-RegisterCampaignScenes()]] - `calls` [EXTRACTED]
-- [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
-- [[dot-Revision()]] - `calls` [EXTRACTED]
-- [[dot-Scenes()]] - `calls` [EXTRACTED]
-- [[dot-SourceHash()]] - `calls` [EXTRACTED]
-- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
+- [[dot-ConfigureArt()]] - `calls` [EXTRACTED]
+- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
+- [[dot-Exterior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_2]] - `calls` [EXTRACTED]
+- [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_6

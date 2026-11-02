@@ -1,20 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 3"
-location: "L557"
+community: "Community 21"
+location: "L1072"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_21
 ---
 
 # .AtualizarRegraBolaMarcadaAntesDoTurno()
 
 ## Connections
-- [[dot-AtualizarVisualBolasMarcadas()]] - `calls` [EXTRACTED]
+- [[dot-CanNominate()_1]] - `calls` [INFERRED]
 - [[dot-IniciarTurnoAtual()]] - `calls` [EXTRACTED]
-- [[dot-SimularTesteDeInvariantes()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_21

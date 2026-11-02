@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
 type: "code"
-community: "Community 6"
+community: "Community 49"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_49
 ---
 
 # .Configurar()
@@ -15,4 +15,4 @@ tags:
 - [[dot-AtualizarSpawnPointExistente()]] - `calls` [INFERRED]
 - [[SpawnPoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_49

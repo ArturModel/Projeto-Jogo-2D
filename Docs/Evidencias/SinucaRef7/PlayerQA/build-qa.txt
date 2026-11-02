@@ -1,0 +1,11 @@
+Unity 6000.6.0f1 Windows x64 Development QA
+Succeeded
+Erros: 0
+Bytes: 314887809
+Duração: 00:01:54.5678018
+Executável: C:/Users/Usuario/Projeto-Jogo-2D/Build/SinucaRef7QA/SantaRita.exe
+UTC: 2026-10-31T20:15:26.1435244Z
+Commit base: 30d811c9dc27006507e821807b395c696c4e6f69 (inclui alterações locais desta revisão)
+SHA256 C#/cenas/dados/texturas/materiais/metas: bf2e8b637196f2ea621b9a3d9c4b6d8c456608b3bc0432409efcf3662031890e
+SO do Editor: Windows 11  (10.0.26300)
+Target: StandaloneWindows64 / D3D11

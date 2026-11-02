@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
 community: "Community 2"
-location: "L57"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .TentarTransicionar()
 
 ## Connections
-- [[dot-Interact()_2]] - `calls` [EXTRACTED]
+- [[dot-Interact()_3]] - `calls` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [INFERRED]

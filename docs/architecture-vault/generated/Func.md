@@ -14,5 +14,6 @@ tags:
 - [[dot-CriarPisoDeZona()]] - `references` [EXTRACTED]
 - [[dot-Mostrar()]] - `references` [EXTRACTED]
 - [[Pedido]] - `references` [EXTRACTED]
+- [[SinucaSpinSelector]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_14

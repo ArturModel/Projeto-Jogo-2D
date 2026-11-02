@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 40"
+community: "Community 19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_19
 ---
 
 # Dictionary
@@ -18,8 +18,10 @@ tags:
 - [[GameState]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `references` [EXTRACTED]
+- [[SantaRitaBarLayout]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
 - [[SantaRitaGeography]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_19

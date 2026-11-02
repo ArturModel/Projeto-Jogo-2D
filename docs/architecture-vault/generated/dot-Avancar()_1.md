@@ -1,19 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 38"
-location: "L772"
+community: "Community 36"
+location: "L443"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_36
 ---
 
 # .Avancar()
 
 ## Connections
-- [[dot-TocarSom()]] - `calls` [EXTRACTED]
-- [[dot-Update()_17]] - `calls` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
+- [[dot-Fechar()_4]] - `calls` [EXTRACTED]
+- [[dot-Play()]] - `calls` [EXTRACTED]
+- [[dot-RotinaContinuacao()]] - `calls` [EXTRACTED]
+- [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
+- [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_36

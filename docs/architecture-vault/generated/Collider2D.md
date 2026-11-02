@@ -11,12 +11,12 @@ tags:
 # Collider2D
 
 ## Connections
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-Atualizar()]] - `references` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `references` [EXTRACTED]
-- [[dot-Awake()_13]] - `references` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()_2]] - `references` [EXTRACTED]
+- [[dot-Awake()_11]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()_1]] - `references` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()_2]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()]] - `references` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]

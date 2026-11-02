@@ -9,7 +9,7 @@ members: 3
 
 ## Members
 - [[bocha-court-atlas.lua]] - code - Tools/Aseprite/bocha-court-atlas.lua
-- [[box()_2]] - code - Tools/Aseprite/bocha-court-atlas.lua
+- [[box()_4]] - code - Tools/Aseprite/bocha-court-atlas.lua
 - [[rgb()_1]] - code - Tools/Aseprite/bocha-court-atlas.lua
 
 ## Live Query (requires Dataview plugin)

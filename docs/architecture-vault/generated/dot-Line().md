@@ -12,8 +12,8 @@ tags:
 # .Line()
 
 ## Connections
-- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
-- [[dot-Ring()]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_3]] - `calls` [EXTRACTED]
+- [[dot-Ring()_1]] - `calls` [EXTRACTED]
 - [[dot-SolidV()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

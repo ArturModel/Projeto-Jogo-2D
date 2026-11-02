@@ -1,0 +1,10 @@
+PASS runtime SantaRitaBarLayout presente
+PASS runtime SantaRitaInventory presente
+PASS runtime SantaRitaItemAction presente
+PASS runtime SinucaBrasileiraRules presente
+PASS runtime SinucaSpinSelector presente
+PASS runtime SinucaTableView presente
+PASS Chapter2RuntimeVerification ausente
+PASS método SimularTesteDeInvariantes ausente
+PASS BeginIsolatedTests ausente
+PASS QA e normal compilados do mesmo hash de fontes

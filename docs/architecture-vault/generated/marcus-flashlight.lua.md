@@ -12,8 +12,8 @@ tags:
 # marcus-flashlight.lua
 
 ## Connections
-- [[c()_3]] - `contains` [EXTRACTED]
-- [[line()_1]] - `contains` [EXTRACTED]
+- [[c()_5]] - `contains` [EXTRACTED]
+- [[line()_2]] - `contains` [EXTRACTED]
 - [[rect()_2]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_61

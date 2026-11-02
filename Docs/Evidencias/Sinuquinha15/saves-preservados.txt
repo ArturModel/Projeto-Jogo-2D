@@ -1,0 +1,19 @@
+Auditoria de saves pessoais — Sinuquinha15, rodada final.
+Referência de hashes capturada em 31/10/2026 antes da validação final.
+A captura mais antiga tinha três mudanças anteriores ao snapshot inicial desta tarefa; preservadas sem rollback.
+PASS santa_rita_save_v2_slot_0.json
+PASS santa_rita_save_v2_slot_1.json
+PASS santa_rita_save_v2_slot_2.json
+PASS santa_rita_save_v2_slot_4.json
+PASS santa_rita_save_v2.bak
+PASS santa_rita_save_v2.json
+
+Encerramento da validacao:
+PASS RAM restaurada campo a campo.
+Indicador nao salvo preservado por conservacao: RAM difere de todos os snapshots em disco.
+PASS santa_rita_save_v2_slot_0.json
+PASS santa_rita_save_v2_slot_1.json
+PASS santa_rita_save_v2_slot_2.json
+PASS santa_rita_save_v2_slot_4.json
+PASS santa_rita_save_v2.bak
+PASS santa_rita_save_v2.json

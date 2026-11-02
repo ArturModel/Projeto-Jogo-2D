@@ -5,14 +5,15 @@ using UnityEngine.Rendering.Universal;
 public sealed class SantaRitaRimLight : MonoBehaviour
 {
     SpriteRenderer body,rim;MaterialPropertyBlock block;Light2D[] lights;float nextScan;
-    void Start()
+    void OnEnable()
     {
         body=GetComponent<SpriteRenderer>();var mat=Resources.Load<Material>("Art/PixelRim");if(mat==null||body==null){enabled=false;return;}
-        var go=new GameObject("RecorteDaLuz");go.transform.SetParent(transform,false);rim=go.AddComponent<SpriteRenderer>();rim.sharedMaterial=mat;block=new MaterialPropertyBlock();
+        var existing=transform.Find("RecorteDaLuz");var go=existing!=null?existing.gameObject:new GameObject("RecorteDaLuz");go.transform.SetParent(transform,false);rim=go.GetComponent<SpriteRenderer>();if(rim==null)rim=go.AddComponent<SpriteRenderer>();rim.sharedMaterial=mat;block=new MaterialPropertyBlock();
     }
     void LateUpdate()
     {
-        if(rim==null)return;
+        if(rim==null||body==null)return;
+        if(block==null)block=new MaterialPropertyBlock();
         if(Time.unscaledTime>nextScan){nextScan=Time.unscaledTime+2;lights=FindObjectsByType<Light2D>();}
         Light2D best=null;float strength=0;
         if(lights!=null)foreach(var l in lights)

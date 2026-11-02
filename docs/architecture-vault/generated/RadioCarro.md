@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs"
 type: "code"
-community: "Community 36"
+community: "Community 54"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_54
 ---
 
 # RadioCarro
@@ -18,4 +18,4 @@ tags:
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[RadioCarro.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_54

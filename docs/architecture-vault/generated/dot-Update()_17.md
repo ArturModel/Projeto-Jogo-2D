@@ -1,19 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 38"
-location: "L737"
+community: "Community 34"
+location: "L492"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_34
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
-- [[dot-Retroceder()]] - `calls` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
+- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
+- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_3]] - `calls` [EXTRACTED]
+- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
+- [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_34

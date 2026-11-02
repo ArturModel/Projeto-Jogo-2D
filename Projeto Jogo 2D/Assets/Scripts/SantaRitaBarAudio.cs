@@ -34,6 +34,13 @@ public sealed class SantaRitaBarAudio : MonoBehaviour
         return mao >= 3 ? .13f : 0;
     }
 
+    private void OnEnable()
+    {
+        instance=this;
+        var existing=GetComponents<AudioSource>();
+        if(existing.Length==layers.Length)for(int i=0;i<layers.Length;i++)layers[i]=existing[i];
+    }
+
     private void Update()
     {
         bool active = inside && Capitulo1Director.Instance != null;
@@ -41,6 +48,7 @@ public sealed class SantaRitaBarAudio : MonoBehaviour
         for (int i = 0; i < layers.Length; i++)
         {
             var source = layers[i];
+            if(source==null)continue;
             if (pause != paused) { if (pause) source.Pause(); else source.UnPause(); }
             float target = active ? VolumeDaCamada(i, hand) * Mathf.Clamp01(PlayerPrefs.GetFloat("audio_efeitos", 1)) : 0;
             if (!pause && target > 0 && !source.isPlaying) source.Play();

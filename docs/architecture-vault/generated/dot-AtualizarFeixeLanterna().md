@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 5"
-location: "L384"
+community: "Community 44"
+location: "L406"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_44
 ---
 
 # .AtualizarFeixeLanterna()
@@ -17,4 +17,4 @@ tags:
 - [[dot-SnapToPixel()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_44

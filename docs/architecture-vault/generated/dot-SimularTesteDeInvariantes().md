@@ -1,23 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 3"
-location: "L1372"
+community: "Community 43"
+location: "L2783"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_3
+  - graphify/INFERRED
+  - community/Community_43
 ---
 
 # .SimularTesteDeInvariantes()
 
 ## Connections
-- [[dot-AtualizarRegraBolaMarcadaAntesDoTurno()]] - `calls` [EXTRACTED]
-- [[dot-ConfigurarMao()]] - `calls` [EXTRACTED]
-- [[dot-PosicaoValidaSemColisao()]] - `calls` [EXTRACTED]
-- [[dot-ResolverFimDaTacada()]] - `calls` [EXTRACTED]
+- [[dot-Resolve()_1]] - `calls` [INFERRED]
 - [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
-- [[dot-ValidarInvarianteSeteBolas()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[SinuquinhaRules]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/INFERRED #community/Community_43

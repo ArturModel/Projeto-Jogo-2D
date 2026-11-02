@@ -1,19 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 5"
-location: "L122"
+community: "Community 44"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_44
 ---
 
 # .PrepararCaminhadaMarcus()
 
 ## Connections
-- [[dot-Awake()_17]] - `calls` [EXTRACTED]
+- [[dot-Awake()_13]] - `calls` [EXTRACTED]
+- [[dot-ValidarFolhaMarcus()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_44

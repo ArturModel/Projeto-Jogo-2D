@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
 community: "Community 0"
-location: "L29"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -32,7 +32,7 @@ tags:
 - [[dot-Start()]] - `calls` [INFERRED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[dot-Travel()]] - `calls` [INFERRED]
-- [[dot-Use()]] - `calls` [INFERRED]
+- [[dot-Use()]] - `calls` [EXTRACTED]
 - [[dot-Walking()]] - `calls` [INFERRED]
 - [[Capitulo2Interactable]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

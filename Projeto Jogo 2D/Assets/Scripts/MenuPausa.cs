@@ -72,6 +72,7 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
+        if (PayphoneCheckpoint.IsSaveUIOpen) return;
         if (Keyboard.current == null ||
             !Keyboard.current.escapeKey.wasPressedThisFrame ||
             quadroDoUltimoEsc == Time.frameCount)
@@ -129,6 +130,17 @@ public class MenuPausa : MonoBehaviour
         }
 
         raiz.SetActive(false);
+    }
+
+    public void AbrirCarregar()
+    {
+        // Keep pause frozen behind the existing five-slot selector; cancel returns here.
+        if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.CancelarCargaAoSuspender();
+        PayphoneCheckpoint.AbrirSelecaoCarregar(Abrir, () =>
+        {
+            if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.Fechar();
+            Fechar();
+        });
     }
 
     public void VoltarAoMenu()
@@ -245,16 +257,19 @@ public class MenuPausa : MonoBehaviour
         RectTransform indPausa = IndicadorPausa(pausaRect);
 
         Button continuar = BotaoPausa(pausaRect, "Continuar", 44f, indPausa);
-        Button opcoes = BotaoPausa(pausaRect, "Configurações", 12f, indPausa);
-        Button menu = BotaoPausa(pausaRect, "Menu Principal", -20f, indPausa);
-        Button sair = BotaoPausa(pausaRect, "Sair", -52f, indPausa);
+        Button carregar = BotaoPausa(pausaRect, "Carregar Jogo", 16f, indPausa);
+        Button opcoes = BotaoPausa(pausaRect, "Configurações", -12f, indPausa);
+        Button menu = BotaoPausa(pausaRect, "Menu Principal", -40f, indPausa);
+        Button sair = BotaoPausa(pausaRect, "Sair", -68f, indPausa);
 
         rotuloStatusSave = Rotulo(pausaRect, "", 11f, new Vector2(0f, -105f),
                                   new Vector2(LarguraPausa - 30f, 22f), TextAlignmentOptions.Center);
         rotuloStatusSave.color = new Color(0.65f, 0.62f, 0.56f, 0.75f);
         rotuloStatusSave.textWrappingMode = TextWrappingModes.Normal;
 
+        foreach(var item in new[]{continuar,carregar,opcoes,menu,sair}){var r=item.GetComponent<RectTransform>();r.sizeDelta=new Vector2(r.sizeDelta.x,26f);}
         continuar.onClick.AddListener(Fechar);
+        carregar.onClick.AddListener(AbrirCarregar);
         menu.onClick.AddListener(VoltarAoMenu);
         sair.onClick.AddListener(Sair);
         primeiroBotao = continuar.gameObject;

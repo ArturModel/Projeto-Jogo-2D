@@ -13,5 +13,7 @@ tags:
 ## Connections
 - [[Chapter2BuildVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Actors.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

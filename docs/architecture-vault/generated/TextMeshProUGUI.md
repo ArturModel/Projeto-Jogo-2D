@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 23"
+community: "Community 51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_51
 ---
 
 # TextMeshProUGUI
@@ -13,13 +13,14 @@ tags:
 ## Connections
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
-- [[dot-ConstruirModal()]] - `references` [EXTRACTED]
 - [[dot-CreateLabel()]] - `references` [EXTRACTED]
-- [[dot-CriarTexto()]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
+- [[dot-CriarTexto()]] - `references` [EXTRACTED]
 - [[dot-CriarTextoFechamento()]] - `references` [EXTRACTED]
 - [[dot-Label()]] - `references` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
@@ -28,7 +29,8 @@ tags:
 - [[Legenda]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `references` [EXTRACTED]
 - [[SceneFader]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_51

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "Community 11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_11
 ---
 
 # BoxCollider2D
@@ -13,8 +13,10 @@ tags:
 ## Connections
 - [[dot-Add()]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
+- [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
-- [[dot-Box()]] - `references` [EXTRACTED]
+- [[dot-Boundary()]] - `references` [EXTRACTED]
+- [[dot-Box()_1]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-Cast()]] - `references` [EXTRACTED]
 - [[dot-Center()]] - `references` [EXTRACTED]
@@ -42,4 +44,4 @@ tags:
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_11

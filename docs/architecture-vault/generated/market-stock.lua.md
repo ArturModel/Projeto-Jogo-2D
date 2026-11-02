@@ -12,7 +12,7 @@ tags:
 # market-stock.lua
 
 ## Connections
-- [[box()_3]] - `contains` [EXTRACTED]
+- [[box()_5]] - `contains` [EXTRACTED]
 - [[rgba()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_68

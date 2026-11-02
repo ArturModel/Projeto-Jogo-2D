@@ -12,7 +12,7 @@ tags:
 # rect()
 
 ## Connections
-- [[box()]] - `calls` [EXTRACTED]
+- [[box()_2]] - `calls` [EXTRACTED]
 - [[c2-workstations.lua]] - `contains` [EXTRACTED]
 - [[table()]] - `calls` [EXTRACTED]
 

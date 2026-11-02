@@ -1,24 +1,25 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 6"
-location: "L512"
+community: "Community 38"
+location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_38
 ---
 
 # .Box()
 
 ## Connections
-- [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[dot-Prop()_2]] - `calls` [EXTRACTED]
-- [[dot-Wall()]] - `calls` [EXTRACTED]
-- [[BoxCollider2D]] - `references` [EXTRACTED]
+- [[dot-BuildRoom()]] - `calls` [EXTRACTED]
+- [[dot-BuildTable()]] - `calls` [EXTRACTED]
+- [[dot-Panel()]] - `calls` [EXTRACTED]
+- [[dot-Primitive()]] - `calls` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
-- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `method` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
+- [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_38

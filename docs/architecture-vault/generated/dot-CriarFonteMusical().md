@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 28"
-location: "L370"
+community: "Community 2"
+location: "L371"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_2
 ---
 
 # .CriarFonteMusical()
@@ -14,7 +14,8 @@ tags:
 ## Connections
 - [[dot-PrepararMusicasDasZonas()]] - `calls` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
+- [[AudioLowPassFilter]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_2

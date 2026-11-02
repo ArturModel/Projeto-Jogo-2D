@@ -1,19 +1,21 @@
 ---
 type: community
-members: 35
+members: 40
 ---
 
 # Community 12
 
-**Members:** 35 nodes
+**Members:** 40 nodes
 
 ## Members
 - [[dot-Abrir()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-AbrirCarregar()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-AtualizarTextoStatusSave()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-Awake()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Awake()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Botao()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-BotaoPausa()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-BotaoSeta()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Build()]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
 - [[dot-CaixaPausa()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Construir()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Fechar()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
@@ -24,25 +26,28 @@ members: 35
 - [[dot-LinhaSlider()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-LinhaStepperResolucao()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-LinhaToggle()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-LoadSprite()]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
 - [[dot-OnDestroy()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Posicionar()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Rotulo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Sair()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Selecionavel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-SelecionavelPausa()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-SubPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Titulo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-TituloPausa()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-Update()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[dot-VoltarAoMenu()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[Aberto]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[BolaMesa]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[EventSystem]] - code
 - [[Graphic]] - code
 - [[Image]] - code
 - [[InputSystemUIInputModule]] - code
 - [[MenuPausa]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[RectTransform]] - code
 - [[ReduzirEfeitosIntensos]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
 - [[Selectable]] - code
-- [[TMP_Text]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,26 +57,37 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_Community 23]]
-- 13 edges to [[_COMMUNITY_Community 15]]
-- 11 edges to [[_COMMUNITY_Community 39]]
-- 10 edges to [[_COMMUNITY_Community 24]]
-- 5 edges to [[_COMMUNITY_Community 28]]
-- 5 edges to [[_COMMUNITY_Community 17]]
-- 5 edges to [[_COMMUNITY_Community 34]]
-- 4 edges to [[_COMMUNITY_Community 3]]
-- 4 edges to [[_COMMUNITY_Community 38]]
+- 36 edges to [[_COMMUNITY_Community 51]]
+- 15 edges to [[_COMMUNITY_Community 15]]
+- 14 edges to [[_COMMUNITY_Community 57]]
+- 14 edges to [[_COMMUNITY_Community 23]]
+- 10 edges to [[_COMMUNITY_Community 34]]
+- 7 edges to [[_COMMUNITY_Community 17]]
+- 6 edges to [[_COMMUNITY_Community 30]]
+- 5 edges to [[_COMMUNITY_Community 36]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 14]]
+- 4 edges to [[_COMMUNITY_Community 28]]
 - 4 edges to [[_COMMUNITY_Community 2]]
-- 4 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 14]]
+- 3 edges to [[_COMMUNITY_Community 46]]
+- 3 edges to [[_COMMUNITY_Community 3]]
+- 3 edges to [[_COMMUNITY_Community 84]]
+- 2 edges to [[_COMMUNITY_Community 31]]
+- 2 edges to [[_COMMUNITY_Community 9]]
 - 2 edges to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 21]]
+- 2 edges to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 18]]
 - 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 85]]
 - 1 edge to [[_COMMUNITY_Community 19]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 87]]
 
 ## Top bridge nodes
-- [[Image]] - degree 45, connects to 8 communities
-- [[MenuPausa]] - degree 39, connects to 7 communities
-- [[dot-Construir()]] - degree 29, connects to 5 communities
-- [[dot-CaixaPausa()]] - degree 9, connects to 5 communities
-- [[TMP_Text]] - degree 14, connects to 4 communities
+- [[RectTransform]] - degree 57, connects to 14 communities
+- [[Image]] - degree 54, connects to 12 communities
+- [[MenuPausa]] - degree 41, connects to 10 communities
+- [[BolaMesa]] - degree 8, connects to 6 communities
+- [[dot-Construir()]] - degree 30, connects to 5 communities

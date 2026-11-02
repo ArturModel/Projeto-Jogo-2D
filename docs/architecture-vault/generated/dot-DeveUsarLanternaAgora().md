@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 5"
+community: "Community 44"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_44
 ---
 
 # .DeveUsarLanternaAgora()
@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarPassada()]] - `calls` [EXTRACTED]
 - [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
 - [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
-- [[dot-Start()_16]] - `calls` [EXTRACTED]
+- [[dot-Start()_17]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_44

@@ -15,5 +15,8 @@ tags:
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaMcpSetup.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
+- [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[Sinuca3DVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaRef7RuntimeVerification.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

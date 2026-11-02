@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs"
 type: "code"
 community: "Community 41"
-location: "L175"
+location: "L184"
 tags:
   - graphify/code
   - graphify/EXTRACTED

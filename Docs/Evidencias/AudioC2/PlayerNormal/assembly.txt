@@ -1,0 +1,2 @@
+PASS Capitulo2Audio presente no assembly normal.
+PASS zero tipos RuntimeVerification/BuildVerification/PreviewSession/Authoring no assembly normal.

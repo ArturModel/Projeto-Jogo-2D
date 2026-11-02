@@ -113,7 +113,7 @@ public class InteracaoCapitulo1 : Interactable
             switch (tipo)
             {
                 case TipoInteracao.CarroMarcus:
-                    return GameState.Tem(Flags.MapaDoCarroObtido) ? "Olhar o carro" : "Abrir o porta-luvas";
+                    return GameState.Tem(Flags.LanternaDoCarroObtida) ? "Olhar o carro" : "Abrir o porta-luvas";
                 case TipoInteracao.PlacaRodoviaEntrada:
                     return "Ler o quadro da parada";
                 case TipoInteracao.MalaAbandonadaEstrada:
@@ -272,9 +272,8 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirCarroMarcus()
     {
-        bool primeiraVez = !GameState.Tem(Flags.MapaDoCarroObtido);
+        bool primeiraVez = !GameState.Tem(Flags.LanternaDoCarroObtida);
         GameState.Marcar(Flags.PrologoAbriuPortaLuvas);
-        GameState.Marcar(Flags.MapaDoCarroObtido);
         GameState.Marcar(Flags.LanternaDoCarroObtida);
         SantaRitaSound.Play(primeiraVez ? "door" : "inspect", .13f);
 
@@ -291,17 +290,16 @@ public class InteracaoCapitulo1 : Interactable
             "porta_luvas_endereco",
             "Carro afogado na entrada",
             "FATO",
-            "O motor afogou na baixada alagada da entrada. Sigo a pé. Levei a lanterna e o mapa da cidade que o vô me deu quando fui embora: 'Bairro das Casas, 40. Segue o asfalto e sobe no barro.'"
+            "O motor afogou na baixada alagada da entrada. Sigo a pé. Levei a lanterna. Ainda lembro o endereço: 'Bairro das Casas, 40. Segue o asfalto e sobe no barro.'"
         );
 
         Falar(() =>
         {
             DicaDeTecla.Mostrar("F", "Lanterna", () => GameState.LanternaLigada);
-            DicaDeTecla.Mostrar("M", "Mapa", () => MapaInterativoUI.IsShowing, 8f);
         },
             Marcus("Afogou de vez na baixada. Daqui eu sigo a pé."),
-            Marcus("A lanterna estava no porta-luvas, embaixo do mapa da cidade que o vô me deu quando eu fui embora."),
-            Marcus("No verso, a letra dele: \"Bairro das Casas, 40. Segue o asfalto e sobe no barro.\"")
+            Marcus("A lanterna ainda estava no porta-luvas. Melhor levar."),
+            Marcus("Ainda lembro do vô explicando: \"Bairro das Casas, 40. Segue o asfalto e sobe no barro.\"")
         );
     }
 
@@ -482,6 +480,14 @@ public class InteracaoCapitulo1 : Interactable
 
         if (GameState.Tem(Flags.AchouReciboMercadinho))
         {
+            if (!GameState.Tem("recibo_entregue"))
+            {
+                GameMessageUI.Instance.ShowInspection("RECIBO DO MERCADINHO", "Bilhete",
+                    "O nome do estabelecimento e o aviso no verso são os mesmos do cupom encontrado na casa. Posso mostrar o papel à atendente.",
+                    () => { if(GameState.Tem("recibo_entregue")) InteragirAtendenteMercadinho(); });
+                SantaRitaItemAction.Oferecer("ENTREGAR RECIBO", () => GameState.Marcar("recibo_entregue"));
+                return;
+            }
             // Só quem leu o aviso no verso do cupom ganha a confiança dela.
             Falar(ConfirmarTestemunhoAtendente,
                 Marcus("Isto estava no chão da casa do meu avô. O aviso no verso é seu?"),
@@ -669,7 +675,7 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirPistaNotaFiscal()
     {
-        GameState.Marcar(Flags.Pista_NotaFiscal2004);
+        GameState.Marcar("recibo_examinado");
         bool nova = Anotar(
             "pista_nota_2004",
             "Cupom com um aviso no verso",
@@ -683,6 +689,12 @@ public class InteracaoCapitulo1 : Interactable
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Letra de mulher. Alguém no mercadinho tentou avisar o vô.",
             etiqueta: Etiqueta(nova));
+        if (!GameState.Tem(Flags.AchouReciboMercadinho))
+            SantaRitaItemAction.Oferecer("PEGAR RECIBO", () => {
+                GameState.Marcar(Flags.Pista_NotaFiscal2004);
+                SantaRitaSound.Play("inspect", .13f);
+                VerificarConclusaoPistasCasaAvo();
+            });
     }
 
     private void InteragirPistaDesordem()
@@ -872,7 +884,7 @@ public class InteracaoCapitulo1 : Interactable
     private void InteragirQuadroRegras()
     {
         GameMessageUI.Instance.ShowInspection("REGRAS DA CASA", "Quadro_Regras_Sinuca",
-            "MELHOR DE TRÊS.\n\nSete bolas na mesa. Quem fizer quatro leva a mão.\n\nDa segunda mão em diante, o dono marca uma bola com giz [X]: ESSA FICA NA MESA.\n\nDerrubou a marcada: a tacada não vale, as bolas voltam e a branca vai pra mão do outro.");
+            "MELHOR DE TRÊS.\n\nQuinze bolas numeradas e a branca. Combine com Zé: lisas/listradas ou números 1–7/9–15.\n\nA primeira bola válida encaçapada define os grupos. Limpe seu grupo e deixe a preta 8 por último.\n\nFalta: branca na mão do outro. Preta antes da hora ou junto com a branca: perde a mão. Na saída, a preta volta à mesa.\n\nDa segunda mão em diante, Zé marca uma bola com X. Se ela cair, a tacada é anulada, a formação volta e a branca vai para o outro. A última bola do grupo e a preta nunca são bloqueadas.");
     }
 
     private void InteragirFrequentadorBar()
@@ -909,7 +921,7 @@ public class InteracaoCapitulo1 : Interactable
         if (GameState.Tem(Flags.FalouComZeAntesDaSinuca))
         {
             linhas.Add(new DialogoLinha("FREGUÊS", "Vai jogar com ele? Cuidado na segunda mão. Ele marca uma bola com giz.", "frequentador"));
-            linhas.Add(new DialogoLinha("FREGUÊS", "Às vezes vale mais deixar a branca difícil pra ele do que arriscar perto da marcada.", "frequentador"));
+            linhas.Add(new DialogoLinha("FREGUÊS", "Às vezes vale mais deixar a branca difícil pra ele do que arriscar uma caçapa apertada.", "frequentador"));
         }
 
         Falar(linhas.ToArray());
@@ -984,8 +996,8 @@ public class InteracaoCapitulo1 : Interactable
         linhas.Add(new DialogoLinha("ZÉ", "Melhor de três. Ganhou, eu te conto o que eu vi hoje. Perdeu, tu pega teu carro e volta pra capital.", "ze"));
         linhas.Add(Marcus("O carro afogou na entrada."));
         linhas.Add(new DialogoLinha("ZÉ", "Então volta a pé.", "ze"));
-        linhas.Add(new DialogoLinha("ZÉ", "Sete bolas, quatro pontos levam a mão. Da segunda em diante eu marco uma com giz: essa fica na mesa.", "ze"));
-        linhas.Add(new DialogoLinha("ZÉ", "Derrubou a marcada, a tacada não vale, as bolas voltam e a branca vai pra mão do outro. Vale pra mim também.", "ze"));
+        linhas.Add(new DialogoLinha("ZÉ", "Quinze bolas. Tu limpa o teu grupo e deixa a preta por último. A primeira que entrar sem falta decide de quem é cada grupo.", "ze"));
+        linhas.Add(new DialogoLinha("ZÉ", "Fez falta, o outro posiciona a branca. Derrubou a preta antes da hora, perdeu. Eu te mostro as duas maneiras de identificar as bolas. Da segunda mão em diante, a que eu marcar com giz fica na mesa; derrubou, a tacada não vale e as bolas voltam.", "ze"));
 
         Falar(IniciarPartidaSinucaComZe, linhas.ToArray());
     }

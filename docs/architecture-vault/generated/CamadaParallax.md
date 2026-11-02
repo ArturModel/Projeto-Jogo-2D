@@ -12,8 +12,8 @@ tags:
 # CamadaParallax
 
 ## Connections
-- [[dot-Awake()_14]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_5]] - `method` [EXTRACTED]
+- [[dot-Awake()_12]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_6]] - `method` [EXTRACTED]
 - [[dot-OnEnable()_3]] - `method` [EXTRACTED]
 - [[CamadaParallax.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

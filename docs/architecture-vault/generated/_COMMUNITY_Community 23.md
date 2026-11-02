@@ -1,43 +1,26 @@
 ---
 type: community
-members: 30
+members: 13
 ---
 
 # Community 23
 
-**Members:** 30 nodes
+**Members:** 13 nodes
 
 ## Members
+- [[dot-ConstruirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ConstruirModal()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-ConstruirPainelEfeitoOpcional()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ConstruirUI()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CreateLabel()]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
-- [[dot-CriarBolasUI()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarBotaoAba()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-CriarBotaoControleMapa()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-CriarBotaoFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-CriarBotaoModal()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-CorDaBola()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-CriarBolasNaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-CriarBotaoHUD()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CriarSpriteCirculo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-CriarTexto()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-CriarTexto()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarTextoFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-GarantirModalCriado()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-Posicionar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-Posicionar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-Posicionar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-RotuloCanonico()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-Stretch()]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
-- [[dot-SubPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[BolaMesa]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Button]] - code
-- [[Color]] - code
-- [[GraphicRaycaster]] - code
-- [[PayphoneSlotInputWatcher_1]] - code
-- [[RectTransform]] - code
-- [[TextAlignmentOptions]] - code
-- [[TextMeshProUGUI]] - code
-- [[UnityAction]] - code
+- [[dot-CriarTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-InicializarOverlays()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-Posicionar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[Outline]] - code
+- [[TMP_FontAsset]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -47,33 +30,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_Community 12]]
-- 20 edges to [[_COMMUNITY_Community 34]]
-- 17 edges to [[_COMMUNITY_Community 3]]
-- 17 edges to [[_COMMUNITY_Community 39]]
-- 15 edges to [[_COMMUNITY_Community 2]]
-- 13 edges to [[_COMMUNITY_Community 17]]
-- 11 edges to [[_COMMUNITY_Community 6]]
-- 10 edges to [[_COMMUNITY_Community 0]]
-- 9 edges to [[_COMMUNITY_Community 9]]
-- 7 edges to [[_COMMUNITY_Community 24]]
-- 7 edges to [[_COMMUNITY_Community 31]]
-- 4 edges to [[_COMMUNITY_Community 14]]
-- 4 edges to [[_COMMUNITY_Community 8]]
-- 3 edges to [[_COMMUNITY_Community 29]]
-- 2 edges to [[_COMMUNITY_Community 26]]
-- 2 edges to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 40]]
-- 1 edge to [[_COMMUNITY_Community 11]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 7]]
+- 14 edges to [[_COMMUNITY_Community 12]]
+- 14 edges to [[_COMMUNITY_Community 51]]
+- 11 edges to [[_COMMUNITY_Community 3]]
+- 5 edges to [[_COMMUNITY_Community 2]]
+- 3 edges to [[_COMMUNITY_Community 39]]
+- 3 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 100]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 87]]
+- 1 edge to [[_COMMUNITY_Community 88]]
+- 1 edge to [[_COMMUNITY_Community 38]]
 
 ## Top bridge nodes
-- [[Color]] - degree 34, connects to 13 communities
-- [[RectTransform]] - degree 52, connects to 10 communities
-- [[TextMeshProUGUI]] - degree 19, connects to 9 communities
-- [[Button]] - degree 21, connects to 6 communities
-- [[dot-CreateLabel()]] - degree 14, connects to 5 communities
+- [[dot-ConstruirUI()]] - degree 23, connects to 7 communities
+- [[dot-CriarBotaoHUD()]] - degree 15, connects to 5 communities
+- [[dot-CriarBolasNaMesa()]] - degree 12, connects to 4 communities
+- [[dot-CriarTexto()]] - degree 11, connects to 4 communities
+- [[dot-ConstruirModal()]] - degree 10, connects to 4 communities

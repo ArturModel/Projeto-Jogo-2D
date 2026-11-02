@@ -1,0 +1,6 @@
+PASS build normal abriu o menu principal observado pela captura nativa.
+PASS mesma revisão de fontes da build QA (a984dd1c00639304fc0363029de7f0e5b0c9ce42e35d3b58a96d150e92be6307).
+LIMITADO fluxo por cliques: prompt do Firewall do Windows sobre acesso público/privado à rede cobriu a janela. Nenhuma escolha de segurança foi automatizada.
+Instância de teste encerrada sem carregar ou gravar slot pessoal.
+Player.log: sem NullReferenceException/MissingReferenceException; aviso preexistente de primárias de vídeo e fallback ExclusiveFullscreen -> FullscreenWindow.
+Câmeras e interações detalhadas: testadas na build Development QA, 200 verificações, mesmo código de produção; não equivalem a campanha humana completa na build normal.

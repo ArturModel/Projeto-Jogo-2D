@@ -25,6 +25,7 @@ tags:
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaBarLayout.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter2Authoring.cs]] - `imports` [EXTRACTED]

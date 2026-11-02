@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-OnPointerEnter()]] - `calls` [EXTRACTED]
-- [[dot-OnSelect()]] - `calls` [EXTRACTED]
+- [[dot-OnSelect()_1]] - `calls` [EXTRACTED]
 - [[MenuItemSelector]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_28

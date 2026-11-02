@@ -26,6 +26,8 @@ tags:
 - [[SantaRitaLivingWorldAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRimLight.cs]] - `imports` [EXTRACTED]
+- [[SinucaRef7Authoring.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.cs]] - `imports` [EXTRACTED]
 - [[TransicaoDeZonaTrigger.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

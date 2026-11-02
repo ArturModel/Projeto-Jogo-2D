@@ -1,21 +1,26 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 3"
-location: "L530"
+community: "Community 88"
+location: "L1027"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_88
 ---
 
 # .ContinuarInicioTurno()
 
 ## Connections
+- [[dot-ApontarMiraParaBolaMaisProxima()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarTextosHUD()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
 - [[dot-EncontrarPosicaoLivreDeterministica()]] - `calls` [EXTRACTED]
 - [[dot-ExecutarTurnoZeCoroutine()]] - `calls` [EXTRACTED]
 - [[dot-IniciarTurnoAtual()]] - `calls` [EXTRACTED]
+- [[dot-SelecionarEfeitoBranca()]] - `calls` [EXTRACTED]
 - [[dot-SincronizarTransformBolas()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_88

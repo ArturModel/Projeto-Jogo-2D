@@ -2,7 +2,7 @@
 source_file: "Tools/Aseprite/marcus-flashlight.lua"
 type: "code"
 community: "Community 61"
-location: "L9"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # rect()
 
 ## Connections
-- [[line()_1]] - `calls` [EXTRACTED]
+- [[line()_2]] - `calls` [EXTRACTED]
 - [[marcus-flashlight.lua]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_61

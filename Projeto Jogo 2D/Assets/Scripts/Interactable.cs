@@ -12,6 +12,7 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] private float interactionRadius = 1.6f;
 
     public float InteractionRadius => interactionRadius;
+    public virtual bool CanInteractAt(Vector2 position) => Vector2.Distance(position,transform.position)<=interactionRadius;
 
     protected virtual void OnEnable()
     {
@@ -42,7 +43,7 @@ public abstract class Interactable : MonoBehaviour
 
             float distance = Vector2.Distance(position, candidate.transform.position);
 
-            if (distance > candidate.interactionRadius || distance >= bestDistance)
+            if (!candidate.CanInteractAt(position) || distance >= bestDistance)
             {
                 continue;
             }

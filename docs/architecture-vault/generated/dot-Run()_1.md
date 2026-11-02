@@ -1,31 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 18"
-location: "L52"
+community: "Community 45"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_45
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Check()_1]] - `calls` [INFERRED]
-- [[dot-Run()_3]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[Capitulo2Portal]] - `references` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
-- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
-- [[ShadowCaster2D]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[TextMeshPro]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_45

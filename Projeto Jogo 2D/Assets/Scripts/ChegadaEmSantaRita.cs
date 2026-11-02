@@ -11,7 +11,9 @@ using UnityEngine.UI;
 public class ChegadaEmSantaRita : MonoBehaviour
 {
     [SerializeField] private float esperaAntesDaFala = 2.0f;
+#pragma warning disable CS0414
     [SerializeField] private float esperaAntesDoObjetivo = 1.4f;
+#pragma warning restore CS0414
 
     [TextArea]
     [SerializeField] private string comSabendoOEndereco = "Bairro das Casas, 40. Preciso seguir pela estrada de asfalto e subir na encruzilhada.";
@@ -19,8 +21,10 @@ public class ChegadaEmSantaRita : MonoBehaviour
     [TextArea]
     [SerializeField] private string semSaberOEndereco = "Faz tempo. Acho que a casa dele era subindo.";
 
+#pragma warning disable CS0414
     [TextArea]
     [SerializeField] private string objetivo = "Pegar a lanterna no carro.";
+#pragma warning restore CS0414
 
     private IEnumerator Start()
     {
@@ -29,7 +33,7 @@ public class ChegadaEmSantaRita : MonoBehaviour
         // A chegada não explica nada: o jogador fica parado na chuva, ouve a
         // cidade e só então Marcus lembra da lanterna. A tecla E flutuando
         // sobre o carro é o único tutorial.
-        if (!GameState.Tem(Flags.MapaDoCarroObtido))
+        if (!GameState.Tem(Flags.LanternaDoCarroObtida))
         {
             GameState.DefinirObjetivo("Pegar a lanterna no carro.");
         }
@@ -45,7 +49,7 @@ public class ChegadaEmSantaRita : MonoBehaviour
 
         yield return new WaitForSeconds(esperaAntesDaFala);
 
-        if (!GameState.Tem(Flags.MapaDoCarroObtido))
+        if (!GameState.Tem(Flags.LanternaDoCarroObtida))
         {
             if (!GameMessageUI.IsShowing)
                 Legenda.Dizer("\"Escuro demais. A lanterna ficou no porta-luvas.\"", 4f);

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 32
+members: 31
 ---
 
 # Community 13
 
-**Members:** 32 nodes
+**Members:** 31 nodes
 
 ## Members
 - [[dot-EntrarNoBar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -33,7 +33,6 @@ members: 32
 - [[dot-InteragirTvPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirVendaAntiga()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-InteragirZe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-JaNoDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-Marcus()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-Pensa()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[dot-ZeDesconversa()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -49,24 +48,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 31 edges to [[_COMMUNITY_Community 30]]
-- 29 edges to [[_COMMUNITY_Community 44]]
-- 4 edges to [[_COMMUNITY_Community 21]]
+- 45 edges to [[_COMMUNITY_Community 86]]
+- 18 edges to [[_COMMUNITY_Community 24]]
 - 3 edges to [[_COMMUNITY_Community 2]]
 - 3 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 7]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 97]]
 - 1 edge to [[_COMMUNITY_Community 10]]
-- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 84]]
 - 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 51]]
 - 1 edge to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 28]]
 - 1 edge to [[_COMMUNITY_Community 14]]
 
 ## Top bridge nodes
-- [[InteracaoCapitulo1]] - degree 61, connects to 11 communities
-- [[dot-InteragirCarroMarcus()]] - degree 10, connects to 5 communities
-- [[dot-InteragirZe()]] - degree 11, connects to 3 communities
-- [[dot-Interact()]] - degree 36, connects to 2 communities
-- [[dot-InteragirAtendenteMercadinho()]] - degree 10, connects to 2 communities
+- [[InteracaoCapitulo1]] - degree 64, connects to 13 communities
+- [[dot-InteragirAtendenteMercadinho()]] - degree 13, connects to 4 communities
+- [[dot-InteragirCarroMarcus()]] - degree 10, connects to 4 communities
+- [[dot-Falar()]] - degree 22, connects to 2 communities
+- [[dot-Marcus()]] - degree 21, connects to 2 communities

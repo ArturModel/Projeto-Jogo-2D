@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "Community 26"
-location: "L39"
+community: "Community 49"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_49
 ---
 
 # .OnTriggerEnter2D()
 
 ## Connections
-- [[dot-Atravessar()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_5]] - `calls` [EXTRACTED]
+- [[Capitulo2Portal]] - `method` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
-- [[DoorTrigger]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_49

@@ -11,6 +11,8 @@ tags:
 # system_linq
 
 ## Connections
+- [[AudioC2RuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[BarSinucaR4RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaPerspectiveRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaRules.cs]] - `imports` [EXTRACTED]
 - [[Chapter2BuildVerification.cs]] - `imports` [EXTRACTED]
@@ -27,5 +29,9 @@ tags:
 - [[SantaRitaLivingWorldAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaMcpSetup.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
+- [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaRef7Authoring.cs]] - `imports` [EXTRACTED]
+- [[SinucaRef7RuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

@@ -1,0 +1,5 @@
+PASS final: 159 verificacoes e encerramento.
+PASS props acima do tampo, rotinas e trilha na Rua Norte; caminhada/contatos/repouso.
+PASS builds QA/normal sem erros e hash igual; QA/autoria excluidos do normal.
+PASS refresh/validate 112 fontes, diff check e seis saves intactos.
+Capturas reais Windowed conferidas. Rodadas intermediarias falhas/crash registradas no plano; sem aprovacao artistica ou audicao subjetiva presumida.

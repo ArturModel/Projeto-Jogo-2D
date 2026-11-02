@@ -1,24 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 9"
-location: "L185"
+community: "Community 38"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_38
 ---
 
 # .Sphere()
 
 ## Connections
-- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
-- [[dot-Unit()]] - `calls` [EXTRACTED]
-- [[BochaCourtView]] - `method` [EXTRACTED]
-- [[Color]] - `references` [EXTRACTED]
-- [[Face]] - `calls` [EXTRACTED]
-- [[Quaternion]] - `references` [EXTRACTED]
-- [[V]] - `calls` [EXTRACTED]
+- [[dot-BuildTable()]] - `calls` [EXTRACTED]
+- [[dot-Primitive()]] - `calls` [EXTRACTED]
+- [[GameObject]] - `references` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `method` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_38

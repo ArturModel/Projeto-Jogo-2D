@@ -8,7 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
-- [[box()_3]] - code - Tools/Aseprite/market-stock.lua
+- [[box()_5]] - code - Tools/Aseprite/market-stock.lua
 - [[market-stock.lua]] - code - Tools/Aseprite/market-stock.lua
 - [[rgba()]] - code - Tools/Aseprite/market-stock.lua
 

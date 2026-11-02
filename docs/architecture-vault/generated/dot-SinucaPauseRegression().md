@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 0"
-location: "L402"
+community: "Community 30"
+location: "L409"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_30
 ---
 
 # .SinucaPauseRegression()
@@ -25,4 +25,4 @@ tags:
 - [[IList]] - `references` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_30

@@ -22,9 +22,10 @@ public sealed partial class Chapter2RuntimeVerification
 #endif
     private IEnumerator TapR2(Key key)
     {
-        InputSystem.QueueStateEvent(Keyboard.current,new KeyboardState());yield return null;yield return null;
-        InputSystem.QueueStateEvent(Keyboard.current,new KeyboardState(key));yield return null;yield return null;
-        InputSystem.QueueStateEvent(Keyboard.current,new KeyboardState());yield return null;yield return null;
+        var keyboard=sinucaR4Keyboard??Keyboard.current;keyboard.MakeCurrent();
+        InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;yield return null;
+        InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;yield return null;
+        InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;yield return null;
     }
     private IEnumerator RunR2()
     {

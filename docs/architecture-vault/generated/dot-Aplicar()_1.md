@@ -12,9 +12,9 @@ tags:
 # .Aplicar()
 
 ## Connections
-- [[dot-Awake()_21]] - `calls` [EXTRACTED]
+- [[dot-Awake()_20]] - `calls` [EXTRACTED]
 - [[dot-Definir()_2]] - `calls` [EXTRACTED]
-- [[dot-Update()_26]] - `calls` [EXTRACTED]
+- [[dot-Update()_27]] - `calls` [EXTRACTED]
 - [[CamadaDeLuz]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_8

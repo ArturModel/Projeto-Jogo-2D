@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 40"
-location: "L62"
+community: "Community 45"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_45
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_45

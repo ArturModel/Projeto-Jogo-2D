@@ -1,0 +1,143 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+PASS OGG importado corretamente: Centro
+PASS OGG importado corretamente: Cemiterio
+PASS OGG importado corretamente: Bocha
+PASS Sprite real do bar: Balcao_Bar_Sprite
+PASS Sprite real do bar: GeladeiraDoBar
+PASS Sprite real do bar: TelevisaoFutebol
+PASS Sprite real do bar: Calendario2004
+PASS Sprite real do bar: CartazGaleto
+PASS Sprite real do bar: FiadoSoAmanha
+PASS Sprite real do bar: TimeDaComunidade
+PASS Sprite real do bar: Inter1994
+PASS Sprite real do bar: RadioBalcao
+PASS Sprite real do bar: BanquetaBalcao0
+PASS Sprite real do bar: BanquetaBalcao1
+PASS Sprite real do bar: BanquetaBalcao2
+PASS Sprite real do bar: TaqueiraDoBar
+PASS Sprite real do bar: EngradadosDoBar
+PASS Sprite real do bar: MesaChimarrao
+PASS Sprite real do bar: CadeiraChimaA
+PASS Sprite real do bar: CadeiraChimaB
+PASS Sprite real do bar: MesaConversa
+PASS Sprite real do bar: CadeiraConversaA
+PASS Sprite real do bar: CadeiraConversaB
+PASS Sprite real do bar: MesaJanela
+PASS Sprite real do bar: CadeiraJanelaA
+PASS Sprite real do bar: CadeiraJanelaB
+PASS Sprite real do bar: CopoConversa
+PASS Sprite real do bar: CopoJanela
+PASS Sprite real do bar: CuiaMesa
+PASS Sprite real do bar: NPC_Ze_Interior
+PASS Sprite real do bar: NPC_Frequentador_Interior
+PASS Sprite real do bar: NPC_Conversa_Bar
+PASS Sprite real do bar: NPC_Chimarrao_Bar
+PASS Sprite real do bar: NPC_Cerveja_Bar
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS Tres itens reais; fichas ausentes da barra apesar de obtidas
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: CentroSantaRita
+PASS Trilha exclusiva em loop: CentroSantaRita
+PASS Volume contextual: CentroSantaRita
+PASS Filtro contextual: CentroSantaRita
+PASS Sem sobreposicao de outra regiao: CentroSantaRita
+PASS Loop atravessa fim do OGG sem encerrar: CentroSantaRita
+PASS Cena carregada IgrejaMatriz
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: IgrejaMatriz
+PASS Trilha exclusiva em loop: IgrejaMatriz
+PASS Volume contextual: IgrejaMatriz
+PASS Filtro contextual: IgrejaMatriz
+PASS Sem sobreposicao de outra regiao: IgrejaMatriz
+PASS Mesma fonte continua entre cenas do Centro
+PASS Loop atravessa fim do OGG sem encerrar: IgrejaMatriz
+PASS Cena carregada PrefeituraSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: PrefeituraSantaRita
+PASS Trilha exclusiva em loop: PrefeituraSantaRita
+PASS Volume contextual: PrefeituraSantaRita
+PASS Filtro contextual: PrefeituraSantaRita
+PASS Sem sobreposicao de outra regiao: PrefeituraSantaRita
+PASS Mesma fonte continua entre cenas do Centro
+PASS Loop atravessa fim do OGG sem encerrar: PrefeituraSantaRita
+PASS Cena carregada RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: RodoviariaSantaRita
+PASS Trilha exclusiva em loop: RodoviariaSantaRita
+PASS Volume contextual: RodoviariaSantaRita
+PASS Filtro contextual: RodoviariaSantaRita
+PASS Sem sobreposicao de outra regiao: RodoviariaSantaRita
+PASS Mesma fonte continua entre cenas do Centro
+PASS Loop atravessa fim do OGG sem encerrar: RodoviariaSantaRita
+PASS Cena carregada MercadinhoDeposito
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: MercadinhoDeposito
+PASS Trilha exclusiva em loop: MercadinhoDeposito
+PASS Volume contextual: MercadinhoDeposito
+PASS Filtro contextual: MercadinhoDeposito
+PASS Sem sobreposicao de outra regiao: MercadinhoDeposito
+PASS Mesma fonte continua entre cenas do Centro
+PASS Loop atravessa fim do OGG sem encerrar: MercadinhoDeposito
+PASS Cena carregada OficinaRadio
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: OficinaRadio
+PASS Trilha exclusiva em loop: OficinaRadio
+PASS Volume contextual: OficinaRadio
+PASS Filtro contextual: OficinaRadio
+PASS Sem sobreposicao de outra regiao: OficinaRadio
+PASS Mesma fonte continua entre cenas do Centro
+PASS Loop atravessa fim do OGG sem encerrar: OficinaRadio
+PASS Cena carregada CasaCostureira
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: CasaCostureira
+PASS Trilha exclusiva em loop: CasaCostureira
+PASS Volume contextual: CasaCostureira
+PASS Filtro contextual: CasaCostureira
+PASS Sem sobreposicao de outra regiao: CasaCostureira
+PASS Mesma fonte continua entre cenas do Centro
+PASS Loop atravessa fim do OGG sem encerrar: CasaCostureira
+PASS Cena carregada CemiterioSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: CemiterioSantaRita
+PASS Trilha exclusiva em loop: CemiterioSantaRita
+PASS Volume contextual: CemiterioSantaRita
+PASS Filtro contextual: CemiterioSantaRita
+PASS Sem sobreposicao de outra regiao: CemiterioSantaRita
+PASS Loop atravessa fim do OGG sem encerrar: CemiterioSantaRita
+PASS Cena carregada AbrigoCemiterio
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: AbrigoCemiterio
+PASS Trilha exclusiva em loop: AbrigoCemiterio
+PASS Volume contextual: AbrigoCemiterio
+PASS Filtro contextual: AbrigoCemiterio
+PASS Sem sobreposicao de outra regiao: AbrigoCemiterio
+PASS Loop atravessa fim do OGG sem encerrar: AbrigoCemiterio
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: SociedadeBeiraRio
+PASS Trilha exclusiva em loop: SociedadeBeiraRio
+PASS Volume contextual: SociedadeBeiraRio
+PASS Filtro contextual: SociedadeBeiraRio
+PASS Sem sobreposicao de outra regiao: SociedadeBeiraRio
+PASS Bocha reduz musica ao entrar no jogo
+PASS Bocha devolve volume ao sair do jogo
+PASS Loop atravessa fim do OGG sem encerrar: SociedadeBeiraRio
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Gerenciador de audio ativo: CentroSantaRita
+PASS Trilha exclusiva em loop: CentroSantaRita
+PASS Volume contextual: CentroSantaRita
+PASS Filtro contextual: CentroSantaRita
+PASS Sem sobreposicao de outra regiao: CentroSantaRita
+PASS Mesma fonte continua entre cenas do Centro
+PASS Loop atravessa fim do OGG sem encerrar: CentroSantaRita
+PASS Volume de musica do usuario respeitado
+PASS Leitura encerra e devolve controle.
+PASS Input real move Marcus com oito poses e interpolação.
+PASS Cada evento de passo coincide com quadro de apoio 0/4: 0,4,0,4,0,4,0,4,0
+PASS Repouso não dispara passos extras.
+PASS Nenhum autosave durante transicoes e minigame
+PASS runtime 2026-11-02T00:24:08.2108781Z

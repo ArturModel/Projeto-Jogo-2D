@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Quad()_1]] - `calls` [EXTRACTED]
 - [[dot-SolidV()]] - `calls` [EXTRACTED]
-- [[dot-Sphere()]] - `calls` [EXTRACTED]
+- [[dot-Sphere()_1]] - `calls` [EXTRACTED]
 - [[dot-Triangle()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `contains` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

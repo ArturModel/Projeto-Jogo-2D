@@ -1,20 +1,25 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
-community: "Community 49"
+community: "Community 21"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_21
 ---
 
 # .DefinirContexto()
 
 ## Connections
+- [[dot-ComecarModoPratica()]] - `calls` [EXTRACTED]
+- [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
+- [[dot-ConcluirSerieVitoria()]] - `calls` [EXTRACTED]
+- [[dot-ConfigurarMao()]] - `calls` [EXTRACTED]
 - [[dot-CriarTextura()]] - `calls` [EXTRACTED]
-- [[dot-Update()_6]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_10]] - `calls` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_21

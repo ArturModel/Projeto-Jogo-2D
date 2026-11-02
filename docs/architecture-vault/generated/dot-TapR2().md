@@ -12,6 +12,7 @@ tags:
 # .TapR2()
 
 ## Connections
+- [[dot-ExitMatChecksR4()]] - `calls` [INFERRED]
 - [[dot-FlashlightR2()]] - `calls` [EXTRACTED]
 - [[dot-RunAccesses()]] - `calls` [INFERRED]
 - [[dot-RunPortalRegression()]] - `calls` [INFERRED]

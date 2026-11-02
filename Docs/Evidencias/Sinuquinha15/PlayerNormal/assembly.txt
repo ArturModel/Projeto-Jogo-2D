@@ -1,0 +1,3 @@
+QA/autoria excluidos da DLL normal: True
+Kernel SinuquinhaRules presente: True
+QA e normal: mesmo SHA256 9e83b0af5bfb8c443722d2288673ae456e181ef4d2befe6e26bfd97cde9c6002

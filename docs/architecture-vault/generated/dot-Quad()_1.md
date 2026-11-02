@@ -12,7 +12,7 @@ tags:
 # .Quad()
 
 ## Connections
-- [[dot-Box()_1]] - `calls` [EXTRACTED]
+- [[dot-Box()_2]] - `calls` [EXTRACTED]
 - [[dot-CriarSala()]] - `calls` [EXTRACTED]
 - [[dot-RoomLight()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]

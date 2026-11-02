@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 5"
-location: "L358"
+community: "Community 44"
+location: "L378"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_44
 ---
 
 # .AtualizarPassada()
@@ -16,6 +16,7 @@ tags:
 - [[dot-Avancar()_2]] - `calls` [INFERRED]
 - [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
 - [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
+- [[dot-Reset()]] - `calls` [INFERRED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_44

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
 type: "code"
-community: "Community 28"
+community: "Community 46"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_46
 ---
 
 # SantaRitaSound
@@ -16,7 +16,7 @@ tags:
 - [[dot-Install()]] - `method` [EXTRACTED]
 - [[dot-OnScene()]] - `method` [EXTRACTED]
 - [[dot-Play()]] - `method` [EXTRACTED]
-- [[dot-Update()_11]] - `method` [EXTRACTED]
+- [[dot-Update()_23]] - `method` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_46

@@ -11,9 +11,9 @@ tags:
 # TMP_Dropdown
 
 ## Connections
-- [[dot-Configurar()_2]] - `references` [EXTRACTED]
+- [[dot-Configurar()]] - `references` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_2]] - `references` [EXTRACTED]
+- [[dot-Vincular()_1]] - `references` [EXTRACTED]
 - [[HorizontalStepperNavigation]] - `references` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 

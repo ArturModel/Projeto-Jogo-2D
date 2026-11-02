@@ -1,18 +1,17 @@
 ---
-source_file: "Tools/Aseprite/market-stock.lua"
+source_file: "Tools/Aseprite/interior-thresholds.lua"
 type: "code"
-community: "Community 68"
-location: "L4"
+community: "Community 60"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_68
+  - community/Community_60
 ---
 
 # box()
 
 ## Connections
-- [[market-stock.lua]] - `contains` [EXTRACTED]
-- [[rgba()]] - `calls` [EXTRACTED]
+- [[interior-thresholds.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_68
+#graphify/code #graphify/EXTRACTED #community/Community_60

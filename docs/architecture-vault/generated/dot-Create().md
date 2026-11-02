@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
 community: "Community 2"
-location: "L12"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED

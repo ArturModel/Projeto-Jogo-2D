@@ -1,0 +1,146 @@
+{
+  "FiadoSoAmanha": [
+    0.500000358,
+    0.0102570523
+  ],
+  "CartazGaleto": [
+    0.500001132,
+    0.0111034587
+  ],
+  "Calendario2004": [
+    0.500000656,
+    0.0116670039
+  ],
+  "TimeDaComunidade": [
+    0.499999762,
+    0.009907083
+  ],
+  "Inter1994": [
+    0.5,
+    0.01016258
+  ],
+  "Balcao_Bar_Sprite": [
+    0.5000001,
+    0.0608518124
+  ],
+  "BanquetaBalcao0": [
+    0.5,
+    0.09781527
+  ],
+  "BanquetaBalcao1": [
+    0.5000001,
+    0.09781527
+  ],
+  "BanquetaBalcao2": [
+    0.5,
+    0.09781527
+  ],
+  "RadioBalcao": [
+    0.446335465,
+    0.0168352053
+  ],
+  "TaqueiraDoBar": [
+    0.4999997,
+    0.0146407923
+  ],
+  "TelevisaoFutebol": [
+    0.5,
+    0.0104364166
+  ],
+  "GeladeiraDoBar": [
+    0.4999772,
+    0.08420493
+  ],
+  "EngradadosDoBar": [
+    0.485075,
+    0.09240077
+  ],
+  "MesaChimarrao": [
+    0.5,
+    0.132887825
+  ],
+  "CadeiraChimaA": [
+    0.5,
+    0.09781524
+  ],
+  "CadeiraChimaB": [
+    0.5,
+    0.09781524
+  ],
+  "MesaConversa": [
+    0.5,
+    0.139960319
+  ],
+  "CadeiraConversaA": [
+    0.5,
+    0.0978152156
+  ],
+  "CadeiraConversaB": [
+    0.5,
+    0.0978152156
+  ],
+  "MesaJanela": [
+    0.5000001,
+    0.139960319
+  ],
+  "CadeiraJanelaA": [
+    0.5,
+    0.09781527
+  ],
+  "CadeiraJanelaB": [
+    0.5,
+    0.09781527
+  ],
+  "NPC_Ze_Interior": [
+    0.50000006,
+    0.043292176
+  ],
+  "NPC_Frequentador_Interior": [
+    0.364956439,
+    0.038102027
+  ],
+  "NPC_Frequentador_Interior_Bebendo": [
+    0.5539284,
+    0.038102027
+  ],
+  "NPC_Conversa_Bar": [
+    0.6311049,
+    0.0403420255
+  ],
+  "NPC_Conversa_Bar_Bebendo": [
+    0.527254343,
+    0.0403420255
+  ],
+  "NPC_Chimarrao_Bar": [
+    0.407601982,
+    0.0356719866
+  ],
+  "NPC_Chimarrao_Bar_Bebendo": [
+    0.5539282,
+    0.0356719866
+  ],
+  "NPC_Cerveja_Bar": [
+    0.633003652,
+    0.0385367461
+  ],
+  "NPC_Cerveja_Bar_Bebendo": [
+    0.537082,
+    0.0385367461
+  ],
+  "TapeteSinuca": [
+    0.5,
+    0.488689482
+  ],
+  "Mesa_Sinuca_Central": [
+    0.5,
+    0.194298357
+  ],
+  "PisoMadeira": [
+    0.5,
+    0.5
+  ],
+  "ParedeMadeira": [
+    0.5,
+    0.5
+  ]
+}

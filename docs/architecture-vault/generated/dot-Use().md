@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
 community: "Community 0"
-location: "L289"
+location: "L296"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,10 +17,10 @@ tags:
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [EXTRACTED]
 - [[dot-Dados()]] - `calls` [EXTRACTED]
-- [[dot-FullBochaPerspective()]] - `calls` [INFERRED]
+- [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
 - [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
-- [[dot-RunR2()]] - `calls` [INFERRED]
+- [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[Capitulo2Interactable]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]

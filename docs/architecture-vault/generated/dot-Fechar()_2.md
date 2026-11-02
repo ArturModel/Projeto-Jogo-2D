@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 3"
-location: "L561"
+community: "Community 21"
+location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_21
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-Avancar()]] - `calls` [EXTRACTED]
-- [[dot-Fade()]] - `calls` [EXTRACTED]
-- [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `calls` [INFERRED]
+- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_21

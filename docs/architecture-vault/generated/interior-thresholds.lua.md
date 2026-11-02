@@ -12,8 +12,8 @@ tags:
 # interior-thresholds.lua
 
 ## Connections
-- [[box()_1]] - `contains` [EXTRACTED]
-- [[c()_2]] - `contains` [EXTRACTED]
-- [[save()]] - `contains` [EXTRACTED]
+- [[box()_3]] - `contains` [EXTRACTED]
+- [[c()_4]] - `contains` [EXTRACTED]
+- [[save()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_60

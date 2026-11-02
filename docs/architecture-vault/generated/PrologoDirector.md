@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AteOTempo()]] - `method` [EXTRACTED]
-- [[dot-Awake()_3]] - `method` [EXTRACTED]
+- [[dot-Awake()_5]] - `method` [EXTRACTED]
 - [[dot-Curvar()]] - `method` [EXTRACTED]
 - [[dot-Desacelerar()]] - `method` [EXTRACTED]
 - [[dot-DispararFalasVencidas()]] - `method` [EXTRACTED]
@@ -21,9 +21,9 @@ tags:
 - [[dot-MontarCortina()]] - `method` [EXTRACTED]
 - [[dot-Revelar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()_1]] - `method` [EXTRACTED]
-- [[dot-Start()_13]] - `references` [EXTRACTED]
-- [[dot-Start()_7]] - `method` [EXTRACTED]
-- [[dot-Update()_5]] - `method` [EXTRACTED]
+- [[dot-Start()_20]] - `references` [EXTRACTED]
+- [[dot-Start()_9]] - `method` [EXTRACTED]
+- [[dot-Update()_9]] - `method` [EXTRACTED]
 - [[dot-UpdatePrologoScene()]] - `references` [EXTRACTED]
 - [[EstradaScroller]] - `references` [EXTRACTED]
 - [[FalaMarcada_1]] - `references` [EXTRACTED]

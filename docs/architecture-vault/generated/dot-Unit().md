@@ -12,7 +12,7 @@ tags:
 # .Unit()
 
 ## Connections
-- [[dot-Sphere()]] - `calls` [EXTRACTED]
+- [[dot-Sphere()_1]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 

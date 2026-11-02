@@ -192,6 +192,8 @@ public static class Chapter2BuildVerification
             PlayerSettings.SetUseDefaultGraphicsAPIs(BuildTarget.StandaloneWindows64,originalAuto);
             PlayerSettings.SetPreloadedAssets(originalPreloaded);
             AssetDatabase.SaveAssets();
+            if (!Application.isBatchMode && File.Exists("Assets/Scenes/MainMenu.unity"))
+                EditorSceneManager.OpenScene("Assets/Scenes/MainMenu.unity", OpenSceneMode.Single);
         }
     }
 

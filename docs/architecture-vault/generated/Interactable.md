@@ -1,24 +1,25 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "Community 26"
+community: "Community 84"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_84
 ---
 
 # Interactable
 
 ## Connections
+- [[dot-CanInteractAt()_1]] - `method` [EXTRACTED]
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
 - [[dot-FindNearest()]] - `method` [EXTRACTED]
-- [[dot-Interact()_7]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_3]] - `method` [EXTRACTED]
+- [[dot-Interact()_4]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_11]] - `method` [EXTRACTED]
 - [[dot-OnDrawGizmosSelected()]] - `method` [EXTRACTED]
-- [[dot-OnEnable()]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
+- [[dot-OnEnable()_11]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_5]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-SetTarget()]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable]] - `inherits` [EXTRACTED]
@@ -32,7 +33,9 @@ tags:
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `inherits` [EXTRACTED]
-- [[Prompt_5]] - `defines` [EXTRACTED]
+- [[Prompt_7]] - `defines` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `inherits` [EXTRACTED]
+- [[SantaRitaBarProp]] - `inherits` [EXTRACTED]
 - [[TransicaoDeZonaTrigger]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_84

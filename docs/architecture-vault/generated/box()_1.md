@@ -1,17 +1,17 @@
 ---
-source_file: "Tools/Aseprite/interior-thresholds.lua"
+source_file: "Tools/Aseprite/bar-identidade-2d.lua"
 type: "code"
-community: "Community 60"
+community: "Community 104"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_60
+  - community/Community_104
 ---
 
 # box()
 
 ## Connections
-- [[interior-thresholds.lua]] - `contains` [EXTRACTED]
+- [[bar-identidade-2d.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+#graphify/code #graphify/EXTRACTED #community/Community_104

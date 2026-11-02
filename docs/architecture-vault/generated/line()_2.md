@@ -1,18 +1,18 @@
 ---
-source_file: "Tools/Aseprite/marcus-walk.lua"
+source_file: "Tools/Aseprite/marcus-flashlight.lua"
 type: "code"
-community: "Community 62"
-location: "L10"
+community: "Community 61"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_62
+  - community/Community_61
 ---
 
 # line()
 
 ## Connections
-- [[leg()]] - `calls` [EXTRACTED]
-- [[marcus-walk.lua]] - `contains` [EXTRACTED]
+- [[marcus-flashlight.lua]] - `contains` [EXTRACTED]
+- [[rect()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_62
+#graphify/code #graphify/EXTRACTED #community/Community_61

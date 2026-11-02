@@ -44,3 +44,7 @@ Pedido autorizado em 21/10/2026. Preservar mapa vigente, saves e progressão de 
 ## Saídas e profundidade da Sociedade — 23/10/2026
 
 Revisão localizada de soleiras/capachos, escada rasa com projeção/escala dos atores, recorte da parede/forro, luz local e bancos nas duas laterais. [Plano, 167 verificações no Player QA, build normal e limites](Saidas_Escada_Execucao.md). Saves pessoais e alterações anteriores preservados; avaliação artística pelo autor permanece pendente.
+
+## Sinuquinha15 — 31/10/2026
+
+Direção 2D mantida; fontes comuns na perspectiva, revisão de movimento/escala, inspeção legível e apresentação de quinze bolas. Contorno A/D, mira nas setas, marcada nas mãos seguintes, listas e carga por cinco slots. [Plano, verificações Editor/Player, build e limites](Evidencias/Sinuquinha15/Relatorio.md). Evidência técnica não equivale à aprovação visual do autor.

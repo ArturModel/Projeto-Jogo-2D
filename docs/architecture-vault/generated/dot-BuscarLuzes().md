@@ -12,7 +12,7 @@ tags:
 # .BuscarLuzes()
 
 ## Connections
-- [[dot-LateUpdate()_10]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_11]] - `calls` [EXTRACTED]
 - [[dot-Start()_18]] - `calls` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 - [[Light2D]] - `references` [EXTRACTED]

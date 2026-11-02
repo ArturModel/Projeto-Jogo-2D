@@ -1,18 +1,19 @@
 ---
-source_file: "Tools/Aseprite/c2-npc-work.lua"
+source_file: "Tools/Aseprite/bar-patrons.lua"
 type: "code"
-community: "Community 58"
+community: "Community 101"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_58
+  - community/Community_101
 ---
 
 # line()
 
 ## Connections
-- [[c2-npc-work.lua]] - `contains` [EXTRACTED]
-- [[rect()_1]] - `calls` [EXTRACTED]
+- [[bar-patrons.lua]] - `contains` [EXTRACTED]
+- [[box()]] - `calls` [EXTRACTED]
+- [[limb()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_58
+#graphify/code #graphify/EXTRACTED #community/Community_101

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 3"
-location: "L1155"
+community: "Community 21"
+location: "L2223"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_21
 ---
 
 # .ConcluirSerieDerrota()
@@ -15,8 +15,9 @@ tags:
 - [[dot-AbrirSelecaoCarregar()]] - `calls` [EXTRACTED]
 - [[dot-Clear()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirMao()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
 - [[dot-Limpar()]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_21

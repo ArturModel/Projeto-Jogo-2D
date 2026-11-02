@@ -1,0 +1,5 @@
+PASS Hash de QA e normal identico.
+PASS Player normal iniciou e permaneceu respondendo; encerrado pelo harness.
+Erros C# procurados no startup: 0
+Avisos presentes: WindowsMediaFoundation color primaries; ExclusiveFullscreen recusado e fallback FullscreenWindow; medicao de vsync/refresh do driver.
+Limite: smoke de inicializacao, nao percurso de campanha ou aprovacao visual.

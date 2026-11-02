@@ -113,3 +113,76 @@ docs/architecture-vault/.obsidian/
 *.key
 *.p12
 *.pfx
+
+# Bar/Sinuca R4: evidências finais textuais; capturas e testes intermediários locais.
+!/Docs/Evidencias/BarSinucaR4/Editor/runtime-qa.txt
+!/Docs/Evidencias/BarSinucaR4/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/BarSinucaR4/PlayerQA/build-qa.txt
+!/Docs/Evidencias/BarSinucaR4/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/BarSinucaR4/PlayerNormal/assembly.txt
+!/Docs/Evidencias/BarSinucaR4/PlayerNormal/smoke.txt
+!/Docs/Evidencias/BarSinucaR4/PlayerNormal/saves-preservados.txt
+
+# Sinuca Ref7: screenshots stay local; compact test evidence is versioned.
+!/Docs/Evidencias/SinucaRef7/Editor/runtime-qa.txt
+!/Docs/Evidencias/SinucaRef7/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/SinucaRef7/PlayerQA/build-qa.txt
+!/Docs/Evidencias/SinucaRef7/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/SinucaRef7/PlayerNormal/assembly.txt
+!/Docs/Evidencias/SinucaRef7/saves-preservados.txt
+
+# Bar 2D identity: final textual evidence only; screenshots remain local.
+!/Docs/Evidencias/BarIdentidade2D/Editor/runtime-qa.txt
+!/Docs/Evidencias/BarIdentidade2D/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/BarIdentidade2D/PlayerQA/build-qa.txt
+!/Docs/Evidencias/BarIdentidade2D/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/BarIdentidade2D/PlayerNormal/assembly.txt
+!/Docs/Evidencias/BarIdentidade2D/saves-preservados.txt
+!/Docs/Evidencias/BarIdentidade2D/circulacao-editor.txt
+
+# Sinuquinha15: compact evidence; captures remain local.
+!/Docs/Evidencias/Sinuquinha15/Editor/runtime-qa.txt
+!/Docs/Evidencias/Sinuquinha15/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/Sinuquinha15/PlayerQA/build-qa.txt
+!/Docs/Evidencias/Sinuquinha15/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/Sinuquinha15/PlayerNormal/assembly.txt
+!/Docs/Evidencias/Sinuquinha15/saves-preservados.txt
+!/Docs/Evidencias/Sinuquinha15/PlayerNormal/smoke.txt
+
+# Audio C2: evidencias textuais finais, capturas locais.
+!/Docs/Evidencias/AudioC2/verificacao.txt
+!/Docs/Evidencias/AudioC2/Editor/runtime-qa.txt
+!/Docs/Evidencias/AudioC2/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/AudioC2/PlayerQA/build-qa.txt
+!/Docs/Evidencias/AudioC2/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/AudioC2/PlayerNormal/assembly.txt
+!/Docs/Evidencias/AudioC2/saves-preservados.txt
+
+# Itens e passada: evidencias compactas.
+!/Docs/Evidencias/ItensPassada/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/ItensPassada/PlayerQA/build-qa.txt
+!/Docs/Evidencias/ItensPassada/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/ItensPassada/resultado.txt
+
+# Proporcoes: evidencias finais textuais.
+!/Docs/Evidencias/Proporcoes/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/Proporcoes/PlayerQA/build-qa.txt
+!/Docs/Evidencias/Proporcoes/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/Proporcoes/resultado.txt
+
+# Bar rotinas: evidencias finais compactas.
+!/Docs/Evidencias/BarRotinas/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/BarRotinas/PlayerQA/build-qa.txt
+!/Docs/Evidencias/BarRotinas/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/BarRotinas/resultado.txt
+
+# Marcus limpo: somente relatorios finais.
+!/Docs/Evidencias/MarcusLimpo/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/MarcusLimpo/PlayerQA/build-qa.txt
+!/Docs/Evidencias/MarcusLimpo/PlayerNormal/build-windows.txt
+!/Docs/Evidencias/MarcusLimpo/resultado.txt
+
+# Lanterna costas: evidencias finais textuais.
+!/Docs/Evidencias/LanternaCostas/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/LanternaCostas/PlayerQA/build-qa.txt
+!/Docs/Evidencias/LanternaCostas/PlayerNormal/build-windows.txt

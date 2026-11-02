@@ -106,6 +106,13 @@ public sealed class Capitulo2Director : MonoBehaviour
     public void Interagir(string id, Sprite arteExame = null)
     {
         if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
+        if (id == "horarios" && !GameState.Tem(Flags.MapaDoCarroObtido))
+        {
+            GameMessageUI.Instance.ShowInspection("LINHAS E RUAS DE SANTA RITA", "Bilhete",
+                "Ao lado dos horários, um porta-folhetos: ORIENTAÇÃO AO PASSAGEIRO — TERMINAL E CENTRO. O traçado das ruas indica as repartições e os caminhos para os bairros. Há exemplares para levar.\n\nCom as obras e as ruas diferentes do que lembro, isto vai me ajudar a procurar os lugares que o vô visitou.");
+            SantaRitaItemAction.Oferecer("PEGAR MAPA", () => GameState.Marcar(Flags.MapaDoCarroObtido));
+            return;
+        }
         C2InteractionData d = Dados(id);
         if (d == null) { Debug.LogError("Interação C2 sem conteúdo: " + id); return; }
         if(id=="protocolo"&&!GameState.Tem("c2_prefeitura_atendimento"))

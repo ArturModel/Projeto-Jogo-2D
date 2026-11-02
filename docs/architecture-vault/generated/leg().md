@@ -2,7 +2,7 @@
 source_file: "Tools/Aseprite/marcus-walk.lua"
 type: "code"
 community: "Community 62"
-location: "L17"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # leg()
 
 ## Connections
-- [[line()_2]] - `calls` [EXTRACTED]
+- [[c()_6]] - `calls` [EXTRACTED]
 - [[marcus-walk.lua]] - `contains` [EXTRACTED]
+- [[stroke()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_62

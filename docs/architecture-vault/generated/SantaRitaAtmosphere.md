@@ -12,12 +12,12 @@ tags:
 # SantaRitaAtmosphere
 
 ## Connections
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-Interior()_1]] - `method` [EXTRACTED]
 - [[dot-OnDestroy()_1]] - `method` [EXTRACTED]
-- [[dot-Start()_8]] - `method` [EXTRACTED]
-- [[dot-Update()_7]] - `method` [EXTRACTED]
+- [[dot-Start()_10]] - `method` [EXTRACTED]
+- [[dot-Update()_11]] - `method` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[ParticleSystem]] - `references` [EXTRACTED]

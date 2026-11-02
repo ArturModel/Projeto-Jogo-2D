@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "Community 26"
+community: "Community 84"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_84
 ---
 
 # SceneFader
 
 ## Connections
-- [[dot-Awake()_12]] - `method` [EXTRACTED]
+- [[dot-Awake()_22]] - `method` [EXTRACTED]
 - [[dot-BannerRoutine()]] - `method` [EXTRACTED]
 - [[dot-Bootstrap()]] - `method` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `method` [EXTRACTED]
@@ -22,7 +22,7 @@ tags:
 - [[dot-Flicker()]] - `method` [EXTRACTED]
 - [[dot-LoadScene()]] - `method` [EXTRACTED]
 - [[dot-MostrarBannerArea()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_4]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_9]] - `method` [EXTRACTED]
 - [[dot-OnSceneLoaded()_2]] - `method` [EXTRACTED]
 - [[dot-ResetStatic()]] - `method` [EXTRACTED]
 - [[dot-ResolverCaminhoCena()]] - `method` [EXTRACTED]
@@ -32,10 +32,10 @@ tags:
 - [[dot-ZoneTransitionRoutine()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Coroutine]] - `references` [EXTRACTED]
-- [[Instance_6]] - `defines` [EXTRACTED]
+- [[Instance_9]] - `defines` [EXTRACTED]
 - [[IsTransitioning]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SceneFader.cs]] - `contains` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_84

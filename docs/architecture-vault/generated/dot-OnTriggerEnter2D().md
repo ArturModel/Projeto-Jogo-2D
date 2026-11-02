@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
 community: "Community 2"
-location: "L44"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED

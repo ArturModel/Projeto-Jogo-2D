@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs"
 type: "code"
 community: "Community 41"
-location: "L79"
+location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -21,7 +21,7 @@ tags:
 - [[dot-ApplyOficinaRadio()]] - `calls` [EXTRACTED]
 - [[dot-ApplyPrefeitura()]] - `calls` [EXTRACTED]
 - [[dot-ApplyRodoviaria()]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
+- [[dot-Start()_11]] - `calls` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]

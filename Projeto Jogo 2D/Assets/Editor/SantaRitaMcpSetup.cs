@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -40,13 +40,31 @@ public static class SantaRitaMcpSetup
             var bridge = locator.GetProperty("Bridge")?.GetValue(null);
             if (server == null || bridge == null) return;
 
-            bool isReachable = (bool)server.GetType().GetMethod("IsLocalHttpServerReachable").Invoke(server, null);
+            var isReachableMethod = server.GetType().GetMethod("IsLocalHttpServerReachable");
+            var isAliveMethod = server.GetType().GetMethod("IsManagedServerLaunchProcessAlive");
+
+            bool isReachable = (bool)isReachableMethod.Invoke(server, null);
             if (!isReachable)
             {
-                server.GetType().GetMethod("StartLocalHttpServer").Invoke(server, new object[] { true });
-                await Task.Delay(1500);
+                bool isLaunching = isAliveMethod != null && (bool)isAliveMethod.Invoke(server, null);
+                if (!isLaunching)
+                {
+                    server.GetType().GetMethod("StartLocalHttpServer").Invoke(server, new object[] { true });
+                }
+
+                for (int i = 0; i < 120; i++)
+                {
+                    await Task.Delay(500);
+                    isReachable = (bool)isReachableMethod.Invoke(server, null);
+                    if (isReachable) break;
+                    if (isAliveMethod != null && i > 4 && !(bool)isAliveMethod.Invoke(server, null))
+                        break;
+                }
             }
 
+            if (!isReachable) return;
+
+            await Task.Delay(250);
             bool isRunning = (bool)bridge.GetType().GetProperty("IsRunning").GetValue(bridge);
             if (!isRunning)
             {

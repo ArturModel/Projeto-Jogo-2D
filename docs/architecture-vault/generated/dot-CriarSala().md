@@ -12,8 +12,8 @@ tags:
 # .CriarSala()
 
 ## Connections
-- [[dot-Awake()_22]] - `calls` [EXTRACTED]
-- [[dot-Box()_1]] - `calls` [EXTRACTED]
+- [[dot-Awake()_23]] - `calls` [EXTRACTED]
+- [[dot-Box()_2]] - `calls` [EXTRACTED]
 - [[dot-Quad()_1]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 

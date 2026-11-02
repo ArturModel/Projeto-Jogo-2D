@@ -1,17 +1,31 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 19"
-location: "L58"
+community: "Community 17"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_17
 ---
 
 # .Update()
 
 ## Connections
-- [[AudioAmbiente]] - `method` [EXTRACTED]
+- [[dot-AtualizarMira()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarTela()]] - `calls` [EXTRACTED]
+- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
+- [[dot-EfetuarLancamento()]] - `calls` [EXTRACTED]
+- [[dot-EntradaTeclado()]] - `calls` [EXTRACTED]
+- [[dot-Escolher()]] - `calls` [EXTRACTED]
+- [[dot-ForcaNoTempo()]] - `calls` [EXTRACTED]
+- [[dot-MudarVista()]] - `calls` [EXTRACTED]
+- [[dot-Pausar()]] - `calls` [EXTRACTED]
+- [[dot-PodeMirar()]] - `calls` [EXTRACTED]
+- [[dot-ProximoTurno()]] - `calls` [EXTRACTED]
+- [[dot-RecordContacts()]] - `calls` [INFERRED]
+- [[dot-Step()]] - `calls` [INFERRED]
+- [[dot-Tick()]] - `calls` [INFERRED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_17

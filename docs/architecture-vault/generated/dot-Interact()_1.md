@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
 community: "Community 18"
-location: "L19"
+location: "L183"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .Interact()
 
 ## Connections
-- [[Capitulo2Interactable]] - `method` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_18

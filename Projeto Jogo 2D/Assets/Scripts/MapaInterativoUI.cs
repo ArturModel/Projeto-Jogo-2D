@@ -503,11 +503,6 @@ public class MapaInterativoUI : MonoBehaviour
         if (Keyboard.current.mKey.wasPressedThisFrame || Keyboard.current.tabKey.wasPressedThisFrame)
         {
             if (GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing) return;
-            if (!GameState.Tem(Flags.MapaDoCarroObtido))
-            {
-                Legenda.Dizer("\"O mapa ficou no carro.\"", 2.5f);
-                return;
-            }
 
             if (IsShowing)
                 Fechar();
@@ -704,11 +699,7 @@ public class MapaInterativoUI : MonoBehaviour
 
     public void Abrir(int abaInicial = -1)
     {
-        if (!GameState.Tem(Flags.MapaDoCarroObtido))
-        {
-            Legenda.Dizer("\"O mapa ficou no carro.\"", 2.5f);
-            return;
-        }
+        if (!GameState.Tem(Flags.MapaDoCarroObtido) && abaInicial<=0) abaInicial=1;
         if (abaInicial >= 0)
         {
             abaAtiva = Mathf.Clamp(abaInicial, 0, 3);
@@ -734,6 +725,8 @@ public class MapaInterativoUI : MonoBehaviour
 
     private void SelecionarAba(int indice)
     {
+        if(indice==0&&!GameState.Tem(Flags.MapaDoCarroObtido))
+        {Legenda.Dizer("Ainda preciso encontrar um mapa. Minhas anotações estão no diário.",2.5f);indice=1;}
         if (diarioScroll != null) diarioScroll.verticalNormalizedPosition = 1;
         abaAtiva = Mathf.Clamp(indice, 0, 3);
         for (int i = 0; i < botoesAba.Length; i++)

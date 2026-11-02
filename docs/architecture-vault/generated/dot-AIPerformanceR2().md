@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
-community: "Community 0"
-location: "L206"
+community: "Community 27"
+location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_27
 ---
 
 # .AIPerformanceR2()
@@ -21,4 +21,4 @@ tags:
 - [[BochaSimulation]] - `calls` [INFERRED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_27

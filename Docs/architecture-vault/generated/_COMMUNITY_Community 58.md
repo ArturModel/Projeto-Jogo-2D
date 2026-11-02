@@ -8,9 +8,9 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[c()_1]] - code - Tools/Aseprite/c2-npc-work.lua
+- [[c()_3]] - code - Tools/Aseprite/c2-npc-work.lua
 - [[c2-npc-work.lua]] - code - Tools/Aseprite/c2-npc-work.lua
-- [[line()]] - code - Tools/Aseprite/c2-npc-work.lua
+- [[line()_1]] - code - Tools/Aseprite/c2-npc-work.lua
 - [[rect()_1]] - code - Tools/Aseprite/c2-npc-work.lua
 
 ## Live Query (requires Dataview plugin)

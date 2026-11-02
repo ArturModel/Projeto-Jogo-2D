@@ -18,6 +18,7 @@ public class TransicaoDeZonaTrigger : Interactable
     private bool exigirCasaAvoVisitada;
     private float cooldownAte;
 
+    public override bool CanInteractAt(Vector2 p) => base.CanInteractAt(p) && (!promptTexto.StartsWith("Sair") || SantaRitaExitThreshold.OnMat(p,transform.position));
     public override string Prompt => automaticoAoEncostar ? "Seguir" : promptTexto.StartsWith("Sair") ? "Sair" : "Abrir porta";
 
     public void Configurar(
@@ -63,10 +64,10 @@ public class TransicaoDeZonaTrigger : Interactable
 
         if (zonaDestino == Capitulo1Director.ZonaId.Zona2_Posto &&
             Capitulo1Director.ZonaAtual == Capitulo1Director.ZonaId.Zona1_Rodovia &&
-            !GameState.Tem(Flags.MapaDoCarroObtido))
+            !GameState.Tem(Flags.LanternaDoCarroObtida))
         {
             cooldownAte = Time.unscaledTime + 2f;
-            GameMessageUI.Instance.Show("O mapa e a lanterna ficaram no meu carro. Preciso pegá-los antes de seguir.", "MARCUS", "marcus");
+            GameMessageUI.Instance.Show("A lanterna ficou no meu carro. Preciso pegá-la antes de seguir.", "MARCUS", "marcus");
             return;
         }
 

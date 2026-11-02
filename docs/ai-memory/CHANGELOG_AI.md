@@ -1,3 +1,63 @@
+# 30/10/2026 — Bar, Sinuca Brasileira e inventário R4
+
+Implementados bar/planta compartilhada, três vistas, regras brasileiras com bola marcada, contato na branca/redes, cinco slots, mapa na Rodoviária e recibo com coleta/entrega. Música expandida/abafada e onze soleiras testadas por E. Player QA final: 200 verificações + PASS. Build normal zero erros, mesmo hash de fontes, QA excluído da DLL; menu observado, cliques limitados por aviso do Firewall não automatizado. Seis arquivos de saves intactos. Graphify/Obsidian atualizados, 103 C#. [Plano executado](../ai-plans/2026-10-30_Patrick-Dotto_bar-sinuca-inventario.md), [evidências e limites](../Evidencias/BarSinucaR4/Relatorio.md).
+
+# Restauração do Comportamento Investigativo Inicial da Casa do Avô — 30/10/2026
+
+- **Autor:** @PatrickDotto (Patrick Dotto)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-30_PatrickDotto_restaurar-investigacao-inicial-casa-avo.md`](../ai-plans/2026-10-30_PatrickDotto_restaurar-investigacao-inicial-casa-avo.md)
+- **Resumo:** Restaurados `InteracaoCapitulo1.cs` e `Capitulo1Director.cs` exatamente ao estado inicial (`git diff` vazio), mantendo a sutileza investigativa original (`"Descobrir quem escreveu o aviso no verso do cupom."`) sem dicas explícitas entregando o próximo passo. Sessão ativa em Play Mode também restaurada ao objetivo original.
+
+---
+
+# Fluxo Original das 5 Pistas da Casa do Avô (Voltar ao Mercadinho → Bar do Zé) — 30/10/2026
+
+- **Autor:** @PatrickDotto (Patrick Dotto)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-30_PatrickDotto_fluxo-5-pistas-voltar-mercadinho-depois-bar.md`](../ai-plans/2026-10-30_PatrickDotto_fluxo-5-pistas-voltar-mercadinho-depois-bar.md)
+- **Resumo:** Restaurada em `InteracaoCapitulo1.cs` a progressão original (Casa do Avô → voltar ao Mercadinho com o cupom → Bar do Zé), adicionando aviso explícito em legenda e no objetivo assim que as 5 pistas da Casa do Avô são coletadas (`"Vasculhei as 5 pistas da casa do vô. Preciso voltar ao Mercadinho e mostrar o aviso no cupom para a atendente."`), lembrete direto em `ZeDesconversa()` caso o jogador suba ao Bar antes de falar com a atendente e confirmação clara ao fechar o relato no Mercadinho (`"O homem de capa sentou na mesa do Zé. Hora de subir ao Bar do Zé na Rua Norte."`). Sessão ativa em Play Mode também ajustada em RAM.
+
+---
+
+# Esclarecimento sobre o Fluxo das 5 Pistas da Casa do Avô — 30/10/2026
+
+- **Autor:** @PatrickDotto (Patrick Dotto)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-30_PatrickDotto_esclarecimento-5-pistas-casa-avo.md`](../ai-plans/2026-10-30_PatrickDotto_esclarecimento-5-pistas-casa-avo.md)
+- **Resumo:** Confirmado ao autor que não faltava examinar nenhum item na Casa do Avô (todas as 5 pistas já haviam sido coletadas) e que, com o ajuste em `InteracaoCapitulo1.cs`, basta examinar as pistas da casa para seguir direto ao confronto com Zé no Bar da Rua Norte sem necessidade de retornar ao Mercadinho.
+
+---
+
+# Reconhecimento das Pistas da Casa do Avô e Progressão Direta ao Bar do Zé — 30/10/2026
+
+- **Autor:** @PatrickDotto (Patrick Dotto)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-30_PatrickDotto_reconhecimento-pistas-casa-avo.md`](../ai-plans/2026-10-30_PatrickDotto_reconhecimento-pistas-casa-avo.md)
+- **Resumo:** Corrigido o fluxo de conclusão das pistas da Casa do Avô (`InteracaoCapitulo1.VerificarConclusaoPistasCasaAvo()` e `InteracaoCapitulo1.InteragirZe()` em `Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs` e `Capitulo1Director.DispararChegadaCasaDoAvo()` em `Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs`) para que, ao reunir as pistas da casa incluindo o documento/cupom (`Flags.Pista_CasaAvoCompleta` + `Flags.Pista_NotaFiscal2004` / `Flags.CasaAvo_LeuBilhete`), o jogo marque imediatamente `Flags.Pista_RumoBarDoZe`, atualize o objetivo/GPS do mapa para o Bar do Zé, exiba confirmação em legenda na Casa do Avô e permita confrontar Zé na Sinuca sem obrigar um retorno forçado ao Mercadinho caso o jogador já tenha passado por lá na subida. Atualizado também o `GameState` em RAM da sessão ativa em Play Mode no Unity Editor via MCP para destravar imediatamente a partida em andamento.
+
+---
+
+# Restauração Automática da Cena `MainMenu.unity` Após Build e Verificação de Saves Pessoais — 30/10/2026
+
+- **Autor:** @PatrickDotto (Patrick Dotto)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-30_PatrickDotto_restaurar-cena-mainmenu-e-saves.md`](../ai-plans/2026-10-30_PatrickDotto_restaurar-cena-mainmenu-e-saves.md)
+- **Resumo:** Reaberta a cena `Assets/Scenes/MainMenu.unity` no Unity Editor (que havia permanecido na cena vazia `Untitled` criada por `EditorSceneManager.NewScene` durante `Chapter2BuildVerification.Run()`) e atualizado o bloco `finally` de `Chapter2BuildVerification.Run()` para sempre restaurar `MainMenu.unity` ao concluir builds no Editor. Confirmada a preservação integral dos saves pessoais do autor (`Slot 1` e `Slot 5` na Sociedade Beira-Rio e `Slot 2` na Rua Norte / Bar do Zé).
+
+---
+
+# Implementação e Validação da Sinuca 3D do Bar do Zé (Referência FlyOrDie, Controles Simples, S01–S27) — 30/10/2026
+
+- **Autor:** @PatrickDotto (Patrick Dotto)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-30_PatrickDotto_sinuca-3d-flyordie-simples-r1.md`](../ai-plans/2026-10-30_PatrickDotto_sinuca-3d-flyordie-simples-r1.md)
+- **Resumo:** Implementada a elevação visual, espacial e física do boss de Sinuca do Bar do Zé (`Prompt_Sinuca_3D_FlyOrDie_Simples_R1`) preservando o ciclo essencial de controles (**mirar, segurar para carregar a força e soltar para tacar**) e as regras canônicas (7 bolas numeradas compartilhadas, 4 pontos/mão, melhor de 3, Bola Marcada `[X]` da 2ª mão em diante e invariante das 7 bolas). Criado `SinucaTableView.cs` (`MaskableGraphic`) com câmeras **Mesa 3D** em perspectiva oblíqua padrão e **Vista Superior** tática (`V` ou botão no HUD) + zoom no scroll, projeção `ScreenToTablePoint`, esferas 3D com números `1..7` e badge `[X]`, taco 3D recuando com a carga e guia de mira discreta até o primeiro contato. Refatorado `SinucaMinigameUI.cs` com física de passo fixo (`120 Hz`), colisão contínua varrida, rebote nos 12 bicos das caçapas, efeito longitudinal opcional na branca (`Normal / Avançar / Recuar`), prática curta opcional antes do duelo, IA de Zé avaliando candidatos no mesmo kernel físico (`~4.2 ms`), áudio por evento físico real e terror psicológico sutil respeitando `MenuPausa.ReduzirEfeitosIntensos`. Validados `S01`–`S27` em EditMode (`Sinuca3DVerification.cs`), regressão C1/C2 (`Chapter2Verification.cs`, `BochaPerspectiveVerification.cs`) e no executável StandaloneWindows64 (`Build/Sinuca3DQA/SantaRita.exe -srSinuca3DQA` com `Sinuca3DRuntimeVerification.cs`), com evidências e capturas salvas em `Docs/Evidencias/Sinuca3D/` e resumo consolidado em `Docs/Sinuca_3D_Execucao.md`.
+
+---
+
+# Resolução de Conflitos Git/VS Code e Avisos/Erros de Inicialização no Console do Unity — 30/10/2026
+
+- **Autor:** @PatrickDotto (Patrick Dotto)
+- **Documento do Plano:** [`docs/ai-plans/2026-10-30_PatrickDotto_resolucao-conflitos-git-e-console-unity.md`](../ai-plans/2026-10-30_PatrickDotto_resolucao-conflitos-git-e-console-unity.md)
+- **Resumo:** Sincronizada a branch `main` local com `origin/main` (`30d811c`), eliminando os bloqueios de `git pull` causados por resíduos do Plastic SCM (`.plastic/`), quebra de linha em `Kenney-Interface-License.txt` e reimportação de fonte. Diagnosticadas e corrigidas as ocorrências do Console do Unity: (1) em `SantaRitaMcpSetup.ConectarManualmente()`, substituído o `Task.Delay(1500)` fixo por polling real de `IsLocalHttpServerReachable()` e verificação de `IsManagedServerLaunchProcessAlive()`, evitando que `bridge.StartAsync()` tentasse conectar à porta `8088` antes de o servidor Python FastMCP/Uvicorn terminar de instalar dependências e subir; (2) suprimidos com `#pragma warning disable CS0414` os dois campos serializados legados (`esperaAntesDoObjetivo` e `objetivo`) em `ChegadaEmSantaRita.cs`; (3) esclarecidos os avisos únicos de transcodificação de vídeo (`WindowsMediaFoundation`). Validação Graphify/Obsidian com status PASS em 94 scripts C#.
+
+---
+
 # Adição e Harmonização de Sprites nos Cenários (Flora e Props) — 29/10/2026
 
 - **Autor:** @Venturini01 (Ariel Venturini)
@@ -256,3 +316,44 @@ Estruturar o projeto com o grafo de conhecimento Graphify, cofre Markdown naveg�
   - `graphify-setup.sh`, `graphify-refresh.sh`, `graphify-validate.sh`.
 - **Documentação:**
   - `docs/PLAN-SETUP-GRAPHIFY-OBSIDIAN.md`, `docs/GRAPHIFY-OBSIDIAN-OPERACAO.md`.
+
+## 31/10/2026 — Bar do Zé: identidade 2D preservada
+
+Correção expressa após rejeição da estética Ref7: exploração com sprites e WorldLit originais, sinuca com as mesmas fontes de pixel art/UV em perspectiva. Zé e frequentadores sem corpos em blocos; móveis nativos, banco/placas/foto/taqueira/engradado/tapete/bandeira e cuia com fontes Aseprite. Núcleos de física, regras e saves preservados. [Plano executado](../ai-plans/2026-10-31_PatrickDotto_bar-identidade-2d.md); resultados e limites no [relatório](../Evidencias/BarIdentidade2D/Relatorio.md).
+
+
+## 31/10/2026 — Sinuquinha de quinze bolas, teclado e carga na pausa
+
+SinuquinhaRules substitui a pontuação de sete bolas por grupos lisas/listradas ou 1–7/9–15 e preta final. Branca pronta, buffers/IA de dezesseis bolas, texturas numeradas/rolamento, guia da colorida; marcada reativada nas mãos 2/3 no complemento do autor, com X e restauração da formação ao cair. A/D contornam, setas miram, lista de encaçapadas e ESC → Carregar Jogo com cinco slots explícitos/cancelamento pausado. Bar sem tapete sob a mesa, capacho visível, escala de TV/geladeira/cadeiras/mesa de calçada; leitura tipográfica, bandeira detalhada e caminhada com apoios 0/4. Referências de rim/áudio/sala recuperadas após reload.
+
+Editor e Player QA: 279 verificações cada + encerramento PASS. Builds QA/normal zero erros e mesmo hash; QA/autoria excluídos da DLL final. Seis saves preservados na rodada final e RAM mais recente restaurada; caches TMP posteriores à build documentados. Graphify/Obsidian atualizados: 111 C#. [Plano executado](../ai-plans/2026-10-31_PatrickDotto_sinuquinha-15.md), [resultados/limites](../Evidencias/Sinuquinha15/Relatorio.md). Sem aprovação artística presumida, commit ou push.
+
+
+## 01/11/2026 — Recuperação de arquivos ausentes / Safe Mode
+Recuperados somente os 640 arquivos ausentes preservados no stash, sem sobrescrever existentes ou consumir o stash. [Plano e validação](../ai-plans/2026-11-01_PatrickDotto_recuperar-safe-mode.md).
+
+
+## 01/11/2026 — Áudio C2 / LFS
+Trilhas Centro/Cemitério/Bocha e recuperação LFS: [plano e limites](../ai-plans/2026-11-01_PatrickDotto_audio-c2-lfs.md).
+
+Fechamento AudioC2: MCP recuperado; Player QA 137 verificações + PASS final; builds finais sem erros e mesmo hash; seis saves intactos, RAM/posição restauradas, índices 112 fontes. Limites e evidências no plano acima.
+
+01/11 — Inventário sem fichas e passada de corpo inteiro: [plano](../ai-plans/2026-11-01_PatrickDotto_itens-passada.md). Validação em andamento.
+
+Fechamento itens-passada: 141 verificações + PASS; builds e hash iguais, índices 112, saves/RAM preservados. Avaliação artística reservada ao autor.
+
+01/11 — Revisão de proporções e moldura: [plano](../ai-plans/2026-11-01_PatrickDotto_proporcoes-inventario.md).
+
+Proporções: encerrado com QA final PASS, builds sem erros/hash igual, refresh/validate 112, saves/RAM intactos.
+
+02/11 — [Bar, rotinas e passada](../ai-plans/2026-11-02_PatrickDotto_bar-rotinas-passada.md): implementação em validação.
+
+Bar-rotinas-passada concluído tecnicamente: QA 159 verificações + PASS, builds sem erros/hash igual, térmica/cuia conferidas nas duas visões; índices 112, saves preservados. Rodadas intermediárias e limitações registradas no plano.
+
+02/11 — [Marcus ciclo limpo e alpha](../ai-plans/2026-11-02_PatrickDotto_marcus-ciclo-limpo.md): em validação.
+
+Marcus ciclo limpo concluído tecnicamente: 33 verificações + PASS, builds sem erros/hash igual, exportação reproduzida em sandbox, índices 112, saves preservados.
+
+02/11 — [Lanterna de costas](../ai-plans/2026-11-02_PatrickDotto_lanterna-costas.md), correção pontual em validação.
+
+Lanterna-costas concluída: captura e QA PASS, builds sem erros/hash igual, índices 112 e saves intactos.

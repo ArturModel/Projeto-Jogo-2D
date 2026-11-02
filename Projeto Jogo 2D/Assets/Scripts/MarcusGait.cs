@@ -8,13 +8,14 @@ public sealed class MarcusGait
     private float fase;
     private bool andando;
     public int Quadro { get; private set; }
+    public int QuadroDetalhado { get; private set; }
 
-    public void Reset() { fase = 7.6f; andando = false; Quadro = 0; }
+    public void Reset() { fase = 7.6f; andando = false; Quadro = 0; QuadroDetalhado=0; }
 
     public void Avancar(float deslocamento, Action apoio)
     {
         if (deslocamento > 1f) { Reset(); return; } // Porta/checkpoint não é um passo.
-        if (deslocamento < .0001f) { Reset(); return; }
+        if (deslocamento < .0001f) return; // Entre ticks interpolados, conservar a fase.
         if (!andando) { fase = 7.6f; andando = true; }
         float nova = fase + deslocamento * 8f / ComprimentoCiclo;
         int ultimoApoio = -1;
@@ -24,6 +25,7 @@ public sealed class MarcusGait
         // Mesmo após um frame demorado, mostrar o apoio antes da passagem.
         // Contatos perdidos no intervalo não viram vários sons no mesmo frame.
         Quadro = ultimoApoio >= 0 ? ultimoApoio : Mathf.FloorToInt(fase);
+        QuadroDetalhado=ultimoApoio>=0?ultimoApoio*2:Mathf.FloorToInt(fase*2);
         if (ultimoApoio >= 0) apoio?.Invoke();
     }
 }

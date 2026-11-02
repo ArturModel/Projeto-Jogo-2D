@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 23"
-location: "L1334"
+location: "L2745"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,9 @@ tags:
 # .CriarSpriteCirculo()
 
 ## Connections
+- [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
-- [[dot-CriarBolasUI()]] - `calls` [EXTRACTED]
+- [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]

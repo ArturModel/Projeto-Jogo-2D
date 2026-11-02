@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs"
 type: "code"
-community: "Community 25"
-location: "L80"
+community: "Community 30"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_30
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[dot-RestoreAudioC2Prefs()]] - `calls` [INFERRED]
+- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_30

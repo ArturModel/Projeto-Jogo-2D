@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 2"
-location: "L1496"
+location: "L1509"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .ColocarGatilhoTransicao()
 
 ## Connections
-- [[dot-Configurar()_1]] - `calls` [INFERRED]
+- [[dot-Configurar()_2]] - `calls` [INFERRED]
 - [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]

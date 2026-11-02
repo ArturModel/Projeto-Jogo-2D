@@ -24,7 +24,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Init()
     {
-        if(!Environment.GetCommandLineArgs().Contains("-srPortalQA")&&!Environment.GetCommandLineArgs().Contains("-srAccessQA")&&!Environment.GetCommandLineArgs().Contains("-srC2QA")&&!Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")&&!Environment.GetCommandLineArgs().Contains("-srC2PerfQA")&&!Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")&&!Environment.GetCommandLineArgs().Contains("-srC2R2QA")&&!Environment.GetCommandLineArgs().Contains("-srBochaQA"))return;
+        if(!Environment.GetCommandLineArgs().Contains("-srMarcusQA")&&!Environment.GetCommandLineArgs().Contains("-srAudioC2QA")&&!Environment.GetCommandLineArgs().Contains("-srSinuquinhaQA")&&!Environment.GetCommandLineArgs().Contains("-srSinucaR4QA")&&!Environment.GetCommandLineArgs().Contains("-srPortalQA")&&!Environment.GetCommandLineArgs().Contains("-srAccessQA")&&!Environment.GetCommandLineArgs().Contains("-srC2QA")&&!Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")&&!Environment.GetCommandLineArgs().Contains("-srC2PerfQA")&&!Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")&&!Environment.GetCommandLineArgs().Contains("-srC2R2QA")&&!Environment.GetCommandLineArgs().Contains("-srBochaQA")&&!Environment.GetCommandLineArgs().Contains("-srSinuca3DQA"))return;
         var g=new GameObject("C2_Runtime_QA_Explicit");DontDestroyOnLoad(g);g.AddComponent<Chapter2RuntimeVerification>();
     }
     private void Start()
@@ -35,11 +35,11 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
         isolation=CheckpointSystem.BeginIsolatedTests();
         File.WriteAllText(Path.Combine(folder,"runtime-progresso.txt"),"Início QA "+DateTime.UtcNow.ToString("O")+"\n");
         report.Add("QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.");
-        StartCoroutine(Guard(portalForce||Environment.GetCommandLineArgs().Contains("-srPortalQA")?RunPortalRegression():accessForce||Environment.GetCommandLineArgs().Contains("-srAccessQA")?RunAccesses():bochaForce||Environment.GetCommandLineArgs().Contains("-srBochaQA")?RunBochaPerspective():r2Force||Environment.GetCommandLineArgs().Contains("-srC2R2QA")?RunR2():Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")?SaveIsolationProbe():Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")?C1LoadSmoke():Environment.GetCommandLineArgs().Contains("-srC2PerfQA")?PerformancePair():Run()));
+        StartCoroutine(Guard(Environment.GetCommandLineArgs().Contains("-srMarcusQA")?RunMarcusQA():audioC2Force||Environment.GetCommandLineArgs().Contains("-srAudioC2QA")?RunAudioC2():sinuquinhaForce||Environment.GetCommandLineArgs().Contains("-srSinuquinhaQA")?RunSinuquinha15():sinucaR4Force||Environment.GetCommandLineArgs().Contains("-srSinucaR4QA")?RunSinucaR4():portalForce||Environment.GetCommandLineArgs().Contains("-srPortalQA")?RunPortalRegression():accessForce||Environment.GetCommandLineArgs().Contains("-srAccessQA")?RunAccesses():sinuca3DForce||Environment.GetCommandLineArgs().Contains("-srSinuca3DQA")?RunSinuca3DPerspective():bochaForce||Environment.GetCommandLineArgs().Contains("-srBochaQA")?RunBochaPerspective():r2Force||Environment.GetCommandLineArgs().Contains("-srC2R2QA")?RunR2():Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")?SaveIsolationProbe():Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")?C1LoadSmoke():Environment.GetCommandLineArgs().Contains("-srC2PerfQA")?PerformancePair():Run()));
     }
     private void Error(string msg,string stack,LogType type)
     {if(type==LogType.Exception||type==LogType.Error){failed=true;report.Add("ERROR "+msg+"\n"+stack);}}
-    private void Update(){if(Time.realtimeSinceStartup>deadline){failed=true;Finish();}}
+    private void Update(){if(sinucaR4Keyboard!=null)sinucaR4Keyboard.MakeCurrent();if(Time.realtimeSinceStartup>deadline){failed=true;Finish();}}
     private IEnumerator Guard(IEnumerator routine)
     {
         while(true)
@@ -226,7 +226,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
     private IEnumerator Walking()
     {
         yield return Place(new Vector2(31,45));yield return CloseText();
-        var player=FindAnyObjectByType<PlayerController>();var keyboard=Keyboard.current;
+        var player=FindAnyObjectByType<PlayerController>();var previousKeyboard=Keyboard.current;var keyboard=InputSystem.AddDevice<Keyboard>();keyboard.MakeCurrent();
         Vector2 initial=player.transform.position;var contacts=new List<int>();
         Action contact=()=>contacts.Add(player.QuadroCaminhada);player.PeApoiou+=contact;
         try
@@ -234,16 +234,23 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
             InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.W));
             for(int i=0;i<16;i++)
             {
+                keyboard.MakeCurrent();InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.W));
                 yield return new WaitForSecondsRealtime(.08f);
                 ScreenCapture.CaptureScreenshot(Path.Combine(folder,"walk-"+i.ToString("D2")+".png"));
             }
-            InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return new WaitForSecondsRealtime(.3f);
-            Check(Vector2.Distance(initial,player.transform.position)>2,"Input real move Marcus com oito poses e interpolação.");
+            float limit=Time.realtimeSinceStartup+5;
+            while(Vector2.Distance(initial,player.transform.position)<=2.1f&&Time.realtimeSinceStartup<limit){keyboard.MakeCurrent();InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.W));yield return null;}
+            InputSystem.QueueStateEvent(keyboard,new KeyboardState());
+            limit=Time.realtimeSinceStartup+2;
+            do{yield return null;}while(Field<Vector2>(player,"currentVelocity").sqrMagnitude>.0001f&&Time.realtimeSinceStartup<limit);
+            Check(Field<Vector2>(player,"currentVelocity").sqrMagnitude<=.0001f,"Soltar input encerra desaceleracao em ate dois segundos");
+            yield return new WaitForSecondsRealtime(.2f);
+            Check(Vector2.Distance(initial,player.transform.position)>2,"Input real move Marcus com ciclo de dezesseis poses.");
             Check(contacts.Count>=3 && contacts.All(q=>q==0||q==4),"Cada evento de passo coincide com quadro de apoio 0/4: "+string.Join(",",contacts));
             int count=contacts.Count;yield return new WaitForSecondsRealtime(.4f);
             Check(contacts.Count==count,"Repouso não dispara passos extras.");
         }
-        finally {InputSystem.QueueStateEvent(keyboard,new KeyboardState());player.PeApoiou-=contact;}
+        finally {InputSystem.QueueStateEvent(keyboard,new KeyboardState());player.PeApoiou-=contact;InputSystem.RemoveDevice(keyboard);if(previousKeyboard!=null)previousKeyboard.MakeCurrent();}
     }
     private IEnumerator DefeatUI()
     {
@@ -464,7 +471,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
     }
     private void Finish()
     {
-        if(isolation==null)return;Time.timeScale=1;Application.logMessageReceived-=Error;isolation.Dispose();isolation=null;
+        if(isolation==null)return;RestoreAudioC2Prefs();Time.timeScale=1;Application.logMessageReceived-=Error;isolation.Dispose();isolation=null;
         report.Add((failed?"FAIL":"PASS")+" runtime "+DateTime.UtcNow.ToString("O"));File.WriteAllLines(Path.Combine(folder,"runtime-qa.txt"),report);Application.Quit(failed?1:0);
 #if UNITY_EDITOR
         if(Application.isEditor)UnityEditor.EditorApplication.isPlaying=false;

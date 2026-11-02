@@ -1,94 +1,48 @@
 ---
 type: community
-members: 81
+members: 35
 ---
 
 # Community 3
 
-**Members:** 81 nodes
+**Members:** 35 nodes
 
 ## Members
-- [[dot-AbrirModalRegrasDuranteJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AbrirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AgendarProximoTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AguardarEIniciarProximoTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarMiraEDisparoJogador()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarPosicionamentoBranca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarRegraBolaMarcadaAntesDoTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarTextosHUD()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarVisualBolasMarcadas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarVisualTacoEMira()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Avancar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Awake()_8]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-AlternarCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-AlternarPainelEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AlternarVistaCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AtualizarBotaoVistaCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AvaliarCandidatoZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Awake()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-CaminhoLivreEntre()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CancelarCargaAoSuspender()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CarregarArteInspecao()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-ComecarNovaSerie()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConcluirMao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConcluirSerieDerrota()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConcluirSerieVitoria()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConfigurarMao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConfigurarRetratoEFalante()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-ContinuarInicioTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Digitar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-DigitarPaginaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-EncontrarPosicaoLivreDeterministica()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-CriarTriangulo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-EnsureInstance()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-EscolherTacadaZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ExecutarTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ExecutarTurnoZeCoroutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Fade()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Falar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Fechar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Fechar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-GerarRetratoPixelArt()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[dot-InicializarCacapas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-IniciarConfronto()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-IniciarDuelo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-IniciarTurnoAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-MostrarModal()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-MouseDentroDaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-IniciarPraticaOpcional()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-OnApplicationFocus()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ParseLinhaAutomatica()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-PosicaoValidaSemColisao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-PosicionarBolasDeterministico()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-RegistrarTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ResolverFimDaTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ResolverRetrato()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-RotinaContinuacao()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-RotinaPagina()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Show()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Show()_1]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Show()_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-ShowDialogue()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-ShowInspection()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-SimularFisicaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-SimularTesteDeInvariantes()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-SincronizarTransformBolas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Update()_12]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Update()_13]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ValidarInvarianteSeteBolas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Action]] - code
+- [[dot-PertoDeCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-RotateVector2()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-SimularPrevisaoRapida()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[BicoCacapa]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[BicoCacapa_1]] - code
 - [[BolaMesa_1]] - code
-- [[BolasEmMovimento]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[CarregandoForca]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[EstadoPartida]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[CameraAtual]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[EfeitoAtual]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[EmModoPratica]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[EstadoPartida_1]] - code
-- [[FimDeMao]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[FimDeSerieDerrota]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[FimDeSerieVitoria]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[GameMessageUI]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[Inativo]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Instance_7]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[Instance_8]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[IsShowing_1]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[IsShowing_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[EventosAudioDisparados]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[Instance_4]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[IsShowing_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[MaoEmCurso]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[MirandoJogador]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[PosicionandoBranca]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[ResolvendoTacada]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[SinucaMinigameUI]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[TurnoZePensando]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[TutorialRegras]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Vector4]] - code
+- [[UltimaDecisaoZeMs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[UltimosCandidatosZe]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -98,34 +52,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_Community 23]]
-- 15 edges to [[_COMMUNITY_Community 0]]
-- 6 edges to [[_COMMUNITY_Community 30]]
-- 5 edges to [[_COMMUNITY_Community 18]]
-- 5 edges to [[_COMMUNITY_Community 6]]
-- 4 edges to [[_COMMUNITY_Community 12]]
+- 26 edges to [[_COMMUNITY_Community 100]]
+- 19 edges to [[_COMMUNITY_Community 21]]
+- 16 edges to [[_COMMUNITY_Community 30]]
+- 14 edges to [[_COMMUNITY_Community 88]]
+- 12 edges to [[_COMMUNITY_Community 83]]
+- 11 edges to [[_COMMUNITY_Community 23]]
+- 9 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 85]]
+- 5 edges to [[_COMMUNITY_Community 43]]
 - 4 edges to [[_COMMUNITY_Community 39]]
-- 4 edges to [[_COMMUNITY_Community 28]]
-- 3 edges to [[_COMMUNITY_Community 17]]
-- 3 edges to [[_COMMUNITY_Community 24]]
-- 3 edges to [[_COMMUNITY_Community 31]]
-- 2 edges to [[_COMMUNITY_Community 42]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 8]]
-- 2 edges to [[_COMMUNITY_Community 26]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 40]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 45]]
-- 1 edge to [[_COMMUNITY_Community 4]]
-- 1 edge to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 25]]
-- 1 edge to [[_COMMUNITY_Community 5]]
+- 3 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 56]]
+- 2 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 51]]
+- 2 edges to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 53]]
+- 1 edge to [[_COMMUNITY_Community 91]]
+- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 0]]
 
 ## Top bridge nodes
-- [[GameMessageUI]] - degree 37, connects to 11 communities
-- [[SinucaMinigameUI]] - degree 65, connects to 9 communities
-- [[Action]] - degree 23, connects to 8 communities
-- [[dot-ShowInspection()]] - degree 8, connects to 4 communities
-- [[dot-Show()_1]] - degree 8, connects to 2 communities
+- [[SinucaMinigameUI]] - degree 143, connects to 23 communities
+- [[dot-EscolherTacadaZe()]] - degree 7, connects to 3 communities
+- [[dot-CancelarCargaAoSuspender()]] - degree 9, connects to 2 communities
+- [[dot-SimularPrevisaoRapida()]] - degree 5, connects to 2 communities
+- [[dot-AguardarEIniciarProximoTurno()]] - degree 4, connects to 2 communities

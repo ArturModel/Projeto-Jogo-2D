@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 0"
+community: "Community 45"
 location: "L188"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_45
 ---
 
 # .ExportarSnapshot()
@@ -17,6 +17,7 @@ tags:
 - [[dot-FlashlightR2()]] - `calls` [EXTRACTED]
 - [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[dot-SaveSlot()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[EntradaDiario]] - `calls` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[ParNumero]] - `calls` [EXTRACTED]
 - [[ParTexto]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_45

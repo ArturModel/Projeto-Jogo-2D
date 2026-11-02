@@ -1,17 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 31"
+community: "Community 7"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_7
 ---
 
 # .AbrirSelecaoCarregar()
 
 ## Connections
+- [[dot-AbrirCarregar()]] - `calls` [EXTRACTED]
 - [[dot-AbrirModalCarregarDoMenu()]] - `calls` [EXTRACTED]
 - [[dot-AbrirModalSlots()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[Action]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_7

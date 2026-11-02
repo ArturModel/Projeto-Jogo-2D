@@ -356,6 +356,7 @@ public class Capitulo1Director : MonoBehaviour
             GarantirElementosBarDoZeCenaSeparada();
         }
         SantaRitaPlaceDressing.ApplyC1();
+        SantaRitaBarLayout.Apply();
         SantaRitaWorldLighting.Apply();
     }
 
@@ -384,6 +385,7 @@ public class Capitulo1Director : MonoBehaviour
         fonte.playOnAwake = false;
         fonte.spatialBlend = 0f;
         fonte.volume = 0f;
+        objetoFonte.AddComponent<AudioLowPassFilter>().cutoffFrequency = 22000f;
         return fonte;
     }
 
@@ -395,8 +397,17 @@ public class Capitulo1Director : MonoBehaviour
 
         // A música do bairro continua sem reiniciar ao entrar na casa; no bar
         // ela só toca no interior. O estado da partida controla a redução de volume.
-        float alvoBairro = zonaAtual == ZonaId.Zona4_Bairro ? VolumeBairro :
-            zonaAtual == ZonaId.Interior_CasaDoAvo ? VolumeCasaAvo : 0f;
+        bool exteriorComTrilha = zonaAtual == ZonaId.Zona4_Bairro ||
+            zonaAtual == ZonaId.Zona2_Posto || zonaAtual == ZonaId.Zona3_Encruzilhada || zonaAtual == ZonaId.Zona5_RuaNorteBar;
+        bool interiorComTrilha = zonaAtual == ZonaId.Interior_CasaDoAvo ||
+            zonaAtual == ZonaId.Interior_Posto || zonaAtual == ZonaId.Interior_Mercadinho;
+        float alvoBairro = exteriorComTrilha ? VolumeBairro : interiorComTrilha ? VolumeCasaAvo : 0f;
+        if (musicaBairro != null)
+        {
+            var filtro = musicaBairro.GetComponent<AudioLowPassFilter>();
+            if (filtro != null) filtro.cutoffFrequency = Mathf.MoveTowards(filtro.cutoffFrequency,
+                interiorComTrilha ? 1800f : 22000f, Time.unscaledDeltaTime * 16000f);
+        }
         float alvoBar = zonaAtual == ZonaId.Interior_BarDoZe ?
             (SinucaMinigameUI.IsShowing ? VolumeSinuca : VolumeBar) : 0f;
         // O volume geral já é aplicado globalmente pelo AudioListener.
@@ -561,6 +572,7 @@ public class Capitulo1Director : MonoBehaviour
             {
                 // O objetivo só muda quando Marcus tiver algo concreto para perguntar ao Zé.
                 GameState.Marcar(Flags.EntrouNoBarDoZe);
+                SinucaMinigameUI.Instance.PrepararSala();
             }
         });
     }
@@ -568,6 +580,7 @@ public class Capitulo1Director : MonoBehaviour
     private void AplicarEstadoDaZona(ZonaId id, bool mostrarBanner)
     {
         zonaAtual = id;
+        if(id==ZonaId.Interior_BarDoZe)SantaRitaBarLayout.ConstrainArrival();
         if (!tabelaZonas.TryGetValue(id, out InfoZona info))
         {
             return;
@@ -1777,7 +1790,7 @@ public class Capitulo1Director : MonoBehaviour
         AdicionarLuzPonto(z.transform, new Vector3(208.0f, -53.5f, 0f), new Color(1.0f, 0.94f, 0.80f, 1f), 10.0f, 1.1f);
 
         // Porta de saída no sul da sala
-        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_Posto",new Vector2(208,-59.2f),"SaidaComercio",2.3f,-10);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_Posto",new Vector2(208,-59.45f),"SaidaComercio",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_Posto",
@@ -1977,7 +1990,7 @@ public class Capitulo1Director : MonoBehaviour
         AdicionarLuzPonto(z.transform, new Vector3(309.0f, -53.0f, 0f), new Color(1.0f, 0.93f, 0.78f, 1f), 11.0f, 1.15f);
 
         // Porta de saída no sul
-        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_Mercadinho",new Vector2(309,-59.2f),"SaidaComercio",2.3f,-10);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_Mercadinho",new Vector2(309,-59.45f),"SaidaComercio",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_Mercadinho",
@@ -2216,7 +2229,7 @@ public class Capitulo1Director : MonoBehaviour
             new Vector2(5.0f, 3.0f), new Color32(94, 49, 41, 255), new Color32(145, 101, 73, 255));
 
         // Porta de saída no sul da casa
-        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_CasaAvo",new Vector2(409,-59.2f),"SaidaCasa",2.3f,-10);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_CasaAvo",new Vector2(409,-59.45f),"SaidaCasa",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_CasaAvo",
@@ -2402,7 +2415,7 @@ public class Capitulo1Director : MonoBehaviour
         AdicionarLuzPonto(z.transform, new Vector3(509.0f, -52.8f, 0f), new Color(1.0f, 0.84f, 0.52f, 1f), 11.5f, 1.25f);
 
         // Porta de saída no sul do Bar
-        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_BarDoZe",new Vector2(509,-59.2f),"SaidaSociedade",2.3f,-10);
+        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_BarDoZe",new Vector2(509,-59.45f),"SaidaSociedade",2.3f,-10);
         ColocarGatilhoTransicao(
             z.transform,
             "Saida_Interior_BarDoZe",
@@ -2469,6 +2482,7 @@ public class Capitulo1Director : MonoBehaviour
     {
         AjustarLuzGlobal(true);
         GameState.Marcar(Flags.EntrouNoBarDoZe);
+                SinucaMinigameUI.Instance.PrepararSala();
 
         ColocarInteracao(transform, "NPC_Ze", new Vector3(2.0f, -4.5f, 0f),
             InteracaoCapitulo1.TipoInteracao.NpcZeBar, "", "Npc_Ze", 32f, 1.0f, 2, solido: true);

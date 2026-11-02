@@ -13,6 +13,8 @@ tags:
 
 ## Connections
 - [[dot-ConverterCapitulo1()]] - `calls` [EXTRACTED]
+- [[dot-ExitMatChecksR4()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[InfoZona_1]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]

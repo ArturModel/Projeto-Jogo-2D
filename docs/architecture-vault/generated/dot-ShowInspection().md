@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 3"
-location: "L282"
+community: "Community 36"
+location: "L295"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_36
 ---
 
 # .ShowInspection()
@@ -19,6 +19,7 @@ tags:
 - [[Action]] - `references` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_36

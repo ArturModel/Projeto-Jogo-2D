@@ -1,0 +1,5 @@
+PASS 33 verificacoes e encerramento.
+PASS alpha/conteudo de 102 celulas; 4 direcoes e repouso com/sem lanterna, folha equipada correta, movimento e contatos, repouso sem passos.
+PASS exportacao reproduzida em sandbox com SHA256 identico.
+PASS builds sem erros/hash igual, QA/autoria excluidos; indices 112 fontes; seis saves intactos.
+Capturas conferidas. Validacao artistica pelo autor, campanha integral e audicao subjetiva nao presumidas.

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "Community 12"
-location: "L212"
+location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Construir()
 
 ## Connections
-- [[dot-Awake()]] - `calls` [EXTRACTED]
+- [[dot-Awake()_1]] - `calls` [EXTRACTED]
 - [[dot-Botao()]] - `calls` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `calls` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
@@ -30,8 +30,8 @@ tags:
 - [[dot-SubPainel()]] - `calls` [EXTRACTED]
 - [[dot-Titulo()]] - `calls` [EXTRACTED]
 - [[dot-TituloPausa()]] - `calls` [EXTRACTED]
-- [[dot-Vincular()_3]] - `calls` [INFERRED]
 - [[dot-Vincular()_4]] - `calls` [INFERRED]
+- [[dot-Vincular()_5]] - `calls` [INFERRED]
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
@@ -39,6 +39,7 @@ tags:
 - [[MenuPanelTransition]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 - [[OptionsPanelController]] - `references` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 

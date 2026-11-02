@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 42"
+community: "Community 18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_18
 ---
 
 # MonoBehaviour
@@ -52,9 +52,14 @@ tags:
 - [[SantaRitaActorElevation]] - `inherits` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `inherits` [EXTRACTED]
+- [[SantaRitaBarHost]] - `inherits` [EXTRACTED]
+- [[SantaRitaBarPose]] - `inherits` [EXTRACTED]
 - [[SantaRitaExitThreshold]] - `inherits` [EXTRACTED]
 - [[SantaRitaFootsteps]] - `inherits` [EXTRACTED]
 - [[SantaRitaForeground]] - `inherits` [EXTRACTED]
+- [[SantaRitaInventory]] - `inherits` [EXTRACTED]
+- [[SantaRitaItemAction]] - `inherits` [EXTRACTED]
+- [[SantaRitaItemHover]] - `inherits` [EXTRACTED]
 - [[SantaRitaNpcRoutine]] - `inherits` [EXTRACTED]
 - [[SantaRitaNpcWork]] - `inherits` [EXTRACTED]
 - [[SantaRitaRimLight]] - `inherits` [EXTRACTED]
@@ -64,8 +69,9 @@ tags:
 - [[SantaRitaSound]] - `inherits` [EXTRACTED]
 - [[SceneFader]] - `inherits` [EXTRACTED]
 - [[SinucaMinigameUI]] - `inherits` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `inherits` [EXTRACTED]
 - [[SpawnPoint]] - `inherits` [EXTRACTED]
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_18

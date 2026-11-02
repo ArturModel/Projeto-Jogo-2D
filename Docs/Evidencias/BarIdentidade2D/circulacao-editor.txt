@@ -1,0 +1,14 @@
+PASS BFS Physics2D: 934 celulas conectadas da soleira; passo .25, BoxCollider2D real (0.50, 0.28) e offset (0.00, 0.14). Nao e percurso humano.
+PASS aproximacao a TelevisaoFutebol
+PASS aproximacao a Calendario2004
+PASS aproximacao a CartazGaleto
+PASS aproximacao a FiadoSoAmanha
+PASS aproximacao a TimeDaComunidade
+PASS aproximacao a Inter1994
+PASS aproximacao a TaqueiraDoBar
+PASS aproximacao a NPC_Ze_Interior
+PASS aproximacao a NPC_Frequentador_Interior
+PASS aproximacao a NPC_Conversa_Bar
+PASS aproximacao a NPC_Chimarrao_Bar
+PASS aproximacao a NPC_Cerveja_Bar
+PASS acesso da soleira a mesa de sinuca.

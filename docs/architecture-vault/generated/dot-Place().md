@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
 community: "Community 0"
-location: "L287"
+location: "L294"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
+- [[dot-ExitMatChecksR4()]] - `calls` [INFERRED]
 - [[dot-FlashlightR2()]] - `calls` [INFERRED]
 - [[dot-FlashlightWalkR2()]] - `calls` [INFERRED]
 - [[dot-PerformancePair()]] - `calls` [EXTRACTED]
@@ -20,6 +21,7 @@ tags:
 - [[dot-Run()]] - `calls` [EXTRACTED]
 - [[dot-RunAccesses()]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
+- [[dot-RunMarcusQA()]] - `calls` [INFERRED]
 - [[dot-RunPortalRegression()]] - `calls` [INFERRED]
 - [[dot-RunR2()]] - `calls` [INFERRED]
 - [[dot-Travel()]] - `calls` [EXTRACTED]

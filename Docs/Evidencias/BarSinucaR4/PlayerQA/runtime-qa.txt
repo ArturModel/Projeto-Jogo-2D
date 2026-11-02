@@ -1,0 +1,208 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+Fixture: aproximações/reposicionamento e pré-condições C1/C2 em RAM, isolamento de save. Cliques e carga via EventSystem/Input System reais. Não equivale a campanha legítima ou aprovação artística.
+PASS Saída convertida repõe formação e não concede pontos
+PASS Saída legal alterna ação
+PASS Da vez removida e valor creditado
+PASS Colorida livre vale seu valor e retorna
+PASS Castigo concede sete e não inventa branca na mão
+PASS Devolução da ação é única
+PASS Branca convertida retorna no D
+PASS Contato errado e bola indevida: uma penalidade, reposição
+PASS Exceção narrativa da bola marcada preservada
+PASS Duas conversões não somam pontos nem faltas múltiplas
+PASS Sequência completa encerra por pontuação brasileira, não meta quatro
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Carro entrega lanterna sem mapa em sessão nova
+PASS Cinco slots com propriedade derivada do snapshot
+PASS Diário acessível antes de obter mapa
+PASS Examinar não coleta recibo automaticamente
+PASS Botão de ação existe
+PASS Leitura encerra e devolve controle.
+PASS Clique PEGAR coloca recibo no inventário
+PASS Botão de ação existe
+PASS Leitura encerra e devolve controle.
+PASS Entrega explícita conduz testemunho e retira original
+PASS Cena carregada RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Botão de ação existe
+PASS Leitura encerra e devolve controle.
+PASS Mapa é coletado na rodoviária
+PASS Snapshot preserva equipamento e entrega
+PASS Aquisições e entrega não gravam autosave
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS Trilha contínua em Zona2_Posto
+PASS Filtro contextual em Zona2_Posto
+PASS Trilha contínua em Zona3_Encruzilhada
+PASS Filtro contextual em Zona3_Encruzilhada
+PASS Trilha contínua em Zona4_Bairro
+PASS Filtro contextual em Zona4_Bairro
+PASS Trilha contínua em Interior_Posto
+PASS Filtro contextual em Interior_Posto
+PASS Trilha contínua em Interior_Mercadinho
+PASS Filtro contextual em Interior_Mercadinho
+PASS Trilha contínua em Interior_CasaDoAvo
+PASS Filtro contextual em Interior_CasaDoAvo
+PASS Leitura encerra e devolve controle.
+PASS Bar usa planta compartilhada
+PASS Âncora compartilhada: Balcao_Bar_Sprite
+PASS Âncora compartilhada: GeladeiraDoBar
+PASS Âncora compartilhada: TelevisaoFutebol
+PASS Âncora compartilhada: Calendario2004
+PASS Âncora compartilhada: CartazGaleto
+PASS Âncora compartilhada: RadioBalcao
+PASS Âncora compartilhada: MesaChimarrao
+PASS Âncora compartilhada: CadeiraChimaA
+PASS Âncora compartilhada: CadeiraChimaB
+PASS Âncora compartilhada: ChimarraoSobreMesa
+PASS Âncora compartilhada: MesaConversa
+PASS Âncora compartilhada: CadeiraConversaA
+PASS Âncora compartilhada: CadeiraConversaB
+PASS Âncora compartilhada: CopoMesaEsq
+PASS Âncora compartilhada: MesaJanela
+PASS Âncora compartilhada: CadeiraJanelaA
+PASS Âncora compartilhada: CadeiraJanelaB
+PASS Âncora compartilhada: CopoMesaDir
+PASS Projeção tem fundo opaco, sem duplicar o bar 2D
+PASS Projeção e mira inversa: Mesa3D
+PASS Projeção e mira inversa: LinhaTaco
+PASS Projeção e mira inversa: VistaSuperior
+PASS Disco recebe contato lateral/longitudinal por clique real
+PASS Preset e disco de efeito permanecem sincronizados
+PASS Perda de foco cancela carga sem tacada fantasma
+PASS Clique real inicia carga
+PASS Força muda enquanto segura
+PASS Soltar clique lança sem botão extra
+PASS Física alcança repouso sem deadlock
+PASS Partida e exploração permanecem sem autosave
+PASS IA/física/resolução coerentes na tacada 1
+PASS IA/física/resolução coerentes na tacada 2
+PASS IA/física/resolução coerentes na tacada 3
+PASS IA/física/resolução coerentes na tacada 4
+PASS IA/física/resolução coerentes na tacada 5
+PASS IA/física/resolução coerentes na tacada 6
+PASS IA/física/resolução coerentes na tacada 7
+PASS IA/física/resolução coerentes na tacada 8
+PASS IA/física/resolução coerentes na tacada 9
+PASS IA/física/resolução coerentes na tacada 10
+DIAGNÓSTICO 10: 7 x 17; da vez 3; saída False
+PASS IA/física/resolução coerentes na tacada 11
+PASS IA/física/resolução coerentes na tacada 12
+PASS IA/física/resolução coerentes na tacada 13
+PASS IA/física/resolução coerentes na tacada 14
+PASS IA/física/resolução coerentes na tacada 15
+PASS IA/física/resolução coerentes na tacada 16
+PASS IA/física/resolução coerentes na tacada 17
+PASS IA/física/resolução coerentes na tacada 18
+PASS IA/física/resolução coerentes na tacada 19
+PASS IA/física/resolução coerentes na tacada 20
+DIAGNÓSTICO 20: 7 x 24; da vez 3; saída False
+PASS IA/física/resolução coerentes na tacada 21
+PASS IA/física/resolução coerentes na tacada 22
+PASS IA/física/resolução coerentes na tacada 23
+PASS IA/física/resolução coerentes na tacada 24
+PASS IA/física/resolução coerentes na tacada 25
+PASS IA/física/resolução coerentes na tacada 26
+PASS IA/física/resolução coerentes na tacada 27
+PASS IA/física/resolução coerentes na tacada 28
+PASS IA/física/resolução coerentes na tacada 29
+PASS IA/física/resolução coerentes na tacada 30
+DIAGNÓSTICO 30: 24 x 24; da vez 4; saída False
+PASS IA/física/resolução coerentes na tacada 31
+PASS IA/física/resolução coerentes na tacada 32
+PASS IA/física/resolução coerentes na tacada 33
+PASS IA/física/resolução coerentes na tacada 34
+PASS IA/física/resolução coerentes na tacada 35
+PASS IA/física/resolução coerentes na tacada 36
+PASS IA/física/resolução coerentes na tacada 37
+PASS IA/física/resolução coerentes na tacada 38
+PASS IA/física/resolução coerentes na tacada 39
+PASS IA/física/resolução coerentes na tacada 40
+DIAGNÓSTICO 40: 29 x 28; da vez 6; saída False
+PASS IA/física/resolução coerentes na tacada 41
+PASS IA/física/resolução coerentes na tacada 42
+PASS IA/física/resolução coerentes na tacada 43
+PASS IA/física/resolução coerentes na tacada 44
+PASS IA/física/resolução coerentes na tacada 45
+PASS Mão completa por IA e física, sem injetar pontos (45 tacadas, 36 x 34)
+Fixture separada de fim de série: sete isolada junto à caçapa para executar duas conversões físicas e o callback real, sem simular a campanha.
+PASS Última bola da vez não fica bloqueada pela marca na mão 1
+PASS Conversão física fecha mão e acumula série 1
+PASS Última bola da vez não fica bloqueada pela marca na mão 2
+PASS Conversão física fecha mão e acumula série 2
+PASS Série aguarda ouvir Zé antes do callback
+PASS Botão de ação existe
+PASS OUVIR ZÉ conclui callback sem autosave
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_Posto
+PASS Tapete seleciona saída C1: Interior_Posto
+PASS E no tapete sai: Interior_Posto; foco=True; pausa=False; texto=False; sinuca=False; posição=(211.60, 12.60, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_Mercadinho
+PASS Tapete seleciona saída C1: Interior_Mercadinho
+PASS E no tapete sai: Interior_Mercadinho; foco=True; pausa=False; texto=False; sinuca=False; posição=(311.00, 12.20, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_CasaDoAvo
+PASS Tapete seleciona saída C1: Interior_CasaDoAvo
+PASS E no tapete sai: Interior_CasaDoAvo; foco=True; pausa=False; texto=False; sinuca=False; posição=(423.50, 22.60, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_BarDoZe
+PASS Tapete seleciona saída C1: Interior_BarDoZe
+PASS E no tapete sai: Interior_BarDoZe; foco=True; pausa=False; texto=False; sinuca=False; posição=(518.00, 12.00, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: SociedadeBeiraRio
+PASS Tapete seleciona saída C2: SociedadeBeiraRio
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: SociedadeBeiraRio
+PASS Cena carregada IgrejaMatriz
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: IgrejaMatriz
+PASS Tapete seleciona saída C2: IgrejaMatriz
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: IgrejaMatriz
+PASS Cena carregada PrefeituraSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: PrefeituraSantaRita
+PASS Tapete seleciona saída C2: PrefeituraSantaRita
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: PrefeituraSantaRita
+PASS Cena carregada RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: RodoviariaSantaRita
+PASS Tapete seleciona saída C2: RodoviariaSantaRita
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: RodoviariaSantaRita
+PASS Cena carregada MercadinhoDeposito
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: MercadinhoDeposito
+PASS Tapete seleciona saída C2: MercadinhoDeposito
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino EntradaDaCidade: MercadinhoDeposito
+PASS Cena carregada OficinaRadio
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: OficinaRadio
+PASS Tapete seleciona saída C2: OficinaRadio
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: OficinaRadio
+PASS Cena carregada CasaCostureira
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: CasaCostureira
+PASS Tapete seleciona saída C2: CasaCostureira
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: CasaCostureira
+PASS Regressão integrada e saídas sem autosave
+PASS runtime 2026-10-30T22:56:41.9487424Z

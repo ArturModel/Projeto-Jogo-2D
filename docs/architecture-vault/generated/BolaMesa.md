@@ -1,23 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 23"
-location: "L57"
+community: "Community 12"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_12
 ---
 
 # BolaMesa
 
 ## Connections
-- [[dot-CriarBolasUI()]] - `calls` [EXTRACTED]
+- [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
+- [[Quaternion]] - `references` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `contains` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_12

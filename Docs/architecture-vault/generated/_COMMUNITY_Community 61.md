@@ -8,8 +8,8 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[c()_3]] - code - Tools/Aseprite/marcus-flashlight.lua
-- [[line()_1]] - code - Tools/Aseprite/marcus-flashlight.lua
+- [[c()_5]] - code - Tools/Aseprite/marcus-flashlight.lua
+- [[line()_2]] - code - Tools/Aseprite/marcus-flashlight.lua
 - [[marcus-flashlight.lua]] - code - Tools/Aseprite/marcus-flashlight.lua
 - [[rect()_2]] - code - Tools/Aseprite/marcus-flashlight.lua
 

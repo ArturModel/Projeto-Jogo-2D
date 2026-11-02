@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs"
 type: "code"
 community: "Community 1"
-location: "L62"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED

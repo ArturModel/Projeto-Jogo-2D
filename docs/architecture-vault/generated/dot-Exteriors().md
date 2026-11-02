@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs"
 type: "code"
-community: "Community 18"
+community: "Community 11"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_11
 ---
 
 # .Exteriors()
@@ -34,4 +34,4 @@ tags:
 - [[Tile]] - `references` [EXTRACTED]
 - [[Tilemap]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_11

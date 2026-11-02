@@ -1,16 +1,21 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 17"
+community: "Community 30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_30
 ---
 
 # Keyboard
 
 ## Connections
 - [[dot-EntradaTeclado()]] - `references` [EXTRACTED]
+- [[dot-RunMarcusQA()]] - `references` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
+- [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
+- [[dot-Walking()]] - `references` [EXTRACTED]
+- [[Chapter2RuntimeVerification]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_30

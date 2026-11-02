@@ -32,6 +32,9 @@ tags:
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
+- [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[Sinuca3DVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaRef7Authoring.cs]] - `imports` [EXTRACTED]
 - [[TransicaoDeZonaTrigger.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

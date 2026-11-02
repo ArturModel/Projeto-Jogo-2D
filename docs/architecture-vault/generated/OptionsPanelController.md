@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "Community 24"
+community: "Community 57"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_57
 ---
 
 # OptionsPanelController
@@ -16,14 +16,14 @@ tags:
 - [[dot-AbrirLegendas()]] - `method` [EXTRACTED]
 - [[dot-AbrirPainel()]] - `method` [EXTRACTED]
 - [[dot-AbrirVideo()]] - `method` [EXTRACTED]
-- [[dot-Awake()_5]] - `method` [EXTRACTED]
+- [[dot-Awake()_17]] - `method` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-EsconderImediatamente()]] - `method` [EXTRACTED]
 - [[dot-MostrarCategorias()]] - `method` [EXTRACTED]
 - [[dot-MostrarImediatamente()]] - `method` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `method` [EXTRACTED]
-- [[dot-Update()_8]] - `method` [EXTRACTED]
-- [[dot-Vincular()_4]] - `method` [EXTRACTED]
+- [[dot-Update()_24]] - `method` [EXTRACTED]
+- [[dot-Vincular()_5]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `references` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[OptionsPanelController.cs]] - `contains` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_57

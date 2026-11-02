@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 0"
-location: "L67"
+community: "Community 39"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_39
 ---
 
 # .Dispose()
 
 ## Connections
-- [[dot-ClearPendingOnly()]] - `calls` [EXTRACTED]
-- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-RestaurarIndicadorDeProgresso()]] - `calls` [EXTRACTED]
-- [[IsolatedSaveScope]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_3]] - `calls` [EXTRACTED]
+- [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_39

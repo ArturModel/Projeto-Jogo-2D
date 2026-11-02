@@ -12,14 +12,16 @@ tags:
 # TransicaoDeZonaTrigger
 
 ## Connections
+- [[dot-CanInteractAt()_2]] - `method` [EXTRACTED]
 - [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
-- [[dot-Configurar()_1]] - `method` [EXTRACTED]
-- [[dot-Interact()_2]] - `method` [EXTRACTED]
+- [[dot-Configurar()_2]] - `method` [EXTRACTED]
+- [[dot-ExitMatChecksR4()]] - `references` [EXTRACTED]
+- [[dot-Interact()_3]] - `method` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-TentarTransicionar()]] - `method` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_2]] - `defines` [EXTRACTED]
+- [[Prompt_3]] - `defines` [EXTRACTED]
 - [[TransicaoDeZonaTrigger.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]

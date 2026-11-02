@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-Ativar()]] - `method` [EXTRACTED]
-- [[dot-Awake()_9]] - `method` [EXTRACTED]
+- [[dot-Awake()_7]] - `method` [EXTRACTED]
 - [[dot-Procurar()]] - `references` [EXTRACTED]
-- [[dot-Update()_14]] - `method` [EXTRACTED]
+- [[dot-Update()_15]] - `method` [EXTRACTED]
 - [[Apontado]] - `defines` [EXTRACTED]
 - [[CelularCarro]] - `inherits` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

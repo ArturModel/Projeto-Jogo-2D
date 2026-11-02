@@ -12,8 +12,8 @@ tags:
 # DicaDeTecla
 
 ## Connections
-- [[dot-Awake()_1]] - `method` [EXTRACTED]
-- [[dot-Build()]] - `method` [EXTRACTED]
+- [[dot-Awake()_2]] - `method` [EXTRACTED]
+- [[dot-Build()_1]] - `method` [EXTRACTED]
 - [[dot-Mostrar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]

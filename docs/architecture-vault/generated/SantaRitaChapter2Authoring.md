@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-BoundaryForest()]] - `method` [EXTRACTED]
-- [[dot-Box()]] - `method` [EXTRACTED]
+- [[dot-Box()_1]] - `method` [EXTRACTED]
 - [[dot-Building()]] - `method` [EXTRACTED]
 - [[dot-ConfigureArt()]] - `method` [EXTRACTED]
 - [[dot-Crosswalk()]] - `method` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[dot-Interacao()]] - `method` [EXTRACTED]
 - [[dot-Interior()_2]] - `method` [EXTRACTED]
 - [[dot-LabelWorld()]] - `method` [EXTRACTED]
-- [[dot-Lamp()_2]] - `method` [EXTRACTED]
+- [[dot-Lamp()_3]] - `method` [EXTRACTED]
 - [[dot-Light()]] - `method` [EXTRACTED]
 - [[dot-NPC()_1]] - `method` [EXTRACTED]
 - [[dot-Phone()]] - `method` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[dot-Prop()_2]] - `method` [EXTRACTED]
 - [[dot-RectTiles()]] - `method` [EXTRACTED]
 - [[dot-Road()]] - `method` [EXTRACTED]
-- [[dot-Run()_5]] - `method` [EXTRACTED]
+- [[dot-Run()_4]] - `method` [EXTRACTED]
 - [[dot-Setup()]] - `method` [EXTRACTED]
 - [[dot-Sign()]] - `method` [EXTRACTED]
 - [[dot-Solid()_1]] - `method` [EXTRACTED]

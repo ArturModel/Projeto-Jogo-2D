@@ -1,20 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
 type: "code"
-community: "Community 0"
-location: "L531"
+community: "Community 109"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_109
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
-- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
-- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
+- [[ChuvaRolando]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_109

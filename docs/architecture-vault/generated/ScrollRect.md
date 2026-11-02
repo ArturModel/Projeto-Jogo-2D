@@ -11,7 +11,7 @@ tags:
 # ScrollRect
 
 ## Connections
-- [[dot-Build()_1]] - `references` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-Use()]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 28"
+community: "Community 46"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_46
 ---
 
 # Capitulo2Audio
@@ -15,13 +15,15 @@ tags:
 - [[dot-CriarAmbiencia()]] - `method` [EXTRACTED]
 - [[dot-CriarImpactoMadeira()]] - `method` [EXTRACTED]
 - [[dot-Definir()_1]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_5]] - `method` [EXTRACTED]
 - [[dot-RespostaAbafada()_1]] - `method` [EXTRACTED]
+- [[dot-RunAudioC2()]] - `references` [EXTRACTED]
 - [[dot-TocarRadio()]] - `method` [EXTRACTED]
-- [[dot-Update()_10]] - `method` [EXTRACTED]
+- [[dot-Update()_20]] - `method` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Capitulo2Audio.cs]] - `contains` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_46

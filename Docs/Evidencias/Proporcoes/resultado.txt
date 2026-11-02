@@ -1,0 +1,3 @@
+PASS QA final 141 verificacoes + encerramento. Primeira rodada falhou no repouso sob build paralela; repeticao sem alteracao PASS.
+PASS builds sem erros/hash igual; refresh/validate 112 fontes; saves e RAM preservados.
+Capturas conferidas; avaliacao artistica reservada ao autor.

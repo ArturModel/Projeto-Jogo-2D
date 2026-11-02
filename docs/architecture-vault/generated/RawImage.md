@@ -12,7 +12,8 @@ tags:
 
 ## Connections
 - [[dot-MontarTela()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_2]] - `references` [EXTRACTED]
+- [[dot-Vincular()_1]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_15

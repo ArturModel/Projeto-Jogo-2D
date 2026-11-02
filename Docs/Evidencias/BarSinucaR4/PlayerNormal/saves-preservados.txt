@@ -1,0 +1,8 @@
+PASS SHA256 preservado: santa_rita_save_v2_slot_0.json
+PASS SHA256 preservado: santa_rita_save_v2_slot_1.json
+PASS SHA256 preservado: santa_rita_save_v2_slot_2.json
+PASS SHA256 preservado: santa_rita_save_v2_slot_4.json
+PASS SHA256 preservado: santa_rita_save_v2.bak
+PASS SHA256 preservado: santa_rita_save_v2.json
+PASS nenhum namespace SRQA em PlayerPrefs
+PASS nenhum diretório de teste criado nesta data permaneceu; diretórios anteriores preservados

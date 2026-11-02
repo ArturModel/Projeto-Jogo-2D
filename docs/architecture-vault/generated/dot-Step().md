@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 4"
+community: "Community 27"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_27
 ---
 
 # .Step()
@@ -18,8 +18,8 @@ tags:
 - [[dot-Forcas()]] - `calls` [EXTRACTED]
 - [[dot-Physics()]] - `calls` [INFERRED]
 - [[dot-RepousarParaPrevisao()]] - `calls` [EXTRACTED]
-- [[dot-Run()_2]] - `calls` [INFERRED]
-- [[dot-Update()_3]] - `calls` [INFERRED]
+- [[dot-Run()_6]] - `calls` [INFERRED]
+- [[dot-Update()_4]] - `calls` [INFERRED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_27

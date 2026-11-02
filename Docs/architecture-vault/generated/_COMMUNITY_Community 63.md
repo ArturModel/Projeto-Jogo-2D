@@ -8,7 +8,7 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[color()_1]] - code - Tools/Aseprite/pool-table.lua
+- [[color()]] - code - Tools/Aseprite/pool-table.lua
 - [[dot()]] - code - Tools/Aseprite/pool-table.lua
 - [[pool-table.lua]] - code - Tools/Aseprite/pool-table.lua
 - [[rect()_3]] - code - Tools/Aseprite/pool-table.lua

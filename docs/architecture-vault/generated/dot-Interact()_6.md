@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 40"
-location: "L13"
+community: "Community 7"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_7
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()_2]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[Capitulo2Portal]] - `method` [EXTRACTED]
+- [[dot-AbrirModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomAtenderOrelhao()]] - `calls` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_7

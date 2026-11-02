@@ -23,5 +23,7 @@ tags:
 - [[SantaRitaMcpSetup.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]
+- [[Sinuca3DVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaRef7Authoring.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

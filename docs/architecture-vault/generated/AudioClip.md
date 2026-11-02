@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 28"
+community: "Community 46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_46
 ---
 
 # AudioClip
 
 ## Connections
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
-- [[dot-Configurar()_2]] - `references` [EXTRACTED]
+- [[dot-Configurar()]] - `references` [EXTRACTED]
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-CriarAmbiencia()]] - `references` [EXTRACTED]
 - [[dot-CriarFonteMusical()]] - `references` [EXTRACTED]
@@ -22,8 +22,11 @@ tags:
 - [[dot-GerarClipConfirmarSaveGancho()]] - `references` [EXTRACTED]
 - [[dot-Play()]] - `references` [EXTRACTED]
 - [[dot-RespostaAbafada()_1]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()_5]] - `references` [EXTRACTED]
+- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-RunAudioC2()]] - `references` [EXTRACTED]
+- [[dot-TocarClipSintetico()]] - `references` [EXTRACTED]
+- [[dot-Update()_20]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[Camada]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `references` [EXTRACTED]
@@ -33,5 +36,6 @@ tags:
 - [[MenuPausa]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `references` [EXTRACTED]
+- [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_46

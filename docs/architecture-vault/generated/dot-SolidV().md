@@ -12,7 +12,7 @@ tags:
 # .SolidV()
 
 ## Connections
-- [[dot-Disc()]] - `calls` [EXTRACTED]
+- [[dot-Disc()_1]] - `calls` [EXTRACTED]
 - [[dot-Line()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

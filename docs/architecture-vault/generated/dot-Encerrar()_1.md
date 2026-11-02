@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 46"
+community: "Community 24"
 location: "L159"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_24
 ---
 
 # .Encerrar()
@@ -17,8 +17,8 @@ tags:
 - [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Start()_13]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Start()_20]] - `calls` [EXTRACTED]
+- [[dot-Update()_28]] - `calls` [EXTRACTED]
 - [[PrologoVideo]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_24

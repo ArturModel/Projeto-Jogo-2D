@@ -1,23 +1,35 @@
 ---
 type: community
-members: 10
+members: 22
 ---
 
 # Community 43
 
-**Members:** 10 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[Interior_BarDoZe]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Interior_CasaDoAvo]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Interior_Mercadinho]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Interior_Posto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona1_Rodovia]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona2_Posto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona3_Encruzilhada]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona4_Bairro]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona5_RuaNorteBar]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[ZonaId]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-CanNominate()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[dot-Group()]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[dot-Refuse()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[dot-Resolve()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[dot-SimularTesteDeInvariantes()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[Finished_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[FreeColor_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[MarcusGroup]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[MarcusPoints_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[MarcusTurn_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[MayRefuse_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[MustOn_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[OnBall_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[Opening_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[OptionalColor_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[Phase_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[Result_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[Sequence_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[SinuquinhaRules]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[Start_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[Winner_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[ZePoints_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,7 +39,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 2]]
+- 7 edges to [[_COMMUNITY_Community 30]]
+- 5 edges to [[_COMMUNITY_Community 3]]
+- 4 edges to [[_COMMUNITY_Community 88]]
+- 2 edges to [[_COMMUNITY_Community 35]]
+- 2 edges to [[_COMMUNITY_Community 100]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 24]]
 
 ## Top bridge nodes
-- [[ZonaId]] - degree 10, connects to 1 community
+- [[SinuquinhaRules]] - degree 26, connects to 6 communities
+- [[dot-CanNominate()_1]] - degree 9, connects to 4 communities
+- [[dot-Resolve()_1]] - degree 9, connects to 3 communities
+- [[dot-SimularTesteDeInvariantes()]] - degree 4, connects to 2 communities
+- [[dot-Group()]] - degree 4, connects to 1 community

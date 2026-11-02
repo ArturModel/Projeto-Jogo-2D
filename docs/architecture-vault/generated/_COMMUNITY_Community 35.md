@@ -1,19 +1,34 @@
 ---
 type: community
-members: 6
+members: 21
 ---
 
 # Community 35
 
-**Members:** 6 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[dot-OnDisable()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
-- [[SantaRitaNpcWork]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
-- [[Station]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
-- [[Station_1]] - code
-- [[StationIndex]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
-- [[Working]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[dot-CanNominate()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[dot-Refuse()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[dot-Resolve()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Finished]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[FreeColor]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[MarcusPoints]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[MarcusTurn]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[MayRefuse]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[MustOn]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[OnBall]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Opening]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[OptionalColor]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Phase]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Result]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Result_2]] - code
+- [[Sequence]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Sequence_2]] - code
+- [[SinucaBrasileiraRules]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Start]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Winner]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[ZePoints]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,16 +38,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 18]]
-- 3 edges to [[_COMMUNITY_Community 11]]
-- 2 edges to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 42]]
+- 6 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 8]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 2]]
 
 ## Top bridge nodes
-- [[SantaRitaNpcWork]] - degree 16, connects to 8 communities
-- [[Station]] - degree 4, connects to 3 communities
+- [[SinucaBrasileiraRules]] - degree 19, connects to 2 communities
+- [[dot-Resolve()]] - degree 6, connects to 1 community
+- [[Result]] - degree 3, connects to 1 community
+- [[dot-Refuse()]] - degree 2, connects to 1 community
+- [[Result_2]] - degree 2, connects to 1 community

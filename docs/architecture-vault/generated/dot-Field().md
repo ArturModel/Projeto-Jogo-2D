@@ -1,29 +1,45 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 0"
-location: "L332"
+community: "Community 30"
+location: "L339"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_30
 ---
 
 # .Field()
 
 ## Connections
-- [[dot-BochaAudioR2()]] - `calls` [INFERRED]
+- [[dot-BochaAudioR2()]] - `calls` [EXTRACTED]
 - [[dot-C1InvestigationRegression()]] - `calls` [EXTRACTED]
 - [[dot-DefeatUI()]] - `calls` [EXTRACTED]
-- [[dot-DialogueR2()]] - `calls` [INFERRED]
-- [[dot-FlashlightWalkR2()]] - `calls` [INFERRED]
-- [[dot-FullBochaPerspective()]] - `calls` [INFERRED]
+- [[dot-DialogueR2()]] - `calls` [EXTRACTED]
+- [[dot-EscolherMelhorTacadaNormalMarcus()]] - `calls` [EXTRACTED]
+- [[dot-FlashlightWalkR2()]] - `calls` [EXTRACTED]
+- [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `calls` [EXTRACTED]
+- [[dot-Ref7Checks()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
-- [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
+- [[dot-RunAudioC2()]] - `calls` [EXTRACTED]
+- [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunMarcusQA()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
+- [[dot-SeriesFixtureR4()]] - `calls` [EXTRACTED]
+- [[dot-SimularPosicaoFinalBrancaPosImpacto()]] - `calls` [EXTRACTED]
 - [[dot-SinucaPauseRegression()]] - `calls` [EXTRACTED]
 - [[dot-SinucaRegression()]] - `calls` [EXTRACTED]
-- [[dot-SlotsR2()]] - `calls` [INFERRED]
+- [[dot-SinuquinhaKeyboard()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaMarked()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaPhysicalHand()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaSeriesFixture()]] - `calls` [EXTRACTED]
+- [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[dot-Travel()]] - `calls` [EXTRACTED]
+- [[dot-VerificarFisicaDeterministicaEBicos()]] - `calls` [EXTRACTED]
+- [[dot-Walking()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_30

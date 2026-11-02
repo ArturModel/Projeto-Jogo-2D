@@ -1,0 +1,35 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+PASS Todas as 51 poses tem corpo e bordas transparentes: MarcusWalkFluido
+PASS Todas as 51 poses tem corpo e bordas transparentes: MarcusLanterna
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Poses mudam naturalmente: A lanterna=False
+PASS Folha equipada correta: A lanterna=False
+PASS Repouso usa celula correta: A lanterna=False
+PASS Poses mudam naturalmente: D lanterna=False
+PASS Folha equipada correta: D lanterna=False
+PASS Repouso usa celula correta: D lanterna=False
+PASS Poses mudam naturalmente: W lanterna=False
+PASS Folha equipada correta: W lanterna=False
+PASS Repouso usa celula correta: W lanterna=False
+PASS Poses mudam naturalmente: S lanterna=False
+PASS Folha equipada correta: S lanterna=False
+PASS Repouso usa celula correta: S lanterna=False
+PASS Poses mudam naturalmente: A lanterna=True
+PASS Folha equipada correta: A lanterna=True
+PASS Repouso usa celula correta: A lanterna=True
+PASS Poses mudam naturalmente: D lanterna=True
+PASS Folha equipada correta: D lanterna=True
+PASS Repouso usa celula correta: D lanterna=True
+PASS Poses mudam naturalmente: W lanterna=True
+PASS Folha equipada correta: W lanterna=True
+PASS Repouso usa celula correta: W lanterna=True
+PASS Poses mudam naturalmente: S lanterna=True
+PASS Folha equipada correta: S lanterna=True
+PASS Repouso usa celula correta: S lanterna=True
+PASS Leitura encerra e devolve controle.
+PASS Soltar input encerra desaceleracao em ate dois segundos
+PASS Input real move Marcus com ciclo de dezesseis poses.
+PASS Cada evento de passo coincide com quadro de apoio 0/4: 0,4,0,4
+PASS Repouso não dispara passos extras.
+PASS runtime 2026-11-02T17:00:47.3776858Z

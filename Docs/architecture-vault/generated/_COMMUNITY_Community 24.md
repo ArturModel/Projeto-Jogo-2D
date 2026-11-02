@@ -1,34 +1,43 @@
 ---
 type: community
-members: 21
+members: 30
 ---
 
 # Community 24
 
-**Members:** 21 nodes
+**Members:** 30 nodes
 
 ## Members
-- [[dot-AbrirAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-AbrirLegendas()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-AbrirOpcoes()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-AbrirPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-AbrirVideo()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-Awake()_4]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-Awake()_5]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-ConfigurarGrupo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-EsconderImediatamente()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-FecharOpcoes()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-MostrarCategorias()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-MostrarImediatamente()]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-TrocarPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-TrocarPainel()_1]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-Update()_8]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[dot-Vincular()_3]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[dot-Vincular()_4]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
-- [[CanvasGroup]] - code
-- [[GameObject]] - code
-- [[MenuPanelTransition]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
-- [[OptionsPanelController]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
+- [[dot-AoVencerZeNaSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-AtualizarInvestigacao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-AuditOldFeedback()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[dot-Clear()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-ConcluirBocha()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-ConfirmarTestemunhoAtendente()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-DefinirObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-Dialogo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-DispararChegadaCasaDoAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Encerrar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
+- [[dot-Encerrar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-Interagir()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-Limpar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Nota()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-Ocorrencia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-RegistrarDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-RegistrarNotaDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-RunAutomatedVerification()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
+- [[dot-Start()_11]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-Start()_12]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-Start()_13]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
+- [[dot-Tem()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-Update()_12]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[dot-VerificarConclusaoPistasCasaAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[C2DialogueBranch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[C2InteractionData]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[ChegadaEmSantaRita]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[DentroDaCasaDoAvo]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
+- [[DialogoLinha]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[Disponivel]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,31 +47,48 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 12]]
-- 7 edges to [[_COMMUNITY_Community 2]]
-- 7 edges to [[_COMMUNITY_Community 23]]
-- 6 edges to [[_COMMUNITY_Community 0]]
-- 4 edges to [[_COMMUNITY_Community 6]]
-- 4 edges to [[_COMMUNITY_Community 11]]
-- 4 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 3]]
-- 3 edges to [[_COMMUNITY_Community 7]]
-- 2 edges to [[_COMMUNITY_Community 14]]
-- 2 edges to [[_COMMUNITY_Community 17]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 26]]
-- 2 edges to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 31]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 18]]
+- 28 edges to [[_COMMUNITY_Community 86]]
+- 23 edges to [[_COMMUNITY_Community 45]]
+- 18 edges to [[_COMMUNITY_Community 13]]
+- 13 edges to [[_COMMUNITY_Community 0]]
+- 11 edges to [[_COMMUNITY_Community 96]]
+- 10 edges to [[_COMMUNITY_Community 2]]
+- 7 edges to [[_COMMUNITY_Community 36]]
+- 6 edges to [[_COMMUNITY_Community 54]]
+- 6 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 1]]
+- 4 edges to [[_COMMUNITY_Community 19]]
+- 3 edges to [[_COMMUNITY_Community 18]]
+- 3 edges to [[_COMMUNITY_Community 44]]
+- 3 edges to [[_COMMUNITY_Community 89]]
+- 3 edges to [[_COMMUNITY_Community 21]]
+- 3 edges to [[_COMMUNITY_Community 46]]
+- 3 edges to [[_COMMUNITY_Community 30]]
+- 3 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 87]]
+- 2 edges to [[_COMMUNITY_Community 3]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 94]]
+- 2 edges to [[_COMMUNITY_Community 49]]
+- 2 edges to [[_COMMUNITY_Community 97]]
+- 2 edges to [[_COMMUNITY_Community 51]]
+- 2 edges to [[_COMMUNITY_Community 93]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 99]]
 - 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 95]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 56]]
+- 1 edge to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 84]]
 
 ## Top bridge nodes
-- [[GameObject]] - degree 41, connects to 16 communities
-- [[CanvasGroup]] - degree 23, connects to 7 communities
-- [[MenuPanelTransition]] - degree 15, connects to 5 communities
-- [[OptionsPanelController]] - degree 18, connects to 3 communities
-- [[dot-TrocarPainel()_1]] - degree 6, connects to 2 communities
+- [[dot-Tem()]] - degree 52, connects to 16 communities
+- [[dot-Start()_11]] - degree 14, connects to 10 communities
+- [[dot-AuditOldFeedback()]] - degree 21, connects to 9 communities
+- [[DialogoLinha]] - degree 26, connects to 7 communities
+- [[dot-Interagir()]] - degree 16, connects to 7 communities

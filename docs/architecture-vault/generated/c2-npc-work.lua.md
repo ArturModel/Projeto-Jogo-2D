@@ -12,8 +12,8 @@ tags:
 # c2-npc-work.lua
 
 ## Connections
-- [[c()_1]] - `contains` [EXTRACTED]
-- [[line()]] - `contains` [EXTRACTED]
+- [[c()_3]] - `contains` [EXTRACTED]
+- [[line()_1]] - `contains` [EXTRACTED]
 - [[rect()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_58

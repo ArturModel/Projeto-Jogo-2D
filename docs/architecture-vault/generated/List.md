@@ -27,9 +27,13 @@ tags:
 - [[Interactable]] - `references` [EXTRACTED]
 - [[Legenda]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
+- [[Result]] - `references` [EXTRACTED]
+- [[Result_1]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `references` [EXTRACTED]
 - [[SantaRitaShallowStairs]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[SpawnPoint]] - `references` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 

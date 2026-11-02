@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 23"
-location: "L1103"
+community: "Community 19"
+location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_19
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-Update()_7]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
+- [[Fileira_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_19

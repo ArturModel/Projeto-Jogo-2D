@@ -26,16 +26,18 @@ public static class SantaRitaPlaceDressing
         Add(casa,"SofaDaSala","Sofa",413.9f,-56.4f,2.8f);
         Replace("TV_Sala_Avo","Televisor",1.5f);
 
+        if(bar==null||bar.transform.Find("BarCoerente")==null){
         Replace("Balcao_Bar_Sprite","BalcaoBar",4.1f);
         Replace("Mesa_Bar_Esq","Chimarrao",2.3f);
         Replace("Mesa_Sinuca_Central","MesaSinuca",3.9f);
         Add(bar,"GeladeiraDoBar","Geladeira",516f,-49.7f,1.6f);
         Add(bar,"TelevisaoFutebol","Televisor",507.5f,-48.2f,1.5f);
+        }
 
         foreach (var n in new[]{"NPC_Frentista_Interior","NPC_Atendente_Interior","NPC_Ze_Interior","NPC_Frequentador_Interior"})
         {
             var g = GameObject.Find(n);
-            if (g != null)
+            if (g != null && g.GetComponent<SantaRitaBarPose>()==null && g.GetComponent<SantaRitaBarHost>()==null)
             {
                 var r = g.GetComponent<SantaRitaNpcRoutine>() ?? g.AddComponent<SantaRitaNpcRoutine>();
                 r.atividade   = n.Contains("Ze") ? "limpar" : n.Contains("Frequentador") ? "chimarrao" : "papeis";
@@ -43,11 +45,18 @@ public static class SantaRitaPlaceDressing
             }
         }
 
+        Replace("Mesa_Calcada_Bar","MesaPlasticaBar",1.35f);
+        Replace("Cadeira_Calcada_1","CadeiraPlasticaBar",.65f);
+        Replace("Cadeira_Calcada_2","CadeiraPlasticaBar",.65f);
+        Replace("Banqueta_Caida_Avo","CadeiraPlasticaBar",.65f);
+        Replace("TV_Posto","Televisor",1.2f);
         ApplyExteriorC1();
 
         var litMat = Resources.Load<Material>("Art/WorldLit");
         foreach (var sr in Object.FindObjectsByType<SpriteRenderer>())
         {
+            var coherent=bar==null?null:bar.transform.Find("BarCoerente");
+            if(coherent!=null&&sr.transform.IsChildOf(coherent))continue;
             if (sr.sprite != null && sr.transform.position.y < -40)
             {
                 switch (sr.sprite.name)

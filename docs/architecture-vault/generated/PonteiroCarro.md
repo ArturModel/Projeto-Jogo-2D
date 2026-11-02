@@ -12,11 +12,11 @@ tags:
 # PonteiroCarro
 
 ## Connections
-- [[dot-Awake()_10]] - `method` [EXTRACTED]
+- [[dot-Awake()_8]] - `method` [EXTRACTED]
 - [[dot-Procurar()]] - `method` [EXTRACTED]
-- [[dot-Start()_13]] - `references` [EXTRACTED]
-- [[dot-Update()_15]] - `method` [EXTRACTED]
-- [[Ativo]] - `defines` [EXTRACTED]
+- [[dot-Start()_20]] - `references` [EXTRACTED]
+- [[dot-Update()_16]] - `method` [EXTRACTED]
+- [[Ativo_1]] - `defines` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[LayerMask]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

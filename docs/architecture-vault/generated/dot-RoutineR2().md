@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
 community: "Community 0"
-location: "L113"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -8,6 +8,12 @@ public sealed class Capitulo2Audio : MonoBehaviour
     private static Capitulo2Audio instance;
     private readonly AudioSource[] fontes = new AudioSource[3];
     private int regiao;
+    private void OnEnable()
+    {
+        instance=this;
+        foreach(var old in GetComponents<AudioSource>())old.Stop();
+        for(int i=0;i<fontes.Length;i++){var child=transform.Find("TrilhaC2_"+i);if(child!=null)fontes[i]=child.GetComponent<AudioSource>();}
+    }
     private static AudioClip resposta;
     private static GameObject radioFeedback;
     public static AudioClip RespostaAbafada()
@@ -53,17 +59,25 @@ public sealed class Capitulo2Audio : MonoBehaviour
 
     private void Update()
     {
-        bool ativo = Capitulo2Director.CenaDoCapitulo2(SceneManager.GetActiveScene().name);
+        string scene=SceneManager.GetActiveScene().name;
+        bool ativo = Capitulo2Director.CenaDoCapitulo2(scene);
+        regiao=scene=="CemiterioSantaRita"||scene=="AbrigoCemiterio"?1:scene=="SociedadeBeiraRio"?2:0;
+        bool interior=Capitulo2Director.Instance!=null&&Capitulo2Director.Instance.interior;
         for (int i = 0; i < fontes.Length; i++)
         {
             if (ativo && i == regiao && fontes[i] == null)
             {
-                fontes[i] = gameObject.AddComponent<AudioSource>();
-                fontes[i].clip = CriarAmbiencia(i); fontes[i].loop = true;
+                var musicObject=new GameObject("TrilhaC2_"+i);musicObject.transform.SetParent(transform,false);fontes[i] = musicObject.AddComponent<AudioSource>();
+                fontes[i].clip = Resources.Load<AudioClip>("Audio/"+new[]{"Centro","Cemiterio","Bocha"}[i]+"_loop"); fontes[i].loop = true;
+                fontes[i].gameObject.AddComponent<AudioLowPassFilter>().cutoffFrequency=22000f;
                 fontes[i].playOnAwake = false; fontes[i].spatialBlend = 0; fontes[i].volume = 0;
             }
             var f = fontes[i]; if (f == null) continue;
-            float alvo = ativo && i == regiao ? (i == 1 ? .22f : .25f) : 0;
+            if(f.clip==null){f.clip=Resources.Load<AudioClip>("Audio/"+new[]{"Centro","Cemiterio","Bocha"}[i]+"_loop");if(f.clip==null)continue;}
+            float alvo = ativo && i == regiao ? .25f : 0;
+            if(interior)alvo*=.65f;
+            var filter=f.GetComponent<AudioLowPassFilter>();
+            if(filter!=null)filter.cutoffFrequency=Mathf.MoveTowards(filter.cutoffFrequency,interior?1800f:22000f,Time.unscaledDeltaTime*16000f);
             alvo *= PlayerPrefs.GetFloat("audio_musica", 1);
             if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing) alvo *= .67f;
             if (alvo > 0 && !f.isPlaying) f.Play();

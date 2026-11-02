@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 0"
+community: "Community 45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_45
 ---
 
 # IDisposable
@@ -14,5 +14,7 @@ tags:
 - [[dot-BeginIsolatedTests()]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `references` [EXTRACTED]
 - [[IsolatedSaveScope]] - `implements` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_45

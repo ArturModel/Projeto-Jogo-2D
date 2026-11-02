@@ -15,9 +15,11 @@ tags:
 - [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-InicializarPontos()]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
-- [[dot-Start()_16]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
+- [[dot-Start()_11]] - `calls` [EXTRACTED]
+- [[dot-Start()_17]] - `calls` [EXTRACTED]
 - [[dot-Travel()]] - `calls` [EXTRACTED]
+- [[dot-Use()_1]] - `calls` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

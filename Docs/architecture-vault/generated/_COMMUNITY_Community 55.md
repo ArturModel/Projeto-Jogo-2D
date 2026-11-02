@@ -8,8 +8,8 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
-- [[box()]] - code - Tools/Aseprite/c2-workstations.lua
-- [[c()]] - code - Tools/Aseprite/c2-workstations.lua
+- [[box()_2]] - code - Tools/Aseprite/c2-workstations.lua
+- [[c()_2]] - code - Tools/Aseprite/c2-workstations.lua
 - [[c2-workstations.lua]] - code - Tools/Aseprite/c2-workstations.lua
 - [[oval()]] - code - Tools/Aseprite/c2-workstations.lua
 - [[rect()]] - code - Tools/Aseprite/c2-workstations.lua

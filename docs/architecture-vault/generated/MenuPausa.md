@@ -13,8 +13,9 @@ tags:
 
 ## Connections
 - [[dot-Abrir()]] - `method` [EXTRACTED]
+- [[dot-AbrirCarregar()]] - `method` [EXTRACTED]
 - [[dot-AtualizarTextoStatusSave()]] - `method` [EXTRACTED]
-- [[dot-Awake()]] - `method` [EXTRACTED]
+- [[dot-Awake()_1]] - `method` [EXTRACTED]
 - [[dot-Botao()]] - `method` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `method` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `method` [EXTRACTED]
@@ -29,6 +30,7 @@ tags:
 - [[dot-LinhaStepperResolucao()]] - `method` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `method` [EXTRACTED]
 - [[dot-OnDestroy()]] - `method` [EXTRACTED]
+- [[dot-PauseLoadFiveSlots()]] - `references` [EXTRACTED]
 - [[dot-Posicionar()]] - `method` [EXTRACTED]
 - [[dot-Rotulo()]] - `method` [EXTRACTED]
 - [[dot-Sair()]] - `method` [EXTRACTED]

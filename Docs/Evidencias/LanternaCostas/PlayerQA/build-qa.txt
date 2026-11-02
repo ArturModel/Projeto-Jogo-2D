@@ -1,0 +1,11 @@
+Unity 6000.6.0f1 Windows x64 Development QA
+Succeeded
+Erros: 0
+Bytes: 321572794
+Duração: 00:01:15.9135902
+Executável: C:/Users/Usuario/Projeto-Jogo-2D/Build/AudioC2QA/SantaRita.exe
+UTC: 2026-11-02T16:59:13.4639393Z
+Commit base: 30d811c9dc27006507e821807b395c696c4e6f69 (inclui alterações locais desta revisão)
+SHA256 C#/cenas/dados/texturas/materiais/metas: a9a43b7c105138318c5eae2b7d35cdb242a175b043591990b1b4d9e9da26ba3a
+SO do Editor: Windows 11  (10.0.26300)
+Target: StandaloneWindows64 / D3D11

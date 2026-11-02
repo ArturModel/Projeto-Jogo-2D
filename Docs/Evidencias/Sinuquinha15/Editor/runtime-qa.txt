@@ -1,0 +1,285 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+PASS Quinze bolas de objeto, preta incluida
+PASS Primeira conversao define lisas e mantem vez
+PASS Contato errado concede branca na mao
+PASS Preta antecipada perde a mao
+PASS Preta liberada apos limpar grupo
+PASS Preta legal encerra mao
+PASS Bola marcada anula conversoes e passa branca na mao
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Marcus anda com eventos sonoros nos quadros de apoio 0/4
+PASS Leitura encerra e devolve controle.
+PASS Documentos ampliados usam texto tipografico legivel
+PASS Leitura encerra e devolve controle.
+PASS Sem tapete sob a mesa
+PASS Capacho aparece acima do piso
+PASS Ze oferece os dois modos de identificacao
+PASS Botão de ação existe
+PASS Branca pronta e quinze numeradas, sem posicionamento na saida
+PASS Arte 2D é a mesma fonte da perspectiva: Balcao_Bar_Sprite
+PASS Material lit do restante do jogo: Balcao_Bar_Sprite
+PASS Exploração preserva sprite nativo: Balcao_Bar_Sprite
+PASS Arte 2D é a mesma fonte da perspectiva: GeladeiraDoBar
+PASS Material lit do restante do jogo: GeladeiraDoBar
+PASS Exploração preserva sprite nativo: GeladeiraDoBar
+PASS Arte 2D é a mesma fonte da perspectiva: TelevisaoFutebol
+PASS Material lit do restante do jogo: TelevisaoFutebol
+PASS Exploração preserva sprite nativo: TelevisaoFutebol
+PASS Arte 2D é a mesma fonte da perspectiva: Calendario2004
+PASS Material lit do restante do jogo: Calendario2004
+PASS Exploração preserva sprite nativo: Calendario2004
+PASS Arte 2D é a mesma fonte da perspectiva: CartazGaleto
+PASS Material lit do restante do jogo: CartazGaleto
+PASS Exploração preserva sprite nativo: CartazGaleto
+PASS Arte 2D é a mesma fonte da perspectiva: FiadoSoAmanha
+PASS Material lit do restante do jogo: FiadoSoAmanha
+PASS Exploração preserva sprite nativo: FiadoSoAmanha
+PASS Arte 2D é a mesma fonte da perspectiva: TimeDaComunidade
+PASS Material lit do restante do jogo: TimeDaComunidade
+PASS Exploração preserva sprite nativo: TimeDaComunidade
+PASS Arte 2D é a mesma fonte da perspectiva: Inter1994
+PASS Material lit do restante do jogo: Inter1994
+PASS Exploração preserva sprite nativo: Inter1994
+PASS Arte 2D é a mesma fonte da perspectiva: RadioBalcao
+PASS Material lit do restante do jogo: RadioBalcao
+PASS Exploração preserva sprite nativo: RadioBalcao
+PASS Arte 2D é a mesma fonte da perspectiva: BanquetaBalcao0
+PASS Material lit do restante do jogo: BanquetaBalcao0
+PASS Exploração preserva sprite nativo: BanquetaBalcao0
+PASS Arte 2D é a mesma fonte da perspectiva: BanquetaBalcao1
+PASS Material lit do restante do jogo: BanquetaBalcao1
+PASS Exploração preserva sprite nativo: BanquetaBalcao1
+PASS Arte 2D é a mesma fonte da perspectiva: BanquetaBalcao2
+PASS Material lit do restante do jogo: BanquetaBalcao2
+PASS Exploração preserva sprite nativo: BanquetaBalcao2
+PASS Arte 2D é a mesma fonte da perspectiva: TaqueiraDoBar
+PASS Material lit do restante do jogo: TaqueiraDoBar
+PASS Exploração preserva sprite nativo: TaqueiraDoBar
+PASS Arte 2D é a mesma fonte da perspectiva: EngradadosDoBar
+PASS Material lit do restante do jogo: EngradadosDoBar
+PASS Exploração preserva sprite nativo: EngradadosDoBar
+PASS Arte 2D é a mesma fonte da perspectiva: MesaChimarrao
+PASS Material lit do restante do jogo: MesaChimarrao
+PASS Exploração preserva sprite nativo: MesaChimarrao
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraChimaA
+PASS Material lit do restante do jogo: CadeiraChimaA
+PASS Exploração preserva sprite nativo: CadeiraChimaA
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraChimaB
+PASS Material lit do restante do jogo: CadeiraChimaB
+PASS Exploração preserva sprite nativo: CadeiraChimaB
+PASS Arte 2D é a mesma fonte da perspectiva: MesaConversa
+PASS Material lit do restante do jogo: MesaConversa
+PASS Exploração preserva sprite nativo: MesaConversa
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraConversaA
+PASS Material lit do restante do jogo: CadeiraConversaA
+PASS Exploração preserva sprite nativo: CadeiraConversaA
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraConversaB
+PASS Material lit do restante do jogo: CadeiraConversaB
+PASS Exploração preserva sprite nativo: CadeiraConversaB
+PASS Arte 2D é a mesma fonte da perspectiva: MesaJanela
+PASS Material lit do restante do jogo: MesaJanela
+PASS Exploração preserva sprite nativo: MesaJanela
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraJanelaA
+PASS Material lit do restante do jogo: CadeiraJanelaA
+PASS Exploração preserva sprite nativo: CadeiraJanelaA
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraJanelaB
+PASS Material lit do restante do jogo: CadeiraJanelaB
+PASS Exploração preserva sprite nativo: CadeiraJanelaB
+PASS Arte 2D é a mesma fonte da perspectiva: CopoConversa
+PASS Material lit do restante do jogo: CopoConversa
+PASS Exploração preserva sprite nativo: CopoConversa
+PASS Arte 2D é a mesma fonte da perspectiva: CopoJanela
+PASS Material lit do restante do jogo: CopoJanela
+PASS Exploração preserva sprite nativo: CopoJanela
+PASS Arte 2D é a mesma fonte da perspectiva: CuiaMesa
+PASS Material lit do restante do jogo: CuiaMesa
+PASS Exploração preserva sprite nativo: CuiaMesa
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Ze_Interior
+PASS Material lit do restante do jogo: NPC_Ze_Interior
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Frequentador_Interior
+PASS Material lit do restante do jogo: NPC_Frequentador_Interior
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Conversa_Bar
+PASS Material lit do restante do jogo: NPC_Conversa_Bar
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Chimarrao_Bar
+PASS Material lit do restante do jogo: NPC_Chimarrao_Bar
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Cerveja_Bar
+PASS Material lit do restante do jogo: NPC_Cerveja_Bar
+PASS Zé mantém pixel art original junto de Marcus
+PASS Piso e parede compartilham exatamente as texturas 2D
+PASS Sala 3D persistente com RenderTexture real
+PASS Renderização da mesa em 1280x560, independente do pixel canvas
+PERF quad: 0.009832 ms/rebuild; 4 vertices; 200 invocações reais após aquecimento.
+PASS Quad de UI não reconstrói a sala por frame (<2 ms no host atual)
+PERF frames reais: p50=17,93ms; p95=23,76ms; max=249,18ms; foco=True; vsync=0; limite=60; resolução=1024x664. Não equivale a certificação em outras GPUs.
+PASS Uma câmera 3D da sala, sem duplicatas
+PASS Caçapa 0 possui rede externa volumétrica
+PASS Boca 0 fica além do pano
+PASS Caçapa 1 possui rede externa volumétrica
+PASS Boca 1 fica além do pano
+PASS Caçapa 2 possui rede externa volumétrica
+PASS Boca 2 fica além do pano
+PASS Caçapa 3 possui rede externa volumétrica
+PASS Boca 3 fica além do pano
+PASS Caçapa 4 possui rede externa volumétrica
+PASS Boca 4 fica além do pano
+PASS Caçapa 5 possui rede externa volumétrica
+PASS Boca 5 fica além do pano
+PASS Bandeira histórica e rádio fazem parte da mesma planta
+PASS Sem botão de efeito: contato selecionado exclusivamente na branca
+PASS Mouse absoluto estável, sem realimentar câmera: Mesa3D
+PASS Mouse absoluto estável, sem realimentar câmera: LinhaTaco
+PASS Mouse absoluto estável, sem realimentar câmera: VistaSuperior
+PASS Seleção de alvo abre explicação contextual
+PASS Sem botoes de contorno na tela
+PASS A contorna sem mudar mira: Mesa3D
+PASS Seta direciona sem contornar: Mesa3D
+PASS A contorna sem mudar mira: LinhaTaco
+PASS Seta direciona sem contornar: LinhaTaco
+PASS A contorna sem mudar mira: VistaSuperior
+PASS Seta direciona sem contornar: VistaSuperior
+PASS Segunda mao seleciona marcada sem bloquear a preta
+PASS Botão de ação existe
+PASS X de giz visivel na bola marcada
+PASS Queda fisica da marcada restaura a formacao e concede branca na mao
+PASS Terceira mao tambem aplica marcada
+PASS Seam publico atualizado para quinze bolas
+PASS Camera contorna para o lado oposto sem limite angular
+PASS Orbita completa de 360 graus retorna a orientacao
+PASS Saida fisica de 16 bolas chega ao repouso
+PASS Presentes e convertidas coerentes apos saida
+PASS Botão de ação existe
+PASS Escolha numerada abre partida pronta
+Mão completa: decisões da IA para ambos os lados, física fixa real; não há injeção de pontuação.
+PASS IA e fisica de quinze bolas coerentes na tacada 1
+PASS IA e fisica de quinze bolas coerentes na tacada 2
+PASS IA e fisica de quinze bolas coerentes na tacada 3
+PASS IA e fisica de quinze bolas coerentes na tacada 4
+PASS IA e fisica de quinze bolas coerentes na tacada 5
+PASS IA e fisica de quinze bolas coerentes na tacada 6
+PASS IA e fisica de quinze bolas coerentes na tacada 7
+PASS IA e fisica de quinze bolas coerentes na tacada 8
+PASS IA e fisica de quinze bolas coerentes na tacada 9
+PASS IA e fisica de quinze bolas coerentes na tacada 10
+PASS IA e fisica de quinze bolas coerentes na tacada 11
+PASS IA e fisica de quinze bolas coerentes na tacada 12
+PASS IA e fisica de quinze bolas coerentes na tacada 13
+PASS IA e fisica de quinze bolas coerentes na tacada 14
+PASS IA e fisica de quinze bolas coerentes na tacada 15
+PASS IA e fisica de quinze bolas coerentes na tacada 16
+PASS IA e fisica de quinze bolas coerentes na tacada 17
+PASS IA e fisica de quinze bolas coerentes na tacada 18
+PASS IA e fisica de quinze bolas coerentes na tacada 19
+PASS IA e fisica de quinze bolas coerentes na tacada 20
+PASS IA e fisica de quinze bolas coerentes na tacada 21
+PASS IA e fisica de quinze bolas coerentes na tacada 22
+PASS IA e fisica de quinze bolas coerentes na tacada 23
+PASS IA e fisica de quinze bolas coerentes na tacada 24
+PASS IA e fisica de quinze bolas coerentes na tacada 25
+PASS IA e fisica de quinze bolas coerentes na tacada 26
+PASS IA e fisica de quinze bolas coerentes na tacada 27
+PASS IA e fisica de quinze bolas coerentes na tacada 28
+PASS IA e fisica de quinze bolas coerentes na tacada 29
+PASS IA e fisica de quinze bolas coerentes na tacada 30
+PASS IA e fisica de quinze bolas coerentes na tacada 31
+PASS IA e fisica de quinze bolas coerentes na tacada 32
+PASS IA e fisica de quinze bolas coerentes na tacada 33
+PASS IA e fisica de quinze bolas coerentes na tacada 34
+PASS IA e fisica de quinze bolas coerentes na tacada 35
+PASS IA e fisica de quinze bolas coerentes na tacada 36
+PASS IA e fisica de quinze bolas coerentes na tacada 37
+PASS IA e fisica de quinze bolas coerentes na tacada 38
+PASS IA e fisica de quinze bolas coerentes na tacada 39
+PASS IA e fisica de quinze bolas coerentes na tacada 40
+PASS IA e fisica de quinze bolas coerentes na tacada 41
+PASS IA e fisica de quinze bolas coerentes na tacada 42
+PASS IA e fisica de quinze bolas coerentes na tacada 43
+PASS IA e fisica de quinze bolas coerentes na tacada 44
+PASS IA e fisica de quinze bolas coerentes na tacada 45
+PASS IA e fisica de quinze bolas coerentes na tacada 46
+PASS IA e fisica de quinze bolas coerentes na tacada 47
+PASS IA e fisica de quinze bolas coerentes na tacada 48
+PASS IA e fisica de quinze bolas coerentes na tacada 49
+PASS IA e fisica de quinze bolas coerentes na tacada 50
+PASS IA e fisica de quinze bolas coerentes na tacada 51
+PASS IA e fisica de quinze bolas coerentes na tacada 52
+PASS IA e fisica de quinze bolas coerentes na tacada 53
+PASS IA e fisica de quinze bolas coerentes na tacada 54
+PASS IA e fisica de quinze bolas coerentes na tacada 55
+PASS IA e fisica de quinze bolas coerentes na tacada 56
+PASS IA e fisica de quinze bolas coerentes na tacada 57
+PASS IA e fisica de quinze bolas coerentes na tacada 58
+PASS IA e fisica de quinze bolas coerentes na tacada 59
+PASS IA e fisica de quinze bolas coerentes na tacada 60
+PASS IA e fisica de quinze bolas coerentes na tacada 61
+PASS IA e fisica de quinze bolas coerentes na tacada 62
+PASS IA e fisica de quinze bolas coerentes na tacada 63
+PASS IA e fisica de quinze bolas coerentes na tacada 64
+PASS IA e fisica de quinze bolas coerentes na tacada 65
+PASS IA e fisica de quinze bolas coerentes na tacada 66
+PASS IA e fisica de quinze bolas coerentes na tacada 67
+PASS IA e fisica de quinze bolas coerentes na tacada 68
+PASS IA e fisica de quinze bolas coerentes na tacada 69
+PASS IA e fisica de quinze bolas coerentes na tacada 70
+PASS IA e fisica de quinze bolas coerentes na tacada 71
+PASS IA e fisica de quinze bolas coerentes na tacada 72
+PASS IA e fisica de quinze bolas coerentes na tacada 73
+PASS IA e fisica de quinze bolas coerentes na tacada 74
+PASS IA e fisica de quinze bolas coerentes na tacada 75
+PASS IA e fisica de quinze bolas coerentes na tacada 76
+PASS IA e fisica de quinze bolas coerentes na tacada 77
+PASS IA e fisica de quinze bolas coerentes na tacada 78
+PASS IA e fisica de quinze bolas coerentes na tacada 79
+PASS IA e fisica de quinze bolas coerentes na tacada 80
+PASS IA e fisica de quinze bolas coerentes na tacada 81
+PASS IA e fisica de quinze bolas coerentes na tacada 82
+PASS IA e fisica de quinze bolas coerentes na tacada 83
+PASS IA e fisica de quinze bolas coerentes na tacada 84
+PASS IA e fisica de quinze bolas coerentes na tacada 85
+PASS IA e fisica de quinze bolas coerentes na tacada 86
+PASS IA e fisica de quinze bolas coerentes na tacada 87
+PASS IA e fisica de quinze bolas coerentes na tacada 88
+PASS IA e fisica de quinze bolas coerentes na tacada 89
+PASS IA e fisica de quinze bolas coerentes na tacada 90
+PASS IA e fisica de quinze bolas coerentes na tacada 91
+PASS IA e fisica de quinze bolas coerentes na tacada 92
+PASS IA e fisica de quinze bolas coerentes na tacada 93
+PASS IA e fisica de quinze bolas coerentes na tacada 94
+PASS IA e fisica de quinze bolas coerentes na tacada 95
+PASS IA e fisica de quinze bolas coerentes na tacada 96
+PASS IA e fisica de quinze bolas coerentes na tacada 97
+PASS IA e fisica de quinze bolas coerentes na tacada 98
+PASS IA e fisica de quinze bolas coerentes na tacada 99
+PASS IA e fisica de quinze bolas coerentes na tacada 100
+PASS IA e fisica de quinze bolas coerentes na tacada 101
+PASS IA e fisica de quinze bolas coerentes na tacada 102
+PASS IA e fisica de quinze bolas coerentes na tacada 103
+PASS IA e fisica de quinze bolas coerentes na tacada 104
+PASS IA e fisica de quinze bolas coerentes na tacada 105
+PASS IA e fisica de quinze bolas coerentes na tacada 106
+PASS IA e fisica de quinze bolas coerentes na tacada 107
+PASS IA e fisica de quinze bolas coerentes na tacada 108
+PASS IA e fisica de quinze bolas coerentes na tacada 109
+PASS IA e fisica de quinze bolas coerentes na tacada 110
+PASS IA e fisica de quinze bolas coerentes na tacada 111
+PASS IA e fisica de quinze bolas coerentes na tacada 112
+PASS IA e fisica de quinze bolas coerentes na tacada 113
+PASS IA e fisica de quinze bolas coerentes na tacada 114
+PASS IA e fisica de quinze bolas coerentes na tacada 115
+PASS Mao completa com quinze bolas por IA/fisica: 115 tacadas
+Fixture separada de série: grupos já limpos e preta perto da caçapa. Exercita duas conversões físicas e callback, não campanha legítima.
+PASS Preta fisica fecha a mao 1
+PASS Preta fisica fecha a mao 2
+PASS Serie aguarda ouvir Ze antes de concluir
+PASS Botão de ação existe
+PASS Ouvir Ze conclui callback da nova regra
+PASS Sem autosave
+PASS Botão de ação existe
+PASS Pausa lista cinco slots e desabilita vazios
+PASS Cancelar carga retorna a pausa sem retomar partida
+PASS Botão de ação existe
+PASS Cena carregada EntradaDaCidade
+PASS Carrega slot escolhido 5 em vez do ultimo slot 1
+PASS Cadeira da calcada deixa escala miniatura e compartilha arte do interior
+PASS runtime 2026-11-01T02:14:04.6814570Z

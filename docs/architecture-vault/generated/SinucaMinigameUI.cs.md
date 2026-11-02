@@ -18,6 +18,7 @@ tags:
 - [[system_collections_generic]] - `imports` [EXTRACTED]
 - [[tmpro]] - `imports` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
+- [[unityengine_eventsystems]] - `imports` [EXTRACTED]
 - [[unityengine_inputsystem]] - `imports` [EXTRACTED]
 - [[unityengine_ui]] - `imports` [EXTRACTED]
 

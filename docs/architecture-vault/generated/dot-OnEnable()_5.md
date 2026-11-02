@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 6"
-location: "L25"
+community: "Community 46"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_46
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[SpawnPoint]] - `method` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[Capitulo2Audio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_46

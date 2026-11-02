@@ -11,19 +11,24 @@ tags:
 # Texture2D
 
 ## Connections
-- [[dot-Awake()_22]] - `references` [EXTRACTED]
+- [[dot-Awake()_23]] - `references` [EXTRACTED]
 - [[dot-CarregarOuGerarArteMapa()]] - `references` [EXTRACTED]
 - [[dot-CarregarTextura()]] - `references` [EXTRACTED]
 - [[dot-ClearTex()]] - `references` [EXTRACTED]
 - [[dot-ExtrairBloco32()]] - `references` [EXTRACTED]
 - [[dot-FillRect()]] - `references` [EXTRACTED]
+- [[dot-LoadIcons()]] - `references` [EXTRACTED]
+- [[dot-NativeSurface()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
+- [[dot-PatronPose()]] - `references` [EXTRACTED]
 - [[dot-PintarAcabamentoArquitetonicoInterior()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-ValidarFolhaMarcus()]] - `references` [EXTRACTED]
 - [[dot-WritePng()]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 - [[Camada_1]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

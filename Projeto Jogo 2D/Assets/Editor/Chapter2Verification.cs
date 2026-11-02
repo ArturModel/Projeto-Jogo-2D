@@ -242,7 +242,8 @@ public static class Chapter2Verification
         gait.Avancar(.8f,()=>steps++);
         Check(gait.Quadro==4 && steps==2,"Segundo som coincide com o pé oposto.");
         for(int i=0;i<60;i++)gait.Avancar(0,()=>steps++);
-        Check(steps==2 && gait.Quadro==0,"Parado/contra parede não dá passos.");
+        Check(steps==2 && gait.Quadro==4,"Frame sem deslocamento conserva fase e nao dispara passos.");
+        gait.Reset();Check(gait.Quadro==0,"Repouso explicito restaura pose neutra.");
         gait.Avancar(5,()=>steps++);
         Check(steps==2,"Teleporte não dispara passos.");
         var a=new MarcusGait();var b=new MarcusGait();int sa=0,sb=0;

@@ -12,8 +12,8 @@ tags:
 # c2-workstations.lua
 
 ## Connections
-- [[box()]] - `contains` [EXTRACTED]
-- [[c()]] - `contains` [EXTRACTED]
+- [[box()_2]] - `contains` [EXTRACTED]
+- [[c()_2]] - `contains` [EXTRACTED]
 - [[oval()]] - `contains` [EXTRACTED]
 - [[rect()]] - `contains` [EXTRACTED]
 - [[table()]] - `contains` [EXTRACTED]

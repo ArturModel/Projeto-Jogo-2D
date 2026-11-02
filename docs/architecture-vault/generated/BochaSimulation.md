@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 4"
+community: "Community 27"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_27
 ---
 
 # BochaSimulation
@@ -38,7 +38,7 @@ tags:
 - [[dot-Resolver()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
 - [[dot-Run()]] - `references` [EXTRACTED]
-- [[dot-Run()_2]] - `calls` [INFERRED]
+- [[dot-Run()_6]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-SetState()]] - `references` [EXTRACTED]
 - [[dot-Step()]] - `method` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[IsMoving]] - `defines` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_27

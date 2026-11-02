@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 23"
+community: "Community 12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_12
 ---
 
 # RectTransform
@@ -13,18 +13,22 @@ tags:
 ## Connections
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
-- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-Build()_1]] - `references` [EXTRACTED]
 - [[dot-Build()_2]] - `references` [EXTRACTED]
+- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
+- [[dot-ClickR4()]] - `references` [EXTRACTED]
+- [[dot-Construir()]] - `references` [EXTRACTED]
+- [[dot-ConstruirEscolhaAlvo()]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
+- [[dot-ConstruirPainelEfeitoOpcional()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
-- [[dot-CriarBolasUI()]] - `references` [EXTRACTED]
+- [[dot-CriarBolasNaMesa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
-- [[dot-CriarBotaoModal()]] - `references` [EXTRACTED]
+- [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
 - [[dot-CriarMarcadorPonto()]] - `references` [EXTRACTED]
 - [[dot-CriarTextoFechamento()]] - `references` [EXTRACTED]
 - [[dot-EsconderImediatamente()]] - `references` [EXTRACTED]
@@ -37,13 +41,14 @@ tags:
 - [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]
 - [[dot-MostrarModal()_1]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `references` [EXTRACTED]
-- [[dot-Posicionar()]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_2]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_3]] - `references` [EXTRACTED]
+- [[dot-Posicionar()]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_2]] - `references` [EXTRACTED]
 - [[dot-PosicionarNoTopo()]] - `references` [EXTRACTED]
 - [[dot-RotuloCanonico()]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
 - [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
 - [[dot-Stretch()]] - `references` [EXTRACTED]
@@ -52,8 +57,8 @@ tags:
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
 - [[dot-Travel()]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()_5]] - `references` [EXTRACTED]
-- [[dot-Vincular()_3]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
+- [[dot-Vincular()_4]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[DicaDeTecla]] - `references` [EXTRACTED]
@@ -64,4 +69,4 @@ tags:
 - [[MenuPanelTransition]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_12

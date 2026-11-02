@@ -31,3 +31,13 @@ Interação E próxima de portas/objetos; transições bloqueadas durante fade. 
 - `Assets/Scenes/Cidade/SociedadeBeiraRio.unity`
 - `Assets/Scenes/Cidade/AbrigoCemiterio.unity`
 - `Assets/Scenes/Cidade/CemiterioSantaRita.unity`
+
+## Revisão R4 — itens e saídas
+
+Carro entrega lanterna; mapa novo é retirado nos folhetos de orientação da Rodoviária C2. Diário continua disponível antes do mapa; saves antigos mantêm mapa adquirido. Recibo passa por examinar → PEGAR → inventário → ENTREGAR no mercadinho → testemunho. Interior4_BarDoZe usa a planta compartilhada SantaRitaBarLayout. Saídas C1/C2 exigem os pés no tapete; depósito mantém seu retorno ao mercadinho em EntradaDaCidade, sem forçar retorno ao Centro.
+
+Ref7 (31/10/2026): Interior4_BarDoZe mantém a conexão e a soleira existentes; mobiliário, limites de circulação e paredes usam a planta compacta comum da sala 3D. O minigame não carrega outra cena nem muda o fluxo narrativo. Renderer/authoring são descritos em Visao_Geral_Arquitetura.
+
+Correção posterior de identidade 2D: Interior4_BarDoZe usa os sprites originais e WorldLit; a sinuca reaproveita a mesma arte em perspectiva. O layout físico e a soleira continuam compartilhados; não carregar Baked/ na exploração.
+
+Sinuquinha15 (31/10/2026): no mesmo interior, Zé oferece lisas/listradas ou 1–7/9–15 e a branca começa pronta. Melhor de três e consequência narrativa preservadas. Capacho na saída, sem tapete sob a mesa; nenhuma nova cena ou alteração de geografia.

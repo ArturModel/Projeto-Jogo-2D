@@ -287,7 +287,7 @@ public class PayphoneCheckpoint : Interactable
         if (s_subtituloModal != null)
         {
             s_subtituloModal.text = apenasCarregar
-                ? "Clique em um dos 5 registros salvos (ou pressione [1]-[5]). [ESC] Voltar"
+                ? (GameState.TemProgressoNaoSalvo ? "Carregar substitui o progresso não salvo. Escolha [1]-[5] ou [ESC] Voltar." : "Escolha um dos 5 registros ([1]-[5] ou clique). [ESC] Voltar")
                 : "Linha chuvosa (425 Hz)... Escolha em qual dos 5 Slots deseja gravar seu progresso ([1]-[5] ou Clique):";
         }
 
@@ -392,7 +392,9 @@ public class PayphoneCheckpoint : Interactable
         {
             if (s_textosSlot[i] == null) continue;
 
-            if (CheckpointSystem.TryLoadSlot(i, out ManualSaveData data))
+            bool available=CheckpointSystem.TryLoadSlot(i, out ManualSaveData data);
+            if(s_botoesSlot[i]!=null)s_botoesSlot[i].interactable=!s_modoApenasCarregar||available;
+            if (available)
             {
                 string local = string.IsNullOrEmpty(data.localDescricao)
                     ? CheckpointSystem.ObterNomeAmigavelOrelhao(data.payphoneId, data.sceneName)

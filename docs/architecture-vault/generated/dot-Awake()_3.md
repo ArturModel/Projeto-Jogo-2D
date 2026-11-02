@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
 community: "Community 19"
-location: "L80"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Awake()
 
 ## Connections
-- [[dot-MontarCortina()]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_19

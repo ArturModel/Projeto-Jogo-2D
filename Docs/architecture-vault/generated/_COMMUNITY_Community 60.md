@@ -8,10 +8,10 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[box()_1]] - code - Tools/Aseprite/interior-thresholds.lua
-- [[c()_2]] - code - Tools/Aseprite/interior-thresholds.lua
+- [[box()_3]] - code - Tools/Aseprite/interior-thresholds.lua
+- [[c()_4]] - code - Tools/Aseprite/interior-thresholds.lua
 - [[interior-thresholds.lua]] - code - Tools/Aseprite/interior-thresholds.lua
-- [[save()]] - code - Tools/Aseprite/interior-thresholds.lua
+- [[save()_1]] - code - Tools/Aseprite/interior-thresholds.lua
 
 ## Live Query (requires Dataview plugin)
 

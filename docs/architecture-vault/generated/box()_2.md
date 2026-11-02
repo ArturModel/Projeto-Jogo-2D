@@ -1,18 +1,19 @@
 ---
-source_file: "Tools/Aseprite/bocha-court-atlas.lua"
+source_file: "Tools/Aseprite/c2-workstations.lua"
 type: "code"
-community: "Community 67"
-location: "L38"
+community: "Community 55"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_67
+  - community/Community_55
 ---
 
 # box()
 
 ## Connections
-- [[bocha-court-atlas.lua]] - `contains` [EXTRACTED]
-- [[rgb()_1]] - `calls` [EXTRACTED]
+- [[c()_2]] - `calls` [EXTRACTED]
+- [[c2-workstations.lua]] - `contains` [EXTRACTED]
+- [[rect()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_67
+#graphify/code #graphify/EXTRACTED #community/Community_55

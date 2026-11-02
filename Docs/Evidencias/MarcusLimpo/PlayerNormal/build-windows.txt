@@ -1,0 +1,11 @@
+Unity 6000.6.0f1 Windows x64 Player
+Succeeded
+Erros: 0
+Bytes: 249963538
+Duração: 00:01:39.9561428
+Executável: C:/Users/Usuario/Projeto-Jogo-2D/Build/Capitulo2/SantaRita.exe
+UTC: 2026-11-02T16:04:32.5514340Z
+Commit base: 30d811c9dc27006507e821807b395c696c4e6f69 (inclui alterações locais desta revisão)
+SHA256 C#/cenas/dados/texturas/materiais/metas: 604e1451b69d0018adabf1b60ad349b6a5d2b296951fc36611f93c96d20f1d27
+SO do Editor: Windows 11  (10.0.26300)
+Target: StandaloneWindows64 / D3D11

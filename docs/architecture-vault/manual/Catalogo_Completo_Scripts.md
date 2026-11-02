@@ -1,6 +1,6 @@
 # Catálogo dos scripts C# atuais
 
-Inventário em 29/10/2026: **94 arquivos C# versionados** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44/93 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
+Inventário em 01/11/2026: **112 arquivos C# atuais (incluindo R4, Ref7 e Sinuquinha15)** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44/93/94 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
 
 | Arquivo | Tipos declarados (amostra) |
 |---|---|
@@ -17,6 +17,7 @@ Inventário em 29/10/2026: **94 arquivos C# versionados** em Assets/Scripts e As
 | [Editor/SantaRitaMcpSetup.cs](../../../Projeto%20Jogo%202D/Assets/Editor/SantaRitaMcpSetup.cs) | `SantaRitaMcpSetup` |
 | [Editor/SantaRitaProductionVerification.cs](../../../Projeto%20Jogo%202D/Assets/Editor/SantaRitaProductionVerification.cs) | `SantaRitaProductionVerification` |
 | [Editor/SantaRitaRuralPaths.cs](../../../Projeto%20Jogo%202D/Assets/Editor/SantaRitaRuralPaths.cs) | `SantaRitaRuralPaths`, `Stretch` |
+| [Editor/Sinuca3DVerification.cs](../../../Projeto%20Jogo%202D/Assets/Editor/Sinuca3DVerification.cs) | `Sinuca3DVerification` |
 | [Scripts/AudioAmbiente.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/AudioAmbiente.cs) | `AudioAmbiente`, `Camada` |
 | [Scripts/AudioSettingsController.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/AudioSettingsController.cs) | `AudioSettingsController` |
 | [Scripts/CamadaDeLuz.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/CamadaDeLuz.cs) | `CamadaDeLuz` |
@@ -40,6 +41,7 @@ Inventário em 29/10/2026: **94 arquivos C# versionados** em Assets/Scripts e As
 | [Scripts/Capitulo2/Chapter2RuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs) | `Chapter2RuntimeVerification` |
 | [Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs) | `Chapter2RuntimeVerification` |
 | [Scripts/Capitulo2/PortalRuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/PortalRuntimeVerification.cs) | `Chapter2RuntimeVerification` |
+| [Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs) | `Chapter2RuntimeVerification` |
 | [Scripts/CelularCarro.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/CelularCarro.cs) | `CelularCarro` |
 | [Scripts/CheckpointSystem.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/CheckpointSystem.cs) | `ManualSaveData`, `CheckpointSystem`, `IsolatedSaveScope` |
 | [Scripts/ChegadaEmSantaRita.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/ChegadaEmSantaRita.cs) | `ChegadaEmSantaRita` |
@@ -92,9 +94,28 @@ Inventário em 29/10/2026: **94 arquivos C# versionados** em Assets/Scripts e As
 | [Scripts/SceneFader.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SceneFader.cs) | `SceneFader` |
 | [Scripts/SceneTransition.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SceneTransition.cs) | `SceneTransition` |
 | [Scripts/SinucaMinigameUI.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SinucaMinigameUI.cs) | `SinucaMinigameUI`, `EstadoPartida`, `BolaMesa` |
+| [Scripts/SinucaTableView.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SinucaTableView.cs) | `SinucaCameraView`, `SinucaCueSpin`, `SinucaVisualBall`, `SinucaAimGuideData`, `SinucaTableView` |
 | [Scripts/SpawnPoint.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SpawnPoint.cs) | `SpawnPoint` |
 | [Scripts/SubtitleSettingsController.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SubtitleSettingsController.cs) | `SubtitleSettingsController` |
 | [Scripts/TileAleatorio.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/TileAleatorio.cs) | `TileAleatorio` |
 | [Scripts/TransicaoDeZonaTrigger.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/TransicaoDeZonaTrigger.cs) | `TransicaoDeZonaTrigger` |
 | [Scripts/UIFactory.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/UIFactory.cs) | `UIFactory` |
 | [Scripts/VideoSettingsController.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/VideoSettingsController.cs) | `VideoSettingsController` |
+| [Scripts/SantaRitaInventory.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SantaRitaInventory.cs) | `SantaRitaInventory` |
+| [Scripts/SantaRitaItemAction.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SantaRitaItemAction.cs) | `SantaRitaItemAction` |
+| [Scripts/SantaRitaBarLayout.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SantaRitaBarLayout.cs) | `SantaRitaBarLayout, SantaRitaBarPatron, SantaRitaBarProp, SantaRitaBarHost` |
+| [Scripts/SinucaBrasileiraRules.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SinucaBrasileiraRules.cs) | `SinucaBrasileiraRules` |
+| [Scripts/SinucaSpinSelector.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SinucaSpinSelector.cs) | `SinucaSpinSelector` |
+| [Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs) | `Chapter2RuntimeVerification (partial)` |
+
+- `Editor/SinucaRef7Authoring.cs`: SinucaRef7Authoring, SinucaPixelPreviewSession.
+- `Scripts/SinucaRoom3D.cs`: SinucaRoom3D.
+- `Scripts/SinucaRoom3D.Scenery.cs`: SinucaRoom3D (parcial).
+- `Scripts/SinucaRoom3D.Table.cs`: SinucaRoom3D (parcial).
+- `Scripts/SinucaRoom3D.Actors.cs`: SinucaRoom3D (parcial).
+- `Scripts/Capitulo2/SinucaRef7RuntimeVerification.cs`: Chapter2RuntimeVerification (parcial QA).
+
+| [Scripts/SinuquinhaRules.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SinuquinhaRules.cs) | `SinuquinhaRules` — núcleo atual de quinze bolas |
+| [Scripts/Capitulo2/Sinuquinha15Verification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs) | parcial `Chapter2RuntimeVerification` — suíte atual Editor/Development |
+
+- `Scripts/Capitulo2/AudioC2RuntimeVerification.cs`: parcial Chapter2RuntimeVerification; testes isolados das trilhas e imagens (Editor/Development).

@@ -1,19 +1,18 @@
 ---
-source_file: "Tools/Aseprite/c2-workstations.lua"
+source_file: "Tools/Aseprite/bar-patrons.lua"
 type: "code"
-community: "Community 55"
-location: "L58"
+community: "Community 101"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_55
+  - community/Community_101
 ---
 
 # box()
 
 ## Connections
-- [[c()]] - `calls` [EXTRACTED]
-- [[c2-workstations.lua]] - `contains` [EXTRACTED]
-- [[rect()]] - `calls` [EXTRACTED]
+- [[bar-patrons.lua]] - `contains` [EXTRACTED]
+- [[line()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_55
+#graphify/code #graphify/EXTRACTED #community/Community_101

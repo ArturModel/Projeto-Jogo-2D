@@ -12,8 +12,8 @@ tags:
 # marcus-walk.lua
 
 ## Connections
-- [[color()]] - `contains` [EXTRACTED]
+- [[c()_6]] - `contains` [EXTRACTED]
 - [[leg()]] - `contains` [EXTRACTED]
-- [[line()_2]] - `contains` [EXTRACTED]
+- [[stroke()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_62

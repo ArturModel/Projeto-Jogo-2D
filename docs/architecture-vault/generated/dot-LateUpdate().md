@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs"
 type: "code"
-community: "Community 16"
-location: "L8"
+community: "Community 1"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_1
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[SantaRitaForeground]] - `method` [EXTRACTED]
+- [[SantaRitaItemAction]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_1

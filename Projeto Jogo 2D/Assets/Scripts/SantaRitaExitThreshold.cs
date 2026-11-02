@@ -5,6 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public sealed class SantaRitaExitThreshold : MonoBehaviour
 {
+    private static readonly System.Collections.Generic.List<SantaRitaExitThreshold> all=new System.Collections.Generic.List<SantaRitaExitThreshold>();
+    private void OnEnable(){all.Add(this);}
+    private void OnDisable(){all.Remove(this);}
+    public static bool OnMat(Vector2 player,Vector2 portal)
+    {
+        SantaRitaExitThreshold nearest=null;float best=3f;
+        foreach(var mat in all){if(mat==null)continue;float d=Vector2.Distance(portal,mat.transform.position);if(d<best){best=d;nearest=mat;}}
+        if(nearest==null)return Vector2.Distance(player,portal)<.45f;
+        var bounds=nearest.GetComponent<SpriteRenderer>().bounds;
+        return player.x>=bounds.min.x+.12f&&player.x<=bounds.max.x-.12f&&player.y>=bounds.min.y&&player.y<=bounds.max.y-.10f;
+    }
     private SpriteRenderer surface;
     private PlayerController actor;
     private float visibility=.87f;
@@ -18,7 +29,7 @@ public sealed class SantaRitaExitThreshold : MonoBehaviour
         var sr=g.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.sharedMaterial=Resources.Load<Material>("Art/WorldLit");sr.sortingOrder=order;
         g.AddComponent<SantaRitaExitThreshold>();return g;
     }
-    private void Awake(){surface=GetComponent<SpriteRenderer>();}
+    private void Awake(){surface=GetComponent<SpriteRenderer>();if(name=="SoleiraSaida"&&GetComponentInParent<Capitulo2Director>()!=null)transform.position+=Vector3.down*.25f;}
     private void LateUpdate()
     {
         if(actor==null)actor=FindAnyObjectByType<PlayerController>();

@@ -9,6 +9,7 @@ public sealed class Capitulo2Portal : Interactable
     private static float ultimoCorte = float.NegativeInfinity;
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetSession() => ultimoCorte = float.NegativeInfinity;
+    public override bool CanInteractAt(Vector2 p) => base.CanInteractAt(p) && (!saidaInterior || SantaRitaExitThreshold.OnMat(p,transform.position));
     public override string Prompt => automatico ? "Seguir pela rua" : saidaInterior ? "Sair" : "Abrir porta";
     public override void Interact()
     {

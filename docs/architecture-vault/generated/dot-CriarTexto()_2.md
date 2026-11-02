@@ -1,26 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 23"
-location: "L1353"
+community: "Community 51"
+location: "L513"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_51
 ---
 
 # .CriarTexto()
 
 ## Connections
-- [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-CriarBolasUI()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoModal()]] - `calls` [EXTRACTED]
+- [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 - [[TextAlignmentOptions]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_51

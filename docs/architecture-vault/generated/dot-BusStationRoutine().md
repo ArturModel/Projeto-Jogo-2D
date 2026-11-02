@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
 type: "code"
-community: "Community 18"
+community: "Community 87"
 location: "L152"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_87
 ---
 
 # .BusStationRoutine()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
+- [[dot-Apply()_6]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable]] - `references` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_87

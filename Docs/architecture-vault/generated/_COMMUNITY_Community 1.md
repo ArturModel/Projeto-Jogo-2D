@@ -1,20 +1,23 @@
 ---
 type: community
-members: 106
+members: 127
 ---
 
 # Community 1
 
-**Members:** 106 nodes
+**Members:** 127 nodes
 
 ## Members
 - [[dot-ConectarManualmente()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[dot-ConfigureEnvironment()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[dot-LateUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs
 - [[dot-OnPreprocessTexture()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
 - [[dot-WaitForEditor()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[AssetPostprocessor]] - code
 - [[AudioAmbiente.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
+- [[AudioC2RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/AudioC2RuntimeVerification.cs
 - [[AudioSettingsController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[BarSinucaR4RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs
 - [[BochaAI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
 - [[BochaCourtView.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[BochaMinigameUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
@@ -25,7 +28,9 @@ members: 106
 - [[Capitulo1Director.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[Capitulo2Audio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
 - [[Capitulo2Director.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[Capitulo2Gate.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
 - [[Capitulo2Perception.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
+- [[Capitulo2Portal.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs
 - [[CelularCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
 - [[Chapter2BuildVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
 - [[Chapter2R2RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
@@ -61,12 +66,16 @@ members: 106
 - [[SantaRitaArtImporter]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
 - [[SantaRitaArtImporter.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
 - [[SantaRitaArtProduction.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
+- [[SantaRitaAtmosphere.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
 - [[SantaRitaC2Consolidation.Access.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
 - [[SantaRitaC2Consolidation.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[SantaRitaChapter1Builder.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[SantaRitaChapter2Authoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[SantaRitaFootsteps.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
 - [[SantaRitaGeography.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
+- [[SantaRitaInventory.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
+- [[SantaRitaItemAction]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs
+- [[SantaRitaItemAction.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs
 - [[SantaRitaLivingWorldAuthoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[SantaRitaMcpSetup]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[SantaRitaMcpSetup.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
@@ -81,7 +90,19 @@ members: 106
 - [[SantaRitaWorldLighting]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs
 - [[SantaRitaWorldLighting.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs
 - [[SceneFader.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[Sinuca3DRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
+- [[Sinuca3DVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
+- [[SinucaBrasileiraRules.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
 - [[SinucaMinigameUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[SinucaRef7Authoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
+- [[SinucaRef7RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/SinucaRef7RuntimeVerification.cs
+- [[SinucaRoom3D.Actors.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[SinucaRoom3D.Table.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[SinucaRoom3D.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[SinucaSpinSelector.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
+- [[SinucaTableView.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[Sinuquinha15Verification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
+- [[SinuquinhaRules.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[SpawnPoint.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
 - [[SubtitleSettingsController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[TileAleatorio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/TileAleatorio.cs
@@ -123,54 +144,66 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 0]]
-- 8 edges to [[_COMMUNITY_Community 6]]
-- 6 edges to [[_COMMUNITY_Community 5]]
-- 5 edges to [[_COMMUNITY_Community 4]]
-- 5 edges to [[_COMMUNITY_Community 42]]
+- 10 edges to [[_COMMUNITY_Community 30]]
+- 6 edges to [[_COMMUNITY_Community 45]]
+- 6 edges to [[_COMMUNITY_Community 49]]
+- 6 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 18]]
+- 5 edges to [[_COMMUNITY_Community 24]]
 - 4 edges to [[_COMMUNITY_Community 20]]
-- 4 edges to [[_COMMUNITY_Community 26]]
-- 3 edges to [[_COMMUNITY_Community 11]]
+- 4 edges to [[_COMMUNITY_Community 19]]
+- 4 edges to [[_COMMUNITY_Community 38]]
+- 4 edges to [[_COMMUNITY_Community 8]]
+- 4 edges to [[_COMMUNITY_Community 84]]
+- 3 edges to [[_COMMUNITY_Community 51]]
 - 3 edges to [[_COMMUNITY_Community 15]]
 - 3 edges to [[_COMMUNITY_Community 16]]
-- 3 edges to [[_COMMUNITY_Community 25]]
-- 3 edges to [[_COMMUNITY_Community 28]]
 - 3 edges to [[_COMMUNITY_Community 33]]
-- 3 edges to [[_COMMUNITY_Community 36]]
-- 3 edges to [[_COMMUNITY_Community 40]]
+- 3 edges to [[_COMMUNITY_Community 46]]
+- 3 edges to [[_COMMUNITY_Community 54]]
+- 3 edges to [[_COMMUNITY_Community 85]]
+- 3 edges to [[_COMMUNITY_Community 87]]
+- 3 edges to [[_COMMUNITY_Community 94]]
 - 3 edges to [[_COMMUNITY_Community 27]]
-- 2 edges to [[_COMMUNITY_Community 18]]
-- 2 edges to [[_COMMUNITY_Community 19]]
+- 3 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 11]]
 - 2 edges to [[_COMMUNITY_Community 2]]
-- 2 edges to [[_COMMUNITY_Community 21]]
-- 2 edges to [[_COMMUNITY_Community 24]]
 - 2 edges to [[_COMMUNITY_Community 29]]
-- 2 edges to [[_COMMUNITY_Community 3]]
-- 2 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 8]]
-- 2 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 37]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 40]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 57]]
+- 2 edges to [[_COMMUNITY_Community 96]]
 - 1 edge to [[_COMMUNITY_Community 12]]
 - 1 edge to [[_COMMUNITY_Community 13]]
 - 1 edge to [[_COMMUNITY_Community 14]]
 - 1 edge to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 3]]
 - 1 edge to [[_COMMUNITY_Community 31]]
 - 1 edge to [[_COMMUNITY_Community 34]]
 - 1 edge to [[_COMMUNITY_Community 35]]
-- 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 43]]
 - 1 edge to [[_COMMUNITY_Community 47]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 37]]
-- 1 edge to [[_COMMUNITY_Community 41]]
-- 1 edge to [[_COMMUNITY_Community 49]]
+- 1 edge to [[_COMMUNITY_Community 5]]
 - 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 56]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 89]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 98]]
+- 1 edge to [[_COMMUNITY_Community 99]]
+- 1 edge to [[_COMMUNITY_Community 109]]
+- 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 93]]
+- 1 edge to [[_COMMUNITY_Community 95]]
 
 ## Top bridge nodes
-- [[unityengine]] - degree 94, connects to 17 communities
-- [[system]] - degree 35, connects to 3 communities
-- [[system_collections_generic]] - degree 36, connects to 2 communities
-- [[MenuPausa.cs]] - degree 10, connects to 2 communities
-- [[Capitulo2Director.cs]] - degree 9, connects to 2 communities
+- [[unityengine]] - degree 110, connects to 20 communities
+- [[system]] - degree 49, connects to 4 communities
+- [[BochaCourtView.cs]] - degree 8, connects to 3 communities
+- [[system_collections_generic]] - degree 48, connects to 2 communities
+- [[SinucaTableView.cs]] - degree 11, connects to 2 communities

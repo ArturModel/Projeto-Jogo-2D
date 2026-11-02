@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 5"
+community: "Community 44"
 location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_44
 ---
 
 # .BloqueiaEquipamento()
 
 ## Connections
 - [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-Update()_22]] - `calls` [EXTRACTED]
+- [[dot-Update()_19]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_44

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 3"
-location: "L165"
+location: "L266"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,6 @@ tags:
 # .EnsureInstance()
 
 ## Connections
-- [[dot-ConstruirUI()]] - `calls` [INFERRED]
-- [[dot-InicializarCacapas()]] - `calls` [INFERRED]
 - [[dot-IniciarConfronto()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 

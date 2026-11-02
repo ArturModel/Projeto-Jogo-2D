@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 36"
+community: "Community 54"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_54
 ---
 
 # Legenda
 
 ## Connections
 - [[dot-Aparecer()]] - `method` [EXTRACTED]
-- [[dot-Awake()_11]] - `method` [EXTRACTED]
-- [[dot-Construir()_2]] - `method` [EXTRACTED]
+- [[dot-Awake()_15]] - `method` [EXTRACTED]
+- [[dot-Construir()_3]] - `method` [EXTRACTED]
 - [[dot-Dizer()]] - `method` [EXTRACTED]
 - [[dot-Enfileirar()]] - `method` [EXTRACTED]
 - [[dot-Limpar()_1]] - `method` [EXTRACTED]
@@ -23,11 +23,11 @@ tags:
 - [[Coroutine]] - `references` [EXTRACTED]
 - [[Fala_2]] - `references` [EXTRACTED]
 - [[Fala]] - `contains` [EXTRACTED]
-- [[Instance_10]] - `defines` [EXTRACTED]
+- [[Instance_7]] - `defines` [EXTRACTED]
 - [[Legenda.cs]] - `contains` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_54

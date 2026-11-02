@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 30"
+community: "Community 24"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_24
 ---
 
 # .Tem()
@@ -29,7 +29,8 @@ tags:
 - [[dot-DialogueR2()]] - `calls` [EXTRACTED]
 - [[dot-DispararChegadaCasaDoAvo()]] - `calls` [EXTRACTED]
 - [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_6]] - `calls` [EXTRACTED]
+- [[dot-HasItem()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_5]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
 - [[dot-InteragirCarroMarcus()]] - `calls` [EXTRACTED]
@@ -38,6 +39,7 @@ tags:
 - [[dot-InteragirLimiarCentro()]] - `calls` [EXTRACTED]
 - [[dot-InteragirMesaSinuca()]] - `calls` [EXTRACTED]
 - [[dot-InteragirMoradorBairro()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPistaNotaFiscal()]] - `calls` [EXTRACTED]
 - [[dot-InteragirVizinhaLurdes()]] - `calls` [EXTRACTED]
 - [[dot-InteragirZe()]] - `calls` [EXTRACTED]
 - [[dot-MostrarPainelFimCapitulo1()]] - `calls` [EXTRACTED]
@@ -45,19 +47,22 @@ tags:
 - [[dot-ObjetivoAtual()]] - `calls` [EXTRACTED]
 - [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
 - [[dot-ProximaFalaContextual()]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
+- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
-- [[dot-Start()_10]] - `calls` [EXTRACTED]
 - [[dot-Start()_11]] - `calls` [EXTRACTED]
+- [[dot-Start()_12]] - `calls` [EXTRACTED]
+- [[dot-Start()_13]] - `calls` [EXTRACTED]
 - [[dot-TentarTransicionar()]] - `calls` [EXTRACTED]
-- [[dot-Update()_16]] - `calls` [EXTRACTED]
-- [[dot-Update()_23]] - `calls` [EXTRACTED]
+- [[dot-Update()_12]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[dot-ZeDesconversa()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_24

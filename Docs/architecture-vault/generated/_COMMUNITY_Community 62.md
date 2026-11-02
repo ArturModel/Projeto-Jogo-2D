@@ -8,10 +8,10 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[color()]] - code - Tools/Aseprite/marcus-walk.lua
+- [[c()_6]] - code - Tools/Aseprite/marcus-walk.lua
 - [[leg()]] - code - Tools/Aseprite/marcus-walk.lua
-- [[line()_2]] - code - Tools/Aseprite/marcus-walk.lua
 - [[marcus-walk.lua]] - code - Tools/Aseprite/marcus-walk.lua
+- [[stroke()]] - code - Tools/Aseprite/marcus-walk.lua
 
 ## Live Query (requires Dataview plugin)
 

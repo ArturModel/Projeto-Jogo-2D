@@ -12,11 +12,11 @@ tags:
 # Face
 
 ## Connections
-- [[dot-Disc()]] - `calls` [EXTRACTED]
+- [[dot-Disc()_1]] - `calls` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `calls` [INFERRED]
 - [[dot-Line()]] - `calls` [EXTRACTED]
 - [[dot-Quad()_1]] - `calls` [EXTRACTED]
-- [[dot-Sphere()]] - `calls` [EXTRACTED]
+- [[dot-Sphere()_1]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `contains` [EXTRACTED]
 - [[V_1]] - `references` [EXTRACTED]
 

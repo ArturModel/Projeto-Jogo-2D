@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
 community: "Community 34"
-location: "L759"
+location: "L752"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,7 +17,7 @@ tags:
 - [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-ObterUVObjetivoAtual()]] - `calls` [EXTRACTED]
 - [[dot-UV()]] - `calls` [EXTRACTED]
-- [[dot-Update()_16]] - `calls` [EXTRACTED]
+- [[dot-Update()_17]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]

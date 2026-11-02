@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-AteOTempo()]] - `references` [EXTRACTED]
-- [[dot-Awake()_2]] - `method` [EXTRACTED]
+- [[dot-Awake()_3]] - `method` [EXTRACTED]
 - [[dot-Curvar()]] - `references` [EXTRACTED]
 - [[dot-Definir()]] - `method` [EXTRACTED]
 - [[dot-Disparar()]] - `method` [EXTRACTED]
 - [[dot-Pitch()]] - `method` [EXTRACTED]
 - [[dot-Tocando()]] - `method` [EXTRACTED]
-- [[dot-Update()_4]] - `method` [EXTRACTED]
+- [[dot-Update()_6]] - `method` [EXTRACTED]
 - [[AudioAmbiente.cs]] - `contains` [EXTRACTED]
 - [[Camada_2]] - `references` [EXTRACTED]
 - [[Camada]] - `contains` [EXTRACTED]

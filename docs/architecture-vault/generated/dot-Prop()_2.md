@@ -12,14 +12,14 @@ tags:
 # .Prop()
 
 ## Connections
-- [[dot-Box()]] - `calls` [EXTRACTED]
+- [[dot-Box()_1]] - `calls` [EXTRACTED]
 - [[dot-Building()]] - `calls` [EXTRACTED]
 - [[dot-Depth()]] - `calls` [EXTRACTED]
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
 - [[dot-Fence()]] - `calls` [EXTRACTED]
 - [[dot-Garden()]] - `calls` [EXTRACTED]
 - [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_2]] - `calls` [EXTRACTED]
+- [[dot-Lamp()_3]] - `calls` [EXTRACTED]
 - [[dot-NPC()_1]] - `calls` [EXTRACTED]
 - [[dot-Phone()]] - `calls` [EXTRACTED]
 - [[dot-Sign()]] - `calls` [EXTRACTED]

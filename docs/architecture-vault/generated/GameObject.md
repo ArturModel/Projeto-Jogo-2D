@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 24"
+community: "Community 30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_30
 ---
 
 # GameObject
@@ -15,6 +15,7 @@ tags:
 - [[dot-Add()]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
+- [[dot-Box()_1]] - `references` [EXTRACTED]
 - [[dot-Box()]] - `references` [EXTRACTED]
 - [[dot-Cast()]] - `references` [EXTRACTED]
 - [[dot-ColocarArteInterior()]] - `references` [EXTRACTED]
@@ -25,21 +26,38 @@ tags:
 - [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
 - [[dot-CreateNpcObject()]] - `references` [EXTRACTED]
 - [[dot-CreateSceneSpriteObject()]] - `references` [EXTRACTED]
+- [[dot-Cylinder()]] - `references` [EXTRACTED]
 - [[dot-Empty()]] - `references` [EXTRACTED]
 - [[dot-Executar()]] - `references` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `references` [EXTRACTED]
 - [[dot-Paper()]] - `references` [EXTRACTED]
+- [[dot-PosicaoFinalBrancaComEfeito()]] - `references` [EXTRACTED]
+- [[dot-Primitive()]] - `references` [EXTRACTED]
 - [[dot-Prop()]] - `references` [EXTRACTED]
 - [[dot-Prop()_2]] - `references` [EXTRACTED]
 - [[dot-Prop()_1]] - `references` [EXTRACTED]
+- [[dot-Ref7Checks()]] - `references` [EXTRACTED]
+- [[dot-Ring()]] - `references` [EXTRACTED]
+- [[dot-Run()_3]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
+- [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
+- [[dot-SeriesFixtureR4()]] - `references` [EXTRACTED]
+- [[dot-SimularPosicaoFinalBrancaPosImpacto()]] - `references` [EXTRACTED]
 - [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
 - [[dot-SinucaRegression()]] - `references` [EXTRACTED]
+- [[dot-SinuquinhaMarked()]] - `references` [EXTRACTED]
+- [[dot-SinuquinhaPhysicalHand()]] - `references` [EXTRACTED]
+- [[dot-SinuquinhaSeriesFixture()]] - `references` [EXTRACTED]
 - [[dot-SlotsR2()]] - `references` [EXTRACTED]
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
+- [[dot-Sphere()]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()_3]] - `references` [EXTRACTED]
+- [[dot-Tube()]] - `references` [EXTRACTED]
+- [[dot-VerificarFisicaDeterministicaEBicos()]] - `references` [EXTRACTED]
 - [[dot-Vincular()_4]] - `references` [EXTRACTED]
+- [[dot-Vincular()_5]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
@@ -52,5 +70,6 @@ tags:
 - [[OptionsPanelController]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_30

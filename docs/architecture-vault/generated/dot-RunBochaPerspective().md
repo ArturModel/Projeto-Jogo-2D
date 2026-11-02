@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 48"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_48
 ---
 
 # .RunBochaPerspective()
@@ -22,16 +22,16 @@ tags:
 - [[dot-Click()]] - `calls` [INFERRED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
-- [[dot-Field()]] - `calls` [INFERRED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [INFERRED]
 - [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
-- [[dot-Invoke()]] - `calls` [INFERRED]
+- [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-MapPoint()]] - `calls` [INFERRED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-NewBochaPractice()]] - `calls` [EXTRACTED]
 - [[dot-Place()]] - `calls` [INFERRED]
 - [[dot-PointerBocha()]] - `calls` [EXTRACTED]
-- [[dot-Project()]] - `calls` [INFERRED]
+- [[dot-Project()_1]] - `calls` [INFERRED]
 - [[dot-RunAccesses()]] - `calls` [INFERRED]
 - [[dot-ScreenBocha()]] - `calls` [EXTRACTED]
 - [[dot-SetView()]] - `calls` [INFERRED]
@@ -53,4 +53,4 @@ tags:
 - [[Slider]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_48

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 15"
+community: "Community 31"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_31
 ---
 
 # AudioSettingsController
@@ -21,12 +21,12 @@ tags:
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-GarantirValoresPadraoAudiveis()]] - `method` [EXTRACTED]
 - [[dot-InicializarAudioGlobal()]] - `method` [EXTRACTED]
-- [[dot-OnDisable()]] - `method` [EXTRACTED]
-- [[dot-Start()_1]] - `method` [EXTRACTED]
-- [[dot-Vincular()]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_3]] - `method` [EXTRACTED]
+- [[dot-Start()_14]] - `method` [EXTRACTED]
+- [[dot-Vincular()_3]] - `method` [EXTRACTED]
 - [[AudioMixer]] - `references` [EXTRACTED]
 - [[AudioSettingsController.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_31

@@ -1,6 +1,7 @@
 -- Pose equipada sobre os mesmos oito apoios. Lente e corpo compartilham âncoras 64 px.
 local src=app.open(assert(app.params.source)); local base=src.cels[1].image
-local root=assert(app.params.root); local sheet=Image(576,192,ColorMode.RGB)
+assert(base.width==1088 and base.height==192,"Exporte e aguarde a folha de 16 poses antes de gerar lanterna")
+local root=assert(app.params.root); local sheet=Image(1088,192,ColorMode.RGB)
 local pc=app.pixelColor
 local function c(r,g,b) return pc.rgba(r,g,b,255) end
 local ink=c(17,19,21);local shirt=c(28,32,35);local edge=c(43,47,48)
@@ -13,10 +14,10 @@ local function line(im,x,y,xx,yy,w,col)
 end
 for row=0,2 do
  local anim=Sprite(64,64,ColorMode.RGB)
- for f=0,8 do
-  local im=Image(64,64,ColorMode.RGB)
+ for f=0,16 do
+  local im=Image(64,64,ColorMode.RGB);im:clear()
   for y=0,63 do for x=0,63 do im:drawPixel(x,y,base:getPixel(f*64+x,row*64+y)) end end
-  local bob=f<8 and ({0,1,0,-1,0,1,0,-1})[f+1]+1 or 0
+  local bob=f<16 and -math.floor(math.sin(f*math.pi/8)^2+.5) or 0
   if row<2 then
    -- Retira somente o braço exterior direito, preservando rosto, tronco e pernas.
    rect(im,39,30+bob,5,13,0)
@@ -42,8 +43,8 @@ for row=0,2 do
   if f>0 then anim:newEmptyFrame() end
   anim:newCel(anim.layers[1],f+1,im,Point(0,0));anim.frames[f+1].duration=.083333
  end
- anim:newTag(1,8).name=({'lanterna_baixo','lanterna_cima','lanterna_esquerda'})[row+1]
+ anim:newTag(1,16).name=({'lanterna_baixo','lanterna_cima','lanterna_esquerda'})[row+1]
  anim:saveAs(root..'/Marcus_lanterna_'..row..'.aseprite');if app.params.preview then anim:saveCopyAs(app.params.preview..'/Marcus_lanterna_'..row..'.gif') end;anim:close()
 end
-local out=Sprite(576,192,ColorMode.RGB);out.cels[1].image=sheet;out:saveAs(root..'/MarcusLanterna.png');out:close();src:close()
+local out=Sprite(1088,192,ColorMode.RGB);out.cels[1].image=sheet;out:saveAs(root..'/MarcusLanterna.png');out:close();src:close()
 print('Marcus equipado: 8 apoios + repouso em 3 direções; direita por um único espelhamento.')

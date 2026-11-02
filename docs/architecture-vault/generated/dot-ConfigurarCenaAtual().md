@@ -12,6 +12,7 @@ tags:
 # .ConfigurarCenaAtual()
 
 ## Connections
+- [[dot-Apply()_2]] - `calls` [EXTRACTED]
 - [[dot-Apply()_4]] - `calls` [EXTRACTED]
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `calls` [EXTRACTED]

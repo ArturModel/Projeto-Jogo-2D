@@ -1,27 +1,29 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "Community 87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_87
 ---
 
 # Sprite
 
 ## Connections
 - [[dot-Add()]] - `references` [EXTRACTED]
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-Apply()]] - `references` [EXTRACTED]
+- [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Art()]] - `references` [EXTRACTED]
 - [[dot-Art()_1]] - `references` [EXTRACTED]
-- [[dot-Awake()_13]] - `references` [EXTRACTED]
+- [[dot-Awake()_11]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-CarregarArteInspecao()]] - `references` [EXTRACTED]
 - [[dot-CarregarOuGerarArteMapa()]] - `references` [EXTRACTED]
 - [[dot-CarregarSprite()]] - `references` [EXTRACTED]
+- [[dot-Character()]] - `references` [EXTRACTED]
 - [[dot-CompactCourt()]] - `references` [EXTRACTED]
 - [[dot-ContactShadow()]] - `references` [EXTRACTED]
 - [[dot-Create()]] - `references` [EXTRACTED]
@@ -39,20 +41,35 @@ tags:
 - [[dot-GerarIconeJogador()]] - `references` [EXTRACTED]
 - [[dot-GerarIconePontoRota()]] - `references` [EXTRACTED]
 - [[dot-GerarRetratoPixelArt()]] - `references` [EXTRACTED]
+- [[dot-Interact()_2]] - `references` [EXTRACTED]
 - [[dot-Interagir()]] - `references` [EXTRACTED]
+- [[dot-LiveSprite()]] - `references` [EXTRACTED]
+- [[dot-LoadIcons()]] - `references` [EXTRACTED]
 - [[dot-LoadSprite()]] - `references` [EXTRACTED]
 - [[dot-NPC()]] - `references` [EXTRACTED]
+- [[dot-NativeMesh()]] - `references` [EXTRACTED]
+- [[dot-NativeSurface()]] - `references` [EXTRACTED]
 - [[dot-NeutralSprite()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
+- [[dot-PatronPose()]] - `references` [EXTRACTED]
+- [[dot-PauseLoadFiveSlots()]] - `references` [EXTRACTED]
+- [[dot-PixelMaterial()]] - `references` [EXTRACTED]
+- [[dot-PixelObject()]] - `references` [EXTRACTED]
+- [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Replace()_1]] - `references` [EXTRACTED]
 - [[dot-ResolverRetrato()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-RunMarcusQA()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
 - [[dot-Sprite()]] - `references` [EXTRACTED]
+- [[dot-SpriteFor()]] - `references` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Surface()]] - `references` [EXTRACTED]
 - [[dot-Tile()]] - `references` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
+- [[Actor]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable]] - `references` [EXTRACTED]
 - [[DialogoLinha]] - `references` [EXTRACTED]
@@ -60,10 +77,14 @@ tags:
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `references` [EXTRACTED]
+- [[SantaRitaBarLayout]] - `references` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `references` [EXTRACTED]
 - [[SantaRitaC2Consolidation]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `references` [EXTRACTED]
 - [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
 - [[SantaRitaNpcWork]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[TileAleatorio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_87

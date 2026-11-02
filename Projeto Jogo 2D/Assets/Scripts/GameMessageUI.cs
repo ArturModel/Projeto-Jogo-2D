@@ -73,6 +73,7 @@ public class GameMessageUI : MonoBehaviour
     private Image dica;
     private GameObject painelInspecao;
     private Image imagemInspecao;
+    private TextMeshProUGUI documentoInspecao;
     private TextMeshProUGUI tituloInspecao;
     private TextMeshProUGUI conteudoInspecao;
     private ScrollRect rolagemInspecao;
@@ -236,6 +237,18 @@ public class GameMessageUI : MonoBehaviour
         imagemInspecao.preserveAspect = true;
         imagemInspecao.raycastTarget = false;
 
+        // Written objects use actual typeset content in examination, rather than enlarging placeholder glyphs.
+        documentoInspecao = UIFactory.CreateLabel(arteFrameInspecao, "DocumentoLegivel", 13f);
+        UIFactory.Stretch(documentoInspecao.rectTransform);
+        documentoInspecao.rectTransform.offsetMin = new Vector2(12f, 12f);
+        documentoInspecao.rectTransform.offsetMax = new Vector2(-12f, -12f);
+        documentoInspecao.alignment = TextAlignmentOptions.TopLeft;
+        documentoInspecao.color = new Color32(40, 34, 28, 255);
+        documentoInspecao.textWrappingMode = TextWrappingModes.Normal;
+        documentoInspecao.overflowMode = TextOverflowModes.Ellipsis;
+        documentoInspecao.raycastTarget = false;
+        documentoInspecao.gameObject.SetActive(false);
+
         var leitura = new GameObject("AreaLeitura", typeof(RectTransform), typeof(Image), typeof(RectMask2D), typeof(ScrollRect));
         leitura.transform.SetParent(painelRect, false);
         leituraInspecao = leitura.GetComponent<RectTransform>();
@@ -284,7 +297,17 @@ public class GameMessageUI : MonoBehaviour
     {
         SantaRitaSound.Play("inspect", .12f);
         Sprite arte = arteCustom != null ? arteCustom : CarregarArteInspecao(nomeSprite);
-        bool temArte = arte != null;
+        string tipo = (titulo ?? "").ToUpperInvariant();
+        bool documento = !string.IsNullOrWhiteSpace(transcricao) &&
+            ((nomeSprite == "Bilhete" && arteCustom == null) || nomeSprite == "Quadro_Regras_Sinuca" ||
+             tipo.Contains("CADERNO") || tipo.Contains("RECIBO") || tipo.Contains("CUPOM") ||
+             tipo.Contains("CALEND") || tipo.Contains("OUTUBRO DE") || tipo.Contains("FIADO") ||
+             tipo == "ALMOÇO DA COMUNIDADE" || tipo == "REGRAS DA CASA");
+        bool temArte = arte != null || documento;
+        imagemInspecao.gameObject.SetActive(!documento);
+        documentoInspecao.gameObject.SetActive(documento);
+        arteFrameInspecao.GetComponent<Image>().color = documento ? new Color32(221, 211, 178, 255) : new Color32(10, 9, 8, 235);
+        documentoInspecao.text = documento ? "<b>" + titulo + "</b>\n\n" + transcricao : "";
 
         imagemInspecao.sprite = arte;
         arteFrameInspecao.gameObject.SetActive(temArte);

@@ -1,0 +1,334 @@
+QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.
+Fixture: aproximações/reposicionamento e pré-condições C1/C2 em RAM, isolamento de save. Cliques e carga via EventSystem/Input System reais. Não equivale a campanha legítima ou aprovação artística.
+PASS Saída convertida repõe formação e não concede pontos
+PASS Saída legal alterna ação
+PASS Da vez removida e valor creditado
+PASS Colorida livre vale seu valor e retorna
+PASS Castigo concede sete e não inventa branca na mão
+PASS Devolução da ação é única
+PASS Branca convertida retorna no D
+PASS Contato errado e bola indevida: uma penalidade, reposição
+PASS Exceção narrativa da bola marcada preservada
+PASS Duas conversões não somam pontos nem faltas múltiplas
+PASS Sequência completa encerra por pontuação brasileira, não meta quatro
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Carro entrega lanterna sem mapa em sessão nova
+PASS Cinco slots com propriedade derivada do snapshot
+PASS Diário acessível antes de obter mapa
+PASS Examinar não coleta recibo automaticamente
+PASS Botão de ação existe
+PASS Leitura encerra e devolve controle.
+PASS Clique PEGAR coloca recibo no inventário
+PASS Botão de ação existe
+PASS Leitura encerra e devolve controle.
+PASS Entrega explícita conduz testemunho e retira original
+PASS Cena carregada RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Botão de ação existe
+PASS Leitura encerra e devolve controle.
+PASS Mapa é coletado na rodoviária
+PASS Snapshot preserva equipamento e entrega
+PASS Aquisições e entrega não gravam autosave
+PASS Cena carregada EntradaDaCidade
+PASS Leitura encerra e devolve controle.
+PASS Trilha contínua em Zona2_Posto
+PASS Filtro contextual em Zona2_Posto
+PASS Trilha contínua em Zona3_Encruzilhada
+PASS Filtro contextual em Zona3_Encruzilhada
+PASS Trilha contínua em Zona4_Bairro
+PASS Filtro contextual em Zona4_Bairro
+PASS Trilha contínua em Interior_Posto
+PASS Filtro contextual em Interior_Posto
+PASS Trilha contínua em Interior_Mercadinho
+PASS Filtro contextual em Interior_Mercadinho
+PASS Trilha contínua em Interior_CasaDoAvo
+PASS Filtro contextual em Interior_CasaDoAvo
+PASS Leitura encerra e devolve controle.
+PASS Bar usa planta compartilhada
+PASS Âncora compartilhada: Balcao_Bar_Sprite
+PASS Âncora compartilhada: GeladeiraDoBar
+PASS Âncora compartilhada: TelevisaoFutebol
+PASS Âncora compartilhada: Calendario2004
+PASS Âncora compartilhada: CartazGaleto
+PASS Âncora compartilhada: FiadoSoAmanha
+PASS Âncora compartilhada: TimeDaComunidade
+PASS Âncora compartilhada: Inter1994
+PASS Âncora compartilhada: RadioBalcao
+PASS Âncora compartilhada: BanquetaBalcao0
+PASS Âncora compartilhada: BanquetaBalcao1
+PASS Âncora compartilhada: BanquetaBalcao2
+PASS Âncora compartilhada: TaqueiraDoBar
+PASS Âncora compartilhada: EngradadosDoBar
+PASS Âncora compartilhada: TapeteSinuca
+PASS Âncora compartilhada: MesaChimarrao
+PASS Âncora compartilhada: CadeiraChimaA
+PASS Âncora compartilhada: CadeiraChimaB
+PASS Âncora compartilhada: MesaConversa
+PASS Âncora compartilhada: CadeiraConversaA
+PASS Âncora compartilhada: CadeiraConversaB
+PASS Âncora compartilhada: MesaJanela
+PASS Âncora compartilhada: CadeiraJanelaA
+PASS Âncora compartilhada: CadeiraJanelaB
+PASS Âncora compartilhada: CopoConversa
+PASS Âncora compartilhada: CopoJanela
+PASS Âncora compartilhada: CuiaMesa
+PASS Arte 2D é a mesma fonte da perspectiva: Balcao_Bar_Sprite
+PASS Material lit do restante do jogo: Balcao_Bar_Sprite
+PASS Exploração preserva sprite nativo: Balcao_Bar_Sprite
+PASS Arte 2D é a mesma fonte da perspectiva: GeladeiraDoBar
+PASS Material lit do restante do jogo: GeladeiraDoBar
+PASS Exploração preserva sprite nativo: GeladeiraDoBar
+PASS Arte 2D é a mesma fonte da perspectiva: TelevisaoFutebol
+PASS Material lit do restante do jogo: TelevisaoFutebol
+PASS Exploração preserva sprite nativo: TelevisaoFutebol
+PASS Arte 2D é a mesma fonte da perspectiva: Calendario2004
+PASS Material lit do restante do jogo: Calendario2004
+PASS Exploração preserva sprite nativo: Calendario2004
+PASS Arte 2D é a mesma fonte da perspectiva: CartazGaleto
+PASS Material lit do restante do jogo: CartazGaleto
+PASS Exploração preserva sprite nativo: CartazGaleto
+PASS Arte 2D é a mesma fonte da perspectiva: FiadoSoAmanha
+PASS Material lit do restante do jogo: FiadoSoAmanha
+PASS Exploração preserva sprite nativo: FiadoSoAmanha
+PASS Arte 2D é a mesma fonte da perspectiva: TimeDaComunidade
+PASS Material lit do restante do jogo: TimeDaComunidade
+PASS Exploração preserva sprite nativo: TimeDaComunidade
+PASS Arte 2D é a mesma fonte da perspectiva: Inter1994
+PASS Material lit do restante do jogo: Inter1994
+PASS Exploração preserva sprite nativo: Inter1994
+PASS Arte 2D é a mesma fonte da perspectiva: RadioBalcao
+PASS Material lit do restante do jogo: RadioBalcao
+PASS Exploração preserva sprite nativo: RadioBalcao
+PASS Arte 2D é a mesma fonte da perspectiva: BanquetaBalcao0
+PASS Material lit do restante do jogo: BanquetaBalcao0
+PASS Exploração preserva sprite nativo: BanquetaBalcao0
+PASS Arte 2D é a mesma fonte da perspectiva: BanquetaBalcao1
+PASS Material lit do restante do jogo: BanquetaBalcao1
+PASS Exploração preserva sprite nativo: BanquetaBalcao1
+PASS Arte 2D é a mesma fonte da perspectiva: BanquetaBalcao2
+PASS Material lit do restante do jogo: BanquetaBalcao2
+PASS Exploração preserva sprite nativo: BanquetaBalcao2
+PASS Arte 2D é a mesma fonte da perspectiva: TaqueiraDoBar
+PASS Material lit do restante do jogo: TaqueiraDoBar
+PASS Exploração preserva sprite nativo: TaqueiraDoBar
+PASS Arte 2D é a mesma fonte da perspectiva: EngradadosDoBar
+PASS Material lit do restante do jogo: EngradadosDoBar
+PASS Exploração preserva sprite nativo: EngradadosDoBar
+PASS Arte 2D é a mesma fonte da perspectiva: TapeteSinuca
+PASS Material lit do restante do jogo: TapeteSinuca
+PASS Exploração preserva sprite nativo: TapeteSinuca
+PASS Arte 2D é a mesma fonte da perspectiva: MesaChimarrao
+PASS Material lit do restante do jogo: MesaChimarrao
+PASS Exploração preserva sprite nativo: MesaChimarrao
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraChimaA
+PASS Material lit do restante do jogo: CadeiraChimaA
+PASS Exploração preserva sprite nativo: CadeiraChimaA
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraChimaB
+PASS Material lit do restante do jogo: CadeiraChimaB
+PASS Exploração preserva sprite nativo: CadeiraChimaB
+PASS Arte 2D é a mesma fonte da perspectiva: MesaConversa
+PASS Material lit do restante do jogo: MesaConversa
+PASS Exploração preserva sprite nativo: MesaConversa
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraConversaA
+PASS Material lit do restante do jogo: CadeiraConversaA
+PASS Exploração preserva sprite nativo: CadeiraConversaA
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraConversaB
+PASS Material lit do restante do jogo: CadeiraConversaB
+PASS Exploração preserva sprite nativo: CadeiraConversaB
+PASS Arte 2D é a mesma fonte da perspectiva: MesaJanela
+PASS Material lit do restante do jogo: MesaJanela
+PASS Exploração preserva sprite nativo: MesaJanela
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraJanelaA
+PASS Material lit do restante do jogo: CadeiraJanelaA
+PASS Exploração preserva sprite nativo: CadeiraJanelaA
+PASS Arte 2D é a mesma fonte da perspectiva: CadeiraJanelaB
+PASS Material lit do restante do jogo: CadeiraJanelaB
+PASS Exploração preserva sprite nativo: CadeiraJanelaB
+PASS Arte 2D é a mesma fonte da perspectiva: CopoConversa
+PASS Material lit do restante do jogo: CopoConversa
+PASS Exploração preserva sprite nativo: CopoConversa
+PASS Arte 2D é a mesma fonte da perspectiva: CopoJanela
+PASS Material lit do restante do jogo: CopoJanela
+PASS Exploração preserva sprite nativo: CopoJanela
+PASS Arte 2D é a mesma fonte da perspectiva: CuiaMesa
+PASS Material lit do restante do jogo: CuiaMesa
+PASS Exploração preserva sprite nativo: CuiaMesa
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Ze_Interior
+PASS Material lit do restante do jogo: NPC_Ze_Interior
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Frequentador_Interior
+PASS Material lit do restante do jogo: NPC_Frequentador_Interior
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Conversa_Bar
+PASS Material lit do restante do jogo: NPC_Conversa_Bar
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Chimarrao_Bar
+PASS Material lit do restante do jogo: NPC_Chimarrao_Bar
+PASS Arte 2D é a mesma fonte da perspectiva: NPC_Cerveja_Bar
+PASS Material lit do restante do jogo: NPC_Cerveja_Bar
+PASS Zé mantém pixel art original junto de Marcus
+PASS Piso e parede compartilham exatamente as texturas 2D
+PASS Sala 3D persistente com RenderTexture real
+PASS Renderização da mesa em 1280x560, independente do pixel canvas
+PERF quad: 0.002853 ms/rebuild; 4 vertices; 200 invocações reais após aquecimento.
+PASS Quad de UI não reconstrói a sala por frame (<2 ms no host atual)
+PERF frames reais: p50=16,67ms; p95=16,69ms; max=118,18ms; foco=True; vsync=0; limite=60; resolução=1920x1080. Não equivale a certificação em outras GPUs.
+PASS Uma câmera 3D da sala, sem duplicatas
+PASS Caçapa 0 possui rede externa volumétrica
+PASS Boca 0 fica além do pano
+PASS Caçapa 1 possui rede externa volumétrica
+PASS Boca 1 fica além do pano
+PASS Caçapa 2 possui rede externa volumétrica
+PASS Boca 2 fica além do pano
+PASS Caçapa 3 possui rede externa volumétrica
+PASS Boca 3 fica além do pano
+PASS Caçapa 4 possui rede externa volumétrica
+PASS Boca 4 fica além do pano
+PASS Caçapa 5 possui rede externa volumétrica
+PASS Boca 5 fica além do pano
+PASS Bandeira histórica e rádio fazem parte da mesma planta
+PASS Sem botão de efeito: contato selecionado exclusivamente na branca
+PASS Mouse absoluto estável, sem realimentar câmera: Mesa3D
+PASS Mouse absoluto estável, sem realimentar câmera: LinhaTaco
+PASS Mouse absoluto estável, sem realimentar câmera: VistaSuperior
+PASS Seleção de alvo abre explicação contextual
+PASS Projeção tem fundo opaco, sem duplicar o bar 2D
+PASS Projeção e mira inversa: Mesa3D
+PASS Projeção e mira inversa: LinhaTaco
+PASS Projeção e mira inversa: VistaSuperior
+PASS Disco recebe contato lateral/longitudinal por clique real
+PASS Reset interno centraliza contato sem botão de preset
+PASS Perda de foco cancela carga sem tacada fantasma
+PASS Clique real inicia carga
+PASS Força muda enquanto segura
+PASS Soltar clique lança sem botão extra
+PASS Física alcança repouso sem deadlock
+PASS Partida e exploração permanecem sem autosave
+PASS IA/física/resolução coerentes na tacada 1
+PASS IA/física/resolução coerentes na tacada 2
+PASS IA/física/resolução coerentes na tacada 3
+PASS IA/física/resolução coerentes na tacada 4
+PASS IA/física/resolução coerentes na tacada 5
+PASS IA/física/resolução coerentes na tacada 6
+PASS IA/física/resolução coerentes na tacada 7
+PASS IA/física/resolução coerentes na tacada 8
+PASS IA/física/resolução coerentes na tacada 9
+PASS IA/física/resolução coerentes na tacada 10
+DIAGNÓSTICO 10: 7 x 17; da vez 3; saída False
+PASS IA/física/resolução coerentes na tacada 11
+PASS IA/física/resolução coerentes na tacada 12
+PASS IA/física/resolução coerentes na tacada 13
+PASS IA/física/resolução coerentes na tacada 14
+PASS IA/física/resolução coerentes na tacada 15
+PASS IA/física/resolução coerentes na tacada 16
+PASS IA/física/resolução coerentes na tacada 17
+PASS IA/física/resolução coerentes na tacada 18
+PASS IA/física/resolução coerentes na tacada 19
+PASS IA/física/resolução coerentes na tacada 20
+DIAGNÓSTICO 20: 7 x 24; da vez 3; saída False
+PASS IA/física/resolução coerentes na tacada 21
+PASS IA/física/resolução coerentes na tacada 22
+PASS IA/física/resolução coerentes na tacada 23
+PASS IA/física/resolução coerentes na tacada 24
+PASS IA/física/resolução coerentes na tacada 25
+PASS IA/física/resolução coerentes na tacada 26
+PASS IA/física/resolução coerentes na tacada 27
+PASS IA/física/resolução coerentes na tacada 28
+PASS IA/física/resolução coerentes na tacada 29
+PASS IA/física/resolução coerentes na tacada 30
+DIAGNÓSTICO 30: 24 x 24; da vez 4; saída False
+PASS IA/física/resolução coerentes na tacada 31
+PASS IA/física/resolução coerentes na tacada 32
+PASS IA/física/resolução coerentes na tacada 33
+PASS IA/física/resolução coerentes na tacada 34
+PASS IA/física/resolução coerentes na tacada 35
+PASS IA/física/resolução coerentes na tacada 36
+PASS IA/física/resolução coerentes na tacada 37
+PASS IA/física/resolução coerentes na tacada 38
+PASS IA/física/resolução coerentes na tacada 39
+PASS IA/física/resolução coerentes na tacada 40
+DIAGNÓSTICO 40: 29 x 28; da vez 6; saída False
+PASS IA/física/resolução coerentes na tacada 41
+PASS IA/física/resolução coerentes na tacada 42
+PASS IA/física/resolução coerentes na tacada 43
+PASS IA/física/resolução coerentes na tacada 44
+PASS IA/física/resolução coerentes na tacada 45
+PASS Mão completa por IA e física, sem injetar pontos (45 tacadas, 36 x 34)
+Fixture separada de fim de série: sete isolada junto à caçapa para executar duas conversões físicas e o callback real, sem simular a campanha.
+PASS Última bola da vez não fica bloqueada pela marca na mão 1
+PASS Conversão física fecha mão e acumula série 1
+PASS Última bola da vez não fica bloqueada pela marca na mão 2
+PASS Conversão física fecha mão e acumula série 2
+PASS Série aguarda ouvir Zé antes do callback
+PASS Botão de ação existe
+PASS OUVIR ZÉ conclui callback sem autosave
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_Posto
+PASS Tapete seleciona saída C1: Interior_Posto
+PASS E no tapete sai: Interior_Posto; foco=True; pausa=False; texto=False; sinuca=False; posição=(211.60, 12.60, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_Mercadinho
+PASS Tapete seleciona saída C1: Interior_Mercadinho
+PASS E no tapete sai: Interior_Mercadinho; foco=True; pausa=False; texto=False; sinuca=False; posição=(311.00, 12.20, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_CasaDoAvo
+PASS Tapete seleciona saída C1: Interior_CasaDoAvo
+PASS E no tapete sai: Interior_CasaDoAvo; foco=True; pausa=False; texto=False; sinuca=False; posição=(423.50, 22.60, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: Interior_BarDoZe
+PASS Tapete seleciona saída C1: Interior_BarDoZe
+PASS E no tapete sai: Interior_BarDoZe; foco=True; pausa=False; texto=False; sinuca=False; posição=(518.00, 12.00, 0.00)
+PASS Leitura encerra e devolve controle.
+PASS Cena carregada SociedadeBeiraRio
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: SociedadeBeiraRio
+PASS Tapete seleciona saída C2: SociedadeBeiraRio
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: SociedadeBeiraRio
+PASS Cena carregada IgrejaMatriz
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: IgrejaMatriz
+PASS Tapete seleciona saída C2: IgrejaMatriz
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: IgrejaMatriz
+PASS Cena carregada PrefeituraSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: PrefeituraSantaRita
+PASS Tapete seleciona saída C2: PrefeituraSantaRita
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: PrefeituraSantaRita
+PASS Cena carregada RodoviariaSantaRita
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: RodoviariaSantaRita
+PASS Tapete seleciona saída C2: RodoviariaSantaRita
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: RodoviariaSantaRita
+PASS Cena carregada MercadinhoDeposito
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: MercadinhoDeposito
+PASS Tapete seleciona saída C2: MercadinhoDeposito
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: MercadinhoDeposito
+PASS Cena carregada OficinaRadio
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: OficinaRadio
+PASS Tapete seleciona saída C2: OficinaRadio
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: OficinaRadio
+PASS Cena carregada CasaCostureira
+PASS Leitura encerra e devolve controle.
+PASS Saída exige pés no tapete: CasaCostureira
+PASS Tapete seleciona saída C2: CasaCostureira
+PASS Cena carregada CentroSantaRita
+PASS Leitura encerra e devolve controle.
+PASS E no tapete respeita destino CentroSantaRita: CasaCostureira
+PASS Regressão integrada e saídas sem autosave
+PASS runtime 2026-10-31T21:14:54.5953678Z
