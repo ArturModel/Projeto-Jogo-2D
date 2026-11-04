@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
-- [[dot-Capture()]] - `calls` [INFERRED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-FindNearest()]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [INFERRED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Place()]] - `calls` [INFERRED]
+- [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
 - [[dot-SpeedAt()]] - `calls` [EXTRACTED]
 - [[dot-Start()]] - `calls` [INFERRED]

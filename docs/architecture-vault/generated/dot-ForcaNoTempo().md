@@ -12,8 +12,8 @@ tags:
 # .ForcaNoTempo()
 
 ## Connections
-- [[dot-Run()_6]] - `calls` [EXTRACTED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Run()_1]] - `calls` [EXTRACTED]
+- [[dot-Update()_5]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

@@ -1,18 +1,22 @@
 ---
 type: community
-members: 5
+members: 9
 ---
 
 # Community 42
 
-**Members:** 5 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[dot-Awake()_12]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
-- [[dot-LateUpdate()_6]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
-- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
-- [[CamadaParallax]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
-- [[CamadaParallax.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
+- [[dot-Avancar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-OnDeselect()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-OnSelect()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Retroceder()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-TocarSom()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Update()_22]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[BaseEventData]] - code
+- [[HorizontalStepperNavigation]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[IDeselectHandler]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,10 +26,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 18]]
+- 4 edges to [[_COMMUNITY_Community 12]]
+- 2 edges to [[_COMMUNITY_Community 28]]
+- 2 edges to [[_COMMUNITY_Community 107]]
+- 1 edge to [[_COMMUNITY_Community 112]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[CamadaParallax]] - degree 6, connects to 2 communities
-- [[CamadaParallax.cs]] - degree 2, connects to 1 community
+- [[HorizontalStepperNavigation]] - degree 16, connects to 5 communities
+- [[BaseEventData]] - degree 3, connects to 1 community

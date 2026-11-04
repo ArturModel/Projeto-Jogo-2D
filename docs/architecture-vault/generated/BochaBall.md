@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [INFERRED]
-- [[dot-Aplicar()]] - `references` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `references` [EXTRACTED]
 - [[dot-Balim()]] - `method` [EXTRACTED]
 - [[dot-BestShot()]] - `calls` [INFERRED]
 - [[dot-BochaAudioR2()]] - `calls` [INFERRED]
@@ -26,7 +26,7 @@ tags:
 - [[dot-Posicao()]] - `references` [EXTRACTED]
 - [[dot-Rebater()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
-- [[dot-Run()_6]] - `calls` [INFERRED]
+- [[dot-Run()_1]] - `calls` [INFERRED]
 - [[dot-Velocidade()]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]

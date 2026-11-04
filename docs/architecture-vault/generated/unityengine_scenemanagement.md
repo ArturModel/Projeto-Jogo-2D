@@ -11,6 +11,7 @@ tags:
 # unityengine_scenemanagement
 
 ## Connections
+- [[AtlasRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[AudioSettingsController.cs]] - `imports` [EXTRACTED]
 - [[Capitulo1Director.cs]] - `imports` [EXTRACTED]
 - [[Capitulo2Audio.cs]] - `imports` [EXTRACTED]
@@ -22,9 +23,12 @@ tags:
 - [[InteractionPrompt.cs]] - `imports` [EXTRACTED]
 - [[InteriorAccessRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[MapaInterativoUI.cs]] - `imports` [EXTRACTED]
+- [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaAtlas.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaAtlasAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]

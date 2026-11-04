@@ -1,17 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 46"
-location: "L41"
+community: "Community 44"
+location: "L237"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_44
 ---
 
 # .Update()
 
 ## Connections
-- [[SantaRitaSound]] - `method` [EXTRACTED]
+- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
+- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
+- [[dot-FindNearest()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_5]] - `calls` [INFERRED]
+- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
+- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_44

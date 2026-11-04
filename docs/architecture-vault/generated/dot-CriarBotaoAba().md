@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
 community: "Community 51"
-location: "L474"
+location: "L292"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
-- [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
+- [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]

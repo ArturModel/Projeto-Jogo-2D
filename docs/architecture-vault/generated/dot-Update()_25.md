@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "Community 6"
-location: "L45"
+community: "Community 57"
+location: "L270"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_57
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-LerEntrada()]] - `calls` [EXTRACTED]
-- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
+- [[dot-FecharOpcoes()]] - `calls` [INFERRED]
+- [[dot-MostrarCategorias()]] - `calls` [EXTRACTED]
+- [[OptionsPanelController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_57

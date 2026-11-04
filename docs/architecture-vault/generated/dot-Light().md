@@ -12,7 +12,7 @@ tags:
 # .Light()
 
 ## Connections
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Interior()_2]] - `calls` [EXTRACTED]
 - [[dot-Lamp()_3]] - `calls` [EXTRACTED]
 - [[dot-Phone()]] - `calls` [EXTRACTED]

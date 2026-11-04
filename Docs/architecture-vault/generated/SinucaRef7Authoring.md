@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 49"
+community: "Community 20"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_20
 ---
 
 # SinucaRef7Authoring
@@ -15,4 +15,4 @@ tags:
 - [[dot-Prepare()]] - `method` [EXTRACTED]
 - [[SinucaRef7Authoring.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_20

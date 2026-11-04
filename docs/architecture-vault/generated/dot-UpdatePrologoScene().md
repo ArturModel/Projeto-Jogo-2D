@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs"
 type: "code"
-community: "Community 89"
+community: "Community 96"
 location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_96
 ---
 
 # .UpdatePrologoScene()
@@ -16,4 +16,4 @@ tags:
 - [[PrologoVideo]] - `references` [EXTRACTED]
 - [[SantaRitaChapter1Builder]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_96

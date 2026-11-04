@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
-community: "Community 54"
+community: "Community 33"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_33
 ---
 
 # CelularCarro
 
 ## Connections
-- [[dot-Ativar()_2]] - `method` [EXTRACTED]
+- [[dot-Ativar()]] - `method` [EXTRACTED]
 - [[dot-Ligar()_1]] - `method` [EXTRACTED]
 - [[CelularCarro.cs]] - `contains` [EXTRACTED]
-- [[Disponivel_2]] - `defines` [EXTRACTED]
+- [[Disponivel]] - `defines` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_33

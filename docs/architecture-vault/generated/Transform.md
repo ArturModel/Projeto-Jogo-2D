@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 2"
+community: "Community 29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_29
 ---
 
 # Transform
@@ -57,22 +57,24 @@ tags:
 - [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
 - [[dot-CriarParedesPerimetro()]] - `references` [EXTRACTED]
 - [[dot-CriarPisoDeZona()]] - `references` [EXTRACTED]
-- [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()]] - `references` [EXTRACTED]
+- [[dot-CriarTexto()_1]] - `references` [EXTRACTED]
 - [[dot-Cylinder()]] - `references` [EXTRACTED]
 - [[dot-FlashlightWalkR2()]] - `references` [EXTRACTED]
 - [[dot-Imagem()]] - `references` [EXTRACTED]
+- [[dot-Initialize()]] - `references` [EXTRACTED]
 - [[dot-Label()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
 - [[dot-Panel()]] - `references` [EXTRACTED]
+- [[dot-Panel()_1]] - `references` [EXTRACTED]
 - [[dot-PixelObject()]] - `references` [EXTRACTED]
 - [[dot-Primitive()]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
 - [[dot-Rotulo()]] - `references` [EXTRACTED]
-- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-Run()_8]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-Sphere()]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
@@ -90,4 +92,4 @@ tags:
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[Station]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_29

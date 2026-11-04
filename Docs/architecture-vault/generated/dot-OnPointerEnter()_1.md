@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 50"
+community: "Community 46"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_46
 ---
 
 # .OnPointerEnter()
@@ -15,4 +15,4 @@ tags:
 - [[PointerEventData]] - `references` [EXTRACTED]
 - [[SantaRitaItemHover]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_46

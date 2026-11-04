@@ -1,19 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 19"
-location: "L168"
+community: "Community 23"
+location: "L522"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_23
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
-- [[EstradaScroller]] - `method` [EXTRACTED]
-- [[Fileira_1]] - `references` [EXTRACTED]
+- [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_23

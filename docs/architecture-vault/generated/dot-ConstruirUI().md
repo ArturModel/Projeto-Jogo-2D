@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
-- [[dot-Awake()_6]] - `calls` [EXTRACTED]
+- [[dot-Awake()_10]] - `calls` [EXTRACTED]
 - [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
 - [[dot-CorDaBola()]] - `calls` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `calls` [EXTRACTED]
 - [[dot-CriarSpriteCirculo()]] - `calls` [EXTRACTED]
-- [[dot-CriarTexto()]] - `calls` [EXTRACTED]
+- [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
 - [[dot-InicializarOverlays()]] - `calls` [INFERRED]
 - [[dot-IniciarDuelo()]] - `calls` [EXTRACTED]
 - [[dot-IniciarPraticaOpcional()]] - `calls` [EXTRACTED]

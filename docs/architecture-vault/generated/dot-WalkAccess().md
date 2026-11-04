@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 48"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_48
 ---
 
 # .WalkAccess()
@@ -16,4 +16,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[Key]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_48

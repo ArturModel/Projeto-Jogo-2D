@@ -12,7 +12,7 @@ tags:
 # SantaRitaLivingWorldAuthoring
 
 ## Connections
-- [[dot-Apply()_1]] - `method` [EXTRACTED]
+- [[dot-Apply()_2]] - `method` [EXTRACTED]
 - [[dot-Art()_1]] - `method` [EXTRACTED]
 - [[dot-Begin()]] - `method` [EXTRACTED]
 - [[dot-Cemetery()]] - `method` [EXTRACTED]

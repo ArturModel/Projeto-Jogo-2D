@@ -1,23 +1,24 @@
 ---
 type: community
-members: 10
+members: 11
 ---
 
 # Community 96
 
-**Members:** 10 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-Awake()_24]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-Awake()_25]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-CarregarConteudo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-Dados()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-OnDestroy()_11]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[C2ContentData]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[Capitulo2Director]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[Instance_10]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[ProntoParaBocha]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[TextAsset]] - code
+- [[dot-Encerrar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-Legendar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-OnDestroy()_12]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-Start()_20]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-Update()_29]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-UpdatePrologoScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
+- [[Fala_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[Fala_2]] - code
+- [[PrologoVideo]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[RenderTexture]] - code
+- [[VideoPlayer]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,25 +28,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Community 24]]
-- 5 edges to [[_COMMUNITY_Community 6]]
-- 5 edges to [[_COMMUNITY_Community 16]]
-- 5 edges to [[_COMMUNITY_Community 11]]
-- 3 edges to [[_COMMUNITY_Community 49]]
+- 3 edges to [[_COMMUNITY_Community 8]]
 - 3 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 44]]
-- 2 edges to [[_COMMUNITY_Community 94]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 87]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 92]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 46]]
+- 3 edges to [[_COMMUNITY_Community 31]]
+- 2 edges to [[_COMMUNITY_Community 15]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 38]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 89]]
+- 1 edge to [[_COMMUNITY_Community 112]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 50]]
 
 ## Top bridge nodes
-- [[Capitulo2Director]] - degree 37, connects to 13 communities
-- [[dot-Dados()]] - degree 10, connects to 5 communities
-- [[C2ContentData]] - degree 4, connects to 3 communities
-- [[dot-Awake()_25]] - degree 3, connects to 2 communities
-- [[TextAsset]] - degree 2, connects to 1 community
+- [[dot-Encerrar()_1]] - degree 8, connects to 4 communities
+- [[dot-Start()_20]] - degree 8, connects to 4 communities
+- [[PrologoVideo]] - degree 13, connects to 3 communities
+- [[dot-Legendar()]] - degree 4, connects to 2 communities
+- [[dot-UpdatePrologoScene()]] - degree 3, connects to 2 communities

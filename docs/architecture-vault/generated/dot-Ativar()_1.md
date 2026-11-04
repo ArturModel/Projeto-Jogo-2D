@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
 community: "Community 33"
-location: "L25"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,7 @@ tags:
 # .Ativar()
 
 ## Connections
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[PortaLuvasCarro]] - `method` [EXTRACTED]
+- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_33

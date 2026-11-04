@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 15"
+community: "Community 42"
 location: "L746"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_42
 ---
 
 # .OnDeselect()
@@ -15,4 +15,4 @@ tags:
 - [[BaseEventData]] - `references` [EXTRACTED]
 - [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_42

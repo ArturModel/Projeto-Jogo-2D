@@ -12,7 +12,7 @@ tags:
 # .LabelWorld()
 
 ## Connections
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Depth()]] - `calls` [EXTRACTED]
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
 - [[dot-Interior()_2]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 100"
+community: "Community 3"
 location: "L1369"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_100
+  - community/Community_3
 ---
 
 # .CancelarCargaAtiva()
@@ -22,9 +22,9 @@ tags:
 - [[dot-ConfigurarMao()]] - `calls` [EXTRACTED]
 - [[dot-ContinuarInicioTurno()]] - `calls` [EXTRACTED]
 - [[dot-ExecutarTacadaComEfeito()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_3]] - `calls` [EXTRACTED]
 - [[dot-OnMesaPointerDown()]] - `calls` [EXTRACTED]
 - [[dot-OnMesaPointerUp()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_100
+#graphify/code #graphify/EXTRACTED #community/Community_3

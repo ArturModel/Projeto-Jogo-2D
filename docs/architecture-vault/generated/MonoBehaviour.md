@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "Community 112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_112
 ---
 
 # MonoBehaviour
@@ -38,6 +38,7 @@ tags:
 - [[LimpadorParabrisa]] - `inherits` [EXTRACTED]
 - [[MainMenuActions]] - `inherits` [EXTRACTED]
 - [[MapaInterativoUI]] - `inherits` [EXTRACTED]
+- [[MarcusNotebookUI]] - `inherits` [EXTRACTED]
 - [[MenuItemSelector]] - `inherits` [EXTRACTED]
 - [[MenuPanelTransition]] - `inherits` [EXTRACTED]
 - [[MenuPausa]] - `inherits` [EXTRACTED]
@@ -50,6 +51,7 @@ tags:
 - [[PrologoDirector]] - `inherits` [EXTRACTED]
 - [[PrologoVideo]] - `inherits` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `inherits` [EXTRACTED]
+- [[SantaRitaAtlasView]] - `inherits` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarHost]] - `inherits` [EXTRACTED]
@@ -74,4 +76,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_112

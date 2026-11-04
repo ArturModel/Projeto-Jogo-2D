@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 45"
-location: "L106"
+community: "Community 86"
+location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .DefinirNumero()
@@ -16,6 +16,7 @@ tags:
 - [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
 - [[dot-FlashlightR2()]] - `calls` [EXTRACTED]
 - [[dot-FlashlightWalkR2()]] - `calls` [EXTRACTED]
+- [[dot-Flip()]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `calls` [EXTRACTED]
 - [[dot-ProximaFalaContextual()]] - `calls` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

@@ -12,7 +12,7 @@ tags:
 # .Velocidade()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
 - [[dot-Rebater()]] - `calls` [EXTRACTED]
 - [[BochaBall]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `method` [EXTRACTED]

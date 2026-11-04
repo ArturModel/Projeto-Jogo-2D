@@ -12,7 +12,7 @@ members: 6
 - [[c()_2]] - code - Tools/Aseprite/c2-workstations.lua
 - [[c2-workstations.lua]] - code - Tools/Aseprite/c2-workstations.lua
 - [[oval()]] - code - Tools/Aseprite/c2-workstations.lua
-- [[rect()]] - code - Tools/Aseprite/c2-workstations.lua
+- [[rect()_1]] - code - Tools/Aseprite/c2-workstations.lua
 - [[table()]] - code - Tools/Aseprite/c2-workstations.lua
 
 ## Live Query (requires Dataview plugin)

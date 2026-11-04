@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AjustarZoom()]] - `calls` [INFERRED]
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
-- [[dot-Capture()]] - `calls` [INFERRED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Click()]] - `calls` [INFERRED]
 - [[dot-CloseText()]] - `calls` [INFERRED]

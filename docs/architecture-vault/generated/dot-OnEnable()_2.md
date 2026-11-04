@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
-community: "Community 40"
-location: "L8"
+community: "Community 114"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_114
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[dot-Atualizar()]] - `calls` [EXTRACTED]
-- [[Capitulo2Gate]] - `method` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_114

@@ -12,7 +12,7 @@ tags:
 # .SinuquinhaSeriesFixture()
 
 ## Connections
-- [[dot-Capture()]] - `calls` [INFERRED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-ClickR4()]] - `calls` [INFERRED]
 - [[dot-Field()]] - `calls` [EXTRACTED]

@@ -1,22 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 57"
-location: "L52"
+community: "Community 84"
+location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_57
+  - community/Community_84
 ---
 
 # .Vincular()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [INFERRED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `references` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
+- [[dot-AplicarVolumesGlobais()]] - `calls` [EXTRACTED]
+- [[AudioMixer]] - `references` [EXTRACTED]
+- [[AudioSettingsController]] - `method` [EXTRACTED]
+- [[Slider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+#graphify/code #graphify/EXTRACTED #community/Community_84

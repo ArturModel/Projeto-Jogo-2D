@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: e0e88a6f5255b824cb416317b801690b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 535965870647070430
+    second: rodovia_1_0
+  - first:
+      213: 6402246074126769936
+    second: rodovia_1_1
+  - first:
+      213: 896534949921197630
+    second: rodovia_1_2
+  - first:
+      213: -8282248972689053346
+    second: rodovia_1_3
+  - first:
+      213: 6754504762269253379
+    second: rodovia_1_4
+  - first:
+      213: -2627680535747581427
+    second: rodovia_1_5
+  - first:
+      213: -5602438366762728682
+    second: rodovia_1_6
+  - first:
+      213: 1573788038375922815
+    second: rodovia_1_7
+  - first:
+      213: 2556499859836445407
+    second: rodovia_1_8
+  - first:
+      213: -7361579569562722745
+    second: rodovia_1_9
+  - first:
+      213: -6208717548956431665
+    second: rodovia_1_10
+  - first:
+      213: 5008675391480823894
+    second: rodovia_1_11
+  - first:
+      213: -5190914570075850280
+    second: rodovia_1_12
+  - first:
+      213: 4743069865755724764
+    second: rodovia_1_13
+  - first:
+      213: -2310340174180198188
+    second: rodovia_1_14
+  - first:
+      213: 6341822385208334261
+    second: rodovia_1_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rodovia_1_0
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 416
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edec6a3ae12207700800000000000000
+      internalID: 535965870647070430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_1
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 416
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f17f442e859d850800000000000000
+      internalID: 6402246074126769936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_2
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 437
+        width: 60
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e86c279c1217c00800000000000000
+      internalID: 896534949921197630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_3
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 416
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e596689c07a8f0d80800000000000000
+      internalID: -8282248972689053346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_4
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 416
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f3ebc5b42dcbd50800000000000000
+      internalID: 6754504762269253379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_5
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 428
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0aae8b897a988bd0800000000000000
+      internalID: -2627680535747581427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_6
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 175
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61386190df32042b0800000000000000
+      internalID: -5602438366762728682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 183
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7cd723f1e737d510800000000000000
+      internalID: 1573788038375922815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_8
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 202
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd223edd3138a7320800000000000000
+      internalID: 2556499859836445407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_9
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 205
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ed072826a66d990800000000000000
+      internalID: -7361579569562722745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_10
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 175
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcac7bfc84436d9a0800000000000000
+      internalID: -6208717548956431665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_11
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 173
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65084704bb3628540800000000000000
+      internalID: 5008675391480823894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_12
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 173
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d9ba3f73ba26f7b0800000000000000
+      internalID: -5190914570075850280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_13
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 173
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbca3db9e4c2d140800000000000000
+      internalID: 4743069865755724764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_14
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 173
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8dcaf2ad500ffd0800000000000000
+      internalID: -2310340174180198188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rodovia_1_15
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 173
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b796f2ebdda20850800000000000000
+      internalID: 6341822385208334261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rodovia_1_0: 535965870647070430
+      rodovia_1_1: 6402246074126769936
+      rodovia_1_10: -6208717548956431665
+      rodovia_1_11: 5008675391480823894
+      rodovia_1_12: -5190914570075850280
+      rodovia_1_13: 4743069865755724764
+      rodovia_1_14: -2310340174180198188
+      rodovia_1_15: 6341822385208334261
+      rodovia_1_2: 896534949921197630
+      rodovia_1_3: -8282248972689053346
+      rodovia_1_4: 6754504762269253379
+      rodovia_1_5: -2627680535747581427
+      rodovia_1_6: -5602438366762728682
+      rodovia_1_7: 1573788038375922815
+      rodovia_1_8: 2556499859836445407
+      rodovia_1_9: -7361579569562722745
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

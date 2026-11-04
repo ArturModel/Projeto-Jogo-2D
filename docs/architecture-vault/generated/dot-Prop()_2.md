@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Box()_1]] - `calls` [EXTRACTED]
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Depth()]] - `calls` [EXTRACTED]
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
 - [[dot-Fence()]] - `calls` [EXTRACTED]

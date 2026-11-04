@@ -12,7 +12,7 @@ tags:
 # .Replace()
 
 ## Connections
-- [[dot-Apply()_1]] - `calls` [EXTRACTED]
+- [[dot-Apply()_2]] - `calls` [EXTRACTED]
 - [[dot-Art()_1]] - `calls` [EXTRACTED]
 - [[dot-Cemetery()]] - `calls` [EXTRACTED]
 - [[dot-Interior()]] - `calls` [EXTRACTED]

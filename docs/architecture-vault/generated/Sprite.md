@@ -1,27 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 87"
+community: "Community 26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_26
 ---
 
 # Sprite
 
 ## Connections
-- [[dot-Add()]] - `references` [EXTRACTED]
+- [[dot-Add()_1]] - `references` [EXTRACTED]
 - [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-Apply()]] - `references` [EXTRACTED]
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_5]] - `references` [EXTRACTED]
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Art()]] - `references` [EXTRACTED]
 - [[dot-Art()_1]] - `references` [EXTRACTED]
-- [[dot-Awake()_11]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-CarregarArteInspecao()]] - `references` [EXTRACTED]
-- [[dot-CarregarOuGerarArteMapa()]] - `references` [EXTRACTED]
 - [[dot-CarregarSprite()]] - `references` [EXTRACTED]
 - [[dot-Character()]] - `references` [EXTRACTED]
 - [[dot-CompactCourt()]] - `references` [EXTRACTED]
@@ -36,12 +35,9 @@ tags:
 - [[dot-EdgeTile()]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
-- [[dot-GerarIconeAlvo()]] - `references` [EXTRACTED]
-- [[dot-GerarIconeBlip()]] - `references` [EXTRACTED]
 - [[dot-GerarIconeJogador()]] - `references` [EXTRACTED]
-- [[dot-GerarIconePontoRota()]] - `references` [EXTRACTED]
 - [[dot-GerarRetratoPixelArt()]] - `references` [EXTRACTED]
-- [[dot-Interact()_2]] - `references` [EXTRACTED]
+- [[dot-Interact()_3]] - `references` [EXTRACTED]
 - [[dot-Interagir()]] - `references` [EXTRACTED]
 - [[dot-LiveSprite()]] - `references` [EXTRACTED]
 - [[dot-LoadIcons()]] - `references` [EXTRACTED]
@@ -55,16 +51,17 @@ tags:
 - [[dot-PauseLoadFiveSlots()]] - `references` [EXTRACTED]
 - [[dot-PixelMaterial()]] - `references` [EXTRACTED]
 - [[dot-PixelObject()]] - `references` [EXTRACTED]
+- [[dot-Raster()]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Replace()_1]] - `references` [EXTRACTED]
 - [[dot-ResolverRetrato()]] - `references` [EXTRACTED]
-- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-Run()_8]] - `references` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
 - [[dot-Sprite()]] - `references` [EXTRACTED]
 - [[dot-SpriteFor()]] - `references` [EXTRACTED]
-- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Start()_10]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
 - [[dot-Tile()]] - `references` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
@@ -87,4 +84,4 @@ tags:
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[TileAleatorio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_26

@@ -1,32 +1,24 @@
 ---
 type: community
-members: 19
+members: 11
 ---
 
 # Community 54
 
-**Members:** 19 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-Aparecer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Ativar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[dot-Ativar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
-- [[dot-Awake()_15]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Dizer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Enfileirar()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-IniciarPartidaSinucaComZe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Ligar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[dot-NarracaoEntradaCasaAvoRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Rodar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Transmitir()]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
-- [[CelularCarro]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[Coroutine]] - code
-- [[Disponivel_2]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
-- [[Fala]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[Fala_2]] - code
-- [[Instance_7]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[Legenda]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[RadioCarro]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
+- [[dot-Orbit()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Orbit()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OrientPixelArt()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-Recenter()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-RecentrarCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-SetMode()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-UpdateCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[LinhaTaco]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[Mesa3D]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[SinucaCameraView]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[VistaSuperior]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,27 +28,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Community 24]]
-- 5 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 33]]
-- 3 edges to [[_COMMUNITY_Community 1]]
-- 3 edges to [[_COMMUNITY_Community 51]]
-- 3 edges to [[_COMMUNITY_Community 86]]
-- 2 edges to [[_COMMUNITY_Community 2]]
-- 2 edges to [[_COMMUNITY_Community 89]]
-- 2 edges to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 57]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 34]]
+- 6 edges to [[_COMMUNITY_Community 38]]
+- 4 edges to [[_COMMUNITY_Community 36]]
+- 3 edges to [[_COMMUNITY_Community 3]]
+- 2 edges to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 56]]
 
 ## Top bridge nodes
-- [[Legenda]] - degree 17, connects to 7 communities
-- [[dot-Dizer()]] - degree 17, connects to 6 communities
-- [[dot-NarracaoEntradaCasaAvoRoutine()]] - degree 4, connects to 3 communities
-- [[CelularCarro]] - degree 5, connects to 2 communities
-- [[RadioCarro]] - degree 5, connects to 2 communities
+- [[SinucaCameraView]] - degree 9, connects to 5 communities
+- [[dot-UpdateCamera()]] - degree 7, connects to 3 communities
+- [[dot-SetMode()]] - degree 5, connects to 3 communities
+- [[dot-Orbit()_1]] - degree 3, connects to 2 communities
+- [[dot-RecentrarCamera()]] - degree 3, connects to 2 communities

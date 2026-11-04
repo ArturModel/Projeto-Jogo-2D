@@ -15,7 +15,7 @@ tags:
 - [[dot-Avancar()_2]] - `calls` [INFERRED]
 - [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-Reset()]] - `calls` [INFERRED]
-- [[dot-Run()_7]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 - [[MarcusGait]] - `calls` [INFERRED]
 

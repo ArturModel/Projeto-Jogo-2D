@@ -25,6 +25,7 @@ tags:
 - [[dot-RunAudioC2()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]

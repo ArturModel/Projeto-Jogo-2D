@@ -1,29 +1,23 @@
 ---
 type: community
-members: 16
+members: 10
 ---
 
 # Community 86
 
-**Members:** 16 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[dot-Anotar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-AtualizarLinhaDoTempo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Etiqueta()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirBalcaoBar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirFrentista()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirFrequentadorBar()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirLivroPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirMarcasBarro()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirMoradorBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirPistaCafe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirPistaCartas()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirPistaDesordem()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirPistaNotaFiscal()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirTelefoneCasaAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-InteragirVizinhaLurdes()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-Marcar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-AoClicarSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[dot-CarregarSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-DefinirNumero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-FecharModalSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[dot-Flip()]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs
+- [[dot-Numero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-PauseLoadFiveSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
+- [[dot-ProximaFalaContextual()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[dot-SlotsR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
+- [[dot-Update()_28]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,25 +27,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 45 edges to [[_COMMUNITY_Community 13]]
-- 28 edges to [[_COMMUNITY_Community 24]]
-- 11 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 45]]
-- 3 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 54]]
-- 2 edges to [[_COMMUNITY_Community 30]]
+- 19 edges to [[_COMMUNITY_Community 0]]
+- 15 edges to [[_COMMUNITY_Community 45]]
+- 7 edges to [[_COMMUNITY_Community 30]]
+- 5 edges to [[_COMMUNITY_Community 24]]
+- 5 edges to [[_COMMUNITY_Community 7]]
+- 4 edges to [[_COMMUNITY_Community 31]]
+- 2 edges to [[_COMMUNITY_Community 12]]
 - 2 edges to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 94]]
-- 1 edge to [[_COMMUNITY_Community 93]]
-- 1 edge to [[_COMMUNITY_Community 97]]
+- 2 edges to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 112]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 92]]
 
 ## Top bridge nodes
-- [[dot-Marcar()]] - degree 59, connects to 12 communities
-- [[dot-InteragirPistaNotaFiscal()]] - degree 10, connects to 4 communities
-- [[dot-Anotar()]] - degree 20, connects to 3 communities
-- [[dot-AtualizarLinhaDoTempo()]] - degree 11, connects to 2 communities
-- [[dot-InteragirFrentista()]] - degree 9, connects to 2 communities
+- [[dot-SlotsR2()]] - degree 27, connects to 9 communities
+- [[dot-PauseLoadFiveSlots()]] - degree 15, connects to 7 communities
+- [[dot-AoClicarSlot()]] - degree 14, connects to 4 communities
+- [[dot-DefinirNumero()]] - degree 11, connects to 3 communities
+- [[dot-Numero()]] - degree 7, connects to 3 communities

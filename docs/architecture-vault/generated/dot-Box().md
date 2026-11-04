@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-BuildRoom()]] - `calls` [EXTRACTED]
 - [[dot-BuildTable()]] - `calls` [EXTRACTED]
-- [[dot-Panel()]] - `calls` [EXTRACTED]
+- [[dot-Panel()_1]] - `calls` [EXTRACTED]
 - [[dot-Primitive()]] - `calls` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]

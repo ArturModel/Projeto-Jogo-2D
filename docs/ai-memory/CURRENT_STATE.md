@@ -72,3 +72,14 @@ Trilhas C2 fornecidas integradas por cena e inventário protegido contra ícone 
 02/11 — Ajuste pontual lanterna de costas: corpo oculta o objeto, feixe e estado permanecem ativos; outras direções preservadas. QA 33 + PASS e builds sem erros/hash igual, plano lanterna-costas.
 
 02/11 — Console: chamadas FindObjectsSortMode.None substituídas por overload atual, campo legado sem leitura removido com referências QA. Compilação real C# sem avisos/erros; índices 112.
+
+
+02/11 — [Atlas cartográfico](../ai-plans/2026-11-02_PatrickDotto_atlas-cartografico.md): levantamento real de 19 regiões/38 acessos, camadas/plantas, marcador e investigação por estados existentes, sem GPS ou ilustração antiga na UI. QA Editor/Player final PASS; builds normais/QA sem erros e mesmo hash; 6 arquivos pessoais intactos. Fontes/limites em [relatório](../Evidencias/Atlas/Relatorio.md) e [arquitetura](../Atlas_Arquitetura.md). Não inferir aprovação artística ou campanha integral.
+
+
+03/11 — Caderno pessoal independente substitui o painel de diário: J ou CADERNO abre livro com caligrafia, folhas, marcador e reflexões desbloqueadas pelos registros adquiridos. Originais narrativos/snapshot v2 preservados; OnDiarioAtualizado/OnSnapshotRestaurado distinguem descoberta de carga e evitam avisos falsos. Scroll dos painéis não opera mapa; fichas só possuídas e em ordem, sem cupom. Mapa da Cidade recebe entorno decorativo sem mudar as cartas ou acessos. Verificação final: [plano](../ai-plans/2026-11-03_PatrickDotto_caderno-paisagem.md), [relatório](../Evidencias/Caderno/Relatorio.md).
+
+
+Fechamento caderno/paisagem: testes específicos (30) e Atlas (237) PASS em Editor e Player; builds finais sem erros e hash igual, 120 C# indexados. Sessão RAM/posição/zona/indicador restaurados, seis arquivos pessoais intactos, cenas/configurações sem diff. Corpus final com 64 textos/variantes; original do diário preservado. Alterações não staged, sem commit/push. Limites e evidências no relatório Caderno.
+
+TMP gravou cache VT323 após restauração; único asset posterior às builds. Hash do Assets atual difere do fingerprint comum das duas builds por esse cache, sem mudanças posteriores em código/cenas/corpus/arte. Detalhe no relatório.

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 40"
+community: "Community 49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_49
 ---
 
 # Collider2D
@@ -14,12 +14,12 @@ tags:
 - [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-Atualizar()]] - `references` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `references` [EXTRACTED]
-- [[dot-Awake()_11]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()_1]] - `references` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()_2]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()]] - `references` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()_2]] - `references` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_49

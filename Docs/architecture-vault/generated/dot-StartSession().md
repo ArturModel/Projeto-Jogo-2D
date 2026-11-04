@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 51"
+community: "Community 23"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_23
 ---
 
 # .StartSession()
@@ -15,4 +15,4 @@ tags:
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
 - [[SantaRitaInventory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_23

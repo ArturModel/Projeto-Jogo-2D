@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
 type: "code"
 community: "Community 100"
-location: "L1100"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,13 +12,8 @@ tags:
 # .Update()
 
 ## Connections
-- [[dot-AlternarVistaCamera()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarMiraJogador()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
-- [[dot-AvancarSimulacaoPassoFixo()]] - `calls` [EXTRACTED]
-- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[dot-Orbit()_1]] - `calls` [INFERRED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-AnguloEm()]] - `calls` [EXTRACTED]
+- [[dot-AplicarAngulo()]] - `calls` [EXTRACTED]
+- [[LimpadorParabrisa]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_100

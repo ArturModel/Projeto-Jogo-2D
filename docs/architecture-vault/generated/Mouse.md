@@ -11,7 +11,9 @@ tags:
 # Mouse
 
 ## Connections
+- [[dot-RunAtlas()]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
+- [[dot-RunNotebook()]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]

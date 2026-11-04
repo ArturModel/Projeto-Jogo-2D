@@ -12,7 +12,7 @@ tags:
 # .Construir()
 
 ## Connections
-- [[dot-Awake()_1]] - `calls` [EXTRACTED]
+- [[dot-Awake()_5]] - `calls` [EXTRACTED]
 - [[dot-Botao()]] - `calls` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `calls` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
@@ -30,8 +30,8 @@ tags:
 - [[dot-SubPainel()]] - `calls` [EXTRACTED]
 - [[dot-Titulo()]] - `calls` [EXTRACTED]
 - [[dot-TituloPausa()]] - `calls` [EXTRACTED]
+- [[dot-Vincular()_3]] - `calls` [INFERRED]
 - [[dot-Vincular()_4]] - `calls` [INFERRED]
-- [[dot-Vincular()_5]] - `calls` [INFERRED]
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]

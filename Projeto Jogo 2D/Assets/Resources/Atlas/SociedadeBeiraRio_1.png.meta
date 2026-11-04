@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 133628aad8347a242881ee2f446b7fef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7683366799586482260
+    second: SociedadeBeiraRio_1_0
+  - first:
+      213: 6535760124737182163
+    second: SociedadeBeiraRio_1_1
+  - first:
+      213: -6392276255226523690
+    second: SociedadeBeiraRio_1_2
+  - first:
+      213: -191093744102782392
+    second: SociedadeBeiraRio_1_3
+  - first:
+      213: 5803999139426014435
+    second: SociedadeBeiraRio_1_4
+  - first:
+      213: -223538007601262049
+    second: SociedadeBeiraRio_1_5
+  - first:
+      213: 6496086191353259968
+    second: SociedadeBeiraRio_1_6
+  - first:
+      213: -4091026706540945171
+    second: SociedadeBeiraRio_1_7
+  - first:
+      213: -1698206909729660214
+    second: SociedadeBeiraRio_1_8
+  - first:
+      213: -3323239915499701523
+    second: SociedadeBeiraRio_1_9
+  - first:
+      213: -4439564509225360740
+    second: SociedadeBeiraRio_1_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 557
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458d160656dc0aa60800000000000000
+      internalID: 7683366799586482260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_1
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 534
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d95f1c943fa3ba50800000000000000
+      internalID: 6535760124737182163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_2
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 534
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df0f051d921a47a0800000000000000
+      internalID: -6392276255226523690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_3
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 534
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a44ff8049195df0800000000000000
+      internalID: -191093744102782392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_4
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 557
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e419266772fb8050800000000000000
+      internalID: 5803999139426014435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 497
+        width: 54
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12d02fcd55d5ecf0800000000000000
+      internalID: -223538007601262049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 319
+        width: 52
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c76ee929fbb62a50800000000000000
+      internalID: 6496086191353259968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 196
+        width: 107
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0adf5b2e0c937c0800000000000000
+      internalID: -4091026706540945171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_8
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 106
+        width: 50
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2237620d1ce68e0800000000000000
+      internalID: -1698206909729660214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_9
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1
+        width: 56
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deabd3577ea71e1d0800000000000000
+      internalID: -3323239915499701523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SociedadeBeiraRio_1_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 11
+        width: 337
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92e036c99f7362c0800000000000000
+      internalID: -4439564509225360740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SociedadeBeiraRio_1_0: 7683366799586482260
+      SociedadeBeiraRio_1_1: 6535760124737182163
+      SociedadeBeiraRio_1_10: -4439564509225360740
+      SociedadeBeiraRio_1_2: -6392276255226523690
+      SociedadeBeiraRio_1_3: -191093744102782392
+      SociedadeBeiraRio_1_4: 5803999139426014435
+      SociedadeBeiraRio_1_5: -223538007601262049
+      SociedadeBeiraRio_1_6: 6496086191353259968
+      SociedadeBeiraRio_1_7: -4091026706540945171
+      SociedadeBeiraRio_1_8: -1698206909729660214
+      SociedadeBeiraRio_1_9: -3323239915499701523
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

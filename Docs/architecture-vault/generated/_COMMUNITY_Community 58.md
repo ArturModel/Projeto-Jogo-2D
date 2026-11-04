@@ -11,7 +11,7 @@ members: 4
 - [[c()_3]] - code - Tools/Aseprite/c2-npc-work.lua
 - [[c2-npc-work.lua]] - code - Tools/Aseprite/c2-npc-work.lua
 - [[line()_1]] - code - Tools/Aseprite/c2-npc-work.lua
-- [[rect()_1]] - code - Tools/Aseprite/c2-npc-work.lua
+- [[rect()_2]] - code - Tools/Aseprite/c2-npc-work.lua
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 14
+members: 13
 ---
 
 # Community 56
 
-**Members:** 14 nodes
+**Members:** 13 nodes
 
 ## Members
 - [[dot-AjustarZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
@@ -14,9 +14,8 @@ members: 14
 - [[dot-GetBall()]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
 - [[dot-Invoke()_1]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
 - [[dot-OnScroll()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OscilarCarga()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-PosicaoFinalBrancaComEfeito()]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
-- [[dot-Run()_3]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
+- [[dot-Run()_6]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
 - [[dot-RunMenu()]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
 - [[dot-Set()_1]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
 - [[dot-SetBall()]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
@@ -32,22 +31,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Community 30]]
-- 6 edges to [[_COMMUNITY_Community 39]]
+- 4 edges to [[_COMMUNITY_Community 36]]
 - 3 edges to [[_COMMUNITY_Community 3]]
 - 3 edges to [[_COMMUNITY_Community 45]]
-- 2 edges to [[_COMMUNITY_Community 6]]
+- 3 edges to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 118]]
 - 1 edge to [[_COMMUNITY_Community 38]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 85]]
-- 1 edge to [[_COMMUNITY_Community 100]]
-- 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 94]]
-- 1 edge to [[_COMMUNITY_Community 49]]
-- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 87]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 
 ## Top bridge nodes
-- [[dot-Run()_3]] - degree 22, connects to 7 communities
+- [[dot-Run()_6]] - degree 22, connects to 7 communities
 - [[dot-PosicaoFinalBrancaComEfeito()]] - degree 11, connects to 4 communities
 - [[dot-AjustarZoom()]] - degree 5, connects to 2 communities
 - [[dot-DefinirZoom()]] - degree 5, connects to 2 communities
-- [[dot-OscilarCarga()]] - degree 3, connects to 2 communities
+- [[dot-SetZoom()]] - degree 3, connects to 2 communities

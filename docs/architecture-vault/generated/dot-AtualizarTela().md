@@ -22,11 +22,11 @@ tags:
 - [[dot-NovaMao()]] - `calls` [EXTRACTED]
 - [[dot-PodeMirar()]] - `calls` [EXTRACTED]
 - [[dot-Preparar()]] - `calls` [EXTRACTED]
-- [[dot-Refresh()]] - `calls` [INFERRED]
+- [[dot-Refresh()_1]] - `calls` [INFERRED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[dot-SetState()]] - `calls` [INFERRED]
 - [[dot-TextoDistancia()]] - `calls` [EXTRACTED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_5]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 

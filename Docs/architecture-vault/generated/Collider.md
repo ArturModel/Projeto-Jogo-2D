@@ -11,7 +11,7 @@ tags:
 # Collider
 
 ## Connections
-- [[dot-Panel()]] - `references` [EXTRACTED]
+- [[dot-Panel()_1]] - `references` [EXTRACTED]
 - [[dot-Primitive()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_38

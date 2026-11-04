@@ -73,3 +73,17 @@ Acabamento posterior: inventário usa moldura nativa fina sem fatiar painel da p
 Bar: SantaRitaBarLayout possui catálogo de poses e fase compartilhado com SinucaRoom3D. Cadeiras ocupadas integram o sprite sentado; CuiaMesa/TermicaMesa alternam visibilidade conforme manuseio. Marcus mantém contatos lógicos 0/4 com 16 poses visuais pelo QuadroDetalhado; frames sem deslocamento entre ticks conservam fase.
 
 Marcus: exportador reconstrói duas pernas por pose sem deformações cumulativas. PlayerController valida dimensões/conteúdo/alpha das folhas antes de recortar; falha equipada mantém corpo normal, sem retângulo. Export-Marcus.ps1 aguarda ambos os processos e publica somente folhas completas.
+
+
+## Atlas cartográfico — 02/11/2026
+
+`SantaRitaAtlas`/`SantaRitaAtlasView` substituem a imagem/UV históricos na interface do jogador. `SantaRitaAtlasAuthoring` levanta sprites, Tilemaps, regiões e portas em fixture de Play para Resources/Atlas; ferramentas ficam no Editor. `Capitulo2Director.PosicaoNoMapa` delega à transformação única do atlas. Diário/fichas e aquisição permanecem em MapaInterativoUI; visitas/origem de entrada são flags/textos RAM compatíveis com snapshot v2 e save manual. Costuras entre cenas não são ruas nem rotas. [Contrato completo](../../Atlas_Arquitetura.md).
+
+
+## Mapa da cidade e caderno — 03/11/2026
+
+`MapaInterativoUI` mantém mapa/fichas/legenda e abre o `MarcusNotebookUI` como tela independente (J ou botão CADERNO). `IsShowing` inclui o livro para bloquear a exploração. Roda sobre painéis não altera zoom; a carta mantém zoom e pan anteriores. Fichas exibem apenas posse em ordem numérica, sem cupom.
+
+`MarcusNotebookContent` projeta registros já adquiridos em primeira pessoa a partir de `Resources/Notebook/Entries.json`, sem mudar os documentos, flags ou fatos originais. Variantes condicionais dependem de conhecimento real. Registros legados sem versão própria são transcrições identificadas, sem novos fatos. `GameState.OnDiarioAtualizado(id)` notifica alteração material; `OnSnapshotRestaurado` reconcilia cache sem aviso de descoberta. `caderno.folha` é apenas marcador RAM/snapshot v2; salvar continua exclusivo do orelhão. Kalam tem licença OFL distribuída; TMP estático evita geração de fonte em jogo.
+
+Entorno `Resources/Atlas/Paisagem.png` e rabiscos por descoberta não modificam a geometria, cenas ou acessos. A autoria de fonte/paisagem roda explicitamente fora de Play; não há reconstrução ao abrir o Editor. QA: `-srNotebookQA` em Development, além da regressão `-srAtlasQA`. Relatório: [caderno](../../Evidencias/Caderno/Relatorio.md).

@@ -1,18 +1,25 @@
 ---
 type: community
-members: 5
+members: 12
 ---
 
 # Community 93
 
-**Members:** 5 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[dot-Interact()_9]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[dot-RegistrarPistaLegada()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[Prompt_9]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[dot-AplicarClampBordas()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-Awake()_25]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-DefinirLimitesRegiao()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-DetectarLimitesDaRegiao()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-GarantirFundoEscuroCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-LateUpdate()_13]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-SnapImediatoParaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[dot-Start()_19]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[Camera]] - code
+- [[CameraFollow]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[LimiteMax]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[LimiteMin]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,14 +29,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 86]]
+- 4 edges to [[_COMMUNITY_Community 87]]
+- 4 edges to [[_COMMUNITY_Community 111]]
+- 3 edges to [[_COMMUNITY_Community 38]]
+- 3 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 112]]
 - 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 16]]
 
 ## Top bridge nodes
-- [[ItemDeCena]] - degree 6, connects to 2 communities
-- [[dot-RegistrarPistaLegada()]] - degree 4, connects to 1 community
-- [[dot-Interact()_9]] - degree 3, connects to 1 community
-- [[ItemDeCena.cs]] - degree 2, connects to 1 community
+- [[CameraFollow]] - degree 22, connects to 9 communities
+- [[Camera]] - degree 13, connects to 8 communities
+- [[dot-DetectarLimitesDaRegiao()]] - degree 6, connects to 3 communities
+- [[dot-SnapImediatoParaAlvo()]] - degree 6, connects to 2 communities
+- [[dot-DefinirLimitesRegiao()]] - degree 5, connects to 2 communities

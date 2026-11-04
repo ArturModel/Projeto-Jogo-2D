@@ -5,7 +5,7 @@ community: "Community 0"
 location: "L314"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Community_0
 ---
 
@@ -14,31 +14,33 @@ tags:
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
 - [[dot-DefeatUI()]] - `calls` [EXTRACTED]
-- [[dot-FlashlightR2()]] - `calls` [INFERRED]
-- [[dot-FlashlightWalkR2()]] - `calls` [INFERRED]
-- [[dot-FullBochaPerspective()]] - `calls` [INFERRED]
-- [[dot-IntegratedFrameR4()]] - `calls` [INFERRED]
-- [[dot-PauseLoadFiveSlots()]] - `calls` [INFERRED]
+- [[dot-FlashlightR2()]] - `calls` [EXTRACTED]
+- [[dot-FlashlightWalkR2()]] - `calls` [EXTRACTED]
+- [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `calls` [EXTRACTED]
+- [[dot-PauseLoadFiveSlots()]] - `calls` [EXTRACTED]
 - [[dot-PlanCapture()]] - `calls` [EXTRACTED]
-- [[dot-Ref7Checks()]] - `calls` [INFERRED]
-- [[dot-RoutineR2()]] - `calls` [INFERRED]
+- [[dot-Ref7Checks()]] - `calls` [EXTRACTED]
+- [[dot-RoutineR2()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
-- [[dot-RunAccesses()]] - `calls` [INFERRED]
-- [[dot-RunAudioC2()]] - `calls` [INFERRED]
-- [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
-- [[dot-RunMarcusQA()]] - `calls` [INFERRED]
-- [[dot-RunPortalRegression()]] - `calls` [INFERRED]
-- [[dot-RunR2()]] - `calls` [INFERRED]
-- [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
-- [[dot-RunSinucaR4()]] - `calls` [INFERRED]
-- [[dot-RunSinuquinha15()]] - `calls` [INFERRED]
-- [[dot-SeriesFixtureR4()]] - `calls` [INFERRED]
-- [[dot-SinuquinhaMarked()]] - `calls` [INFERRED]
-- [[dot-SinuquinhaPhysicalHand()]] - `calls` [INFERRED]
-- [[dot-SinuquinhaSeriesFixture()]] - `calls` [INFERRED]
-- [[dot-SlotsR2()]] - `calls` [INFERRED]
+- [[dot-RunAccesses()]] - `calls` [EXTRACTED]
+- [[dot-RunAtlas()]] - `calls` [EXTRACTED]
+- [[dot-RunAudioC2()]] - `calls` [EXTRACTED]
+- [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunMarcusQA()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
+- [[dot-RunPortalRegression()]] - `calls` [EXTRACTED]
+- [[dot-RunR2()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
+- [[dot-SeriesFixtureR4()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaMarked()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaPhysicalHand()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaSeriesFixture()]] - `calls` [EXTRACTED]
+- [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[dot-Use()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_0

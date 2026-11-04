@@ -16,7 +16,7 @@ tags:
 - [[dot-Clear()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirMao()]] - `calls` [EXTRACTED]
 - [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[dot-Limpar()]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 

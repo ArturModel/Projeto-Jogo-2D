@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
 community: "Community 51"
-location: "L513"
+location: "L709"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,12 @@ tags:
 # .CriarTexto()
 
 ## Connections
+- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
+- [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[TextAlignmentOptions]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]

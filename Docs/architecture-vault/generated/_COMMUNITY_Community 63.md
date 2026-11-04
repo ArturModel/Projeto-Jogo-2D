@@ -8,10 +8,10 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[color()]] - code - Tools/Aseprite/pool-table.lua
+- [[color()_1]] - code - Tools/Aseprite/pool-table.lua
 - [[dot()]] - code - Tools/Aseprite/pool-table.lua
 - [[pool-table.lua]] - code - Tools/Aseprite/pool-table.lua
-- [[rect()_3]] - code - Tools/Aseprite/pool-table.lua
+- [[rect()_4]] - code - Tools/Aseprite/pool-table.lua
 
 ## Live Query (requires Dataview plugin)
 

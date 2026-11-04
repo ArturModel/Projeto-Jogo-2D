@@ -1,19 +1,17 @@
 ---
-source_file: "Tools/Aseprite/pool-table.lua"
+source_file: "Tools/Aseprite/caderno.lua"
 type: "code"
-community: "Community 63"
-location: "L3"
+community: "Community 119"
+location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_63
+  - community/Community_119
 ---
 
 # color()
 
 ## Connections
-- [[dot()]] - `calls` [EXTRACTED]
-- [[pool-table.lua]] - `contains` [EXTRACTED]
-- [[rect()_3]] - `calls` [EXTRACTED]
+- [[caderno.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_63
+#graphify/code #graphify/EXTRACTED #community/Community_119

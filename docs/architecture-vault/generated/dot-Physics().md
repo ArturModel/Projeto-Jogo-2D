@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 94"
+community: "Community 4"
 location: "L202"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_94
+  - community/Community_4
 ---
 
 # .Physics()
@@ -19,11 +19,11 @@ tags:
 - [[dot-Lancar()_1]] - `calls` [INFERRED]
 - [[dot-MelhorDistancia()]] - `calls` [EXTRACTED]
 - [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
-- [[dot-Run()_7]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[dot-Step()]] - `calls` [INFERRED]
 - [[BochaBall]] - `calls` [INFERRED]
 - [[BochaMatch]] - `calls` [INFERRED]
 - [[BochaSimulation]] - `calls` [INFERRED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_94
+#graphify/code #graphify/INFERRED #community/Community_4

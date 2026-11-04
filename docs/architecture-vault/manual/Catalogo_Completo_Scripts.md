@@ -1,9 +1,17 @@
 # Catálogo dos scripts C# atuais
 
-Inventário em 01/11/2026: **112 arquivos C# atuais (incluindo R4, Ref7 e Sinuquinha15)** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44/93/94 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
+Inventário em 03/11/2026: **120 arquivos C# atuais (incluindo Atlas, R4, Ref7 e Sinuquinha15)** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44/93/94 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
 
 | Arquivo | Tipos declarados (amostra) |
 |---|---|
+| [Scripts/MarcusNotebookContent.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/MarcusNotebookContent.cs) | Projeção pessoal de notas já adquiridas; catálogo em Resources/Notebook/Entries.json |
+| [Scripts/MarcusNotebookUI.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/MarcusNotebookUI.cs) | Livro paginado independente, caligrafia, marcador e aviso de atualização |
+| [Scripts/Capitulo2/NotebookRuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/NotebookRuntimeVerification.cs) | QA explícito de caderno, fichas, scroll e persistência isolada |
+| [Editor/SantaRitaNotebookAuthoring.cs](../../../Projeto%20Jogo%202D/Assets/Editor/SantaRitaNotebookAuthoring.cs) | Fonte estática e entorno decorativo; fora do Player |
+| [Scripts/SantaRitaAtlas.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SantaRitaAtlas.cs) | `SantaRitaAtlas`, `AtlasSurvey`, `AtlasRegion`, acessos e marcos |
+| [Scripts/SantaRitaAtlasView.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SantaRitaAtlasView.cs) | `SantaRitaAtlasView` |
+| [Scripts/Capitulo2/AtlasRuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/AtlasRuntimeVerification.cs) | `Chapter2RuntimeVerification` parcial, QA explícito |
+| [Editor/SantaRitaAtlasAuthoring.cs](../../../Projeto%20Jogo%202D/Assets/Editor/SantaRitaAtlasAuthoring.cs) | `SantaRitaAtlasAuthoring` |
 | [Editor/BochaPerspectiveVerification.cs](../../../Projeto%20Jogo%202D/Assets/Editor/BochaPerspectiveVerification.cs) | `BochaPerspectiveVerification` |
 | [Editor/Chapter2BuildVerification.cs](../../../Projeto%20Jogo%202D/Assets/Editor/Chapter2BuildVerification.cs) | `Chapter2BuildVerification` |
 | [Editor/Chapter2Verification.cs](../../../Projeto%20Jogo%202D/Assets/Editor/Chapter2Verification.cs) | `Chapter2Verification` |

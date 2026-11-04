@@ -1,27 +1,27 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 12"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_23
 ---
 
 # Image
 
 ## Connections
 - [[dot-AtualizarDestaqueBotoesEfeito()]] - `references` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `references` [EXTRACTED]
-- [[dot-Awake()_14]] - `references` [EXTRACTED]
+- [[dot-Awake()_8]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
+- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-Build()_1]] - `references` [EXTRACTED]
 - [[dot-Build()_2]] - `references` [EXTRACTED]
-- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
+- [[dot-Button()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirEscolhaAlvo()]] - `references` [EXTRACTED]
@@ -36,10 +36,10 @@ tags:
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
-- [[dot-CriarMarcadorPonto()]] - `references` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 - [[dot-Imagem()]] - `references` [EXTRACTED]
 - [[dot-IndicadorPausa()]] - `references` [EXTRACTED]
+- [[dot-Label()_1]] - `references` [EXTRACTED]
 - [[dot-LinhaSlider()]] - `references` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
@@ -47,7 +47,8 @@ tags:
 - [[dot-MontarTela()]] - `references` [EXTRACTED]
 - [[dot-MostrarModal()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
-- [[dot-RotuloCanonico()]] - `references` [EXTRACTED]
+- [[dot-Panel()]] - `references` [EXTRACTED]
+- [[dot-Rebuild()]] - `references` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
@@ -55,7 +56,7 @@ tags:
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
 - [[dot-Titulo()]] - `references` [EXTRACTED]
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_1]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[DicaDeTecla]] - `references` [EXTRACTED]
@@ -66,4 +67,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_23

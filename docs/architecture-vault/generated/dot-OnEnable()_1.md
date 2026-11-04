@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "Community 39"
-location: "L70"
+community: "Community 112"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_112
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
-- [[dot-SetActive()]] - `calls` [EXTRACTED]
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_112

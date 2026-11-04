@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 96"
+community: "Community 113"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_113
 ---
 
 # Capitulo2Director
@@ -14,8 +14,9 @@ tags:
 ## Connections
 - [[dot-Apply()]] - `references` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `method` [EXTRACTED]
-- [[dot-Awake()_25]] - `references` [EXTRACTED]
-- [[dot-Awake()_24]] - `method` [EXTRACTED]
+- [[dot-Awake()_4]] - `references` [EXTRACTED]
+- [[dot-Awake()_3]] - `method` [EXTRACTED]
+- [[dot-Capture()_1]] - `references` [EXTRACTED]
 - [[dot-CarregarConteudo()]] - `method` [EXTRACTED]
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
 - [[dot-CenaDoCapitulo2()]] - `method` [EXTRACTED]
@@ -30,19 +31,19 @@ tags:
 - [[dot-Interagir()]] - `method` [EXTRACTED]
 - [[dot-Nota()]] - `method` [EXTRACTED]
 - [[dot-Ocorrencia()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_11]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()]] - `method` [EXTRACTED]
 - [[dot-PosicaoNoMapa()]] - `method` [EXTRACTED]
 - [[dot-PrepararSessao()]] - `method` [EXTRACTED]
-- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-Run()_8]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
-- [[dot-Start()_11]] - `method` [EXTRACTED]
-- [[dot-Update()_21]] - `method` [EXTRACTED]
+- [[dot-Start()_12]] - `method` [EXTRACTED]
+- [[dot-Update()_16]] - `method` [EXTRACTED]
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 - [[C2InteractionData]] - `references` [EXTRACTED]
 - [[Capitulo2Director.cs]] - `contains` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
-- [[Instance_10]] - `defines` [EXTRACTED]
+- [[Instance]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[ProntoParaBocha]] - `defines` [EXTRACTED]
@@ -50,4 +51,4 @@ tags:
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_113

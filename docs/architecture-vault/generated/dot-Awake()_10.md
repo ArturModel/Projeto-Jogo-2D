@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 39"
-location: "L64"
+community: "Community 3"
+location: "L277"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_3
 ---
 
 # .Awake()
 
 ## Connections
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
+- [[dot-InicializarCacapas()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_3

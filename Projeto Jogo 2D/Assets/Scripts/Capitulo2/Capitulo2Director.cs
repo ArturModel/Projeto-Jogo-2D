@@ -258,15 +258,7 @@ public sealed class Capitulo2Director : MonoBehaviour
 
     public bool PosicaoNoMapa(Vector3 pos, out Vector2 uv, out string local)
     {
-        local = nomeLocal;
-        string scene = SceneManager.GetActiveScene().name;
-        string landmark = SantaRitaGeography.IdDaCena(scene);
-        uv = landmark != null ? SantaRitaGeography.UV(landmark) : uvNoMapa;
-        if (!interior)
-        {
-            uv = SantaRitaGeography.MundoC2ParaUV(pos);
-            local = SceneManager.GetActiveScene().name == "CemiterioSantaRita" ? "Cemitério municipal" : pos.y < 17 && pos.x < 25 ? "Sociedade Beira-Rio — Margem urbana" : nomeLocal;
-        }
+        uv=SantaRitaAtlas.Player(pos,out local);
         return true;
     }
 }

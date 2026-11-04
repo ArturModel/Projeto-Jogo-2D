@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 54"
+community: "Community 31"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_31
 ---
 
 # .Dizer()
 
 ## Connections
 - [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
+- [[dot-Ativar()]] - `calls` [EXTRACTED]
 - [[dot-Ativar()_2]] - `calls` [EXTRACTED]
-- [[dot-Ativar()_1]] - `calls` [EXTRACTED]
 - [[dot-DispararFalasVencidas()]] - `calls` [EXTRACTED]
 - [[dot-Enfileirar()]] - `calls` [EXTRACTED]
 - [[dot-FecharPainelFechamento()]] - `calls` [EXTRACTED]
@@ -25,9 +25,9 @@ tags:
 - [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
 - [[dot-Rodar()_1]] - `calls` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
 - [[dot-Start()_13]] - `calls` [EXTRACTED]
+- [[dot-Start()_14]] - `calls` [EXTRACTED]
 - [[dot-Transmitir()]] - `calls` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_31

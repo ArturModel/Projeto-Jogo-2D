@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 100"
+community: "Community 3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_100
+  - community/Community_3
 ---
 
 # DispositivoCarga
@@ -14,4 +14,4 @@ tags:
 - [[dot-IniciarCargaPorDispositivo()]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_100
+#graphify/code #graphify/EXTRACTED #community/Community_3

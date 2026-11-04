@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-BoundaryForest()]] - `calls` [EXTRACTED]
 - [[dot-Box()_1]] - `calls` [EXTRACTED]
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Crosswalk()]] - `calls` [EXTRACTED]
 - [[dot-Fence()]] - `calls` [EXTRACTED]
 - [[dot-Garden()]] - `calls` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[dot-Prop()_2]] - `calls` [EXTRACTED]
 - [[dot-RectTiles()]] - `calls` [EXTRACTED]
 - [[dot-Road()]] - `calls` [EXTRACTED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
+- [[dot-Run()_7]] - `calls` [EXTRACTED]
 - [[dot-Setup()]] - `calls` [EXTRACTED]
 - [[dot-Sign()]] - `calls` [EXTRACTED]
 - [[dot-Spawn()_2]] - `calls` [EXTRACTED]

@@ -13,14 +13,14 @@ tags:
 
 ## Connections
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
-- [[dot-Capture()]] - `calls` [INFERRED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-FindNearest()]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [INFERRED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Place()]] - `calls` [INFERRED]
+- [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-Start()]] - `calls` [INFERRED]
 - [[dot-TapR2()]] - `calls` [INFERRED]
 - [[Capitulo2Portal]] - `references` [EXTRACTED]

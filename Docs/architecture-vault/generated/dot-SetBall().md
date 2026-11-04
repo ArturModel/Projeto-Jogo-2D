@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
-- [[dot-Run()_3]] - `calls` [EXTRACTED]
+- [[dot-Run()_6]] - `calls` [EXTRACTED]
 - [[Sinuca3DVerification]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_56

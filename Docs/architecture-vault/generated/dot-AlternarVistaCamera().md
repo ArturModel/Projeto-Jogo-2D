@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarBotaoVistaCamera()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
 - [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[dot-Update()]] - `calls` [EXTRACTED]
+- [[dot-Update()_17]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_3

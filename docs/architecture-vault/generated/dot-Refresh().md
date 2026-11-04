@@ -1,19 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
 type: "code"
-community: "Community 17"
-location: "L335"
+community: "Community 24"
+location: "L124"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Community_17
+  - graphify/EXTRACTED
+  - community/Community_24
 ---
 
 # .Refresh()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [INFERRED]
-- [[dot-AtualizarTela()]] - `calls` [INFERRED]
-- [[BochaMapGraphic]] - `method` [EXTRACTED]
+- [[dot-Changed()]] - `calls` [EXTRACTED]
+- [[dot-Flip()]] - `calls` [EXTRACTED]
+- [[dot-Show()_3]] - `calls` [EXTRACTED]
+- [[MarcusNotebookUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_24

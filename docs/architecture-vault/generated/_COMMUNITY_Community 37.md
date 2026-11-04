@@ -1,16 +1,17 @@
 ---
 type: community
-members: 14
+members: 15
 ---
 
 # Community 37
 
-**Members:** 14 nodes
+**Members:** 15 nodes
 
 ## Members
 - [[dot-Escolher()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
 - [[dot-ForcaPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[dot-Preparar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
+- [[dot-SetState()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[BochaAI]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
 - [[BochaLaunch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[BochaShot]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
@@ -31,17 +32,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 17]]
-- 6 edges to [[_COMMUNITY_Community 94]]
-- 3 edges to [[_COMMUNITY_Community 27]]
-- 3 edges to [[_COMMUNITY_Community 4]]
+- 11 edges to [[_COMMUNITY_Community 17]]
+- 8 edges to [[_COMMUNITY_Community 4]]
+- 5 edges to [[_COMMUNITY_Community 27]]
 - 2 edges to [[_COMMUNITY_Community 1]]
 - 2 edges to [[_COMMUNITY_Community 9]]
-- 2 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 38]]
 
 ## Top bridge nodes
 - [[BochaShot]] - degree 15, connects to 5 communities
-- [[dot-Escolher()]] - degree 14, connects to 4 communities
+- [[dot-Escolher()]] - degree 14, connects to 3 communities
 - [[dot-Preparar()_1]] - degree 7, connects to 3 communities
+- [[dot-SetState()]] - degree 5, connects to 3 communities
 - [[BochaThrowType]] - degree 8, connects to 1 community
-- [[BochaAI]] - degree 4, connects to 1 community

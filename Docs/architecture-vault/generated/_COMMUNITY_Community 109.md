@@ -1,17 +1,18 @@
 ---
 type: community
-members: 4
+members: 5
 ---
 
 # Community 109
 
-**Members:** 4 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[dot-Awake()]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
-- [[dot-Update()_1]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
-- [[ChuvaRolando]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
-- [[ChuvaRolando.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
+- [[dot-Awake()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
+- [[dot-LateUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
+- [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
+- [[CamadaParallax]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
+- [[CamadaParallax.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,10 +22,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 38]]
+- 1 edge to [[_COMMUNITY_Community 112]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[ChuvaRolando]] - degree 5, connects to 2 communities
-- [[ChuvaRolando.cs]] - degree 2, connects to 1 community
+- [[CamadaParallax]] - degree 6, connects to 2 communities
+- [[CamadaParallax.cs]] - degree 2, connects to 1 community

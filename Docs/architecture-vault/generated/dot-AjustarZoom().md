@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-DefinirZoom()]] - `calls` [EXTRACTED]
 - [[dot-OnScroll()_1]] - `calls` [EXTRACTED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[dot-Run()_6]] - `calls` [INFERRED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
 - [[SinucaTableView]] - `method` [EXTRACTED]
 

@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 50"
+community: "Community 46"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_46
 ---
 
 # SantaRitaItemHover
 
 ## Connections
-- [[dot-Awake()_14]] - `references` [EXTRACTED]
+- [[dot-Awake()_8]] - `references` [EXTRACTED]
 - [[dot-OnPointerEnter()_1]] - `method` [EXTRACTED]
 - [[dot-OnPointerExit()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaInventory.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_46

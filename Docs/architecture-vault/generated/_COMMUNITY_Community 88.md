@@ -8,16 +8,16 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
-- [[dot-AtualizarTextosHUD()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ContinuarInicioTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-EncontrarPosicaoLivreDeterministica()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-EscolherPosicaoBrancaZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ExecutarTurnoZeCoroutine()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-PosicaoValidaSemColisao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ReporBrasileira()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ResolverFimDaTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ResolverFimDaTacadaPratica()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-SincronizarTransformBolas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-GarantirClipsAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-RegistrarQuedaNaCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-RegistrarTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-SimularFisicaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-TocarClipSintetico()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-TocarSomCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-TocarSomColisaoBola()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-TocarSomGiz()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-TocarSomTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-TocarSomTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,19 +27,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Community 3]]
-- 12 edges to [[_COMMUNITY_Community 100]]
-- 11 edges to [[_COMMUNITY_Community 21]]
-- 4 edges to [[_COMMUNITY_Community 43]]
-- 4 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 83]]
-- 1 edge to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Community 85]]
-- 1 edge to [[_COMMUNITY_Community 0]]
+- 12 edges to [[_COMMUNITY_Community 3]]
+- 4 edges to [[_COMMUNITY_Community 21]]
+- 2 edges to [[_COMMUNITY_Community 117]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 118]]
 
 ## Top bridge nodes
-- [[dot-ResolverFimDaTacada()]] - degree 14, connects to 5 communities
-- [[dot-AtualizarTextosHUD()]] - degree 11, connects to 5 communities
-- [[dot-SincronizarTransformBolas()]] - degree 10, connects to 4 communities
-- [[dot-PosicaoValidaSemColisao()]] - degree 8, connects to 4 communities
-- [[dot-ContinuarInicioTurno()]] - degree 10, connects to 3 communities
+- [[dot-SimularFisicaMesa()]] - degree 10, connects to 3 communities
+- [[dot-TocarSomTacada()]] - degree 5, connects to 3 communities
+- [[dot-TocarClipSintetico()]] - degree 8, connects to 2 communities
+- [[dot-TocarSomColisaoBola()]] - degree 5, connects to 2 communities
+- [[dot-TocarSomGiz()]] - degree 5, connects to 2 communities

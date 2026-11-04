@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()]] - `calls` [EXTRACTED]
-- [[dot-Refresh()]] - `calls` [INFERRED]
+- [[dot-Refresh()_1]] - `calls` [INFERRED]
 - [[dot-SetState()]] - `calls` [INFERRED]
 - [[Action]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]

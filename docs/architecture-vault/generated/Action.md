@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 36"
+community: "Community 19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_19
 ---
 
 # Action
@@ -22,6 +22,8 @@ tags:
 - [[dot-Falar()_1]] - `references` [EXTRACTED]
 - [[dot-IniciarConfronto()]] - `references` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `references` [EXTRACTED]
+- [[dot-Initialize()]] - `references` [EXTRACTED]
+- [[dot-Initialize()_1]] - `references` [EXTRACTED]
 - [[dot-Oferecer()]] - `references` [EXTRACTED]
 - [[dot-Show()_1]] - `references` [EXTRACTED]
 - [[dot-Show()_2]] - `references` [EXTRACTED]
@@ -33,11 +35,13 @@ tags:
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
+- [[MarcusNotebookUI]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
+- [[SantaRitaAtlasView]] - `references` [EXTRACTED]
 - [[SantaRitaItemHover]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaSpinSelector]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_19

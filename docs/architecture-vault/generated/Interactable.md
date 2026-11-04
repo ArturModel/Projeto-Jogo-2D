@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "Community 84"
+community: "Community 83"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_83
 ---
 
 # Interactable
@@ -15,8 +15,8 @@ tags:
 - [[dot-CanInteractAt()_1]] - `method` [EXTRACTED]
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
 - [[dot-FindNearest()]] - `method` [EXTRACTED]
-- [[dot-Interact()_4]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_11]] - `method` [EXTRACTED]
+- [[dot-Interact()_5]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_10]] - `method` [EXTRACTED]
 - [[dot-OnDrawGizmosSelected()]] - `method` [EXTRACTED]
 - [[dot-OnEnable()_11]] - `method` [EXTRACTED]
 - [[dot-Posicionar()_5]] - `references` [EXTRACTED]
@@ -38,4 +38,4 @@ tags:
 - [[SantaRitaBarProp]] - `inherits` [EXTRACTED]
 - [[TransicaoDeZonaTrigger]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_83

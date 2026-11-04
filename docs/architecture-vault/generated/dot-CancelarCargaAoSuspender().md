@@ -19,7 +19,7 @@ tags:
 - [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
 - [[dot-OnApplicationFocus()_1]] - `calls` [EXTRACTED]
 - [[dot-SelecionarEfeitoBranca()]] - `calls` [EXTRACTED]
-- [[dot-Update()]] - `calls` [EXTRACTED]
+- [[dot-Update()_17]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_3

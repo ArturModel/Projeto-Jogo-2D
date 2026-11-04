@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 51"
+community: "Community 23"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_23
 ---
 
 # SantaRitaInventory
 
 ## Connections
-- [[dot-Awake()_14]] - `method` [EXTRACTED]
+- [[dot-Awake()_8]] - `method` [EXTRACTED]
 - [[dot-HasItem()]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_9]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_8]] - `method` [EXTRACTED]
 - [[dot-LoadIcons()]] - `method` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `references` [EXTRACTED]
 - [[dot-StartSession()]] - `method` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_23

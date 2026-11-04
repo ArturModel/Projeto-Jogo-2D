@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 33"
-location: "L27"
+community: "Community 28"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_28
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Ativar()]] - `calls` [INFERRED]
-- [[dot-Procurar()]] - `calls` [EXTRACTED]
-- [[PonteiroCarro]] - `method` [EXTRACTED]
+- [[dot-Definir()_1]] - `calls` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_28

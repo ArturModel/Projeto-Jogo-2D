@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AjustarZoom()]] - `calls` [EXTRACTED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
+- [[dot-Run()_6]] - `calls` [INFERRED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
 - [[dot-SetZoom()]] - `calls` [EXTRACTED]
 - [[SinucaTableView]] - `method` [EXTRACTED]

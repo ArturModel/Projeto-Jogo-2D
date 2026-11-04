@@ -14,3 +14,8 @@ Consolidadas em 26/10/2026. Decisões recentes do autor prevalecem sobre o índi
 10. Manter Graphify/Obsidian atualizáveis, locais e fora do Player. Índice antigo não pode reverter decisões/código atual. Gerado é recriável; notas curadas são mantidas separadas. Sem extração semântica remota implícita.
 
 Fontes: [direção](../../Docs/Direcao_Arte_Narrativa_Audio.md), [produção](../../Docs/Producao_Artistica_Execucao.md), [estado/evidências](CURRENT_STATE.md).
+
+
+## 03/11/2026 — Caderno de Marcus e fichas
+
+Diário é um caderno pessoal manuscrito em tela independente, com páginas e reflexões por conhecimento adquirido, sem funcionar como guia de objetivos. Atualização material avisa o jogador; carga de save e repetição não são descobertas. Registros originais continuam preservados para os sistemas. Fichas só aparecem depois da aquisição, em ordem numérica e separadas de recibos/provas. Scroll de painéis não atua sobre a carta; entorno do mapa pode receber paisagem decorativa coerente, sem criar capítulos ou acessos jogáveis.

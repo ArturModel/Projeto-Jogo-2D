@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
 type: "code"
-community: "Community 2"
-location: "L45"
+community: "Community 103"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_103
 ---
 
 # .OnTriggerEnter2D()
 
 ## Connections
-- [[dot-TentarTransicionar()]] - `calls` [EXTRACTED]
+- [[dot-Atravessar()]] - `calls` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
+- [[DoorTrigger]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
-- [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_103

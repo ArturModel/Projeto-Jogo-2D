@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 45"
-location: "L57"
+community: "Community 25"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_25
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
+- [[dot-LiberarCamada()]] - `calls` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_25

@@ -90,9 +90,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/GameState.cs": {
-    "mtime": 1793377436.3305712,
-    "seen": 1793378767.0646703,
-    "ast_hash": "840622cd978a03e301770053f6b6522e",
+    "mtime": 1793677981.3320143,
+    "seen": 1793679445.809076,
+    "ast_hash": "b420de35a9435e03eeab8eed51fec1ff",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Interactable.cs": {
@@ -132,9 +132,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs": {
-    "mtime": 1793639604.8392258,
-    "seen": 1793639920.438796,
-    "ast_hash": "d559cdc7267c49632412796c90f96b31",
+    "mtime": 1793677367.4785662,
+    "seen": 1793679445.809076,
+    "ast_hash": "3ae17924c08dc1c226611d41c8e7b504",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs": {
@@ -438,9 +438,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs": {
-    "mtime": 1793639604.8184712,
-    "seen": 1793639920.438796,
-    "ast_hash": "c1cfa0aa4012c6cebf257a12bab6de4d",
+    "mtime": 1793665013.6965976,
+    "seen": 1793665981.4569418,
+    "ast_hash": "bdbb57827a2c9265aaee90c9eea53334",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs": {
-    "mtime": 1793639870.2159185,
-    "seen": 1793639920.438796,
-    "ast_hash": "fbe7b506722d7bb8ae6fe8dedbbc0062",
+    "mtime": 1793679015.7650378,
+    "seen": 1793679445.809076,
+    "ast_hash": "4dd9320b4795329da0f778b8a3b88d6a",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs": {
@@ -867,6 +867,66 @@
     "mtime": 1793639604.896116,
     "seen": 1793639920.438796,
     "ast_hash": "ad964ebbc4303d96e35d76c906f99646",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Editor/SantaRitaAtlasAuthoring.cs": {
+    "mtime": 1793665526.3467412,
+    "seen": 1793665981.4569418,
+    "ast_hash": "181d0cd610c229fcd9647bb58b2232b8",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AtlasRuntimeVerification.cs": {
+    "mtime": 1793667145.982433,
+    "seen": 1793667431.3470507,
+    "ast_hash": "b9fedf3c6f541a1d2cba9d0f66f3c29e",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlas.cs": {
+    "mtime": 1793664765.0885274,
+    "seen": 1793665981.4569418,
+    "ast_hash": "73ee2ffe79c8556726f0bf41d864ac1b",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs": {
+    "mtime": 1793678055.48955,
+    "seen": 1793679445.809076,
+    "ast_hash": "0e3d3049994040d5d611064ffa6b7183",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs": {
+    "mtime": 1793679241.1888175,
+    "seen": 1793679445.8075337,
+    "ast_hash": "2cbbef19d7a306876a91e51f8e825d47",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Capitulo2/NotebookRuntimeVerification.cs": {
+    "mtime": 1793679015.7599778,
+    "seen": 1793679445.809076,
+    "ast_hash": "1d0a9f3e4879bce5af2d2c36eb691bf3",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookContent.cs": {
+    "mtime": 1793676360.9017873,
+    "seen": 1793679445.809076,
+    "ast_hash": "ea9b5678c5278dfd3503e03941223bdb",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs": {
+    "mtime": 1793677698.965114,
+    "seen": 1793679445.809076,
+    "ast_hash": "10f88114236fc89eb14a7c163597fbf3",
+    "semantic_hash": ""
+  },
+  "Tools/Aseprite/caderno.lua": {
+    "mtime": 1793678055.4829402,
+    "seen": 1793679445.809076,
+    "ast_hash": "a0a4678841b78100a3bcbf92261a9bf6",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/StreamingAssets/Licenses/Kalam-OFL.txt": {
+    "mtime": 1793675667.1262565,
+    "seen": 1793679445.8101037,
+    "ast_hash": "5cd80f7708fef4b16854c4af0bbd3f16",
     "semantic_hash": ""
   }
 }

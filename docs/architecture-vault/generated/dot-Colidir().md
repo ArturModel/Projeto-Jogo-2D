@@ -12,7 +12,7 @@ tags:
 # .Colidir()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
 - [[dot-AvancarComContatos()]] - `calls` [EXTRACTED]
 - [[dot-Notificar()]] - `calls` [EXTRACTED]
 - [[BochaBall]] - `references` [EXTRACTED]

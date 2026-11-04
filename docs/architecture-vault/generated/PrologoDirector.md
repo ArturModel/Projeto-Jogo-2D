@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 19"
+community: "Community 8"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_8
 ---
 
 # PrologoDirector
 
 ## Connections
 - [[dot-AteOTempo()]] - `method` [EXTRACTED]
-- [[dot-Awake()_5]] - `method` [EXTRACTED]
+- [[dot-Awake()_20]] - `method` [EXTRACTED]
 - [[dot-Curvar()]] - `method` [EXTRACTED]
 - [[dot-Desacelerar()]] - `method` [EXTRACTED]
 - [[dot-DispararFalasVencidas()]] - `method` [EXTRACTED]
@@ -22,8 +22,8 @@ tags:
 - [[dot-Revelar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()_1]] - `method` [EXTRACTED]
 - [[dot-Start()_20]] - `references` [EXTRACTED]
-- [[dot-Start()_9]] - `method` [EXTRACTED]
-- [[dot-Update()_9]] - `method` [EXTRACTED]
+- [[dot-Start()_17]] - `method` [EXTRACTED]
+- [[dot-Update()_27]] - `method` [EXTRACTED]
 - [[dot-UpdatePrologoScene()]] - `references` [EXTRACTED]
 - [[EstradaScroller]] - `references` [EXTRACTED]
 - [[FalaMarcada_1]] - `references` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[PonteiroCarro]] - `references` [EXTRACTED]
 - [[PrologoDirector.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_8

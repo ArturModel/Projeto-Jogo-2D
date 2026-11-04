@@ -359,3 +359,14 @@ Marcus ciclo limpo concluído tecnicamente: 33 verificações + PASS, builds sem
 Lanterna-costas concluída: captura e QA PASS, builds sem erros/hash igual, índices 112 e saves intactos.
 
 02/11 — [Console limpo](../ai-plans/2026-11-02_PatrickDotto_console-limpo.md): APIs obsoletas e campo não utilizado removidos.
+
+
+02/11 — [Atlas cartográfico](../ai-plans/2026-11-02_PatrickDotto_atlas-cartografico.md): levantamento real de 19 regiões/38 acessos, camadas/plantas, marcador e investigação por estados existentes, sem GPS ou ilustração antiga na UI. QA Editor/Player final PASS; builds normais/QA sem erros e mesmo hash; 6 arquivos pessoais intactos. Fontes/limites em [relatório](../Evidencias/Atlas/Relatorio.md) e [arquitetura](../Atlas_Arquitetura.md). Não inferir aprovação artística ou campanha integral.
+
+
+03/11 — [Caderno e paisagem](../ai-plans/2026-11-03_PatrickDotto_caderno-paisagem.md): scroll dos painéis isolado, fichas só adquiridas/ordenadas sem cupom, título Mapa da Cidade e paisagem decorativa, livro independente com escrita manuscrita e reflexões por conhecimento adquirido. Avisos sem repetição/carga falsa e sem autosave. Validação final em consolidação; [relatório](../Evidencias/Caderno/Relatorio.md).
+
+
+Fechamento caderno/paisagem: testes específicos (30) e Atlas (237) PASS em Editor e Player; builds finais sem erros e hash igual, 120 C# indexados. Sessão RAM/posição/zona/indicador restaurados, seis arquivos pessoais intactos, cenas/configurações sem diff. Corpus final com 64 textos/variantes; original do diário preservado. Alterações não staged, sem commit/push. Limites e evidências no relatório Caderno.
+
+TMP gravou cache VT323 após restauração; único asset posterior às builds. Hash do Assets atual difere do fingerprint comum das duas builds por esse cache, sem mudanças posteriores em código/cenas/corpus/arte. Detalhe no relatório.

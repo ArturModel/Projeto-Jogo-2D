@@ -1,23 +1,23 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
 type: "code"
-community: "Community 84"
+community: "Community 103"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_103
 ---
 
 # DoorTrigger
 
 ## Connections
 - [[dot-Atravessar()]] - `method` [EXTRACTED]
-- [[dot-Interact()_7]] - `method` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()_2]] - `method` [EXTRACTED]
+- [[dot-Interact()]] - `method` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()]] - `method` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 - [[DoorTrigger.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_6]] - `defines` [EXTRACTED]
+- [[Prompt]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_103

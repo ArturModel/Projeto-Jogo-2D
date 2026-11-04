@@ -11,6 +11,7 @@ tags:
 # system
 
 ## Connections
+- [[AtlasRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[AudioC2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BarSinucaR4RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaCourtView.cs]] - `imports` [EXTRACTED]
@@ -33,8 +34,14 @@ tags:
 - [[InteracaoCapitulo1.cs]] - `imports` [EXTRACTED]
 - [[InteriorAccessRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[MarcusGait.cs]] - `imports` [EXTRACTED]
+- [[MarcusNotebookContent.cs]] - `imports` [EXTRACTED]
+- [[MarcusNotebookUI.cs]] - `imports` [EXTRACTED]
+- [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaAtlas.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaAtlasAuthoring.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaAtlasView.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.Access.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.cs]] - `imports` [EXTRACTED]
@@ -44,6 +51,7 @@ tags:
 - [[SantaRitaItemAction.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaMcpSetup.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaNotebookAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaNpcWork.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]

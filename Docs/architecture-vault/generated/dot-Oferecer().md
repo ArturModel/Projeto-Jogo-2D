@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs"
 type: "code"
-community: "Community 51"
+community: "Community 23"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_23
 ---
 
 # .Oferecer()
@@ -24,4 +24,4 @@ tags:
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
 - [[SantaRitaItemAction]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_23

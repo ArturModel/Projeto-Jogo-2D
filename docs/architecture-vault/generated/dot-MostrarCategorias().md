@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AbrirPainel()]] - `calls` [EXTRACTED]
-- [[dot-Update()_24]] - `calls` [EXTRACTED]
+- [[dot-Update()_25]] - `calls` [EXTRACTED]
 - [[OptionsPanelController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_57

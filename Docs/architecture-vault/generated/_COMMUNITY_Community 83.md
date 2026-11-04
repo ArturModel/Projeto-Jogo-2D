@@ -1,24 +1,27 @@
 ---
 type: community
-members: 11
+members: 14
 ---
 
 # Community 83
 
-**Members:** 11 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[dot-AvancarSimulacaoPassoFixo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-GarantirClipsAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-RegistrarQuedaNaCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-RegistrarTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-SimularFisicaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-TocarClipSintetico()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-TocarSomCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-TocarSomColisaoBola()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-TocarSomGiz()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-TocarSomTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-TocarSomTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Awake()_21]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-LateUpdate()_12]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-LimparAoTrocarCena()]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-OnDestroy()_10]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-OnDisable()_10]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnDrawGizmosSelected()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnEnable()_11]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-Posicionar()_5]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[dot-SetTarget()]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[Instance_8]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[InteractionPrompt]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[InteractionRadius]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[Prompt_7]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,16 +31,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Community 3]]
-- 4 edges to [[_COMMUNITY_Community 100]]
-- 4 edges to [[_COMMUNITY_Community 46]]
-- 2 edges to [[_COMMUNITY_Community 88]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 26]]
+- 2 edges to [[_COMMUNITY_Community 49]]
+- 2 edges to [[_COMMUNITY_Community 112]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 99]]
+- 1 edge to [[_COMMUNITY_Community 103]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 87]]
+- 1 edge to [[_COMMUNITY_Community 97]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 38]]
 
 ## Top bridge nodes
-- [[dot-SimularFisicaMesa()]] - degree 10, connects to 3 communities
-- [[dot-TocarSomGiz()]] - degree 5, connects to 3 communities
-- [[dot-TocarSomTacada()]] - degree 5, connects to 3 communities
-- [[dot-TocarClipSintetico()]] - degree 8, connects to 2 communities
-- [[dot-TocarSomColisaoBola()]] - degree 5, connects to 2 communities
+- [[Interactable]] - degree 25, connects to 15 communities
+- [[InteractionPrompt]] - degree 13, connects to 5 communities
+- [[dot-LimparAoTrocarCena()]] - degree 4, connects to 1 community
+- [[dot-Posicionar()_5]] - degree 4, connects to 1 community
+- [[dot-Awake()_21]] - degree 2, connects to 1 community

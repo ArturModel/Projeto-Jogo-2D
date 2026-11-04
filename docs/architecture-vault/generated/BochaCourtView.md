@@ -12,7 +12,7 @@ tags:
 # BochaCourtView
 
 ## Connections
-- [[dot-Awake()_23]] - `method` [EXTRACTED]
+- [[dot-Awake()_24]] - `method` [EXTRACTED]
 - [[dot-BallColor()]] - `method` [EXTRACTED]
 - [[dot-Box()_2]] - `method` [EXTRACTED]
 - [[dot-CameraBasis()]] - `method` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[dot-OnPointerUp()_1]] - `method` [EXTRACTED]
 - [[dot-OnPopulateMesh()_3]] - `method` [EXTRACTED]
 - [[dot-OnScroll()]] - `method` [EXTRACTED]
-- [[dot-Project()_1]] - `method` [EXTRACTED]
+- [[dot-Project()_3]] - `method` [EXTRACTED]
 - [[dot-ProjectReady()]] - `method` [EXTRACTED]
 - [[dot-Quad()_1]] - `method` [EXTRACTED]
 - [[dot-RecordContacts()]] - `method` [EXTRACTED]
@@ -40,7 +40,7 @@ tags:
 - [[dot-SetView()]] - `method` [EXTRACTED]
 - [[dot-SolidV()]] - `method` [EXTRACTED]
 - [[dot-Sphere()_1]] - `method` [EXTRACTED]
-- [[dot-Tick()]] - `method` [EXTRACTED]
+- [[dot-Tick()_1]] - `method` [EXTRACTED]
 - [[dot-Triangle()]] - `method` [EXTRACTED]
 - [[dot-Unit()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]

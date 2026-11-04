@@ -1,12 +1,12 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AudioC2RuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AtlasRuntimeVerification.cs"
 type: "code"
-community: "Community 30"
-location: "L4"
+community: "Community 48"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_48
 ---
 
 # Chapter2RuntimeVerification
@@ -42,7 +42,7 @@ tags:
 - [[dot-Invoke()]] - `method` [EXTRACTED]
 - [[dot-InvokeEncontrarLivre()]] - `method` [EXTRACTED]
 - [[dot-NewBochaPractice()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_2]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_8]] - `method` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `method` [EXTRACTED]
 - [[dot-Performance()]] - `method` [EXTRACTED]
 - [[dot-PerformancePair()]] - `method` [EXTRACTED]
@@ -55,9 +55,13 @@ tags:
 - [[dot-RoutineR2()]] - `method` [EXTRACTED]
 - [[dot-Run()]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `method` [EXTRACTED]
+- [[dot-RunAtlas()]] - `method` [EXTRACTED]
+- [[dot-RunAtlasInEditor()]] - `method` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `method` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `method` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `method` [EXTRACTED]
+- [[dot-RunNotebook()]] - `method` [EXTRACTED]
+- [[dot-RunNotebookInEditor()]] - `method` [EXTRACTED]
 - [[dot-RunPortalRegression()]] - `method` [EXTRACTED]
 - [[dot-RunR2()]] - `method` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `method` [EXTRACTED]
@@ -87,12 +91,13 @@ tags:
 - [[dot-StartSinuquinhaEditor()]] - `method` [EXTRACTED]
 - [[dot-TapR2()]] - `method` [EXTRACTED]
 - [[dot-Travel()]] - `method` [EXTRACTED]
-- [[dot-Update()_14]] - `method` [EXTRACTED]
+- [[dot-Update()_24]] - `method` [EXTRACTED]
 - [[dot-Use()]] - `method` [EXTRACTED]
 - [[dot-VerificarFisicaDeterministicaEBicos()]] - `method` [EXTRACTED]
 - [[dot-WalkAccess()]] - `method` [EXTRACTED]
 - [[dot-WalkAccessFilm()]] - `method` [EXTRACTED]
 - [[dot-Walking()]] - `method` [EXTRACTED]
+- [[AtlasRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[AudioC2RuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[BackgroundBehavior]] - `references` [EXTRACTED]
 - [[BarSinucaR4RuntimeVerification.cs]] - `contains` [EXTRACTED]
@@ -107,9 +112,10 @@ tags:
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Mouse]] - `references` [EXTRACTED]
+- [[NotebookRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[SinucaRef7RuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[Sinuquinha15Verification.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_48

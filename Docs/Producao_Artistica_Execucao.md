@@ -48,3 +48,8 @@ Revisão localizada de soleiras/capachos, escada rasa com projeção/escala dos 
 ## Sinuquinha15 — 31/10/2026
 
 Direção 2D mantida; fontes comuns na perspectiva, revisão de movimento/escala, inspeção legível e apresentação de quinze bolas. Contorno A/D, mira nas setas, marcada nas mãos seguintes, listas e carga por cinco slots. [Plano, verificações Editor/Player, build e limites](Evidencias/Sinuquinha15/Relatorio.md). Evidência técnica não equivale à aprovação visual do autor.
+
+
+## Caderno e Mapa da Cidade — 03/11/2026
+
+Caderno independente, páginas, caligrafia legível e textos na voz de Marcus por conhecimento adquirido. Papel editável em Aseprite; fonte Kalam OFL com atlas estático no Player. Fichas só adquiridas e em ordem, painéis sem zoom acidental; entorno com campos, morros baixos e arroio usando arte do projeto. Registros clínicos originais não foram alterados. Critérios e evidências: [relatório](Evidencias/Caderno/Relatorio.md). Aprovação artística/leitura pelo autor não é presumida pelo QA técnico.

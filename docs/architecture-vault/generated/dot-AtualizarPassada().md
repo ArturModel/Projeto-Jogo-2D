@@ -15,7 +15,7 @@ tags:
 - [[dot-AtualizarFeixeLanterna()]] - `calls` [EXTRACTED]
 - [[dot-Avancar()_2]] - `calls` [INFERRED]
 - [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_11]] - `calls` [EXTRACTED]
 - [[dot-Reset()]] - `calls` [INFERRED]
 - [[PlayerController]] - `method` [EXTRACTED]
 

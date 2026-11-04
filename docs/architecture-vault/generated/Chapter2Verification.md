@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 94"
+community: "Community 4"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_94
+  - community/Community_4
 ---
 
 # Chapter2Verification
@@ -19,8 +19,8 @@ tags:
 - [[dot-Narrative()]] - `method` [EXTRACTED]
 - [[dot-Physics()]] - `method` [EXTRACTED]
 - [[dot-Rules()]] - `method` [EXTRACTED]
-- [[dot-Run()_7]] - `method` [EXTRACTED]
+- [[dot-Run()_2]] - `method` [EXTRACTED]
 - [[dot-Saves()]] - `method` [EXTRACTED]
 - [[Chapter2Verification.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_4

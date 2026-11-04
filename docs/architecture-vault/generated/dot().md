@@ -12,7 +12,7 @@ tags:
 # dot()
 
 ## Connections
-- [[color()]] - `calls` [EXTRACTED]
+- [[color()_1]] - `calls` [EXTRACTED]
 - [[pool-table.lua]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_63

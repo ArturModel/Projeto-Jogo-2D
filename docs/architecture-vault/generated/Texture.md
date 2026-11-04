@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[dot-Mat()]] - `references` [EXTRACTED]
-- [[dot-Panel()]] - `references` [EXTRACTED]
+- [[dot-Panel()_1]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_38

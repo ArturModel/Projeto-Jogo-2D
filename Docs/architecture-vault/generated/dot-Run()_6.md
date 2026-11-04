@@ -1,29 +1,38 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 94"
-location: "L9"
+community: "Community 56"
+location: "L22"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Community_94
+  - graphify/EXTRACTED
+  - community/Community_56
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Balim()]] - `calls` [EXTRACTED]
+- [[dot-AjustarZoom()]] - `calls` [INFERRED]
+- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
 - [[dot-Check()_1]] - `calls` [INFERRED]
-- [[dot-Clone()_1]] - `calls` [INFERRED]
-- [[dot-CriarMao()]] - `calls` [INFERRED]
-- [[dot-ForcaNoTempo()]] - `calls` [EXTRACTED]
-- [[dot-Lancar()_2]] - `calls` [INFERRED]
-- [[dot-Preparar()_1]] - `calls` [EXTRACTED]
-- [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
-- [[dot-Step()]] - `calls` [INFERRED]
-- [[BochaBall]] - `calls` [INFERRED]
-- [[BochaMatch]] - `calls` [INFERRED]
-- [[BochaPerspectiveVerification]] - `method` [EXTRACTED]
-- [[BochaSimulation]] - `calls` [INFERRED]
+- [[dot-DefinirCamera()]] - `calls` [INFERRED]
+- [[dot-DefinirZoom()]] - `calls` [INFERRED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-GetBall()]] - `calls` [EXTRACTED]
+- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-OscilarCarga()]] - `calls` [EXTRACTED]
+- [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
+- [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [INFERRED]
+- [[dot-RunMenu()]] - `calls` [EXTRACTED]
+- [[dot-SetBall()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[GameObject]] - `references` [EXTRACTED]
+- [[GameStateSnapshot]] - `calls` [INFERRED]
+- [[IList]] - `references` [EXTRACTED]
+- [[Sinuca3DVerification]] - `method` [EXTRACTED]
+- [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_56

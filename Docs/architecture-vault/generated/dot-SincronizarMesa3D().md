@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 85"
+community: "Community 39"
 location: "L2461"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_85
+  - community/Community_39
 ---
 
 # .SincronizarMesa3D()
@@ -20,4 +20,4 @@ tags:
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[SinucaVisualBall]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_85
+#graphify/code #graphify/EXTRACTED #community/Community_39

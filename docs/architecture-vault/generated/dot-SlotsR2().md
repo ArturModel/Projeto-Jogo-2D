@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .SlotsR2()
@@ -16,7 +16,7 @@ tags:
 - [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
-- [[dot-Capture()]] - `calls` [INFERRED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-CarregarSlot()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Click()]] - `calls` [INFERRED]
@@ -40,4 +40,4 @@ tags:
 - [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

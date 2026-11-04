@@ -11,8 +11,10 @@ tags:
 # RawImage
 
 ## Connections
+- [[dot-Initialize()]] - `references` [EXTRACTED]
 - [[dot-MontarTela()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_1]] - `references` [EXTRACTED]
+- [[dot-Rebuild()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `references` [EXTRACTED]
 

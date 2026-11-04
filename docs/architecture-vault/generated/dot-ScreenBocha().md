@@ -12,7 +12,7 @@ tags:
 # .ScreenBocha()
 
 ## Connections
-- [[dot-Project()_1]] - `calls` [INFERRED]
+- [[dot-Project()_3]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

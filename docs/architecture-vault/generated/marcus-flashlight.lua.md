@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[c()_5]] - `contains` [EXTRACTED]
 - [[line()_2]] - `contains` [EXTRACTED]
-- [[rect()_2]] - `contains` [EXTRACTED]
+- [[rect()_3]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_61

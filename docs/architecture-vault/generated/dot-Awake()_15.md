@@ -1,18 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 54"
-location: "L57"
+community: "Community 44"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_44
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[dot-PrepararCaminhadaMarcus()]] - `calls` [EXTRACTED]
+- [[dot-PrepararFeixeLanterna()]] - `calls` [EXTRACTED]
+- [[dot-PrepararPosesLanterna()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
+- [[Rigidbody2D]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_44

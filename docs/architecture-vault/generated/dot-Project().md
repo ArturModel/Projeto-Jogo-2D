@@ -1,20 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookContent.cs"
 type: "code"
-community: "Community 39"
-location: "L119"
+community: "Community 25"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_25
 ---
 
 # .Project()
 
 ## Connections
-- [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [EXTRACTED]
-- [[SinucaRoom3D]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
-- [[Vector3]] - `references` [EXTRACTED]
+- [[dot-Changed()]] - `calls` [EXTRACTED]
+- [[dot-Plain()]] - `calls` [EXTRACTED]
+- [[dot-Read()]] - `calls` [EXTRACTED]
+- [[dot-Restored()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[EntradaDiario]] - `references` [EXTRACTED]
+- [[MarcusNotebookCatalog]] - `calls` [EXTRACTED]
+- [[MarcusNotebookContent]] - `method` [EXTRACTED]
+- [[MarcusNotebookEntry]] - `calls` [EXTRACTED]
+- [[TextAsset]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_25

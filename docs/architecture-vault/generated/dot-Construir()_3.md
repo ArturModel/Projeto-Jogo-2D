@@ -1,22 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 51"
-location: "L69"
+community: "Community 25"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_25
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Awake()_15]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[CanvasScaler]] - `references` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[dot-Start()_9]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
+- [[Fileira_1]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_25

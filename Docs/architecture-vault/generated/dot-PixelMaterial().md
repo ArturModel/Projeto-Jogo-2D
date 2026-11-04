@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs"
 type: "code"
-community: "Community 20"
+community: "Community 38"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_38
 ---
 
 # .PixelMaterial()
@@ -19,4 +19,4 @@ tags:
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_38

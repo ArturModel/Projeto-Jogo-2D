@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
 type: "code"
-community: "Community 3"
-location: "L277"
+community: "Community 14"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_14
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
-- [[dot-InicializarCacapas()]] - `calls` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-Build()]] - `calls` [EXTRACTED]
+- [[DicaDeTecla]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_14

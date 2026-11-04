@@ -41,3 +41,6 @@ Ref7 (31/10/2026): Interior4_BarDoZe mantém a conexão e a soleira existentes; 
 Correção posterior de identidade 2D: Interior4_BarDoZe usa os sprites originais e WorldLit; a sinuca reaproveita a mesma arte em perspectiva. O layout físico e a soleira continuam compartilhados; não carregar Baked/ na exploração.
 
 Sinuquinha15 (31/10/2026): no mesmo interior, Zé oferece lisas/listradas ou 1–7/9–15 e a branca começa pronta. Melhor de três e consequência narrativa preservadas. Capacho na saída, sem tapete sob a mesa; nenhuma nova cena ou alteração de geografia.
+
+
+Atlas (02/11/2026): cenas/zonas aprovadas não foram reconstruídas. O levantamento registra 19 cartas (9 zonas C1 + 10 cenas C2), 38 acessos reais, inclusive o LimiarCentro de InteracaoCapitulo1. Frente e serviço do Mercadinho compartilham identidade, mantendo suas coordenadas locais e origem exterior de entrada. Sem Escola ou interiores futuros.

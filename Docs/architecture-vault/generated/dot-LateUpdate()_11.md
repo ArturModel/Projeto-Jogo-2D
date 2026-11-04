@@ -1,23 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 8"
-location: "L217"
+community: "Community 44"
+location: "L367"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_44
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-AtualizarClima()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarSom()]] - `calls` [EXTRACTED]
-- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
-- [[dot-Desenhar()]] - `calls` [EXTRACTED]
-- [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
-- [[dot-Simular()]] - `calls` [EXTRACTED]
-- [[Chuva]] - `method` [EXTRACTED]
+- [[dot-AtualizarPassada()]] - `calls` [EXTRACTED]
+- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_44

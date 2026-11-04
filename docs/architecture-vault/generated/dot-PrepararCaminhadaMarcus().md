@@ -12,7 +12,7 @@ tags:
 # .PrepararCaminhadaMarcus()
 
 ## Connections
-- [[dot-Awake()_13]] - `calls` [EXTRACTED]
+- [[dot-Awake()_15]] - `calls` [EXTRACTED]
 - [[dot-ValidarFolhaMarcus()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]

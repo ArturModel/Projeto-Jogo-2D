@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 29"
+community: "Community 40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_40
 ---
 
 # MaskableGraphic
@@ -15,4 +15,4 @@ tags:
 - [[BochaMapGraphic]] - `inherits` [EXTRACTED]
 - [[SinucaSpinSelector]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_40

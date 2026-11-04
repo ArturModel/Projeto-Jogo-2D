@@ -16,7 +16,7 @@ tags:
 - [[dot-ExitMatChecksR4()]] - `calls` [EXTRACTED]
 - [[dot-RunAccesses()]] - `calls` [EXTRACTED]
 - [[dot-RunPortalRegression()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_23]] - `calls` [EXTRACTED]
 - [[Interactable]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

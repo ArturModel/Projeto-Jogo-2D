@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 89"
-location: "L149"
+community: "Community 86"
+location: "L533"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_86
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
+- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
+- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_86
