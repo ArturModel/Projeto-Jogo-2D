@@ -12,7 +12,7 @@ tags:
 # .OtherRooms()
 
 ## Connections
-- [[dot-Apply()]] - `calls` [EXTRACTED]
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
 - [[MenuItem]] - `references` [EXTRACTED]
 - [[SantaRitaC2Consolidation]] - `method` [EXTRACTED]
 

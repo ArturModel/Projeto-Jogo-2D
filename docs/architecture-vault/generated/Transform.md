@@ -1,19 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 2"
+community: "Community 30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_30
 ---
 
 # Transform
 
 ## Connections
 - [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
-- [[dot-Apply()]] - `references` [EXTRACTED]
-- [[dot-Apply()_3]] - `references` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Apply()_5]] - `references` [EXTRACTED]
 - [[dot-ApprovedScenes()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
@@ -76,7 +76,7 @@ tags:
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
 - [[dot-Rotulo()]] - `references` [EXTRACTED]
-- [[dot-Run()_7]] - `references` [EXTRACTED]
+- [[dot-Run()_3]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-Sphere()]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
@@ -95,4 +95,4 @@ tags:
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[Station]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_30

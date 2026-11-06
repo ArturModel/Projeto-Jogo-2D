@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 14"
-location: "L57"
+community: "Community 13"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_13
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Build()]] - `calls` [EXTRACTED]
-- [[DicaDeTecla]] - `method` [EXTRACTED]
+- [[dot-Build()_2]] - `calls` [EXTRACTED]
+- [[GameMessageUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_13

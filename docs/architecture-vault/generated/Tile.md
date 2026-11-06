@@ -11,7 +11,7 @@ tags:
 # Tile
 
 ## Connections
-- [[dot-Apply()]] - `references` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Center()]] - `references` [EXTRACTED]
 - [[dot-CompactCourt()]] - `references` [EXTRACTED]

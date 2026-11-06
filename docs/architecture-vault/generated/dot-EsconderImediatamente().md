@@ -12,7 +12,7 @@ tags:
 # .EsconderImediatamente()
 
 ## Connections
-- [[dot-Awake()_21]] - `calls` [EXTRACTED]
+- [[dot-Awake()_19]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[OptionsPanelController]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 48"
+community: "Community 51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_51
 ---
 
 # Button
@@ -13,14 +13,14 @@ tags:
 ## Connections
 - [[dot-ActiveButton()]] - `references` [EXTRACTED]
 - [[dot-AtualizarTela()]] - `references` [EXTRACTED]
-- [[dot-Awake()_18]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-Click()]] - `references` [EXTRACTED]
 - [[dot-ClickR4()]] - `references` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
@@ -44,4 +44,4 @@ tags:
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_51

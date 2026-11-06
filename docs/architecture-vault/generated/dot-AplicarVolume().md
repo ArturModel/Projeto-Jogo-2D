@@ -16,7 +16,7 @@ tags:
 - [[dot-AlterarVolumeGeral()]] - `calls` [EXTRACTED]
 - [[dot-AlterarVolumeMusica()]] - `calls` [EXTRACTED]
 - [[dot-AplicarVolumeEmMixer()]] - `calls` [EXTRACTED]
-- [[dot-Start()_10]] - `calls` [EXTRACTED]
+- [[dot-Start()_14]] - `calls` [EXTRACTED]
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_31

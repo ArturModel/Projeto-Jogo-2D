@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 2"
+community: "Community 24"
 location: "L336"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_24
 ---
 
 # .ConfigurarCenaAtual()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
-- [[dot-Apply()_4]] - `calls` [EXTRACTED]
+- [[dot-Apply()_3]] - `calls` [EXTRACTED]
+- [[dot-Apply()_6]] - `calls` [EXTRACTED]
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirMundoMultiZonas()]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[dot-PrepararMusicasDasZonas()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_24

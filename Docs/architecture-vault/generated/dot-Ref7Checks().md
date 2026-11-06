@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `calls` [INFERRED]
 - [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]

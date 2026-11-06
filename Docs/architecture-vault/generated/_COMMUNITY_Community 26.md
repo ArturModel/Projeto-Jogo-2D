@@ -9,13 +9,13 @@ members: 13
 
 ## Members
 - [[dot-Ativar()]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
-- [[dot-Awake()_5]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
-- [[dot-Awake()_6]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[dot-Awake()_7]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[dot-Awake()_8]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
 - [[dot-Procurar()]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
-- [[dot-Update()_11]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
-- [[dot-Update()_12]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[dot-Update()_16]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[dot-Update()_17]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
 - [[Apontado]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
-- [[Ativo]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[Ativo_1]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
 - [[Disponivel_1]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
 - [[LayerMask]] - code
 - [[ObjetoCarro]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
@@ -30,18 +30,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 33]]
-- 2 edges to [[_COMMUNITY_Community 18]]
-- 2 edges to [[_COMMUNITY_Community 42]]
+- 4 edges to [[_COMMUNITY_Community 94]]
+- 2 edges to [[_COMMUNITY_Community 19]]
+- 2 edges to [[_COMMUNITY_Community 16]]
+- 2 edges to [[_COMMUNITY_Community 54]]
 - 2 edges to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 89]]
 
 ## Top bridge nodes
-- [[PonteiroCarro]] - degree 12, connects to 6 communities
-- [[ObjetoCarro]] - degree 14, connects to 5 communities
-- [[dot-Awake()_5]] - degree 2, connects to 1 community
+- [[PonteiroCarro]] - degree 12, connects to 5 communities
+- [[ObjetoCarro]] - degree 14, connects to 4 communities
+- [[dot-Awake()_7]] - degree 2, connects to 1 community
 - [[ObjetoCarro.cs]] - degree 2, connects to 1 community

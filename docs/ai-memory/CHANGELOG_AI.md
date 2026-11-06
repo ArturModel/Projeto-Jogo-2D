@@ -361,3 +361,11 @@ Lanterna-costas concluída: captura e QA PASS, builds sem erros/hash igual, índ
 02/11 — [Console limpo](../ai-plans/2026-11-02_PatrickDotto_console-limpo.md): APIs obsoletas e campo não utilizado removidos.
 
 06/11 — [Prólogo jogável](../ai-plans/2026-11-06_BBCONTTI_prologo-jogavel.md): cabine detalhada em camadas, condução leve e interações opcionais. Revisão de asfalto/chuva e parada no recuo da Rodovia; validação no relatório. Preferir Play do Editor nas iterações conforme pedido do usuário.
+
+## 06/11/2026 — revisão rural do prólogo (substitui a apresentação anterior)
+
+Horizonte distante sem postes/casas embutidos; atlas de cenário próximo avança na mesma projeção da via. Trajetória em espaço com duas curvas; terra aos 140–166 m; parada em recuo de terra aos 44 s e transição aos 51 s para EntradaDaCidade/saida_carro. Asfalto, terra compactada e solo com folhas/capim são materiais distintos com acostamento irregular. Motor interior e rodagem em cascalho usam gravações CC0, mistura por superfície/velocidade e pausa/foco/efeitos do mixer existente; nenhum save automático. Plano: [prólogo rural](../ai-plans/2026-11-06_ismaelweinertb_prologo-rural.md). Testes em Play; sem builds. Avaliação visual/audição final pelo autor pendentes.
+
+06/11 — Identidade GitHub confirmada: ismaelweinertb / Ismael Weinert. Configuração somente deste repositório corrigida para nome/noreply e credencial dessa conta. Commit anterior dc7b5841 corrigido para 451c5606 com árvore/mensagem idênticas e lease explícito autorizado; novas melhorias rurais/áudio continuam sem commit.
+
+06/11 — Autor autorizou commit e push das melhorias rurais/áudio na feature/prologo-jogavel com ismaelweinertb. Publicação documentada em [plano](../ai-plans/2026-11-06_ismaelweinertb_commit-prologo-rural.md); substitui a pendência anterior de alterações locais sem commit. Sem nova build; evidências de Play preservadas.

@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-Captura()]] - `method` [EXTRACTED]
-- [[dot-Check()_2]] - `method` [EXTRACTED]
+- [[dot-Check()_1]] - `method` [EXTRACTED]
 - [[dot-Instalar()]] - `method` [EXTRACTED]
 - [[dot-Start()_17]] - `method` [EXTRACTED]
 - [[dot-Tecla()]] - `method` [EXTRACTED]
-- [[dot-Update()_25]] - `method` [EXTRACTED]
+- [[dot-Update()_22]] - `method` [EXTRACTED]
 - [[Keyboard]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Mouse]] - `references` [EXTRACTED]

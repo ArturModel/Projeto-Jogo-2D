@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 86"
+community: "Community 45"
 location: "L172"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_45
 ---
 
 # .ObterEntradasDiario()
@@ -21,4 +21,4 @@ tags:
 - [[GameState]] - `method` [EXTRACTED]
 - [[IReadOnlyList]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_45

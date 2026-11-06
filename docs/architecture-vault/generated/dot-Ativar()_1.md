@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
-community: "Community 33"
-location: "L25"
+community: "Community 86"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_86
 ---
 
 # .Ativar()
 
 ## Connections
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Interagir()]] - `calls` [INFERRED]
+- [[dot-Interagir()_1]] - `calls` [INFERRED]
+- [[dot-Ligar()_1]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[PortaLuvasCarro]] - `method` [EXTRACTED]
+- [[CelularCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_86

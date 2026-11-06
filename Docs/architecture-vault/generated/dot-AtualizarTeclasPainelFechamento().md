@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 2"
+community: "Community 24"
 location: "L2562"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_24
 ---
 
 # .AtualizarTeclasPainelFechamento()
 
 ## Connections
 - [[dot-FecharPainelFechamento()]] - `calls` [EXTRACTED]
-- [[dot-Update()_8]] - `calls` [EXTRACTED]
+- [[dot-Update()_15]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_24

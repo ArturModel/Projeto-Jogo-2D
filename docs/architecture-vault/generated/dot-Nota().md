@@ -12,7 +12,7 @@ tags:
 # .Nota()
 
 ## Connections
-- [[dot-Interagir()_1]] - `calls` [EXTRACTED]
+- [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[C2InteractionData]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]

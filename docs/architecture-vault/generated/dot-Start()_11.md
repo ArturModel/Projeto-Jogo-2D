@@ -1,17 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 33"
-location: "L83"
+community: "Community 19"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_19
 ---
 
 # .Start()
 
 ## Connections
-- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
+- [[dot-Legendar()]] - `calls` [EXTRACTED]
+- [[dot-MontarTela()]] - `calls` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[PonteiroCarro]] - `references` [EXTRACTED]
+- [[PrologoDirector]] - `references` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[VideoPlayer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_19

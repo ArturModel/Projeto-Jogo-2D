@@ -12,7 +12,7 @@ tags:
 # .SinucaRegression()
 
 ## Connections
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]

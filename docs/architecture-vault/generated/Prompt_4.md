@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 46"
-location: "L66"
+community: "Community 18"
+location: "L194"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_18
 ---
 
 # Prompt
 
 ## Connections
-- [[PayphoneCheckpoint]] - `defines` [EXTRACTED]
+- [[SantaRitaBarProp]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_18

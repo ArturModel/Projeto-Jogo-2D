@@ -12,7 +12,7 @@ tags:
 # .SpriteFor()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
+- [[dot-Apply()_3]] - `calls` [EXTRACTED]
 - [[dot-BuildRoom()]] - `calls` [EXTRACTED]
 - [[dot-Character()]] - `calls` [EXTRACTED]
 - [[dot-LiveSprite()]] - `calls` [EXTRACTED]

@@ -12,9 +12,9 @@ tags:
 # SantaRitaInventory
 
 ## Connections
-- [[dot-Awake()_18]] - `method` [EXTRACTED]
+- [[dot-Awake()_16]] - `method` [EXTRACTED]
 - [[dot-HasItem()]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_11]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_9]] - `method` [EXTRACTED]
 - [[dot-LoadIcons()]] - `method` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `references` [EXTRACTED]
 - [[dot-StartSession()]] - `method` [EXTRACTED]

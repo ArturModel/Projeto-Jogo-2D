@@ -8,10 +8,10 @@ using UnityEngine.UI;
 // derrota, colisão, aceleração obrigatória ou interação que bloqueie a chegada.
 public sealed class PrologoJogavel : MonoBehaviour
 {
-    public const float InicioManobra = 42f;
-    public const float Parado = 54f;
-    public const float Duracao = 62f;
-    public const float DistanciaParada = 588f;
+    public const float InicioManobra = 36f;
+    public const float Parado = 44f;
+    public const float Duracao = 51f;
+    public const float DistanciaParada = 468f;
     public float Tempo { get; private set; }
     public float Direcao { get; private set; }
     public float Lateral { get; private set; }
@@ -23,8 +23,15 @@ public sealed class PrologoJogavel : MonoBehaviour
     public bool PortaLuvasAberto { get; private set; }
     public bool Finalizado { get; private set; }
     public bool Suspenso => !foco || MenuPausa.Aberto || Time.timeScale <= 0f;
-    public float Velocidade => Tempo < 44f ? 12f : Mathf.Lerp(12f, 0f, Mathf.SmoothStep(0f, 1f, (Tempo - 44f) / 10f));
-    public float Curva => Mathf.Sin(Mathf.Clamp01((Tempo - 30f) / 10f) * Mathf.PI) * .42f;
+    public float Velocidade => Tempo < 34f ? 12f : Mathf.Lerp(12f, 0f, Mathf.SmoothStep(0f, 1f, (Tempo - 34f) / 10f));
+    // Duas curvas contínuas no espaço; terreno e objetos usam a mesma trajetória.
+    public static float CentroVia(float distancia) =>
+        15f * Mathf.SmoothStep(0,1,Mathf.InverseLerp(105,215,distancia))
+        - 22f * Mathf.SmoothStep(0,1,Mathf.InverseLerp(245,365,distancia));
+    public static float TerraEm(float distancia) => Mathf.SmoothStep(0,1,Mathf.InverseLerp(140,166,distancia));
+    public float Rumo => (CentroVia(Distancia+1)-CentroVia(Distancia-1))*.5f;
+    public float Curva => Mathf.Clamp((CentroVia(Distancia+12)-2*CentroVia(Distancia)+CentroVia(Distancia-12))*.4f,-.65f,.65f);
+    public float Terra => TerraEm(Distancia);
     public float Estacionamento => Mathf.SmoothStep(0,1,Mathf.InverseLerp(InicioManobra,Parado,Tempo));
     public float PosicaoLateral => Lateral + Estacionamento * 5.2f;
     public float FaseLimpador { get; private set; }
@@ -50,7 +57,7 @@ public sealed class PrologoJogavel : MonoBehaviour
         "\"Vou encostar um pouco.\"",
         "\"Certo... vamos ver por que ele não atendeu hoje.\""
     };
-    private readonly float[] tempos = { 4f, 10f, 21f, 35f, 42f, 56f };
+    private readonly float[] tempos = { 4f, 10f, 19f, 28f, 36f, 46f };
     private readonly Rect areaVolante = new Rect(30, -60, 350, 335);
     private readonly Rect[] areas = {
         new Rect(389,166,176,71), new Rect(523,79,43,44),
@@ -82,9 +89,11 @@ public sealed class PrologoJogavel : MonoBehaviour
 
     private void Start()
     {
+        AudioAmbiente.Instance?.ConfigurarLoop("motor",Resources.Load<AudioClip>("Audio/Prologo/MotorInterior"));
+        AudioAmbiente.Instance?.ConfigurarLoop("pneusTerra",Resources.Load<AudioClip>("Audio/Prologo/RodagemTerra"));
         AudioAmbiente.Instance?.Definir("chuva", .55f, 1f);
-        AudioAmbiente.Instance?.Definir("motor", .38f, 1f);
-        AudioAmbiente.Instance?.Definir("pneus", .28f, 1f);
+        AudioAmbiente.Instance?.Definir("motor", .3f, 1f);
+        AudioAmbiente.Instance?.Definir("pneus", .2f, 1f);
     }
 
     private void Construir()
@@ -96,7 +105,7 @@ public sealed class PrologoJogavel : MonoBehaviour
         quadro = Rect("Enquadramento16x9", canvas.transform, new Vector2(960,540), Vector2.zero);
         quadro.gameObject.AddComponent<RectMask2D>();
         cabine = Rect("CamadasDoCarro", quadro, new Vector2(960,540), Vector2.zero);
-        paisagem = Imagem("Paisagem", cabine, "Paisagem", new Vector2(1040,350), new Vector2(480,425));
+        paisagem = Imagem("HorizonteDistante", cabine, "Horizonte", new Vector2(1160,350), new Vector2(480,425));
         estrada = Graphic("AsfaltoReflexosAcostamento", cabine, false);
         chuva = Graphic("ChuvaPalhetas", cabine, true);
         Imagem("CabineDetalhada", cabine, "Cabine", new Vector2(1000,563), new Vector2(480,270));
@@ -164,12 +173,15 @@ public sealed class PrologoJogavel : MonoBehaviour
         Tempo += dt;
         LerControles(dt);
         Distancia += Velocidade*dt;
+        AtualizarAudio();
         if (Limpador > 0 && Tempo < Parado) FaseLimpador += dt/(Limpador==1?2.1f:1.15f);
         float fase=FaseLimpador%1f;
         if (Limpador>0 && fase < cicloAnterior) { Molhado=.08f; AudioAmbiente.Instance?.Disparar("limpador",.45f); }
         cicloAnterior=fase; Molhado=Mathf.MoveTowards(Molhado,.85f,dt*.065f);
-        cabine.anchoredPosition = -Olhar + (MenuPausa.ReduzirEfeitosIntensos ? Vector2.zero : new Vector2(Mathf.Sin(Tempo*1.7f)*.6f,Mathf.Sin(Tempo*2.1f)*.7f)*Mathf.Clamp01(Velocidade/8f));
-        paisagem.anchoredPosition = new Vector2(-PosicaoLateral*3f+Curva*15f,155f);
+        float trepidacao=1f+Terra*.8f;
+        cabine.anchoredPosition = -Olhar + (MenuPausa.ReduzirEfeitosIntensos ? Vector2.zero : new Vector2(Mathf.Sin(Tempo*1.7f)*.6f,Mathf.Sin(Tempo*(2.1f+Terra*3f))*.7f)*Mathf.Clamp01(Velocidade/8f)*trepidacao);
+        // O relevo distante quase não cresce, mas acompanha a orientação do carro.
+        paisagem.anchoredPosition = new Vector2(-PosicaoLateral*2f-Rumo*210f-CentroVia(Distancia)*.8f,155f);
         float manobra=Mathf.Sin(Mathf.InverseLerp(InicioManobra,Parado,Tempo)*Mathf.PI*2)*21f;
         volante.localRotation=Quaternion.Euler(0,0,-Direcao*17f-Curva*12f-manobra);
         mostrador.text=RadioLigado?"FM  97.1":"- - -";
@@ -184,10 +196,25 @@ public sealed class PrologoJogavel : MonoBehaviour
             motorDesligado=true; Limpador=0; RadioLigado=false;
             AudioAmbiente.Instance?.Disparar("motorDesliga",.65f);
             AudioAmbiente.Instance?.Definir("motor",0,1.2f); AudioAmbiente.Instance?.Definir("pneus",0,1);
+            AudioAmbiente.Instance?.Definir("pneusTerra",0,.35f);
             AudioAmbiente.Instance?.Definir("radio",0,1); AudioAmbiente.Instance?.Definir("chuva",.75f,2);
         }
         if(Tempo>=Duracao) Encerrar();
         estrada.SetVerticesDirty(); chuva.SetVerticesDirty();
+    }
+
+    private void AtualizarAudio()
+    {
+        if(motorDesligado)return;
+        var audio=AudioAmbiente.Instance;
+        if(audio==null)return;
+        float movimento=Mathf.Clamp01(Velocidade/12f);
+        float irregularidade=.93f+Mathf.PerlinNoise(Distancia*.13f,7.1f)*.14f;
+        audio.Definir("motor",.19f+movimento*.13f,.4f);
+        audio.Pitch("motor",.82f+movimento*.2f+Mathf.Sin(Tempo*.8f)*.006f);
+        audio.Definir("pneus",.2f*movimento*(1-Terra),.3f);
+        audio.Definir("pneusTerra",.58f*Terra*movimento*irregularidade,.3f);
+        audio.Pitch("pneusTerra",.76f+movimento*.24f);
     }
 
     private void LerControles(float dt)

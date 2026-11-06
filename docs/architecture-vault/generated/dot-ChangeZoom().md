@@ -12,7 +12,7 @@ tags:
 # .ChangeZoom()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [INFERRED]
+- [[dot-Construir()_2]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 

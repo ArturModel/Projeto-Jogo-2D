@@ -12,8 +12,8 @@ tags:
 # .CreateCemetery()
 
 ## Connections
-- [[dot-Apply()_1]] - `calls` [EXTRACTED]
-- [[dot-Run()_6]] - `calls` [EXTRACTED]
+- [[dot-Apply()_2]] - `calls` [EXTRACTED]
+- [[dot-Run()_5]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]

@@ -1,24 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 24"
-location: "L59"
+community: "Community 19"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_19
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[dot-Legendar()]] - `calls` [EXTRACTED]
-- [[dot-MontarTela()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[PonteiroCarro]] - `references` [EXTRACTED]
-- [[PrologoDirector]] - `references` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
-- [[VideoPlayer]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_19

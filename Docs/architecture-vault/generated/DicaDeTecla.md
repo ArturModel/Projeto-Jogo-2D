@@ -12,7 +12,7 @@ tags:
 # DicaDeTecla
 
 ## Connections
-- [[dot-Awake()_2]] - `method` [EXTRACTED]
+- [[dot-Awake()_3]] - `method` [EXTRACTED]
 - [[dot-Build()]] - `method` [EXTRACTED]
 - [[dot-Mostrar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()]] - `method` [EXTRACTED]

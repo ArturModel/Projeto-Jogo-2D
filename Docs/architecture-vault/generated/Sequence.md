@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs"
 type: "code"
-community: "Community 103"
+community: "Community 35"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_103
+  - community/Community_35
 ---
 
 # Sequence
@@ -18,4 +18,4 @@ tags:
 - [[SinucaBrasileiraRules]] - `contains` [EXTRACTED]
 - [[Start]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_35

@@ -26,7 +26,7 @@ tags:
 - [[dot-Portal()_2]] - `references` [EXTRACTED]
 - [[dot-Portal()_1]] - `references` [EXTRACTED]
 - [[dot-ResetSession()]] - `method` [EXTRACTED]
-- [[dot-Run()_7]] - `references` [EXTRACTED]
+- [[dot-Run()_3]] - `references` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-RunPortalRegression()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
@@ -34,6 +34,6 @@ tags:
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 - [[Capitulo2Portal.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_5]] - `defines` [EXTRACTED]
+- [[Prompt_6]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_49

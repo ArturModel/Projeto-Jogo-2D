@@ -121,3 +121,5 @@ Inventário em 01/11/2026: **112 arquivos C# atuais (incluindo R4, Ref7 e Sinuqu
 - `Scripts/Capitulo2/AudioC2RuntimeVerification.cs`: parcial Chapter2RuntimeVerification; testes isolados das trilhas e imagens (Editor/Development).
 
 06/11 — 116 C# indexados após quatro novas fontes: `PrologoJogavel`, `PrologoEstradaGraphic`, `PrologoRuntimeVerification` (fixture opt-in) e `Editor/PrologoJogavelVerification` (build explícita e importador das texturas).
+
+06/11 — Prólogo rural: PrologoJogavel fornece CentroVia/TerraEm por distância, duas curvas, recuo de terra e parada 44 s/transição 51 s. PrologoEstradaGraphic projeta atlas de cenário e três superfícies do mesmo mundo; UV1 distingue terra e solo vegetal. AudioAmbiente.ConfigurarLoop reaproveita a fonte do motor e adiciona pneusTerra ao mixer comum; alvo/pitch acompanham velocidade/superfície. Próxima cena/saida_carro e saves manuais preservados. Plano: docs/ai-plans/2026-11-06_ismaelweinertb_prologo-rural.md; evidências: Docs/Evidencias/PrologoRural/Relatorio.md.

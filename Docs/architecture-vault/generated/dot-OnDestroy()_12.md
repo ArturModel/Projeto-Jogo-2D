@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
 community: "Community 84"
-location: "L53"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .OnDestroy()
 
 ## Connections
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[SceneFader]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_84

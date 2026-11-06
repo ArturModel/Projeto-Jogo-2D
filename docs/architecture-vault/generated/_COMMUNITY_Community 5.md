@@ -1,16 +1,16 @@
 ---
 type: community
-members: 28
+members: 42
 ---
 
 # Community 5
 
-**Members:** 28 nodes
+**Members:** 42 nodes
 
 ## Members
+- [[dot-Atravessar()]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
 - [[dot-BuildAndValidateAll()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-BuildWindows64Player()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
-- [[dot-CarregarOuGerarArteMapa()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
 - [[dot-ClearTex()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-ConfigureSpriteImporters()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-CreateBuildingObject()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -20,6 +20,14 @@ members: 28
 - [[dot-ExecuteSetupAndTests()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-FillRect()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-GenerateInteriorAndPropSprites()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
+- [[dot-Interact()_7]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
+- [[dot-Interact()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-Interact()_9]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[dot-OnDisable()_9]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnDrawGizmosSelected()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnEnable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnTriggerEnter2D()_2]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
+- [[dot-RegistrarPistaLegada()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 - [[dot-RemoveIfExists()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveBarCounterPng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveCardsCluePng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -28,14 +36,20 @@ members: 28
 - [[dot-SavePoolTablePng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveReceiptCluePng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveRulesBoardPng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
-- [[dot-Start()_16]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
 - [[dot-UpdateBuildSettings()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-UpdateCasaDoAvoScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-UpdateEntradaDaCidadeScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-WritePng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
+- [[DoorTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
+- [[DoorTrigger.cs]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
+- [[Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[InteractionRadius]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[Prompt_7]] - code - Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs
+- [[Prompt_8]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[Prompt_9]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 - [[SantaRitaChapter1Builder]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
-- [[Shader]] - code
-- [[Texture2D]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,31 +59,33 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Community 2]]
-- 9 edges to [[_COMMUNITY_Community 18]]
-- 3 edges to [[_COMMUNITY_Community 13]]
-- 3 edges to [[_COMMUNITY_Community 20]]
-- 3 edges to [[_COMMUNITY_Community 9]]
-- 3 edges to [[_COMMUNITY_Community 16]]
-- 2 edges to [[_COMMUNITY_Community 23]]
-- 2 edges to [[_COMMUNITY_Community 34]]
-- 2 edges to [[_COMMUNITY_Community 49]]
-- 2 edges to [[_COMMUNITY_Community 86]]
-- 2 edges to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 105]]
-- 1 edge to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 87]]
-- 1 edge to [[_COMMUNITY_Community 92]]
-- 1 edge to [[_COMMUNITY_Community 99]]
+- 7 edges to [[_COMMUNITY_Community 18]]
+- 5 edges to [[_COMMUNITY_Community 24]]
+- 5 edges to [[_COMMUNITY_Community 16]]
+- 5 edges to [[_COMMUNITY_Community 86]]
+- 4 edges to [[_COMMUNITY_Community 13]]
+- 4 edges to [[_COMMUNITY_Community 49]]
+- 4 edges to [[_COMMUNITY_Community 1]]
+- 3 edges to [[_COMMUNITY_Community 99]]
+- 3 edges to [[_COMMUNITY_Community 2]]
+- 3 edges to [[_COMMUNITY_Community 48]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 46]]
+- 2 edges to [[_COMMUNITY_Community 45]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 103]]
+- 1 edge to [[_COMMUNITY_Community 19]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 
 ## Top bridge nodes
-- [[Texture2D]] - degree 23, connects to 11 communities
-- [[dot-UpdateEntradaDaCidadeScene()]] - degree 12, connects to 7 communities
-- [[dot-CreateBuildingObject()]] - degree 8, connects to 4 communities
-- [[dot-UpdateCasaDoAvoScene()]] - degree 8, connects to 4 communities
-- [[SantaRitaChapter1Builder]] - degree 26, connects to 3 communities
+- [[Interactable]] - degree 25, connects to 12 communities
+- [[dot-UpdateEntradaDaCidadeScene()]] - degree 12, connects to 6 communities
+- [[dot-CreateSceneSpriteObject()]] - degree 11, connects to 6 communities
+- [[dot-CreateBuildingObject()]] - degree 8, connects to 5 communities
+- [[dot-CreateNpcObject()]] - degree 7, connects to 4 communities

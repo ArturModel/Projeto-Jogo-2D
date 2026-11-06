@@ -18,7 +18,7 @@ tags:
 - [[dot-ConfigurarMao()]] - `calls` [EXTRACTED]
 - [[dot-CriarTextura()]] - `calls` [EXTRACTED]
 - [[dot-Fechar()_3]] - `calls` [EXTRACTED]
-- [[dot-Update()_8]] - `calls` [EXTRACTED]
+- [[dot-Update()_15]] - `calls` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 

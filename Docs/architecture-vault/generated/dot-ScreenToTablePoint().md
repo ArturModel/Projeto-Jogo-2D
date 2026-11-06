@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 28"
+community: "Community 39"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_39
 ---
 
 # .ScreenToTablePoint()
 
 ## Connections
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
-- [[dot-OnPointerDown()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPointerDown()_2]] - `calls` [EXTRACTED]
 - [[dot-OnPointerMove()_1]] - `calls` [EXTRACTED]
 - [[dot-OnPointerUp()_1]] - `calls` [EXTRACTED]
 - [[dot-RayToTable()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[SinucaTableView]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_39

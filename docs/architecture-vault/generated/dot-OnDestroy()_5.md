@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
-community: "Community 36"
-location: "L80"
+community: "Community 23"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_23
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_23

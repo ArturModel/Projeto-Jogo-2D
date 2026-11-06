@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 93"
-location: "L67"
+community: "Community 33"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_33
 ---
 
 # Velocidade
 
 ## Connections
-- [[EstradaScroller]] - `defines` [EXTRACTED]
+- [[PrologoJogavel]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_33

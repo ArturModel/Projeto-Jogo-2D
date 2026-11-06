@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
+- [[dot-Run()_7]] - `calls` [EXTRACTED]
 - [[C2ContentData]] - `references` [EXTRACTED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 - [[GameStateSnapshot]] - `calls` [INFERRED]

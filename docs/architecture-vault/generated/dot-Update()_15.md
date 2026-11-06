@@ -1,23 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 34"
-location: "L492"
+community: "Community 24"
+location: "L392"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_24
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
-- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_4]] - `calls` [EXTRACTED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarTeclasPainelFechamento()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[AudioLowPassFilter]] - `references` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_24

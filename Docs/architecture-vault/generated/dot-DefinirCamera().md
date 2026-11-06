@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AlternarCamera()]] - `calls` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `calls` [INFERRED]
-- [[dot-Run()_5]] - `calls` [INFERRED]
+- [[dot-Run()_4]] - `calls` [INFERRED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
 - [[dot-SetMode()]] - `calls` [EXTRACTED]
 - [[dot-SinuquinhaKeyboard()]] - `calls` [INFERRED]

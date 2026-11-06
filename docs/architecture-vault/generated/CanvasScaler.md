@@ -12,8 +12,8 @@ tags:
 
 ## Connections
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `references` [EXTRACTED]
 

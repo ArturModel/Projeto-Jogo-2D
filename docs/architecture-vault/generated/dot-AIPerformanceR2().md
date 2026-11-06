@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Balim()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Escolher()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]

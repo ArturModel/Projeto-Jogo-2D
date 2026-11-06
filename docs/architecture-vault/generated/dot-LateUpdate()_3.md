@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 40"
-location: "L31"
+community: "Community 18"
+location: "L200"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_18
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-ElevationAt()]] - `calls` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
+- [[SantaRitaBarHost]] - `method` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_18

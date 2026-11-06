@@ -1,11 +1,11 @@
 ---
 type: community
-members: 131
+members: 132
 ---
 
 # Community 1
 
-**Members:** 131 nodes
+**Members:** 132 nodes
 
 ## Members
 - [[dot-ConectarManualmente()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
@@ -23,14 +23,16 @@ members: 131
 - [[BochaMinigameUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[BochaPerspectiveRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
 - [[BochaPerspectiveVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs
-- [[BochaSimulation.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[C2ContentData]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[C2DialogueBranch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[C2InteractionData]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
 - [[CamadaDeLuz.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
 - [[CameraFollow.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 - [[Capitulo1Director.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[Capitulo2Audio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
 - [[Capitulo2Director.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[Capitulo2Interactable.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
 - [[Capitulo2Perception.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
-- [[Capitulo2Portal.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs
 - [[CelularCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
 - [[Chapter2BuildVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
 - [[Chapter2R2RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
@@ -41,6 +43,7 @@ members: 131
 - [[Chuva.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[DentroDaCasaDoAvo.cs]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
 - [[DicaDeTecla.cs]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[Disponivel]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
 - [[EstradaScroller.cs]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
 - [[GameMessageUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
 - [[InteracaoCapitulo1.cs]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -71,7 +74,6 @@ members: 131
 - [[SantaRitaArtImporter]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
 - [[SantaRitaArtImporter.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
 - [[SantaRitaArtProduction.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[SantaRitaAtmosphere.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
 - [[SantaRitaC2Consolidation.Access.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
 - [[SantaRitaC2Consolidation.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[SantaRitaChapter1Builder.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -83,7 +85,6 @@ members: 131
 - [[SantaRitaLivingWorldAuthoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[SantaRitaMcpSetup]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[SantaRitaMcpSetup.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
-- [[SantaRitaNpcRoutine.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs
 - [[SantaRitaNpcWork.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
 - [[SantaRitaProductionVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
 - [[SantaRitaRimLight.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs
@@ -149,63 +150,72 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_Community 48]]
-- 9 edges to [[_COMMUNITY_Community 42]]
-- 6 edges to [[_COMMUNITY_Community 2]]
-- 6 edges to [[_COMMUNITY_Community 44]]
+- 7 edges to [[_COMMUNITY_Community 45]]
+- 6 edges to [[_COMMUNITY_Community 20]]
+- 6 edges to [[_COMMUNITY_Community 19]]
 - 6 edges to [[_COMMUNITY_Community 49]]
-- 5 edges to [[_COMMUNITY_Community 4]]
-- 5 edges to [[_COMMUNITY_Community 45]]
-- 5 edges to [[_COMMUNITY_Community 46]]
+- 5 edges to [[_COMMUNITY_Community 13]]
 - 5 edges to [[_COMMUNITY_Community 6]]
-- 5 edges to [[_COMMUNITY_Community 84]]
-- 4 edges to [[_COMMUNITY_Community 20]]
-- 4 edges to [[_COMMUNITY_Community 13]]
+- 4 edges to [[_COMMUNITY_Community 36]]
 - 4 edges to [[_COMMUNITY_Community 18]]
-- 4 edges to [[_COMMUNITY_Community 27]]
-- 3 edges to [[_COMMUNITY_Community 33]]
-- 3 edges to [[_COMMUNITY_Community 36]]
+- 4 edges to [[_COMMUNITY_Community 2]]
+- 4 edges to [[_COMMUNITY_Community 5]]
+- 4 edges to [[_COMMUNITY_Community 54]]
+- 3 edges to [[_COMMUNITY_Community 16]]
+- 3 edges to [[_COMMUNITY_Community 8]]
 - 3 edges to [[_COMMUNITY_Community 85]]
+- 3 edges to [[_COMMUNITY_Community 87]]
+- 3 edges to [[_COMMUNITY_Community 94]]
+- 3 edges to [[_COMMUNITY_Community 27]]
+- 3 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 86]]
 - 2 edges to [[_COMMUNITY_Community 11]]
 - 2 edges to [[_COMMUNITY_Community 15]]
-- 2 edges to [[_COMMUNITY_Community 16]]
-- 2 edges to [[_COMMUNITY_Community 19]]
 - 2 edges to [[_COMMUNITY_Community 26]]
-- 2 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 28]]
 - 2 edges to [[_COMMUNITY_Community 37]]
 - 2 edges to [[_COMMUNITY_Community 39]]
 - 2 edges to [[_COMMUNITY_Community 40]]
 - 2 edges to [[_COMMUNITY_Community 51]]
-- 2 edges to [[_COMMUNITY_Community 54]]
 - 2 edges to [[_COMMUNITY_Community 57]]
-- 2 edges to [[_COMMUNITY_Community 87]]
-- 2 edges to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 103]]
+- 1 edge to [[_COMMUNITY_Community 107]]
+- 1 edge to [[_COMMUNITY_Community 109]]
 - 1 edge to [[_COMMUNITY_Community 12]]
 - 1 edge to [[_COMMUNITY_Community 14]]
 - 1 edge to [[_COMMUNITY_Community 17]]
 - 1 edge to [[_COMMUNITY_Community 23]]
 - 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 29]]
 - 1 edge to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 30]]
 - 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 33]]
 - 1 edge to [[_COMMUNITY_Community 34]]
 - 1 edge to [[_COMMUNITY_Community 35]]
 - 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 - 1 edge to [[_COMMUNITY_Community 47]]
-- 1 edge to [[_COMMUNITY_Community 5]]
 - 1 edge to [[_COMMUNITY_Community 50]]
 - 1 edge to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 84]]
+- 1 edge to [[_COMMUNITY_Community 89]]
 - 1 edge to [[_COMMUNITY_Community 9]]
 - 1 edge to [[_COMMUNITY_Community 93]]
 - 1 edge to [[_COMMUNITY_Community 96]]
 - 1 edge to [[_COMMUNITY_Community 98]]
 - 1 edge to [[_COMMUNITY_Community 99]]
-- 1 edge to [[_COMMUNITY_Community 94]]
+- 1 edge to [[_COMMUNITY_Community 105]]
+- 1 edge to [[_COMMUNITY_Community 106]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 42]]
 
 ## Top bridge nodes
-- [[unityengine]] - degree 114, connects to 16 communities
-- [[system]] - degree 52, connects to 3 communities
+- [[unityengine]] - degree 114, connects to 22 communities
+- [[system]] - degree 52, connects to 4 communities
+- [[C2InteractionData]] - degree 7, connects to 4 communities
 - [[BochaCourtView.cs]] - degree 8, connects to 3 communities
-- [[SinucaTableView.cs]] - degree 11, connects to 2 communities
-- [[MenuPausa.cs]] - degree 10, connects to 2 communities
+- [[system_collections_generic]] - degree 48, connects to 2 communities

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Captura()]] - `calls` [EXTRACTED]
-- [[dot-Check()_2]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-Tecla()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]

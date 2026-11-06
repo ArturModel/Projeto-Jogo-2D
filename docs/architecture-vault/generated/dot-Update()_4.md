@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 18"
-location: "L181"
+community: "Community 12"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_12
 ---
 
 # .Update()
 
 ## Connections
-- [[SantaRitaBarPatron]] - `method` [EXTRACTED]
-- [[SantaRitaBarPose]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-Abrir()]] - `calls` [EXTRACTED]
+- [[dot-Fechar()]] - `calls` [EXTRACTED]
+- [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_12

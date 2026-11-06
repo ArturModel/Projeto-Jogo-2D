@@ -11,7 +11,7 @@ tags:
 # TMP_Text
 
 ## Connections
-- [[dot-Configurar()]] - `references` [EXTRACTED]
+- [[dot-Configurar()_3]] - `references` [EXTRACTED]
 - [[dot-LinhaSlider()]] - `references` [EXTRACTED]
 - [[dot-Rotulo()]] - `references` [EXTRACTED]
 - [[dot-SlotsR2()]] - `references` [EXTRACTED]

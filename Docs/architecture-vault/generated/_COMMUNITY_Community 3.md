@@ -11,7 +11,7 @@ members: 29
 - [[dot-AplicarPercepcaoPorMao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AtualizarDestaqueBotoesEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AvaliarCandidatoZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Awake()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Awake()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CaminhoLivreEntre()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-EnsureInstance()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-EscolherTacadaZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -58,19 +58,19 @@ SORT file.name ASC
 - 4 edges to [[_COMMUNITY_Community 85]]
 - 3 edges to [[_COMMUNITY_Community 39]]
 - 2 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 46]]
-- 2 edges to [[_COMMUNITY_Community 86]]
+- 2 edges to [[_COMMUNITY_Community 51]]
+- 2 edges to [[_COMMUNITY_Community 45]]
 - 2 edges to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 93]]
+- 1 edge to [[_COMMUNITY_Community 8]]
 - 1 edge to [[_COMMUNITY_Community 9]]
 - 1 edge to [[_COMMUNITY_Community 12]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 - 1 edge to [[_COMMUNITY_Community 53]]
 - 1 edge to [[_COMMUNITY_Community 91]]
+- 1 edge to [[_COMMUNITY_Community 95]]
 
 ## Top bridge nodes
 - [[SinucaMinigameUI]] - degree 143, connects to 25 communities

@@ -8,7 +8,7 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
-- [[dot-Awake()_2]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[dot-Awake()_3]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
 - [[dot-Build()]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
 - [[dot-Mostrar()]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
 - [[dot-Rodar()]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
@@ -30,16 +30,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Community 51]]
+- 4 edges to [[_COMMUNITY_Community 51]]
+- 3 edges to [[_COMMUNITY_Community 12]]
 - 2 edges to [[_COMMUNITY_Community 57]]
 - 2 edges to [[_COMMUNITY_Community 7]]
-- 2 edges to [[_COMMUNITY_Community 12]]
-- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 28]]
 - 1 edge to [[_COMMUNITY_Community 13]]
 - 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 30]]
 - 1 edge to [[_COMMUNITY_Community 34]]
 
 ## Top bridge nodes

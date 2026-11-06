@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 42"
-location: "L24"
+community: "Community 39"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_39
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
+- [[dot-SetActive()]] - `calls` [EXTRACTED]
+- [[SinucaTableView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_39

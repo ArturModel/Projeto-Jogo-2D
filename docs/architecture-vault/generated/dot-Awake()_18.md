@@ -1,27 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
-community: "Community 51"
-location: "L35"
+community: "Community 57"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_57
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-CreateBox()]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-LoadIcons()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[dot-Use()_1]] - `calls` [EXTRACTED]
-- [[Button]] - `references` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[SantaRitaInventory]] - `method` [EXTRACTED]
-- [[SantaRitaItemHover]] - `references` [EXTRACTED]
+- [[dot-ConfigurarGrupo()]] - `calls` [EXTRACTED]
+- [[MenuPanelTransition]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_57

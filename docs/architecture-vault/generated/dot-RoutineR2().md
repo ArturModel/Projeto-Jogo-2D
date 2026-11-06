@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-Place()]] - `calls` [INFERRED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]

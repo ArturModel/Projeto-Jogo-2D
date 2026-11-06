@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-AtualizarSpawnPointExistente()]] - `references` [EXTRACTED]
-- [[dot-Configurar()_3]] - `method` [EXTRACTED]
+- [[dot-Configurar()_2]] - `method` [EXTRACTED]
 - [[dot-CorrectApprovedGeography()]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_10]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_8]] - `method` [EXTRACTED]
 - [[dot-OnDrawGizmos()]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_10]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_7]] - `method` [EXTRACTED]
 - [[dot-Procurar()_1]] - `method` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-Spawn()]] - `references` [EXTRACTED]

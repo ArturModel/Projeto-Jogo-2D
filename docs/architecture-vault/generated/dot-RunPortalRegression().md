@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-FindNearest()]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [INFERRED]

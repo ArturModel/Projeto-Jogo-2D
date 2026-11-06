@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 48"
 location: "L147"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_48
 ---
 
 # .FlashlightWalkR2()
 
 ## Connections
 - [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
 - [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Place()]] - `calls` [INFERRED]
@@ -23,4 +23,4 @@ tags:
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_48

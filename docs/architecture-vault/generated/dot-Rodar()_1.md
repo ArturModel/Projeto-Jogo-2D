@@ -20,9 +20,9 @@ tags:
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()]] - `calls` [EXTRACTED]
 - [[dot-Ligar()]] - `calls` [INFERRED]
-- [[dot-Limpar()]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_2]] - `calls` [EXTRACTED]
 - [[dot-Revelar()]] - `calls` [EXTRACTED]
-- [[dot-Start()_7]] - `calls` [EXTRACTED]
+- [[dot-Start()_10]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 

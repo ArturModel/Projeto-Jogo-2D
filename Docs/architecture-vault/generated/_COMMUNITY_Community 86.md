@@ -1,56 +1,51 @@
 ---
 type: community
-members: 43
+members: 38
 ---
 
 # Community 86
 
-**Members:** 43 nodes
+**Members:** 38 nodes
 
 ## Members
-- [[dot-AlternarLanterna()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-Ativar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[dot-Ativar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs
 - [[dot-AtualizarInvestigacao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-AuditOldFeedback()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
-- [[dot-C1InvestigationRegression()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-Clear()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-ConcluirBocha()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-ConfirmarSaveManual()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-ConfirmarTestemunhoAtendente()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-DefinirNumero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-DefinirObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-DefinirTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-DialogueR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
+- [[dot-Dialogo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
 - [[dot-DispararChegadaCasaDoAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Dizer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Encerrar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
+- [[dot-Encerrar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Encerrar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
 - [[dot-EnsureInstance()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-Interagir()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-Limpar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-Executar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
+- [[dot-FecharPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Interagir()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-Interagir()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Ir()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs
+- [[dot-LerControles()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Ligar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[dot-Limpar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-Marcar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-MostrarPainelFimCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-MostrarTelaFechamentoCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-NarracaoEntradaCasaAvoRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-Nota()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-NovoJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[dot-Numero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-ObterEntradasDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-ObterObjetivo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-Ocorrencia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-ProximaFalaContextual()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-RegistrarDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-RegistrarNotaDiario()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-ResetarMemoriaSilencioso()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-RunAutomatedVerification()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
-- [[dot-Start()_18]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-Start()_19]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
-- [[dot-Start()_20]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
-- [[dot-Start()_21]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-Start()_19]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-Start()_20]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[dot-Start()_21]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
 - [[dot-Tem()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Texto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-Tocar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
+- [[dot-Update()_26]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Update()_27]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[GameState]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[HashSet]] - code
-- [[IReadOnlyList]] - code
-- [[LanternaLigada]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[ObjetivoAtual]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[TemProgressoNaoSalvo]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[Capitulo2Perception]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -60,41 +55,39 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 47 edges to [[_COMMUNITY_Community 13]]
-- 35 edges to [[_COMMUNITY_Community 45]]
-- 30 edges to [[_COMMUNITY_Community 0]]
-- 19 edges to [[_COMMUNITY_Community 48]]
-- 13 edges to [[_COMMUNITY_Community 2]]
-- 9 edges to [[_COMMUNITY_Community 34]]
-- 9 edges to [[_COMMUNITY_Community 36]]
-- 8 edges to [[_COMMUNITY_Community 6]]
-- 8 edges to [[_COMMUNITY_Community 33]]
-- 7 edges to [[_COMMUNITY_Community 44]]
-- 6 edges to [[_COMMUNITY_Community 46]]
+- 46 edges to [[_COMMUNITY_Community 13]]
+- 28 edges to [[_COMMUNITY_Community 0]]
+- 23 edges to [[_COMMUNITY_Community 45]]
+- 12 edges to [[_COMMUNITY_Community 24]]
+- 10 edges to [[_COMMUNITY_Community 19]]
+- 10 edges to [[_COMMUNITY_Community 48]]
+- 8 edges to [[_COMMUNITY_Community 34]]
+- 7 edges to [[_COMMUNITY_Community 33]]
+- 7 edges to [[_COMMUNITY_Community 36]]
 - 6 edges to [[_COMMUNITY_Community 54]]
-- 4 edges to [[_COMMUNITY_Community 42]]
+- 6 edges to [[_COMMUNITY_Community 94]]
+- 5 edges to [[_COMMUNITY_Community 44]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 5]]
 - 4 edges to [[_COMMUNITY_Community 51]]
-- 4 edges to [[_COMMUNITY_Community 84]]
-- 3 edges to [[_COMMUNITY_Community 19]]
-- 3 edges to [[_COMMUNITY_Community 21]]
-- 3 edges to [[_COMMUNITY_Community 24]]
-- 2 edges to [[_COMMUNITY_Community 3]]
-- 2 edges to [[_COMMUNITY_Community 4]]
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 40]]
+- 3 edges to [[_COMMUNITY_Community 89]]
+- 3 edges to [[_COMMUNITY_Community 93]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 2 edges to [[_COMMUNITY_Community 109]]
 - 2 edges to [[_COMMUNITY_Community 49]]
 - 1 edge to [[_COMMUNITY_Community 20]]
 - 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 103]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 41]]
-- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 - 1 edge to [[_COMMUNITY_Community 50]]
 - 1 edge to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_Community 18]]
 
 ## Top bridge nodes
 - [[dot-Tem()]] - degree 55, connects to 15 communities
-- [[dot-Marcar()]] - degree 60, connects to 10 communities
-- [[dot-Start()_18]] - degree 14, connects to 8 communities
-- [[dot-AuditOldFeedback()]] - degree 21, connects to 6 communities
-- [[dot-RunAutomatedVerification()]] - degree 15, connects to 6 communities
+- [[dot-Marcar()]] - degree 60, connects to 9 communities
+- [[dot-Start()_19]] - degree 14, connects to 9 communities
+- [[dot-Interagir()]] - degree 16, connects to 8 communities
+- [[dot-Ir()]] - degree 15, connects to 7 communities

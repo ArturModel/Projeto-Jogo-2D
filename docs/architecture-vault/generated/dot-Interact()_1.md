@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 18"
-location: "L183"
+community: "Community 103"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_103
 ---
 
 # .Interact()
 
 ## Connections
-- [[SantaRitaBarPatron]] - `method` [EXTRACTED]
+- [[dot-TentarTransicionar()]] - `calls` [EXTRACTED]
+- [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_103

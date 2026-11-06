@@ -13,8 +13,8 @@ tags:
 ## Connections
 - [[dot-Add()]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
-- [[dot-Apply()_6]] - `references` [EXTRACTED]
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-Boundary()]] - `references` [EXTRACTED]
 - [[dot-Box()_1]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]

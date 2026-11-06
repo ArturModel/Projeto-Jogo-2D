@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 2"
+community: "Community 48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_48
 ---
 
 # GameObject
@@ -38,7 +38,7 @@ tags:
 - [[dot-Prop()_1]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
-- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-Run()_4]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
@@ -56,7 +56,7 @@ tags:
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
 - [[dot-Tube()]] - `references` [EXTRACTED]
 - [[dot-VerificarFisicaDeterministicaEBicos()]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_4]] - `references` [EXTRACTED]
 - [[dot-Vincular()_5]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
@@ -72,4 +72,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_48

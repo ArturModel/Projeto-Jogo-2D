@@ -12,12 +12,12 @@ tags:
 # BochaCourtView
 
 ## Connections
-- [[dot-Awake()_25]] - `method` [EXTRACTED]
+- [[dot-Awake()_24]] - `method` [EXTRACTED]
 - [[dot-BallColor()]] - `method` [EXTRACTED]
 - [[dot-Box()_2]] - `method` [EXTRACTED]
 - [[dot-CameraBasis()]] - `method` [EXTRACTED]
 - [[dot-ChangeZoom()]] - `method` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-CourtPoint()]] - `method` [EXTRACTED]
 - [[dot-CriarSala()]] - `method` [EXTRACTED]
 - [[dot-Disc()_1]] - `method` [EXTRACTED]

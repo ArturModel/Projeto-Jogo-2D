@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "Community 40"
-location: "L8"
+community: "Community 36"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_36
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[dot-Atualizar()]] - `calls` [EXTRACTED]
-- [[Capitulo2Gate]] - `method` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_36

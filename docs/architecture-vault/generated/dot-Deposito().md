@@ -12,7 +12,7 @@ tags:
 # .Deposito()
 
 ## Connections
-- [[dot-Apply()]] - `calls` [EXTRACTED]
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
 - [[dot-CreateExit()]] - `calls` [INFERRED]
 - [[dot-Interaction()]] - `calls` [EXTRACTED]
 - [[dot-Lamp()]] - `calls` [EXTRACTED]

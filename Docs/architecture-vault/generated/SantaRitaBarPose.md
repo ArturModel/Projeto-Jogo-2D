@@ -12,12 +12,12 @@ tags:
 # SantaRitaBarPose
 
 ## Connections
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `references` [EXTRACTED]
-- [[dot-Start()_5]] - `method` [EXTRACTED]
-- [[dot-Update()_4]] - `references` [EXTRACTED]
-- [[dot-Update()_5]] - `method` [EXTRACTED]
+- [[dot-Start()_8]] - `method` [EXTRACTED]
+- [[dot-Update()_7]] - `references` [EXTRACTED]
+- [[dot-Update()_8]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `contains` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]

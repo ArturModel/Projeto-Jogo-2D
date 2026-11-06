@@ -12,7 +12,7 @@ tags:
 # .SinuquinhaKeyboard()
 
 ## Connections
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `calls` [INFERRED]
 - [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]

@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
 type: "code"
-community: "Community 54"
-location: "L57"
+community: "Community 57"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_57
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Construir()_2]] - `calls` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[dot-EsconderImediatamente()]] - `calls` [EXTRACTED]
+- [[dot-MostrarImediatamente()]] - `calls` [EXTRACTED]
+- [[OptionsPanelController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_57

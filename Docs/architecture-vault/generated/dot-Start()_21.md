@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
 type: "code"
 community: "Community 86"
-location: "L176"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,13 +12,13 @@ tags:
 # .Start()
 
 ## Connections
-- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
-- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
-- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_86

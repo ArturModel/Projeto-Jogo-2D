@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
 community: "Community 92"
-location: "L135"
+location: "L144"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Imagem()
 
 ## Connections
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
+- [[dot-Construir()_4]] - `calls` [EXTRACTED]
 - [[dot-Rect()]] - `calls` [EXTRACTED]
 - [[PrologoJogavel]] - `method` [EXTRACTED]
 - [[RawImage]] - `references` [EXTRACTED]

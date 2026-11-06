@@ -12,7 +12,7 @@ tags:
 # .Surface()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
+- [[dot-Apply()_3]] - `calls` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `calls` [INFERRED]
 - [[Color]] - `references` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]

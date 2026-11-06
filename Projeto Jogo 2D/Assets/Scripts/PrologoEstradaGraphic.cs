@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Geometria limitada e determinística, sem criar objetos/partículas a cada quadro.
-// Cenário e cabine são arte raster; só a perspectiva, reflexos e chuva são animados.
+// Cenário raster ancorado no mundo, terreno em perspectiva e chuva no vidro.
 [RequireComponent(typeof(CanvasRenderer))]
 public sealed class PrologoEstradaGraphic : MaskableGraphic
 {
@@ -11,6 +11,7 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
     private VertexHelper mesh;
     private float deslocamento;
     private Texture2D asfalto;
+    private Texture2D cenarioRural;
     private Material materialAsfalto;
     private readonly float[] ultimaLimpeza = new float[150];
     public override Texture mainTexture => asfalto != null ? asfalto : Texture2D.whiteTexture;
@@ -23,7 +24,17 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
         if(Chuva)return;
         asfalto=Resources.Load<Texture2D>("PrologoJogavel/Asfalto");
         var shader=Resources.Load<Shader>("PrologoJogavel/AsfaltoMolhado");
-        if(shader!=null) { materialAsfalto=new Material(shader); material=materialAsfalto; }
+        if(shader!=null)
+        {
+            materialAsfalto=new Material(shader);
+            cenarioRural=Resources.Load<Texture2D>("PrologoJogavel/CenarioRural");
+            materialAsfalto.SetTexture("_CenarioTex",cenarioRural);
+            materialAsfalto.SetTexture("_TerraTex",Resources.Load<Texture2D>("PrologoJogavel/Terra"));
+            materialAsfalto.SetTexture("_SoloTex",Resources.Load<Texture2D>("PrologoJogavel/SoloVegetacao"));
+            material=materialAsfalto;
+            // UV1 transporta a transição de material do terreno por vértice.
+            canvas.additionalShaderChannels |= AdditionalCanvasShaderChannels.TexCoord1;
+        }
         else Debug.LogError("Shader do asfalto do prólogo ausente.");
         SetMaterialDirty();
     }
@@ -42,7 +53,7 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
 
     private Vector2 Projetar(float x,float z)
     {
-        float curva=Viagem.Curva*z*z*.0009f;
+        float curva=PrologoJogavel.CentroVia(deslocamento+z)-PrologoJogavel.CentroVia(deslocamento)-Viagem.Rumo*z;
         return new Vector2(480+(x-Viagem.PosicaoLateral+curva)*1050/z,405-1600/z);
     }
     private void Estrada()
@@ -54,15 +65,28 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
             float luz=Mathf.Clamp01((195-z0)/160f)*(Viagem.FarolAlto?1.25f:.86f);
             float neblina=Mathf.InverseLerp(200,100,z0);
             float mundo=z0+deslocamento;
+            float terra=PrologoJogavel.TerraEm(mundo);
+            float largura=Mathf.Lerp(3.8f,3f,terra);
             var tom=Cor(.039f+luz*.048f,.052f+luz*.056f,.073f+luz*.064f,neblina);
-            // Transição fina e irregular entre a vegetação pintada e o acostamento.
-            for(int e=4;e>=0;e--)
+            tom=Color.Lerp(tom,Cor(.105f+luz*.11f,.072f+luz*.075f,.044f+luz*.046f,neblina),terra);
+            // Solo lateral também avança: não existe primeiro plano pintado imóvel.
+            Chao(-55,55,z0,z1,Cor(.095f+luz*.06f,.115f+luz*.075f,.072f+luz*.04f,neblina),true,1);
+            // Acostamento de terra exposta perde cobertura entre folhas e capim.
+            // Cada lado tem uma borda própria, presa ao mundo e sem linha reta.
+            for(int e=5;e>=0;e--)
             {
-                float w=3.8f+e*.13f+Ruido(Mathf.FloorToInt(mundo)*7)*.05f;
-                Chao(-w,w,z0,z1,Cor(.055f,.064f,.06f,(.14f+(.12f*(4-e)))*neblina),true);
+                float ruido0=Mathf.PerlinNoise(mundo*.18f,4.7f)*.26f;
+                float ruido1=Mathf.PerlinNoise((mundo+z1-z0)*.18f,4.7f)*.26f;
+                float w0=largura+.06f+e*.15f+ruido0;
+                float w1=largura+.06f+e*.15f+ruido1;
+                float esquerda0=largura+.06f+e*.15f+Mathf.PerlinNoise(mundo*.18f,9.3f)*.26f;
+                float esquerda1=largura+.06f+e*.15f+Mathf.PerlinNoise((mundo+z1-z0)*.18f,9.3f)*.26f;
+                var borda=Color.Lerp(Cor(.12f+luz*.045f,.095f+luz*.035f,.062f+luz*.025f,neblina),tom,terra*.45f);
+                borda.a*=.1f+(5-e)*.125f;
+                Faixa(-esquerda0,w0,-esquerda1,w1,z0,z1,borda,1,0);
             }
-            Chao(-3.8f,3.8f,z0,z1,tom,true);
-            float tinta=(.36f+Ruido(Mathf.FloorToInt(mundo*2))* .25f)*neblina;
+            Chao(-largura,largura,z0,z1,tom,true);
+            float tinta=(.36f+Ruido(Mathf.FloorToInt(mundo*2))* .25f)*neblina*(1-terra);
             Chao(-3.8f,-3.75f,z0,z1,Cor(.45f,.44f,.37f,tinta));
             bool recuo=mundo>PrologoJogavel.DistanciaParada-55 && mundo<PrologoJogavel.DistanciaParada+100;
             if(!recuo) Chao(3.75f,3.8f,z0,z1,Cor(.45f,.44f,.37f,tinta));
@@ -70,17 +94,26 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
             Chao(.045f,.1f,z0,z1,Cor(.65f,.46f,.18f,tinta));
             if(recuo)
             {
-                // Recuo junto à calçada da Rodovia; a pista continua à esquerda.
-                Chao(3.8f,7.6f,z0,z1,Cor(.09f+luz*.05f,.1f+luz*.05f,.105f+luz*.055f,neblina),true);
-                Chao(7.6f,7.78f,z0,z1,Cor(.31f,.32f,.31f,neblina));
-                Chao(7.78f,10.8f,z0,z1,Cor(.14f,.16f,.16f,neblina),true);
-                Chao(7.78f,10.8f,z0,z0+.025f,Cor(.045f,.052f,.055f,neblina*.8f));
+                // Alargamento de terra fora da faixa de circulação, sem plataforma.
+                Chao(largura,7.8f,z0,z1,tom,true);
+                Chao(7.8f,8.1f,z0,z1,Cor(.062f,.073f,.043f,neblina*.6f),true);
+            }
+            if(terra>0)
+            {
+                // Trilhas úmidas, sulcos irregulares e poças rasas presos ao solo.
+                for(int r=-1;r<=1;r+=2)
+                {
+                    float x=r*1.25f+Mathf.Sin(mundo*.17f)*.035f;
+                    Chao(x-.25f,x+.25f,z0,z1,Cor(.037f,.032f,.025f,terra*neblina*.35f),true);
+                    if(Ruido(Mathf.FloorToInt(mundo/3)*31+r)>.65f)
+                        Chao(x-.21f,x+.18f,z0,z1,Cor(.22f,.25f,.27f,terra*neblina*.17f));
+                }
             }
             // Alongamento descontínuo das luzes na água, sem efeito de espelho perfeito.
             float fase=(z0+deslocamento)%17f;
             if(fase<8f)
             {
-                float a=(.055f+Ruido(Mathf.FloorToInt(mundo)*3)*.18f)*luz*neblina;
+                float a=(.055f+Ruido(Mathf.FloorToInt(mundo)*3)*.18f)*luz*neblina*(1-terra*.85f);
                 for(int r=0;r<3;r++)
                 {
                     float centro=-2.55f+Mathf.Sin(mundo*2.3f+r)*.2f+r*.11f;
@@ -94,6 +127,7 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
                 Chao(x,x+.015f+Ruido(i+j)*.025f,z0,z0+.09f,Cor(.58f,.64f,.69f,.04f*luz*neblina));
             }
         }
+        Cenario();
         // Postes, fios, cercas e reflexos passam continuamente nos dois lados.
         for(int i=4;i>=0;i--)
         {
@@ -130,6 +164,43 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
                 }
             }
         }
+    }
+    private void Cenario()
+    {
+        // Índices de mundo, não um loop de relógio: tudo congela ao estacionar.
+        int primeiro=Mathf.FloorToInt((deslocamento+8)/14);
+        int ultimo=Mathf.CeilToInt((deslocamento+195)/14);
+        for(int i=ultimo;i>=primeiro;i--)
+        {
+            float mundo=i*14f;
+            float z=mundo-deslocamento;
+            if(z<9 || z>195)continue;
+            float alfa=Mathf.InverseLerp(195,105,z);
+            for(int lado=-1;lado<=1;lado+=2)
+            {
+                bool casa=i%11==4 && lado>0;
+                int celula=casa?2+(i%2):(i%3==0?6:i%2);
+                float x=lado*(casa?12f:7.8f+Ruido(i*17+lado)*5f);
+                // O recuo da chegada permanece livre para o carro e para sair.
+                if(lado>0 && mundo>PrologoJogavel.DistanciaParada-60)x+=7;
+                SpriteCenario(celula,x,z,casa?7.5f:5.4f+Ruido(i)*2.2f,alfa);
+                bool recuo=lado>0 && mundo>PrologoJogavel.DistanciaParada-60 && mundo<PrologoJogavel.DistanciaParada+100;
+                if(!recuo)SpriteCenario(4+(i%2),lado*(4.5f+Ruido(i*3)*1.4f),z,2.7f,alfa);
+            }
+        }
+    }
+    private void SpriteCenario(int celula,float x,float z,float altura,float alfa)
+    {
+        Vector2 pe=Projetar(x,z);
+        float h=altura*1050/z;
+        // Atlas 4x2: proporção real da célula, margem transparente na base.
+        float aspecto=cenarioRural!=null?(cenarioRural.width/4f)/(cenarioRural.height/2f):.75f;
+        float w=h*aspecto;
+        float u=(celula%4)*.25f,v=celula<4?.5f:0;
+        pe.y-=h*.06f;
+        var c=Color.Lerp(Cor(.4f,.5f,.62f,alfa),Cor(.82f,.85f,.88f,alfa),Mathf.InverseLerp(150,25,z));
+        QuadTextura(pe+new Vector2(-w*.5f,0),pe+new Vector2(w*.5f,0),pe+new Vector2(w*.5f,h),pe+new Vector2(-w*.5f,h),c,
+            new Vector2(10+u,v),new Vector2(10+u+.25f,v),new Vector2(10+u+.25f,v+.5f),new Vector2(10+u,v+.5f));
     }
     private void Vidro()
     {
@@ -175,12 +246,16 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
             Linha(pe+Vector2.up,ponta+Vector2.up, .85f,Cor(.27f,.29f,.28f,.7f));
         }
     }
-    private void Chao(float a,float b,float z0,float z1,Color cor,bool textura=false)
+    private void Chao(float a,float b,float z0,float z1,Color cor,bool textura=false,float solo=0)
     {
         if(!textura) { Quad(Projetar(a,z0),Projetar(b,z0),Projetar(b,z1),Projetar(a,z1),cor); return; }
-        QuadTextura(Projetar(a,z0),Projetar(b,z0),Projetar(b,z1),Projetar(a,z1),cor,
-            new Vector2(a*.12f,(z0+deslocamento)*.05f),new Vector2(b*.12f,(z0+deslocamento)*.05f),
-            new Vector2(b*.12f,(z1+deslocamento)*.05f),new Vector2(a*.12f,(z1+deslocamento)*.05f));
+        Faixa(a,b,a,b,z0,z1,cor,PrologoJogavel.TerraEm((z0+z1)*.5f+deslocamento),solo);
+    }
+    private void Faixa(float a0,float b0,float a1,float b1,float z0,float z1,Color cor,float terra,float solo)
+    {
+        QuadTextura(Projetar(a0,z0),Projetar(b0,z0),Projetar(b1,z1),Projetar(a1,z1),cor,
+            new Vector2(a0*.12f,(z0+deslocamento)*.05f),new Vector2(b0*.12f,(z0+deslocamento)*.05f),
+            new Vector2(b1*.12f,(z1+deslocamento)*.05f),new Vector2(a1*.12f,(z1+deslocamento)*.05f),terra,solo);
     }
     private void Linha(Vector2 a,Vector2 b,float largura,Color cor)
     {
@@ -198,13 +273,18 @@ public sealed class PrologoEstradaGraphic : MaskableGraphic
     }
     private void Quad(Vector2 a,Vector2 b,Vector2 c,Vector2 d,Color cor)
         => QuadTextura(a,b,c,d,cor,new Vector2(-1000,-1000),new Vector2(-1000,-1000),new Vector2(-1000,-1000),new Vector2(-1000,-1000));
-    private void QuadTextura(Vector2 a,Vector2 b,Vector2 c,Vector2 d,Color cor,Vector2 u0,Vector2 u1,Vector2 u2,Vector2 u3)
+    private void QuadTextura(Vector2 a,Vector2 b,Vector2 c,Vector2 d,Color cor,Vector2 u0,Vector2 u1,Vector2 u2,Vector2 u3,float terra=0,float solo=0)
     {
         int n=mesh.currentVertCount;
         Vector2 origem=new Vector2(480,270);
-        mesh.AddVert(a-origem,cor,u0); mesh.AddVert(b-origem,cor,u1);
-        mesh.AddVert(c-origem,cor,u2); mesh.AddVert(d-origem,cor,u3);
+        Vertice(a-origem,cor,u0,terra,solo); Vertice(b-origem,cor,u1,terra,solo);
+        Vertice(c-origem,cor,u2,terra,solo); Vertice(d-origem,cor,u3,terra,solo);
         mesh.AddTriangle(n,n+1,n+2); mesh.AddTriangle(n,n+2,n+3);
+    }
+    private void Vertice(Vector2 pos,Color cor,Vector2 uv,float terra,float solo)
+    {
+        var v=UIVertex.simpleVert; v.position=pos; v.color=cor; v.uv0=uv;
+        v.uv1=new Vector2(terra,solo); mesh.AddVert(v);
     }
     private static float Ruido(int i)
     {

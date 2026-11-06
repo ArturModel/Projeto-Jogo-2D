@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
 type: "code"
-community: "Community 12"
-location: "L164"
+community: "Community 110"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_110
 ---
 
 # .Sair()
 
 ## Connections
-- [[dot-Fechar()]] - `calls` [EXTRACTED]
-- [[MenuPausa]] - `method` [EXTRACTED]
+- [[MainMenuActions]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_110

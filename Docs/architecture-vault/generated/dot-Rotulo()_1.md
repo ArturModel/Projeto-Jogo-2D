@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
 community: "Community 33"
-location: "L236"
+location: "L263"
 tags:
   - graphify/code
   - graphify/EXTRACTED

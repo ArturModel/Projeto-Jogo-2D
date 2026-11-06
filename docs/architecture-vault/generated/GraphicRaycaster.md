@@ -11,9 +11,9 @@ tags:
 # GraphicRaycaster
 
 ## Connections
-- [[dot-Awake()_18]] - `references` [EXTRACTED]
-- [[dot-Build()_1]] - `references` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]

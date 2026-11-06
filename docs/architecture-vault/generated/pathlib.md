@@ -12,5 +12,6 @@ tags:
 
 ## Connections
 - [[graphify-project.py]] - `imports_from` [EXTRACTED]
+- [[prepare-prologo-loops.py]] - `imports_from` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_32

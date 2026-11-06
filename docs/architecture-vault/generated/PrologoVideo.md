@@ -1,24 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 24"
+community: "Community 19"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_19
 ---
 
 # PrologoVideo
 
 ## Connections
-- [[dot-Build()_3]] - `references` [EXTRACTED]
-- [[dot-Encerrar()_1]] - `method` [EXTRACTED]
+- [[dot-Build()_1]] - `references` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `method` [EXTRACTED]
 - [[dot-Legendar()]] - `method` [EXTRACTED]
 - [[dot-MontarTela()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_4]] - `method` [EXTRACTED]
-- [[dot-Start()_9]] - `method` [EXTRACTED]
-- [[dot-Update()_10]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_3]] - `method` [EXTRACTED]
+- [[dot-Start()_11]] - `method` [EXTRACTED]
+- [[dot-Update()_13]] - `method` [EXTRACTED]
 - [[dot-UpdatePrologoScene()]] - `references` [EXTRACTED]
 - [[Fala_2]] - `references` [EXTRACTED]
 - [[Fala]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[RenderTexture]] - `references` [EXTRACTED]
 - [[VideoPlayer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_19

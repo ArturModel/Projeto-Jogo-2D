@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
 type: "code"
-community: "Community 46"
+community: "Community 109"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_109
 ---
 
 # .Play()
@@ -15,7 +15,7 @@ tags:
 - [[dot-ApoiarPe()]] - `calls` [EXTRACTED]
 - [[dot-Avancar()]] - `calls` [EXTRACTED]
 - [[dot-Ensure()]] - `calls` [EXTRACTED]
-- [[dot-Interagir()]] - `calls` [EXTRACTED]
+- [[dot-Interagir()_1]] - `calls` [EXTRACTED]
 - [[dot-InteragirCarroMarcus()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPistaNotaFiscal()]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_109

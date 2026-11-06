@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs"
 type: "code"
-community: "Community 0"
+community: "Community 86"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_86
 ---
 
 # .Ir()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Atravessar()]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()]] - `calls` [EXTRACTED]
-- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
 - [[dot-EntrarNoBar()]] - `calls` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `calls` [EXTRACTED]
 - [[dot-Interact()_6]] - `calls` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[dot-RunPortalRegression()]] - `calls` [EXTRACTED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
-- [[dot-Start()_18]] - `calls` [EXTRACTED]
+- [[dot-Start()_19]] - `calls` [EXTRACTED]
 - [[SceneTransition]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_86

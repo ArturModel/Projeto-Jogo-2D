@@ -1,15 +1,15 @@
 ---
 type: community
-members: 63
+members: 65
 ---
 
 # Community 6
 
-**Members:** 63 nodes
+**Members:** 65 nodes
 
 ## Members
 - [[dot-AdaptSavedPosition()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomLayout.cs
-- [[dot-Awake()_22]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
+- [[dot-Awake()_20]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
 - [[dot-BoundaryForest()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Box()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Building()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
@@ -19,6 +19,8 @@ members: 63
 - [[dot-CenaC2()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
 - [[dot-ConfigureArt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-ConsumirEntrada()]] - code - Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs
+- [[dot-ConverterCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
+- [[dot-ConverterMundoParaUV()]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
 - [[dot-CriarTriangulo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-Crosswalk()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Depth()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
@@ -47,7 +49,7 @@ members: 63
 - [[dot-Prop()_2]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-RectTiles()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Road()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
-- [[dot-Run()_6]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
+- [[dot-Run()_5]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Setup()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Sign()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Solid()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
@@ -56,7 +58,7 @@ members: 63
 - [[dot-Tile()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Tree()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-UV()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
-- [[dot-Update()_27]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
+- [[dot-Update()_24]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
 - [[dot-Wall()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[dot-Walls()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
 - [[Deslocamento]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
@@ -80,56 +82,59 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 30 edges to [[_COMMUNITY_Community 2]]
-- 14 edges to [[_COMMUNITY_Community 18]]
-- 11 edges to [[_COMMUNITY_Community 44]]
-- 11 edges to [[_COMMUNITY_Community 49]]
+- 14 edges to [[_COMMUNITY_Community 34]]
+- 12 edges to [[_COMMUNITY_Community 2]]
+- 12 edges to [[_COMMUNITY_Community 49]]
+- 11 edges to [[_COMMUNITY_Community 8]]
+- 11 edges to [[_COMMUNITY_Community 48]]
+- 10 edges to [[_COMMUNITY_Community 18]]
 - 10 edges to [[_COMMUNITY_Community 3]]
-- 10 edges to [[_COMMUNITY_Community 34]]
 - 10 edges to [[_COMMUNITY_Community 11]]
+- 9 edges to [[_COMMUNITY_Community 30]]
+- 9 edges to [[_COMMUNITY_Community 16]]
+- 8 edges to [[_COMMUNITY_Community 0]]
 - 8 edges to [[_COMMUNITY_Community 51]]
-- 8 edges to [[_COMMUNITY_Community 86]]
-- 8 edges to [[_COMMUNITY_Community 48]]
-- 7 edges to [[_COMMUNITY_Community 9]]
-- 7 edges to [[_COMMUNITY_Community 0]]
-- 6 edges to [[_COMMUNITY_Community 17]]
-- 5 edges to [[_COMMUNITY_Community 29]]
+- 8 edges to [[_COMMUNITY_Community 23]]
+- 7 edges to [[_COMMUNITY_Community 20]]
+- 7 edges to [[_COMMUNITY_Community 45]]
+- 6 edges to [[_COMMUNITY_Community 89]]
 - 5 edges to [[_COMMUNITY_Community 36]]
+- 5 edges to [[_COMMUNITY_Community 39]]
 - 5 edges to [[_COMMUNITY_Community 40]]
-- 5 edges to [[_COMMUNITY_Community 87]]
+- 5 edges to [[_COMMUNITY_Community 44]]
 - 5 edges to [[_COMMUNITY_Community 1]]
-- 5 edges to [[_COMMUNITY_Community 45]]
-- 5 edges to [[_COMMUNITY_Community 89]]
-- 5 edges to [[_COMMUNITY_Community 16]]
-- 5 edges to [[_COMMUNITY_Community 23]]
+- 5 edges to [[_COMMUNITY_Community 86]]
+- 5 edges to [[_COMMUNITY_Community 9]]
 - 5 edges to [[_COMMUNITY_Community 83]]
-- 4 edges to [[_COMMUNITY_Community 20]]
-- 4 edges to [[_COMMUNITY_Community 39]]
-- 4 edges to [[_COMMUNITY_Community 8]]
+- 4 edges to [[_COMMUNITY_Community 103]]
 - 4 edges to [[_COMMUNITY_Community 85]]
 - 4 edges to [[_COMMUNITY_Community 12]]
 - 4 edges to [[_COMMUNITY_Community 88]]
-- 3 edges to [[_COMMUNITY_Community 84]]
+- 3 edges to [[_COMMUNITY_Community 17]]
+- 3 edges to [[_COMMUNITY_Community 54]]
 - 3 edges to [[_COMMUNITY_Community 7]]
-- 2 edges to [[_COMMUNITY_Community 33]]
+- 3 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 28]]
 - 2 edges to [[_COMMUNITY_Community 37]]
 - 2 edges to [[_COMMUNITY_Community 46]]
-- 2 edges to [[_COMMUNITY_Community 42]]
-- 2 edges to [[_COMMUNITY_Community 28]]
-- 2 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 84]]
 - 2 edges to [[_COMMUNITY_Community 56]]
 - 2 edges to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 106]]
 - 1 edge to [[_COMMUNITY_Community 27]]
-- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 33]]
 - 1 edge to [[_COMMUNITY_Community 57]]
-- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 21]]
 - 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 87]]
 
 ## Top bridge nodes
-- [[Vector2]] - degree 199, connects to 40 communities
+- [[Vector2]] - degree 200, connects to 45 communities
 - [[SantaRitaChapter2Authoring]] - degree 39, connects to 9 communities
 - [[SantaRitaRoomLayout]] - degree 11, connects to 6 communities
-- [[dot-Setup()]] - degree 10, connects to 5 communities
-- [[OlharPrimeiraPessoa]] - degree 9, connects to 4 communities
+- [[dot-Solid()_1]] - degree 11, connects to 4 communities
+- [[dot-Setup()]] - degree 10, connects to 4 communities

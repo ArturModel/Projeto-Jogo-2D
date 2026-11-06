@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs": {
-    "mtime": 1793965040.0114672,
-    "seen": 1793967434.655552,
-    "ast_hash": "cd4239a3a493acc33f44d2561b691db8",
+    "mtime": 1793969807.6202135,
+    "seen": 1793970426.6707203,
+    "ast_hash": "d9f11f66a62029afd57ad25df4bc2742",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs": {
@@ -870,27 +870,33 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs": {
-    "mtime": 1793967857.6108084,
-    "seen": 1793967879.0535657,
-    "ast_hash": "02d68738d54ea0f91f6f533b2500071f",
+    "mtime": 1793969492.819445,
+    "seen": 1793970426.6707203,
+    "ast_hash": "b2611c76209e075b4a1feb09c0ce9b8c",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs": {
-    "mtime": 1793967390.1231048,
-    "seen": 1793967434.655552,
-    "ast_hash": "684ab7648b9f69c9709ea5f2d8ddffbc",
+    "mtime": 1793970250.4457417,
+    "seen": 1793970426.6707203,
+    "ast_hash": "7fcf2c2b7252e86d607589339179d251",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs": {
-    "mtime": 1793967818.9047475,
-    "seen": 1793967879.0535657,
-    "ast_hash": "f01f00e3ff81e6965be6bf5771784bcc",
+    "mtime": 1793970186.2187746,
+    "seen": 1793970426.6707203,
+    "ast_hash": "24c3564b2bf2de9dc806b4a7751fa9b9",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs": {
-    "mtime": 1793967175.707972,
-    "seen": 1793967434.655552,
-    "ast_hash": "48caa5583c38b95b9b5a172f5c37d0d3",
+    "mtime": 1793969141.2726905,
+    "seen": 1793970426.6707203,
+    "ast_hash": "3826e1c68c694a47e304f348c8be05b1",
+    "semantic_hash": ""
+  },
+  "Tools/Audio/prepare-prologo-loops.py": {
+    "mtime": 1793969915.1960826,
+    "seen": 1793970426.6707203,
+    "ast_hash": "584068ef408912ceefed424af7e2c66a",
     "semantic_hash": ""
   }
 }

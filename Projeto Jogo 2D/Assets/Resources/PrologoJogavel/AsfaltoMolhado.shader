@@ -3,6 +3,9 @@ Shader "SantaRita/PrologoAsfaltoMolhado"
     Properties
     {
         [PerRendererData] _MainTex ("Asfalto", 2D) = "white" {}
+        _CenarioTex ("Cenário rural separado", 2D) = "white" {}
+        _TerraTex ("Terra molhada", 2D) = "white" {}
+        _SoloTex ("Folhas e vegetação no solo", 2D) = "white" {}
         _StencilComp ("Stencil Comparison", Float) = 8
         _Stencil ("Stencil ID", Float) = 0
         _StencilOp ("Stencil Operation", Float) = 0
@@ -27,22 +30,30 @@ Shader "SantaRita/PrologoAsfaltoMolhado"
             #pragma multi_compile_local _ UNITY_UI_ALPHACLIP
             #include "UnityCG.cginc"
             #include "UnityUI.cginc"
-            struct appdata { float4 vertex:POSITION; float4 color:COLOR; float2 uv:TEXCOORD0; };
-            struct v2f { float4 vertex:SV_POSITION; fixed4 color:COLOR; float2 uv:TEXCOORD0; float4 local:TEXCOORD1; };
+            struct appdata { float4 vertex:POSITION; float4 color:COLOR; float2 uv:TEXCOORD0; float2 surface:TEXCOORD1; };
+            struct v2f { float4 vertex:SV_POSITION; fixed4 color:COLOR; float2 uv:TEXCOORD0; float4 local:TEXCOORD1; float2 surface:TEXCOORD2; };
             sampler2D _MainTex;
+            sampler2D _CenarioTex;
+            sampler2D _TerraTex;
+            sampler2D _SoloTex;
             float4 _ClipRect;
             v2f vert(appdata v)
             {
-                v2f o; o.local=v.vertex; o.vertex=UnityObjectToClipPos(v.vertex); o.color=v.color; o.uv=v.uv; return o;
+                v2f o; o.local=v.vertex; o.vertex=UnityObjectToClipPos(v.vertex); o.color=v.color; o.uv=v.uv; o.surface=v.surface; return o;
             }
             fixed4 frag(v2f i):SV_Target
             {
                 fixed4 c=i.color;
                 // UV sentinela preserva a cor de postes, pintura e reflexos.
-                if(i.uv.y > -900)
+                if(i.uv.x >= 9.9)
                 {
-                    fixed3 pedra=tex2D(_MainTex,i.uv).rgb;
-                    c.rgb *= .58 + pedra*4.0;
+                    c *= tex2D(_CenarioTex,float2(i.uv.x-10,i.uv.y));
+                }
+                else if(i.uv.y > -900)
+                {
+                    fixed3 pedra=lerp(tex2D(_MainTex,i.uv).rgb,tex2D(_TerraTex,i.uv).rgb*.52,saturate(i.surface.x));
+                    fixed3 folhas=tex2D(_SoloTex,i.uv*.72).rgb;
+                    c.rgb *= lerp(.58+pedra*4.0,.35+folhas*3.1,saturate(i.surface.y));
                 }
                 #ifdef UNITY_UI_CLIP_RECT
                 c.a *= UnityGet2DClipping(i.local.xy,_ClipRect);

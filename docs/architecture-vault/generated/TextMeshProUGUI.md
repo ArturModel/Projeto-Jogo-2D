@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-CreateLabel()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
 - [[dot-CriarTexto()]] - `references` [EXTRACTED]

@@ -1,25 +1,38 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 49"
-location: "L157"
+community: "Community 56"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_56
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-ApprovedScenes()]] - `calls` [EXTRACTED]
-- [[dot-BuildFinalLivingWorld()]] - `calls` [EXTRACTED]
-- [[dot-BuildQA()]] - `calls` [EXTRACTED]
-- [[dot-RegisterCampaignScenes()]] - `calls` [EXTRACTED]
-- [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
-- [[dot-Revision()]] - `calls` [EXTRACTED]
-- [[dot-Scenes()]] - `calls` [EXTRACTED]
-- [[dot-SourceHash()]] - `calls` [EXTRACTED]
-- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
+- [[dot-AjustarZoom()]] - `calls` [INFERRED]
+- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [INFERRED]
+- [[dot-DefinirCamera()]] - `calls` [INFERRED]
+- [[dot-DefinirZoom()]] - `calls` [INFERRED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-GetBall()]] - `calls` [EXTRACTED]
+- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-OscilarCarga()]] - `calls` [EXTRACTED]
+- [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
+- [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [INFERRED]
+- [[dot-RunMenu()]] - `calls` [EXTRACTED]
+- [[dot-SetBall()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[GameObject]] - `references` [EXTRACTED]
+- [[GameStateSnapshot]] - `calls` [INFERRED]
+- [[IList]] - `references` [EXTRACTED]
+- [[Sinuca3DVerification]] - `method` [EXTRACTED]
+- [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_56

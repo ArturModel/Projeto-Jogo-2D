@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-Aparecer()]] - `method` [EXTRACTED]
-- [[dot-Awake()_19]] - `method` [EXTRACTED]
-- [[dot-Construir()_2]] - `method` [EXTRACTED]
+- [[dot-Awake()_17]] - `method` [EXTRACTED]
+- [[dot-Construir()_3]] - `method` [EXTRACTED]
 - [[dot-Dizer()]] - `method` [EXTRACTED]
 - [[dot-Enfileirar()]] - `method` [EXTRACTED]
-- [[dot-Limpar()]] - `method` [EXTRACTED]
+- [[dot-Limpar()_2]] - `method` [EXTRACTED]
 - [[dot-Rodar()_2]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Coroutine]] - `references` [EXTRACTED]

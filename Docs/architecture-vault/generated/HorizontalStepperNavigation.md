@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Avancar()_2]] - `method` [EXTRACTED]
-- [[dot-Configurar()]] - `method` [EXTRACTED]
+- [[dot-Configurar()_3]] - `method` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-OnDeselect()]] - `method` [EXTRACTED]
 - [[dot-OnSelect()_1]] - `method` [EXTRACTED]

@@ -18,7 +18,7 @@ tags:
 - [[dot-CriarMarcadorPonto()]] - `calls` [EXTRACTED]
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Update()_15]] - `calls` [EXTRACTED]
+- [[dot-Update()_18]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
 community: "Community 99"
-location: "L45"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,12 +12,12 @@ tags:
 # .Build()
 
 ## Connections
-- [[dot-BuildNormal()]] - `calls` [EXTRACTED]
-- [[dot-BuildQA()_1]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `references` [EXTRACTED]
-- [[PrologoJogavel]] - `references` [EXTRACTED]
-- [[PrologoJogavelVerification]] - `method` [EXTRACTED]
-- [[PrologoVideo]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[dot-Awake()_26]] - `calls` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
+- [[dot-LoadSprite()]] - `calls` [EXTRACTED]
+- [[CanvasGroup]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_99

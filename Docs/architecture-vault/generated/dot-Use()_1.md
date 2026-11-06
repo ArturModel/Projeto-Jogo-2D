@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
-- [[dot-Awake()_18]] - `calls` [EXTRACTED]
+- [[dot-Awake()_16]] - `calls` [EXTRACTED]
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
 - [[dot-HasItem()]] - `calls` [EXTRACTED]
 - [[SantaRitaInventory]] - `method` [EXTRACTED]

@@ -1,21 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 2"
-location: "L392"
+community: "Community 18"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_18
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarTeclasPainelFechamento()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[AudioLowPassFilter]] - `references` [EXTRACTED]
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[dot-PatronPose()]] - `calls` [EXTRACTED]
+- [[dot-TablePropVisible()]] - `calls` [EXTRACTED]
+- [[SantaRitaBarPose]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_18

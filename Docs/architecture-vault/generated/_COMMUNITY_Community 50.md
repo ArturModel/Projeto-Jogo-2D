@@ -9,11 +9,11 @@ members: 9
 
 ## Members
 - [[dot-Captura()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
-- [[dot-Check()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Check()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 - [[dot-Instalar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 - [[dot-Start()_17]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 - [[dot-Tecla()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
-- [[dot-Update()_25]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Update()_22]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 - [[Keyboard]] - code
 - [[Mouse]] - code
 - [[PrologoRuntimeVerification]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
@@ -29,12 +29,12 @@ SORT file.name ASC
 - 8 edges to [[_COMMUNITY_Community 48]]
 - 6 edges to [[_COMMUNITY_Community 0]]
 - 2 edges to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 - 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 95]]
 - 1 edge to [[_COMMUNITY_Community 86]]
-- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 19]]
 
 ## Top bridge nodes
 - [[dot-Start()_17]] - degree 10, connects to 4 communities

@@ -1,23 +1,32 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 33"
-location: "L247"
+community: "Community 86"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_86
 ---
 
 # .Interagir()
 
 ## Connections
-- [[dot-Ativar()_2]] - `calls` [INFERRED]
-- [[dot-Ativar()_1]] - `calls` [INFERRED]
-- [[dot-Ativar()_3]] - `calls` [INFERRED]
-- [[dot-LerControles()]] - `calls` [EXTRACTED]
-- [[dot-Play()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
+- [[dot-Dados()]] - `calls` [EXTRACTED]
+- [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
+- [[dot-Dialogo()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Nota()]] - `calls` [EXTRACTED]
+- [[dot-Numero()]] - `calls` [EXTRACTED]
+- [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
+- [[dot-Oferecer()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[dot-TocarRadio()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomAtenderOrelhao()]] - `calls` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[DialogoLinha]] - `calls` [INFERRED]
+- [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_86

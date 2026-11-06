@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
 community: "Community 23"
-location: "L190"
+location: "L265"
 tags:
   - graphify/code
   - graphify/EXTRACTED

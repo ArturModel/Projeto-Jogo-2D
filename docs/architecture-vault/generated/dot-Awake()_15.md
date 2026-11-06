@@ -1,17 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 42"
-location: "L21"
+community: "Community 44"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_44
 ---
 
 # .Awake()
 
 ## Connections
-- [[ChuvaRolando]] - `method` [EXTRACTED]
+- [[dot-PrepararCaminhadaMarcus()]] - `calls` [EXTRACTED]
+- [[dot-PrepararFeixeLanterna()]] - `calls` [EXTRACTED]
+- [[dot-PrepararPosesLanterna()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
+- [[Rigidbody2D]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_44

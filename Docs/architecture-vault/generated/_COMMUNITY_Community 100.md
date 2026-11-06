@@ -32,11 +32,12 @@ SORT file.name ASC
 ## Connections to other communities
 - 13 edges to [[_COMMUNITY_Community 3]]
 - 12 edges to [[_COMMUNITY_Community 21]]
-- 3 edges to [[_COMMUNITY_Community 39]]
 - 3 edges to [[_COMMUNITY_Community 83]]
+- 2 edges to [[_COMMUNITY_Community 39]]
 - 2 edges to [[_COMMUNITY_Community 38]]
 - 1 edge to [[_COMMUNITY_Community 43]]
 - 1 edge to [[_COMMUNITY_Community 56]]
+- 1 edge to [[_COMMUNITY_Community 2]]
 
 ## Top bridge nodes
 - [[dot-Update()]] - degree 8, connects to 4 communities

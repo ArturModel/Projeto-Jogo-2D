@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 51"
+community: "Community 34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_34
 ---
 
 # ScrollRect
 
 ## Connections
-- [[dot-Build()_1]] - `references` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 - [[dot-Use()]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_34

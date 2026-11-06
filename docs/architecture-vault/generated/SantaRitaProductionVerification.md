@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-BuildFinalLivingWorld()]] - `method` [EXTRACTED]
-- [[dot-BuildQA()]] - `method` [EXTRACTED]
-- [[dot-Run()_7]] - `method` [EXTRACTED]
+- [[dot-BuildQA()_1]] - `method` [EXTRACTED]
+- [[dot-Run()_3]] - `method` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_49

@@ -86,12 +86,12 @@ public sealed class PrologoRuntimeVerification : MonoBehaviour
         focoFixture=false; p.SendMessage("OnApplicationFocus",false); tempo=p.Tempo;
         yield return new WaitForSecondsRealtime(.4f); Check(Mathf.Abs(tempo-p.Tempo)<.02f,"Perda de foco suspende viagem");
         focoFixture=true; p.SendMessage("OnApplicationFocus",true);
-        while(p!=null && p.Tempo<43)yield return null;
+        while(p!=null && p.Tempo<PrologoJogavel.InicioManobra+1)yield return null;
         Check(p!=null && p.Estacionamento>0,"Manobra inicia antes da parada");
         yield return Captura("05-aproximacao");
         while(p!=null && p.Tempo<PrologoJogavel.Parado+.3f)yield return null;
         Check(p!=null && p.Velocidade==0 && p.Estacionamento==1,"Carro estaciona no recuo");
-        Check(p!=null && p.PosicaoLateral>4.5f,"Carro deixa a pista para o recuo pavimentado");
+        Check(p!=null && p.PosicaoLateral>4.5f && p.Terra==1,"Carro deixa a estrada de terra para o recuo");
         if(p!=null)
         {
             float d=p.Distancia;

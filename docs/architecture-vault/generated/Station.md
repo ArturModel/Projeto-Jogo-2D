@@ -12,7 +12,7 @@ tags:
 # Station
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [INFERRED]
+- [[dot-Apply()_3]] - `calls` [INFERRED]
 - [[dot-Exteriors()]] - `calls` [INFERRED]
 - [[dot-NPC()]] - `calls` [INFERRED]
 - [[SantaRitaNpcWork]] - `contains` [EXTRACTED]

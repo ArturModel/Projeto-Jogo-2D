@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
-- [[dot-Start()_19]] - `calls` [EXTRACTED]
+- [[dot-Start()_20]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_86

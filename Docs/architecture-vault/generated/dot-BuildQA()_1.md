@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
 type: "code"
-community: "Community 99"
-location: "L43"
+community: "Community 49"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_49
 ---
 
 # .BuildQA()
 
 ## Connections
-- [[dot-Build()_3]] - `calls` [EXTRACTED]
-- [[PrologoJogavelVerification]] - `method` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
+- [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_49

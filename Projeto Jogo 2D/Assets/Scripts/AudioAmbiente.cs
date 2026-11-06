@@ -105,6 +105,27 @@ public class AudioAmbiente : MonoBehaviour
         }
     }
 
+    // O prólogo reaproveita a fonte do motor e acrescenta só a superfície nova.
+    // As camadas continuam pertencendo a este mixer (volume, foco e pausa comuns).
+    public void ConfigurarLoop(string nome, AudioClip clipe)
+    {
+        if (clipe == null) { Debug.LogError("Loop ausente: " + nome); return; }
+        Camada c;
+        if (!porNome.TryGetValue(nome, out c))
+        {
+            c = new Camada { nome = nome, fonte = gameObject.AddComponent<AudioSource>() };
+            System.Array.Resize(ref camadas, camadas.Length + 1);
+            camadas[camadas.Length - 1] = c;
+            porNome[nome] = c;
+        }
+        c.clipe = clipe; c.loop = true;
+        c.alvo = c.volumeAtual = 0;
+        c.fonte.Stop(); c.fonte.clip = clipe; c.fonte.loop = true;
+        c.fonte.playOnAwake = false; c.fonte.spatialBlend = 0; c.fonte.volume = 0;
+        c.fonte.Play();
+        if (pausado) c.fonte.Pause();
+    }
+
     // Som avulso: uma passada de limpador, um clique de seta.
     public void Disparar(string nome, float volume = 1f)
     {

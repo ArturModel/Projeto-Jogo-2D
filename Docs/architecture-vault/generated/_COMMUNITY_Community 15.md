@@ -1,11 +1,11 @@
 ---
 type: community
-members: 29
+members: 28
 ---
 
 # Community 15
 
-**Members:** 29 nodes
+**Members:** 28 nodes
 
 ## Members
 - [[dot-AlterarAtivacao()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
@@ -22,8 +22,8 @@ members: 29
 - [[dot-OnDisable()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-OnDisable()_1]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 - [[dot-PrepararResolucoes()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-Start()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[dot-Start()_2]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
+- [[dot-Start()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
+- [[dot-Start()_3]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 - [[dot-Vincular()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-Vincular()_2]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 - [[AspectRatioFitter]] - code
@@ -34,7 +34,6 @@ members: 29
 - [[Resolution]] - code
 - [[Slider]] - code
 - [[SubtitleSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[TMP_Dropdown]] - code
 - [[Toggle]] - code
 - [[VideoSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 
@@ -46,22 +45,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 12]]
+- 8 edges to [[_COMMUNITY_Community 12]]
 - 3 edges to [[_COMMUNITY_Community 7]]
-- 2 edges to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 54]]
 - 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 24]]
+- 2 edges to [[_COMMUNITY_Community 96]]
+- 2 edges to [[_COMMUNITY_Community 19]]
 - 2 edges to [[_COMMUNITY_Community 31]]
 - 2 edges to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 8]]
 - 1 edge to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 96]]
 - 1 edge to [[_COMMUNITY_Community 48]]
 - 1 edge to [[_COMMUNITY_Community 92]]
 
 ## Top bridge nodes
-- [[VideoSettingsController]] - degree 20, connects to 4 communities
+- [[VideoSettingsController]] - degree 20, connects to 5 communities
 - [[SubtitleSettingsController]] - degree 17, connects to 4 communities
 - [[Slider]] - degree 8, connects to 3 communities
 - [[dot-MontarTela()]] - degree 7, connects to 3 communities
-- [[dot-Vincular()_1]] - degree 5, connects to 2 communities
+- [[dot-Vincular()_2]] - degree 6, connects to 2 communities

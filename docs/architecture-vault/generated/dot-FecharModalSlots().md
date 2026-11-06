@@ -17,7 +17,7 @@ tags:
 - [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_20]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_45

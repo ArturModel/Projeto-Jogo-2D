@@ -1,22 +1,29 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs"
 type: "code"
-community: "Community 6"
-location: "L30"
+community: "Community 87"
+location: "L9"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_6
+  - graphify/INFERRED
+  - community/Community_87
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-ConfigureArt()]] - `calls` [EXTRACTED]
-- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
-- [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
+- [[dot-Balim()]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [INFERRED]
+- [[dot-Clone()_1]] - `calls` [INFERRED]
+- [[dot-CriarMao()]] - `calls` [INFERRED]
+- [[dot-ForcaNoTempo()]] - `calls` [EXTRACTED]
+- [[dot-Lancar()_2]] - `calls` [INFERRED]
+- [[dot-Preparar()_1]] - `calls` [EXTRACTED]
+- [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
+- [[dot-Step()]] - `calls` [INFERRED]
+- [[BochaBall]] - `calls` [INFERRED]
+- [[BochaMatch]] - `calls` [INFERRED]
+- [[BochaPerspectiveVerification]] - `method` [EXTRACTED]
+- [[BochaSimulation]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/INFERRED #community/Community_87

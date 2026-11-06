@@ -12,7 +12,7 @@ tags:
 # Stretch
 
 ## Connections
-- [[dot-Apply()_3]] - `calls` [EXTRACTED]
+- [[dot-Apply()_5]] - `calls` [EXTRACTED]
 - [[SantaRitaRuralPaths]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

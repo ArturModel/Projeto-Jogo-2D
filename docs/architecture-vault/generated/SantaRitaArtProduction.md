@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
 type: "code"
-community: "Community 87"
+community: "Community 20"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_20
 ---
 
 # SantaRitaArtProduction
 
 ## Connections
-- [[dot-Apply()_6]] - `method` [EXTRACTED]
+- [[dot-Apply()_4]] - `method` [EXTRACTED]
 - [[dot-ApplyMacroTiles()]] - `method` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `method` [EXTRACTED]
 - [[dot-ContactShadow()]] - `method` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[dot-NeutralSprite()]] - `method` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_20

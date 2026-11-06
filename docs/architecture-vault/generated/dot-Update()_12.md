@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 26"
-location: "L27"
+community: "Community 19"
+location: "L329"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_19
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Ativar()]] - `calls` [INFERRED]
-- [[dot-Procurar()]] - `calls` [EXTRACTED]
-- [[PonteiroCarro]] - `method` [EXTRACTED]
+- [[dot-Encerrar()]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_19

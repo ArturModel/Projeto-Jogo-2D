@@ -1,25 +1,25 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs"
 type: "code"
-community: "Community 41"
+community: "Community 16"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/Community_16
 ---
 
 # SantaRitaForeground
 
 ## Connections
-- [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_4]] - `method` [EXTRACTED]
-- [[dot-Start()_12]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_1]] - `method` [EXTRACTED]
+- [[dot-Start()_4]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaForeground.cs]] - `contains` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/Community_16

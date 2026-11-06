@@ -12,8 +12,8 @@ tags:
 # .CreateBox()
 
 ## Connections
-- [[dot-Awake()_18]] - `calls` [EXTRACTED]
-- [[dot-Build()_1]] - `calls` [EXTRACTED]
+- [[dot-Awake()_16]] - `calls` [EXTRACTED]
+- [[dot-Build()_2]] - `calls` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
 - [[dot-LoadSprite()]] - `calls` [EXTRACTED]

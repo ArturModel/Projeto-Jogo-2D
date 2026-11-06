@@ -16,7 +16,7 @@ public sealed class PrologoTextureImporter : AssetPostprocessor
         t.mipmapEnabled=false; t.filterMode=FilterMode.Point; t.wrapMode=TextureWrapMode.Clamp;
         t.textureCompression=TextureImporterCompression.Uncompressed;
         t.npotScale=TextureImporterNPOTScale.None; t.maxTextureSize=2048;
-        if(assetPath.EndsWith("Asfalto.png",StringComparison.Ordinal))
+        if(assetPath.EndsWith("Asfalto.png",StringComparison.Ordinal) || assetPath.EndsWith("Terra.png",StringComparison.Ordinal) || assetPath.EndsWith("SoloVegetacao.png",StringComparison.Ordinal))
         { t.wrapMode=TextureWrapMode.Repeat; t.mipmapEnabled=true; t.filterMode=FilterMode.Bilinear; }
     }
 }
@@ -45,7 +45,7 @@ public static class PrologoJogavelVerification
     private static void Build(bool qa)
     {
         Directory.CreateDirectory(Output);
-        foreach(string n in new[]{"Cabine","Volante","Paisagem","Objetos","Asfalto"})
+        foreach(string n in new[]{"Cabine","Volante","Horizonte","CenarioRural","Objetos","Asfalto","Terra","SoloVegetacao"})
         {
             string path="Assets/Resources/PrologoJogavel/"+n+".png";
             AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceUpdate);
@@ -55,7 +55,7 @@ public static class PrologoJogavelVerification
         if(UnityEngine.Object.FindAnyObjectByType<PrologoJogavel>()==null)throw new Exception("Prólogo jogável não está ativo");
         if(UnityEngine.Object.FindAnyObjectByType<PrologoVideo>()!=null)throw new Exception("Vídeo legado ainda ativo");
         if(UnityEngine.Object.FindAnyObjectByType<PrologoDirector>()!=null)throw new Exception("Dois diretores ativos");
-        Debug.Log("PROLOGO EDITOR PASS: cinco texturas importadas; um diretor jogável; vídeo/diretor legados inativos.");
+        Debug.Log("PROLOGO EDITOR PASS: oito texturas importadas; um diretor jogável; vídeo/diretor legados inativos.");
         string folder=Output+(qa?"/QA":"/Normal");
         var options=new BuildPlayerOptions {
             scenes=qa?new[]{"Assets/Scenes/MainMenu.unity","Assets/Scenes/Prologo.unity","Assets/Scenes/Cidade/EntradaDaCidade.unity"}:

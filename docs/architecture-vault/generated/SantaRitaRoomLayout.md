@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-AdaptSavedPosition()]] - `method` [EXTRACTED]
-- [[dot-Apply()]] - `references` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
 - [[dot-FindWalkable()]] - `method` [EXTRACTED]
 - [[dot-Free()]] - `method` [EXTRACTED]
 - [[dot-RunR2()]] - `references` [EXTRACTED]
 - [[dot-SlotsR2()]] - `references` [EXTRACTED]
-- [[dot-Start()_21]] - `references` [EXTRACTED]
+- [[dot-Start()_15]] - `references` [EXTRACTED]
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaRoomLayout.cs]] - `contains` [EXTRACTED]

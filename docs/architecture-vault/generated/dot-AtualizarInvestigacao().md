@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Interagir()_1]] - `calls` [EXTRACTED]
+- [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Start()_18]] - `calls` [EXTRACTED]
+- [[dot-Start()_19]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 

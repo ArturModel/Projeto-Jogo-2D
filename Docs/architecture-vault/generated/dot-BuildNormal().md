@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
 type: "code"
-community: "Community 99"
+community: "Community 19"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_19
 ---
 
 # .BuildNormal()
 
 ## Connections
-- [[dot-Build()_3]] - `calls` [EXTRACTED]
+- [[dot-Build()_1]] - `calls` [EXTRACTED]
 - [[PrologoJogavelVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_19

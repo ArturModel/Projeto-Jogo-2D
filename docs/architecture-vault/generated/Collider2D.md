@@ -11,7 +11,7 @@ tags:
 # Collider2D
 
 ## Connections
-- [[dot-Apply()_6]] - `references` [EXTRACTED]
+- [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-Atualizar()]] - `references` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `references` [EXTRACTED]
 - [[dot-Awake()_13]] - `references` [EXTRACTED]

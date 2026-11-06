@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 5"
-location: "L19"
+community: "Community 45"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_45
 ---
 
 # .Start()
 
 ## Connections
-- [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
-- [[Shader]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_45

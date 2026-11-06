@@ -12,11 +12,11 @@ tags:
 # SantaRitaBarProp
 
 ## Connections
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
-- [[dot-Interact()_2]] - `method` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
+- [[dot-Interact()_4]] - `method` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_2]] - `defines` [EXTRACTED]
+- [[Prompt_4]] - `defines` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_18

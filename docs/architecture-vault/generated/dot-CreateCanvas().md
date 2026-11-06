@@ -12,14 +12,14 @@ tags:
 # .CreateCanvas()
 
 ## Connections
-- [[dot-Awake()_18]] - `calls` [EXTRACTED]
+- [[dot-Awake()_16]] - `calls` [EXTRACTED]
 - [[dot-Build()]] - `calls` [EXTRACTED]
-- [[dot-Build()_1]] - `calls` [EXTRACTED]
 - [[dot-Build()_2]] - `calls` [EXTRACTED]
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Build()_3]] - `calls` [EXTRACTED]
 - [[dot-Construir()_2]] - `calls` [EXTRACTED]
-- [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-Construir()_3]] - `calls` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_4]] - `calls` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]

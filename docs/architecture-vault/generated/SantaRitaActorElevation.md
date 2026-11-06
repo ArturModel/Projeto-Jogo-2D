@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Awake()_13]] - `method` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_3]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_7]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_6]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_8]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

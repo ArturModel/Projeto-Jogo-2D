@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 95"
-location: "L141"
+community: "Community 93"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_95
+  - community/Community_93
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
-- [[dot-MontarSom()]] - `calls` [EXTRACTED]
-- [[dot-Simular()]] - `calls` [EXTRACTED]
-- [[Chuva]] - `method` [EXTRACTED]
-- [[PixelPerfectCamera]] - `references` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_95
+#graphify/code #graphify/EXTRACTED #community/Community_93

@@ -1,35 +1,32 @@
 ---
 type: community
-members: 22
+members: 19
 ---
 
 # Community 87
 
-**Members:** 22 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[dot-Apply()_6]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-ApplyMacroTiles()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-BusStationRoutine()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-ContactShadow()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-DecorateTerrain()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-DetectarLimitesDaRegiao()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
-- [[dot-EdgeTile()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-Interact()_9]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
-- [[dot-NeutralSprite()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-Run()_7]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
-- [[Capitulo2Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
-- [[Capitulo2Interactable.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
-- [[ColorAdjustments]] - code
-- [[Prompt_9]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
-- [[SantaRitaArtProduction]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[ShadowCaster2D]] - code
-- [[TextMeshPro]] - code
-- [[Tilemap]] - code
-- [[TilemapRenderer]] - code
-- [[Vignette]] - code
-- [[Volume]] - code
-- [[VolumeProfile]] - code
+- [[dot-Avancar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[dot-Balim()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-BestShot()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
+- [[dot-Check()_2]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[dot-Clone()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-Clone()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-CriarMao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs
+- [[dot-Gait()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[dot-Matches()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[dot-Physics()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[dot-RepousarParaPrevisao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-Reset()]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[dot-Run()_6]] - code - Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs
+- [[dot-Run()_7]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[BochaPerspectiveVerification]] - code - Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs
+- [[Chapter2Verification]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[MarcusGait]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[Quadro]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[QuadroDetalhado]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,26 +36,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Community 18]]
-- 10 edges to [[_COMMUNITY_Community 11]]
-- 7 edges to [[_COMMUNITY_Community 16]]
-- 7 edges to [[_COMMUNITY_Community 20]]
-- 7 edges to [[_COMMUNITY_Community 44]]
-- 6 edges to [[_COMMUNITY_Community 49]]
-- 5 edges to [[_COMMUNITY_Community 6]]
-- 3 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 4]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 40]]
-- 1 edge to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 2]]
+- 17 edges to [[_COMMUNITY_Community 4]]
+- 15 edges to [[_COMMUNITY_Community 27]]
+- 8 edges to [[_COMMUNITY_Community 45]]
+- 6 edges to [[_COMMUNITY_Community 37]]
+- 3 edges to [[_COMMUNITY_Community 44]]
+- 3 edges to [[_COMMUNITY_Community 1]]
+- 3 edges to [[_COMMUNITY_Community 49]]
+- 2 edges to [[_COMMUNITY_Community 48]]
+- 2 edges to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 56]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 89]]
 
 ## Top bridge nodes
-- [[dot-Run()_7]] - degree 15, connects to 8 communities
-- [[dot-Apply()_6]] - degree 25, connects to 6 communities
-- [[Tilemap]] - degree 19, connects to 6 communities
-- [[Capitulo2Interactable]] - degree 12, connects to 6 communities
-- [[dot-BusStationRoutine()]] - degree 7, connects to 3 communities
+- [[dot-BestShot()]] - degree 11, connects to 5 communities
+- [[dot-Run()_6]] - degree 13, connects to 4 communities
+- [[dot-Check()_2]] - degree 10, connects to 4 communities
+- [[Chapter2Verification]] - degree 10, connects to 3 communities
+- [[dot-Run()_7]] - degree 10, connects to 3 communities

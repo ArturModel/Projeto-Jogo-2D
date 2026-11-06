@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 2"
+community: "Community 24"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_24
 ---
 
 # Capitulo1Director
@@ -65,10 +65,10 @@ tags:
 - [[dot-PintarAcabamentoArquitetonicoInterior()]] - `method` [EXTRACTED]
 - [[dot-PosicionarJogadorInicialRoutine()]] - `method` [EXTRACTED]
 - [[dot-PrepararMusicasDasZonas()]] - `method` [EXTRACTED]
-- [[dot-ResetStatic()]] - `method` [EXTRACTED]
+- [[dot-ResetStatic()_1]] - `method` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `method` [EXTRACTED]
 - [[dot-TryObterInfoZona()]] - `method` [EXTRACTED]
-- [[dot-Update()_8]] - `method` [EXTRACTED]
+- [[dot-Update()_15]] - `method` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
@@ -91,4 +91,4 @@ tags:
 - [[ZonaId_1]] - `references` [EXTRACTED]
 - [[ZonaId]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_24

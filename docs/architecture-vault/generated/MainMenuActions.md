@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
 type: "code"
-community: "Community 42"
+community: "Community 110"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_110
 ---
 
 # MainMenuActions
@@ -15,8 +15,8 @@ tags:
 - [[dot-Continuar()]] - `method` [EXTRACTED]
 - [[dot-NovoJogo()]] - `method` [EXTRACTED]
 - [[dot-Opcoes()]] - `method` [EXTRACTED]
-- [[dot-Sair()_1]] - `method` [EXTRACTED]
+- [[dot-Sair()]] - `method` [EXTRACTED]
 - [[MainMenuActions.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_110

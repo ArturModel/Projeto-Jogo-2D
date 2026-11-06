@@ -12,7 +12,7 @@ tags:
 # .Dispose()
 
 ## Connections
-- [[dot-OnDestroy()_6]] - `calls` [EXTRACTED]
+- [[dot-OnDestroy()_7]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_39

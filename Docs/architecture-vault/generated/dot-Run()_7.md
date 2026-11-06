@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
 community: "Community 87"
-location: "L52"
+location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,20 +12,15 @@ tags:
 # .Run()
 
 ## Connections
-- [[dot-Check()]] - `calls` [INFERRED]
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[Capitulo2Portal]] - `references` [EXTRACTED]
+- [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
+- [[dot-Gait()]] - `calls` [EXTRACTED]
+- [[dot-Matches()]] - `calls` [EXTRACTED]
+- [[dot-Narrative()]] - `calls` [EXTRACTED]
+- [[dot-Physics()]] - `calls` [EXTRACTED]
+- [[dot-Rules()]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
+- [[dot-Saves()]] - `calls` [EXTRACTED]
+- [[Chapter2Verification]] - `method` [EXTRACTED]
 - [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
-- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
-- [[ShadowCaster2D]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[TextMeshPro]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_87

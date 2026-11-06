@@ -12,7 +12,7 @@ tags:
 # SantaRitaWorldLighting
 
 ## Connections
-- [[dot-Apply()_4]] - `method` [EXTRACTED]
+- [[dot-Apply()_6]] - `method` [EXTRACTED]
 - [[SantaRitaWorldLighting.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_1

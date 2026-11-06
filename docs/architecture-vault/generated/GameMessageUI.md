@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-Avancar()]] - `method` [EXTRACTED]
-- [[dot-Awake()_1]] - `method` [EXTRACTED]
-- [[dot-Build()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_2]] - `method` [EXTRACTED]
+- [[dot-Build()_2]] - `method` [EXTRACTED]
 - [[dot-CarregarArteInspecao()]] - `method` [EXTRACTED]
 - [[dot-ConfigurarRetratoEFalante()]] - `method` [EXTRACTED]
 - [[dot-Digitar()]] - `method` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[dot-Show()_1]] - `method` [EXTRACTED]
 - [[dot-ShowDialogue()]] - `method` [EXTRACTED]
 - [[dot-ShowInspection()]] - `method` [EXTRACTED]
-- [[dot-Update()_2]] - `method` [EXTRACTED]
+- [[dot-Update()_5]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Coroutine]] - `references` [EXTRACTED]

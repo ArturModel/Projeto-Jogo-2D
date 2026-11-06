@@ -12,16 +12,16 @@ tags:
 # SantaRitaNpcWork
 
 ## Connections
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
 - [[dot-Free()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_1]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_3]] - `references` [EXTRACTED]
 - [[dot-NPC()]] - `references` [EXTRACTED]
 - [[dot-OnDisable()_2]] - `method` [EXTRACTED]
 - [[dot-RoutineR2()]] - `references` [EXTRACTED]
 - [[dot-Start()_6]] - `method` [EXTRACTED]
-- [[dot-Update()_18]] - `method` [EXTRACTED]
+- [[dot-Update()_27]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaNpcWork.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]

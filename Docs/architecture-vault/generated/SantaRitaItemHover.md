@@ -12,8 +12,8 @@ tags:
 # SantaRitaItemHover
 
 ## Connections
-- [[dot-Awake()_18]] - `references` [EXTRACTED]
-- [[dot-OnPointerEnter()]] - `method` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
+- [[dot-OnPointerEnter()_1]] - `method` [EXTRACTED]
 - [[dot-OnPointerExit()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[IPointerEnterHandler]] - `implements` [EXTRACTED]
