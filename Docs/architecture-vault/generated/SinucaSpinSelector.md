@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
-community: "Community 40"
+community: "Community 42"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_42
 ---
 
 # SinucaSpinSelector
@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 - [[dot-Disc()]] - `method` [EXTRACTED]
-- [[dot-OnDrag()_2]] - `method` [EXTRACTED]
-- [[dot-OnPointerDown()_2]] - `method` [EXTRACTED]
+- [[dot-OnDrag()]] - `method` [EXTRACTED]
+- [[dot-OnPointerDown()]] - `method` [EXTRACTED]
 - [[dot-OnPopulateMesh()_1]] - `method` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
-- [[dot-Select()]] - `method` [EXTRACTED]
+- [[dot-Select()_1]] - `method` [EXTRACTED]
 - [[dot-SetContact()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[Contact]] - `defines` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[SinucaSpinSelector.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_42

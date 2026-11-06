@@ -12,7 +12,7 @@ members: 5
 - [[box()_6]] - code - Tools/Aseprite/bar-2004.lua
 - [[c()_7]] - code - Tools/Aseprite/bar-2004.lua
 - [[ellipse()]] - code - Tools/Aseprite/bar-2004.lua
-- [[save()_2]] - code - Tools/Aseprite/bar-2004.lua
+- [[save()_3]] - code - Tools/Aseprite/bar-2004.lua
 
 ## Live Query (requires Dataview plugin)
 

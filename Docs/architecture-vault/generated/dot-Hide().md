@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
 type: "code"
 community: "Community 24"
-location: "L88"
+location: "L138"
 tags:
   - graphify/code
   - graphify/INFERRED
@@ -12,7 +12,7 @@ tags:
 # .Hide()
 
 ## Connections
-- [[dot-Fechar()_4]] - `calls` [INFERRED]
+- [[dot-Fechar()]] - `calls` [INFERRED]
 - [[dot-SelecionarAba()]] - `calls` [INFERRED]
 - [[MarcusNotebookUI]] - `method` [EXTRACTED]
 

@@ -1,34 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 34"
-location: "L26"
+community: "Community 18"
+location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_18
 ---
 
 # .Rebuild()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [INFERRED]
-- [[dot-Annotation()]] - `calls` [EXTRACTED]
-- [[dot-Building()]] - `calls` [EXTRACTED]
-- [[dot-Initialize()_1]] - `calls` [EXTRACTED]
-- [[dot-Known()]] - `calls` [EXTRACTED]
-- [[dot-Label()_1]] - `calls` [EXTRACTED]
-- [[dot-Landmark()]] - `calls` [EXTRACTED]
-- [[dot-ObjectiveId()]] - `calls` [EXTRACTED]
-- [[dot-Region()]] - `calls` [EXTRACTED]
-- [[dot-RegionName()]] - `calls` [EXTRACTED]
-- [[dot-ShowInterior()]] - `calls` [EXTRACTED]
-- [[dot-ToAtlas()]] - `calls` [INFERRED]
-- [[dot-UV()]] - `calls` [EXTRACTED]
-- [[Button]] - `references` [EXTRACTED]
+- [[dot-Cell()]] - `calls` [EXTRACTED]
+- [[dot-Contents()]] - `calls` [EXTRACTED]
+- [[dot-Icon()]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_3]] - `calls` [EXTRACTED]
+- [[dot-Name()]] - `calls` [EXTRACTED]
+- [[dot-Picture()]] - `calls` [EXTRACTED]
+- [[dot-Swap()]] - `calls` [EXTRACTED]
+- [[dot-Toggle()]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[RawImage]] - `references` [EXTRACTED]
-- [[SantaRitaAtlasView]] - `method` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_18

@@ -1,18 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookContent.cs"
 type: "code"
-community: "Community 25"
+community: "Community 1"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_1
 ---
 
 # .Read()
 
 ## Connections
 - [[dot-BuildPages()]] - `calls` [EXTRACTED]
+- [[dot-DrawIndex()]] - `calls` [EXTRACTED]
 - [[dot-ObterEntradasDiario()]] - `calls` [EXTRACTED]
 - [[dot-Project()]] - `calls` [EXTRACTED]
 - [[dot-RunNotebook()]] - `calls` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[MarcusNotebookContent]] - `method` [EXTRACTED]
 - [[MarcusNotebookEntry]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_1

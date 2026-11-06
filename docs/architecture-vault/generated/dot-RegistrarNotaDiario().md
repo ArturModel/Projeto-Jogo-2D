@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 31"
+community: "Community 13"
 location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_13
 ---
 
 # .RegistrarNotaDiario()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
 - [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
-- [[dot-Ativar()_2]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_1]] - `calls` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarLinhaDoTempo()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirBocha()]] - `calls` [EXTRACTED]
@@ -25,12 +25,15 @@ tags:
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-Nota()]] - `calls` [EXTRACTED]
 - [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarDiario()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
 - [[dot-RunNotebook()]] - `calls` [EXTRACTED]
-- [[dot-Start()_14]] - `calls` [EXTRACTED]
+- [[dot-Start()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_9]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_13

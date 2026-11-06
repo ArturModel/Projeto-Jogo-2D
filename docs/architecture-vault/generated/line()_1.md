@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[c2-npc-work.lua]] - `contains` [EXTRACTED]
-- [[rect()_2]] - `calls` [EXTRACTED]
+- [[rect()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_58

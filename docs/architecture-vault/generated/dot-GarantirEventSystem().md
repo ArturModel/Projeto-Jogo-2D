@@ -12,7 +12,7 @@ tags:
 # .GarantirEventSystem()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[EventSystem]] - `references` [EXTRACTED]
 - [[InputSystemUIInputModule]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .SaveSlot()
@@ -19,6 +19,7 @@ tags:
 - [[dot-ObterNomeAmigavelOrelhao()]] - `calls` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[dot-RunAtlas()]] - `calls` [EXTRACTED]
 - [[dot-RunNotebook()]] - `calls` [EXTRACTED]
 - [[dot-Save()_1]] - `calls` [EXTRACTED]
@@ -30,4 +31,4 @@ tags:
 - [[ManualSaveData]] - `calls` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

@@ -1,22 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 51"
-location: "L718"
+community: "Community 84"
+location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_84
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_12]] - `calls` [EXTRACTED]
+- [[Interactable]] - `references` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[Renderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_84

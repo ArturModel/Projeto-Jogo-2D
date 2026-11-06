@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [INFERRED]
-- [[dot-Aplicar()_1]] - `method` [EXTRACTED]
+- [[dot-Aplicar()]] - `method` [EXTRACTED]
 - [[dot-AvancarComContatos()]] - `method` [EXTRACTED]
 - [[dot-BestShot()]] - `references` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
@@ -38,7 +38,7 @@ tags:
 - [[dot-Resolver()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
 - [[dot-Run()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `calls` [INFERRED]
+- [[dot-Run()_4]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-SetState()]] - `references` [EXTRACTED]
 - [[dot-Step()]] - `method` [EXTRACTED]

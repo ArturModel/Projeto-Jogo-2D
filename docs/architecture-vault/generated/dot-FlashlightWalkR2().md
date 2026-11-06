@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
 - [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

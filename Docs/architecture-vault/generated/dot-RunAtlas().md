@@ -1,27 +1,27 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AtlasRuntimeVerification.cs"
 type: "code"
-community: "Community 92"
+community: "Community 0"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_92
+  - community/Community_0
 ---
 
 # .RunAtlas()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [INFERRED]
+- [[dot-Abrir()_1]] - `calls` [INFERRED]
 - [[dot-Annotation()]] - `calls` [EXTRACTED]
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-Current()]] - `calls` [EXTRACTED]
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_4]] - `calls` [INFERRED]
-- [[dot-Finish()]] - `calls` [INFERRED]
+- [[dot-Fechar()]] - `calls` [INFERRED]
+- [[dot-Finish()]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Known()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[dot-TryObterInfoZona()]] - `calls` [EXTRACTED]
-- [[dot-UV()]] - `calls` [EXTRACTED]
+- [[dot-UV()_1]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[GameStateSnapshot]] - `calls` [INFERRED]
 - [[IEnumerator]] - `references` [EXTRACTED]
@@ -43,4 +43,4 @@ tags:
 - [[SantaRitaAtlasView]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_92
+#graphify/code #graphify/EXTRACTED #community/Community_0

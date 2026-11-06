@@ -23,6 +23,7 @@ tags:
 - [[InteractionPrompt.cs]] - `imports` [EXTRACTED]
 - [[InteriorAccessRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[MapaInterativoUI.cs]] - `imports` [EXTRACTED]
+- [[MilaRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
@@ -37,6 +38,7 @@ tags:
 - [[SantaRitaLivingWorldAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaTapeDeck.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
 - [[TransicaoDeZonaTrigger.cs]] - `imports` [EXTRACTED]
 

@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_9]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_5]] - `calls` [EXTRACTED]
 - [[dot-MetadeDaTela()]] - `calls` [EXTRACTED]
 - [[dot-NovaGota()]] - `calls` [EXTRACTED]
 - [[dot-NovoRespingo()]] - `calls` [EXTRACTED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
+- [[dot-Start()_10]] - `calls` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_25

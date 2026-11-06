@@ -1,18 +1,18 @@
 ---
-source_file: "Tools/Aseprite/marcus-flashlight.lua"
+source_file: "Tools/Aseprite/c2-npc-work.lua"
 type: "code"
-community: "Community 61"
-location: "L10"
+community: "Community 58"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_61
+  - community/Community_58
 ---
 
 # rect()
 
 ## Connections
-- [[line()_2]] - `calls` [EXTRACTED]
-- [[marcus-flashlight.lua]] - `contains` [EXTRACTED]
+- [[c2-npc-work.lua]] - `contains` [EXTRACTED]
+- [[line()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_61
+#graphify/code #graphify/EXTRACTED #community/Community_58

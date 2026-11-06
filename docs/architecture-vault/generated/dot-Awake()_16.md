@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "Community 49"
-location: "L24"
+community: "Community 44"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_44
 ---
 
 # .Awake()
 
 ## Connections
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
+- [[Capitulo2Director]] - `references` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_44

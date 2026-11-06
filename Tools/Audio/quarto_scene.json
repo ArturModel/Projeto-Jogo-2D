@@ -1,0 +1,24 @@
+{
+  "status": "study_not_approved",
+  "year": 1990,
+  "intent": "Gravador doméstico num quarto; conversa casual de adolescentes, sem locução ou suspense imposto.",
+  "cast": {
+    "julia": {"file": "julia.wav", "position": "perto do gravador", "rms_db": -21, "pan": -0.08, "lowpass_hz": 6500, "room_send": 0.08},
+    "lucas": {"file": "lucas.wav", "position": "ao lado da mesa", "rms_db": -23, "pan": 0.3, "lowpass_hz": 5200, "room_send": 0.13},
+    "marcus": {"file": "marcus.wav", "position": "mais ao fundo, ouvido com clareza", "rms_db": -28, "pan": -0.28, "lowpass_hz": 3200, "room_send": 0.22}
+  },
+  "lines": [
+    {"speaker": "julia", "text": "Tá, agora fica quieto um pouquinho. Lucas, não bate na mesa.", "gap_before": 1.25},
+    {"speaker": "lucas", "text": "Eu nem fiz nada!", "gap_before": -0.1},
+    {"speaker": "marcus", "text": "Já tá gravando?", "gap_before": 0.25}
+  ],
+  "ambience": {
+    "file": "room.mp3", "rms_db": -36,
+    "title": "House Room Tone", "author": "aleclubin", "license": "CC0-1.0",
+    "url": "https://freesound.org/people/aleclubin/sounds/641306/"
+  },
+  "foley": [
+    {"file": "button.mp3", "kind": "button", "time": 0.15, "peak_db": -19, "author": "220bluebulb", "license": "CC0-1.0", "url": "https://freesound.org/people/220bluebulb/sounds/572138/"},
+    {"file": "chair.mp3", "kind": "chair", "time": 0.75, "peak_db": -25, "author": "OverlookHotelRecords", "license": "CC0-1.0", "url": "https://freesound.org/people/OverlookHotelRecords/sounds/538961/"}
+  ]
+}

@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 36"
-location: "L71"
+community: "Community 85"
+location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_85
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[dot-SetActive()]] - `calls` [EXTRACTED]
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_85

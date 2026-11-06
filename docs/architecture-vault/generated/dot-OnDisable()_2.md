@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 15"
-location: "L125"
+community: "Community 25"
+location: "L164"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_25
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[SubtitleSettingsController]] - `method` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_25

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 38"
+community: "Community 110"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_110
 ---
 
 # .Sphere()
@@ -20,4 +20,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_110

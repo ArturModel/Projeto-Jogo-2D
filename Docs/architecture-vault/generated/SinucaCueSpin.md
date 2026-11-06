@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 118"
+community: "Community 39"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_118
+  - community/Community_39
 ---
 
 # SinucaCueSpin
@@ -24,4 +24,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaTableView.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_118
+#graphify/code #graphify/EXTRACTED #community/Community_39

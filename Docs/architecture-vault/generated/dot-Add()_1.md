@@ -1,32 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaAtlasAuthoring.cs"
 type: "code"
-community: "Community 41"
-location: "L340"
+community: "Community 51"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_41
+  - community/Community_51
 ---
 
 # .Add()
 
 ## Connections
-- [[dot-ApplyAbrigo()]] - `calls` [EXTRACTED]
-- [[dot-ApplyBarDoZeInterior()]] - `calls` [EXTRACTED]
-- [[dot-ApplyC1()]] - `calls` [EXTRACTED]
-- [[dot-ApplyCasaCostureira()]] - `calls` [EXTRACTED]
-- [[dot-ApplyCasaDoAvoInterior()]] - `calls` [EXTRACTED]
-- [[dot-ApplyExteriorC1()]] - `calls` [EXTRACTED]
-- [[dot-ApplyIgreja()]] - `calls` [EXTRACTED]
-- [[dot-ApplyMercadinhoDeposito()]] - `calls` [EXTRACTED]
-- [[dot-ApplyOficinaRadio()]] - `calls` [EXTRACTED]
-- [[dot-ApplyPrefeitura()]] - `calls` [EXTRACTED]
-- [[dot-ApplyRodoviaria()]] - `calls` [EXTRACTED]
-- [[BoxCollider2D]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-Capture()_1]] - `calls` [EXTRACTED]
+- [[AtlasLandmark]] - `calls` [INFERRED]
+- [[AtlasRegion]] - `references` [EXTRACTED]
+- [[AtlasSurvey]] - `references` [EXTRACTED]
+- [[SantaRitaAtlasAuthoring]] - `method` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_41
+#graphify/code #graphify/EXTRACTED #community/Community_51

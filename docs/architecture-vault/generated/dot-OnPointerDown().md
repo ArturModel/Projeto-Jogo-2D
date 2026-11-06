@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
-community: "Community 36"
-location: "L97"
+community: "Community 42"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_42
 ---
 
 # .OnPointerDown()
 
 ## Connections
-- [[dot-ScreenToTablePoint()]] - `calls` [EXTRACTED]
+- [[dot-Select()_1]] - `calls` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[SinucaSpinSelector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_42

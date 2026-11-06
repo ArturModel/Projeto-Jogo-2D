@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarTela()]] - `calls` [EXTRACTED]
 - [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
 - [[dot-EntradaTeclado()]] - `calls` [EXTRACTED]
 - [[dot-PodeMirar()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]

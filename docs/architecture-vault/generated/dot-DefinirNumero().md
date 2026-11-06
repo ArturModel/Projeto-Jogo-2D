@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 86"
+community: "Community 48"
 location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_48
 ---
 
 # .DefinirNumero()
@@ -22,6 +22,7 @@ tags:
 - [[dot-ProximaFalaContextual()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
+- [[dot-ToggleBookmark()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_48

@@ -1,17 +1,17 @@
 ---
-source_file: "Tools/Aseprite/bar-2004.lua"
+source_file: "Tools/Aseprite/interior-thresholds.lua"
 type: "code"
-community: "Community 90"
-location: "L7"
+community: "Community 60"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_90
+  - community/Community_60
 ---
 
 # save()
 
 ## Connections
-- [[bar-2004.lua]] - `contains` [EXTRACTED]
+- [[interior-thresholds.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_90
+#graphify/code #graphify/EXTRACTED #community/Community_60

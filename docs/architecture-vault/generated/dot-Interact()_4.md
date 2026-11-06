@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 31"
-location: "L28"
+community: "Community 26"
+location: "L183"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_26
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
-- [[ItemDeCena]] - `method` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_26

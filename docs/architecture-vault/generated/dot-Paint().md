@@ -12,7 +12,7 @@ tags:
 # .Paint()
 
 ## Connections
-- [[dot-Apply()_3]] - `calls` [EXTRACTED]
+- [[dot-Apply()_2]] - `calls` [EXTRACTED]
 - [[dot-Edge()]] - `calls` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
 - [[SantaRitaRuralPaths]] - `method` [EXTRACTED]

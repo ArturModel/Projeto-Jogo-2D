@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-ClickR4()]] - `calls` [INFERRED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [INFERRED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]

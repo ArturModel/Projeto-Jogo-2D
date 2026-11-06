@@ -30,6 +30,7 @@ tags:
 - [[SantaRitaInventory.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaNotebookAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaTapeDeck.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]
 - [[SinucaTableView.cs]] - `imports` [EXTRACTED]

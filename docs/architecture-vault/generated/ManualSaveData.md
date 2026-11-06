@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # ManualSaveData
@@ -22,4 +22,4 @@ tags:
 - [[CheckpointSystem.cs]] - `contains` [EXTRACTED]
 - [[GameStateSnapshot]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

@@ -1,22 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 24"
-location: "L144"
+community: "Community 18"
+location: "L119"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_18
 ---
 
 # .Place()
 
 ## Connections
-- [[dot-Hand()]] - `calls` [EXTRACTED]
-- [[dot-Initialize()]] - `calls` [EXTRACTED]
-- [[dot-Panel()]] - `calls` [EXTRACTED]
-- [[MarcusNotebookUI]] - `method` [EXTRACTED]
+- [[dot-Awake()_7]] - `calls` [EXTRACTED]
+- [[dot-Frame()]] - `calls` [EXTRACTED]
+- [[dot-Label()]] - `calls` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_18

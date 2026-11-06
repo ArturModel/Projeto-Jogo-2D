@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 96"
+community: "Community 7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_7
 ---
 
 # Fala
@@ -14,4 +14,4 @@ tags:
 - [[Legenda]] - `references` [EXTRACTED]
 - [[PrologoVideo]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_7

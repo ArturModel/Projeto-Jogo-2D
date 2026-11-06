@@ -12,11 +12,11 @@ tags:
 # .Center()
 
 ## Connections
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
 - [[dot-Apply()_2]] - `calls` [EXTRACTED]
-- [[dot-Apply()_3]] - `calls` [EXTRACTED]
 - [[dot-Delete()]] - `calls` [EXTRACTED]
 - [[dot-Interaction()_1]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_1]] - `calls` [EXTRACTED]
+- [[dot-Lamp()_2]] - `calls` [EXTRACTED]
 - [[dot-Portal()_1]] - `calls` [EXTRACTED]
 - [[dot-Prop()_1]] - `calls` [EXTRACTED]
 - [[dot-Routine()]] - `calls` [EXTRACTED]

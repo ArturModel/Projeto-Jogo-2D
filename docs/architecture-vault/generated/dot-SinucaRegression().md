@@ -12,8 +12,8 @@ tags:
 # .SinucaRegression()
 
 ## Connections
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

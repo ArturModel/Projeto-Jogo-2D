@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 99"
+community: "Community 84"
 location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_84
 ---
 
 # .OnSceneLoaded()
@@ -17,4 +17,4 @@ tags:
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[Scene]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_84

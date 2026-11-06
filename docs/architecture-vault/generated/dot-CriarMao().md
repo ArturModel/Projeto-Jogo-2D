@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: "Community 4"
+community: "Community 45"
 location: "L31"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_4
+  - community/Community_45
 ---
 
 # .CriarMao()
@@ -17,8 +17,8 @@ tags:
 - [[dot-NovaMao()]] - `calls` [INFERRED]
 - [[dot-Physics()]] - `calls` [INFERRED]
 - [[dot-Rules()]] - `calls` [INFERRED]
-- [[dot-Run()_1]] - `calls` [INFERRED]
+- [[dot-Run()_4]] - `calls` [INFERRED]
 - [[BochaMatch]] - `method` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_4
+#graphify/code #graphify/INFERRED #community/Community_45

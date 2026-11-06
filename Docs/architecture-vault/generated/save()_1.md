@@ -1,17 +1,19 @@
 ---
-source_file: "Tools/Aseprite/interior-thresholds.lua"
+source_file: "Tools/Aseprite/fitas.lua"
 type: "code"
-community: "Community 60"
-location: "L6"
+community: "Community 123"
+location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_60
+  - community/Community_123
 ---
 
 # save()
 
 ## Connections
-- [[interior-thresholds.lua]] - `contains` [EXTRACTED]
+- [[col()]] - `calls` [EXTRACTED]
+- [[fitas.lua]] - `contains` [EXTRACTED]
+- [[rect()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+#graphify/code #graphify/EXTRACTED #community/Community_123

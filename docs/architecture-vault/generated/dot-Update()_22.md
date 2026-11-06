@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "Community 42"
-location: "L752"
+community: "Community 33"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_33
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
-- [[dot-Retroceder()]] - `calls` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_33

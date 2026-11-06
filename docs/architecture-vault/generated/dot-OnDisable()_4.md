@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "Community 18"
-location: "L30"
+community: "Community 44"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_44
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[SpawnPoint]] - `method` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_44

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ApoiarPe()]] - `calls` [EXTRACTED]
-- [[dot-Avancar()]] - `calls` [EXTRACTED]
+- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
 - [[dot-Ensure()]] - `calls` [EXTRACTED]
 - [[dot-InteragirCarroMarcus()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPistaNotaFiscal()]] - `calls` [EXTRACTED]

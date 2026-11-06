@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "Community 25"
-location: "L164"
+community: "Community 49"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_49
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[Chuva]] - `method` [EXTRACTED]
+- [[SantaRitaShallowStairs]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_49

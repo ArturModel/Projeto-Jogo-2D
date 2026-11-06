@@ -12,14 +12,14 @@ tags:
 
 ## Connections
 - [[dot-AbrirPainel()]] - `references` [EXTRACTED]
-- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-Build()_1]] - `references` [EXTRACTED]
 - [[dot-Build()_2]] - `references` [EXTRACTED]
+- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-ConfigurarGrupo()]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
-- [[dot-Construir()]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-EsconderImediatamente()]] - `references` [EXTRACTED]
 - [[dot-Initialize()]] - `references` [EXTRACTED]
 - [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]

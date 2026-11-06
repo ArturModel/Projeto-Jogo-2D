@@ -22,6 +22,7 @@ tags:
 - [[SantaRitaBarLayout]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
 - [[SantaRitaGeography]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `references` [EXTRACTED]
 - [[SantaRitaSound]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 

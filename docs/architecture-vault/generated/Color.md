@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 9"
+community: "Community 23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_23
 ---
 
 # Color
@@ -29,7 +29,7 @@ tags:
 - [[dot-Line()]] - `references` [EXTRACTED]
 - [[dot-Mat()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
-- [[dot-Panel()]] - `references` [EXTRACTED]
+- [[dot-Panel()_1]] - `references` [EXTRACTED]
 - [[dot-Pintar()]] - `references` [EXTRACTED]
 - [[dot-Quad()_1]] - `references` [EXTRACTED]
 - [[dot-Quad()]] - `references` [EXTRACTED]
@@ -52,4 +52,4 @@ tags:
 - [[SantaRitaForeground]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_23

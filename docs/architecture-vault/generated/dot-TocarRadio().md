@@ -12,6 +12,7 @@ tags:
 # .TocarRadio()
 
 ## Connections
+- [[dot-Awake()_7]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `method` [EXTRACTED]

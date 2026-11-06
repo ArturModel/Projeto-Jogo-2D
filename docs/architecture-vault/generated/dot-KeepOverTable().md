@@ -12,7 +12,7 @@ tags:
 # .KeepOverTable()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 

@@ -1,24 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "Community 96"
-location: "L59"
+community: "Community 94"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_94
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[dot-Legendar()]] - `calls` [EXTRACTED]
-- [[dot-MontarTela()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[PonteiroCarro]] - `references` [EXTRACTED]
-- [[PrologoDirector]] - `references` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
-- [[VideoPlayer]] - `references` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_94

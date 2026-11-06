@@ -12,8 +12,8 @@ tags:
 # .LoadSprite()
 
 ## Connections
-- [[dot-Build()_1]] - `calls` [EXTRACTED]
 - [[dot-Build()_2]] - `calls` [EXTRACTED]
+- [[dot-Build()]] - `calls` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]
 - [[dot-IndicadorPausa()]] - `calls` [EXTRACTED]

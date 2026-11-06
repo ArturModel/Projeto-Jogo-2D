@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs"
 type: "code"
-community: "Community 94"
+community: "Community 45"
 location: "L13"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_94
+  - community/Community_45
 ---
 
 # .Reset()
@@ -18,4 +18,4 @@ tags:
 - [[dot-TeleportarPara()]] - `calls` [INFERRED]
 - [[MarcusGait]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_94
+#graphify/code #graphify/INFERRED #community/Community_45

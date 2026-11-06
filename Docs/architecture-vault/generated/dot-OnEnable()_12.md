@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
 community: "Community 99"
-location: "L10"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,6 @@ tags:
 # .OnEnable()
 
 ## Connections
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaFootsteps]] - `method` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_99

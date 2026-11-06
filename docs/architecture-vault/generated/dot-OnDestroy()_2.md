@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 12"
-location: "L210"
+community: "Community 18"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_18
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[MenuPausa]] - `method` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_18

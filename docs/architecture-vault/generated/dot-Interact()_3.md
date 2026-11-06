@@ -1,19 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 26"
-location: "L195"
+community: "Community 19"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_19
 ---
 
 # .Interact()
 
 ## Connections
-- [[SantaRitaBarProp]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-AbrirModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomAtenderOrelhao()]] - `calls` [EXTRACTED]
+- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_19

@@ -12,7 +12,7 @@ tags:
 # .SetState()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [INFERRED]
+- [[dot-Abrir()_2]] - `calls` [INFERRED]
 - [[dot-AtualizarTela()]] - `calls` [INFERRED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[BochaShot]] - `references` [EXTRACTED]

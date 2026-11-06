@@ -12,11 +12,11 @@ tags:
 # .RotinaPagina()
 
 ## Connections
-- [[dot-Avancar()]] - `calls` [EXTRACTED]
+- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarRetratoEFalante()]] - `calls` [EXTRACTED]
 - [[dot-Digitar()]] - `calls` [EXTRACTED]
 - [[dot-Fade()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_3]] - `calls` [EXTRACTED]
 - [[dot-Show()_1]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]

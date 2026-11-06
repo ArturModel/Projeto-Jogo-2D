@@ -1,23 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlas.cs"
 type: "code"
-community: "Community 39"
-location: "L34"
+community: "Community 51"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_51
 ---
 
 # .UV()
 
 ## Connections
-- [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
-- [[dot-CorrectApprovedGeography()]] - `calls` [EXTRACTED]
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[dot-ObjetivoAtual()]] - `calls` [EXTRACTED]
-- [[dot-Scenes()]] - `calls` [EXTRACTED]
-- [[SantaRitaGeography]] - `method` [EXTRACTED]
+- [[dot-InicializarPontos()]] - `calls` [EXTRACTED]
+- [[dot-Label()_2]] - `calls` [EXTRACTED]
+- [[dot-Player()]] - `calls` [EXTRACTED]
+- [[dot-Rebuild()_1]] - `calls` [EXTRACTED]
+- [[dot-RunAtlas()]] - `calls` [EXTRACTED]
+- [[SantaRitaAtlas]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_51

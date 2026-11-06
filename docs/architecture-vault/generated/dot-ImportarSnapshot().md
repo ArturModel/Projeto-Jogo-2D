@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L227"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .ImportarSnapshot()
@@ -26,8 +26,9 @@ tags:
 - [[dot-RequestSpawnAtSlot()]] - `calls` [EXTRACTED]
 - [[dot-ResetarMemoriaSilencioso()]] - `calls` [EXTRACTED]
 - [[dot-RestaurarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-Run()_6]] - `calls` [EXTRACTED]
+- [[dot-Run()_7]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[dot-RunAtlas()]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
 - [[dot-RunNotebook()]] - `calls` [EXTRACTED]
@@ -38,4 +39,4 @@ tags:
 - [[GameState]] - `method` [EXTRACTED]
 - [[GameStateSnapshot]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

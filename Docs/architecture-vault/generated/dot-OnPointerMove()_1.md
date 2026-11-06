@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
 community: "Community 46"
-location: "L323"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,9 @@ tags:
 # .OnPointerMove()
 
 ## Connections
-- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[dot-OnDrag()_2]] - `calls` [EXTRACTED]
+- [[dot-ScreenToTablePoint()]] - `calls` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_46

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 97"
+community: "Community 84"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_97
+  - community/Community_84
 ---
 
 # .OnTriggerEnter2D()
@@ -17,4 +17,4 @@ tags:
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_97
+#graphify/code #graphify/EXTRACTED #community/Community_84

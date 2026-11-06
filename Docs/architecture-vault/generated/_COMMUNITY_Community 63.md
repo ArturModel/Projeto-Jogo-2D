@@ -11,7 +11,7 @@ members: 4
 - [[color()_1]] - code - Tools/Aseprite/pool-table.lua
 - [[dot()]] - code - Tools/Aseprite/pool-table.lua
 - [[pool-table.lua]] - code - Tools/Aseprite/pool-table.lua
-- [[rect()_4]] - code - Tools/Aseprite/pool-table.lua
+- [[rect()_5]] - code - Tools/Aseprite/pool-table.lua
 
 ## Live Query (requires Dataview plugin)
 

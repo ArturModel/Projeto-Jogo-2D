@@ -12,10 +12,10 @@ tags:
 # SantaRitaActorElevation
 
 ## Connections
-- [[dot-Awake()_16]] - `method` [EXTRACTED]
+- [[dot-Awake()_17]] - `method` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_6]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_9]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_10]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_8]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

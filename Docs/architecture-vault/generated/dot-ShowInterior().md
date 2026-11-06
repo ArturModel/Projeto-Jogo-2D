@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs"
 type: "code"
-community: "Community 34"
+community: "Community 51"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_51
 ---
 
 # .ShowInterior()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AlternarPlanta()]] - `calls` [INFERRED]
 - [[dot-CentralizarNoJogador()]] - `calls` [INFERRED]
-- [[dot-Rebuild()]] - `calls` [EXTRACTED]
+- [[dot-Rebuild()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaAtlasView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_51

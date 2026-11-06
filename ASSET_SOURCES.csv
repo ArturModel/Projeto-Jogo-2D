@@ -391,3 +391,6 @@ Assets/Resources/Notebook/Book.png,UI/Notebook,Tools/Aseprite/caderno.lua; Arte/
 Assets/Resources/Notebook/Leaf.png,UI/Notebook,Tools/Aseprite/caderno.lua; Arte/Producao/Caderno/Folha.aseprite,Santa Rita project,Project original,N/A,Point,Page turning paper.
 Assets/Resources/Notebook/Sketch.png,UI/Cartography,Tools/Aseprite/caderno.lua; Arte/Producao/Caderno/Rabisco.aseprite,Santa Rita project,Project original,N/A,Point,Discovered annotations only.
 Assets/Resources/Atlas/Paisagem.png,Cartography/Derived,SantaRitaNotebookAuthoring; existing grass water and trees,Santa Rita project,Derived - retain source licenses in this manifest,16,Point,Decorative low hills open fields and stream; no new playable geography.
+Assets/Resources/Tapes/Recorder.png,UI/Inventory/Tapes,Tools/Aseprite/fitas.lua; Arte/Producao/Caderno/Recorder.aseprite,Santa Rita project,Project original,32,Point,Original pixel art; voice recordings not included.
+Assets/Resources/Tapes/Cassette.png,UI/Inventory/Tapes,Tools/Aseprite/fitas.lua; Arte/Producao/Caderno/Cassette.aseprite,Santa Rita project,Project original,32,Point,Original pixel art; voice recordings not included.
+Assets/Resources/Tapes/Letter.png,UI/Inventory/Tapes,Tools/Aseprite/fitas.lua; Arte/Producao/Caderno/Letter.aseprite,Santa Rita project,Project original,32,Point,Original pixel art; voice recordings not included.

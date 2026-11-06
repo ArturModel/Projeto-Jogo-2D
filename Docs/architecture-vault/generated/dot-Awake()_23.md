@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "Community 89"
-location: "L57"
+community: "Community 84"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_84
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Construir()_2]] - `calls` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
+- [[dot-FadeIn()]] - `calls` [EXTRACTED]
+- [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_84

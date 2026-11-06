@@ -1,20 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 5"
-location: "L12"
+community: "Community 45"
+location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_45
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Landscape()]] - `calls` [EXTRACTED]
-- [[dot-PrepareFont()]] - `calls` [EXTRACTED]
+- [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
+- [[dot-Gait()]] - `calls` [EXTRACTED]
+- [[dot-Matches()]] - `calls` [EXTRACTED]
+- [[dot-Narrative()]] - `calls` [EXTRACTED]
+- [[dot-Physics()]] - `calls` [EXTRACTED]
+- [[dot-Rules()]] - `calls` [EXTRACTED]
+- [[dot-Run()_1]] - `calls` [EXTRACTED]
+- [[dot-Saves()]] - `calls` [EXTRACTED]
+- [[Chapter2Verification]] - `method` [EXTRACTED]
 - [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNotebookAuthoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_45

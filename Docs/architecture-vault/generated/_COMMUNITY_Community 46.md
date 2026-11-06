@@ -1,23 +1,26 @@
 ---
 type: community
-members: 14
+members: 17
 ---
 
 # Community 46
 
-**Members:** 14 nodes
+**Members:** 17 nodes
 
 ## Members
 - [[dot-OnDrag()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnDrag()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
+- [[dot-OnDrag()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-OnPointerDown()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerDown()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
+- [[dot-OnPointerDown()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-OnPointerEnter()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
 - [[dot-OnPointerExit()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnPointerMove()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerUp()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnScroll()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Select()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
+- [[dot-OnPointerMove()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnPointerMove()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnPointerUp()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnPointerUp()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnScroll()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-RayToTable()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-ScreenToTablePoint()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[IPointerEnterHandler]] - code
 - [[IPointerExitHandler]] - code
 - [[PointerEventData]] - code
@@ -31,20 +34,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 7 edges to [[_COMMUNITY_Community 36]]
 - 6 edges to [[_COMMUNITY_Community 9]]
 - 4 edges to [[_COMMUNITY_Community 17]]
-- 4 edges to [[_COMMUNITY_Community 36]]
-- 3 edges to [[_COMMUNITY_Community 40]]
-- 2 edges to [[_COMMUNITY_Community 107]]
+- 3 edges to [[_COMMUNITY_Community 42]]
+- 3 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 38]]
 - 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Community 112]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 56]]
 
 ## Top bridge nodes
 - [[PointerEventData]] - degree 21, connects to 5 communities
 - [[SantaRitaItemHover]] - degree 8, connects to 4 communities
-- [[dot-Select()]] - degree 4, connects to 1 community
-- [[dot-OnDrag()_2]] - degree 3, connects to 1 community
-- [[dot-OnPointerDown()_2]] - degree 3, connects to 1 community
+- [[dot-ScreenToTablePoint()]] - degree 8, connects to 2 communities
+- [[dot-RayToTable()]] - degree 3, connects to 2 communities
+- [[dot-OnPointerMove()_1]] - degree 4, connects to 1 community

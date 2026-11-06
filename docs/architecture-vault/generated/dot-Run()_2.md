@@ -1,26 +1,44 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 4"
-location: "L146"
+community: "Community 18"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_18
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
-- [[dot-Gait()]] - `calls` [EXTRACTED]
-- [[dot-Matches()]] - `calls` [EXTRACTED]
-- [[dot-Narrative()]] - `calls` [EXTRACTED]
-- [[dot-Physics()]] - `calls` [EXTRACTED]
-- [[dot-Rules()]] - `calls` [EXTRACTED]
-- [[dot-Run()_8]] - `calls` [EXTRACTED]
-- [[dot-Saves()]] - `calls` [EXTRACTED]
-- [[Chapter2Verification]] - `method` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
+- [[dot-Abrir()_1]] - `calls` [INFERRED]
+- [[dot-Assign()]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Contents()]] - `calls` [EXTRACTED]
+- [[dot-Ensure()_1]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()]] - `calls` [INFERRED]
+- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Open()]] - `calls` [INFERRED]
+- [[dot-Owns()]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [INFERRED]
+- [[dot-Quick()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-Repair()]] - `calls` [INFERRED]
+- [[dot-Rewind()]] - `calls` [INFERRED]
+- [[dot-SaveSlot()]] - `calls` [EXTRACTED]
+- [[dot-Start()_8]] - `calls` [EXTRACTED]
+- [[dot-Swap()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
+- [[GameStateSnapshot]] - `calls` [INFERRED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[Keyboard]] - `references` [EXTRACTED]
+- [[MarcusNotebookUI]] - `references` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
+- [[SantaRitaTapePickup]] - `references` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_18

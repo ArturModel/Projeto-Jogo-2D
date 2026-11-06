@@ -1,19 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 24"
-location: "L73"
+community: "Community 13"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_13
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Current()]] - `calls` [EXTRACTED]
-- [[dot-Turn()]] - `calls` [EXTRACTED]
-- [[MarcusNotebookUI]] - `method` [EXTRACTED]
+- [[dot-Close()]] - `calls` [EXTRACTED]
+- [[dot-Duration()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_13

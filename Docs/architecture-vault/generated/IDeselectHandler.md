@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 42"
+community: "Community 15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_15
 ---
 
 # IDeselectHandler
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[HorizontalStepperNavigation]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_15

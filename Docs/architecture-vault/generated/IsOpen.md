@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 24"
-location: "L13"
+community: "Community 18"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_18
 ---
 
 # IsOpen
 
 ## Connections
-- [[MarcusNotebookUI]] - `defines` [EXTRACTED]
+- [[SantaRitaInventory]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_18

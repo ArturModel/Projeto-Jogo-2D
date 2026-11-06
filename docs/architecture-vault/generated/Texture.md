@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 38"
+community: "Community 110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_110
 ---
 
 # Texture
 
 ## Connections
 - [[dot-Mat()]] - `references` [EXTRACTED]
-- [[dot-Panel()_1]] - `references` [EXTRACTED]
+- [[dot-Panel()]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_110

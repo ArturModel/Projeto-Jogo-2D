@@ -12,10 +12,10 @@ tags:
 # .PosicaoFinalBrancaComEfeito()
 
 ## Connections
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-GetBall()]] - `calls` [EXTRACTED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
-- [[dot-Run()_6]] - `calls` [EXTRACTED]
+- [[dot-Run()_7]] - `calls` [EXTRACTED]
 - [[dot-SetBall()]] - `calls` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[IList]] - `references` [EXTRACTED]

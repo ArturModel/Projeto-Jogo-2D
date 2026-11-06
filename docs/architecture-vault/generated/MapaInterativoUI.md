@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 51"
+community: "Community 92"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_92
 ---
 
 # MapaInterativoUI
 
 ## Connections
-- [[dot-Abrir()_2]] - `method` [EXTRACTED]
+- [[dot-Abrir()_1]] - `method` [EXTRACTED]
 - [[dot-AlternarPlanta()]] - `method` [EXTRACTED]
 - [[dot-AlternarVisibilidadeBlips()]] - `method` [EXTRACTED]
 - [[dot-AplicarZoomIncremental()]] - `method` [EXTRACTED]
@@ -28,24 +28,24 @@ tags:
 - [[dot-CriarBotaoControleMapa()]] - `method` [EXTRACTED]
 - [[dot-CriarTexto()_2]] - `method` [EXTRACTED]
 - [[dot-EnsureInstance()_1]] - `method` [EXTRACTED]
-- [[dot-Fechar()_4]] - `method` [EXTRACTED]
+- [[dot-Fechar()]] - `method` [EXTRACTED]
 - [[dot-FecharSeAberto()]] - `method` [EXTRACTED]
 - [[dot-GerarIconeJogador()]] - `method` [EXTRACTED]
 - [[dot-InicializarPontos()]] - `method` [EXTRACTED]
 - [[dot-LimitarPanDoMapa()]] - `method` [EXTRACTED]
 - [[dot-NomeMarco()]] - `method` [EXTRACTED]
 - [[dot-OnSceneLoaded()_1]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_5]] - `method` [EXTRACTED]
 - [[dot-ResetStatic()_1]] - `method` [EXTRACTED]
 - [[dot-ResetarZoomEPan()]] - `method` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `method` [EXTRACTED]
 - [[dot-SelecionarMarcoAtlas()]] - `method` [EXTRACTED]
-- [[dot-Update()_20]] - `method` [EXTRACTED]
+- [[dot-Update()_7]] - `method` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `method` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[Instance_6]] - `defines` [EXTRACTED]
+- [[Instance_12]] - `defines` [EXTRACTED]
 - [[IsShowing_3]] - `defines` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
 - [[MapaInterativoUI.cs]] - `contains` [EXTRACTED]
@@ -59,4 +59,4 @@ tags:
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_92

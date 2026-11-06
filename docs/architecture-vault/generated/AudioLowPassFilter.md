@@ -16,7 +16,7 @@ tags:
 - [[dot-CriarFonteMusical()]] - `references` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `references` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
-- [[dot-Update()_7]] - `references` [EXTRACTED]
-- [[dot-Update()_15]] - `references` [EXTRACTED]
+- [[dot-Update()_16]] - `references` [EXTRACTED]
+- [[dot-Update()_21]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_28

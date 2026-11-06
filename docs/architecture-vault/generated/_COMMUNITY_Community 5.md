@@ -20,7 +20,7 @@ members: 27
 - [[dot-Landscape()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs
 - [[dot-PrepareFont()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs
 - [[dot-Read()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs
-- [[dot-Run()_5]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs
+- [[dot-Run()_6]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs
 - [[dot-SaveBarCounterPng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveCardsCluePng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-SaveIronGatePng()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
@@ -44,27 +44,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Community 110]]
 - 5 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 3 edges to [[_COMMUNITY_Community 45]]
-- 3 edges to [[_COMMUNITY_Community 9]]
-- 3 edges to [[_COMMUNITY_Community 87]]
+- 4 edges to [[_COMMUNITY_Community 110]]
+- 3 edges to [[_COMMUNITY_Community 51]]
+- 3 edges to [[_COMMUNITY_Community 11]]
+- 3 edges to [[_COMMUNITY_Community 18]]
 - 2 edges to [[_COMMUNITY_Community 20]]
 - 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 88]]
+- 2 edges to [[_COMMUNITY_Community 43]]
+- 2 edges to [[_COMMUNITY_Community 9]]
 - 2 edges to [[_COMMUNITY_Community 24]]
 - 2 edges to [[_COMMUNITY_Community 26]]
 - 1 edge to [[_COMMUNITY_Community 25]]
 - 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 96]]
-- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 0]]
 - 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 86]]
+- 1 edge to [[_COMMUNITY_Community 89]]
 
 ## Top bridge nodes
-- [[Texture2D]] - degree 27, connects to 14 communities
-- [[SantaRitaChapter1Builder]] - degree 26, connects to 4 communities
+- [[Texture2D]] - degree 29, connects to 14 communities
+- [[SantaRitaChapter1Builder]] - degree 26, connects to 5 communities
 - [[dot-FillRect()]] - degree 10, connects to 1 community
 - [[SantaRitaNotebookAuthoring]] - degree 6, connects to 1 community
 - [[dot-ExecuteSetupAndTests()]] - degree 4, connects to 1 community

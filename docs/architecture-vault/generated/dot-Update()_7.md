@@ -1,21 +1,31 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 2"
-location: "L392"
+community: "Community 13"
+location: "L310"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_13
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarTeclasPainelFechamento()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[AudioLowPassFilter]] - `references` [EXTRACTED]
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
+- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
+- [[dot-Current()]] - `calls` [EXTRACTED]
+- [[dot-DefinirTexto()]] - `calls` [EXTRACTED]
+- [[dot-Detail()]] - `calls` [INFERRED]
+- [[dot-Fechar()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Region()]] - `calls` [EXTRACTED]
+- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[dot-Texto()]] - `calls` [EXTRACTED]
+- [[dot-Turn()]] - `calls` [INFERRED]
+- [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_13

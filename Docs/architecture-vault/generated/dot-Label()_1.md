@@ -1,23 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 34"
-location: "L74"
+community: "Community 24"
+location: "L332"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_24
 ---
 
 # .Label()
 
 ## Connections
-- [[dot-Rebuild()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[dot-UV()]] - `calls` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[SantaRitaAtlasView]] - `method` [EXTRACTED]
+- [[dot-Botao()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
+- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
+- [[dot-MostrarModal()]] - `calls` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_24

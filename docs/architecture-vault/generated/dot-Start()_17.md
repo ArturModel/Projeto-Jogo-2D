@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 8"
-location: "L85"
+community: "Community 85"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_85
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
+- [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
+- [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_85

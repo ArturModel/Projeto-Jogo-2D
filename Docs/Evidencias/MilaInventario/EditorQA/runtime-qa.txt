@@ -1,0 +1,34 @@
+PASS Quatro fitas atuais, sem fita final futura.
+PASS Transcrição temporizada fita01
+PASS Arte de fita fita01
+PASS Transcrição temporizada fita02
+PASS Arte de fita fita02
+PASS Transcrição temporizada fita03
+PASS Arte de fita fita03
+PASS Transcrição temporizada fita_sociedade
+PASS Arte de fita fita_sociedade
+PASS Não recebe tocador só por visitar oficina.
+PASS Ajuste incorreto não conclui reparo.
+PASS Reparo regular concede aparelho e fita de procedência da oficina.
+PASS Bolsa guarda mais de cinco itens.
+PASS Fichas continuam exclusivamente no mapa.
+PASS Atalho reorganizável.
+PASS Mover atalho troca sem duplicar referência.
+PASS Ordem da bolsa alterada.
+PASS Bolsa abre em tela própria.
+PASS Bolsa bloqueia equipamento F.
+PASS Esc fecha bolsa sem abrir pausa por baixo. Bolsa=False Pausa=False
+PASS Marcador ligado a ID de anotação.
+PASS Reabrir retorna à anotação marcada.
+PASS Índice em papel abre com filtro.
+PASS Aparelho acessível pela fita.
+PASS Pausa mantém posição da fita.
+PASS Rebobinar retorna ao início sem concluir.
+PASS Troca de cena interrompe sem registrar escuta completa.
+PASS Fita física anexada ao material de som da Igreja.
+PASS Fita inicial existe junto dos retratos da casa do avô.
+PASS Reparo, coleta e organização não criam autosave.
+PASS Save manual restaura aparelho, atalhos e marcador.
+PASS Recibo entregue sai da bolsa sem apagar outros itens.
+Fixtures e transcrições; vozes humanas não produzidas nem aprovadas. Áudio final pendente.
+PASS runtime

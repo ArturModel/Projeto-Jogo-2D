@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs"
 type: "code"
-community: "Community 89"
+community: "Community 7"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_7
 ---
 
 # .Transmitir()
@@ -17,4 +17,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[RadioCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_7

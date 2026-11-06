@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 38"
+community: "Community 110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_110
 ---
 
 # Vector3
 
 ## Connections
 - [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
-- [[dot-Aplicar()_1]] - `references` [EXTRACTED]
+- [[dot-Aplicar()]] - `references` [EXTRACTED]
 - [[dot-AplicarClampBordas()]] - `references` [EXTRACTED]
 - [[dot-AtualizarSpawnPointExistente()]] - `references` [EXTRACTED]
 - [[dot-Box()_2]] - `references` [EXTRACTED]
@@ -29,17 +29,17 @@ tags:
 - [[dot-CreateSceneSpriteObject()]] - `references` [EXTRACTED]
 - [[dot-Cylinder()]] - `references` [EXTRACTED]
 - [[dot-Disc()_1]] - `references` [EXTRACTED]
-- [[dot-Lamp()_2]] - `references` [EXTRACTED]
+- [[dot-Lamp()_1]] - `references` [EXTRACTED]
 - [[dot-Line()]] - `references` [EXTRACTED]
 - [[dot-Notificar()]] - `references` [EXTRACTED]
-- [[dot-Panel()_1]] - `references` [EXTRACTED]
+- [[dot-Panel()]] - `references` [EXTRACTED]
 - [[dot-PixelObject()]] - `references` [EXTRACTED]
 - [[dot-Plan()]] - `references` [EXTRACTED]
 - [[dot-Posicao()]] - `references` [EXTRACTED]
 - [[dot-PosicaoNoMapa()]] - `references` [EXTRACTED]
 - [[dot-Primitive()]] - `references` [EXTRACTED]
-- [[dot-Project()_3]] - `references` [EXTRACTED]
 - [[dot-Project()_2]] - `references` [EXTRACTED]
+- [[dot-Project()_1]] - `references` [EXTRACTED]
 - [[dot-ProjectReady()]] - `references` [EXTRACTED]
 - [[dot-ProjetarPontoMesaParaLocalUI()]] - `references` [EXTRACTED]
 - [[dot-Quad()_1]] - `references` [EXTRACTED]
@@ -63,4 +63,4 @@ tags:
 - [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_110

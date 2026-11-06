@@ -1,18 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 39"
-location: "L45"
+community: "Community 28"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_28
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-LerEntrada()]] - `calls` [EXTRACTED]
-- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
+- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[AudioLowPassFilter]] - `references` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[Capitulo2Audio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_28

@@ -370,3 +370,20 @@ Lanterna-costas concluída: captura e QA PASS, builds sem erros/hash igual, índ
 Fechamento caderno/paisagem: testes específicos (30) e Atlas (237) PASS em Editor e Player; builds finais sem erros e hash igual, 120 C# indexados. Sessão RAM/posição/zona/indicador restaurados, seis arquivos pessoais intactos, cenas/configurações sem diff. Corpus final com 64 textos/variantes; original do diário preservado. Alterações não staged, sem commit/push. Limites e evidências no relatório Caderno.
 
 TMP gravou cache VT323 após restauração; único asset posterior às builds. Hash do Assets atual difere do fingerprint comum das duas builds por esse cache, sem mudanças posteriores em código/cenas/corpus/arte. Detalhe no relatório.
+
+
+04/11 — Priorização documental de exploração: Mila/tocador, Lia/rodoviária e orelhões primeiro; dependências locais separadas da reforma geral. PDF reorganizado e lista em Docs/Ideias_Exploracao_Ordem_Producao.md. Plano: ../ai-plans/2026-11-04_PatrickDotto_prioridades-exploracao.md. Implementação ainda pendente.
+
+04/11 — Proposta Mila/fitas para discussão antes de implementar: Docs/Proposta_Mila_Fitas.md; plano 2026-11-04_PatrickDotto_proposta-mila-fitas.md. Produção vocal não iniciada; nenhuma ferramenta TTS conectada.
+
+
+04/11 — Mila/fitas, bolsa e caderno: empréstimo/reparo contextual, quatro fitas físicas/transcrições, bolsa de vinte espaços com cinco atalhos, índice manuscrito e marcador por ID. 32 checks + PASS Editor e Player, builds finais/hash igual. Dublagem final pendente: ElevenLabs autenticado privado, candidata Jessica rejeitada; pesquisa e duas audições Qwen oficiais, Audio Lens instalado 12/12. [Plano executado](../ai-plans/2026-11-04_PatrickDotto_mila-inventario-caderno.md), [relatório](../Evidencias/MilaInventario/Relatorio.md), [pesquisa vocal](../Vozes_Pesquisa_E_Producao.md). Sem autosave/reconstrução/commit/push.
+
+
+04/11 — Revisão das audições pelo autor: duas candidatas Qwen também REJEITADAS (artificialidade/idade), faltaram quarto/Marcus ao fundo. Direção agora exige prova de cena completa com vozes em posições distintas. Base real de quarto/foley CC0 preparada em prévia privada, renderer validado; elenco completo NÃO produzido: Lucas/Marcus retornaram erro na demo, Voice Design do AI Studio exige chave paga. Sem compras, Assets ou saves alterados. [Plano e bloqueios](../ai-plans/2026-11-04_PatrickDotto_fitas-cena-quarto.md); [fontes/evidências](../Evidencias/MilaInventario/Revisao_Cena_Quarto.md).
+
+04/11 — Pedido posterior de amostra única: cena com três tomadas ElevenLabs v3 e ambiente/foley renderizada em prévia privada; elenco ainda não aprovado. Plano: ../ai-plans/2026-11-04_PatrickDotto_amostra-fita-quarto.md. Sem publicar no jogo.
+
+04/11 — Amostra R2: novas tomadas Júlia/Lucas, Marcus chamado pelo nome na porta; REC/cadeira/quarto aumentados e tratamento mono de cassete com chiado. Prévia privada, sem aprovação/publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_amostra-fita-r2.md.
+
+04/11 — Autor forneceu roteiro R3 e rejeitou timbre adulto da R2. Oito falas registradas literalmente em Tools/Audio/quarto_roteiro_r3.json; teste juvenil Qwen falhou. Sem nova amostra adequada nem publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_roteiro-fita-r3.md.

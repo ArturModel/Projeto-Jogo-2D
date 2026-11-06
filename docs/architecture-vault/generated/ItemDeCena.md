@@ -1,22 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
 type: "code"
-community: "Community 31"
+community: "Community 13"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_13
 ---
 
 # ItemDeCena
 
 ## Connections
-- [[dot-Interact()_4]] - `method` [EXTRACTED]
+- [[dot-Interact()_1]] - `method` [EXTRACTED]
 - [[dot-RegistrarPistaLegada()]] - `method` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[ItemDeCena.cs]] - `contains` [EXTRACTED]
-- [[Prompt_4]] - `defines` [EXTRACTED]
+- [[Prompt_1]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_13

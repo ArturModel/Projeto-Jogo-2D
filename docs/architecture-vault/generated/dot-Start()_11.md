@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
 community: "Community 26"
-location: "L213"
+location: "L180"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # .Start()
 
 ## Connections
-- [[SantaRitaBarPose]] - `method` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_26

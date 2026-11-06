@@ -1,18 +1,16 @@
 ---
 type: community
-members: 29
+members: 27
 ---
 
 # Community 27
 
-**Members:** 29 nodes
+**Members:** 27 nodes
 
 ## Members
 - [[dot-AIPerformanceR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
-- [[dot-Aplicar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
+- [[dot-Aplicar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
 - [[dot-AvancarComContatos()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
-- [[dot-Clone()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
-- [[dot-Clone()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
 - [[dot-Colidir()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
 - [[dot-ContatoReal()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-CorrigirContatos()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs
@@ -46,22 +44,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 27 edges to [[_COMMUNITY_Community 4]]
-- 9 edges to [[_COMMUNITY_Community 0]]
-- 6 edges to [[_COMMUNITY_Community 38]]
-- 5 edges to [[_COMMUNITY_Community 37]]
+- 15 edges to [[_COMMUNITY_Community 45]]
+- 11 edges to [[_COMMUNITY_Community 4]]
+- 7 edges to [[_COMMUNITY_Community 48]]
+- 6 edges to [[_COMMUNITY_Community 110]]
+- 4 edges to [[_COMMUNITY_Community 37]]
 - 3 edges to [[_COMMUNITY_Community 17]]
 - 3 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 34]]
 - 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 9]]
 - 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 25]]
-- 1 edge to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 30]]
 
 ## Top bridge nodes
-- [[BochaSimulation]] - degree 42, connects to 8 communities
-- [[BochaBall]] - degree 24, connects to 5 communities
-- [[dot-AIPerformanceR2()]] - degree 8, connects to 4 communities
+- [[BochaSimulation]] - degree 42, connects to 10 communities
+- [[BochaBall]] - degree 24, connects to 7 communities
+- [[dot-AIPerformanceR2()]] - degree 8, connects to 5 communities
 - [[dot-Step()]] - degree 9, connects to 3 communities
-- [[dot-Clone()_1]] - degree 6, connects to 2 communities
+- [[dot-Aplicar()]] - degree 7, connects to 1 community

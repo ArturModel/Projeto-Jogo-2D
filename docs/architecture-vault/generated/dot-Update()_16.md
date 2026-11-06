@@ -1,18 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 28"
-location: "L83"
+community: "Community 2"
+location: "L392"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_2
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Definir()_1]] - `calls` [EXTRACTED]
-- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarTeclasPainelFechamento()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[AudioLowPassFilter]] - `references` [EXTRACTED]
+- [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_2

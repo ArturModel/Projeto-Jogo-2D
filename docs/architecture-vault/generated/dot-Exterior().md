@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
-community: "Community 6"
+community: "Community 34"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_34
 ---
 
 # .Exterior()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-BoundaryForest()]] - `calls` [EXTRACTED]
 - [[dot-Box()_1]] - `calls` [EXTRACTED]
-- [[dot-Building()_1]] - `calls` [EXTRACTED]
+- [[dot-Building()]] - `calls` [EXTRACTED]
 - [[dot-Crosswalk()]] - `calls` [EXTRACTED]
 - [[dot-Fence()]] - `calls` [EXTRACTED]
 - [[dot-Garden()]] - `calls` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[dot-Prop()_2]] - `calls` [EXTRACTED]
 - [[dot-RectTiles()]] - `calls` [EXTRACTED]
 - [[dot-Road()]] - `calls` [EXTRACTED]
-- [[dot-Run()_7]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
 - [[dot-Setup()]] - `calls` [EXTRACTED]
 - [[dot-Sign()]] - `calls` [EXTRACTED]
 - [[dot-Spawn()_2]] - `calls` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[dot-Tree()]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_34

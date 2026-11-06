@@ -1,27 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlas.cs"
 type: "code"
-community: "Community 6"
-location: "L343"
+community: "Community 51"
+location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_51
 ---
 
 # .Building()
 
 ## Connections
-- [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Garden()]] - `calls` [EXTRACTED]
-- [[dot-LabelWorld()]] - `calls` [EXTRACTED]
-- [[dot-Light()]] - `calls` [EXTRACTED]
-- [[dot-Portal()_2]] - `calls` [EXTRACTED]
-- [[dot-Prop()_2]] - `calls` [EXTRACTED]
-- [[dot-RectTiles()]] - `calls` [EXTRACTED]
-- [[dot-Spawn()_2]] - `calls` [EXTRACTED]
-- [[dot-Sprite()]] - `calls` [EXTRACTED]
-- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-AtualizarPainelLateral()]] - `calls` [EXTRACTED]
+- [[dot-Player()]] - `calls` [EXTRACTED]
+- [[dot-Rebuild()_1]] - `calls` [EXTRACTED]
+- [[dot-Region()]] - `calls` [EXTRACTED]
+- [[dot-RunAtlas()]] - `calls` [EXTRACTED]
+- [[AtlasLandmark]] - `references` [EXTRACTED]
+- [[SantaRitaAtlas]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_51

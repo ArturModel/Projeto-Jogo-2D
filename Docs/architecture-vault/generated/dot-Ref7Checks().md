@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `calls` [INFERRED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-NativeSurface()]] - `calls` [EXTRACTED]
 - [[dot-PointerSinuca()]] - `calls` [INFERRED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 112"
+community: "Community 94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_112
+  - community/Community_94
 ---
 
 # MonoBehaviour
@@ -42,6 +42,7 @@ tags:
 - [[MenuItemSelector]] - `inherits` [EXTRACTED]
 - [[MenuPanelTransition]] - `inherits` [EXTRACTED]
 - [[MenuPausa]] - `inherits` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `inherits` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[OlharPrimeiraPessoa]] - `inherits` [EXTRACTED]
 - [[OptionsPanelController]] - `inherits` [EXTRACTED]
@@ -69,6 +70,8 @@ tags:
 - [[SantaRitaRoomLayout]] - `inherits` [EXTRACTED]
 - [[SantaRitaShallowStairs]] - `inherits` [EXTRACTED]
 - [[SantaRitaSound]] - `inherits` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `inherits` [EXTRACTED]
+- [[SantaRitaTapePlacement]] - `inherits` [EXTRACTED]
 - [[SceneFader]] - `inherits` [EXTRACTED]
 - [[SinucaMinigameUI]] - `inherits` [EXTRACTED]
 - [[SinucaPixelPreviewSession]] - `inherits` [EXTRACTED]
@@ -76,4 +79,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_112
+#graphify/code #graphify/EXTRACTED #community/Community_94

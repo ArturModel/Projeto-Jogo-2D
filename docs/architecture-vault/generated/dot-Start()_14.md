@@ -1,24 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 31"
-location: "L25"
+community: "Community 34"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_34
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
+- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
+- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
+- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
+- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_34

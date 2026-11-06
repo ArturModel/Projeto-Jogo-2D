@@ -1,26 +1,26 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/NotebookRuntimeVerification.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .RunNotebook()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [INFERRED]
+- [[dot-Abrir()_1]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
 - [[dot-ExportarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_4]] - `calls` [INFERRED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
-- [[dot-Finish()]] - `calls` [INFERRED]
+- [[dot-Fechar()]] - `calls` [INFERRED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Finish()]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
@@ -45,4 +45,4 @@ tags:
 - [[TMP_Text]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 3"
-location: "L258"
+community: "Community 17"
+location: "L269"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_17
 ---
 
 # .OnApplicationFocus()
 
 ## Connections
-- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
+- [[dot-Pausar()]] - `calls` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_17

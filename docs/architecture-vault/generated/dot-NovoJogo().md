@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .NovoJogo()
 
 ## Connections
 - [[dot-Clear()]] - `calls` [EXTRACTED]
-- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_2]] - `calls` [EXTRACTED]
 - [[MainMenuActions]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

@@ -12,9 +12,9 @@ tags:
 # SantaRitaBarHost
 
 ## Connections
-- [[dot-Apply()_5]] - `references` [EXTRACTED]
+- [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_10]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_6]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `contains` [EXTRACTED]
 

@@ -12,7 +12,7 @@ tags:
 # .Rebater()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()]] - `calls` [EXTRACTED]
 - [[dot-AvancarComContatos()]] - `calls` [EXTRACTED]
 - [[dot-Notificar()]] - `calls` [EXTRACTED]
 - [[dot-Velocidade()]] - `calls` [EXTRACTED]

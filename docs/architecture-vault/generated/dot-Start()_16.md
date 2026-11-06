@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 45"
-location: "L41"
+community: "Community 8"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_8
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
+- [[dot-Rodar()_2]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_8

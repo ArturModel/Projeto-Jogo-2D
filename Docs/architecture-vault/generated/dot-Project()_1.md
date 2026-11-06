@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 34"
-location: "L21"
+community: "Community 36"
+location: "L119"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_36
 ---
 
 # .Project()
 
 ## Connections
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [INFERRED]
-- [[dot-Player()]] - `calls` [EXTRACTED]
-- [[dot-Region()]] - `calls` [EXTRACTED]
-- [[SantaRitaAtlasView]] - `method` [EXTRACTED]
+- [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [EXTRACTED]
+- [[SinucaRoom3D]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
+- [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_36

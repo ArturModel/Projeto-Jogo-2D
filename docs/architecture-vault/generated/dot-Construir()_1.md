@@ -1,38 +1,46 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 17"
-location: "L60"
+community: "Community 12"
+location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_12
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Botao()_1]] - `calls` [EXTRACTED]
-- [[dot-ChangeZoom()]] - `calls` [INFERRED]
+- [[dot-Awake()_2]] - `calls` [EXTRACTED]
+- [[dot-Botao()]] - `calls` [EXTRACTED]
+- [[dot-BotaoPausa()]] - `calls` [EXTRACTED]
+- [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CriarImpactoMadeira()]] - `calls` [EXTRACTED]
-- [[dot-EscolherTipo()]] - `calls` [EXTRACTED]
-- [[dot-Label()]] - `calls` [EXTRACTED]
-- [[dot-MudarVista()]] - `calls` [EXTRACTED]
-- [[dot-Painel()]] - `calls` [EXTRACTED]
-- [[dot-PodeConsultar()]] - `calls` [EXTRACTED]
-- [[dot-Regras()]] - `calls` [EXTRACTED]
+- [[dot-GarantirEventSystem()]] - `calls` [EXTRACTED]
+- [[dot-Imagem()]] - `calls` [EXTRACTED]
+- [[dot-Indicador()]] - `calls` [EXTRACTED]
+- [[dot-IndicadorPausa()]] - `calls` [EXTRACTED]
+- [[dot-LinhaSlider()]] - `calls` [EXTRACTED]
+- [[dot-LinhaStepperResolucao()]] - `calls` [EXTRACTED]
+- [[dot-LinhaToggle()]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
+- [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
+- [[dot-SubPainel()]] - `calls` [EXTRACTED]
+- [[dot-Titulo()]] - `calls` [EXTRACTED]
+- [[dot-TituloPausa()]] - `calls` [EXTRACTED]
+- [[dot-Vincular()_3]] - `calls` [INFERRED]
+- [[dot-Vincular()_4]] - `calls` [INFERRED]
+- [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
-- [[BochaCourtView]] - `references` [EXTRACTED]
-- [[BochaMapGraphic]] - `references` [EXTRACTED]
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
-- [[Button]] - `references` [EXTRACTED]
-- [[CanvasScaler]] - `references` [EXTRACTED]
+- [[CanvasGroup]] - `references` [EXTRACTED]
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[RectMask2D]] - `references` [EXTRACTED]
-- [[TextMeshProUGUI]] - `references` [EXTRACTED]
+- [[MenuPanelTransition]] - `references` [EXTRACTED]
+- [[MenuPausa]] - `method` [EXTRACTED]
+- [[OptionsPanelController]] - `references` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
+- [[SubtitleSettingsController]] - `references` [EXTRACTED]
+- [[VideoSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_12

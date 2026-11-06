@@ -12,7 +12,7 @@ tags:
 # SceneFader
 
 ## Connections
-- [[dot-Awake()_22]] - `method` [EXTRACTED]
+- [[dot-Awake()_23]] - `method` [EXTRACTED]
 - [[dot-BannerRoutine()]] - `method` [EXTRACTED]
 - [[dot-Bootstrap()]] - `method` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `method` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[dot-MostrarBannerArea()]] - `method` [EXTRACTED]
 - [[dot-OnDestroy()_11]] - `method` [EXTRACTED]
 - [[dot-OnSceneLoaded()_2]] - `method` [EXTRACTED]
-- [[dot-ResetStatic()_3]] - `method` [EXTRACTED]
+- [[dot-ResetStatic()_4]] - `method` [EXTRACTED]
 - [[dot-ResolverCaminhoCena()]] - `method` [EXTRACTED]
 - [[dot-SincronizarCenasNoEditor()]] - `method` [EXTRACTED]
 - [[dot-TransicionarParaZona()]] - `method` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[dot-ZoneTransitionRoutine()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Coroutine]] - `references` [EXTRACTED]
-- [[Instance_9]] - `defines` [EXTRACTED]
+- [[Instance_11]] - `defines` [EXTRACTED]
 - [[IsTransitioning]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SceneFader.cs]] - `contains` [EXTRACTED]

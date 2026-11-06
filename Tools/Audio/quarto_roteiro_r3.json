@@ -1,0 +1,64 @@
+{
+  "status": "awaiting_suitable_juvenile_cast",
+  "year": 1990,
+  "marcus_age": 16,
+  "other_ages": "adolescentes, idade exata não fixada",
+  "opening": "REC, chiado de cassete, chuva fraca pela janela",
+  "lines": [
+    {
+      "speaker": "julia",
+      "text": "Tá... agora foi. Lucas, fala alguma coisa lá da janela.",
+      "direction": "próxima, concentrada",
+      "take": "r3-00-julia.wav"
+    },
+    {
+      "speaker": "lucas",
+      "text": "O quê? Que tá chovendo pra caramba?",
+      "direction": "distante, junto à janela",
+      "take": "r3-01-lucas.wav"
+    },
+    {
+      "speaker": "julia",
+      "text": "Isso! Quero ver se o microfone pega tua voz com a chuva. Se funcionar, levo o gravador pro clube hoje.",
+      "direction": "empolgada, sem locução",
+      "take": "r3-02-julia.wav"
+    },
+    {
+      "speaker": "marcus",
+      "text": "Já tá gravando?",
+      "direction": "tímido, perto da porta",
+      "take": "r3-03-marcus.wav"
+    },
+    {
+      "speaker": "julia",
+      "text": "Tá, Marcus. Chega mais perto e fala também.",
+      "direction": "próxima",
+      "take": "r3-04-julia.wav"
+    },
+    {
+      "speaker": "marcus",
+      "text": "Ah... oi.",
+      "direction": "aproximando-se",
+      "take": "r3-05-marcus.wav"
+    },
+    {
+      "speaker": "lucas",
+      "text": "Bah, que discurso!",
+      "direction": "riso espontâneo, janela",
+      "take": "r3-06-lucas.wav"
+    },
+    {
+      "speaker": "julia",
+      "text": "Vocês dois não ajudam... Pronto, agora deixa eu ouvir.",
+      "direction": "riso baixo",
+      "take": "r3-07-julia.wav"
+    }
+  ],
+  "ending": "STOP e motor desacelerando",
+  "rejected_cast": [
+    "Laura",
+    "Liam",
+    "Will"
+  ],
+  "approved": false
+}

@@ -1,19 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "Community 115"
-location: "L21"
+community: "Community 16"
+location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_115
+  - community/Community_16
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-LateUpdate()_2]] - `calls` [EXTRACTED]
-- [[dot-Start()_1]] - `calls` [EXTRACTED]
-- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
+- [[dot-Begin()]] - `calls` [EXTRACTED]
+- [[dot-Cemetery()]] - `calls` [EXTRACTED]
+- [[dot-Center()]] - `calls` [EXTRACTED]
+- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
+- [[dot-Interior()]] - `calls` [EXTRACTED]
+- [[dot-KeepOverTable()]] - `calls` [EXTRACTED]
+- [[dot-Replace()]] - `calls` [EXTRACTED]
+- [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaForeground]] - `references` [EXTRACTED]
+- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_115
+#graphify/code #graphify/EXTRACTED #community/Community_16

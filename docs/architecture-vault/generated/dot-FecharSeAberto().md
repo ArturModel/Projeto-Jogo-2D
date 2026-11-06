@@ -12,8 +12,10 @@ tags:
 # .FecharSeAberto()
 
 ## Connections
-- [[dot-Fechar()_4]] - `calls` [EXTRACTED]
+- [[dot-Fechar()]] - `calls` [EXTRACTED]
+- [[dot-Open()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
+- [[dot-Toggle()]] - `calls` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

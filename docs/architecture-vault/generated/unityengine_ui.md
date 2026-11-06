@@ -35,6 +35,7 @@ tags:
 - [[SantaRitaAtlasView.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaInventory.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaItemAction.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaTapeDeck.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]

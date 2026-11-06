@@ -12,7 +12,7 @@ tags:
 # .Vincular()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [INFERRED]
+- [[dot-Construir()_1]] - `calls` [INFERRED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `references` [EXTRACTED]

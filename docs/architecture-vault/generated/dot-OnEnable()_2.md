@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 114"
-location: "L37"
+community: "Community 25"
+location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_114
+  - community/Community_25
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+#graphify/code #graphify/EXTRACTED #community/Community_25

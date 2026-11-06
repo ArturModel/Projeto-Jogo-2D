@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 25"
-location: "L36"
+community: "Community 3"
+location: "L277"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_3
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
+- [[dot-InicializarCacapas()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_3

@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 26"
-location: "L181"
+community: "Community 18"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_18
 ---
 
 # .Update()
 
 ## Connections
-- [[SantaRitaBarPatron]] - `method` [EXTRACTED]
-- [[SantaRitaBarPose]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_18

@@ -1,9 +1,12 @@
 # Catálogo dos scripts C# atuais
 
-Inventário em 03/11/2026: **120 arquivos C# atuais (incluindo Atlas, R4, Ref7 e Sinuquinha15)** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44/93/94 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
+Inventário em 04/11/2026: **123 arquivos C# atuais (incluindo Mila, Atlas, R4, Ref7 e Sinuquinha15)** em Assets/Scripts e Assets/Editor, incluindo subdiretórios. Números históricos de 43/44/93/94 arquivos foram substituídos. Símbolos abaixo são auxílio de navegação; confirme o código.
 
 | Arquivo | Tipos declarados (amostra) |
 |---|---|
+| [Scripts/SantaRitaTapeDeck.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/SantaRitaTapeDeck.cs) | Tocador/transcrição, SantaRitaTapePickup e anexos SantaRitaTapePlacement; vozes finais pendentes |
+| [Scripts/Capitulo2/MilaRuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs) | QA explícito Editor/Development com armazenamento isolado |
+| [Editor/MilaProductionVerification.cs](../../../Projeto%20Jogo%202D/Assets/Editor/MilaProductionVerification.cs) | Preparação de texturas e builds/QA explícitos, fora do Player |
 | [Scripts/MarcusNotebookContent.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/MarcusNotebookContent.cs) | Projeção pessoal de notas já adquiridas; catálogo em Resources/Notebook/Entries.json |
 | [Scripts/MarcusNotebookUI.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/MarcusNotebookUI.cs) | Livro paginado independente, caligrafia, marcador e aviso de atualização |
 | [Scripts/Capitulo2/NotebookRuntimeVerification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/NotebookRuntimeVerification.cs) | QA explícito de caderno, fichas, scroll e persistência isolada |

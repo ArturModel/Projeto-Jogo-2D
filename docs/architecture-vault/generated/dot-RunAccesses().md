@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-FindNearest()]] - `calls` [EXTRACTED]
-- [[dot-Finish()]] - `calls` [INFERRED]
+- [[dot-Finish()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]

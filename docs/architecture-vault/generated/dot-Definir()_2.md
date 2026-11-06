@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "Community 8"
-location: "L74"
+community: "Community 99"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_99
 ---
 
 # .Definir()
 
 ## Connections
-- [[dot-Rodar()_1]] - `calls` [INFERRED]
-- [[AudioAmbiente]] - `method` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_99

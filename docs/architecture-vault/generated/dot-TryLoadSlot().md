@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L206"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .TryLoadSlot()
@@ -19,6 +19,7 @@ tags:
 - [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
 - [[dot-RequestSpawnAtSlot()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[dot-RunAtlas()]] - `calls` [EXTRACTED]
 - [[dot-RunNotebook()]] - `calls` [EXTRACTED]
 - [[dot-SaveIsolationProbe()]] - `calls` [EXTRACTED]
@@ -32,4 +33,4 @@ tags:
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 - [[ManualSaveData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

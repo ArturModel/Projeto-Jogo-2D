@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 107"
+community: "Community 28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_107
+  - community/Community_28
 ---
 
 # ISelectHandler
@@ -14,4 +14,4 @@ tags:
 - [[HorizontalStepperNavigation]] - `implements` [EXTRACTED]
 - [[MenuItemSelector]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_107
+#graphify/code #graphify/EXTRACTED #community/Community_28

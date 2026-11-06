@@ -324,7 +324,7 @@ public class MapaInterativoUI : MonoBehaviour
                 lastVisit=region.id;if(!GameState.Tem("atlas.visit."+region.id))GameState.Marcar("atlas.visit."+region.id);
             }
         }
-        if (Keyboard.current == null) return;
+        if (Keyboard.current == null || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen) return;
         if (MenuPausa.Aberto) return;
 
         string sceneName = SceneManager.GetActiveScene().name;

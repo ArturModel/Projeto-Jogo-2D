@@ -44,3 +44,6 @@ Sinuquinha15 (31/10/2026): no mesmo interior, Zé oferece lisas/listradas ou 1�
 
 
 Atlas (02/11/2026): cenas/zonas aprovadas não foram reconstruídas. O levantamento registra 19 cartas (9 zonas C1 + 10 cenas C2), 38 acessos reais, inclusive o LimiarCentro de InteracaoCapitulo1. Frente e serviço do Mercadinho compartilham identidade, mantendo suas coordenadas locais e origem exterior de entrada. Sem Escola ou interiores futuros.
+
+
+04/11/2026 — Anexos de fitas, sem mudança na topologia: SantaRitaTapePlacement usa RetratoFamiliaCasaAvo na cena C1, foto_igreja na Igreja e cordas na Sociedade; Mila entrega a fita da oficina ao concluir o reparo. São anexos runtime em pontos existentes, não novas salas/cenas. Escola e fita futura de Amaro permanecem adiadas. [Plano](../../ai-plans/2026-11-04_PatrickDotto_mila-inventario-caderno.md).

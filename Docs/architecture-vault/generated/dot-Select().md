@@ -1,20 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 46"
-location: "L14"
+community: "Community 18"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_18
 ---
 
 # .Select()
 
 ## Connections
-- [[dot-OnDrag()_2]] - `calls` [EXTRACTED]
-- [[dot-OnPointerDown()_2]] - `calls` [EXTRACTED]
-- [[PointerEventData]] - `references` [EXTRACTED]
-- [[SinucaSpinSelector]] - `method` [EXTRACTED]
+- [[dot-Awake()_7]] - `calls` [EXTRACTED]
+- [[dot-Open()]] - `calls` [EXTRACTED]
+- [[dot-Owns()]] - `calls` [EXTRACTED]
+- [[dot-Stop()]] - `calls` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_18

@@ -12,8 +12,8 @@ tags:
 # .BotaoPausa()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[dot-SelecionavelPausa()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]

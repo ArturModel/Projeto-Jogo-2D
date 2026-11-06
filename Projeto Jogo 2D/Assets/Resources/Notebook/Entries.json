@@ -383,6 +383,36 @@
       "title": "Quem bateu a fotografia?",
       "body": "Uma foto do vô, da minha mãe e de mim. Não lembro quem ficou atrás da câmera.\n\nReconheci as pessoas e ainda assim levei um tempo olhando. Tem um pedaço daquele instante que não coube no retrato. Eu queria lembrar de quem estava ali do outro lado.",
       "requires": ""
+    },
+    {
+      "id": "mila_emprestimo",
+      "title": "Um aparelho emprestado",
+      "body": "Mila continuou separando as caixas enquanto eu testava o tocador. A umidade chegou antes de mim.\n\nEla deixou que eu levasse o aparelho e a fita do estojo de testes. Não foi uma resposta sobre o vô. Foi um jeito de me deixar escutar outra coisa além da falta dele.",
+      "requires": ""
+    },
+    {
+      "id": "fita_fita01",
+      "title": "Antes de virar lembrança",
+      "body": "Júlia implicando com o Lucas. Eu perguntando se já estava gravando, tarde demais. A conversa ficou guardada junto dos retratos do vô.\n\nLembro de como eu tentava ficar fora dessas brincadeiras. Agora fico procurando a minha voz lá no fundo.",
+      "requires": ""
+    },
+    {
+      "id": "fita_fita02",
+      "title": "A oficina inteira",
+      "body": "Júlia queria guardar os barulhos junto das vozes. Mila mandou anotar de onde vinha cada som, antes que depois alguém inventasse uma explicação.\n\nEu tô fazendo o contrário faz tempo: encontro uma explicação e vou tentando encaixar o resto nela.",
+      "requires": ""
+    },
+    {
+      "id": "fita_fita03",
+      "title": "Uma voz no corredor",
+      "body": "O teste do som pega passos e uma voz longe. Júlia queria escrever na caixa para ninguém mexer na instalação.\n\nNão consigo dar um rosto àquela voz só porque queria saber quem estava ali. O que ficou registrado é menor que a história que dá vontade de completar.",
+      "requires": ""
+    },
+    {
+      "id": "fita_fita_sociedade",
+      "title": "O banco que rangia",
+      "body": "Um banco, uma ferramenta que cai, gente rindo no teste do microfone. Um domingo que ninguém estava tentando tornar importante.\n\nA Sociedade também guardou isso. Nem tudo que ficou de 1990 precisa caber numa explicação sobre a tragédia.",
+      "requires": ""
     }
   ]
 }

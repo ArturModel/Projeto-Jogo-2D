@@ -1,19 +1,18 @@
 ---
-source_file: "Tools/Aseprite/c2-workstations.lua"
+source_file: "Tools/Aseprite/fitas.lua"
 type: "code"
-community: "Community 55"
-location: "L6"
+community: "Community 123"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_55
+  - community/Community_123
 ---
 
 # rect()
 
 ## Connections
-- [[box()_2]] - `calls` [EXTRACTED]
-- [[c2-workstations.lua]] - `contains` [EXTRACTED]
-- [[table()]] - `calls` [EXTRACTED]
+- [[fitas.lua]] - `contains` [EXTRACTED]
+- [[save()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_55
+#graphify/code #graphify/EXTRACTED #community/Community_123

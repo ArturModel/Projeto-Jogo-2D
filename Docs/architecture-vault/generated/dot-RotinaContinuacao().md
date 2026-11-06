@@ -12,7 +12,7 @@ tags:
 # .RotinaContinuacao()
 
 ## Connections
-- [[dot-Avancar()]] - `calls` [EXTRACTED]
+- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
 - [[dot-DigitarPaginaAtual()]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]

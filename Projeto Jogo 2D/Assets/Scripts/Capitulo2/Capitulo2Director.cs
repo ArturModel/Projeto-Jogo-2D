@@ -106,6 +106,12 @@ public sealed class Capitulo2Director : MonoBehaviour
     public void Interagir(string id, Sprite arteExame = null)
     {
         if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
+        if(id=="radio_test")
+        {
+            if(!GameState.Tem("c2_conheceu_mila")){GameMessageUI.Instance.Show("O aparelho está na bancada de trabalho. Vou pedir antes de mexer.","MARCUS","marcus");return;}
+            if(GameState.Tem("item.tocador")){SantaRitaTapeDeck.Ensure().Open();return;}
+            SantaRitaTapeDeck.Ensure().Repair();return;
+        }
         if (id == "horarios" && !GameState.Tem(Flags.MapaDoCarroObtido))
         {
             GameMessageUI.Instance.ShowInspection("LINHAS E RUAS DE SANTA RITA", "Bilhete",

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Awake()_1]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_1]] - `method` [EXTRACTED]
 - [[dot-OnEnable()]] - `method` [EXTRACTED]
 - [[CamadaParallax.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

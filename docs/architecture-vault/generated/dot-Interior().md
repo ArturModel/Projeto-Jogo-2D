@@ -12,10 +12,10 @@ tags:
 # .Interior()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
 - [[dot-Art()_1]] - `calls` [EXTRACTED]
 - [[dot-Interaction()_1]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_1]] - `calls` [EXTRACTED]
+- [[dot-Lamp()_2]] - `calls` [EXTRACTED]
 - [[dot-Move()]] - `calls` [EXTRACTED]
 - [[dot-PaperOnTable()]] - `calls` [EXTRACTED]
 - [[dot-Prop()_1]] - `calls` [EXTRACTED]

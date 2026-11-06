@@ -9,7 +9,7 @@ members: 5
 
 ## Members
 - [[dot-Awake()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
-- [[dot-LateUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
+- [[dot-LateUpdate()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
 - [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
 - [[CamadaParallax]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
 - [[CamadaParallax.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs
@@ -22,8 +22,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 112]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes

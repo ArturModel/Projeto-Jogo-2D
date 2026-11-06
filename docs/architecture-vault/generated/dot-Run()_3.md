@@ -1,17 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
-community: "Community 45"
-location: "L40"
+community: "Community 34"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_34
 ---
 
 # .Run()
 
 ## Connections
-- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
+- [[dot-ConfigureArt()]] - `calls` [EXTRACTED]
+- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
+- [[dot-Exterior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_2]] - `calls` [EXTRACTED]
+- [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_34

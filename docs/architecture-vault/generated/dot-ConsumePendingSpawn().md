@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L274"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .ConsumePendingSpawn()
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
-- [[dot-Start()_15]] - `calls` [EXTRACTED]
+- [[dot-Start()_14]] - `calls` [EXTRACTED]
 - [[dot-TryLoadManualSave()]] - `calls` [EXTRACTED]
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

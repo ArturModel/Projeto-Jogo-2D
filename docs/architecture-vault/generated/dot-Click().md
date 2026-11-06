@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 48"
 location: "L343"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_0
+  - community/Community_48
 ---
 
 # .Click()
@@ -23,4 +23,4 @@ tags:
 - [[Button]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_0
+#graphify/code #graphify/INFERRED #community/Community_48

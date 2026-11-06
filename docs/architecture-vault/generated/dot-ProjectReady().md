@@ -12,7 +12,7 @@ tags:
 # .ProjectReady()
 
 ## Connections
-- [[dot-Project()_3]] - `calls` [EXTRACTED]
+- [[dot-Project()_2]] - `calls` [EXTRACTED]
 - [[dot-Triangle()]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

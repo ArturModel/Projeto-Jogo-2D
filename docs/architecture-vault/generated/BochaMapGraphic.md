@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Circle()]] - `method` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-MapPoint()]] - `method` [EXTRACTED]
 - [[dot-OnPopulateMesh()]] - `method` [EXTRACTED]
 - [[dot-Quad()]] - `method` [EXTRACTED]

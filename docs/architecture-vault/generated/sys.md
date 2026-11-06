@@ -12,5 +12,6 @@ tags:
 
 ## Connections
 - [[graphify-project.py]] - `imports` [EXTRACTED]
+- [[voice_pipeline.py]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_32

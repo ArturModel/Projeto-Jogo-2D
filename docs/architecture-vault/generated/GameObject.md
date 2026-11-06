@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 30"
+community: "Community 110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_110
 ---
 
 # GameObject
 
 ## Connections
 - [[dot-AbrirPainel()]] - `references` [EXTRACTED]
-- [[dot-Add()_1]] - `references` [EXTRACTED]
+- [[dot-Add()]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Box()_1]] - `references` [EXTRACTED]
@@ -29,8 +29,9 @@ tags:
 - [[dot-Cylinder()]] - `references` [EXTRACTED]
 - [[dot-Empty()]] - `references` [EXTRACTED]
 - [[dot-Executar()]] - `references` [EXTRACTED]
+- [[dot-Frame()]] - `references` [EXTRACTED]
 - [[dot-IntegratedFrameR4()]] - `references` [EXTRACTED]
-- [[dot-Panel()]] - `references` [EXTRACTED]
+- [[dot-Panel()_1]] - `references` [EXTRACTED]
 - [[dot-Paper()]] - `references` [EXTRACTED]
 - [[dot-PosicaoFinalBrancaComEfeito()]] - `references` [EXTRACTED]
 - [[dot-Primitive()]] - `references` [EXTRACTED]
@@ -39,7 +40,7 @@ tags:
 - [[dot-Prop()_1]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
-- [[dot-Run()_6]] - `references` [EXTRACTED]
+- [[dot-Run()_7]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunNotebook()]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
@@ -73,7 +74,9 @@ tags:
 - [[OptionsPanelController]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SantaRitaAtlasView]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `references` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_110

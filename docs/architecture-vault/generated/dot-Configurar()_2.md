@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 18"
-location: "L19"
+community: "Community 88"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_88
 ---
 
 # .Configurar()
 
 ## Connections
-- [[dot-AtualizarSpawnPointExistente()]] - `calls` [INFERRED]
-- [[SpawnPoint]] - `method` [EXTRACTED]
+- [[dot-ColocarInteracao()]] - `calls` [INFERRED]
+- [[dot-UpdateCasaDoAvoScene()]] - `calls` [INFERRED]
+- [[InteracaoCapitulo1]] - `method` [EXTRACTED]
+- [[TipoInteracao_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_88

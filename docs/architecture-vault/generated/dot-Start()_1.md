@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 115"
-location: "L14"
+community: "Community 116"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_115
+  - community/Community_116
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Apply()_1]] - `calls` [EXTRACTED]
-- [[dot-ShouldReveal()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_115
+#graphify/code #graphify/EXTRACTED #community/Community_116

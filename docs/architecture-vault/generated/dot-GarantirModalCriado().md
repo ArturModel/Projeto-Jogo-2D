@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 23"
+community: "Community 19"
 location: "L309"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_19
 ---
 
 # .GarantirModalCriado()
@@ -18,7 +18,7 @@ tags:
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()]] - `calls` [EXTRACTED]
 - [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[PayphoneSlotInputWatcher_1]] - `references` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_19

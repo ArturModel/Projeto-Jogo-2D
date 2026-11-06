@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 56"
-location: "L216"
+community: "Community 48"
+location: "L340"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_56
+  - community/Community_48
 ---
 
 # .Set()
 
 ## Connections
-- [[Sinuca3DVerification]] - `method` [EXTRACTED]
+- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_56
+#graphify/code #graphify/EXTRACTED #community/Community_48

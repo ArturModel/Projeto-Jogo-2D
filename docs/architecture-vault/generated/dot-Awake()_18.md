@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
 type: "code"
 community: "Community 57"
-location: "L34"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,7 @@ tags:
 # .Awake()
 
 ## Connections
-- [[dot-EsconderImediatamente()]] - `calls` [EXTRACTED]
-- [[dot-MostrarImediatamente()]] - `calls` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
+- [[dot-ConfigurarGrupo()]] - `calls` [EXTRACTED]
+- [[MenuPanelTransition]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_57

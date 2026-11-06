@@ -1,31 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 87"
-location: "L52"
+community: "Community 6"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_6
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Check()_1]] - `calls` [INFERRED]
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[Capitulo2Portal]] - `references` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
-- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
-- [[ShadowCaster2D]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[TextMeshPro]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[dot-ApprovedScenes()]] - `calls` [EXTRACTED]
+- [[dot-BuildFinalLivingWorld()]] - `calls` [EXTRACTED]
+- [[dot-BuildNormal()]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()_1]] - `calls` [EXTRACTED]
+- [[dot-RegisterCampaignScenes()]] - `calls` [EXTRACTED]
+- [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
+- [[dot-Revision()]] - `calls` [EXTRACTED]
+- [[dot-Scenes()]] - `calls` [EXTRACTED]
+- [[dot-SourceHash()]] - `calls` [EXTRACTED]
+- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_6

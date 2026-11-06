@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 31"
-location: "L26"
+community: "Community 26"
+location: "L194"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_26
 ---
 
 # Prompt
 
 ## Connections
-- [[ItemDeCena]] - `defines` [EXTRACTED]
+- [[SantaRitaBarProp]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_26

@@ -12,7 +12,7 @@ tags:
 # .SaveIsolationProbe()
 
 ## Connections
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [EXTRACTED]
 - [[dot-SaveSlot()]] - `calls` [EXTRACTED]
 - [[dot-Start()]] - `calls` [EXTRACTED]

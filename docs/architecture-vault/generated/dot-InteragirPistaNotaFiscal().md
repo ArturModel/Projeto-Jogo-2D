@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 50"
+community: "Community 13"
 location: "L676"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_13
 ---
 
 # .InteragirPistaNotaFiscal()
@@ -15,7 +15,7 @@ tags:
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarLinhaDoTempo()]] - `calls` [EXTRACTED]
 - [[dot-Etiqueta()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_1]] - `calls` [EXTRACTED]
+- [[dot-Interact()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Oferecer()]] - `calls` [EXTRACTED]
 - [[dot-Play()]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_13

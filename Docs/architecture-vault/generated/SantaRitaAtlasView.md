@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs"
 type: "code"
-community: "Community 34"
+community: "Community 51"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_51
 ---
 
 # SantaRitaAtlasView
@@ -16,9 +16,9 @@ tags:
 - [[dot-Detail()]] - `method` [EXTRACTED]
 - [[dot-Initialize()_1]] - `method` [EXTRACTED]
 - [[dot-Invalidate()]] - `method` [EXTRACTED]
-- [[dot-Label()_1]] - `method` [EXTRACTED]
-- [[dot-Project()_1]] - `method` [EXTRACTED]
-- [[dot-Rebuild()]] - `method` [EXTRACTED]
+- [[dot-Label()_2]] - `method` [EXTRACTED]
+- [[dot-Project()_3]] - `method` [EXTRACTED]
+- [[dot-Rebuild()_1]] - `method` [EXTRACTED]
 - [[dot-RegionName()]] - `method` [EXTRACTED]
 - [[dot-RunAtlas()]] - `references` [EXTRACTED]
 - [[dot-ShowInterior()]] - `method` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[SantaRitaAtlasView.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_51

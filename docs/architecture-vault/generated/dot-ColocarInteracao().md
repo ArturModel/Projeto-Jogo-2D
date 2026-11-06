@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-CarregarSprite()]] - `calls` [EXTRACTED]
-- [[dot-Configurar()]] - `calls` [INFERRED]
+- [[dot-Configurar()_2]] - `calls` [INFERRED]
 - [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]

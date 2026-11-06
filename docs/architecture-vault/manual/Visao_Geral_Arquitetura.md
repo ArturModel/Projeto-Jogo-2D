@@ -87,3 +87,14 @@ Marcus: exportador reconstrói duas pernas por pose sem deformações cumulativa
 `MarcusNotebookContent` projeta registros já adquiridos em primeira pessoa a partir de `Resources/Notebook/Entries.json`, sem mudar os documentos, flags ou fatos originais. Variantes condicionais dependem de conhecimento real. Registros legados sem versão própria são transcrições identificadas, sem novos fatos. `GameState.OnDiarioAtualizado(id)` notifica alteração material; `OnSnapshotRestaurado` reconcilia cache sem aviso de descoberta. `caderno.folha` é apenas marcador RAM/snapshot v2; salvar continua exclusivo do orelhão. Kalam tem licença OFL distribuída; TMP estático evita geração de fonte em jogo.
 
 Entorno `Resources/Atlas/Paisagem.png` e rabiscos por descoberta não modificam a geometria, cenas ou acessos. A autoria de fonte/paisagem roda explicitamente fora de Play; não há reconstrução ao abrir o Editor. QA: `-srNotebookQA` em Development, além da regressão `-srAtlasQA`. Relatório: [caderno](../../Evidencias/Caderno/Relatorio.md).
+
+
+## Pertences e fitas — 04/11/2026
+
+SantaRitaInventory deriva posse das flags existentes/item.<id>; bolsa.ordem e bolsa.atalho.<n> são textos em RAM/snapshot v2. Cinco atalhos não são capacidade máxima: bolsa possui vinte células de apresentação para o catálogo atual de nove objetos. Fichas continuam no mapa, não itens. Contrato HasItem(int) preserva índices históricos.
+
+SantaRitaTapeDeck gerencia modal, reparo de velocidade de Mila, seleção adquirida, controles e transcrição de Resources/Tapes/Catalog.json; clipes de voz são opcionais e ainda ausentes. SantaRitaTapePickup/Placement anexam fitas a objetos já existentes depois da carga, sem salvar/regenerar cenas. Conclusão anota fato pessoal, troca de cena interrompe. PlayerController/Mapa/Menu bloqueiam comandos concorrentes e ClosedFrame evita ESC abrir pausa por baixo. Capitulo2Audio atenua música durante consulta. Tudo permanece RAM até o orelhão.
+
+MarcusNotebookUI mantém índice manuscrito e filtros de registros adquiridos. caderno.marcador.id/.parte resolve o marcador por nota mesmo com páginas adicionadas; caderno.folha é fallback. APIs de notas originais não substituídas.
+
+MilaProductionVerification fica no Editor; MilaRuntimeVerification apenas Editor/DEBUG com flags explícitas e saves temporários. Chapter2BuildVerification agenda Exit para permitir finally restaurar configurações. Autoria vocal em Tools/Audio e segredos fora do repo/Player. [Relatório e limites](../../Evidencias/MilaInventario/Relatorio.md).

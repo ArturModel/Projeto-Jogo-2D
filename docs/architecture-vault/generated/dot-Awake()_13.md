@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
 type: "code"
-community: "Community 36"
-location: "L64"
+community: "Community 34"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_34
 ---
 
 # .Awake()
 
 ## Connections
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_34

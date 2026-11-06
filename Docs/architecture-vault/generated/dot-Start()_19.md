@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "Community 93"
-location: "L41"
+community: "Community 94"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_94
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
+- [[dot-PrepareTools()]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_94

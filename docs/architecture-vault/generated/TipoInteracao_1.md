@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 110"
+community: "Community 88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_110
+  - community/Community_88
 ---
 
 # TipoInteracao
 
 ## Connections
 - [[dot-ColocarInteracao()]] - `references` [EXTRACTED]
-- [[dot-Configurar()]] - `references` [EXTRACTED]
+- [[dot-Configurar()_2]] - `references` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_110
+#graphify/code #graphify/EXTRACTED #community/Community_88

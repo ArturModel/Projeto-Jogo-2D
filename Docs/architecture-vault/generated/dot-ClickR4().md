@@ -12,7 +12,7 @@ tags:
 # .ClickR4()
 
 ## Connections
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `calls` [INFERRED]
 - [[dot-PointerSinuca()]] - `calls` [INFERRED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]

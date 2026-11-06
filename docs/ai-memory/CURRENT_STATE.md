@@ -83,3 +83,21 @@ Trilhas C2 fornecidas integradas por cena e inventário protegido contra ícone 
 Fechamento caderno/paisagem: testes específicos (30) e Atlas (237) PASS em Editor e Player; builds finais sem erros e hash igual, 120 C# indexados. Sessão RAM/posição/zona/indicador restaurados, seis arquivos pessoais intactos, cenas/configurações sem diff. Corpus final com 64 textos/variantes; original do diário preservado. Alterações não staged, sem commit/push. Limites e evidências no relatório Caderno.
 
 TMP gravou cache VT323 após restauração; único asset posterior às builds. Hash do Assets atual difere do fingerprint comum das duas builds por esse cache, sem mudanças posteriores em código/cenas/corpus/arte. Detalhe no relatório.
+
+
+## Mila, bolsa e caderno — 04/11/2026
+
+[Plano](../ai-plans/2026-11-04_PatrickDotto_mila-inventario-caderno.md) e [relatório](../Evidencias/MilaInventario/Relatorio.md): bolsa I com vinte espaços de apresentação/catálogo atual de nove itens e cinco atalhos reorganizáveis, fichas só no mapa; índice manuscrito do caderno e marcador por ID/parte, preservado no snapshot manual. Mila empresta tocador após ajuste; quatro fitas contextualizadas com coleta explícita e transcrição temporizada. Conteúdo de Amaro futuro não antecipado. Sem autosave ou reconstrução de cenas.
+
+32 verificações específicas + PASS em Editor e Player final; builds QA/normal zero erros, sem avisos C#, fingerprint igual. Cenas/ProjectSettings sem diff. QA fora do assembly normal; smoke normal só inicialização, avisos conhecidos de vídeo/driver permanecem. Sete saves pessoais anteriores à tarefa; hashes iguais no intervalo do smoke, sem alegar baseline de início.
+
+Dublagem NÃO concluída: ElevenLabs privado autenticado, criação de voz bloqueada pelo plano; Jessica rejeitada por soar adulta/artificial e retirada da seleção automática. Duas audições ficcionais Qwen VoiceDesign geradas na demo oficial, ainda sem aprovação. Skill Audio Lens instalada/testada 12/12; skill santa-rita-audio ampliada. [Pesquisa, fontes, hardware e próximos passos](../Vozes_Pesquisa_E_Producao.md). Ferramentas/segredos fora do Player; nenhum modelo pesado instalado, compra, commit ou push.
+
+
+04/11 — Revisão das audições pelo autor: duas candidatas Qwen também REJEITADAS (artificialidade/idade), faltaram quarto/Marcus ao fundo. Direção agora exige prova de cena completa com vozes em posições distintas. Base real de quarto/foley CC0 preparada em prévia privada, renderer validado; elenco completo NÃO produzido: Lucas/Marcus retornaram erro na demo, Voice Design do AI Studio exige chave paga. Sem compras, Assets ou saves alterados. [Plano e bloqueios](../ai-plans/2026-11-04_PatrickDotto_fitas-cena-quarto.md); [fontes/evidências](../Evidencias/MilaInventario/Revisao_Cena_Quarto.md).
+
+04/11 — Pedido posterior de amostra única: cena com três tomadas ElevenLabs v3 e ambiente/foley renderizada em prévia privada; elenco ainda não aprovado. Plano: ../ai-plans/2026-11-04_PatrickDotto_amostra-fita-quarto.md. Sem publicar no jogo.
+
+04/11 — Amostra R2: novas tomadas Júlia/Lucas, Marcus chamado pelo nome na porta; REC/cadeira/quarto aumentados e tratamento mono de cassete com chiado. Prévia privada, sem aprovação/publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_amostra-fita-r2.md.
+
+04/11 — Autor forneceu roteiro R3 e rejeitou timbre adulto da R2. Oito falas registradas literalmente em Tools/Audio/quarto_roteiro_r3.json; teste juvenil Qwen falhou. Sem nova amostra adequada nem publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_roteiro-fita-r3.md.

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Finish()]] - `calls` [INFERRED]
-- [[dot-OnDestroy()_8]] - `calls` [INFERRED]
+- [[dot-OnDestroy()_7]] - `calls` [INFERRED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Community_48

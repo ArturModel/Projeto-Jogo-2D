@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
-community: "Community 6"
+community: "Community 34"
 location: "L377"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_34
 ---
 
 # .Sprite()
 
 ## Connections
-- [[dot-Building()_1]] - `calls` [EXTRACTED]
+- [[dot-Building()]] - `calls` [EXTRACTED]
 - [[dot-Interacao()]] - `calls` [EXTRACTED]
 - [[dot-Prop()_2]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_34

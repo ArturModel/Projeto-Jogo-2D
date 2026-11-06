@@ -38,15 +38,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 30]]
-- 3 edges to [[_COMMUNITY_Community 48]]
+- 6 edges to [[_COMMUNITY_Community 30]]
 - 2 edges to [[_COMMUNITY_Community 43]]
 - 1 edge to [[_COMMUNITY_Community 25]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[SinucaBrasileiraRules]] - degree 19, connects to 3 communities
-- [[dot-Resolve()]] - degree 6, connects to 2 communities
+- [[SinucaBrasileiraRules]] - degree 19, connects to 2 communities
+- [[dot-Resolve()]] - degree 6, connects to 1 community
 - [[Result]] - degree 3, connects to 1 community
 - [[dot-Refuse()]] - degree 2, connects to 1 community
 - [[Result_2]] - degree 2, connects to 1 community

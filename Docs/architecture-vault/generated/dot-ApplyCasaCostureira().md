@@ -12,7 +12,7 @@ tags:
 # .ApplyCasaCostureira()
 
 ## Connections
-- [[dot-Add()_1]] - `calls` [EXTRACTED]
+- [[dot-Add()]] - `calls` [EXTRACTED]
 - [[dot-ApplyC2()]] - `calls` [EXTRACTED]
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
 

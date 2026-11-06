@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
 community: "Community 46"
-location: "L86"
+location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # SantaRitaItemHover
 
 ## Connections
-- [[dot-Awake()_8]] - `references` [EXTRACTED]
+- [[dot-Awake()_6]] - `references` [EXTRACTED]
 - [[dot-OnPointerEnter()_1]] - `method` [EXTRACTED]
 - [[dot-OnPointerExit()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]

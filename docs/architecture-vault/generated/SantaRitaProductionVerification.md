@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
 type: "code"
-community: "Community 87"
+community: "Community 6"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_6
 ---
 
 # SantaRitaProductionVerification
 
 ## Connections
 - [[dot-BuildFinalLivingWorld()]] - `method` [EXTRACTED]
-- [[dot-BuildQA()]] - `method` [EXTRACTED]
-- [[dot-Run()_8]] - `method` [EXTRACTED]
+- [[dot-BuildQA()_1]] - `method` [EXTRACTED]
+- [[dot-Run()_1]] - `method` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_6

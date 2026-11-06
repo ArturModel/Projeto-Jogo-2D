@@ -12,9 +12,9 @@ tags:
 # .SinuquinhaKeyboard()
 
 ## Connections
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `calls` [INFERRED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]

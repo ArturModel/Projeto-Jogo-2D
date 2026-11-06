@@ -1,19 +1,22 @@
 ---
 type: community
-members: 6
+members: 9
 ---
 
 # Community 116
 
-**Members:** 6 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[dot-Awake()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-LateUpdate()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-OnDisable()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[SantaRitaExitThreshold]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[SantaRitaExitThreshold.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
+- [[dot-Construir()]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Ligar()]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Posicionar()]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Start()_1]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Update()_1]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[Curvatura]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[EstradaScroller]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[Fileira_1]] - code
+- [[Velocidade]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,20 +26,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 44]]
-- 2 edges to [[_COMMUNITY_Community 16]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 113]]
-- 1 edge to [[_COMMUNITY_Community 25]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 26]]
-- 1 edge to [[_COMMUNITY_Community 112]]
-- 1 edge to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 16]]
 
 ## Top bridge nodes
-- [[SantaRitaExitThreshold]] - degree 15, connects to 9 communities
-- [[dot-Awake()_4]] - degree 3, connects to 2 communities
-- [[dot-LateUpdate()_3]] - degree 2, connects to 1 community
-- [[SantaRitaExitThreshold.cs]] - degree 2, connects to 1 community
+- [[EstradaScroller]] - degree 12, connects to 4 communities
+- [[dot-Construir()]] - degree 4, connects to 1 community
+- [[dot-Ligar()]] - degree 2, connects to 1 community

@@ -12,13 +12,13 @@ tags:
 # Sinuca3DVerification
 
 ## Connections
-- [[dot-Field()_1]] - `method` [EXTRACTED]
+- [[dot-Field()_2]] - `method` [EXTRACTED]
 - [[dot-GetBall()]] - `method` [EXTRACTED]
 - [[dot-Invoke()_1]] - `method` [EXTRACTED]
 - [[dot-PosicaoFinalBrancaComEfeito()]] - `method` [EXTRACTED]
-- [[dot-Run()_6]] - `method` [EXTRACTED]
+- [[dot-Run()_7]] - `method` [EXTRACTED]
 - [[dot-RunMenu()]] - `method` [EXTRACTED]
-- [[dot-Set()_1]] - `method` [EXTRACTED]
+- [[dot-Set()_2]] - `method` [EXTRACTED]
 - [[dot-SetBall()]] - `method` [EXTRACTED]
 - [[Sinuca3DVerification.cs]] - `contains` [EXTRACTED]
 

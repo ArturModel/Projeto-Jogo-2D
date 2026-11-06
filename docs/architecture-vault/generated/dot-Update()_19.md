@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 33"
-location: "L27"
+community: "Community 26"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_26
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Ativar()_1]] - `calls` [INFERRED]
-- [[dot-Procurar()]] - `calls` [EXTRACTED]
-- [[PonteiroCarro]] - `method` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `method` [EXTRACTED]
+- [[SantaRitaBarPose]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_26

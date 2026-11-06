@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]

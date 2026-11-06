@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "Community 45"
+community: "Community 86"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_86
 ---
 
 # .BeginIsolatedTests()
@@ -18,15 +18,16 @@ tags:
 - [[dot-ExportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Narrative()]] - `calls` [EXTRACTED]
-- [[dot-Run()_6]] - `calls` [EXTRACTED]
+- [[dot-Run()_7]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[dot-Start()_16]] - `calls` [EXTRACTED]
+- [[dot-Start()_18]] - `calls` [EXTRACTED]
 - [[dot-Start()]] - `calls` [EXTRACTED]
+- [[dot-Start()_8]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 - [[GameStateSnapshot]] - `calls` [INFERRED]
 - [[IDisposable]] - `references` [EXTRACTED]
 - [[IsolatedSaveScope]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_86

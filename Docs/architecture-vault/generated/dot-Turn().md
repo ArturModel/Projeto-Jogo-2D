@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
 type: "code"
 community: "Community 24"
-location: "L89"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Flip()]] - `calls` [EXTRACTED]
 - [[dot-Initialize()]] - `calls` [EXTRACTED]
-- [[dot-Update()_9]] - `calls` [EXTRACTED]
-- [[dot-Update()_20]] - `calls` [INFERRED]
+- [[dot-Update()_18]] - `calls` [EXTRACTED]
+- [[dot-Update()_7]] - `calls` [INFERRED]
 - [[MarcusNotebookUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_24

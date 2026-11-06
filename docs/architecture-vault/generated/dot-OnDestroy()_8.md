@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 48"
-location: "L19"
+community: "Community 49"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_49
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[dot-RestoreAudioC2Prefs()]] - `calls` [INFERRED]
-- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
+- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_49

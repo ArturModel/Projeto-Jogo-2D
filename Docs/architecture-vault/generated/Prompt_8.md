@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 87"
-location: "L7"
+community: "Community 84"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_84
 ---
 
 # Prompt
 
 ## Connections
-- [[Capitulo2Interactable]] - `defines` [EXTRACTED]
+- [[SantaRitaTapePickup]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_84

@@ -1,18 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
 type: "code"
-community: "Community 57"
-location: "L29"
+community: "Community 49"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_57
+  - community/Community_49
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ConfigurarGrupo()]] - `calls` [EXTRACTED]
-- [[MenuPanelTransition]] - `method` [EXTRACTED]
+- [[Collider2D]] - `references` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+#graphify/code #graphify/EXTRACTED #community/Community_49

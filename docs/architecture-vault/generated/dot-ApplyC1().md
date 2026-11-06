@@ -12,7 +12,7 @@ tags:
 # .ApplyC1()
 
 ## Connections
-- [[dot-Add()_1]] - `calls` [EXTRACTED]
+- [[dot-Add()]] - `calls` [EXTRACTED]
 - [[dot-ApplyExteriorC1()]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
 - [[dot-Replace()_1]] - `calls` [EXTRACTED]

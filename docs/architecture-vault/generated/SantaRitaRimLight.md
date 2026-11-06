@@ -12,10 +12,10 @@ tags:
 # SantaRitaRimLight
 
 ## Connections
-- [[dot-Apply()_4]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_7]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_5]] - `method` [EXTRACTED]
-- [[dot-Start()_12]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_4]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_1]] - `method` [EXTRACTED]
+- [[dot-Start()_2]] - `references` [EXTRACTED]
 - [[Light2D]] - `references` [EXTRACTED]
 - [[MaterialPropertyBlock]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

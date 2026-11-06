@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 54"
+community: "Community 38"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_38
 ---
 
 # .RecentrarCamera()
@@ -16,4 +16,4 @@ tags:
 - [[dot-Recenter()]] - `calls` [EXTRACTED]
 - [[SinucaTableView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_38

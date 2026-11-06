@@ -1,21 +1,19 @@
 ---
 type: community
-members: 11
+members: 9
 ---
 
 # Community 96
 
-**Members:** 11 nodes
+**Members:** 9 nodes
 
 ## Members
 - [[dot-Encerrar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
 - [[dot-Legendar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-OnDestroy()_12]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-Start()_20]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-Update()_29]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-UpdatePrologoScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
+- [[dot-OnDestroy()_13]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-Start()_21]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-Update()_32]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
 - [[Fala_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[Fala_2]] - code
 - [[PrologoVideo]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
 - [[RenderTexture]] - code
 - [[VideoPlayer]] - code
@@ -28,21 +26,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 4 edges to [[_COMMUNITY_Community 13]]
 - 3 edges to [[_COMMUNITY_Community 8]]
 - 3 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 31]]
-- 2 edges to [[_COMMUNITY_Community 15]]
+- 2 edges to [[_COMMUNITY_Community 89]]
 - 1 edge to [[_COMMUNITY_Community 33]]
 - 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 89]]
-- 1 edge to [[_COMMUNITY_Community 112]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 50]]
 
 ## Top bridge nodes
-- [[dot-Encerrar()_1]] - degree 8, connects to 4 communities
-- [[dot-Start()_20]] - degree 8, connects to 4 communities
-- [[PrologoVideo]] - degree 13, connects to 3 communities
+- [[PrologoVideo]] - degree 13, connects to 5 communities
+- [[dot-Start()_21]] - degree 8, connects to 4 communities
+- [[dot-Encerrar()_1]] - degree 8, connects to 3 communities
 - [[dot-Legendar()]] - degree 4, connects to 2 communities
-- [[dot-UpdatePrologoScene()]] - degree 3, connects to 2 communities
+- [[RenderTexture]] - degree 2, connects to 1 community

@@ -1,22 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 93"
+community: "Community 34"
 location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_34
 ---
 
 # .DetectarLimitesDaRegiao()
 
 ## Connections
-- [[dot-Start()_19]] - `calls` [EXTRACTED]
+- [[dot-Start()_13]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Tilemap]] - `references` [EXTRACTED]
 - [[TilemapRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_34

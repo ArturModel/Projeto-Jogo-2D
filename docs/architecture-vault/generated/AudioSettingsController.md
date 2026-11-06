@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 84"
+community: "Community 85"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_85
 ---
 
 # AudioSettingsController
@@ -18,15 +18,15 @@ tags:
 - [[dot-AplicarVolume()]] - `method` [EXTRACTED]
 - [[dot-AplicarVolumeEmMixer()]] - `method` [EXTRACTED]
 - [[dot-AplicarVolumesGlobais()]] - `method` [EXTRACTED]
-- [[dot-Construir()]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-GarantirValoresPadraoAudiveis()]] - `method` [EXTRACTED]
 - [[dot-InicializarAudioGlobal()]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_11]] - `method` [EXTRACTED]
-- [[dot-Start()_18]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_8]] - `method` [EXTRACTED]
+- [[dot-Start()_17]] - `method` [EXTRACTED]
 - [[dot-Vincular()_5]] - `method` [EXTRACTED]
 - [[AudioMixer]] - `references` [EXTRACTED]
 - [[AudioSettingsController.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_85

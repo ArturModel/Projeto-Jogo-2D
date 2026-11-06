@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 15"
-location: "L187"
+community: "Community 36"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_36
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[dot-SetActive()]] - `calls` [EXTRACTED]
+- [[SinucaTableView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_36

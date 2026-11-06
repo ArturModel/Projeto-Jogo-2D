@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs"
 type: "code"
-community: "Community 86"
+community: "Community 30"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_30
 ---
 
 # .PauseLoadFiveSlots()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-ClickR4()]] - `calls` [INFERRED]
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
 - [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_30

@@ -14,15 +14,16 @@ tags:
 ## Connections
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-Interacao()]] - `references` [EXTRACTED]
-- [[dot-Interact()_8]] - `method` [EXTRACTED]
+- [[dot-Interact()_10]] - `method` [EXTRACTED]
 - [[dot-Interaction()]] - `references` [EXTRACTED]
 - [[dot-Interaction()_1]] - `references` [EXTRACTED]
 - [[dot-RoutineR2()]] - `references` [EXTRACTED]
 - [[dot-RunR2()]] - `references` [EXTRACTED]
+- [[dot-Update()_30]] - `references` [EXTRACTED]
 - [[dot-Use()]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_8]] - `defines` [EXTRACTED]
+- [[Prompt_10]] - `defines` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_87

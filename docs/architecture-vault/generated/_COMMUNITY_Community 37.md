@@ -33,16 +33,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 11 edges to [[_COMMUNITY_Community 17]]
-- 8 edges to [[_COMMUNITY_Community 4]]
-- 5 edges to [[_COMMUNITY_Community 27]]
+- 6 edges to [[_COMMUNITY_Community 45]]
+- 4 edges to [[_COMMUNITY_Community 27]]
+- 3 edges to [[_COMMUNITY_Community 4]]
 - 2 edges to [[_COMMUNITY_Community 1]]
 - 2 edges to [[_COMMUNITY_Community 9]]
-- 2 edges to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 38]]
+- 2 edges to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 110]]
 
 ## Top bridge nodes
-- [[BochaShot]] - degree 15, connects to 5 communities
-- [[dot-Escolher()]] - degree 14, connects to 3 communities
+- [[BochaShot]] - degree 15, connects to 6 communities
+- [[dot-Escolher()]] - degree 14, connects to 4 communities
 - [[dot-Preparar()_1]] - degree 7, connects to 3 communities
 - [[dot-SetState()]] - degree 5, connects to 3 communities
 - [[BochaThrowType]] - degree 8, connects to 1 community

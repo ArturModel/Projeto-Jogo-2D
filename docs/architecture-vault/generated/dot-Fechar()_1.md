@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 17"
-location: "L297"
+community: "Community 12"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_12
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
-- [[dot-Derrota()]] - `calls` [EXTRACTED]
-- [[dot-Pausar()]] - `calls` [EXTRACTED]
-- [[dot-ResolverMao()]] - `calls` [EXTRACTED]
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-AbrirCarregar()]] - `calls` [EXTRACTED]
+- [[dot-Sair()]] - `calls` [EXTRACTED]
+- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
+- [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_12

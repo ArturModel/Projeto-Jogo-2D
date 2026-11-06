@@ -12,7 +12,7 @@ tags:
 # .Forcas()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()]] - `calls` [EXTRACTED]
 - [[dot-Step()]] - `calls` [EXTRACTED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 

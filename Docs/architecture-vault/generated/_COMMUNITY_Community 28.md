@@ -1,29 +1,34 @@
 ---
 type: community
-members: 16
+members: 21
 ---
 
 # Community 28
 
-**Members:** 16 nodes
+**Members:** 21 nodes
 
 ## Members
 - [[dot-AtualizarFiltroInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-CriarAmbiencia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-CriarFonte()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
 - [[dot-CriarFonteMusical()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-CriarImpactoMadeira()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-Definir()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-OnEnable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
+- [[dot-DefinirModoInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
+- [[dot-MoverIndicador()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
+- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
+- [[dot-OnPointerEnter()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
+- [[dot-OnSelect()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
+- [[dot-ReiniciarSelecao()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
 - [[dot-RespostaAbafada()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
 - [[dot-TocarRadio()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-Update()_15]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-Update()_16]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-Update()_21]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
+- [[dot-Vincular()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
 - [[AudioClip]] - code
 - [[AudioLowPassFilter]] - code
 - [[AudioSource]] - code
 - [[Camada_1]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
 - [[Capitulo2Audio]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
+- [[ISelectHandler]] - code
+- [[MenuItemSelector]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,32 +38,33 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 0]]
-- 6 edges to [[_COMMUNITY_Community 17]]
-- 5 edges to [[_COMMUNITY_Community 12]]
-- 5 edges to [[_COMMUNITY_Community 2]]
-- 5 edges to [[_COMMUNITY_Community 25]]
-- 5 edges to [[_COMMUNITY_Community 7]]
-- 4 edges to [[_COMMUNITY_Community 107]]
+- 7 edges to [[_COMMUNITY_Community 12]]
+- 6 edges to [[_COMMUNITY_Community 15]]
+- 6 edges to [[_COMMUNITY_Community 2]]
+- 6 edges to [[_COMMUNITY_Community 25]]
+- 5 edges to [[_COMMUNITY_Community 18]]
+- 5 edges to [[_COMMUNITY_Community 19]]
 - 4 edges to [[_COMMUNITY_Community 117]]
-- 4 edges to [[_COMMUNITY_Community 30]]
-- 3 edges to [[_COMMUNITY_Community 114]]
-- 2 edges to [[_COMMUNITY_Community 8]]
-- 2 edges to [[_COMMUNITY_Community 112]]
-- 2 edges to [[_COMMUNITY_Community 42]]
-- 2 edges to [[_COMMUNITY_Community 31]]
-- 2 edges to [[_COMMUNITY_Community 88]]
-- 1 edge to [[_COMMUNITY_Community 113]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 111]]
+- 4 edges to [[_COMMUNITY_Community 0]]
+- 3 edges to [[_COMMUNITY_Community 17]]
+- 3 edges to [[_COMMUNITY_Community 13]]
+- 3 edges to [[_COMMUNITY_Community 3]]
+- 3 edges to [[_COMMUNITY_Community 54]]
+- 3 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 48]]
+- 3 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 120]]
+- 2 edges to [[_COMMUNITY_Community 110]]
+- 2 edges to [[_COMMUNITY_Community 94]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 11]]
+- 1 edge to [[_COMMUNITY_Community 112]]
 - 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 92]]
-- 1 edge to [[_COMMUNITY_Community 87]]
 
 ## Top bridge nodes
-- [[AudioSource]] - degree 33, connects to 15 communities
-- [[AudioClip]] - degree 26, connects to 12 communities
-- [[Capitulo2Audio]] - degree 13, connects to 4 communities
-- [[AudioLowPassFilter]] - degree 7, connects to 3 communities
-- [[dot-RespostaAbafada()_1]] - degree 4, connects to 2 communities
+- [[AudioSource]] - degree 35, connects to 17 communities
+- [[AudioClip]] - degree 27, connects to 13 communities
+- [[MenuItemSelector]] - degree 15, connects to 5 communities
+- [[Capitulo2Audio]] - degree 13, connects to 5 communities
+- [[AudioLowPassFilter]] - degree 7, connects to 4 communities

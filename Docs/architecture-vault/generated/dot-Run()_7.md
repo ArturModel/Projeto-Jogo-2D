@@ -1,22 +1,38 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 6"
-location: "L30"
+community: "Community 56"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_56
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-ConfigureArt()]] - `calls` [EXTRACTED]
-- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
-- [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
+- [[dot-AjustarZoom()]] - `calls` [INFERRED]
+- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [INFERRED]
+- [[dot-DefinirCamera()]] - `calls` [INFERRED]
+- [[dot-DefinirZoom()]] - `calls` [INFERRED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
+- [[dot-GetBall()]] - `calls` [EXTRACTED]
+- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-OscilarCarga()]] - `calls` [EXTRACTED]
+- [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
+- [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [INFERRED]
+- [[dot-RunMenu()]] - `calls` [EXTRACTED]
+- [[dot-SetBall()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[GameObject]] - `references` [EXTRACTED]
+- [[GameStateSnapshot]] - `calls` [INFERRED]
+- [[IList]] - `references` [EXTRACTED]
+- [[Sinuca3DVerification]] - `method` [EXTRACTED]
+- [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_56

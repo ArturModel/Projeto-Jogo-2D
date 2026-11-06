@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
-- [[dot-OnDisable()_8]] - `calls` [EXTRACTED]
-- [[dot-OnEnable()_9]] - `calls` [EXTRACTED]
+- [[dot-OnDisable()_3]] - `calls` [EXTRACTED]
+- [[dot-OnEnable()_4]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_36

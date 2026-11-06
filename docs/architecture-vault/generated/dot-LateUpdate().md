@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs"
 type: "code"
-community: "Community 109"
-location: "L29"
+community: "Community 1"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_109
+  - community/Community_1
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[SantaRitaItemAction]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_109
+#graphify/code #graphify/EXTRACTED #community/Community_1

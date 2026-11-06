@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs"
 type: "code"
-community: "Community 1"
+community: "Community 122"
 location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_122
 ---
 
 # .WaitForEditor()
@@ -15,4 +15,4 @@ tags:
 - [[dot-ConectarManualmente()]] - `calls` [EXTRACTED]
 - [[SantaRitaMcpSetup]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_122

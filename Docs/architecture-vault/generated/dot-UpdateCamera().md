@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 54"
+community: "Community 38"
 location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_38
 ---
 
 # .UpdateCamera()
@@ -20,4 +20,4 @@ tags:
 - [[dot-Sync()]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_38

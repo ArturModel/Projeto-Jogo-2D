@@ -5,7 +5,7 @@ community: "Community 0"
 location: "L472"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Community_0
 ---
 
@@ -17,19 +17,19 @@ tags:
 - [[dot-PerformancePair()]] - `calls` [EXTRACTED]
 - [[dot-RestoreAudioC2Prefs()]] - `calls` [INFERRED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
-- [[dot-RunAccesses()]] - `calls` [INFERRED]
-- [[dot-RunAtlas()]] - `calls` [INFERRED]
-- [[dot-RunAudioC2()]] - `calls` [INFERRED]
-- [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
-- [[dot-RunMarcusQA()]] - `calls` [INFERRED]
-- [[dot-RunNotebook()]] - `calls` [INFERRED]
-- [[dot-RunPortalRegression()]] - `calls` [INFERRED]
-- [[dot-RunR2()]] - `calls` [INFERRED]
-- [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
-- [[dot-RunSinucaR4()]] - `calls` [INFERRED]
-- [[dot-RunSinuquinha15()]] - `calls` [INFERRED]
+- [[dot-RunAccesses()]] - `calls` [EXTRACTED]
+- [[dot-RunAtlas()]] - `calls` [EXTRACTED]
+- [[dot-RunAudioC2()]] - `calls` [EXTRACTED]
+- [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunMarcusQA()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
+- [[dot-RunPortalRegression()]] - `calls` [EXTRACTED]
+- [[dot-RunR2()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
 - [[dot-SaveIsolationProbe()]] - `calls` [EXTRACTED]
-- [[dot-Update()_24]] - `calls` [EXTRACTED]
+- [[dot-Update()_26]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_0

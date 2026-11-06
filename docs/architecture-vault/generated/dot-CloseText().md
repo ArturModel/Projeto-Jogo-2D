@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-C1InvestigationRegression()]] - `calls` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-DialogueR2()]] - `calls` [INFERRED]
 - [[dot-ExitMatChecksR4()]] - `calls` [INFERRED]
 - [[dot-FlashlightR2()]] - `calls` [INFERRED]

@@ -1,16 +1,26 @@
 ---
 type: community
-members: 3
+members: 13
 ---
 
 # Community 85
 
-**Members:** 3 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[C2DialogueBranch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[C2InteractionData]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[Disponivel_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[dot-AlterarVolumeEfeitos()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AlterarVolumeGeral()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AlterarVolumeMusica()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AplicarVolume()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AplicarVolumeEmMixer()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AplicarVolumesGlobais()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-GarantirValoresPadraoAudiveis()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-InicializarAudioGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-OnDisable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Start()_17]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Vincular()_5]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[AudioMixer]] - code
+- [[AudioSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -20,12 +30,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 113]]
-- 2 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 31]]
-- 1 edge to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 12]]
+- 2 edges to [[_COMMUNITY_Community 15]]
+- 1 edge to [[_COMMUNITY_Community 94]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 18]]
 
 ## Top bridge nodes
-- [[C2InteractionData]] - degree 7, connects to 5 communities
-- [[C2DialogueBranch]] - degree 4, connects to 2 communities
+- [[AudioSettingsController]] - degree 16, connects to 4 communities
+- [[AudioMixer]] - degree 5, connects to 1 community
+- [[dot-InicializarAudioGlobal()]] - degree 4, connects to 1 community
+- [[dot-Vincular()_5]] - degree 4, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
 type: "code"
-community: "Community 86"
-location: "L95"
+community: "Community 24"
+location: "L145"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_24
 ---
 
 # .Flip()
@@ -20,4 +20,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[MarcusNotebookUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_24

@@ -1,20 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Community 15"
-location: "L20"
+community: "Community 13"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_13
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
-- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
-- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
+- [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[ChegadaEmSantaRita]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_13

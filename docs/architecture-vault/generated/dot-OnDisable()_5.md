@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
 type: "code"
-community: "Community 25"
-location: "L55"
+community: "Community 49"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_49
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[Capitulo2Gate]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_49

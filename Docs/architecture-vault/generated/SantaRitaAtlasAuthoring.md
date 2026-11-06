@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaAtlasAuthoring.cs"
 type: "code"
-community: "Community 34"
+community: "Community 51"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_51
 ---
 
 # SantaRitaAtlasAuthoring
 
 ## Connections
-- [[dot-Add()]] - `method` [EXTRACTED]
+- [[dot-Add()_1]] - `method` [EXTRACTED]
 - [[dot-BeginSurvey()]] - `method` [EXTRACTED]
 - [[dot-Capture()_1]] - `method` [EXTRACTED]
 - [[dot-CompleteGate()]] - `method` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[SantaRitaAtlasAuthoring.cs]] - `contains` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_51

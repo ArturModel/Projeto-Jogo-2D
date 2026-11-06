@@ -12,7 +12,7 @@ tags:
 # .PodeConsultar()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
 - [[dot-MudarVista()]] - `calls` [EXTRACTED]
 - [[dot-PodeMirar()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
