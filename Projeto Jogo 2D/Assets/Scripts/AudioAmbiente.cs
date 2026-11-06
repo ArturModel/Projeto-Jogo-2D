@@ -80,7 +80,8 @@ public class AudioAmbiente : MonoBehaviour
             c.volumeAtual = Mathf.MoveTowards(
                 c.volumeAtual, c.alvo, c.velocidade * Time.deltaTime
             );
-            c.fonte.volume = c.loop ? c.volumeAtual * efeitos : efeitos;
+            float ganho = c.nome == "chuva" ? AudioSettingsController.VolumeChuva : efeitos;
+            c.fonte.volume = c.loop ? c.volumeAtual * ganho : ganho;
         }
     }
 

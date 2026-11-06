@@ -23,13 +23,30 @@ public sealed partial class SinucaRoom3D
                 if(p.id=="TapeteSinuca")a.root.localRotation=Quaternion.Euler(90,0,0);
             });
         }
-        var sun=new GameObject("LuzAmbiente3D").AddComponent<Light>();sun.transform.SetParent(root.transform,false);sun.type=LightType.Directional;sun.color=new Color(1,.96f,.87f);sun.intensity=.85f;sun.transform.localRotation=Quaternion.Euler(48,-32,0);sun.cullingMask=1<<Layer;sun.shadows=LightShadows.Soft;sun.shadowBias=.02f;
+        var sun=new GameObject("LuzAmbiente3D").AddComponent<Light>();sun.transform.SetParent(root.transform,false);sun.type=LightType.Directional;sun.color=new Color(.57f,.65f,.77f);sun.intensity=.10f;sun.transform.localRotation=Quaternion.Euler(48,-32,0);sun.cullingMask=1<<Layer;sun.shadows=LightShadows.None;sun.shadowBias=.02f;
         Lamp(new Vector3(0,2.55f,0));
+        // Low-cost indirect spill: no shadow cubemaps, fog, or screen-space effects.
+        RoomFill("ReflexoQuenteMesa",new Vector3(0,1.75f,0),new Color(1f,.78f,.51f),.18f,3.1f);
+        RoomFill("LuzDiscretaBalcao",new Vector3(-2.5f,2.1f,2.8f),new Color(1f,.67f,.34f),.55f,3.8f);
+        RoomFill("ReflexoFrioSala",new Vector3(3.8f,1.9f,-3.8f),new Color(.39f,.52f,.69f),.22f,4.5f);
+    }
+    private void RoomFill(string name,Vector3 at,Color color,float intensity,float range)
+    {
+        var light=new GameObject(name).AddComponent<Light>();light.transform.SetParent(root.transform,false);
+        light.transform.localPosition=at;light.type=LightType.Point;light.color=color;
+        light.intensity=intensity;light.range=range;light.cullingMask=1<<Layer;light.shadows=LightShadows.None;
     }
     private void Lamp(Vector3 at)
     {
         var shade=Mat("cupulaVerde",new Color(.09f,.18f,.10f));Cylinder("Cupula",at,.23f,.055f,shade);Cylinder("FioLampada",at+Vector3.up*.3f,.009f,.6f,DarkWood);
         Cylinder("Lampada",at+Vector3.down*.035f,.06f,.05f,Mat("lampada",new Color(.94f,.80f,.47f),null,true));
-        var light=new GameObject("Incandescente").AddComponent<Light>();light.transform.SetParent(root.transform,false);light.transform.localPosition=at+Vector3.down*.15f;light.type=LightType.Point;light.color=new Color(1,.86f,.66f);light.intensity=3;light.range=5.5f;light.cullingMask=1<<Layer;
+        var light=new GameObject("Incandescente").AddComponent<Light>();light.transform.SetParent(root.transform,false);light.transform.localPosition=at+Vector3.down*.15f;light.type=LightType.Spot;light.transform.localRotation=Quaternion.Euler(90,0,0);
+        light.color=new Color(1f,.88f,.70f);light.intensity=5.2f;light.range=4f;
+        light.spotAngle=108f;light.innerSpotAngle=76f;light.cullingMask=1<<Layer;
+        // One shadow map for the entire room, centered on the playable surface.
+        light.shadows=LightShadows.Hard;
+        UnityEngine.Rendering.Universal.UniversalAdditionalLightData lightData=light.gameObject.AddComponent<UnityEngine.Rendering.Universal.UniversalAdditionalLightData>();
+        if(Application.isPlaying)lightData.additionalLightsShadowResolutionTier=0;
+        light.shadowBias=.015f;light.shadowNormalBias=.025f;light.shadowNearPlane=.08f;light.shadowStrength=.85f;
     }
 }

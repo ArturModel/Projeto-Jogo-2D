@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
@@ -40,6 +40,7 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private Color corControle = new Color(0.14f, 0.13f, 0.12f, 0.95f);
 
     public static bool Aberto { get; private set; }
+    public static int ClosedFrame { get; private set; } = -1;
 
     public static bool ReduzirEfeitosIntensos
     {
@@ -79,6 +80,8 @@ public class MenuPausa : MonoBehaviour
         {
             return;
         }
+
+        if(SinucaMinigameUI.IsShowing && !Aberto)return; // first ESC releases the billiards cursor; HUD opens pause
 
         // Sinuca usa esta pausa global; mapa/Bocha/orelhão possuem fechamento próprio.
         if (!Aberto && (MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen))
@@ -120,6 +123,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Fechar()
     {
+        ClosedFrame=Time.frameCount;
         Aberto = false;
         aguardandoConfirmacaoSaida = false;
         Time.timeScale = 1f;
@@ -291,10 +295,13 @@ public class MenuPausa : MonoBehaviour
         // áudio
         CanvasGroup audioGrupo = SubPainel(opcoesRect, "Audio", out RectTransform audioRect);
         RectTransform indAudio = Indicador(audioRect, xInd);
-        Slider geral = LinhaSlider(audioRect, "VOLUME GERAL", 44f, 0f, 1f, false, indAudio, out _);
-        Slider musica = LinhaSlider(audioRect, "MÚSICA", 12f, 0f, 1f, false, indAudio, out _);
-        Slider efeitos = LinhaSlider(audioRect, "EFEITOS", -20f, 0f, 1f, false, indAudio, out _);
-        Button bVoltarAudio = Botao(audioRect, "VOLTAR", -58f, indAudio);
+        Slider geral = LinhaSlider(audioRect, "VOLUME GERAL", 64f, 0f, 1f, false, indAudio, out _);
+        Slider musica = LinhaSlider(audioRect, "MÚSICA", 39f, 0f, 1f, false, indAudio, out _);
+        Slider fala = LinhaSlider(audioRect, "FALA", 14f, 0f, 1f, false, indAudio, out _);
+        Slider chuva = LinhaSlider(audioRect, "CHUVA", -11f, 0f, 1f, false, indAudio, out _);
+        Slider impactos = LinhaSlider(audioRect, "TACO E BOLAS", -36f, 0f, 1f, false, indAudio, out _);
+        Slider efeitos = LinhaSlider(audioRect, "OUTROS EFEITOS", -61f, 0f, 1f, false, indAudio, out _);
+        Button bVoltarAudio = Botao(audioRect, "VOLTAR", -96f, indAudio);
 
         // vídeo
         CanvasGroup videoGrupo = SubPainel(opcoesRect, "Video", out RectTransform videoRect);
@@ -349,7 +356,7 @@ public class MenuPausa : MonoBehaviour
         bVoltarVideo.onClick.AddListener(painel.MostrarCategorias);
         bVoltarLeg.onClick.AddListener(painel.MostrarCategorias);
 
-        raiz.AddComponent<AudioSettingsController>().Vincular(mixer, geral, musica, efeitos);
+        raiz.AddComponent<AudioSettingsController>().Vincular(mixer, geral, musica, efeitos, fala, chuva, impactos);
 
         // brilho sem alvo: no menu ele escurece o vídeo de fundo, que aqui não existe
         raiz.AddComponent<VideoSettingsController>().Vincular(

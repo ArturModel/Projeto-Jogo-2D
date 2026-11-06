@@ -98,3 +98,46 @@ SantaRitaTapeDeck gerencia modal, reparo de velocidade de Mila, seleção adquir
 MarcusNotebookUI mantém índice manuscrito e filtros de registros adquiridos. caderno.marcador.id/.parte resolve o marcador por nota mesmo com páginas adicionadas; caderno.folha é fallback. APIs de notas originais não substituídas.
 
 MilaProductionVerification fica no Editor; MilaRuntimeVerification apenas Editor/DEBUG com flags explícitas e saves temporários. Chapter2BuildVerification agenda Exit para permitir finally restaurar configurações. Autoria vocal em Tools/Audio e segredos fora do repo/Player. [Relatório e limites](../../Evidencias/MilaInventario/Relatorio.md).
+
+
+## Sinuca em primeira pessoa — 06/11/2026
+
+SinucaMinigameUI preserva SinuquinhaRules e kernel 1/120. Caminhando3D é a entrada; LinhaTaco é a postura após aproximar/clicar na branca. SinucaRoom3D mantém posição de pé independente da bola, clearance da sala/mesa/props, caminho do Zé e rig 3D. SinucaTableView continua RawImage com render target ajustado ao aspect. Mão de empunhadura é filha do taco; apoio separado com altura da tabela. Carregado e tacada usam o mesmo taco 3D.
+
+Cursor Locked usa deltas acumulados para força e relativos para olhar/mirar; Esc passa à UI sem disparar nem mover; MenuPausa deixa Esc da sinuca para ela enquanto não estiver aberto, e ClosedFrame impede consumir o fechamento duas vezes. HUD fornece Pausa. Fechar/desativar restaura cursor anterior; foco perdido cancela e libera. Nenhuma persistência nova. Zé planeja rota nos obstáculos e aguarda chegada/preparo antes do impulso, com apresentação da arte original por malha de passos.
+
+Plano e limites: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-imersiva.md. Índices gerados desatualizados por ausência de Graphify.
+
+
+### Revisão posterior: mãos e Zé — 06/11/2026
+
+Substitui a descrição anterior do NPC móvel: Zé fica na posição original, sem taco, sem malha de passos, sem caminho e sem preparo físico. IA calcula e aplica impulso após espera. Mãos de Marcus mantêm contato em 3D mas orientam a face à câmera; o roll da empunhadura é apenas apresentação. Layer 29 contém exclusivamente taco/mãos em câmera URP Overlay com depth limpo e lente/projeção sincronizada; sala continua layer 30 no mesmo target. Assim, geometria da mesa não recorta os sprites. Caminhada exibe só taco. Nenhuma cena/persistência alterada. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-maos-primeiro-plano.md. Renderização final ainda não conferida em Play.
+
+
+Sinuca, pegada revisada 06/11/2026: GripScreenRoll calcula rotação do sprite frontal pelo eixo do taco em pixels; AlignGripToShaft mantém contato em -0.72 m do taco e desloca o dorso apenas em profundidade para ocultar o eixo sob a mão. Shader Resources/Art/Sinuca/MaoFlutuante usa dissolução fixa em UV apenas na terminação do pulso; não altera controle/física. Revisão nativa da renderização ainda pendente. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-pegada-fechada.md.
+
+
+Sinuca 06/11 — apresentação atual das mãos: HandSprite usa duas células do atlas MaosMarcus, substituindo os recursos individuais antigos em runtime. AlignBridgeToShaft alinha ponto de apoio ao eixo e reparte a mesma arte em dorso/polegar por máscaras complementares de MaoFlutuante. PlaceHandDepth compensa escala ao mudar profundidade ao longo do raio de câmera. Controles/física/saves permanecem. Arte isolada aprovada; integração render ainda pendente. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-maos-aprovadas.md
+
+
+Sinuca, ajuste posterior 06/11: apenas empunhadura configura _ZTest Always e fila 2470 em MaoFlutuante, depois do taco/apoio. Alpha clip limita sobreposição à silhueta; apoio .30m segue LEqual e máscaras de profundidade. Imagem aprovada permanece. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-apoio-menor-oclusao.md
+
+
+Sinuca 06/11: PlaceHandDepth aceita mirrorX para empunhadura esquerda; AlignGripToShaft aplica roll do eixo -12° no mesmo pivô. Apoio não espelhado. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-pegada-esquerda.md
+
+
+Sinuca 06/11 — mão esquerda redesenhada: HandSprite carrega MaoEsquerdaTaco inteira para empunhadura e célula esquerda de MaosMarcus para apoio. mirrorX/roll -12° removidos; ângulo anatômico vem da arte, referência ao eixo projetado mantida. Novo pivô (.45,.50), largura .22m. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-esquerda-desenhada.md
+
+
+06/11/2026 — SinucaMinigameUI contém SinucaZeComments, seletor transitório por resultado adjudicado (conversões/faltas/marcada e marcos de poucas bolas/preta por jogador). Legenda inferior independente com TMP maxVisibleCharacters, espera/fade e áudio abstrato dedicado, suspensa por foco/pausa/painéis; sem flags/saves. Treino e encerramento não mantêm falas. Capitulo1Director mantém fade/loop com volume de sinuca .23. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-falas-audio.md. Render/audição ainda pendentes.
+
+
+Sinuca 06/11 — ambas mãos agora usam células de MaosMarcusUnificadas, pele/estilo gerados juntos; pegada superior já espelhada na arte. Apoio .21m nas duas camadas (redução adicional 30%); contato preservado. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-atlas-unificado-apoio-30.md
+
+
+06/11/2026 — AudioSettingsController mantém PlayerPrefs como fonte única menu/pausa, sincroniza sliders por evento e OnEnable, vincula sem depender de Start, altera todos os mixers carregados e aplica master uma única vez no AudioListener. Defaults somente para chaves ausentes; música .35, efeitos 1. Ganhos de mixer .5 e contexto sinuca .35 não alteram preferências. Capitulo1Director preserva fade da trilha direta com sinuca .10. Fixture nativa e harness PASS; plano ../../ai-plans/2026-11-06_BBCONTTI_audio-global-sinuca.md.
+
+
+06/11/2026 — AudioSettingsController expõe VolumeFala/VolumeChuva/VolumeImpactos com preferências próprias e seis sliders sincronizados menu/pausa. Chuva/MenuChuva bypassam SFX; AudioAmbiente separa camada chuva; SantaRitaBarAudio separa água/chuva do murmúrio; SinucaMinigameUI e TapeDeck leem fala/impactos. SinucaRoom3D.MovePlayer acumula distância pós-colisão para passo experimental de madeira via SantaRitaSound/Outros efeitos, sem afetar PeApoiou da exploração. Plano ../../ai-plans/2026-11-06_BBCONTTI_categorias-audio-passos.md.
+
+Sinuca 06/11: PocketSlab recorta as seis passagens em todos os sólidos da mesa; SalaLit usa luzes URP com ambiente local. MaoFlutuante recebe luz sem alterar as máscaras de contato. Cylinder compartilha malhas de 6/16 lados. Sombras adicionais URP habilitadas para o único spot da sinuca. Sem alteração de cena ou regras.

@@ -30,12 +30,12 @@ public class SinucaMinigameUI : MonoBehaviour
     public const float BallRadius = 5.4f;
     public const float PocketRadius = 5.9f;
     public const float FixedStep = 1f / 120f;
-    private const float CushionRestitution = 0.80f;
+    private const float CushionRestitution = 0.74f;
     private const float BallRestitution = 0.94f;
-    private const float BallFriction = 88f;
-    private const float StopSpeedSq = 3.2f;
-    private const float MaxShotPower = 485f;
-    private const float MinShotPower = 95f;
+    private const float BallFriction = 65f;
+    private const float StopSpeedSq = 0.16f;
+    private const float MaxShotPower = 410f;
+    private const float MinShotPower = 22f;
 
     private enum EstadoPartida
     {
@@ -95,6 +95,15 @@ public class SinucaMinigameUI : MonoBehaviour
     private TextMeshProUGUI txtTurnoStatus;
     private TextMeshProUGUI txtRegraBolaMarcada;
     private TextMeshProUGUI txtPercepcaoSubtitulo;
+    private TextMeshProUGUI txtFalaZe;
+    private CanvasGroup legendaZe;
+    private AudioSource vozFalaZe;
+    private AudioClip[] silabasZe;
+    private readonly SinucaZeComments comentariosZe = new SinucaZeComments();
+    private string falaZePendente;
+    private bool falaZePendenteUrgente;
+    private float tempoLetraZe, tempoLeituraZe, intervaloSilabaZe, intervaloFalaZe;
+    private int caractereZe, silabaZe;
     private TextMeshProUGUI txtControlesRodape;
     private Image barraForcaFill;
     private Image overlayPercepcao;
@@ -112,6 +121,11 @@ public class SinucaMinigameUI : MonoBehaviour
     private Button btnAcaoPraticaOuDuelo;
     private TextMeshProUGUI txtBtnAcaoPraticaOuDuelo;
 
+    private GameObject painelOpcoes, grupoForca, escudoModal;
+    private Button btnOpcoes, btnAjuda, btnCancelarTacada;
+    private TextMeshProUGUI txtForcaPercentual;
+    private int paginaAjuda;
+    private bool ajudaInicialPendente;
     private GameObject painelModal;
     private TextMeshProUGUI txtModalTitulo;
     private TextMeshProUGUI txtModalCorpo;
@@ -148,8 +162,15 @@ public class SinucaMinigameUI : MonoBehaviour
     private int contadorTurnosMao = 0;
 
     private float anguloMiraRad = 0f;
+    private float alvoMiraMouseRad, ultimoAnguloMouseRad, offsetMiraMouseRad;
+    private bool miraMouseAtiva, referenciaMiraMouse;
     private float forcaNormalizada = 0f;
-    private bool carregandoDirectionUp = true;
+    private Vector2 inicioPuxadaUI, direcaoPuxadaUI;
+    private bool puxadaValida;
+    private readonly AudioSource[] vozesSinuca = new AudioSource[6];
+    private readonly Dictionary<AudioClip, float> ultimoImpacto = new Dictionary<AudioClip, float>();
+    private int proximaVoz;
+    private bool audioSuspenso;
     private DispositivoCarga dispositivoCargaAtivo = DispositivoCarga.Nenhum;
     private int frameConfirmacaoBranca = -1;
     private SinucaCueSpin efeitoEscolhido = SinucaCueSpin.Normal;
@@ -238,20 +259,25 @@ public class SinucaMinigameUI : MonoBehaviour
     public void Fechar()
     {
         StopAllCoroutines();
+        LimparFalaZe();
+        RestaurarCursor();
         CancelarCargaAtiva();
         estado = EstadoPartida.Inativo;
         modoPratica = false;
         if (Application.isPlaying) SantaRitaBarAudio.DefinirContexto(false, 0);
+        foreach (var voz in vozesSinuca) if (voz != null) voz.Stop();
         if (raiz != null) raiz.SetActive(false);
     }
 
     public void CancelarCargaAoSuspender()
     {
+        miraMouseAtiva = referenciaMiraMouse = false;
+        if (tableView3D != null) tableView3D.ReiniciarReferenciaPonteiro();
         if (estado == EstadoPartida.CarregandoForca)
         {
             CancelarCargaAtiva();
             if (txtTurnoStatus != null)
-                txtTurnoStatus.text = "Tacada cancelada. Ajuste a mira e segure para carregar.";
+                txtTurnoStatus.text = "Tacada cancelada. Mire, clique e puxe para trás. Solte para tacar.";
         }
     }
 
@@ -259,6 +285,7 @@ public class SinucaMinigameUI : MonoBehaviour
     {
         if (!hasFocus && IsShowing)
         {
+            interfaceLivre=true;Cursor.lockState=CursorLockMode.None;Cursor.visible=true;
             CancelarCargaAoSuspender();
         }
     }
@@ -323,194 +350,273 @@ public class SinucaMinigameUI : MonoBehaviour
         }
     }
 
+    private float levantarAposTacada = -1f;
+    private float eixoMiraApoiada;
+    private bool interfaceLivre, cursorGuardado;
+    private CursorLockMode cursorAnterior;
+    private bool cursorAnteriorVisivel;
+    private Vector2 puxadaAcumulada;
+    private int framePuxada=-1, frameInicioCarga=-1, frameCaptura=-1;
+    private TextMeshProUGUI reticuloFPS;
+
+    private void OnDisable(){RestaurarCursor();LimparFalaZe();}
+    private void OnDestroy()
+    {
+        RestaurarCursor();LimparFalaZe();
+        if(silabasZe!=null)foreach(var clip in silabasZe)if(clip!=null)Destroy(clip);
+    }
+
+    private void RestaurarCursor()
+    {
+        if(!cursorGuardado)return;
+        Cursor.lockState=cursorAnterior;Cursor.visible=cursorAnteriorVisivel;cursorGuardado=false;
+    }
+    private void AtualizarCapturaCursor()
+    {
+        if(!cursorGuardado){cursorAnterior=Cursor.lockState;cursorAnteriorVisivel=Cursor.visible;cursorGuardado=true;}
+        bool capturar=!interfaceLivre && Application.isFocused && !EntradaMesaBloqueada();
+        var mode=capturar?CursorLockMode.Locked:CursorLockMode.None;
+        if(Cursor.lockState!=mode){Cursor.lockState=mode;if(capturar)frameCaptura=Time.frameCount;}
+        Cursor.visible=!capturar;
+        if(reticuloFPS!=null)reticuloFPS.gameObject.SetActive(capturar && EmPe);
+    }
+    private Vector2 CentroDaMesaNaTela()
+        => RectTransformUtility.WorldToScreenPoint(null,mesaRect.TransformPoint(mesaRect.rect.center));
+
+    private void LerMouseCapturado()
+    {
+        var mouse=Mouse.current;if(Time.frameCount==frameCaptura)return;if(mouse==null || Cursor.lockState!=CursorLockMode.Locked || EntradaMesaBloqueada())return;
+        if(mouse.leftButton.wasPressedThisFrame)
+        {
+            if(EmPe)
+            {
+                if(estado==EstadoPartida.MirandoJogador && tableView3D.Room.RayHitsWhite(new Vector2(.5f,.5f),bolas[0].pos))OnMesaPointerDown(bolas[0].pos,PointerEventData.InputButton.Left);
+                else if(estado==EstadoPartida.PosicionandoBranca && tableView3D.ScreenToTablePoint(CentroDaMesaNaTela(),null,out var p))OnMesaPointerDown(p,PointerEventData.InputButton.Left);
+            }
+            else OnMesaPointerDown(Vector2.zero,PointerEventData.InputButton.Left);
+        }
+        else if(!EmPe && estado==EstadoPartida.MirandoJogador)
+            tableView3D.AoAjustarMira?.Invoke(mouse.delta.ReadValue().x / Mathf.Max(.01f,mesaRect.GetComponentInParent<Canvas>().scaleFactor)*.003f);
+        if(mouse.rightButton.wasPressedThisFrame && !EmPe)OnMesaPointerDown(Vector2.zero,PointerEventData.InputButton.Right);
+        if(mouse.leftButton.wasReleasedThisFrame)OnMesaPointerUp(Vector2.zero,true,PointerEventData.InputButton.Left);
+    }
+
+    private RectTransform headerMesa, footerMesa;
+    private bool EmPe => tableView3D != null && tableView3D.CameraModo == SinucaCameraView.Caminhando3D;
+
     private void ConstruirUI()
     {
         Canvas canvas = UIFactory.CreateCanvas(transform, "SinucaCanvas", 6500);
         canvas.gameObject.AddComponent<GraphicRaycaster>();
-        CanvasScaler scaler = canvas.GetComponent<CanvasScaler>();
-        if (scaler != null) scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
-        TMP_FontAsset font = UIFactory.Font;
-
+        canvas.GetComponent<CanvasScaler>().screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
         raiz = new GameObject("RaizSinuca", typeof(RectTransform));
         raiz.transform.SetParent(canvas.transform, false);
-        RectTransform raizRect = raiz.GetComponent<RectTransform>();
-        UIFactory.Stretch(raizRect);
+        UIFactory.Stretch(raiz.GetComponent<RectTransform>());
 
-        // A planta projetada ocupa toda a tela; impedir duplicação do mundo 2D por transparência.
-        GameObject bgObj = new GameObject("FundoEscuroBar", typeof(RectTransform), typeof(Image));
-        bgObj.transform.SetParent(raiz.transform, false);
-        UIFactory.Stretch(bgObj.GetComponent<RectTransform>());
-        bgObj.GetComponent<Image>().color = new Color32(12, 10, 8, 255);
+        var fundo = CriarPainelHUD(raiz.transform, "FundoEscuroBar", Vector2.zero, new Vector2(640,360));
+        fundo.GetComponent<Image>().color = new Color32(12,10,8,255);
+        UIFactory.Stretch(fundo.GetComponent<RectTransform>());
 
-        // Overlay de percepção sutil (subtítulo atmosférico + leve vinheta da 3ª mão)
-        GameObject percObj = new GameObject("OverlayPercepcao", typeof(RectTransform), typeof(Image));
-        percObj.transform.SetParent(raiz.transform, false);
-        UIFactory.Stretch(percObj.GetComponent<RectTransform>());
-        overlayPercepcao = percObj.GetComponent<Image>();
-        overlayPercepcao.color = new Color(0.18f, 0.04f, 0.04f, 0f);
-        overlayPercepcao.raycastTarget = false;
-
-        // Cabeçalho superior (Placar da Série, Placar da Mão, Regra da Bola Marcada, Status do Turno)
-        GameObject header = new GameObject("HeaderHUD", typeof(RectTransform), typeof(Image));
-        header.transform.SetParent(raiz.transform, false);
-        RectTransform headerRect = header.GetComponent<RectTransform>();
-        Posicionar(headerRect, new Vector2(0f, 156f), new Vector2(624f, 42f));
-        header.GetComponent<Image>().color = new Color32(20, 17, 14, 240);
-        Outline headerOut = header.AddComponent<Outline>();
-        headerOut.effectColor = new Color32(98, 72, 42, 175);
-
-        txtPlacarSerie = CriarTexto("TxtPlacarSerie", header.transform,
-            "SÉRIE MELHOR DE 3 — MARCUS [0] x [0] ZÉ", 10.6f, new Color32(238, 214, 158, 255), TextAlignmentOptions.TopLeft);
-        Posicionar(txtPlacarSerie.rectTransform, new Vector2(-122f, 9f), new Vector2(356f, 18f));
-
-        txtPlacarMao = CriarTexto("TxtPlacarMao", header.transform,
-            "MÃO 1: MARCUS 0/4  |  ZÉ 0/4", 10.2f, new Color32(215, 224, 215, 255), TextAlignmentOptions.TopLeft);
-        Posicionar(txtPlacarMao.rectTransform, new Vector2(-122f, -9f), new Vector2(356f, 18f));
-
-        txtRegraBolaMarcada = CriarTexto("TxtRegraBolaMarcada", header.transform,
-            "SINUQUINHA · 15 BOLAS · PRETA 8 POR ÚLTIMO", 9.4f, new Color32(255, 192, 118, 255), TextAlignmentOptions.Left);
-        Posicionar(txtRegraBolaMarcada.rectTransform, new Vector2(-122f, -11f), new Vector2(356f, 16f));
-
-        txtTurnoStatus = CriarTexto("TxtTurnoStatus", header.transform,
-            "Sua vez, Marcus.", 9.6f, new Color32(168, 232, 184, 255), TextAlignmentOptions.Left);
-        Posicionar(txtTurnoStatus.rectTransform, new Vector2(-122f, -25f), new Vector2(356f, 16f));
-
-        // Botões superiores à direita: VISTA (3D / Superior), PRÁTICA / DUELO e REGRAS
-        btnVistaCamera = CriarBotaoHUD(header.transform, "BtnVistaCamera", "VISTA: MESA 3D (V)",
-            new Vector2(126f, 10f), new Vector2(114f, 18f), new Color32(38, 56, 46, 255), out txtBtnVistaCamera);
-        btnVistaCamera.onClick.AddListener(AlternarVistaCamera);
-
-        btnAcaoPraticaOuDuelo = CriarBotaoHUD(header.transform, "BtnAcaoPraticaOuDuelo", "PRÁTICA LIVRE",
-            new Vector2(126f, -10f), new Vector2(114f, 18f), new Color32(54, 42, 28, 255), out txtBtnAcaoPraticaOuDuelo);
-        btnAcaoPraticaOuDuelo.onClick.AddListener(AoClicarBotaoPraticaOuDuelo);
-
-        Button btnRegras = CriarBotaoHUD(header.transform, "BtnVerRegras", "REGRAS",
-            new Vector2(244f, 10f), new Vector2(104f, 18f), new Color32(52, 38, 24, 255), out _);
-        btnRegras.onClick.AddListener(AbrirModalRegrasDuranteJogo);
-
-        var targetButton=CriarBotaoHUD(header.transform,"EscolherPrimeiroToque","ALVO: AUTO",new Vector2(244,-10),new Vector2(104,18),new Color32(47,55,44,255),out txtAlvo);
-        targetButton.onClick.AddListener(AbrirEscolhaAlvo);
-
-        // Viewport 3D da Mesa de Sinuca (SinucaTableView : MaskableGraphic)
-        GameObject viewportObj = new GameObject("MesaSinuca3DViewport", typeof(RectTransform), typeof(CanvasRenderer), typeof(SinucaTableView));
-        viewportObj.transform.SetParent(raiz.transform, false);
-        mesaRect = viewportObj.GetComponent<RectTransform>();
-        Posicionar(mesaRect, new Vector2(0f, -8f), new Vector2(640f, 280f));
-
-        viewportObj.transform.SetSiblingIndex(2);
-        txtRegraBolaMarcada.transform.SetParent(raiz.transform,false);Posicionar(txtRegraBolaMarcada.rectTransform,new Vector2(0,124),new Vector2(610,15));
-        txtTurnoStatus.transform.SetParent(raiz.transform,false);Posicionar(txtTurnoStatus.rectTransform,new Vector2(0,109),new Vector2(610,15));
-        tableView3D = viewportObj.GetComponent<SinucaTableView>();
+        var viewport = new GameObject("MesaSinuca3DViewport", typeof(RectTransform), typeof(CanvasRenderer), typeof(SinucaTableView));
+        viewport.transform.SetParent(raiz.transform, false);
+        mesaRect = viewport.GetComponent<RectTransform>();
+        UIFactory.Stretch(mesaRect);
+        tableView3D = viewport.GetComponent<SinucaTableView>();
         tableView3D.color = Color.white;
-        tableView3D.InicializarOverlays(font);
         tableView3D.AoPressionarMesa = OnMesaPointerDown;
         tableView3D.AoMoverMesa = OnMesaPointerMove;
-        tableView3D.AoAjustarMira=delta=>{if(estado==EstadoPartida.MirandoJogador&&!MenuPausa.Aberto){anguloMiraRad+=delta;AtualizarVisualTacoEMira();}};
+        tableView3D.AoAjustarMira = delta => { if (estado == EstadoPartida.MirandoJogador && !interfaceLivre && !EntradaMesaBloqueada()) { if(!tableView3D.Room.SettledAtCue)return; miraMouseAtiva=referenciaMiraMouse=false; anguloMiraRad += delta*(Keyboard.current!=null&&Keyboard.current.shiftKey.isPressed?.15f:1f); LimitarMiraApoiada(); AtualizarVisualTacoEMira(); } };
         tableView3D.AoSoltarMesa = OnMesaPointerUp;
         tableView3D.AoScrollZoom = OnMesaScrollZoom;
 
-        // Container oculto de compatibilidade legado (mantém rects/labels/bolas caso inspecionados por reflexão)
-        GameObject containerLegado = new GameObject("ContainerLegadoCompat", typeof(RectTransform));
-        containerLegado.transform.SetParent(mesaRect, false);
-        containerLegado.SetActive(false);
+        var legado = new GameObject("ContainerLegadoCompat", typeof(RectTransform));
+        legado.transform.SetParent(mesaRect,false);
+        legado.SetActive(false);
+        var mira = new GameObject("LinhaMira", typeof(RectTransform), typeof(Image));
+        mira.transform.SetParent(legado.transform,false); linhaMiraRect = mira.GetComponent<RectTransform>();
+        var taco = new GameObject("TacoSinuca", typeof(RectTransform), typeof(Image));
+        taco.transform.SetParent(legado.transform,false); tacoRect = taco.GetComponent<RectTransform>();
+        CriarBolasNaMesa(legado.transform, UIFactory.Font);
 
-        GameObject miraObj = new GameObject("LinhaMira", typeof(RectTransform), typeof(Image));
-        miraObj.transform.SetParent(containerLegado.transform, false);
-        linhaMiraRect = miraObj.GetComponent<RectTransform>();
+        var percepcao = CriarPainelHUD(raiz.transform,"OverlayPercepcao",Vector2.zero,new Vector2(640,360));
+        UIFactory.Stretch(percepcao.GetComponent<RectTransform>());
+        overlayPercepcao = percepcao.GetComponent<Image>();
+        overlayPercepcao.color = Color.clear; overlayPercepcao.raycastTarget = false;
 
-        GameObject tacoObj = new GameObject("TacoSinuca", typeof(RectTransform), typeof(Image));
-        tacoObj.transform.SetParent(containerLegado.transform, false);
-        tacoRect = tacoObj.GetComponent<RectTransform>();
+        var header = CriarPainelHUD(raiz.transform,"HeaderHUD",new Vector2(0,165),new Vector2(624,26));
+        txtPlacarSerie = CriarTexto("TxtPlacarSerie",header.transform,"MARCUS 0  :  0 ZÉ",10,new Color32(242,220,170,255),TextAlignmentOptions.Left);
+        Posicionar(txtPlacarSerie.rectTransform,new Vector2(-193,0),new Vector2(214,18));
+        txtRegraBolaMarcada = CriarTexto("TxtRegraBolaMarcada",header.transform,"Mesa aberta · preta 8 por último",8.2f,new Color32(207,207,188,255),TextAlignmentOptions.Left);
+        Posicionar(txtRegraBolaMarcada.rectTransform,new Vector2(-16,0),new Vector2(132,18));
+        txtRegraBolaMarcada.overflowMode = TextOverflowModes.Ellipsis;
+        txtPlacarMao = CriarTexto("TxtPlacarMao",legado.transform,"",10,Color.white,TextAlignmentOptions.Left);
+        btnVistaCamera = CriarBotaoHUD(header.transform,"BtnVistaCamera","Sala",new Vector2(91,0),new Vector2(62,20),new Color32(44,64,54,255),out txtBtnVistaCamera);
+        btnVistaCamera.onClick.AddListener(AlternarVistaCamera);
+        btnOpcoes = CriarBotaoHUD(header.transform,"BtnOpcoesMesa","Opções",new Vector2(157,0),new Vector2(60,20),new Color32(43,45,41,255),out _);
+        btnOpcoes.onClick.AddListener(AlternarOpcoesMesa);
+        btnAjuda = CriarBotaoHUD(header.transform,"BtnVerRegras","Ajuda",new Vector2(221,0),new Vector2(60,20),new Color32(63,51,33,255),out _);
+        btnAjuda.onClick.AddListener(AbrirModalRegrasDuranteJogo);
+        var btnPausa=CriarBotaoHUD(header.transform,"BtnPausaSinuca","Pausa",new Vector2(279,0),new Vector2(48,20),new Color32(35,39,32,85),out _);
+        btnPausa.GetComponent<Outline>().effectColor=new Color32(133,121,91,55);btnPausa.GetComponentInChildren<TextMeshProUGUI>().fontSize=9;
+        btnPausa.onClick.AddListener(()=>{interfaceLivre=true;var pausa=FindAnyObjectByType<MenuPausa>();if(pausa==null)pausa=gameObject.AddComponent<MenuPausa>();pausa.Abrir();AtualizarCapturaCursor();});
 
-        CriarBolasNaMesa(containerLegado.transform, font);
+        var footer = CriarPainelHUD(raiz.transform,"FooterHUD",new Vector2(0,-164),new Vector2(624,28));
+        txtTurnoStatus = CriarTexto("TxtTurnoStatus",footer.transform,"Aproxime-se da branca.",9,new Color32(224,234,219,255),TextAlignmentOptions.Left);
+        Posicionar(txtTurnoStatus.rectTransform,new Vector2(0,7),new Vector2(596,12));
+        txtTurnoStatus.overflowMode = TextOverflowModes.Ellipsis;
+        txtControlesRodape = CriarTexto("TxtControlesRodape",footer.transform,"WASD: caminhar · Mouse: olhar · Esc: cursor",8.3f,new Color32(173,184,172,255),TextAlignmentOptions.Left);
+        Posicionar(txtControlesRodape.rectTransform,new Vector2(0,-6),new Vector2(596,12));
+        grupoForca = new GameObject("ForcaContextual",typeof(RectTransform));
+        grupoForca.transform.SetParent(footer.transform,false);
+        Posicionar(grupoForca.GetComponent<RectTransform>(),new Vector2(104,0),new Vector2(124,24));
+        txtForcaPercentual = CriarTexto("ForcaPercentual",grupoForca.transform,"Força 0%",9,new Color32(235,204,139,255),TextAlignmentOptions.Center);
+        Posicionar(txtForcaPercentual.rectTransform,new Vector2(0,7),new Vector2(124,12));
+        var barra = CriarPainelHUD(grupoForca.transform,"BarraForcaBg",new Vector2(0,-5),new Vector2(124,7));
+        barra.GetComponent<Image>().color = new Color32(55,55,43,255);
+        var fill = new GameObject("BarraForcaFill",typeof(RectTransform),typeof(Image));
+        fill.transform.SetParent(barra.transform,false); barraForcaFill = fill.GetComponent<Image>();
+        AtualizarBarraForcaVisual(0);
+        btnCancelarTacada = CriarBotaoHUD(footer.transform,"BtnCancelarTacada","Cancelar",new Vector2(248,0),new Vector2(96,20),new Color32(74,43,34,255),out _);
+        btnCancelarTacada.onClick.AddListener(()=>{CancelarCargaAtiva();txtTurnoStatus.text="Tacada cancelada. Ajuste a mira para tentar de novo.";});
+        grupoForca.SetActive(false); btnCancelarTacada.gameObject.SetActive(false);
 
-        // Painel recolhível de Efeito Opcional na Branca (Normal / Avançar / Recuar)
-        // Efeito somente no ponto de contato da branca.
-
-        var spinObject=new GameObject("PontoDeContatoBranca",typeof(RectTransform),typeof(CanvasRenderer),typeof(SinucaSpinSelector));
-        spinObject.transform.SetParent(raiz.transform,false);
-        Posicionar(spinObject.GetComponent<RectTransform>(),new Vector2(285,-112),new Vector2(42,42));
-        spinSelector=spinObject.GetComponent<SinucaSpinSelector>();
-        spinSelector.CanSelect=()=>estado==EstadoPartida.MirandoJogador&&!MenuPausa.Aberto;
-        spinSelector.Changed=p=>{if(estado!=EstadoPartida.MirandoJogador)return;contatoTaco=p;
-            efeitoEscolhido=p.y>.15f?SinucaCueSpin.Avancar:p.y<-.15f?SinucaCueSpin.Recuar:SinucaCueSpin.Normal;
-            txtTendenciaEfeito.text="Contato: "+(p.x<-.15f?"esquerda / ":p.x>.15f?"direita / ":"")+(p.y<-.15f?"recuo":p.y>.15f?"avanço":"centro");};
-
-        var contactLabel=CriarTexto("LegendaContato",raiz.transform,"TOQUE NA BRANCA",7,new Color32(224,211,165,255),TextAlignmentOptions.Center);
-        Posicionar(contactLabel.rectTransform,new Vector2(285,-85),new Vector2(75,10));
-        var cameraLabel=CriarTexto("LegendaCamera",raiz.transform,"A / D · CONTORNAR    ← / → · MIRAR",8,new Color32(224,211,165,255),TextAlignmentOptions.Left);
-        Posicionar(cameraLabel.rectTransform,new Vector2(-164,-116),new Vector2(280,16));
-        txtEncaçapadasMarcus=CriarTexto("EncaçapadasMarcus",raiz.transform,"MARCUS · ENCAÇAPADAS",8.5f,new Color32(234,224,195,255),TextAlignmentOptions.Left);
-        txtEncaçapadasZe=CriarTexto("EncaçapadasZe",raiz.transform,"ZÉ · ENCAÇAPADAS",8.5f,new Color32(234,224,195,255),TextAlignmentOptions.Left);
-        Posicionar(txtEncaçapadasMarcus.rectTransform,new Vector2(-225,91),new Vector2(160,12));
-        Posicionar(txtEncaçapadasZe.rectTransform,new Vector2(115,91),new Vector2(160,12));
-        for(int n=1;n<16;n++)if(n!=8){var chip=new GameObject("Encaçapada_"+n,typeof(RectTransform),typeof(Image));chip.transform.SetParent(raiz.transform,false);var im=chip.GetComponent<Image>();im.sprite=CriarSpriteCirculo(40,SinucaTableView.CorDaBola(n),new Color(.84f,.78f,.58f));im.raycastTarget=false;encaçapadasIcones[n]=im;var number=CriarTexto("Numero",chip.transform,n.ToString(),8.5f,(n==1||n==5||n==9||n==13)?new Color(.06f,.06f,.04f):Color.white,TextAlignmentOptions.Center);UIFactory.Stretch(number.rectTransform);chip.SetActive(false);}
-        var guideLabel=CriarTexto("LegendaDaMira",raiz.transform,"CLARA: BRANCA   ·   DOURADA: COLORIDA",7.5f,new Color32(239,214,146,255),TextAlignmentOptions.Left);
-        Posicionar(guideLabel.rectTransform,new Vector2(-164,-103),new Vector2(280,12));
+        headerMesa=header.GetComponent<RectTransform>();footerMesa=footer.GetComponent<RectTransform>();
+        headerMesa.anchorMin=headerMesa.anchorMax=new Vector2(.5f,1);headerMesa.anchoredPosition=new Vector2(0,-15);
+        footerMesa.anchorMin=footerMesa.anchorMax=new Vector2(.5f,0);footerMesa.anchoredPosition=new Vector2(0,16);
+        header.GetComponent<Image>().color=new Color32(15,17,14,150);
+        footer.GetComponent<Image>().color=new Color32(15,17,14,145);
+        foreach(var panel in new[]{header,footer}) { var outline=panel.GetComponent<Outline>();if(outline!=null)outline.enabled=false; }
+        foreach(var button in new[]{btnVistaCamera,btnOpcoes,btnAjuda,btnCancelarTacada})
+        {button.GetComponent<Image>().color=new Color32(35,39,32,85);button.GetComponent<Outline>().effectColor=new Color32(133,121,91,55);button.GetComponentInChildren<TextMeshProUGUI>().fontSize=9;}
+        reticuloFPS=CriarTexto("ReticuloFPS",raiz.transform,"·",12,new Color32(228,221,192,120),TextAlignmentOptions.Center);
+        Posicionar(reticuloFPS.rectTransform,Vector2.zero,new Vector2(12,12));reticuloFPS.raycastTarget=false;
+        // Atmosphere shares the same context line; no floating instructional labels on the table.
+        txtPercepcaoSubtitulo = CriarTexto("TxtPercepcaoSubtitulo",legado.transform,"",9,Color.white,TextAlignmentOptions.Left);
+        ConstruirLegendaZe();
+        ConstruirOpcoesMesa();
         ConstruirEscolhaAlvo();
-        // Subtítulo de percepção psicológica (discreto acima do rodapé)
-        txtPercepcaoSubtitulo = CriarTexto("TxtPercepcaoSubtitulo", raiz.transform,
-            "", 9.8f, new Color32(215, 198, 172, 225), TextAlignmentOptions.Center);
-        Posicionar(txtPercepcaoSubtitulo.rectTransform, new Vector2(-30f, -89f), new Vector2(510f, 14f));
-
-        // Rodapé: Barra de Força + Resumo dos Controles Simples
-        GameObject footer = new GameObject("FooterHUD", typeof(RectTransform), typeof(Image));
-        footer.transform.SetParent(raiz.transform, false);
-        RectTransform footerRect = footer.GetComponent<RectTransform>();
-        Posicionar(footerRect, new Vector2(0f, -154f), new Vector2(624f, 44f));
-        footer.GetComponent<Image>().color = new Color32(20, 17, 14, 238);
-
-        TextMeshProUGUI lblForca = CriarTexto("LblForca", footer.transform,
-            "FORÇA DA TACADA:", 9.8f, new Color32(228, 214, 184, 255), TextAlignmentOptions.Left);
-        Posicionar(lblForca.rectTransform, new Vector2(-242f, 9f), new Vector2(124f, 16f));
-
-        GameObject barraBg = new GameObject("BarraForcaBg", typeof(RectTransform), typeof(Image));
-        barraBg.transform.SetParent(footer.transform, false);
-        Posicionar(barraBg.GetComponent<RectTransform>(), new Vector2(-88f, 9f), new Vector2(180f, 12f));
-        barraBg.GetComponent<Image>().color = new Color32(42, 38, 34, 255);
-
-        GameObject barraFill = new GameObject("BarraForcaFill", typeof(RectTransform), typeof(Image));
-        barraFill.transform.SetParent(barraBg.transform, false);
-        RectTransform fillRect = barraFill.GetComponent<RectTransform>();
-        fillRect.anchorMin = new Vector2(0f, 0f);
-        fillRect.anchorMax = new Vector2(0f, 1f);
-        fillRect.offsetMin = new Vector2(1f, 1f);
-        fillRect.offsetMax = new Vector2(-1f, -1f);
-        barraForcaFill = barraFill.GetComponent<Image>();
-        barraForcaFill.color = new Color32(235, 168, 52, 255);
-        barraForcaFill.fillAmount = 0f;
-
-        txtTendenciaEfeito = CriarTexto("TxtTendenciaEfeito", footer.transform,
-            "Tacada Normal: a branca segue o rebote natural após o contato.", 9.4f, new Color32(186, 214, 198, 255), TextAlignmentOptions.Left);
-        Posicionar(txtTendenciaEfeito.rectTransform, new Vector2(158f, 9f), new Vector2(292f, 16f));
-
-        txtControlesRodape = CriarTexto("TxtControlesRodape", footer.transform,
-            "Aponte: mirar  |  Segure e solte: tacar  |  Roda: zoom  |  V: vistas  |  A/D: contornar  |  ←/→: mira  |  Dir./C: cancelar  |  ESC: pausa",
-            8.9f, new Color32(178, 174, 164, 255), TextAlignmentOptions.Center);
-        Posicionar(txtControlesRodape.rectTransform, new Vector2(0f, -10f), new Vector2(612f, 16f));
-
         ConstruirModal(raiz.transform);
+        AtualizarPainelContextual();
     }
 
+    private GameObject CriarPainelHUD(Transform pai,string nome,Vector2 pos,Vector2 tamanho)
+    {
+        var obj = new GameObject(nome,typeof(RectTransform),typeof(Image));
+        obj.transform.SetParent(pai,false);
+        Posicionar(obj.GetComponent<RectTransform>(),pos,tamanho);
+        obj.GetComponent<Image>().color = new Color32(22,24,21,246);
+        return obj;
+    }
+
+    private void ConstruirOpcoesMesa()
+    {
+        painelOpcoes = CriarPainelHUD(raiz.transform,"OpcoesMesa",Vector2.zero,new Vector2(640,360));
+        UIFactory.Stretch(painelOpcoes.GetComponent<RectTransform>());
+        painelOpcoes.GetComponent<Image>().color = new Color(0,0,0,.5f);
+        painelOpcoes.AddComponent<Button>().onClick.AddListener(()=>painelOpcoes.SetActive(false));
+        var card = CriarPainelHUD(painelOpcoes.transform,"AjustesMesa",new Vector2(132,0),new Vector2(344,294));
+        card.AddComponent<Button>().navigation = new Navigation { mode = Navigation.Mode.None };
+        var titulo = CriarTexto("TituloOpcoes",card.transform,"OPÇÕES DA MESA",13,new Color32(242,220,170,255),TextAlignmentOptions.Left);
+        Posicionar(titulo.rectTransform,new Vector2(-38,122),new Vector2(236,22));
+        var fechar = CriarBotaoHUD(card.transform,"FecharOpcoes","Fechar",new Vector2(122,122),new Vector2(72,25),new Color32(48,51,43,255),out _);
+        fechar.onClick.AddListener(()=>painelOpcoes.SetActive(false));
+        var instrucao = CriarTexto("AjudaContato",card.transform,"EFEITO OPCIONAL · toque no ponto da branca",9,new Color32(173,184,172,255),TextAlignmentOptions.Left);
+        Posicionar(instrucao.rectTransform,new Vector2(0,96),new Vector2(312,16));
+        var spin = new GameObject("PontoDeContatoBranca",typeof(RectTransform),typeof(CanvasRenderer),typeof(SinucaSpinSelector));
+        spin.transform.SetParent(card.transform,false);
+        Posicionar(spin.GetComponent<RectTransform>(),new Vector2(-130,57),new Vector2(44,44));
+        spinSelector=spin.GetComponent<SinucaSpinSelector>();
+        spinSelector.CanSelect=()=>estado==EstadoPartida.MirandoJogador&&!MenuPausa.Aberto;
+        txtTendenciaEfeito=CriarTexto("TxtTendenciaEfeito",card.transform,"Toque no centro: tacada sem efeito.",10,new Color32(210,219,203,255),TextAlignmentOptions.Left);
+        Posicionar(txtTendenciaEfeito.rectTransform,new Vector2(26,67),new Vector2(240,32));
+        spinSelector.Changed=p=>{if(estado!=EstadoPartida.MirandoJogador)return;contatoTaco=p;efeitoEscolhido=p.y>.15f?SinucaCueSpin.Avancar:p.y<-.15f?SinucaCueSpin.Recuar:SinucaCueSpin.Normal;txtTendenciaEfeito.text="Contato: "+(p.x<-.15f?"esquerda / ":p.x>.15f?"direita / ":"")+(p.y<-.15f?"recuo":p.y>.15f?"avanço":"centro");};
+        var reset=CriarBotaoHUD(card.transform,"SemEfeito","Centralizar toque",new Vector2(28,34),new Vector2(160,23),new Color32(44,64,54,255),out _);
+        reset.onClick.AddListener(()=>SelecionarEfeitoBranca(SinucaCueSpin.Normal));
+        var alvo=CriarBotaoHUD(card.transform,"EscolherPrimeiroToque","Primeiro toque: automático",new Vector2(0,0),new Vector2(312,27),new Color32(44,54,44,255),out txtAlvo);
+        alvo.onClick.AddListener(AbrirEscolhaAlvo);
+        txtEncaçapadasMarcus=CriarTexto("EncaçapadasMarcus",card.transform,"MARCUS",9,new Color32(234,224,195,255),TextAlignmentOptions.Left);
+        txtEncaçapadasZe=CriarTexto("EncaçapadasZe",card.transform,"ZÉ",9,new Color32(234,224,195,255),TextAlignmentOptions.Left);
+        Posicionar(txtEncaçapadasMarcus.rectTransform,new Vector2(-80,-31),new Vector2(152,16));
+        Posicionar(txtEncaçapadasZe.rectTransform,new Vector2(80,-31),new Vector2(152,16));
+        for(int n=1;n<16;n++)if(n!=8){var chip=new GameObject("Encaçapada_"+n,typeof(RectTransform),typeof(Image));chip.transform.SetParent(card.transform,false);var im=chip.GetComponent<Image>();im.sprite=CriarSpriteCirculo(40,SinucaTableView.CorDaBola(n),new Color(.84f,.78f,.58f));im.raycastTarget=false;encaçapadasIcones[n]=im;var number=CriarTexto("Numero",chip.transform,n.ToString(),8.5f,(n==1||n==5||n==9||n==13)?new Color(.06f,.06f,.04f):Color.white,TextAlignmentOptions.Center);UIFactory.Stretch(number.rectTransform);chip.SetActive(false);}
+        var nota=CriarTexto("NotaTrocaModo",card.transform,"Trocar de modo reinicia a série atual.",9,new Color32(173,184,172,255),TextAlignmentOptions.Left);
+        Posicionar(nota.rectTransform,new Vector2(0,-86),new Vector2(312,18));
+        btnAcaoPraticaOuDuelo=CriarBotaoHUD(card.transform,"BtnAcaoPraticaOuDuelo","Ir para o treino",new Vector2(0,-117),new Vector2(312,30),new Color32(58,66,43,255),out txtBtnAcaoPraticaOuDuelo);
+        btnAcaoPraticaOuDuelo.onClick.AddListener(AoClicarBotaoPraticaOuDuelo);
+        painelOpcoes.SetActive(false);
+    }
 
     private void ConstruirEscolhaAlvo()
     {
-        painelAlvo=new GameObject("PrimeiroToque",typeof(RectTransform),typeof(Image));painelAlvo.transform.SetParent(raiz.transform,false);
-        Posicionar(painelAlvo.GetComponent<RectTransform>(),new Vector2(183,77),new Vector2(238,92));painelAlvo.GetComponent<Image>().color=new Color32(28,31,25,250);
-        var title=CriarTexto("ExplicacaoAlvo",painelAlvo.transform,"QUAL BOLA VOCÊ PRETENDE TOCAR PRIMEIRO?\nAUTO acompanha sua mira. Escolha uma bola para anunciar uma jogada de tabela.",8,new Color32(232,219,183,255),TextAlignmentOptions.Center);Posicionar(title.rectTransform,new Vector2(0,21),new Vector2(222,39));
+        painelAlvo=CriarPainelHUD(raiz.transform,"PrimeiroToque",Vector2.zero,new Vector2(640,360));
+        UIFactory.Stretch(painelAlvo.GetComponent<RectTransform>());
+        painelAlvo.GetComponent<Image>().color=new Color(0,0,0,.5f);
+        painelAlvo.AddComponent<Button>().onClick.AddListener(()=>painelAlvo.SetActive(false));
+        var card=CriarPainelHUD(painelAlvo.transform,"EscolhaPrimeiroToque",Vector2.zero,new Vector2(320,182));
+        card.AddComponent<Button>().navigation = new Navigation { mode = Navigation.Mode.None };
+        var title=CriarTexto("ExplicacaoAlvo",card.transform,"PRIMEIRO TOQUE\nAutomático segue a mira. Escolha uma bola para jogar de tabela.",10,new Color32(232,219,183,255),TextAlignmentOptions.Center);
+        Posicionar(title.rectTransform,new Vector2(0,57),new Vector2(294,48));
         for(int n=0;n<=15;n++)
         {
-            int target=n;var button=CriarBotaoHUD(painelAlvo.transform,"Alvo"+n,n==0?"AUTO":n.ToString(),new Vector2(-98+(n%8)*28,n<8?-8:-36),new Vector2(n==0?33:24,24),new Color32(43,47,37,255),out var label);
+            int target=n;var button=CriarBotaoHUD(card.transform,"Alvo"+n,n==0?"Auto":n.ToString(),new Vector2(-126+(n%8)*36,n<8?8:-25),new Vector2(32,27),new Color32(43,47,37,255),out var label);
             if(n>0){button.GetComponent<Image>().sprite=CriarSpriteCirculo(40,SinucaTableView.CorDaBola(n),new Color(.72f,.65f,.44f));label.color=(n==8||n==2||n==4||n==7||n==10||n==12||n==15)?Color.white:new Color(.06f,.06f,.045f);}
-            escolhasAlvo[n]=button;button.onClick.AddListener(()=>{cantadaManual=target;txtAlvo.text=target==0?"ALVO: AUTO":"PRIMEIRO TOQUE: "+target;painelAlvo.SetActive(false);txtTurnoStatus.text=target==0?"Mire a bola pretendida; o alvo é identificado pela linha.":"Primeiro toque anunciado: bola "+target+". Acerte essa bola antes das demais.";});
+            escolhasAlvo[n]=button;button.onClick.AddListener(()=>{cantadaManual=target;txtAlvo.text=target==0?"Primeiro toque: automático":"Primeiro toque: bola "+target;painelAlvo.SetActive(false);txtTurnoStatus.text=target==0?"Alvo automático: acompanhe a linha de mira.":"Acerte a bola "+target+" antes das demais.";});
         }
+        var voltar=CriarBotaoHUD(card.transform,"VoltarAlvo","Voltar à mesa",new Vector2(0,-65),new Vector2(180,26),new Color32(44,64,54,255),out _);
+        voltar.onClick.AddListener(()=>painelAlvo.SetActive(false));
         painelAlvo.SetActive(false);
     }
+
+    private bool EntradaMesaBloqueada()
+    {
+        return MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)
+            || (painelOpcoes != null && painelOpcoes.activeSelf) || (painelAlvo != null && painelAlvo.activeSelf);
+    }
+
+    private void AlternarOpcoesMesa()
+    {
+        if (estado != EstadoPartida.MirandoJogador) return;
+        CancelarCargaAoSuspender();
+        painelOpcoes.SetActive(!painelOpcoes.activeSelf);
+    }
+
+    private void AtualizarPainelContextual()
+    {
+        if (txtControlesRodape == null) return;
+        if(escudoModal!=null)escudoModal.SetActive(painelModal!=null&&painelModal.activeSelf);
+        bool carga = estado == EstadoPartida.CarregandoForca;
+        grupoForca.SetActive(carga); btnCancelarTacada.gameObject.SetActive(carga);
+        txtForcaPercentual.text = "Força " + Mathf.RoundToInt(forcaNormalizada * 100f) + "%";
+        Posicionar(txtTurnoStatus.rectTransform,new Vector2(carga?-144:0,7),new Vector2(carga?308:596,12));
+        Posicionar(txtControlesRodape.rectTransform,new Vector2(carga?-144:0,-6),new Vector2(carga?308:596,12));
+        switch (estado)
+        {
+            case EstadoPartida.MirandoJogador: txtControlesRodape.text=EmPe?"WASD: caminhar · Mouse: olhar · Esc: cursor · Clique na branca próxima para se apoiar":"Mouse: mirar · Clique, puxe para baixo e solte · Shift: precisão · Q: levantar"; break;
+            case EstadoPartida.CarregandoForca: txtControlesRodape.text="Mais recuo = mais força. Solte para tacar."; break;
+            case EstadoPartida.PosicionandoBranca: txtControlesRodape.text="Clique na mesa para repor a branca · Setas: ajustar · E: confirmar"; break;
+            case EstadoPartida.TurnoZePensando: txtControlesRodape.text="Zé está escolhendo a jogada. Observe a mesa."; break;
+            case EstadoPartida.BolasEmMovimento: txtControlesRodape.text="Aguarde as bolas pararem para jogar de novo."; break;
+            default: txtControlesRodape.text="Como jogar explica os controles e as regras da mesa."; break;
+        }
+        if(EmPe && estado==EstadoPartida.MirandoJogador)txtTurnoStatus.text=tableView3D.Room.CanReachWhite(bolas[0].pos)?"Sua vez · Clique na branca para preparar a tacada.":"Sua vez · Caminhe até o lado da branca.";
+        else if(EmPe)txtControlesRodape.text="WASD: caminhar · Mouse: olhar · Esc: cursor · Aguarde sua vez";
+        if(interfaceLivre)txtControlesRodape.text="Cursor livre · Clique na sala ou Esc para voltar · Pausa: menu do jogo";
+        AtualizarBotaoVistaCamera();
+        if (!turnoDeMarcus && !string.IsNullOrEmpty(txtPercepcaoSubtitulo.text))
+            txtControlesRodape.text=txtPercepcaoSubtitulo.text;
+        txtControlesRodape.overflowMode=TextOverflowModes.Ellipsis;
+        bool podeAjustar = estado == EstadoPartida.MirandoJogador || estado == EstadoPartida.PosicionandoBranca;
+        btnOpcoes.interactable=estado == EstadoPartida.MirandoJogador;
+        btnAjuda.interactable=podeAjustar;
+        btnAcaoPraticaOuDuelo.interactable=podeAjustar;
+    }
+
     private void AbrirEscolhaAlvo()
     {
-        if(estado!=EstadoPartida.MirandoJogador)return;CancelarCargaAoSuspender();
+        if(estado!=EstadoPartida.MirandoJogador)return;
+        CancelarCargaAoSuspender();painelOpcoes.SetActive(false);
         for(int n=1;n<=15;n++)escolhasAlvo[n].interactable=modoPratica?bolas[n].ativa:regrasBrasileiras!=null&&regrasBrasileiras.CanNominate(n);
-        painelAlvo.SetActive(!painelAlvo.activeSelf);
+        painelAlvo.SetActive(true);
     }
 
     private Button CriarBotaoHUD(Transform pai, string nome, string rotulo, Vector2 pos, Vector2 tam, Color32 corFundo, out TextMeshProUGUI txtOut)
@@ -522,9 +628,18 @@ public class SinucaMinigameUI : MonoBehaviour
         Outline o = obj.AddComponent<Outline>();
         o.effectColor = new Color32(146, 114, 66, 185);
 
-        txtOut = CriarTexto("Txt_" + nome, obj.transform, rotulo, 9.2f, new Color32(242, 224, 182, 255), TextAlignmentOptions.Center);
+        txtOut = CriarTexto("Txt_" + nome, obj.transform, rotulo, 11f, new Color32(242, 224, 182, 255), TextAlignmentOptions.Center);
         UIFactory.Stretch(txtOut.rectTransform);
-        return obj.GetComponent<Button>();
+        var button = obj.GetComponent<Button>();
+        button.navigation = new Navigation { mode = Navigation.Mode.None };
+        button.onClick.AddListener(()=>{if(EventSystem.current!=null)EventSystem.current.SetSelectedGameObject(null);});
+        var colors = button.colors;
+        colors.highlightedColor = new Color(1.25f,1.25f,1.18f,1f);
+        colors.pressedColor = new Color(.72f,.82f,.70f,1f);
+        colors.disabledColor = new Color(.55f,.55f,.55f,.65f);
+        colors.fadeDuration = .08f; button.colors = colors;
+        txtOut.margin = new Vector4(4,1,4,1);
+        return button;
     }
 
     private void ConstruirPainelEfeitoOpcional()
@@ -614,7 +729,12 @@ public class SinucaMinigameUI : MonoBehaviour
     private void ConstruirModal(Transform pai)
     {
         painelModal = new GameObject("PainelModalSinuca", typeof(RectTransform), typeof(Image));
-        painelModal.transform.SetParent(pai, false);
+        var escudo=CriarPainelHUD(pai,"EscudoModalSinuca",Vector2.zero,new Vector2(640,360));
+        UIFactory.Stretch(escudo.GetComponent<RectTransform>());
+        escudo.GetComponent<Image>().color=new Color(0,0,0,.62f);
+        // Shield visibility follows the card in AtualizarPainelContextual.
+        escudoModal=escudo;
+        painelModal.transform.SetParent(escudo.transform, false);
         RectTransform modalRect = painelModal.GetComponent<RectTransform>();
         Posicionar(modalRect, Vector2.zero, new Vector2(492f, 254f));
         painelModal.GetComponent<Image>().color = new Color32(16, 15, 13, 248);
@@ -656,6 +776,8 @@ public class SinucaMinigameUI : MonoBehaviour
     private void ComecarNovaSerie(Action aoVencerSerie)
     {
         StopAllCoroutines();
+        LimparFalaZe();
+        comentariosZe.ResetSeries();
         CancelarCargaAtiva();
         onVictoryCallback = aoVencerSerie;
         raiz.SetActive(true);
@@ -673,17 +795,22 @@ public class SinucaMinigameUI : MonoBehaviour
         ultimaAlturaTela = Screen.height;
 
         ConfigurarMao(1);
-        MostrarModal("ZÉ · COMO VAMOS JOGAR?","Quinze bolas no triângulo. Você prefere identificar os grupos pelas cores ou pelos números? A preta 8 é sempre a última. A branca já está posicionada.","LISAS / LISTRADAS",()=>{gruposPorNumero=false;painelModal.SetActive(false);IniciarTurnoAtual();},"1–7 / 9–15",()=>{gruposPorNumero=true;painelModal.SetActive(false);IniciarTurnoAtual();});
+        DefinirVistaInicial();
+        ajudaInicialPendente=true;
+        MostrarModal("ZÉ · COMO VAMOS JOGAR?","Quinze bolas no triângulo. Você prefere identificar os grupos pelas cores ou pelos números? A preta 8 é sempre a última. A branca já está posicionada.","LISAS / LISTRADAS",()=>{gruposPorNumero=false;painelModal.SetActive(false);AbrirAjudaGuiada(0,true);},"1–7 / 9–15",()=>{gruposPorNumero=true;painelModal.SetActive(false);AbrirAjudaGuiada(0,true);});
     }
 
     private void ComecarModoPratica()
     {
         StopAllCoroutines();
+        LimparFalaZe();
         CancelarCargaAtiva();
         raiz.SetActive(true);
         if (painelModal != null) painelModal.SetActive(false);
 
         modoPratica = true;
+        ajudaInicialPendente=false;
+        if(painelOpcoes!=null)painelOpcoes.SetActive(false);
         maoAtual = 1;
         pontosMarcus = 0;
         pontosZe = 0;
@@ -724,6 +851,7 @@ public class SinucaMinigameUI : MonoBehaviour
         }
 
         anguloMiraRad = 0f;
+        DefinirVistaInicial();
         forcaNormalizada = 0f;
         estado = EstadoPartida.MirandoJogador;
         if (txtPercepcaoSubtitulo != null)
@@ -734,40 +862,46 @@ public class SinucaMinigameUI : MonoBehaviour
         AtualizarVisualTacoEMira();
     }
 
+    private void DefinirVistaInicial()
+    {
+        if(painelOpcoes!=null)painelOpcoes.SetActive(false);
+        if(painelAlvo!=null)painelAlvo.SetActive(false);
+        AtualizarVisualTacoEMira();
+        levantarAposTacada=-1;interfaceLivre=false;
+        tableView3D.DefinirCamera(SinucaCameraView.Caminhando3D);
+        tableView3D.Room.ResetWalking();
+        tableView3D.DefinirZoom(1f);
+        tableView3D.ReiniciarReferenciaPonteiro();
+        AtualizarBotaoVistaCamera();
+    }
+
     private void AoClicarBotaoPraticaOuDuelo()
     {
-        CancelarCargaAtiva();
-        if (modoPratica)
-        {
-            // Se está na prática, iniciar o duelo real melhor de 3 contra Zé
-            ComecarNovaSerie(onVictoryCallback);
-            if (painelModal != null) painelModal.SetActive(false);
-            IniciarTurnoAtual();
-        }
-        else
-        {
-            ComecarModoPratica();
-        }
+        if(estado!=EstadoPartida.MirandoJogador && estado!=EstadoPartida.PosicionandoBranca)return;
+        CancelarCargaAtiva();painelOpcoes.SetActive(false);
+        bool irDuelo=modoPratica;
+        MostrarModal(irDuelo?"JOGAR CONTRA O ZÉ?":"ENTRAR NO TREINO?",
+            irDuelo?"O treino termina e uma nova série começa contra o Zé.":"A série atual será reiniciada. No treino você pode experimentar as tacadas sem penalidades.",
+            irDuelo?"COMEÇAR DUELO":"IR PARA O TREINO",()=>{painelModal.SetActive(false);if(irDuelo)ComecarNovaSerie(onVictoryCallback);else ComecarModoPratica();},
+            "CONTINUAR NA MESA",()=>painelModal.SetActive(false));
     }
 
     private void AlternarVistaCamera()
     {
-        CancelarCargaAoSuspender();
-        if (tableView3D != null)
-        {
-            tableView3D.AlternarCamera();
-            AtualizarBotaoVistaCamera();
-            AtualizarVisualTacoEMira();
-        }
+        if(EntradaMesaBloqueada())return;
+        if(!EmPe)LevantarDaMesa();
+        else txtTurnoStatus.text="Caminhe até a branca e clique nela para preparar a tacada.";
+    }
+
+    private void LevantarDaMesa()
+    {
+        CancelarCargaAoSuspender();levantarAposTacada=-1;
+        tableView3D.DefinirCamera(SinucaCameraView.Caminhando3D);
+        tableView3D.ReiniciarReferenciaPonteiro();AtualizarVisualTacoEMira();
     }
 
     private void AtualizarBotaoVistaCamera()
-    {
-        if (txtBtnVistaCamera == null || tableView3D == null) return;
-        txtBtnVistaCamera.text = tableView3D.CameraModo == SinucaCameraView.Mesa3D
-            ? "VISTA: DIAGONAL (V)"
-            : tableView3D.CameraModo == SinucaCameraView.LinhaTaco ? "VISTA: TACO (V)" : "VISTA: SUPERIOR (V)";
-    }
+    { if(txtBtnVistaCamera!=null)txtBtnVistaCamera.text=EmPe?"Sala · WASD":"Levantar · Q"; }
 
     private void AlternarPainelEfeito()
     {
@@ -798,15 +932,15 @@ public class SinucaMinigameUI : MonoBehaviour
             switch (novoEfeito)
             {
                 case SinucaCueSpin.Avancar:
-                    txtTendenciaEfeito.text = "Avançar (opcional): a branca tende a acompanhar para frente após o contato.";
+                    txtTendenciaEfeito.text = "Avanço: a branca segue para frente após o contato.";
                     txtTendenciaEfeito.color = new Color32(156, 214, 248, 255);
                     break;
                 case SinucaCueSpin.Recuar:
-                    txtTendenciaEfeito.text = "Recuar (opcional): a branca tende a frear ou puxar para trás após o contato.";
+                    txtTendenciaEfeito.text = "Recuo: a branca tende a voltar após o contato.";
                     txtTendenciaEfeito.color = new Color32(248, 198, 142, 255);
                     break;
                 default:
-                    txtTendenciaEfeito.text = "Tacada Normal: a branca segue o rebote natural após o contato.";
+                    txtTendenciaEfeito.text = "Centro: tacada sem efeito.";
                     txtTendenciaEfeito.color = new Color32(186, 214, 198, 255);
                     break;
             }
@@ -829,63 +963,62 @@ public class SinucaMinigameUI : MonoBehaviour
                 ? new Color32(94, 64, 38, 255) : new Color32(34, 38, 44, 255);
     }
 
-    private void AbrirTutorialInicial()
-    {
-        estado = EstadoPartida.TutorialRegras;
-        MostrarModal(
-            "SINUCA NO BAR DO ZÉ — MELHOR DE 3 MÃOS",
-            "Quinze bolas: lisas 1–7 e listradas 9–15. A primeira conversão válida define os grupos.\n" +
-            "Converta todas as bolas do seu grupo. Só então jogue na preta 8.\n" +
-            "Falta: bola na mão ao adversário. Limpe seu grupo e só então converta a preta 8; preta antecipada perde a mão.\n" +
-            "A branca já começa pronta. Reposicionamento só depois de falta. Da 2ª mão em diante, não encaçape a bola com X: a tacada será anulada.\n" +
-            "A/D: contornar. Setas ou mouse: mirar. Segure/solte para tacar. V: vistas. Da 2ª mão em diante, cair a marcada anula a tacada e devolve a formação. Duas vitórias vencem a série.",
-            "DUELAR COM ZÉ",
-            () =>
-            {
-                painelModal.SetActive(false);
-                IniciarTurnoAtual();
-            },
-            "PRÁTICA CURTA",
-            () =>
-            {
-                painelModal.SetActive(false);
-                ComecarModoPratica();
-            }
-        );
-    }
+    private void AbrirTutorialInicial() { AbrirAjudaGuiada(0,true); }
 
     private void AbrirModalRegrasDuranteJogo()
     {
-        if (estado == EstadoPartida.BolasEmMovimento || estado == EstadoPartida.ResolvendoTacada) return;
+        if(estado!=EstadoPartida.MirandoJogador && estado!=EstadoPartida.PosicionandoBranca)return;
+        CancelarCargaAoSuspender();painelOpcoes.SetActive(false);
+        AbrirAjudaGuiada(0,false);
+    }
+
+    private void AbrirAjudaGuiada(int pagina,bool inicial)
+    {
         CancelarCargaAoSuspender();
-        EstadoPartida estadoAnterior = estado;
-        MostrarModal(
-            "REGRAS DA MESA — BAR DO ZÉ",
-            "Quinze bolas: lisas 1–7 e listradas 9–15. A primeira conversão válida define os grupos.\n" +
-            "Converta todas as bolas do seu grupo. Só então jogue na preta 8.\n" +
-            "Falta: bola na mão ao adversário. Limpe seu grupo e só então converta a preta 8; preta antecipada perde a mão.\n" +
-            "A branca já começa pronta. Reposicionamento só depois de falta. Da 2ª mão em diante, não encaçape a bola com X: a tacada será anulada.\n" +
-            "A/D: contornar. Setas ou mouse: mirar. Segure/solte para tacar. V: vistas. Da 2ª mão em diante, cair a marcada anula a tacada e devolve a formação. Duas vitórias vencem a série.",
-            "VOLTAR À MESA",
-            () =>
-            {
-                painelModal.SetActive(false);
-                if (estado == EstadoPartida.TutorialRegras)
-                    IniciarTurnoAtual();
-                else
-                    estado = estadoAnterior;
-            },
-            modoPratica ? "IR PARA O DUELO" : "PRÁTICA CURTA",
-            () =>
-            {
-                painelModal.SetActive(false);
-                AoClicarBotaoPraticaOuDuelo();
-            }
-        );
+        paginaAjuda=Mathf.Clamp(pagina,0,2);ajudaInicialPendente=inicial;
+        string titulo,corpo;
+        if(paginaAjuda==0)
+        {
+            titulo="COMO JOGAR · 1 / 3 · A TACADA";
+            corpo="<b>1. Caminhe</b> com WASD até o lado da branca. Mova o mouse para olhar. Esc libera o cursor para a interface.\n"+
+                "<b>2. Clique na branca</b> para apoiar a mão e preparar o taco. Ajuste a mira com o mouse.\n"+
+                "<b>3. Clique e puxe para baixo</b>. Quanto mais puxar, maior a força.\n"+
+                "<b>4. Solte</b> para tacar. A direção fica travada durante a puxada.\n\n"+
+                "<b>Shift</b>: ajustes bem pequenos na mira.\n<b>Botão direito ou C</b>: cancelar sem gastar a vez.";
+        }
+        else if(paginaAjuda==1)
+        {
+            titulo="COMO JOGAR · 2 / 3 · A MESA";
+            corpo="Você entra <b>em pé na sala</b>, sem corpo visível. Após tacar, volta a caminhar.\n"+
+                "<b>Q ou Levantar</b>: sair da posição de tacada. Caminhe ao redor da mesa para escolher outro ângulo.\n<b>← / →</b>: ajustar a mira. <b>Espaço</b>: segure para aumentar a força e solte para tacar.\n\n"+
+                "Em <b>Opções</b> ficam o efeito na branca, o primeiro toque manual e o treino. São opcionais: você pode jogar sem mexer neles.";
+        }
+        else
+        {
+            titulo="COMO JOGAR · 3 / 3 · O OBJETIVO";
+            corpo="A primeira bola válida encaçapada define seu grupo: <b>lisas 1–7</b> ou <b>listradas 9–15</b>.\n"+
+                "Encaçape seu grupo e depois a <b>preta 8</b>. Preta antecipada perde a mão. Duas mãos vencem a série.\n"+
+                "<b>Falta</b>: o adversário pode reposicionar a branca.\n\n"+
+                "Da 2ª mão em diante, a bola com <b>X</b> deve ficar na mesa. Se cair, a tacada é anulada e a formação volta.";
+        }
+        MostrarModal(titulo,corpo,paginaAjuda<2?"PRÓXIMO":"VAMOS JOGAR",
+            ()=>{if(paginaAjuda<2)AbrirAjudaGuiada(paginaAjuda+1,inicial);else FecharAjudaGuiada();},
+            inicial?"PULAR AJUDA":"VOLTAR À MESA",FecharAjudaGuiada);
+    }
+
+    private void FecharAjudaGuiada()
+    {
+        painelModal.SetActive(false);
+        if(ajudaInicialPendente){ajudaInicialPendente=false;IniciarTurnoAtual();}
     }
 
     private void ConfigurarMao(int numeroMao)
     {
+        LimparFalaZe();
+        comentariosZe.ResetHand();
+        EnfileirarFalaZe(numeroMao==1 ? "Primeiro a partida, Marcus. Depois a gente conversa." :
+            numeroMao==2 ? "Mais uma mão. E cuida com a bola marcada." :
+            "Última mão. Vamos terminar isso.", true);
         modoPratica = false;
         maoAtual = numeroMao;
         pontosMarcus = 0;
@@ -963,7 +1096,7 @@ public class SinucaMinigameUI : MonoBehaviour
     private void IniciarTurnoAtual()
     {
         cantadaManual=0;
-        if(txtAlvo!=null)txtAlvo.text="ALVO: AUTO";
+        if(txtAlvo!=null)txtAlvo.text="Primeiro toque: automático";
         if(painelAlvo!=null)painelAlvo.SetActive(false);
         if (modoPratica)
         {
@@ -1054,7 +1187,7 @@ public class SinucaMinigameUI : MonoBehaviour
             {
                 estado = EstadoPartida.MirandoJogador;
                 ApontarMiraParaBolaMaisProxima();
-                txtTurnoStatus.text = "SUA VEZ, MARCUS: Mire com Mouse ou ←/→ e segure Clique Esq. ou Espaço para tacar.";
+                txtTurnoStatus.text = "Sua vez · Caminhe até a branca e clique nela.";
             }
             AtualizarVisualTacoEMira();
         }
@@ -1099,7 +1232,25 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void Update()
     {
+        bool suspenderAudio = Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused;
+        if (suspenderAudio != audioSuspenso)
+        {
+            audioSuspenso = suspenderAudio;
+            foreach (var voz in vozesSinuca)
+                if (voz != null) { if (audioSuspenso) voz.Pause(); else voz.UnPause(); }
+        }
+        AtualizarFalaZe(suspenderAudio);
         if (!IsShowing || estado == EstadoPartida.Inativo) return;
+        var tecladoCursor=Keyboard.current;
+        if(tecladoCursor!=null && tecladoCursor.escapeKey.wasPressedThisFrame && !MenuPausa.Aberto && MenuPausa.ClosedFrame!=Time.frameCount)
+        {
+            CancelarCargaAoSuspender();
+            if(painelOpcoes!=null&&painelOpcoes.activeSelf)painelOpcoes.SetActive(false);
+            else if(painelAlvo!=null&&painelAlvo.activeSelf)painelAlvo.SetActive(false);
+            else if(painelModal==null||!painelModal.activeSelf)interfaceLivre=!interfaceLivre;
+        }
+        AtualizarCapturaCursor();
+        AtualizarPainelContextual();
 
         // Proteção contra mudança de resolução durante carga
         if (Screen.width != ultimaLarguraTela || Screen.height != ultimaAlturaTela)
@@ -1122,23 +1273,30 @@ public class SinucaMinigameUI : MonoBehaviour
         }
 
         var kb = Keyboard.current;
+        if (painelOpcoes != null && painelOpcoes.activeSelf)
+        {
+            CancelarCargaAoSuspender();
+            return;
+        }
         if(painelAlvo!=null&&painelAlvo.activeSelf)
         {
             if(kb!=null&&kb.escapeKey.wasPressedThisFrame)painelAlvo.SetActive(false);
             return;
         }
 
-        if(kb!=null && (kb.aKey.isPressed||kb.dKey.isPressed))
+        LerMouseCapturado();
+        if(levantarAposTacada>=0 && Time.time>=levantarAposTacada)LevantarDaMesa();
+        if(!interfaceLivre && kb!=null && (kb.qKey.wasPressedThisFrame || kb.vKey.wasPressedThisFrame))AlternarVistaCamera();
+        if(EmPe)
         {
-            CancelarCargaAoSuspender();
-            float orbit=(kb.aKey.isPressed?1:0)-(kb.dKey.isPressed?1:0);
-            tableView3D.Orbit(orbit*(kb.shiftKey.isPressed?25f:70f)*Time.unscaledDeltaTime);
+            Vector2 move=Vector2.zero,look=Vector2.zero;
+            if(!interfaceLivre && kb!=null){move.x=(kb.dKey.isPressed?1:0)-(kb.aKey.isPressed?1:0);move.y=(kb.wKey.isPressed?1:0)-(kb.sKey.isPressed?1:0);}
+            var mouse=Mouse.current;
+            if(mouse!=null && Cursor.lockState==CursorLockMode.Locked && Time.frameCount!=frameCaptura)look=mouse.delta.ReadValue();
+            tableView3D.Room.MovePlayer(move,look,Time.deltaTime);
+            AtualizarVisualTacoEMira();
         }
-        // Atalho V para alternar entre Mesa 3D e Vista Superior (cancela carga com segurança)
-        if (kb != null && kb.vKey.wasPressedThisFrame)
-        {
-            AlternarVistaCamera();
-        }
+        else AtualizarVisualTacoEMira(); // also advances the approach/follow-through animation
 
         // Atualizar oscilação sutil de luz apenas entre turnos (jamais durante mira/carga)
         if (timerOscilacaoLuz > 0f && estado != EstadoPartida.MirandoJogador && estado != EstadoPartida.CarregandoForca)
@@ -1154,11 +1312,11 @@ public class SinucaMinigameUI : MonoBehaviour
         switch (estado)
         {
             case EstadoPartida.PosicionandoBranca:
-                AtualizarPosicionamentoBranca();
+                if(!interfaceLivre)AtualizarPosicionamentoBranca();
                 break;
 
             case EstadoPartida.MirandoJogador:
-                AtualizarMiraJogador();
+                if(!interfaceLivre && !EmPe && tableView3D.Room.SettledAtCue)AtualizarMiraJogador();
                 break;
 
             case EstadoPartida.CarregandoForca:
@@ -1189,14 +1347,15 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void OnMesaPointerDown(Vector2 tablePos, PointerEventData.InputButton button)
     {
-        if (MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)) return;
+        if (EntradaMesaBloqueada()) return;
+        if(interfaceLivre){interfaceLivre=false;AtualizarCapturaCursor();return;}
 
         if (button == PointerEventData.InputButton.Right)
         {
             if (estado == EstadoPartida.CarregandoForca)
             {
                 CancelarCargaAtiva();
-                txtTurnoStatus.text = "Tacada cancelada. Ajuste a mira e segure para carregar.";
+                txtTurnoStatus.text = "Tacada cancelada. Mire, clique e puxe para trás. Solte para tacar.";
             }
             return;
         }
@@ -1217,16 +1376,37 @@ public class SinucaMinigameUI : MonoBehaviour
             return;
         }
 
+        if(EmPe)
+        {
+            if(estado!=EstadoPartida.MirandoJogador || !bolas[0].ativa)return;
+            if((tablePos-bolas[0].pos).sqrMagnitude>BallRadius*BallRadius*2.25f)return;
+            if(!tableView3D.Room.CanReachWhite(bolas[0].pos)) {txtTurnoStatus.text="Aproxime-se mais da branca.";return;}
+            anguloMiraRad=eixoMiraApoiada=tableView3D.Room.ApproachAngle(bolas[0].pos);
+            miraMouseAtiva=referenciaMiraMouse=false;
+            tableView3D.DefinirCamera(SinucaCameraView.LinhaTaco);
+            tableView3D.ReiniciarReferenciaPonteiro();frameConfirmacaoBranca=Time.frameCount;
+            txtTurnoStatus.text="Ajuste a mira. Clique, puxe para baixo e solte. Q: levantar.";
+            AtualizarVisualTacoEMira();return; // this click enters the stance, never charges
+        }
+        if(!tableView3D.Room.SettledAtCue)return;
+
         if (estado == EstadoPartida.MirandoJogador && Time.frameCount != frameConfirmacaoBranca)
         {
-            AtualizarAnguloMiraParaPonto(tablePos);
+            // Preserve the aim, including fine keyboard adjustments, on mouse-down.
             IniciarCargaPorDispositivo(DispositivoCarga.MouseEsquerdo);
+            Vector2 dir = new Vector2(Mathf.Cos(anguloMiraRad), Mathf.Sin(anguloMiraRad));
+            Vector2 a = tableView3D.ProjetarPontoMesaParaLocalUI(new Vector3(bolas[0].pos.x, 0f, bolas[0].pos.y));
+            Vector2 b = tableView3D.ProjetarPontoMesaParaLocalUI(new Vector3(bolas[0].pos.x + dir.x * 50f, 0f, bolas[0].pos.y + dir.y * 50f));
+            direcaoPuxadaUI = Vector2.down; // first-person pullback stays stable as the camera follows aim
+            puxadaValida = Mouse.current != null && tableView3D.ScreenToViewPoint(Mouse.current.position.ReadValue(), out inicioPuxadaUI)
+                && (a - b).sqrMagnitude > 0.01f;
+            if (!puxadaValida) CancelarCargaAtiva();
         }
     }
 
     private void OnMesaPointerMove(Vector2 tablePos)
     {
-        if (MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)) return;
+        if (EntradaMesaBloqueada() || interfaceLivre || EmPe) return;
 
         if (estado == EstadoPartida.PosicionandoBranca)
         {
@@ -1234,7 +1414,7 @@ public class SinucaMinigameUI : MonoBehaviour
             return;
         }
 
-        // Durante a carga, a mira permanece travada (mover o mouse NÃO altera direção nem força)
+        // Aim stays locked during pullback; power is sampled separately in viewport coordinates.
         if (estado == EstadoPartida.MirandoJogador)
         {
             AtualizarAnguloMiraParaPonto(tablePos);
@@ -1248,18 +1428,21 @@ public class SinucaMinigameUI : MonoBehaviour
         if (dispositivoCargaAtivo != DispositivoCarga.MouseEsquerdo || button != PointerEventData.InputButton.Left)
             return;
 
-        if (!dentroDoViewport || MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf))
+        bool sobreHUD=Mouse.current!=null && (RectTransformUtility.RectangleContainsScreenPoint(headerMesa,Mouse.current.position.ReadValue(),null)||RectTransformUtility.RectangleContainsScreenPoint(footerMesa,Mouse.current.position.ReadValue(),null));
+        if (!dentroDoViewport || sobreHUD || EntradaMesaBloqueada())
         {
             CancelarCargaAtiva();
             txtTurnoStatus.text = "Tacada cancelada fora da mesa.";
             return;
         }
 
+        AtualizarForcaPuxada();
         DispararTacadaCarregada();
     }
 
     private void OnMesaScrollZoom(float novoZoom)
     {
+        CancelarCargaAoSuspender();
         AtualizarVisualTacoEMira();
     }
 
@@ -1281,17 +1464,41 @@ public class SinucaMinigameUI : MonoBehaviour
         estado = EstadoPartida.MirandoJogador;
         ApontarMiraParaBolaMaisProxima();
         tableView3D.RecentrarCamera();
-        txtTurnoStatus.text = "Branca posicionada. Mire e segure Clique Esq. ou Espaço para tacar.";
+        txtTurnoStatus.text = "Branca posicionada. Mire, clique, puxe para trás e solte para tacar.";
         AtualizarVisualTacoEMira();
     }
 
     private void AtualizarAnguloMiraParaPonto(Vector2 tablePos)
     {
         Vector2 delta = tablePos - bolas[0].pos;
-        if (delta.sqrMagnitude > 4f)
+        if (delta.sqrMagnitude > BallRadius * BallRadius)
         {
-            anguloMiraRad = Mathf.Atan2(delta.y, delta.x);
+            float raw = Mathf.Atan2(delta.y, delta.x);
+            bool precisao = Keyboard.current != null && Keyboard.current.shiftKey.isPressed;
+            if (!referenciaMiraMouse)
+            {
+                ultimoAnguloMouseRad = raw;
+                offsetMiraMouseRad = precisao ? anguloMiraRad - raw : 0f;
+                alvoMiraMouseRad = precisao ? anguloMiraRad : raw;
+                referenciaMiraMouse = true;
+            }
+            if (precisao)
+            {
+                float passo = Mathf.DeltaAngle(ultimoAnguloMouseRad * Mathf.Rad2Deg, raw * Mathf.Rad2Deg) * Mathf.Deg2Rad;
+                alvoMiraMouseRad += passo * 0.15f;
+                // Preserve the fine adjustment when Shift is released: no snap back to the cursor.
+                offsetMiraMouseRad = alvoMiraMouseRad - raw;
+            }
+            else alvoMiraMouseRad = raw + offsetMiraMouseRad;
+            ultimoAnguloMouseRad = raw;
+            miraMouseAtiva = true;
         }
+    }
+
+    public static float SuavizarMira(float atualRad, float alvoRad, float dt)
+    {
+        float peso = 1f - Mathf.Exp(-35f * Mathf.Max(0f, dt));
+        return Mathf.LerpAngle(atualRad * Mathf.Rad2Deg, alvoRad * Mathf.Rad2Deg, peso) * Mathf.Deg2Rad;
     }
 
     private void AtualizarPosicionamentoBranca()
@@ -1300,8 +1507,8 @@ public class SinucaMinigameUI : MonoBehaviour
         if (kb == null) return;
 
         Vector2 move = Vector2.zero;
-        if (kb.wKey.isPressed || kb.upArrowKey.isPressed) move.y += 1f;
-        if (kb.sKey.isPressed || kb.downArrowKey.isPressed) move.y -= 1f;
+        if (kb.upArrowKey.isPressed) move.y += 1f;
+        if (kb.downArrowKey.isPressed) move.y -= 1f;
         if (kb.leftArrowKey.isPressed) move.x -= 1f;
         if (kb.rightArrowKey.isPressed) move.x += 1f;
 
@@ -1324,14 +1531,26 @@ public class SinucaMinigameUI : MonoBehaviour
         }
     }
 
+    private void LimitarMiraApoiada()
+    {
+        float offset=Mathf.DeltaAngle(eixoMiraApoiada*Mathf.Rad2Deg,anguloMiraRad*Mathf.Rad2Deg);
+        anguloMiraRad=eixoMiraApoiada+Mathf.Clamp(offset,-55f,55f)*Mathf.Deg2Rad;
+    }
+
     private void AtualizarMiraJogador()
     {
+        if (miraMouseAtiva) anguloMiraRad = SuavizarMira(anguloMiraRad, alvoMiraMouseRad, Time.deltaTime);
         var kb = Keyboard.current;
         if (kb != null)
         {
-            float rotSpeed = 1.65f;
-            if (kb.shiftKey.isPressed) rotSpeed = 0.55f;
+            float rotSpeed = 0.75f;
+            if (kb.shiftKey.isPressed) rotSpeed = 0.16f;
 
+            if (kb.leftArrowKey.isPressed || kb.rightArrowKey.isPressed)
+            {
+                miraMouseAtiva = referenciaMiraMouse = false;
+                tableView3D.ReiniciarReferenciaPonteiro();
+            }
             if (kb.leftArrowKey.isPressed)
                 anguloMiraRad -= tableView3D.AngularScreenSign(bolas[0].pos,anguloMiraRad)*rotSpeed*Time.deltaTime;
             if (kb.rightArrowKey.isPressed)
@@ -1343,6 +1562,8 @@ public class SinucaMinigameUI : MonoBehaviour
                 return;
             }
         }
+
+        LimitarMiraApoiada();
 
         // Terror psicológico sutil do Bar do Zé: quando Zé está passando giz no taco reserva,
         // se Marcus aponta diretamente para a Bola Marcada [X], o som de giz de Zé para subitamente.
@@ -1357,18 +1578,25 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void IniciarCargaPorDispositivo(DispositivoCarga disp)
     {
+        miraMouseAtiva = referenciaMiraMouse = false;
         dispositivoCargaAtivo = disp;
         estado = EstadoPartida.CarregandoForca;
-        forcaNormalizada = 0.08f;
-        carregandoDirectionUp = true;
+        forcaNormalizada = 0f;
+        puxadaAcumulada=Vector2.zero;frameInicioCarga=Time.frameCount;framePuxada=-1;
+        puxadaValida = false;
         AtualizarBarraForcaVisual(forcaNormalizada);
-        txtTurnoStatus.text = "Carregando força... Solte para tacar (Dir. ou C cancela).";
+        txtTurnoStatus.text = disp == DispositivoCarga.MouseEsquerdo
+            ? "Puxe para trás da mira. Mais recuo = mais força. Solte para tacar; Dir./C cancela."
+            : "Espaço: segure para aumentar a força, solte para tacar. C cancela.";
         AtualizarVisualTacoEMira();
     }
 
     private void CancelarCargaAtiva()
     {
+        miraMouseAtiva = referenciaMiraMouse = false;
         dispositivoCargaAtivo = DispositivoCarga.Nenhum;
+        puxadaValida = false;
+        if (tableView3D != null) tableView3D.ReiniciarReferenciaPonteiro();
         forcaNormalizada = 0f;
         AtualizarBarraForcaVisual(0f);
         if (estado == EstadoPartida.CarregandoForca)
@@ -1393,21 +1621,31 @@ public class SinucaMinigameUI : MonoBehaviour
         }
     }
 
+    // Retained for existing QA callers; keyboard charge now rises once and stays at maximum.
     public static float OscilarCarga(float atual, float dt, ref bool subindo)
     {
-        const float chargeSpeed = 1.05f;
-        atual += (subindo ? 1f : -1f) * chargeSpeed * dt;
-        if (atual >= 1f)
+        subindo = true;
+        return Mathf.Clamp01(atual + Mathf.Max(0f, dt) * 0.65f);
+    }
+
+    public static float CalcularForcaPuxada(Vector2 deslocamento, Vector2 direcaoParaTras)
+    {
+        // Ignore lateral jitter and the first 3 canvas units. Returning the mouse reduces power.
+        return Mathf.Clamp01((Vector2.Dot(deslocamento, direcaoParaTras.normalized) - 3f) / 97f);
+    }
+
+    private void AtualizarForcaPuxada()
+    {
+        var mouse = Mouse.current;
+        if (!puxadaValida || mouse == null) return;
+        if(Cursor.lockState==CursorLockMode.Locked)
         {
-            atual = 1f;
-            subindo = false;
+            if(framePuxada!=Time.frameCount && Time.frameCount!=frameInicioCarga)
+            {puxadaAcumulada+=mouse.delta.ReadValue()/Mathf.Max(.01f,mesaRect.GetComponentInParent<Canvas>().scaleFactor);framePuxada=Time.frameCount;}
+            forcaNormalizada=CalcularForcaPuxada(puxadaAcumulada,Vector2.down);return;
         }
-        else if (atual <= 0.08f)
-        {
-            atual = 0.08f;
-            subindo = true;
-        }
-        return atual;
+        if (tableView3D.ScreenToViewPoint(mouse.position.ReadValue(), out var atual))
+            forcaNormalizada = CalcularForcaPuxada(atual - inicioPuxadaUI, direcaoPuxadaUI);
     }
 
     private void AtualizarCargaForca()
@@ -1421,12 +1659,22 @@ public class SinucaMinigameUI : MonoBehaviour
         if (cancelarTeclado || cancelarMouse)
         {
             CancelarCargaAtiva();
-            txtTurnoStatus.text = "Tacada cancelada. Ajuste a mira e segure para carregar.";
+            txtTurnoStatus.text = "Tacada cancelada. Mire, clique e puxe para trás. Solte para tacar.";
             return;
         }
 
-        // A carga avança mesmo com o mouse totalmente parado
-        forcaNormalizada = OscilarCarga(forcaNormalizada, Time.deltaTime, ref carregandoDirectionUp);
+        if (dispositivoCargaAtivo == DispositivoCarga.MouseEsquerdo)
+        {
+            AtualizarForcaPuxada();
+            // A missing pointer-up must never leave the shot armed for a later click.
+            if (mouse == null || (!mouse.leftButton.isPressed && !mouse.leftButton.wasReleasedThisFrame))
+            { CancelarCargaAtiva(); return; }
+        }
+        else
+        {
+            bool subindo = true;
+            forcaNormalizada = OscilarCarga(forcaNormalizada, Time.deltaTime, ref subindo);
+        }
         AtualizarBarraForcaVisual(forcaNormalizada);
 
         AtualizarVisualTacoEMira();
@@ -1441,12 +1689,22 @@ public class SinucaMinigameUI : MonoBehaviour
     private void DispararTacadaCarregada()
     {
         float forcaFinal = Mathf.Clamp01(forcaNormalizada);
+        if (forcaFinal < 0.015f)
+        {
+            CancelarCargaAtiva();
+            txtTurnoStatus.text = "Sem tacada. Clique e puxe para trás antes de soltar.";
+            return;
+        }
         dispositivoCargaAtivo = DispositivoCarga.Nenhum;
+        puxadaValida = false;
+        if (tableView3D != null) tableView3D.ReiniciarReferenciaPonteiro();
         forcaNormalizada = 0f;
         AtualizarBarraForcaVisual(0f);
 
         Vector2 dir = new Vector2(Mathf.Cos(anguloMiraRad), Mathf.Sin(anguloMiraRad));
-        float potencia = Mathf.Lerp(MinShotPower, MaxShotPower, forcaFinal);
+        float potencia = Mathf.Lerp(MinShotPower, MaxShotPower, Mathf.Pow(forcaFinal, 1.35f));
+        tableView3D.Room.BeginStroke(forcaFinal);
+        levantarAposTacada=Time.time+.26f;
         ExecutarTacadaComEfeito(dir, potencia, efeitoEscolhido);
     }
 
@@ -1472,13 +1730,9 @@ public class SinucaMinigameUI : MonoBehaviour
         }
 
         EscolherTacadaZe(out Vector2 direcaoZe, out float potenciaZe);
-        anguloMiraRad = Mathf.Atan2(direcaoZe.y, direcaoZe.x);
-        AtualizarVisualTacoEMira();
-        yield return new WaitForSeconds(0.32f);
-        while (MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf) || estado == EstadoPartida.TutorialRegras)
-            yield return null;
-        if (estado != EstadoPartida.TurnoZePensando) yield break;
-
+        yield return new WaitForSeconds(.32f);
+        while(MenuPausa.Aberto || (painelModal!=null&&painelModal.activeSelf) || !Application.isFocused)yield return null;
+        if(estado!=EstadoPartida.TurnoZePensando)yield break;
         ExecutarTacadaComEfeito(direcaoZe, potenciaZe, SinucaCueSpin.Normal);
     }
 
@@ -1624,9 +1878,9 @@ public class SinucaMinigameUI : MonoBehaviour
 
         float limX = TableWidth * 0.5f - BallRadius;
         float limY = TableHeight * 0.5f - BallRadius;
-        const float dt = 1f / 90f;
+        const float dt = FixedStep;
 
-        for (int step = 0; step < 320; step++)
+        for (int step = 0; step < 1000; step++)
         {
             bool movendo = false;
             for (int i = 0; i < 16; i++)
@@ -1689,7 +1943,7 @@ public class SinucaMinigameUI : MonoBehaviour
                         float vn = Vector2.Dot(v[i] - v[j], n);
                         if (vn > 0f)
                         {
-                            Vector2 imp = n * (vn * BallRestitution);
+                            Vector2 imp = n * (vn * (1f + BallRestitution) * 0.5f);
                             v[i] -= imp;
                             v[j] += imp;
                         }
@@ -1960,7 +2214,7 @@ public class SinucaMinigameUI : MonoBehaviour
                         float velAlongNormal = Vector2.Dot(relVel, normal);
                         if (velAlongNormal > 0f)
                         {
-                            Vector2 impulse = normal * (velAlongNormal * BallRestitution);
+                            Vector2 impulse = normal * (velAlongNormal * (1f + BallRestitution) * 0.5f);
                             bolas[i].vel -= impulse;
                             bolas[j].vel += impulse;
 
@@ -2068,7 +2322,10 @@ public class SinucaMinigameUI : MonoBehaviour
         var convertidas = new List<int>();
         foreach (int index in bolasObjetoCaidasNaTacada) convertidas.Add(bolas[index].numero);
         if(regrasBrasileiras==null)regrasBrasileiras=new SinuquinhaRules(turnoDeMarcus);
+        bool marcusTacou = regrasBrasileiras.MarcusTurn;
         var resultado = regrasBrasileiras.Resolve(bolaCantada,primeiroContatoNumero,convertidas,brancaCaiuNestaTacada,numeroBolaMarcada,!houveToqueTabelaOuCacapa);
+        var comentario = comentariosZe.React(regrasBrasileiras, resultado, marcusTacou);
+        EnfileirarFalaZe(comentario.Text, comentario.Urgent);
         if(resultado.revertShot)for(int n=0;n<bolas.Count;n++){bolas[n].pos=inicioTacadaPos[n];bolas[n].rotacao=inicioTacadaRot[n];bolas[n].ativa=inicioTacadaAtiva[n];bolas[n].vel=Vector2.zero;bolas[n].caindoNaCacapa=false;bolas[n].progressoQueda=0;}
         // Highest ball first has precedence when home spots are occupied.
         resultado.respot.Sort((x,y)=>y.CompareTo(x));
@@ -2111,7 +2368,7 @@ public class SinucaMinigameUI : MonoBehaviour
         }
         else
         {
-            txtTurnoStatus.text = "Prática: Mire e segure para testar outra tacada, ou clique em INICIAR DUELO.";
+            txtTurnoStatus.text = "Treino: tente outra tacada. Para enfrentar o Zé, abra Opções.";
             brancaNaMao = false;
         }
 
@@ -2155,6 +2412,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void ConcluirMao(bool marcusVenceu)
     {
+        LimparFalaZe();
         estado = EstadoPartida.FimDeMao;
         if (marcusVenceu) maosVencidasMarcus++;
         else maosVencidasZe++;
@@ -2439,7 +2697,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void AtualizarVisualTacoEMira()
     {
-        bool mostrarMira = (estado == EstadoPartida.MirandoJogador || estado == EstadoPartida.CarregandoForca) && bolas.Count > 0 && bolas[0].ativa;
+        bool mostrarMira = !EmPe && (estado == EstadoPartida.MirandoJogador || estado == EstadoPartida.CarregandoForca) && bolas.Count > 0 && bolas[0].ativa;
         if (linhaMiraRect != null) linhaMiraRect.gameObject.SetActive(mostrarMira);
         if (tacoRect != null) tacoRect.gameObject.SetActive(mostrarMira);
 
@@ -2480,7 +2738,7 @@ public class SinucaMinigameUI : MonoBehaviour
             });
         }
 
-        bool mostrarMira = (estado == EstadoPartida.MirandoJogador || estado == EstadoPartida.CarregandoForca) && bolas[0].ativa;
+        bool mostrarMira = !EmPe && (estado == EstadoPartida.MirandoJogador || estado == EstadoPartida.CarregandoForca) && bolas[0].ativa;
         SinucaAimGuideData guia = mostrarMira
             ? CalcularGuiaDeMira(bolas[0].pos, anguloMiraRad, efeitoEscolhido)
             : new SinucaAimGuideData { ativa = false };
@@ -2524,8 +2782,8 @@ public class SinucaMinigameUI : MonoBehaviour
         if (txtPlacarSerie != null)
         {
             txtPlacarSerie.text = modoPratica
-                ? "PRÁTICA LIVRE — BAR DO ZÉ"
-                : $"SÉRIE MELHOR DE 3 — MARCUS [{maosVencidasMarcus}] x [{maosVencidasZe}] ZÉ  (Mão {maoAtual}/3)";
+                ? "TREINO LIVRE"
+                : $"MARCUS {maosVencidasMarcus}  :  {maosVencidasZe} ZÉ   ·   Mão {maoAtual}/3";
         }
 
         if (txtPlacarMao != null)
@@ -2545,7 +2803,7 @@ public class SinucaMinigameUI : MonoBehaviour
         if (txtRegraBolaMarcada != null)
         {
             if (modoPratica)
-                txtRegraBolaMarcada.text = "Prática Livre: Quando estiver pronto, clique em INICIAR DUELO para enfrentar Zé.";
+                txtRegraBolaMarcada.text = "Experimente as tacadas · sem penalidades";
             else if (numeroBolaMarcada > 0 && bolas[numeroBolaMarcada].ativa)
                 txtRegraBolaMarcada.text = $"REGRA ATIVA — \"ESSA FICA NA MESA\": Bola [{numeroBolaMarcada}X] NÃO pode ser encaçapada!";
             else if (maoAtual >= 2)
@@ -2556,20 +2814,20 @@ public class SinucaMinigameUI : MonoBehaviour
 
         if(!modoPratica&&regrasBrasileiras!=null&&txtRegraBolaMarcada!=null)
         {
-            string sequence=regrasBrasileiras.Opening?"SAÍDA · branca pronta para tacar":regrasBrasileiras.MarcusGroup==0?"MESA ABERTA · grupos definidos na primeira conversão válida":(gruposPorNumero?"SEU GRUPO: "+(regrasBrasileiras.MarcusGroup==1?"1–7":"9–15"):"SEU GRUPO: "+(regrasBrasileiras.MarcusGroup==1?"LISAS":"LISTRADAS"))+" · PRETA 8 POR ÚLTIMO";
-            txtRegraBolaMarcada.text=sequence+(numeroBolaMarcada>0?" • MARCADA: "+numeroBolaMarcada:"");
+            string grupo=regrasBrasileiras.MarcusGroup==0?"Mesa aberta":regrasBrasileiras.MarcusGroup==1?(gruposPorNumero?"Seu grupo: 1–7":"Seu grupo: lisas"):gruposPorNumero?"Seu grupo: 9–15":"Seu grupo: listradas";
+            txtRegraBolaMarcada.text=grupo+(numeroBolaMarcada>0?" · Não encaçape "+numeroBolaMarcada+" [X]":" · Preta 8 por último");
         }
 
         if (txtBtnAcaoPraticaOuDuelo != null)
         {
-            txtBtnAcaoPraticaOuDuelo.text = modoPratica ? "INICIAR DUELO" : "PRÁTICA LIVRE";
+            txtBtnAcaoPraticaOuDuelo.text = modoPratica ? "Jogar contra o Zé" : "Ir para o treino";
         }
 
         if(txtEncaçapadasMarcus!=null&&regrasBrasileiras!=null)
         {
-            txtEncaçapadasMarcus.text="MARCUS · ENCAÇAPADAS"+(regrasBrasileiras.MarcusGroup==0?" —":"");
-            txtEncaçapadasZe.text="ZÉ · ENCAÇAPADAS"+(regrasBrasileiras.MarcusGroup==0?" —":"");
-            int left=0,right=0;for(int n=1;n<16;n++)if(n!=8){bool show=!modoPratica&&!regrasBrasileiras.Present[n]&&regrasBrasileiras.MarcusGroup!=0;encaçapadasIcones[n].gameObject.SetActive(show);if(show){bool marcus=SinuquinhaRules.Group(n)==regrasBrasileiras.MarcusGroup;int j=marcus?left++:right++;Posicionar(encaçapadasIcones[n].rectTransform,new Vector2((marcus?-298:42)+j*16,78),new Vector2(13,13));}}
+            txtEncaçapadasMarcus.text="MARCUS · BOLAS"+(regrasBrasileiras.MarcusGroup==0?" —":"");
+            txtEncaçapadasZe.text="ZÉ · BOLAS"+(regrasBrasileiras.MarcusGroup==0?" —":"");
+            int left=0,right=0;for(int n=1;n<16;n++)if(n!=8){bool show=!modoPratica&&!regrasBrasileiras.Present[n]&&regrasBrasileiras.MarcusGroup!=0;encaçapadasIcones[n].gameObject.SetActive(show);if(show){bool marcus=SinuquinhaRules.Group(n)==regrasBrasileiras.MarcusGroup;int j=marcus?left++:right++;Posicionar(encaçapadasIcones[n].rectTransform,new Vector2((marcus?-150:10)+j*16,-53),new Vector2(13,13));}}
         }
         AtualizarBotaoVistaCamera();
     }
@@ -2577,6 +2835,136 @@ public class SinucaMinigameUI : MonoBehaviour
     // =========================================================================
     // Síntese e Disparo de Áudio por Evento Real (Tacada, Colisão, Tabela, Caçapa, Giz)
     // =========================================================================
+
+    private void ConstruirLegendaZe()
+    {
+        var painel = CriarPainelHUD(raiz.transform,"LegendaZe",Vector2.zero,new Vector2(520,48));
+        var rect = painel.GetComponent<RectTransform>();
+        rect.anchorMin = rect.anchorMax = new Vector2(.5f,0);
+        rect.anchoredPosition = new Vector2(0,64);
+        painel.GetComponent<Image>().color = new Color32(10,13,11,220);
+        legendaZe = painel.AddComponent<CanvasGroup>();
+        legendaZe.blocksRaycasts = legendaZe.interactable = false;
+        legendaZe.alpha = 0;
+        txtFalaZe = CriarTexto("FalaZe",painel.transform,"",16,new Color32(244,233,208,255),TextAlignmentOptions.Center);
+        Posicionar(txtFalaZe.rectTransform,Vector2.zero,new Vector2(496,42));
+        txtFalaZe.richText = false;
+        txtFalaZe.raycastTarget = false;
+        txtFalaZe.overflowMode = TextOverflowModes.Overflow;
+    }
+
+    private void EnfileirarFalaZe(string texto, bool urgente = false)
+    {
+        if(string.IsNullOrEmpty(texto))return;
+        // Uma reação importante substitui a espera; comentários comuns não se acumulam.
+        if(!urgente && (falaZePendenteUrgente || (txtFalaZe!=null && !string.IsNullOrEmpty(txtFalaZe.text))))return;
+        falaZePendente = texto;
+        falaZePendenteUrgente = urgente;
+    }
+
+    private void LimparFalaZe()
+    {
+        falaZePendente = null;falaZePendenteUrgente = false;
+        tempoLetraZe = tempoLeituraZe = intervaloSilabaZe = intervaloFalaZe = 0;
+        caractereZe = silabaZe = 0;
+        if(txtFalaZe!=null)txtFalaZe.text = "";
+        if(legendaZe!=null)legendaZe.alpha = 0;
+        if(vozFalaZe!=null)vozFalaZe.Stop();
+    }
+
+    private void AtualizarFalaZe(bool suspenso)
+    {
+        if(txtFalaZe==null)return;
+        bool bloqueado = suspenso || !IsShowing || modoPratica || estado==EstadoPartida.Inativo ||
+            (painelModal!=null && painelModal.activeSelf) ||
+            (painelOpcoes!=null && painelOpcoes.activeSelf) || (painelAlvo!=null && painelAlvo.activeSelf);
+        if(bloqueado)
+        {
+            legendaZe.alpha = 0;
+            if(vozFalaZe!=null)vozFalaZe.Pause();
+            return;
+        }
+        if(vozFalaZe!=null)
+        {
+            vozFalaZe.volume = .20f * AudioSettingsController.VolumeFala;
+            vozFalaZe.UnPause();
+        }
+        float dt = Mathf.Min(Time.unscaledDeltaTime,.1f);
+        intervaloSilabaZe -= dt;
+        if(string.IsNullOrEmpty(txtFalaZe.text))
+        {
+            intervaloFalaZe -= dt;
+            if(string.IsNullOrEmpty(falaZePendente) || intervaloFalaZe>0)return;
+            txtFalaZe.text = "Zé: " + falaZePendente;
+            txtFalaZe.ForceMeshUpdate();
+            txtFalaZe.maxVisibleCharacters = caractereZe = 4;
+            tempoLetraZe = 0;
+            tempoLeituraZe = Mathf.Max(2.2f,falaZePendente.Length*.035f);
+            falaZePendente = null;falaZePendenteUrgente = false;
+        }
+        legendaZe.alpha = Mathf.MoveTowards(legendaZe.alpha,1,dt*8);
+        int total = txtFalaZe.textInfo.characterCount;
+        if(caractereZe<total)
+        {
+            tempoLetraZe -= dt;
+            if(tempoLetraZe<=0)
+            {
+                char letra = txtFalaZe.textInfo.characterInfo[caractereZe].character;
+                txtFalaZe.maxVisibleCharacters = ++caractereZe;
+                tempoLetraZe += char.IsPunctuation(letra) ? .16f : .032f;
+                if(char.IsLetterOrDigit(letra) && intervaloSilabaZe<=0)
+                {
+                    TocarSilabaZe();
+                    intervaloSilabaZe = .095f;
+                }
+            }
+        }
+        else
+        {
+            tempoLeituraZe -= dt;
+            if(tempoLeituraZe<=.3f)legendaZe.alpha = Mathf.Max(0,tempoLeituraZe/.3f);
+            if(tempoLeituraZe<=0)
+            {
+                txtFalaZe.text = "";legendaZe.alpha = 0;
+                intervaloFalaZe = falaZePendenteUrgente ? .35f : 1.5f;
+            }
+        }
+    }
+
+    private void TocarSilabaZe()
+    {
+        float efeitos = AudioSettingsController.VolumeFala;
+        if(efeitos<=.001f)return;
+        if(silabasZe==null)
+        {
+            // Síntese original abstrata de quatro murmúrios "hm/bom"; sem voz gravada ou palavras.
+            const int hz = 22050;
+            silabasZe = new AudioClip[4];
+            for(int v=0;v<silabasZe.Length;v++)
+            {
+                var data = new float[(int)(hz*.075f)];
+                float fundamental = 112+v*9;
+                for(int i=0;i<data.Length;i++)
+                {
+                    float t=i/(float)hz;
+                    float env=Mathf.Pow(Mathf.Max(0,Mathf.Sin(Mathf.PI*i/(data.Length-1))),1.5f);
+                    float onda=Mathf.Sin(2*Mathf.PI*fundamental*t)*.48f +
+                        Mathf.Sin(2*Mathf.PI*fundamental*2*t)*.24f +
+                        Mathf.Sin(2*Mathf.PI*fundamental*(v%2==0?5:6)*t)*.12f;
+                    data[i]=onda*env*.65f;
+                }
+                silabasZe[v]=AudioClip.Create("SR_Ze_Murmurio_"+v,data.Length,1,hz,false);
+                silabasZe[v].SetData(data,0);
+            }
+            vozFalaZe=gameObject.AddComponent<AudioSource>();
+            vozFalaZe.playOnAwake=false;vozFalaZe.spatialBlend=0;
+        }
+        // Fonte separada: a fala nunca interrompe uma fonte de impacto das bolas.
+        if(vozFalaZe.isPlaying)return;
+        vozFalaZe.clip=silabasZe[(silabaZe++*3)%silabasZe.Length];
+        vozFalaZe.volume=.20f*efeitos;
+        vozFalaZe.Play();
+    }
 
     private static void GarantirClipsAudio()
     {
@@ -2590,8 +2978,8 @@ public class SinucaMinigameUI : MonoBehaviour
             for (int i = 0; i < data.Length; i++)
             {
                 float t = i / (float)hz;
-                float env = Mathf.Exp(-t * 68f);
-                float tone = Mathf.Sin(2f * Mathf.PI * 520f * t) * 0.55f + Mathf.Sin(2f * Mathf.PI * 1180f * t) * 0.25f;
+                float env = Mathf.Exp(-t * 135f) * Mathf.Min(1f, t * 8000f);
+                float tone = Mathf.Sin(2f * Mathf.PI * 380f * t) * 0.35f + Mathf.Sin(2f * Mathf.PI * 1733f * t) * 0.12f;
                 float noise = ((float)rng.NextDouble() * 2f - 1f) * 0.35f;
                 data[i] = Mathf.Clamp((tone + noise) * env, -0.9f, 0.9f);
             }
@@ -2602,11 +2990,14 @@ public class SinucaMinigameUI : MonoBehaviour
         // 2. Estalo cristalino bola-bola (resina fenólica)
         {
             var data = new float[(int)(hz * 0.075f)];
+            var rng = new System.Random(871);
             for (int i = 0; i < data.Length; i++)
             {
                 float t = i / (float)hz;
-                float env = Mathf.Exp(-t * 85f);
-                float click = Mathf.Sin(2f * Mathf.PI * 1680f * t) * 0.62f + Mathf.Sin(2f * Mathf.PI * 2840f * t) * 0.32f;
+                float env = Mathf.Exp(-t * 210f) * Mathf.Min(1f, t * 11000f);
+                float click = ((float)rng.NextDouble() * 2f - 1f) * 0.65f
+                    + Mathf.Sin(2f * Mathf.PI * 1931f * t) * 0.24f
+                    + Mathf.Sin(2f * Mathf.PI * 3277f * t) * 0.11f;
                 data[i] = Mathf.Clamp(click * env, -0.9f, 0.9f);
             }
             clipColisaoBola = AudioClip.Create("SR_Sinuca_ColisaoBola", data.Length, 1, hz, false);
@@ -2620,7 +3011,7 @@ public class SinucaMinigameUI : MonoBehaviour
             for (int i = 0; i < data.Length; i++)
             {
                 float t = i / (float)hz;
-                float env = Mathf.Exp(-t * 42f);
+                float env = Mathf.Exp(-t * 72f) * Mathf.Min(1f, t * 5000f);
                 float thud = Mathf.Sin(2f * Mathf.PI * 145f * t) * 0.72f + ((float)rng.NextDouble() * 2f - 1f) * 0.18f;
                 data[i] = Mathf.Clamp(thud * env, -0.85f, 0.85f);
             }
@@ -2663,49 +3054,53 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void TocarClipSintetico(AudioClip clip, float volumeBase, float pitch = 1f)
     {
-        EventosAudioDisparados++;
-        if (!Application.isPlaying || Time.timeScale == 0f || MenuPausa.Aberto) return;
-        float volPref = PlayerPrefs.GetFloat("audio_efeitos", 1f);
-        if (volPref <= 0.001f || clip == null) return;
-
-        AudioSource src = GetComponent<AudioSource>();
+        if (!Application.isPlaying || Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused || clip == null) return;
+        float volPref = AudioSettingsController.VolumeImpactos;
+        if (volPref <= 0.001f || volumeBase <= 0.002f) return;
+        if (ultimoImpacto.TryGetValue(clip, out float ultimo) && Time.unscaledTime - ultimo < 0.018f) return;
+        ultimoImpacto[clip] = Time.unscaledTime;
+        int indice = proximaVoz++ % vozesSinuca.Length;
+        AudioSource src = vozesSinuca[indice];
         if (src == null)
         {
             src = gameObject.AddComponent<AudioSource>();
             src.playOnAwake = false;
             src.spatialBlend = 0f;
+            vozesSinuca[indice] = src;
         }
-        src.pitch = Mathf.Clamp(pitch, 0.85f, 1.18f);
-        src.PlayOneShot(clip, Mathf.Clamp01(volumeBase * volPref));
+        src.Stop();
+        src.clip = clip;
+        src.pitch = Mathf.Clamp(pitch, 0.94f, 1.06f);
+        src.volume = Mathf.Clamp01(volumeBase * volPref);
+        src.Play();
+        EventosAudioDisparados++;
     }
 
     private void TocarSomTacada(float intensidade01)
     {
         GarantirClipsAudio();
-        float v = Mathf.Lerp(0.18f, 0.42f, Mathf.Clamp01(intensidade01));
-        if (Application.isPlaying) SantaRitaSound.Play("sinuca", v * 0.65f, Mathf.Lerp(0.94f, 1.06f, intensidade01), 0.03f);
+        float v = Mathf.Lerp(0.28f, 0.66f, Mathf.Clamp01(intensidade01));
         TocarClipSintetico(clipTacada, v, Mathf.Lerp(0.95f, 1.08f, intensidade01));
     }
 
     private void TocarSomColisaoBola(float intensidade01)
     {
         GarantirClipsAudio();
-        float v = Mathf.Lerp(0.12f, 0.44f, Mathf.Clamp01(intensidade01));
-        if (Application.isPlaying) SantaRitaSound.Play("sinuca", v * 0.85f, Mathf.Lerp(0.96f, 1.12f, intensidade01), 0.025f);
+        float v = 0.70f * Mathf.Sqrt(Mathf.Clamp01(intensidade01));
         TocarClipSintetico(clipColisaoBola, v, Mathf.Lerp(0.96f, 1.12f, intensidade01));
     }
 
     private void TocarSomTabela(float intensidade01)
     {
         GarantirClipsAudio();
-        float v = Mathf.Lerp(0.10f, 0.30f, Mathf.Clamp01(intensidade01));
+        float v = 0.35f * Mathf.Sqrt(Mathf.Clamp01(intensidade01));
         TocarClipSintetico(clipTabela, v, Mathf.Lerp(0.92f, 1.04f, intensidade01));
     }
 
     private void TocarSomCacapa()
     {
         GarantirClipsAudio();
-        TocarClipSintetico(clipCacapa, 0.34f, 0.98f);
+        TocarClipSintetico(clipCacapa, 0.40f, 0.98f);
     }
 
     private void TocarSomGiz(float volume = 0.16f)
@@ -2717,6 +3112,7 @@ public class SinucaMinigameUI : MonoBehaviour
     private void MostrarModal(string titulo, string corpo, string txtPrimario, UnityEngine.Events.UnityAction acaoPrimaria,
         string txtSecundario, UnityEngine.Events.UnityAction acaoSecundaria)
     {
+        if(escudoModal!=null)escudoModal.SetActive(true);
         painelModal.SetActive(true);
         txtModalTitulo.text = titulo;
         txtModalCorpo.text = corpo;
@@ -2791,4 +3187,71 @@ public class SinucaMinigameUI : MonoBehaviour
     }
 
 #endif
+}
+
+// Reações transitórias da partida: não alteram flags, pistas, física ou saves.
+internal sealed class SinucaZeComments
+{
+    internal readonly struct Reaction
+    {
+        public readonly string Text;
+        public readonly bool Urgent;
+        public Reaction(string text, bool urgent=false){Text=text;Urgent=urgent;}
+    }
+    private readonly int[] variation = new int[4];
+    private readonly int[] milestone = new int[2];
+    private int dryShots;
+    private static readonly string[] MarcusPots = {
+        "Essa foi bem. Vamos ver a próxima.",
+        "Tá com a mão firme, hein?",
+        "Não te apressa. Ainda tem mesa.",
+        "Boa bola. Mas a partida não acabou."
+    };
+    private static readonly string[] ZePots = {
+        "Essa entrou limpa.",
+        "Ainda sei o caminho dessas caçapas.",
+        "Pois é. Mais uma.",
+        "Agora deixa eu ver a próxima."
+    };
+    private static readonly string[] MarcusFouls = {
+        "Com pressa tu só me ajuda.",
+        "Olha a branca, Marcus.",
+        "Respira antes de bater."
+    };
+    private static readonly string[] ZeFouls = {
+        "Errei a mão. Joga.",
+        "Essa eu te entreguei.",
+        "Peguei mal nessa."
+    };
+    public void ResetSeries(){Array.Clear(variation,0,variation.Length);ResetHand();}
+    public void ResetHand(){Array.Clear(milestone,0,milestone.Length);dryShots=0;}
+    private Reaction Next(int category,string[] lines)
+        => new Reaction(lines[variation[category]++%lines.Length]);
+
+    public Reaction React(SinuquinhaRules rules,SinuquinhaRules.Result result,bool marcusShot)
+    {
+        if(rules.Finished)return default;
+        if(result.revertShot)return new Reaction("Eu avisei. A marcada fica na mesa.",true);
+        // A falta tem precedência: não elogiar uma conversão anulada pela branca.
+        if(result.foul)return Next(marcusShot?2:3,marcusShot?MarcusFouls:ZeFouls);
+        if(result.credited>0 && rules.MarcusGroup!=0)
+        {
+            int side=marcusShot?0:1;
+            int group=marcusShot?rules.MarcusGroup:3-rules.MarcusGroup;
+            int remaining=0;
+            for(int n=1;n<16;n++)if(rules.Present[n]&&SinuquinhaRules.Group(n)==group)remaining++;
+            int stage=remaining==0?2:remaining<=2?1:0;
+            if(stage>milestone[side])
+            {
+                milestone[side]=stage;
+                return new Reaction(marcusShot ?
+                    (stage==2?"Só a preta agora. Eu lembro do combinado.":"Tá chegando, Marcus. Não perde a mão agora.") :
+                    (stage==2?"Falta a preta. Fica de olho.":"Tá ficando pouca bola pra mim. Cuida essa próxima."),true);
+            }
+            return Next(marcusShot?0:1,marcusShot?MarcusPots:ZePots);
+        }
+        // Espaço para silêncio: não comentar toda defesa ou tacada sem conversão.
+        if(++dryShots%3!=0)return default;
+        return new Reaction(marcusShot?"Não caiu. Agora é comigo.":"Ficou pra ti. Vamos ver.");
+    }
 }

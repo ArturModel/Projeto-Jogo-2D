@@ -24,10 +24,13 @@ public sealed class MenuAmbiente : MonoBehaviour
     readonly Dictionary<Button, RawImage> linhas = new Dictionary<Button, RawImage>();
     readonly Dictionary<Button, float> enfases = new Dictionary<Button, float>();
     readonly Dictionary<string, Transform> objetos = new Dictionary<string, Transform>();
+    readonly List<Button> botoesPrincipais = new List<Button>();
     Vector2 ponto = new Vector2(.34f, .46f), mouseSuave;
     Vector2 tamanho;
     float zoom = 1.025f, luzTelefone, luzClube, saida, tempo, pulsoTelefone;
     bool temSave, focoJanela = true;
+    bool menuMinigames;
+    GameObject painelMinigames;
     string ultimaLegenda;
 
     void Start()
@@ -83,6 +86,7 @@ public sealed class MenuAmbiente : MonoBehaviour
             b.colors = cores;
             if (t.parent != principal.transform) continue;
             ConfigurarBotao(b, IndicePrincipal(t.name));
+            botoesPrincipais.Add(b);
             var linha = NovaImagem("TracoDeFoco", t, null);
             linha.color = new Color(1f, .73f, .34f, 0f);
             linha.rectTransform.anchorMin = linha.rectTransform.anchorMax = new Vector2(0, 0);
@@ -90,6 +94,10 @@ public sealed class MenuAmbiente : MonoBehaviour
             linha.rectTransform.anchoredPosition = new Vector2(0, 2);
             linhas.Add(b, linha); enfases.Add(b, 0);
         }
+        var botaoMinigames = CriarBotao("btn_minigames", "MINIGAMES", principal.transform, 3,
+            AbrirMenuMinigames);
+        botoesPrincipais.Add(botaoMinigames);
+        CriarPainelMinigames(botaoMinigames.GetComponentInChildren<TMP_Text>().font);
         if (objetos.TryGetValue("OptionSelector", out var seletor)) seletor.gameObject.SetActive(false);
         foreach (var t in principal.GetComponentsInChildren<TMP_Text>(true))
             if (t.text.Trim() == ">") t.gameObject.SetActive(false);
@@ -112,7 +120,76 @@ public sealed class MenuAmbiente : MonoBehaviour
     { return objetos.TryGetValue(nome, out var t) ? t.GetComponent<T>() : null; }
 
     static int IndicePrincipal(string nome)
-    { return nome == "btn_novojogo" ? 0 : nome == "btn_continuar" ? 1 : nome == "btn_opcoes" ? 2 : 3; }
+    { return nome == "btn_novojogo" ? 0 : nome == "btn_continuar" ? 1 : nome == "btn_opcoes" ? 2 : nome == "btn_minigames" ? 3 : 4; }
+
+    Button CriarBotao(string nome, string titulo, Transform pai, int indice, UnityEngine.Events.UnityAction acao)
+    {
+        var go = new GameObject(nome, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image), typeof(Button));
+        go.transform.SetParent(pai, false);
+        objetos[nome] = go.transform;
+        var imagem = go.GetComponent<Image>(); imagem.color = new Color(.12f, .15f, .14f, .96f);
+        var botao = go.GetComponent<Button>(); botao.targetGraphic = imagem;
+        var cores = botao.colors; cores.normalColor = new Color(.82f, .85f, .81f);
+        cores.highlightedColor = cores.selectedColor = new Color(1f, .84f, .56f);
+        cores.pressedColor = Color.white; cores.fadeDuration = .15f; botao.colors = cores;
+        var label = new GameObject("Label", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI));
+        label.transform.SetParent(go.transform, false);
+        var texto = label.GetComponent<TextMeshProUGUI>();
+        texto.font = Obter<Button>("btn_novojogo").GetComponentInChildren<TMP_Text>().font;
+        texto.text = titulo; texto.fontSize = 25; texto.color = new Color(.94f, .9f, .76f);
+        texto.alignment = TextAlignmentOptions.MidlineLeft; texto.raycastTarget = false;
+        Esticar(texto.rectTransform); texto.margin = Vector4.zero;
+        ConfigurarBotao(botao, indice);
+        texto.fontSize = 25;
+        botao.onClick.AddListener(acao);
+        return botao;
+    }
+
+    void CriarPainelMinigames(TMP_FontAsset font)
+    {
+        painelMinigames = new GameObject("MinigamesPanel", typeof(RectTransform), typeof(Image));
+        painelMinigames.transform.SetParent(principal.transform, false);
+        Esticar(painelMinigames.GetComponent<RectTransform>());
+        var fundoPainel = painelMinigames.GetComponent<Image>();
+        fundoPainel.color = new Color(.035f, .055f, .052f, .96f);
+        var titulo = Texto("TituloMinigames", painelMinigames.transform, font,
+            "JOGUE UMA PARTIDA", 30, new Vector2(.078f, .58f), new Vector2(400, 46), new Color(.94f, .9f, .76f));
+        titulo.alignment = TextAlignmentOptions.MidlineLeft;
+        var bocha = CriarBotao("btn_minigame_bocha", "BOCHA · PRÁTICA", painelMinigames.transform, 0,
+            () => BochaMinigameUI.Instance.IniciarPraticaOpcional());
+        ConfigurarBotaoPainel(bocha, .46f);
+        var sinuca = CriarBotao("btn_minigame_sinuca", "SINUCA · PRÁTICA", painelMinigames.transform, 0,
+            () => SinucaMinigameUI.Instance.IniciarPraticaOpcional());
+        ConfigurarBotaoPainel(sinuca, .37f);
+        var voltar = CriarBotao("btn_voltar_minigames", "VOLTAR", painelMinigames.transform, 0,
+            FecharMenuMinigames);
+        ConfigurarBotaoPainel(voltar, .28f);
+        painelMinigames.SetActive(false);
+    }
+
+    static void ConfigurarBotaoPainel(Button botao, float y)
+    {
+        var r = botao.GetComponent<RectTransform>();
+        r.anchorMin = r.anchorMax = new Vector2(.078f, y); r.pivot = new Vector2(0, .5f);
+        r.anchoredPosition = Vector2.zero; r.sizeDelta = new Vector2(390, 44);
+        var label = botao.GetComponentInChildren<TMP_Text>(); label.fontSize = 25;
+    }
+
+    void AbrirMenuMinigames()
+    {
+        menuMinigames = true;
+        foreach (var botao in botoesPrincipais) botao.gameObject.SetActive(false);
+        painelMinigames.SetActive(true);
+        EventSystem.current?.SetSelectedGameObject(Obter<Button>("btn_minigame_bocha").gameObject);
+    }
+
+    void FecharMenuMinigames()
+    {
+        menuMinigames = false;
+        painelMinigames.SetActive(false);
+        foreach (var botao in botoesPrincipais) botao.gameObject.SetActive(true);
+        EventSystem.current?.SetSelectedGameObject(Obter<Button>("btn_minigames").gameObject);
+    }
 
     static void ConfigurarBotao(Button b, int i)
     {
@@ -140,6 +217,8 @@ public sealed class MenuAmbiente : MonoBehaviour
         bool modal = PayphoneCheckpoint.IsSaveUIOpen;
         bool configurando = opcoes != null && opcoes.gameObject.activeInHierarchy;
         string nome = selecionado != null ? selecionado.name : "";
+        if (menuMinigames && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+            FecharMenuMinigames();
         string foco = modal ? "Orelhao" : FocoDoBotao(nome, configurando);
         if (!modal && configurando)
         {
@@ -193,7 +272,9 @@ public sealed class MenuAmbiente : MonoBehaviour
         vinheta.SetVerticesDirty();
         if (focoJanela) atmosfera.SetVerticesDirty();
         AtualizarBotoes(selecionado, dt);
-        string texto = modal ? "Escolha um registro do orelhão." : LegendaDoFoco(FocoAtual);
+        string texto = modal ? "Escolha um registro do orelhão." : menuMinigames
+            ? "Escolha uma partida rápida de bocha ou sinuca."
+            : LegendaDoFoco(FocoAtual);
         if (ultimaLegenda != texto) { legenda.text = texto; ultimaLegenda = texto; }
         if (!modal && !configurando && focoJanela && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             InteragirCenario();
@@ -237,6 +318,7 @@ public sealed class MenuAmbiente : MonoBehaviour
     {
         if (nome == "btn_continuar") return "Orelhao";
         if (nome == "btn_sair") return "Despedida";
+        if (nome == "btn_minigames" || nome.StartsWith("btn_minigame_")) return "Clube";
         if (nome == "btn_audio" || nome.Contains("volume")) return "Poste";
         if (nome == "btn_video" || nome.Contains("resolucao") || nome.Contains("brilho")) return "Reflexos";
         if (nome == "btn_legendas" || nome.Contains("Legenda")) return "Clube";

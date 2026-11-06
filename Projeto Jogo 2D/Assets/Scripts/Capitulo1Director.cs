@@ -57,7 +57,7 @@ public class Capitulo1Director : MonoBehaviour
     private const float VolumeBairro = 0.48f;
     private const float VolumeCasaAvo = 0.32f;
     private const float VolumeBar = 0.48f;
-    private const float VolumeSinuca = 0.31f;
+    private const float VolumeSinuca = 0.10f;
     private const float VelocidadeFadeMusica = 0.55f;
 
     private static readonly Dictionary<string, Texture2D> cacheTexturas = new Dictionary<string, Texture2D>();

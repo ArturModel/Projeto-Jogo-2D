@@ -36,7 +36,7 @@ public sealed partial class SinucaRoom3D
     {
         string key="pixel_"+sprite.texture.name;
         if(materials.TryGetValue(key,out var mat))return mat;
-        mat=new Material(Resources.Load<Material>("Art/BarRef7/BarPixelCutout")){name=key};mat.SetTexture("_BaseMap",sprite.texture);mat.SetColor("_BaseColor",new Color(.87f,.84f,.77f));materials.Add(key,mat);owned.Add(mat);return mat;
+        mat=new Material(Resources.Load<Material>("Art/BarRef7/BarPixelCutout")){name=key};mat.SetTexture("_BaseMap",sprite.texture);mat.SetColor("_BaseColor",new Color(.87f,.84f,.77f));mat.shader=Resources.Load<Shader>("Art/Sinuca/SalaLit");mat.SetFloat("_AlphaClip",1);mat.SetFloat("_Cull",0);mat.SetFloat("_Smoothness",.03f);mat.EnableKeyword("_ALPHATEST_ON");mat.renderQueue=2450;materials.Add(key,mat);owned.Add(mat);return mat;
     }
     private Mesh NativeMesh(Sprite sprite)
     {

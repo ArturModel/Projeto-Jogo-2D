@@ -387,3 +387,40 @@ TMP gravou cache VT323 após restauração; único asset posterior às builds. H
 04/11 — Amostra R2: novas tomadas Júlia/Lucas, Marcus chamado pelo nome na porta; REC/cadeira/quarto aumentados e tratamento mono de cassete com chiado. Prévia privada, sem aprovação/publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_amostra-fita-r2.md.
 
 04/11 — Autor forneceu roteiro R3 e rejeitou timbre adulto da R2. Oito falas registradas literalmente em Tools/Audio/quarto_roteiro_r3.json; teste juvenil Qwen falhou. Sem nova amostra adequada nem publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_roteiro-fita-r3.md.
+
+06/11/2026 — Migração para C:/Temp/SantaRita com Git independente, main atualizada, branch melhoria-minigames e alterações locais da bocha/menu. Plano: ../ai-plans/2026-11-06_BBCONTTI_migracao-santa-rita.md. LFS completo; Unity ainda não validado nesta cópia.
+
+
+06/11/2026 — Sinuca em primeira pessoa: WASD, mouse capturado/Esc livre, aproximação à branca, mãos e taco 3D/carregado, Zé circulando e preparando a tacada; HUD fino e física/puxada/som revistos. Compilação e QA numérico registrados, sem aprovação visual/auditiva ou Player; Graphify indisponível. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-imersiva.md. Direção de caminhada substitui o default de câmera arcade. Saves e cenas preservados.
+
+
+06/11/2026 — Direção mais recente da sinuca: Zé voltou a ficar parado e sem taco, jogada apenas simulada. Mãos são billboards; ocultas ao caminhar (fica só taco). Apoio mantém arte aceita; overlay URP de primeiro plano evita corte pelo tampo e empunhadura foi aproximada/rotacionada para expor antebraço. Validação visual da overlay ainda pendente; fonte atual prevalece sobre plano anterior de NPC móvel. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-maos-primeiro-plano.md.
+
+
+06/11/2026 — Empunhadura refeita após nova referência: pegada fechada vista pelo dorso/de cima, pulso curto; versão de palma/dedos por baixo rejeitada e não publicada. Pivô e rotação seguem eixo projetado do taco; dorso fica à frente do eixo e pulso termina com dissolução em pixels. Apoio mantém PNG/pose. 0 erros C#, 22 QA de rig; shader/render e aprovação artística in-game pendentes. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-pegada-fechada.md.
+
+
+06/11/2026 — Autor aprovou a última dupla ImageGen após correção só do apoio (ponte aberta próxima à original). Atlas MaosMarcus.png integrado, contato do apoio no eixo sem offset lateral e máscaras complementares de dorso/polegar em profundidades distintas; empunhadura segue taco. 0 erros C#, 55 verificações numéricas/assets PASS. Play/HLSL/render pendentes: MCP no_unity_session e CUA sem acesso. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-maos-aprovadas.md.
+
+
+06/11/2026 — Apoio da sinuca reduzido .36 → .30m (16,7%) a pedido do autor; empunhadura desenhada após taco com ZTest Always apenas na própria silhueta recortada, evitando haste atravessar dorso. Apoio mantém profundidade normal e contato. 0 erros C#, 56 checks numéricos/assets PASS; render nativo pendente. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-apoio-menor-oclusao.md
+
+
+06/11/2026 — Empunhadura do taco espelhada para mão esquerda, pulso -12° em torno do mesmo contato; apoio preservado. Atlas não regenerado. 56 checks numéricos/assets PASS, 0 erros C#/17 avisos CS0649; render/Play pendente. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-pegada-esquerda.md
+
+
+06/11/2026 — Autor pediu mão esquerda original vista de cima, polegar quase oculto. Novo MaoEsquerdaTaco.png ImageGen integrado, sem mirrorX/roll corretivo -12°; apoio preservado no atlas. 57 checks numéricos/assets PASS. Compilação geral bloqueada por CS0246 SinucaZeComments ausente em mudanças concorrentes de SinucaMinigameUI.cs; Play/render pendentes. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-esquerda-desenhada.md
+
+
+06/11/2026 — Sinuca: trilha .31 → .23, impactos taco/bolas destacados, Zé reage a conversões/faltas/marcada e proximidade da vitória. Legenda inferior central fonte 16, escrita progressiva, leitura/fade; murmúrios sintéticos originais em fonte dedicada, pausa/foco/efeitos respeitados. 27 testes de fala + 46 de mecânicas PASS; Assembly-CSharp 0 erros/17 avisos CS0649. CS0246 transitório SinucaZeComments de edição concorrente resolvido. Render/audição/Player pendentes (MCP sem sessão). Refresh Graphify falha por CLI ausente; validate com hashes antigos. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-falas-audio.md.
+
+
+06/11/2026 — Dupla reunida em MaosMarcusUnificadas.png ImageGen para mesma pele/estilo; nova pegada superior espelhada na arte, apoio mantido. Apoio reduzido mais 30% (.30 → .21m) sem mudar contato. 57 checks numéricos/assets PASS, compilação geral voltou a passar 0 erros/17 CS0649. Play/render pendentes. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-atlas-unificado-apoio-30.md
+
+
+06/11/2026 — Áudio menu/sinuca: AudioSettingsController sincroniza ambos os painéis ao abrir/alterar, aplica sliders a todos os mixers e preserva zero/valores baixos (migração de reset removida). Master só no AudioListener; defaults ausentes música .35/efeitos 1; música de mixer .5 com duck .35 na sinuca, trilha direta da sinuca .10, impactos reforçados. 22 testes isolados + 8 checks nativos Unity PASS; compilação 0 erros/17 avisos CS0649, preferências da fixture restauradas. Graphify indisponível/hashes antigos; audição/Player pendentes. Plano: ../ai-plans/2026-11-06_BBCONTTI_audio-global-sinuca.md.
+
+
+06/11/2026 — Áudio dividido em Geral/Música/Fala/Chuva/Taco e bolas/Outros efeitos nos dois menus. Novas preferências independentes audio_fala/audio_chuva/audio_impactos; chuva fora do SFX, voz de Zé/fitas e impactos com ganhos próprios. Passo discreto de madeira na sala da sinuca (.065, cada .62 m de movimento real), silencioso parado/colidindo. 29 testes de configurações + 18 checks Unity + 27 de fala + 75 de movimento PASS; 0 erros/16 CS0649. Preferências da fixture restauradas, sem cenas/saves alterados. Audição/layout visual/Player pendentes; Graphify indisponível. Plano: ../ai-plans/2026-11-06_BBCONTTI_categorias-audio-passos.md.
+
+06/11/2026 — Sinuca: caçapas recortadas em todos os sólidos, iluminação focal sombria, sprites e mãos iluminados; cilindros/redes otimizados. 624 amostras de passagem sem obstrução, 117 checks numéricos PASS, shaders/console sem erros. Autor aprovou apresentação; Player/FPS pendentes, Graphify ausente. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-luz-cacapas.md.

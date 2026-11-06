@@ -797,7 +797,7 @@ public class Chuva : MonoBehaviour
         fonte.spatialBlend = 0f;
         fonte.pitch = pitch;
         fonte.volume = 0f;
-        fonte.outputAudioMixerGroup = grupoMixer;
+        fonte.outputAudioMixerGroup = null; // ganho de chuva próprio, sem passar por Outros efeitos
 
         if (abafado)
         {
@@ -816,7 +816,7 @@ public class Chuva : MonoBehaviour
         float k = Mathf.Lerp(0.85f, 1.12f, Mathf.InverseLerp(0.35f, 1.6f, intensidade));
         float suave = 1f - Mathf.Exp(-2f * Time.unscaledDeltaTime);
 
-        fonteA.volume = Mathf.Lerp(fonteA.volume, volume * 0.75f * k, suave);
-        fonteB.volume = Mathf.Lerp(fonteB.volume, volume * 0.45f * k, suave);
+        fonteA.volume = Mathf.Lerp(fonteA.volume, volume * 0.75f * k * AudioSettingsController.VolumeChuva, suave);
+        fonteB.volume = Mathf.Lerp(fonteB.volume, volume * 0.45f * k * AudioSettingsController.VolumeChuva, suave);
     }
 }

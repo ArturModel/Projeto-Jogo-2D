@@ -70,7 +70,7 @@ public sealed class SantaRitaTapeDeck:MonoBehaviour
     private void Update()
     {
         if(!IsOpen)return;if(Keyboard.current!=null&&Keyboard.current.escapeKey.wasPressedThisFrame){Close();return;}
-        voice.volume=PlayerPrefs.GetFloat("audio_efeitos",1f);
+        voice.volume=AudioSettingsController.VolumeFala;
         if(MenuPausa.Aberto||!Application.isFocused){if(playing){playing=false;voice.Pause();}return;}
         if(!playing||tape==null)return;
         elapsed+=Time.unscaledDeltaTime;timeLabel.text=TimeSpan.FromSeconds(elapsed).ToString(@"mm\:ss");float t=0;
