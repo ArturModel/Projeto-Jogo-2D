@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-Awake()_25]] - `calls` [EXTRACTED]
-- [[dot-Caixa()]] - `calls` [EXTRACTED]
+- [[dot-Caixa()_1]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-Graphic()]] - `calls` [EXTRACTED]
 - [[dot-Imagem()_1]] - `calls` [EXTRACTED]
 - [[dot-Rect()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[dot-Texto()_1]] - `calls` [EXTRACTED]
+- [[dot-Texto()_2]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[PrologoJogavel]] - `method` [EXTRACTED]
 - [[RectMask2D]] - `references` [EXTRACTED]

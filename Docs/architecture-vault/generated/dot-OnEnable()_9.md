@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
 community: "Community 8"
-location: "L50"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # .OnEnable()
 
 ## Connections
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_8

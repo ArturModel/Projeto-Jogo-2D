@@ -16,8 +16,8 @@ members: 13
 - [[dot-AplicarVolumesGlobais()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-GarantirValoresPadraoAudiveis()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-InicializarAudioGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-OnDisable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-Start()_14]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-OnDisable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Start()_12]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-Vincular()_3]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[AudioMixer]] - code
 - [[AudioSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
@@ -32,9 +32,9 @@ SORT file.name ASC
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Community 12]]
 - 2 edges to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 96]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 95]]
+- 1 edge to [[_COMMUNITY_Community 84]]
 
 ## Top bridge nodes
 - [[AudioSettingsController]] - degree 16, connects to 4 communities

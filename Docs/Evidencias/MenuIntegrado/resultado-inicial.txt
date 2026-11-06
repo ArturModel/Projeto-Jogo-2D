@@ -1,0 +1,28 @@
+PASS Menu inicializado com arte nova
+PASS Armazenamento isolado ativo
+PASS Vídeo original preservado e inativo
+PASS Imagem detalhada em resolução nativa superior ao vídeo original
+PASS Fundo não intercepta UI
+PASS Orelhão independente do cenário
+PASS Novo jogo dirige atenção à rua
+PASS Hover em Continuar destaca o orelhão
+PASS Seta navega de Continuar a Configurações
+PASS Enter abre configurações
+PASS Áudio abre com foco no poste
+PASS Vídeo abre com foco nos reflexos
+PASS Brilho segue o controle existente
+PASS Legendas abre integrado ao clube
+PASS ESC retorna ao menu principal
+PASS Clique no orelhão abre seleção explícita de slots
+PASS Orelhão não carrega automaticamente
+PASS ESC fecha registros sem carregar
+PASS Continuar mantém o mesmo modal de slots
+PASS Navegação preserva o save de teste
+PASS Confirmar novo jogo inicia transição única
+FAIL Novo jogo chega ao prólogo
+FAIL Diretor jogável do prólogo preservado
+FAIL Limpeza de novo jogo limitada ao armazenamento de teste
+FAIL Estado sem save é explicado
+FAIL Continuar sem save não abre partida
+FAIL Sair responde com enquadramento de despedida
+FAIL: 27 verificações; input injetado no InputSystem; saves isolados; preferências restauradas.

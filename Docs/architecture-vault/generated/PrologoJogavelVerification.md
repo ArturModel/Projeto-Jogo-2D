@@ -12,9 +12,9 @@ tags:
 # PrologoJogavelVerification
 
 ## Connections
-- [[dot-Build()_1]] - `method` [EXTRACTED]
-- [[dot-BuildNormal()]] - `method` [EXTRACTED]
-- [[dot-BuildQA()]] - `method` [EXTRACTED]
+- [[dot-Build()_2]] - `method` [EXTRACTED]
+- [[dot-BuildNormal()_1]] - `method` [EXTRACTED]
+- [[dot-BuildQA()_1]] - `method` [EXTRACTED]
 - [[dot-DepoisDeParar()]] - `method` [EXTRACTED]
 - [[dot-QueueBuildQA()]] - `method` [EXTRACTED]
 - [[PrologoJogavelVerification.cs]] - `contains` [EXTRACTED]

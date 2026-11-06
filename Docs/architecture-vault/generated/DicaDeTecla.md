@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Awake()_3]] - `method` [EXTRACTED]
-- [[dot-Build()]] - `method` [EXTRACTED]
+- [[dot-Build()_1]] - `method` [EXTRACTED]
 - [[dot-Mostrar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]

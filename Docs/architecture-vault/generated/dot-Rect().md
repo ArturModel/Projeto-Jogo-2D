@@ -12,7 +12,7 @@ tags:
 # .Rect()
 
 ## Connections
-- [[dot-Caixa()]] - `calls` [EXTRACTED]
+- [[dot-Caixa()_1]] - `calls` [EXTRACTED]
 - [[dot-Construir()_4]] - `calls` [EXTRACTED]
 - [[dot-Graphic()]] - `calls` [EXTRACTED]
 - [[dot-Imagem()_1]] - `calls` [EXTRACTED]

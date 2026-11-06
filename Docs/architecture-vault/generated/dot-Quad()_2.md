@@ -1,24 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs"
 type: "code"
-community: "Community 9"
-location: "L227"
+community: "Community 46"
+location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_46
 ---
 
 # .Quad()
 
 ## Connections
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
-- [[dot-CriarSala()]] - `calls` [EXTRACTED]
-- [[dot-RoomLight()]] - `calls` [EXTRACTED]
-- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[dot-Caixa()]] - `calls` [EXTRACTED]
+- [[dot-Linha()_1]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[Face]] - `calls` [EXTRACTED]
-- [[V]] - `calls` [EXTRACTED]
+- [[MenuAmbienteGraphic]] - `method` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
+- [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_46

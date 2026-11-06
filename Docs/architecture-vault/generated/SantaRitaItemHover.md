@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Awake()_16]] - `references` [EXTRACTED]
-- [[dot-OnPointerEnter()_1]] - `method` [EXTRACTED]
+- [[dot-OnPointerEnter()]] - `method` [EXTRACTED]
 - [[dot-OnPointerExit()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[IPointerEnterHandler]] - `implements` [EXTRACTED]

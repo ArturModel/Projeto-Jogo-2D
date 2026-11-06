@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Capture()]] - `calls` [INFERRED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
-- [[dot-Invoke()]] - `calls` [EXTRACTED]
+- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
 - [[dot-ValidarInvarianteSeteBolas()]] - `calls` [INFERRED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 24
+members: 25
 ---
 
 # Community 43
 
-**Members:** 24 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[dot-AbrirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -17,6 +17,7 @@ members: 24
 - [[dot-SimularTesteDeInvariantes()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[Finished_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[FreeColor_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[List]] - code
 - [[MarcusGroup]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[MarcusPoints_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[MarcusTurn_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
@@ -41,20 +42,36 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 48]]
-- 6 edges to [[_COMMUNITY_Community 3]]
-- 3 edges to [[_COMMUNITY_Community 21]]
-- 3 edges to [[_COMMUNITY_Community 88]]
-- 2 edges to [[_COMMUNITY_Community 35]]
-- 1 edge to [[_COMMUNITY_Community 8]]
+- 9 edges to [[_COMMUNITY_Community 48]]
+- 7 edges to [[_COMMUNITY_Community 3]]
+- 5 edges to [[_COMMUNITY_Community 21]]
+- 3 edges to [[_COMMUNITY_Community 35]]
+- 3 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 45]]
+- 2 edges to [[_COMMUNITY_Community 83]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 15]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 - 1 edge to [[_COMMUNITY_Community 100]]
-- 1 edge to [[_COMMUNITY_Community 45]]
-- 1 edge to [[_COMMUNITY_Community 83]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 84]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 93]]
+- 1 edge to [[_COMMUNITY_Community 109]]
+- 1 edge to [[_COMMUNITY_Community 86]]
 
 ## Top bridge nodes
+- [[List]] - degree 26, connects to 21 communities
 - [[SinuquinhaRules]] - degree 26, connects to 6 communities
 - [[dot-CanNominate()_1]] - degree 9, connects to 3 communities
 - [[dot-Resolve()_1]] - degree 9, connects to 3 communities
 - [[dot-SimularTesteDeInvariantes()]] - degree 4, connects to 2 communities
-- [[dot-AbrirEscolhaAlvo()]] - degree 3, connects to 2 communities

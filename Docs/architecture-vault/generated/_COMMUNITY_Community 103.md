@@ -1,21 +1,18 @@
 ---
 type: community
-members: 8
+members: 5
 ---
 
 # Community 103
 
-**Members:** 8 nodes
+**Members:** 5 nodes
 
 ## Members
-- [[dot-Configurar()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[dot-Interact()_1]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[dot-OnTriggerEnter2D()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[dot-TentarTransicionar()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[InfoZona]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[TransicaoDeZonaTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[ZonaId_1]] - code
+- [[dot-Interact()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[dot-RegistrarPistaLegada()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,21 +22,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 6]]
-- 3 edges to [[_COMMUNITY_Community 24]]
-- 3 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 89]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 84]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 - 1 edge to [[_COMMUNITY_Community 86]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[TransicaoDeZonaTrigger]] - degree 13, connects to 5 communities
-- [[ZonaId_1]] - degree 8, connects to 3 communities
-- [[dot-TentarTransicionar()]] - degree 5, connects to 2 communities
-- [[dot-Configurar()]] - degree 4, connects to 2 communities
-- [[dot-OnTriggerEnter2D()]] - degree 4, connects to 2 communities
+- [[ItemDeCena]] - degree 6, connects to 2 communities
+- [[dot-RegistrarPistaLegada()]] - degree 4, connects to 2 communities
+- [[dot-Interact()]] - degree 3, connects to 1 community
+- [[ItemDeCena.cs]] - degree 2, connects to 1 community

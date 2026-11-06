@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs"
 type: "code"
-community: "Community 2"
+community: "Community 1"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_1
 ---
 
 # SinucaRoom3D.Scenery.cs
@@ -15,4 +15,4 @@ tags:
 - [[SinucaRoom3D]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_1

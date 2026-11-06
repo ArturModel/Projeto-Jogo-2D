@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
 - [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Falar()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_2]] - `calls` [EXTRACTED]
+- [[dot-Falar()_1]] - `calls` [EXTRACTED]
+- [[dot-Interact()_1]] - `calls` [EXTRACTED]
 - [[dot-InteragirMesaSinuca()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Marcus()]] - `calls` [EXTRACTED]

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "Community 99"
-location: "L11"
+community: "Community 84"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_84
 ---
 
 # Instance
 
 ## Connections
-- [[InteractionPrompt]] - `defines` [EXTRACTED]
+- [[SceneFader]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_84

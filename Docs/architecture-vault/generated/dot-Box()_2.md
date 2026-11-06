@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-CriarSala()]] - `calls` [EXTRACTED]
-- [[dot-Quad()_2]] - `calls` [EXTRACTED]
+- [[dot-Quad()_3]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]

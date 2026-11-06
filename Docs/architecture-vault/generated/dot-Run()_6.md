@@ -1,29 +1,25 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 87"
-location: "L9"
+community: "Community 6"
+location: "L157"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Community_87
+  - graphify/EXTRACTED
+  - community/Community_6
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Balim()]] - `calls` [EXTRACTED]
-- [[dot-Check()_2]] - `calls` [INFERRED]
-- [[dot-Clone()_1]] - `calls` [INFERRED]
-- [[dot-CriarMao()]] - `calls` [INFERRED]
-- [[dot-ForcaNoTempo()]] - `calls` [EXTRACTED]
-- [[dot-Lancar()_2]] - `calls` [INFERRED]
-- [[dot-Preparar()_1]] - `calls` [EXTRACTED]
-- [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
-- [[dot-Step()]] - `calls` [INFERRED]
-- [[BochaBall]] - `calls` [INFERRED]
-- [[BochaMatch]] - `calls` [INFERRED]
-- [[BochaPerspectiveVerification]] - `method` [EXTRACTED]
-- [[BochaSimulation]] - `calls` [INFERRED]
+- [[dot-ApprovedScenes()]] - `calls` [EXTRACTED]
+- [[dot-BuildFinalLivingWorld()]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()_2]] - `calls` [EXTRACTED]
+- [[dot-RegisterCampaignScenes()]] - `calls` [EXTRACTED]
+- [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
+- [[dot-Revision()]] - `calls` [EXTRACTED]
+- [[dot-Scenes()]] - `calls` [EXTRACTED]
+- [[dot-SourceHash()]] - `calls` [EXTRACTED]
+- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_6

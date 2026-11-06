@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Awake()_16]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_9]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
 - [[SantaRitaInventory]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]

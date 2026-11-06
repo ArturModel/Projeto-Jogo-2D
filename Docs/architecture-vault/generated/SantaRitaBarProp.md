@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Apply()_3]] - `references` [EXTRACTED]
-- [[dot-Interact()_4]] - `method` [EXTRACTED]
+- [[dot-Interact()_3]] - `method` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[Prompt_4]] - `defines` [EXTRACTED]

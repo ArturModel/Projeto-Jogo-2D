@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Orbit()]] - `calls` [EXTRACTED]
-- [[dot-Update()]] - `calls` [INFERRED]
+- [[dot-Update()_27]] - `calls` [INFERRED]
 - [[SinucaTableView]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

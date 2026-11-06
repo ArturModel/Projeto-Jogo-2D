@@ -126,9 +126,9 @@
     "semantic_hash": "1cc53172cfa3bb9b96ebf4a658207a3f"
   },
   "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs": {
-    "mtime": 1793382113.2631862,
-    "seen": 1793967434.655552,
-    "ast_hash": "bc5bf76f9045f19063438748af40aed2",
+    "mtime": 1793973099.6768658,
+    "seen": 1793973553.7504363,
+    "ast_hash": "c56361ca0601c59c6e7d77dbc6ded3d2",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs": {
@@ -897,6 +897,30 @@
     "mtime": 1793969915.1960826,
     "seen": 1793970426.6707203,
     "ast_hash": "584068ef408912ceefed424af7e2c66a",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs": {
+    "mtime": 1793972734.253753,
+    "seen": 1793973553.7504363,
+    "ast_hash": "0e644a9ff74cf40133aa2d769b7d9c3c",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs": {
+    "mtime": 1793973100.5312698,
+    "seen": 1793973553.7504363,
+    "ast_hash": "7f52c74642be7d8287d3bcca2bcf0274",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs": {
+    "mtime": 1793972583.8784084,
+    "seen": 1793973553.7504363,
+    "ast_hash": "bfe1523f954831608be186d050b26da3",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs": {
+    "mtime": 1793973098.8042843,
+    "seen": 1793973553.7504363,
+    "ast_hash": "7d7323218a12a6fc6c283c5d7093f740",
     "semantic_hash": ""
   }
 }

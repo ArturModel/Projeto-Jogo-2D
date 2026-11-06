@@ -17,7 +17,7 @@ tags:
 - [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
 - [[dot-DispararTacadaCarregada()]] - `calls` [EXTRACTED]
 - [[dot-OscilarCarga()]] - `calls` [EXTRACTED]
-- [[dot-Update()]] - `calls` [EXTRACTED]
+- [[dot-Update()_27]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_100

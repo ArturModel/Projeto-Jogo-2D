@@ -1,14 +1,14 @@
 ---
 type: community
-members: 33
+members: 34
 ---
 
 # Community 9
 
-**Members:** 33 nodes
+**Members:** 34 nodes
 
 ## Members
-- [[dot-Awake()_24]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Awake()_23]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-BallColor()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Box()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-CameraBasis()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
@@ -17,12 +17,14 @@ members: 33
 - [[dot-CriarSala()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Disc()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Line()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPopulateMesh()_4]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnPopulateMesh()_5]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Project()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-ProjectReady()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Quad()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Quad()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-RecordContacts()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Ring()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-RoomLight()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-ScreenBocha()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
 - [[dot-SolidV()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Sphere()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Tick()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
@@ -32,7 +34,6 @@ members: 33
 - [[BochaCourtView]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[Face]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[Face_1]] - code
-- [[Quaternion]] - code
 - [[Track]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[Track_1]] - code
 - [[TrackCount]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
@@ -50,32 +51,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Community 2]]
+- 15 edges to [[_COMMUNITY_Community 2]]
 - 10 edges to [[_COMMUNITY_Community 23]]
 - 9 edges to [[_COMMUNITY_Community 28]]
-- 6 edges to [[_COMMUNITY_Community 48]]
-- 5 edges to [[_COMMUNITY_Community 17]]
-- 5 edges to [[_COMMUNITY_Community 6]]
-- 3 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 29]]
-- 2 edges to [[_COMMUNITY_Community 27]]
-- 2 edges to [[_COMMUNITY_Community 37]]
+- 8 edges to [[_COMMUNITY_Community 17]]
+- 7 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 48]]
+- 4 edges to [[_COMMUNITY_Community 39]]
 - 2 edges to [[_COMMUNITY_Community 24]]
-- 2 edges to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 3]]
+- 2 edges to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 37]]
 - 1 edge to [[_COMMUNITY_Community 4]]
-- 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 85]]
-- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 110]]
 - 1 edge to [[_COMMUNITY_Community 98]]
-- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 43]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 11]]
-- 1 edge to [[_COMMUNITY_Community 89]]
+- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 85]]
 
 ## Top bridge nodes
-- [[BochaCourtView]] - degree 60, connects to 14 communities
-- [[Quaternion]] - degree 5, connects to 4 communities
+- [[BochaCourtView]] - degree 60, connects to 13 communities
 - [[V]] - degree 8, connects to 3 communities
-- [[dot-BallColor()]] - degree 5, connects to 3 communities
-- [[dot-CourtPoint()]] - degree 5, connects to 3 communities
+- [[dot-Sphere()_1]] - degree 8, connects to 3 communities
+- [[dot-Project()_1]] - degree 7, connects to 3 communities
+- [[dot-ScreenBocha()]] - degree 6, connects to 3 communities

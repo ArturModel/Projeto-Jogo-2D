@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-Avancar()_2]] - `method` [EXTRACTED]
-- [[dot-Configurar()_3]] - `method` [EXTRACTED]
+- [[dot-Configurar()]] - `method` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-OnDeselect()]] - `method` [EXTRACTED]
 - [[dot-OnSelect()_1]] - `method` [EXTRACTED]
 - [[dot-Retroceder()]] - `method` [EXTRACTED]
 - [[dot-TocarSom()]] - `method` [EXTRACTED]
-- [[dot-Update()_30]] - `method` [EXTRACTED]
+- [[dot-Update()_31]] - `method` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[IDeselectHandler]] - `implements` [EXTRACTED]

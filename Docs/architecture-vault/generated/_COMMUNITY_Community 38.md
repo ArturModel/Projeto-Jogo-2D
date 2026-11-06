@@ -1,14 +1,13 @@
 ---
 type: community
-members: 11
+members: 10
 ---
 
 # Community 38
 
-**Members:** 11 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[dot-AvancarSimulacaoPassoFixo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-GarantirClipsAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-RegistrarQuedaNaCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-RegistrarTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -28,16 +27,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Community 3]]
-- 4 edges to [[_COMMUNITY_Community 21]]
-- 2 edges to [[_COMMUNITY_Community 100]]
+- 11 edges to [[_COMMUNITY_Community 3]]
+- 3 edges to [[_COMMUNITY_Community 100]]
+- 3 edges to [[_COMMUNITY_Community 21]]
 - 2 edges to [[_COMMUNITY_Community 109]]
-- 2 edges to [[_COMMUNITY_Community 93]]
+- 2 edges to [[_COMMUNITY_Community 8]]
 - 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 88]]
+- 1 edge to [[_COMMUNITY_Community 83]]
 
 ## Top bridge nodes
-- [[dot-SimularFisicaMesa()]] - degree 10, connects to 3 communities
+- [[dot-SimularFisicaMesa()]] - degree 10, connects to 4 communities
 - [[dot-TocarSomGiz()]] - degree 5, connects to 3 communities
 - [[dot-TocarSomTacada()]] - degree 5, connects to 3 communities
 - [[dot-TocarClipSintetico()]] - degree 8, connects to 2 communities

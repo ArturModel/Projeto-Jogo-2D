@@ -1,24 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 86"
-location: "L25"
+community: "Community 8"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_8
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
+- [[dot-MontarSom()]] - `calls` [EXTRACTED]
+- [[dot-Simular()]] - `calls` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
+- [[PixelPerfectCamera]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_8

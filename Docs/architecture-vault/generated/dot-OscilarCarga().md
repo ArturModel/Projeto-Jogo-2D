@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_100

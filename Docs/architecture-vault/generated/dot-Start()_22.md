@@ -1,21 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Community 89"
-location: "L41"
+community: "Community 86"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_86
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
+- [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[ChegadaEmSantaRita]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_86

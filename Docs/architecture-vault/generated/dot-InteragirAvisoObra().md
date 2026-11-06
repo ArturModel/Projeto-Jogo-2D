@@ -12,8 +12,8 @@ tags:
 # .InteragirAvisoObra()
 
 ## Connections
-- [[dot-Falar()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_2]] - `calls` [EXTRACTED]
+- [[dot-Falar()_1]] - `calls` [EXTRACTED]
+- [[dot-Interact()_1]] - `calls` [EXTRACTED]
 - [[dot-Marcus()]] - `calls` [EXTRACTED]
 - [[dot-Pensa()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]

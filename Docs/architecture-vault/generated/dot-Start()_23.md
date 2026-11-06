@@ -1,18 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
 type: "code"
-community: "Community 93"
-location: "L90"
+community: "Community 86"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_86
 ---
 
 # .Start()
 
 ## Connections
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_86

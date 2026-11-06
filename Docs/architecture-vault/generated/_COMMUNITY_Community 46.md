@@ -1,30 +1,27 @@
 ---
 type: community
-members: 17
+members: 14
 ---
 
 # Community 46
 
-**Members:** 17 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[dot-AbrirModalCarregarDoMenu()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-AbrirModalSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-AbrirSelecaoCarregar()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-ConfigurarId()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-Continuar()]] - code - Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs
-- [[dot-GarantirAudioOrelhao()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-GerarClipAtenderEDiscarOrelhao()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-GerarClipConfirmarSaveGancho()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-Interact()_5]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-TocarSomAtenderOrelhao()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-TocarSomConfirmarGancho()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-Update()_20]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[IsSaveUIOpen]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[PayphoneCheckpoint]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[PayphoneId]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[PayphoneSlotInputWatcher]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[Prompt_5]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[dot-Anel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Caixa()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Chuva()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Halo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Hash()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Leitura()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Linha()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-OnPopulateMesh()_4]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Ondas()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Pos()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Quad()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Reflexos()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[MenuAmbienteGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[VertexHelper]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,29 +31,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Community 45]]
-- 7 edges to [[_COMMUNITY_Community 51]]
-- 5 edges to [[_COMMUNITY_Community 93]]
-- 3 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 110]]
-- 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 48]]
+- 7 edges to [[_COMMUNITY_Community 23]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 3 edges to [[_COMMUNITY_Community 110]]
+- 3 edges to [[_COMMUNITY_Community 28]]
+- 3 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 2]]
+- 2 edges to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 105]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 92]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 95]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 12]]
-- 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 86]]
+- 1 edge to [[_COMMUNITY_Community 39]]
 
 ## Top bridge nodes
-- [[PayphoneCheckpoint]] - degree 37, connects to 12 communities
-- [[dot-AbrirSelecaoCarregar()]] - degree 8, connects to 5 communities
-- [[dot-AbrirModalSlots()]] - degree 5, connects to 2 communities
-- [[dot-TocarSomConfirmarGancho()]] - degree 5, connects to 2 communities
-- [[dot-GarantirAudioOrelhao()]] - degree 6, connects to 1 community
+- [[MenuAmbienteGraphic]] - degree 21, connects to 7 communities
+- [[VertexHelper]] - degree 20, connects to 5 communities
+- [[dot-Linha()_1]] - degree 8, connects to 2 communities
+- [[dot-Anel()]] - degree 7, connects to 2 communities
+- [[dot-Halo()]] - degree 6, connects to 2 communities

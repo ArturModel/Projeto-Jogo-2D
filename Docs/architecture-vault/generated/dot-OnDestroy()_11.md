@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
 community: "Community 8"
-location: "L176"
+location: "L97"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,6 @@ tags:
 # .OnDestroy()
 
 ## Connections
-- [[dot-LiberarCamada()]] - `calls` [EXTRACTED]
-- [[Chuva]] - `method` [EXTRACTED]
+- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_8

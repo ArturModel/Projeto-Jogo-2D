@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 18"
+community: "Community 89"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_89
 ---
 
 # .ConstrainArrival()
@@ -16,4 +16,4 @@ tags:
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaBarLayout]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_89

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
-- [[dot-Falar()]] - `calls` [EXTRACTED]
+- [[dot-Falar()_1]] - `calls` [EXTRACTED]
 - [[dot-InteragirZe()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Marcus()]] - `calls` [EXTRACTED]

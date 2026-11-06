@@ -8,16 +8,16 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
-- [[dot-Init()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-PrepararSessao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-ReiniciarSelecao()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
-- [[dot-ResetArt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-ResetSession()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs
-- [[dot-ResetStatic()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ResetStatic()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-ResetStatic()_3]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-ResetStatic()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[RuntimeInitializeOnLoadMethod]] - code
+- [[dot-AoVencerZeNaSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-Ativar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[dot-Ativar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs
+- [[dot-AtualizarEstadoPortaoCentroNaCena()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Dizer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-IniciarPartidaSinucaComZe()]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-Interagir()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Ligar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[CelularCarro]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[Disponivel_2]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,24 +27,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 24]]
-- 2 edges to [[_COMMUNITY_Community 34]]
-- 2 edges to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 107]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 49]]
-- 1 edge to [[_COMMUNITY_Community 109]]
-- 1 edge to [[_COMMUNITY_Community 31]]
-- 1 edge to [[_COMMUNITY_Community 50]]
-- 1 edge to [[_COMMUNITY_Community 51]]
+- 6 edges to [[_COMMUNITY_Community 86]]
+- 5 edges to [[_COMMUNITY_Community 42]]
+- 4 edges to [[_COMMUNITY_Community 13]]
+- 4 edges to [[_COMMUNITY_Community 33]]
+- 4 edges to [[_COMMUNITY_Community 94]]
+- 3 edges to [[_COMMUNITY_Community 19]]
+- 3 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 109]]
+- 2 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 88]]
+- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 0]]
 
 ## Top bridge nodes
-- [[RuntimeInitializeOnLoadMethod]] - degree 17, connects to 7 communities
-- [[dot-ResetStatic()_1]] - degree 2, connects to 1 community
-- [[dot-PrepararSessao()]] - degree 2, connects to 1 community
-- [[dot-ResetSession()]] - degree 2, connects to 1 community
-- [[dot-Init()]] - degree 2, connects to 1 community
+- [[dot-Dizer()]] - degree 18, connects to 8 communities
+- [[dot-AoVencerZeNaSinuca()]] - degree 10, connects to 5 communities
+- [[CelularCarro]] - degree 7, connects to 4 communities
+- [[dot-Interagir()_1]] - degree 7, connects to 4 communities
+- [[dot-AtualizarEstadoPortaoCentroNaCena()]] - degree 5, connects to 4 communities

@@ -1,17 +1,20 @@
 ---
 type: community
-members: 24
+members: 27
 ---
 
 # Community 33
 
-**Members:** 24 nodes
+**Members:** 27 nodes
 
 ## Members
 - [[dot-AtualizarAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-CentroVia()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-LerControles()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-OnApplicationFocus()_3]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-Rotulo()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Start()_13]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Update()_14]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Curva]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Direcao]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Distancia]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
@@ -42,20 +45,22 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Community 92]]
-- 7 edges to [[_COMMUNITY_Community 86]]
-- 5 edges to [[_COMMUNITY_Community 94]]
+- 4 edges to [[_COMMUNITY_Community 95]]
+- 4 edges to [[_COMMUNITY_Community 94]]
+- 4 edges to [[_COMMUNITY_Community 86]]
 - 3 edges to [[_COMMUNITY_Community 23]]
-- 2 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 12]]
 - 2 edges to [[_COMMUNITY_Community 50]]
-- 1 edge to [[_COMMUNITY_Community 7]]
 - 1 edge to [[_COMMUNITY_Community 6]]
 - 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 96]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 93]]
+- 1 edge to [[_COMMUNITY_Community 8]]
 
 ## Top bridge nodes
-- [[PrologoJogavel]] - degree 51, connects to 12 communities
-- [[dot-CentroVia()]] - degree 3, connects to 2 communities
-- [[dot-AtualizarAudio()]] - degree 2, connects to 1 community
-- [[dot-Rotulo()_1]] - degree 2, connects to 1 community
+- [[PrologoJogavel]] - degree 52, connects to 12 communities
+- [[dot-Update()_14]] - degree 7, connects to 2 communities
+- [[dot-LerControles()]] - degree 5, connects to 2 communities
+- [[dot-CentroVia()]] - degree 3, connects to 1 community
+- [[dot-Start()_13]] - degree 2, connects to 1 community

@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 89"
-location: "L223"
+community: "Community 84"
+location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_84
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-AplicarClampBordas()]] - `calls` [EXTRACTED]
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[Camera]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_5]] - `calls` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_84

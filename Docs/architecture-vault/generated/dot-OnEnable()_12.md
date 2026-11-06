@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "Community 93"
-location: "L11"
+community: "Community 96"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_96
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_96

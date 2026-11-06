@@ -1,25 +1,25 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs"
 type: "code"
-community: "Community 9"
-location: "L102"
+community: "Community 46"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_46
 ---
 
 # .OnPopulateMesh()
 
 ## Connections
-- [[dot-BallColor()]] - `calls` [EXTRACTED]
-- [[dot-CameraBasis()]] - `calls` [EXTRACTED]
-- [[dot-Disc()_1]] - `calls` [EXTRACTED]
-- [[dot-Line()]] - `calls` [EXTRACTED]
-- [[dot-Ring()_1]] - `calls` [EXTRACTED]
-- [[dot-Sphere()_1]] - `calls` [EXTRACTED]
-- [[dot-Triangle()]] - `calls` [EXTRACTED]
-- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[dot-Anel()]] - `calls` [EXTRACTED]
+- [[dot-Caixa()]] - `calls` [EXTRACTED]
+- [[dot-Chuva()]] - `calls` [EXTRACTED]
+- [[dot-Halo()]] - `calls` [EXTRACTED]
+- [[dot-Leitura()]] - `calls` [EXTRACTED]
+- [[dot-Ondas()]] - `calls` [EXTRACTED]
+- [[dot-Reflexos()]] - `calls` [EXTRACTED]
+- [[MenuAmbienteGraphic]] - `method` [EXTRACTED]
 - [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_46

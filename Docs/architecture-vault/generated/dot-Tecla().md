@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs"
 type: "code"
-community: "Community 50"
-location: "L39"
+community: "Community 110"
+location: "L201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_110
 ---
 
 # .Tecla()
 
 ## Connections
-- [[dot-Start()_17]] - `calls` [EXTRACTED]
+- [[dot-Esperar()]] - `calls` [EXTRACTED]
+- [[dot-Roteiro()]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[Key]] - `references` [EXTRACTED]
-- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_110

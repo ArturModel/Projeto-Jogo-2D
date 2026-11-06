@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
 - [[dot-IniciarCargaPorDispositivo()]] - `calls` [EXTRACTED]
 - [[dot-TocarSomGiz()]] - `calls` [EXTRACTED]
-- [[dot-Update()]] - `calls` [EXTRACTED]
+- [[dot-Update()_27]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_100

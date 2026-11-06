@@ -12,7 +12,7 @@ tags:
 # PrologoTextureImporter
 
 ## Connections
-- [[dot-OnPreprocessTexture()]] - `method` [EXTRACTED]
+- [[dot-OnPreprocessTexture()_1]] - `method` [EXTRACTED]
 - [[AssetPostprocessor]] - `inherits` [EXTRACTED]
 - [[PrologoJogavelVerification.cs]] - `contains` [EXTRACTED]
 
