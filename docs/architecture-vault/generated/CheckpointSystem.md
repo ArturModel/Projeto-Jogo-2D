@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-BeginIsolatedTests()]] - `method` [EXTRACTED]
 - [[dot-CarregarSlot()]] - `method` [EXTRACTED]
+- [[dot-CarregarSlot()_1]] - `method` [EXTRACTED]
 - [[dot-Clear()]] - `method` [EXTRACTED]
 - [[dot-ClearPendingOnly()]] - `method` [EXTRACTED]
 - [[dot-ConsumePendingSpawn()]] - `method` [EXTRACTED]

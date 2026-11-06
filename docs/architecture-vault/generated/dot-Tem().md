@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 86"
-location: "L80"
+community: "Community 13"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_13
 ---
 
 # .Tem()
@@ -15,12 +15,14 @@ tags:
 - [[dot-Abrir()_2]] - `calls` [EXTRACTED]
 - [[dot-AdaptSavedPosition()]] - `calls` [EXTRACTED]
 - [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
+- [[dot-Annotation()]] - `calls` [EXTRACTED]
 - [[dot-Atravessar()]] - `calls` [EXTRACTED]
 - [[dot-Atualizar()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarLinhaDoTempo()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarPainelLateral()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
 - [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
 - [[dot-C1InvestigationRegression()]] - `calls` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
@@ -29,8 +31,7 @@ tags:
 - [[dot-DialogueR2()]] - `calls` [EXTRACTED]
 - [[dot-DispararChegadaCasaDoAvo()]] - `calls` [EXTRACTED]
 - [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
-- [[dot-HasItem()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_6]] - `calls` [EXTRACTED]
+- [[dot-Interact()_1]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-Interagir()_1]] - `calls` [EXTRACTED]
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
@@ -43,29 +44,38 @@ tags:
 - [[dot-InteragirPistaNotaFiscal()]] - `calls` [EXTRACTED]
 - [[dot-InteragirVizinhaLurdes()]] - `calls` [EXTRACTED]
 - [[dot-InteragirZe()]] - `calls` [EXTRACTED]
+- [[dot-Known()]] - `calls` [EXTRACTED]
 - [[dot-MostrarPainelFimCapitulo1()]] - `calls` [EXTRACTED]
 - [[dot-MostrarTelaFechamentoCapitulo1()]] - `calls` [EXTRACTED]
 - [[dot-ObjetivoAtual()]] - `calls` [EXTRACTED]
 - [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
+- [[dot-Open()]] - `calls` [EXTRACTED]
+- [[dot-Owns()]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [EXTRACTED]
+- [[dot-Project()_2]] - `calls` [EXTRACTED]
 - [[dot-ProximaFalaContextual()]] - `calls` [EXTRACTED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
+- [[dot-Run()_1]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
+- [[dot-RunAtlas()]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[dot-Start()_19]] - `calls` [EXTRACTED]
-- [[dot-Start()_20]] - `calls` [EXTRACTED]
-- [[dot-Start()_21]] - `calls` [EXTRACTED]
-- [[dot-Start()_17]] - `calls` [EXTRACTED]
+- [[dot-Start()_4]] - `calls` [EXTRACTED]
+- [[dot-Start()_5]] - `calls` [EXTRACTED]
+- [[dot-Start()_6]] - `calls` [EXTRACTED]
+- [[dot-Start()_23]] - `calls` [EXTRACTED]
 - [[dot-TentarTransicionar()]] - `calls` [EXTRACTED]
-- [[dot-Update()_26]] - `calls` [EXTRACTED]
-- [[dot-Update()_27]] - `calls` [EXTRACTED]
+- [[dot-Update()_23]] - `calls` [EXTRACTED]
+- [[dot-Update()_22]] - `calls` [EXTRACTED]
+- [[dot-Update()_10]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[dot-ZeDesconversa()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_13

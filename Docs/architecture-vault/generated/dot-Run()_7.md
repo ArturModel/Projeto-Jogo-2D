@@ -1,26 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
-community: "Community 99"
-location: "L146"
+community: "Community 6"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_6
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
-- [[dot-Gait()]] - `calls` [EXTRACTED]
-- [[dot-Matches()]] - `calls` [EXTRACTED]
-- [[dot-Narrative()]] - `calls` [EXTRACTED]
-- [[dot-Physics()]] - `calls` [EXTRACTED]
-- [[dot-Rules()]] - `calls` [EXTRACTED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
-- [[dot-Saves()]] - `calls` [EXTRACTED]
-- [[Chapter2Verification]] - `method` [EXTRACTED]
+- [[dot-ConfigureArt()]] - `calls` [EXTRACTED]
+- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
+- [[dot-Exterior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_2]] - `calls` [EXTRACTED]
 - [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_6

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarPassada()]] - `calls` [INFERRED]
-- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Avancar()_2]] - `calls` [EXTRACTED]
 - [[dot-Gait()]] - `calls` [INFERRED]
 - [[dot-TeleportarPara()]] - `calls` [INFERRED]
 - [[MarcusGait]] - `method` [EXTRACTED]

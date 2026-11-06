@@ -1,17 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
 type: "code"
-community: "Community 45"
-location: "L116"
+community: "Community 15"
+location: "L282"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_15
 ---
 
 # .Texto()
 
 ## Connections
-- [[GameState]] - `method` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
+- [[dot-Rect()]] - `calls` [EXTRACTED]
+- [[Color]] - `references` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
+- [[TextMeshProUGUI]] - `references` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_15

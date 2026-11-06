@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Falar()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_2]] - `calls` [EXTRACTED]
+- [[dot-Interact()_3]] - `calls` [EXTRACTED]
 - [[dot-Marcus()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 

@@ -13,9 +13,10 @@ tags:
 ## Connections
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Capture()_1]] - `references` [EXTRACTED]
 - [[dot-DecorateTerrain()]] - `references` [EXTRACTED]
 - [[dot-DetectarLimitesDaRegiao()]] - `references` [EXTRACTED]
-- [[dot-Run()_3]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_20

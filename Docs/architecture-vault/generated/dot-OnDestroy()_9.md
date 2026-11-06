@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 42"
-location: "L288"
+community: "Community 39"
+location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_39
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
-- [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
+- [[dot-Dispose()]] - `calls` [EXTRACTED]
+- [[SinucaTableView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_39

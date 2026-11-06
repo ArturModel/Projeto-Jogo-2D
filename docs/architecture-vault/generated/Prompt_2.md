@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
-community: "Community 13"
-location: "L101"
+community: "Community 109"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_109
 ---
 
 # Prompt
 
 ## Connections
-- [[InteracaoCapitulo1]] - `defines` [EXTRACTED]
+- [[Interactable]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_109

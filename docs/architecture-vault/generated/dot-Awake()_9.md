@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 3"
-location: "L277"
+community: "Community 19"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_19
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
-- [[dot-InicializarCacapas()]] - `calls` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-MontarCortina()]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_19

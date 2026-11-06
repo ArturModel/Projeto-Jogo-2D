@@ -1,30 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 51"
-location: "L107"
+community: "Community 57"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_57
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_5]] - `calls` [EXTRACTED]
-- [[dot-CreateBox()]] - `calls` [EXTRACTED]
+- [[dot-Awake()_20]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[dot-LoadSprite()]] - `calls` [EXTRACTED]
-- [[dot-PosicionarNoTopo()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
-- [[ContentSizeFitter]] - `references` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
-- [[ScrollRect]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_57

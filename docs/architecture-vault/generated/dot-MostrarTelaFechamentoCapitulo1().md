@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 86"
+community: "Community 13"
 location: "L2513"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_13
 ---
 
 # .MostrarTelaFechamentoCapitulo1()
@@ -19,4 +19,4 @@ tags:
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_13

@@ -1,12 +1,12 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AudioC2RuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AtlasRuntimeVerification.cs"
 type: "code"
-community: "Community 48"
-location: "L4"
+community: "Community 0"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # Chapter2RuntimeVerification
@@ -21,7 +21,7 @@ tags:
 - [[dot-C1InvestigationRegression()]] - `method` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `method` [EXTRACTED]
 - [[dot-Capture()]] - `method` [EXTRACTED]
-- [[dot-Check()]] - `method` [EXTRACTED]
+- [[dot-Check()_1]] - `method` [EXTRACTED]
 - [[dot-Click()]] - `method` [EXTRACTED]
 - [[dot-ClickR4()]] - `method` [EXTRACTED]
 - [[dot-CloseText()]] - `method` [EXTRACTED]
@@ -31,7 +31,7 @@ tags:
 - [[dot-EscolherMelhorTacadaNormalMarcus()]] - `method` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `method` [EXTRACTED]
 - [[dot-ExitToCenter()]] - `method` [EXTRACTED]
-- [[dot-Field()]] - `method` [EXTRACTED]
+- [[dot-Field()_2]] - `method` [EXTRACTED]
 - [[dot-Finish()]] - `method` [EXTRACTED]
 - [[dot-FlashlightR2()]] - `method` [EXTRACTED]
 - [[dot-FlashlightWalkR2()]] - `method` [EXTRACTED]
@@ -39,10 +39,10 @@ tags:
 - [[dot-Guard()]] - `method` [EXTRACTED]
 - [[dot-Init()]] - `method` [EXTRACTED]
 - [[dot-IntegratedFrameR4()]] - `method` [EXTRACTED]
-- [[dot-Invoke()]] - `method` [EXTRACTED]
+- [[dot-Invoke()_1]] - `method` [EXTRACTED]
 - [[dot-InvokeEncontrarLivre()]] - `method` [EXTRACTED]
 - [[dot-NewBochaPractice()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_10]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()]] - `method` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `method` [EXTRACTED]
 - [[dot-Performance()]] - `method` [EXTRACTED]
 - [[dot-PerformancePair()]] - `method` [EXTRACTED]
@@ -55,9 +55,13 @@ tags:
 - [[dot-RoutineR2()]] - `method` [EXTRACTED]
 - [[dot-Run()]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `method` [EXTRACTED]
+- [[dot-RunAtlas()]] - `method` [EXTRACTED]
+- [[dot-RunAtlasInEditor()]] - `method` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `method` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `method` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `method` [EXTRACTED]
+- [[dot-RunNotebook()]] - `method` [EXTRACTED]
+- [[dot-RunNotebookInEditor()]] - `method` [EXTRACTED]
 - [[dot-RunPortalRegression()]] - `method` [EXTRACTED]
 - [[dot-RunR2()]] - `method` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `method` [EXTRACTED]
@@ -87,12 +91,13 @@ tags:
 - [[dot-StartSinuquinhaEditor()]] - `method` [EXTRACTED]
 - [[dot-TapR2()]] - `method` [EXTRACTED]
 - [[dot-Travel()]] - `method` [EXTRACTED]
-- [[dot-Update()_21]] - `method` [EXTRACTED]
+- [[dot-Update()]] - `method` [EXTRACTED]
 - [[dot-Use()]] - `method` [EXTRACTED]
 - [[dot-VerificarFisicaDeterministicaEBicos()]] - `method` [EXTRACTED]
 - [[dot-WalkAccess()]] - `method` [EXTRACTED]
 - [[dot-WalkAccessFilm()]] - `method` [EXTRACTED]
 - [[dot-Walking()]] - `method` [EXTRACTED]
+- [[AtlasRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[AudioC2RuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[BackgroundBehavior]] - `references` [EXTRACTED]
 - [[BarSinucaR4RuntimeVerification.cs]] - `contains` [EXTRACTED]
@@ -107,9 +112,10 @@ tags:
 - [[List]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Mouse]] - `references` [EXTRACTED]
+- [[NotebookRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[SinucaRef7RuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[Sinuquinha15Verification.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

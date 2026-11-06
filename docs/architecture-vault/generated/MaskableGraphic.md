@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[BochaCourtView]] - `inherits` [EXTRACTED]
 - [[BochaMapGraphic]] - `inherits` [EXTRACTED]
+- [[MenuAmbienteGraphic]] - `inherits` [EXTRACTED]
 - [[PrologoEstradaGraphic]] - `inherits` [EXTRACTED]
 - [[SinucaSpinSelector]] - `inherits` [EXTRACTED]
 

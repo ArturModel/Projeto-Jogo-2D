@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 99"
+community: "Community 57"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_57
 ---
 
 # .LimparAoTrocarCena()
@@ -17,4 +17,4 @@ tags:
 - [[LoadSceneMode]] - `references` [EXTRACTED]
 - [[Scene]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_57

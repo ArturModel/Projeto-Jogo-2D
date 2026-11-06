@@ -1,22 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
 type: "code"
-community: "Community 57"
-location: "L52"
+community: "Community 95"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_57
+  - community/Community_95
 ---
 
 # .Vincular()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [INFERRED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `references` [EXTRACTED]
-- [[OptionsPanelController]] - `method` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[MenuItemSelector]] - `method` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+#graphify/code #graphify/EXTRACTED #community/Community_95

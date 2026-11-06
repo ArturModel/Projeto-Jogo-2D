@@ -1,26 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 50"
-location: "L52"
+community: "Community 24"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_24
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Captura()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
-- [[dot-Tecla()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[Keyboard]] - `references` [EXTRACTED]
-- [[Mouse]] - `references` [EXTRACTED]
-- [[PrologoJogavel]] - `references` [EXTRACTED]
-- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
-- [[VideoPlayer]] - `references` [EXTRACTED]
+- [[dot-DetectarLimitesDaRegiao()]] - `calls` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
+- [[dot-SnapImediatoParaAlvo()]] - `calls` [EXTRACTED]
+- [[CameraFollow]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_24

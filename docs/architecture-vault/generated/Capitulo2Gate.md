@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Atualizar()]] - `method` [EXTRACTED]
 - [[dot-Interior()_2]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_7]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_5]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_8]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_7]] - `method` [EXTRACTED]
 - [[dot-Prefeitura()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[Capitulo2Gate.cs]] - `contains` [EXTRACTED]

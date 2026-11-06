@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
 community: "Community 93"
-location: "L50"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,7 @@ tags:
 # .Definir()
 
 ## Connections
-- [[dot-Start()_19]] - `calls` [EXTRACTED]
-- [[dot-Update()_29]] - `calls` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_93

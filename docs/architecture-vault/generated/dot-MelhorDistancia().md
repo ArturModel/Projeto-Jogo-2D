@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
-community: "Community 4"
+community: "Community 99"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_99
 ---
 
 # .MelhorDistancia()
@@ -23,4 +23,4 @@ tags:
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_99

@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 5cf295f29a5c1584ca233cb64713ac11
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5231751543732828942
+    second: MercadinhoDeposito_1_0
+  - first:
+      213: -8114954042706233694
+    second: MercadinhoDeposito_1_1
+  - first:
+      213: 7233453225821195474
+    second: MercadinhoDeposito_1_2
+  - first:
+      213: 3646275319775808293
+    second: MercadinhoDeposito_1_3
+  - first:
+      213: -3190715029834499639
+    second: MercadinhoDeposito_1_4
+  - first:
+      213: -4347094790122460324
+    second: MercadinhoDeposito_1_5
+  - first:
+      213: 8190208902697418487
+    second: MercadinhoDeposito_1_6
+  - first:
+      213: 2418931510081341813
+    second: MercadinhoDeposito_1_7
+  - first:
+      213: -909486743380475521
+    second: MercadinhoDeposito_1_8
+  - first:
+      213: 2178949373858978175
+    second: MercadinhoDeposito_1_9
+  - first:
+      213: 1884093299790129738
+    second: MercadinhoDeposito_1_10
+  - first:
+      213: -7323629839033066878
+    second: MercadinhoDeposito_1_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 397
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bfb4d5f4aea9840800000000000000
+      internalID: 5231751543732828942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 383
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a6ffd30b44e16f80800000000000000
+      internalID: -8114954042706233694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_2
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 397
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dcc9786263626460800000000000000
+      internalID: 7233453225821195474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_3
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 374
+        width: 56
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bc284a51c2a9230800000000000000
+      internalID: 3646275319775808293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_4
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 333
+        width: 56
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9f633e59d48b3d0800000000000000
+      internalID: -3190715029834499639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_5
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 304
+        width: 61
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5baccdf1540ca3c0800000000000000
+      internalID: -4347094790122460324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_6
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 266
+        width: 58
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe75897a9779a170800000000000000
+      internalID: 8190208902697418487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_7
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 221
+        width: 56
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579c5627465c19120800000000000000
+      internalID: 2418931510081341813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_8
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 128
+        width: 50
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7141e420aad063f0800000000000000
+      internalID: -909486743380475521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 109
+        width: 56
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f799c6439ee2d3e10800000000000000
+      internalID: 2178949373858978175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1
+        width: 56
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a2fa1bfd4a52a10800000000000000
+      internalID: 1884093299790129738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercadinhoDeposito_1_11
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 11
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a9bf1b67d3d5a90800000000000000
+      internalID: -7323629839033066878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MercadinhoDeposito_1_0: 5231751543732828942
+      MercadinhoDeposito_1_1: -8114954042706233694
+      MercadinhoDeposito_1_10: 1884093299790129738
+      MercadinhoDeposito_1_11: -7323629839033066878
+      MercadinhoDeposito_1_2: 7233453225821195474
+      MercadinhoDeposito_1_3: 3646275319775808293
+      MercadinhoDeposito_1_4: -3190715029834499639
+      MercadinhoDeposito_1_5: -4347094790122460324
+      MercadinhoDeposito_1_6: 8190208902697418487
+      MercadinhoDeposito_1_7: 2418931510081341813
+      MercadinhoDeposito_1_8: -909486743380475521
+      MercadinhoDeposito_1_9: 2178949373858978175
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 86"
-location: "L203"
+community: "Community 13"
+location: "L209"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_13
 ---
 
 # .Dialogo()
@@ -18,4 +18,4 @@ tags:
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 - [[DialogoLinha]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_13

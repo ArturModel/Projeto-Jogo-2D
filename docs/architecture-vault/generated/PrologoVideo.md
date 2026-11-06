@@ -12,16 +12,16 @@ tags:
 # PrologoVideo
 
 ## Connections
-- [[dot-Build()_1]] - `references` [EXTRACTED]
-- [[dot-Encerrar()_2]] - `method` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
+- [[dot-Encerrar()_3]] - `method` [EXTRACTED]
 - [[dot-Legendar()]] - `method` [EXTRACTED]
 - [[dot-MontarTela()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_3]] - `method` [EXTRACTED]
-- [[dot-Start()_11]] - `method` [EXTRACTED]
-- [[dot-Update()_13]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_5]] - `method` [EXTRACTED]
+- [[dot-Start()_15]] - `method` [EXTRACTED]
+- [[dot-Update()_15]] - `method` [EXTRACTED]
 - [[dot-UpdatePrologoScene()]] - `references` [EXTRACTED]
 - [[Fala_2]] - `references` [EXTRACTED]
-- [[Fala]] - `contains` [EXTRACTED]
+- [[Fala_1]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PrologoVideo.cs]] - `contains` [EXTRACTED]
 - [[RenderTexture]] - `references` [EXTRACTED]

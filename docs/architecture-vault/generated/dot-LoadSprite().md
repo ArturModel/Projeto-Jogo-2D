@@ -12,7 +12,7 @@ tags:
 # .LoadSprite()
 
 ## Connections
-- [[dot-Build()_2]] - `calls` [EXTRACTED]
+- [[dot-Build()_4]] - `calls` [EXTRACTED]
 - [[dot-Build()_3]] - `calls` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]

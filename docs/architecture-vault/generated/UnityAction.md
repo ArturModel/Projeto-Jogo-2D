@@ -11,6 +11,9 @@ tags:
 # UnityAction
 
 ## Connections
+- [[dot-ActionButton()]] - `references` [EXTRACTED]
+- [[dot-Button()]] - `references` [EXTRACTED]
+- [[dot-Cell()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]

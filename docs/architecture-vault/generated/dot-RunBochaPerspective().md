@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs"
 type: "code"
-community: "Community 48"
+community: "Community 0"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # .RunBochaPerspective()
@@ -16,22 +16,22 @@ tags:
 - [[dot-ActiveButton()]] - `calls` [INFERRED]
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-BochaAudioR2()]] - `calls` [INFERRED]
-- [[dot-Capture()]] - `calls` [INFERRED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-ChangeZoom()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Click()]] - `calls` [INFERRED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Click()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
-- [[dot-Finish()]] - `calls` [INFERRED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
+- [[dot-Finish()]] - `calls` [EXTRACTED]
 - [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
-- [[dot-Invoke()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-MapPoint()]] - `calls` [INFERRED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-NewBochaPractice()]] - `calls` [EXTRACTED]
-- [[dot-Place()]] - `calls` [INFERRED]
+- [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-PointerBocha()]] - `calls` [EXTRACTED]
-- [[dot-Project()_1]] - `calls` [INFERRED]
+- [[dot-Project()_3]] - `calls` [INFERRED]
 - [[dot-RunAccesses()]] - `calls` [INFERRED]
 - [[dot-ScreenBocha()]] - `calls` [EXTRACTED]
 - [[dot-SetView()]] - `calls` [INFERRED]
@@ -53,4 +53,4 @@ tags:
 - [[Slider]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

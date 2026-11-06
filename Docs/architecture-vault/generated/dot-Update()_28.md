@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
 type: "code"
-community: "Community 93"
-location: "L60"
+community: "Community 50"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_50
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
+- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_50

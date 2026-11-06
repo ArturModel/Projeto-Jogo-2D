@@ -1,18 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 50"
-location: "L20"
+community: "Community 33"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_33
 ---
 
 # .Update()
 
 ## Connections
-- [[PrologoJogavel]] - `references` [EXTRACTED]
-- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
+- [[dot-AtualizarAudio()]] - `calls` [EXTRACTED]
+- [[dot-CentroVia()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
+- [[dot-LerControles()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_33

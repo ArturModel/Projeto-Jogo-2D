@@ -12,7 +12,7 @@ tags:
 # .BrazilianRuleChecks()
 
 ## Connections
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-Refuse()]] - `calls` [INFERRED]
 - [[dot-Resolve()]] - `calls` [INFERRED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]

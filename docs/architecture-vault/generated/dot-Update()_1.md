@@ -1,18 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
 type: "code"
-community: "Community 105"
-location: "L44"
+community: "Community 110"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_105
+  - community/Community_110
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-VolumeDaCamada()]] - `calls` [EXTRACTED]
-- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
+- [[dot-AtualizarBotoes()]] - `calls` [EXTRACTED]
+- [[dot-FocoDoBotao()]] - `calls` [EXTRACTED]
+- [[dot-InteragirCenario()]] - `calls` [EXTRACTED]
+- [[dot-LegendaDoFoco()]] - `calls` [EXTRACTED]
+- [[dot-PonteiroNoQuadro()]] - `calls` [EXTRACTED]
+- [[dot-PontoDoFoco()]] - `calls` [EXTRACTED]
+- [[MenuAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_105
+#graphify/code #graphify/EXTRACTED #community/Community_110

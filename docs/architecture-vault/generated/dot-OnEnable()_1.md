@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
 type: "code"
-community: "Community 20"
-location: "L10"
+community: "Community 113"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_113
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaFootsteps]] - `method` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_113

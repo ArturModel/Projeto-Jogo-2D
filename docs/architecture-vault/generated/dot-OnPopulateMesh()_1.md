@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
-community: "Community 29"
-location: "L336"
+community: "Community 28"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_28
 ---
 
 # .OnPopulateMesh()
 
 ## Connections
-- [[dot-BallColor()]] - `calls` [EXTRACTED]
-- [[dot-Circle()]] - `calls` [EXTRACTED]
-- [[dot-MapPoint()]] - `calls` [EXTRACTED]
-- [[dot-Quad()_1]] - `calls` [EXTRACTED]
-- [[BochaMapGraphic]] - `method` [EXTRACTED]
+- [[dot-Disc()]] - `calls` [EXTRACTED]
+- [[SinucaSpinSelector]] - `method` [EXTRACTED]
 - [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_28

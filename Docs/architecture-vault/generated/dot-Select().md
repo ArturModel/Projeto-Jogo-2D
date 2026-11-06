@@ -12,8 +12,8 @@ tags:
 # .Select()
 
 ## Connections
-- [[dot-OnDrag()_1]] - `calls` [EXTRACTED]
-- [[dot-OnPointerDown()_1]] - `calls` [EXTRACTED]
+- [[dot-OnDrag()]] - `calls` [EXTRACTED]
+- [[dot-OnPointerDown()]] - `calls` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
 - [[SinucaSpinSelector]] - `method` [EXTRACTED]
 

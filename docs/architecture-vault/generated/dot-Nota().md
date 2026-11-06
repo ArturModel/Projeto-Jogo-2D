@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 86"
-location: "L197"
+community: "Community 13"
+location: "L203"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_13
 ---
 
 # .Nota()
@@ -17,4 +17,4 @@ tags:
 - [[C2InteractionData]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_13

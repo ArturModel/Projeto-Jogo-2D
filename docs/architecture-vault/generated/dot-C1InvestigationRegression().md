@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [EXTRACTED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-ObterEntradasDiario()]] - `calls` [EXTRACTED]

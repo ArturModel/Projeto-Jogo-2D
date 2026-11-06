@@ -182,9 +182,9 @@ public static class Chapter2BuildVerification
                 "\nCommit base: " + Revision() + " (inclui alterações locais desta revisão)\nSHA256 C#/cenas/dados/texturas/materiais/metas: " + SourceHash() + "\nSO do Editor: " + SystemInfo.operatingSystem + "\nTarget: StandaloneWindows64 / D3D11";
             Directory.CreateDirectory(Evidence);File.WriteAllText(Path.Combine(Evidence,qa?"build-qa.txt":"build-windows.txt"),text);Debug.Log(text);
             if(result.summary.result!=BuildResult.Succeeded)throw new Exception("Build Windows falhou.");
-            if(Application.isBatchMode)EditorApplication.Exit(0);
+            if(Application.isBatchMode)EditorApplication.delayCall+=()=>EditorApplication.Exit(0);
         }
-        catch(Exception ex){Debug.LogException(ex);if(Application.isBatchMode)EditorApplication.Exit(1);else throw;}
+        catch(Exception ex){Debug.LogException(ex);if(Application.isBatchMode)EditorApplication.delayCall+=()=>EditorApplication.Exit(1);else throw;}
         finally
         {
             EditorBuildSettings.scenes=originalScenes;

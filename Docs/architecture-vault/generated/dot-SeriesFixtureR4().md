@@ -12,10 +12,10 @@ tags:
 # .SeriesFixtureR4()
 
 ## Connections
-- [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-ClickR4()]] - `calls` [EXTRACTED]
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [INFERRED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]

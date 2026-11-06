@@ -12,9 +12,9 @@ tags:
 # .SinuquinhaPhysicalHand()
 
 ## Connections
-- [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
 - [[dot-ValidarInvarianteSeteBolas()]] - `calls` [INFERRED]

@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "Community 36"
-location: "L32"
+community: "Community 26"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_26
 ---
 
 # .Awake()
 
 ## Connections
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_26

@@ -17,8 +17,8 @@ tags:
 - [[dot-ConcluirSerieVitoria()]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarMao()]] - `calls` [EXTRACTED]
 - [[dot-CriarTextura()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_3]] - `calls` [EXTRACTED]
-- [[dot-Update()_15]] - `calls` [EXTRACTED]
+- [[dot-Fechar()]] - `calls` [EXTRACTED]
+- [[dot-Update()_17]] - `calls` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 

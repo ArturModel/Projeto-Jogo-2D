@@ -12,7 +12,7 @@ tags:
 # .Captura()
 
 ## Connections
-- [[dot-Start()_18]] - `calls` [EXTRACTED]
+- [[dot-Start()_23]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
 

@@ -14,6 +14,8 @@ tags:
 - [[dot-BeginIsolatedTests()]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `references` [EXTRACTED]
 - [[IsolatedSaveScope]] - `implements` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA]] - `references` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `references` [EXTRACTED]
 - [[SinucaPixelPreviewSession]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `implements` [EXTRACTED]
 

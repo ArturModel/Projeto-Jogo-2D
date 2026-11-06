@@ -12,10 +12,10 @@ tags:
 # .RoutineR2()
 
 ## Connections
-- [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
-- [[dot-Place()]] - `calls` [INFERRED]
+- [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[Capitulo2Interactable]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

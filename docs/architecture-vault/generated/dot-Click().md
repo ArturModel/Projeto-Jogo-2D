@@ -1,26 +1,26 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 48"
+community: "Community 0"
 location: "L343"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Community_48
+  - graphify/EXTRACTED
+  - community/Community_0
 ---
 
 # .Click()
 
 ## Connections
-- [[dot-BochaAudioR2()]] - `calls` [INFERRED]
+- [[dot-BochaAudioR2()]] - `calls` [EXTRACTED]
 - [[dot-DefeatUI()]] - `calls` [EXTRACTED]
-- [[dot-FullBochaPerspective()]] - `calls` [INFERRED]
-- [[dot-NewBochaPractice()]] - `calls` [INFERRED]
+- [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-NewBochaPractice()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
-- [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
-- [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
-- [[dot-SlotsR2()]] - `calls` [INFERRED]
+- [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
+- [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

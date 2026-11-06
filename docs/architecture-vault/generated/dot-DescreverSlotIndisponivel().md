@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarTextosDosSlots()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
+- [[dot-Selecionar()]] - `calls` [EXTRACTED]
 - [[dot-SlotFilePath()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 - [[ManualSaveData]] - `references` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # .MostrarImediatamente()
 
 ## Connections
-- [[dot-Awake()_19]] - `calls` [EXTRACTED]
+- [[dot-Awake()_22]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[OptionsPanelController]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]

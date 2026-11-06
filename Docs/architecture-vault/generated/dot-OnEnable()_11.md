@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
 type: "code"
-community: "Community 88"
-location: "L8"
+community: "Community 83"
+location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_88
+  - community/Community_83
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[Material]] - `references` [EXTRACTED]
-- [[SantaRitaRimLight]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_88
+#graphify/code #graphify/EXTRACTED #community/Community_83

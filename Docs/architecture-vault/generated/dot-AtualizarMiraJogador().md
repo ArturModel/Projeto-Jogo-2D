@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 39"
+community: "Community 100"
 location: "L1327"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_100
 ---
 
 # .AtualizarMiraJogador()
@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
 - [[dot-IniciarCargaPorDispositivo()]] - `calls` [EXTRACTED]
 - [[dot-TocarSomGiz()]] - `calls` [EXTRACTED]
-- [[dot-Update()_16]] - `calls` [EXTRACTED]
+- [[dot-Update()_27]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_100

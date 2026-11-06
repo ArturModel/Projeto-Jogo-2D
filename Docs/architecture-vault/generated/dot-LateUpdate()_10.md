@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "Community 51"
-location: "L59"
+community: "Community 44"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_44
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-HasItem()]] - `calls` [EXTRACTED]
-- [[dot-LoadIcons()]] - `calls` [EXTRACTED]
-- [[SantaRitaInventory]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_44

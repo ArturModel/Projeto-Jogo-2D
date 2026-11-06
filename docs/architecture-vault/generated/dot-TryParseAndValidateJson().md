@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
 community: "Community 45"
-location: "L364"
+location: "L371"
 tags:
   - graphify/code
   - graphify/EXTRACTED

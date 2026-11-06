@@ -16,9 +16,9 @@ tags:
 - [[dot-GetBall()]] - `method` [EXTRACTED]
 - [[dot-Invoke()]] - `method` [EXTRACTED]
 - [[dot-PosicaoFinalBrancaComEfeito()]] - `method` [EXTRACTED]
-- [[dot-Run()_2]] - `method` [EXTRACTED]
+- [[dot-Run()_1]] - `method` [EXTRACTED]
 - [[dot-RunMenu()]] - `method` [EXTRACTED]
-- [[dot-Set()]] - `method` [EXTRACTED]
+- [[dot-Set()_1]] - `method` [EXTRACTED]
 - [[dot-SetBall()]] - `method` [EXTRACTED]
 - [[Sinuca3DVerification.cs]] - `contains` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 51"
+community: "Community 7"
 location: "L2573"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_7
 ---
 
 # .ConstruirPainelFechamento()
@@ -23,4 +23,4 @@ tags:
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_7

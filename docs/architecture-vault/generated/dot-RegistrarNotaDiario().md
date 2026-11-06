@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 86"
-location: "L132"
+community: "Community 13"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_13
 ---
 
 # .RegistrarNotaDiario()
@@ -14,23 +14,27 @@ tags:
 ## Connections
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
 - [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
-- [[dot-Ativar()_2]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_1]] - `calls` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarLinhaDoTempo()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirBocha()]] - `calls` [EXTRACTED]
 - [[dot-ConfirmarTestemunhoAtendente()]] - `calls` [EXTRACTED]
 - [[dot-DispararChegadaCasaDoAvo()]] - `calls` [EXTRACTED]
-- [[dot-Encerrar()]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_3]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-Nota()]] - `calls` [EXTRACTED]
 - [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarDiario()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
-- [[dot-Start()_21]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
+- [[dot-Start()_6]] - `calls` [EXTRACTED]
+- [[dot-Update()_20]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_13

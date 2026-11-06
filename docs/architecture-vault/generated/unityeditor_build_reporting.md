@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[Chapter2BuildVerification.cs]] - `imports` [EXTRACTED]
+- [[MenuAmbienteAuthoring.cs]] - `imports` [EXTRACTED]
 - [[PrologoJogavelVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]
 

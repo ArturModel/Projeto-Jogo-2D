@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 2"
+community: "Community 9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_9
 ---
 
 # Vector3
@@ -24,7 +24,6 @@ tags:
 - [[dot-ColocarPosteComLuz()]] - `references` [EXTRACTED]
 - [[dot-ColocarProp()]] - `references` [EXTRACTED]
 - [[dot-ConverterCapitulo1()]] - `references` [EXTRACTED]
-- [[dot-ConverterMundoParaUV()]] - `references` [EXTRACTED]
 - [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
 - [[dot-CreateNpcObject()]] - `references` [EXTRACTED]
 - [[dot-CreateSceneSpriteObject()]] - `references` [EXTRACTED]
@@ -36,13 +35,15 @@ tags:
 - [[dot-Panel()]] - `references` [EXTRACTED]
 - [[dot-PixelObject()]] - `references` [EXTRACTED]
 - [[dot-Plan()]] - `references` [EXTRACTED]
+- [[dot-Pos()]] - `references` [EXTRACTED]
 - [[dot-Posicao()]] - `references` [EXTRACTED]
 - [[dot-PosicaoNoMapa()]] - `references` [EXTRACTED]
 - [[dot-Primitive()]] - `references` [EXTRACTED]
+- [[dot-Project()_3]] - `references` [EXTRACTED]
 - [[dot-Project()_1]] - `references` [EXTRACTED]
-- [[dot-Project()]] - `references` [EXTRACTED]
 - [[dot-ProjectReady()]] - `references` [EXTRACTED]
 - [[dot-ProjetarPontoMesaParaLocalUI()]] - `references` [EXTRACTED]
+- [[dot-Quad()_3]] - `references` [EXTRACTED]
 - [[dot-Quad()_2]] - `references` [EXTRACTED]
 - [[dot-Ring()_1]] - `references` [EXTRACTED]
 - [[dot-RoomLight()]] - `references` [EXTRACTED]
@@ -64,4 +65,4 @@ tags:
 - [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
 - [[V]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_9

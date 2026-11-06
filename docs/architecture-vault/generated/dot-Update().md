@@ -1,24 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 100"
-location: "L1100"
+community: "Community 0"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_100
+  - community/Community_0
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarVistaCamera()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarMiraJogador()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
-- [[dot-AvancarSimulacaoPassoFixo()]] - `calls` [EXTRACTED]
-- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[dot-Orbit()_1]] - `calls` [INFERRED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-Finish()]] - `calls` [EXTRACTED]
+- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_100
+#graphify/code #graphify/EXTRACTED #community/Community_0

@@ -1,23 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 86"
-location: "L29"
+community: "Community 45"
+location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_45
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
-- [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[ChegadaEmSantaRita]] - `method` [EXTRACTED]
+- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_45

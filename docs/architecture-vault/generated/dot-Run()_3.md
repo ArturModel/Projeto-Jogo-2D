@@ -1,31 +1,44 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 49"
-location: "L52"
+community: "Community 29"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_29
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Check()_2]] - `calls` [INFERRED]
-- [[dot-Run()_7]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[Capitulo2Portal]] - `references` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
-- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
-- [[ShadowCaster2D]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[TextMeshPro]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
+- [[dot-Abrir()_2]] - `calls` [INFERRED]
+- [[dot-Assign()]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Contents()]] - `calls` [EXTRACTED]
+- [[dot-Ensure()]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_4]] - `calls` [INFERRED]
+- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Open()]] - `calls` [INFERRED]
+- [[dot-Owns()]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [INFERRED]
+- [[dot-Quick()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-Repair()]] - `calls` [INFERRED]
+- [[dot-Rewind()]] - `calls` [INFERRED]
+- [[dot-SaveSlot()]] - `calls` [EXTRACTED]
+- [[dot-Start()_19]] - `calls` [EXTRACTED]
+- [[dot-Swap()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
+- [[GameStateSnapshot]] - `calls` [INFERRED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[Keyboard]] - `references` [EXTRACTED]
+- [[MarcusNotebookUI]] - `references` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
+- [[SantaRitaTapePickup]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_29

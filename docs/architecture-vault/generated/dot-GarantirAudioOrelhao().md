@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 46"
-location: "L96"
+community: "Community 56"
+location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_56
 ---
 
 # .GarantirAudioOrelhao()
@@ -16,7 +16,8 @@ tags:
 - [[dot-GerarClipConfirmarSaveGancho()]] - `calls` [EXTRACTED]
 - [[dot-TocarSomAtenderOrelhao()]] - `calls` [EXTRACTED]
 - [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
+- [[dot-TocarTeclaRegistro()]] - `calls` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_56

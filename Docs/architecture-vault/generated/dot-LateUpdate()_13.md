@@ -1,21 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 89"
-location: "L223"
+community: "Community 8"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_8
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-AplicarClampBordas()]] - `calls` [EXTRACTED]
-- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
-- [[Camera]] - `references` [EXTRACTED]
-- [[CameraFollow]] - `method` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
+- [[dot-AtualizarClima()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarSom()]] - `calls` [EXTRACTED]
+- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
+- [[dot-Desenhar()]] - `calls` [EXTRACTED]
+- [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
+- [[dot-Simular()]] - `calls` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_8

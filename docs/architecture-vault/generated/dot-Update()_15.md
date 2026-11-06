@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 24"
-location: "L392"
+community: "Community 19"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_19
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarFonteMusical()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarTeclasPainelFechamento()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[AudioLowPassFilter]] - `references` [EXTRACTED]
-- [[Capitulo1Director]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_3]] - `calls` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_19

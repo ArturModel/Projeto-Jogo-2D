@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 23"
-location: "L20"
+community: "Community 19"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_19
 ---
 
 # .Start()
 
 ## Connections
-- [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
-- [[Shader]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[dot-Construir()_4]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_19

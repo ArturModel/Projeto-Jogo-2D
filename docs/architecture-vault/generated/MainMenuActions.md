@@ -12,11 +12,16 @@ tags:
 # MainMenuActions
 
 ## Connections
+- [[dot-Awake()]] - `method` [EXTRACTED]
 - [[dot-Continuar()]] - `method` [EXTRACTED]
+- [[dot-Encerrar()]] - `method` [EXTRACTED]
+- [[dot-IniciarViagem()]] - `method` [EXTRACTED]
+- [[dot-InteragirCenario()]] - `references` [EXTRACTED]
 - [[dot-NovoJogo()]] - `method` [EXTRACTED]
 - [[dot-Opcoes()]] - `method` [EXTRACTED]
 - [[dot-Sair()]] - `method` [EXTRACTED]
 - [[MainMenuActions.cs]] - `contains` [EXTRACTED]
+- [[MenuAmbiente]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_110

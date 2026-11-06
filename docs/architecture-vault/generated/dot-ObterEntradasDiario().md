@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
 community: "Community 45"
-location: "L172"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,13 @@ tags:
 # .ObterEntradasDiario()
 
 ## Connections
-- [[dot-AtualizarPainelLateral()]] - `calls` [EXTRACTED]
 - [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
 - [[dot-C1InvestigationRegression()]] - `calls` [EXTRACTED]
+- [[dot-Changed()]] - `calls` [EXTRACTED]
 - [[dot-JaNoDiario()]] - `calls` [EXTRACTED]
+- [[dot-Read()_1]] - `calls` [EXTRACTED]
+- [[dot-Restored()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
 - [[EntradaDiario]] - `references` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]

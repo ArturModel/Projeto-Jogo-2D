@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 19"
-location: "L19"
+community: "Community 15"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_15
 ---
 
 # Fala
 
 ## Connections
-- [[PrologoVideo]] - `contains` [EXTRACTED]
+- [[dot-Enfileirar()]] - `calls` [EXTRACTED]
+- [[Legenda]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_15

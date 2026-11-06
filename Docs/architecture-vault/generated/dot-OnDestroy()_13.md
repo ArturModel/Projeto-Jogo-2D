@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
 type: "code"
-community: "Community 84"
-location: "L80"
+community: "Community 51"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_51
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SceneFader]] - `method` [EXTRACTED]
+- [[MarcusNotebookUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_51

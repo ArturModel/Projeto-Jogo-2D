@@ -79,7 +79,7 @@ public sealed class Capitulo2Audio : MonoBehaviour
             var filter=f.GetComponent<AudioLowPassFilter>();
             if(filter!=null)filter.cutoffFrequency=Mathf.MoveTowards(filter.cutoffFrequency,interior?1800f:22000f,Time.unscaledDeltaTime*16000f);
             alvo *= PlayerPrefs.GetFloat("audio_musica", 1);
-            if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing) alvo *= .67f;
+            if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || SantaRitaTapeDeck.IsOpen) alvo *= .67f;
             if (alvo > 0 && !f.isPlaying) f.Play();
             f.volume = Mathf.MoveTowards(f.volume, alvo, Time.unscaledDeltaTime * .24f);
             if (alvo == 0 && f.volume == 0 && f.isPlaying) f.Stop();

@@ -12,8 +12,8 @@ tags:
 # .BallColor()
 
 ## Connections
-- [[dot-OnPopulateMesh()_4]] - `calls` [EXTRACTED]
-- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_5]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_3]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

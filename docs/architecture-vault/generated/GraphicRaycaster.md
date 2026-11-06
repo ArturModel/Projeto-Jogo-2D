@@ -1,19 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 51"
+community: "Community 7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_7
 ---
 
 # GraphicRaycaster
 
 ## Connections
-- [[dot-Awake()_16]] - `references` [EXTRACTED]
-- [[dot-Build()_2]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Awake()_14]] - `references` [EXTRACTED]
+- [[dot-Awake()_15]] - `references` [EXTRACTED]
+- [[dot-Build()_4]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 - [[dot-Oferecer()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_7

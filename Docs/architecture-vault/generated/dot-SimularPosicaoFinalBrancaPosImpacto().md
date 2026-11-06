@@ -12,7 +12,7 @@ tags:
 # .SimularPosicaoFinalBrancaPosImpacto()
 
 ## Connections
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

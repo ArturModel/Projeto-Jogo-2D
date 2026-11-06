@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 30"
+community: "Community 24"
 location: "L432"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_24
 ---
 
 # .ConstruirMundoMultiZonas()
@@ -28,4 +28,4 @@ tags:
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_24

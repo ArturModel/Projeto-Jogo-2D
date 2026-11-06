@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 100"
+community: "Community 49"
 location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_100
+  - community/Community_49
 ---
 
 # .CancelarCargaAoSuspender()
@@ -17,9 +17,9 @@ tags:
 - [[dot-AlternarPainelEfeito()]] - `calls` [EXTRACTED]
 - [[dot-AlternarVistaCamera()]] - `calls` [EXTRACTED]
 - [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
-- [[dot-OnApplicationFocus()]] - `calls` [EXTRACTED]
+- [[dot-OnApplicationFocus()_5]] - `calls` [EXTRACTED]
 - [[dot-SelecionarEfeitoBranca()]] - `calls` [EXTRACTED]
-- [[dot-Update()]] - `calls` [EXTRACTED]
+- [[dot-Update()_27]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_100
+#graphify/code #graphify/EXTRACTED #community/Community_49

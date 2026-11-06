@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DoorTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 5"
-location: "L32"
+community: "Community 18"
+location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_18
 ---
 
 # Prompt
 
 ## Connections
-- [[DoorTrigger]] - `defines` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_18

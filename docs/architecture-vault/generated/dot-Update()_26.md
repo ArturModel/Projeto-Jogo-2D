@@ -1,23 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 86"
-location: "L167"
+community: "Community 44"
+location: "L237"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_44
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarAudio()]] - `calls` [EXTRACTED]
-- [[dot-CentroVia()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[dot-LerControles()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
+- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
+- [[dot-FindNearest()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_9]] - `calls` [INFERRED]
+- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
+- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_44

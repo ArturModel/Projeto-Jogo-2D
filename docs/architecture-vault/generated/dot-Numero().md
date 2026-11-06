@@ -1,21 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 45"
-location: "L100"
+community: "Community 51"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_51
 ---
 
 # .Numero()
 
 ## Connections
 - [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
+- [[dot-Flip()]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `calls` [EXTRACTED]
 - [[dot-ProximaFalaContextual()]] - `calls` [EXTRACTED]
+- [[dot-RestoreBookmark()]] - `calls` [EXTRACTED]
+- [[dot-Show()_3]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_51

@@ -12,7 +12,7 @@ tags:
 # .PrepararPosesLanterna()
 
 ## Connections
-- [[dot-Awake()_15]] - `calls` [EXTRACTED]
+- [[dot-Awake()_18]] - `calls` [EXTRACTED]
 - [[dot-ValidarFolhaMarcus()]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 

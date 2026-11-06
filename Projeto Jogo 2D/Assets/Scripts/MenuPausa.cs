@@ -72,7 +72,7 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
-        if (PayphoneCheckpoint.IsSaveUIOpen) return;
+        if (PayphoneCheckpoint.IsSaveUIOpen || SantaRitaInventory.ClosedFrame==Time.frameCount || SantaRitaTapeDeck.ClosedFrame==Time.frameCount) return;
         if (Keyboard.current == null ||
             !Keyboard.current.escapeKey.wasPressedThisFrame ||
             quadroDoUltimoEsc == Time.frameCount)
@@ -81,7 +81,7 @@ public class MenuPausa : MonoBehaviour
         }
 
         // Sinuca usa esta pausa global; mapa/Bocha/orelhão possuem fechamento próprio.
-        if (!Aberto && (MapaInterativoUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen))
+        if (!Aberto && (MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen))
         {
             return;
         }

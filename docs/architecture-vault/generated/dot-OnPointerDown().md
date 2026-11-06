@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
 community: "Community 28"
-location: "L320"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # .OnPointerDown()
 
 ## Connections
-- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[dot-Select()]] - `calls` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
+- [[SinucaSpinSelector]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_28

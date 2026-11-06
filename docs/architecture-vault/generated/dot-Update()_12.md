@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
 community: "Community 19"
-location: "L329"
+location: "L138"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Update()
 
 ## Connections
-- [[dot-Encerrar()]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_19

@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "Community 107"
-location: "L25"
+community: "Community 12"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_107
+  - community/Community_12
 ---
 
 # .Vincular()
 
 ## Connections
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[MenuItemSelector]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[Slider]] - `references` [EXTRACTED]
+- [[SubtitleSettingsController]] - `method` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
+- [[Toggle]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_107
+#graphify/code #graphify/EXTRACTED #community/Community_12

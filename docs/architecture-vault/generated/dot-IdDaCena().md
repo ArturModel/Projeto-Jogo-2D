@@ -12,10 +12,11 @@ tags:
 # .IdDaCena()
 
 ## Connections
+- [[dot-Capture()_1]] - `calls` [EXTRACTED]
 - [[dot-CenaC2()]] - `calls` [EXTRACTED]
 - [[dot-CorrectApprovedGeography()]] - `calls` [EXTRACTED]
+- [[dot-CreateSurvey()]] - `calls` [EXTRACTED]
 - [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[dot-PosicaoNoMapa()]] - `calls` [EXTRACTED]
 - [[dot-Scenes()]] - `calls` [EXTRACTED]
 - [[SantaRitaGeography]] - `method` [EXTRACTED]
 

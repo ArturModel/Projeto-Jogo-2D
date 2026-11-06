@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Apply()_3]] - `calls` [EXTRACTED]
-- [[dot-Apply()_6]] - `calls` [EXTRACTED]
+- [[dot-Apply()_5]] - `calls` [EXTRACTED]
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirMundoMultiZonas()]] - `calls` [EXTRACTED]

@@ -1,17 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 42"
-location: "L29"
+community: "Community 24"
+location: "L223"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_24
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[CamadaParallax]] - `method` [EXTRACTED]
+- [[dot-AplicarClampBordas()]] - `calls` [EXTRACTED]
+- [[dot-GarantirFundoEscuroCamera()]] - `calls` [EXTRACTED]
+- [[Camera]] - `references` [EXTRACTED]
+- [[CameraFollow]] - `method` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_24

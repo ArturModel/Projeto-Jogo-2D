@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [EXTRACTED]
 - [[dot-Dados()]] - `calls` [EXTRACTED]
 - [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]

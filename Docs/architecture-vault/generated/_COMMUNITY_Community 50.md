@@ -1,17 +1,24 @@
 ---
 type: community
-members: 7
+members: 14
 ---
 
 # Community 50
 
-**Members:** 7 nodes
+**Members:** 14 nodes
 
 ## Members
 - [[dot-Captura()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
-- [[dot-Check()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
-- [[dot-Start()_18]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Check()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-EnsureInstance()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-Fechar()_4]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[dot-Instalar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-RunAtlas()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/AtlasRuntimeVerification.cs
+- [[dot-RunNotebook()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/NotebookRuntimeVerification.cs
+- [[dot-Start()_23]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 - [[dot-Tecla()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-TryObterInfoZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Update()_28]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 - [[Keyboard]] - code
 - [[Mouse]] - code
 - [[PrologoRuntimeVerification]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
@@ -24,20 +31,31 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 48]]
-- 6 edges to [[_COMMUNITY_Community 0]]
+- 24 edges to [[_COMMUNITY_Community 0]]
+- 16 edges to [[_COMMUNITY_Community 34]]
+- 12 edges to [[_COMMUNITY_Community 48]]
+- 11 edges to [[_COMMUNITY_Community 45]]
+- 7 edges to [[_COMMUNITY_Community 13]]
+- 5 edges to [[_COMMUNITY_Community 51]]
+- 4 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 29]]
 - 2 edges to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 40]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 38]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 7]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 57]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 111]]
-- 1 edge to [[_COMMUNITY_Community 107]]
 - 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 86]]
-- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 19]]
 
 ## Top bridge nodes
-- [[PrologoRuntimeVerification]] - degree 10, connects to 4 communities
-- [[dot-Start()_18]] - degree 10, connects to 4 communities
-- [[Keyboard]] - degree 8, connects to 3 communities
-- [[Mouse]] - degree 7, connects to 2 communities
-- [[dot-Tecla()_1]] - degree 4, connects to 1 community
+- [[dot-RunNotebook()]] - degree 32, connects to 9 communities
+- [[dot-RunAtlas()]] - degree 30, connects to 8 communities
+- [[dot-EnsureInstance()_1]] - degree 13, connects to 8 communities
+- [[Keyboard]] - degree 12, connects to 5 communities
+- [[dot-Fechar()_4]] - degree 8, connects to 5 communities

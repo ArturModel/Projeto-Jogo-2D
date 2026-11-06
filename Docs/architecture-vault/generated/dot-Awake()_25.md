@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "Community 9"
-location: "L38"
+community: "Community 84"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_84
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-CriarSala()]] - `calls` [EXTRACTED]
-- [[BochaCourtView]] - `method` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[dot-BuildOverlay()]] - `calls` [EXTRACTED]
+- [[dot-FadeIn()]] - `calls` [EXTRACTED]
+- [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_84

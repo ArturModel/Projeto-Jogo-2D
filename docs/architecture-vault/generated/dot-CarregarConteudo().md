@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 36"
+community: "Community 13"
 location: "L94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_13
 ---
 
 # .CarregarConteudo()
 
 ## Connections
-- [[dot-Awake()_10]] - `calls` [EXTRACTED]
+- [[dot-Awake()_4]] - `calls` [EXTRACTED]
 - [[dot-Dados()]] - `calls` [EXTRACTED]
 - [[C2ContentData]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 - [[TextAsset]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_13

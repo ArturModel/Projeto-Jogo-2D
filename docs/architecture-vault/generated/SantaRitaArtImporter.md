@@ -12,7 +12,7 @@ tags:
 # SantaRitaArtImporter
 
 ## Connections
-- [[dot-OnPreprocessTexture()_1]] - `method` [EXTRACTED]
+- [[dot-OnPreprocessTexture()_2]] - `method` [EXTRACTED]
 - [[AssetPostprocessor]] - `inherits` [EXTRACTED]
 - [[SantaRitaArtImporter.cs]] - `contains` [EXTRACTED]
 

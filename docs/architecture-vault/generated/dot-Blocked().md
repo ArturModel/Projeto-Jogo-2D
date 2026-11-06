@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 49"
-location: "L141"
+community: "Community 38"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_38
 ---
 
 # .Blocked()
 
 ## Connections
-- [[dot-Flood()]] - `calls` [EXTRACTED]
-- [[dot-Scenes()]] - `calls` [EXTRACTED]
-- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_8]] - `calls` [EXTRACTED]
+- [[dot-Toggle()]] - `calls` [EXTRACTED]
+- [[dot-Use()_1]] - `calls` [EXTRACTED]
+- [[SantaRitaInventory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_38

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 103"
+community: "Community 24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_103
+  - community/Community_24
 ---
 
 # ZonaId
@@ -13,11 +13,11 @@ tags:
 ## Connections
 - [[dot-AplicarEstadoDaZona()]] - `references` [EXTRACTED]
 - [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
-- [[dot-Configurar()]] - `references` [EXTRACTED]
+- [[dot-Configurar()_2]] - `references` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `references` [EXTRACTED]
 - [[dot-TryObterInfoZona()]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[InfoZona]] - `references` [EXTRACTED]
 - [[TransicaoDeZonaTrigger]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_24

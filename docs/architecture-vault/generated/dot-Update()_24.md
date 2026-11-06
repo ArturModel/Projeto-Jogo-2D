@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 6"
-location: "L45"
+community: "Community 36"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_36
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-LerEntrada()]] - `calls` [EXTRACTED]
-- [[OlharPrimeiraPessoa]] - `method` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_36

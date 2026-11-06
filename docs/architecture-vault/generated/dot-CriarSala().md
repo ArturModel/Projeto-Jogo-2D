@@ -12,9 +12,9 @@ tags:
 # .CriarSala()
 
 ## Connections
-- [[dot-Awake()_24]] - `calls` [EXTRACTED]
+- [[dot-Awake()_26]] - `calls` [EXTRACTED]
 - [[dot-Box()_2]] - `calls` [EXTRACTED]
-- [[dot-Quad()_2]] - `calls` [EXTRACTED]
+- [[dot-Quad()_3]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_9

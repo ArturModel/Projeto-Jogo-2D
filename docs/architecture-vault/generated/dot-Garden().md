@@ -12,7 +12,7 @@ tags:
 # .Garden()
 
 ## Connections
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
 - [[dot-Prop()_2]] - `calls` [EXTRACTED]
 - [[dot-Solid()_1]] - `calls` [EXTRACTED]

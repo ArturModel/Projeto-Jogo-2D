@@ -11,8 +11,10 @@ tags:
 # VideoPlayer
 
 ## Connections
-- [[dot-Start()_17]] - `references` [EXTRACTED]
-- [[dot-Start()_11]] - `references` [EXTRACTED]
+- [[dot-Roteiro()]] - `references` [EXTRACTED]
+- [[dot-Start()_23]] - `references` [EXTRACTED]
+- [[dot-Start()_2]] - `references` [EXTRACTED]
+- [[dot-Start()_15]] - `references` [EXTRACTED]
 - [[PrologoVideo]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_19

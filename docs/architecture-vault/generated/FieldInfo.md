@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 48"
+community: "Community 0"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # FieldInfo
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Chapter2RuntimeVerification]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

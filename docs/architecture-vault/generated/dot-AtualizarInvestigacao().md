@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 86"
-location: "L214"
+community: "Community 13"
+location: "L220"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_13
 ---
 
 # .AtualizarInvestigacao()
@@ -16,8 +16,8 @@ tags:
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Start()_19]] - `calls` [EXTRACTED]
+- [[dot-Start()_4]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_13

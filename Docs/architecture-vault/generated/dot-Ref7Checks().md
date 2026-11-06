@@ -12,10 +12,10 @@ tags:
 # .Ref7Checks()
 
 ## Connections
-- [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `calls` [INFERRED]
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-NativeSurface()]] - `calls` [EXTRACTED]
 - [[dot-PointerSinuca()]] - `calls` [INFERRED]

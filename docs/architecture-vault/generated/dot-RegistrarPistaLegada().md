@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
 type: "code"
-community: "Community 5"
+community: "Community 13"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_13
 ---
 
 # .RegistrarPistaLegada()
 
 ## Connections
-- [[dot-Interact()_9]] - `calls` [EXTRACTED]
+- [[dot-Interact()_4]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[ItemDeCena]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_13

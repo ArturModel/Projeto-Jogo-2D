@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
 type: "code"
-community: "Community 103"
-location: "L22"
+community: "Community 109"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_103
+  - community/Community_109
 ---
 
 # Prompt
 
 ## Connections
-- [[TransicaoDeZonaTrigger]] - `defines` [EXTRACTED]
+- [[Capitulo2Portal]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_109

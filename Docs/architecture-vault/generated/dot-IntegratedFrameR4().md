@@ -12,10 +12,10 @@ tags:
 # .IntegratedFrameR4()
 
 ## Connections
-- [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_3]] - `calls` [INFERRED]
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Capture()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()]] - `calls` [INFERRED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [INFERRED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]

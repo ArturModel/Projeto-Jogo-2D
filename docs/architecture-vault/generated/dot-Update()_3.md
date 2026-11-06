@@ -1,17 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 111"
-location: "L26"
+community: "Community 117"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_111
+  - community/Community_117
 ---
 
 # .Update()
 
 ## Connections
-- [[ChuvaRolando]] - `method` [EXTRACTED]
+- [[dot-Attach()]] - `calls` [EXTRACTED]
+- [[Capitulo2Interactable]] - `references` [EXTRACTED]
+- [[InteracaoCapitulo1]] - `references` [EXTRACTED]
+- [[SantaRitaTapePlacement]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_111
+#graphify/code #graphify/EXTRACTED #community/Community_117

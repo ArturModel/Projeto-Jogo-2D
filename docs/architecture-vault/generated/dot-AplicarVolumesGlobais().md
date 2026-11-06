@@ -15,7 +15,7 @@ tags:
 - [[dot-AplicarVolumeEmMixer()]] - `calls` [EXTRACTED]
 - [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
 - [[dot-InicializarAudioGlobal()]] - `calls` [EXTRACTED]
-- [[dot-Vincular()_3]] - `calls` [EXTRACTED]
+- [[dot-Vincular()_2]] - `calls` [EXTRACTED]
 - [[AudioMixer]] - `references` [EXTRACTED]
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 

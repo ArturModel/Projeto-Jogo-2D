@@ -15,7 +15,7 @@ tags:
 - [[BochaMinigameUI]] - `contains` [EXTRACTED]
 - [[Carregando]] - `case_of` [EXTRACTED]
 - [[Mira]] - `case_of` [EXTRACTED]
-- [[Resultado]] - `case_of` [EXTRACTED]
+- [[Resultado_1]] - `case_of` [EXTRACTED]
 - [[Rolagem]] - `case_of` [EXTRACTED]
 - [[Tonando]] - `case_of` [EXTRACTED]
 

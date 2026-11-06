@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 86"
-location: "L98"
+community: "Community 50"
+location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_50
 ---
 
 # .EnsureInstance()
@@ -15,12 +15,15 @@ tags:
 - [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-InicializarPontos()]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
+- [[dot-RunAtlas()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
-- [[dot-Start()_19]] - `calls` [EXTRACTED]
-- [[dot-Start()_15]] - `calls` [EXTRACTED]
+- [[dot-Start()_4]] - `calls` [EXTRACTED]
+- [[dot-Start()_20]] - `calls` [EXTRACTED]
 - [[dot-Travel()]] - `calls` [EXTRACTED]
-- [[dot-Use()_1]] - `calls` [EXTRACTED]
+- [[dot-UseItem()]] - `calls` [EXTRACTED]
 - [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_50

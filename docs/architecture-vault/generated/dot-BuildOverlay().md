@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
-community: "Community 51"
+community: "Community 84"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_84
 ---
 
 # .BuildOverlay()
 
 ## Connections
-- [[dot-Awake()_22]] - `calls` [EXTRACTED]
+- [[dot-Awake()_25]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[Canvas]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[Image]] - `references` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_84

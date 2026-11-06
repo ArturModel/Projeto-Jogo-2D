@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "Community 0"
+community: "Community 109"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_109
 ---
 
 # Capitulo2Interactable
@@ -19,10 +19,11 @@ tags:
 - [[dot-Interaction()_1]] - `references` [EXTRACTED]
 - [[dot-RoutineR2()]] - `references` [EXTRACTED]
 - [[dot-RunR2()]] - `references` [EXTRACTED]
+- [[dot-Update()_3]] - `references` [EXTRACTED]
 - [[dot-Use()]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[Prompt]] - `defines` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_109

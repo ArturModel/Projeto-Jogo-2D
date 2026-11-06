@@ -1,30 +1,19 @@
 ---
 type: community
-members: 17
+members: 6
 ---
 
 # Community 54
 
-**Members:** 17 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[dot-Aparecer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Awake()_19]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Enfileirar()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Legendar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-OnDestroy()_11]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-Rodar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[dot-Start()_19]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-Update()_22]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[dot-UpdatePrologoScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
-- [[Fala]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[Fala_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[Fala_2]] - code
-- [[Instance_9]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[Legenda]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
-- [[PrologoVideo]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
-- [[RenderTexture]] - code
-- [[VideoPlayer]] - code
+- [[dot-Avancar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Retroceder()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-TocarSom()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Update()_30]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[HorizontalStepperNavigation]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[IDeselectHandler]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,26 +23,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Community 86]]
-- 4 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 51]]
-- 2 edges to [[_COMMUNITY_Community 19]]
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 40]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 26]]
+- 4 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 96]]
+- 2 edges to [[_COMMUNITY_Community 95]]
 - 1 edge to [[_COMMUNITY_Community 57]]
-- 1 edge to [[_COMMUNITY_Community 113]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 110]]
-- 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[Legenda]] - degree 17, connects to 7 communities
-- [[PrologoVideo]] - degree 14, connects to 5 communities
-- [[dot-Start()_19]] - degree 8, connects to 5 communities
-- [[VideoPlayer]] - degree 5, connects to 3 communities
-- [[dot-Legendar()]] - degree 4, connects to 2 communities
+- [[HorizontalStepperNavigation]] - degree 16, connects to 5 communities

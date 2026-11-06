@@ -11,7 +11,6 @@ tags:
 # PontoMapa
 
 ## Connections
-- [[dot-CriarMarcadorPonto()]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_34

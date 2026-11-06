@@ -1,26 +1,27 @@
 ---
 type: community
-members: 13
+members: 14
 ---
 
 # Community 36
 
-**Members:** 13 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[dot-Awake()_10]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-Awake()_11]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-CarregarConteudo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-LateUpdate()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-OnDestroy()_6]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-OnDisable()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[Capitulo2Director]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[Instance_7]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[ProntoParaBocha]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[SantaRitaExitThreshold]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[SantaRitaExitThreshold.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[TextAsset]] - code
+- [[dot-Check()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Error()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
+- [[dot-Field()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Finish()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Guard()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Init()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Log()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Set()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Start()_19]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Update()_24]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[HideFlags]] - code
+- [[InputSettings]] - code
+- [[LogType]] - code
+- [[MilaRuntimeVerification]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,28 +31,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 86]]
-- 6 edges to [[_COMMUNITY_Community 16]]
-- 5 edges to [[_COMMUNITY_Community 6]]
-- 4 edges to [[_COMMUNITY_Community 1]]
-- 4 edges to [[_COMMUNITY_Community 11]]
-- 4 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 44]]
-- 3 edges to [[_COMMUNITY_Community 49]]
-- 2 edges to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 40]]
-- 1 edge to [[_COMMUNITY_Community 95]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 93]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 45]]
+- 3 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 15]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 111]]
 
 ## Top bridge nodes
-- [[Capitulo2Director]] - degree 37, connects to 13 communities
-- [[SantaRitaExitThreshold]] - degree 15, connects to 9 communities
-- [[dot-CarregarConteudo()]] - degree 5, connects to 2 communities
-- [[dot-Awake()_11]] - degree 3, connects to 1 community
-- [[dot-LateUpdate()_5]] - degree 2, connects to 1 community
+- [[MilaRuntimeVerification]] - degree 17, connects to 6 communities
+- [[dot-Start()_19]] - degree 4, connects to 2 communities
+- [[dot-Guard()_1]] - degree 4, connects to 1 community
+- [[dot-Error()]] - degree 2, connects to 1 community
+- [[dot-Check()]] - degree 2, connects to 1 community

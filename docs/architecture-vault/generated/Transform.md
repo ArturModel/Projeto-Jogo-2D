@@ -1,27 +1,30 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 30"
+community: "Community 24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_24
 ---
 
 # Transform
 
 ## Connections
+- [[dot-ActionButton()]] - `references` [EXTRACTED]
 - [[dot-AdicionarLuzPonto()]] - `references` [EXTRACTED]
 - [[dot-Apply()_1]] - `references` [EXTRACTED]
-- [[dot-Apply()_5]] - `references` [EXTRACTED]
+- [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-ApprovedScenes()]] - `references` [EXTRACTED]
-- [[dot-Botao()_1]] - `references` [EXTRACTED]
+- [[dot-Attach()]] - `references` [EXTRACTED]
+- [[dot-Botao()_2]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-Boundary()]] - `references` [EXTRACTED]
 - [[dot-Box()]] - `references` [EXTRACTED]
 - [[dot-BuildCue()]] - `references` [EXTRACTED]
-- [[dot-Caixa()]] - `references` [EXTRACTED]
+- [[dot-Caixa()_1]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
+- [[dot-Cell()]] - `references` [EXTRACTED]
 - [[dot-Center()]] - `references` [EXTRACTED]
 - [[dot-ColocarArteInterior()]] - `references` [EXTRACTED]
 - [[dot-ColocarArvore()]] - `references` [EXTRACTED]
@@ -34,6 +37,7 @@ tags:
 - [[dot-ColocarTapete()]] - `references` [EXTRACTED]
 - [[dot-CombineNet()]] - `references` [EXTRACTED]
 - [[dot-CompactCourt()]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-ConstruirInterior1_Posto()]] - `references` [EXTRACTED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `references` [EXTRACTED]
 - [[dot-ConstruirInterior3_CasaDoAvo()]] - `references` [EXTRACTED]
@@ -63,36 +67,50 @@ tags:
 - [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-Cylinder()]] - `references` [EXTRACTED]
 - [[dot-FlashlightWalkR2()]] - `references` [EXTRACTED]
+- [[dot-Frame()]] - `references` [EXTRACTED]
 - [[dot-Graphic()]] - `references` [EXTRACTED]
 - [[dot-Imagem()]] - `references` [EXTRACTED]
 - [[dot-Imagem()_1]] - `references` [EXTRACTED]
+- [[dot-Initialize()_1]] - `references` [EXTRACTED]
 - [[dot-Label()]] - `references` [EXTRACTED]
+- [[dot-Label()_2]] - `references` [EXTRACTED]
+- [[dot-NovaImagem()]] - `references` [EXTRACTED]
+- [[dot-NovoGrafico()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
+- [[dot-Panel()_1]] - `references` [EXTRACTED]
 - [[dot-Panel()]] - `references` [EXTRACTED]
+- [[dot-Picture()]] - `references` [EXTRACTED]
 - [[dot-PixelObject()]] - `references` [EXTRACTED]
 - [[dot-Primitive()]] - `references` [EXTRACTED]
 - [[dot-Rect()]] - `references` [EXTRACTED]
+- [[dot-Rect()_1]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
 - [[dot-Rotulo()]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-Run()_3]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-Sphere()]] - `references` [EXTRACTED]
+- [[dot-Start()_2]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
-- [[dot-Texto()_1]] - `references` [EXTRACTED]
+- [[dot-Texto()_2]] - `references` [EXTRACTED]
+- [[dot-Texto()]] - `references` [EXTRACTED]
+- [[dot-Texto()_3]] - `references` [EXTRACTED]
 - [[dot-Tube()]] - `references` [EXTRACTED]
 - [[Actor]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `references` [EXTRACTED]
 - [[Fileira]] - `references` [EXTRACTED]
 - [[LimpadorParabrisa]] - `references` [EXTRACTED]
+- [[MenuAmbiente]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaC2Consolidation]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
 - [[SantaRitaForeground]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `references` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `references` [EXTRACTED]
 - [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[Station]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_24

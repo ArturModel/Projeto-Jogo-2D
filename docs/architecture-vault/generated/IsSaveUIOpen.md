@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 46"
+community: "Community 56"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_56
 ---
 
 # IsSaveUIOpen
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[PayphoneCheckpoint]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_56

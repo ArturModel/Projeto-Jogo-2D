@@ -12,10 +12,10 @@ tags:
 # OlharPrimeiraPessoa
 
 ## Connections
-- [[dot-Awake()_25]] - `references` [EXTRACTED]
-- [[dot-Awake()_20]] - `method` [EXTRACTED]
+- [[dot-Awake()_28]] - `references` [EXTRACTED]
+- [[dot-Awake()_23]] - `method` [EXTRACTED]
 - [[dot-LerEntrada()]] - `method` [EXTRACTED]
-- [[dot-Update()_24]] - `method` [EXTRACTED]
+- [[dot-Update()_33]] - `method` [EXTRACTED]
 - [[Deslocamento]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[OlharPrimeiraPessoa.cs]] - `contains` [EXTRACTED]

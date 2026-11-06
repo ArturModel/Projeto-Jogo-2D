@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 54"
+community: "Community 15"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_15
 ---
 
 # .Enfileirar()
 
 ## Connections
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Rodar()_2]] - `calls` [EXTRACTED]
-- [[Fala_1]] - `calls` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
+- [[Fala]] - `calls` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_15

@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
-- [[dot-Apply()_6]] - `references` [EXTRACTED]
+- [[dot-Apply()_5]] - `references` [EXTRACTED]
 - [[dot-Interior()_1]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_4]] - `method` [EXTRACTED]
-- [[dot-Start()_12]] - `method` [EXTRACTED]
-- [[dot-Update()_14]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_6]] - `method` [EXTRACTED]
+- [[dot-Start()_16]] - `method` [EXTRACTED]
+- [[dot-Update()_16]] - `method` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[ParticleSystem]] - `references` [EXTRACTED]

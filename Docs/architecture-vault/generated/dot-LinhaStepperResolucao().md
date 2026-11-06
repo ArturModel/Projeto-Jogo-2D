@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-BotaoSeta()]] - `calls` [EXTRACTED]
-- [[dot-Configurar()_3]] - `calls` [INFERRED]
+- [[dot-Configurar()]] - `calls` [INFERRED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-Imagem()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()]] - `calls` [EXTRACTED]
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[dot-Selecionavel()]] - `calls` [EXTRACTED]
 - [[HorizontalStepperNavigation]] - `references` [EXTRACTED]

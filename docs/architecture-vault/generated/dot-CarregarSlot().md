@@ -12,11 +12,9 @@ tags:
 # .CarregarSlot()
 
 ## Connections
-- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
-- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-CarregarSlot()_1]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
 - [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_45

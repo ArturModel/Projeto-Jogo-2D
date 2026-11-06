@@ -12,7 +12,7 @@ tags:
 # .Portal()
 
 ## Connections
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
 - [[dot-Interior()_2]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]

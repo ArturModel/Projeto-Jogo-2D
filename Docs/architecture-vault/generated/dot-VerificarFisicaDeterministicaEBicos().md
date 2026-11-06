@@ -12,8 +12,8 @@ tags:
 # .VerificarFisicaDeterministicaEBicos()
 
 ## Connections
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

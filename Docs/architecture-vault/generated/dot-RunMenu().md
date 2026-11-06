@@ -12,7 +12,7 @@ tags:
 # .RunMenu()
 
 ## Connections
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
+- [[dot-Run()_1]] - `calls` [EXTRACTED]
 - [[MenuItem]] - `references` [EXTRACTED]
 - [[Sinuca3DVerification]] - `method` [EXTRACTED]
 

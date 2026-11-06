@@ -19,6 +19,7 @@ tags:
 - [[dot-Ref7Checks()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]

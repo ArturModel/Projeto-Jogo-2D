@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
 community: "Community 45"
-location: "L179"
+location: "L183"
 tags:
   - graphify/code
   - graphify/EXTRACTED

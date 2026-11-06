@@ -11,6 +11,7 @@ tags:
 # system_collections
 
 ## Connections
+- [[AtlasRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[AudioC2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BarSinucaR4RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaMinigameUI.cs]] - `imports` [EXTRACTED]
@@ -28,8 +29,14 @@ tags:
 - [[InteracaoCapitulo1.cs]] - `imports` [EXTRACTED]
 - [[InteriorAccessRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[Legenda.cs]] - `imports` [EXTRACTED]
+- [[MarcusNotebookUI.cs]] - `imports` [EXTRACTED]
+- [[MenuAmbiente.cs]] - `imports` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA.cs]] - `imports` [EXTRACTED]
 - [[MenuPanelTransition.cs]] - `imports` [EXTRACTED]
+- [[MilaRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[OptionsPanelController.cs]] - `imports` [EXTRACTED]
+- [[PayphoneRegistroUI.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PrologoDirector.cs]] - `imports` [EXTRACTED]
 - [[PrologoRuntimeVerification.cs]] - `imports` [EXTRACTED]

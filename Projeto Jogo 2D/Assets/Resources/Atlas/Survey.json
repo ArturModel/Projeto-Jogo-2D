@@ -1,0 +1,1707 @@
+{
+    "city": "Santa Rita",
+    "regions": [
+        {
+            "id": "rodovia",
+            "scene": "EntradaDaCidade",
+            "name": "RODOVIA DE ENTRADA — SANTA RITA",
+            "building": "",
+            "zone": 0,
+            "interior": false,
+            "local": {
+                "serializedVersion": "2",
+                "x": 100.0,
+                "y": 0.0,
+                "width": 36.0,
+                "height": 20.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": -136.0,
+                "y": 40.0,
+                "width": 36.0,
+                "height": 20.0
+            }
+        },
+        {
+            "id": "posto_exterior",
+            "scene": "EntradaDaCidade",
+            "name": "AVENIDA SUL — POSTO & VENDA ANTIGA",
+            "building": "",
+            "zone": 1,
+            "interior": false,
+            "local": {
+                "serializedVersion": "2",
+                "x": 200.0,
+                "y": 0.0,
+                "width": 38.0,
+                "height": 22.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": -100.0,
+                "y": 40.0,
+                "width": 38.0,
+                "height": 22.0
+            }
+        },
+        {
+            "id": "posto_interior",
+            "scene": "EntradaDaCidade",
+            "name": "CONVENIÊNCIA DO POSTO",
+            "building": "posto",
+            "zone": 2,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 200.0,
+                "y": -60.0,
+                "width": 16.0,
+                "height": 12.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 16.0,
+                "height": 12.0
+            }
+        },
+        {
+            "id": "encruzilhada",
+            "scene": "EntradaDaCidade",
+            "name": "ENCRUZILHADA DO MERCADINHO",
+            "building": "",
+            "zone": 3,
+            "interior": false,
+            "local": {
+                "serializedVersion": "2",
+                "x": 300.0,
+                "y": 0.0,
+                "width": 40.0,
+                "height": 26.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": -62.0,
+                "y": 40.0,
+                "width": 40.0,
+                "height": 26.0
+            }
+        },
+        {
+            "id": "mercado_interior",
+            "scene": "EntradaDaCidade",
+            "name": "MERCADINHO SANTA RITA",
+            "building": "mercadinho",
+            "zone": 4,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 300.0,
+                "y": -60.0,
+                "width": 18.0,
+                "height": 13.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 18.0,
+                "height": 13.0
+            }
+        },
+        {
+            "id": "bairro",
+            "scene": "EntradaDaCidade",
+            "name": "BAIRRO DAS CASAS",
+            "building": "",
+            "zone": 5,
+            "interior": false,
+            "local": {
+                "serializedVersion": "2",
+                "x": 400.0,
+                "y": 0.0,
+                "width": 44.0,
+                "height": 34.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": -74.0,
+                "y": 66.0,
+                "width": 44.0,
+                "height": 34.0
+            }
+        },
+        {
+            "id": "casa_interior",
+            "scene": "EntradaDaCidade",
+            "name": "CASA DO AVÔ ADÍLIO — Nº 40",
+            "building": "casa_avo",
+            "zone": 6,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 400.0,
+                "y": -60.0,
+                "width": 18.0,
+                "height": 14.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 18.0,
+                "height": 14.0
+            }
+        },
+        {
+            "id": "rua_norte",
+            "scene": "EntradaDaCidade",
+            "name": "RUA NORTE — EXTERIOR DO BAR DO ZÉ",
+            "building": "",
+            "zone": 7,
+            "interior": false,
+            "local": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": 0.0,
+                "width": 38.0,
+                "height": 22.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": -30.0,
+                "y": 100.0,
+                "width": 38.0,
+                "height": 22.0
+            }
+        },
+        {
+            "id": "bar_interior",
+            "scene": "EntradaDaCidade",
+            "name": "BAR DO ZÉ — SINUCA & BEBIDAS",
+            "building": "bar_ze",
+            "zone": 8,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 500.0,
+                "y": -60.0,
+                "width": 18.0,
+                "height": 14.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 18.0,
+                "height": 14.0
+            }
+        },
+        {
+            "id": "CentroSantaRita",
+            "scene": "CentroSantaRita",
+            "name": "Centro de Santa Rita — Praça da Matriz",
+            "building": "centro",
+            "zone": -1,
+            "interior": false,
+            "local": {
+                "serializedVersion": "2",
+                "x": -20.0,
+                "y": -8.0,
+                "width": 116.0,
+                "height": 93.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": -20.0,
+                "y": -8.0,
+                "width": 116.0,
+                "height": 93.0
+            }
+        },
+        {
+            "id": "IgrejaMatriz",
+            "scene": "IgrejaMatriz",
+            "name": "Igreja da Matriz",
+            "building": "igreja",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 18.0,
+                "height": 22.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 18.0,
+                "height": 22.0
+            }
+        },
+        {
+            "id": "PrefeituraSantaRita",
+            "scene": "PrefeituraSantaRita",
+            "name": "Prefeitura de Santa Rita",
+            "building": "prefeitura",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 20.0,
+                "height": 17.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 20.0,
+                "height": 17.0
+            }
+        },
+        {
+            "id": "RodoviariaSantaRita",
+            "scene": "RodoviariaSantaRita",
+            "name": "Rodoviária de Santa Rita",
+            "building": "rodoviaria",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 22.0,
+                "height": 15.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 22.0,
+                "height": 15.0
+            }
+        },
+        {
+            "id": "MercadinhoDeposito",
+            "scene": "MercadinhoDeposito",
+            "name": "Mercadinho Santa Rita — Depósito",
+            "building": "mercadinho",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 16.0,
+                "height": 14.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 16.0,
+                "height": 14.0
+            }
+        },
+        {
+            "id": "OficinaRadio",
+            "scene": "OficinaRadio",
+            "name": "Oficina de Rádio — Mila",
+            "building": "oficina",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 16.0,
+                "height": 13.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 16.0,
+                "height": 13.0
+            }
+        },
+        {
+            "id": "CasaCostureira",
+            "scene": "CasaCostureira",
+            "name": "Casa de Costura — Celina",
+            "building": "costura",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 16.0,
+                "height": 14.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 16.0,
+                "height": 14.0
+            }
+        },
+        {
+            "id": "SociedadeBeiraRio",
+            "scene": "SociedadeBeiraRio",
+            "name": "Sociedade Beira-Rio — Salão e Cancha",
+            "building": "canto_se",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 30.0,
+                "height": 19.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 30.0,
+                "height": 19.0
+            }
+        },
+        {
+            "id": "AbrigoCemiterio",
+            "scene": "AbrigoCemiterio",
+            "name": "Abrigo das Velas — Cemitério",
+            "building": "abrigo",
+            "zone": -1,
+            "interior": true,
+            "local": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 13.0,
+                "height": 11.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 13.0,
+                "height": 11.0
+            }
+        },
+        {
+            "id": "CemiterioSantaRita",
+            "scene": "CemiterioSantaRita",
+            "name": "Cemitério municipal",
+            "building": "cemiterio",
+            "zone": -1,
+            "interior": false,
+            "local": {
+                "serializedVersion": "2",
+                "x": 43.0,
+                "y": 82.0,
+                "width": 45.0,
+                "height": 29.0
+            },
+            "atlas": {
+                "serializedVersion": "2",
+                "x": 43.0,
+                "y": 82.0,
+                "width": 45.0,
+                "height": 29.0
+            }
+        }
+    ],
+    "landmarks": [
+        {
+            "id": "Saida_Z1_Para_Z2",
+            "region": "rodovia",
+            "name": "Saida Z1 Para Z2",
+            "destination": "posto_exterior",
+            "condition": "",
+            "local": {
+                "x": 134.39999389648438,
+                "y": 10.0
+            },
+            "phone": false
+        },
+        {
+            "id": "tel_rodovia_Orelhao_Rodovia",
+            "region": "rodovia",
+            "name": "tel rodovia Orelhao Rodovia",
+            "destination": "",
+            "condition": "",
+            "local": {
+                "x": 126.5,
+                "y": 13.100000381469727
+            },
+            "phone": true
+        },
+        {
+            "id": "Saida_Z2_Para_Z3",
+            "region": "posto_exterior",
+            "name": "Saida Z2 Para Z3",
+            "destination": "encruzilhada",
+            "condition": "",
+            "local": {
+                "x": 236.5,
+                "y": 10.0
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Z2_Para_Z1",
+            "region": "posto_exterior",
+            "name": "Saida Z2 Para Z1",
+            "destination": "rodovia",
+            "condition": "",
+            "local": {
+                "x": 201.39999389648438,
+                "y": 10.0
+            },
+            "phone": false
+        },
+        {
+            "id": "posto",
+            "region": "posto_exterior",
+            "name": "posto",
+            "destination": "posto_interior",
+            "condition": "",
+            "local": {
+                "x": 211.60000610351563,
+                "y": 13.800000190734863
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Interior_Posto",
+            "region": "posto_interior",
+            "name": "Saida Interior Posto",
+            "destination": "posto_exterior",
+            "condition": "",
+            "local": {
+                "x": 208.0,
+                "y": -58.400001525878906
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Z3_Para_Z4_Bairro",
+            "region": "encruzilhada",
+            "name": "Saida Z3 Para Z4 Bairro",
+            "destination": "bairro",
+            "condition": "",
+            "local": {
+                "x": 319.5,
+                "y": 24.399999618530273
+            },
+            "phone": false
+        },
+        {
+            "id": "mercadinho",
+            "region": "encruzilhada",
+            "name": "mercadinho",
+            "destination": "mercado_interior",
+            "condition": "",
+            "local": {
+                "x": 311.0,
+                "y": 13.399999618530273
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Z3_Para_Z2",
+            "region": "encruzilhada",
+            "name": "Saida Z3 Para Z2",
+            "destination": "posto_exterior",
+            "condition": "",
+            "local": {
+                "x": 301.3999938964844,
+                "y": 10.5
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Servico_Centro",
+            "region": "mercado_interior",
+            "name": "Porta Servico Centro",
+            "destination": "MercadinhoDeposito",
+            "condition": "venceu_ze_sinuca",
+            "local": {
+                "x": 316.29998779296875,
+                "y": -50.0
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Interior_Mercadinho",
+            "region": "mercado_interior",
+            "name": "Saida Interior Mercadinho",
+            "destination": "encruzilhada",
+            "condition": "",
+            "local": {
+                "x": 309.0,
+                "y": -58.400001525878906
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Z4_Para_Z5_Bar",
+            "region": "bairro",
+            "name": "Saida Z4 Para Z5 Bar",
+            "destination": "rua_norte",
+            "condition": "",
+            "local": {
+                "x": 435.5,
+                "y": 32.400001525878906
+            },
+            "phone": false
+        },
+        {
+            "id": "casa_avo",
+            "region": "bairro",
+            "name": "casa avo",
+            "destination": "casa_interior",
+            "condition": "",
+            "local": {
+                "x": 423.5,
+                "y": 23.799999237060547
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Z4_Para_Z3",
+            "region": "bairro",
+            "name": "Saida Z4 Para Z3",
+            "destination": "encruzilhada",
+            "condition": "",
+            "local": {
+                "x": 420.0,
+                "y": 1.399999976158142
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Interior_CasaAvo",
+            "region": "casa_interior",
+            "name": "Saida Interior CasaAvo",
+            "destination": "bairro",
+            "condition": "",
+            "local": {
+                "x": 409.0,
+                "y": -58.400001525878906
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Z5_Para_Z4_Bairro",
+            "region": "rua_norte",
+            "name": "Saida Z5 Para Z4 Bairro",
+            "destination": "bairro",
+            "condition": "",
+            "local": {
+                "x": 501.3999938964844,
+                "y": 10.0
+            },
+            "phone": false
+        },
+        {
+            "id": "bar_ze",
+            "region": "rua_norte",
+            "name": "bar ze",
+            "destination": "bar_interior",
+            "condition": "",
+            "local": {
+                "x": 518.0,
+                "y": 13.399999618530273
+            },
+            "phone": false
+        },
+        {
+            "id": "tel_rua_norte_Orelhao_BarDoZe",
+            "region": "rua_norte",
+            "name": "tel rua norte Orelhao BarDoZe",
+            "destination": "",
+            "condition": "",
+            "local": {
+                "x": 525.7999877929688,
+                "y": 13.199999809265137
+            },
+            "phone": true
+        },
+        {
+            "id": "Saida_Interior_BarDoZe",
+            "region": "bar_interior",
+            "name": "Saida Interior BarDoZe",
+            "destination": "rua_norte",
+            "condition": "",
+            "local": {
+                "x": 509.0,
+                "y": -58.400001525878906
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Porta_OficinaRadio",
+            "region": "CentroSantaRita",
+            "name": "Porta Porta OficinaRadio",
+            "destination": "OficinaRadio",
+            "condition": "",
+            "local": {
+                "x": 11.199999809265137,
+                "y": 33.04999923706055
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Deposito",
+            "region": "CentroSantaRita",
+            "name": "Porta Deposito",
+            "destination": "MercadinhoDeposito",
+            "condition": "",
+            "local": {
+                "x": 20.200000762939453,
+                "y": 49.29999923706055
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Porta_PrefeituraSantaRita",
+            "region": "CentroSantaRita",
+            "name": "Porta Porta PrefeituraSantaRita",
+            "destination": "PrefeituraSantaRita",
+            "condition": "",
+            "local": {
+                "x": 88.0,
+                "y": 65.44999694824219
+            },
+            "phone": false
+        },
+        {
+            "id": "Portao_Cemiterio",
+            "region": "CentroSantaRita",
+            "name": "Portao Cemiterio",
+            "destination": "CemiterioSantaRita",
+            "condition": "",
+            "local": {
+                "x": 64.0,
+                "y": 81.69999694824219
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Porta_CasaCostureira",
+            "region": "CentroSantaRita",
+            "name": "Porta Porta CasaCostureira",
+            "destination": "CasaCostureira",
+            "condition": "",
+            "local": {
+                "x": 21.799999237060547,
+                "y": 27.950000762939453
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Porta_SociedadeBeiraRio",
+            "region": "CentroSantaRita",
+            "name": "Porta Porta SociedadeBeiraRio",
+            "destination": "SociedadeBeiraRio",
+            "condition": "",
+            "local": {
+                "x": 5.0,
+                "y": 4.449999809265137
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Porta_IgrejaMatriz",
+            "region": "CentroSantaRita",
+            "name": "Porta Porta IgrejaMatriz",
+            "destination": "IgrejaMatriz",
+            "condition": "",
+            "local": {
+                "x": 44.79999923706055,
+                "y": 63.45000076293945
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_RuaNorte",
+            "region": "CentroSantaRita",
+            "name": "Porta RuaNorte",
+            "destination": "EntradaDaCidade",
+            "condition": "",
+            "local": {
+                "x": 25.0,
+                "y": 84.0
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Porta_RodoviariaSantaRita",
+            "region": "CentroSantaRita",
+            "name": "Porta Porta RodoviariaSantaRita",
+            "destination": "RodoviariaSantaRita",
+            "condition": "",
+            "local": {
+                "x": 68.0,
+                "y": 21.450000762939453
+            },
+            "phone": false
+        },
+        {
+            "id": "tel_CentroSantaRita_orelhao_centro_matriz",
+            "region": "CentroSantaRita",
+            "name": "tel CentroSantaRita orelhao centro matriz",
+            "destination": "",
+            "condition": "",
+            "local": {
+                "x": 40.0,
+                "y": 41.79999923706055
+            },
+            "phone": true
+        },
+        {
+            "id": "tel_CentroSantaRita_orelhao_bocha_beira_rio",
+            "region": "CentroSantaRita",
+            "name": "tel CentroSantaRita orelhao bocha beira rio",
+            "destination": "",
+            "condition": "",
+            "local": {
+                "x": 12.699999809265137,
+                "y": 4.599999904632568
+            },
+            "phone": true
+        },
+        {
+            "id": "oficina",
+            "region": "CentroSantaRita",
+            "name": "oficina",
+            "destination": "OficinaRadio",
+            "condition": "",
+            "local": {
+                "x": 11.199999809265137,
+                "y": 33.04999923706055
+            },
+            "phone": false
+        },
+        {
+            "id": "prefeitura",
+            "region": "CentroSantaRita",
+            "name": "prefeitura",
+            "destination": "PrefeituraSantaRita",
+            "condition": "",
+            "local": {
+                "x": 88.0,
+                "y": 65.44999694824219
+            },
+            "phone": false
+        },
+        {
+            "id": "cemiterio",
+            "region": "CentroSantaRita",
+            "name": "cemiterio",
+            "destination": "CemiterioSantaRita",
+            "condition": "",
+            "local": {
+                "x": 64.0,
+                "y": 81.69999694824219
+            },
+            "phone": false
+        },
+        {
+            "id": "costura",
+            "region": "CentroSantaRita",
+            "name": "costura",
+            "destination": "CasaCostureira",
+            "condition": "",
+            "local": {
+                "x": 21.799999237060547,
+                "y": 27.950000762939453
+            },
+            "phone": false
+        },
+        {
+            "id": "canto_se",
+            "region": "CentroSantaRita",
+            "name": "canto se",
+            "destination": "SociedadeBeiraRio",
+            "condition": "",
+            "local": {
+                "x": 5.0,
+                "y": 4.449999809265137
+            },
+            "phone": false
+        },
+        {
+            "id": "igreja",
+            "region": "CentroSantaRita",
+            "name": "igreja",
+            "destination": "IgrejaMatriz",
+            "condition": "",
+            "local": {
+                "x": 44.79999923706055,
+                "y": 63.45000076293945
+            },
+            "phone": false
+        },
+        {
+            "id": "rodoviaria",
+            "region": "CentroSantaRita",
+            "name": "rodoviaria",
+            "destination": "RodoviariaSantaRita",
+            "condition": "",
+            "local": {
+                "x": 68.0,
+                "y": 21.450000762939453
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Saida",
+            "region": "IgrejaMatriz",
+            "name": "Porta Saida",
+            "destination": "CentroSantaRita",
+            "condition": "",
+            "local": {
+                "x": 9.0,
+                "y": 1.0
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_LojaOriginal",
+            "region": "MercadinhoDeposito",
+            "name": "Porta LojaOriginal",
+            "destination": "EntradaDaCidade",
+            "condition": "",
+            "local": {
+                "x": 8.0,
+                "y": 12.0
+            },
+            "phone": false
+        },
+        {
+            "id": "Porta_Abrigo",
+            "region": "CemiterioSantaRita",
+            "name": "Porta Abrigo",
+            "destination": "AbrigoCemiterio",
+            "condition": "",
+            "local": {
+                "x": 78.5,
+                "y": 100.19999694824219
+            },
+            "phone": false
+        },
+        {
+            "id": "Saida_Cemiterio",
+            "region": "CemiterioSantaRita",
+            "name": "Saida Cemiterio",
+            "destination": "CentroSantaRita",
+            "condition": "",
+            "local": {
+                "x": 64.0,
+                "y": 83.19999694824219
+            },
+            "phone": false
+        },
+        {
+            "id": "abrigo",
+            "region": "CemiterioSantaRita",
+            "name": "abrigo",
+            "destination": "AbrigoCemiterio",
+            "condition": "",
+            "local": {
+                "x": 78.5,
+                "y": 100.19999694824219
+            },
+            "phone": false
+        },
+        {
+            "id": "centro",
+            "region": "CemiterioSantaRita",
+            "name": "centro",
+            "destination": "CentroSantaRita",
+            "condition": "",
+            "local": {
+                "x": 64.0,
+                "y": 83.19999694824219
+            },
+            "phone": false
+        }
+    ],
+    "accesses": [
+        {
+            "region": "rodovia",
+            "destination": "posto_exterior",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 134.39999389648438,
+                "y": 10.0
+            },
+            "arrival": {
+                "x": 203.0,
+                "y": 10.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "posto_exterior",
+            "destination": "encruzilhada",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 236.5,
+                "y": 10.0
+            },
+            "arrival": {
+                "x": 303.0,
+                "y": 10.5
+            },
+            "resolved": true
+        },
+        {
+            "region": "posto_exterior",
+            "destination": "rodovia",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 201.39999389648438,
+                "y": 10.0
+            },
+            "arrival": {
+                "x": 132.8000030517578,
+                "y": 10.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "posto_exterior",
+            "destination": "posto_interior",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 211.60000610351563,
+                "y": 13.800000190734863
+            },
+            "arrival": {
+                "x": 208.0,
+                "y": -57.20000076293945
+            },
+            "resolved": true
+        },
+        {
+            "region": "posto_interior",
+            "destination": "posto_exterior",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 208.0,
+                "y": -58.400001525878906
+            },
+            "arrival": {
+                "x": 211.60000610351563,
+                "y": 12.600000381469727
+            },
+            "resolved": true
+        },
+        {
+            "region": "encruzilhada",
+            "destination": "bairro",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 319.5,
+                "y": 24.399999618530273
+            },
+            "arrival": {
+                "x": 420.0,
+                "y": 3.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "encruzilhada",
+            "destination": "mercado_interior",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 311.0,
+                "y": 13.399999618530273
+            },
+            "arrival": {
+                "x": 309.0,
+                "y": -57.20000076293945
+            },
+            "resolved": true
+        },
+        {
+            "region": "encruzilhada",
+            "destination": "posto_exterior",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 301.3999938964844,
+                "y": 10.5
+            },
+            "arrival": {
+                "x": 234.8000030517578,
+                "y": 10.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "mercado_interior",
+            "destination": "MercadinhoDeposito",
+            "entry": "loja",
+            "condition": "venceu_ze_sinuca",
+            "local": {
+                "x": 316.29998779296875,
+                "y": -50.0
+            },
+            "arrival": {
+                "x": 8.0,
+                "y": 10.699999809265137
+            },
+            "resolved": true
+        },
+        {
+            "region": "mercado_interior",
+            "destination": "encruzilhada",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 309.0,
+                "y": -58.400001525878906
+            },
+            "arrival": {
+                "x": 311.0,
+                "y": 12.199999809265137
+            },
+            "resolved": true
+        },
+        {
+            "region": "bairro",
+            "destination": "rua_norte",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 435.5,
+                "y": 32.400001525878906
+            },
+            "arrival": {
+                "x": 503.20001220703125,
+                "y": 10.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "bairro",
+            "destination": "casa_interior",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 423.5,
+                "y": 23.799999237060547
+            },
+            "arrival": {
+                "x": 409.0,
+                "y": -57.20000076293945
+            },
+            "resolved": true
+        },
+        {
+            "region": "bairro",
+            "destination": "encruzilhada",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 420.0,
+                "y": 1.399999976158142
+            },
+            "arrival": {
+                "x": 319.5,
+                "y": 22.399999618530273
+            },
+            "resolved": true
+        },
+        {
+            "region": "casa_interior",
+            "destination": "bairro",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 409.0,
+                "y": -58.400001525878906
+            },
+            "arrival": {
+                "x": 423.5,
+                "y": 22.600000381469727
+            },
+            "resolved": true
+        },
+        {
+            "region": "rua_norte",
+            "destination": "bairro",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 501.3999938964844,
+                "y": 10.0
+            },
+            "arrival": {
+                "x": 435.5,
+                "y": 29.799999237060547
+            },
+            "resolved": true
+        },
+        {
+            "region": "rua_norte",
+            "destination": "bar_interior",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 518.0,
+                "y": 13.399999618530273
+            },
+            "arrival": {
+                "x": 509.0,
+                "y": -57.20000076293945
+            },
+            "resolved": true
+        },
+        {
+            "region": "bar_interior",
+            "destination": "rua_norte",
+            "entry": "",
+            "condition": "",
+            "local": {
+                "x": 509.0,
+                "y": -58.400001525878906
+            },
+            "arrival": {
+                "x": 518.0,
+                "y": 12.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "OficinaRadio",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 11.199999809265137,
+                "y": 33.04999923706055
+            },
+            "arrival": {
+                "x": 8.0,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "MercadinhoDeposito",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 20.200000762939453,
+                "y": 49.29999923706055
+            },
+            "arrival": {
+                "x": 8.0,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "PrefeituraSantaRita",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 88.0,
+                "y": 65.44999694824219
+            },
+            "arrival": {
+                "x": 10.0,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "CemiterioSantaRita",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 64.0,
+                "y": 81.69999694824219
+            },
+            "arrival": {
+                "x": 64.0,
+                "y": 86.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "CasaCostureira",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 21.799999237060547,
+                "y": 27.950000762939453
+            },
+            "arrival": {
+                "x": 8.0,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "SociedadeBeiraRio",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 5.0,
+                "y": 4.449999809265137
+            },
+            "arrival": {
+                "x": 5.0,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "IgrejaMatriz",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 44.79999923706055,
+                "y": 63.45000076293945
+            },
+            "arrival": {
+                "x": 9.0,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "rua_norte",
+            "entry": "saida_bar_ze",
+            "condition": "",
+            "local": {
+                "x": 25.0,
+                "y": 84.0
+            },
+            "arrival": {
+                "x": 518.0,
+                "y": 11.800000190734863
+            },
+            "resolved": true
+        },
+        {
+            "region": "CentroSantaRita",
+            "destination": "RodoviariaSantaRita",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 68.0,
+                "y": 21.450000762939453
+            },
+            "arrival": {
+                "x": 11.0,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "IgrejaMatriz",
+            "destination": "CentroSantaRita",
+            "entry": "volta_IgrejaMatriz",
+            "condition": "",
+            "local": {
+                "x": 9.0,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 44.79999923706055,
+                "y": 61.5
+            },
+            "resolved": true
+        },
+        {
+            "region": "PrefeituraSantaRita",
+            "destination": "CentroSantaRita",
+            "entry": "volta_PrefeituraSantaRita",
+            "condition": "",
+            "local": {
+                "x": 10.0,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 88.0,
+                "y": 63.5
+            },
+            "resolved": true
+        },
+        {
+            "region": "RodoviariaSantaRita",
+            "destination": "CentroSantaRita",
+            "entry": "volta_RodoviariaSantaRita",
+            "condition": "",
+            "local": {
+                "x": 11.0,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 68.0,
+                "y": 19.5
+            },
+            "resolved": true
+        },
+        {
+            "region": "MercadinhoDeposito",
+            "destination": "mercado_interior",
+            "entry": "retorno_deposito",
+            "condition": "",
+            "local": {
+                "x": 8.0,
+                "y": 12.0
+            },
+            "arrival": {
+                "x": 316.1000061035156,
+                "y": -51.5
+            },
+            "resolved": true
+        },
+        {
+            "region": "MercadinhoDeposito",
+            "destination": "CentroSantaRita",
+            "entry": "volta_MercadinhoDeposito",
+            "condition": "",
+            "local": {
+                "x": 8.0,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 20.200000762939453,
+                "y": 47.5
+            },
+            "resolved": true
+        },
+        {
+            "region": "OficinaRadio",
+            "destination": "CentroSantaRita",
+            "entry": "volta_OficinaRadio",
+            "condition": "",
+            "local": {
+                "x": 8.0,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 11.199999809265137,
+                "y": 31.200000762939453
+            },
+            "resolved": true
+        },
+        {
+            "region": "CasaCostureira",
+            "destination": "CentroSantaRita",
+            "entry": "volta_CasaCostureira",
+            "condition": "",
+            "local": {
+                "x": 8.0,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 21.799999237060547,
+                "y": 26.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "SociedadeBeiraRio",
+            "destination": "CentroSantaRita",
+            "entry": "volta_SociedadeBeiraRio",
+            "condition": "",
+            "local": {
+                "x": 5.0,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 5.0,
+                "y": 2.5999999046325684
+            },
+            "resolved": true
+        },
+        {
+            "region": "AbrigoCemiterio",
+            "destination": "CemiterioSantaRita",
+            "entry": "volta_AbrigoCemiterio",
+            "condition": "",
+            "local": {
+                "x": 6.5,
+                "y": 1.0
+            },
+            "arrival": {
+                "x": 78.5,
+                "y": 98.0
+            },
+            "resolved": true
+        },
+        {
+            "region": "CemiterioSantaRita",
+            "destination": "AbrigoCemiterio",
+            "entry": "centro",
+            "condition": "",
+            "local": {
+                "x": 78.5,
+                "y": 100.19999694824219
+            },
+            "arrival": {
+                "x": 6.5,
+                "y": 2.4000000953674316
+            },
+            "resolved": true
+        },
+        {
+            "region": "CemiterioSantaRita",
+            "destination": "CentroSantaRita",
+            "entry": "volta_CemiterioSantaRita",
+            "condition": "",
+            "local": {
+                "x": 64.0,
+                "y": 83.19999694824219
+            },
+            "arrival": {
+                "x": 64.0,
+                "y": 79.5
+            },
+            "resolved": true
+        },
+        {
+            "region": "rua_norte",
+            "destination": "CentroSantaRita",
+            "entry": "c1_portao_norte",
+            "condition": "venceu_ze_sinuca",
+            "local": {
+                "x": 531.5,
+                "y": 10.0
+            },
+            "arrival": {
+                "x": 30.0,
+                "y": 78.0
+            },
+            "resolved": true
+        }
+    ],
+    "arrivals": [
+        {
+            "scene": "EntradaDaCidade",
+            "id": "saida_carro",
+            "local": {
+                "x": 112.0,
+                "y": 10.199999809265137
+            }
+        },
+        {
+            "scene": "EntradaDaCidade",
+            "id": "saida_bar_ze",
+            "local": {
+                "x": 518.0,
+                "y": 11.800000190734863
+            }
+        },
+        {
+            "scene": "EntradaDaCidade",
+            "id": "porta_casa_avo",
+            "local": {
+                "x": 423.5,
+                "y": 22.799999237060547
+            }
+        },
+        {
+            "scene": "EntradaDaCidade",
+            "id": "retorno_deposito",
+            "local": {
+                "x": 316.1000061035156,
+                "y": -51.5
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "c1_portao_norte",
+            "local": {
+                "x": 30.0,
+                "y": 78.0
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_SociedadeBeiraRio",
+            "local": {
+                "x": 5.0,
+                "y": 2.5999999046325684
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_CemiterioSantaRita",
+            "local": {
+                "x": 64.0,
+                "y": 79.5
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_IgrejaMatriz",
+            "local": {
+                "x": 44.79999923706055,
+                "y": 61.5
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_CasaCostureira",
+            "local": {
+                "x": 21.799999237060547,
+                "y": 26.0
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_PrefeituraSantaRita",
+            "local": {
+                "x": 88.0,
+                "y": 63.5
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_MercadinhoDeposito",
+            "local": {
+                "x": 20.200000762939453,
+                "y": 47.5
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_RodoviariaSantaRita",
+            "local": {
+                "x": 68.0,
+                "y": 19.5
+            }
+        },
+        {
+            "scene": "CentroSantaRita",
+            "id": "volta_OficinaRadio",
+            "local": {
+                "x": 11.199999809265137,
+                "y": 31.200000762939453
+            }
+        },
+        {
+            "scene": "IgrejaMatriz",
+            "id": "centro",
+            "local": {
+                "x": 9.0,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "PrefeituraSantaRita",
+            "id": "centro",
+            "local": {
+                "x": 10.0,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "RodoviariaSantaRita",
+            "id": "centro",
+            "local": {
+                "x": 11.0,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "MercadinhoDeposito",
+            "id": "centro",
+            "local": {
+                "x": 8.0,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "MercadinhoDeposito",
+            "id": "loja",
+            "local": {
+                "x": 8.0,
+                "y": 10.699999809265137
+            }
+        },
+        {
+            "scene": "OficinaRadio",
+            "id": "centro",
+            "local": {
+                "x": 8.0,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "CasaCostureira",
+            "id": "centro",
+            "local": {
+                "x": 8.0,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "SociedadeBeiraRio",
+            "id": "centro",
+            "local": {
+                "x": 5.0,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "AbrigoCemiterio",
+            "id": "centro",
+            "local": {
+                "x": 6.5,
+                "y": 2.4000000953674316
+            }
+        },
+        {
+            "scene": "CemiterioSantaRita",
+            "id": "volta_AbrigoCemiterio",
+            "local": {
+                "x": 78.5,
+                "y": 98.0
+            }
+        },
+        {
+            "scene": "CemiterioSantaRita",
+            "id": "centro",
+            "local": {
+                "x": 64.0,
+                "y": 86.0
+            }
+        }
+    ]
+}

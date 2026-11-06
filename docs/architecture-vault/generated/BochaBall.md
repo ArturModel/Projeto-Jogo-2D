@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 27"
+community: "Community 99"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_27
+  - community/Community_99
 ---
 
 # BochaBall
@@ -26,7 +26,7 @@ tags:
 - [[dot-Posicao()]] - `references` [EXTRACTED]
 - [[dot-Rebater()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
-- [[dot-Run()_6]] - `calls` [INFERRED]
+- [[dot-Run()_8]] - `calls` [INFERRED]
 - [[dot-Velocidade()]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
@@ -35,6 +35,6 @@ tags:
 - [[Quaternion]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
-- [[Velocidade_1]] - `defines` [EXTRACTED]
+- [[Velocidade_2]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_27
+#graphify/code #graphify/EXTRACTED #community/Community_99

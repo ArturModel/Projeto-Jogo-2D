@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
-community: "Community 36"
-location: "L9"
+community: "Community 116"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_116
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_116

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 48"
+community: "Community 36"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_36
 ---
 
 # .Error()
@@ -15,4 +15,4 @@ tags:
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[LogType]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_36

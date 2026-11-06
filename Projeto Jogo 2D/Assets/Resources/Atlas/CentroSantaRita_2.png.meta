@@ -1,0 +1,613 @@
+fileFormatVersion: 2
+guid: ece1559e01e4fac429f6f2561d1a50dc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7265962090812848958
+    second: CentroSantaRita_2_0
+  - first:
+      213: -4383287385628592503
+    second: CentroSantaRita_2_1
+  - first:
+      213: 1918621413126347135
+    second: CentroSantaRita_2_2
+  - first:
+      213: 3002942302931050006
+    second: CentroSantaRita_2_3
+  - first:
+      213: -617833324717775353
+    second: CentroSantaRita_2_4
+  - first:
+      213: -5859875517849451734
+    second: CentroSantaRita_2_5
+  - first:
+      213: 215896035701759780
+    second: CentroSantaRita_2_6
+  - first:
+      213: -2615591622912880673
+    second: CentroSantaRita_2_7
+  - first:
+      213: 6740106784865554114
+    second: CentroSantaRita_2_8
+  - first:
+      213: -246863281369538875
+    second: CentroSantaRita_2_9
+  - first:
+      213: -929151907750306606
+    second: CentroSantaRita_2_10
+  - first:
+      213: -1894427076979292248
+    second: CentroSantaRita_2_11
+  - first:
+      213: 9122950965571232440
+    second: CentroSantaRita_2_12
+  - first:
+      213: 5414462584805458048
+    second: CentroSantaRita_2_13
+  - first:
+      213: 8305338566543247954
+    second: CentroSantaRita_2_14
+  - first:
+      213: 5665145950136008100
+    second: CentroSantaRita_2_15
+  - first:
+      213: 1736860642789445240
+    second: CentroSantaRita_2_16
+  - first:
+      213: 1663872072516901419
+    second: CentroSantaRita_2_17
+  - first:
+      213: 5262583555035820475
+    second: CentroSantaRita_2_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CentroSantaRita_2_0
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 2309
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bba5e5602e5d460800000000000000
+      internalID: 7265962090812848958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_1
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 2309
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986382fa85f6b23c0800000000000000
+      internalID: -4383287385628592503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_2
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 2015
+        width: 28
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f799adb820050aa10800000000000000
+      internalID: 1918621413126347135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_3
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 2015
+        width: 75
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ed23f3d189ca920800000000000000
+      internalID: 3002942302931050006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_4
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 1942
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7066cc55dd30d67f0800000000000000
+      internalID: -617833324717775353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_5
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 1791
+        width: 28
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a234392734a8daea0800000000000000
+      internalID: -5859875517849451734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_6
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 1791
+        width: 28
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f1b64fc440ff200800000000000000
+      internalID: 215896035701759780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_7
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 1669
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf4ac6e64d83bbd0800000000000000
+      internalID: -2615591622912880673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_8
+      rect:
+        serializedVersion: 2
+        x: 2998
+        y: 1669
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce8c14096ba98d50800000000000000
+      internalID: 6740106784865554114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_9
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 1567
+        width: 28
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce91ed4727f29cf0800000000000000
+      internalID: -246863281369538875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_10
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 1567
+        width: 28
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc9a24434dfa13f0800000000000000
+      internalID: -929151907750306606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_11
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1337
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a784cf4c94a5b5e0800000000000000
+      internalID: -1894427076979292248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_12
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1337
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b22e26519b3b9e70800000000000000
+      internalID: 9122950965571232440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_13
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1173
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08009f8a809042b40800000000000000
+      internalID: 5414462584805458048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_14
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 1173
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a89263c6d724370800000000000000
+      internalID: 8305338566543247954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_15
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 965
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad7996f934ae9e40800000000000000
+      internalID: 5665145950136008100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_16
+      rect:
+        serializedVersion: 2
+        x: 2987
+        y: 965
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e42d56d819a1810800000000000000
+      internalID: 1736860642789445240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_17
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 421
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a101a95d2471710800000000000000
+      internalID: 1663872072516901419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CentroSantaRita_2_18
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 421
+        width: 106
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1f8b66cd3780940800000000000000
+      internalID: 5262583555035820475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CentroSantaRita_2_0: 7265962090812848958
+      CentroSantaRita_2_1: -4383287385628592503
+      CentroSantaRita_2_10: -929151907750306606
+      CentroSantaRita_2_11: -1894427076979292248
+      CentroSantaRita_2_12: 9122950965571232440
+      CentroSantaRita_2_13: 5414462584805458048
+      CentroSantaRita_2_14: 8305338566543247954
+      CentroSantaRita_2_15: 5665145950136008100
+      CentroSantaRita_2_16: 1736860642789445240
+      CentroSantaRita_2_17: 1663872072516901419
+      CentroSantaRita_2_18: 5262583555035820475
+      CentroSantaRita_2_2: 1918621413126347135
+      CentroSantaRita_2_3: 3002942302931050006
+      CentroSantaRita_2_4: -617833324717775353
+      CentroSantaRita_2_5: -5859875517849451734
+      CentroSantaRita_2_6: 215896035701759780
+      CentroSantaRita_2_7: -2615591622912880673
+      CentroSantaRita_2_8: 6740106784865554114
+      CentroSantaRita_2_9: -246863281369538875
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

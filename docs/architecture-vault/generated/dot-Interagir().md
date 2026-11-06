@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 86"
+community: "Community 13"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_13
 ---
 
 # .Interagir()
@@ -16,6 +16,7 @@ tags:
 - [[dot-Dados()]] - `calls` [EXTRACTED]
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
 - [[dot-Dialogo()]] - `calls` [EXTRACTED]
+- [[dot-Ensure()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Nota()]] - `calls` [EXTRACTED]
 - [[dot-Numero()]] - `calls` [EXTRACTED]
@@ -29,4 +30,4 @@ tags:
 - [[DialogoLinha]] - `calls` [INFERRED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_13

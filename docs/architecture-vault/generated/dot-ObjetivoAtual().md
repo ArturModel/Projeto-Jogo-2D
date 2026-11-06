@@ -13,9 +13,8 @@ tags:
 
 ## Connections
 - [[dot-AuditOldFeedback()]] - `calls` [EXTRACTED]
-- [[dot-ObterUVObjetivoAtual()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-UV()]] - `calls` [EXTRACTED]
+- [[dot-UV()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaGeography]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

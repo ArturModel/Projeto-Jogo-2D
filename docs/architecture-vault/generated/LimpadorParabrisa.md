@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-AnguloEm()]] - `method` [EXTRACTED]
 - [[dot-AplicarAngulo()]] - `method` [EXTRACTED]
-- [[dot-Awake()_5]] - `method` [EXTRACTED]
+- [[dot-Awake()_8]] - `method` [EXTRACTED]
 - [[dot-Suavizar()]] - `method` [EXTRACTED]
-- [[dot-Update()_11]] - `method` [EXTRACTED]
+- [[dot-Update()_13]] - `method` [EXTRACTED]
 - [[Ativo]] - `defines` [EXTRACTED]
 - [[LimpadorParabrisa.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

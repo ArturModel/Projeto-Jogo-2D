@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
-- [[dot-OnPointerDown()_2]] - `calls` [EXTRACTED]
-- [[dot-OnPointerMove()_1]] - `calls` [EXTRACTED]
-- [[dot-OnPointerUp()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPointerDown()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPointerMove()]] - `calls` [EXTRACTED]
+- [[dot-OnPointerUp()]] - `calls` [EXTRACTED]
 - [[dot-RayToTable()]] - `calls` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `method` [EXTRACTED]

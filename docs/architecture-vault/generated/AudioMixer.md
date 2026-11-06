@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[dot-AplicarVolumeEmMixer()]] - `references` [EXTRACTED]
 - [[dot-AplicarVolumesGlobais()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_3]] - `references` [EXTRACTED]
+- [[dot-Vincular()_2]] - `references` [EXTRACTED]
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 

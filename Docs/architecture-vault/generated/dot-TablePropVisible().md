@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-PatronFrame()]] - `calls` [EXTRACTED]
 - [[dot-Sync()]] - `calls` [EXTRACTED]
-- [[dot-Update()_8]] - `calls` [EXTRACTED]
+- [[dot-Update()_9]] - `calls` [EXTRACTED]
 - [[SantaRitaBarLayout]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_18

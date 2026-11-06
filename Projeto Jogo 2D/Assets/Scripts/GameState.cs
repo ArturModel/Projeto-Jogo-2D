@@ -55,6 +55,8 @@ public static class GameState
     private static bool progressoNaoSalvo = false;
 
     public static event Action OnEstadoAlterado;
+    public static event Action<string> OnDiarioAtualizado;
+    public static event Action OnSnapshotRestaurado;
 
     public static bool TemProgressoNaoSalvo => progressoNaoSalvo;
     public static string ObjetivoAtual => objetivoAtualSessao;
@@ -154,6 +156,7 @@ public static class GameState
                 diarioSessao[i].descricao = descricao;
                 progressoNaoSalvo = true;
                 OnEstadoAlterado?.Invoke();
+                OnDiarioAtualizado?.Invoke(id);
                 return;
             }
         }
@@ -167,6 +170,7 @@ public static class GameState
         });
         progressoNaoSalvo = true;
         OnEstadoAlterado?.Invoke();
+        OnDiarioAtualizado?.Invoke(id);
     }
 
     public static IReadOnlyList<EntradaDiario> ObterEntradasDiario()
@@ -275,6 +279,7 @@ public static class GameState
 
         progressoNaoSalvo = false;
         OnEstadoAlterado?.Invoke();
+        OnSnapshotRestaurado?.Invoke();
     }
 
     private static void ResetarMemoriaSilencioso()
@@ -295,6 +300,7 @@ public static class GameState
         if (CheckpointSystem.EmArmazenamentoDeTeste)
         {
             OnEstadoAlterado?.Invoke();
+            OnSnapshotRestaurado?.Invoke();
             return;
         }
 
@@ -310,6 +316,7 @@ public static class GameState
         PlayerPrefs.Save();
 
         OnEstadoAlterado?.Invoke();
+        OnSnapshotRestaurado?.Invoke();
     }
 }
 

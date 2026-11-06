@@ -1,19 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "Community 45"
-location: "L41"
+community: "Community 20"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_20
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[ParticleSystem]] - `references` [EXTRACTED]
+- [[ParticleSystemRenderer]] - `references` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_20

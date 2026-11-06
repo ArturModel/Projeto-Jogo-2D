@@ -74,9 +74,27 @@ Bar: SantaRitaBarLayout possui catálogo de poses e fase compartilhado com Sinuc
 
 Marcus: exportador reconstrói duas pernas por pose sem deformações cumulativas. PlayerController valida dimensões/conteúdo/alpha das folhas antes de recortar; falha equipada mantém corpo normal, sem retângulo. Export-Marcus.ps1 aguarda ambos os processos e publica somente folhas completas.
 
-## Prólogo jogável — 06/11/2026
-`PrologoJogavel` é o diretor ativo de `Prologo.unity`; `PrologoVideo` e o protótipo antigo permanecem como referências inativas. `PrologoEstradaGraphic` projeta estrada/recorte, pintura, chuva/palhetas e usa shader UI texturizado apenas na estrada. Cinco PNGs em Resources são carregados localmente. Estado da viagem é transitório; chegada usa os mesmos flags/diário e `SceneTransition.Ir("EntradaDaCidade", "saida_carro")`. O estacionamento corresponde ao recuo da Zona1_Rodovia, sem mudar a posição do carro ou a geografia seguinte. `AudioAmbiente` respeita volume de efeitos, pausa e foco. QA Development é opt-in por argumento; ferramentas de build são explícitas no Editor.
 
-Decisão posterior do autor (06/11): remover do prólogo a imagem de placa/banco/orelhão, que parecia uma plataforma na estrada. Somente a estrada e um recuo lateral discreto permanecem visíveis. O carro encosta, desacelera e para antes da transição; os marcos são vistos apenas na próxima cena. A imagem descartada foi arquivada fora de Assets, em Arte/Producao/PrologoJogavel/Descartados. Testes visuais devem priorizar Play, sem nova build por este ajuste.
+## Atlas cartográfico — 02/11/2026
 
-06/11 — Prólogo rural: PrologoJogavel fornece CentroVia/TerraEm por distância, duas curvas, recuo de terra e parada 44 s/transição 51 s. PrologoEstradaGraphic projeta atlas de cenário e três superfícies do mesmo mundo; UV1 distingue terra e solo vegetal. AudioAmbiente.ConfigurarLoop reaproveita a fonte do motor e adiciona pneusTerra ao mixer comum; alvo/pitch acompanham velocidade/superfície. Próxima cena/saida_carro e saves manuais preservados. Plano: docs/ai-plans/2026-11-06_ismaelweinertb_prologo-rural.md; evidências: Docs/Evidencias/PrologoRural/Relatorio.md.
+`SantaRitaAtlas`/`SantaRitaAtlasView` substituem a imagem/UV históricos na interface do jogador. `SantaRitaAtlasAuthoring` levanta sprites, Tilemaps, regiões e portas em fixture de Play para Resources/Atlas; ferramentas ficam no Editor. `Capitulo2Director.PosicaoNoMapa` delega à transformação única do atlas. Diário/fichas e aquisição permanecem em MapaInterativoUI; visitas/origem de entrada são flags/textos RAM compatíveis com snapshot v2 e save manual. Costuras entre cenas não são ruas nem rotas. [Contrato completo](../../Atlas_Arquitetura.md).
+
+
+## Mapa da cidade e caderno — 03/11/2026
+
+`MapaInterativoUI` mantém mapa/fichas/legenda e abre o `MarcusNotebookUI` como tela independente (J ou botão CADERNO). `IsShowing` inclui o livro para bloquear a exploração. Roda sobre painéis não altera zoom; a carta mantém zoom e pan anteriores. Fichas exibem apenas posse em ordem numérica, sem cupom.
+
+`MarcusNotebookContent` projeta registros já adquiridos em primeira pessoa a partir de `Resources/Notebook/Entries.json`, sem mudar os documentos, flags ou fatos originais. Variantes condicionais dependem de conhecimento real. Registros legados sem versão própria são transcrições identificadas, sem novos fatos. `GameState.OnDiarioAtualizado(id)` notifica alteração material; `OnSnapshotRestaurado` reconcilia cache sem aviso de descoberta. `caderno.folha` é apenas marcador RAM/snapshot v2; salvar continua exclusivo do orelhão. Kalam tem licença OFL distribuída; TMP estático evita geração de fonte em jogo.
+
+Entorno `Resources/Atlas/Paisagem.png` e rabiscos por descoberta não modificam a geometria, cenas ou acessos. A autoria de fonte/paisagem roda explicitamente fora de Play; não há reconstrução ao abrir o Editor. QA: `-srNotebookQA` em Development, além da regressão `-srAtlasQA`. Relatório: [caderno](../../Evidencias/Caderno/Relatorio.md).
+
+
+## Pertences e fitas — 04/11/2026
+
+SantaRitaInventory deriva posse das flags existentes/item.<id>; bolsa.ordem e bolsa.atalho.<n> são textos em RAM/snapshot v2. Cinco atalhos não são capacidade máxima: bolsa possui vinte células de apresentação para o catálogo atual de nove objetos. Fichas continuam no mapa, não itens. Contrato HasItem(int) preserva índices históricos.
+
+SantaRitaTapeDeck gerencia modal, reparo de velocidade de Mila, seleção adquirida, controles e transcrição de Resources/Tapes/Catalog.json; clipes de voz são opcionais e ainda ausentes. SantaRitaTapePickup/Placement anexam fitas a objetos já existentes depois da carga, sem salvar/regenerar cenas. Conclusão anota fato pessoal, troca de cena interrompe. PlayerController/Mapa/Menu bloqueiam comandos concorrentes e ClosedFrame evita ESC abrir pausa por baixo. Capitulo2Audio atenua música durante consulta. Tudo permanece RAM até o orelhão.
+
+MarcusNotebookUI mantém índice manuscrito e filtros de registros adquiridos. caderno.marcador.id/.parte resolve o marcador por nota mesmo com páginas adicionadas; caderno.folha é fallback. APIs de notas originais não substituídas.
+
+MilaProductionVerification fica no Editor; MilaRuntimeVerification apenas Editor/DEBUG com flags explícitas e saves temporários. Chapter2BuildVerification agenda Exit para permitir finally restaurar configurações. Autoria vocal em Tools/Audio e segredos fora do repo/Player. [Relatório e limites](../../Evidencias/MilaInventario/Relatorio.md).

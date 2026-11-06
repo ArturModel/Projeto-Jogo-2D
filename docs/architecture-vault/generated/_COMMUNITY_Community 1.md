@@ -1,0 +1,245 @@
+---
+type: community
+members: 150
+---
+
+# Community 1
+
+**Members:** 150 nodes
+
+## Members
+- [[dot-Build()]] - code - Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs
+- [[dot-BuildNormal()]] - code - Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs
+- [[dot-BuildQA()]] - code - Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs
+- [[dot-ConectarManualmente()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[dot-ConfigureEnvironment()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[dot-OnPreprocessTexture()]] - code - Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs
+- [[dot-OnPreprocessTexture()_1]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[dot-OnPreprocessTexture()_2]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
+- [[dot-WaitForEditor()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[AssetPostprocessor]] - code
+- [[AtlasRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/AtlasRuntimeVerification.cs
+- [[AudioAmbiente.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
+- [[AudioC2RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/AudioC2RuntimeVerification.cs
+- [[AudioSettingsController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[BarSinucaR4RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs
+- [[BochaAI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
+- [[BochaCourtView.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[BochaMinigameUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[BochaPerspectiveRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
+- [[BochaPerspectiveVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs
+- [[CamadaDeLuz.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs
+- [[CameraFollow.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
+- [[Capitulo1Director.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[Capitulo2Audio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
+- [[Capitulo2Director.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
+- [[Capitulo2Perception.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
+- [[CelularCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs
+- [[Chapter2BuildVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[Chapter2R2RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
+- [[Chapter2RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
+- [[Chapter2Verification.cs]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
+- [[CheckpointSystem.cs]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[ChegadaEmSantaRita.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs
+- [[Chuva.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
+- [[DentroDaCasaDoAvo.cs]] - code - Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs
+- [[DicaDeTecla.cs]] - code - Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs
+- [[EstradaScroller.cs]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[GameMessageUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[InteracaoCapitulo1.cs]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[Interactable.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[InteractionPrompt.cs]] - code - Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs
+- [[InteriorAccessRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs
+- [[Legenda.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[MapaInterativoUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
+- [[MarcusGait.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[MarcusNotebookUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs
+- [[MenuAmbiente.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs
+- [[MenuAmbienteAuthoring]] - code - Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs
+- [[MenuAmbienteAuthoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs
+- [[MenuAmbienteGraphic.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[MenuAmbienteRuntimeQA.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs
+- [[MenuAmbienteTextureImporter]] - code - Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs
+- [[MenuItemSelector.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
+- [[MenuPanelTransition.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs
+- [[MenuPausa.cs]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[MilaProductionVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/MilaProductionVerification.cs
+- [[MilaRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[NotebookRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/NotebookRuntimeVerification.cs
+- [[OlharPrimeiraPessoa.cs]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
+- [[OptionsPanelController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/OptionsPanelController.cs
+- [[PayphoneCheckpoint.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[PayphoneRegistroUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[PlayerController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[PonteiroCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[PortalRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/PortalRuntimeVerification.cs
+- [[PrologoDirector.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs
+- [[PrologoEstradaGraphic.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[PrologoJogavel.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[PrologoJogavelVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[PrologoRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[PrologoTextureImporter]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[PrologoVideo.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[RadioCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
+- [[SantaRitaActorElevation.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
+- [[SantaRitaArtImporter]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
+- [[SantaRitaArtImporter.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs
+- [[SantaRitaArtProduction.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
+- [[SantaRitaAtlasAuthoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaAtlasAuthoring.cs
+- [[SantaRitaAtlasView.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs
+- [[SantaRitaBarLayout.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[SantaRitaC2Consolidation.Access.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
+- [[SantaRitaC2Consolidation.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
+- [[SantaRitaChapter1Builder.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
+- [[SantaRitaChapter2Authoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs
+- [[SantaRitaFootsteps.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
+- [[SantaRitaGeography.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
+- [[SantaRitaInventory.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
+- [[SantaRitaItemAction.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs
+- [[SantaRitaLivingWorldAuthoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
+- [[SantaRitaMcpSetup]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[SantaRitaMcpSetup.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[SantaRitaNotebookAuthoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs
+- [[SantaRitaNpcWork.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[SantaRitaProductionVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
+- [[SantaRitaRimLight.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs
+- [[SantaRitaRoomLayout.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomLayout.cs
+- [[SantaRitaRuralPaths.cs]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
+- [[SantaRitaShallowStairs.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[SantaRitaSound.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
+- [[SantaRitaTapeDeck.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[SantaRitaWorldLighting]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs
+- [[SantaRitaWorldLighting.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs
+- [[SceneFader.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SceneFader.cs
+- [[Sinuca3DRuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
+- [[Sinuca3DVerification.cs]] - code - Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs
+- [[SinucaBrasileiraRules.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[SinucaMinigameUI.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[SinucaRef7Authoring.cs]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
+- [[SinucaRef7RuntimeVerification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/SinucaRef7RuntimeVerification.cs
+- [[SinucaRoom3D.Actors.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[SinucaRoom3D.Table.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[SinucaRoom3D.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[SinucaSpinSelector.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
+- [[SinucaTableView.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[Sinuquinha15Verification.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
+- [[SinuquinhaRules.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
+- [[SpawnPoint.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs
+- [[SubtitleSettingsController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
+- [[TileAleatorio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/TileAleatorio.cs
+- [[TransicaoDeZonaTrigger.cs]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
+- [[UIFactory.cs]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
+- [[VideoSettingsController.cs]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
+- [[system]] - concept
+- [[system_collections]] - concept
+- [[system_collections_generic]] - concept
+- [[system_io]] - concept
+- [[system_linq]] - concept
+- [[system_reflection]] - concept
+- [[system_text]] - concept
+- [[system_threading_tasks]] - concept
+- [[tmpro]] - concept
+- [[unity_collections]] - concept
+- [[unityeditor]] - concept
+- [[unityeditor_build_reporting]] - concept
+- [[unityeditor_scenemanagement]] - concept
+- [[unityengine]] - concept
+- [[unityengine_audio]] - concept
+- [[unityengine_events]] - concept
+- [[unityengine_eventsystems]] - concept
+- [[unityengine_inputsystem]] - concept
+- [[unityengine_inputsystem_lowlevel]] - concept
+- [[unityengine_inputsystem_ui]] - concept
+- [[unityengine_object]] - concept
+- [[unityengine_rendering]] - concept
+- [[unityengine_rendering_universal]] - concept
+- [[unityengine_scenemanagement]] - concept
+- [[unityengine_textcore_lowlevel]] - concept
+- [[unityengine_tilemaps]] - concept
+- [[unityengine_ui]] - concept
+- [[unityengine_video]] - concept
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_1
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 13 edges to [[_COMMUNITY_Community 6]]
+- 12 edges to [[_COMMUNITY_Community 0]]
+- 10 edges to [[_COMMUNITY_Community 13]]
+- 7 edges to [[_COMMUNITY_Community 20]]
+- 6 edges to [[_COMMUNITY_Community 18]]
+- 6 edges to [[_COMMUNITY_Community 19]]
+- 6 edges to [[_COMMUNITY_Community 45]]
+- 6 edges to [[_COMMUNITY_Community 51]]
+- 5 edges to [[_COMMUNITY_Community 57]]
+- 4 edges to [[_COMMUNITY_Community 2]]
+- 4 edges to [[_COMMUNITY_Community 29]]
+- 3 edges to [[_COMMUNITY_Community 109]]
+- 3 edges to [[_COMMUNITY_Community 16]]
+- 3 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 85]]
+- 3 edges to [[_COMMUNITY_Community 27]]
+- 3 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 11]]
+- 2 edges to [[_COMMUNITY_Community 110]]
+- 2 edges to [[_COMMUNITY_Community 113]]
+- 2 edges to [[_COMMUNITY_Community 117]]
+- 2 edges to [[_COMMUNITY_Community 15]]
+- 2 edges to [[_COMMUNITY_Community 26]]
+- 2 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 40]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 46]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 95]]
+- 2 edges to [[_COMMUNITY_Community 96]]
+- 2 edges to [[_COMMUNITY_Community 99]]
+- 2 edges to [[_COMMUNITY_Community 122]]
+- 1 edge to [[_COMMUNITY_Community 114]]
+- 1 edge to [[_COMMUNITY_Community 115]]
+- 1 edge to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 123]]
+- 1 edge to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 38]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 47]]
+- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 56]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 83]]
+- 1 edge to [[_COMMUNITY_Community 84]]
+- 1 edge to [[_COMMUNITY_Community 87]]
+- 1 edge to [[_COMMUNITY_Community 88]]
+- 1 edge to [[_COMMUNITY_Community 89]]
+- 1 edge to [[_COMMUNITY_Community 93]]
+- 1 edge to [[_COMMUNITY_Community 98]]
+- 1 edge to [[_COMMUNITY_Community 106]]
+- 1 edge to [[_COMMUNITY_Community 116]]
+- 1 edge to [[_COMMUNITY_Community 37]]
+- 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 94]]
+
+## Top bridge nodes
+- [[unityengine]] - degree 130, connects to 21 communities
+- [[system]] - degree 68, connects to 5 communities
+- [[system_collections_generic]] - degree 56, connects to 4 communities
+- [[BochaCourtView.cs]] - degree 8, connects to 3 communities
+- [[SantaRitaTapeDeck.cs]] - degree 13, connects to 2 communities

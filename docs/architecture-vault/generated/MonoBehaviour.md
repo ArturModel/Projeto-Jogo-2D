@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 54"
+community: "Community 57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_57
 ---
 
 # MonoBehaviour
@@ -38,12 +38,18 @@ tags:
 - [[LimpadorParabrisa]] - `inherits` [EXTRACTED]
 - [[MainMenuActions]] - `inherits` [EXTRACTED]
 - [[MapaInterativoUI]] - `inherits` [EXTRACTED]
+- [[MarcusNotebookUI]] - `inherits` [EXTRACTED]
+- [[MenuAmbiente]] - `inherits` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA]] - `inherits` [EXTRACTED]
 - [[MenuItemSelector]] - `inherits` [EXTRACTED]
 - [[MenuPanelTransition]] - `inherits` [EXTRACTED]
 - [[MenuPausa]] - `inherits` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `inherits` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[OlharPrimeiraPessoa]] - `inherits` [EXTRACTED]
 - [[OptionsPanelController]] - `inherits` [EXTRACTED]
+- [[PayphoneRegistroTecla]] - `inherits` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `inherits` [EXTRACTED]
 - [[PayphoneSlotInputWatcher]] - `inherits` [EXTRACTED]
 - [[PlayerController]] - `inherits` [EXTRACTED]
 - [[PonteiroCarro]] - `inherits` [EXTRACTED]
@@ -52,6 +58,7 @@ tags:
 - [[PrologoRuntimeVerification]] - `inherits` [EXTRACTED]
 - [[PrologoVideo]] - `inherits` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `inherits` [EXTRACTED]
+- [[SantaRitaAtlasView]] - `inherits` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarHost]] - `inherits` [EXTRACTED]
@@ -69,6 +76,8 @@ tags:
 - [[SantaRitaRoomLayout]] - `inherits` [EXTRACTED]
 - [[SantaRitaShallowStairs]] - `inherits` [EXTRACTED]
 - [[SantaRitaSound]] - `inherits` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `inherits` [EXTRACTED]
+- [[SantaRitaTapePlacement]] - `inherits` [EXTRACTED]
 - [[SceneFader]] - `inherits` [EXTRACTED]
 - [[SinucaMinigameUI]] - `inherits` [EXTRACTED]
 - [[SinucaPixelPreviewSession]] - `inherits` [EXTRACTED]
@@ -76,4 +85,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_57

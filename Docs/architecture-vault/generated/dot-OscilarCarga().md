@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 114"
+community: "Community 100"
 location: "L1396"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_114
+  - community/Community_100
 ---
 
 # .OscilarCarga()
 
 ## Connections
 - [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
-- [[dot-Run()_2]] - `calls` [EXTRACTED]
+- [[dot-Run()_1]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+#graphify/code #graphify/EXTRACTED #community/Community_100

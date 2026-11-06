@@ -11,6 +11,7 @@ tags:
 # AssetPostprocessor
 
 ## Connections
+- [[MenuAmbienteTextureImporter]] - `inherits` [EXTRACTED]
 - [[PrologoTextureImporter]] - `inherits` [EXTRACTED]
 - [[SantaRitaArtImporter]] - `inherits` [EXTRACTED]
 

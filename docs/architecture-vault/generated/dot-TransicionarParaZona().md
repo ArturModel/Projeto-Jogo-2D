@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
 community: "Community 84"
-location: "L198"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED

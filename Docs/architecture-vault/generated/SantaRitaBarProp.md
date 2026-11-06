@@ -16,7 +16,7 @@ tags:
 - [[dot-Interact()_6]] - `method` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_6]] - `defines` [EXTRACTED]
+- [[Prompt_8]] - `defines` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_18

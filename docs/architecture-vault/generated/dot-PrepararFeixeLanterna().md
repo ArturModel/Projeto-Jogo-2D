@@ -12,7 +12,7 @@ tags:
 # .PrepararFeixeLanterna()
 
 ## Connections
-- [[dot-Awake()_15]] - `calls` [EXTRACTED]
+- [[dot-Awake()_18]] - `calls` [EXTRACTED]
 - [[Light2D]] - `references` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 

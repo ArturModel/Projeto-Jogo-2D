@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 103"
+community: "Community 24"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_103
+  - community/Community_24
 ---
 
 # .TentarTransicionar()
 
 ## Connections
-- [[dot-Interact()_1]] - `calls` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_7]] - `calls` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()_2]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [INFERRED]
 - [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_24

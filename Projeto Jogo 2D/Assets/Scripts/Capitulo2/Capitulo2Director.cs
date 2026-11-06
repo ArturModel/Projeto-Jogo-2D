@@ -106,6 +106,12 @@ public sealed class Capitulo2Director : MonoBehaviour
     public void Interagir(string id, Sprite arteExame = null)
     {
         if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
+        if(id=="radio_test")
+        {
+            if(!GameState.Tem("c2_conheceu_mila")){GameMessageUI.Instance.Show("O aparelho está na bancada de trabalho. Vou pedir antes de mexer.","MARCUS","marcus");return;}
+            if(GameState.Tem("item.tocador")){SantaRitaTapeDeck.Ensure().Open();return;}
+            SantaRitaTapeDeck.Ensure().Repair();return;
+        }
         if (id == "horarios" && !GameState.Tem(Flags.MapaDoCarroObtido))
         {
             GameMessageUI.Instance.ShowInspection("LINHAS E RUAS DE SANTA RITA", "Bilhete",
@@ -258,15 +264,7 @@ public sealed class Capitulo2Director : MonoBehaviour
 
     public bool PosicaoNoMapa(Vector3 pos, out Vector2 uv, out string local)
     {
-        local = nomeLocal;
-        string scene = SceneManager.GetActiveScene().name;
-        string landmark = SantaRitaGeography.IdDaCena(scene);
-        uv = landmark != null ? SantaRitaGeography.UV(landmark) : uvNoMapa;
-        if (!interior)
-        {
-            uv = SantaRitaGeography.MundoC2ParaUV(pos);
-            local = SceneManager.GetActiveScene().name == "CemiterioSantaRita" ? "Cemitério municipal" : pos.y < 17 && pos.x < 25 ? "Sociedade Beira-Rio — Margem urbana" : nomeLocal;
-        }
+        uv=SantaRitaAtlas.Player(pos,out local);
         return true;
     }
 }

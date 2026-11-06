@@ -12,7 +12,7 @@ tags:
 # .EntrarNoBar()
 
 ## Connections
-- [[dot-Interact()_4]] - `calls` [EXTRACTED]
+- [[dot-Interact()_3]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 

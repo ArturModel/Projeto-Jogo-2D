@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
 community: "Community 34"
-location: "L82"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED

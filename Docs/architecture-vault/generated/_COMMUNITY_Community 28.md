@@ -1,33 +1,23 @@
 ---
 type: community
-members: 21
+members: 11
 ---
 
 # Community 28
 
-**Members:** 21 nodes
+**Members:** 11 nodes
 
 ## Members
 - [[dot-Disc()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnDrag()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnDrag()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnPointerDown()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerDown()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnPointerEnter()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnPointerExit()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnPointerMove()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerUp()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnDrag()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
+- [[dot-OnPointerDown()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
 - [[dot-OnPopulateMesh()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnScroll()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-Select()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
 - [[dot-SetContact()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
 - [[Contact]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
 - [[IDragHandler]] - code
 - [[IPointerDownHandler]] - code
-- [[IPointerEnterHandler]] - code
-- [[IPointerExitHandler]] - code
-- [[PointerEventData]] - code
-- [[SantaRitaItemHover]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
+- [[MaskableGraphic]] - code
 - [[SinucaSpinSelector]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
 
 ## Live Query (requires Dataview plugin)
@@ -38,27 +28,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Community 9]]
-- 7 edges to [[_COMMUNITY_Community 39]]
-- 4 edges to [[_COMMUNITY_Community 17]]
+- 6 edges to [[_COMMUNITY_Community 9]]
+- 4 edges to [[_COMMUNITY_Community 46]]
 - 3 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 119]]
-- 2 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 96]]
-- 2 edges to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 40]]
+- 2 edges to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 30]]
 - 1 edge to [[_COMMUNITY_Community 14]]
 - 1 edge to [[_COMMUNITY_Community 3]]
 - 1 edge to [[_COMMUNITY_Community 48]]
 - 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 100]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 21]]
 
 ## Top bridge nodes
-- [[SinucaSpinSelector]] - degree 17, connects to 8 communities
-- [[PointerEventData]] - degree 22, connects to 5 communities
-- [[SantaRitaItemHover]] - degree 8, connects to 4 communities
+- [[SinucaSpinSelector]] - degree 17, connects to 7 communities
 - [[dot-Disc()]] - degree 5, connects to 3 communities
+- [[MaskableGraphic]] - degree 5, connects to 3 communities
 - [[dot-SetContact()]] - degree 3, connects to 2 communities
+- [[IDragHandler]] - degree 3, connects to 2 communities

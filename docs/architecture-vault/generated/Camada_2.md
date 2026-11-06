@@ -1,21 +1,20 @@
 ---
-source_file: ""
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "Community 8"
+community: "Community 95"
+location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_95
 ---
 
 # Camada
 
 ## Connections
-- [[dot-CriarCamada()]] - `references` [EXTRACTED]
-- [[dot-LiberarCamada()]] - `references` [EXTRACTED]
-- [[dot-Limpar()_1]] - `references` [EXTRACTED]
-- [[dot-Pintar()]] - `references` [EXTRACTED]
-- [[AudioAmbiente]] - `references` [EXTRACTED]
-- [[Chuva]] - `references` [EXTRACTED]
+- [[dot-ConfigurarLoop()]] - `calls` [EXTRACTED]
+- [[AudioAmbiente]] - `contains` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_95

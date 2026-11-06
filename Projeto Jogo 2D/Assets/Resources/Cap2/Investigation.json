@@ -717,7 +717,7 @@
         },
         {
           "falante": "MILA",
-          "texto": "É uma reprodução que deixaram para a oficina. Ela queria ampliar o som da praça. Guardei por causa da piada do rádio teimoso. Esse aí está em teste: deixa na faixa LOCAL. Se voltar dois tons, o circuito respondeu.",
+          "texto": "Guardei o desenho com os testes de som. O tocador ali está com a velocidade irregular. Se puder comparar os três ajustes comigo, eu termino de separar essas caixas.",
           "retratoId": "mila"
         }
       ],
@@ -735,14 +735,14 @@
         },
         {
           "falante": "MILA",
-          "texto": "A gente lembra dela também por isso. Leve a frase com você, não o aparelho da oficina.",
+          "texto": "Pode ficar com o tocador por enquanto. A fita do estojo é do teste da campainha; ficou junto do material que eu conservo aqui. Depois passa para me contar o que achou.",
           "retratoId": "mila"
         }
       ],
       "repeat": [
         {
           "falante": "MILA",
-          "texto": "O desenho está na bancada; a etiqueta pede FAIXA LOCAL. Não há mensagem secreta da Júlia dentro do rádio.",
+          "texto": "O tocador fica na bancada. A etiqueta marca REGULAR. Pode testar sem medo de estragar a fita.",
           "retratoId": "mila"
         }
       ],

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
 type: "code"
-community: "Community 39"
-location: "L64"
+community: "Community 26"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_26
 ---
 
 # .Awake()
 
 ## Connections
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[PonteiroCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_26

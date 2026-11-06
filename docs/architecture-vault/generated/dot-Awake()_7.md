@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "Community 26"
-location: "L24"
+community: "Community 19"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_19
 ---
 
 # .Awake()
 
 ## Connections
-- [[ObjetoCarro]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_19

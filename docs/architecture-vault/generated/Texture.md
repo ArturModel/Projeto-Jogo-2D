@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[dot-Mat()]] - `references` [EXTRACTED]
+- [[dot-NovaImagem()]] - `references` [EXTRACTED]
 - [[dot-Panel()]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 - [[PrologoEstradaGraphic]] - `references` [EXTRACTED]

@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
 type: "code"
-community: "Community 19"
-location: "L36"
+community: "Community 14"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_14
 ---
 
 # .Awake()
 
 ## Connections
-- [[LimpadorParabrisa]] - `method` [EXTRACTED]
+- [[dot-Build()_1]] - `calls` [EXTRACTED]
+- [[DicaDeTecla]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_14

@@ -1,24 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 54"
-location: "L59"
+community: "Community 36"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_36
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Encerrar()_3]] - `calls` [EXTRACTED]
-- [[dot-Legendar()]] - `calls` [EXTRACTED]
-- [[dot-MontarTela()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[PonteiroCarro]] - `references` [EXTRACTED]
-- [[PrologoDirector]] - `references` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
-- [[VideoPlayer]] - `references` [EXTRACTED]
+- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
+- [[dot-Guard()_1]] - `calls` [EXTRACTED]
+- [[dot-Run()_3]] - `calls` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_36

@@ -360,12 +360,30 @@ Lanterna-costas concluída: captura e QA PASS, builds sem erros/hash igual, índ
 
 02/11 — [Console limpo](../ai-plans/2026-11-02_PatrickDotto_console-limpo.md): APIs obsoletas e campo não utilizado removidos.
 
-06/11 — [Prólogo jogável](../ai-plans/2026-11-06_BBCONTTI_prologo-jogavel.md): cabine detalhada em camadas, condução leve e interações opcionais. Revisão de asfalto/chuva e parada no recuo da Rodovia; validação no relatório. Preferir Play do Editor nas iterações conforme pedido do usuário.
 
-## 06/11/2026 — revisão rural do prólogo (substitui a apresentação anterior)
+02/11 — [Atlas cartográfico](../ai-plans/2026-11-02_PatrickDotto_atlas-cartografico.md): levantamento real de 19 regiões/38 acessos, camadas/plantas, marcador e investigação por estados existentes, sem GPS ou ilustração antiga na UI. QA Editor/Player final PASS; builds normais/QA sem erros e mesmo hash; 6 arquivos pessoais intactos. Fontes/limites em [relatório](../Evidencias/Atlas/Relatorio.md) e [arquitetura](../Atlas_Arquitetura.md). Não inferir aprovação artística ou campanha integral.
 
-Horizonte distante sem postes/casas embutidos; atlas de cenário próximo avança na mesma projeção da via. Trajetória em espaço com duas curvas; terra aos 140–166 m; parada em recuo de terra aos 44 s e transição aos 51 s para EntradaDaCidade/saida_carro. Asfalto, terra compactada e solo com folhas/capim são materiais distintos com acostamento irregular. Motor interior e rodagem em cascalho usam gravações CC0, mistura por superfície/velocidade e pausa/foco/efeitos do mixer existente; nenhum save automático. Plano: [prólogo rural](../ai-plans/2026-11-06_ismaelweinertb_prologo-rural.md). Testes em Play; sem builds. Avaliação visual/audição final pelo autor pendentes.
 
-06/11 — Identidade GitHub confirmada: ismaelweinertb / Ismael Weinert. Configuração somente deste repositório corrigida para nome/noreply e credencial dessa conta. Commit anterior dc7b5841 corrigido para 451c5606 com árvore/mensagem idênticas e lease explícito autorizado; novas melhorias rurais/áudio continuam sem commit.
+03/11 — [Caderno e paisagem](../ai-plans/2026-11-03_PatrickDotto_caderno-paisagem.md): scroll dos painéis isolado, fichas só adquiridas/ordenadas sem cupom, título Mapa da Cidade e paisagem decorativa, livro independente com escrita manuscrita e reflexões por conhecimento adquirido. Avisos sem repetição/carga falsa e sem autosave. Validação final em consolidação; [relatório](../Evidencias/Caderno/Relatorio.md).
 
-06/11 — Autor autorizou commit e push das melhorias rurais/áudio na feature/prologo-jogavel com ismaelweinertb. Publicação documentada em [plano](../ai-plans/2026-11-06_ismaelweinertb_commit-prologo-rural.md); substitui a pendência anterior de alterações locais sem commit. Sem nova build; evidências de Play preservadas.
+
+Fechamento caderno/paisagem: testes específicos (30) e Atlas (237) PASS em Editor e Player; builds finais sem erros e hash igual, 120 C# indexados. Sessão RAM/posição/zona/indicador restaurados, seis arquivos pessoais intactos, cenas/configurações sem diff. Corpus final com 64 textos/variantes; original do diário preservado. Alterações não staged, sem commit/push. Limites e evidências no relatório Caderno.
+
+TMP gravou cache VT323 após restauração; único asset posterior às builds. Hash do Assets atual difere do fingerprint comum das duas builds por esse cache, sem mudanças posteriores em código/cenas/corpus/arte. Detalhe no relatório.
+
+
+04/11 — Priorização documental de exploração: Mila/tocador, Lia/rodoviária e orelhões primeiro; dependências locais separadas da reforma geral. PDF reorganizado e lista em Docs/Ideias_Exploracao_Ordem_Producao.md. Plano: ../ai-plans/2026-11-04_PatrickDotto_prioridades-exploracao.md. Implementação ainda pendente.
+
+04/11 — Proposta Mila/fitas para discussão antes de implementar: Docs/Proposta_Mila_Fitas.md; plano 2026-11-04_PatrickDotto_proposta-mila-fitas.md. Produção vocal não iniciada; nenhuma ferramenta TTS conectada.
+
+
+04/11 — Mila/fitas, bolsa e caderno: empréstimo/reparo contextual, quatro fitas físicas/transcrições, bolsa de vinte espaços com cinco atalhos, índice manuscrito e marcador por ID. 32 checks + PASS Editor e Player, builds finais/hash igual. Dublagem final pendente: ElevenLabs autenticado privado, candidata Jessica rejeitada; pesquisa e duas audições Qwen oficiais, Audio Lens instalado 12/12. [Plano executado](../ai-plans/2026-11-04_PatrickDotto_mila-inventario-caderno.md), [relatório](../Evidencias/MilaInventario/Relatorio.md), [pesquisa vocal](../Vozes_Pesquisa_E_Producao.md). Sem autosave/reconstrução/commit/push.
+
+
+04/11 — Revisão das audições pelo autor: duas candidatas Qwen também REJEITADAS (artificialidade/idade), faltaram quarto/Marcus ao fundo. Direção agora exige prova de cena completa com vozes em posições distintas. Base real de quarto/foley CC0 preparada em prévia privada, renderer validado; elenco completo NÃO produzido: Lucas/Marcus retornaram erro na demo, Voice Design do AI Studio exige chave paga. Sem compras, Assets ou saves alterados. [Plano e bloqueios](../ai-plans/2026-11-04_PatrickDotto_fitas-cena-quarto.md); [fontes/evidências](../Evidencias/MilaInventario/Revisao_Cena_Quarto.md).
+
+04/11 — Pedido posterior de amostra única: cena com três tomadas ElevenLabs v3 e ambiente/foley renderizada em prévia privada; elenco ainda não aprovado. Plano: ../ai-plans/2026-11-04_PatrickDotto_amostra-fita-quarto.md. Sem publicar no jogo.
+
+04/11 — Amostra R2: novas tomadas Júlia/Lucas, Marcus chamado pelo nome na porta; REC/cadeira/quarto aumentados e tratamento mono de cassete com chiado. Prévia privada, sem aprovação/publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_amostra-fita-r2.md.
+
+04/11 — Autor forneceu roteiro R3 e rejeitou timbre adulto da R2. Oito falas registradas literalmente em Tools/Audio/quarto_roteiro_r3.json; teste juvenil Qwen falhou. Sem nova amostra adequada nem publicação. Plano ../ai-plans/2026-11-04_PatrickDotto_roteiro-fita-r3.md.

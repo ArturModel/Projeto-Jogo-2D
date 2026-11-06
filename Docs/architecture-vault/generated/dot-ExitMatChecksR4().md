@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-FindNearest()]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-Place()]] - `calls` [INFERRED]
+- [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[dot-TapR2()]] - `calls` [INFERRED]
 - [[dot-TryObterInfoZona()]] - `calls` [EXTRACTED]

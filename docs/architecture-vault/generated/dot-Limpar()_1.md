@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs"
 type: "code"
-community: "Community 8"
-location: "L593"
+community: "Community 42"
+location: "L276"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_42
 ---
 
 # .Limpar()
 
 ## Connections
-- [[dot-Desenhar()]] - `calls` [EXTRACTED]
-- [[Camada_2]] - `references` [EXTRACTED]
-- [[Chuva]] - `method` [EXTRACTED]
+- [[dot-ExecutarProtegido()]] - `calls` [EXTRACTED]
+- [[dot-OnDestroy()_11]] - `calls` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_42

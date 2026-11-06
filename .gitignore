@@ -186,3 +186,9 @@ docs/architecture-vault/.obsidian/
 !/Docs/Evidencias/LanternaCostas/PlayerQA/runtime-qa.txt
 !/Docs/Evidencias/LanternaCostas/PlayerQA/build-qa.txt
 !/Docs/Evidencias/LanternaCostas/PlayerNormal/build-windows.txt
+
+# Mila: somente evidências finais compactas, capturas/logs continuam locais.
+!/Docs/Evidencias/MilaInventario/EditorQA/runtime-qa.txt
+!/Docs/Evidencias/MilaInventario/PlayerQA/runtime-qa.txt
+!/Docs/Evidencias/MilaInventario/BuildQA/build-qa.txt
+!/Docs/Evidencias/MilaInventario/BuildNormal/build-windows.txt

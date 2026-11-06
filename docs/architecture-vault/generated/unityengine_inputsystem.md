@@ -11,6 +11,7 @@ tags:
 # unityengine_inputsystem
 
 ## Connections
+- [[AtlasRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[AudioC2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BarSinucaR4RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaMinigameUI.cs]] - `imports` [EXTRACTED]
@@ -20,7 +21,10 @@ tags:
 - [[GameMessageUI.cs]] - `imports` [EXTRACTED]
 - [[InteriorAccessRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[MapaInterativoUI.cs]] - `imports` [EXTRACTED]
+- [[MenuAmbiente.cs]] - `imports` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA.cs]] - `imports` [EXTRACTED]
 - [[MenuPausa.cs]] - `imports` [EXTRACTED]
+- [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[OlharPrimeiraPessoa.cs]] - `imports` [EXTRACTED]
 - [[OptionsPanelController.cs]] - `imports` [EXTRACTED]
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
@@ -31,6 +35,8 @@ tags:
 - [[PrologoJogavel.cs]] - `imports` [EXTRACTED]
 - [[PrologoRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PrologoVideo.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaInventory.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaTapeDeck.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]
 - [[Sinuquinha15Verification.cs]] - `imports` [EXTRACTED]

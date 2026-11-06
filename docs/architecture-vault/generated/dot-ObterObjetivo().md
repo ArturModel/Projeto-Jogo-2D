@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 86"
-location: "L61"
+community: "Community 34"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_34
 ---
 
 # .ObterObjetivo()
@@ -14,7 +14,8 @@ tags:
 ## Connections
 - [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
-- [[dot-Start()_20]] - `calls` [EXTRACTED]
+- [[dot-ObjectiveId()]] - `calls` [EXTRACTED]
+- [[dot-Start()_5]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_34

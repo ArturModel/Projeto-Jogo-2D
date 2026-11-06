@@ -24,7 +24,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void Init()
     {
-        if(!Environment.GetCommandLineArgs().Contains("-srMarcusQA")&&!Environment.GetCommandLineArgs().Contains("-srAudioC2QA")&&!Environment.GetCommandLineArgs().Contains("-srSinuquinhaQA")&&!Environment.GetCommandLineArgs().Contains("-srSinucaR4QA")&&!Environment.GetCommandLineArgs().Contains("-srPortalQA")&&!Environment.GetCommandLineArgs().Contains("-srAccessQA")&&!Environment.GetCommandLineArgs().Contains("-srC2QA")&&!Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")&&!Environment.GetCommandLineArgs().Contains("-srC2PerfQA")&&!Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")&&!Environment.GetCommandLineArgs().Contains("-srC2R2QA")&&!Environment.GetCommandLineArgs().Contains("-srBochaQA")&&!Environment.GetCommandLineArgs().Contains("-srSinuca3DQA"))return;
+        if(!Environment.GetCommandLineArgs().Contains("-srNotebookQA")&&!Environment.GetCommandLineArgs().Contains("-srAtlasQA")&&!Environment.GetCommandLineArgs().Contains("-srMarcusQA")&&!Environment.GetCommandLineArgs().Contains("-srAudioC2QA")&&!Environment.GetCommandLineArgs().Contains("-srSinuquinhaQA")&&!Environment.GetCommandLineArgs().Contains("-srSinucaR4QA")&&!Environment.GetCommandLineArgs().Contains("-srPortalQA")&&!Environment.GetCommandLineArgs().Contains("-srAccessQA")&&!Environment.GetCommandLineArgs().Contains("-srC2QA")&&!Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")&&!Environment.GetCommandLineArgs().Contains("-srC2PerfQA")&&!Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")&&!Environment.GetCommandLineArgs().Contains("-srC2R2QA")&&!Environment.GetCommandLineArgs().Contains("-srBochaQA")&&!Environment.GetCommandLineArgs().Contains("-srSinuca3DQA"))return;
         var g=new GameObject("C2_Runtime_QA_Explicit");DontDestroyOnLoad(g);g.AddComponent<Chapter2RuntimeVerification>();
     }
     private void Start()
@@ -35,11 +35,11 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
         isolation=CheckpointSystem.BeginIsolatedTests();
         File.WriteAllText(Path.Combine(folder,"runtime-progresso.txt"),"Início QA "+DateTime.UtcNow.ToString("O")+"\n");
         report.Add("QA automatizado em Development Build. Fixture C1 criada em RAM; não comprova T01/percurso legítimo. Nenhum slot pessoal utilizado.");
-        StartCoroutine(Guard(Environment.GetCommandLineArgs().Contains("-srMarcusQA")?RunMarcusQA():audioC2Force||Environment.GetCommandLineArgs().Contains("-srAudioC2QA")?RunAudioC2():sinuquinhaForce||Environment.GetCommandLineArgs().Contains("-srSinuquinhaQA")?RunSinuquinha15():sinucaR4Force||Environment.GetCommandLineArgs().Contains("-srSinucaR4QA")?RunSinucaR4():portalForce||Environment.GetCommandLineArgs().Contains("-srPortalQA")?RunPortalRegression():accessForce||Environment.GetCommandLineArgs().Contains("-srAccessQA")?RunAccesses():sinuca3DForce||Environment.GetCommandLineArgs().Contains("-srSinuca3DQA")?RunSinuca3DPerspective():bochaForce||Environment.GetCommandLineArgs().Contains("-srBochaQA")?RunBochaPerspective():r2Force||Environment.GetCommandLineArgs().Contains("-srC2R2QA")?RunR2():Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")?SaveIsolationProbe():Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")?C1LoadSmoke():Environment.GetCommandLineArgs().Contains("-srC2PerfQA")?PerformancePair():Run()));
+        StartCoroutine(Guard(notebookForce||Environment.GetCommandLineArgs().Contains("-srNotebookQA")?RunNotebook():atlasForce||Environment.GetCommandLineArgs().Contains("-srAtlasQA")?RunAtlas():Environment.GetCommandLineArgs().Contains("-srMarcusQA")?RunMarcusQA():audioC2Force||Environment.GetCommandLineArgs().Contains("-srAudioC2QA")?RunAudioC2():sinuquinhaForce||Environment.GetCommandLineArgs().Contains("-srSinuquinhaQA")?RunSinuquinha15():sinucaR4Force||Environment.GetCommandLineArgs().Contains("-srSinucaR4QA")?RunSinucaR4():portalForce||Environment.GetCommandLineArgs().Contains("-srPortalQA")?RunPortalRegression():accessForce||Environment.GetCommandLineArgs().Contains("-srAccessQA")?RunAccesses():sinuca3DForce||Environment.GetCommandLineArgs().Contains("-srSinuca3DQA")?RunSinuca3DPerspective():bochaForce||Environment.GetCommandLineArgs().Contains("-srBochaQA")?RunBochaPerspective():r2Force||Environment.GetCommandLineArgs().Contains("-srC2R2QA")?RunR2():Environment.GetCommandLineArgs().Contains("-srSaveIsolationQA")?SaveIsolationProbe():Environment.GetCommandLineArgs().Contains("-srC1LoadSmoke")?C1LoadSmoke():Environment.GetCommandLineArgs().Contains("-srC2PerfQA")?PerformancePair():Run()));
     }
     private void Error(string msg,string stack,LogType type)
     {if(type==LogType.Exception||type==LogType.Error){failed=true;report.Add("ERROR "+msg+"\n"+stack);}}
-    private void Update(){if(sinucaR4Keyboard!=null)sinucaR4Keyboard.MakeCurrent();if(Time.realtimeSinceStartup>deadline){failed=true;Finish();}}
+    private void Update(){if(notebookMouse!=null)notebookMouse.MakeCurrent();if(sinucaR4Keyboard!=null)sinucaR4Keyboard.MakeCurrent();if(Time.realtimeSinceStartup>deadline){failed=true;Finish();}}
     private IEnumerator Guard(IEnumerator routine)
     {
         while(true)
@@ -471,7 +471,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
     }
     private void Finish()
     {
-        if(isolation==null)return;RestoreAudioC2Prefs();Time.timeScale=1;Application.logMessageReceived-=Error;isolation.Dispose();isolation=null;
+        if(isolation==null)return;if(notebookMouse!=null){InputSystem.RemoveDevice(notebookMouse);notebookMouse=null;if(sinucaR4Keyboard!=null){InputSystem.RemoveDevice(sinucaR4Keyboard);sinucaR4Keyboard=null;}}RestoreAudioC2Prefs();Time.timeScale=1;Application.logMessageReceived-=Error;isolation.Dispose();isolation=null;
         report.Add((failed?"FAIL":"PASS")+" runtime "+DateTime.UtcNow.ToString("O"));File.WriteAllLines(Path.Combine(folder,"runtime-qa.txt"),report);Application.Quit(failed?1:0);
 #if UNITY_EDITOR
         if(Application.isEditor)UnityEditor.EditorApplication.isPlaying=false;

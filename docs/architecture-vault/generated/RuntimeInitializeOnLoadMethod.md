@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 95"
+community: "Community 111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_95
+  - community/Community_111
 ---
 
 # RuntimeInitializeOnLoadMethod
@@ -13,20 +13,24 @@ tags:
 ## Connections
 - [[dot-AoCarregarCenaRuntime()]] - `references` [EXTRACTED]
 - [[dot-AutoBootstrap()]] - `references` [EXTRACTED]
+- [[dot-Boot()]] - `references` [EXTRACTED]
 - [[dot-Bootstrap()]] - `references` [EXTRACTED]
+- [[dot-Bootstrap()_1]] - `references` [EXTRACTED]
 - [[dot-InicializarAudioGlobal()]] - `references` [EXTRACTED]
 - [[dot-Init()]] - `references` [EXTRACTED]
+- [[dot-Init()_1]] - `references` [EXTRACTED]
 - [[dot-Instalar()]] - `references` [EXTRACTED]
+- [[dot-Install()_1]] - `references` [EXTRACTED]
 - [[dot-Install()]] - `references` [EXTRACTED]
 - [[dot-PrepararSessao()]] - `references` [EXTRACTED]
 - [[dot-ReiniciarSelecao()]] - `references` [EXTRACTED]
 - [[dot-ResetArt()]] - `references` [EXTRACTED]
 - [[dot-ResetSession()]] - `references` [EXTRACTED]
+- [[dot-ResetStatic()]] - `references` [EXTRACTED]
 - [[dot-ResetStatic()_1]] - `references` [EXTRACTED]
 - [[dot-ResetStatic()_2]] - `references` [EXTRACTED]
-- [[dot-ResetStatic()_3]] - `references` [EXTRACTED]
-- [[dot-ResetStatic()]] - `references` [EXTRACTED]
 - [[dot-ResetStatic()_4]] - `references` [EXTRACTED]
+- [[dot-ResetStatic()_3]] - `references` [EXTRACTED]
 - [[dot-StartSession()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_95
+#graphify/code #graphify/EXTRACTED #community/Community_111

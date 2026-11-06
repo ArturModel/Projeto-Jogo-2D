@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 93"
+community: "Community 95"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_95
 ---
 
 # .RespostaAbafada()
@@ -17,4 +17,4 @@ tags:
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_95

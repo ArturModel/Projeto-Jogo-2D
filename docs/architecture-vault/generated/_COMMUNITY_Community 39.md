@@ -1,36 +1,45 @@
 ---
 type: community
-members: 34
+members: 43
 ---
 
 # Community 39
 
-**Members:** 34 nodes
+**Members:** 43 nodes
 
 ## Members
 - [[dot-AjustarZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-AlternarCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-AngularScreenSign()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-Awake()_12]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-DefinirCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-Awake()_16]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-DefinirZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-Dispose()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-EnsureRoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnDestroy()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnDisable()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnDrag()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnEnable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnPointerDown()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnPointerMove()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnPointerUp()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnScroll()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-InicializarOverlays()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnDestroy()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnDisable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnDrag()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnEnable()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnPointerDown()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnPointerMove()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnPointerUp()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnPopulateMesh()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OnScroll()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-Orbit()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Orbit()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-OrientPixelArt()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
 - [[dot-Preaquecer()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-PrepararSala()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Project()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-ProjetarPontoMesaParaLocalUI()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-RayToTable()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Recenter()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-RecentrarCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-ScreenToTablePoint()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-SetActive()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-SetMode()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-SetZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-UpdateCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[CameraModo]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[IPointerMoveHandler]] - code
 - [[IPointerUpHandler]] - code
@@ -51,26 +60,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Community 2]]
-- 13 edges to [[_COMMUNITY_Community 48]]
-- 7 edges to [[_COMMUNITY_Community 28]]
-- 5 edges to [[_COMMUNITY_Community 56]]
-- 5 edges to [[_COMMUNITY_Community 6]]
+- 14 edges to [[_COMMUNITY_Community 2]]
+- 14 edges to [[_COMMUNITY_Community 48]]
+- 10 edges to [[_COMMUNITY_Community 9]]
+- 6 edges to [[_COMMUNITY_Community 6]]
+- 4 edges to [[_COMMUNITY_Community 114]]
 - 3 edges to [[_COMMUNITY_Community 3]]
+- 3 edges to [[_COMMUNITY_Community 100]]
 - 3 edges to [[_COMMUNITY_Community 7]]
-- 3 edges to [[_COMMUNITY_Community 9]]
 - 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 89]]
+- 2 edges to [[_COMMUNITY_Community 24]]
+- 2 edges to [[_COMMUNITY_Community 28]]
 - 2 edges to [[_COMMUNITY_Community 85]]
-- 2 edges to [[_COMMUNITY_Community 100]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 83]]
+- 2 edges to [[_COMMUNITY_Community 49]]
+- 1 edge to [[_COMMUNITY_Community 30]]
 - 1 edge to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 51]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 
 ## Top bridge nodes
-- [[SinucaTableView]] - degree 51, connects to 14 communities
+- [[SinucaTableView]] - degree 51, connects to 13 communities
+- [[SinucaCameraView]] - degree 9, connects to 4 communities
 - [[dot-ProjetarPontoMesaParaLocalUI()]] - degree 8, connects to 4 communities
-- [[SinucaCameraView]] - degree 9, connects to 3 communities
-- [[dot-DefinirCamera()]] - degree 8, connects to 3 communities
+- [[dot-Project()_1]] - degree 4, connects to 3 communities
 - [[dot-EnsureRoom()]] - degree 9, connects to 2 communities

@@ -12,7 +12,6 @@ tags:
 # .MundoC2ParaUV()
 
 ## Connections
-- [[dot-PosicaoNoMapa()]] - `calls` [EXTRACTED]
 - [[SantaRitaGeography]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

@@ -1,30 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 86"
-location: "L51"
+community: "Community 44"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_44
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-ApplyC2()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
-- [[dot-Definir()_2]] - `calls` [EXTRACTED]
+- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
+- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
+- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-IrParaPosicao()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[CameraFollow]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `method` [EXTRACTED]
-- [[Chuva]] - `references` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaRimLight]] - `references` [EXTRACTED]
+- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
+- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_44

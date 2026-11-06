@@ -1,0 +1,146 @@
+{
+  "tapes": [
+    {
+      "id": "fita01",
+      "title": "01 · No quarto",
+      "label": "JÚ — 01 / TESTE / 1990",
+      "origin": "Estojo guardado junto dos retratos da casa de Adílio. Uma experiência doméstica, preservada com os objetos da família.",
+      "lines": [
+        {
+          "speaker": "JÚLIA",
+          "text": "Tá, agora fica quieto um pouquinho... Lucas, não bate na mesa.",
+          "seconds": 5
+        },
+        {
+          "speaker": "LUCAS",
+          "text": "Eu nem fiz nada!",
+          "seconds": 3
+        },
+        {
+          "speaker": "JÚLIA",
+          "text": "Aham. E esse barulhão se gravou sozinho?",
+          "seconds": 4
+        },
+        {
+          "speaker": "MARCUS",
+          "text": "Já tá gravando?",
+          "seconds": 3
+        },
+        {
+          "speaker": "JÚLIA",
+          "text": "Faz tempo.",
+          "seconds": 3
+        },
+        {
+          "speaker": "AMBIENTE",
+          "text": "Uma risada curta. Uma cadeira arrasta e alguém chama da cozinha.",
+          "seconds": 5
+        }
+      ]
+    },
+    {
+      "id": "fita02",
+      "title": "02 · Campainha",
+      "label": "JÚ — 02 / SOM E CAMPAINHA / 1990",
+      "origin": "Do estojo de testes que Mila conserva na oficina. Júlia experimentava gravar o som de uma campainha; o aparelho ficou com o material de manutenção.",
+      "lines": [
+        {
+          "speaker": "JÚLIA",
+          "text": "Mila, escuta agora. Se eu aperto aqui... ouviu?",
+          "seconds": 5
+        },
+        {
+          "speaker": "MILA",
+          "text": "Ouvi. Mas tá pegando a oficina inteira junto.",
+          "seconds": 4
+        },
+        {
+          "speaker": "JÚLIA",
+          "text": "Melhor. Daí dá pra lembrar como era aqui.",
+          "seconds": 4
+        },
+        {
+          "speaker": "MILA",
+          "text": "Anota os barulhos, então. Depois tu não vai lembrar de onde veio cada um.",
+          "seconds": 6
+        },
+        {
+          "speaker": "JÚLIA",
+          "text": "Tá. A campainha, a porta... e tu reclamando no fundo.",
+          "seconds": 5
+        },
+        {
+          "speaker": "AMBIENTE",
+          "text": "O motor do aparelho diminui. A fita termina.",
+          "seconds": 3
+        }
+      ]
+    },
+    {
+      "id": "fita03",
+      "title": "03 · Ensaio",
+      "label": "JÚ — 03 / ENSAIO / 1990",
+      "origin": "Estojo do material de som da paróquia, perto das fotografias da atividade. O registro acompanha um teste que seria levado ao Clube.",
+      "lines": [
+        {
+          "speaker": "JÚLIA",
+          "text": "Teste três. Lucas, bate duas palmas perto da porta.",
+          "seconds": 5
+        },
+        {
+          "speaker": "AMBIENTE",
+          "text": "Duas palmas. Passos ao fundo.",
+          "seconds": 3
+        },
+        {
+          "speaker": "JÚLIA",
+          "text": "Daqui pega até o corredor. Melhor escrever na caixa pra ninguém mexer na instalação.",
+          "seconds": 7
+        },
+        {
+          "speaker": "VOZ DISTANTE",
+          "text": "Deixa pra amanhã. Agora tem gente entrando.",
+          "seconds": 4
+        },
+        {
+          "speaker": "JÚLIA",
+          "text": "Tá... antes que eu esqueça, me dá aquele lápis.",
+          "seconds": 5
+        }
+      ]
+    },
+    {
+      "id": "fita_sociedade",
+      "title": "Um domingo",
+      "label": "SOCIEDADE / TESTE DE SOM / 1990",
+      "origin": "Cassete conservada no armário da bancada de manutenção. Registro de um teste do microfone usado nas reuniões; vozes e trabalho cotidiano.",
+      "lines": [
+        {
+          "speaker": "JÚLIA",
+          "text": "É só falar normal. Não precisa chegar tão perto.",
+          "seconds": 4
+        },
+        {
+          "speaker": "VOZ AO FUNDO",
+          "text": "Se esse banco ranger na gravação, não fui eu.",
+          "seconds": 4
+        },
+        {
+          "speaker": "AMBIENTE",
+          "text": "Risadas e um banco de madeira arrastando.",
+          "seconds": 3
+        },
+        {
+          "speaker": "JÚLIA",
+          "text": "Eu vou gravar de novo. Dessa vez ninguém arrasta nada.",
+          "seconds": 5
+        },
+        {
+          "speaker": "AMBIENTE",
+          "text": "Uma ferramenta cai. Risos. A gravação é interrompida.",
+          "seconds": 4
+        }
+      ]
+    }
+  ]
+}

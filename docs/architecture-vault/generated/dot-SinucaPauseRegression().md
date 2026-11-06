@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [EXTRACTED]
-- [[dot-Field()]] - `calls` [EXTRACTED]
-- [[dot-Invoke()]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
+- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]

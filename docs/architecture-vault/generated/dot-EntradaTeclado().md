@@ -17,7 +17,7 @@ tags:
 - [[dot-EscolherTipo()]] - `calls` [EXTRACTED]
 - [[dot-MudarVista()]] - `calls` [EXTRACTED]
 - [[dot-Preparar()]] - `calls` [EXTRACTED]
-- [[dot-Update()_6]] - `calls` [EXTRACTED]
+- [[dot-Update()_7]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[Keyboard]] - `references` [EXTRACTED]
 

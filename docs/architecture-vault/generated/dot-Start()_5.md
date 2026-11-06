@@ -1,21 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Community 16"
-location: "L12"
+community: "Community 13"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_13
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-PrepareTools()]] - `calls` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
+- [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[ChegadaEmSantaRita]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_13

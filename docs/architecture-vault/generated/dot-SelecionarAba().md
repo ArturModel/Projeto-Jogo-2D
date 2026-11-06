@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
 community: "Community 34"
-location: "L726"
+location: "L577"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,10 +15,12 @@ tags:
 - [[dot-Abrir()_2]] - `calls` [EXTRACTED]
 - [[dot-AtualizarPainelLateral()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
-- [[dot-CriarMarcadorPonto()]] - `calls` [EXTRACTED]
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Hide()]] - `calls` [INFERRED]
+- [[dot-SelecionarMarcoAtlas()]] - `calls` [EXTRACTED]
+- [[dot-Show()_3]] - `calls` [INFERRED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Update()_18]] - `calls` [EXTRACTED]
+- [[dot-Update()_23]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

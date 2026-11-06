@@ -11,11 +11,15 @@ tags:
 # Rect
 
 ## Connections
-- [[dot-Caixa()]] - `references` [EXTRACTED]
+- [[dot-Caixa()_1]] - `references` [EXTRACTED]
 - [[dot-Imagem()_1]] - `references` [EXTRACTED]
 - [[dot-Quad()_1]] - `references` [EXTRACTED]
-- [[dot-Texto()_1]] - `references` [EXTRACTED]
+- [[dot-Raster()]] - `references` [EXTRACTED]
+- [[dot-Texto()_3]] - `references` [EXTRACTED]
+- [[AtlasRegion]] - `references` [EXTRACTED]
+- [[MenuAmbienteGraphic]] - `references` [EXTRACTED]
 - [[PrologoJogavel]] - `references` [EXTRACTED]
+- [[SantaRitaAtlas]] - `references` [EXTRACTED]
 - [[SantaRitaBarLayout]] - `references` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `references` [EXTRACTED]
 - [[SantaRitaShallowStairs]] - `references` [EXTRACTED]

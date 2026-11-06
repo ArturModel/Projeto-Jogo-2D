@@ -1,27 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 51"
-location: "L35"
+community: "Community 39"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_39
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-CreateBox()]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-LoadIcons()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[dot-Use()_1]] - `calls` [EXTRACTED]
-- [[Button]] - `references` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[SantaRitaInventory]] - `method` [EXTRACTED]
-- [[SantaRitaItemHover]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_39

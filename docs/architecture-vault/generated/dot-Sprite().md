@@ -12,7 +12,7 @@ tags:
 # .Sprite()
 
 ## Connections
-- [[dot-Building()]] - `calls` [EXTRACTED]
+- [[dot-Building()_1]] - `calls` [EXTRACTED]
 - [[dot-Interacao()]] - `calls` [EXTRACTED]
 - [[dot-Prop()_2]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]

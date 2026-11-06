@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 103"
+community: "Community 24"
 location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_103
+  - community/Community_24
 ---
 
 # InfoZona
@@ -16,4 +16,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_24

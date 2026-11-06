@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 46"
-location: "L533"
+community: "Community 29"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_46
+  - community/Community_29
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
-- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
-- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
+- [[dot-Close()]] - `calls` [EXTRACTED]
+- [[dot-Duration()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+#graphify/code #graphify/EXTRACTED #community/Community_29

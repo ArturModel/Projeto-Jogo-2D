@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "Community 36"
+community: "Community 44"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_44
 ---
 
 # SantaRitaExitThreshold.cs
@@ -15,4 +15,4 @@ tags:
 - [[SantaRitaExitThreshold]] - `contains` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_44

@@ -1,22 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 15"
-location: "L49"
+community: "Community 31"
+location: "L112"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_31
 ---
 
 # .Vincular()
 
 ## Connections
-- [[RawImage]] - `references` [EXTRACTED]
+- [[dot-AplicarVolumesGlobais()]] - `calls` [EXTRACTED]
+- [[AudioMixer]] - `references` [EXTRACTED]
+- [[AudioSettingsController]] - `method` [EXTRACTED]
 - [[Slider]] - `references` [EXTRACTED]
-- [[TMP_Dropdown]] - `references` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
-- [[Toggle]] - `references` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_31

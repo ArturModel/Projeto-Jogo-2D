@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 89"
+community: "Community 24"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_24
 ---
 
 # .SnapImediatoParaAlvo()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-AplicarClampBordas()]] - `calls` [EXTRACTED]
 - [[dot-DefinirLimitesRegiao()]] - `calls` [EXTRACTED]
-- [[dot-Start()_22]] - `calls` [EXTRACTED]
+- [[dot-Start()_17]] - `calls` [EXTRACTED]
 - [[dot-TeleportarPara()]] - `calls` [INFERRED]
 - [[CameraFollow]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_24

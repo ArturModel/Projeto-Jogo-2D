@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 89"
+community: "Community 24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_24
 ---
 
 # Camera
@@ -13,10 +13,10 @@ tags:
 ## Connections
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-AtualizarMira()]] - `references` [EXTRACTED]
-- [[dot-Awake()_23]] - `references` [EXTRACTED]
+- [[dot-Awake()_10]] - `references` [EXTRACTED]
 - [[dot-CourtPoint()]] - `references` [EXTRACTED]
 - [[dot-GarantirFundoEscuroCamera()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_12]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_7]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-ScreenToTablePoint()]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `references` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_24

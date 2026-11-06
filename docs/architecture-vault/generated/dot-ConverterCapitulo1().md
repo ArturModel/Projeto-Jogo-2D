@@ -12,7 +12,6 @@ tags:
 # .ConverterCapitulo1()
 
 ## Connections
-- [[dot-ConverterMundoParaUV()]] - `calls` [EXTRACTED]
 - [[dot-TryObterInfoZona()]] - `calls` [EXTRACTED]
 - [[SantaRitaGeography]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

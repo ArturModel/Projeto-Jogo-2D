@@ -1,19 +1,30 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 16"
-location: "L7"
+community: "Community 13"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_13
 ---
 
 # .Start()
 
 ## Connections
+- [[dot-ApplyC2()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
+- [[dot-Definir()]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-Ir()]] - `calls` [EXTRACTED]
+- [[dot-IrParaPosicao()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[CameraFollow]] - `references` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[Chuva]] - `references` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaForeground]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_13

@@ -1,31 +1,34 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 7"
+community: "Community 12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_12
 ---
 
 # Image
 
 ## Connections
 - [[dot-AtualizarDestaqueBotoesEfeito()]] - `references` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `references` [EXTRACTED]
-- [[dot-Awake()_16]] - `references` [EXTRACTED]
-- [[dot-Botao()_1]] - `references` [EXTRACTED]
+- [[dot-Awake()_15]] - `references` [EXTRACTED]
+- [[dot-Botao()_2]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
+- [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
-- [[dot-Build()]] - `references` [EXTRACTED]
-- [[dot-Build()_2]] - `references` [EXTRACTED]
+- [[dot-Build()_1]] - `references` [EXTRACTED]
+- [[dot-Build()_4]] - `references` [EXTRACTED]
 - [[dot-Build()_3]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
-- [[dot-Caixa()]] - `references` [EXTRACTED]
+- [[dot-Button()]] - `references` [EXTRACTED]
+- [[dot-Caixa()_1]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
+- [[dot-Cell()]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-Construir()_2]] - `references` [EXTRACTED]
-- [[dot-Construir()_4]] - `references` [EXTRACTED]
+- [[dot-Construir()_5]] - `references` [EXTRACTED]
 - [[dot-ConstruirEscolhaAlvo()]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelEfeitoOpcional()]] - `references` [EXTRACTED]
@@ -38,10 +41,13 @@ tags:
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
-- [[dot-CriarMarcadorPonto()]] - `references` [EXTRACTED]
+- [[dot-DrawIndex()]] - `references` [EXTRACTED]
+- [[dot-Frame()]] - `references` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 - [[dot-Imagem()]] - `references` [EXTRACTED]
 - [[dot-IndicadorPausa()]] - `references` [EXTRACTED]
+- [[dot-Initialize()_1]] - `references` [EXTRACTED]
+- [[dot-Label()_1]] - `references` [EXTRACTED]
 - [[dot-LinhaSlider()]] - `references` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
@@ -49,24 +55,30 @@ tags:
 - [[dot-MontarTela()]] - `references` [EXTRACTED]
 - [[dot-MostrarModal()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
-- [[dot-RotuloCanonico()]] - `references` [EXTRACTED]
+- [[dot-Panel()_1]] - `references` [EXTRACTED]
+- [[dot-Picture()]] - `references` [EXTRACTED]
+- [[dot-Rebuild()]] - `references` [EXTRACTED]
+- [[dot-Rebuild()_1]] - `references` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
+- [[dot-Start()_2]] - `references` [EXTRACTED]
 - [[dot-Titulo()]] - `references` [EXTRACTED]
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_1]] - `references` [EXTRACTED]
+- [[dot-Vincular()]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[DicaDeTecla]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `references` [EXTRACTED]
 - [[PrologoJogavel]] - `references` [EXTRACTED]
 - [[SantaRitaInventory]] - `references` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_12

@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-Disc()]] - `method` [EXTRACTED]
-- [[dot-OnDrag()_1]] - `method` [EXTRACTED]
-- [[dot-OnPointerDown()_1]] - `method` [EXTRACTED]
+- [[dot-OnDrag()]] - `method` [EXTRACTED]
+- [[dot-OnPointerDown()]] - `method` [EXTRACTED]
 - [[dot-OnPopulateMesh()_1]] - `method` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-Select()]] - `method` [EXTRACTED]

@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 40"
-location: "L24"
+community: "Community 3"
+location: "L277"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_3
 ---
 
 # .Awake()
 
 ## Connections
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-InicializarCacapas()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_3
