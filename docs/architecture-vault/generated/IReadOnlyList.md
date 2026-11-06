@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 97"
+community: "Community 86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_97
+  - community/Community_86
 ---
 
 # IReadOnlyList
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-ObterEntradasDiario()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_97
+#graphify/code #graphify/EXTRACTED #community/Community_86

@@ -12,7 +12,7 @@ tags:
 # .CriarMarcadorPonto()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-GerarIconeBlip()]] - `calls` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]

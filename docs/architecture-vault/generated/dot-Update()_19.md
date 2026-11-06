@@ -1,23 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 44"
-location: "L237"
+community: "Community 45"
+location: "L533"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_45
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
-- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
-- [[dot-FindNearest()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_4]] - `calls` [INFERRED]
-- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
-- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
+- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
+- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
+- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_45

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Saves()]] - `calls` [EXTRACTED]
-- [[dot-Start()_17]] - `calls` [EXTRACTED]
+- [[dot-Start()_21]] - `calls` [EXTRACTED]
 - [[dot-TryLoadManualSave()]] - `calls` [EXTRACTED]
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
 - [[CheckpointSystem]] - `method` [EXTRACTED]

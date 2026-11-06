@@ -12,9 +12,9 @@ tags:
 # .CriarBotaoAba()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
-- [[dot-CriarTexto()_1]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
+- [[dot-CriarTexto()]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]

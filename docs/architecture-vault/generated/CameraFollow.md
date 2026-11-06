@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs"
 type: "code"
-community: "Community 6"
+community: "Community 44"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_44
 ---
 
 # CameraFollow
@@ -14,17 +14,17 @@ tags:
 ## Connections
 - [[dot-AplicarClampBordas()]] - `method` [EXTRACTED]
 - [[dot-AplicarEstadoDaZona()]] - `references` [EXTRACTED]
-- [[dot-Awake()_18]] - `method` [EXTRACTED]
+- [[dot-Awake()_16]] - `method` [EXTRACTED]
 - [[dot-DefinirLimitesRegiao()]] - `method` [EXTRACTED]
 - [[dot-DetectarLimitesDaRegiao()]] - `method` [EXTRACTED]
 - [[dot-GarantirFundoEscuroCamera()]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_10]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_7]] - `method` [EXTRACTED]
 - [[dot-Place()]] - `references` [EXTRACTED]
 - [[dot-PlanCapture()]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
 - [[dot-SnapImediatoParaAlvo()]] - `method` [EXTRACTED]
-- [[dot-Start()_11]] - `references` [EXTRACTED]
-- [[dot-Start()_16]] - `method` [EXTRACTED]
+- [[dot-Start()_18]] - `references` [EXTRACTED]
+- [[dot-Start()_13]] - `method` [EXTRACTED]
 - [[dot-TeleportarPara()]] - `references` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[CameraFollow.cs]] - `contains` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_44

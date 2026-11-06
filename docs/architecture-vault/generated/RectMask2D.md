@@ -12,5 +12,6 @@ tags:
 
 ## Connections
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

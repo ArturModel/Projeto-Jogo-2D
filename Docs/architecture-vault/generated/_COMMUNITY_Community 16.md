@@ -1,11 +1,11 @@
 ---
 type: community
-members: 28
+members: 24
 ---
 
 # Community 16
 
-**Members:** 28 nodes
+**Members:** 24 nodes
 
 ## Members
 - [[dot-Apply()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
@@ -19,8 +19,7 @@ members: 28
 - [[dot-Interior()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[dot-KeepOverTable()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[dot-Lamp()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
-- [[dot-LateUpdate()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs
-- [[dot-LateUpdate()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs
+- [[dot-LateUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs
 - [[dot-Move()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[dot-PaperOnTable()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[dot-Portal()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
@@ -29,13 +28,10 @@ members: 28
 - [[dot-Replace()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[dot-Routine()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[dot-Spawn()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
-- [[dot-Start()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs
-- [[dot-Start()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs
-- [[SantaRitaForeground]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs
-- [[SantaRitaForeground.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs
+- [[dot-Start()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs
+- [[BoxCollider2D]] - code
 - [[SantaRitaLivingWorldAuthoring]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs
 - [[SantaRitaNpcRoutine]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs
-- [[SpriteRenderer]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,33 +41,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_Community 11]]
-- 13 edges to [[_COMMUNITY_Community 18]]
+- 16 edges to [[_COMMUNITY_Community 18]]
 - 12 edges to [[_COMMUNITY_Community 2]]
-- 11 edges to [[_COMMUNITY_Community 87]]
-- 9 edges to [[_COMMUNITY_Community 20]]
-- 8 edges to [[_COMMUNITY_Community 49]]
-- 7 edges to [[_COMMUNITY_Community 44]]
-- 7 edges to [[_COMMUNITY_Community 6]]
-- 6 edges to [[_COMMUNITY_Community 41]]
-- 5 edges to [[_COMMUNITY_Community 96]]
-- 4 edges to [[_COMMUNITY_Community 0]]
-- 3 edges to [[_COMMUNITY_Community 1]]
-- 3 edges to [[_COMMUNITY_Community 33]]
-- 3 edges to [[_COMMUNITY_Community 40]]
-- 3 edges to [[_COMMUNITY_Community 8]]
-- 3 edges to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 9]]
+- 12 edges to [[_COMMUNITY_Community 11]]
+- 7 edges to [[_COMMUNITY_Community 87]]
+- 6 edges to [[_COMMUNITY_Community 49]]
+- 5 edges to [[_COMMUNITY_Community 20]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 4 edges to [[_COMMUNITY_Community 41]]
+- 3 edges to [[_COMMUNITY_Community 36]]
+- 3 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 42]]
 - 1 edge to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 26]]
-- 1 edge to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 33]]
 - 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 5]]
 
 ## Top bridge nodes
-- [[SpriteRenderer]] - degree 85, connects to 20 communities
-- [[SantaRitaNpcRoutine]] - degree 18, connects to 6 communities
+- [[BoxCollider2D]] - degree 33, connects to 10 communities
+- [[SantaRitaNpcRoutine]] - degree 18, connects to 7 communities
 - [[dot-Center()]] - degree 17, connects to 6 communities
-- [[dot-CreateCemetery()]] - degree 8, connects to 5 communities
+- [[dot-CreateCemetery()]] - degree 8, connects to 6 communities
 - [[SantaRitaLivingWorldAuthoring]] - degree 22, connects to 4 communities

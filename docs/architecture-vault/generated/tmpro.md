@@ -22,6 +22,7 @@ tags:
 - [[MenuPausa.cs]] - `imports` [EXTRACTED]
 - [[OptionsPanelController.cs]] - `imports` [EXTRACTED]
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
+- [[PrologoJogavel.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter2Authoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaInventory.cs]] - `imports` [EXTRACTED]

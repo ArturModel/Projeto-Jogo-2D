@@ -1,24 +1,23 @@
 ---
 type: community
-members: 21
+members: 20
 ---
 
 # Community 20
 
-**Members:** 21 nodes
+**Members:** 20 nodes
 
 ## Members
 - [[dot-Apply()_3]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
 - [[dot-Apply()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs
 - [[dot-Edge()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
 - [[dot-Interior()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
-- [[dot-LateUpdate()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs
-- [[dot-OnDestroy()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
+- [[dot-LateUpdate()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs
+- [[dot-OnDestroy()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
 - [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs
 - [[dot-Paint()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
-- [[dot-PixelMaterial()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
-- [[dot-Start()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
-- [[dot-Update()_11]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
+- [[dot-Start()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
+- [[dot-Update()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs
 - [[Light2D]] - code
 - [[Material]] - code
 - [[MaterialPropertyBlock]] - code
@@ -38,29 +37,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 38]]
+- 16 edges to [[_COMMUNITY_Community 2]]
 - 9 edges to [[_COMMUNITY_Community 11]]
-- 9 edges to [[_COMMUNITY_Community 16]]
-- 9 edges to [[_COMMUNITY_Community 87]]
-- 8 edges to [[_COMMUNITY_Community 2]]
-- 5 edges to [[_COMMUNITY_Community 8]]
+- 7 edges to [[_COMMUNITY_Community 87]]
+- 7 edges to [[_COMMUNITY_Community 18]]
+- 5 edges to [[_COMMUNITY_Community 16]]
 - 4 edges to [[_COMMUNITY_Community 1]]
 - 4 edges to [[_COMMUNITY_Community 6]]
-- 4 edges to [[_COMMUNITY_Community 18]]
+- 3 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 30]]
 - 2 edges to [[_COMMUNITY_Community 44]]
-- 2 edges to [[_COMMUNITY_Community 26]]
+- 2 edges to [[_COMMUNITY_Community 8]]
 - 2 edges to [[_COMMUNITY_Community 40]]
 - 2 edges to [[_COMMUNITY_Community 41]]
-- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 86]]
+- 1 edge to [[_COMMUNITY_Community 23]]
 - 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 85]]
-- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 48]]
 - 1 edge to [[_COMMUNITY_Community 49]]
-- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 95]]
 
 ## Top bridge nodes
-- [[Material]] - degree 36, connects to 12 communities
-- [[Light2D]] - degree 19, connects to 9 communities
+- [[Material]] - degree 37, connects to 12 communities
+- [[Light2D]] - degree 19, connects to 11 communities
+- [[dot-Paint()]] - degree 11, connects to 5 communities
 - [[SantaRitaAtmosphere]] - degree 11, connects to 4 communities
-- [[dot-Paint()]] - degree 11, connects to 4 communities
 - [[SantaRitaRimLight]] - degree 9, connects to 4 communities

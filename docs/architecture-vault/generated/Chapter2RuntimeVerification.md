@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AudioC2RuntimeVerification.cs"
 type: "code"
-community: "Community 30"
+community: "Community 48"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_48
 ---
 
 # Chapter2RuntimeVerification
@@ -21,7 +21,7 @@ tags:
 - [[dot-C1InvestigationRegression()]] - `method` [EXTRACTED]
 - [[dot-C1LoadSmoke()]] - `method` [EXTRACTED]
 - [[dot-Capture()]] - `method` [EXTRACTED]
-- [[dot-Check()]] - `method` [EXTRACTED]
+- [[dot-Check()_1]] - `method` [EXTRACTED]
 - [[dot-Click()]] - `method` [EXTRACTED]
 - [[dot-ClickR4()]] - `method` [EXTRACTED]
 - [[dot-CloseText()]] - `method` [EXTRACTED]
@@ -42,7 +42,7 @@ tags:
 - [[dot-Invoke()]] - `method` [EXTRACTED]
 - [[dot-InvokeEncontrarLivre()]] - `method` [EXTRACTED]
 - [[dot-NewBochaPractice()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_2]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_10]] - `method` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `method` [EXTRACTED]
 - [[dot-Performance()]] - `method` [EXTRACTED]
 - [[dot-PerformancePair()]] - `method` [EXTRACTED]
@@ -87,7 +87,7 @@ tags:
 - [[dot-StartSinuquinhaEditor()]] - `method` [EXTRACTED]
 - [[dot-TapR2()]] - `method` [EXTRACTED]
 - [[dot-Travel()]] - `method` [EXTRACTED]
-- [[dot-Update()_14]] - `method` [EXTRACTED]
+- [[dot-Update()_24]] - `method` [EXTRACTED]
 - [[dot-Use()]] - `method` [EXTRACTED]
 - [[dot-VerificarFisicaDeterministicaEBicos()]] - `method` [EXTRACTED]
 - [[dot-WalkAccess()]] - `method` [EXTRACTED]
@@ -112,4 +112,4 @@ tags:
 - [[SinucaRef7RuntimeVerification.cs]] - `contains` [EXTRACTED]
 - [[Sinuquinha15Verification.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_48

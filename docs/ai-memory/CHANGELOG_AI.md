@@ -359,3 +359,5 @@ Marcus ciclo limpo concluído tecnicamente: 33 verificações + PASS, builds sem
 Lanterna-costas concluída: captura e QA PASS, builds sem erros/hash igual, índices 112 e saves intactos.
 
 02/11 — [Console limpo](../ai-plans/2026-11-02_PatrickDotto_console-limpo.md): APIs obsoletas e campo não utilizado removidos.
+
+06/11 — [Prólogo jogável](../ai-plans/2026-11-06_BBCONTTI_prologo-jogavel.md): cabine detalhada em camadas, condução leve e interações opcionais. Revisão de asfalto/chuva e parada no recuo da Rodovia; validação no relatório. Preferir Play do Editor nas iterações conforme pedido do usuário.

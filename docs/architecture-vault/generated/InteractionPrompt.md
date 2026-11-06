@@ -12,15 +12,15 @@ tags:
 # InteractionPrompt
 
 ## Connections
-- [[dot-Awake()_21]] - `method` [EXTRACTED]
-- [[dot-Build()]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_13]] - `method` [EXTRACTED]
+- [[dot-Awake()_23]] - `method` [EXTRACTED]
+- [[dot-Build()_2]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_12]] - `method` [EXTRACTED]
 - [[dot-LimparAoTrocarCena()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_8]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_5]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_12]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `method` [EXTRACTED]
 - [[dot-SetTarget()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
-- [[Instance_8]] - `defines` [EXTRACTED]
+- [[Instance_9]] - `defines` [EXTRACTED]
 - [[Interactable]] - `references` [EXTRACTED]
 - [[InteractionPrompt.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

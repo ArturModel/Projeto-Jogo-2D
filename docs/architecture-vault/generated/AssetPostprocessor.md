@@ -11,6 +11,7 @@ tags:
 # AssetPostprocessor
 
 ## Connections
+- [[PrologoTextureImporter]] - `inherits` [EXTRACTED]
 - [[SantaRitaArtImporter]] - `inherits` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_1

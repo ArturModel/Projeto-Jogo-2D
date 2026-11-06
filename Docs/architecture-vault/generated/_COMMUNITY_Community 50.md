@@ -1,27 +1,22 @@
 ---
 type: community
-members: 14
+members: 9
 ---
 
 # Community 50
 
-**Members:** 14 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[dot-OnDrag()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnDrag()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnPointerDown()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerDown()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnPointerEnter()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnPointerExit()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnPointerMove()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerUp()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnScroll()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Select()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[IPointerEnterHandler]] - code
-- [[IPointerExitHandler]] - code
-- [[PointerEventData]] - code
-- [[SantaRitaItemHover]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
+- [[dot-Captura()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Check()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Instalar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Start()_17]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Tecla()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[dot-Update()_25]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
+- [[Keyboard]] - code
+- [[Mouse]] - code
+- [[PrologoRuntimeVerification]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,20 +26,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Community 9]]
-- 4 edges to [[_COMMUNITY_Community 17]]
-- 4 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 29]]
-- 2 edges to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 18]]
+- 8 edges to [[_COMMUNITY_Community 48]]
+- 6 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 42]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 56]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 86]]
+- 1 edge to [[_COMMUNITY_Community 24]]
 
 ## Top bridge nodes
-- [[PointerEventData]] - degree 21, connects to 5 communities
-- [[SantaRitaItemHover]] - degree 8, connects to 4 communities
-- [[dot-Select()]] - degree 4, connects to 1 community
-- [[dot-OnDrag()_2]] - degree 3, connects to 1 community
-- [[dot-OnPointerDown()_2]] - degree 3, connects to 1 community
+- [[dot-Start()_17]] - degree 10, connects to 4 communities
+- [[Keyboard]] - degree 8, connects to 3 communities
+- [[PrologoRuntimeVerification]] - degree 10, connects to 2 communities
+- [[Mouse]] - degree 7, connects to 1 community
+- [[dot-Tecla()]] - degree 4, connects to 1 community

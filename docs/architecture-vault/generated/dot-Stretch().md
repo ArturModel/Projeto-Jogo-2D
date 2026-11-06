@@ -12,14 +12,15 @@ tags:
 # .Stretch()
 
 ## Connections
-- [[dot-Awake()_14]] - `calls` [EXTRACTED]
-- [[dot-Build()_2]] - `calls` [EXTRACTED]
+- [[dot-Awake()_18]] - `calls` [EXTRACTED]
+- [[dot-Build()_1]] - `calls` [EXTRACTED]
 - [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[dot-Construir()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_3]] - `calls` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]

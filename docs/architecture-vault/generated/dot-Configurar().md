@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 15"
+community: "Community 12"
 location: "L732"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_12
 ---
 
 # .Configurar()
@@ -19,4 +19,4 @@ tags:
 - [[TMP_Dropdown]] - `references` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_12

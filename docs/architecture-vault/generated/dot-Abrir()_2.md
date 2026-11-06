@@ -18,7 +18,7 @@ tags:
 - [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[dot-Travel()]] - `calls` [INFERRED]
-- [[dot-Update()_17]] - `calls` [EXTRACTED]
+- [[dot-Update()_15]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_34

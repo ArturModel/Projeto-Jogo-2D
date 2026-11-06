@@ -119,3 +119,5 @@ Inventário em 01/11/2026: **112 arquivos C# atuais (incluindo R4, Ref7 e Sinuqu
 | [Scripts/Capitulo2/Sinuquinha15Verification.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs) | parcial `Chapter2RuntimeVerification` — suíte atual Editor/Development |
 
 - `Scripts/Capitulo2/AudioC2RuntimeVerification.cs`: parcial Chapter2RuntimeVerification; testes isolados das trilhas e imagens (Editor/Development).
+
+06/11 — 116 C# indexados após quatro novas fontes: `PrologoJogavel`, `PrologoEstradaGraphic`, `PrologoRuntimeVerification` (fixture opt-in) e `Editor/PrologoJogavelVerification` (build explícita e importador das texturas).

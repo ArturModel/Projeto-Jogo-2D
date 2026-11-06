@@ -1,19 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 19"
-location: "L13"
+community: "Community 105"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_105
 ---
 
 # Camada
 
 ## Connections
-- [[AudioAmbiente]] - `contains` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
+- [[dot-CriarCamada()]] - `calls` [EXTRACTED]
+- [[Chuva]] - `contains` [EXTRACTED]
+- [[Color32]] - `references` [EXTRACTED]
+- [[List]] - `references` [EXTRACTED]
+- [[NativeArray]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_105

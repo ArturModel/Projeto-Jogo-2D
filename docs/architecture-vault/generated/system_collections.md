@@ -32,6 +32,7 @@ tags:
 - [[OptionsPanelController.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PrologoDirector.cs]] - `imports` [EXTRACTED]
+- [[PrologoRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PrologoVideo.cs]] - `imports` [EXTRACTED]
 - [[RadioCarro.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]

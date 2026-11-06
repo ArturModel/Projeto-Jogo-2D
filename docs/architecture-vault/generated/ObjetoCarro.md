@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "Community 33"
+community: "Community 26"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_26
 ---
 
 # ObjetoCarro
 
 ## Connections
 - [[dot-Ativar()]] - `method` [EXTRACTED]
-- [[dot-Awake()_7]] - `method` [EXTRACTED]
+- [[dot-Awake()_5]] - `method` [EXTRACTED]
 - [[dot-Procurar()]] - `references` [EXTRACTED]
-- [[dot-Update()_15]] - `method` [EXTRACTED]
+- [[dot-Update()_11]] - `method` [EXTRACTED]
 - [[Apontado]] - `defines` [EXTRACTED]
 - [[CelularCarro]] - `inherits` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[RadioCarro]] - `inherits` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_26

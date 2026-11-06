@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 8"
+community: "Community 105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_105
 ---
 
 # NativeArray
 
 ## Connections
-- [[Camada_1]] - `references` [EXTRACTED]
+- [[Camada]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_105

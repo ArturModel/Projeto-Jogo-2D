@@ -41,3 +41,7 @@ Ref7 (31/10/2026): Interior4_BarDoZe mantém a conexão e a soleira existentes; 
 Correção posterior de identidade 2D: Interior4_BarDoZe usa os sprites originais e WorldLit; a sinuca reaproveita a mesma arte em perspectiva. O layout físico e a soleira continuam compartilhados; não carregar Baked/ na exploração.
 
 Sinuquinha15 (31/10/2026): no mesmo interior, Zé oferece lisas/listradas ou 1–7/9–15 e a branca começa pronta. Melhor de três e consequência narrativa preservadas. Capacho na saída, sem tapete sob a mesa; nenhuma nova cena ou alteração de geografia.
+
+06/11 — Prologo passa a viagem jogável. Manobra/parada no recuo pavimentado da Rodovia de Entrada antecede a saída em `saida_carro`. Placa, banco e orelhão são marcos de continuidade, igreja apenas paisagem distante. Fluxo/cenas e coordenadas C1 preservados.
+
+Decisão posterior do autor (06/11): remover do prólogo a imagem de placa/banco/orelhão, que parecia uma plataforma na estrada. Somente a estrada e um recuo lateral discreto permanecem visíveis. O carro encosta, desacelera e para antes da transição; os marcos são vistos apenas na próxima cena. A imagem descartada foi arquivada fora de Assets, em Arte/Producao/PrologoJogavel/Descartados. Testes visuais devem priorizar Play, sem nova build por este ajuste.

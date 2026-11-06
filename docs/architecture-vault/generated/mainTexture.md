@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
-community: "Community 9"
-location: "L36"
+community: "Community 23"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_23
 ---
 
 # mainTexture
 
 ## Connections
-- [[BochaCourtView]] - `defines` [EXTRACTED]
+- [[PrologoEstradaGraphic]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_23

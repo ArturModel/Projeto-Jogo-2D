@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-Awake()_2]] - `method` [EXTRACTED]
-- [[dot-Build()_1]] - `method` [EXTRACTED]
+- [[dot-Build()]] - `method` [EXTRACTED]
 - [[dot-Mostrar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()]] - `method` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[DicaDeTecla.cs]] - `contains` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[Instance]] - `defines` [EXTRACTED]
+- [[Instance_1]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Pedido_1]] - `references` [EXTRACTED]
 - [[Pedido]] - `contains` [EXTRACTED]

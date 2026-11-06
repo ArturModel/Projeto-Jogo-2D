@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 24"
+community: "Community 86"
 location: "L238"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_86
 ---
 
 # .ConcluirBocha()
@@ -19,4 +19,4 @@ tags:
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_86

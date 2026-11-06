@@ -12,10 +12,12 @@ tags:
 # CelularCarro
 
 ## Connections
-- [[dot-Ativar()_2]] - `method` [EXTRACTED]
+- [[dot-Ativar()_3]] - `method` [EXTRACTED]
+- [[dot-Awake()_9]] - `references` [EXTRACTED]
 - [[dot-Ligar()_1]] - `method` [EXTRACTED]
 - [[CelularCarro.cs]] - `contains` [EXTRACTED]
 - [[Disponivel_2]] - `defines` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_54

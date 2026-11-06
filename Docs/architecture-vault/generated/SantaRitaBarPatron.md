@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-Interact()_1]] - `method` [EXTRACTED]
-- [[dot-Start()_5]] - `method` [EXTRACTED]
-- [[dot-Update()_5]] - `method` [EXTRACTED]
+- [[dot-Start()_4]] - `method` [EXTRACTED]
+- [[dot-Update()_4]] - `method` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[Prompt_1]] - `defines` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `contains` [EXTRACTED]

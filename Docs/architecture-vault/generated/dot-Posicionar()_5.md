@@ -1,20 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 84"
-location: "L100"
+community: "Community 93"
+location: "L168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_93
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-LateUpdate()_13]] - `calls` [EXTRACTED]
-- [[Interactable]] - `references` [EXTRACTED]
-- [[InteractionPrompt]] - `method` [EXTRACTED]
-- [[Renderer]] - `references` [EXTRACTED]
+- [[dot-Update()_28]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
+- [[Fileira_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_93

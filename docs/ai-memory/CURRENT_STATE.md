@@ -72,3 +72,9 @@ Trilhas C2 fornecidas integradas por cena e inventário protegido contra ícone 
 02/11 — Ajuste pontual lanterna de costas: corpo oculta o objeto, feixe e estado permanecem ativos; outras direções preservadas. QA 33 + PASS e builds sem erros/hash igual, plano lanterna-costas.
 
 02/11 — Console: chamadas FindObjectsSortMode.None substituídas por overload atual, campo legado sem leitura removido com referências QA. Compilação real C# sem avisos/erros; índices 112.
+
+## 06/11/2026 — prólogo jogável
+
+Branch `feature/prologo-jogavel`: `PrologoJogavel` substitui a reprodução de vídeo na cena, com arte raster detalhada e elementos móveis separados. A/D ou arraste do volante deslocam suavemente na faixa; botão direito olha, R recentraliza, 1–5 acionam objetos, ESC abre pausa, segurar espaço pula. Viagem sem derrota ou tarefas obrigatórias. Asfalto texturizado em perspectiva, chuva exterior/gotas locais e limpeza por palhetas. Manobra automática ao recuo pavimentado sem imagem de placa/banco/orelhão, parada e desligamento antes de `EntradaDaCidade/saida_carro`. Saves permanecem manuais. Plano/evidências: [prólogo](../ai-plans/2026-11-06_BBCONTTI_prologo-jogavel.md). Priorizar testes em Play; não gerar builds repetidas por ajuste visual.
+
+Decisão posterior do autor (06/11): remover do prólogo a imagem de placa/banco/orelhão, que parecia uma plataforma na estrada. Somente a estrada e um recuo lateral discreto permanecem visíveis. O carro encosta, desacelera e para antes da transição; os marcos são vistos apenas na próxima cena. A imagem descartada foi arquivada fora de Assets, em Arte/Producao/PrologoJogavel/Descartados. Testes visuais devem priorizar Play, sem nova build por este ajuste.

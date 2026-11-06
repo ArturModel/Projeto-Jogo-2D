@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "Community 39"
-location: "L70"
+community: "Community 30"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_30
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
-- [[dot-SetActive()]] - `calls` [EXTRACTED]
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_30

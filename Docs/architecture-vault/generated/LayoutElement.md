@@ -11,6 +11,6 @@ tags:
 # LayoutElement
 
 ## Connections
-- [[dot-Build()_1]] - `references` [EXTRACTED]
+- [[dot-Build()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_14

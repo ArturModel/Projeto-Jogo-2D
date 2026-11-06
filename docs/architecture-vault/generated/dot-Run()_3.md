@@ -1,38 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 56"
-location: "L22"
+community: "Community 42"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_56
+  - community/Community_42
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-AjustarZoom()]] - `calls` [INFERRED]
-- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [INFERRED]
-- [[dot-DefinirCamera()]] - `calls` [INFERRED]
-- [[dot-DefinirZoom()]] - `calls` [INFERRED]
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
-- [[dot-GetBall()]] - `calls` [EXTRACTED]
-- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
-- [[dot-OscilarCarga()]] - `calls` [EXTRACTED]
-- [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
-- [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [INFERRED]
-- [[dot-RunMenu()]] - `calls` [EXTRACTED]
-- [[dot-SetBall()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[GameStateSnapshot]] - `calls` [INFERRED]
-- [[IList]] - `references` [EXTRACTED]
-- [[Sinuca3DVerification]] - `method` [EXTRACTED]
-- [[SinucaMinigameUI]] - `references` [EXTRACTED]
-- [[SinucaTableView]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_56
+#graphify/code #graphify/EXTRACTED #community/Community_42

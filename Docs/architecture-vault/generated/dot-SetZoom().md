@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 56"
+community: "Community 39"
 location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_56
+  - community/Community_39
 ---
 
 # .SetZoom()
@@ -16,4 +16,4 @@ tags:
 - [[dot-UpdateCamera()]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_56
+#graphify/code #graphify/EXTRACTED #community/Community_39

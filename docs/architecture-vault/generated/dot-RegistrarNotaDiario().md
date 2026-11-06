@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 24"
+community: "Community 86"
 location: "L132"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_86
 ---
 
 # .RegistrarNotaDiario()
@@ -21,15 +21,16 @@ tags:
 - [[dot-ConfirmarTestemunhoAtendente()]] - `calls` [EXTRACTED]
 - [[dot-DispararChegadaCasaDoAvo()]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
-- [[dot-Interagir()]] - `calls` [EXTRACTED]
+- [[dot-Interagir()_1]] - `calls` [EXTRACTED]
 - [[dot-Nota()]] - `calls` [EXTRACTED]
 - [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarDiario()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
 - [[dot-RunAutomatedVerification()]] - `calls` [EXTRACTED]
-- [[dot-Start()_13]] - `calls` [EXTRACTED]
+- [[dot-Start()_20]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_86

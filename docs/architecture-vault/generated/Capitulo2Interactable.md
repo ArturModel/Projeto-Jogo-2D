@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-Interacao()]] - `references` [EXTRACTED]
-- [[dot-Interact()_8]] - `method` [EXTRACTED]
+- [[dot-Interact()_9]] - `method` [EXTRACTED]
 - [[dot-Interaction()]] - `references` [EXTRACTED]
 - [[dot-Interaction()_1]] - `references` [EXTRACTED]
 - [[dot-RoutineR2()]] - `references` [EXTRACTED]
@@ -22,7 +22,7 @@ tags:
 - [[dot-Use()]] - `references` [EXTRACTED]
 - [[Capitulo2Interactable.cs]] - `contains` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_8]] - `defines` [EXTRACTED]
+- [[Prompt_9]] - `defines` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_87

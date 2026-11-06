@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 87"
+community: "Community 18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_18
 ---
 
 # Sprite
@@ -18,7 +18,7 @@ tags:
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Art()]] - `references` [EXTRACTED]
 - [[dot-Art()_1]] - `references` [EXTRACTED]
-- [[dot-Awake()_11]] - `references` [EXTRACTED]
+- [[dot-Awake()_13]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-CarregarArteInspecao()]] - `references` [EXTRACTED]
 - [[dot-CarregarOuGerarArteMapa()]] - `references` [EXTRACTED]
@@ -42,7 +42,7 @@ tags:
 - [[dot-GerarIconePontoRota()]] - `references` [EXTRACTED]
 - [[dot-GerarRetratoPixelArt()]] - `references` [EXTRACTED]
 - [[dot-Interact()_2]] - `references` [EXTRACTED]
-- [[dot-Interagir()]] - `references` [EXTRACTED]
+- [[dot-Interagir()_1]] - `references` [EXTRACTED]
 - [[dot-LiveSprite()]] - `references` [EXTRACTED]
 - [[dot-LoadIcons()]] - `references` [EXTRACTED]
 - [[dot-LoadSprite()]] - `references` [EXTRACTED]
@@ -58,13 +58,13 @@ tags:
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Replace()_1]] - `references` [EXTRACTED]
 - [[dot-ResolverRetrato()]] - `references` [EXTRACTED]
-- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-Run()_7]] - `references` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
 - [[dot-Sprite()]] - `references` [EXTRACTED]
 - [[dot-SpriteFor()]] - `references` [EXTRACTED]
-- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Start()_4]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
 - [[dot-Tile()]] - `references` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
@@ -87,4 +87,4 @@ tags:
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[TileAleatorio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_18

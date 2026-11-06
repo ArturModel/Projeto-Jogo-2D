@@ -24,6 +24,7 @@ tags:
 - [[MapaInterativoUI.cs]] - `imports` [EXTRACTED]
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[PrologoRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.cs]] - `imports` [EXTRACTED]

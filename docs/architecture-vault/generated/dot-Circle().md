@@ -12,7 +12,7 @@ tags:
 # .Circle()
 
 ## Connections
-- [[dot-OnPopulateMesh()]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
 - [[BochaMapGraphic]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

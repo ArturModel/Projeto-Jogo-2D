@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 26"
+community: "Community 18"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_18
 ---
 
 # .OccupiedChair()
@@ -17,4 +17,4 @@ tags:
 - [[Prop_1]] - `references` [EXTRACTED]
 - [[SantaRitaBarLayout]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_18

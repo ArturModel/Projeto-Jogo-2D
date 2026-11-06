@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[dot-Apply()_2]] - `references` [EXTRACTED]
-- [[dot-Awake()_25]] - `method` [EXTRACTED]
+- [[dot-Awake()_11]] - `method` [EXTRACTED]
 - [[dot-Create()]] - `method` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_8]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_6]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_4]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_9]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_8]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_6]] - `method` [EXTRACTED]
 - [[dot-OnMat()]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]

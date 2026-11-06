@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 12"
+community: "Community 7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_7
 ---
 
 # Image
@@ -13,23 +13,25 @@ tags:
 ## Connections
 - [[dot-AtualizarDestaqueBotoesEfeito()]] - `references` [EXTRACTED]
 - [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `references` [EXTRACTED]
-- [[dot-Awake()_14]] - `references` [EXTRACTED]
+- [[dot-Awake()_18]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
+- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-Build()_1]] - `references` [EXTRACTED]
 - [[dot-Build()_2]] - `references` [EXTRACTED]
-- [[dot-Build()]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
+- [[dot-Caixa()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-ConstruirEscolhaAlvo()]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelEfeitoOpcional()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `references` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CreateBox()]] - `references` [EXTRACTED]
 - [[dot-CriarBolasNaMesa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
@@ -55,15 +57,16 @@ tags:
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
 - [[dot-Titulo()]] - `references` [EXTRACTED]
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
-- [[dot-Vincular()]] - `references` [EXTRACTED]
+- [[dot-Vincular()_1]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[DicaDeTecla]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
 - [[SantaRitaInventory]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_7

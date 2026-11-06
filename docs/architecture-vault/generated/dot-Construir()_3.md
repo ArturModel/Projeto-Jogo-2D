@@ -1,22 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 51"
-location: "L69"
+community: "Community 92"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_92
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Awake()_15]] - `calls` [EXTRACTED]
+- [[dot-Awake()_9]] - `calls` [EXTRACTED]
+- [[dot-Caixa()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[CanvasScaler]] - `references` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[dot-Graphic()]] - `calls` [EXTRACTED]
+- [[dot-Imagem()_1]] - `calls` [EXTRACTED]
+- [[dot-Rect()]] - `calls` [EXTRACTED]
+- [[dot-Stretch()]] - `calls` [EXTRACTED]
+- [[dot-Texto()_1]] - `calls` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[RectMask2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_92

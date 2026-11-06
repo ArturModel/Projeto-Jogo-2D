@@ -12,7 +12,7 @@ tags:
 # .GerarIconeAlvo()
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 

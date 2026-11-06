@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[Chapter2BuildVerification.cs]] - `imports` [EXTRACTED]
+- [[PrologoJogavelVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

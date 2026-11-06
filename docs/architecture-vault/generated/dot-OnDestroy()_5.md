@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 45"
-location: "L57"
+community: "Community 36"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_36
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_36

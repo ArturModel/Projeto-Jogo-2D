@@ -15,8 +15,8 @@ tags:
 - [[dot-AoCarregarCenaRuntime()]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarCenaAtual()]] - `calls` [INFERRED]
 - [[dot-OnSceneLoaded()]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
-- [[dot-Start()_13]] - `calls` [EXTRACTED]
+- [[dot-Start()_19]] - `calls` [EXTRACTED]
+- [[dot-Start()_20]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-Rodar()_2]] - `calls` [EXTRACTED]
-- [[Fala]] - `calls` [EXTRACTED]
+- [[Fala_1]] - `calls` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_54

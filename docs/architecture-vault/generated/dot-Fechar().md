@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AbrirCarregar()]] - `calls` [EXTRACTED]
 - [[dot-Sair()]] - `calls` [EXTRACTED]
-- [[dot-Update()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_1]] - `calls` [EXTRACTED]
 - [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 

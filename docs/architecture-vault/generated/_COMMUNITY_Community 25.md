@@ -8,7 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
-- [[Actor_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[Actor_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
 - [[Chair]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
 - [[Counter]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
 - [[Decor]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
@@ -25,7 +25,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 18]]
 
 ## Top bridge nodes
 - [[Kind]] - degree 8, connects to 1 community

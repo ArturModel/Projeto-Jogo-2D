@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
-- [[dot-Ativar()_2]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_3]] - `calls` [EXTRACTED]
 - [[dot-Ativar()_1]] - `calls` [EXTRACTED]
 - [[dot-DispararFalasVencidas()]] - `calls` [EXTRACTED]
 - [[dot-Enfileirar()]] - `calls` [EXTRACTED]
@@ -25,9 +25,10 @@ tags:
 - [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
 - [[dot-Rodar()_1]] - `calls` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Start()_12]] - `calls` [EXTRACTED]
-- [[dot-Start()_13]] - `calls` [EXTRACTED]
+- [[dot-Start()_19]] - `calls` [EXTRACTED]
+- [[dot-Start()_20]] - `calls` [EXTRACTED]
 - [[dot-Transmitir()]] - `calls` [EXTRACTED]
+- [[dot-Update()_14]] - `calls` [EXTRACTED]
 - [[Legenda]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_54

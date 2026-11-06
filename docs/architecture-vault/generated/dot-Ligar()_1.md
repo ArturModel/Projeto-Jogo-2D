@@ -12,7 +12,7 @@ tags:
 # .Ligar()
 
 ## Connections
-- [[dot-Ativar()_2]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_3]] - `calls` [EXTRACTED]
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[CelularCarro]] - `method` [EXTRACTED]

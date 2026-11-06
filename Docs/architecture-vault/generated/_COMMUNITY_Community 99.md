@@ -1,16 +1,20 @@
 ---
 type: community
-members: 3
+members: 7
 ---
 
 # Community 99
 
-**Members:** 3 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[dot-Executar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
-- [[dot-Tocar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
-- [[Capitulo2Perception]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs
+- [[dot-Build()_3]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[dot-BuildNormal()]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[dot-BuildQA()_1]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[dot-DepoisDeParar()]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[dot-QueueBuildQA()]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
+- [[PlayModeStateChange]] - code
+- [[PrologoJogavelVerification]] - code - Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -20,14 +24,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 19]]
 - 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 5]]
 
 ## Top bridge nodes
-- [[dot-Executar()]] - degree 5, connects to 3 communities
-- [[Capitulo2Perception]] - degree 4, connects to 2 communities
-- [[dot-Tocar()]] - degree 3, connects to 1 community
+- [[dot-Build()_3]] - degree 7, connects to 4 communities
+- [[PrologoJogavelVerification]] - degree 6, connects to 1 community

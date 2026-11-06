@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-Start()_20]] - `calls` [EXTRACTED]
+- [[dot-Start()_9]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[AspectRatioFitter]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]

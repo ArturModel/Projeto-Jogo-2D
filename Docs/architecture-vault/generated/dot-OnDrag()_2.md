@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
-community: "Community 50"
+community: "Community 29"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_29
 ---
 
 # .OnDrag()
@@ -16,4 +16,4 @@ tags:
 - [[PointerEventData]] - `references` [EXTRACTED]
 - [[SinucaSpinSelector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_29

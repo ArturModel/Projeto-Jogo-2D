@@ -14,17 +14,18 @@ tags:
 ## Connections
 - [[dot-Atravessar()]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
 - [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
 - [[dot-EntrarNoBar()]] - `calls` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_5]] - `calls` [EXTRACTED]
+- [[dot-Interact()_6]] - `calls` [EXTRACTED]
 - [[dot-MostrarTelaFechamentoCapitulo1()]] - `calls` [EXTRACTED]
 - [[dot-PerformancePair()]] - `calls` [EXTRACTED]
 - [[dot-Play()]] - `calls` [EXTRACTED]
 - [[dot-RunPortalRegression()]] - `calls` [EXTRACTED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
-- [[dot-Start()_11]] - `calls` [EXTRACTED]
+- [[dot-Start()_18]] - `calls` [EXTRACTED]
 - [[SceneTransition]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_0

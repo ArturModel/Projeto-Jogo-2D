@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 24"
+community: "Community 13"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_13
 ---
 
 # DialogoLinha
@@ -18,7 +18,7 @@ tags:
 - [[dot-ConfigurarRetratoEFalante()]] - `references` [EXTRACTED]
 - [[dot-Dialogo()]] - `references` [EXTRACTED]
 - [[dot-DialogueR2()]] - `references` [EXTRACTED]
-- [[dot-Interagir()]] - `calls` [INFERRED]
+- [[dot-Interagir()_1]] - `calls` [INFERRED]
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [INFERRED]
 - [[dot-InteragirFrentista()]] - `calls` [INFERRED]
 - [[dot-InteragirFrequentadorBar()]] - `calls` [INFERRED]
@@ -39,4 +39,4 @@ tags:
 - [[GameMessageUI.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_13

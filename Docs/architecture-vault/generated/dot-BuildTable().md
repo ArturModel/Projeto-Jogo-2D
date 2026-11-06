@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs"
 type: "code"
-community: "Community 38"
+community: "Community 2"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_2
 ---
 
 # .BuildTable()
@@ -25,4 +25,4 @@ tags:
 - [[MeshRenderer]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_2

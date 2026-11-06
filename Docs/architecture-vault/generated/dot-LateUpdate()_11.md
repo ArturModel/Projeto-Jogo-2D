@@ -1,23 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 8"
-location: "L217"
+community: "Community 51"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_51
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-AtualizarClima()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarSom()]] - `calls` [EXTRACTED]
-- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
-- [[dot-Desenhar()]] - `calls` [EXTRACTED]
-- [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
-- [[dot-Simular()]] - `calls` [EXTRACTED]
-- [[Chuva]] - `method` [EXTRACTED]
+- [[dot-HasItem()]] - `calls` [EXTRACTED]
+- [[dot-LoadIcons()]] - `calls` [EXTRACTED]
+- [[SantaRitaInventory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_51

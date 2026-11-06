@@ -12,7 +12,7 @@ tags:
 # .MontarCortina()
 
 ## Connections
-- [[dot-Awake()_5]] - `calls` [EXTRACTED]
+- [[dot-Awake()_4]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]

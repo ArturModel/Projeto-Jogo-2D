@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 16"
+community: "Community 18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_18
 ---
 
 # SpriteRenderer
@@ -19,10 +19,10 @@ tags:
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
 - [[dot-ApplyC2()]] - `references` [EXTRACTED]
 - [[dot-Atualizar()]] - `references` [EXTRACTED]
-- [[dot-Awake()_7]] - `references` [EXTRACTED]
+- [[dot-Awake()_5]] - `references` [EXTRACTED]
+- [[dot-Awake()_17]] - `references` [EXTRACTED]
 - [[dot-Awake()_13]] - `references` [EXTRACTED]
 - [[dot-Awake()_11]] - `references` [EXTRACTED]
-- [[dot-Awake()_25]] - `references` [EXTRACTED]
 - [[dot-BoundaryForest()]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[dot-ColocarProp()]] - `references` [EXTRACTED]
 - [[dot-ColocarTapete()]] - `references` [EXTRACTED]
 - [[dot-CompactCourt()]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_4]] - `references` [EXTRACTED]
 - [[dot-CorrectApprovedGeography()]] - `references` [EXTRACTED]
 - [[dot-Costura()]] - `references` [EXTRACTED]
 - [[dot-Create()]] - `references` [EXTRACTED]
@@ -74,15 +74,15 @@ tags:
 - [[dot-Sociedade()]] - `references` [EXTRACTED]
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
-- [[dot-Start()_5]] - `references` [EXTRACTED]
-- [[dot-Start()_6]] - `references` [EXTRACTED]
-- [[dot-Start()_3]] - `references` [EXTRACTED]
 - [[dot-Start()_4]] - `references` [EXTRACTED]
-- [[dot-Start()_7]] - `references` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Start()_12]] - `references` [EXTRACTED]
+- [[dot-Start()_3]] - `references` [EXTRACTED]
+- [[dot-Start()_6]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
-- [[dot-Update()_5]] - `references` [EXTRACTED]
+- [[dot-Update()_4]] - `references` [EXTRACTED]
 - [[dot-Walls()]] - `references` [EXTRACTED]
-- [[Camada_1]] - `references` [EXTRACTED]
+- [[Camada]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `references` [EXTRACTED]
 - [[Fileira]] - `references` [EXTRACTED]
 - [[ObjetoCarro]] - `references` [EXTRACTED]
@@ -97,4 +97,4 @@ tags:
 - [[SantaRitaRimLight]] - `references` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_18

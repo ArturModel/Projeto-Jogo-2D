@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-AtualizarFeixeLanterna()]] - `calls` [EXTRACTED]
-- [[dot-Avancar()_2]] - `calls` [INFERRED]
+- [[dot-Avancar()_1]] - `calls` [INFERRED]
 - [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_8]] - `calls` [EXTRACTED]
 - [[dot-Reset()]] - `calls` [INFERRED]
 - [[PlayerController]] - `method` [EXTRACTED]
 

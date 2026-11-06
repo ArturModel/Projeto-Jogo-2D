@@ -1,18 +1,21 @@
 ---
 type: community
-members: 5
+members: 8
 ---
 
 # Community 93
 
-**Members:** 5 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[dot-Interact()_9]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[dot-RegistrarPistaLegada()]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[ItemDeCena]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[ItemDeCena.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
-- [[Prompt_9]] - code - Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs
+- [[dot-Construir()_4]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Posicionar()_5]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Start()_22]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-Update()_28]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[Curvatura]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[EstradaScroller]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[Fileira_1]] - code
+- [[Velocidade_2]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,14 +25,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 86]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 2 edges to [[_COMMUNITY_Community 19]]
+- 1 edge to [[_COMMUNITY_Community 42]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[ItemDeCena]] - degree 6, connects to 2 communities
-- [[dot-RegistrarPistaLegada()]] - degree 4, connects to 1 community
-- [[dot-Interact()_9]] - degree 3, connects to 1 community
-- [[ItemDeCena.cs]] - degree 2, connects to 1 community
+- [[EstradaScroller]] - degree 12, connects to 4 communities
+- [[dot-Construir()_4]] - degree 4, connects to 1 community

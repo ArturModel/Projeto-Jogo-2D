@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs"
 type: "code"
 community: "Community 54"
-location: "L32"
+location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,10 @@ tags:
 # .Ativar()
 
 ## Connections
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Interagir()]] - `calls` [INFERRED]
+- [[dot-Ligar()_1]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Transmitir()]] - `calls` [EXTRACTED]
-- [[RadioCarro]] - `method` [EXTRACTED]
+- [[CelularCarro]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_54

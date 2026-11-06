@@ -15,15 +15,15 @@ tags:
 - [[dot-Derrota()]] - `calls` [EXTRACTED]
 - [[dot-EntradaTeclado()]] - `calls` [EXTRACTED]
 - [[dot-EscolherTipo()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()]] - `calls` [EXTRACTED]
 - [[dot-MudarVista()]] - `calls` [EXTRACTED]
 - [[dot-NovaMao()]] - `calls` [EXTRACTED]
-- [[dot-OnApplicationFocus()]] - `calls` [EXTRACTED]
+- [[dot-OnApplicationFocus()_1]] - `calls` [EXTRACTED]
 - [[dot-Pausar()]] - `calls` [EXTRACTED]
 - [[dot-Regras()]] - `calls` [EXTRACTED]
 - [[dot-SoltarArraste()]] - `calls` [EXTRACTED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
+- [[dot-Update()_3]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

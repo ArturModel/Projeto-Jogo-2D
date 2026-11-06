@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
 community: "Community 28"
-location: "L32"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,7 @@ tags:
 # .OnPointerEnter()
 
 ## Connections
-- [[dot-MoverIndicador()]] - `calls` [EXTRACTED]
-- [[MenuItemSelector]] - `method` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
+- [[SantaRitaItemHover]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_28

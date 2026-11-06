@@ -12,7 +12,7 @@ tags:
 # .OnTriggerEnter2D()
 
 ## Connections
-- [[dot-Interact()_5]] - `calls` [EXTRACTED]
+- [[dot-Interact()_6]] - `calls` [EXTRACTED]
 - [[Capitulo2Portal]] - `method` [EXTRACTED]
 - [[Collider2D]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]

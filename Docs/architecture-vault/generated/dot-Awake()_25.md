@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 96"
-location: "L32"
+community: "Community 9"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_9
 ---
 
 # .Awake()
 
 ## Connections
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[SantaRitaExitThreshold]] - `method` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-CriarSala()]] - `calls` [EXTRACTED]
+- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_9

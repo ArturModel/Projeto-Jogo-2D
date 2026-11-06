@@ -12,7 +12,7 @@ tags:
 # .Awake()
 
 ## Connections
-- [[dot-Build()_1]] - `calls` [EXTRACTED]
+- [[dot-Build()]] - `calls` [EXTRACTED]
 - [[DicaDeTecla]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_14

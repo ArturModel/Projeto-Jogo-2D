@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 96"
+community: "Community 36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_36
 ---
 
 # TextAsset
@@ -14,4 +14,4 @@ tags:
 - [[dot-CarregarConteudo()]] - `references` [EXTRACTED]
 - [[dot-Narrative()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_36

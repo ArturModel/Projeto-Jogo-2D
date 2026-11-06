@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-CriarAmbiencia()]] - `method` [EXTRACTED]
 - [[dot-CriarImpactoMadeira()]] - `method` [EXTRACTED]
-- [[dot-Definir()_1]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_5]] - `method` [EXTRACTED]
+- [[dot-Definir()_2]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_8]] - `method` [EXTRACTED]
 - [[dot-RespostaAbafada()_1]] - `method` [EXTRACTED]
 - [[dot-RunAudioC2()]] - `references` [EXTRACTED]
 - [[dot-TocarRadio()]] - `method` [EXTRACTED]

@@ -1,30 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 24"
-location: "L51"
+community: "Community 33"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_33
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-ApplyC2()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
-- [[dot-Definir()_1]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-IrParaPosicao()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[CameraFollow]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `method` [EXTRACTED]
-- [[Chuva]] - `references` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaRimLight]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_33

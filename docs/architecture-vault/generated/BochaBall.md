@@ -26,7 +26,7 @@ tags:
 - [[dot-Posicao()]] - `references` [EXTRACTED]
 - [[dot-Rebater()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
-- [[dot-Run()_6]] - `calls` [INFERRED]
+- [[dot-Run()_1]] - `calls` [INFERRED]
 - [[dot-Velocidade()]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
@@ -35,6 +35,6 @@ tags:
 - [[Quaternion]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
-- [[Velocidade_1]] - `defines` [EXTRACTED]
+- [[Velocidade]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_27

@@ -12,7 +12,7 @@ tags:
 # .DetectarLimitesDaRegiao()
 
 ## Connections
-- [[dot-Start()_16]] - `calls` [EXTRACTED]
+- [[dot-Start()_13]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]

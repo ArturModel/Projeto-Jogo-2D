@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "Community 8"
+community: "Community 44"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_44
 ---
 
 # SantaRitaRoomCutaway
@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-Apply()_5]] - `method` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_12]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_10]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-ShouldReveal()]] - `method` [EXTRACTED]
-- [[dot-Start()_19]] - `method` [EXTRACTED]
+- [[dot-Start()_14]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Opacity]] - `defines` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_44

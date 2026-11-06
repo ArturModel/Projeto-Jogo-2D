@@ -20,7 +20,7 @@ members: 43
 - [[dot-EfetuarLancamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-EntradaTeclado()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-EscolherTipo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Fechar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-Fechar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-ForcaNoTempo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-ImpactoReal()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-IniciarArraste()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
@@ -30,7 +30,7 @@ members: 43
 - [[dot-MoverMira()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-MudarVista()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-NovaMao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-OnApplicationFocus()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-OnApplicationFocus()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-Painel()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-Pausar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-PodeConsultar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
@@ -45,11 +45,11 @@ members: 43
 - [[dot-SetView()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-SoltarArraste()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[dot-TextoDistancia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[dot-Update()_4]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-Update()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[BochaMinigameUI]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[Fase_1]] - code
-- [[Instance_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
-- [[IsShowing]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[Instance_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[IsShowing_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 - [[RectMask2D]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -60,32 +60,33 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Community 51]]
 - 10 edges to [[_COMMUNITY_Community 37]]
 - 10 edges to [[_COMMUNITY_Community 9]]
-- 8 edges to [[_COMMUNITY_Community 4]]
-- 7 edges to [[_COMMUNITY_Community 12]]
-- 7 edges to [[_COMMUNITY_Community 6]]
-- 6 edges to [[_COMMUNITY_Community 46]]
+- 10 edges to [[_COMMUNITY_Community 4]]
+- 8 edges to [[_COMMUNITY_Community 51]]
+- 7 edges to [[_COMMUNITY_Community 46]]
+- 6 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 2]]
+- 5 edges to [[_COMMUNITY_Community 7]]
 - 4 edges to [[_COMMUNITY_Community 27]]
-- 4 edges to [[_COMMUNITY_Community 50]]
-- 3 edges to [[_COMMUNITY_Community 36]]
+- 4 edges to [[_COMMUNITY_Community 48]]
+- 4 edges to [[_COMMUNITY_Community 28]]
+- 3 edges to [[_COMMUNITY_Community 13]]
 - 3 edges to [[_COMMUNITY_Community 29]]
-- 3 edges to [[_COMMUNITY_Community 30]]
-- 3 edges to [[_COMMUNITY_Community 2]]
+- 2 edges to [[_COMMUNITY_Community 12]]
 - 2 edges to [[_COMMUNITY_Community 98]]
-- 2 edges to [[_COMMUNITY_Community 94]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 42]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 - 1 edge to [[_COMMUNITY_Community 52]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 50]]
 - 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 92]]
 
 ## Top bridge nodes
-- [[BochaMinigameUI]] - degree 59, connects to 15 communities
-- [[dot-Botao()_1]] - degree 11, connects to 6 communities
-- [[dot-Construir()_1]] - degree 22, connects to 5 communities
-- [[dot-Painel()]] - degree 9, connects to 4 communities
-- [[dot-Update()_4]] - degree 15, connects to 3 communities
+- [[BochaMinigameUI]] - degree 59, connects to 16 communities
+- [[dot-Construir()_1]] - degree 22, connects to 6 communities
+- [[dot-Botao()_1]] - degree 11, connects to 5 communities
+- [[dot-Painel()]] - degree 9, connects to 5 communities
+- [[dot-Update()_3]] - degree 15, connects to 3 communities

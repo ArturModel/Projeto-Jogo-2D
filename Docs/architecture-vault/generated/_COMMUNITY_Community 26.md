@@ -1,33 +1,26 @@
 ---
 type: community
-members: 20
+members: 13
 ---
 
 # Community 26
 
-**Members:** 20 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[dot-Character()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
-- [[dot-ConstrainArrival()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-LivePosition()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-LiveSprite()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-NativeMesh()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
-- [[dot-OccupiedChair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-PatronFrame()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-PatronPose()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-PixelObject()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
-- [[dot-SpriteFor()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-TablePropVisible()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-Update()_13]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Actor]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
-- [[Actor_2]] - code
-- [[Kind_1]] - code
-- [[Mesh]] - code
-- [[MeshFilter]] - code
-- [[Prop]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Prop_1]] - code
-- [[SantaRitaBarLayout]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Ativar()]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[dot-Awake()_5]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[dot-Awake()_6]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[dot-Procurar()]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[dot-Update()_11]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[dot-Update()_12]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[Apontado]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[Ativo]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
+- [[Disponivel_1]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[LayerMask]] - code
+- [[ObjetoCarro]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[ObjetoCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs
+- [[PonteiroCarro]] - code - Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,26 +30,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Community 38]]
-- 8 edges to [[_COMMUNITY_Community 18]]
-- 8 edges to [[_COMMUNITY_Community 87]]
-- 4 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 6]]
-- 3 edges to [[_COMMUNITY_Community 85]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 20]]
-- 2 edges to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 25]]
+- 3 edges to [[_COMMUNITY_Community 33]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 2 edges to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 1]]
 - 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 30]]
+- 1 edge to [[_COMMUNITY_Community 24]]
 
 ## Top bridge nodes
-- [[SantaRitaBarLayout]] - degree 21, connects to 7 communities
-- [[dot-SpriteFor()]] - degree 10, connects to 5 communities
-- [[dot-PixelObject()]] - degree 9, connects to 5 communities
-- [[dot-Character()]] - degree 12, connects to 4 communities
-- [[dot-PatronPose()]] - degree 9, connects to 4 communities
+- [[PonteiroCarro]] - degree 12, connects to 6 communities
+- [[ObjetoCarro]] - degree 14, connects to 5 communities
+- [[dot-Awake()_5]] - degree 2, connects to 1 community
+- [[ObjetoCarro.cs]] - degree 2, connects to 1 community

@@ -16,8 +16,8 @@ tags:
 - [[dot-DesenharOndinha()]] - `calls` [EXTRACTED]
 - [[dot-DesenharPocas()]] - `calls` [EXTRACTED]
 - [[dot-DesenharRespingo()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_11]] - `calls` [EXTRACTED]
-- [[dot-Limpar()_2]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_13]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_8

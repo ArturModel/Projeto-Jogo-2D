@@ -1,11 +1,11 @@
 ---
 type: community
-members: 88
+members: 121
 ---
 
 # Community 2
 
-**Members:** 88 nodes
+**Members:** 121 nodes
 
 ## Members
 - [[dot-AbrirPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
@@ -19,8 +19,15 @@ members: 88
 - [[dot-AtualizarFonteMusical()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-AtualizarSpawnPointExistente()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-AtualizarTeclasPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-BallMaterial()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-Box()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-BuildCue()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-BuildRoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs
+- [[dot-BuildTable()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-CaptureArt()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-CarregarSprite()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-CarregarTextura()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Character()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
 - [[dot-ColocarArteInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ColocarArvore()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ColocarGatilhoTransicao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
@@ -30,7 +37,7 @@ members: 88
 - [[dot-ColocarPosteComLuz()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ColocarProp()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ColocarTapete()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Configurar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-CombineNet()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-Configurar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
 - [[dot-ConfigurarCenaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ConstruirInterior1_Posto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
@@ -43,58 +50,84 @@ members: 88
 - [[dot-ConstruirZona3_Encruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ConstruirZona4_Bairro()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ConstruirZona5_RuaNorteBar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-ConverterCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
 - [[dot-Create()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-CriarFonteMusical()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-CriarParedesPerimetro()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-CriarPisoDeZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Cylinder()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-EnsureForCurrentScene()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-ExtrairBloco32()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-FecharPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-GarantirElementosBarDoZeCenaSeparada()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-GarantirElementosCasaDoAvoCenaSeparada()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-Interact()_3]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[dot-MostrarPainelFimCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-MostrarTelaFechamentoCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Lamp()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs
+- [[dot-Mat()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-NativeMesh()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-NewGuide()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-NomeArquivoTile()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-OnTriggerEnter2D()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
+- [[dot-Panel()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-PintarAcabamentoArquitetonicoInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-PixelMaterial()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-PixelObject()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-Plan()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-PocketOuter()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-PocketPhysics()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
 - [[dot-PosicionarJogadorInicialRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-PrepararMusicasDasZonas()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Primitive()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Ring()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Sphere()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Sync()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[dot-TentarTransicionar()]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
 - [[dot-TransicionarPara()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[dot-TryObterInfoZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Update()_10]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[dot-Tube()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Update()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[Actor]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Actor_1]] - code
 - [[CaixaMercado]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[CaixaPosto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[Capitulo1Director]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[Collider]] - code
 - [[Color32]] - code
+- [[DarkWood]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[EstaEmInterior]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[FloorTile]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[FrameGeometryBuilds]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[GameObject]] - code
 - [[Geladeira]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[Hortifruti]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[InfoZona]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[InfoZona_1]] - code
-- [[Instance_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Interior_BarDoZe]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Interior_CasaDoAvo]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Interior_Mercadinho]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Interior_Posto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[Instance_4]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[Light]] - code
+- [[LineRenderer]] - code
+- [[Mesh]] - code
+- [[MeshFilter]] - code
+- [[MeshRenderer]] - code
 - [[MovelLoja]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[MovelLoja_1]] - code
+- [[Object]] - code
 - [[PainelFechamentoAberto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[Prateleira]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[PrimitiveType]] - code
 - [[Prompt_3]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[Texture2D]] - code
+- [[Renderer]] - code
+- [[SinucaRoom3D]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[SinucaRoom3D.Scenery.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs
+- [[StaticRendererCount]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Target]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Texture]] - code
 - [[TilePiso_1]] - code
-- [[TipoInteracao_1]] - code
 - [[Transform]] - code
 - [[TransicaoDeZonaTrigger]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[Zona1_Rodovia]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona2_Posto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona3_Encruzilhada]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona4_Bairro]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Zona5_RuaNorteBar]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
+- [[UniversalAdditionalCameraData]] - code
+- [[Vector3]] - code
+- [[WallTile]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Wood]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[ZonaAtual]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[ZonaId]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
 - [[ZonaId_1]] - code
 
 ## Live Query (requires Dataview plugin)
@@ -105,45 +138,56 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Community 6]]
-- 14 edges to [[_COMMUNITY_Community 51]]
-- 12 edges to [[_COMMUNITY_Community 11]]
+- 31 edges to [[_COMMUNITY_Community 18]]
+- 30 edges to [[_COMMUNITY_Community 6]]
+- 19 edges to [[_COMMUNITY_Community 48]]
+- 17 edges to [[_COMMUNITY_Community 9]]
+- 16 edges to [[_COMMUNITY_Community 20]]
+- 15 edges to [[_COMMUNITY_Community 46]]
+- 15 edges to [[_COMMUNITY_Community 39]]
+- 14 edges to [[_COMMUNITY_Community 5]]
+- 13 edges to [[_COMMUNITY_Community 51]]
+- 13 edges to [[_COMMUNITY_Community 86]]
+- 13 edges to [[_COMMUNITY_Community 44]]
 - 12 edges to [[_COMMUNITY_Community 16]]
-- 12 edges to [[_COMMUNITY_Community 9]]
-- 11 edges to [[_COMMUNITY_Community 30]]
-- 11 edges to [[_COMMUNITY_Community 38]]
-- 10 edges to [[_COMMUNITY_Community 24]]
-- 8 edges to [[_COMMUNITY_Community 20]]
-- 7 edges to [[_COMMUNITY_Community 5]]
-- 7 edges to [[_COMMUNITY_Community 0]]
-- 6 edges to [[_COMMUNITY_Community 18]]
-- 6 edges to [[_COMMUNITY_Community 87]]
-- 6 edges to [[_COMMUNITY_Community 44]]
+- 10 edges to [[_COMMUNITY_Community 11]]
+- 7 edges to [[_COMMUNITY_Community 13]]
+- 7 edges to [[_COMMUNITY_Community 7]]
+- 6 edges to [[_COMMUNITY_Community 12]]
+- 6 edges to [[_COMMUNITY_Community 1]]
+- 6 edges to [[_COMMUNITY_Community 27]]
 - 6 edges to [[_COMMUNITY_Community 49]]
-- 6 edges to [[_COMMUNITY_Community 8]]
-- 5 edges to [[_COMMUNITY_Community 23]]
-- 4 edges to [[_COMMUNITY_Community 46]]
-- 4 edges to [[_COMMUNITY_Community 7]]
-- 4 edges to [[_COMMUNITY_Community 26]]
-- 4 edges to [[_COMMUNITY_Community 12]]
-- 3 edges to [[_COMMUNITY_Community 13]]
-- 3 edges to [[_COMMUNITY_Community 84]]
-- 3 edges to [[_COMMUNITY_Community 17]]
-- 3 edges to [[_COMMUNITY_Community 86]]
-- 2 edges to [[_COMMUNITY_Community 19]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 92]]
+- 5 edges to [[_COMMUNITY_Community 17]]
+- 5 edges to [[_COMMUNITY_Community 0]]
+- 5 edges to [[_COMMUNITY_Community 57]]
+- 5 edges to [[_COMMUNITY_Community 92]]
+- 4 edges to [[_COMMUNITY_Community 40]]
+- 4 edges to [[_COMMUNITY_Community 42]]
+- 4 edges to [[_COMMUNITY_Community 84]]
+- 3 edges to [[_COMMUNITY_Community 34]]
+- 3 edges to [[_COMMUNITY_Community 41]]
+- 3 edges to [[_COMMUNITY_Community 85]]
+- 2 edges to [[_COMMUNITY_Community 105]]
 - 2 edges to [[_COMMUNITY_Community 54]]
-- 2 edges to [[_COMMUNITY_Community 40]]
-- 2 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 45]]
+- 2 edges to [[_COMMUNITY_Community 8]]
+- 2 edges to [[_COMMUNITY_Community 56]]
+- 1 edge to [[_COMMUNITY_Community 97]]
 - 1 edge to [[_COMMUNITY_Community 22]]
-- 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 37]]
+- 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 14]]
 - 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 87]]
 
 ## Top bridge nodes
-- [[Transform]] - degree 78, connects to 18 communities
-- [[Capitulo1Director]] - degree 78, connects to 14 communities
-- [[Texture2D]] - degree 19, connects to 11 communities
-- [[dot-Create()]] - degree 12, connects to 7 communities
-- [[dot-ColocarProp()]] - degree 21, connects to 5 communities
+- [[Transform]] - degree 83, connects to 18 communities
+- [[GameObject]] - degree 60, connects to 17 communities
+- [[Capitulo1Director]] - degree 78, connects to 12 communities
+- [[SinucaRoom3D]] - degree 68, connects to 12 communities
+- [[Vector3]] - degree 52, connects to 10 communities

@@ -27,7 +27,7 @@ tags:
 - [[dot-RunSinucaR4()]] - `calls` [INFERRED]
 - [[dot-RunSinuquinha15()]] - `calls` [INFERRED]
 - [[dot-SaveIsolationProbe()]] - `calls` [EXTRACTED]
-- [[dot-Update()_14]] - `calls` [EXTRACTED]
+- [[dot-Update()_24]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Community_0

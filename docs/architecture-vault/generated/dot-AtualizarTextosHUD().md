@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 88"
+community: "Community 21"
 location: "L2522"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_88
+  - community/Community_21
 ---
 
 # .AtualizarTextosHUD()
@@ -19,9 +19,9 @@ tags:
 - [[dot-ContinuarInicioTurno()]] - `calls` [EXTRACTED]
 - [[dot-Group()]] - `calls` [EXTRACTED]
 - [[dot-IniciarTurnoAtual()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_3]] - `calls` [EXTRACTED]
 - [[dot-ResolverFimDaTacada()]] - `calls` [EXTRACTED]
 - [[dot-ResolverFimDaTacadaPratica()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_88
+#graphify/code #graphify/EXTRACTED #community/Community_21

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "Community 42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_42
 ---
 
 # MonoBehaviour
@@ -48,6 +48,8 @@ tags:
 - [[PlayerController]] - `inherits` [EXTRACTED]
 - [[PonteiroCarro]] - `inherits` [EXTRACTED]
 - [[PrologoDirector]] - `inherits` [EXTRACTED]
+- [[PrologoJogavel]] - `inherits` [EXTRACTED]
+- [[PrologoRuntimeVerification]] - `inherits` [EXTRACTED]
 - [[PrologoVideo]] - `inherits` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `inherits` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `inherits` [EXTRACTED]
@@ -74,4 +76,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_42

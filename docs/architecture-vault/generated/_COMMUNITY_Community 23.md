@@ -1,26 +1,27 @@
 ---
 type: community
-members: 13
+members: 14
 ---
 
 # Community 23
 
-**Members:** 13 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[dot-ConstruirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirModal()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirPainelEfeitoOpcional()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirUI()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CorDaBola()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-CriarBolasNaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarBotaoHUD()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarSpriteCirculo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-InicializarOverlays()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-Posicionar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[Outline]] - code
-- [[TMP_FontAsset]] - code
+- [[dot-Chao()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Cor()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Disco()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Estrada()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Linha()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-OnDestroy()_3]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-OnPopulateMesh()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Projetar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Quad()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-QuadTextura()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Ruido()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Vidro()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[PrologoEstradaGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[mainTexture]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,24 +31,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Community 12]]
-- 14 edges to [[_COMMUNITY_Community 51]]
-- 11 edges to [[_COMMUNITY_Community 3]]
-- 5 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 9]]
-- 2 edges to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 100]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 87]]
-- 1 edge to [[_COMMUNITY_Community 88]]
-- 1 edge to [[_COMMUNITY_Community 38]]
+- 6 edges to [[_COMMUNITY_Community 9]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 3 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[dot-ConstruirUI()]] - degree 23, connects to 7 communities
-- [[dot-CriarBotaoHUD()]] - degree 15, connects to 5 communities
-- [[dot-CriarBolasNaMesa()]] - degree 12, connects to 4 communities
-- [[dot-CriarTexto()]] - degree 11, connects to 4 communities
-- [[dot-ConstruirModal()]] - degree 10, connects to 4 communities
+- [[PrologoEstradaGraphic]] - degree 22, connects to 7 communities
+- [[dot-Quad()]] - degree 8, connects to 2 communities
+- [[dot-Linha()]] - degree 6, connects to 2 communities
+- [[dot-Disco()]] - degree 5, connects to 2 communities
+- [[dot-QuadTextura()]] - degree 5, connects to 2 communities

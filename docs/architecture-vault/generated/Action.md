@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 36"
+community: "Community 13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_13
 ---
 
 # Action
@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[dot-Abrir()_1]] - `references` [EXTRACTED]
 - [[dot-AbrirSelecaoCarregar()]] - `references` [EXTRACTED]
-- [[dot-Avancar()_2]] - `references` [EXTRACTED]
+- [[dot-Avancar()_1]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-CaptureArt()]] - `references` [EXTRACTED]
@@ -40,4 +40,4 @@ tags:
 - [[SinucaSpinSelector]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_13

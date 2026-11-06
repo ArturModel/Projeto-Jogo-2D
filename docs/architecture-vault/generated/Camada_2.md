@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[dot-CriarCamada()]] - `references` [EXTRACTED]
 - [[dot-LiberarCamada()]] - `references` [EXTRACTED]
-- [[dot-Limpar()_2]] - `references` [EXTRACTED]
+- [[dot-Limpar()_1]] - `references` [EXTRACTED]
 - [[dot-Pintar()]] - `references` [EXTRACTED]
 - [[AudioAmbiente]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]

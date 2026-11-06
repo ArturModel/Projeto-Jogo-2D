@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs"
 type: "code"
-community: "Community 30"
+community: "Community 48"
 location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_48
 ---
 
 # .IntegratedFrameR4()
 
 ## Connections
 - [[dot-Capture()]] - `calls` [INFERRED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_2]] - `calls` [INFERRED]
+- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_3]] - `calls` [INFERRED]
 - [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [INFERRED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[SinucaBrasileiraRules]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_48

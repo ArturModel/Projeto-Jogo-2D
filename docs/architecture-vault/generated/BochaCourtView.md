@@ -12,7 +12,7 @@ tags:
 # BochaCourtView
 
 ## Connections
-- [[dot-Awake()_23]] - `method` [EXTRACTED]
+- [[dot-Awake()_25]] - `method` [EXTRACTED]
 - [[dot-BallColor()]] - `method` [EXTRACTED]
 - [[dot-Box()_2]] - `method` [EXTRACTED]
 - [[dot-CameraBasis()]] - `method` [EXTRACTED]
@@ -22,15 +22,15 @@ tags:
 - [[dot-CriarSala()]] - `method` [EXTRACTED]
 - [[dot-Disc()_1]] - `method` [EXTRACTED]
 - [[dot-Line()]] - `method` [EXTRACTED]
-- [[dot-OnDrag()_1]] - `method` [EXTRACTED]
-- [[dot-OnPointerDown()_1]] - `method` [EXTRACTED]
-- [[dot-OnPointerMove()_1]] - `method` [EXTRACTED]
-- [[dot-OnPointerUp()_1]] - `method` [EXTRACTED]
-- [[dot-OnPopulateMesh()_3]] - `method` [EXTRACTED]
+- [[dot-OnDrag()]] - `method` [EXTRACTED]
+- [[dot-OnPointerDown()]] - `method` [EXTRACTED]
+- [[dot-OnPointerMove()]] - `method` [EXTRACTED]
+- [[dot-OnPointerUp()]] - `method` [EXTRACTED]
+- [[dot-OnPopulateMesh()_4]] - `method` [EXTRACTED]
 - [[dot-OnScroll()]] - `method` [EXTRACTED]
 - [[dot-Project()_1]] - `method` [EXTRACTED]
 - [[dot-ProjectReady()]] - `method` [EXTRACTED]
-- [[dot-Quad()_1]] - `method` [EXTRACTED]
+- [[dot-Quad()_2]] - `method` [EXTRACTED]
 - [[dot-RecordContacts()]] - `method` [EXTRACTED]
 - [[dot-Ring()_1]] - `method` [EXTRACTED]
 - [[dot-RoomLight()]] - `method` [EXTRACTED]
@@ -71,6 +71,6 @@ tags:
 - [[Vector3]] - `references` [EXTRACTED]
 - [[View]] - `defines` [EXTRACTED]
 - [[Zoom_1]] - `defines` [EXTRACTED]
-- [[mainTexture]] - `defines` [EXTRACTED]
+- [[mainTexture_1]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_9

@@ -1,22 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 21"
-location: "L292"
+community: "Community 19"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_19
 ---
 
 # .Limpar()
 
 ## Connections
-- [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
-- [[dot-DialogueR2()]] - `calls` [EXTRACTED]
-- [[dot-NovoJogo()]] - `calls` [EXTRACTED]
-- [[dot-ResetarMemoriaSilencioso()]] - `calls` [EXTRACTED]
-- [[dot-RunR2()]] - `calls` [EXTRACTED]
-- [[GameState]] - `method` [EXTRACTED]
+- [[dot-Encerrar()]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_19

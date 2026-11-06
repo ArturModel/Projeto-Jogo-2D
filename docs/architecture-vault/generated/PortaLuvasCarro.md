@@ -13,8 +13,10 @@ tags:
 
 ## Connections
 - [[dot-Ativar()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_9]] - `references` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[PortaLuvasCarro.cs]] - `contains` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_33

@@ -12,11 +12,11 @@ tags:
 # SinucaSpinSelector
 
 ## Connections
-- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-Disc()]] - `method` [EXTRACTED]
 - [[dot-OnDrag()_2]] - `method` [EXTRACTED]
 - [[dot-OnPointerDown()_2]] - `method` [EXTRACTED]
-- [[dot-OnPopulateMesh()_1]] - `method` [EXTRACTED]
+- [[dot-OnPopulateMesh()_2]] - `method` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-Select()]] - `method` [EXTRACTED]
 - [[dot-SetContact()]] - `method` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 2"
+community: "Community 13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_13
 ---
 
 # TipoInteracao
@@ -15,4 +15,4 @@ tags:
 - [[dot-Configurar()_1]] - `references` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_13

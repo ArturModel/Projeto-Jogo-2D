@@ -12,7 +12,7 @@ tags:
 # Kind
 
 ## Connections
-- [[Actor_1]] - `case_of` [EXTRACTED]
+- [[Actor_2]] - `case_of` [EXTRACTED]
 - [[Chair]] - `case_of` [EXTRACTED]
 - [[Counter]] - `case_of` [EXTRACTED]
 - [[Decor]] - `case_of` [EXTRACTED]
