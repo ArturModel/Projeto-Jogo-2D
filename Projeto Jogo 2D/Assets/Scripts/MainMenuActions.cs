@@ -35,12 +35,6 @@ public class MainMenuActions : MonoBehaviour
 
     public void Continuar()
     {
-        if (!CheckpointSystem.HasCheckpoint)
-        {
-            Debug.Log("Nenhum orelhão registrado ainda.");
-            return;
-        }
-
         // Abre a seleção dos 5 Slots de Orelhão para o jogador escolher qual save carregar
         PayphoneCheckpoint.AbrirModalCarregarDoMenu();
     }

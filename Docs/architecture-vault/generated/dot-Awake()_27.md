@@ -1,17 +1,25 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 96"
-location: "L21"
+community: "Community 94"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_94
 ---
 
 # .Awake()
 
 ## Connections
-- [[ChuvaRolando]] - `method` [EXTRACTED]
+- [[dot-Construir()_5]] - `calls` [EXTRACTED]
+- [[dot-Objeto()]] - `calls` [EXTRACTED]
+- [[CelularCarro]] - `references` [EXTRACTED]
+- [[MenuPausa]] - `references` [EXTRACTED]
+- [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
+- [[PonteiroCarro]] - `references` [EXTRACTED]
+- [[PortaLuvasCarro]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[RadioCarro]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_94

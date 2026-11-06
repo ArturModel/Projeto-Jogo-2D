@@ -15,10 +15,10 @@ tags:
 - [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
 - [[dot-LerControles()]] - `calls` [EXTRACTED]
-- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_3]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Update()_14]] - `calls` [EXTRACTED]
+- [[dot-Update()_26]] - `calls` [EXTRACTED]
 - [[PrologoJogavel]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_86

@@ -8,24 +8,24 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
+- [[dot-ApprovedScenes()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[dot-Blocked()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
 - [[dot-BuildFinalLivingWorld()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
-- [[dot-BuildQA()_2]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
-- [[dot-ConectarManualmente()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
-- [[dot-ConfigureEnvironment()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
-- [[dot-EncloseCourt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
-- [[dot-ImportAccessArt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
-- [[dot-Pilot()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
-- [[dot-Prepare()]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
-- [[dot-PrepareArt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
-- [[dot-Safe()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
-- [[dot-UpdateAccesses()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
-- [[dot-WaitForEditor()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[dot-BuildQA()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
+- [[dot-Flood()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[dot-RegisterCampaignScenes()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[dot-RequireSavedScenes()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[dot-Revision()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[dot-Run()_3]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[dot-Run()_4]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
+- [[dot-Scenes()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[dot-SourceHash()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[Chapter2BuildVerification]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[Evidence]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
+- [[ForcarDevelopment]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs
 - [[MenuItem]] - code
-- [[SantaRitaMcpSetup]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
 - [[SantaRitaProductionVerification]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
-- [[SinucaRef7Authoring]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
-- [[UniversalRenderPipelineAsset]] - code
-- [[UniversalRendererData]] - code
+- [[TilemapCollider2D]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -35,26 +35,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_Community 11]]
-- 4 edges to [[_COMMUNITY_Community 20]]
+- 6 edges to [[_COMMUNITY_Community 11]]
+- 5 edges to [[_COMMUNITY_Community 20]]
+- 5 edges to [[_COMMUNITY_Community 6]]
 - 4 edges to [[_COMMUNITY_Community 16]]
-- 4 edges to [[_COMMUNITY_Community 6]]
+- 4 edges to [[_COMMUNITY_Community 40]]
+- 3 edges to [[_COMMUNITY_Community 36]]
 - 3 edges to [[_COMMUNITY_Community 1]]
-- 3 edges to [[_COMMUNITY_Community 18]]
-- 2 edges to [[_COMMUNITY_Community 36]]
-- 2 edges to [[_COMMUNITY_Community 40]]
-- 2 edges to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 4]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 86]]
+- 3 edges to [[_COMMUNITY_Community 30]]
+- 3 edges to [[_COMMUNITY_Community 99]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 109]]
+- 1 edge to [[_COMMUNITY_Community 114]]
+- 1 edge to [[_COMMUNITY_Community 38]]
+- 1 edge to [[_COMMUNITY_Community 113]]
+- 1 edge to [[_COMMUNITY_Community 95]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 88]]
 
 ## Top bridge nodes
-- [[dot-EncloseCourt()]] - degree 23, connects to 8 communities
-- [[MenuItem]] - degree 19, connects to 8 communities
-- [[dot-UpdateAccesses()]] - degree 9, connects to 4 communities
-- [[SantaRitaProductionVerification]] - degree 4, connects to 2 communities
-- [[dot-Safe()]] - degree 6, connects to 1 community
+- [[MenuItem]] - degree 19, connects to 10 communities
+- [[dot-Run()_4]] - degree 15, connects to 10 communities
+- [[dot-Scenes()]] - degree 20, connects to 9 communities
+- [[dot-Blocked()]] - degree 5, connects to 2 communities
+- [[dot-Flood()]] - degree 5, connects to 2 communities

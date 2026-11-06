@@ -13,11 +13,11 @@ tags:
 
 ## Connections
 - [[dot-Apply()_3]] - `references` [EXTRACTED]
-- [[dot-Interact()_2]] - `method` [EXTRACTED]
-- [[dot-Start()_7]] - `method` [EXTRACTED]
-- [[dot-Update()_3]] - `method` [EXTRACTED]
+- [[dot-Interact()_5]] - `method` [EXTRACTED]
+- [[dot-Start()_9]] - `method` [EXTRACTED]
+- [[dot-Update()_7]] - `method` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_3]] - `defines` [EXTRACTED]
+- [[Prompt_5]] - `defines` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 

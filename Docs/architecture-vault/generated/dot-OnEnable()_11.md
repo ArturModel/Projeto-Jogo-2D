@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs"
 type: "code"
-community: "Community 93"
-location: "L50"
+community: "Community 88"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_88
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_88

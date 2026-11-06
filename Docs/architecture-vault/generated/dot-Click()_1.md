@@ -1,26 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs"
 type: "code"
-community: "Community 48"
-location: "L343"
+community: "Community 42"
+location: "L243"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_42
 ---
 
 # .Click()
 
 ## Connections
-- [[dot-BochaAudioR2()]] - `calls` [EXTRACTED]
-- [[dot-DefeatUI()]] - `calls` [EXTRACTED]
-- [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
-- [[dot-NewBochaPractice()]] - `calls` [EXTRACTED]
-- [[dot-Run()]] - `calls` [EXTRACTED]
-- [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
-- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
-- [[dot-SlotsR2()]] - `calls` [EXTRACTED]
-- [[Button]] - `references` [EXTRACTED]
-- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
+- [[dot-ClickPonto()]] - `calls` [EXTRACTED]
+- [[dot-Esperar()]] - `calls` [EXTRACTED]
+- [[dot-Hover()]] - `calls` [EXTRACTED]
+- [[dot-Roteiro()]] - `calls` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_42

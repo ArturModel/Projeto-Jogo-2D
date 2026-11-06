@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-Apply()_3]] - `references` [EXTRACTED]
-- [[dot-Interact()_3]] - `method` [EXTRACTED]
+- [[dot-Interact()_6]] - `method` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
-- [[Prompt_4]] - `defines` [EXTRACTED]
+- [[Prompt_6]] - `defines` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_18

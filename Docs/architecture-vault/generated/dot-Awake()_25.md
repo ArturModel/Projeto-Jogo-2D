@@ -1,25 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 94"
-location: "L68"
+community: "Community 9"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_94
+  - community/Community_9
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Construir()_4]] - `calls` [EXTRACTED]
-- [[dot-Objeto()]] - `calls` [EXTRACTED]
-- [[CelularCarro]] - `references` [EXTRACTED]
-- [[MenuPausa]] - `references` [EXTRACTED]
-- [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
-- [[PonteiroCarro]] - `references` [EXTRACTED]
-- [[PortaLuvasCarro]] - `references` [EXTRACTED]
-- [[PrologoJogavel]] - `method` [EXTRACTED]
-- [[RadioCarro]] - `references` [EXTRACTED]
+- [[dot-CriarSala()]] - `calls` [EXTRACTED]
+- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_9

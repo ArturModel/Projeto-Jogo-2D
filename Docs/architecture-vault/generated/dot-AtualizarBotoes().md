@@ -12,7 +12,7 @@ tags:
 # .AtualizarBotoes()
 
 ## Connections
-- [[dot-Update()_1]] - `calls` [EXTRACTED]
+- [[dot-Update()]] - `calls` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[MenuAmbiente]] - `method` [EXTRACTED]
 

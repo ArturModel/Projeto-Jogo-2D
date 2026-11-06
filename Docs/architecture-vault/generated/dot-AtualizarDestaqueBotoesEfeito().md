@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 21"
+community: "Community 3"
 location: "L819"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_3
 ---
 
 # .AtualizarDestaqueBotoesEfeito()
@@ -16,4 +16,4 @@ tags:
 - [[Image]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_3

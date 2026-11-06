@@ -1,24 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 7"
-location: "L314"
+community: "Community 38"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_38
 ---
 
 # .Texto()
 
 ## Connections
-- [[dot-Start()_2]] - `calls` [EXTRACTED]
-- [[Color]] - `references` [EXTRACTED]
-- [[MenuAmbiente]] - `method` [EXTRACTED]
-- [[TMP_FontAsset]] - `references` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
-- [[TextMeshProUGUI]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_38

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Clear()]] - `calls` [EXTRACTED]
-- [[dot-Limpar()_2]] - `calls` [EXTRACTED]
+- [[dot-Limpar()]] - `calls` [EXTRACTED]
 - [[dot-NovoJogo()]] - `calls` [EXTRACTED]
 - [[MainMenuActions]] - `method` [EXTRACTED]
 

@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs"
 type: "code"
-community: "Community 16"
-location: "L128"
+community: "Community 42"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_42
 ---
 
 # .Begin()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
-- [[dot-Delete()]] - `calls` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
+- [[dot-Bootstrap()_1]] - `calls` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_42

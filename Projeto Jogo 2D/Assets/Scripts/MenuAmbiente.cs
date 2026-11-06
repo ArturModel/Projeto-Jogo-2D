@@ -217,7 +217,7 @@ public sealed class MenuAmbiente : MonoBehaviour
             EventSystem.current?.SetSelectedGameObject(Obter<Button>("btn_continuar").gameObject);
             // Atalho diegético para a mesma seleção explícita de slots.
             // Nunca salva, escolhe slot ou carrega uma partida por aproximação.
-            if (temSave) GetComponent<MainMenuActions>().Continuar();
+            GetComponent<MainMenuActions>().Continuar();
         }
         else if (p.y < .29f) atmosfera.Responder(p, tempo);
     }

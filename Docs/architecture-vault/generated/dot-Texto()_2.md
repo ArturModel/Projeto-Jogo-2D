@@ -1,22 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
 type: "code"
-community: "Community 92"
-location: "L157"
+community: "Community 51"
+location: "L282"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_92
+  - community/Community_51
 ---
 
 # .Texto()
 
 ## Connections
 - [[dot-Construir()_4]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[PrologoJogavel]] - `method` [EXTRACTED]
-- [[Rect]] - `references` [EXTRACTED]
+- [[dot-Rect()]] - `calls` [EXTRACTED]
+- [[Color]] - `references` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
+- [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_92
+#graphify/code #graphify/EXTRACTED #community/Community_51

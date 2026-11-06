@@ -1,14 +1,15 @@
 ---
 type: community
-members: 5
+members: 6
 ---
 
 # Community 87
 
-**Members:** 5 nodes
+**Members:** 6 nodes
 
 ## Members
 - [[dot-Avancar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
+- [[dot-Gait()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
 - [[dot-Reset()]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
 - [[MarcusGait]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
 - [[Quadro]] - code - Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs
@@ -22,12 +23,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 44]]
-- 3 edges to [[_COMMUNITY_Community 4]]
+- 3 edges to [[_COMMUNITY_Community 44]]
+- 3 edges to [[_COMMUNITY_Community 99]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 89]]
 
 ## Top bridge nodes
-- [[MarcusGait]] - degree 7, connects to 3 communities
-- [[dot-Avancar()_1]] - degree 5, connects to 3 communities
+- [[MarcusGait]] - degree 7, connects to 2 communities
+- [[dot-Avancar()_1]] - degree 5, connects to 2 communities
 - [[dot-Reset()]] - degree 5, connects to 2 communities
+- [[dot-Gait()]] - degree 6, connects to 1 community

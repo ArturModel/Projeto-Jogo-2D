@@ -12,8 +12,8 @@ tags:
 # .LoadIcons()
 
 ## Connections
-- [[dot-Awake()_16]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_7]] - `calls` [EXTRACTED]
+- [[dot-Awake()_18]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_10]] - `calls` [EXTRACTED]
 - [[SantaRitaInventory]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]

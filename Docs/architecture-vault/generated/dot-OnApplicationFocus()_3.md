@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 33"
-location: "L290"
+community: "Community 3"
+location: "L258"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_3
 ---
 
 # .OnApplicationFocus()
 
 ## Connections
-- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_3

@@ -12,7 +12,7 @@ tags:
 # .Objeto()
 
 ## Connections
-- [[dot-Awake()_25]] - `calls` [EXTRACTED]
+- [[dot-Awake()_27]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[PrologoJogavel]] - `method` [EXTRACTED]
 

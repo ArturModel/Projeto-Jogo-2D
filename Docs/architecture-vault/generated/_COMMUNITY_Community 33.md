@@ -1,20 +1,19 @@
 ---
 type: community
-members: 27
+members: 26
 ---
 
 # Community 33
 
-**Members:** 27 nodes
+**Members:** 26 nodes
 
 ## Members
 - [[dot-AtualizarAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-CentroVia()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-LerControles()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-OnApplicationFocus()_3]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-OnApplicationFocus()_4]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-Rotulo()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Start()_13]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Update()_14]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Start()_14]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Update()_17]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs
 - [[Curva]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Direcao]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Distancia]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
@@ -34,7 +33,7 @@ members: 27
 - [[Suspenso]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Tempo]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Terra_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[Velocidade_2]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[Velocidade_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,23 +43,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 9 edges to [[_COMMUNITY_Community 86]]
 - 7 edges to [[_COMMUNITY_Community 92]]
-- 4 edges to [[_COMMUNITY_Community 95]]
-- 4 edges to [[_COMMUNITY_Community 94]]
-- 4 edges to [[_COMMUNITY_Community 86]]
 - 3 edges to [[_COMMUNITY_Community 23]]
-- 3 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 94]]
+- 2 edges to [[_COMMUNITY_Community 12]]
 - 2 edges to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 - 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 110]]
-- 1 edge to [[_COMMUNITY_Community 96]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 95]]
 
 ## Top bridge nodes
 - [[PrologoJogavel]] - degree 52, connects to 12 communities
-- [[dot-Update()_14]] - degree 7, connects to 2 communities
-- [[dot-LerControles()]] - degree 5, connects to 2 communities
-- [[dot-CentroVia()]] - degree 3, connects to 1 community
-- [[dot-Start()_13]] - degree 2, connects to 1 community
+- [[dot-CentroVia()]] - degree 3, connects to 2 communities
+- [[dot-AtualizarAudio()]] - degree 2, connects to 1 community
+- [[dot-Rotulo()_1]] - degree 2, connects to 1 community
+- [[dot-Start()_14]] - degree 2, connects to 1 community

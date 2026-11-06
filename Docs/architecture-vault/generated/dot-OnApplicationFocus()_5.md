@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 83"
-location: "L258"
+community: "Community 44"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_83
+  - community/Community_44
 ---
 
 # .OnApplicationFocus()
 
 ## Connections
-- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/EXTRACTED #community/Community_44

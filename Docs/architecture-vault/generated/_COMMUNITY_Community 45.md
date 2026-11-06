@@ -1,49 +1,29 @@
 ---
 type: community
-members: 69
+members: 35
 ---
 
 # Community 45
 
-**Members:** 69 nodes
+**Members:** 35 nodes
 
 ## Members
-- [[dot-AlternarLanterna()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-AoClicarSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 - [[dot-AtualizarTextosDosSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-BeginIsolatedTests()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-CarregarSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-ClearPendingOnly()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-ConfirmarSaveManual()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
+- [[dot-CarregarSlot()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
+- [[dot-Clear()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-ConsumePendingSpawn()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-DefinirNumero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-DefinirTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-DescreverSlotIndisponivel()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-Dispose()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-ExportarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-FecharModalSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 - [[dot-ImportarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Limpar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Numero()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-ObterNomeAmigavelOrelhao()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-OnDestroy()_8]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
-- [[dot-PauseLoadFiveSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
-- [[dot-ProximaFalaContextual()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
 - [[dot-RecarregarUltimoSaveManual()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-RequestSpawnAtCheckpoint()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-RequestSpawnAtSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-ResetarMemoriaSilencioso()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-RestaurarIndicadorDeProgresso()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-RestaurarSnapshot()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Run()_5]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
+- [[dot-RunAutomatedVerification()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
 - [[dot-Save()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-Save()_1]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-SaveSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-Saves()]] - code - Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs
 - [[dot-SlotFilePath()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[dot-SlotsR2()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs
-- [[dot-Start()_17]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
-- [[dot-Texto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[dot-TryLoadManualSave()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-TryLoadPrimaryOnly()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[dot-TryLoadSlot()]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
@@ -53,28 +33,14 @@ members: 69
 - [[CheckpointScene]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[CheckpointSystem]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[EmArmazenamentoDeTeste]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[EntradaDiario]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[Flags]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[GameState]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[GameState.cs]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[GameStateSnapshot]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[HasCheckpoint]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[HashSet]] - code
-- [[IDisposable]] - code
-- [[IsolatedSaveScope]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[LanternaLigada]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[ManualSaveData]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[ObjetivoAtual]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[ParNumero]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[ParTexto]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[PrefKeyBackup]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[PrefKeyLastSlot]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[PrefKeyPrimary]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[PrefKeySlotPrefix]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[PrimaryFilePath]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[SinucaPixelPreviewSession]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
 - [[StorageDirectory]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
-- [[TemProgressoNaoSalvo]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
 - [[TestPrefix]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 - [[UltimoSlotUsado]] - code - Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs
 
@@ -86,31 +52,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 33 edges to [[_COMMUNITY_Community 0]]
-- 23 edges to [[_COMMUNITY_Community 86]]
-- 18 edges to [[_COMMUNITY_Community 48]]
-- 8 edges to [[_COMMUNITY_Community 8]]
-- 6 edges to [[_COMMUNITY_Community 110]]
-- 6 edges to [[_COMMUNITY_Community 4]]
-- 6 edges to [[_COMMUNITY_Community 1]]
-- 4 edges to [[_COMMUNITY_Community 44]]
-- 4 edges to [[_COMMUNITY_Community 6]]
-- 3 edges to [[_COMMUNITY_Community 2]]
-- 3 edges to [[_COMMUNITY_Community 36]]
-- 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 51]]
-- 2 edges to [[_COMMUNITY_Community 12]]
-- 2 edges to [[_COMMUNITY_Community 43]]
-- 2 edges to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 96]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 16]]
+- 18 edges to [[_COMMUNITY_Community 38]]
+- 7 edges to [[_COMMUNITY_Community 112]]
+- 7 edges to [[_COMMUNITY_Community 86]]
+- 6 edges to [[_COMMUNITY_Community 0]]
+- 6 edges to [[_COMMUNITY_Community 107]]
+- 4 edges to [[_COMMUNITY_Community 99]]
+- 4 edges to [[_COMMUNITY_Community 83]]
+- 3 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 2 edges to [[_COMMUNITY_Community 56]]
+- 2 edges to [[_COMMUNITY_Community 21]]
+- 2 edges to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 114]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 44]]
 
 ## Top bridge nodes
-- [[dot-SlotsR2()]] - degree 27, connects to 7 communities
-- [[GameStateSnapshot]] - degree 19, connects to 6 communities
-- [[dot-BeginIsolatedTests()]] - degree 18, connects to 6 communities
-- [[GameState]] - degree 27, connects to 5 communities
-- [[dot-ImportarSnapshot()]] - degree 23, connects to 5 communities
+- [[dot-ImportarSnapshot()]] - degree 23, connects to 8 communities
+- [[dot-RunAutomatedVerification()]] - degree 15, connects to 8 communities
+- [[dot-TryLoadSlot()]] - degree 20, connects to 5 communities
+- [[dot-Saves()]] - degree 13, connects to 4 communities
+- [[CheckpointSystem]] - degree 34, connects to 3 communities

@@ -1,24 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DentroDaCasaDoAvo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "Community 86"
-location: "L25"
+community: "Community 88"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_88
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[DentroDaCasaDoAvo]] - `method` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
+- [[dot-Interior()_2]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[ParticleSystem]] - `references` [EXTRACTED]
+- [[ParticleSystemRenderer]] - `references` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_88

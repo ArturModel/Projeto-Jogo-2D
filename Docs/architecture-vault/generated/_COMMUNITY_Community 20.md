@@ -1,26 +1,30 @@
 ---
 type: community
-members: 19
+members: 23
 ---
 
 # Community 20
 
-**Members:** 19 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[dot-Apply()_4]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
 - [[dot-ApplyMacroTiles()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
+- [[dot-BusStationRoutine()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
 - [[dot-ContactShadow()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
 - [[dot-DecorateTerrain()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
+- [[dot-DetectarLimitesDaRegiao()]] - code - Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs
 - [[dot-EdgeTile()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
+- [[dot-Interact()_7]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
 - [[dot-NeutralSprite()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
-- [[dot-OnDisable()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-Run()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs
+- [[dot-OnDisable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
+- [[dot-OnEnable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
+- [[Capitulo2Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
+- [[Capitulo2Interactable.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
 - [[ColorAdjustments]] - code
+- [[Prompt_7]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs
 - [[SantaRitaArtProduction]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs
 - [[SantaRitaFootsteps]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[ShadowCaster2D]] - code
 - [[TextMeshPro]] - code
 - [[Tilemap]] - code
 - [[TilemapRenderer]] - code
@@ -36,31 +40,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 18]]
-- 8 edges to [[_COMMUNITY_Community 11]]
+- 9 edges to [[_COMMUNITY_Community 11]]
+- 8 edges to [[_COMMUNITY_Community 18]]
+- 8 edges to [[_COMMUNITY_Community 16]]
+- 7 edges to [[_COMMUNITY_Community 88]]
 - 5 edges to [[_COMMUNITY_Community 6]]
-- 5 edges to [[_COMMUNITY_Community 16]]
-- 4 edges to [[_COMMUNITY_Community 49]]
+- 5 edges to [[_COMMUNITY_Community 49]]
+- 3 edges to [[_COMMUNITY_Community 1]]
+- 3 edges to [[_COMMUNITY_Community 0]]
 - 3 edges to [[_COMMUNITY_Community 44]]
-- 3 edges to [[_COMMUNITY_Community 40]]
-- 3 edges to [[_COMMUNITY_Community 39]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 2]]
-- 2 edges to [[_COMMUNITY_Community 4]]
-- 2 edges to [[_COMMUNITY_Community 99]]
-- 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 96]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 56]]
-- 1 edge to [[_COMMUNITY_Community 88]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 30]]
+- 3 edges to [[_COMMUNITY_Community 89]]
+- 3 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 109]]
+- 1 edge to [[_COMMUNITY_Community 117]]
+- 1 edge to [[_COMMUNITY_Community 113]]
 
 ## Top bridge nodes
-- [[dot-Run()_1]] - degree 15, connects to 9 communities
-- [[dot-Apply()_4]] - degree 25, connects to 8 communities
-- [[Tilemap]] - degree 19, connects to 6 communities
+- [[dot-Apply()_4]] - degree 25, connects to 9 communities
+- [[Capitulo2Interactable]] - degree 12, connects to 6 communities
+- [[Tilemap]] - degree 19, connects to 5 communities
 - [[SantaRitaFootsteps]] - degree 9, connects to 5 communities
-- [[dot-DecorateTerrain()]] - degree 8, connects to 3 communities
+- [[dot-BusStationRoutine()]] - degree 7, connects to 4 communities

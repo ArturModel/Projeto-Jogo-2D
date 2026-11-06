@@ -18,7 +18,7 @@ tags:
 - [[dot-RunSinuquinha15()]] - `calls` [INFERRED]
 - [[dot-SimularTesteDeInvariantes()]] - `calls` [INFERRED]
 - [[IList]] - `references` [EXTRACTED]
-- [[Result_1]] - `calls` [EXTRACTED]
+- [[Result]] - `calls` [EXTRACTED]
 - [[Result_2]] - `references` [EXTRACTED]
 - [[SinuquinhaRules]] - `method` [EXTRACTED]
 

@@ -15,7 +15,7 @@ tags:
 - [[dot-BrazilianRuleChecks()]] - `calls` [INFERRED]
 - [[dot-CanNominate()]] - `calls` [EXTRACTED]
 - [[IList]] - `references` [EXTRACTED]
-- [[Result]] - `calls` [EXTRACTED]
+- [[Result_1]] - `calls` [EXTRACTED]
 - [[Result_2]] - `references` [EXTRACTED]
 - [[SinucaBrasileiraRules]] - `method` [EXTRACTED]
 

@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 44"
-location: "L106"
+community: "Community 33"
+location: "L290"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_33
 ---
 
 # .OnApplicationFocus()
 
 ## Connections
-- [[PlayerController]] - `method` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_33

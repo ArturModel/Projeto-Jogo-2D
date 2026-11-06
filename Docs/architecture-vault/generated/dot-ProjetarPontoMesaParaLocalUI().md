@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AngularScreenSign()]] - `calls` [EXTRACTED]
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
-- [[dot-Project()]] - `calls` [EXTRACTED]
+- [[dot-Project()_1]] - `calls` [EXTRACTED]
 - [[dot-Run()_2]] - `calls` [INFERRED]
 - [[dot-ScreenSinuca()]] - `calls` [INFERRED]
 - [[SinucaTableView]] - `method` [EXTRACTED]

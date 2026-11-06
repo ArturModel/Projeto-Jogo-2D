@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 109"
+community: "Community 13"
 location: "L344"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_109
+  - community/Community_13
 ---
 
 # .CarregarArteInspecao()
@@ -16,4 +16,4 @@ tags:
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_109
+#graphify/code #graphify/EXTRACTED #community/Community_13

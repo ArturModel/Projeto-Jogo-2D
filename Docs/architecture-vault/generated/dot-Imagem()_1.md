@@ -12,8 +12,8 @@ tags:
 # .Imagem()
 
 ## Connections
-- [[dot-Construir()_4]] - `calls` [EXTRACTED]
-- [[dot-Rect()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_5]] - `calls` [EXTRACTED]
+- [[dot-Rect()_1]] - `calls` [EXTRACTED]
 - [[PrologoJogavel]] - `method` [EXTRACTED]
 - [[RawImage]] - `references` [EXTRACTED]
 - [[Rect]] - `references` [EXTRACTED]

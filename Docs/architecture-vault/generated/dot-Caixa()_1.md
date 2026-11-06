@@ -12,8 +12,8 @@ tags:
 # .Caixa()
 
 ## Connections
-- [[dot-Construir()_4]] - `calls` [EXTRACTED]
-- [[dot-Rect()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_5]] - `calls` [EXTRACTED]
+- [[dot-Rect()_1]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[PrologoJogavel]] - `method` [EXTRACTED]

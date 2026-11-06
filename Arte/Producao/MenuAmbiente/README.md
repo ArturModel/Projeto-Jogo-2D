@@ -9,3 +9,9 @@ Referência de composição: vídeo existente `Assets/Videos/telaPrincipalV2.mp4
 O menu compõe chuva, ondas e reflexos em geometria UI, iluminação do clube e parallax do orelhão. A seleção por mouse/teclado dirige o enquadramento; o orelhão funciona como atalho para a seleção de registros. Os controladores existentes de configurações e saves são reaproveitados. Novo jogo preserva os slots manuais, conforme o comportamento atual de CheckpointSystem.Clear.
 
 O autor declarou a versão funcional e autorizou a conclusão em 06/11/2026. A última suíte automatizada integral não foi repetida após correções nas suas expectativas de save e tempo de fade; não confundir validação do autor com resultado automatizado integral. Detalhes no plano e no relatório de evidências.
+
+## Vista frontal dos registros — revisão posterior
+
+`Assets/Resources/MenuAmbiente/OrelhaoFrente.png` é uma nova imagem gerada com OpenAI ImageGen a partir do orelhão e da rua existentes. A imagem final incorpora o fone e o cabo, por correção expressa do autor. O teclado e o visor recebem texto e áreas interativas no Unity. O monofone separado foi rejeitado como apresentação final; o estudo permanece apenas localmente fora de Assets.
+
+As teclas 1–5 representam os cinco registros; o visor mostra os dados do slot. A aproximação dura 0,22 s. Ao carregar, o aparelho permanece na tela enquanto SceneFader escurece diretamente até a cena salva, sem recuo intermediário. O autor confirmou o funcionamento e pediu commit/push. Plano: Docs/ai-plans/2026-11-06_ismaelweinertb_orelhao-registros.md.

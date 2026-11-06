@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 84"
-location: "L30"
+community: "Community 6"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_6
 ---
 
 # Prompt
 
 ## Connections
-- [[Interactable]] - `defines` [EXTRACTED]
+- [[TransicaoDeZonaTrigger]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_6

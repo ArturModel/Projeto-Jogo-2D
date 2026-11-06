@@ -1,24 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "Community 83"
-location: "L1100"
+community: "Community 88"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_83
+  - community/Community_88
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarVistaCamera()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarMiraJogador()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
-- [[dot-AvancarSimulacaoPassoFixo()]] - `calls` [EXTRACTED]
-- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[dot-Orbit()_1]] - `calls` [INFERRED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-Interior()_2]] - `calls` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/EXTRACTED #community/Community_88

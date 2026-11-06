@@ -1,16 +1,19 @@
 ---
 type: community
-members: 10
+members: 13
 ---
 
 # Community 85
 
-**Members:** 10 nodes
+**Members:** 13 nodes
 
 ## Members
 - [[dot-AtualizarEstadoRender()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[dot-CalcularGuiaDeMira()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-PocketOuter()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-PocketPhysics()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
 - [[dot-SincronizarMesa3D()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Sync()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 - [[Avancar]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[Normal]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
 - [[Quaternion]] - code
@@ -27,21 +30,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 7 edges to [[_COMMUNITY_Community 2]]
+- 7 edges to [[_COMMUNITY_Community 6]]
 - 5 edges to [[_COMMUNITY_Community 3]]
-- 4 edges to [[_COMMUNITY_Community 6]]
+- 4 edges to [[_COMMUNITY_Community 100]]
 - 3 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 2]]
 - 3 edges to [[_COMMUNITY_Community 1]]
-- 3 edges to [[_COMMUNITY_Community 100]]
-- 2 edges to [[_COMMUNITY_Community 48]]
-- 2 edges to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 12]]
-- 1 edge to [[_COMMUNITY_Community 27]]
+- 3 edges to [[_COMMUNITY_Community 48]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 114]]
+- 1 edge to [[_COMMUNITY_Community 99]]
+- 1 edge to [[_COMMUNITY_Community 21]]
 - 1 edge to [[_COMMUNITY_Community 9]]
 
 ## Top bridge nodes
-- [[SinucaCueSpin]] - degree 11, connects to 6 communities
-- [[dot-AtualizarEstadoRender()]] - degree 9, connects to 4 communities
-- [[SinucaVisualBall]] - degree 7, connects to 4 communities
+- [[dot-Sync()]] - degree 13, connects to 5 communities
+- [[SinucaCueSpin]] - degree 11, connects to 5 communities
 - [[Quaternion]] - degree 5, connects to 4 communities
-- [[dot-SincronizarMesa3D()]] - degree 7, connects to 3 communities
+- [[dot-AtualizarEstadoRender()]] - degree 9, connects to 3 communities
+- [[SinucaVisualBall]] - degree 7, connects to 3 communities

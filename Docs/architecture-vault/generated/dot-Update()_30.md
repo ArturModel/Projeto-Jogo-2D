@@ -1,17 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 96"
-location: "L26"
+community: "Community 95"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_95
 ---
 
 # .Update()
 
 ## Connections
-- [[ChuvaRolando]] - `method` [EXTRACTED]
+- [[dot-Definir()_2]] - `calls` [EXTRACTED]
+- [[Capitulo2Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_95

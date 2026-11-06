@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarBotoes()]] - `method` [EXTRACTED]
-- [[dot-Awake()_1]] - `references` [EXTRACTED]
+- [[dot-Awake()_2]] - `references` [EXTRACTED]
 - [[dot-ConfigurarBotao()]] - `method` [EXTRACTED]
 - [[dot-Esticar()]] - `method` [EXTRACTED]
 - [[dot-FocoDoBotao()]] - `method` [EXTRACTED]
@@ -30,8 +30,8 @@ tags:
 - [[dot-Roteiro()]] - `references` [EXTRACTED]
 - [[dot-Sair()_1]] - `method` [EXTRACTED]
 - [[dot-Start()_2]] - `method` [EXTRACTED]
-- [[dot-Texto()_1]] - `method` [EXTRACTED]
-- [[dot-Update()_1]] - `method` [EXTRACTED]
+- [[dot-Texto()]] - `method` [EXTRACTED]
+- [[dot-Update()]] - `method` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]

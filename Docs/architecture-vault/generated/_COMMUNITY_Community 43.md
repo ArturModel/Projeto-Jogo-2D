@@ -1,14 +1,13 @@
 ---
 type: community
-members: 25
+members: 22
 ---
 
 # Community 43
 
-**Members:** 25 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[dot-AbrirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AtualizarRegraBolaMarcadaAntesDoTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CanNominate()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[dot-Group()]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
@@ -17,7 +16,6 @@ members: 25
 - [[dot-SimularTesteDeInvariantes()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[Finished_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[FreeColor_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
-- [[List]] - code
 - [[MarcusGroup]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[MarcusPoints_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[MarcusTurn_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
@@ -27,7 +25,6 @@ members: 25
 - [[Opening_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[OptionalColor_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[Phase_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
-- [[Result_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[Sequence_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[SinuquinhaRules]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[Start_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
@@ -42,36 +39,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Community 48]]
-- 7 edges to [[_COMMUNITY_Community 3]]
+- 7 edges to [[_COMMUNITY_Community 48]]
+- 6 edges to [[_COMMUNITY_Community 3]]
 - 5 edges to [[_COMMUNITY_Community 21]]
-- 3 edges to [[_COMMUNITY_Community 35]]
-- 3 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 45]]
-- 2 edges to [[_COMMUNITY_Community 83]]
-- 1 edge to [[_COMMUNITY_Community 110]]
-- 1 edge to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 27]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 40]]
+- 2 edges to [[_COMMUNITY_Community 113]]
+- 2 edges to [[_COMMUNITY_Community 35]]
+- 2 edges to [[_COMMUNITY_Community 100]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 100]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 84]]
-- 1 edge to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 93]]
-- 1 edge to [[_COMMUNITY_Community 109]]
-- 1 edge to [[_COMMUNITY_Community 86]]
+- 1 edge to [[_COMMUNITY_Community 45]]
 
 ## Top bridge nodes
-- [[List]] - degree 26, connects to 21 communities
-- [[SinuquinhaRules]] - degree 26, connects to 6 communities
+- [[SinuquinhaRules]] - degree 26, connects to 7 communities
+- [[dot-Resolve()_1]] - degree 9, connects to 4 communities
 - [[dot-CanNominate()_1]] - degree 9, connects to 3 communities
-- [[dot-Resolve()_1]] - degree 9, connects to 3 communities
 - [[dot-SimularTesteDeInvariantes()]] - degree 4, connects to 2 communities
+- [[dot-AtualizarRegraBolaMarcadaAntesDoTurno()]] - degree 3, connects to 2 communities

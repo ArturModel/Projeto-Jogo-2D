@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_3]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Start()_10]] - `calls` [EXTRACTED]
-- [[dot-Update()_10]] - `calls` [EXTRACTED]
+- [[dot-Start()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_22]] - `calls` [EXTRACTED]
 - [[PrologoVideo]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_86

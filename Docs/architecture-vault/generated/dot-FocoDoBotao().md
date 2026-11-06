@@ -12,7 +12,7 @@ tags:
 # .FocoDoBotao()
 
 ## Connections
-- [[dot-Update()_1]] - `calls` [EXTRACTED]
+- [[dot-Update()]] - `calls` [EXTRACTED]
 - [[MenuAmbiente]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_110

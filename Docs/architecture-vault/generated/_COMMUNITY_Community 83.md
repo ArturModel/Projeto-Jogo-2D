@@ -1,24 +1,32 @@
 ---
 type: community
-members: 11
+members: 19
 ---
 
 # Community 83
 
-**Members:** 11 nodes
+**Members:** 19 nodes
 
 ## Members
-- [[dot-AbrirModalRegrasDuranteJogo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AlternarPainelEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AlternarVistaCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ApontarMiraParaBolaMaisProxima()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarBotaoVistaCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarPosicionamentoBranca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AvancarSimulacaoPassoFixo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CancelarCargaAoSuspender()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConfirmarBrancaNaMao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-OnApplicationFocus()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Update()_27]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Abrir()_3]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-AguardarCarga()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Apresentar()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Aproximar()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Atualizar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Confirmar()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Discando()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-FalhaAoCarregar()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Fechar()_5]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-OnDisable()_12]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-OnEnable()_10]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Recuar()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Selecionar()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-TocarTeclaRegistro()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
+- [[Ocupado]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[PayphoneRegistroUI]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[RegistroSelecionado]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[SomenteCarregar]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[TemArte]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,17 +36,25 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Community 3]]
-- 8 edges to [[_COMMUNITY_Community 100]]
-- 6 edges to [[_COMMUNITY_Community 21]]
-- 2 edges to [[_COMMUNITY_Community 2]]
-- 2 edges to [[_COMMUNITY_Community 43]]
-- 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 39]]
+- 7 edges to [[_COMMUNITY_Community 51]]
+- 6 edges to [[_COMMUNITY_Community 56]]
+- 4 edges to [[_COMMUNITY_Community 96]]
+- 4 edges to [[_COMMUNITY_Community 45]]
+- 3 edges to [[_COMMUNITY_Community 7]]
+- 3 edges to [[_COMMUNITY_Community 107]]
+- 3 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 117]]
 
 ## Top bridge nodes
-- [[dot-CancelarCargaAoSuspender()]] - degree 9, connects to 4 communities
-- [[dot-Update()_27]] - degree 8, connects to 3 communities
-- [[dot-AlternarVistaCamera()]] - degree 6, connects to 3 communities
-- [[dot-ConfirmarBrancaNaMao()]] - degree 6, connects to 3 communities
-- [[dot-AbrirModalRegrasDuranteJogo()]] - degree 5, connects to 3 communities
+- [[PayphoneRegistroUI]] - degree 37, connects to 12 communities
+- [[dot-Selecionar()]] - degree 8, connects to 2 communities
+- [[dot-Confirmar()]] - degree 7, connects to 2 communities
+- [[dot-Discando()]] - degree 4, connects to 2 communities
+- [[dot-Abrir()_3]] - degree 5, connects to 1 community

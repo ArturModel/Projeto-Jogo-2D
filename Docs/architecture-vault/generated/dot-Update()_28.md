@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
 type: "code"
-community: "Community 88"
-location: "L29"
+community: "Community 93"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_88
+  - community/Community_93
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[CamadaDeLuz]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_88
+#graphify/code #graphify/EXTRACTED #community/Community_93

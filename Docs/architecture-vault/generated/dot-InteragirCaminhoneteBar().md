@@ -12,8 +12,8 @@ tags:
 # .InteragirCaminhoneteBar()
 
 ## Connections
-- [[dot-Falar()_1]] - `calls` [EXTRACTED]
-- [[dot-Interact()_1]] - `calls` [EXTRACTED]
+- [[dot-Falar()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_4]] - `calls` [EXTRACTED]
 - [[dot-Marcus()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 

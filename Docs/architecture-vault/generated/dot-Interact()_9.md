@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Portal.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 86"
-location: "L14"
+community: "Community 6"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_6
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[Capitulo2Portal]] - `method` [EXTRACTED]
+- [[dot-TentarTransicionar()]] - `calls` [EXTRACTED]
+- [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_6

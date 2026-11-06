@@ -191,6 +191,25 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(TransitionRoutine(sceneName));
     }
 
+    // Retomada pelo orelhão: imagem do aparelho -> preto -> cena salva,
+    // sem piscar ou voltar ao enquadramento do menu antes de carregar.
+    public bool LoadSceneSuave(string sceneName)
+    {
+        if (isTransitioning) return false;
+        StartCoroutine(TransitionSuaveRoutine(sceneName));
+        return true;
+    }
+
+    private IEnumerator TransitionSuaveRoutine(string sceneName)
+    {
+        isTransitioning = true;
+        group.blocksRaycasts = true;
+        yield return FadeTo(1, .28f);
+        yield return null;
+        isTransitioning = false;
+        CarregarCenaSegura(sceneName);
+    }
+
     /// <summary>
     /// Corta a cena com efeito de fade (estilo Pokémon FireRed / OMORI / Corpse Party)
     /// para transicionar entre diferentes regiões/quadrados da cidade ou entrar/sair de interiores.

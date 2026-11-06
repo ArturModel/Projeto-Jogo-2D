@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 48"
+community: "Community 39"
 location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_39
 ---
 
 # .DefinirCamera()
@@ -21,4 +21,4 @@ tags:
 - [[SinucaCameraView]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_39

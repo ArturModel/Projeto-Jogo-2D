@@ -12,7 +12,7 @@ tags:
 # .Sair()
 
 ## Connections
-- [[dot-Fechar()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_12

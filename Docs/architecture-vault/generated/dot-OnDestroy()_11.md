@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 8"
-location: "L97"
+community: "Community 54"
+location: "L181"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_54
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SantaRitaBarAudio]] - `method` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_54

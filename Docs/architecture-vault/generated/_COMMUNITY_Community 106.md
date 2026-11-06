@@ -9,7 +9,7 @@ members: 7
 
 ## Members
 - [[dot-Apply()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
-- [[dot-LateUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-LateUpdate()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 - [[dot-ShouldReveal()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 - [[dot-Start()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 - [[Opacity]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
@@ -28,13 +28,13 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Community 92]]
 - 1 edge to [[_COMMUNITY_Community 16]]
 - 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 11]]
 - 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 96]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
 - [[SantaRitaRoomCutaway]] - degree 13, connects to 7 communities
-- [[dot-LateUpdate()]] - degree 4, connects to 1 community
+- [[dot-LateUpdate()_2]] - degree 4, connects to 1 community
 - [[dot-Start()_1]] - degree 4, connects to 1 community
 - [[SantaRitaRoomCutaway.cs]] - degree 2, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # .PontoDoFoco()
 
 ## Connections
-- [[dot-Update()_1]] - `calls` [EXTRACTED]
+- [[dot-Update()]] - `calls` [EXTRACTED]
 - [[MenuAmbiente]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

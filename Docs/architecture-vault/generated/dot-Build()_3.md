@@ -12,7 +12,7 @@ tags:
 # .Build()
 
 ## Connections
-- [[dot-Awake()]] - `calls` [EXTRACTED]
+- [[dot-Awake()_5]] - `calls` [EXTRACTED]
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]

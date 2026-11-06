@@ -42,9 +42,9 @@
     "semantic_hash": "5b4c729c3a3829c9d1a5f243a01b022a"
   },
   "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs": {
-    "mtime": 1793382113.2587492,
-    "seen": 1793967434.655552,
-    "ast_hash": "ccf1517c95ed343fabbac0d9a4e278dc",
+    "mtime": 1793975108.0571437,
+    "seen": 1793975633.870751,
+    "ast_hash": "6be07afb15bb3975af7d1a6bc9345fe9",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs": {
@@ -126,9 +126,9 @@
     "semantic_hash": "1cc53172cfa3bb9b96ebf4a658207a3f"
   },
   "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs": {
-    "mtime": 1793973099.6768658,
-    "seen": 1793973553.7504363,
-    "ast_hash": "c56361ca0601c59c6e7d77dbc6ded3d2",
+    "mtime": 1793974400.4271843,
+    "seen": 1793975633.870751,
+    "ast_hash": "9d337ce6054e3a2d42343f60e07b5c65",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs": {
@@ -174,9 +174,9 @@
     "semantic_hash": "7bbec983ccb92c5c96431ec89e18af77"
   },
   "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs": {
-    "mtime": 1793963511.064891,
-    "seen": 1793967434.655552,
-    "ast_hash": "0fbd023ae825624aedbe27de315af59c",
+    "mtime": 1793975108.675536,
+    "seen": 1793975633.870751,
+    "ast_hash": "e03bf53f1a981b2355d6aca03e92b04f",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs": {
@@ -216,9 +216,9 @@
     "semantic_hash": "829cd5e24da256df9abbc5907e6cd72a"
   },
   "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs": {
-    "mtime": 1793382113.279509,
-    "seen": 1793967434.655552,
-    "ast_hash": "a9a1d0fceba5af788a1e1409daaf8f26",
+    "mtime": 1793975107.4358358,
+    "seen": 1793975633.870751,
+    "ast_hash": "06d643ae962c06b9289fdd92afca254c",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs": {
@@ -906,9 +906,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs": {
-    "mtime": 1793973100.5312698,
-    "seen": 1793973553.7504363,
-    "ast_hash": "7f52c74642be7d8287d3bcca2bcf0274",
+    "mtime": 1793974401.0463243,
+    "seen": 1793975633.870751,
+    "ast_hash": "93d4923e1ead1a762063aaa0b2e3ef0a",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs": {
@@ -918,9 +918,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs": {
-    "mtime": 1793973098.8042843,
-    "seen": 1793973553.7504363,
-    "ast_hash": "7d7323218a12a6fc6c283c5d7093f740",
+    "mtime": 1793975174.5343666,
+    "seen": 1793975633.870751,
+    "ast_hash": "01faf731c10382f955968d002172996b",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs": {
+    "mtime": 1793975106.7532601,
+    "seen": 1793975633.870751,
+    "ast_hash": "8200b1cac99486f83d5eee6a76bf12c9",
     "semantic_hash": ""
   }
 }
