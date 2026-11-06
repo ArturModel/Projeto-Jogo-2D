@@ -11,7 +11,7 @@ using UnityEngine.UI;
 /// Sinuquinha no Bar do Zé: quinze bolas numeradas, grupos e preta por último.
 /// A adjudicação é isolada em SinuquinhaRules; física/renderização não concedem pontos.
 /// </summary>
-public class SinucaMinigameUI : MonoBehaviour
+public partial class SinucaMinigameUI : MonoBehaviour
 {
     public static SinucaMinigameUI Instance
     {
@@ -258,6 +258,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
     public void Fechar()
     {
+        ReiniciarPercepcoesSinuca();
         StopAllCoroutines();
         LimparFalaZe();
         RestaurarCursor();
@@ -359,10 +360,11 @@ public class SinucaMinigameUI : MonoBehaviour
     private int framePuxada=-1, frameInicioCarga=-1, frameCaptura=-1;
     private TextMeshProUGUI reticuloFPS;
 
-    private void OnDisable(){RestaurarCursor();LimparFalaZe();}
+    private void OnDisable(){RestaurarCursor();LimparFalaZe();ReiniciarPercepcoesSinuca();}
     private void OnDestroy()
     {
         RestaurarCursor();LimparFalaZe();
+        DestruirAudioPercepcao();
         if(silabasZe!=null)foreach(var clip in silabasZe)if(clip!=null)Destroy(clip);
     }
 
@@ -374,7 +376,7 @@ public class SinucaMinigameUI : MonoBehaviour
     private void AtualizarCapturaCursor()
     {
         if(!cursorGuardado){cursorAnterior=Cursor.lockState;cursorAnteriorVisivel=Cursor.visible;cursorGuardado=true;}
-        bool capturar=!interfaceLivre && Application.isFocused && !EntradaMesaBloqueada();
+        bool capturar=!interfaceLivre && Application.isFocused && !EntradaMesaBloqueada(true);
         var mode=capturar?CursorLockMode.Locked:CursorLockMode.None;
         if(Cursor.lockState!=mode){Cursor.lockState=mode;if(capturar)frameCaptura=Time.frameCount;}
         Cursor.visible=!capturar;
@@ -567,9 +569,9 @@ public class SinucaMinigameUI : MonoBehaviour
         painelAlvo.SetActive(false);
     }
 
-    private bool EntradaMesaBloqueada()
+    private bool EntradaMesaBloqueada(bool permitirInspecao = false)
     {
-        return MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)
+        return (OlhandoDebaixo && !permitirInspecao) || !Application.isFocused || Time.timeScale==0f || MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)
             || (painelOpcoes != null && painelOpcoes.activeSelf) || (painelAlvo != null && painelAlvo.activeSelf);
     }
 
@@ -778,6 +780,7 @@ public class SinucaMinigameUI : MonoBehaviour
         StopAllCoroutines();
         LimparFalaZe();
         comentariosZe.ResetSeries();
+        ReiniciarPercepcoesSinuca();
         CancelarCargaAtiva();
         onVictoryCallback = aoVencerSerie;
         raiz.SetActive(true);
@@ -802,6 +805,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void ComecarModoPratica()
     {
+        ReiniciarPercepcoesSinuca();
         StopAllCoroutines();
         LimparFalaZe();
         CancelarCargaAtiva();
@@ -990,6 +994,7 @@ public class SinucaMinigameUI : MonoBehaviour
         {
             titulo="COMO JOGAR · 2 / 3 · A MESA";
             corpo="Você entra <b>em pé na sala</b>, sem corpo visível. Após tacar, volta a caminhar.\n"+
+                "<b>E</b>: examinar um ruído sob a mesa quando estiver perto. Segure E olhando uma bola para examiná-la.\n"+
                 "<b>Q ou Levantar</b>: sair da posição de tacada. Caminhe ao redor da mesa para escolher outro ângulo.\n<b>← / →</b>: ajustar a mira. <b>Espaço</b>: segure para aumentar a força e solte para tacar.\n\n"+
                 "Em <b>Opções</b> ficam o efeito na branca, o primeiro toque manual e o treino. São opcionais: você pode jogar sem mexer neles.";
         }
@@ -1178,6 +1183,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
         if (turnoDeMarcus)
         {
+            PrepararBolaFalsa();
             if (brancaNaMao)
             {
                 estado = EstadoPartida.PosicionandoBranca;
@@ -1233,6 +1239,7 @@ public class SinucaMinigameUI : MonoBehaviour
     private void Update()
     {
         bool suspenderAudio = Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused;
+        SuspenderAudioPercepcao(suspenderAudio || !IsShowing || (painelModal!=null && painelModal.activeSelf) || (painelOpcoes!=null && painelOpcoes.activeSelf) || (painelAlvo!=null && painelAlvo.activeSelf));
         if (suspenderAudio != audioSuspenso)
         {
             audioSuspenso = suspenderAudio;
@@ -1244,6 +1251,7 @@ public class SinucaMinigameUI : MonoBehaviour
         var tecladoCursor=Keyboard.current;
         if(tecladoCursor!=null && tecladoCursor.escapeKey.wasPressedThisFrame && !MenuPausa.Aberto && MenuPausa.ClosedFrame!=Time.frameCount)
         {
+            if(OlhandoDebaixo){SairDeBaixoDaMesa();return;}
             CancelarCargaAoSuspender();
             if(painelOpcoes!=null&&painelOpcoes.activeSelf)painelOpcoes.SetActive(false);
             else if(painelAlvo!=null&&painelAlvo.activeSelf)painelAlvo.SetActive(false);
@@ -1272,6 +1280,7 @@ public class SinucaMinigameUI : MonoBehaviour
             return;
         }
 
+        if(suspenderAudio)return;
         var kb = Keyboard.current;
         if (painelOpcoes != null && painelOpcoes.activeSelf)
         {
@@ -1284,6 +1293,7 @@ public class SinucaMinigameUI : MonoBehaviour
             return;
         }
 
+        if(AtualizarPercepcoesSinuca())return;
         LerMouseCapturado();
         if(levantarAposTacada>=0 && Time.time>=levantarAposTacada)LevantarDaMesa();
         if(!interfaceLivre && kb!=null && (kb.qKey.wasPressedThisFrame || kb.vKey.wasPressedThisFrame))AlternarVistaCamera();
@@ -2412,6 +2422,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void ConcluirMao(bool marcusVenceu)
     {
+        EncerrarPercepcaoDaMao();
         LimparFalaZe();
         estado = EstadoPartida.FimDeMao;
         if (marcusVenceu) maosVencidasMarcus++;
@@ -2743,6 +2754,7 @@ public class SinucaMinigameUI : MonoBehaviour
             ? CalcularGuiaDeMira(bolas[0].pos, anguloMiraRad, efeitoEscolhido)
             : new SinucaAimGuideData { ativa = false };
 
+        AplicarGuiaBolaFalsa(ref guia);
         miraAmeacaBolaMarcada = mostrarMira && guia.atingeBola && guia.alvoEhMarcada;
 
         // Encenação psicológica contextual: se Marcus aponta para a Bola Marcada [X], Zé para o gesto de giz e observa em silêncio
@@ -2758,6 +2770,7 @@ public class SinucaMinigameUI : MonoBehaviour
 
         bool brancaValida = estado != EstadoPartida.PosicionandoBranca || PosicaoValidaSemColisao(bolas[0].pos, 0);
 
+        AtualizarBolaFalsaVisual();
         tableView3D.AtualizarEstadoRender(
             bufferVisuais,
             cacapas,
@@ -2855,7 +2868,8 @@ public class SinucaMinigameUI : MonoBehaviour
 
     private void EnfileirarFalaZe(string texto, bool urgente = false)
     {
-        if(string.IsNullOrEmpty(texto))return;
+        if(string.IsNullOrEmpty(texto) || falasHistoria.Count>0 || OlhandoDebaixo || (batidasOuvidas && !inspecaoConcluida))return;
+        locutorPendenteMarcus = false;
         // Uma reação importante substitui a espera; comentários comuns não se acumulam.
         if(!urgente && (falaZePendenteUrgente || (txtFalaZe!=null && !string.IsNullOrEmpty(txtFalaZe.text))))return;
         falaZePendente = texto;
@@ -2895,9 +2909,11 @@ public class SinucaMinigameUI : MonoBehaviour
         {
             intervaloFalaZe -= dt;
             if(string.IsNullOrEmpty(falaZePendente) || intervaloFalaZe>0)return;
-            txtFalaZe.text = "Zé: " + falaZePendente;
+            locutorAtualMarcus = locutorPendenteMarcus;
+            string prefixo = locutorAtualMarcus ? "Marcus: " : "Zé: ";
+            txtFalaZe.text = prefixo + falaZePendente;
             txtFalaZe.ForceMeshUpdate();
-            txtFalaZe.maxVisibleCharacters = caractereZe = 4;
+            txtFalaZe.maxVisibleCharacters = caractereZe = prefixo.Length;
             tempoLetraZe = 0;
             tempoLeituraZe = Mathf.Max(2.2f,falaZePendente.Length*.035f);
             falaZePendente = null;falaZePendenteUrgente = false;
@@ -2961,6 +2977,7 @@ public class SinucaMinigameUI : MonoBehaviour
         }
         // Fonte separada: a fala nunca interrompe uma fonte de impacto das bolas.
         if(vozFalaZe.isPlaying)return;
+        vozFalaZe.pitch=locutorAtualMarcus?.77f:1f;
         vozFalaZe.clip=silabasZe[(silabaZe++*3)%silabasZe.Length];
         vozFalaZe.volume=.20f*efeitos;
         vozFalaZe.Play();

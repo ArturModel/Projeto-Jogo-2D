@@ -12,14 +12,16 @@ public sealed partial class SinucaRoom3D
         string support=p.id=="CuiaMesa"||p.id=="TermicaMesa"?"MesaChimarrao":p.id=="CopoConversa"?"MesaConversa":p.id=="CopoJanela"?"MesaJanela":null;
         if(support!=null)
         {
-            var table=dynamic.Find(support);var definition=System.Array.Find(SantaRitaBarLayout.Props,x=>x.id==support);
-            if(table!=null&&definition!=null)
+            var definition=System.Array.Find(SantaRitaBarLayout.Props,x=>x.id==support);
+            if(definition!=null)
             {
-                float scale=table.localScale.x;g.SetParent(table,false);
-                g.localPosition=new Vector3((p.position.x-definition.position.x)*1.15f/scale,(p.position.y-definition.position.y)*1.15f/scale,-.015f/scale);
-                g.localScale=Vector3.one*(p.width/sprite.bounds.size.x*1.15f/scale);pixelBillboards.Remove(g);
+                var centre=Plan(definition.position);
+                // Place cups/mate on the solid tabletop, independent of sprite perspective.
+                g.localPosition=new Vector3(centre.x+(p.position.x-definition.position.x)*.8f,.79f,centre.z+.08f);
+                g.localScale=Vector3.one*(p.width/sprite.bounds.size.x*.80f);
             }
         }
+
         var a=new Actor{definition=p,root=g,filter=g.GetComponent<MeshFilter>(),renderer=g.GetComponent<MeshRenderer>(),rest=sprite,phase=Mathf.Abs(p.id.GetHashCode()%197)*.1f,seated=!p.key.Contains("Ze")};
         if(p.kind==SantaRitaBarLayout.Kind.Actor&&a.seated){foreach(var t in new[]{0f,7.2f,7.6f,8.3f,9.4f,9.8f,17.5f,18.5f,22f}){var frame=SantaRitaBarLayout.PatronPose(p.key,p.id,t);if(frame!=null){NativeMesh(frame);PixelMaterial(frame);}}a.drink=Resources.Load<Sprite>("Art/Characters/"+p.key+"_Bebendo");if(a.drink!=null){NativeMesh(a.drink);PixelMaterial(a.drink);}}
         return a;

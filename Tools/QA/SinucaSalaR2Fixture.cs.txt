@@ -1,0 +1,83 @@
+// Run through Unity MCP execute_code. Isolated fixture; never touches GameState/saves.
+var existing=Resources.FindObjectsOfTypeAll<Camera>().Where(c=>c.name=="CameraSinuca3D").Select(c=>c.transform.parent.gameObject).Distinct().ToArray();
+var states=existing.Select(g=>g.activeSelf).ToArray();
+SinucaRoom3D room=null;
+var report=new System.Text.StringBuilder();
+string folder="C:/Temp/SantaRita/Docs/Evidencias/SinucaSalaR2";
+System.IO.Directory.CreateDirectory(folder);
+try
+{
+    foreach(var old in existing)old.SetActive(false);
+    room=new SinucaRoom3D(1280,720);
+    var balls=new List<SinucaVisualBall>();
+    balls.Add(new SinucaVisualBall{numero=0,pos=new Vector2(-90,0),ativa=true,rotacao=Quaternion.identity});
+    for(int n=1;n<=15;n++)balls.Add(new SinucaVisualBall{numero=n,pos=new Vector2(50+(n%5)*12,(n/5-1)*18),ativa=true,rotacao=Quaternion.identity});
+    var all=room.root.GetComponentsInChildren<MeshFilter>(true);
+    var slabs=all.Where(f=>f.sharedMesh.name.EndsWith("_BocasRecortadas")).ToArray();
+    int samples=0,blocked=0;
+    for(int pocket=0;pocket<6;pocket++)for(int step=0;step<=12;step++)for(int ring=0;ring<8;ring++)
+    {
+        Vector2 at=Vector2.Lerp(SinucaRoom3D.PocketPhysics(pocket),SinucaRoom3D.PocketOuter(pocket),step/12f)+new Vector2(Mathf.Cos(ring*Mathf.PI/4),Mathf.Sin(ring*Mathf.PI/4))*.039f;
+        samples++;
+        foreach(var filter in slabs)
+        {
+            var v=filter.sharedMesh.vertices;var triangles=filter.sharedMesh.triangles;
+            for(int i=0;i<triangles.Length;i+=3)
+            {
+                var aa=v[triangles[i]];var bb=v[triangles[i+1]];var cc=v[triangles[i+2]];
+                if(Mathf.Abs(aa.y-bb.y)>.00001f||Mathf.Abs(aa.y-cc.y)>.00001f)continue;
+                var a=new Vector2(aa.x,aa.z);var b=new Vector2(bb.x,bb.z);var c=new Vector2(cc.x,cc.z);
+                float cross=(b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x);
+                if(Mathf.Abs(cross)<1e-10f)continue;
+                float u=((b.x-at.x)*(c.y-at.y)-(b.y-at.y)*(c.x-at.x))/cross;
+                float w=((c.x-at.x)*(a.y-at.y)-(c.y-at.y)*(a.x-at.x))/cross;
+                float t=1-u-w;
+                if(u>.00001f&&w>.00001f&&t>.00001f)blocked++;
+            }
+        }
+    }
+    report.AppendLine("Pocket ball-footprint samples: "+samples+"; intersecting solid top faces: "+blocked);
+    if(blocked>0)throw new Exception("Pocket passage is obstructed");
+    report.AppendLine("Cloth vertices: "+all.First(f=>f.name=="Pano").sharedMesh.vertexCount+" (previous grid: approximately 26000)");
+    foreach(var filter in all.Where(f=>f.name=="MalhaBarbante"))report.AppendLine("Combined mesh "+filter.transform.parent.name+": "+filter.sharedMesh.triangles.Length/3+" triangles");
+    report.AppendLine("Lights: "+room.root.GetComponentsInChildren<Light>().Length+"; shadow casters: "+room.root.GetComponentsInChildren<Light>().Count(l=>l.shadows!=LightShadows.None));
+    var oldRT=RenderTexture.active;
+    foreach(var mode in new[]{SinucaCameraView.Mesa3D,SinucaCameraView.VistaSuperior,SinucaCameraView.LinhaTaco})
+    {
+        room.SetMode(mode,0);
+        // Disable transition only in this isolated fixture, for repeatable captures.
+        typeof(SinucaRoom3D).GetField("transitionStarted",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance).SetValue(room,-10f);
+        room.Sync(balls,new Vector2(-90,0),0,.45f,mode==SinucaCameraView.LinhaTaco,new SinucaAimGuideData());
+        room.camera.Render();RenderTexture.active=room.Target;
+        var image=new Texture2D(1280,720,TextureFormat.RGB24,false);image.ReadPixels(new Rect(0,0,1280,720),0,0);image.Apply();
+        System.IO.File.WriteAllBytes(folder+"/"+mode+".png",image.EncodeToPNG());UnityEngine.Object.Destroy(image);
+    }
+    int index=0;
+    foreach(var eye in new[]{new Vector3(-2.2f,1.62f,-1.5f),new Vector3(3.2f,1.62f,-4f),new Vector3(.2f,1.62f,-6.5f)})
+    {
+        room.SetMode(SinucaCameraView.Caminhando3D,0);
+        room.Sync(balls,new Vector2(-90,0),0,0,false,new SinucaAimGuideData());
+        room.camera.transform.position=eye;
+        room.camera.transform.rotation=Quaternion.LookRotation(new Vector3(0,1f,-.2f)-eye);
+        room.root.GetComponentsInChildren<Camera>().First(c=>c.name=="CameraTacoEMaos").enabled=false;
+        room.camera.Render();RenderTexture.active=room.Target;
+        var image=new Texture2D(1280,720,TextureFormat.RGB24,false);image.ReadPixels(new Rect(0,0,1280,720),0,0);image.Apply();
+        System.IO.File.WriteAllBytes(folder+"/Sala_"+index+".png",image.EncodeToPNG());UnityEngine.Object.Destroy(image);index++;
+    }
+    var renderers=room.root.GetComponentsInChildren<MeshRenderer>().Where(r=>r.enabled).ToArray();
+    report.AppendLine("Enabled mesh renderers: "+renderers.Length+"; enabled triangles: "+renderers.Sum(r=>r.GetComponent<MeshFilter>().sharedMesh.triangles.Length/3));
+    report.AppendLine("Solid furniture anchors: "+room.root.GetComponentsInChildren<Transform>().Count(t=>t.name=="TampoPlastico"||t.name=="CorpoBalcao"||t.name=="CorpoGeladeira"));
+    report.AppendLine("Visible sconce fixtures: "+room.root.GetComponentsInChildren<Transform>().Count(t=>t.name=="ArandelaParede"));
+    RenderTexture.active=oldRT;
+    var shader=Resources.Load<Shader>("Art/Sinuca/SalaLit");
+    var hands=Resources.Load<Shader>("Art/Sinuca/MaoFlutuante");
+    report.AppendLine("Room shader errors: "+UnityEditor.ShaderUtil.ShaderHasError(shader)+"; hand shader errors: "+UnityEditor.ShaderUtil.ShaderHasError(hands));
+    report.AppendLine("Frame geometry rebuilds: "+room.FrameGeometryBuilds);
+    System.IO.File.WriteAllText(folder+"/UnityQA.txt",report.ToString());
+    return report.ToString();
+}
+finally
+{
+    if(room!=null){room.SetActive(false);room.Dispose();}
+    for(int i=0;i<existing.Length;i++)if(existing[i]!=null)existing[i].SetActive(states[i]);
+}

@@ -12,12 +12,16 @@ public sealed partial class SinucaRoom3D
         Box("LambrilDir",new Vector3(5.46f,1.5f,-1.8f),new Vector3(.08f,3f,11.4f),side);
         Box("LambrilFrente",new Vector3(0,1.5f,-7.5f),new Vector3(11,3f,.08f),wall);
         Box("PortaSaida",new Vector3(0,1.03f,-7.43f),new Vector3(1.05f,2.06f,.10f),DarkWood);
+        BuildRoomArchitecture();
         foreach(var p in SantaRitaBarLayout.Props)
         {
-            if(SantaRitaBarLayout.OccupiedChair(p))continue;
+            // Occupied seats are already drawn in the seated character sprites.
+            if(p.kind==SantaRitaBarLayout.Kind.Chair)continue;
+            if(p.id=="Mesa_Sinuca_Central")continue;
             if(SantaRitaBarLayout.SpriteFor(p)==null)throw new System.InvalidOperationException("Sprite nativo ausente: "+p.key);
             CaptureArt(p.id,()=>
             {
+                if(BuildSolidProp(p))return;
                 var a=Character(p);
                 if(p.kind==SantaRitaBarLayout.Kind.Actor||p.id=="CuiaMesa"||p.id=="TermicaMesa")actors.Add(a);
                 if(p.id=="TapeteSinuca")a.root.localRotation=Quaternion.Euler(90,0,0);
@@ -27,7 +31,7 @@ public sealed partial class SinucaRoom3D
         Lamp(new Vector3(0,2.55f,0));
         // Low-cost indirect spill: no shadow cubemaps, fog, or screen-space effects.
         RoomFill("ReflexoQuenteMesa",new Vector3(0,1.75f,0),new Color(1f,.78f,.51f),.18f,3.1f);
-        RoomFill("LuzDiscretaBalcao",new Vector3(-2.5f,2.1f,2.8f),new Color(1f,.67f,.34f),.55f,3.8f);
+        RoomFill("LuzDiscretaBalcao",new Vector3(-2.1f,2.4f,3.1f),new Color(1f,.74f,.47f),.68f,3.5f);
         RoomFill("ReflexoFrioSala",new Vector3(3.8f,1.9f,-3.8f),new Color(.39f,.52f,.69f),.22f,4.5f);
     }
     private void RoomFill(string name,Vector3 at,Color color,float intensity,float range)

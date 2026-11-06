@@ -31,6 +31,8 @@ public sealed partial class SinucaRoom3D : IDisposable
     private Transform[] lampParts;
     private readonly Transform ghost,cue;
     private Renderer wallLeft,wallRight,wallBack,wallFront;
+    private Renderer ceilingRenderer;
+    private Renderer[] ceilingBeams;
     private float yaw=8,topYaw,zoom=1,cueHeading;
     private SinucaCameraView mode;
     private Vector2 white;
@@ -168,7 +170,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         if(p.x < -5.12f || p.x > 5.12f || p.y < -7.16f || p.y > 3.5f || InsideTableFootprint(p))return false;
         foreach(var prop in SantaRitaBarLayout.Props)
         {
-            if(prop.kind==SantaRitaBarLayout.Kind.Wall || prop.kind==SantaRitaBarLayout.Kind.Decor)continue;
+            if(prop.kind==SantaRitaBarLayout.Kind.Wall || prop.kind==SantaRitaBarLayout.Kind.Decor || prop.kind==SantaRitaBarLayout.Kind.Chair)continue;
             var at=Plan(prop.position-Vector2.up*prop.supportOffset);
             float radius=prop.kind==SantaRitaBarLayout.Kind.Actor?.38f:prop.width*.5f+.20f;
             // The counter has depth; chairs/tables use circular clearance.
@@ -324,9 +326,13 @@ public sealed partial class SinucaRoom3D : IDisposable
         else{var dir=new Vector3(Mathf.Cos(cueHeading),0,Mathf.Sin(cueHeading));var ball=new Vector3(white.x*MetresPerUnit,TableY,white.y*MetresPerUnit);camera.transform.localPosition=ball-dir*(1.65f/zoom)+Vector3.up*.53f;camera.transform.localRotation=Quaternion.LookRotation(ball+dir*.13f+Vector3.up*.015f-camera.transform.localPosition);camera.fieldOfView=48;}
         float transition=Mathf.SmoothStep(0,1,(Time.unscaledTime-transitionStarted)/.42f);
         if(cameraInitialized && transition<1){camera.transform.localPosition=Vector3.Lerp(transitionPosition,camera.transform.localPosition,transition);camera.transform.localRotation=Quaternion.Slerp(transitionRotation,camera.transform.localRotation,transition);}
+        AplicarCameraInvestigacao();
         cameraInitialized=true;poseBlend=Walking?0:transition;
         // Cut only an intervening wall when inspecting from outside; inside cue views remain enclosed.
         if(lampParts!=null)foreach(var t in lampParts)t.gameObject.SetActive(mode!=SinucaCameraView.VistaSuperior);
+        bool insideCeiling=camera.transform.localPosition.y<2.85f;
+        if(ceilingRenderer!=null)ceilingRenderer.enabled=insideCeiling;
+        if(ceilingBeams!=null)foreach(var beam in ceilingBeams)beam.enabled=insideCeiling;
         OrientPixelArt();
         if(wallLeft!=null){var p=camera.transform.localPosition;wallLeft.enabled=p.x>-5.3f;wallRight.enabled=p.x<5.3f;wallBack.enabled=p.z<3.7f;wallFront.enabled=p.z>-7.3f;}
     }
@@ -354,8 +360,8 @@ public sealed partial class SinucaRoom3D : IDisposable
         var dir=new Vector3(Mathf.Cos(angle),0,Mathf.Sin(angle));
         float strokeAge=Time.time-strokeStarted;
         bool stroke=strokeAge>=0 && strokeAge<.24f;
-        bool handsVisible=(showCue||stroke) && mode==SinucaCameraView.LinhaTaco;
-        bool carry=Walking;
+        bool handsVisible=!InspectingUnderTable && (showCue||stroke) && mode==SinucaCameraView.LinhaTaco;
+        bool carry=Walking && !InspectingUnderTable;
         cue.gameObject.SetActive(handsVisible||carry);
         float pull=power*.22f;
         var bridgeBall=stroke?new Vector2(strokeOrigin.x,strokeOrigin.z)/MetresPerUnit:cuePos;
@@ -383,9 +389,10 @@ public sealed partial class SinucaRoom3D : IDisposable
 
         // Keep the support planted while the grip moves with the cue's actual transform.
         // A small local guide replaces the long arcade trajectory and target arrows.
-        g.ativa=g.ativa && handsVisible && !stroke;
-        g.atingeBola=false;
-        if(g.ativa)g.pontoContato=g.origem+new Vector2(dir.x,dir.z)*36f;
+        g.ativa=g.ativa && handsVisible && !stroke && !InspectingUnderTable;
+        bool alvoFalso=g.numeroBolaAlvo==16 && FalseBallVisible;
+        g.atingeBola=alvoFalso;
+        if(g.ativa && !alvoFalso)g.pontoContato=g.origem+new Vector2(dir.x,dir.z)*36f;
 
         guide.gameObject.SetActive(g.ativa);ghost.gameObject.SetActive(g.ativa);if(g.ativa){guide.SetPosition(0,new Vector3(g.origem.x*MetresPerUnit,TableY+.005f,g.origem.y*MetresPerUnit));guide.SetPosition(1,new Vector3(g.pontoContato.x*MetresPerUnit,TableY+.005f,g.pontoContato.y*MetresPerUnit));ghost.localPosition=new Vector3(g.pontoContato.x*MetresPerUnit,TableY+.005f,g.pontoContato.y*MetresPerUnit);}
         guideBorder.gameObject.SetActive(g.ativa);if(g.ativa){guideBorder.SetPosition(0,guide.GetPosition(0)-Vector3.up*.001f);guideBorder.SetPosition(1,guide.GetPosition(1)-Vector3.up*.001f);}
