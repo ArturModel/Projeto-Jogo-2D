@@ -1,46 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 12"
-location: "L224"
+community: "Community 15"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_15
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Awake()_2]] - `calls` [EXTRACTED]
-- [[dot-Botao()]] - `calls` [EXTRACTED]
-- [[dot-BotaoPausa()]] - `calls` [EXTRACTED]
-- [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
+- [[dot-Awake()_6]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-GarantirEventSystem()]] - `calls` [EXTRACTED]
-- [[dot-Imagem()]] - `calls` [EXTRACTED]
-- [[dot-Indicador()]] - `calls` [EXTRACTED]
-- [[dot-IndicadorPausa()]] - `calls` [EXTRACTED]
-- [[dot-LinhaSlider()]] - `calls` [EXTRACTED]
-- [[dot-LinhaStepperResolucao()]] - `calls` [EXTRACTED]
-- [[dot-LinhaToggle()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
-- [[dot-Rotulo()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[dot-SubPainel()]] - `calls` [EXTRACTED]
-- [[dot-Titulo()]] - `calls` [EXTRACTED]
-- [[dot-TituloPausa()]] - `calls` [EXTRACTED]
-- [[dot-Vincular()_3]] - `calls` [INFERRED]
-- [[dot-Vincular()_4]] - `calls` [INFERRED]
-- [[AudioSettingsController]] - `references` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
+- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[MenuPanelTransition]] - `references` [EXTRACTED]
-- [[MenuPausa]] - `method` [EXTRACTED]
-- [[OptionsPanelController]] - `references` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
-- [[SubtitleSettingsController]] - `references` [EXTRACTED]
-- [[VideoSettingsController]] - `references` [EXTRACTED]
+- [[CanvasScaler]] - `references` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_15

@@ -12,9 +12,9 @@ tags:
 # .LinhaToggle()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-Imagem()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()]] - `calls` [EXTRACTED]
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[dot-Selecionavel()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]

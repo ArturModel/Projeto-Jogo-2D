@@ -1,18 +1,18 @@
 ---
-source_file: "Tools/Aseprite/c2-npc-work.lua"
+source_file: "Tools/Aseprite/pool-table.lua"
 type: "code"
-community: "Community 58"
-location: "L5"
+community: "Community 63"
+location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_58
+  - community/Community_63
 ---
 
 # rect()
 
 ## Connections
-- [[c2-npc-work.lua]] - `contains` [EXTRACTED]
-- [[line()_1]] - `calls` [EXTRACTED]
+- [[color()]] - `calls` [EXTRACTED]
+- [[pool-table.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_58
+#graphify/code #graphify/EXTRACTED #community/Community_63

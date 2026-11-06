@@ -12,7 +12,7 @@ tags:
 # .Update()
 
 ## Connections
-- [[dot-Definir()_1]] - `calls` [EXTRACTED]
+- [[dot-Definir()]] - `calls` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

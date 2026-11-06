@@ -29,7 +29,7 @@ tags:
 - [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
 - [[dot-SaveIsolationProbe()]] - `calls` [EXTRACTED]
-- [[dot-Update()_26]] - `calls` [EXTRACTED]
+- [[dot-Update()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_0

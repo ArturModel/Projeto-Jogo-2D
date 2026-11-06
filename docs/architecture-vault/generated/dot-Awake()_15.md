@@ -1,22 +1,34 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 44"
-location: "L66"
+community: "Community 38"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_38
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-PrepararCaminhadaMarcus()]] - `calls` [EXTRACTED]
-- [[dot-PrepararFeixeLanterna()]] - `calls` [EXTRACTED]
-- [[dot-PrepararPosesLanterna()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[Rigidbody2D]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-ActionButton()]] - `calls` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
+- [[dot-Frame()]] - `calls` [EXTRACTED]
+- [[dot-Label()_2]] - `calls` [EXTRACTED]
+- [[dot-Place()_2]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [EXTRACTED]
+- [[dot-Rewind()]] - `calls` [EXTRACTED]
+- [[dot-Select()_1]] - `calls` [EXTRACTED]
+- [[dot-Stop()]] - `calls` [EXTRACTED]
+- [[dot-TocarRadio()]] - `calls` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[GraphicRaycaster]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
+- [[TapeCatalog]] - `references` [EXTRACTED]
+- [[TextAsset]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_38

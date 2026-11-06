@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "Community 7"
-location: "L32"
+community: "Community 26"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_26
 ---
 
 # .Ativar()
 
 ## Connections
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Transmitir()]] - `calls` [EXTRACTED]
-- [[RadioCarro]] - `method` [EXTRACTED]
+- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_26

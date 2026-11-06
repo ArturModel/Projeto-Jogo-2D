@@ -1,24 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 118"
-location: "L1100"
+community: "Community 117"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_118
+  - community/Community_117
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarVistaCamera()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarMiraJogador()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
-- [[dot-AvancarSimulacaoPassoFixo()]] - `calls` [EXTRACTED]
-- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[dot-Orbit()_1]] - `calls` [INFERRED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-Attach()]] - `calls` [EXTRACTED]
+- [[Capitulo2Interactable]] - `references` [EXTRACTED]
+- [[InteracaoCapitulo1]] - `references` [EXTRACTED]
+- [[SantaRitaTapePlacement]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_118
+#graphify/code #graphify/EXTRACTED #community/Community_117

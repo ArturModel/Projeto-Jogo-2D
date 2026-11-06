@@ -15,7 +15,7 @@ tags:
 - [[dot-DefinirNumero()]] - `calls` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Update()_25]] - `calls` [EXTRACTED]
+- [[dot-Update()_26]] - `calls` [EXTRACTED]
 - [[dot-UseItem()]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 

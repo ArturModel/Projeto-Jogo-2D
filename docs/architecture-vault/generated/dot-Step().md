@@ -18,8 +18,8 @@ tags:
 - [[dot-Forcas()]] - `calls` [EXTRACTED]
 - [[dot-Physics()]] - `calls` [INFERRED]
 - [[dot-RepousarParaPrevisao()]] - `calls` [EXTRACTED]
-- [[dot-Run()_4]] - `calls` [INFERRED]
-- [[dot-Update()_11]] - `calls` [INFERRED]
+- [[dot-Run()_8]] - `calls` [INFERRED]
+- [[dot-Update()_7]] - `calls` [INFERRED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_27

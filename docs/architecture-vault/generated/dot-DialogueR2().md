@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
-community: "Community 86"
+community: "Community 45"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_45
 ---
 
 # .DialogueR2()
@@ -16,7 +16,7 @@ tags:
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-Dados()]] - `calls` [EXTRACTED]
 - [[dot-ExportarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-Field()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()_2]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Limpar()_2]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[DialogoLinha]] - `references` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_45

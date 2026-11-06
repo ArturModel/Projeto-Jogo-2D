@@ -1,37 +1,39 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 89"
-location: "L127"
+community: "Community 7"
+location: "L326"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_7
 ---
 
 # .ConstruirUI()
 
 ## Connections
-- [[dot-AplicarZoomIncremental()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
+- [[dot-Awake()_13]] - `calls` [EXTRACTED]
+- [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
+- [[dot-CorDaBola()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
+- [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoHUD()]] - `calls` [EXTRACTED]
+- [[dot-CriarSpriteCirculo()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-GerarIconeJogador()]] - `calls` [EXTRACTED]
-- [[dot-Initialize()_1]] - `calls` [INFERRED]
-- [[dot-Initialize()]] - `calls` [INFERRED]
+- [[dot-InicializarOverlays()]] - `calls` [INFERRED]
+- [[dot-IniciarDuelo()]] - `calls` [EXTRACTED]
+- [[dot-IniciarPraticaOpcional()]] - `calls` [EXTRACTED]
 - [[dot-Posicionar()_5]] - `calls` [EXTRACTED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[ContentSizeFitter]] - `references` [EXTRACTED]
+- [[CanvasScaler]] - `references` [EXTRACTED]
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
-- [[MarcusNotebookUI]] - `references` [EXTRACTED]
+- [[Outline]] - `references` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
-- [[SantaRitaAtlasView]] - `references` [EXTRACTED]
-- [[ScrollRect]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[SinucaSpinSelector]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_7

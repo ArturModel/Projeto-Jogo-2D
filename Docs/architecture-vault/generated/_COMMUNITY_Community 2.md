@@ -1,48 +1,58 @@
 ---
 type: community
-members: 35
+members: 45
 ---
 
 # Community 2
 
-**Members:** 35 nodes
+**Members:** 45 nodes
 
 ## Members
-- [[dot-AjustarBrilho()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AjustarLuzGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AoCarregarCenaRuntime()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AplicarEstadoDaZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AtualizarEstadoPortaoCentroNaCena()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AtualizarFonteMusical()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AtualizarSpawnPointExistente()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AtualizarTeclasPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-CarregarSprite()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-CarregarTextura()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarTapete()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Configurar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs
-- [[dot-ConfigurarCenaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConverterCapitulo1()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs
-- [[dot-EnsureForCurrentScene()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ExtrairBloco32()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-GarantirElementosBarDoZeCenaSeparada()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-GarantirElementosCasaDoAvoCenaSeparada()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-NomeArquivoTile()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-PintarAcabamentoArquitetonicoInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-PosicionarJogadorInicialRoutine()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-PrepararMusicasDasZonas()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-TransicionarPara()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-TryObterInfoZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Update()_16]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Capitulo1Director]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[Color32]] - code
-- [[EstaEmInterior]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[InfoZona]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[InfoZona_1]] - code
-- [[Instance_7]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[PainelFechamentoAberto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[TilePiso_1]] - code
-- [[ZonaAtual]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[ZonaId_1]] - code
+- [[dot-BallMaterial()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-Box()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-BuildCue()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-BuildRoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs
+- [[dot-BuildTable()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-CaptureArt()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Character()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-CombineNet()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Cylinder()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Lamp()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs
+- [[dot-Mat()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-NativeMesh()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-NewGuide()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Panel()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-PixelMaterial()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-PixelObject()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[dot-PocketOuter()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-PocketPhysics()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs
+- [[dot-Primitive()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Ring()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Sphere()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Sync()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Tube()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Actor]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Actor_1]] - code
+- [[Collider]] - code
+- [[DarkWood]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[FloorTile]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[FrameGeometryBuilds]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Light]] - code
+- [[LineRenderer]] - code
+- [[Mesh]] - code
+- [[MeshFilter]] - code
+- [[MeshRenderer]] - code
+- [[Object]] - code
+- [[PrimitiveType]] - code
+- [[Renderer]] - code
+- [[SinucaRoom3D]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs
+- [[SinucaRoom3D.Scenery.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs
+- [[StaticRendererCount]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Target]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Texture]] - code
+- [[UniversalAdditionalCameraData]] - code
+- [[WallTile]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[Wood]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,40 +62,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 38 edges to [[_COMMUNITY_Community 29]]
-- 13 edges to [[_COMMUNITY_Community 13]]
-- 11 edges to [[_COMMUNITY_Community 34]]
-- 6 edges to [[_COMMUNITY_Community 28]]
-- 5 edges to [[_COMMUNITY_Community 5]]
-- 4 edges to [[_COMMUNITY_Community 110]]
-- 4 edges to [[_COMMUNITY_Community 26]]
-- 4 edges to [[_COMMUNITY_Community 84]]
-- 3 edges to [[_COMMUNITY_Community 94]]
-- 3 edges to [[_COMMUNITY_Community 89]]
-- 3 edges to [[_COMMUNITY_Community 25]]
-- 3 edges to [[_COMMUNITY_Community 51]]
-- 3 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 49]]
-- 2 edges to [[_COMMUNITY_Community 24]]
-- 2 edges to [[_COMMUNITY_Community 18]]
-- 2 edges to [[_COMMUNITY_Community 44]]
-- 2 edges to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 105]]
-- 1 edge to [[_COMMUNITY_Community 108]]
+- 15 edges to [[_COMMUNITY_Community 18]]
+- 14 edges to [[_COMMUNITY_Community 39]]
+- 13 edges to [[_COMMUNITY_Community 24]]
+- 11 edges to [[_COMMUNITY_Community 9]]
+- 10 edges to [[_COMMUNITY_Community 20]]
+- 8 edges to [[_COMMUNITY_Community 48]]
+- 7 edges to [[_COMMUNITY_Community 6]]
+- 4 edges to [[_COMMUNITY_Community 1]]
+- 3 edges to [[_COMMUNITY_Community 23]]
+- 3 edges to [[_COMMUNITY_Community 85]]
+- 1 edge to [[_COMMUNITY_Community 15]]
 - 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 88]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 22]]
-- 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 92]]
-- 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 - 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 57]]
 
 ## Top bridge nodes
-- [[Capitulo1Director]] - degree 78, connects to 18 communities
-- [[dot-ConfigurarCenaAtual()]] - degree 11, connects to 5 communities
-- [[dot-AplicarEstadoDaZona()]] - degree 10, connects to 4 communities
-- [[Color32]] - degree 9, connects to 4 communities
-- [[dot-PosicionarJogadorInicialRoutine()]] - degree 6, connects to 4 communities
+- [[SinucaRoom3D]] - degree 68, connects to 12 communities
+- [[dot-Sync()]] - degree 13, connects to 5 communities
+- [[dot-Primitive()]] - degree 11, connects to 4 communities
+- [[dot-Box()]] - degree 9, connects to 4 communities
+- [[dot-Cylinder()]] - degree 9, connects to 4 communities

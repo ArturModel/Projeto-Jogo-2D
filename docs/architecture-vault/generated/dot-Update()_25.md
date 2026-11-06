@@ -1,23 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 44"
-location: "L237"
+community: "Community 38"
+location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_38
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
-- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
-- [[dot-FindNearest()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_6]] - `calls` [INFERRED]
-- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
-- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
+- [[dot-Close()_1]] - `calls` [EXTRACTED]
+- [[dot-Toggle()]] - `calls` [EXTRACTED]
+- [[SantaRitaInventory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_38

@@ -1,44 +1,31 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
 type: "code"
-community: "Community 18"
-location: "L36"
+community: "Community 20"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_20
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [INFERRED]
-- [[dot-Assign()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Contents()]] - `calls` [EXTRACTED]
-- [[dot-Ensure()_1]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Fechar()]] - `calls` [INFERRED]
-- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Open()]] - `calls` [INFERRED]
-- [[dot-Owns()]] - `calls` [EXTRACTED]
-- [[dot-PlayPause()]] - `calls` [INFERRED]
-- [[dot-Quick()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Repair()]] - `calls` [INFERRED]
-- [[dot-Rewind()]] - `calls` [INFERRED]
-- [[dot-SaveSlot()]] - `calls` [EXTRACTED]
-- [[dot-Start()_8]] - `calls` [EXTRACTED]
-- [[dot-Swap()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
-- [[GameStateSnapshot]] - `calls` [INFERRED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[Keyboard]] - `references` [EXTRACTED]
-- [[MarcusNotebookUI]] - `references` [EXTRACTED]
-- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
-- [[SantaRitaTapePickup]] - `references` [EXTRACTED]
+- [[dot-Check()_3]] - `calls` [INFERRED]
+- [[dot-Run()_9]] - `calls` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[Capitulo2Director]] - `references` [EXTRACTED]
+- [[Capitulo2Portal]] - `references` [EXTRACTED]
+- [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
+- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
+- [[ShadowCaster2D]] - `references` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
+- [[TextMeshPro]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
+- [[Tilemap]] - `references` [EXTRACTED]
+- [[TilemapRenderer]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_20

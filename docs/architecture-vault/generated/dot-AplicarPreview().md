@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs"
 type: "code"
-community: "Community 15"
+community: "Community 115"
 location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_115
 ---
 
 # .AplicarPreview()
@@ -15,7 +15,7 @@ tags:
 - [[dot-AlterarAtivacao()]] - `calls` [EXTRACTED]
 - [[dot-AlterarFundo()]] - `calls` [EXTRACTED]
 - [[dot-AlterarTamanho()]] - `calls` [EXTRACTED]
-- [[dot-Start()_5]] - `calls` [EXTRACTED]
+- [[dot-Start()_3]] - `calls` [EXTRACTED]
 - [[SubtitleSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_115

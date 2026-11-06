@@ -1,27 +1,21 @@
 ---
 type: community
-members: 15
+members: 9
 ---
 
 # Community 37
 
-**Members:** 15 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[dot-Escolher()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
 - [[dot-ForcaPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[dot-Preparar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
-- [[dot-SetState()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[BochaAI]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
 - [[BochaLaunch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[BochaShot]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[BochaShot.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[BochaThrowType]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[Ponto]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 - [[Rafa]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
-- [[Random]] - code
-- [[UltimaDecisaoMs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
-- [[UltimosCandidatos]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs
 - [[Volo]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaShot.cs
 
 ## Live Query (requires Dataview plugin)
@@ -32,18 +26,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Community 17]]
-- 6 edges to [[_COMMUNITY_Community 45]]
-- 4 edges to [[_COMMUNITY_Community 27]]
-- 3 edges to [[_COMMUNITY_Community 4]]
-- 2 edges to [[_COMMUNITY_Community 1]]
+- 8 edges to [[_COMMUNITY_Community 17]]
+- 6 edges to [[_COMMUNITY_Community 99]]
 - 2 edges to [[_COMMUNITY_Community 9]]
-- 2 edges to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 110]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[BochaShot]] - degree 15, connects to 6 communities
-- [[dot-Escolher()]] - degree 14, connects to 4 communities
+- [[BochaShot]] - degree 15, connects to 5 communities
 - [[dot-Preparar()_1]] - degree 7, connects to 3 communities
-- [[dot-SetState()]] - degree 5, connects to 3 communities
 - [[BochaThrowType]] - degree 8, connects to 1 community
+- [[BochaShot.cs]] - degree 4, connects to 1 community
+- [[dot-ForcaPonto()]] - degree 2, connects to 1 community

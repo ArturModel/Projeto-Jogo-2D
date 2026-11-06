@@ -12,7 +12,7 @@ tags:
 # .Comecar()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()]] - `calls` [EXTRACTED]
 - [[dot-NovaMao()]] - `calls` [EXTRACTED]
 - [[dot-Regras()]] - `calls` [EXTRACTED]

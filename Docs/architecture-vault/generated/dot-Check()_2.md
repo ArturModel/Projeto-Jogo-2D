@@ -1,26 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
 type: "code"
-community: "Community 45"
-location: "L143"
+community: "Community 50"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_50
 ---
 
 # .Check()
 
 ## Connections
-- [[dot-Gait()]] - `calls` [EXTRACTED]
-- [[dot-Matches()]] - `calls` [EXTRACTED]
-- [[dot-Narrative()]] - `calls` [EXTRACTED]
-- [[dot-Physics()]] - `calls` [EXTRACTED]
-- [[dot-Rules()]] - `calls` [EXTRACTED]
-- [[dot-Run()_4]] - `calls` [INFERRED]
-- [[dot-Run()_1]] - `calls` [INFERRED]
-- [[dot-Run()_7]] - `calls` [INFERRED]
-- [[dot-Saves()]] - `calls` [EXTRACTED]
-- [[Chapter2Verification]] - `method` [EXTRACTED]
+- [[dot-Start()_23]] - `calls` [EXTRACTED]
+- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_50

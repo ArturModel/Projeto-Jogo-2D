@@ -1,31 +1,38 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaProductionVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 11"
-location: "L52"
+community: "Community 114"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Community_114
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Check()_2]] - `calls` [INFERRED]
-- [[dot-Run()_5]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[Capitulo2Portal]] - `references` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
-- [[SantaRitaProductionVerification]] - `method` [EXTRACTED]
-- [[ShadowCaster2D]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[TextMeshPro]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[dot-AjustarZoom()]] - `calls` [INFERRED]
+- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
+- [[dot-Check()_3]] - `calls` [INFERRED]
+- [[dot-DefinirCamera()]] - `calls` [INFERRED]
+- [[dot-DefinirZoom()]] - `calls` [INFERRED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-GetBall()]] - `calls` [EXTRACTED]
+- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()]] - `calls` [EXTRACTED]
+- [[dot-OscilarCarga()]] - `calls` [EXTRACTED]
+- [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
+- [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [INFERRED]
+- [[dot-RunMenu()]] - `calls` [EXTRACTED]
+- [[dot-SetBall()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[GameObject]] - `references` [EXTRACTED]
+- [[GameStateSnapshot]] - `calls` [INFERRED]
+- [[IList]] - `references` [EXTRACTED]
+- [[Sinuca3DVerification]] - `method` [EXTRACTED]
+- [[SinucaMinigameUI]] - `references` [EXTRACTED]
+- [[SinucaTableView]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Community_114

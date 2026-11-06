@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/MilaProductionVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs"
 type: "code"
-community: "Community 6"
-location: "L14"
+community: "Community 1"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_1
 ---
 
 # .BuildNormal()
 
 ## Connections
-- [[dot-Prepare()_1]] - `calls` [EXTRACTED]
-- [[dot-Run()_8]] - `calls` [EXTRACTED]
-- [[MilaProductionVerification]] - `method` [EXTRACTED]
+- [[dot-Build()]] - `calls` [EXTRACTED]
+- [[MenuAmbienteAuthoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_1

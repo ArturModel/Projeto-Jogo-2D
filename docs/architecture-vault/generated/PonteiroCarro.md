@@ -1,21 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
 type: "code"
-community: "Community 33"
+community: "Community 26"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_26
 ---
 
 # PonteiroCarro
 
 ## Connections
-- [[dot-Awake()_11]] - `method` [EXTRACTED]
+- [[dot-Awake()_28]] - `references` [EXTRACTED]
+- [[dot-Awake()_12]] - `method` [EXTRACTED]
 - [[dot-Procurar()]] - `method` [EXTRACTED]
-- [[dot-Start()_21]] - `references` [EXTRACTED]
-- [[dot-Update()_23]] - `method` [EXTRACTED]
+- [[dot-Start()_15]] - `references` [EXTRACTED]
+- [[dot-Update()_19]] - `method` [EXTRACTED]
 - [[Ativo_1]] - `defines` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[LayerMask]] - `references` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[PonteiroCarro.cs]] - `contains` [EXTRACTED]
 - [[PrologoDirector]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_26

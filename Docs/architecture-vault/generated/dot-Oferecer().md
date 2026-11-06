@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs"
 type: "code"
-community: "Community 89"
+community: "Community 7"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_7
 ---
 
 # .Oferecer()
@@ -15,7 +15,7 @@ tags:
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_2]] - `calls` [EXTRACTED]
+- [[dot-Interact()_8]] - `calls` [EXTRACTED]
 - [[dot-Interagir()]] - `calls` [EXTRACTED]
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPistaNotaFiscal()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
 - [[SantaRitaItemAction]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_7

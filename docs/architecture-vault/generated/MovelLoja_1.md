@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 29"
+community: "Community 24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_24
 ---
 
 # MovelLoja
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-ColocarMovelLoja()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_24

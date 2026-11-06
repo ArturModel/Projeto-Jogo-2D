@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 94"
+community: "Community 57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_94
+  - community/Community_57
 ---
 
 # MonoBehaviour
@@ -39,6 +39,8 @@ tags:
 - [[MainMenuActions]] - `inherits` [EXTRACTED]
 - [[MapaInterativoUI]] - `inherits` [EXTRACTED]
 - [[MarcusNotebookUI]] - `inherits` [EXTRACTED]
+- [[MenuAmbiente]] - `inherits` [EXTRACTED]
+- [[MenuAmbienteRuntimeQA]] - `inherits` [EXTRACTED]
 - [[MenuItemSelector]] - `inherits` [EXTRACTED]
 - [[MenuPanelTransition]] - `inherits` [EXTRACTED]
 - [[MenuPausa]] - `inherits` [EXTRACTED]
@@ -46,10 +48,14 @@ tags:
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[OlharPrimeiraPessoa]] - `inherits` [EXTRACTED]
 - [[OptionsPanelController]] - `inherits` [EXTRACTED]
+- [[PayphoneRegistroTecla]] - `inherits` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `inherits` [EXTRACTED]
 - [[PayphoneSlotInputWatcher]] - `inherits` [EXTRACTED]
 - [[PlayerController]] - `inherits` [EXTRACTED]
 - [[PonteiroCarro]] - `inherits` [EXTRACTED]
 - [[PrologoDirector]] - `inherits` [EXTRACTED]
+- [[PrologoJogavel]] - `inherits` [EXTRACTED]
+- [[PrologoRuntimeVerification]] - `inherits` [EXTRACTED]
 - [[PrologoVideo]] - `inherits` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `inherits` [EXTRACTED]
 - [[SantaRitaAtlasView]] - `inherits` [EXTRACTED]
@@ -79,4 +85,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_57

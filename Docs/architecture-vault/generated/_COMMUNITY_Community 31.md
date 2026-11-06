@@ -1,24 +1,26 @@
 ---
 type: community
-members: 11
+members: 13
 ---
 
 # Community 31
 
-**Members:** 11 nodes
+**Members:** 13 nodes
 
 ## Members
-- [[dot-BrilhoEm()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-Desenhar()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-DesenharGota()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-DesenharOndinha()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-DesenharPocas()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-DesenharRespingo()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-Limpar()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-MetadeDaTela()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-ParaPixel()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[dot-Pintar()]] - code - Projeto Jogo 2D/Assets/Scripts/Chuva.cs
-- [[Respingo_1]] - code
+- [[dot-AlterarVolumeEfeitos()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AlterarVolumeGeral()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AlterarVolumeMusica()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AplicarVolume()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AplicarVolumeEmMixer()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-AplicarVolumesGlobais()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-GarantirValoresPadraoAudiveis()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-InicializarAudioGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-OnDisable()_6]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Start()_18]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Vincular()_2]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[AudioMixer]] - code
+- [[AudioSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,14 +30,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Community 25]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 2 edges to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Community 29]]
+- 4 edges to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 111]]
 
 ## Top bridge nodes
-- [[dot-Pintar()]] - degree 8, connects to 3 communities
-- [[dot-BrilhoEm()]] - degree 6, connects to 3 communities
-- [[dot-ParaPixel()]] - degree 6, connects to 2 communities
-- [[dot-MetadeDaTela()]] - degree 5, connects to 2 communities
-- [[dot-Desenhar()]] - degree 7, connects to 1 community
+- [[AudioSettingsController]] - degree 16, connects to 3 communities
+- [[AudioMixer]] - degree 5, connects to 1 community
+- [[dot-InicializarAudioGlobal()]] - degree 4, connects to 1 community
+- [[dot-Vincular()_2]] - degree 4, connects to 1 community

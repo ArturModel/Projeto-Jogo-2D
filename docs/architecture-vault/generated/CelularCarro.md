@@ -13,9 +13,11 @@ tags:
 
 ## Connections
 - [[dot-Ativar()]] - `method` [EXTRACTED]
-- [[dot-Ligar()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_28]] - `references` [EXTRACTED]
+- [[dot-Ligar()]] - `method` [EXTRACTED]
 - [[CelularCarro.cs]] - `contains` [EXTRACTED]
 - [[Disponivel_1]] - `defines` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

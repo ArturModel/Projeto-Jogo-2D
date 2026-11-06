@@ -1,30 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 13"
-location: "L545"
+community: "Community 17"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_17
 ---
 
 # .Abrir()
 
 ## Connections
-- [[dot-AtualizarDisponibilidadePlanta()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarIndicadorZoom()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
-- [[dot-Detail()]] - `calls` [INFERRED]
-- [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
-- [[dot-Rebuild()_1]] - `calls` [INFERRED]
-- [[dot-Run()_2]] - `calls` [INFERRED]
-- [[dot-RunAtlas()]] - `calls` [INFERRED]
-- [[dot-RunNotebook()]] - `calls` [INFERRED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Travel()]] - `calls` [INFERRED]
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-Comecar()]] - `calls` [EXTRACTED]
+- [[dot-MostrarModal()]] - `calls` [EXTRACTED]
+- [[dot-Refresh()]] - `calls` [INFERRED]
+- [[dot-SetState()]] - `calls` [INFERRED]
+- [[Action]] - `references` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_17

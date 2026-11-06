@@ -13,7 +13,9 @@ tags:
 ## Connections
 - [[Chapter2BuildVerification.cs]] - `imports` [EXTRACTED]
 - [[Chapter2Verification.cs]] - `imports` [EXTRACTED]
+- [[MenuAmbienteAuthoring.cs]] - `imports` [EXTRACTED]
 - [[MilaProductionVerification.cs]] - `imports` [EXTRACTED]
+- [[PrologoJogavelVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtImporter.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaAtlasAuthoring.cs]] - `imports` [EXTRACTED]

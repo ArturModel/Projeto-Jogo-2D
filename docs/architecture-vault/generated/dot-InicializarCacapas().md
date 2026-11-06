@@ -12,7 +12,7 @@ tags:
 # .InicializarCacapas()
 
 ## Connections
-- [[dot-Awake()_9]] - `calls` [EXTRACTED]
+- [[dot-Awake()_13]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [EXTRACTED]
 - [[dot-IniciarPraticaOpcional()]] - `calls` [EXTRACTED]
 - [[BicoCacapa]] - `calls` [EXTRACTED]

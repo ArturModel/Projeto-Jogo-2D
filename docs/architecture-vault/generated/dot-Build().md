@@ -1,23 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs"
 type: "code"
-community: "Community 12"
-location: "L64"
+community: "Community 1"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_1
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_22]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-LoadSprite()]] - `calls` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[InteractionPrompt]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
+- [[dot-BuildNormal()]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()]] - `calls` [EXTRACTED]
+- [[MenuAmbienteAuthoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_1

@@ -33,19 +33,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Community 16]]
-- 4 edges to [[_COMMUNITY_Community 26]]
-- 2 edges to [[_COMMUNITY_Community 29]]
+- 6 edges to [[_COMMUNITY_Community 16]]
+- 4 edges to [[_COMMUNITY_Community 18]]
+- 3 edges to [[_COMMUNITY_Community 24]]
 - 2 edges to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 48]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[dot-ApplyC1()]] - degree 11, connects to 5 communities
 - [[dot-Add()]] - degree 16, connects to 4 communities
+- [[dot-ApplyC1()]] - degree 11, connects to 4 communities
 - [[dot-ApplyC2()]] - degree 13, connects to 3 communities
 - [[dot-Replace()_1]] - degree 6, connects to 3 communities
 - [[SantaRitaPlaceDressing.cs]] - degree 2, connects to 1 community

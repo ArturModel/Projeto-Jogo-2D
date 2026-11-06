@@ -1,87 +1,49 @@
 ---
 type: community
-members: 74
+members: 36
 ---
 
 # Community 18
 
-**Members:** 74 nodes
+**Members:** 36 nodes
 
 ## Members
-- [[dot-ActionButton()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Assign()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Awake()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Awake()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Blocked()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Boot()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Cell()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Check()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Close()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Contents()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-DefinirTexto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Ensure()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Error()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-Field()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Finish()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Frame()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Guard()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-HasItem()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Icon()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Init()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-Init()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Interact()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Label()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-LateUpdate()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-LoadIcons()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Log()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Name()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnDestroy()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Open()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Owns()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Picture()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Place()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-PrepararSessao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs
-- [[dot-Quick()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Rebuild()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Repair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-ResetArt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-ResetStatic()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ResetStatic()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs
-- [[dot-ResetStatic()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs
-- [[dot-ResetStatic()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Rewind()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Run()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Select()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Set()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Start()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-StartSession()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Stop()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Swap()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Texto()]] - code - Projeto Jogo 2D/Assets/Scripts/GameState.cs
-- [[dot-Toggle()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Update()_12]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Update()_13]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Use()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-UseItem()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[ClosedFrame]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[ClosedFrame_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[HideFlags]] - code
-- [[InputSettings]] - code
-- [[Instance_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[Instance_5]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[IsOpen]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[IsOpen_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[LogType]] - code
-- [[MilaRuntimeVerification]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[Playing]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Position]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Records]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[RuntimeInitializeOnLoadMethod]] - code
-- [[SantaRitaInventory]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[SantaRitaTapeDeck]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeCatalog]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeLine]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeRecord]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Apply()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Boundary()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-ConstrainArrival()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Interact()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Interact()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-LateUpdate()_6]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-LivePosition()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-LiveSprite()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-NativeSurface()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-OccupiedChair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-OnDisable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[dot-PatronFrame()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-PatronPose()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-SpriteFor()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Start()_11]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Start()_12]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Surface()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-TablePropVisible()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Update()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Update()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Update()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[Fileira]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[Prompt_7]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[Prompt_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[Prop_1]] - code
+- [[SantaRitaBarHost]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[SantaRitaBarLayout]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[SantaRitaBarPatron]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[SantaRitaBarPose]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[SantaRitaBarProp]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[SantaRitaNpcWork]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[Sprite]] - code
+- [[Station]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[Station_1]] - code
+- [[StationIndex]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
+- [[Working]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -91,39 +53,40 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_Community 13]]
-- 9 edges to [[_COMMUNITY_Community 89]]
-- 8 edges to [[_COMMUNITY_Community 86]]
-- 8 edges to [[_COMMUNITY_Community 12]]
-- 7 edges to [[_COMMUNITY_Community 92]]
-- 7 edges to [[_COMMUNITY_Community 29]]
-- 6 edges to [[_COMMUNITY_Community 0]]
+- 15 edges to [[_COMMUNITY_Community 2]]
+- 14 edges to [[_COMMUNITY_Community 11]]
+- 14 edges to [[_COMMUNITY_Community 16]]
+- 12 edges to [[_COMMUNITY_Community 6]]
+- 11 edges to [[_COMMUNITY_Community 24]]
+- 10 edges to [[_COMMUNITY_Community 20]]
+- 7 edges to [[_COMMUNITY_Community 5]]
 - 6 edges to [[_COMMUNITY_Community 1]]
-- 6 edges to [[_COMMUNITY_Community 24]]
-- 6 edges to [[_COMMUNITY_Community 84]]
+- 5 edges to [[_COMMUNITY_Community 0]]
+- 5 edges to [[_COMMUNITY_Community 48]]
 - 5 edges to [[_COMMUNITY_Community 30]]
-- 5 edges to [[_COMMUNITY_Community 28]]
-- 5 edges to [[_COMMUNITY_Community 34]]
-- 4 edges to [[_COMMUNITY_Community 26]]
-- 3 edges to [[_COMMUNITY_Community 94]]
-- 3 edges to [[_COMMUNITY_Community 110]]
-- 3 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 49]]
-- 2 edges to [[_COMMUNITY_Community 2]]
-- 2 edges to [[_COMMUNITY_Community 48]]
-- 2 edges to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 25]]
-- 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 46]]
-- 1 edge to [[_COMMUNITY_Community 117]]
-- 1 edge to [[_COMMUNITY_Community 44]]
+- 4 edges to [[_COMMUNITY_Community 13]]
+- 4 edges to [[_COMMUNITY_Community 41]]
+- 4 edges to [[_COMMUNITY_Community 44]]
+- 3 edges to [[_COMMUNITY_Community 109]]
+- 3 edges to [[_COMMUNITY_Community 57]]
+- 3 edges to [[_COMMUNITY_Community 38]]
+- 2 edges to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 85]]
+- 1 edge to [[_COMMUNITY_Community 19]]
+- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 47]]
+- 1 edge to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 88]]
 
 ## Top bridge nodes
-- [[SantaRitaInventory]] - degree 39, connects to 11 communities
-- [[SantaRitaTapeDeck]] - degree 29, connects to 9 communities
-- [[dot-Run()_2]] - degree 28, connects to 7 communities
-- [[RuntimeInitializeOnLoadMethod]] - degree 19, connects to 7 communities
-- [[dot-Awake()_7]] - degree 18, connects to 7 communities
+- [[Sprite]] - degree 73, connects to 22 communities
+- [[SantaRitaNpcWork]] - degree 19, connects to 6 communities
+- [[dot-Surface()]] - degree 9, connects to 6 communities
+- [[SantaRitaBarLayout]] - degree 21, connects to 5 communities
+- [[dot-Apply()_3]] - degree 19, connects to 5 communities

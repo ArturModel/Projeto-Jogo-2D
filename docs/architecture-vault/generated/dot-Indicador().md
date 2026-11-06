@@ -12,7 +12,7 @@ tags:
 # .Indicador()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]

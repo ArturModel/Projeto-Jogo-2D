@@ -15,7 +15,7 @@ tags:
 - [[box()_2]] - `contains` [EXTRACTED]
 - [[c()_2]] - `contains` [EXTRACTED]
 - [[oval()]] - `contains` [EXTRACTED]
-- [[rect()_2]] - `contains` [EXTRACTED]
+- [[rect()]] - `contains` [EXTRACTED]
 - [[table()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_55

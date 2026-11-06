@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 88"
-location: "L95"
+community: "Community 24"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_88
+  - community/Community_24
 ---
 
 # .Configurar()
 
 ## Connections
-- [[dot-ColocarInteracao()]] - `calls` [INFERRED]
-- [[dot-UpdateCasaDoAvoScene()]] - `calls` [INFERRED]
-- [[InteracaoCapitulo1]] - `method` [EXTRACTED]
-- [[TipoInteracao_1]] - `references` [EXTRACTED]
+- [[dot-ColocarGatilhoTransicao()]] - `calls` [INFERRED]
+- [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
+- [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_88
+#graphify/code #graphify/EXTRACTED #community/Community_24

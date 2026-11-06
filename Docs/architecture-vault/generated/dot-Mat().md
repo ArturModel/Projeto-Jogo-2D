@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 110"
+community: "Community 2"
 location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_110
+  - community/Community_2
 ---
 
 # .Mat()
@@ -16,7 +16,7 @@ tags:
 - [[dot-BuildCue()]] - `calls` [INFERRED]
 - [[dot-BuildRoom()]] - `calls` [INFERRED]
 - [[dot-BuildTable()]] - `calls` [INFERRED]
-- [[dot-Lamp()_1]] - `calls` [INFERRED]
+- [[dot-Lamp()_2]] - `calls` [INFERRED]
 - [[dot-Panel()]] - `calls` [EXTRACTED]
 - [[dot-Ring()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 - [[Texture]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_110
+#graphify/code #graphify/EXTRACTED #community/Community_2

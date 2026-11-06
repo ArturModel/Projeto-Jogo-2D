@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 25"
+community: "Community 8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_8
 ---
 
 # Poca
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[Chuva]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_8

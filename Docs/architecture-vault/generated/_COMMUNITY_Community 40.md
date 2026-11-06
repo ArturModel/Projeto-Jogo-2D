@@ -1,25 +1,24 @@
 ---
 type: community
-members: 12
+members: 11
 ---
 
 # Community 40
 
-**Members:** 12 nodes
+**Members:** 11 nodes
 
 ## Members
-- [[dot-Circle()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Disc()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-MapPoint()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPopulateMesh()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPopulateMesh()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnPopulateMesh()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-Quad()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Refresh()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[BochaMapGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[MaskableGraphic]] - code
-- [[Simulation]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[VertexHelper]] - code
+- [[dot-Atualizar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
+- [[dot-Awake()_17]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
+- [[dot-OnDestroy()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
+- [[dot-OnDisable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
+- [[dot-OnEnable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
+- [[Capitulo2Gate]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
+- [[Capitulo2Gate.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
+- [[Collider2D]] - code
+- [[SantaRitaActorElevation]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
+- [[VisualDepth]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
+- [[VisualScale]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,21 +28,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 9]]
-- 3 edges to [[_COMMUNITY_Community 17]]
-- 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 23]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 2 edges to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 27]]
-- 1 edge to [[_COMMUNITY_Community 36]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 3 edges to [[_COMMUNITY_Community 16]]
+- 3 edges to [[_COMMUNITY_Community 13]]
+- 2 edges to [[_COMMUNITY_Community 11]]
+- 2 edges to [[_COMMUNITY_Community 57]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 113]]
+- 1 edge to [[_COMMUNITY_Community 109]]
 - 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 51]]
 
 ## Top bridge nodes
-- [[BochaMapGraphic]] - degree 12, connects to 5 communities
-- [[dot-Disc()]] - degree 5, connects to 3 communities
-- [[dot-Circle()]] - degree 5, connects to 2 communities
-- [[dot-Quad()]] - degree 5, connects to 2 communities
-- [[dot-MapPoint()]] - degree 4, connects to 2 communities
+- [[SantaRitaActorElevation]] - degree 16, connects to 10 communities
+- [[Collider2D]] - degree 10, connects to 6 communities
+- [[dot-Awake()_17]] - degree 6, connects to 4 communities
+- [[Capitulo2Gate]] - degree 8, connects to 3 communities
+- [[dot-Atualizar()]] - degree 5, connects to 2 communities

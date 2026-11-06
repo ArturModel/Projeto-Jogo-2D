@@ -1,0 +1,7 @@
+Audio recordings adapted for Santa Rita - CC0 1.0.
+MotorInterior.wav: Car Engine interior by NachtmahrTV
+https://freesound.org/people/NachtmahrTV/sounds/556692/
+RodagemTerra.wav: Honda CRV 2014 Interior Slow Gravel Road by loganzsound
+https://freesound.org/people/loganzsound/sounds/784175/
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Adapted from public HQ MP3 previews: trimmed, filtered, loop crossfaded and gain adjusted.

@@ -1,17 +1,17 @@
 ---
-source_file: ""
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 38"
+community: "Community 25"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_25
 ---
 
 # Actor
 
 ## Connections
-- [[dot-Character()]] - `references` [EXTRACTED]
-- [[SinucaRoom3D]] - `references` [EXTRACTED]
+- [[Kind]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_25

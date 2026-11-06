@@ -1,16 +1,17 @@
 ---
 type: community
-members: 35
+members: 40
 ---
 
 # Community 32
 
-**Members:** 35 nodes
+**Members:** 40 nodes
 
 ## Members
 - [[ElevenLabs production helper. Dry-run by default; keys never enter the…]] - rationale - Tools/Audio/voice_pipeline.py
 - [[Local Graphify lifecycle shared by PowerShell and Bash; no LLMbackend calls.]] - rationale - scripts/graphify-project.py
 - [[Offline room-scene renderer. Requires actual per-character takes; no missing-…]] - rationale - Tools/Audio/tape_scene.py
+- [[Prepara derivações de gravações CC0; requer ffmpeg no PATH e numpy. Fontes e…]] - rationale - Tools/Audio/prepare-prologo-loops.py
 - [[Small, opt-in audition against the official public Qwen demo; never publishes…]] - rationale - Tools/Audio/qwen_audition.py
 - [[add()]] - code - Tools/Audio/tape_scene.py
 - [[argparse]] - concept
@@ -28,8 +29,11 @@ members: 35
 - [[main()_1]] - code - Tools/Audio/qwen_audition.py
 - [[main()_2]] - code - Tools/Audio/tape_scene.py
 - [[main()_3]] - code - Tools/Audio/voice_pipeline.py
+- [[numpy]] - concept
 - [[os]] - concept
 - [[pathlib]] - concept
+- [[preparar()]] - code - Tools/Audio/prepare-prologo-loops.py
+- [[prepare-prologo-loops.py]] - code - Tools/Audio/prepare-prologo-loops.py
 - [[qwen_audition.py]] - code - Tools/Audio/qwen_audition.py
 - [[request()]] - code - Tools/Audio/voice_pipeline.py
 - [[rms_gain()]] - code - Tools/Audio/tape_scene.py
@@ -43,6 +47,7 @@ members: 35
 - [[urllib_request]] - concept
 - [[validate()]] - code - scripts/graphify-project.py
 - [[voice_pipeline.py]] - code - Tools/Audio/voice_pipeline.py
+- [[wave]] - concept
 
 ## Live Query (requires Dataview plugin)
 

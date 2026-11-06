@@ -1,27 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookContent.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlasView.cs"
 type: "code"
-community: "Community 1"
-location: "L22"
+community: "Community 34"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_34
 ---
 
 # .Project()
 
 ## Connections
-- [[dot-Changed()]] - `calls` [EXTRACTED]
-- [[dot-Plain()]] - `calls` [EXTRACTED]
-- [[dot-Read()]] - `calls` [EXTRACTED]
-- [[dot-Restored()]] - `calls` [EXTRACTED]
-- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[EntradaDiario]] - `references` [EXTRACTED]
-- [[MarcusNotebookCatalog]] - `calls` [EXTRACTED]
-- [[MarcusNotebookContent]] - `method` [EXTRACTED]
-- [[MarcusNotebookEntry]] - `calls` [EXTRACTED]
-- [[TextAsset]] - `references` [EXTRACTED]
+- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [INFERRED]
+- [[dot-Player()]] - `calls` [EXTRACTED]
+- [[dot-Region()]] - `calls` [EXTRACTED]
+- [[SantaRitaAtlasView]] - `method` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_34

@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtImporter.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs"
 type: "code"
 community: "Community 1"
-location: "L6"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # .OnPreprocessTexture()
 
 ## Connections
-- [[SantaRitaArtImporter]] - `method` [EXTRACTED]
+- [[MenuAmbienteTextureImporter]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_1

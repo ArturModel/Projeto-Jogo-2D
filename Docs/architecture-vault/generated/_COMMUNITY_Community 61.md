@@ -11,7 +11,7 @@ members: 4
 - [[c()_5]] - code - Tools/Aseprite/marcus-flashlight.lua
 - [[line()_2]] - code - Tools/Aseprite/marcus-flashlight.lua
 - [[marcus-flashlight.lua]] - code - Tools/Aseprite/marcus-flashlight.lua
-- [[rect()_4]] - code - Tools/Aseprite/marcus-flashlight.lua
+- [[rect()_2]] - code - Tools/Aseprite/marcus-flashlight.lua
 
 ## Live Query (requires Dataview plugin)
 

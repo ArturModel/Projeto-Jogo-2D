@@ -1,21 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 13"
-location: "L70"
+community: "Community 18"
+location: "L214"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_18
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Close()]] - `calls` [EXTRACTED]
-- [[dot-Duration()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
+- [[dot-PatronPose()]] - `calls` [EXTRACTED]
+- [[dot-TablePropVisible()]] - `calls` [EXTRACTED]
+- [[SantaRitaBarPose]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_18

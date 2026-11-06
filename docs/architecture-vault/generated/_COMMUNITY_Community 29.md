@@ -1,40 +1,39 @@
 ---
 type: community
-members: 27
+members: 26
 ---
 
 # Community 29
 
-**Members:** 27 nodes
+**Members:** 26 nodes
 
 ## Members
-- [[dot-AdicionarBoxCollider()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-AdicionarLuzPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Boundary()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[dot-ColocarArteInterior()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarArvore()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarGatilhoTransicao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarInteracao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarMovelLoja()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarOrelhaoSave()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarPosteComLuz()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ColocarProp()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirInterior1_Posto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirInterior2_Mercadinho()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirInterior3_CasaDoAvo()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirInterior4_BarDoZe()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirMundoMultiZonas()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirZona1_Rodovia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirZona2_Posto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirZona3_Encruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirZona4_Bairro()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirZona5_RuaNorteBar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Create()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs
-- [[dot-CriarParedesPerimetro()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-CriarPisoDeZona()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[BoxCollider2D]] - code
-- [[MovelLoja_1]] - code
-- [[Transform]] - code
+- [[dot-Boot()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Close()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Duration()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Ensure()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-HasItem()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
+- [[dot-Interact()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-OnDestroy()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Open()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Owns()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
+- [[dot-PlayPause()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Repair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Rewind()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Run()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
+- [[dot-Select()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Stop()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Update()_20]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[ClosedFrame]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Instance_6]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[IsOpen]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Playing]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Position]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Records]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[SantaRitaTapeDeck]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[TapeCatalog]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[TapeLine]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[TapeRecord]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,39 +43,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 38 edges to [[_COMMUNITY_Community 2]]
-- 25 edges to [[_COMMUNITY_Community 110]]
-- 15 edges to [[_COMMUNITY_Community 16]]
-- 14 edges to [[_COMMUNITY_Community 34]]
-- 13 edges to [[_COMMUNITY_Community 11]]
-- 7 edges to [[_COMMUNITY_Community 18]]
-- 6 edges to [[_COMMUNITY_Community 26]]
-- 6 edges to [[_COMMUNITY_Community 23]]
-- 6 edges to [[_COMMUNITY_Community 24]]
-- 5 edges to [[_COMMUNITY_Community 89]]
-- 4 edges to [[_COMMUNITY_Community 19]]
-- 4 edges to [[_COMMUNITY_Community 38]]
-- 4 edges to [[_COMMUNITY_Community 12]]
-- 4 edges to [[_COMMUNITY_Community 20]]
-- 2 edges to [[_COMMUNITY_Community 44]]
-- 2 edges to [[_COMMUNITY_Community 84]]
-- 2 edges to [[_COMMUNITY_Community 94]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 88]]
-- 2 edges to [[_COMMUNITY_Community 41]]
-- 2 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 87]]
-- 1 edge to [[_COMMUNITY_Community 100]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 49]]
-- 1 edge to [[_COMMUNITY_Community 31]]
-- 1 edge to [[_COMMUNITY_Community 14]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 48]]
+- 18 edges to [[_COMMUNITY_Community 38]]
+- 12 edges to [[_COMMUNITY_Community 13]]
+- 4 edges to [[_COMMUNITY_Community 117]]
+- 4 edges to [[_COMMUNITY_Community 1]]
+- 4 edges to [[_COMMUNITY_Community 45]]
+- 3 edges to [[_COMMUNITY_Community 48]]
+- 3 edges to [[_COMMUNITY_Community 36]]
+- 3 edges to [[_COMMUNITY_Community 50]]
+- 2 edges to [[_COMMUNITY_Community 95]]
+- 2 edges to [[_COMMUNITY_Community 51]]
+- 1 edge to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
-- [[Transform]] - degree 88, connects to 21 communities
-- [[BoxCollider2D]] - degree 32, connects to 9 communities
-- [[dot-Create()]] - degree 12, connects to 7 communities
-- [[dot-ColocarInteracao()]] - degree 20, connects to 5 communities
-- [[dot-ColocarProp()]] - degree 21, connects to 4 communities
+- [[dot-Run()_3]] - degree 28, connects to 10 communities
+- [[SantaRitaTapeDeck]] - degree 29, connects to 8 communities
+- [[dot-Interact()_8]] - degree 5, connects to 3 communities
+- [[dot-Owns()]] - degree 11, connects to 2 communities
+- [[dot-PlayPause()]] - degree 9, connects to 2 communities

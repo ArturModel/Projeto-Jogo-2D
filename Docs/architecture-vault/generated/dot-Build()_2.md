@@ -1,30 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
 type: "code"
-community: "Community 89"
-location: "L107"
+community: "Community 19"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_19
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_8]] - `calls` [EXTRACTED]
-- [[dot-CreateBox()]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-LoadSprite()]] - `calls` [EXTRACTED]
-- [[dot-PosicionarNoTopo()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[ContentSizeFitter]] - `references` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
-- [[ScrollRect]] - `references` [EXTRACTED]
+- [[dot-BuildNormal()_1]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()_1]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
+- [[PrologoJogavelVerification]] - `method` [EXTRACTED]
+- [[PrologoVideo]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_19

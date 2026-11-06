@@ -1,22 +1,20 @@
 ---
 type: community
-members: 9
+members: 7
 ---
 
 # Community 116
 
-**Members:** 9 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[dot-Construir()]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[dot-Ligar()]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[dot-Posicionar()]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[dot-Start()_1]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[dot-Update()_1]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[Curvatura]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[EstradaScroller]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
-- [[Fileira_1]] - code
-- [[Velocidade]] - code - Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs
+- [[dot-CriarTextura()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[dot-OnDestroy()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[dot-OnEnable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[dot-Update()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[dot-VolumeDaCamada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[SantaRitaBarAudio]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[SantaRitaBarAudio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,13 +24,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 94]]
+- 3 edges to [[_COMMUNITY_Community 95]]
+- 2 edges to [[_COMMUNITY_Community 21]]
+- 2 edges to [[_COMMUNITY_Community 38]]
+- 1 edge to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 26]]
-- 1 edge to [[_COMMUNITY_Community 16]]
 
 ## Top bridge nodes
-- [[EstradaScroller]] - degree 12, connects to 4 communities
-- [[dot-Construir()]] - degree 4, connects to 1 community
-- [[dot-Ligar()]] - degree 2, connects to 1 community
+- [[SantaRitaBarAudio]] - degree 10, connects to 4 communities
+- [[dot-CriarTextura()]] - degree 4, connects to 3 communities
+- [[dot-VolumeDaCamada()]] - degree 3, connects to 1 community
+- [[dot-OnEnable()_3]] - degree 2, connects to 1 community
+- [[SantaRitaBarAudio.cs]] - degree 2, connects to 1 community

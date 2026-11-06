@@ -1,20 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 84"
-location: "L103"
+community: "Community 54"
+location: "L752"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_54
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Attach()]] - `calls` [EXTRACTED]
-- [[Capitulo2Interactable]] - `references` [EXTRACTED]
-- [[InteracaoCapitulo1]] - `references` [EXTRACTED]
-- [[SantaRitaTapePlacement]] - `method` [EXTRACTED]
+- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Retroceder()]] - `calls` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_54

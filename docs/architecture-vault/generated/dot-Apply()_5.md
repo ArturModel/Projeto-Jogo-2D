@@ -1,19 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs"
 type: "code"
-community: "Community 51"
-location: "L21"
+community: "Community 20"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_20
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-LateUpdate()_11]] - `calls` [EXTRACTED]
-- [[dot-Start()_15]] - `calls` [EXTRACTED]
-- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
+- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `references` [EXTRACTED]
+- [[SantaRitaWorldLighting]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_20

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 86"
+community: "Community 45"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_45
 ---
 
 # GameState
@@ -30,7 +30,7 @@ tags:
 - [[dot-RestaurarIndicadorDeProgresso()]] - `method` [EXTRACTED]
 - [[dot-RestaurarSnapshot()]] - `method` [EXTRACTED]
 - [[dot-Tem()]] - `method` [EXTRACTED]
-- [[dot-Texto()]] - `method` [EXTRACTED]
+- [[dot-Texto()_1]] - `method` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
 - [[EntradaDiario]] - `references` [EXTRACTED]
 - [[GameState.cs]] - `contains` [EXTRACTED]
@@ -40,4 +40,4 @@ tags:
 - [[ObjetivoAtual]] - `defines` [EXTRACTED]
 - [[TemProgressoNaoSalvo]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_45

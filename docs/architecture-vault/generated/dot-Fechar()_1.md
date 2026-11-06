@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AbrirCarregar()]] - `calls` [EXTRACTED]
-- [[dot-Sair()]] - `calls` [EXTRACTED]
+- [[dot-Sair()_2]] - `calls` [EXTRACTED]
 - [[dot-Update()_4]] - `calls` [EXTRACTED]
 - [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]

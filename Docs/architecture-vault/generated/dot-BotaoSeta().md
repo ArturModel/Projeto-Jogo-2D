@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-LinhaStepperResolucao()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()]] - `calls` [EXTRACTED]
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]

@@ -1,25 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 89"
-location: "L709"
+community: "Community 7"
+location: "L2762"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_7
 ---
 
 # .CriarTexto()
 
 ## Connections
+- [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
+- [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoHUD()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[TextAlignmentOptions]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_7

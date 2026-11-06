@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "Community 86"
-location: "L364"
+community: "Community 45"
+location: "L371"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_45
 ---
 
 # .TryParseAndValidateJson()
@@ -21,4 +21,4 @@ tags:
 - [[GameStateSnapshot]] - `calls` [INFERRED]
 - [[ManualSaveData]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_45

@@ -1,21 +1,20 @@
 ---
 type: community
-members: 8
+members: 7
 ---
 
 # Community 106
 
-**Members:** 8 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[Actor_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Chair]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Counter]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Decor]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Kind]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Shelf]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Table]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
-- [[Wall]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-Apply()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-LateUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-ShouldReveal()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[dot-Start()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[Opacity]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[SantaRitaRoomCutaway]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
+- [[SantaRitaRoomCutaway.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,7 +24,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 26]]
+- 3 edges to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 11]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[Kind]] - degree 8, connects to 1 community
+- [[SantaRitaRoomCutaway]] - degree 13, connects to 7 communities
+- [[dot-LateUpdate()]] - degree 4, connects to 1 community
+- [[dot-Start()_1]] - degree 4, connects to 1 community
+- [[SantaRitaRoomCutaway.cs]] - degree 2, connects to 1 community

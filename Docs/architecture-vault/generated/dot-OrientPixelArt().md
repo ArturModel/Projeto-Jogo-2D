@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs"
 type: "code"
-community: "Community 38"
+community: "Community 39"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_39
 ---
 
 # .OrientPixelArt()
@@ -15,4 +15,4 @@ tags:
 - [[dot-UpdateCamera()]] - `calls` [INFERRED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_39

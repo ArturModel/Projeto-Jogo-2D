@@ -1,20 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs"
 type: "code"
-community: "Community 16"
-location: "L142"
+community: "Community 2"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_2
 ---
 
 # .Lamp()
 
 ## Connections
-- [[dot-Center()]] - `calls` [EXTRACTED]
-- [[dot-Interior()]] - `calls` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
-- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
+- [[dot-BuildRoom()]] - `calls` [EXTRACTED]
+- [[dot-Cylinder()]] - `calls` [INFERRED]
+- [[dot-Mat()]] - `calls` [INFERRED]
+- [[Light]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `method` [EXTRACTED]
+- [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_2

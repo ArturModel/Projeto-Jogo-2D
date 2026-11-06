@@ -1,23 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaParallax.cs"
 type: "code"
-community: "Community 18"
-location: "L85"
+community: "Community 122"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_122
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-Blocked()]] - `calls` [EXTRACTED]
-- [[dot-Close()_1]] - `calls` [EXTRACTED]
-- [[dot-Icon()]] - `calls` [EXTRACTED]
-- [[dot-Name()]] - `calls` [EXTRACTED]
-- [[dot-Quick()]] - `calls` [EXTRACTED]
-- [[dot-Rebuild()]] - `calls` [EXTRACTED]
-- [[SantaRitaInventory]] - `method` [EXTRACTED]
+- [[CamadaParallax]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_122

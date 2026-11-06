@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 100"
-location: "L41"
+community: "Community 0"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_100
+  - community/Community_0
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AnguloEm()]] - `calls` [EXTRACTED]
-- [[dot-AplicarAngulo()]] - `calls` [EXTRACTED]
-- [[LimpadorParabrisa]] - `method` [EXTRACTED]
+- [[dot-Finish()]] - `calls` [EXTRACTED]
+- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_100
+#graphify/code #graphify/EXTRACTED #community/Community_0

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 25"
+community: "Community 8"
 location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_8
 ---
 
 # Chuva
@@ -29,28 +29,28 @@ tags:
 - [[dot-DesenharPocas()]] - `method` [EXTRACTED]
 - [[dot-DesenharRespingo()]] - `method` [EXTRACTED]
 - [[dot-GarantirCamadas()]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_5]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_13]] - `method` [EXTRACTED]
 - [[dot-LiberarCamada()]] - `method` [EXTRACTED]
-- [[dot-Limpar()]] - `method` [EXTRACTED]
+- [[dot-Limpar()_3]] - `method` [EXTRACTED]
 - [[dot-MetadeDaTela()]] - `method` [EXTRACTED]
 - [[dot-MontarSom()]] - `method` [EXTRACTED]
 - [[dot-NovaGota()]] - `method` [EXTRACTED]
 - [[dot-NovoRespingo()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_5]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_2]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_2]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_15]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_11]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_10]] - `method` [EXTRACTED]
 - [[dot-ParaPixel()]] - `method` [EXTRACTED]
 - [[dot-Pintar()]] - `method` [EXTRACTED]
 - [[dot-RespingoDePasso()]] - `method` [EXTRACTED]
 - [[dot-Run()]] - `references` [EXTRACTED]
 - [[dot-Simular()]] - `method` [EXTRACTED]
-- [[dot-Start()_2]] - `references` [EXTRACTED]
-- [[dot-Start()_10]] - `method` [EXTRACTED]
+- [[dot-Start()_4]] - `references` [EXTRACTED]
+- [[dot-Start()_24]] - `method` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioMixerGroup]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
-- [[Camada_2]] - `references` [EXTRACTED]
-- [[Camada]] - `contains` [EXTRACTED]
+- [[Camada_3]] - `references` [EXTRACTED]
+- [[Camada_1]] - `contains` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[Chuva.cs]] - `contains` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
@@ -66,4 +66,4 @@ tags:
 - [[Respingo]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_8

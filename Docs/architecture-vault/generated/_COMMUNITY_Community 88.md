@@ -1,17 +1,19 @@
 ---
 type: community
-members: 4
+members: 6
 ---
 
 # Community 88
 
-**Members:** 4 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[dot-Configurar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
-- [[dot-RemoveIfExists()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
-- [[dot-UpdateCasaDoAvoScene()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaChapter1Builder.cs
-- [[TipoInteracao_1]] - code
+- [[dot-Apply()_6]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
+- [[dot-Edge()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
+- [[dot-Paint()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
+- [[SantaRitaRuralPaths]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
+- [[Stretch]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs
+- [[Stretch_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,15 +23,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 5]]
-- 2 edges to [[_COMMUNITY_Community 110]]
-- 2 edges to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 26]]
+- 4 edges to [[_COMMUNITY_Community 20]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 16]]
+- 2 edges to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 11]]
 
 ## Top bridge nodes
-- [[dot-UpdateCasaDoAvoScene()]] - degree 8, connects to 5 communities
-- [[dot-Configurar()_2]] - degree 4, connects to 2 communities
-- [[dot-RemoveIfExists()]] - degree 3, connects to 2 communities
-- [[TipoInteracao_1]] - degree 3, connects to 2 communities
+- [[dot-Paint()]] - degree 11, connects to 6 communities
+- [[dot-Apply()_6]] - degree 7, connects to 3 communities
+- [[SantaRitaRuralPaths]] - degree 5, connects to 1 community
+- [[dot-Edge()]] - degree 4, connects to 1 community
+- [[Stretch]] - degree 3, connects to 1 community

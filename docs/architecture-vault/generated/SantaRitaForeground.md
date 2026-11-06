@@ -12,10 +12,10 @@ tags:
 # SantaRitaForeground
 
 ## Connections
-- [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Apply()_2]] - `references` [EXTRACTED]
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_2]] - `method` [EXTRACTED]
-- [[dot-Start()_7]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_4]] - `method` [EXTRACTED]
+- [[dot-Start()_8]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaForeground.cs]] - `contains` [EXTRACTED]

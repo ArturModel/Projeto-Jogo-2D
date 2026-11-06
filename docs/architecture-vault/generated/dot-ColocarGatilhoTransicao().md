@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 29"
+community: "Community 24"
 location: "L1509"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_24
 ---
 
 # .ColocarGatilhoTransicao()
 
 ## Connections
-- [[dot-Configurar()_1]] - `calls` [INFERRED]
+- [[dot-Configurar()_2]] - `calls` [INFERRED]
 - [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]
@@ -30,4 +30,4 @@ tags:
 - [[Vector3]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_24

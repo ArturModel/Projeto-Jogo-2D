@@ -1,41 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs"
 type: "code"
-community: "Community 87"
-location: "L17"
+community: "Community 88"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_88
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-ApplyMacroTiles()]] - `calls` [EXTRACTED]
-- [[dot-BusStationRoutine()]] - `calls` [EXTRACTED]
-- [[dot-ContactShadow()]] - `calls` [EXTRACTED]
-- [[dot-DecorateTerrain()]] - `calls` [EXTRACTED]
-- [[dot-NeutralSprite()]] - `calls` [EXTRACTED]
-- [[BoxCollider2D]] - `references` [EXTRACTED]
-- [[Camera]] - `references` [EXTRACTED]
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[ColorAdjustments]] - `references` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
+- [[dot-Center()]] - `calls` [EXTRACTED]
+- [[dot-Paint()]] - `calls` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaArtProduction]] - `method` [EXTRACTED]
-- [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
-- [[SantaRitaFootsteps]] - `references` [EXTRACTED]
-- [[ShadowCaster2D]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
-- [[TextMeshPro]] - `references` [EXTRACTED]
+- [[SantaRitaRuralPaths]] - `method` [EXTRACTED]
+- [[Stretch]] - `calls` [EXTRACTED]
 - [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
-- [[Vignette]] - `references` [EXTRACTED]
-- [[Volume]] - `references` [EXTRACTED]
-- [[VolumeProfile]] - `references` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_88

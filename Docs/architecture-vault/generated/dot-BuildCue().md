@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs"
 type: "code"
-community: "Community 110"
+community: "Community 2"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_110
+  - community/Community_2
 ---
 
 # .BuildCue()
@@ -17,4 +17,4 @@ tags:
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_110
+#graphify/code #graphify/EXTRACTED #community/Community_2

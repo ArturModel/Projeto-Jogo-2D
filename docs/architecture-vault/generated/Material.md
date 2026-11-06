@@ -11,11 +11,11 @@ tags:
 # Material
 
 ## Connections
-- [[dot-Apply()_6]] - `references` [EXTRACTED]
-- [[dot-Apply()]] - `references` [EXTRACTED]
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
 - [[dot-Apply()_3]] - `references` [EXTRACTED]
-- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-Apply()_5]] - `references` [EXTRACTED]
+- [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-ApplyC1()]] - `references` [EXTRACTED]
 - [[dot-ApplyC2()]] - `references` [EXTRACTED]
 - [[dot-Awake()_17]] - `references` [EXTRACTED]
@@ -38,11 +38,12 @@ tags:
 - [[dot-Primitive()]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Sphere()]] - `references` [EXTRACTED]
+- [[dot-Start()_16]] - `references` [EXTRACTED]
 - [[dot-Start()_9]] - `references` [EXTRACTED]
-- [[dot-Start()_19]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
 - [[dot-Tube()]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]
+- [[PrologoEstradaGraphic]] - `references` [EXTRACTED]
 - [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
 - [[SantaRitaC2Consolidation]] - `references` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `references` [EXTRACTED]

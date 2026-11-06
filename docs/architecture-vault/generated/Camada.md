@@ -1,23 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs"
 type: "code"
-community: "Community 25"
-location: "L115"
+community: "Community 46"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_25
+  - community/Community_46
 ---
 
 # Camada
 
 ## Connections
-- [[dot-CriarCamada()]] - `calls` [EXTRACTED]
-- [[Chuva]] - `contains` [EXTRACTED]
-- [[Color32]] - `references` [EXTRACTED]
-- [[List]] - `references` [EXTRACTED]
-- [[NativeArray]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[Ambiente]] - `case_of` [EXTRACTED]
+- [[Leitura]] - `case_of` [EXTRACTED]
+- [[MenuAmbienteGraphic]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_25
+#graphify/code #graphify/EXTRACTED #community/Community_46

@@ -1,24 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 0"
-location: "L569"
+community: "Community 100"
+location: "L238"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Community_0
+  - graphify/EXTRACTED
+  - community/Community_100
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-FecharSeAberto()]] - `calls` [EXTRACTED]
-- [[dot-Hide()]] - `calls` [INFERRED]
-- [[dot-Run()_2]] - `calls` [INFERRED]
-- [[dot-RunAtlas()]] - `calls` [INFERRED]
-- [[dot-RunNotebook()]] - `calls` [INFERRED]
-- [[dot-Travel()]] - `calls` [INFERRED]
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `calls` [INFERRED]
+- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_100

@@ -1,30 +1,33 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 19"
+community: "Community 30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_30
 ---
 
 # Action
 
 ## Connections
-- [[dot-Abrir()_2]] - `references` [EXTRACTED]
+- [[dot-Abrir()_1]] - `references` [EXTRACTED]
 - [[dot-AbrirSelecaoCarregar()]] - `references` [EXTRACTED]
 - [[dot-Avancar()_2]] - `references` [EXTRACTED]
-- [[dot-Botao()_1]] - `references` [EXTRACTED]
+- [[dot-Botao()_2]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
 - [[dot-CaptureArt()]] - `references` [EXTRACTED]
 - [[dot-ComecarNovaSerie()]] - `references` [EXTRACTED]
+- [[dot-Construir()_2]] - `references` [EXTRACTED]
 - [[dot-Dialogo()]] - `references` [EXTRACTED]
 - [[dot-Falar()_1]] - `references` [EXTRACTED]
 - [[dot-IniciarConfronto()]] - `references` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `references` [EXTRACTED]
-- [[dot-Initialize()]] - `references` [EXTRACTED]
 - [[dot-Initialize()_1]] - `references` [EXTRACTED]
+- [[dot-Initialize()]] - `references` [EXTRACTED]
 - [[dot-Oferecer()]] - `references` [EXTRACTED]
+- [[dot-PrepararSaida()]] - `references` [EXTRACTED]
+- [[dot-Sair()_1]] - `references` [EXTRACTED]
 - [[dot-Show()_1]] - `references` [EXTRACTED]
 - [[dot-Show()_2]] - `references` [EXTRACTED]
 - [[dot-ShowDialogue()]] - `references` [EXTRACTED]
@@ -38,10 +41,11 @@ tags:
 - [[MarcusNotebookUI]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `references` [EXTRACTED]
 - [[SantaRitaAtlasView]] - `references` [EXTRACTED]
 - [[SantaRitaItemHover]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaSpinSelector]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_30

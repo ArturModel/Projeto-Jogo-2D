@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "Community 111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_111
 ---
 
 # RuntimeInitializeOnLoadMethod
@@ -15,11 +15,13 @@ tags:
 - [[dot-AutoBootstrap()]] - `references` [EXTRACTED]
 - [[dot-Boot()]] - `references` [EXTRACTED]
 - [[dot-Bootstrap()]] - `references` [EXTRACTED]
+- [[dot-Bootstrap()_1]] - `references` [EXTRACTED]
 - [[dot-InicializarAudioGlobal()]] - `references` [EXTRACTED]
 - [[dot-Init()]] - `references` [EXTRACTED]
 - [[dot-Init()_1]] - `references` [EXTRACTED]
-- [[dot-Install()]] - `references` [EXTRACTED]
+- [[dot-Instalar()]] - `references` [EXTRACTED]
 - [[dot-Install()_1]] - `references` [EXTRACTED]
+- [[dot-Install()]] - `references` [EXTRACTED]
 - [[dot-PrepararSessao()]] - `references` [EXTRACTED]
 - [[dot-ReiniciarSelecao()]] - `references` [EXTRACTED]
 - [[dot-ResetArt()]] - `references` [EXTRACTED]
@@ -31,4 +33,4 @@ tags:
 - [[dot-ResetStatic()_3]] - `references` [EXTRACTED]
 - [[dot-StartSession()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_111

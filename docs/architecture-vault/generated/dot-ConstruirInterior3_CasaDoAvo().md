@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 29"
+community: "Community 24"
 location: "L2209"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_24
 ---
 
 # .ConstruirInterior3_CasaDoAvo()
@@ -26,4 +26,4 @@ tags:
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_24

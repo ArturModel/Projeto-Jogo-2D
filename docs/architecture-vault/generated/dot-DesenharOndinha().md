@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 31"
+community: "Community 8"
 location: "L698"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_31
+  - community/Community_8
 ---
 
 # .DesenharOndinha()
@@ -18,4 +18,4 @@ tags:
 - [[Chuva]] - `method` [EXTRACTED]
 - [[Respingo_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_31
+#graphify/code #graphify/EXTRACTED #community/Community_8

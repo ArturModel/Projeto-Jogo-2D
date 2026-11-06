@@ -12,6 +12,8 @@ tags:
 
 ## Connections
 - [[dot-TapR2()]] - `references` [EXTRACTED]
+- [[dot-Tecla()]] - `references` [EXTRACTED]
+- [[dot-Tecla()_1]] - `references` [EXTRACTED]
 - [[dot-WalkAccess()]] - `references` [EXTRACTED]
 - [[dot-WalkAccessFilm()]] - `references` [EXTRACTED]
 

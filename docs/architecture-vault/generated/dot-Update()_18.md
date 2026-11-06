@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs"
 type: "code"
-community: "Community 24"
-location: "L123"
+community: "Community 26"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_26
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Current()]] - `calls` [EXTRACTED]
-- [[dot-Turn()]] - `calls` [EXTRACTED]
-- [[MarcusNotebookUI]] - `method` [EXTRACTED]
+- [[ObjetoCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_26

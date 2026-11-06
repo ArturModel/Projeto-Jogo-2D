@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 26"
+community: "Community 18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_18
 ---
 
 # Sprite
 
 ## Connections
 - [[dot-Add()]] - `references` [EXTRACTED]
-- [[dot-Apply()_6]] - `references` [EXTRACTED]
-- [[dot-Apply()]] - `references` [EXTRACTED]
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Art()]] - `references` [EXTRACTED]
 - [[dot-Art()_1]] - `references` [EXTRACTED]
@@ -38,7 +38,7 @@ tags:
 - [[dot-GerarIconeJogador()]] - `references` [EXTRACTED]
 - [[dot-GerarRetratoPixelArt()]] - `references` [EXTRACTED]
 - [[dot-Icon()]] - `references` [EXTRACTED]
-- [[dot-Interact()_5]] - `references` [EXTRACTED]
+- [[dot-Interact()_6]] - `references` [EXTRACTED]
 - [[dot-Interagir()]] - `references` [EXTRACTED]
 - [[dot-LiveSprite()]] - `references` [EXTRACTED]
 - [[dot-LoadIcons()]] - `references` [EXTRACTED]
@@ -56,7 +56,7 @@ tags:
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Replace()_1]] - `references` [EXTRACTED]
 - [[dot-ResolverRetrato()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
@@ -85,4 +85,4 @@ tags:
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[TileAleatorio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_18

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/CheckpointSystem.cs"
 type: "code"
-community: "Community 86"
+community: "Community 45"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_45
 ---
 
 # CheckpointSystem
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-BeginIsolatedTests()]] - `method` [EXTRACTED]
 - [[dot-CarregarSlot()]] - `method` [EXTRACTED]
+- [[dot-CarregarSlot()_1]] - `method` [EXTRACTED]
 - [[dot-Clear()]] - `method` [EXTRACTED]
 - [[dot-ClearPendingOnly()]] - `method` [EXTRACTED]
 - [[dot-ConsumePendingSpawn()]] - `method` [EXTRACTED]
@@ -46,4 +47,4 @@ tags:
 - [[TestPrefix]] - `defines` [EXTRACTED]
 - [[UltimoSlotUsado]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_45

@@ -12,7 +12,7 @@ tags:
 # .BuildOverlay()
 
 ## Connections
-- [[dot-Awake()_23]] - `calls` [EXTRACTED]
+- [[dot-Awake()_25]] - `calls` [EXTRACTED]
 - [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[Canvas]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]

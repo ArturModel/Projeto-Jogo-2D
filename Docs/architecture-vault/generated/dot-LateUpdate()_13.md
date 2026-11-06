@@ -1,17 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 94"
-location: "L20"
+community: "Community 8"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_94
+  - community/Community_8
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
+- [[dot-AtualizarClima()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarSom()]] - `calls` [EXTRACTED]
+- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
+- [[dot-Desenhar()]] - `calls` [EXTRACTED]
+- [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
+- [[dot-Simular()]] - `calls` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_8

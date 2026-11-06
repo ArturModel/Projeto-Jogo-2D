@@ -11,10 +11,10 @@ tags:
 # TextAsset
 
 ## Connections
-- [[dot-Awake()_7]] - `references` [EXTRACTED]
+- [[dot-Awake()_15]] - `references` [EXTRACTED]
 - [[dot-CarregarConteudo()]] - `references` [EXTRACTED]
 - [[dot-Load()]] - `references` [EXTRACTED]
 - [[dot-Narrative()]] - `references` [EXTRACTED]
-- [[dot-Project()]] - `references` [EXTRACTED]
+- [[dot-Project()_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_51

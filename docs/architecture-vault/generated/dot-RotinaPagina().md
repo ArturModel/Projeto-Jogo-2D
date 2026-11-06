@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 19"
+community: "Community 30"
 location: "L481"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_30
 ---
 
 # .RotinaPagina()
 
 ## Connections
-- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Avancar()]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarRetratoEFalante()]] - `calls` [EXTRACTED]
 - [[dot-Digitar()]] - `calls` [EXTRACTED]
 - [[dot-Fade()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_30

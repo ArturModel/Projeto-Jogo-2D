@@ -1,29 +1,30 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 8"
+community: "Community 19"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_19
 ---
 
 # PrologoDirector
 
 ## Connections
 - [[dot-AteOTempo()]] - `method` [EXTRACTED]
-- [[dot-Awake()_21]] - `method` [EXTRACTED]
+- [[dot-Awake()_9]] - `method` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
 - [[dot-Curvar()]] - `method` [EXTRACTED]
 - [[dot-Desacelerar()]] - `method` [EXTRACTED]
 - [[dot-DispararFalasVencidas()]] - `method` [EXTRACTED]
-- [[dot-Encerrar()]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_1]] - `method` [EXTRACTED]
 - [[dot-MontarCortina()]] - `method` [EXTRACTED]
 - [[dot-Revelar()]] - `method` [EXTRACTED]
 - [[dot-Rodar()_2]] - `method` [EXTRACTED]
-- [[dot-Start()_21]] - `references` [EXTRACTED]
-- [[dot-Start()_16]] - `method` [EXTRACTED]
-- [[dot-Update()_29]] - `method` [EXTRACTED]
+- [[dot-Start()_15]] - `references` [EXTRACTED]
+- [[dot-Start()_14]] - `method` [EXTRACTED]
+- [[dot-Update()_14]] - `method` [EXTRACTED]
 - [[dot-UpdatePrologoScene()]] - `references` [EXTRACTED]
 - [[EstradaScroller]] - `references` [EXTRACTED]
 - [[FalaMarcada_1]] - `references` [EXTRACTED]
@@ -34,4 +35,4 @@ tags:
 - [[PonteiroCarro]] - `references` [EXTRACTED]
 - [[PrologoDirector.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_19

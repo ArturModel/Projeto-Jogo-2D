@@ -1,41 +1,38 @@
 ---
 type: community
-members: 28
+members: 25
 ---
 
 # Community 30
 
-**Members:** 28 nodes
+**Members:** 25 nodes
 
 ## Members
-- [[dot-BrazilianRuleChecks()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs
-- [[dot-Check()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-ClickR4()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs
-- [[dot-DefinirCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-EscolherMelhorTacadaNormalMarcus()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
-- [[dot-Field()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-IntegratedFrameR4()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs
-- [[dot-Invoke()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-PauseLoadFiveSlots()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
-- [[dot-PointerSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
-- [[dot-Ref7Checks()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/SinucaRef7RuntimeVerification.cs
-- [[dot-RunSinuca3DPerspective()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
-- [[dot-RunSinucaR4()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs
-- [[dot-RunSinuquinha15()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
-- [[dot-ScreenSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
-- [[dot-SeriesFixtureR4()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs
-- [[dot-SimularPosicaoFinalBrancaPosImpacto()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
-- [[dot-SinucaPauseRegression()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-SinucaRegression()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs
-- [[dot-SinuquinhaKeyboard()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
-- [[dot-SinuquinhaMarked()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
-- [[dot-SinuquinhaPhysicalHand()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
-- [[dot-SinuquinhaSeriesFixture()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs
-- [[dot-ValidarInvarianteSeteBolas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-VerificarFisicaDeterministicaEBicos()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs
-- [[Button]] - code
-- [[IList]] - code
-- [[Mouse]] - code
+- [[dot-Avancar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-CarregarArteInspecao()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ConfigurarRetratoEFalante()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Digitar()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-DigitarPaginaAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Fade()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Falar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[dot-Fechar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-GerarRetratoPixelArt()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ParseLinhaAutomatica()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-PosicionarNoTopo()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ResolverRetrato()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-RotinaContinuacao()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-RotinaPagina()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Show()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Show()_1]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Show()_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ShowDialogue()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-ShowInspection()]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[dot-Update()_21]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[Action]] - code
+- [[GameMessageUI]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[Instance_8]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[IsShowing_2]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
+- [[Vector4]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,43 +42,35 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 70 edges to [[_COMMUNITY_Community 0]]
-- 47 edges to [[_COMMUNITY_Community 48]]
-- 15 edges to [[_COMMUNITY_Community 3]]
-- 13 edges to [[_COMMUNITY_Community 86]]
-- 13 edges to [[_COMMUNITY_Community 110]]
-- 12 edges to [[_COMMUNITY_Community 36]]
-- 8 edges to [[_COMMUNITY_Community 12]]
-- 8 edges to [[_COMMUNITY_Community 43]]
-- 6 edges to [[_COMMUNITY_Community 13]]
-- 6 edges to [[_COMMUNITY_Community 24]]
-- 6 edges to [[_COMMUNITY_Community 35]]
+- 12 edges to [[_COMMUNITY_Community 13]]
+- 6 edges to [[_COMMUNITY_Community 7]]
+- 6 edges to [[_COMMUNITY_Community 0]]
 - 5 edges to [[_COMMUNITY_Community 18]]
-- 5 edges to [[_COMMUNITY_Community 26]]
-- 5 edges to [[_COMMUNITY_Community 34]]
-- 4 edges to [[_COMMUNITY_Community 89]]
-- 3 edges to [[_COMMUNITY_Community 19]]
-- 3 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 92]]
-- 3 edges to [[_COMMUNITY_Community 28]]
-- 3 edges to [[_COMMUNITY_Community 16]]
-- 3 edges to [[_COMMUNITY_Community 56]]
-- 2 edges to [[_COMMUNITY_Community 38]]
-- 2 edges to [[_COMMUNITY_Community 44]]
-- 2 edges to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 54]]
-- 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 2]]
+- 4 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 17]]
+- 3 edges to [[_COMMUNITY_Community 34]]
+- 3 edges to [[_COMMUNITY_Community 51]]
+- 2 edges to [[_COMMUNITY_Community 3]]
+- 2 edges to [[_COMMUNITY_Community 57]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 48]]
+- 2 edges to [[_COMMUNITY_Community 56]]
+- 2 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 110]]
+- 2 edges to [[_COMMUNITY_Community 15]]
+- 2 edges to [[_COMMUNITY_Community 84]]
 - 1 edge to [[_COMMUNITY_Community 27]]
-- 1 edge to [[_COMMUNITY_Community 25]]
-- 1 edge to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 51]]
+- 1 edge to [[_COMMUNITY_Community 28]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 83]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 87]]
 
 ## Top bridge nodes
-- [[dot-RunSinucaR4()]] - degree 39, connects to 12 communities
-- [[Button]] - degree 37, connects to 11 communities
-- [[dot-Ref7Checks()]] - degree 23, connects to 10 communities
-- [[dot-RunSinuca3DPerspective()]] - degree 32, connects to 8 communities
-- [[dot-RunSinuquinha15()]] - degree 30, connects to 8 communities
+- [[Action]] - degree 36, connects to 20 communities
+- [[GameMessageUI]] - degree 37, connects to 10 communities
+- [[dot-ShowInspection()]] - degree 9, connects to 3 communities
+- [[dot-PosicionarNoTopo()]] - degree 5, connects to 2 communities
+- [[dot-ShowDialogue()]] - degree 5, connects to 2 communities

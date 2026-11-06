@@ -8,10 +8,10 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[dot-ConectarManualmente()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
-- [[dot-ConfigureEnvironment()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
-- [[dot-WaitForEditor()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
-- [[SantaRitaMcpSetup]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaMcpSetup.cs
+- [[dot-Awake()_4]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
+- [[dot-Update()_3]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
+- [[ChuvaRolando]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
+- [[ChuvaRolando.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,9 +21,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 11]]
 
 ## Top bridge nodes
-- [[SantaRitaMcpSetup]] - degree 4, connects to 1 community
-- [[dot-ConectarManualmente()]] - degree 4, connects to 1 community
+- [[ChuvaRolando]] - degree 5, connects to 2 communities
+- [[ChuvaRolando.cs]] - degree 2, connects to 1 community

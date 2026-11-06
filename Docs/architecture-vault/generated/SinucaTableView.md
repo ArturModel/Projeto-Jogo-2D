@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 36"
+community: "Community 39"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_39
 ---
 
 # SinucaTableView
@@ -16,20 +16,20 @@ tags:
 - [[dot-AlternarCamera()]] - `method` [EXTRACTED]
 - [[dot-AngularScreenSign()]] - `method` [EXTRACTED]
 - [[dot-AtualizarEstadoRender()]] - `method` [EXTRACTED]
-- [[dot-Awake()_14]] - `method` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
+- [[dot-Awake()_16]] - `method` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CorDaBola()]] - `method` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `method` [EXTRACTED]
 - [[dot-DefinirZoom()]] - `method` [EXTRACTED]
 - [[dot-EnsureRoom()]] - `method` [EXTRACTED]
 - [[dot-InicializarOverlays()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_6]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_3]] - `method` [EXTRACTED]
-- [[dot-OnDrag()_2]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_4]] - `method` [EXTRACTED]
-- [[dot-OnPointerDown()_2]] - `method` [EXTRACTED]
-- [[dot-OnPointerMove()_1]] - `method` [EXTRACTED]
-- [[dot-OnPointerUp()_1]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_9]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_7]] - `method` [EXTRACTED]
+- [[dot-OnDrag()_1]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_6]] - `method` [EXTRACTED]
+- [[dot-OnPointerDown()_1]] - `method` [EXTRACTED]
+- [[dot-OnPointerMove()]] - `method` [EXTRACTED]
+- [[dot-OnPointerUp()]] - `method` [EXTRACTED]
 - [[dot-OnPopulateMesh()_2]] - `method` [EXTRACTED]
 - [[dot-OnScroll()]] - `method` [EXTRACTED]
 - [[dot-Orbit()_1]] - `method` [EXTRACTED]
@@ -38,7 +38,7 @@ tags:
 - [[dot-ProjetarPontoMesaParaLocalUI()]] - `method` [EXTRACTED]
 - [[dot-RecentrarCamera()]] - `method` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
-- [[dot-Run()_7]] - `references` [EXTRACTED]
+- [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
@@ -64,4 +64,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Zoom]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_39

@@ -295,6 +295,12 @@ public static class CheckpointSystem
 
     public static bool CarregarSlot(int slotIndex)
     {
+        return CarregarSlot(slotIndex, false);
+    }
+
+    public static bool CarregarSlot(int slotIndex, bool transicaoDireta)
+    {
+        if (transicaoDireta && SceneFader.IsTransitioning) return false;
         if (!TryLoadSlot(slotIndex, out ManualSaveData data))
             return false;
 
@@ -302,7 +308,8 @@ public static class CheckpointSystem
         pendingSpawn = true;
         pendingSlotIndex = slotIndex;
         PlayerPrefs.SetInt(PrefKeyLastSlot, slotIndex);
-        SceneFader.Instance.LoadScene(data.sceneName);
+        if (transicaoDireta) SceneFader.Instance.LoadSceneSuave(data.sceneName);
+        else SceneFader.Instance.LoadScene(data.sceneName);
         return true;
     }
 

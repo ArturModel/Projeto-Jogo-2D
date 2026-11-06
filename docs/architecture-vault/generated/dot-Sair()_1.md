@@ -1,17 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MainMenuActions.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
 type: "code"
-community: "Community 19"
-location: "L39"
+community: "Community 110"
+location: "L278"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_110
 ---
 
 # .Sair()
 
 ## Connections
-- [[MainMenuActions]] - `method` [EXTRACTED]
+- [[dot-PrepararSaida()]] - `calls` [EXTRACTED]
+- [[Action]] - `references` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[MenuAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_110

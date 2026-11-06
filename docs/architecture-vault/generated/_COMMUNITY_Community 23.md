@@ -1,26 +1,33 @@
 ---
 type: community
-members: 13
+members: 20
 ---
 
 # Community 23
 
-**Members:** 13 nodes
+**Members:** 20 nodes
 
 ## Members
-- [[dot-ConstruirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirModal()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirPainelEfeitoOpcional()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirUI()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CorDaBola()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-CriarBolasNaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarBotaoHUD()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarSpriteCirculo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarTexto()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Posicionar()_3]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Cenario()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Chao()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Cor()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Disco()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Estrada()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Faixa()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Linha()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-OnDestroy()_7]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-OnPopulateMesh()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Projetar()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Quad()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-QuadTextura()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Ruido()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-SpriteCenario()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-TerraEm()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Vertice()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Vidro()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
 - [[Color]] - code
-- [[Outline]] - code
-- [[TextAlignmentOptions]] - code
+- [[PrologoEstradaGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[mainTexture]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,36 +37,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_Community 12]]
-- 12 edges to [[_COMMUNITY_Community 3]]
 - 10 edges to [[_COMMUNITY_Community 9]]
-- 9 edges to [[_COMMUNITY_Community 89]]
-- 6 edges to [[_COMMUNITY_Community 29]]
-- 6 edges to [[_COMMUNITY_Community 24]]
-- 3 edges to [[_COMMUNITY_Community 36]]
-- 3 edges to [[_COMMUNITY_Community 110]]
-- 3 edges to [[_COMMUNITY_Community 21]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 3 edges to [[_COMMUNITY_Community 40]]
-- 2 edges to [[_COMMUNITY_Community 25]]
-- 2 edges to [[_COMMUNITY_Community 19]]
-- 2 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 26]]
-- 2 edges to [[_COMMUNITY_Community 31]]
+- 9 edges to [[_COMMUNITY_Community 46]]
+- 7 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 8]]
+- 3 edges to [[_COMMUNITY_Community 33]]
+- 3 edges to [[_COMMUNITY_Community 2]]
+- 3 edges to [[_COMMUNITY_Community 5]]
+- 3 edges to [[_COMMUNITY_Community 7]]
+- 2 edges to [[_COMMUNITY_Community 12]]
+- 2 edges to [[_COMMUNITY_Community 17]]
+- 2 edges to [[_COMMUNITY_Community 92]]
+- 2 edges to [[_COMMUNITY_Community 28]]
+- 2 edges to [[_COMMUNITY_Community 34]]
+- 2 edges to [[_COMMUNITY_Community 24]]
+- 2 edges to [[_COMMUNITY_Community 51]]
 - 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 49]]
-- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 40]]
 - 1 edge to [[_COMMUNITY_Community 11]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 51]]
+- 1 edge to [[_COMMUNITY_Community 15]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 56]]
 
 ## Top bridge nodes
-- [[Color]] - degree 40, connects to 20 communities
-- [[dot-CriarBotaoHUD()]] - degree 15, connects to 8 communities
-- [[dot-ConstruirUI()]] - degree 23, connects to 6 communities
-- [[dot-CriarBolasNaMesa()]] - degree 12, connects to 5 communities
-- [[dot-ConstruirModal()]] - degree 10, connects to 5 communities
+- [[Color]] - degree 56, connects to 21 communities
+- [[PrologoEstradaGraphic]] - degree 26, connects to 8 communities
+- [[dot-Projetar()]] - degree 7, connects to 2 communities
+- [[dot-Quad()]] - degree 8, connects to 1 community
+- [[dot-QuadTextura()]] - degree 7, connects to 1 community

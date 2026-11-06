@@ -1,25 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 9"
-location: "L102"
+community: "Community 46"
+location: "L336"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_46
 ---
 
 # .OnPopulateMesh()
 
 ## Connections
 - [[dot-BallColor()]] - `calls` [EXTRACTED]
-- [[dot-CameraBasis()]] - `calls` [EXTRACTED]
-- [[dot-Disc()_1]] - `calls` [EXTRACTED]
-- [[dot-Line()]] - `calls` [EXTRACTED]
-- [[dot-Ring()_1]] - `calls` [EXTRACTED]
-- [[dot-Sphere()_1]] - `calls` [EXTRACTED]
-- [[dot-Triangle()]] - `calls` [EXTRACTED]
-- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[dot-Circle()]] - `calls` [EXTRACTED]
+- [[dot-MapPoint()]] - `calls` [EXTRACTED]
+- [[dot-Quad()_1]] - `calls` [EXTRACTED]
+- [[BochaMapGraphic]] - `method` [EXTRACTED]
 - [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_46

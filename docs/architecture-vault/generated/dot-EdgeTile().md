@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaArtProduction.cs"
 type: "code"
-community: "Community 87"
+community: "Community 20"
 location: "L242"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_87
+  - community/Community_20
 ---
 
 # .EdgeTile()
@@ -17,4 +17,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[Tile]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/EXTRACTED #community/Community_20

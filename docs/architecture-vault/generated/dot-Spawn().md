@@ -12,7 +12,7 @@ tags:
 # .Spawn()
 
 ## Connections
-- [[dot-Apply()]] - `calls` [EXTRACTED]
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
 - [[dot-Deposito()]] - `calls` [EXTRACTED]
 - [[dot-Empty()]] - `calls` [EXTRACTED]
 - [[SantaRitaC2Consolidation]] - `method` [EXTRACTED]

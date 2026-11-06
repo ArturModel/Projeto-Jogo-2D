@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Interagir()_1]] - `calls` [INFERRED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
 - [[PortaLuvasCarro]] - `method` [EXTRACTED]

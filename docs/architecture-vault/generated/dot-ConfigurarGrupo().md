@@ -12,7 +12,7 @@ tags:
 # .ConfigurarGrupo()
 
 ## Connections
-- [[dot-Awake()_18]] - `calls` [EXTRACTED]
+- [[dot-Awake()_21]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `method` [EXTRACTED]
 

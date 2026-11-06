@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 7"
+community: "Community 15"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_15
 ---
 
 # Fala
@@ -15,4 +15,4 @@ tags:
 - [[dot-Enfileirar()]] - `calls` [EXTRACTED]
 - [[Legenda]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_15

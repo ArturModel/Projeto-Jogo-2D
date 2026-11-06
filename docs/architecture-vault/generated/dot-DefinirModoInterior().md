@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 28"
+community: "Community 8"
 location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_8
 ---
 
 # .DefinirModoInterior()
@@ -16,4 +16,4 @@ tags:
 - [[dot-AtualizarFiltroInterior()]] - `calls` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_8

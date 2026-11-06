@@ -1,30 +1,36 @@
 ---
 type: community
-members: 17
+members: 23
 ---
 
 # Community 46
 
-**Members:** 17 nodes
+**Members:** 23 nodes
 
 ## Members
-- [[dot-OnDrag()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnDrag()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnPointerDown()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerDown()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnPointerEnter()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnPointerExit()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-OnPointerMove()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerMove()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnPointerUp()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPointerUp()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-OnScroll()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-RayToTable()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
-- [[dot-ScreenToTablePoint()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[IPointerEnterHandler]] - code
-- [[IPointerExitHandler]] - code
-- [[PointerEventData]] - code
-- [[SantaRitaItemHover]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
+- [[dot-Anel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Caixa()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Chuva()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Circle()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Halo()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Hash()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Leitura()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Linha()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-MapPoint()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnPopulateMesh()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnPopulateMesh()_4]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Ondas()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Pos()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Quad()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Quad()_2]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[dot-Reflexos()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[Ambiente]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[BochaMapGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[Camada]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[Leitura]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[MenuAmbienteGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs
+- [[Simulation]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[VertexHelper]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,21 +40,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 36]]
-- 6 edges to [[_COMMUNITY_Community 9]]
-- 4 edges to [[_COMMUNITY_Community 17]]
-- 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 2 edges to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 94]]
-- 1 edge to [[_COMMUNITY_Community 1]]
+- 9 edges to [[_COMMUNITY_Community 23]]
+- 7 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 9]]
+- 4 edges to [[_COMMUNITY_Community 28]]
+- 3 edges to [[_COMMUNITY_Community 110]]
+- 3 edges to [[_COMMUNITY_Community 17]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 39]]
 
 ## Top bridge nodes
-- [[PointerEventData]] - degree 21, connects to 5 communities
-- [[SantaRitaItemHover]] - degree 8, connects to 4 communities
-- [[dot-ScreenToTablePoint()]] - degree 8, connects to 2 communities
-- [[dot-RayToTable()]] - degree 3, connects to 2 communities
-- [[dot-OnPointerMove()_1]] - degree 4, connects to 1 community
+- [[MenuAmbienteGraphic]] - degree 21, connects to 6 communities
+- [[BochaMapGraphic]] - degree 12, connects to 5 communities
+- [[VertexHelper]] - degree 20, connects to 4 communities
+- [[dot-Linha()_1]] - degree 8, connects to 2 communities
+- [[dot-Anel()]] - degree 7, connects to 2 communities

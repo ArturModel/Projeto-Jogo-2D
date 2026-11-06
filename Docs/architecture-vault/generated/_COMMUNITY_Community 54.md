@@ -1,20 +1,19 @@
 ---
 type: community
-members: 7
+members: 6
 ---
 
 # Community 54
 
-**Members:** 7 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[dot-CriarTextura()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-OnDestroy()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-OnEnable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-Update()_27]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[dot-VolumeDaCamada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[SantaRitaBarAudio]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
-- [[SantaRitaBarAudio.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs
+- [[dot-Avancar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Retroceder()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-TocarSom()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Update()_30]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[HorizontalStepperNavigation]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[IDeselectHandler]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,16 +23,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 28]]
-- 2 edges to [[_COMMUNITY_Community 21]]
-- 2 edges to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 94]]
+- 4 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 96]]
+- 2 edges to [[_COMMUNITY_Community 95]]
+- 1 edge to [[_COMMUNITY_Community 57]]
 - 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[SantaRitaBarAudio]] - degree 10, connects to 4 communities
-- [[dot-CriarTextura()]] - degree 4, connects to 3 communities
-- [[dot-VolumeDaCamada()]] - degree 3, connects to 1 community
-- [[dot-OnEnable()_8]] - degree 2, connects to 1 community
-- [[SantaRitaBarAudio.cs]] - degree 2, connects to 1 community
+- [[HorizontalStepperNavigation]] - degree 16, connects to 5 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
 type: "code"
-community: "Community 94"
+community: "Community 6"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_94
+  - community/Community_6
 ---
 
 # SpawnPoint
@@ -16,9 +16,9 @@ tags:
 - [[dot-Capture()_1]] - `references` [EXTRACTED]
 - [[dot-Configurar()_3]] - `method` [EXTRACTED]
 - [[dot-CorrectApprovedGeography()]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_11]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_10]] - `method` [EXTRACTED]
 - [[dot-OnDrawGizmos()]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_11]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_9]] - `method` [EXTRACTED]
 - [[dot-Procurar()_1]] - `method` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-Spawn()]] - `references` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SpawnPoint.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_6

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 29"
+community: "Community 24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_24
 ---
 
 # BoxCollider2D
@@ -13,8 +13,8 @@ tags:
 ## Connections
 - [[dot-Add()]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
-- [[dot-Apply()_6]] - `references` [EXTRACTED]
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-Boundary()]] - `references` [EXTRACTED]
 - [[dot-Box()_1]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
@@ -33,6 +33,7 @@ tags:
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
 - [[dot-Interior()]] - `references` [EXTRACTED]
+- [[dot-Objeto()]] - `references` [EXTRACTED]
 - [[dot-Portal()_2]] - `references` [EXTRACTED]
 - [[dot-Portal()_1]] - `references` [EXTRACTED]
 - [[dot-Prop()]] - `references` [EXTRACTED]
@@ -44,4 +45,4 @@ tags:
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_24

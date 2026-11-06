@@ -1,31 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 18"
-location: "L51"
+community: "Community 15"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_15
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ActionButton()]] - `calls` [EXTRACTED]
-- [[dot-Assign()]] - `calls` [EXTRACTED]
-- [[dot-Cell()]] - `calls` [EXTRACTED]
-- [[dot-Close()_1]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-Frame()]] - `calls` [EXTRACTED]
-- [[dot-Label()]] - `calls` [EXTRACTED]
-- [[dot-LoadIcons()]] - `calls` [EXTRACTED]
-- [[dot-Picture()]] - `calls` [EXTRACTED]
-- [[dot-Toggle()]] - `calls` [EXTRACTED]
-- [[dot-Use()_1]] - `calls` [EXTRACTED]
-- [[dot-UseItem()]] - `calls` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[SantaRitaInventory]] - `method` [EXTRACTED]
-- [[SantaRitaItemHover]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_15

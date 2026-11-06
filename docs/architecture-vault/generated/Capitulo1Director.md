@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 2"
+community: "Community 24"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_24
 ---
 
 # Capitulo1Director
@@ -68,7 +68,7 @@ tags:
 - [[dot-ResetStatic()]] - `method` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `method` [EXTRACTED]
 - [[dot-TryObterInfoZona()]] - `method` [EXTRACTED]
-- [[dot-Update()_16]] - `method` [EXTRACTED]
+- [[dot-Update()_17]] - `method` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
@@ -78,7 +78,7 @@ tags:
 - [[GameObject]] - `references` [EXTRACTED]
 - [[InfoZona_1]] - `references` [EXTRACTED]
 - [[InfoZona]] - `contains` [EXTRACTED]
-- [[Instance_7]] - `defines` [EXTRACTED]
+- [[Instance_5]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[MovelLoja]] - `contains` [EXTRACTED]
 - [[PainelFechamentoAberto]] - `defines` [EXTRACTED]
@@ -91,4 +91,4 @@ tags:
 - [[ZonaId_1]] - `references` [EXTRACTED]
 - [[ZonaId]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_24

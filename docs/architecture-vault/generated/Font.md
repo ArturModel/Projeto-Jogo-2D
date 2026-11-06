@@ -1,17 +1,16 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
+source_file: ""
 type: "code"
-community: "Community 24"
-location: "L17"
+community: "Community 5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_5
 ---
 
 # Font
 
 ## Connections
-- [[UIFactory]] - `defines` [EXTRACTED]
+- [[dot-PrepareFont()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_5

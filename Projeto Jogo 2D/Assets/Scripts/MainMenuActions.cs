@@ -10,10 +10,24 @@ public class MainMenuActions : MonoBehaviour
     // orelhão salvo, sem repetir a abertura.
     [SerializeField] private string prologoSceneName = "Prologo";
 
+    private MenuAmbiente ambiente;
+
+    private void Awake()
+    {
+        if (gameObject.scene.name == "MainMenu")
+            ambiente = gameObject.GetComponent<MenuAmbiente>() ?? gameObject.AddComponent<MenuAmbiente>();
+    }
+
     public void NovoJogo()
     {
-        // Começo limpo: descarta o orelhão salvo e tudo que a partida anterior
-        // marcou (flags do prólogo, falas do orelhão já ouvidas, progresso).
+        if (ambiente != null && ambiente.PrepararSaida(IniciarViagem, true)) return;
+        IniciarViagem();
+    }
+
+    private void IniciarViagem()
+    {
+        // Começo limpo em RAM e spawn pendente. Clear preserva os slots manuais
+        // existentes; eles continuam disponíveis na seleção explícita de carga.
         CheckpointSystem.Clear();
         GameState.Limpar();
         SceneFader.Instance.LoadScene(prologoSceneName);
@@ -21,12 +35,6 @@ public class MainMenuActions : MonoBehaviour
 
     public void Continuar()
     {
-        if (!CheckpointSystem.HasCheckpoint)
-        {
-            Debug.Log("Nenhum orelhão registrado ainda.");
-            return;
-        }
-
         // Abre a seleção dos 5 Slots de Orelhão para o jogador escolher qual save carregar
         PayphoneCheckpoint.AbrirModalCarregarDoMenu();
     }
@@ -38,7 +46,12 @@ public class MainMenuActions : MonoBehaviour
 
     public void Sair()
     {
-        Debug.Log("Sair clicado!");
+        if (ambiente != null && ambiente.PrepararSaida(Encerrar, false)) return;
+        Encerrar();
+    }
+
+    private void Encerrar()
+    {
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

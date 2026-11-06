@@ -12,12 +12,12 @@ tags:
 # .MostrarModal()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
-- [[dot-Botao()_1]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
+- [[dot-Botao()_2]] - `calls` [EXTRACTED]
 - [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
 - [[dot-Derrota()]] - `calls` [EXTRACTED]
-- [[dot-Label()_1]] - `calls` [EXTRACTED]
+- [[dot-Label()]] - `calls` [EXTRACTED]
 - [[dot-Painel()]] - `calls` [EXTRACTED]
 - [[dot-Pausar()]] - `calls` [EXTRACTED]
 - [[dot-Regras()]] - `calls` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
 community: "Community 84"
-location: "L342"
+location: "L361"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .SincronizarCenasNoEditor()
 
 ## Connections
-- [[dot-Bootstrap()]] - `calls` [EXTRACTED]
+- [[dot-Bootstrap()_1]] - `calls` [EXTRACTED]
 - [[dot-CarregarCenaSegura()]] - `calls` [EXTRACTED]
 - [[dot-ResetStatic()_4]] - `calls` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]

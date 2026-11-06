@@ -12,11 +12,11 @@ tags:
 # ItemDeCena
 
 ## Connections
-- [[dot-Interact()_1]] - `method` [EXTRACTED]
+- [[dot-Interact()_4]] - `method` [EXTRACTED]
 - [[dot-RegistrarPistaLegada()]] - `method` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[ItemDeCena.cs]] - `contains` [EXTRACTED]
-- [[Prompt_1]] - `defines` [EXTRACTED]
+- [[Prompt_6]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

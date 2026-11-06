@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 84"
+community: "Community 24"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_24
 ---
 
 # TransicaoDeZonaTrigger
@@ -15,9 +15,9 @@ tags:
 - [[dot-CanInteractAt()_2]] - `method` [EXTRACTED]
 - [[dot-Capture()_1]] - `references` [EXTRACTED]
 - [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
-- [[dot-Configurar()_1]] - `method` [EXTRACTED]
+- [[dot-Configurar()_2]] - `method` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `references` [EXTRACTED]
-- [[dot-Interact()_9]] - `method` [EXTRACTED]
+- [[dot-Interact()_7]] - `method` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()_2]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-TentarTransicionar()]] - `method` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[Vector2]] - `references` [EXTRACTED]
 - [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_24

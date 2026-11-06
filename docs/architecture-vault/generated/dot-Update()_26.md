@@ -1,18 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 48"
-location: "L42"
+community: "Community 44"
+location: "L237"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_44
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Finish()]] - `calls` [EXTRACTED]
-- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
+- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
+- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
+- [[dot-FindNearest()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_9]] - `calls` [INFERRED]
+- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
+- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_44

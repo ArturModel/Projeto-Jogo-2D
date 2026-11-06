@@ -1,19 +1,18 @@
 ---
-source_file: "Tools/Aseprite/c2-workstations.lua"
+source_file: "Tools/Aseprite/marcus-flashlight.lua"
 type: "code"
-community: "Community 55"
-location: "L6"
+community: "Community 61"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_55
+  - community/Community_61
 ---
 
 # rect()
 
 ## Connections
-- [[box()_2]] - `calls` [EXTRACTED]
-- [[c2-workstations.lua]] - `contains` [EXTRACTED]
-- [[table()]] - `calls` [EXTRACTED]
+- [[line()_2]] - `calls` [EXTRACTED]
+- [[marcus-flashlight.lua]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_55
+#graphify/code #graphify/EXTRACTED #community/Community_61

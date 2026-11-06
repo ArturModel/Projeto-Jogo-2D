@@ -1,34 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "Community 18"
-location: "L24"
+community: "Community 19"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_19
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ActionButton()]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-Frame()]] - `calls` [EXTRACTED]
-- [[dot-Label()]] - `calls` [EXTRACTED]
-- [[dot-Place()_1]] - `calls` [EXTRACTED]
-- [[dot-PlayPause()]] - `calls` [EXTRACTED]
-- [[dot-Rewind()]] - `calls` [EXTRACTED]
-- [[dot-Select()]] - `calls` [EXTRACTED]
-- [[dot-Stop()]] - `calls` [EXTRACTED]
-- [[dot-TocarRadio()]] - `calls` [EXTRACTED]
+- [[AudioAmbiente]] - `method` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
-- [[TapeCatalog]] - `references` [EXTRACTED]
-- [[TextAsset]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_19

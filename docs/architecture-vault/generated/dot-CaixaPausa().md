@@ -12,9 +12,9 @@ tags:
 # .CaixaPausa()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-LoadSprite()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]

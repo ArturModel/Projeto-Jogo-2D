@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[c2-workstations.lua]] - `contains` [EXTRACTED]
-- [[rect()_2]] - `calls` [EXTRACTED]
+- [[rect()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_55

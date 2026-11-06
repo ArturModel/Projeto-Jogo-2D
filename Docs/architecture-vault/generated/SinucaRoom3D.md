@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs"
 type: "code"
-community: "Community 38"
+community: "Community 2"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_2
 ---
 
 # SinucaRoom3D
@@ -23,7 +23,7 @@ tags:
 - [[dot-Cylinder()]] - `method` [EXTRACTED]
 - [[dot-Dispose()]] - `method` [EXTRACTED]
 - [[dot-EnsureRoom()]] - `calls` [INFERRED]
-- [[dot-Lamp()_1]] - `method` [EXTRACTED]
+- [[dot-Lamp()_2]] - `method` [EXTRACTED]
 - [[dot-Mat()]] - `method` [EXTRACTED]
 - [[dot-NativeMesh()]] - `method` [EXTRACTED]
 - [[dot-NativeSurface()]] - `calls` [EXTRACTED]
@@ -48,7 +48,7 @@ tags:
 - [[dot-Sync()]] - `method` [EXTRACTED]
 - [[dot-Tube()]] - `method` [EXTRACTED]
 - [[dot-UpdateCamera()]] - `method` [EXTRACTED]
-- [[Actor_2]] - `references` [EXTRACTED]
+- [[Actor_1]] - `references` [EXTRACTED]
 - [[Actor]] - `contains` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[DarkWood]] - `defines` [EXTRACTED]
@@ -81,4 +81,4 @@ tags:
 - [[WallTile]] - `defines` [EXTRACTED]
 - [[Wood]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_2

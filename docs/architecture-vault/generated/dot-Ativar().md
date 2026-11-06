@@ -13,7 +13,8 @@ tags:
 
 ## Connections
 - [[dot-Dizer()]] - `calls` [EXTRACTED]
-- [[dot-Ligar()_1]] - `calls` [EXTRACTED]
+- [[dot-Interagir()_1]] - `calls` [INFERRED]
+- [[dot-Ligar()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[CelularCarro]] - `method` [EXTRACTED]
 

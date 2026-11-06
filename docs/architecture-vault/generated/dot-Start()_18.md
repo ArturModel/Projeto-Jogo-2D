@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs"
 type: "code"
-community: "Community 86"
-location: "L41"
+community: "Community 31"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_86
+  - community/Community_31
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
+- [[dot-AplicarVolume()]] - `calls` [EXTRACTED]
+- [[dot-GarantirValoresPadraoAudiveis()]] - `calls` [EXTRACTED]
+- [[AudioSettingsController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_86
+#graphify/code #graphify/EXTRACTED #community/Community_31

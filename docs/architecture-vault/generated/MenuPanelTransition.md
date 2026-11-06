@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[dot-AbrirOpcoes()]] - `method` [EXTRACTED]
-- [[dot-Awake()_18]] - `method` [EXTRACTED]
+- [[dot-Awake()_21]] - `method` [EXTRACTED]
 - [[dot-ConfigurarGrupo()]] - `method` [EXTRACTED]
-- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()]] - `references` [EXTRACTED]
 - [[dot-FecharOpcoes()]] - `method` [EXTRACTED]
 - [[dot-TrocarPainel()]] - `method` [EXTRACTED]
 - [[dot-Vincular()_4]] - `references` [EXTRACTED]

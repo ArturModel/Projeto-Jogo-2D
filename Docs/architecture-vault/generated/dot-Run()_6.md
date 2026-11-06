@@ -1,20 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaNotebookAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 5"
-location: "L12"
+community: "Community 6"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_6
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Landscape()]] - `calls` [EXTRACTED]
-- [[dot-PrepareFont()]] - `calls` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaNotebookAuthoring]] - `method` [EXTRACTED]
+- [[dot-ApprovedScenes()]] - `calls` [EXTRACTED]
+- [[dot-BuildFinalLivingWorld()]] - `calls` [EXTRACTED]
+- [[dot-BuildNormal()_2]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()_3]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()_2]] - `calls` [EXTRACTED]
+- [[dot-RegisterCampaignScenes()]] - `calls` [EXTRACTED]
+- [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
+- [[dot-Revision()]] - `calls` [EXTRACTED]
+- [[dot-Scenes()]] - `calls` [EXTRACTED]
+- [[dot-SourceHash()]] - `calls` [EXTRACTED]
+- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_6

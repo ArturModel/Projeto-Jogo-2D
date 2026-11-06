@@ -1,20 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
 type: "code"
-community: "Community 51"
-location: "L14"
+community: "Community 19"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_51
+  - community/Community_19
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Apply()_5]] - `calls` [EXTRACTED]
-- [[dot-ShouldReveal()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
+- [[dot-Encerrar()_3]] - `calls` [EXTRACTED]
+- [[dot-Legendar()]] - `calls` [EXTRACTED]
+- [[dot-MontarTela()]] - `calls` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[PonteiroCarro]] - `references` [EXTRACTED]
+- [[PrologoDirector]] - `references` [EXTRACTED]
+- [[PrologoVideo]] - `method` [EXTRACTED]
+- [[VideoPlayer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_51
+#graphify/code #graphify/EXTRACTED #community/Community_19

@@ -1,17 +1,19 @@
 ---
-source_file: "Tools/Aseprite/caderno.lua"
+source_file: "Tools/Aseprite/c2-workstations.lua"
 type: "code"
-community: "Community 119"
-location: "L5"
+community: "Community 55"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_119
+  - community/Community_55
 ---
 
 # rect()
 
 ## Connections
-- [[caderno.lua]] - `contains` [EXTRACTED]
+- [[box()_2]] - `calls` [EXTRACTED]
+- [[c2-workstations.lua]] - `contains` [EXTRACTED]
+- [[table()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_119
+#graphify/code #graphify/EXTRACTED #community/Community_55

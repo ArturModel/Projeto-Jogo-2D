@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[dot-Build()_1]] - `references` [EXTRACTED]
-- [[dot-Build()_2]] - `references` [EXTRACTED]
-- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
+- [[dot-Build()_4]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_14

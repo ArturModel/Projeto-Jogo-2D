@@ -22,6 +22,7 @@ public class AudioAmbiente : MonoBehaviour
 
         [System.NonSerialized] public AudioSource fonte;
         [System.NonSerialized] public float alvo;
+        [System.NonSerialized] public float volumeAtual;
         [System.NonSerialized] public float velocidade = 1f;
     }
 
@@ -30,6 +31,8 @@ public class AudioAmbiente : MonoBehaviour
     [SerializeField] private Camada[] camadas;
 
     private readonly Dictionary<string, Camada> porNome = new Dictionary<string, Camada>();
+    private bool pausado;
+    private bool foco = true;
 
     private void Awake()
     {
@@ -46,6 +49,7 @@ public class AudioAmbiente : MonoBehaviour
 
             c.fonte = fonte;
             c.alvo = c.volumeInicial;
+            c.volumeAtual = c.volumeInicial;
             porNome[c.nome] = c;
 
             if (c.loop && c.clipe != null)
@@ -57,6 +61,15 @@ public class AudioAmbiente : MonoBehaviour
 
     private void Update()
     {
+        bool pausa = !foco || Time.timeScale == 0 || MenuPausa.Aberto;
+        if (pausa != pausado)
+        {
+            pausado = pausa;
+            foreach (Camada c in camadas)
+                if (c.fonte != null) { if (pausa) c.fonte.Pause(); else c.fonte.UnPause(); }
+        }
+        if (pausa) return;
+        float efeitos = PlayerPrefs.GetFloat("audio_efeitos", 1f);
         foreach (Camada c in camadas)
         {
             if (c.fonte == null)
@@ -64,9 +77,10 @@ public class AudioAmbiente : MonoBehaviour
                 continue;
             }
 
-            c.fonte.volume = Mathf.MoveTowards(
-                c.fonte.volume, c.alvo, c.velocidade * Time.deltaTime
+            c.volumeAtual = Mathf.MoveTowards(
+                c.volumeAtual, c.alvo, c.velocidade * Time.deltaTime
             );
+            c.fonte.volume = c.loop ? c.volumeAtual * efeitos : efeitos;
         }
     }
 
@@ -78,7 +92,7 @@ public class AudioAmbiente : MonoBehaviour
             return;
         }
 
-        float distancia = Mathf.Abs(volume - c.fonte.volume);
+        float distancia = Mathf.Abs(volume - c.volumeAtual);
         c.alvo = Mathf.Clamp01(volume);
         c.velocidade = tempo <= 0.01f ? 99f : Mathf.Max(0.01f, distancia / tempo);
     }
@@ -91,11 +105,35 @@ public class AudioAmbiente : MonoBehaviour
         }
     }
 
+    // O prólogo reaproveita a fonte do motor e acrescenta só a superfície nova.
+    // As camadas continuam pertencendo a este mixer (volume, foco e pausa comuns).
+    public void ConfigurarLoop(string nome, AudioClip clipe)
+    {
+        if (clipe == null) { Debug.LogError("Loop ausente: " + nome); return; }
+        Camada c;
+        if (!porNome.TryGetValue(nome, out c))
+        {
+            c = new Camada { nome = nome, fonte = gameObject.AddComponent<AudioSource>() };
+            System.Array.Resize(ref camadas, camadas.Length + 1);
+            camadas[camadas.Length - 1] = c;
+            porNome[nome] = c;
+        }
+        c.clipe = clipe; c.loop = true;
+        c.alvo = c.volumeAtual = 0;
+        c.fonte.Stop(); c.fonte.clip = clipe; c.fonte.loop = true;
+        c.fonte.playOnAwake = false; c.fonte.spatialBlend = 0; c.fonte.volume = 0;
+        c.fonte.Play();
+        if (pausado) c.fonte.Pause();
+    }
+
     // Som avulso: uma passada de limpador, um clique de seta.
     public void Disparar(string nome, float volume = 1f)
     {
+        if (pausado || !foco || Time.timeScale == 0) return;
         if (porNome.TryGetValue(nome, out Camada c) && c.clipe != null)
         {
+            // Camadas avulsas normalmente têm volumeInicial = 0.
+            c.fonte.volume = PlayerPrefs.GetFloat("audio_efeitos", 1f);
             c.fonte.PlayOneShot(c.clipe, volume);
         }
     }
@@ -104,4 +142,7 @@ public class AudioAmbiente : MonoBehaviour
     {
         return porNome.TryGetValue(nome, out Camada c) && c.fonte != null && c.fonte.volume > 0.01f;
     }
+
+    private void OnApplicationFocus(bool ativo) { foco = ativo; }
+    private void OnDestroy() { if (Instance == this) Instance = null; }
 }

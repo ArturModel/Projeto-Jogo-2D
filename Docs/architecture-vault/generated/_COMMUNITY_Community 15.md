@@ -1,49 +1,42 @@
 ---
 type: community
-members: 37
+members: 30
 ---
 
 # Community 15
 
-**Members:** 37 nodes
+**Members:** 30 nodes
 
 ## Members
-- [[dot-AlterarAtivacao()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-AlterarBrilho()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-AlterarFundo()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-AlterarResolucao()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-AlterarTamanho()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-AlterarTelaCheia()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 - [[dot-AlterarVSync()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
+- [[dot-Aparecer()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
 - [[dot-AplicarBrilho()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-AplicarPreview()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
 - [[dot-AplicarResolucaoAtual()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-Avancar()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-Configurar()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-OnDeselect()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-OnDisable()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[dot-OnDisable()_1]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-OnSelect()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
+- [[dot-Awake()_6]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Botao()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Construir()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Construir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-CreateCanvas()]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
+- [[dot-Enfileirar()]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-MontarTela()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs
+- [[dot-OnDisable()_3]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 - [[dot-PrepararResolucoes()]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-Retroceder()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-Start()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[dot-Start()_6]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[dot-TocarSom()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-Update()_10]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[dot-Vincular()]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[dot-Vincular()_1]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
-- [[BaseEventData]] - code
-- [[FundoEscuroAtivo]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[HorizontalStepperNavigation]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[IDeselectHandler]] - code
-- [[LegendasAtivas]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[MultiplicadorTamanho]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
+- [[dot-Rect()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[dot-Rodar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[dot-Start()_7]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
+- [[dot-Texto()]] - code - Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs
+- [[AspectRatioFitter]] - code
+- [[Canvas]] - code
+- [[CanvasScaler]] - code
+- [[Fala]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[Instance_2]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[Legenda]] - code - Projeto Jogo 2D/Assets/Scripts/Legenda.cs
+- [[List]] - code
+- [[RawImage]] - code
 - [[Resolution]] - code
-- [[Slider]] - code
-- [[SubtitleSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/SubtitleSettingsController.cs
-- [[TMP_Dropdown]] - code
-- [[TMP_Text]] - code
-- [[Toggle]] - code
 - [[VideoSettingsController]] - code - Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs
 
 ## Live Query (requires Dataview plugin)
@@ -54,21 +47,50 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Community 12]]
-- 6 edges to [[_COMMUNITY_Community 28]]
-- 3 edges to [[_COMMUNITY_Community 94]]
-- 3 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 89]]
-- 2 edges to [[_COMMUNITY_Community 57]]
-- 2 edges to [[_COMMUNITY_Community 85]]
-- 2 edges to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 25]]
+- 12 edges to [[_COMMUNITY_Community 12]]
+- 8 edges to [[_COMMUNITY_Community 51]]
+- 8 edges to [[_COMMUNITY_Community 7]]
+- 7 edges to [[_COMMUNITY_Community 6]]
+- 6 edges to [[_COMMUNITY_Community 57]]
+- 5 edges to [[_COMMUNITY_Community 34]]
+- 5 edges to [[_COMMUNITY_Community 83]]
+- 4 edges to [[_COMMUNITY_Community 0]]
+- 4 edges to [[_COMMUNITY_Community 13]]
+- 4 edges to [[_COMMUNITY_Community 19]]
+- 4 edges to [[_COMMUNITY_Community 48]]
+- 4 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 110]]
+- 3 edges to [[_COMMUNITY_Community 17]]
+- 3 edges to [[_COMMUNITY_Community 38]]
+- 2 edges to [[_COMMUNITY_Community 1]]
+- 2 edges to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 45]]
+- 2 edges to [[_COMMUNITY_Community 8]]
+- 2 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 56]]
+- 2 edges to [[_COMMUNITY_Community 92]]
+- 2 edges to [[_COMMUNITY_Community 84]]
+- 1 edge to [[_COMMUNITY_Community 109]]
+- 1 edge to [[_COMMUNITY_Community 113]]
 - 1 edge to [[_COMMUNITY_Community 18]]
-- 1 edge to [[_COMMUNITY_Community 86]]
+- 1 edge to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 93]]
+- 1 edge to [[_COMMUNITY_Community 96]]
+- 1 edge to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 23]]
 
 ## Top bridge nodes
-- [[VideoSettingsController]] - degree 20, connects to 5 communities
-- [[TMP_Text]] - degree 16, connects to 5 communities
-- [[HorizontalStepperNavigation]] - degree 16, connects to 4 communities
-- [[SubtitleSettingsController]] - degree 17, connects to 3 communities
-- [[Slider]] - degree 8, connects to 3 communities
+- [[List]] - degree 31, connects to 22 communities
+- [[dot-CreateCanvas()]] - degree 20, connects to 12 communities
+- [[dot-Construir()_2]] - degree 17, connects to 10 communities
+- [[RawImage]] - degree 12, connects to 7 communities
+- [[Legenda]] - degree 17, connects to 6 communities

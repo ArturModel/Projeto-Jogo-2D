@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomLayout.cs"
 type: "code"
-community: "Community 34"
+community: "Community 6"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_6
 ---
 
 # .AdaptSavedPosition()
@@ -17,4 +17,4 @@ tags:
 - [[SantaRitaRoomLayout]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_6

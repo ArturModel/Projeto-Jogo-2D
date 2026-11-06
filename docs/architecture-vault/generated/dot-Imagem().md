@@ -12,7 +12,7 @@ tags:
 # .Imagem()
 
 ## Connections
-- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `calls` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

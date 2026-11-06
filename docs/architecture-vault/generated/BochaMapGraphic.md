@@ -1,23 +1,23 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 40"
+community: "Community 46"
 location: "L327"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_46
 ---
 
 # BochaMapGraphic
 
 ## Connections
 - [[dot-Circle()]] - `method` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-MapPoint()]] - `method` [EXTRACTED]
-- [[dot-OnPopulateMesh()]] - `method` [EXTRACTED]
-- [[dot-Quad()]] - `method` [EXTRACTED]
-- [[dot-Refresh()_1]] - `method` [EXTRACTED]
+- [[dot-OnPopulateMesh()_3]] - `method` [EXTRACTED]
+- [[dot-Quad()_1]] - `method` [EXTRACTED]
+- [[dot-Refresh()]] - `method` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[BochaCourtView.cs]] - `contains` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[MaskableGraphic]] - `inherits` [EXTRACTED]
 - [[Simulation]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_46
