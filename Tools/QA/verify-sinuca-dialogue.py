@@ -36,7 +36,7 @@ class SampleClip {
  public void SetData(float[] d,int offset){data=d;}
 }
 class AudioSource {
- public bool playOnAwake,isPlaying,paused; public float spatialBlend,volume; public SampleClip clip;
+ public bool playOnAwake,isPlaying,paused; public float spatialBlend,volume,pitch; public SampleClip clip;
  public void Play(){isPlaying=true;paused=false;} public void Stop(){isPlaying=paused=false;}
  public void Pause(){if(isPlaying){isPlaying=false;paused=true;}}
  public void UnPause(){if(paused){isPlaying=true;paused=false;}}
@@ -53,6 +53,8 @@ class Harness {
  enum EstadoPartida { Inativo,MirandoJogador }
  EstadoPartida estado=EstadoPartida.MirandoJogador;
  bool IsShowing=true,modoPratica;
+ bool locutorAtualMarcus,locutorPendenteMarcus,OlhandoDebaixo,batidasOuvidas,inspecaoConcluida;
+ int batidasRestantes; readonly Queue<string> falasHistoria=new Queue<string>();
  Node painelModal=new Node(),painelOpcoes=new Node(),painelAlvo=new Node(),gameObject=new Node();
  Label txtFalaZe=new Label(); Group legendaZe=new Group(); AudioSource vozFalaZe; SampleClip[] silabasZe;
  string falaZePendente; bool falaZePendenteUrgente;
@@ -98,11 +100,23 @@ class Harness {
   PlayerPrefs.effects=0;h.Tick();Check(h.vozFalaZe.volume==0,"effect mute applies live while subtitle remains");PlayerPrefs.effects=1;
   h.Tick(50);Check(h.caractereZe==h.txtFalaZe.text.Length&&h.legendaZe.alpha>0,"complete text remains for reading");
   h.Tick(130);Check(h.txtFalaZe.text==""&&h.legendaZe.alpha==0,"subtitle disappears after reading");
-  h.EnfileirarFalaZe("Pendente");h.EnfileirarFalaZe("Só a preta.",true);h.EnfileirarFalaZe("Comum");
-  Check(h.falaZePendente=="Só a preta.","important reaction replaces pending common line");
+  h.EnfileirarFalaZe("Pendente");h.EnfileirarFalaZe("SÃ³ a preta.",true);h.EnfileirarFalaZe("Comum");
+  Check(h.falaZePendente=="SÃ³ a preta.","important reaction replaces pending common line");
   h.LimparFalaZe();h.Tick(100);Check(h.txtFalaZe.text==""&&h.falaZePendente==null&&!h.vozFalaZe.isPlaying,"close/reset cancels text, queue and voice");
-  h.modoPratica=true;h.EnfileirarFalaZe("Não deve aparecer");h.Tick(100);Check(h.txtFalaZe.text=="","practice has no opponent speech");
+  h.modoPratica=true;h.EnfileirarFalaZe("NÃ£o deve aparecer");h.Tick(100);Check(h.txtFalaZe.text=="","practice has no opponent speech");
   foreach(var clip in h.silabasZe){float peak=0;foreach(float sample in clip.data){if(float.IsNaN(sample)||float.IsInfinity(sample))throw new Exception("Invalid sample");peak=Math.Max(peak,Math.Abs(sample));}Check(peak>0&&peak<.6f&&Math.Abs(clip.data[0])<.0001f&&Math.Abs(clip.data[clip.data.Length-1])<.0001f,"murmur finite, non-clipping, soft edges");}
+  var pending=new Harness{batidasOuvidas=true,inspecaoConcluida=false};
+  pending.EnfileirarFalaZe("Boa bola.");pending.Tick();
+  Check(pending.txtFalaZe.text.StartsWith("Zé: ")&&pending.legendaZe.alpha>0,"unresolved table inspection does not silence Ze");
+  pending.LimparFalaZe();pending.batidasRestantes=3;pending.EnfileirarFalaZe("Aguarda");
+  Check(pending.falaZePendente==null,"knock audio retains priority during actual knocks");
+  pending.batidasRestantes=0;pending.OlhandoDebaixo=true;pending.EnfileirarFalaZe("Aguarda");
+  Check(pending.falaZePendente==null,"under-table investigation retains narrative priority");
+  pending.OlhandoDebaixo=false;pending.falasHistoria.Enqueue("Historia");pending.EnfileirarFalaZe("Aguarda",true);
+  Check(pending.falaZePendente==null,"queued narrative retains priority");
+  pending.falasHistoria.Clear();pending.falaZePendente="Marcus historia";pending.falaZePendenteUrgente=true;pending.locutorPendenteMarcus=true;
+  pending.EnfileirarFalaZe("Urgente",true);
+  Check(pending.falaZePendente=="Marcus historia"&&pending.locutorPendenteMarcus,"dequeued Marcus story line is not overwritten or relabelled");
   Console.WriteLine("TOTAL "+checks+" PASS. C# source with UI/audio stubs; no native render/listening/Player.");
  }
 '''

@@ -27,12 +27,15 @@ public sealed partial class SinucaRoom3D
                 if(p.id=="TapeteSinuca")a.root.localRotation=Quaternion.Euler(90,0,0);
             });
         }
+        BuildSalonDepth();
         var sun=new GameObject("LuzAmbiente3D").AddComponent<Light>();sun.transform.SetParent(root.transform,false);sun.type=LightType.Directional;sun.color=new Color(.57f,.65f,.77f);sun.intensity=.10f;sun.transform.localRotation=Quaternion.Euler(48,-32,0);sun.cullingMask=1<<Layer;sun.shadows=LightShadows.None;sun.shadowBias=.02f;
         Lamp(new Vector3(0,2.55f,0));
         // Low-cost indirect spill: no shadow cubemaps, fog, or screen-space effects.
         RoomFill("ReflexoQuenteMesa",new Vector3(0,1.75f,0),new Color(1f,.78f,.51f),.18f,3.1f);
-        RoomFill("LuzDiscretaBalcao",new Vector3(-2.1f,2.4f,3.1f),new Color(1f,.74f,.47f),.68f,3.5f);
+        RoomFill("LuzDiscretaBalcao",new Vector3(-2.1f,2.4f,3.1f),new Color(1f,.74f,.47f),1.25f,4.3f);
         RoomFill("ReflexoFrioSala",new Vector3(3.8f,1.9f,-3.8f),new Color(.39f,.52f,.69f),.22f,4.5f);
+        RoomFill("RebatimentoConversa",new Vector3(-3.3f,2.45f,-3.0f),new Color(1f,.80f,.58f),.68f,3.7f);
+        RoomFill("RebatimentoChimarrao",new Vector3(-3.4f,2.4f,1.1f),new Color(1f,.80f,.58f),.58f,3.4f);
     }
     private void RoomFill(string name,Vector3 at,Color color,float intensity,float range)
     {

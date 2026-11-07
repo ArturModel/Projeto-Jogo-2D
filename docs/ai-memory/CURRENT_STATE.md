@@ -144,3 +144,17 @@ Dublagem NÃO concluída: ElevenLabs privado autenticado, criação de voz bloqu
 06/11/2026 — Sinuca: retirados assentos 3D vazios (cadeiras e banquetas); apenas cadeiras integradas aos quatro NPCs sentados permanecem. Walkable não bloqueia assentos removidos. Unity sem erros; inspeção nativa 0 anchors de cadeira e 4 NPCs preservados. Plano ../ai-plans/2026-11-06_BBCONTTI_sinuca-sem-cadeiras-vazias.md.
 
 06/11/2026 — Sinuca: bola falsa visual separada do solver, exame por E, batidas e inspeção sob a mesa; legenda compartilhada Marcus/Zé com murmúrio Marcus mais grave (pitch .77). Impacto usa Foley/door (Kenney CC0). Bloco de água corrigido; poça rejeitada pelo autor e removida em favor de três gotas pequenas. Console sem erros C#; aprovação visual final/audição/campanha/Player pendentes. Graphify indisponível e índice desatualizado. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-percepcoes.md.
+
+
+06/11/2026 — Sinuca: síntese bola-bola substituída por três recortes de gravação real CC0 (bsumusictech/Freesound 62331), pitch natural fixo e volume pelo impulso, com categoria de impactos preservada. WAVs PCM/180 ms/pico .72 validados; 45 checks numéricos PASS e compilação 0 erros/16 CS0649. Unity MCP sem instâncias; audição/importação nativa/Player pendentes. Graphify refresh indisponível e validate desatualizado. Plano: ../ai-plans/2026-11-06_BBCONTTI_sinuca-bolas-reais.md.
+
+06/11 — Sinuca: Zé usa atlas novo mais detalhado (16 desenhos), três poses de caminhada por direção e quatro poses de inclinação/tacada; IA contorna mesa/móveis antes do contato. Não usa deformação da arte anterior. Compilação C# e harnesses locais passaram; visual no Unity/Player e atualização Graphify pendentes. [Plano](../ai-plans/2026-11-06_BBCONTTI_ze-sinuca-sprites-movimento.md).
+
+
+06/11/2026 — Zé na sinuca: 24 quadros; caminhada/tacada frente/lado/costas por posição relativa da câmera, inclusive parado, com histerese. Dezesseis quadros anteriores preservados. Falas liberadas enquanto investigação das batidas está apenas pendente; prioridade narrativa preservada. Unity 33 checks e 12 capturas; 32 falas, 1580 planner, 10 timing PASS; compilação geral 0 erros. Graphify indisponível/índice antigo; Player/aprovação artística pendentes. [Plano](../ai-plans/2026-11-06_BBCONTTI_ze-direcional-falas.md).
+
+
+06/11/2026 — [Sinuca: eventos e lore](../ai-plans/2026-11-06_BBCONTTI_sinuca-eventos-lore.md): R1 conferida contra DOCX R1/V5; Docs/Lore_Atual.md registra fatos, compatibilidade e percepções. SinucaPerceptionSchedule centraliza quatro eventos exclusivos com intervalos variáveis, turnos e repetição distribuída; batidas/bola falsa corrigidas, água no cano/eco da festa adicionados. Teste .NET 1.000 sementes/24.000 eventos PASS, assembly Unity 10.000 checks PASS e regressão física 53 PASS; sem build Player/audição/campanha. Refresh/validate Graphify falharam por ferramenta ausente/índice antigo. Cenas/saves e alterações preexistentes preservados.
+
+
+06/11/2026 — [Sinuca: efeito e apoio](../ai-plans/2026-11-06_BBCONTTI_sinuca-efeito-apoio.md): direito + arraste, foco suave, UI bola/ponto/taco/ângulos e contato contínuo. Apoio intersecta haste real e permanece estável na puxada. Unity sem erros; física 136 PASS e 28 verificações projetadas do apoio PASS. Fixtures técnicas; Player/input físico/aprovação visual pendentes. Graphify ausente/índice antigo.

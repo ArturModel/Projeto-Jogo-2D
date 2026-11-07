@@ -148,3 +148,20 @@ Sinuca 06/11, ajuste posterior: apresentação 3D omite todos os props Kind.Chai
 
 ## Percepções da sinuca — 06/11/2026
 SinucaMinigameUI_Perception separa estados transitórios de investigação/falsa bola das regras SinuquinhaRules. Renderização falsa reutiliza aparência real, mas não integra a lista física; guia percebida pode apontar para ela. E examina/abaixa, E/Q/Esc encerra inspeção; pausa/foco suspendem atualização. SinucaRoom3D_Perception controla câmera baixa, forro inferior e três pequenas gotas; não há poça. Fila narrativa compartilha legenda e sílabas, com identificação de locutor e pitch Marcus .77/Zé 1. Impacto sob mesa usa Foley/door CC0; sem autosave/flags novas. Verificação final visual/auditiva e campanha pendentes. Plano: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-percepcoes.md.
+
+
+06/11/2026 — Colisões bola-bola: SinucaMinigameUI.GarantirColisoesGravadas pré-carrega três Resources/Audio/Sinuca/Colisao_*.wav no Awake. TocarSomColisaoBola alterna gravações CC0 com pitch fixo, ganho por impulso e gate compartilhado 18 ms; TocarClipImpacto aplica VolumeImpactos e pool/pausa/foco existentes. Tacada/tabela/caçapa/giz mantêm síntese. Procedência e QA: ../../ai-plans/2026-11-06_BBCONTTI_sinuca-bolas-reais.md.
+
+## Zé na sinuca — 06/11/2026
+`SinucaRoom3D.Opponent` apresenta o adversário com sprites novos `Art/Characters/Npc_Ze_Sinuca` (16 células, 128 px, PPU 64 em runtime), caminho com colisão geométrica e taco independente do view-model de Marcus. A coroutine de `SinucaMinigameUI` avança caminho/pose somente com apresentação ativa e dispara a física no contato a 82% da preparação. Layout/regras/saves permanecem separados; NPCs restantes usam a apresentação existente. Evidência local e limites no plano ze-sinuca-sprites-movimento.
+
+
+06/11 — SinucaRoom3D.Opponent mantém heading de mundo; UpdateOpponentView é chamado a cada UpdateCamera e seleciona 24 células direcionais sem reiniciar a pose. Comentários de Zé só cedem às batidas em curso e à inspeção/fila narrativa ativa, sem depender da conclusão de inspeção opcional. Sem APIs públicas novas nem alterações de saves/cenas.
+
+
+## Agenda das percepções — 06/11/2026
+`SinucaPerceptionSchedule` é um núcleo C# sem Unity, física, flags ou persistência: controla Active/Age/Remaining, bolsa embaralhada e gates de tempo/turnos. `SinucaMinigameUI_Perception` faz a apresentação dos eventos UnderTable/FalseBall/WaterInPipes/PartyEcho; só a UI decide quando é seguro começar. Fim de mão cancela apresentação, preservando a agenda da série; reset apenas em treino/nova série/fechamento. Fila de falas bloqueia novo sorteio; áudio/painéis/foco/pausa respeitam suspensão existente. Referência e limites em Docs/Lore_Atual.md; testes reproduzíveis em Tools/QA/SinucaPerceptionSchedule. Graphify não foi regenerado: binário local ausente.
+
+
+## Sinuca: efeito e apoio — 06/11/2026
+SinucaMinigameUI.Spin centraliza ajuste contextual por direito + arraste e reutiliza contatoTaco da física. SinucaRoom3D.SetCueContact/SetSpinFocus controlam apresentação. AlignBridgeToShaft intersecta haste com plano de apoio, preservando o canal palma/polegar na mudança de efeito e estabilidade na puxada. Não adiciona persistência, cena ou regra de progressão. [Plano](../../ai-plans/2026-11-06_BBCONTTI_sinuca-efeito-apoio.md).

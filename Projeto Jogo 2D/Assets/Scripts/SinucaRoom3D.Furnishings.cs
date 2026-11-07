@@ -97,6 +97,7 @@ public sealed partial class SinucaRoom3D
     private void BuildRoomArchitecture()
     {
         var plaster=Mat("rebocoEnvelhecido",new Color(.38f,.36f,.29f));
+        plaster.SetFloat("_RoomSurface",1);
         var trim=Mat("guarnicaoEscura",new Color(.14f,.105f,.075f),tiles[2]);
         // Lambril remains below shoulder level; calm plaster above breaks up the
         // previous all-wood texture and makes the bar feel like a built interior.
@@ -124,7 +125,7 @@ public sealed partial class SinucaRoom3D
         foreach(float y in new[]{.58f,1.50f})Box("AlmofadaPorta",new Vector3(0,y,-7.35f),new Vector3(.78f,.70f,.035f),Wood);
         Sphere("MacanetaPorta",new Vector3(.39f,1.05f,-7.27f),.055f,Mat("lataoEnvelhecido",new Color(.38f,.28f,.12f)),scenery);
         WallSconce(new Vector3(-5.23f,2.05f,-.6f),90);
-        WallSconce(new Vector3(5.23f,2.05f,-3.7f),-90);
+        WallSconce(new Vector3(5.23f,2.05f,-5.25f),-90);
         WallSconce(new Vector3(1.80f,2.12f,-7.24f),0);
         // A small service lamp motivates the warm spill behind the bar.
         var bulb=Mat("lenteArandela",new Color(.56f,.36f,.15f),null,true);
@@ -138,7 +139,7 @@ public sealed partial class SinucaRoom3D
         Box("SuporteArandela",Vector3.zero,new Vector3(.15f,.32f,.06f),iron,g);
         Box("VidroFosco",new Vector3(0,0,.08f),new Vector3(.12f,.23f,.07f),Mat("lenteArandela",new Color(.56f,.36f,.15f),null,true),g);
         Box("ChapeuArandela",new Vector3(0,.14f,.08f),new Vector3(.23f,.045f,.18f),iron,g);
-        RoomFill("LuzArandela",at+g.forward*.20f,new Color(1f,.71f,.42f),.34f,3.4f);
+        RoomFill("LuzArandela",at+g.forward*.20f,new Color(1f,.75f,.49f),.52f,3.6f);
         CombineNet(g);
     }
 }

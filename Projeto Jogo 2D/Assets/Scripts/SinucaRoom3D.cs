@@ -115,8 +115,12 @@ public sealed partial class SinucaRoom3D : IDisposable
     private void AlignBridgeToShaft()
     {
         if(bridgeHand==null || bridgeThumb==null)return;
-        // Fixed on the table: pulling the cue does not drag the bridge.
-        var contact=bridgeAnchor.TransformPoint(new Vector3(0f,.047f,-.25f));
+        // The support follows the shaft at a fixed plane behind the ball.
+        // Sliding the cue along itself during pullback leaves this point fixed.
+        var support=bridgeAnchor.TransformPoint(new Vector3(0f,.047f,-.25f));
+        float alignment=Vector3.Dot(cue.forward,bridgeAnchor.forward);
+        if(Mathf.Abs(alignment)<.01f)return;
+        var contact=cue.position+cue.forward*(Vector3.Dot(support-cue.position,bridgeAnchor.forward)/alignment);
         var rear=camera.WorldToViewportPoint(contact);
         var front=camera.WorldToViewportPoint(contact+cue.forward*.20f);
         var pixels=new Vector2((front.x-rear.x)*Target.width,(front.y-rear.y)*Target.height);
@@ -171,7 +175,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         foreach(var prop in SantaRitaBarLayout.Props)
         {
             if(prop.kind==SantaRitaBarLayout.Kind.Wall || prop.kind==SantaRitaBarLayout.Kind.Decor || prop.kind==SantaRitaBarLayout.Kind.Chair)continue;
-            var at=Plan(prop.position-Vector2.up*prop.supportOffset);
+            var at=prop.id=="NPC_Ze_Interior" && opponent!=null?opponent.root.localPosition:Plan(prop.position-Vector2.up*prop.supportOffset);
             float radius=prop.kind==SantaRitaBarLayout.Kind.Actor?.38f:prop.width*.5f+.20f;
             // The counter has depth; chairs/tables use circular clearance.
             if(prop.kind==SantaRitaBarLayout.Kind.Counter)
@@ -224,7 +228,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         var data=camera.gameObject.AddComponent<UniversalAdditionalCameraData>();data.SetRenderer(1);data.renderPostProcessing=false;data.renderShadows=true;data.volumeLayerMask=0;
         Target=new RenderTexture(width,height,24,RenderTextureFormat.ARGB32){name="Sinuca_Offscreen",antiAliasing=2,filterMode=FilterMode.Bilinear};Target.Create();camera.targetTexture=Target;owned.Add(Target);
         BuildRoom();CaptureArt("Mesa_Sinuca_Central",BuildTable);for(int n=0;n<16;n++){balls[n]=Sphere("Bola_"+n,new Vector3(0,TableY+SinucaTableView.BallRadius*MetresPerUnit,0),SinucaTableView.BallRadius*2*MetresPerUnit,BallMaterial(n),dynamic).transform;}
-        cue=BuildCue(dynamic);BuildHands();guide=new GameObject("MiraFina").AddComponent<LineRenderer>();guide.transform.SetParent(dynamic,false);guide.useWorldSpace=false;guide.positionCount=2;guide.startWidth=guide.endWidth=.0045f;guide.numCapVertices=4;guide.sharedMaterial=Mat("mira",new Color(.82f,.88f,.78f),null,true);guide.shadowCastingMode=ShadowCastingMode.Off;guide.receiveShadows=false;
+        cue=BuildCue(dynamic);BuildHands();BuildOpponent();guide=new GameObject("MiraFina").AddComponent<LineRenderer>();guide.transform.SetParent(dynamic,false);guide.useWorldSpace=false;guide.positionCount=2;guide.startWidth=.006f;guide.endWidth=.002f;guide.numCapVertices=4;guide.sharedMaterial=Mat("mira",new Color(.82f,.88f,.78f),null,true);guide.shadowCastingMode=ShadowCastingMode.Off;guide.receiveShadows=false;
         objectGuide=new GameObject("DirecaoDaColorida").AddComponent<LineRenderer>();objectGuide.transform.SetParent(dynamic,false);objectGuide.useWorldSpace=false;objectGuide.positionCount=2;objectGuide.startWidth=.005f;objectGuide.endWidth=.0035f;objectGuide.sharedMaterial=Mat("direcaoObjeto",new Color(1f,.74f,.25f),null,true);objectGuide.shadowCastingMode=ShadowCastingMode.Off;
         guideBorder=NewGuide("ContrasteMira",.011f,Mat("sombraMira",new Color(.025f,.08f,.045f),null,true),2);
         objectArrow=NewGuide("SetaDaColorida",.005f,objectGuide.sharedMaterial,3);
@@ -308,6 +312,11 @@ public sealed partial class SinucaRoom3D : IDisposable
         mode=value;cueHeading=angle;UpdateCamera();
     }
     public void Orbit(float degrees){if(mode==SinucaCameraView.LinhaTaco)cueHeading-=degrees*Mathf.Deg2Rad;else if(mode==SinucaCameraView.VistaSuperior)topYaw+=degrees;else yaw+=degrees;UpdateCamera();}
+    private Vector2 cueContact;
+    private float spinFocusFrom,spinFocusTo,spinFocusStarted=-10;
+    private float SpinFocus => Mathf.Lerp(spinFocusFrom,spinFocusTo,Mathf.SmoothStep(0,1,(Time.unscaledTime-spinFocusStarted)/.2f));
+    public void SetSpinFocus(bool active){spinFocusFrom=SpinFocus;spinFocusTo=active?1:0;spinFocusStarted=Time.unscaledTime;}
+    public void SetCueContact(Vector2 value){cueContact=Vector2.ClampMagnitude(value,.75f);}
     public void SetZoom(float value){zoom=Mathf.Clamp(value,.8f,1.35f);UpdateCamera();}
     public void SetViewportAspect(float aspect)
     {
@@ -324,6 +333,13 @@ public sealed partial class SinucaRoom3D : IDisposable
         else if(camera.orthographic){camera.transform.localPosition=new Vector3(0,6,0);camera.transform.localRotation=Quaternion.Euler(90,topYaw,0);camera.orthographicSize=1.25f/zoom;}
         else if(mode==SinucaCameraView.Mesa3D){var target=new Vector3(0,1f,.5f);camera.transform.localPosition=target+Quaternion.Euler(0,yaw,0)*new Vector3(0,2f,-4.3f)/zoom;camera.transform.localRotation=Quaternion.LookRotation(target-camera.transform.localPosition);camera.fieldOfView=46;}
         else{var dir=new Vector3(Mathf.Cos(cueHeading),0,Mathf.Sin(cueHeading));var ball=new Vector3(white.x*MetresPerUnit,TableY,white.y*MetresPerUnit);camera.transform.localPosition=ball-dir*(1.65f/zoom)+Vector3.up*.53f;camera.transform.localRotation=Quaternion.LookRotation(ball+dir*.13f+Vector3.up*.015f-camera.transform.localPosition);camera.fieldOfView=48;}
+        if(mode==SinucaCameraView.LinhaTaco)
+        {
+            float focus=SpinFocus;
+            var centre=new Vector3(white.x*MetresPerUnit,TableY+SinucaTableView.BallRadius*MetresPerUnit,white.y*MetresPerUnit);
+            camera.transform.localPosition=Vector3.Lerp(camera.transform.localPosition,centre+(camera.transform.localPosition-centre)*.82f,focus);
+            camera.transform.localRotation=Quaternion.Slerp(camera.transform.localRotation,Quaternion.LookRotation(centre-camera.transform.localPosition),focus*.35f);
+        }
         float transition=Mathf.SmoothStep(0,1,(Time.unscaledTime-transitionStarted)/.42f);
         if(cameraInitialized && transition<1){camera.transform.localPosition=Vector3.Lerp(transitionPosition,camera.transform.localPosition,transition);camera.transform.localRotation=Quaternion.Slerp(transitionRotation,camera.transform.localRotation,transition);}
         AplicarCameraInvestigacao();
@@ -333,7 +349,9 @@ public sealed partial class SinucaRoom3D : IDisposable
         bool insideCeiling=camera.transform.localPosition.y<2.85f;
         if(ceilingRenderer!=null)ceilingRenderer.enabled=insideCeiling;
         if(ceilingBeams!=null)foreach(var beam in ceilingBeams)beam.enabled=insideCeiling;
+        foreach(var detail in overheadDetails)detail.enabled=insideCeiling;
         OrientPixelArt();
+        UpdateOpponentView();
         if(wallLeft!=null){var p=camera.transform.localPosition;wallLeft.enabled=p.x>-5.3f;wallRight.enabled=p.x<5.3f;wallBack.enabled=p.z<3.7f;wallFront.enabled=p.z>-7.3f;}
     }
     public Vector2 Project(Vector3 sim){var p=root.transform.TransformPoint(new Vector3(sim.x*MetresPerUnit,TableY+sim.y*MetresPerUnit,sim.z*MetresPerUnit));return camera.WorldToViewportPoint(p);}
@@ -349,6 +367,7 @@ public sealed partial class SinucaRoom3D : IDisposable
     {var ray=camera.ViewportPointToRay(viewport);var plane=new Plane(Vector3.up,root.transform.position+Vector3.up*(TableY+SinucaTableView.BallRadius*.4f*MetresPerUnit));if(plane.Raycast(ray,out float d)&&d>0){var p=root.transform.InverseTransformPoint(ray.GetPoint(d));sim=new Vector2(p.x,p.z)/MetresPerUnit;return true;}sim=Vector2.zero;return false;}
     public void Sync(IList<SinucaVisualBall> values,Vector2 cuePos,float angle,float power,bool showCue,SinucaAimGuideData g)
     {
+        TickSalon();
         if(Walking||showCue)white=cuePos;if(mode==SinucaCameraView.LinhaTaco)cueHeading=angle;UpdateCamera();
         for(int i=0;i<values.Count;i++)
         {
@@ -366,10 +385,18 @@ public sealed partial class SinucaRoom3D : IDisposable
         float pull=power*.22f;
         var bridgeBall=stroke?new Vector2(strokeOrigin.x,strokeOrigin.z)/MetresPerUnit:cuePos;
         float railLift=BridgeRailLift(bridgeBall,new Vector2(dir.x,dir.z));
-        var cueAxis=(dir-Vector3.up*(railLift/.25f)).normalized;
+        var side=new Vector3(-dir.z,0,dir.x);
+        var cueAxis=(Quaternion.AngleAxis(cueContact.x*18f,Vector3.up)*dir-Vector3.up*Mathf.Tan(Mathf.Abs(cueContact.y)*14f*Mathf.Deg2Rad)-Vector3.up*(railLift/.25f)).normalized;
         if(stroke)pull=Mathf.Lerp(strokePower*.22f,-.055f,Mathf.SmoothStep(0,1,strokeAge/.09f));
         // Freeze the stroke at the contact origin, even as the physical white rolls away.
-        if(!stroke)strokeOrigin=new Vector3(cuePos.x*MetresPerUnit,TableY+.047f,cuePos.y*MetresPerUnit);
+        if(!stroke)
+        {
+            float radius=SinucaTableView.BallRadius*MetresPerUnit;
+            var centre=new Vector3(cuePos.x*MetresPerUnit,TableY+radius,cuePos.y*MetresPerUnit);
+            var contact=centre+(side*cueContact.x+Vector3.up*cueContact.y-dir*Mathf.Sqrt(1-cueContact.sqrMagnitude))*radius;
+            // The cue model's tip is 8.7 cm behind its origin; leave 4 cm of approach gap.
+            strokeOrigin=contact+cueAxis*.047f;
+        }
         cue.localPosition=strokeOrigin-cueAxis*pull+Vector3.down*((1-poseBlend)*.16f);
         cue.localRotation=Quaternion.LookRotation(cueAxis);
         bridgeAnchor.gameObject.SetActive(handsVisible);
@@ -388,25 +415,34 @@ public sealed partial class SinucaRoom3D : IDisposable
         SyncFirstPersonCamera();
 
         // Keep the support planted while the grip moves with the cue's actual transform.
-        // A small local guide replaces the long arcade trajectory and target arrows.
-        g.ativa=g.ativa && handsVisible && !stroke && !InspectingUnderTable;
-        bool alvoFalso=g.numeroBolaAlvo==16 && FalseBallVisible;
-        g.atingeBola=alvoFalso;
-        if(g.ativa && !alvoFalso)g.pontoContato=g.origem+new Vector2(dir.x,dir.z)*36f;
+        // Show only the first 90 cm, preserving the real first collision.
+        g.ativa = g.ativa && handsVisible && !stroke && !InspectingUnderTable;
+        const float previewLength = .90f / MetresPerUnit;
+        float contactDistance = Vector2.Distance(g.origem, g.pontoContato);
+        bool contactVisible = g.atingeBola && contactDistance <= previewLength;
+        g.pontoContato = g.origem + (g.pontoContato - g.origem).normalized * Mathf.Min(contactDistance, previewLength);
+        g.atingeBola = contactVisible;
 
-        guide.gameObject.SetActive(g.ativa);ghost.gameObject.SetActive(g.ativa);if(g.ativa){guide.SetPosition(0,new Vector3(g.origem.x*MetresPerUnit,TableY+.005f,g.origem.y*MetresPerUnit));guide.SetPosition(1,new Vector3(g.pontoContato.x*MetresPerUnit,TableY+.005f,g.pontoContato.y*MetresPerUnit));ghost.localPosition=new Vector3(g.pontoContato.x*MetresPerUnit,TableY+.005f,g.pontoContato.y*MetresPerUnit);}
+        guide.gameObject.SetActive(g.ativa);ghost.gameObject.SetActive(g.ativa && g.atingeBola);if(g.ativa){guide.SetPosition(0,new Vector3(g.origem.x*MetresPerUnit,TableY+.005f,g.origem.y*MetresPerUnit));guide.SetPosition(1,new Vector3(g.pontoContato.x*MetresPerUnit,TableY+.005f,g.pontoContato.y*MetresPerUnit));ghost.localPosition=new Vector3(g.pontoContato.x*MetresPerUnit,TableY+.005f,g.pontoContato.y*MetresPerUnit);}
         guideBorder.gameObject.SetActive(g.ativa);if(g.ativa){guideBorder.SetPosition(0,guide.GetPosition(0)-Vector3.up*.001f);guideBorder.SetPosition(1,guide.GetPosition(1)-Vector3.up*.001f);}
         objectGuide.gameObject.SetActive(g.ativa&&g.atingeBola);objectArrow.gameObject.SetActive(g.ativa&&g.atingeBola);
         if(g.ativa&&g.atingeBola)
         {
-            var a=g.posBolaAlvo;var d=g.direcaoBolaAlvo.normalized;float length=65;
+            var a=g.posBolaAlvo;var d=g.direcaoBolaAlvo.normalized;float length=.32f/MetresPerUnit;
+            foreach(var other in values)
+            {
+                if(!other.ativa || other.numero==g.numeroBolaAlvo || other.numero==0)continue;
+                Vector2 offset=other.pos-a;float along=Vector2.Dot(offset,d);float r=SinucaTableView.BallRadius*2;
+                float sideSq=offset.sqrMagnitude-along*along;
+                if(along>0 && sideSq<r*r)length=Mathf.Min(length,Mathf.Max(0,along-Mathf.Sqrt(r*r-sideSq)));
+            }
             if(Mathf.Abs(d.x)>.001f)length=Mathf.Min(length,((d.x>0?204:-204)-a.x)/d.x);
             if(Mathf.Abs(d.y)>.001f)length=Mathf.Min(length,((d.y>0?99:-99)-a.y)/d.y);
-            var b=a+d*Mathf.Max(0,length);var from=new Vector3(a.x*MetresPerUnit,TableY+.013f,a.y*MetresPerUnit);var tip=new Vector3(b.x*MetresPerUnit,TableY+.013f,b.y*MetresPerUnit);var objectDir=new Vector3(d.x,0,d.y);var side=new Vector3(-d.y,0,d.x);
-            objectGuide.SetPosition(0,from);objectGuide.SetPosition(1,tip);objectArrow.SetPosition(0,tip-objectDir*.05f+side*.025f);objectArrow.SetPosition(1,tip);objectArrow.SetPosition(2,tip-objectDir*.05f-side*.025f);
+            var b=a+d*Mathf.Max(0,length);var from=new Vector3(a.x*MetresPerUnit,TableY+.013f,a.y*MetresPerUnit);var tip=new Vector3(b.x*MetresPerUnit,TableY+.013f,b.y*MetresPerUnit);var objectDir=new Vector3(d.x,0,d.y);var arrowSide=new Vector3(-d.y,0,d.x);
+            objectGuide.SetPosition(0,from);objectGuide.SetPosition(1,tip);objectArrow.SetPosition(0,tip-objectDir*.05f+arrowSide*.025f);objectArrow.SetPosition(1,tip);objectArrow.SetPosition(2,tip-objectDir*.05f-arrowSide*.025f);
         }
         for(int j=0;j<6;j++){float t=Time.unscaledTime-impactTime[j];float bounce=t<2?Mathf.Sin(t*22)*Mathf.Exp(-t*3)*.09f:0;nets[j].localScale=new Vector3(1,1+bounce,1);}
-        foreach(var a in actors){if(a.definition.kind!=SantaRitaBarLayout.Kind.Actor){a.renderer.enabled=SantaRitaBarLayout.TablePropVisible(a.definition.id,Time.time);continue;}var sprite=a.seated?SantaRitaBarLayout.PatronPose(a.definition.key,a.definition.id,Time.time)??a.rest:a.rest;a.filter.sharedMesh=NativeMesh(sprite);a.renderer.sharedMaterial=PixelMaterial(sprite);}
+        foreach(var a in actors){if(a.definition.kind!=SantaRitaBarLayout.Kind.Actor){a.renderer.enabled=SalonPropVisible(a.definition.id);continue;}if(a==opponent)continue;if(UpdateSalonPatron(a))continue;var sprite=a.seated?SantaRitaBarLayout.PatronPose(a.definition.key,a.definition.id,Time.time)??a.rest:a.rest;a.filter.sharedMesh=NativeMesh(sprite);a.renderer.sharedMaterial=PixelMaterial(sprite);}
 
     }
     public void SetActive(bool value){if(root!=null)root.SetActive(value);}

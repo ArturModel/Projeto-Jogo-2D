@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 102bdfaf7c3be8142aab25d1e7343d03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -914601110014882685
+    second: FrequentadoresSinuca_0
+  - first:
+      213: -8483193872811753266
+    second: FrequentadoresSinuca_1
+  - first:
+      213: 7269124910034624950
+    second: FrequentadoresSinuca_2
+  - first:
+      213: 3532796295017142655
+    second: FrequentadoresSinuca_3
+  - first:
+      213: 3870380440500753595
+    second: FrequentadoresSinuca_4
+  - first:
+      213: -7382621084388634625
+    second: FrequentadoresSinuca_5
+  - first:
+      213: 5092751484418674838
+    second: FrequentadoresSinuca_6
+  - first:
+      213: 8360952698664858429
+    second: FrequentadoresSinuca_7
+  - first:
+      213: 2468699991903595076
+    second: FrequentadoresSinuca_8
+  - first:
+      213: 4775429890386185816
+    second: FrequentadoresSinuca_9
+  - first:
+      213: -4382007833780386264
+    second: FrequentadoresSinuca_10
+  - first:
+      213: -1054132053268458139
+    second: FrequentadoresSinuca_11
+  - first:
+      213: 1608863441842487195
+    second: FrequentadoresSinuca_12
+  - first:
+      213: 4452933165513278188
+    second: FrequentadoresSinuca_13
+  - first:
+      213: -2054587314395928740
+    second: FrequentadoresSinuca_14
+  - first:
+      213: -7576481446241841034
+    second: FrequentadoresSinuca_15
+  - first:
+      213: -8840658729101250652
+    second: FrequentadoresSinuca_16
+  - first:
+      213: 1648802808229590438
+    second: FrequentadoresSinuca_17
+  - first:
+      213: -7372221175684941909
+    second: FrequentadoresSinuca_18
+  - first:
+      213: -1514474087189222262
+    second: FrequentadoresSinuca_19
+  - first:
+      213: 2891135516425017025
+    second: FrequentadoresSinuca_20
+  - first:
+      213: 1005845220292440606
+    second: FrequentadoresSinuca_21
+  - first:
+      213: 4876364659166497068
+    second: FrequentadoresSinuca_22
+  - first:
+      213: -158085532714858898
+    second: FrequentadoresSinuca_23
+  - first:
+      213: 3448340345811585550
+    second: FrequentadoresSinuca_24
+  - first:
+      213: 3124151364231058594
+    second: FrequentadoresSinuca_25
+  - first:
+      213: -3335676847923015152
+    second: FrequentadoresSinuca_26
+  - first:
+      213: 4862167613693124602
+    second: FrequentadoresSinuca_27
+  - first:
+      213: -6792888363892271365
+    second: FrequentadoresSinuca_28
+  - first:
+      213: 6887656473196450709
+    second: FrequentadoresSinuca_29
+  - first:
+      213: 7070170961141515317
+    second: FrequentadoresSinuca_30
+  - first:
+      213: 8666200673207569805
+    second: FrequentadoresSinuca_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.125}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 396
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c826ed22fae43f0800000000000000
+      internalID: -914601110014882685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 396
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0094a5e14a54a80800000000000000
+      internalID: -8483193872811753266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 396
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1ae8a979e11e460800000000000000
+      internalID: 7269124910034624950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_3
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 396
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7910544383070130800000000000000
+      internalID: 3532796295017142655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_4
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 396
+        width: 66
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4daa5218a56b530800000000000000
+      internalID: 3870380440500753595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_5
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 396
+        width: 69
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fffc4b11d39ab8990800000000000000
+      internalID: -7382621084388634625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_6
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 396
+        width: 65
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6905e161e761da640800000000000000
+      internalID: 5092751484418674838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_7
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 396
+        width: 59
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3333c36e22180470800000000000000
+      internalID: 8360952698664858429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 268
+        width: 64
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a6c6a1095924220800000000000000
+      internalID: 2468699991903595076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 268
+        width: 63
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e404a1f2cb54240800000000000000
+      internalID: 4775429890386185816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_10
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 268
+        width: 63
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8268a80971bff23c0800000000000000
+      internalID: -4382007833780386264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_11
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 268
+        width: 63
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565949a8b78fe51f0800000000000000
+      internalID: -1054132053268458139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_12
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 268
+        width: 65
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f3227b6c4d35610800000000000000
+      internalID: 1608863441842487195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_13
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 268
+        width: 69
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce289f21f1ffbcd30800000000000000
+      internalID: 4452933165513278188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_14
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 268
+        width: 65
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57286529b3ac73e0800000000000000
+      internalID: -2054587314395928740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_15
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 268
+        width: 62
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670da6d344eead690800000000000000
+      internalID: -7576481446241841034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_16
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 140
+        width: 62
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afa677c9bbaf4580800000000000000
+      internalID: -8840658729101250652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_17
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 140
+        width: 65
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5f0391b69b1e610800000000000000
+      internalID: 1648802808229590438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_18
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 140
+        width: 61
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7bfa186eb90b990800000000000000
+      internalID: -7372221175684941909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_19
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 140
+        width: 63
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8c6d8b77d18bfae0800000000000000
+      internalID: -1514474087189222262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_20
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 140
+        width: 66
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6570e2f606f1820800000000000000
+      internalID: 2891135516425017025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_21
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 140
+        width: 69
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e123e8e06ea75fd00800000000000000
+      internalID: 1005845220292440606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_22
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 140
+        width: 65
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2943e842d35ca340800000000000000
+      internalID: 4876364659166497068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_23
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 140
+        width: 62
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66076aab0e5ecdf0800000000000000
+      internalID: -158085532714858898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_24
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 12
+        width: 61
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a4fb04647fadf20800000000000000
+      internalID: 3448340345811585550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_25
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 12
+        width: 62
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a45b810d173b5b20800000000000000
+      internalID: 3124151364231058594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_26
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 12
+        width: 60
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012dd0a749b45b1d0800000000000000
+      internalID: -3335676847923015152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_27
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 12
+        width: 62
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff569c0fa3e97340800000000000000
+      internalID: 4862167613693124602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_28
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 12
+        width: 66
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf61157f500dab1a0800000000000000
+      internalID: -6792888363892271365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_29
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 12
+        width: 68
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5935bcbe11fd59f50800000000000000
+      internalID: 6887656473196450709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_30
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 12
+        width: 65
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5344f10a70b4e1260800000000000000
+      internalID: 7070170961141515317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FrequentadoresSinuca_31
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 12
+        width: 62
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8dc9c6c897844870800000000000000
+      internalID: 8666200673207569805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

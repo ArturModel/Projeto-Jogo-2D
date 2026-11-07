@@ -1,0 +1,35 @@
+{
+  "cell": [
+    128,
+    128
+  ],
+  "columns": 4,
+  "rows": 6,
+  "floor": 113,
+  "animations": {
+    "frente_caminhar": {
+      "from": 0,
+      "to": 3
+    },
+    "costas_caminhar": {
+      "from": 4,
+      "to": 7
+    },
+    "lado_caminhar": {
+      "from": 8,
+      "to": 11
+    },
+    "lado_tacada": {
+      "from": 12,
+      "to": 15
+    },
+    "frente_tacada": {
+      "from": 16,
+      "to": 19
+    },
+    "costas_tacada": {
+      "from": 20,
+      "to": 23
+    }
+  }
+}

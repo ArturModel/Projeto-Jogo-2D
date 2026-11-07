@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 public sealed partial class SinucaRoom3D
 {
@@ -17,9 +17,8 @@ public sealed partial class SinucaRoom3D
         var ivory=Mat("madreperola",new Color(.78f,.70f,.45f));for(int i=-2;i<=2;i++)foreach(float side in new[]{-1f,1f})if(i!=0)Sphere("Mosca",new Vector3(i*.47f,.877f,side*.77f),.012f,ivory,scenery);
         for(int j=0;j<6;j++)
         {
-            Vector2 p=PocketOuter(j);Vector2 throat=PocketPhysics(j);Vector2 delta=p-throat;
-            var chute=Box("GargantaCacapa",new Vector3((p.x+throat.x)*.5f,TableY-.065f,(p.y+throat.y)*.5f),new Vector3(.16f,.008f,delta.magnitude+.16f),Mat("interiorCacapa",new Color(.004f,.005f,.003f),null,true));
-            chute.transform.localRotation=Quaternion.Euler(0,Mathf.Atan2(delta.x,delta.y)*Mathf.Rad2Deg,0);
+            Vector2 p=PocketOuter(j);
+            BuildPocketLining(j);
             // Open leather lip: no solid cylinder or raised cap across the ball's path.
             Cylinder("BuracoEscuro_"+j,new Vector3(p.x,.75f,p.y),.077f,.004f,Mat("interiorCacapa",new Color(.004f,.005f,.003f),null,true));
             var lip=Ring("AroCouro_"+j,.078f,.006f,new Color(.10f,.065f,.035f),scenery,24);
@@ -32,6 +31,24 @@ public sealed partial class SinucaRoom3D
         }
     }
 
+    private void BuildPocketLining(int pocket)
+    {
+        var from=PocketPhysics(pocket);var to=PocketCutExit(pocket);
+        float angle=Mathf.Atan2(to.y-from.y,to.x-from.x);var polygon=new List<Vector2>();
+        for(int k=0;k<=12;k++){float a=angle-Mathf.PI*.5f+k*Mathf.PI/12;polygon.Add(to+new Vector2(Mathf.Cos(a),Mathf.Sin(a))*(SinucaMinigameUI.PocketOpeningRadius*MetresPerUnit));}
+        for(int k=0;k<=12;k++){float a=angle+Mathf.PI*.5f+k*Mathf.PI/12;polygon.Add(from+new Vector2(Mathf.Cos(a),Mathf.Sin(a))*(SinucaMinigameUI.PocketOpeningRadius*MetresPerUnit));}
+        // The dark lining follows the existing opening and ends at the outer wood.
+        // A rectangular backing projects black tabs beyond the corners of the table.
+        var bounds=new[]{new Vector2(-1.535f,-.835f),new Vector2(1.535f,-.835f),new Vector2(1.535f,.835f),new Vector2(-1.535f,.835f)};
+        for(int edge=0;edge<4;edge++)polygon=ClipPocketPolygon(polygon,bounds[edge],bounds[(edge+1)%4],true);
+        var vertices=new List<Vector3>();var triangles=new List<int>();
+        foreach(var point in polygon)vertices.Add(new Vector3(point.x,TableY-.065f,point.y));
+        for(int i=1;i<polygon.Count-1;i++)triangles.AddRange(new[]{0,i+1,i});
+        var mesh=new Mesh{name="ForroCacapa_"+pocket};mesh.SetVertices(vertices);mesh.SetTriangles(triangles,0);mesh.RecalculateNormals();mesh.RecalculateBounds();owned.Add(mesh);
+        var go=new GameObject("GargantaCacapa_"+pocket);go.transform.SetParent(scenery,false);go.layer=Layer;
+        go.AddComponent<MeshFilter>().sharedMesh=mesh;go.AddComponent<MeshRenderer>().sharedMaterial=Mat("interiorCacapa",new Color(.004f,.005f,.003f),null,true);
+    }
+
     // Subtract six convex capsule profiles. Every remaining polygon is convex, so a fan
     // triangulates it exactly; no dense grid, stair-step holes, or per-frame rebuild.
     private GameObject PocketSlab(string name,Vector3 at,Vector3 size,Material material)
@@ -40,9 +57,9 @@ public sealed partial class SinucaRoom3D
         var pieces=new List<List<Vector2>>{new List<Vector2>{new Vector2(x0,z0),new Vector2(x1,z0),new Vector2(x1,z1),new Vector2(x0,z1)}};
         for(int pocket=0;pocket<6;pocket++)
         {
-            var from=PocketPhysics(pocket);var to=PocketOuter(pocket);var axis=(to-from).normalized;
+            var from=PocketPhysics(pocket);var to=PocketCutExit(pocket);var axis=(to-from).normalized;
             float angle=Mathf.Atan2(axis.y,axis.x);var cut=new List<Vector2>();
-            const float radius=.080f;
+            const float radius=(SinucaMinigameUI.PocketOpeningRadius*MetresPerUnit);
             for(int k=0;k<=12;k++){float a=angle-Mathf.PI*.5f+k*Mathf.PI/12;cut.Add(to+new Vector2(Mathf.Cos(a),Mathf.Sin(a))*radius);}
             for(int k=0;k<=12;k++){float a=angle+Mathf.PI*.5f+k*Mathf.PI/12;cut.Add(from+new Vector2(Mathf.Cos(a),Mathf.Sin(a))*radius);}
             var next=new List<List<Vector2>>();
@@ -96,5 +113,9 @@ public sealed partial class SinucaRoom3D
         var g=new GameObject("TacoProporcional").transform;g.SetParent(parent,false);Tube("MadeiraTaco",new Vector3(0,0,-1.22f),new Vector3(0,0,-.16f),.008f,Mat("tacoClaro",new Color(.62f,.43f,.20f)),g);Tube("Empunhadura",new Vector3(0,0,-.92f),new Vector3(0,0,-.62f),.013f,DarkWood,g);Tube("Virola",new Vector3(0,0,-.16f),new Vector3(0,0,-.10f),.006f,Mat("virola",new Color(.78f,.77f,.60f)),g);Tube("SolaAzul",new Vector3(0,0,-.10f),new Vector3(0,0,-.087f),.006f,Mat("gizAzul",new Color(.16f,.39f,.47f)),g);return g;
     }
     public static Vector2 PocketPhysics(int j){float x=206*MetresPerUnit,z=101*MetresPerUnit;return j==0?new Vector2(-x,z):j==1?new Vector2(0,z+2*MetresPerUnit):j==2?new Vector2(x,z):j==3?new Vector2(-x,-z):j==4?new Vector2(0,-z-2*MetresPerUnit):new Vector2(x,-z);}
-    public static Vector2 PocketOuter(int j)=>j==0?new Vector2(-1.47f,.765f):j==1?new Vector2(0,.78f):j==2?new Vector2(1.47f,.765f):j==3?new Vector2(-1.47f,-.765f):j==4?new Vector2(0,-.78f):new Vector2(1.47f,-.765f);
+    // The visible mouth, net and falling ball share the actual opening centre.
+    public static Vector2 PocketOuter(int j)=>PocketPhysics(j);
+    // Preserve the already-correct cut through the wooden rail; this is its outer
+    // clearance limit, not a second pocket centre behind the opening.
+    private static Vector2 PocketCutExit(int j)=>j==0?new Vector2(-1.47f,.765f):j==1?new Vector2(0,.78f):j==2?new Vector2(1.47f,.765f):j==3?new Vector2(-1.47f,-.765f):j==4?new Vector2(0,-.78f):new Vector2(1.47f,-.765f);
 }

@@ -29,6 +29,8 @@ class WalkingQA {
  Vector3 standingPosition=new Vector3(-2.1f,1.62f,-1.25f);
  float standingYaw=58f,standingPitch=22f;
  float distanciaPasso;int variantePasso;
+ class Actor { public Transform root; }
+ Actor opponent;
  bool Walking=true;
  Vector2 StandingXZ=>new Vector2(standingPosition.x,standingPosition.z);
 '''+methods+reach+'''

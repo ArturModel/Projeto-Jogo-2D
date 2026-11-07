@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -49,7 +49,7 @@ public struct SinucaAimGuideData
 /// <summary>GPU room view; one persistent UI quad, true depth and perspective-correct textures.</summary>
 public sealed class SinucaTableView : RawImage, IPointerDownHandler,IPointerMoveHandler,IPointerUpHandler,IDragHandler,IScrollHandler
 {
-    public const float TableWidth=420,TableHeight=210,HalfW=210,HalfH=105,BallRadius=5.4f,PocketRadius=5.9f;
+    public const float TableWidth=420,TableHeight=210,HalfW=210,HalfH=105,BallRadius=5.4f,PocketRadius=SinucaMinigameUI.PocketRadius;
     public SinucaCameraView CameraModo{get;private set;}=SinucaCameraView.Caminhando3D;
     public float Zoom{get;private set;}=1;
     public Action<Vector2,PointerEventData.InputButton> AoPressionarMesa;

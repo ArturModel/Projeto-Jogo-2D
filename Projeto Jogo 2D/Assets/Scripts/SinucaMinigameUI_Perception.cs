@@ -9,11 +9,16 @@ public partial class SinucaMinigameUI
     private struct FalaHistoria { public string texto; public bool marcus; }
     private readonly Queue<FalaHistoria> falasHistoria = new Queue<FalaHistoria>();
     private bool locutorPendenteMarcus, locutorAtualMarcus;
-    private bool batidasOuvidas, inspecaoConcluida, bolaFalsaVista;
+    private bool batidasOuvidas, inspecaoConcluida;
+    private readonly SinucaPerceptionSchedule agendaPercepcoes = new SinucaPerceptionSchedule(Guid.NewGuid().GetHashCode());
+    private AudioClip ecoFesta;
+    private bool PercepcaoSobMesaAtiva => agendaPercepcoes.Active == SinucaPerceptionSchedule.Event.UnderTable;
+    private bool FalaPercepcaoOcupada => falasHistoria.Count > 0 ||
+        !string.IsNullOrEmpty(falaZePendente) || (txtFalaZe != null && !string.IsNullOrEmpty(txtFalaZe.text));
     private bool bolaFalsaAtiva, bolaFalsaExaminada;
     private int numeroFalso = -1, turnoBolaFalsa = -1;
     private Vector2 posicaoFalsa;
-    private float escutaTimer, proximaBatida, tempoSobMesa, exameBola;
+    private float proximaBatida, tempoSobMesa, exameBola;
     private int batidasRestantes, faseSobMesa;
     private AudioSource audioSobMesa;
     private AudioClip batidaSobMesa, aguaSobMesa;
@@ -31,29 +36,31 @@ public partial class SinucaMinigameUI
     private void ReiniciarPercepcoesSinuca()
     {
         EncerrarPercepcaoDaMao();falasHistoria.Clear();
-        batidasOuvidas=inspecaoConcluida=bolaFalsaVista=false;
-        escutaTimer=exameBola=0;locutorPendenteMarcus=locutorAtualMarcus=false;
+        batidasOuvidas=inspecaoConcluida=false;
+        exameBola=0;agendaPercepcoes.Reset();locutorPendenteMarcus=locutorAtualMarcus=false;
     }
-    private void EncerrarPercepcaoDaMao()
+    private void EncerrarPercepcaoDaMao(bool preservarFalas=false)
     {
-        if(OlhandoDebaixo)inspecaoConcluida=true;
+        agendaPercepcoes.Finish();
+        batidasOuvidas=false;inspecaoConcluida=true;
         if(tableView3D!=null && tableView3D.Room!=null){tableView3D.Room.EndUnderTable();tableView3D.Room.SetFalseBall(false,1,Vector2.zero);}
         if(audioSobMesa!=null)audioSobMesa.Stop();
         bolaFalsaAtiva=false;batidasRestantes=0;tempoSobMesa=0;faseSobMesa=0;
-        numeroFalso=-1;turnoBolaFalsa=-1;falasHistoria.Clear();
+        numeroFalso=-1;turnoBolaFalsa=-1;if(!preservarFalas)falasHistoria.Clear();
+        if(txtPercepcaoSubtitulo!=null)txtPercepcaoSubtitulo.text="";
     }
-    private void PrepararBolaFalsa()
+    private bool PrepararBolaFalsa()
     {
         bolaFalsaAtiva=false;
-        if(modoPratica || bolaFalsaVista || contadorTurnosMao<3)return;
+        if(modoPratica || agendaPercepcoes.Active != SinucaPerceptionSchedule.Event.FalseBall || OlhandoDebaixo || batidasRestantes>0)return false;
         numeroFalso=-1;
         for(int n=1;n<16;n++)if(n!=8 && bolas[n].ativa && (regrasBrasileiras==null || regrasBrasileiras.CanNominate(n))){numeroFalso=n;break;}
-        if(numeroFalso<0)return;
+        if(numeroFalso<0)return false;
         // A tempting free position, without covering an actual ball or pocket.
         posicaoFalsa=EncontrarPosicaoLivreDeterministica(new Vector2(-15f,48f),-1);
-        if(!PosicaoValidaSemColisao(posicaoFalsa,-1))return;
-        bolaFalsaAtiva=true;bolaFalsaVista=true;bolaFalsaExaminada=false;
-        turnoBolaFalsa=contadorTurnosMao;exameBola=0;
+        if(!PosicaoValidaSemColisao(posicaoFalsa,-1))return false;
+        bolaFalsaAtiva=true;bolaFalsaExaminada=false;
+        turnoBolaFalsa=contadorTurnosMao;exameBola=0;return true;
     }
     private void AtualizarBolaFalsaVisual()
     {
@@ -83,7 +90,9 @@ public partial class SinucaMinigameUI
     {
         if(modoPratica || tableView3D==null || tableView3D.Room==null)return false;
         var sala=tableView3D.Room;var kb=Keyboard.current;
-        float dt=Mathf.Min(Time.deltaTime,.05f);
+        float dt=Time.deltaTime;
+        if(interfaceLivre)return false;
+        AtualizarAgendaPercepcoes(dt);
         ProximaFalaHistoria();
         if(OlhandoDebaixo)
         {
@@ -112,20 +121,10 @@ public partial class SinucaMinigameUI
             }
             AtualizarBatidas(dt);AtualizarVisualTacoEMira();return true;
         }
-        // Trigger on a settled player turn, including a 2–0 series; no mandatory third hand.
         bool seguro=estado==EstadoPartida.MirandoJogador && turnoDeMarcus;
-        if(seguro && !batidasOuvidas && contadorTurnosMao>=2)
-        {
-            escutaTimer+=dt;
-            if(escutaTimer>=2.2f)
-            {
-                batidasOuvidas=true;batidasRestantes=3;proximaBatida=0;
-                FalaHistoriaEnfileirar("Espera. Tem alguma coisa batendo debaixo da mesa.");
-            }
-        }
         AtualizarBatidas(dt);
         bool perto=sala.CanInspectUnderTable;
-        if(batidasOuvidas && !inspecaoConcluida && seguro)
+        if(PercepcaoSobMesaAtiva && batidasOuvidas && !inspecaoConcluida && seguro)
         {
             txtPercepcaoSubtitulo.text="[Três batidas abafadas vêm debaixo do tampo.]";
             txtControlesRodape.text=EmPe?(perto?"E: abaixar e olhar debaixo da mesa · Mouse: olhar":"Aproxime-se da lateral da mesa para investigar o som."):"Q: levantar para investigar as batidas sob a mesa.";
@@ -146,12 +145,54 @@ public partial class SinucaMinigameUI
             }
         }
         else exameBola=0;
-        if(seguro && EmPe && perto && batidasOuvidas && !inspecaoConcluida && !interfaceLivre && kb!=null && kb.eKey.wasPressedThisFrame)
+        if(PercepcaoSobMesaAtiva && seguro && EmPe && perto && batidasOuvidas && !inspecaoConcluida && !interfaceLivre && kb!=null && kb.eKey.wasPressedThisFrame)
         {
             CancelarCargaAoSuspender();levantarAposTacada=-1;tempoSobMesa=0;faseSobMesa=0;
             sala.BeginUnderTable();AtualizarVisualTacoEMira();return true;
         }
         AtualizarBolaFalsaVisual();return false;
+    }
+    private void AtualizarAgendaPercepcoes(float dt)
+    {
+        bool seguro=estado==EstadoPartida.MirandoJogador && turnoDeMarcus && EmPe && !interfaceLivre;
+        var inicio=agendaPercepcoes.Tick(dt,seguro,FalaPercepcaoOcupada);
+        switch(inicio)
+        {
+            case SinucaPerceptionSchedule.Event.UnderTable:
+                batidasOuvidas=true;inspecaoConcluida=false;batidasRestantes=3;proximaBatida=0;
+                FalaHistoriaEnfileirar("Espera. Tem alguma coisa batendo debaixo da mesa.");
+                break;
+            case SinucaPerceptionSchedule.Event.FalseBall:
+                if(!PrepararBolaFalsa())agendaPercepcoes.Finish();
+                break;
+            case SinucaPerceptionSchedule.Event.WaterInPipes:
+                TocarSobMesa(true);
+                txtPercepcaoSubtitulo.text="[Água corre dentro de um cano. O chão junto à mesa continua seco.]";
+                FalaHistoriaEnfileirar("Esse cano passa por aqui?");
+                break;
+            case SinucaPerceptionSchedule.Event.PartyEcho:
+                // Reuse the project's original abstract crowd texture; no new voices or music.
+                TocarSobMesa(false);audioSobMesa.Stop();
+                if(ecoFesta==null)ecoFesta=SantaRitaBarAudio.CriarTextura(0);
+                audioSobMesa.pitch=.92f;audioSobMesa.PlayOneShot(ecoFesta,.34f);
+                txtPercepcaoSubtitulo.text="[Um salão cheio, distante. As conversas do bar continuam perto de você.]";
+                FalaHistoriaEnfileirar("Parecia que tinha muito mais gente conversando.");
+                break;
+        }
+        var ativo=agendaPercepcoes.Active;
+        if(ativo==SinucaPerceptionSchedule.Event.None)return;
+        float limite=ativo==SinucaPerceptionSchedule.Event.UnderTable?24:
+            ativo==SinucaPerceptionSchedule.Event.FalseBall?16:7;
+        if(OlhandoDebaixo)
+        {
+            if(tempoSobMesa>=12)SairDeBaixoDaMesa();
+            return;
+        }
+        if((ativo==SinucaPerceptionSchedule.Event.FalseBall && !bolaFalsaAtiva) || agendaPercepcoes.Age>=limite)
+        {
+            EncerrarPercepcaoDaMao(true);
+        }
+        AtualizarVolumeSobMesa();
     }
     private void SairDeBaixoDaMesa()
     {
@@ -159,7 +200,8 @@ public partial class SinucaMinigameUI
         bool viu=tempoSobMesa>=1.5f;
         tableView3D.Room.EndUnderTable();batidasRestantes=0;
         if(audioSobMesa!=null)audioSobMesa.Stop();
-        inspecaoConcluida=viu;
+        inspecaoConcluida=true;
+        agendaPercepcoes.Finish();batidasOuvidas=false;
         if(viu)
         {
             FalaHistoriaEnfileirar("Eu ouvi daqui. Bem debaixo da mesa.");
@@ -217,5 +259,5 @@ public partial class SinucaMinigameUI
         var clip=AudioClip.Create(agua?"SR_Memoria_Agua_Original":"SR_SobMesa_Batida_Original",count,1,hz,false);clip.SetData(data,0);return clip;
     }
     private void DestruirAudioPercepcao()
-    { if(aguaSobMesa!=null)Destroy(aguaSobMesa); }
+    { if(aguaSobMesa!=null)Destroy(aguaSobMesa);if(ecoFesta!=null)Destroy(ecoFesta); }
 }

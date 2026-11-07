@@ -28,14 +28,20 @@ public partial class SinucaMinigameUI : MonoBehaviour
     public const float TableWidth = 420f;
     public const float TableHeight = 210f;
     public const float BallRadius = 5.4f;
-    public const float PocketRadius = 5.9f;
+    // Match the 16 cm rendered mouth; capture radius is clearance for the ball centre.
+    public const float PocketOpeningRadius = .080f / (2.84f / TableWidth);
+    public const float PocketRadius = PocketOpeningRadius - BallRadius;
     public const float FixedStep = 1f / 120f;
     private const float CushionRestitution = 0.74f;
-    private const float BallRestitution = 0.94f;
-    private const float BallFriction = 65f;
+    private const float BallRestitution = 0.88f;
+    // Equal solid spheres: I = 2/5 mr². Values use the rendered table's metre scale.
+    private const float BallMassKg = 0.170f;
+    private const float MetresPerPhysicsUnit = 2.84f / TableWidth;
+    private const float SlidingFriction = 0.18f * 9.81f / MetresPerPhysicsUnit;
+    private const float BallFriction = 0.026f * 9.81f / MetresPerPhysicsUnit;
     private const float StopSpeedSq = 0.16f;
-    private const float MaxShotPower = 410f;
-    private const float MinShotPower = 22f;
+    private const float MaxShotPower = 0.60f / (BallMassKg * MetresPerPhysicsUnit);
+    private const float MinShotPower = 0.018f / (BallMassKg * MetresPerPhysicsUnit);
 
     private enum EstadoPartida
     {
@@ -71,7 +77,8 @@ public partial class SinucaMinigameUI : MonoBehaviour
         public Vector2 cacapaAlvo;
         public Quaternion rotacao = Quaternion.identity;
         public float spinLateral;
-        public float spinLongitudinal; // > 0 topspin (Avançar), < 0 backspin (Recuar)
+        public float spinLongitudinal; // Initial cue spin, expressed as surface speed.
+        public Vector2 rolagem; // rω projected into the cloth plane; preserved through ball impacts.
         public RectTransform rect;
         public Image img;
         public TextMeshProUGUI label;
@@ -185,14 +192,16 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private readonly List<int> bolasObjetoCaidasNaTacada = new List<int>();
 
-    // Terror psicológico contextual do Bar do Zé e síntese de áudio por evento
+    // Terror psicológico contextual do Bar do Zé e áudio por evento
     private float multiplicadorLuzAmbiente = 1f;
     private float timerOscilacaoLuz = 0f;
     private bool zePassandoGizNoTurno = true;
     private bool miraAmeacaBolaMarcada = false;
     private float ultimoSomGiz = -10f;
     private static AudioClip clipTacada;
-    private static AudioClip clipColisaoBola;
+    private static AudioClip[] clipsColisaoBola;
+    private int proximaColisaoBola;
+    private float ultimoSomColisaoBola = -10f;
     private static AudioClip clipTabela;
     private static AudioClip clipCacapa;
     private static AudioClip clipGiz;
@@ -260,6 +269,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     {
         ReiniciarPercepcoesSinuca();
         StopAllCoroutines();
+        if(tableView3D!=null)tableView3D.Room?.CancelOpponentShot();
         LimparFalaZe();
         RestaurarCursor();
         CancelarCargaAtiva();
@@ -272,6 +282,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     public void CancelarCargaAoSuspender()
     {
+        EncerrarAjusteEfeito();
         miraMouseAtiva = referenciaMiraMouse = false;
         if (tableView3D != null) tableView3D.ReiniciarReferenciaPonteiro();
         if (estado == EstadoPartida.CarregandoForca)
@@ -312,6 +323,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
         InicializarCacapas();
+        GarantirColisoesGravadas();
         ConstruirUI();
         raiz.SetActive(false);
     }
@@ -331,8 +343,10 @@ public partial class SinucaMinigameUI : MonoBehaviour
         float w = TableWidth * 0.5f;  // 210
         float h = TableHeight * 0.5f; // 105
         float jawR = 1.8f;
-        float cOffset = 10.5f;
-        float sOffset = 9.0f;
+        // Rounded tips sit outside the drawn opening, rather than narrowing its centre.
+        float expandedMouth = PocketOpeningRadius + jawR;
+        float cOffset = 4f + Mathf.Sqrt(expandedMouth * expandedMouth - 4f * 4f);
+        float sOffset = Mathf.Sqrt(expandedMouth * expandedMouth - 2f * 2f);
 
         // Bicos das 4 caçapas de canto (2 por canto)
         foreach (float sx in new[] { -1f, 1f })
@@ -360,7 +374,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private int framePuxada=-1, frameInicioCarga=-1, frameCaptura=-1;
     private TextMeshProUGUI reticuloFPS;
 
-    private void OnDisable(){RestaurarCursor();LimparFalaZe();ReiniciarPercepcoesSinuca();}
+    private void OnDisable(){EncerrarAjusteEfeito();if(tableView3D!=null)tableView3D.Room?.CancelOpponentShot();RestaurarCursor();LimparFalaZe();ReiniciarPercepcoesSinuca();}
     private void OnDestroy()
     {
         RestaurarCursor();LimparFalaZe();
@@ -388,6 +402,17 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private void LerMouseCapturado()
     {
         var mouse=Mouse.current;if(Time.frameCount==frameCaptura)return;if(mouse==null || Cursor.lockState!=CursorLockMode.Locked || EntradaMesaBloqueada())return;
+        if(mouse.rightButton.wasPressedThisFrame && !EmPe)
+        {
+            OnMesaPointerDown(Vector2.zero,PointerEventData.InputButton.Right);
+            return;
+        }
+        if(ajustandoEfeito)
+        {
+            if(!mouse.rightButton.isPressed)EncerrarAjusteEfeito();
+            else ArrastarEfeito(mouse.delta.ReadValue());
+            return;
+        }
         if(mouse.leftButton.wasPressedThisFrame)
         {
             if(EmPe)
@@ -399,7 +424,6 @@ public partial class SinucaMinigameUI : MonoBehaviour
         }
         else if(!EmPe && estado==EstadoPartida.MirandoJogador)
             tableView3D.AoAjustarMira?.Invoke(mouse.delta.ReadValue().x / Mathf.Max(.01f,mesaRect.GetComponentInParent<Canvas>().scaleFactor)*.003f);
-        if(mouse.rightButton.wasPressedThisFrame && !EmPe)OnMesaPointerDown(Vector2.zero,PointerEventData.InputButton.Right);
         if(mouse.leftButton.wasReleasedThisFrame)OnMesaPointerUp(Vector2.zero,true,PointerEventData.InputButton.Left);
     }
 
@@ -427,7 +451,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         tableView3D.color = Color.white;
         tableView3D.AoPressionarMesa = OnMesaPointerDown;
         tableView3D.AoMoverMesa = OnMesaPointerMove;
-        tableView3D.AoAjustarMira = delta => { if (estado == EstadoPartida.MirandoJogador && !interfaceLivre && !EntradaMesaBloqueada()) { if(!tableView3D.Room.SettledAtCue)return; miraMouseAtiva=referenciaMiraMouse=false; anguloMiraRad += delta*(Keyboard.current!=null&&Keyboard.current.shiftKey.isPressed?.15f:1f); LimitarMiraApoiada(); AtualizarVisualTacoEMira(); } };
+        tableView3D.AoAjustarMira = delta => { if (estado == EstadoPartida.MirandoJogador && !ajustandoEfeito && !interfaceLivre && !EntradaMesaBloqueada()) { if(!tableView3D.Room.SettledAtCue)return; miraMouseAtiva=referenciaMiraMouse=false; anguloMiraRad += delta*(Keyboard.current!=null&&Keyboard.current.shiftKey.isPressed?.15f:1f); LimitarMiraApoiada(); AtualizarVisualTacoEMira(); } };
         tableView3D.AoSoltarMesa = OnMesaPointerUp;
         tableView3D.AoScrollZoom = OnMesaScrollZoom;
 
@@ -496,6 +520,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         txtPercepcaoSubtitulo = CriarTexto("TxtPercepcaoSubtitulo",legado.transform,"",9,Color.white,TextAlignmentOptions.Left);
         ConstruirLegendaZe();
         ConstruirOpcoesMesa();
+        ConstruirAjusteEfeito();
         ConstruirEscolhaAlvo();
         ConstruirModal(raiz.transform);
         AtualizarPainelContextual();
@@ -531,7 +556,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         spinSelector.CanSelect=()=>estado==EstadoPartida.MirandoJogador&&!MenuPausa.Aberto;
         txtTendenciaEfeito=CriarTexto("TxtTendenciaEfeito",card.transform,"Toque no centro: tacada sem efeito.",10,new Color32(210,219,203,255),TextAlignmentOptions.Left);
         Posicionar(txtTendenciaEfeito.rectTransform,new Vector2(26,67),new Vector2(240,32));
-        spinSelector.Changed=p=>{if(estado!=EstadoPartida.MirandoJogador)return;contatoTaco=p;efeitoEscolhido=p.y>.15f?SinucaCueSpin.Avancar:p.y<-.15f?SinucaCueSpin.Recuar:SinucaCueSpin.Normal;txtTendenciaEfeito.text="Contato: "+(p.x<-.15f?"esquerda / ":p.x>.15f?"direita / ":"")+(p.y<-.15f?"recuo":p.y>.15f?"avanço":"centro");};
+        spinSelector.Changed=AplicarContatoEfeito;
         var reset=CriarBotaoHUD(card.transform,"SemEfeito","Centralizar toque",new Vector2(28,34),new Vector2(160,23),new Color32(44,64,54,255),out _);
         reset.onClick.AddListener(()=>SelecionarEfeitoBranca(SinucaCueSpin.Normal));
         var alvo=CriarBotaoHUD(card.transform,"EscolherPrimeiroToque","Primeiro toque: automático",new Vector2(0,0),new Vector2(312,27),new Color32(44,54,44,255),out txtAlvo);
@@ -593,7 +618,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         Posicionar(txtControlesRodape.rectTransform,new Vector2(carga?-144:0,-6),new Vector2(carga?308:596,12));
         switch (estado)
         {
-            case EstadoPartida.MirandoJogador: txtControlesRodape.text=EmPe?"WASD: caminhar · Mouse: olhar · Esc: cursor · Clique na branca próxima para se apoiar":"Mouse: mirar · Clique, puxe para baixo e solte · Shift: precisão · Q: levantar"; break;
+            case EstadoPartida.MirandoJogador: txtControlesRodape.text=EmPe?"WASD: caminhar · Mouse: olhar · Esc: cursor · Clique na branca próxima para se apoiar":"Mouse: mirar · Direito + arraste: efeito · Esquerdo: puxar/tacar · Q: levantar"; break;
             case EstadoPartida.CarregandoForca: txtControlesRodape.text="Mais recuo = mais força. Solte para tacar."; break;
             case EstadoPartida.PosicionandoBranca: txtControlesRodape.text="Clique na mesa para repor a branca · Setas: ajustar · E: confirmar"; break;
             case EstadoPartida.TurnoZePensando: txtControlesRodape.text="Zé está escolhendo a jogada. Observe a mesa."; break;
@@ -602,6 +627,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         }
         if(EmPe && estado==EstadoPartida.MirandoJogador)txtTurnoStatus.text=tableView3D.Room.CanReachWhite(bolas[0].pos)?"Sua vez · Clique na branca para preparar a tacada.":"Sua vez · Caminhe até o lado da branca.";
         else if(EmPe)txtControlesRodape.text="WASD: caminhar · Mouse: olhar · Esc: cursor · Aguarde sua vez";
+        if(ajustandoEfeito)txtControlesRodape.text="Arraste para ajustar o contato · Solte o botão direito para manter o efeito";
         if(interfaceLivre)txtControlesRodape.text="Cursor livre · Clique na sala ou Esc para voltar · Pausa: menu do jogo";
         AtualizarBotaoVistaCamera();
         if (!turnoDeMarcus && !string.IsNullOrEmpty(txtPercepcaoSubtitulo.text))
@@ -778,6 +804,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private void ComecarNovaSerie(Action aoVencerSerie)
     {
         StopAllCoroutines();
+        if(tableView3D!=null)tableView3D.Room?.CancelOpponentShot();
         LimparFalaZe();
         comentariosZe.ResetSeries();
         ReiniciarPercepcoesSinuca();
@@ -807,6 +834,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     {
         ReiniciarPercepcoesSinuca();
         StopAllCoroutines();
+        if(tableView3D!=null)tableView3D.Room?.CancelOpponentShot();
         LimparFalaZe();
         CancelarCargaAtiva();
         raiz.SetActive(true);
@@ -835,6 +863,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
             bolas[i].progressoQueda = 0f;
             bolas[i].rotacao = Quaternion.Euler(i * 35f, i * 50f, 0f);
             bolas[i].spinLongitudinal = 0f;
+            bolas[i].rolagem = Vector2.zero;
             bolas[i].spinLateral = 0f;
             if (bolas[i].marcaVisual != null) bolas[i].marcaVisual.SetActive(false);
         }
@@ -919,6 +948,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     {
         contatoTaco = new Vector2(0,novoEfeito==SinucaCueSpin.Avancar?.65f:novoEfeito==SinucaCueSpin.Recuar?-.65f:0);
         if(spinSelector!=null)spinSelector.SetContact(contatoTaco);
+        AtualizarIndicadorEfeito();
         if (efeitoEscolhido != novoEfeito)
             CancelarCargaAoSuspender();
 
@@ -1048,6 +1078,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         bolas[0].vel = Vector2.zero;
         bolas[0].rotacao = Quaternion.identity;
         bolas[0].spinLongitudinal = 0f;
+        bolas[0].rolagem = Vector2.zero;
 
         // Individual home marks of the Brazilian game.
         for (int i = 1; i <= 15; i++)
@@ -1060,6 +1091,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
             bolas[i].vel = Vector2.zero;
             bolas[i].rotacao = Quaternion.Euler(i * 28f, i * 44f, 0f);
             bolas[i].spinLongitudinal = 0f;
+            bolas[i].rolagem = Vector2.zero;
             bolas[i].spinLateral = 0f;
             if (bolas[i].marcaVisual != null) bolas[i].marcaVisual.SetActive(false);
         }
@@ -1129,6 +1161,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         }
 
         contadorTurnosMao++;
+        agendaPercepcoes.TurnStarted();
         AtualizarRegraBolaMarcadaAntesDoTurno();
 
         // Demonstração breve na abertura da 2ª mão quando a Bola Marcada entra em vigor
@@ -1183,7 +1216,6 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
         if (turnoDeMarcus)
         {
-            PrepararBolaFalsa();
             if (brancaNaMao)
             {
                 estado = EstadoPartida.PosicionandoBranca;
@@ -1239,7 +1271,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private void Update()
     {
         bool suspenderAudio = Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused;
-        SuspenderAudioPercepcao(suspenderAudio || !IsShowing || (painelModal!=null && painelModal.activeSelf) || (painelOpcoes!=null && painelOpcoes.activeSelf) || (painelAlvo!=null && painelAlvo.activeSelf));
+        SuspenderAudioPercepcao(suspenderAudio || interfaceLivre || !IsShowing || (painelModal!=null && painelModal.activeSelf) || (painelOpcoes!=null && painelOpcoes.activeSelf) || (painelAlvo!=null && painelAlvo.activeSelf));
         if (suspenderAudio != audioSuspenso)
         {
             audioSuspenso = suspenderAudio;
@@ -1294,6 +1326,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         }
 
         if(AtualizarPercepcoesSinuca())return;
+        AtualizarAjusteEfeito();
         LerMouseCapturado();
         if(levantarAposTacada>=0 && Time.time>=levantarAposTacada)LevantarDaMesa();
         if(!interfaceLivre && kb!=null && (kb.qKey.wasPressedThisFrame || kb.vKey.wasPressedThisFrame))AlternarVistaCamera();
@@ -1367,9 +1400,11 @@ public partial class SinucaMinigameUI : MonoBehaviour
                 CancelarCargaAtiva();
                 txtTurnoStatus.text = "Tacada cancelada. Mire, clique e puxe para trás. Solte para tacar.";
             }
+            else IniciarAjusteEfeito();
             return;
         }
 
+        if(ajustandoEfeito)return;
         if (button != PointerEventData.InputButton.Left) return;
 
         if (estado == EstadoPartida.PosicionandoBranca)
@@ -1416,7 +1451,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private void OnMesaPointerMove(Vector2 tablePos)
     {
-        if (EntradaMesaBloqueada() || interfaceLivre || EmPe) return;
+        if (EntradaMesaBloqueada() || interfaceLivre || EmPe || ajustandoEfeito) return;
 
         if (estado == EstadoPartida.PosicionandoBranca)
         {
@@ -1434,6 +1469,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private void OnMesaPointerUp(Vector2 tablePos, bool dentroDoViewport, PointerEventData.InputButton button)
     {
+        if(button==PointerEventData.InputButton.Right){EncerrarAjusteEfeito();return;}
         if (estado != EstadoPartida.CarregandoForca) return;
         if (dispositivoCargaAtivo != DispositivoCarga.MouseEsquerdo || button != PointerEventData.InputButton.Left)
             return;
@@ -1549,6 +1585,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private void AtualizarMiraJogador()
     {
+        if(ajustandoEfeito)return;
         if (miraMouseAtiva) anguloMiraRad = SuavizarMira(anguloMiraRad, alvoMiraMouseRad, Time.deltaTime);
         var kb = Keyboard.current;
         if (kb != null)
@@ -1712,7 +1749,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         AtualizarBarraForcaVisual(0f);
 
         Vector2 dir = new Vector2(Mathf.Cos(anguloMiraRad), Mathf.Sin(anguloMiraRad));
-        float potencia = Mathf.Lerp(MinShotPower, MaxShotPower, Mathf.Pow(forcaFinal, 1.35f));
+        float potencia = Mathf.Lerp(MinShotPower, MaxShotPower, Mathf.Pow(forcaFinal, 1.65f));
         tableView3D.Room.BeginStroke(forcaFinal);
         levantarAposTacada=Time.time+.26f;
         ExecutarTacadaComEfeito(dir, potencia, efeitoEscolhido);
@@ -1740,11 +1777,50 @@ public partial class SinucaMinigameUI : MonoBehaviour
         }
 
         EscolherTacadaZe(out Vector2 direcaoZe, out float potenciaZe);
-        yield return new WaitForSeconds(.32f);
-        while(MenuPausa.Aberto || (painelModal!=null&&painelModal.activeSelf) || !Application.isFocused)yield return null;
-        if(estado!=EstadoPartida.TurnoZePensando)yield break;
-        ExecutarTacadaComEfeito(direcaoZe, potenciaZe, SinucaCueSpin.Normal);
+        var room = tableView3D.Room;
+        bool presented = room.PrepareOpponentShot(bolas[0].pos, direcaoZe);
+        if (!presented)
+        {
+            // A missing art resource must not permanently strand the rules on Zé's turn.
+            Debug.LogWarning("Sinuca: apresentação do Zé indisponível; executando a jogada escolhida.");
+            while (ApresentacaoZeSuspensa()) yield return null;
+            if (estado == EstadoPartida.TurnoZePensando)
+                ExecutarTacadaComEfeito(direcaoZe, potenciaZe, SinucaCueSpin.Normal);
+            yield break;
+        }
+        while (!room.OpponentAtShot)
+        {
+            if (estado != EstadoPartida.TurnoZePensando) { room.CancelOpponentShot(); yield break; }
+            if (!ApresentacaoZeSuspensa()) room.TickOpponentWalk(Time.deltaTime);
+            yield return null;
+        }
+        float elapsed = 0;
+        bool struck = false;
+        const float duration = 1.65f, contact = .82f;
+        while (elapsed < duration)
+        {
+            if (!struck && estado != EstadoPartida.TurnoZePensando) { room.CancelOpponentShot(); yield break; }
+            if (!ApresentacaoZeSuspensa())
+            {
+                elapsed = Mathf.Min(duration, elapsed + Mathf.Min(Time.deltaTime, .05f));
+                float progress = elapsed / duration;
+                room.PoseOpponentShot(progress);
+                if (!struck && progress >= contact)
+                {
+                    struck = true;
+                    ExecutarTacadaComEfeito(direcaoZe, potenciaZe, SinucaCueSpin.Normal);
+                }
+            }
+            yield return null;
+        }
+        room.CancelOpponentShot();
     }
+
+    private bool ApresentacaoZeSuspensa()
+        => !IsShowing || MenuPausa.Aberto || Time.timeScale == 0 || !Application.isFocused ||
+           (painelModal != null && painelModal.activeSelf) ||
+           (painelOpcoes != null && painelOpcoes.activeSelf) ||
+           (painelAlvo != null && painelAlvo.activeSelf);
 
     private Vector2 EscolherPosicaoBrancaZe()
     {
@@ -1804,7 +1880,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                 if (!CaminhoLivreEntre(cuePos, ghostPos, 0, i)) continue;
                 if (!CaminhoLivreEntre(bolas[i].pos, pocketPos, i, -1)) continue;
 
-                float potBase = Mathf.Clamp(165f + (distCueGhost + distBallPocket) * 0.58f / Mathf.Max(0.35f, cosCut), 155f, 415f);
+                float potBase = Mathf.Clamp(165f + (distCueGhost + distBallPocket) * 0.58f / Mathf.Max(0.35f, cosCut), 155f, MaxShotPower);
                 AvaliarCandidatoZe(dirCueGhost, potBase, ref melhorScore, ref direcaoEscolhida, ref potenciaEscolhida);
             }
         }
@@ -1870,6 +1946,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     {
         Vector2[] p = new Vector2[16];
         Vector2[] v = new Vector2[16];
+        Vector2[] roll = new Vector2[16];
         bool[] a = new bool[16];
         for (int i = 0; i < 16; i++)
         {
@@ -1878,7 +1955,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
             a[i] = bolas[i].ativa;
         }
 
-        v[0] = dir.normalized * potencia;
+        v[0] = dir.normalized * Mathf.Clamp(potencia, MinShotPower, MaxShotPower);
         bolasLegaisCaidas = 0;
         caiuBranca = false;
         caiuMarcada = false;
@@ -1890,22 +1967,22 @@ public partial class SinucaMinigameUI : MonoBehaviour
         float limY = TableHeight * 0.5f - BallRadius;
         const float dt = FixedStep;
 
-        for (int step = 0; step < 1000; step++)
+        for (int step = 0; step < 2400; step++)
         {
             bool movendo = false;
             for (int i = 0; i < 16; i++)
             {
                 if (!a[i]) continue;
                 float spdSq = v[i].sqrMagnitude;
-                if (spdSq <= StopSpeedSq)
+                if (spdSq <= StopSpeedSq && roll[i].sqrMagnitude <= StopSpeedSq)
                 {
                     v[i] = Vector2.zero;
                     continue;
                 }
                 movendo = true;
+                Vector2 anterior = p[i];
                 p[i] += v[i] * dt;
-                float spd = Mathf.Sqrt(spdSq);
-                v[i] = v[i] / spd * Mathf.Max(0f, spd - BallFriction * dt);
+                IntegrarPano(ref v[i], ref roll[i], dt);
 
                 for (int c = 0; c < cacapas.Length; c++)
                 {
@@ -1913,7 +1990,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                     if (i > 0 && (modoPratica || regrasBrasileiras == null || regrasBrasileiras.CanNominate(i)) && dCac < menorDistCacapa)
                         menorDistCacapa = dCac;
 
-                    if (dCac <= PocketRadius)
+                    if (CruzaCapturaCacapa(anterior, p[i], cacapas[c]))
                     {
                         a[i] = false;
                         v[i] = Vector2.zero;
@@ -1927,11 +2004,11 @@ public partial class SinucaMinigameUI : MonoBehaviour
                 }
                 if (!a[i]) continue;
 
-                if (p[i].x < -limX && !PertoDeCacapa(p[i], 20f)) { p[i].x = -limX; v[i].x = Mathf.Abs(v[i].x) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
-                else if (p[i].x > limX && !PertoDeCacapa(p[i], 20f)) { p[i].x = limX; v[i].x = -Mathf.Abs(v[i].x) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
+                if (p[i].x < -limX && !PertoDeCacapa(p[i], PocketOpeningRadius)) { p[i].x = -limX; v[i].x = Mathf.Abs(v[i].x) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
+                else if (p[i].x > limX && !PertoDeCacapa(p[i], PocketOpeningRadius)) { p[i].x = limX; v[i].x = -Mathf.Abs(v[i].x) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
 
-                if (p[i].y < -limY && !PertoDeCacapa(p[i], 20f)) { p[i].y = -limY; v[i].y = Mathf.Abs(v[i].y) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
-                else if (p[i].y > limY && !PertoDeCacapa(p[i], 20f)) { p[i].y = limY; v[i].y = -Mathf.Abs(v[i].y) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
+                if (p[i].y < -limY && !PertoDeCacapa(p[i], PocketOpeningRadius)) { p[i].y = -limY; v[i].y = Mathf.Abs(v[i].y) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
+                else if (p[i].y > limY && !PertoDeCacapa(p[i], PocketOpeningRadius)) { p[i].y = limY; v[i].y = -Mathf.Abs(v[i].y) * CushionRestitution; if (tocouObjeto) tocouTabelaOuCacapa = true; }
             }
 
             float minDist = BallRadius * 2f;
@@ -2023,22 +2100,61 @@ public partial class SinucaMinigameUI : MonoBehaviour
             bolas[i].caindoNaCacapa = false;
             bolas[i].progressoQueda = 0f;
             bolas[i].spinLongitudinal = 0f;
+            bolas[i].rolagem = Vector2.zero;
             bolas[i].spinLateral = 0f;
         }
 
         Vector2 dirNorm = direcao.sqrMagnitude > 0.0001f ? direcao.normalized : Vector2.right;
-        float potClamped = Mathf.Clamp(potencia, 20f, MaxShotPower * 1.15f);
+        float potClamped = Mathf.Clamp(potencia, MinShotPower, MaxShotPower);
         bolas[0].vel = dirNorm * potClamped * Mathf.Sqrt(1f-.35f*contatoTaco.sqrMagnitude);
         bolas[0].spinLateral=turnoDeMarcus ? contatoTaco.x*potClamped*.3f : 0;
 
-        // Configurar giro longitudinal na bola branca conforme modo escolhido (Normal / Avançar / Recuar)
-        bolas[0].spinLongitudinal = efeito == SinucaCueSpin.Avancar ? potClamped * 0.58f :
-                                    efeito == SinucaCueSpin.Recuar ? -potClamped * 0.64f : 0f;
-
-        if(turnoDeMarcus && Mathf.Abs(contatoTaco.y)>.01f)bolas[0].spinLongitudinal=contatoTaco.y*potClamped*.4f;
+        // A centre strike starts sliding. Cloth develops natural forward roll;
+        // follow/draw retain angular momentum at impact instead of adding an impulse.
+        float spinRatio = efeito == SinucaCueSpin.Avancar ? 1.2f :
+                          efeito == SinucaCueSpin.Recuar ? -0.8f : 0f;
+        if (turnoDeMarcus && Mathf.Abs(contatoTaco.y) > .01f) spinRatio = contatoTaco.y * 1.2f;
+        bolas[0].spinLongitudinal = spinRatio * bolas[0].vel.magnitude;
+        bolas[0].rolagem = dirNorm * bolas[0].spinLongitudinal;
         TocarSomTacada(Mathf.InverseLerp(MinShotPower, MaxShotPower, potClamped));
         AtualizarVisualTacoEMira();
         txtTurnoStatus.text = turnoDeMarcus ? "Marcus executou a tacada..." : "Zé executou a tacada...";
+    }
+
+    // Coulomb sliding friction with exact slip cancellation (no numerical reversal).
+    // Angular surface speed changes 5/2 times as fast as linear speed for a solid sphere.
+    // Tangential cushion impulse also spends side-spin energy (I = 2/5 mr²).
+    // Adding side spin directly to linear speed would create energy on glancing banks.
+    private static void RebaterTabela(ref Vector2 velocidade, ref float spin, Vector2 normal)
+    {
+        float normalSpeed = Vector2.Dot(velocidade, normal);
+        if (normalSpeed >= 0f) return;
+        float normalImpulse = -(1f + CushionRestitution) * normalSpeed;
+        velocidade += normal * normalImpulse;
+        Vector2 tangent = new Vector2(-normal.y, normal.x);
+        float slip = Vector2.Dot(velocidade, tangent) - spin;
+        float tangentImpulse = Mathf.Clamp(slip / 3.5f, -normalImpulse * .12f, normalImpulse * .12f);
+        velocidade -= tangent * tangentImpulse;
+        spin += tangentImpulse * 2.5f;
+    }
+
+    private static void IntegrarPano(ref Vector2 velocidade, ref Vector2 rolagem, float dt)
+    {
+        Vector2 slip = velocidade - rolagem;
+        float speed = slip.magnitude;
+        if (speed > .0001f)
+        {
+            float slidingTime = Mathf.Min(dt, speed / (3.5f * SlidingFriction));
+            Vector2 friction = slip / speed * (SlidingFriction * slidingTime);
+            velocidade -= friction;
+            rolagem += friction * 2.5f;
+            dt -= slidingTime;
+        }
+        if (dt > 0f)
+        {
+            velocidade = Vector2.MoveTowards(velocidade, Vector2.zero, BallFriction * dt);
+            rolagem = velocidade;
+        }
     }
 
     private void SimularFisicaMesa(float dt)
@@ -2069,49 +2185,37 @@ public partial class SinucaMinigameUI : MonoBehaviour
                 if (!b.ativa) continue;
 
                 float speedSq = b.vel.sqrMagnitude;
-                if (speedSq <= StopSpeedSq && Mathf.Abs(b.spinLongitudinal) < 4f)
+                if (speedSq <= StopSpeedSq && b.rolagem.sqrMagnitude <= StopSpeedSq)
                 {
                     b.vel = Vector2.zero;
                     b.spinLongitudinal = 0f;
+                    b.rolagem = Vector2.zero;
                     continue;
                 }
 
+                Vector2 anterior = b.pos;
                 Vector2 deslocamento = b.vel * subDt;
                 b.pos += deslocamento;
 
                 // Atualizar rotação 3D da esfera pelo deslocamento no pano + giro longitudinal
-                float dist = deslocamento.magnitude;
+                float dist = b.rolagem.magnitude * subDt;
                 if (dist > 0.0001f)
                 {
-                    Vector2 dirMov = deslocamento / dist;
+                    Vector2 dirMov = b.rolagem.normalized;
                     Vector3 eixoRolagem = new Vector3(dirMov.y, 0f, -dirMov.x);
                     float anguloGraus = (dist / BallRadius) * Mathf.Rad2Deg;
                     b.rotacao = Quaternion.AngleAxis(anguloGraus, eixoRolagem) * b.rotacao;
                 }
 
-                // Atrito do pano + decaimento gradual do spin longitudinal
-                float speed = Mathf.Sqrt(speedSq);
-                if (speed > 0.001f)
-                {
-                    float decel = BallFriction * subDt;
-                    float newSpeed = Mathf.Max(0f, speed - decel);
-                    b.vel = (b.vel / speed) * newSpeed;
-                }
-                b.spinLongitudinal = Mathf.MoveTowards(b.spinLongitudinal, 0f, BallFriction * 0.35f * subDt);
-                b.spinLateral=Mathf.MoveTowards(b.spinLateral,0,BallFriction*.18f*subDt);
+                IntegrarPano(ref b.vel, ref b.rolagem, subDt);
+                b.spinLateral = Mathf.MoveTowards(b.spinLateral, 0f, BallFriction * .18f * subDt);
 
                 // Verificar captura pelas 6 caçapas
                 for (int p = 0; p < cacapas.Length; p++)
                 {
-                    float distPocket = Vector2.Distance(b.pos, cacapas[p]);
-                    // Funil suave da boca da caçapa (somente dentro da garganta real)
-                    if (distPocket < PocketRadius * 1.18f && distPocket > PocketRadius)
-                    {
-                        Vector2 pull = (cacapas[p] - b.pos).normalized;
-                        b.vel += pull * (42f * subDt);
-                    }
-
-                    if (distPocket <= PocketRadius)
+                    // Sweep the centre through the actual clearance. No magnetic funnel;
+                    // a fast valid shot cannot skip capture between physics steps.
+                    if (CruzaCapturaCacapa(anterior, b.pos, cacapas[p]))
                     {
                         RegistrarQuedaNaCacapa(i, cacapas[p]);
                         break;
@@ -2137,7 +2241,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                         float vnJaw = Vector2.Dot(b.vel, nJaw);
                         if (vnJaw < 0f)
                         {
-                            b.vel -= (1f + CushionRestitution * 0.92f) * vnJaw * nJaw;
+                            RebaterTabela(ref b.vel, ref b.spinLateral, nJaw);
                             RegistrarTabela();
                             TocarSomTabela(Mathf.Abs(vnJaw) / MaxShotPower);
                         }
@@ -2145,7 +2249,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                 }
 
                 // Rebote nas tabelas retas (fora da garganta das caçapas)
-                bool naBocaCacapa = PertoDeCacapa(b.pos, PocketRadius * 1.12f);
+                bool naBocaCacapa = PertoDeCacapa(b.pos, PocketOpeningRadius);
                 if (!naBocaCacapa)
                 {
                     if (b.pos.x < -limX)
@@ -2153,8 +2257,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                         b.pos.x = -limX;
                         if (b.vel.x < 0f)
                         {
-                            b.vel.x = -b.vel.x * CushionRestitution;
-                            b.vel.y+=b.spinLateral*.18f*(b.pos.x<0?1:-1);b.spinLateral*=.55f;
+                            RebaterTabela(ref b.vel, ref b.spinLateral, Vector2.right);
                             RegistrarTabela();
                             TocarSomTabela(Mathf.Abs(b.vel.x) / MaxShotPower);
                         }
@@ -2164,8 +2267,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                         b.pos.x = limX;
                         if (b.vel.x > 0f)
                         {
-                            b.vel.x = -b.vel.x * CushionRestitution;
-                            b.vel.y+=b.spinLateral*.18f*(b.pos.x<0?1:-1);b.spinLateral*=.55f;
+                            RebaterTabela(ref b.vel, ref b.spinLateral, Vector2.left);
                             RegistrarTabela();
                             TocarSomTabela(Mathf.Abs(b.vel.x) / MaxShotPower);
                         }
@@ -2176,8 +2278,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                         b.pos.y = -limY;
                         if (b.vel.y < 0f)
                         {
-                            b.vel.y = -b.vel.y * CushionRestitution;
-                            b.vel.x+=b.spinLateral*.18f*(b.pos.y<0?-1:1);b.spinLateral*=.55f;
+                            RebaterTabela(ref b.vel, ref b.spinLateral, Vector2.up);
                             RegistrarTabela();
                             TocarSomTabela(Mathf.Abs(b.vel.y) / MaxShotPower);
                         }
@@ -2187,8 +2288,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                         b.pos.y = limY;
                         if (b.vel.y > 0f)
                         {
-                            b.vel.y = -b.vel.y * CushionRestitution;
-                            b.vel.x+=b.spinLateral*.18f*(b.pos.y<0?-1:1);b.spinLateral*=.55f;
+                            RebaterTabela(ref b.vel, ref b.spinLateral, Vector2.down);
                             RegistrarTabela();
                             TocarSomTabela(Mathf.Abs(b.vel.y) / MaxShotPower);
                         }
@@ -2228,13 +2328,8 @@ public partial class SinucaMinigameUI : MonoBehaviour
                             bolas[i].vel -= impulse;
                             bolas[j].vel += impulse;
 
-                            // Aplicar efeito longitudinal físico da bola branca (Avançar / Recuar) no contato
-                            if (i == 0 && Mathf.Abs(bolas[0].spinLongitudinal) > 1f)
-                            {
-                                Vector2 dirSpin = normal * bolas[0].spinLongitudinal * 0.72f;
-                                bolas[0].vel += dirSpin;
-                                bolas[0].spinLongitudinal *= 0.25f;
-                            }
+                            // Smooth sphere contact transfers only normal linear impulse.
+                            // Cloth resolves the retained angular momentum on subsequent steps.
 
                             TocarSomColisaoBola(velAlongNormal / MaxShotPower);
                         }
@@ -2250,7 +2345,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         bool algumaEmMovimento = false;
         for (int i = 0; i < bolas.Count; i++)
         {
-            if (bolas[i].ativa && bolas[i].vel.sqrMagnitude > StopSpeedSq)
+            if (bolas[i].ativa && (bolas[i].vel.sqrMagnitude > StopSpeedSq || bolas[i].rolagem.sqrMagnitude > StopSpeedSq))
             {
                 algumaEmMovimento = true;
                 break;
@@ -2268,11 +2363,20 @@ public partial class SinucaMinigameUI : MonoBehaviour
             {
                 bolas[i].vel = Vector2.zero;
                 bolas[i].spinLongitudinal = 0f;
+                bolas[i].rolagem = Vector2.zero;
             bolas[i].spinLateral = 0f;
                 bolas[i].caindoNaCacapa = false;
             }
             ResolverFimDaTacada();
         }
+    }
+
+    private static bool CruzaCapturaCacapa(Vector2 anterior, Vector2 atual, Vector2 centro)
+    {
+        Vector2 passo = atual - anterior;
+        float t = passo.sqrMagnitude > .000001f
+            ? Mathf.Clamp01(Vector2.Dot(centro - anterior, passo) / passo.sqrMagnitude) : 0f;
+        return (anterior + passo * t - centro).sqrMagnitude <= PocketRadius * PocketRadius;
     }
 
     private bool PertoDeCacapa(Vector2 pos, float raioBusca)
@@ -2293,6 +2397,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         b.ativa = false;
         b.vel = Vector2.zero;
         b.spinLongitudinal = 0f;
+        b.rolagem = Vector2.zero;
         b.caiuNestaTacada = true;
         b.caindoNaCacapa = Application.isPlaying;
         b.progressoQueda = 0f;
@@ -2664,6 +2769,17 @@ public partial class SinucaMinigameUI : MonoBehaviour
             if (ty > 0f && ty < tTabela) tTabela = ty;
         }
 
+        foreach (var jaw in bicosCacapas)
+        {
+            Vector2 delta = jaw.pos - origemBranca;
+            float along = Vector2.Dot(delta, dir);
+            float radius = BallRadius + jaw.raio;
+            float perpendicularSq = delta.sqrMagnitude - along * along;
+            if (along <= 0f || perpendicularSq >= radius * radius) continue;
+            float hit = along - Mathf.Sqrt(radius * radius - perpendicularSq);
+            if (hit >= 0f) tTabela = Mathf.Min(tTabela, hit);
+        }
+
         if (bolaAtingida != -1 && menorT <= tTabela)
         {
             Vector2 ghostCenter = origemBranca + dir * menorT;
@@ -2771,6 +2887,8 @@ public partial class SinucaMinigameUI : MonoBehaviour
         bool brancaValida = estado != EstadoPartida.PosicionandoBranca || PosicaoValidaSemColisao(bolas[0].pos, 0);
 
         AtualizarBolaFalsaVisual();
+        tableView3D.Preaquecer();
+        tableView3D.Room.SetCueContact(contatoTaco);
         tableView3D.AtualizarEstadoRender(
             bufferVisuais,
             cacapas,
@@ -2868,7 +2986,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private void EnfileirarFalaZe(string texto, bool urgente = false)
     {
-        if(string.IsNullOrEmpty(texto) || falasHistoria.Count>0 || OlhandoDebaixo || (batidasOuvidas && !inspecaoConcluida))return;
+        if(string.IsNullOrEmpty(texto) || agendaPercepcoes.Active!=SinucaPerceptionSchedule.Event.None || falasHistoria.Count>0 || OlhandoDebaixo || batidasRestantes>0 || (falaZePendenteUrgente && locutorPendenteMarcus))return;
         locutorPendenteMarcus = false;
         // Uma reação importante substitui a espera; comentários comuns não se acumulam.
         if(!urgente && (falaZePendenteUrgente || (txtFalaZe!=null && !string.IsNullOrEmpty(txtFalaZe.text))))return;
@@ -3004,23 +3122,6 @@ public partial class SinucaMinigameUI : MonoBehaviour
             clipTacada.SetData(data, 0);
         }
 
-        // 2. Estalo cristalino bola-bola (resina fenólica)
-        {
-            var data = new float[(int)(hz * 0.075f)];
-            var rng = new System.Random(871);
-            for (int i = 0; i < data.Length; i++)
-            {
-                float t = i / (float)hz;
-                float env = Mathf.Exp(-t * 210f) * Mathf.Min(1f, t * 11000f);
-                float click = ((float)rng.NextDouble() * 2f - 1f) * 0.65f
-                    + Mathf.Sin(2f * Mathf.PI * 1931f * t) * 0.24f
-                    + Mathf.Sin(2f * Mathf.PI * 3277f * t) * 0.11f;
-                data[i] = Mathf.Clamp(click * env, -0.9f, 0.9f);
-            }
-            clipColisaoBola = AudioClip.Create("SR_Sinuca_ColisaoBola", data.Length, 1, hz, false);
-            clipColisaoBola.SetData(data, 0);
-        }
-
         // 3. Batida abafada na tabela de borracha/madeira
         {
             var data = new float[(int)(hz * 0.11f)];
@@ -3069,7 +3170,20 @@ public partial class SinucaMinigameUI : MonoBehaviour
         }
     }
 
-    private void TocarClipSintetico(AudioClip clip, float volumeBase, float pitch = 1f)
+    private static void GarantirColisoesGravadas()
+    {
+        if (clipsColisaoBola != null) return;
+        clipsColisaoBola = new AudioClip[3];
+        for (int i = 0; i < clipsColisaoBola.Length; i++)
+        {
+            string caminho = "Audio/Sinuca/Colisao_" + (i + 1).ToString("00");
+            clipsColisaoBola[i] = Resources.Load<AudioClip>(caminho);
+            if (clipsColisaoBola[i] == null)
+                Debug.LogWarning("Sinuca: gravação de colisão ausente: " + caminho);
+        }
+    }
+
+    private void TocarClipImpacto(AudioClip clip, float volumeBase, float pitch = 1f)
     {
         if (!Application.isPlaying || Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused || clip == null) return;
         float volPref = AudioSettingsController.VolumeImpactos;
@@ -3097,33 +3211,41 @@ public partial class SinucaMinigameUI : MonoBehaviour
     {
         GarantirClipsAudio();
         float v = Mathf.Lerp(0.28f, 0.66f, Mathf.Clamp01(intensidade01));
-        TocarClipSintetico(clipTacada, v, Mathf.Lerp(0.95f, 1.08f, intensidade01));
+        TocarClipImpacto(clipTacada, v, Mathf.Lerp(0.95f, 1.08f, intensidade01));
     }
 
     private void TocarSomColisaoBola(float intensidade01)
     {
-        GarantirClipsAudio();
         float v = 0.70f * Mathf.Sqrt(Mathf.Clamp01(intensidade01));
-        TocarClipSintetico(clipColisaoBola, v, Mathf.Lerp(0.96f, 1.12f, intensidade01));
+        if (!Application.isPlaying || Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused
+            || v <= 0.002f || AudioSettingsController.VolumeImpactos <= 0.001f) return;
+        // Um limite para toda a categoria evita empilhar as três variantes no mesmo contato.
+        if (Time.unscaledTime - ultimoSomColisaoBola < 0.018f) return;
+        GarantirColisoesGravadas();
+        AudioClip clip = clipsColisaoBola[proximaColisaoBola++ % clipsColisaoBola.Length];
+        if (clip == null) return;
+        ultimoSomColisaoBola = Time.unscaledTime;
+        // O impulso altera o volume; a gravação conserva o timbre e o pitch naturais.
+        TocarClipImpacto(clip, v);
     }
 
     private void TocarSomTabela(float intensidade01)
     {
         GarantirClipsAudio();
         float v = 0.35f * Mathf.Sqrt(Mathf.Clamp01(intensidade01));
-        TocarClipSintetico(clipTabela, v, Mathf.Lerp(0.92f, 1.04f, intensidade01));
+        TocarClipImpacto(clipTabela, v, Mathf.Lerp(0.92f, 1.04f, intensidade01));
     }
 
     private void TocarSomCacapa()
     {
         GarantirClipsAudio();
-        TocarClipSintetico(clipCacapa, 0.40f, 0.98f);
+        TocarClipImpacto(clipCacapa, 0.40f, 0.98f);
     }
 
     private void TocarSomGiz(float volume = 0.16f)
     {
         GarantirClipsAudio();
-        TocarClipSintetico(clipGiz, volume, 1.0f);
+        TocarClipImpacto(clipGiz, volume, 1.0f);
     }
 
     private void MostrarModal(string titulo, string corpo, string txtPrimario, UnityEngine.Events.UnityAction acaoPrimaria,
