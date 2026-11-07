@@ -25036,10 +25036,10 @@ MonoBehaviour:
   corPoca: {r: 0.04, g: 0.055, b: 0.08, a: 1}
   alfaPoca: 0.38
   pocas: []
-  som: {fileID: 8300000, guid: e006185ef17b7e14cad26862a86198f7, type: 3}
+  som: {fileID: 8300000, guid: 29fe76e25c889ed57e08191c7eca668c, type: 3}
   grupoMixer: {fileID: 8148229276307118450, guid: 735a2bcdd5fe2ed4c9e8aa6cba9dd6d2, type: 2}
-  volume: 0.55
-  abafado: 0
+  volume: 0.35
+  abafado: 1
   corteAbafado: 750
 --- !u!4 &1627823819
 Transform:

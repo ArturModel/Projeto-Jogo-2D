@@ -46,7 +46,7 @@ public sealed class SantaRitaSound : MonoBehaviour
     }
     public static void Play(string id, float volume = .2f, float pitch = 1, float interval = .055f)
     {
-        if (Time.timeScale == 0 || PlayerPrefs.GetFloat("audio_efeitos", 1) <= 0) return;
+        if (Time.timeScale == 0 || AudioSettingsController.VolumeEfeitos <= 0) return;
         var sound = Ensure();
         if (sound.lastPlayed.TryGetValue(id, out float last) && Time.unscaledTime - last < interval) return;
         if (!sound.clips.TryGetValue(id, out var clip))
@@ -55,7 +55,7 @@ public sealed class SantaRitaSound : MonoBehaviour
         sound.lastPlayed[id] = Time.unscaledTime;
         var source = sound.voices[sound.voice++ % sound.voices.Length];
         source.Stop(); source.pitch = Mathf.Clamp(pitch, .8f, 1.2f);
-        source.clip = clip; source.volume = Mathf.Clamp01(volume * PlayerPrefs.GetFloat("audio_efeitos", 1));
+        source.clip = clip; source.volume = Mathf.Clamp01(volume * AudioSettingsController.VolumeEfeitos);
         source.Play(); EventsPlayed++;
     }
 }

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// The exploration room and the billiards environment consume this same physical plan.
+// Both views share the props and anchors. Exploration gives the side aisles more room.
 public static class SantaRitaBarLayout
 {
     public const float UnitsPerMetre=1f/1.15f;
@@ -10,12 +10,20 @@ public static class SantaRitaBarLayout
     public static readonly Vector2 TableCenter=new Vector2(9,6.5f);
     public static readonly Vector2 Origin=new Vector2(500,-60);
     public static readonly Rect WalkableRoom=new Rect(4.25f,0,9.5f,9.85f);
+    internal static readonly Rect ExplorationFloor=new Rect(2.75f,0,12.5f,9.85f);
+
+    private static Vector2 ExplorationPosition(Vector2 position)
+    {
+        if (position.x <= 8.5f) position.x -= .95f;
+        else if (position.x >= 10.9f) position.x += 1.05f;
+        return position;
+    }
     public static void ConstrainArrival()
     {
         if(GameObject.Find("BarCoerente")==null)return;var player=UnityEngine.Object.FindAnyObjectByType<PlayerController>();if(player==null)return;
         Vector2 p=(Vector2)player.transform.position-Origin;
-        if(p.x<WalkableRoom.xMin+.45f||p.x>WalkableRoom.xMax-.45f||p.y>WalkableRoom.yMax-.5f)
-            player.TeleportarPara(Origin+new Vector2(Mathf.Clamp(p.x,WalkableRoom.xMin+.6f,WalkableRoom.xMax-.6f),Mathf.Clamp(p.y,.8f,WalkableRoom.yMax-1.1f)),1);
+        if(p.x<ExplorationFloor.xMin+.45f||p.x>ExplorationFloor.xMax-.45f||p.y>ExplorationFloor.yMax-.5f)
+            player.TeleportarPara(Origin+new Vector2(Mathf.Clamp(p.x,ExplorationFloor.xMin+.6f,ExplorationFloor.xMax-.6f),Mathf.Clamp(p.y,.8f,ExplorationFloor.yMax-1.1f)),1);
     }
     public enum Kind { Counter, Shelf, Table, Chair, Wall, Actor, Decor }
     public sealed class Prop
@@ -116,35 +124,46 @@ public static class SantaRitaBarLayout
         foreach(var mat in room.GetComponentsInChildren<SantaRitaExitThreshold>(true))mat.GetComponent<SpriteRenderer>().sortingOrder=-2;
         var group=new GameObject("BarCoerente");group.transform.SetParent(room.transform,false);
         var lit=Resources.Load<Material>("Art/WorldLit");
+        var floor=ExplorationFloor;
         var floorSprite=NativeSurface(false);
-        if(floorSprite!=null){var floor=new GameObject("PisoRef7");floor.transform.SetParent(group.transform,false);floor.transform.position=Origin+new Vector2(9,4.925f);var sr=floor.AddComponent<SpriteRenderer>();sr.sprite=floorSprite;sr.drawMode=SpriteDrawMode.Tiled;sr.size=new Vector2(9.5f,9.85f);sr.color=Color.white;sr.sortingOrder=-5;sr.sharedMaterial=lit;}
+        if(floorSprite!=null)Surface(group.transform,"PisoRef7",floorSprite,floor.center,floor.size,-5,lit,Color.white);
         var wallSprite=NativeSurface(true);
         if(wallSprite!=null)
         {
             var oldFloor=room.transform.Find("Piso_Interior_BarDoZe");if(oldFloor!=null)oldFloor.gameObject.SetActive(false);
-            Surface(group.transform,"ParedeRef7Fundo",wallSprite,new Vector2(9,10.85f),new Vector2(9.65f,2f),-3,lit,Color.white);
-            Surface(group.transform,"ParedeRef7Esq",wallSprite,new Vector2(4.15f,4.925f),new Vector2(.2f,9.85f),-3,lit,new Color(.34f,.28f,.20f));
-            Surface(group.transform,"ParedeRef7Dir",wallSprite,new Vector2(13.85f,4.925f),new Vector2(.2f,9.85f),-3,lit,new Color(.34f,.28f,.20f));
-            Boundary(group.transform,"LimiteRef7Fundo",new Vector2(9,9.96f),new Vector2(9.8f,.2f));
-            Boundary(group.transform,"LimiteRef7Esq",new Vector2(4.15f,4.925f),new Vector2(.2f,10));
-            Boundary(group.transform,"LimiteRef7Dir",new Vector2(13.85f,4.925f),new Vector2(.2f,10));
+            Surface(group.transform,"ParedeRef7Fundo",wallSprite,new Vector2(floor.center.x,floor.yMax+1f),new Vector2(floor.width+.65f,2f),-3,lit,Color.white);
+            foreach(float side in new[]{-1f,1f})
+            {
+                string suffix=side<0f?"Esq":"Dir";
+                float edge=floor.center.x+side*floor.width*.5f;
+                var sideWall=new Vector2(edge+side*.18f,floor.center.y);
+                Surface(group.transform,"ParedeRef7"+suffix,wallSprite,sideWall,new Vector2(.36f,floor.height),-3,lit,new Color(.47f,.38f,.31f));
+                Boundary(group.transform,"LimiteRef7"+suffix,sideWall,new Vector2(.36f,floor.height+.2f));
+            }
+            Boundary(group.transform,"LimiteRef7Fundo",new Vector2(floor.center.x,floor.yMax+.1f),new Vector2(floor.width+.72f,.2f));
         }
+        var lighting=group.AddComponent<SantaRitaBarLighting>();
+        lighting.Build(floor,lit);
         foreach(var def in Props)
         {
             if(OccupiedChair(def))continue;
             var sprite=SpriteFor(def);if(sprite==null){Debug.LogError("Arte do bar ausente: "+def.key);continue;}
-            var g=new GameObject(def.id);g.transform.SetParent(group.transform,false);g.transform.position=Origin+def.position;
+            var g=new GameObject(def.id);g.transform.SetParent(group.transform,false);g.transform.position=Origin+ExplorationPosition(def.position);
             var sr=g.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.sharedMaterial=lit;
             g.transform.localScale=Vector3.one*(def.kind==Kind.Actor?1f:def.width/sprite.bounds.size.x);sr.sortingOrder=def.id=="TapeteSinuca"?-4:1000-Mathf.RoundToInt(g.transform.position.y*10);
             if(def.supportOffset>0)sr.sortingOrder=1005-Mathf.RoundToInt((g.transform.position.y-def.supportOffset)*10);
             if(def.kind==Kind.Actor||def.kind==Kind.Table||def.kind==Kind.Chair||def.kind==Kind.Counter||def.kind==Kind.Shelf)
-            {var col=g.AddComponent<BoxCollider2D>();col.size=new Vector2(sprite.bounds.size.x*.72f,.3f/g.transform.localScale.x);col.offset=new Vector2(0,col.size.y*.5f);}
+            {
+                var col=g.AddComponent<BoxCollider2D>();col.size=new Vector2(sprite.bounds.size.x*.72f,.3f/g.transform.localScale.x);col.offset=new Vector2(0,col.size.y*.5f);
+                float width=def.kind==Kind.Actor?.58f:def.width;
+                lighting.AddShadow(g.transform,width*.83f,.26f,Mathf.Max(.5f,width*.78f),def.id=="NPC_Ze_Interior");
+            }
             if(def.kind==Kind.Actor)live[def.id]=g.transform;
             if(def.id=="CuiaMesa"||def.id=="TermicaMesa"){var action=g.AddComponent<SantaRitaBarPose>();action.propId=def.id;}
             if(def.id=="NPC_Ze_Interior")
             {
                 g.AddComponent<InteracaoCapitulo1>().Configurar(InteracaoCapitulo1.TipoInteracao.NpcZeBar);
-                var a=new GameObject("TrabalhoZeBalcao");a.transform.SetParent(group.transform,false);a.transform.position=Origin+new Vector2(9.2f,9.1f);
+                var a=new GameObject("TrabalhoZeBalcao");a.transform.SetParent(group.transform,false);a.transform.position=Origin+new Vector2(8.4f,9.1f);
                 var b=new GameObject("TrabalhoZeMesa");b.transform.SetParent(group.transform,false);b.transform.position=Origin+def.position;
                 var routine=g.AddComponent<SantaRitaNpcWork>();routine.stations=new[]{new SantaRitaNpcWork.Station{anchor=a.transform,duration=17.3f,working=true},new SantaRitaNpcWork.Station{anchor=b.transform,duration=11.7f,working=false}};
                 g.AddComponent<SantaRitaBarHost>();
@@ -162,10 +181,11 @@ public static class SantaRitaBarLayout
             t.transform.localScale=Vector3.one*(newTable?1:2.84f*UnitsPerMetre*1.105f/tableSprite.bounds.size.x);
             var col=t.AddComponent<BoxCollider2D>();col.size=new Vector2(tableSprite.bounds.size.x*.9f,1.42f*UnitsPerMetre/t.transform.localScale.x);
             col.offset=newTable?Vector2.zero:new Vector2(0,col.size.y*.5f);
+            lighting.AddShadow(t.transform,2.58f,.48f,1.32f,false);
         }
         var cue=new GameObject("Mesa_Sinuca_Trigger");cue.transform.SetParent(group.transform,false);cue.transform.position=Origin+TableCenter+Vector2.down*.75f;
         cue.AddComponent<InteracaoCapitulo1>().Configurar(InteracaoCapitulo1.TipoInteracao.MesaSinucaBar);
-        var counter=new GameObject("Balcao_Bar_Interacao");counter.transform.SetParent(group.transform,false);counter.transform.position=Origin+new Vector2(8,9.7f);
+        var counter=new GameObject("Balcao_Bar_Interacao");counter.transform.SetParent(group.transform,false);counter.transform.position=Origin+ExplorationPosition(new Vector2(8,9.7f));
         counter.AddComponent<InteracaoCapitulo1>().Configurar(InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe);
     }
     private static void Surface(Transform parent,string id,Sprite sprite,Vector2 position,Vector2 size,int order,Material material,Color tint)

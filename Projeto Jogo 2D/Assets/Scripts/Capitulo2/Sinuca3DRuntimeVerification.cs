@@ -72,6 +72,7 @@ public sealed partial class Chapter2RuntimeVerification
         zeNpc.Interact();
         yield return new WaitForSecondsRealtime(0.3f);
         yield return CloseText();
+        yield return AguardarEntradaSinuca();
         Check(SinucaMinigameUI.IsShowing, "S01: Conversa real com Zé abre SinucaMinigameUI sem recriar cena nem perder estado.");
 
         var ui = SinucaMinigameUI.Instance;
@@ -253,6 +254,7 @@ public sealed partial class Chapter2RuntimeVerification
         zeNpc.Interact();
         yield return new WaitForSecondsRealtime(0.25f);
         yield return CloseText();
+        yield return AguardarEntradaSinuca();
         Check(SinucaMinigameUI.IsShowing, "S18: Reabertura limpa do duelo contra Zé.");
         if (modal.activeSelf) Click("BtnModalPrimario");
         yield return null;
@@ -310,6 +312,13 @@ public sealed partial class Chapter2RuntimeVerification
         if (sinucaMouse != null) InputSystem.RemoveDevice(sinucaMouse);
         sinucaMouse = null;
         Finish();
+    }
+
+    private IEnumerator AguardarEntradaSinuca()
+    {
+        float limite = Time.realtimeSinceStartup + 8f;
+        while (SceneFader.IsTransitioning && Time.realtimeSinceStartup < limite) yield return null;
+        Check(!SceneFader.IsTransitioning, "A entrada da sinuca devolve os controles após revelar a sala.");
     }
 
     private static Vector2 InvokeEncontrarLivre(SinucaMinigameUI ui, Vector2 pref)

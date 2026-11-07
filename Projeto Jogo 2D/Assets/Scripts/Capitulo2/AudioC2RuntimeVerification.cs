@@ -7,7 +7,7 @@ public sealed partial class Chapter2RuntimeVerification
 #if UNITY_EDITOR
  public static void StartAudioC2Editor(string output){Environment.SetEnvironmentVariable("SR_EVIDENCE_DIR",output);var go=new GameObject("QA_AudioC2");DontDestroyOnLoad(go);go.AddComponent<Chapter2RuntimeVerification>().audioC2Force=true;}
 #endif
- private void RestoreAudioC2Prefs(){if(!audioPrefsChanged)return;if(audioPrefExisted)PlayerPrefs.SetFloat("audio_musica",audioPrefOriginal);else PlayerPrefs.DeleteKey("audio_musica");audioPrefsChanged=false;}
+ private void RestoreAudioC2Prefs(){if(!audioPrefsChanged)return;if(audioPrefExisted)PlayerPrefs.SetFloat(AudioSettingsController.PreferenciaMusica,audioPrefOriginal);else PlayerPrefs.DeleteKey(AudioSettingsController.PreferenciaMusica);audioPrefsChanged=false;}
  private IEnumerator RunMarcusQA()
  {
   yield return new WaitForSecondsRealtime(2);
@@ -56,7 +56,8 @@ public sealed partial class Chapter2RuntimeVerification
 #if !UNITY_EDITOR
   Screen.SetResolution(1280,720,FullScreenMode.Windowed);yield return null;yield return new WaitForSecondsRealtime(1);
 #endif
-  audioPrefExisted=PlayerPrefs.HasKey("audio_musica");audioPrefOriginal=PlayerPrefs.GetFloat("audio_musica",1);audioPrefsChanged=true;PlayerPrefs.SetFloat("audio_musica",1);
+  audioPrefExisted=PlayerPrefs.HasKey(AudioSettingsController.PreferenciaMusica);audioPrefOriginal=PlayerPrefs.GetFloat(AudioSettingsController.PreferenciaMusica,1);audioPrefsChanged=true;PlayerPrefs.SetFloat(AudioSettingsController.PreferenciaMusica,1);
+  float ganhoMusica = AudioSettingsController.VolumeMusica;
   foreach(string n in new[]{"Centro","Cemiterio","Bocha"}){var c=Resources.Load<AudioClip>("Audio/"+n+"_loop");Check(c!=null&&c.length>80&&c.frequency==48000,"OGG importado corretamente: "+n);}
   foreach(var prop in SantaRitaBarLayout.Props)Check(SantaRitaBarLayout.SpriteFor(prop)!=null,"Sprite real do bar: "+prop.id);
   SceneFader.Instance.LoadScene("EntradaDaCidade");yield return AwaitScene("EntradaDaCidade");yield return CloseText();
@@ -76,7 +77,7 @@ public sealed partial class Chapter2RuntimeVerification
   }
   var pool=SinucaMinigameUI.Instance;pool.IniciarPraticaOpcional();yield return new WaitForSecondsRealtime(2);yield return Capture("bar-na-sinuca");pool.Fechar();
   Capitulo1Director.Instance.TransicionarPara(Capitulo1Director.ZonaId.Zona5_RuaNorteBar,new Vector2(525,12),1);yield return new WaitForSecondsRealtime(3);yield return CloseText();
-  var bairro=Field<AudioSource>(Capitulo1Director.Instance,"musicaBairro");Check(bairro!=null&&bairro.isPlaying&&bairro.volume>.1f,"Musica do bairro toca na Rua Norte exterior do bar");
+  var bairro=Field<AudioSource>(Capitulo1Director.Instance,"musicaBairro");Check(bairro!=null && (ganhoMusica > 0 ? bairro.isPlaying && bairro.volume > 0 : !bairro.isPlaying && bairro.volume == 0),"Musica do bairro toca na Rua Norte exterior do bar");
 
   AudioSource centro=null;
   foreach(string scene in new[]{"CentroSantaRita","IgrejaMatriz","PrefeituraSantaRita","RodoviariaSantaRita","MercadinhoDeposito","OficinaRadio","CasaCostureira","CemiterioSantaRita","AbrigoCemiterio","SociedadeBeiraRio","CentroSantaRita"})
@@ -84,19 +85,22 @@ public sealed partial class Chapter2RuntimeVerification
    SceneFader.Instance.LoadScene(scene);yield return new WaitForSecondsRealtime(1);yield return AwaitScene(scene);yield return CloseText();yield return new WaitForSecondsRealtime(2);
    int region=scene=="CemiterioSantaRita"||scene=="AbrigoCemiterio"?1:scene=="SociedadeBeiraRio"?2:0;var audio=FindAnyObjectByType<Capitulo2Audio>();Check(audio!=null,"Gerenciador de audio ativo: "+scene);var sources=audio.GetComponentsInChildren<AudioSource>();var f=sources.Single(x=>x.gameObject.name=="TrilhaC2_"+region);
    string name=new[]{"Centro","Cemiterio","Bocha"}[region];bool inside=Capitulo2Director.Instance.interior;
-   Check(f.clip!=null&&f.clip.name==name+"_loop"&&f.loop&&f.isPlaying,"Trilha exclusiva em loop: "+scene);
-   Check(Mathf.Abs(f.volume-(inside?.1625f:.25f))<.01f,"Volume contextual: "+scene);
+   Check(f.clip!=null&&f.clip.name==name+"_loop"&&f.loop && f.isPlaying == (ganhoMusica > 0),"Trilha exclusiva em loop: "+scene);
+   Check(Mathf.Abs(f.volume-(inside?.1625f:.25f)*ganhoMusica)<.01f,"Volume contextual: "+scene);
    Check(Mathf.Abs(f.GetComponent<AudioLowPassFilter>().cutoffFrequency-(inside?1800:22000))<5,"Filtro contextual: "+scene);
    Check(sources.Where(x=>x!=f).All(x=>x.volume<.001f),"Sem sobreposicao de outra regiao: "+scene);
    if(region==0){if(centro!=null)Check(f==centro,"Mesma fonte continua entre cenas do Centro");centro=f;}
    if(scene=="CemiterioSantaRita"||scene=="SociedadeBeiraRio"||scene=="IgrejaMatriz")yield return Capture(scene);
    if(scene=="SociedadeBeiraRio")
    {
-    BochaMinigameUI.Instance.Abrir(null);yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-.1625f*.67f)<.01f,"Bocha reduz musica ao entrar no jogo");yield return Capture("bocha-musica-reduzida");BochaMinigameUI.Instance.Fechar();yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-.1625f)<.01f,"Bocha devolve volume ao sair do jogo");
+    BochaMinigameUI.Instance.Abrir(null);yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-AudioSettingsController.TrilhaDiretaMinigame*ganhoMusica)<.01f,"Bocha reduz musica ao entrar no jogo");yield return Capture("bocha-musica-reduzida");BochaMinigameUI.Instance.Fechar();yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-.1625f*ganhoMusica)<.01f,"Bocha devolve volume ao sair do jogo");
    }
-   f.time=f.clip.length-.3f;yield return new WaitForSecondsRealtime(1);Check(f.isPlaying&&f.time<3,"Loop atravessa fim do OGG sem encerrar: "+scene);
+   if (ganhoMusica > 0)
+   {
+    f.time=f.clip.length-.3f;yield return new WaitForSecondsRealtime(1);Check(f.isPlaying&&f.time<3,"Loop atravessa fim do OGG sem encerrar: "+scene);
+   }
   }
-  PlayerPrefs.SetFloat("audio_musica",.5f);yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(centro.volume-.125f)<.01f,"Volume de musica do usuario respeitado");
+  PlayerPrefs.SetFloat(AudioSettingsController.PreferenciaMusica,.5f);yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(centro.volume-.125f*ganhoMusica)<.01f,"Volume de musica do usuario respeitado");
   yield return Walking();
   Check(!CheckpointSystem.HasCheckpoint,"Nenhum autosave durante transicoes e minigame");Finish();
  }

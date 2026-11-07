@@ -8,13 +8,13 @@ public partial class SinucaMinigameUI
 {
     private struct FalaHistoria { public string texto; public bool marcus; }
     private readonly Queue<FalaHistoria> falasHistoria = new Queue<FalaHistoria>();
-    private bool locutorPendenteMarcus, locutorAtualMarcus;
+    private bool locutorPendenteMarcus;
     private bool batidasOuvidas, inspecaoConcluida;
     private readonly SinucaPerceptionSchedule agendaPercepcoes = new SinucaPerceptionSchedule(Guid.NewGuid().GetHashCode());
     private AudioClip ecoFesta;
     private bool PercepcaoSobMesaAtiva => agendaPercepcoes.Active == SinucaPerceptionSchedule.Event.UnderTable;
     private bool FalaPercepcaoOcupada => falasHistoria.Count > 0 ||
-        !string.IsNullOrEmpty(falaZePendente) || (txtFalaZe != null && !string.IsNullOrEmpty(txtFalaZe.text));
+        !string.IsNullOrEmpty(falaZePendente) || dialogoZe?.Ocupada == true;
     private bool bolaFalsaAtiva, bolaFalsaExaminada;
     private int numeroFalso = -1, turnoBolaFalsa = -1;
     private Vector2 posicaoFalsa;
@@ -29,7 +29,7 @@ public partial class SinucaMinigameUI
     { falasHistoria.Enqueue(new FalaHistoria{texto=texto,marcus=marcus}); }
     private void ProximaFalaHistoria()
     {
-        if(falasHistoria.Count==0 || txtFalaZe==null || !string.IsNullOrEmpty(txtFalaZe.text) || !string.IsNullOrEmpty(falaZePendente))return;
+        if(falasHistoria.Count==0 || dialogoZe == null || dialogoZe.Ocupada || !string.IsNullOrEmpty(falaZePendente))return;
         var fala=falasHistoria.Dequeue();falaZePendente=fala.texto;falaZePendenteUrgente=true;
         locutorPendenteMarcus=fala.marcus;intervaloFalaZe=0;
     }
@@ -37,7 +37,7 @@ public partial class SinucaMinigameUI
     {
         EncerrarPercepcaoDaMao();falasHistoria.Clear();
         batidasOuvidas=inspecaoConcluida=false;
-        exameBola=0;agendaPercepcoes.Reset();locutorPendenteMarcus=locutorAtualMarcus=false;
+        exameBola=0;agendaPercepcoes.Reset();locutorPendenteMarcus=false;
     }
     private void EncerrarPercepcaoDaMao(bool preservarFalas=false)
     {

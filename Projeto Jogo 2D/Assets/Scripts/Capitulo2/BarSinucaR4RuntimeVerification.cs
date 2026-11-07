@@ -196,7 +196,7 @@ public sealed partial class Chapter2RuntimeVerification
             Capitulo1Director.InfoZona info;Capitulo1Director.TryObterInfoZona(zone,out info);
             d.TransicionarPara(zone,(info.min+info.max)*.5f,0);yield return new WaitForSecondsRealtime(2.7f);
             var music=Field<AudioSource>(d,"musicaBairro");bool inside=zone.ToString().StartsWith("Interior");
-            Check(music!=null&&music.loop&&(PlayerPrefs.GetFloat("audio_musica",1)<=0||music.isPlaying),"Trilha contínua em "+zone);
+            Check(music!=null&&music.loop&&(AudioSettingsController.VolumeMusica<=0||music.isPlaying),"Trilha contínua em "+zone);
             Check(music.GetComponent<AudioLowPassFilter>().cutoffFrequency<(inside?2500:23000)&&(!inside?music.GetComponent<AudioLowPassFilter>().cutoffFrequency>18000:true),"Filtro contextual em "+zone);
         }
         d.TransicionarPara(Capitulo1Director.ZonaId.Interior_BarDoZe,new Vector2(509,-54.8f),1);yield return new WaitForSecondsRealtime(1.5f);yield return CloseText();

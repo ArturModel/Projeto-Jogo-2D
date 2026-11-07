@@ -51,6 +51,8 @@ public class SceneFader : MonoBehaviour
     }
 
     private CanvasGroup group;
+    private Image fadeImage;
+    private Material sinucaIris;
     private CanvasGroup bannerGroup;
     private TextMeshProUGUI bannerTitulo;
     private TextMeshProUGUI bannerSubtitulo;
@@ -80,6 +82,7 @@ public class SceneFader : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (sinucaIris != null) Destroy(sinucaIris);
         if (instance == this)
         {
             instance = null;
@@ -94,6 +97,7 @@ public class SceneFader : MonoBehaviour
         Canvas canvas = canvasObject.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         canvas.sortingOrder = 9999;
+        canvasObject.AddComponent<GraphicRaycaster>();
 
         CanvasScaler scaler = canvasObject.AddComponent<CanvasScaler>();
         scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
@@ -106,11 +110,11 @@ public class SceneFader : MonoBehaviour
         GameObject imageObject = new GameObject("Black");
         imageObject.transform.SetParent(canvasObject.transform, false);
 
-        Image image = imageObject.AddComponent<Image>();
-        image.color = Color.black;
-        image.raycastTarget = false;
+        fadeImage = imageObject.AddComponent<Image>();
+        fadeImage.color = Color.black;
+        fadeImage.raycastTarget = false;
 
-        RectTransform rect = image.rectTransform;
+        RectTransform rect = fadeImage.rectTransform;
         rect.anchorMin = Vector2.zero;
         rect.anchorMax = Vector2.one;
         rect.offsetMin = Vector2.zero;
@@ -178,7 +182,98 @@ public class SceneFader : MonoBehaviour
     {
         isTransitioning = false;
         StopAllCoroutines();
+        RestaurarImagemFade();
         StartCoroutine(FadeIn());
+    }
+
+    internal void TransicionarParaSinuca(Vector2 foco, Action abrirSala, Action<float> olharPendente, Action mostrarEscolha)
+    {
+        if (isTransitioning) return;
+        StartCoroutine(EntradaSinuca(foco, abrirSala, olharPendente, mostrarEscolha));
+    }
+
+    private IEnumerator EntradaSinuca(Vector2 foco, Action abrirSala, Action<float> olharPendente, Action mostrarEscolha)
+    {
+        isTransitioning = true;
+        group.blocksRaycasts = true;
+        fadeImage.raycastTarget = true;
+
+        if (!MenuPausa.ReduzirEfeitosIntensos && sinucaIris == null)
+        {
+            var shader = Resources.Load<Shader>("Art/Sinuca/EntradaSinuca");
+            if (shader != null && shader.isSupported)
+            {
+                sinucaIris = new Material(shader);
+                sinucaIris.SetTexture("_Grao", SantaRitaBarLayout.NativeSurface(false).texture);
+            }
+        }
+        bool cinematica = !MenuPausa.ReduzirEfeitosIntensos && sinucaIris != null;
+        Vector2 centro = Vector2.one * .5f;
+        if (!cinematica)
+            yield return FadeTo(1f, .45f);
+        else
+        {
+            fadeImage.material = sinucaIris;
+            fadeImage.color = Color.white;
+            group.alpha = 1f;
+            const float fechar = 1.35f;
+            for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
+            {
+                float alinhar = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(1.17f, fechar, t));
+                AjustarIrisSinuca(Vector2.Lerp(foco, centro, alinhar), Mathf.SmoothStep(0f, 1f, t / fechar));
+                yield return null;
+            }
+            AjustarIrisSinuca(centro, 1f);
+        }
+
+        bool abriu = false;
+        try
+        {
+            abrirSala();
+            if (cinematica) olharPendente(1f);
+            abriu = true;
+        }
+        catch (Exception ex)
+        {
+            Debug.LogException(ex);
+        }
+
+        // The lamp stays at the centre of the iris across the cut between cameras.
+        yield return null;
+        if (cinematica)
+        {
+            for (float t = 0f; t < 2f; t += Time.unscaledDeltaTime)
+            {
+                AjustarIrisSinuca(centro, 1f - Mathf.SmoothStep(0f, 1f, t / 1.15f));
+                if (abriu) olharPendente(1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.64f, 2f, t)));
+                yield return null;
+            }
+            AjustarIrisSinuca(centro, 0f);
+            if (abriu) olharPendente(0f);
+            group.alpha = 0f;
+        }
+        else
+            yield return FadeTo(0f, .56f);
+        if (abriu) yield return new WaitForSecondsRealtime(.3f);
+        RestaurarImagemFade();
+        isTransitioning = false;
+        if (abriu) mostrarEscolha();
+    }
+
+    private void AjustarIrisSinuca(Vector2 foco, float progresso)
+    {
+        float aspecto = (float)Screen.width / Mathf.Max(1, Screen.height);
+        float alcance = new Vector2(Mathf.Max(foco.x, 1f - foco.x) * aspecto, Mathf.Max(foco.y, 1f - foco.y)).magnitude;
+        sinucaIris.SetVector("_Foco", new Vector4(foco.x, foco.y, aspecto, alcance));
+        sinucaIris.SetFloat("_Progresso", progresso);
+    }
+
+    private void RestaurarImagemFade()
+    {
+        fadeImage.material = null;
+        fadeImage.color = Color.black;
+        fadeImage.raycastTarget = false;
+        group.blocksRaycasts = false;
     }
 
     public void LoadScene(string sceneName)

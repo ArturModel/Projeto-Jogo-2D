@@ -45,7 +45,7 @@ public sealed class Capitulo2Audio : MonoBehaviour
             data[i]=som*env;
         }
         var clip=AudioClip.Create("Radio_"+new[]{"FM_sinal_distante","AM_chiado","LOCAL_dois_tons"}[faixa],data.Length,1,hz,false);clip.SetData(data,0);
-        source.clip=clip;source.volume=PlayerPrefs.GetFloat("audio_efeitos",1)*.65f;source.Play();Destroy(go,2.2f);Destroy(clip,2.3f);
+        source.clip=clip;source.volume=AudioSettingsController.VolumeEfeitos*.65f;source.Play();Destroy(go,2.2f);Destroy(clip,2.3f);
     }
     public static void Definir(int assinatura)
     {
@@ -78,8 +78,11 @@ public sealed class Capitulo2Audio : MonoBehaviour
             if(interior)alvo*=.65f;
             var filter=f.GetComponent<AudioLowPassFilter>();
             if(filter!=null)filter.cutoffFrequency=Mathf.MoveTowards(filter.cutoffFrequency,interior?1800f:22000f,Time.unscaledDeltaTime*16000f);
-            alvo *= PlayerPrefs.GetFloat("audio_musica", 1);
-            if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || SantaRitaTapeDeck.IsOpen) alvo *= .67f;
+            if (alvo > 0 && BochaMinigameUI.IsShowing)
+                alvo = AudioSettingsController.TrilhaDiretaMinigame;
+            else if (GameMessageUI.IsShowing || SantaRitaTapeDeck.IsOpen)
+                alvo *= .67f;
+            alvo *= AudioSettingsController.VolumeMusica;
             if (alvo > 0 && !f.isPlaying) f.Play();
             f.volume = Mathf.MoveTowards(f.volume, alvo, Time.unscaledDeltaTime * .24f);
             if (alvo == 0 && f.volume == 0 && f.isPlaying) f.Stop();

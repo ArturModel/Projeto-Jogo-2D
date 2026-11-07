@@ -57,7 +57,6 @@ public class Capitulo1Director : MonoBehaviour
     private const float VolumeBairro = 0.48f;
     private const float VolumeCasaAvo = 0.32f;
     private const float VolumeBar = 0.48f;
-    private const float VolumeSinuca = 0.10f;
     private const float VelocidadeFadeMusica = 0.55f;
 
     private static readonly Dictionary<string, Texture2D> cacheTexturas = new Dictionary<string, Texture2D>();
@@ -409,9 +408,9 @@ public class Capitulo1Director : MonoBehaviour
                 interiorComTrilha ? 1800f : 22000f, Time.unscaledDeltaTime * 16000f);
         }
         float alvoBar = zonaAtual == ZonaId.Interior_BarDoZe ?
-            (SinucaMinigameUI.IsShowing ? VolumeSinuca : VolumeBar) : 0f;
+            (SinucaMinigameUI.IsShowing ? AudioSettingsController.TrilhaDiretaMinigame : VolumeBar) : 0f;
         // O volume geral já é aplicado globalmente pelo AudioListener.
-        float volumeUsuario = Mathf.Clamp01(PlayerPrefs.GetFloat("audio_musica", 1f));
+        float volumeUsuario = AudioSettingsController.VolumeMusica;
 
         AtualizarFonteMusical(musicaBairro, alvoBairro * volumeUsuario);
         AtualizarFonteMusical(musicaBar, alvoBar * volumeUsuario);
@@ -586,7 +585,7 @@ public class Capitulo1Director : MonoBehaviour
             return;
         }
 
-        AjustarLuzGlobal(info.ehInterior);
+        AjustarLuzGlobal(info.ehInterior, id == ZonaId.Interior_BarDoZe);
 
         Chuva chuva = FindAnyObjectByType<Chuva>();
         if (chuva != null)
@@ -632,7 +631,7 @@ public class Capitulo1Director : MonoBehaviour
         Legenda.Dizer("\"A porta aberta. Tudo aceso. E ninguém.\"", 3.5f);
     }
 
-    private static void AjustarLuzGlobal(bool emInterior)
+    private static void AjustarLuzGlobal(bool emInterior, bool noBar = false)
     {
         GameObject goGlobalLight = GameObject.Find("Global Light 2D");
         if (goGlobalLight != null)
@@ -640,8 +639,8 @@ public class Capitulo1Director : MonoBehaviour
             Light2D l2d = goGlobalLight.GetComponent<Light2D>();
             if (l2d != null)
             {
-                l2d.intensity = emInterior ? 0.72f : 0.46f;
-                l2d.color = emInterior
+                l2d.intensity = noBar ? .43f : emInterior ? .72f : .46f;
+                l2d.color = emInterior && !noBar
                     ? new Color(1.0f, 0.94f, 0.84f, 1f)
                     : new Color(0.76f, 0.82f, 0.94f, 1f);
             }
@@ -2410,9 +2409,6 @@ public class Capitulo1Director : MonoBehaviour
 
         CriarParedesPerimetro(z.transform, min, max, 1.0f);
         AdicionarBoxCollider(z, new Vector2(509f, -47.2f), new Vector2(18f, 1.6f));
-
-        // Iluminação quente de sinuca e bar
-        AdicionarLuzPonto(z.transform, new Vector3(509.0f, -52.8f, 0f), new Color(1.0f, 0.84f, 0.52f, 1f), 11.5f, 1.25f);
 
         // Porta de saída no sul do Bar
         SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_BarDoZe",new Vector2(509,-59.45f),"SaidaSociedade",2.3f,-10);

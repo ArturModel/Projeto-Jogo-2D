@@ -16,23 +16,51 @@ public class AudioSettingsController : MonoBehaviour
     [SerializeField] private Slider volumeChuva;
     [SerializeField] private Slider volumeImpactos;
 
-    public static float VolumeFala => Mathf.Clamp01(PlayerPrefs.GetFloat("audio_fala", 1f));
-    public static float VolumeChuva => Mathf.Clamp01(PlayerPrefs.GetFloat("audio_chuva", .55f));
-    public static float VolumeImpactos => Mathf.Clamp01(PlayerPrefs.GetFloat("audio_impactos", 1f));
+    // O perfil da sinuca é o ganho a 100% nos dois menus.
+    // A posição de cada controle é persistida separadamente do ganho legado.
+    private const string Perfil = "audio_perfil_sinuca_";
+    private const string ChaveMaster = "master";
+    private const string ChaveMusica = "musica";
+    internal const string PreferenciaMusica = Perfil + ChaveMusica;
+    private const string ChaveEfeitos = "efeitos";
+    private const string ChaveFala = "fala";
+    private const string ChaveChuva = "chuva";
+    private const string ChaveImpactos = "impactos";
 
-    private const string ChaveMaster = "audio_master";
-    private const string ChaveMusica = "audio_musica";
-    private const string ChaveEfeitos = "audio_efeitos";
-    private const float MusicaPadrao = 0.35f;
+    private const float GanhoMusicaSinuca = 0f;
+    private const float GanhoChuvaSinuca = .10f;
+    private const float GanhoOutrosEfeitosSinuca = .078125f;
+
+    public static float VolumeMusica => Nivel(ChaveMusica) * GanhoMusicaSinuca;
+    public static float VolumeEfeitos => Nivel(ChaveEfeitos) * GanhoOutrosEfeitosSinuca;
+    public static float VolumeFala => Nivel(ChaveFala);
+    public static float VolumeChuva => Nivel(ChaveChuva) * GanhoChuvaSinuca;
+    public static float VolumeImpactos => Nivel(ChaveImpactos);
+
+    internal const float TrilhaDiretaMinigame = .10f;
+    internal const float IntervaloColisaoBola = .018f;
+    internal static float GanhoTacada(float intensidade) => Mathf.Lerp(.28f, .66f, Mathf.Clamp01(intensidade));
+    internal static float GanhoColisaoBola(float intensidade) => .70f * Mathf.Sqrt(Mathf.Clamp01(intensidade));
+
+    private static bool EmMinigame => SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing;
+
+    private static float Nivel(string categoria) =>
+        Mathf.Clamp01(PlayerPrefs.GetFloat(Perfil + categoria, 1f));
+
+    private void AlterarNivel(string categoria, float valor)
+    {
+        PlayerPrefs.SetFloat(Perfil + categoria, Mathf.Clamp01(valor));
+        PublicarAlteracao();
+    }
+
     private static event System.Action VolumesAlterados;
 
-    private bool sinucaAnterior;
+    private bool minigameAnterior;
     private bool reaplicarVolumes;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     private static void InicializarAudioGlobal()
     {
-        GarantirValoresPadraoAudiveis();
         AplicarVolumesGlobais();
 
         SceneManager.sceneLoaded -= AoCarregarCena;
@@ -41,42 +69,15 @@ public class AudioSettingsController : MonoBehaviour
 
     private static void AoCarregarCena(Scene cena, LoadSceneMode modo) => AplicarVolumesGlobais();
 
-    private static void GarantirValoresPadraoAudiveis()
-    {
-        // Preferências já escolhidas, inclusive zero, nunca são elevadas por migração.
-        bool criou = false;
-        if (!PlayerPrefs.HasKey(ChaveMaster))
-        {
-            PlayerPrefs.SetFloat(ChaveMaster, 1f); criou = true;
-        }
-        if (!PlayerPrefs.HasKey(ChaveMusica))
-        {
-            PlayerPrefs.SetFloat(ChaveMusica, MusicaPadrao); criou = true;
-        }
-        if (!PlayerPrefs.HasKey(ChaveEfeitos))
-        {
-            PlayerPrefs.SetFloat(ChaveEfeitos, 1f); criou = true;
-        }
-        if (!PlayerPrefs.HasKey("audio_fala")) { PlayerPrefs.SetFloat("audio_fala", 1f); criou = true; }
-        if (!PlayerPrefs.HasKey("audio_chuva")) { PlayerPrefs.SetFloat("audio_chuva", .55f); criou = true; }
-        if (!PlayerPrefs.HasKey("audio_impactos")) { PlayerPrefs.SetFloat("audio_impactos", 1f); criou = true; }
-        if (criou) PlayerPrefs.Save();
-    }
-
     public static void AplicarVolumesGlobais(AudioMixer mixerExplicito = null)
     {
-        GarantirValoresPadraoAudiveis();
 
-        float master = PlayerPrefs.GetFloat(ChaveMaster, 1f);
-        float musica = PlayerPrefs.GetFloat(ChaveMusica, 1f);
-        float efeitos = PlayerPrefs.GetFloat(ChaveEfeitos, 1f);
-
-        AudioListener.volume = Mathf.Clamp01(master);
+        AudioListener.volume = Nivel(ChaveMaster);
         AtualizarChuvaMenu();
 
-        // No treino aberto sobre MainMenu, sua música continua no mixer do menu.
-        // Fontes diretas do bar têm seu próprio fade em Capitulo1Director.
-        float ganhoMusica = musica * 0.5f * (SinucaMinigameUI.IsShowing ? 0.35f : 1f);
+        // Em prática, a música ainda vem do mixer do menu.
+        float ganhoMusica = VolumeMusica * .5f * (EmMinigame ? .35f : 1f);
+        float efeitos = VolumeEfeitos;
 
         if (mixerExplicito != null)
         {
@@ -114,27 +115,26 @@ public class AudioSettingsController : MonoBehaviour
         VolumesAlterados += SincronizarSliders;
         VincularSliders();
         SincronizarSliders();
-        sinucaAnterior = SinucaMinigameUI.IsShowing;
+        minigameAnterior = EmMinigame;
         reaplicarVolumes = true;
     }
 
     private void Update()
     {
-        if (!reaplicarVolumes && sinucaAnterior == SinucaMinigameUI.IsShowing) return;
+        if (!reaplicarVolumes && minigameAnterior == EmMinigame) return;
         reaplicarVolumes = false;
-        sinucaAnterior = SinucaMinigameUI.IsShowing;
+        minigameAnterior = EmMinigame;
         AplicarVolumesGlobais(mixer);
     }
 
     private void SincronizarSliders()
     {
-        GarantirValoresPadraoAudiveis();
-        if (volumeGeral != null) volumeGeral.SetValueWithoutNotify(PlayerPrefs.GetFloat(ChaveMaster, 1f));
-        if (volumeMusica != null) volumeMusica.SetValueWithoutNotify(PlayerPrefs.GetFloat(ChaveMusica, MusicaPadrao));
-        if (volumeEfeitos != null) volumeEfeitos.SetValueWithoutNotify(PlayerPrefs.GetFloat(ChaveEfeitos, 1f));
-        if (volumeFala != null) volumeFala.SetValueWithoutNotify(VolumeFala);
-        if (volumeChuva != null) volumeChuva.SetValueWithoutNotify(VolumeChuva);
-        if (volumeImpactos != null) volumeImpactos.SetValueWithoutNotify(VolumeImpactos);
+        if (volumeGeral != null) volumeGeral.SetValueWithoutNotify(Nivel(ChaveMaster));
+        if (volumeMusica != null) volumeMusica.SetValueWithoutNotify(Nivel(ChaveMusica));
+        if (volumeEfeitos != null) volumeEfeitos.SetValueWithoutNotify(Nivel(ChaveEfeitos));
+        if (volumeFala != null) volumeFala.SetValueWithoutNotify(Nivel(ChaveFala));
+        if (volumeChuva != null) volumeChuva.SetValueWithoutNotify(Nivel(ChaveChuva));
+        if (volumeImpactos != null) volumeImpactos.SetValueWithoutNotify(Nivel(ChaveImpactos));
     }
 
     private void DesvincularSliders()
@@ -176,36 +176,12 @@ public class AudioSettingsController : MonoBehaviour
         AplicarVolumesGlobais(mixer);
     }
 
-    public void AlterarVolumeGeral(float valor)
-    {
-        PlayerPrefs.SetFloat(ChaveMaster, Mathf.Clamp01(valor));
-        PublicarAlteracao();
-    }
-
-    public void AlterarVolumeMusica(float valor)
-    {
-        PlayerPrefs.SetFloat(ChaveMusica, Mathf.Clamp01(valor));
-        PublicarAlteracao();
-    }
-
-    public void AlterarVolumeEfeitos(float valor)
-    {
-        PlayerPrefs.SetFloat(ChaveEfeitos, Mathf.Clamp01(valor));
-        PublicarAlteracao();
-    }
-
-    public void AlterarVolumeFala(float valor)
-    {
-        PlayerPrefs.SetFloat("audio_fala", Mathf.Clamp01(valor)); PublicarAlteracao();
-    }
-    public void AlterarVolumeChuva(float valor)
-    {
-        PlayerPrefs.SetFloat("audio_chuva", Mathf.Clamp01(valor)); PublicarAlteracao();
-    }
-    public void AlterarVolumeImpactos(float valor)
-    {
-        PlayerPrefs.SetFloat("audio_impactos", Mathf.Clamp01(valor)); PublicarAlteracao();
-    }
+    public void AlterarVolumeGeral(float valor) => AlterarNivel(ChaveMaster, valor);
+    public void AlterarVolumeMusica(float valor) => AlterarNivel(ChaveMusica, valor);
+    public void AlterarVolumeEfeitos(float valor) => AlterarNivel(ChaveEfeitos, valor);
+    public void AlterarVolumeFala(float valor) => AlterarNivel(ChaveFala, valor);
+    public void AlterarVolumeChuva(float valor) => AlterarNivel(ChaveChuva, valor);
+    public void AlterarVolumeImpactos(float valor) => AlterarNivel(ChaveImpactos, valor);
 
     private static void AtualizarChuvaMenu()
     {

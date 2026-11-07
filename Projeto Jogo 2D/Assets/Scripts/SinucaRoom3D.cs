@@ -39,6 +39,7 @@ public sealed partial class SinucaRoom3D : IDisposable
     // Independent standing position: never follows the cue ball after a shot.
     private Vector3 standingPosition = new Vector3(-2.1f,1.62f,-1.25f);
     private float standingYaw=58f, standingPitch=22f;
+    private float entryLook;
     private float distanciaPasso;
     private int variantePasso;
     private bool cameraInitialized;
@@ -161,7 +162,13 @@ public sealed partial class SinucaRoom3D : IDisposable
     public void ResetWalking()
     {
         standingPosition=new Vector3(-2.1f,1.62f,-1.25f);standingYaw=58f;standingPitch=22f;
-        cameraInitialized=false;poseBlend=0;SetMode(SinucaCameraView.Caminhando3D,0);
+        entryLook=0;cameraInitialized=false;poseBlend=0;SetMode(SinucaCameraView.Caminhando3D,0);
+    }
+    internal void SetEntryLook(float weight)
+    {
+        entryLook = weight;
+        if (weight > 0f) cue.gameObject.SetActive(false);
+        UpdateCamera();
     }
     public bool CanReachWhite(Vector2 ball)
         => Vector2.Distance(StandingXZ,ball*MetresPerUnit)<=1.9f;
@@ -329,7 +336,16 @@ public sealed partial class SinucaRoom3D : IDisposable
     private void UpdateCamera()
     {
         camera.orthographic=mode==SinucaCameraView.VistaSuperior;
-        if(Walking){camera.transform.localPosition=standingPosition;camera.transform.localRotation=Quaternion.Euler(standingPitch,standingYaw,0);camera.fieldOfView=62;}
+        if(Walking)
+        {
+            var rotation = Quaternion.Euler(standingPitch,standingYaw,0);
+            var towardTable = new Vector3(-standingPosition.x, 0, -standingPosition.z).normalized;
+            var position = standingPosition + entryLook * (Vector3.up * .03f - towardTable * .18f);
+            var towardLamp = Quaternion.LookRotation(PendantPosition - position);
+            camera.transform.localPosition = position;
+            camera.transform.localRotation = Quaternion.Slerp(rotation, towardLamp, entryLook);
+            camera.fieldOfView = Mathf.Lerp(62f, 55f, entryLook);
+        }
         else if(camera.orthographic){camera.transform.localPosition=new Vector3(0,6,0);camera.transform.localRotation=Quaternion.Euler(90,topYaw,0);camera.orthographicSize=1.25f/zoom;}
         else if(mode==SinucaCameraView.Mesa3D){var target=new Vector3(0,1f,.5f);camera.transform.localPosition=target+Quaternion.Euler(0,yaw,0)*new Vector3(0,2f,-4.3f)/zoom;camera.transform.localRotation=Quaternion.LookRotation(target-camera.transform.localPosition);camera.fieldOfView=46;}
         else{var dir=new Vector3(Mathf.Cos(cueHeading),0,Mathf.Sin(cueHeading));var ball=new Vector3(white.x*MetresPerUnit,TableY,white.y*MetresPerUnit);camera.transform.localPosition=ball-dir*(1.65f/zoom)+Vector3.up*.53f;camera.transform.localRotation=Quaternion.LookRotation(ball+dir*.13f+Vector3.up*.015f-camera.transform.localPosition);camera.fieldOfView=48;}

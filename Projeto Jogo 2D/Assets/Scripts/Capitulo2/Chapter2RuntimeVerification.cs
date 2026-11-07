@@ -442,7 +442,7 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
         ui.IniciarDuelo(null); Invoke(ui,"ConfigurarMao",2);
         yield return new WaitForSecondsRealtime(1);
         var ambience = FindAnyObjectByType<SantaRitaBarAudio>(); var layers = Field<AudioSource[]>(ambience,"layers");
-        bool effects = PlayerPrefs.GetFloat("audio_efeitos",1) > 0;
+        bool effects = AudioSettingsController.VolumeChuva > 0;
         Check(layers[0].volume < .001f && (effects ? layers[1].volume > 0 && layers[1].isPlaying : layers[1].volume == 0),
             "Segunda mão silencia murmúrio e toca água real, respeitando volume de efeitos.");
         Invoke(ui,"ConfigurarMao",3); yield return new WaitForSecondsRealtime(1);

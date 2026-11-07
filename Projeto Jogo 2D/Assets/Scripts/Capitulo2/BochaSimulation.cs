@@ -27,6 +27,7 @@ public struct BochaContact
     public BochaContactType tipo;
     public Vector3 ponto;
     public float velocidade;
+    public bool envolveBalim;
 }
 
 // Kernel único da partida e IA. Contato varrido entre esferas, guias e piso;
@@ -168,7 +169,8 @@ public sealed class BochaSimulation
             Vector3 friction = -tangent.normalized * Mathf.Min(tangent.magnitude / (3.5f * inverse), impulse * .14f);
             Aplicar(a, -friction, n * a.raio); Aplicar(b, friction, -n * b.raio);
         }
-        Notificar(BochaContactType.Bochas, a.Centro + n * a.raio, -closing);
+        Notificar(BochaContactType.Bochas, a.Centro + n * a.raio, -closing,
+            a.lado == BochaSide.Nenhum || b.lado == BochaSide.Nenhum);
     }
     private void Rebater(BochaBall b, int eixo, float sentido)
     {
@@ -187,10 +189,10 @@ public sealed class BochaSimulation
             Notificar(BochaContactType.Madeira, b.Centro, impact);
         }
     }
-    private void Notificar(BochaContactType tipo, Vector3 p, float v)
+    private void Notificar(BochaContactType tipo, Vector3 p, float v, bool envolveBalim = false)
     {
         if (v < .06f) return;
-        Impacto?.Invoke(v); Contato?.Invoke(new BochaContact { tipo = tipo, ponto = p, velocidade = v });
+        Impacto?.Invoke(v); Contato?.Invoke(new BochaContact { tipo = tipo, ponto = p, velocidade = v, envolveBalim = envolveBalim });
     }
     private void CorrigirContatos()
     {

@@ -102,15 +102,11 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private TextMeshProUGUI txtTurnoStatus;
     private TextMeshProUGUI txtRegraBolaMarcada;
     private TextMeshProUGUI txtPercepcaoSubtitulo;
-    private TextMeshProUGUI txtFalaZe;
-    private CanvasGroup legendaZe;
-    private AudioSource vozFalaZe;
-    private AudioClip[] silabasZe;
+    private MinigameDialogue dialogoZe;
     private readonly SinucaZeComments comentariosZe = new SinucaZeComments();
     private string falaZePendente;
     private bool falaZePendenteUrgente;
-    private float tempoLetraZe, tempoLeituraZe, intervaloSilabaZe, intervaloFalaZe;
-    private int caractereZe, silabaZe;
+    private float intervaloFalaZe;
     private TextMeshProUGUI txtControlesRodape;
     private Image barraForcaFill;
     private Image overlayPercepcao;
@@ -254,6 +250,34 @@ public partial class SinucaMinigameUI : MonoBehaviour
         ComecarNovaSerie(aoVencer);
     }
 
+    internal void IniciarDueloDoBar(Action aoVencer, Action aoPerder)
+    {
+        if (IsShowing || SceneFader.IsTransitioning) return;
+        var camera = Camera.main;
+        var mesa = GameObject.Find("Mesa_Sinuca_Trigger");
+        if (camera == null || mesa == null)
+        {
+            IniciarDuelo(aoVencer, aoPerder);
+            return;
+        }
+
+        PrepararSala();
+        var lampada = GameObject.Find("LampadaDaSinuca");
+        Vector3 alvo = lampada != null ? lampada.transform.position : mesa.transform.position + Vector3.up * .95f;
+        Vector3 point = camera.WorldToScreenPoint(alvo);
+        var foco = new Vector2(Mathf.Clamp01(point.x / Screen.width), Mathf.Clamp01(point.y / Screen.height));
+        SceneFader.Instance.TransicionarParaSinuca(foco, () =>
+        {
+            onDefeatCallback = aoPerder;
+            ComecarNovaSerie(aoVencer, mostrarEscolha: false);
+        }, olhar => tableView3D.Room.SetEntryLook(olhar), () =>
+        {
+            MostrarHudDaEntrada(true);
+            AtualizarVisualTacoEMira();
+            MostrarEscolhaDosGrupos();
+        });
+    }
+
     public void PrepararSala(){var view=GetComponentInChildren<SinucaTableView>(true);if(view!=null)view.Preaquecer();}
     public void IniciarPraticaOpcional()
     {
@@ -267,6 +291,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     public void Fechar()
     {
+        MostrarHudDaEntrada(true);
         ReiniciarPercepcoesSinuca();
         StopAllCoroutines();
         if(tableView3D!=null)tableView3D.Room?.CancelOpponentShot();
@@ -379,7 +404,6 @@ public partial class SinucaMinigameUI : MonoBehaviour
     {
         RestaurarCursor();LimparFalaZe();
         DestruirAudioPercepcao();
-        if(silabasZe!=null)foreach(var clip in silabasZe)if(clip!=null)Destroy(clip);
     }
 
     private void RestaurarCursor()
@@ -596,7 +620,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private bool EntradaMesaBloqueada(bool permitirInspecao = false)
     {
-        return (OlhandoDebaixo && !permitirInspecao) || !Application.isFocused || Time.timeScale==0f || MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)
+        return SceneFader.IsTransitioning || (OlhandoDebaixo && !permitirInspecao) || !Application.isFocused || Time.timeScale==0f || MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)
             || (painelOpcoes != null && painelOpcoes.activeSelf) || (painelAlvo != null && painelAlvo.activeSelf);
     }
 
@@ -801,7 +825,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         painelModal.SetActive(false);
     }
 
-    private void ComecarNovaSerie(Action aoVencerSerie)
+    private void ComecarNovaSerie(Action aoVencerSerie, bool mostrarEscolha = true)
     {
         StopAllCoroutines();
         if(tableView3D!=null)tableView3D.Room?.CancelOpponentShot();
@@ -827,6 +851,25 @@ public partial class SinucaMinigameUI : MonoBehaviour
         ConfigurarMao(1);
         DefinirVistaInicial();
         ajudaInicialPendente=true;
+        if (mostrarEscolha) MostrarEscolhaDosGrupos();
+        else
+        {
+            painelModal.SetActive(false);
+            AtualizarPainelContextual();
+            MostrarHudDaEntrada(false);
+        }
+    }
+
+    private void MostrarHudDaEntrada(bool visivel)
+    {
+        if (headerMesa != null) headerMesa.gameObject.SetActive(visivel);
+        if (footerMesa != null) footerMesa.gameObject.SetActive(visivel);
+        if (!visivel && reticuloFPS != null) reticuloFPS.gameObject.SetActive(false);
+    }
+
+    private void MostrarEscolhaDosGrupos()
+    {
+        if (!IsShowing) return;
         MostrarModal("ZÉ · COMO VAMOS JOGAR?","Quinze bolas no triângulo. Você prefere identificar os grupos pelas cores ou pelos números? A preta 8 é sempre a última. A branca já está posicionada.","LISAS / LISTRADAS",()=>{gruposPorNumero=false;painelModal.SetActive(false);AbrirAjudaGuiada(0,true);},"1–7 / 9–15",()=>{gruposPorNumero=true;painelModal.SetActive(false);AbrirAjudaGuiada(0,true);});
     }
 
@@ -1279,7 +1322,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                 if (voz != null) { if (audioSuspenso) voz.Pause(); else voz.UnPause(); }
         }
         AtualizarFalaZe(suspenderAudio);
-        if (!IsShowing || estado == EstadoPartida.Inativo) return;
+        if (!IsShowing || estado == EstadoPartida.Inativo || SceneFader.IsTransitioning) return;
         var tecladoCursor=Keyboard.current;
         if(tecladoCursor!=null && tecladoCursor.escapeKey.wasPressedThisFrame && !MenuPausa.Aberto && MenuPausa.ClosedFrame!=Time.frameCount)
         {
@@ -2967,138 +3010,52 @@ public partial class SinucaMinigameUI : MonoBehaviour
     // Síntese e Disparo de Áudio por Evento Real (Tacada, Colisão, Tabela, Caçapa, Giz)
     // =========================================================================
 
-    private void ConstruirLegendaZe()
-    {
-        var painel = CriarPainelHUD(raiz.transform,"LegendaZe",Vector2.zero,new Vector2(520,48));
-        var rect = painel.GetComponent<RectTransform>();
-        rect.anchorMin = rect.anchorMax = new Vector2(.5f,0);
-        rect.anchoredPosition = new Vector2(0,64);
-        painel.GetComponent<Image>().color = new Color32(10,13,11,220);
-        legendaZe = painel.AddComponent<CanvasGroup>();
-        legendaZe.blocksRaycasts = legendaZe.interactable = false;
-        legendaZe.alpha = 0;
-        txtFalaZe = CriarTexto("FalaZe",painel.transform,"",16,new Color32(244,233,208,255),TextAlignmentOptions.Center);
-        Posicionar(txtFalaZe.rectTransform,Vector2.zero,new Vector2(496,42));
-        txtFalaZe.richText = false;
-        txtFalaZe.raycastTarget = false;
-        txtFalaZe.overflowMode = TextOverflowModes.Overflow;
-    }
+    private void ConstruirLegendaZe() =>
+        dialogoZe = new MinigameDialogue(raiz.transform, "LegendaZe");
 
     private void EnfileirarFalaZe(string texto, bool urgente = false)
     {
         if(string.IsNullOrEmpty(texto) || agendaPercepcoes.Active!=SinucaPerceptionSchedule.Event.None || falasHistoria.Count>0 || OlhandoDebaixo || batidasRestantes>0 || (falaZePendenteUrgente && locutorPendenteMarcus))return;
         locutorPendenteMarcus = false;
         // Uma reação importante substitui a espera; comentários comuns não se acumulam.
-        if(!urgente && (falaZePendenteUrgente || (txtFalaZe!=null && !string.IsNullOrEmpty(txtFalaZe.text))))return;
+        if(!urgente && (falaZePendenteUrgente || dialogoZe?.Ocupada == true))return;
         falaZePendente = texto;
         falaZePendenteUrgente = urgente;
     }
 
     private void LimparFalaZe()
     {
-        falaZePendente = null;falaZePendenteUrgente = false;
-        tempoLetraZe = tempoLeituraZe = intervaloSilabaZe = intervaloFalaZe = 0;
-        caractereZe = silabaZe = 0;
-        if(txtFalaZe!=null)txtFalaZe.text = "";
-        if(legendaZe!=null)legendaZe.alpha = 0;
-        if(vozFalaZe!=null)vozFalaZe.Stop();
+        falaZePendente = null;
+        falaZePendenteUrgente = false;
+        intervaloFalaZe = 0;
+        dialogoZe?.Limpar();
     }
 
     private void AtualizarFalaZe(bool suspenso)
     {
-        if(txtFalaZe==null)return;
-        bool bloqueado = suspenso || !IsShowing || modoPratica || estado==EstadoPartida.Inativo ||
-            (painelModal!=null && painelModal.activeSelf) ||
-            (painelOpcoes!=null && painelOpcoes.activeSelf) || (painelAlvo!=null && painelAlvo.activeSelf);
-        if(bloqueado)
+        if (dialogoZe == null) return;
+        bool bloqueado = suspenso || !IsShowing || modoPratica || estado == EstadoPartida.Inativo ||
+            (painelModal != null && painelModal.activeSelf) ||
+            (painelOpcoes != null && painelOpcoes.activeSelf) || (painelAlvo != null && painelAlvo.activeSelf);
+        if (bloqueado)
         {
-            legendaZe.alpha = 0;
-            if(vozFalaZe!=null)vozFalaZe.Pause();
+            dialogoZe.Suspender();
             return;
         }
-        if(vozFalaZe!=null)
-        {
-            vozFalaZe.volume = .20f * AudioSettingsController.VolumeFala;
-            vozFalaZe.UnPause();
-        }
-        float dt = Mathf.Min(Time.unscaledDeltaTime,.1f);
-        intervaloSilabaZe -= dt;
-        if(string.IsNullOrEmpty(txtFalaZe.text))
+
+        float dt = Mathf.Min(Time.unscaledDeltaTime, .1f);
+        if (!dialogoZe.Ocupada)
         {
             intervaloFalaZe -= dt;
-            if(string.IsNullOrEmpty(falaZePendente) || intervaloFalaZe>0)return;
-            locutorAtualMarcus = locutorPendenteMarcus;
-            string prefixo = locutorAtualMarcus ? "Marcus: " : "Zé: ";
-            txtFalaZe.text = prefixo + falaZePendente;
-            txtFalaZe.ForceMeshUpdate();
-            txtFalaZe.maxVisibleCharacters = caractereZe = prefixo.Length;
-            tempoLetraZe = 0;
-            tempoLeituraZe = Mathf.Max(2.2f,falaZePendente.Length*.035f);
-            falaZePendente = null;falaZePendenteUrgente = false;
+            if (string.IsNullOrEmpty(falaZePendente) || intervaloFalaZe > 0) return;
+            dialogoZe.Dizer(locutorPendenteMarcus ? "Marcus" : "Zé", falaZePendente,
+                locutorPendenteMarcus ? MinigameDialogue.MarcusPitch : 1f);
+            falaZePendente = null;
+            falaZePendenteUrgente = false;
         }
-        legendaZe.alpha = Mathf.MoveTowards(legendaZe.alpha,1,dt*8);
-        int total = txtFalaZe.textInfo.characterCount;
-        if(caractereZe<total)
-        {
-            tempoLetraZe -= dt;
-            if(tempoLetraZe<=0)
-            {
-                char letra = txtFalaZe.textInfo.characterInfo[caractereZe].character;
-                txtFalaZe.maxVisibleCharacters = ++caractereZe;
-                tempoLetraZe += char.IsPunctuation(letra) ? .16f : .032f;
-                if(char.IsLetterOrDigit(letra) && intervaloSilabaZe<=0)
-                {
-                    TocarSilabaZe();
-                    intervaloSilabaZe = .095f;
-                }
-            }
-        }
-        else
-        {
-            tempoLeituraZe -= dt;
-            if(tempoLeituraZe<=.3f)legendaZe.alpha = Mathf.Max(0,tempoLeituraZe/.3f);
-            if(tempoLeituraZe<=0)
-            {
-                txtFalaZe.text = "";legendaZe.alpha = 0;
-                intervaloFalaZe = falaZePendenteUrgente ? .35f : 1.5f;
-            }
-        }
-    }
 
-    private void TocarSilabaZe()
-    {
-        float efeitos = AudioSettingsController.VolumeFala;
-        if(efeitos<=.001f)return;
-        if(silabasZe==null)
-        {
-            // Síntese original abstrata de quatro murmúrios "hm/bom"; sem voz gravada ou palavras.
-            const int hz = 22050;
-            silabasZe = new AudioClip[4];
-            for(int v=0;v<silabasZe.Length;v++)
-            {
-                var data = new float[(int)(hz*.075f)];
-                float fundamental = 112+v*9;
-                for(int i=0;i<data.Length;i++)
-                {
-                    float t=i/(float)hz;
-                    float env=Mathf.Pow(Mathf.Max(0,Mathf.Sin(Mathf.PI*i/(data.Length-1))),1.5f);
-                    float onda=Mathf.Sin(2*Mathf.PI*fundamental*t)*.48f +
-                        Mathf.Sin(2*Mathf.PI*fundamental*2*t)*.24f +
-                        Mathf.Sin(2*Mathf.PI*fundamental*(v%2==0?5:6)*t)*.12f;
-                    data[i]=onda*env*.65f;
-                }
-                silabasZe[v]=AudioClip.Create("SR_Ze_Murmurio_"+v,data.Length,1,hz,false);
-                silabasZe[v].SetData(data,0);
-            }
-            vozFalaZe=gameObject.AddComponent<AudioSource>();
-            vozFalaZe.playOnAwake=false;vozFalaZe.spatialBlend=0;
-        }
-        // Fonte separada: a fala nunca interrompe uma fonte de impacto das bolas.
-        if(vozFalaZe.isPlaying)return;
-        vozFalaZe.pitch=locutorAtualMarcus?.77f:1f;
-        vozFalaZe.clip=silabasZe[(silabaZe++*3)%silabasZe.Length];
-        vozFalaZe.volume=.20f*efeitos;
-        vozFalaZe.Play();
+        dialogoZe.Atualizar(dt);
+        if (!dialogoZe.Ocupada) intervaloFalaZe = falaZePendenteUrgente ? .35f : 1.5f;
     }
 
     private static void GarantirClipsAudio()
@@ -3210,17 +3167,17 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private void TocarSomTacada(float intensidade01)
     {
         GarantirClipsAudio();
-        float v = Mathf.Lerp(0.28f, 0.66f, Mathf.Clamp01(intensidade01));
+        float v = AudioSettingsController.GanhoTacada(intensidade01);
         TocarClipImpacto(clipTacada, v, Mathf.Lerp(0.95f, 1.08f, intensidade01));
     }
 
     private void TocarSomColisaoBola(float intensidade01)
     {
-        float v = 0.70f * Mathf.Sqrt(Mathf.Clamp01(intensidade01));
+        float v = AudioSettingsController.GanhoColisaoBola(intensidade01);
         if (!Application.isPlaying || Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused
             || v <= 0.002f || AudioSettingsController.VolumeImpactos <= 0.001f) return;
         // Um limite para toda a categoria evita empilhar as três variantes no mesmo contato.
-        if (Time.unscaledTime - ultimoSomColisaoBola < 0.018f) return;
+        if (Time.unscaledTime - ultimoSomColisaoBola < AudioSettingsController.IntervaloColisaoBola) return;
         GarantirColisoesGravadas();
         AudioClip clip = clipsColisaoBola[proximaColisaoBola++ % clipsColisaoBola.Length];
         if (clip == null) return;

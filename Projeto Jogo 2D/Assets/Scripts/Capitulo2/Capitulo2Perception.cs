@@ -18,7 +18,7 @@ public sealed class Capitulo2Perception : MonoBehaviour
             for(int i=0;i<samples.Length;i++)
             {float t=i/(float)hz;samples[i]=(Mathf.Sin(2*Mathf.PI*293.66f*t)+.28f*Mathf.Sin(2*Mathf.PI*806*t)+.13f*Mathf.Sin(2*Mathf.PI*1134*t))*Mathf.Exp(-t*1.9f)*Mathf.Min(1,t*40)*.2f;}
             var clip=AudioClip.Create("C2_SinoPercebidoOriginal",samples.Length,1,hz,false);clip.SetData(samples,0);
-            var audio=host.AddComponent<AudioSource>();audio.playOnAwake=false;audio.clip=clip;audio.volume=.32f*PlayerPrefs.GetFloat("audio_efeitos",1);audio.Play();
+            var audio=host.AddComponent<AudioSource>();audio.playOnAwake=false;audio.clip=clip;audio.volume=.32f*AudioSettingsController.VolumeEfeitos;audio.Play();
             float elapsed=0;while(elapsed<3){if(!MenuPausa.Aberto)elapsed+=Time.deltaTime;audio.Pause();if(!MenuPausa.Aberto)audio.UnPause();yield return null;}
             Destroy(clip);
         }

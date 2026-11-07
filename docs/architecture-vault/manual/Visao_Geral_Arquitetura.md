@@ -165,3 +165,22 @@ SinucaMinigameUI_Perception separa estados transitórios de investigação/falsa
 
 ## Sinuca: efeito e apoio — 06/11/2026
 SinucaMinigameUI.Spin centraliza ajuste contextual por direito + arraste e reutiliza contatoTaco da física. SinucaRoom3D.SetCueContact/SetSpinFocus controlam apresentação. AlignBridgeToShaft intersecta haste com plano de apoio, preservando o canal palma/polegar na mudança de efeito e estabilidade na puxada. Não adiciona persistência, cena ou regra de progressão. [Plano](../../ai-plans/2026-11-06_BBCONTTI_sinuca-efeito-apoio.md).
+
+
+## Bocha — ambientação 07/11/2026
+BochaCourtView apresenta a sala persistente de BochaRoom3D em RenderTexture via renderer 3D da sinuca. BuildAtmosphere adiciona arquitetura e decoração funcional; arandelas/pendentes secundários mantêm a principal da cancha dominante. Reboco independe de NativeSurface do bar. Obstáculos novos usam CanStand; sem alteração de cenas/kernel/persistência. Fixture Editor: 273 pontos livres e quatro vistas. Player e aprovação artística pendentes. Graphify ausente/índice antigo.
+
+## Tonão na bocha
+
+`BochaAI` escolhe o lançamento na simulação existente. `BochaRoom3D` move Tonão pela faixa livre e devolve o sinal de soltura quando troca para o quadro da mão direita aberta. `BochaMinigameUI` usa esse sinal para lançar no kernel. Legendas de percepção de Marcus têm prioridade sobre as falas de Tonão.
+
+
+## Percepções da bocha — 07/11/2026
+
+`MinigamePerceptionSchedule<T>` fornece a bolsa, os intervalos e os turnos de elegibilidade. `SinucaPerceptionSchedule` conserva os quatro eventos e seu contrato. `BochaMinigameUI.Perception` define quando iniciar as duas ocorrências, controla fala e efeitos e retém o passo do solver durante a animação de queda. `BochaRoom3D.Perception` controla figura, teste de olhar e visualização da bocha que cai. A abertura de `SalaLit` é configurada só nos materiais do piso e das marcas da bocha. [Plano e verificações](../../ai-plans/2026-11-07_BBCONTTI_bocha-percepcoes.md).
+
+## Mixagem compartilhada dos minigames
+
+AudioSettingsController separa o ganho de referência do valor relativo persistido no perfil `audio_perfil_sinuca_`. Menu e pausa usam o mesmo perfil, aplicado aos mixers e às fontes diretas. MinigameDialogue usa SubtitleSettingsController e mantém a apresentação da fala e o áudio de sílabas em sinuca e bocha. As filas e a prioridade dos locutores ficam em cada jogo. [Plano](../../ai-plans/2026-11-07_BBCONTTI_mix-global-minigames.md).
+
+07/11/2026 — SantaRitaBarLayout mantém a planta de referência para SinucaRoom3D e define uma projeção 2D mais larga. SantaRitaBarLighting monta as luzes e sombras na exploração. SceneFader coordena a íris texturizada e SinucaRoom3D aplica um olhar de entrada sobre a câmera inicial antes da escolha de grupos. [Plano](../../ai-plans/2026-11-07_BBCONTTI_sinuca-sala-entrada.md).

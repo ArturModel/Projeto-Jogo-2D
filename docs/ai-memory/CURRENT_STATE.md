@@ -158,3 +158,17 @@ Dublagem NÃO concluída: ElevenLabs privado autenticado, criação de voz bloqu
 
 
 06/11/2026 — [Sinuca: efeito e apoio](../ai-plans/2026-11-06_BBCONTTI_sinuca-efeito-apoio.md): direito + arraste, foco suave, UI bola/ponto/taco/ângulos e contato contínuo. Apoio intersecta haste real e permanece estável na puxada. Unity sem erros; física 136 PASS e 28 verificações projetadas do apoio PASS. Fixtures técnicas; Player/input físico/aprovação visual pendentes. Graphify ausente/índice antigo.
+
+
+07/11/2026 — [Bocha: ambientação](../ai-plans/2026-11-07_BBCONTTI_bocha-ambientacao.md): seis arandelas e dois pendentes fracos, reboco independente do bar, pilastras/reforços/sanca/alcova e decoração funcional. Editor: quatro vistas, 273 amostras livres, 0 shaders inválidos e console sem erros. Fonte runtime BochaRoom3D; cenas/saves preservados. Player e avaliação artística pendentes. Refresh Graphify indisponível; validate aponta índice antigo.
+
+07/11/2026 — [Tonão na bocha](../ai-plans/2026-11-07_BBCONTTI_tonao-bocha.md). Tonão caminha até a posição escolhida pela IA, lança com a mão direita e reage com legenda e murmúrio. Atlas iluminado em frente, costas e ambos os perfis. Fixture Unity passou 27 combinações e registrou 16 capturas. Graphify ausente e índice desatualizado. Partida completa, audição e Player pendentes.
+
+
+07/11/2026 — [Bocha com alucinações](../ai-plans/2026-11-07_BBCONTTI_bocha-percepcoes.md). O duelo usa a mesma agenda sem repetição imediata da sinuca. Marcus reage à figura no banco quando foca a câmera e à queda aparente de sua bocha. Tonão segue o jogo. O tremor respeita a opção de reduzir efeitos intensos. A queda preserva o estado real e os resultados da jogada. 37 verificações no Unity, capturas da câmera do jogo e regressão da agenda concluídas.
+
+## Perfil de áudio e legendas dos minigames
+
+O ganho da sinuca confirmado pelo autor é a referência dos sliders a 100%. Música 0, chuva .10 e outros efeitos .078125. A chuva subiu cerca de 3,6 dB após nova avaliação do autor. Geral, fala e taco/bolas mantêm ganho unitário antes da mixagem das fontes. Bocha e sinuca compartilham a apresentação de fala, e a Sociedade usa a mesma chuva abafada do bar. [Plano e QA](../ai-plans/2026-11-07_BBCONTTI_mix-global-minigames.md).
+
+07/11/2026 — Bar do Zé em exploração usa piso de 12,5 unidades, corredores laterais mais largos, luz quente localizada e sombras em móveis e personagens. A entrada do duelo dura cerca de 3,7 s com íris texturizada e descida de câmera do pendente para o feltro. O autor testou e aprovou. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-sala-entrada.md).

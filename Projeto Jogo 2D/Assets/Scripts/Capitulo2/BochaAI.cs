@@ -3,6 +3,7 @@ using UnityEngine;
 
 public static class BochaAI
 {
+    private static readonly float[] Posicoes = { -1.7f, 0, 1.7f };
     public static double UltimaDecisaoMs { get; private set; }
     public static int UltimosCandidatos { get; private set; }
     // Orçamento limitado. Estima a força para gerar candidatos, mas pontua
@@ -15,14 +16,14 @@ public static class BochaAI
         foreach(var b in mesa.bolas)if(b.valida&&b.lado==BochaSide.Marcus)
         {float distance=BochaMatch.Distancia(b,mesa.bolas[0]);if(distance<nearest){nearest=distance;target=b.pos;}}
         var shots=new List<BochaShot>(25);
-        foreach(float x in new[]{-1.7f,0,1.7f})
+        foreach(float x in Posicoes)
         {
             Vector2 delta=balim-new Vector2(x,.65f);float power=BochaLaunch.ForcaPonto(delta.magnitude);
             foreach(float offset in new[]{-.025f,0,.025f})shots.Add(BochaLaunch.Preparar(BochaThrowType.Ponto,x,delta,power+offset));
         }
         if(!float.IsPositiveInfinity(nearest))
         {
-            foreach(float x in new[]{-1.4f,1.4f})
+            foreach(float x in Posicoes)
             {
                 Vector2 delta=target-new Vector2(x,.65f);
                 float p=(Mathf.Sqrt(2*BochaSimulation.ResistenciaRolagem*delta.magnitude)/.77f+1.2f-3.8f)/8.7f;

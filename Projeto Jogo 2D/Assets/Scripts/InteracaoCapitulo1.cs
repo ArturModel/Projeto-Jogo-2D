@@ -1038,7 +1038,7 @@ public class InteracaoCapitulo1 : Interactable
 
     private void IniciarPartidaSinucaComZe()
     {
-        SinucaMinigameUI.Instance.IniciarDuelo(
+        SinucaMinigameUI.Instance.IniciarDueloDoBar(
             aoVencer: AoVencerZeNaSinuca,
             aoPerder: () =>
             {

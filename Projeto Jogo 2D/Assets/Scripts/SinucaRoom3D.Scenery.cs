@@ -1,6 +1,8 @@
 using UnityEngine;
 public sealed partial class SinucaRoom3D
 {
+    private static readonly Vector3 PendantPosition = new Vector3(0,2.55f,0);
+
     private void BuildRoom()
     {
         var floor=Mat("assoalhoNativo",Color.white,tiles[0]);floor.mainTextureScale=new Vector2(9.5f,9.85f);
@@ -29,7 +31,7 @@ public sealed partial class SinucaRoom3D
         }
         BuildSalonDepth();
         var sun=new GameObject("LuzAmbiente3D").AddComponent<Light>();sun.transform.SetParent(root.transform,false);sun.type=LightType.Directional;sun.color=new Color(.57f,.65f,.77f);sun.intensity=.10f;sun.transform.localRotation=Quaternion.Euler(48,-32,0);sun.cullingMask=1<<Layer;sun.shadows=LightShadows.None;sun.shadowBias=.02f;
-        Lamp(new Vector3(0,2.55f,0));
+        Lamp(PendantPosition);
         // Low-cost indirect spill: no shadow cubemaps, fog, or screen-space effects.
         RoomFill("ReflexoQuenteMesa",new Vector3(0,1.75f,0),new Color(1f,.78f,.51f),.18f,3.1f);
         RoomFill("LuzDiscretaBalcao",new Vector3(-2.1f,2.4f,3.1f),new Color(1f,.74f,.47f),1.25f,4.3f);

@@ -1,3 +1,7 @@
+# 07/11/2026 — Saves de trabalho antes da sinuca e da bocha
+
+Slots 2 e 3 instalados no armazenamento local, junto à mesa do Bar do Zé e à cancha da Sociedade Beira-Rio, com os requisitos dos duelos satisfeitos. Save geral e slot 1 verificados byte a byte. Validação estática concluída. Carga pelo Unity pendente. [Plano executado](../ai-plans/2026-11-07_BBCONTTI_saves-pre-sinuca-bocha.md).
+
 # 30/10/2026 — Bar, Sinuca Brasileira e inventário R4
 
 Implementados bar/planta compartilhada, três vistas, regras brasileiras com bola marcada, contato na branca/redes, cinco slots, mapa na Rodoviária e recibo com coleta/entrega. Música expandida/abafada e onze soleiras testadas por E. Player QA final: 200 verificações + PASS. Build normal zero erros, mesmo hash de fontes, QA excluído da DLL; menu observado, cliques limitados por aviso do Firewall não automatizado. Seis arquivos de saves intactos. Graphify/Obsidian atualizados, 103 C#. [Plano executado](../ai-plans/2026-10-30_Patrick-Dotto_bar-sinuca-inventario.md), [evidências e limites](../Evidencias/BarSinucaR4/Relatorio.md).
@@ -444,3 +448,21 @@ TMP gravou cache VT323 após restauração; único asset posterior às builds. H
 
 
 06/11/2026 — [Sinuca: efeito e apoio](../ai-plans/2026-11-06_BBCONTTI_sinuca-efeito-apoio.md): direito + arraste, foco suave, UI bola/ponto/taco/ângulos e contato contínuo. Apoio intersecta haste real e permanece estável na puxada. Unity sem erros; física 136 PASS e 28 verificações projetadas do apoio PASS. Fixtures técnicas; Player/input físico/aprovação visual pendentes. Graphify ausente/índice antigo.
+
+
+07/11/2026 — [Bocha: ambientação](../ai-plans/2026-11-07_BBCONTTI_bocha-ambientacao.md): seis arandelas e dois pendentes fracos, reboco independente do bar, pilastras/reforços/sanca/alcova e decoração funcional. Editor: quatro vistas, 273 amostras livres, 0 shaders inválidos e console sem erros. Fonte runtime BochaRoom3D; cenas/saves preservados. Player e avaliação artística pendentes. Refresh Graphify indisponível; validate aponta índice antigo.
+
+07/11/2026 — [Tonão na bocha](../ai-plans/2026-11-07_BBCONTTI_tonao-bocha.md). Tonão caminha até a posição escolhida pela IA, lança com a mão direita e reage com legenda e murmúrio. Atlas iluminado em frente, costas e ambos os perfis. Fixture Unity passou 27 combinações e registrou 16 capturas. Graphify ausente e índice desatualizado. Partida completa, audição e Player pendentes.
+
+
+07/11/2026 — [Bocha com alucinações](../ai-plans/2026-11-07_BBCONTTI_bocha-percepcoes.md). Figura no banco responde ao olhar com coração, legenda e tremor de mão e mira. O buraco interrompe a apresentação do lançamento de Marcus e a bocha reaparece na mesma posição antes de a simulação retomar. 37 verificações no Unity e regressão da agenda de sinuca concluídas. Audição, partida completa e Player pendentes.
+
+## 07/11/2026 · Perfil de áudio e legendas dos minigames
+
+O ajuste de áudio confirmado na sinuca define 100% dos seis controles. Chuva da Sociedade, impactos da bocha e legendas foram ligados à referência. Compilação e verificações Unity registradas no [plano](../ai-plans/2026-11-07_BBCONTTI_mix-global-minigames.md).
+
+## 07/11/2026 · Aumento do volume da chuva
+
+Ganho de referência .10, cerca de 3,6 dB acima do perfil inicial. As duas fontes de chuva foram verificadas tocando em Play Mode. [Plano e QA](../ai-plans/2026-11-07_BBCONTTI_chuva-volume.md).
+
+07/11/2026 — Salão 2D do Bar do Zé alargado e iluminado com arandelas, luz de balcão e pendente. Entrada da sinuca conecta o pendente 2D ao 3D por íris com grão do piso e descida de câmera até o feltro. Autor testou e aprovou. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-sala-entrada.md).

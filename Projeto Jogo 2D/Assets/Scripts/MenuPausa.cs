@@ -1,4 +1,4 @@
-﻿using TMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Events;
@@ -73,7 +73,7 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
-        if (PayphoneCheckpoint.IsSaveUIOpen || SantaRitaInventory.ClosedFrame==Time.frameCount || SantaRitaTapeDeck.ClosedFrame==Time.frameCount) return;
+        if (SceneFader.IsTransitioning || PayphoneCheckpoint.IsSaveUIOpen || SantaRitaInventory.ClosedFrame==Time.frameCount || SantaRitaTapeDeck.ClosedFrame==Time.frameCount) return;
         if (Keyboard.current == null ||
             !Keyboard.current.escapeKey.wasPressedThisFrame ||
             quadroDoUltimoEsc == Time.frameCount)
@@ -109,6 +109,7 @@ public class MenuPausa : MonoBehaviour
     public void Abrir()
     {
         if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.CancelarCargaAoSuspender();
+        if (BochaMinigameUI.IsShowing) BochaMinigameUI.Instance.CancelarCargaAoSuspender();
         Aberto = true;
         aguardandoConfirmacaoSaida = false;
         AtualizarTextoStatusSave();
@@ -140,9 +141,11 @@ public class MenuPausa : MonoBehaviour
     {
         // Keep pause frozen behind the existing five-slot selector; cancel returns here.
         if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.CancelarCargaAoSuspender();
+        if (BochaMinigameUI.IsShowing) BochaMinigameUI.Instance.CancelarCargaAoSuspender();
         PayphoneCheckpoint.AbrirSelecaoCarregar(Abrir, () =>
         {
             if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.Fechar();
+            if (BochaMinigameUI.IsShowing) BochaMinigameUI.Instance.Fechar();
             Fechar();
         });
     }
@@ -161,6 +164,7 @@ public class MenuPausa : MonoBehaviour
         }
 
         if (SinucaMinigameUI.IsShowing) SinucaMinigameUI.Instance.Fechar();
+            if (BochaMinigameUI.IsShowing) BochaMinigameUI.Instance.Fechar();
         Fechar();
         SceneFader.Instance.LoadScene(cenaMenu);
     }
@@ -804,7 +808,7 @@ public class HorizontalStepperNavigation : MonoBehaviour, ISelectHandler, IDesel
     {
         if (audioSource != null && somSelecao != null)
         {
-            audioSource.PlayOneShot(somSelecao);
+            audioSource.PlayOneShot(somSelecao, AudioSettingsController.VolumeEfeitos);
         }
     }
 }

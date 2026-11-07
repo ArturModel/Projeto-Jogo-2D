@@ -69,7 +69,7 @@ public class AudioAmbiente : MonoBehaviour
                 if (c.fonte != null) { if (pausa) c.fonte.Pause(); else c.fonte.UnPause(); }
         }
         if (pausa) return;
-        float efeitos = PlayerPrefs.GetFloat("audio_efeitos", 1f);
+        float efeitos = AudioSettingsController.VolumeEfeitos;
         foreach (Camada c in camadas)
         {
             if (c.fonte == null)
@@ -134,7 +134,7 @@ public class AudioAmbiente : MonoBehaviour
         if (porNome.TryGetValue(nome, out Camada c) && c.clipe != null)
         {
             // Camadas avulsas normalmente têm volumeInicial = 0.
-            c.fonte.volume = PlayerPrefs.GetFloat("audio_efeitos", 1f);
+            c.fonte.volume = AudioSettingsController.VolumeEfeitos;
             c.fonte.PlayOneShot(c.clipe, volume);
         }
     }

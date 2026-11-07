@@ -120,7 +120,7 @@ public class PayphoneCheckpoint : Interactable
     public static void TocarSomAtenderOrelhao()
     {
         GarantirAudioOrelhao();
-        float vol = Mathf.Clamp01(PlayerPrefs.GetFloat("audio_master", 1f) * PlayerPrefs.GetFloat("audio_efeitos", 1f));
+        float vol = AudioSettingsController.VolumeEfeitos;
         s_audioSource.Stop();
         s_audioSource.clip = s_clipAtenderDiscar;
         s_audioSource.volume = vol * 0.9f;
@@ -130,7 +130,7 @@ public class PayphoneCheckpoint : Interactable
     public static void TocarSomConfirmarGancho()
     {
         GarantirAudioOrelhao();
-        float vol = Mathf.Clamp01(PlayerPrefs.GetFloat("audio_master", 1f) * PlayerPrefs.GetFloat("audio_efeitos", 1f));
+        float vol = AudioSettingsController.VolumeEfeitos;
         s_audioSource.Stop();
         s_audioSource.volume = vol;
         s_audioSource.PlayOneShot(s_clipConfirmarGancho, 0.95f);
@@ -158,7 +158,7 @@ public class PayphoneCheckpoint : Interactable
             s_tonsRegistro[slot].SetData(samples, 0);
         }
         s_audioSource.Stop();
-        s_audioSource.volume = Mathf.Clamp01(PlayerPrefs.GetFloat("audio_master", 1) * PlayerPrefs.GetFloat("audio_efeitos", 1));
+        s_audioSource.volume = AudioSettingsController.VolumeEfeitos;
         s_audioSource.PlayOneShot(s_tonsRegistro[slot], .8f);
     }
 

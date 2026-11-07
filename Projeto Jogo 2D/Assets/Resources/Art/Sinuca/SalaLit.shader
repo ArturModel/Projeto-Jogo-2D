@@ -7,6 +7,7 @@ Shader "SantaRita/Sinuca/SalaLit"
         _Smoothness("Polish",Range(0,1))=.15
         _ActorLighting("Rounded sprite lighting",Float)=0
         _RoomSurface("Architectural surface",Float)=0
+        [HideInInspector] _BochaAbertura("Opening in the bocce court",Vector)=(0,0,0,0)
         _AlphaClip("Cutout",Float)=0
         _Cutoff("Cutout threshold",Range(0,1))=.5
         [Enum(UnityEngine.Rendering.CullMode)] _Cull("Cull",Float)=2
@@ -29,7 +30,7 @@ Shader "SantaRita/Sinuca/SalaLit"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             TEXTURE2D(_BaseMap);SAMPLER(sampler_BaseMap);
             CBUFFER_START(UnityPerMaterial)
-            float4 _BaseMap_ST;half4 _BaseColor;half _Smoothness,_AlphaClip,_Cull,_ActorLighting,_RoomSurface;
+            float4 _BaseMap_ST,_BochaAbertura;half4 _BaseColor;half _Smoothness,_AlphaClip,_Cull,_ActorLighting,_RoomSurface;
             CBUFFER_END
             struct A {float4 positionOS:POSITION;float3 normalOS:NORMAL;float2 uv:TEXCOORD0;UNITY_VERTEX_INPUT_INSTANCE_ID};
             struct V {float4 positionCS:SV_POSITION;float3 positionWS:TEXCOORD0;half3 normalWS:TEXCOORD1;float2 uv:TEXCOORD2;float2 localXY:TEXCOORD3;UNITY_VERTEX_INPUT_INSTANCE_ID};
@@ -50,6 +51,15 @@ Shader "SantaRita/Sinuca/SalaLit"
             {
                 UNITY_SETUP_INSTANCE_ID(i);
                 half4 surface=SAMPLE_TEXTURE2D(_BaseMap,sampler_BaseMap,i.uv)*_BaseColor;
+                if (_BochaAbertura.z > 0)
+                {
+                    float2 offset = i.positionWS.xz - _BochaAbertura.xy;
+                    float angle = atan2(offset.y, offset.x);
+                    float contour = 1 + .10 * sin(7 * angle) + .065 * cos(13 * angle);
+                    float edge = length(offset) / _BochaAbertura.z - contour;
+                    clip(edge);
+                    surface.rgb *= lerp(half3(.18,.10,.10), half3(1,1,1), smoothstep(0,.23,edge));
+                }
                 clip(surface.a-(_AlphaClip>.5?.5:0));
                 half3 normal=normalize(i.normalWS)*IS_FRONT_VFACE(face,1,-1);
                 // Gentle cylindrical lighting keeps cutout art grounded as the camera turns.
