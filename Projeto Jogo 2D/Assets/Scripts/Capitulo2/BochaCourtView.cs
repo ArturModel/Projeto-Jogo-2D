@@ -28,6 +28,12 @@ public sealed class BochaCourtView : RawImage, IPointerDownHandler, IDragHandler
         Room=new BochaRoom3D();texture=Room.Target;Room.SetActive(isActiveAndEnabled);
     }
     protected override void Awake(){base.Awake();raycastTarget=true;}
+    internal void Preaquecer() => EnsureRoom();
+    internal void OlharPendente(float peso)
+    {
+        Room.SetEntryLook(peso);
+        Sync();
+    }
     protected override void OnEnable()
     {
         base.OnEnable();worldCamera=Camera.main;

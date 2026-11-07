@@ -11,7 +11,6 @@ public partial class SinucaMinigameUI
     private bool locutorPendenteMarcus;
     private bool batidasOuvidas, inspecaoConcluida;
     private readonly SinucaPerceptionSchedule agendaPercepcoes = new SinucaPerceptionSchedule(Guid.NewGuid().GetHashCode());
-    private AudioClip ecoFesta;
     private bool PercepcaoSobMesaAtiva => agendaPercepcoes.Active == SinucaPerceptionSchedule.Event.UnderTable;
     private bool FalaPercepcaoOcupada => falasHistoria.Count > 0 ||
         !string.IsNullOrEmpty(falaZePendente) || dialogoZe?.Ocupada == true;
@@ -35,15 +34,18 @@ public partial class SinucaMinigameUI
     }
     private void ReiniciarPercepcoesSinuca()
     {
+        ReiniciarConsoleSinuca();
         EncerrarPercepcaoDaMao();falasHistoria.Clear();
         batidasOuvidas=inspecaoConcluida=false;
         exameBola=0;agendaPercepcoes.Reset();locutorPendenteMarcus=false;
     }
-    private void EncerrarPercepcaoDaMao(bool preservarFalas=false)
+    private void EncerrarPercepcaoDaMao(bool preservarFalas=false, bool preservarMedo=false)
     {
         agendaPercepcoes.Finish();
         batidasOuvidas=false;inspecaoConcluida=true;
         if(tableView3D!=null && tableView3D.Room!=null){tableView3D.Room.EndUnderTable();tableView3D.Room.SetFalseBall(false,1,Vector2.zero);}
+        RestaurarSustosSinuca(preservarMedo);
+        LimparPercepcaoJanela();
         if(audioSobMesa!=null)audioSobMesa.Stop();
         bolaFalsaAtiva=false;batidasRestantes=0;tempoSobMesa=0;faseSobMesa=0;
         numeroFalso=-1;turnoBolaFalsa=-1;if(!preservarFalas)falasHistoria.Clear();
@@ -93,7 +95,10 @@ public partial class SinucaMinigameUI
         float dt=Time.deltaTime;
         if(interfaceLivre)return false;
         AtualizarAgendaPercepcoes(dt);
+        bool bloqueando = AtualizarSustosSinuca(sala, dt);
+        bool examinouJanela = AtualizarPercepcaoJanela(sala, kb);
         ProximaFalaHistoria();
+        if (bloqueando || examinouJanela) return true;
         if(OlhandoDebaixo)
         {
             if(kb!=null && (kb.eKey.wasPressedThisFrame || kb.qKey.wasPressedThisFrame)){SairDeBaixoDaMesa();return true;}
@@ -155,7 +160,9 @@ public partial class SinucaMinigameUI
     private void AtualizarAgendaPercepcoes(float dt)
     {
         bool seguro=estado==EstadoPartida.MirandoJogador && turnoDeMarcus && EmPe && !interfaceLivre;
-        var inicio=agendaPercepcoes.Tick(dt,seguro,FalaPercepcaoOcupada);
+        var inicio = ConsumirEventoConsoleSinuca();
+        if (inicio == SinucaPerceptionSchedule.Event.None)
+            inicio = agendaPercepcoes.Tick(dt, seguro, FalaPercepcaoOcupada || tremorSinuca);
         switch(inicio)
         {
             case SinucaPerceptionSchedule.Event.UnderTable:
@@ -165,24 +172,18 @@ public partial class SinucaMinigameUI
             case SinucaPerceptionSchedule.Event.FalseBall:
                 if(!PrepararBolaFalsa())agendaPercepcoes.Finish();
                 break;
-            case SinucaPerceptionSchedule.Event.WaterInPipes:
-                TocarSobMesa(true);
-                txtPercepcaoSubtitulo.text="[Água corre dentro de um cano. O chão junto à mesa continua seco.]";
-                FalaHistoriaEnfileirar("Esse cano passa por aqui?");
+            case SinucaPerceptionSchedule.Event.Blackout:
+                IniciarApagaoSinuca();
                 break;
-            case SinucaPerceptionSchedule.Event.PartyEcho:
-                // Reuse the project's original abstract crowd texture; no new voices or music.
-                TocarSobMesa(false);audioSobMesa.Stop();
-                if(ecoFesta==null)ecoFesta=SantaRitaBarAudio.CriarTextura(0);
-                audioSobMesa.pitch=.92f;audioSobMesa.PlayOneShot(ecoFesta,.34f);
-                txtPercepcaoSubtitulo.text="[Um salão cheio, distante. As conversas do bar continuam perto de você.]";
-                FalaHistoriaEnfileirar("Parecia que tinha muito mais gente conversando.");
+            case SinucaPerceptionSchedule.Event.WindowKnock:
+                IniciarPercepcaoJanela();
                 break;
         }
         var ativo=agendaPercepcoes.Active;
-        if(ativo==SinucaPerceptionSchedule.Event.None)return;
-        float limite=ativo==SinucaPerceptionSchedule.Event.UnderTable?24:
-            ativo==SinucaPerceptionSchedule.Event.FalseBall?16:7;
+        if (ativo == SinucaPerceptionSchedule.Event.None) return;
+        AtualizarVolumeSobMesa();
+        if (ativo != SinucaPerceptionSchedule.Event.UnderTable && ativo != SinucaPerceptionSchedule.Event.FalseBall) return;
+        float limite=ativo==SinucaPerceptionSchedule.Event.UnderTable?24:16;
         if(OlhandoDebaixo)
         {
             if(tempoSobMesa>=12)SairDeBaixoDaMesa();
@@ -192,7 +193,6 @@ public partial class SinucaMinigameUI
         {
             EncerrarPercepcaoDaMao(true);
         }
-        AtualizarVolumeSobMesa();
     }
     private void SairDeBaixoDaMesa()
     {
@@ -221,6 +221,11 @@ public partial class SinucaMinigameUI
     private void SuspenderAudioPercepcao(bool suspenso)
     {
         audioPercepcaoSuspenso=suspenso;
+        if (audioMedoSinuca != null)
+        {
+            if (suspenso) audioMedoSinuca.Pause();
+            else audioMedoSinuca.UnPause();
+        }
         if(audioSobMesa==null)return;
         if(suspenso)audioSobMesa.Pause();
         else {audioSobMesa.UnPause();AtualizarVolumeSobMesa();}
@@ -228,14 +233,33 @@ public partial class SinucaMinigameUI
     private void AtualizarVolumeSobMesa()
     {
         if(audioSobMesa==null || tableView3D==null || tableView3D.Room==null)return;
-        var cam=tableView3D.Room.camera.transform;var delta=new Vector3(0,.46f,0)-cam.localPosition;
+        var sala = tableView3D.Room;
+        var cam = sala.camera.transform;
+        var origem = janelaPercepcao >= 0 ? sala.WindowPosition(janelaPercepcao) : sala.root.transform.TransformPoint(0f, .46f, 0f);
+        var delta = origem - cam.position;
         audioSobMesa.panStereo=Mathf.Clamp(Vector3.Dot(cam.right,delta.normalized)*.65f,-.65f,.65f);
-        audioSobMesa.volume=.52f*AudioSettingsController.VolumeImpactos/(1+delta.magnitude*.12f);
+        if (agendaPercepcoes.Active == SinucaPerceptionSchedule.Event.Blackout)
+        {
+            audioSobMesa.panStereo = 0;
+            audioSobMesa.volume = .88f * AudioSettingsController.VolumeImpactos;
+        }
+        else
+        {
+            float ganho = janelaPercepcao >= 0 ? .82f : .52f;
+            audioSobMesa.volume = ganho * AudioSettingsController.VolumeImpactos / (1 + delta.magnitude * .12f);
+        }
+    }
+    private void GarantirFontePercepcao()
+    {
+        if (audioSobMesa != null) return;
+        audioSobMesa = gameObject.AddComponent<AudioSource>();
+        audioSobMesa.playOnAwake = false;
+        audioSobMesa.spatialBlend = 0;
     }
     private void TocarSobMesa(bool agua)
     {
         if(audioPercepcaoSuspenso)return;
-        if(audioSobMesa==null){audioSobMesa=gameObject.AddComponent<AudioSource>();audioSobMesa.playOnAwake=false;audioSobMesa.spatialBlend=0;}
+        GarantirFontePercepcao();
         if(batidaSobMesa==null)batidaSobMesa=Resources.Load<AudioClip>("Audio/Foley/door");
         if(aguaSobMesa==null)aguaSobMesa=CriarAudioSobMesa(true);
         AtualizarVolumeSobMesa();audioSobMesa.pitch=agua?1f:.97f;
@@ -259,5 +283,11 @@ public partial class SinucaMinigameUI
         var clip=AudioClip.Create(agua?"SR_Memoria_Agua_Original":"SR_SobMesa_Batida_Original",count,1,hz,false);clip.SetData(data,0);return clip;
     }
     private void DestruirAudioPercepcao()
-    { if(aguaSobMesa!=null)Destroy(aguaSobMesa);if(ecoFesta!=null)Destroy(ecoFesta); }
+    {
+        if (aguaSobMesa != null) Destroy(aguaSobMesa);
+        if (clipApagao != null) Destroy(clipApagao);
+        if (clipImpactoSusto != null) Destroy(clipImpactoSusto);
+        if (clipCoracaoSinuca != null) Destroy(clipCoracaoSinuca);
+        if (clipJanela != null) Destroy(clipJanela);
+    }
 }

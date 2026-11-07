@@ -23,6 +23,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
     private enum Fase { Mira, Carregando, Rolagem, Tonando, Resultado }
     private Fase fase;
     private GameObject raiz, modal;
+    private CanvasGroup hudEntrada;
     private RectTransform cancha;
     private BochaCourtView vista;
     private BochaMapGraphic minimapa;
@@ -62,8 +63,43 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
 
     public void Abrir(Action vitoria)
     {
+        PrepararSala(vitoria);
+        MostrarEscolhaInicial();
+    }
+
+    internal void AbrirDaSociedade(Action vitoria)
+    {
+        if (IsShowing || SceneFader.IsTransitioning) return;
+        var camera = Camera.main;
+        if (camera == null)
+        {
+            Abrir(vitoria);
+            return;
+        }
+
+        vista.Preaquecer();
+        var luz = camera.WorldToScreenPoint(SantaRitaBochaAmbiente.PendenteDaEntrada);
+        var foco = new Vector2(Mathf.Clamp01(luz.x / Screen.width), Mathf.Clamp01(luz.y / Screen.height));
+        SceneFader.Instance.TransicionarParaMinigame(foco, Resources.Load<Texture2D>("Bocha/SaibroCancha"), () =>
+        {
+            PrepararSala(vitoria);
+            hudEntrada.alpha = 0;
+            hudEntrada.interactable = hudEntrada.blocksRaycasts = false;
+        }, vista.OlharPendente, () =>
+        {
+            RestaurarHud();
+            if (IsShowing) MostrarEscolhaInicial();
+        });
+    }
+
+    private void PrepararSala(Action vitoria)
+    {
         larguraTela = Screen.width; alturaTela = Screen.height; aoVencer = vitoria;
         sim = null; partida = null; raiz.SetActive(true); vista.ResetWalking(); vista.Room.ReiniciarTonao(); LimparFalaTonao(); vista.SetState(null, default, false); minimapa.Simulation = null; minimapa.Refresh();
+    }
+
+    private void MostrarEscolhaInicial()
+    {
         MostrarModal("SOCIEDADE BEIRA-RIO · BOCHA",
             "A madeira fecha a cancha de saibro. Quatro bochas de cada lado; ganha quem chegar a seis pontos.\n\n" +
             "PONTO para encostar. RAFA para uma batida rasteira. VOLO para lançar por cima. Consulte as posições no minimapa ou nas outras vistas.\n\n" +
@@ -99,6 +135,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
         maoBocha.rectTransform.localScale = new Vector3(-1, 1, 1);
         maoBocha.rectTransform.sizeDelta=Vector2.one*tamanhoMao;posMao=new Vector2(133,-99);maoBocha.rectTransform.anchoredPosition=posMao;
         maoBocha.gameObject.SetActive(false);
+        int inicioHud = raiz.transform.childCount;
         Painel(raiz.transform,"Cabecalho",new Vector2(0,160),new Vector2(640,40),Ink);
         Botao(raiz.transform,"REGRAS",new Vector2(-285,160),new Vector2(52,23),()=>Regras(0));
         Label(raiz.transform,"Titulo","SOCIEDADE BEIRA-RIO",new Vector2(-173,160),new Vector2(160,25),12);
@@ -138,6 +175,13 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
         cameraLabel=Label(raiz.transform,"CameraAtual","",new Vector2(0,-111),new Vector2(360,14),9.5f);
         controls = Label(raiz.transform,"Controles","A/D: posição · Mouse / ← →: mira · Clique/Espaço: segure e solte · Direito/C: cancelar · V: vistas",new Vector2(0,-167),new Vector2(624,20),11);
         ConstruirFalaTonao();
+        var filhosHud = new List<Transform>();
+        for (int i = inicioHud; i < raiz.transform.childCount; i++) filhosHud.Add(raiz.transform.GetChild(i));
+        var camadaHud = new GameObject("HudBocha", typeof(RectTransform), typeof(CanvasGroup));
+        camadaHud.transform.SetParent(raiz.transform, false);
+        UIFactory.Stretch((RectTransform)camadaHud.transform);
+        hudEntrada = camadaHud.GetComponent<CanvasGroup>();
+        foreach (var filho in filhosHud) filho.SetParent(camadaHud.transform, false);
         efeitos = CriarFonte();
         madeira = Resources.Load<AudioClip>("Audio/Foley/bocha") ?? Capitulo2Audio.CriarImpactoMadeira();
         saibro = Resources.Load<AudioClip>("Audio/Foley/BochaQueda") ?? madeira;
@@ -150,6 +194,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
             batidasBocha[i] = Resources.Load<AudioClip>("Audio/Sinuca/Colisao_0" + (i + 1)) ?? madeira;
         for (int i = 0; i < vozesBocha.Length; i++) vozesBocha[i] = CriarFonte();
         raiz.SetActive(false);
+        raiz.AddComponent<ChuvaMinigame>();
     }
     private void Comecar(bool treino)
     {
@@ -181,7 +226,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
     private bool PodeMirar()=>PodeConsultar()&&(fase==Fase.Mira||fase==Fase.Carregando);
     private void Update()
     {
-        if(!IsShowing)return;
+        if(!IsShowing || SceneFader.IsTransitioning)return;
         if(MenuPausa.Aberto||PayphoneCheckpoint.IsSaveUIOpen||Time.timeScale==0)
         {CancelarCargaAoSuspender();return;}
         if(MenuPausa.ClosedFrame==Time.frameCount)return;
@@ -485,7 +530,13 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
         minimapa.Refresh();
     }
     private static string TextoDistancia(float d)=>float.IsPositiveInfinity(d)?"—":d<1?(d*100).ToString("F0")+" cm":d.ToString("F2")+" m";
-    public void Fechar(){StopAllCoroutines();ReiniciarPercepcoes();PararFoley();LimparFalaTonao();if(efeitos!=null)efeitos.Stop();CancelarCarga();aoVencer=null;if(modal!=null)modal.SetActive(false);raiz.SetActive(false);}
+    private void RestaurarHud()
+    {
+        hudEntrada.alpha = 1;
+        hudEntrada.interactable = hudEntrada.blocksRaycasts = true;
+    }
+
+    public void Fechar(){RestaurarHud();StopAllCoroutines();ReiniciarPercepcoes();PararFoley();LimparFalaTonao();if(efeitos!=null)efeitos.Stop();CancelarCarga();aoVencer=null;if(modal!=null)modal.SetActive(false);raiz.SetActive(false);}
     private void ContatoReal(BochaContact contact)
     {
         float pan = PanBocha(contact.ponto.x);

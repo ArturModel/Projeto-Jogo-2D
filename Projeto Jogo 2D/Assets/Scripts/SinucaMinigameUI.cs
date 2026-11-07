@@ -266,7 +266,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         Vector3 alvo = lampada != null ? lampada.transform.position : mesa.transform.position + Vector3.up * .95f;
         Vector3 point = camera.WorldToScreenPoint(alvo);
         var foco = new Vector2(Mathf.Clamp01(point.x / Screen.width), Mathf.Clamp01(point.y / Screen.height));
-        SceneFader.Instance.TransicionarParaSinuca(foco, () =>
+        SceneFader.Instance.TransicionarParaMinigame(foco, SantaRitaBarLayout.NativeSurface(false).texture, () =>
         {
             onDefeatCallback = aoPerder;
             ComecarNovaSerie(aoVencer, mostrarEscolha: false);
@@ -548,6 +548,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         ConstruirEscolhaAlvo();
         ConstruirModal(raiz.transform);
         AtualizarPainelContextual();
+        raiz.AddComponent<ChuvaMinigame>();
     }
 
     private GameObject CriarPainelHUD(Transform pai,string nome,Vector2 pos,Vector2 tamanho)
@@ -620,7 +621,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private bool EntradaMesaBloqueada(bool permitirInspecao = false)
     {
-        return SceneFader.IsTransitioning || (OlhandoDebaixo && !permitirInspecao) || !Application.isFocused || Time.timeScale==0f || MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)
+        return ConsoleSinucaAberto || SceneFader.IsTransitioning || ((OlhandoDebaixo || SustosSinucaBloqueiamMesa) && !permitirInspecao) || !Application.isFocused || Time.timeScale==0f || MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf)
             || (painelOpcoes != null && painelOpcoes.activeSelf) || (painelAlvo != null && painelAlvo.activeSelf);
     }
 
@@ -1313,7 +1314,8 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private void Update()
     {
-        bool suspenderAudio = Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused;
+        bool teclaConsole = AtualizarConsoleSinuca();
+        bool suspenderAudio = ConsoleSinucaAberto || Time.timeScale == 0f || MenuPausa.Aberto || !Application.isFocused;
         SuspenderAudioPercepcao(suspenderAudio || interfaceLivre || !IsShowing || (painelModal!=null && painelModal.activeSelf) || (painelOpcoes!=null && painelOpcoes.activeSelf) || (painelAlvo!=null && painelAlvo.activeSelf));
         if (suspenderAudio != audioSuspenso)
         {
@@ -1322,6 +1324,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
                 if (voz != null) { if (audioSuspenso) voz.Pause(); else voz.UnPause(); }
         }
         AtualizarFalaZe(suspenderAudio);
+        if (teclaConsole || ConsoleSinucaAberto) return;
         if (!IsShowing || estado == EstadoPartida.Inativo || SceneFader.IsTransitioning) return;
         var tecladoCursor=Keyboard.current;
         if(tecladoCursor!=null && tecladoCursor.escapeKey.wasPressedThisFrame && !MenuPausa.Aberto && MenuPausa.ClosedFrame!=Time.frameCount)
@@ -1791,7 +1794,8 @@ public partial class SinucaMinigameUI : MonoBehaviour
         forcaNormalizada = 0f;
         AtualizarBarraForcaVisual(0f);
 
-        Vector2 dir = new Vector2(Mathf.Cos(anguloMiraRad), Mathf.Sin(anguloMiraRad));
+        float angulo = AnguloMiraComTremor;
+        Vector2 dir = new Vector2(Mathf.Cos(angulo), Mathf.Sin(angulo));
         float potencia = Mathf.Lerp(MinShotPower, MaxShotPower, Mathf.Pow(forcaFinal, 1.65f));
         tableView3D.Room.BeginStroke(forcaFinal);
         levantarAposTacada=Time.time+.26f;
@@ -1860,7 +1864,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     }
 
     private bool ApresentacaoZeSuspensa()
-        => !IsShowing || MenuPausa.Aberto || Time.timeScale == 0 || !Application.isFocused ||
+        => !IsShowing || ConsoleSinucaAberto || MenuPausa.Aberto || Time.timeScale == 0 || !Application.isFocused ||
            (painelModal != null && painelModal.activeSelf) ||
            (painelOpcoes != null && painelOpcoes.activeSelf) ||
            (painelAlvo != null && painelAlvo.activeSelf);
@@ -2466,6 +2470,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
 
     private void ResolverFimDaTacada()
     {
+        if (turnoDeMarcus) PararTremorSinuca();
         estado = EstadoPartida.ResolvendoTacada;
 
         for (int i = 0; i < bolas.Count; i++)
@@ -2562,7 +2567,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private IEnumerator AguardarEIniciarProximoTurno(float segundos)
     {
         yield return new WaitForSeconds(segundos);
-        while (MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf))
+        while (ConsoleSinucaAberto || MenuPausa.Aberto || (painelModal != null && painelModal.activeSelf))
             yield return null;
         if (estado != EstadoPartida.ResolvendoTacada) yield break;
         IniciarTurnoAtual();
@@ -2909,8 +2914,9 @@ public partial class SinucaMinigameUI : MonoBehaviour
         }
 
         bool mostrarMira = !EmPe && (estado == EstadoPartida.MirandoJogador || estado == EstadoPartida.CarregandoForca) && bolas[0].ativa;
+        float angulo = AnguloMiraComTremor;
         SinucaAimGuideData guia = mostrarMira
-            ? CalcularGuiaDeMira(bolas[0].pos, anguloMiraRad, efeitoEscolhido)
+            ? CalcularGuiaDeMira(bolas[0].pos, angulo, efeitoEscolhido)
             : new SinucaAimGuideData { ativa = false };
 
         AplicarGuiaBolaFalsa(ref guia);
@@ -2932,13 +2938,14 @@ public partial class SinucaMinigameUI : MonoBehaviour
         AtualizarBolaFalsaVisual();
         tableView3D.Preaquecer();
         tableView3D.Room.SetCueContact(contatoTaco);
+        tableView3D.Room.GripShake = TremorEmpunhadura;
         tableView3D.AtualizarEstadoRender(
             bufferVisuais,
             cacapas,
             guia,
             mostrarMira,
             bolas[0].pos,
-            anguloMiraRad,
+            angulo,
             forcaNormalizada,
             efeitoEscolhido,
             estado == EstadoPartida.PosicionandoBranca,
@@ -3034,7 +3041,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
     private void AtualizarFalaZe(bool suspenso)
     {
         if (dialogoZe == null) return;
-        bool bloqueado = suspenso || !IsShowing || modoPratica || estado == EstadoPartida.Inativo ||
+        bool bloqueado = suspenso || (interfaceLivre && SustosSinucaBloqueiamMesa) || !IsShowing || modoPratica || estado == EstadoPartida.Inativo ||
             (painelModal != null && painelModal.activeSelf) ||
             (painelOpcoes != null && painelOpcoes.activeSelf) || (painelAlvo != null && painelAlvo.activeSelf);
         if (bloqueado)

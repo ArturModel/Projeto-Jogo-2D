@@ -172,3 +172,7 @@ Dublagem NÃO concluída: ElevenLabs privado autenticado, criação de voz bloqu
 O ganho da sinuca confirmado pelo autor é a referência dos sliders a 100%. Música 0, chuva .10 e outros efeitos .078125. A chuva subiu cerca de 3,6 dB após nova avaliação do autor. Geral, fala e taco/bolas mantêm ganho unitário antes da mixagem das fontes. Bocha e sinuca compartilham a apresentação de fala, e a Sociedade usa a mesma chuva abafada do bar. [Plano e QA](../ai-plans/2026-11-07_BBCONTTI_mix-global-minigames.md).
 
 07/11/2026 — Bar do Zé em exploração usa piso de 12,5 unidades, corredores laterais mais largos, luz quente localizada e sombras em móveis e personagens. A entrada do duelo dura cerca de 3,7 s com íris texturizada e descida de câmera do pendente para o feltro. O autor testou e aprovou. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-sala-entrada.md).
+
+## Sinuca e integração local — 07/11/2026
+
+Apagão, Zé assombrado e batidas na janela integram os dois eventos anteriores. Console por aspas oferece comandos e botões no Editor e builds de desenvolvimento. Vistas laterais usam atlas com dois planos e shader de chuva/gotas. Autor confirmou teste no jogo e autorizou commit e push de todo o trabalho local. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-eventos-console-janelas.md). Graphify segue indisponível.

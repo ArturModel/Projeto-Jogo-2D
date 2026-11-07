@@ -338,7 +338,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         camera.orthographic=mode==SinucaCameraView.VistaSuperior;
         if(Walking)
         {
-            var rotation = Quaternion.Euler(standingPitch,standingYaw,0);
+            var rotation = Quaternion.Euler(standingPitch + startleLook.y,standingYaw + startleLook.x,0);
             var towardTable = new Vector3(-standingPosition.x, 0, -standingPosition.z).normalized;
             var position = standingPosition + entryLook * (Vector3.up * .03f - towardTable * .18f);
             var towardLamp = Quaternion.LookRotation(PendantPosition - position);
@@ -404,6 +404,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         var side=new Vector3(-dir.z,0,dir.x);
         var cueAxis=(Quaternion.AngleAxis(cueContact.x*18f,Vector3.up)*dir-Vector3.up*Mathf.Tan(Mathf.Abs(cueContact.y)*14f*Mathf.Deg2Rad)-Vector3.up*(railLift/.25f)).normalized;
         if(stroke)pull=Mathf.Lerp(strokePower*.22f,-.055f,Mathf.SmoothStep(0,1,strokeAge/.09f));
+        if (handsVisible && !stroke) pull += GripShake;
         // Freeze the stroke at the contact origin, even as the physical white rolls away.
         if(!stroke)
         {

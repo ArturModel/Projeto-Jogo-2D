@@ -814,9 +814,10 @@ public class Chuva : MonoBehaviour
         if (fonteA == null) return;
 
         float k = Mathf.Lerp(0.85f, 1.12f, Mathf.InverseLerp(0.35f, 1.6f, intensidade));
+        float ganho = AudioSettingsController.VolumeChuvaAmbiente;
         float suave = 1f - Mathf.Exp(-2f * Time.unscaledDeltaTime);
 
-        fonteA.volume = Mathf.Lerp(fonteA.volume, volume * 0.75f * k * AudioSettingsController.VolumeChuva, suave);
-        fonteB.volume = Mathf.Lerp(fonteB.volume, volume * 0.45f * k * AudioSettingsController.VolumeChuva, suave);
+        fonteA.volume = Mathf.Lerp(fonteA.volume, volume * 0.75f * k * ganho, suave);
+        fonteB.volume = Mathf.Lerp(fonteB.volume, volume * 0.45f * k * ganho, suave);
     }
 }

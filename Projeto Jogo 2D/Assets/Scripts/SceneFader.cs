@@ -186,13 +186,13 @@ public class SceneFader : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    internal void TransicionarParaSinuca(Vector2 foco, Action abrirSala, Action<float> olharPendente, Action mostrarEscolha)
+    internal void TransicionarParaMinigame(Vector2 foco, Texture2D grao, Action abrirSala, Action<float> olharPendente, Action mostrarEscolha)
     {
         if (isTransitioning) return;
-        StartCoroutine(EntradaSinuca(foco, abrirSala, olharPendente, mostrarEscolha));
+        StartCoroutine(EntradaMinigame(foco, grao, abrirSala, olharPendente, mostrarEscolha));
     }
 
-    private IEnumerator EntradaSinuca(Vector2 foco, Action abrirSala, Action<float> olharPendente, Action mostrarEscolha)
+    private IEnumerator EntradaMinigame(Vector2 foco, Texture2D grao, Action abrirSala, Action<float> olharPendente, Action mostrarEscolha)
     {
         isTransitioning = true;
         group.blocksRaycasts = true;
@@ -204,7 +204,6 @@ public class SceneFader : MonoBehaviour
             if (shader != null && shader.isSupported)
             {
                 sinucaIris = new Material(shader);
-                sinucaIris.SetTexture("_Grao", SantaRitaBarLayout.NativeSurface(false).texture);
             }
         }
         bool cinematica = !MenuPausa.ReduzirEfeitosIntensos && sinucaIris != null;
@@ -213,6 +212,7 @@ public class SceneFader : MonoBehaviour
             yield return FadeTo(1f, .45f);
         else
         {
+            sinucaIris.SetTexture("_Grao", grao ?? Texture2D.grayTexture);
             fadeImage.material = sinucaIris;
             fadeImage.color = Color.white;
             group.alpha = 1f;

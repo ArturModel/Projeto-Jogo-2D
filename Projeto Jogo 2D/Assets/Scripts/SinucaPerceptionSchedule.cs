@@ -9,6 +9,7 @@ public class MinigamePerceptionSchedule<T> where T : struct, Enum
     private readonly T[] events;
     private readonly List<T> bag = new List<T>();
     private T previous;
+    internal bool IsForced { get; private set; }
     private int turns, earliestTurn;
     private float remaining;
     public T Active { get; private set; }
@@ -29,6 +30,7 @@ public class MinigamePerceptionSchedule<T> where T : struct, Enum
     {
         bag.Clear();
         previous = Active = default;
+        IsForced = false;
         Age = 0;
         turns = 0;
         remaining = Range(40, 85);
@@ -36,6 +38,16 @@ public class MinigamePerceptionSchedule<T> where T : struct, Enum
     }
 
     public void TurnStarted() { turns++; }
+
+    internal T StartForced(T next)
+    {
+        if (!Same(Active, default) || Same(next, default) || Array.IndexOf(events, next) < 0)
+            return default;
+        Active = next;
+        IsForced = true;
+        Age = 0;
+        return Active;
+    }
 
     public T Tick(float seconds, bool eligible, bool presentationBusy)
     {
@@ -67,7 +79,8 @@ public class MinigamePerceptionSchedule<T> where T : struct, Enum
     public void Finish()
     {
         if (Same(Active, default)) return;
-        previous = Active;
+        if (!IsForced) previous = Active;
+        IsForced = false;
         Active = default;
         Age = 0;
         remaining = Range(55, 115);
@@ -80,8 +93,8 @@ public class MinigamePerceptionSchedule<T> where T : struct, Enum
 
 public sealed class SinucaPerceptionSchedule : MinigamePerceptionSchedule<SinucaPerceptionSchedule.Event>
 {
-    public enum Event { None, UnderTable, FalseBall, WaterInPipes, PartyEcho }
+    public enum Event { None, UnderTable, FalseBall, Blackout, HauntedZe, WindowKnock }
 
     public SinucaPerceptionSchedule(int seed)
-        : base(seed, Event.UnderTable, Event.FalseBall, Event.WaterInPipes, Event.PartyEcho) { }
+        : base(seed, Event.UnderTable, Event.FalseBall, Event.Blackout, Event.HauntedZe, Event.WindowKnock) { }
 }

@@ -470,3 +470,7 @@ O ajuste de áudio confirmado na sinuca define 100% dos seis controles. Chuva da
 Ganho de referência .10, cerca de 3,6 dB acima do perfil inicial. As duas fontes de chuva foram verificadas tocando em Play Mode. [Plano e QA](../ai-plans/2026-11-07_BBCONTTI_chuva-volume.md).
 
 07/11/2026 — Salão 2D do Bar do Zé alargado e iluminado com arandelas, luz de balcão e pendente. Entrada da sinuca conecta o pendente 2D ao 3D por íris com grão do piso e descida de câmera até o feltro. Autor testou e aprovou. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-sala-entrada.md).
+
+## 07/11/2026 — eventos, console e janelas da sinuca
+
+Cinco eventos, console com comandos e botões, reações de Marcus e janela com paralaxe e gotas na GPU. Autor testou e autorizou commit e push de todas as alterações locais, incluindo bocha e chuva. Compilação sem erros, 4.323.887 verificações da agenda e 136 da física. Graphify indisponível e índice antigo. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-eventos-console-janelas.md).

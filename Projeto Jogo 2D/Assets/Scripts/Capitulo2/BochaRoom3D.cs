@@ -27,6 +27,8 @@ public sealed partial class BochaRoom3D : IDisposable
     private readonly Transform ghost;
     private BochaCameraView mode;
     private float stepDistance,prepareBlend,pullBlend;
+    private float entryLook;
+    private static readonly Vector3 PendenteDaEntrada = new Vector3(0, 3.57f, 3f);
     public void SetThrowPose(bool preparing,float pull,float dt)
     {
         float blend=1-Mathf.Exp(-Mathf.Min(dt,.05f)*10);
@@ -112,7 +114,7 @@ public sealed partial class BochaRoom3D : IDisposable
         var plaster=Mat("reboco",new Color(.57f,.55f,.44f));
         plaster.SetFloat("_RoomSurface",1);plaster.SetTextureScale("_BaseMap",new Vector2(12,1));
         var floor=Mat("assoalho",new Color(.52f,.46f,.36f),Resources.Load<Texture2D>("Bocha/MadeiraCancha"));floor.SetTextureScale("_BaseMap",new Vector2(8,20));
-        var sand=Mat("saibro",new Color(.78f,.64f,.43f),Resources.Load<Texture2D>("Bocha/SaibroCancha"));sand.SetTextureScale("_BaseMap",new Vector2(6,20));
+        var sand=Mat("saibro",new Color(.78f,.70f,.58f),Resources.Load<Texture2D>("Bocha/SaibroCancha"));sand.SetTextureScale("_BaseMap",new Vector2(6,20));
         Box("PisoSala",new Vector3(0,-.09f,9.5f),new Vector3(11.6f,.16f,25.4f),floor);
         Box("Saibro",new Vector3(0,-.015f,10),new Vector3(6,.025f,20),sand);
         foreach(float x in new[]{-3.13f,3.13f})
@@ -123,6 +125,9 @@ public sealed partial class BochaRoom3D : IDisposable
         Box("CabeceiraBase",new Vector3(0,.13f,-.13f),new Vector3(6.5f,.26f,.26f),wood);
         Box("CabeceiraFundo",new Vector3(0,.24f,20.13f),new Vector3(6.5f,.48f,.26f),wood,true);
         Box("LinhaLancamento",new Vector3(0,.002f,1.1f),new Vector3(5.96f,.006f,.03f),Mat("linha",new Color(.58f,.51f,.34f)));
+        foreach (float z in new[] { 6f, 11f, 16f })
+            foreach (float x in new[] { -2.76f, 2.76f })
+                Box("ReferenciaGasta", new Vector3(x, .002f, z), new Vector3(.42f, .006f, .031f), Mat("linha", Color.white));
         foreach(float x in new[]{-5.8f,5.8f})
         {
             Box("ParedeLateral",new Vector3(x,2.15f,9.5f),new Vector3(.18f,4.3f,25.4f),plaster);
@@ -145,11 +150,11 @@ public sealed partial class BochaRoom3D : IDisposable
         Box("LuminariaCentral",new Vector3(0,3.51f,10),new Vector3(.85f,.16f,1.8f),dark,false,true);
         Box("DifusorQuente",new Vector3(0,3.42f,10),new Vector3(.73f,.025f,1.62f),Mat("lampada",new Color(1,.76f,.40f),null,true),false,true);
         Light("AmbienteFrio",LightType.Directional,Vector3.zero,new Color(.45f,.53f,.66f),.075f,0).transform.localRotation=Quaternion.Euler(52,-30,0);
-        var key=Light("LuzPrincipalCancha",LightType.Spot,new Vector3(0,3.32f,10),new Color(1,.80f,.55f),8.5f,24);
-        key.transform.localRotation=Quaternion.Euler(90,0,0);key.spotAngle=158;key.innerSpotAngle=115;
+        var key=Light("LuzPrincipalCancha",LightType.Spot,new Vector3(0,3.32f,10),new Color(1,.84f,.65f),6.5f,19);
+        key.transform.localRotation=Quaternion.Euler(90,0,0);key.spotAngle=128;key.innerSpotAngle=78;
         key.shadows=LightShadows.Hard;key.shadowBias=.012f;key.shadowNormalBias=.025f;key.shadowStrength=.85f;
         key.gameObject.AddComponent<UniversalAdditionalLightData>().additionalLightsShadowResolutionTier=1;
-        foreach(float z in new[]{3f,10f,17f})Light("RebatimentoCancha",LightType.Point,new Vector3(0,2.2f,z),new Color(1,.74f,.46f),.65f,8);
+        foreach(float z in new[]{3f,10f,17f})Light("RebatimentoCancha",LightType.Point,new Vector3(0,2.2f,z),new Color(1,.80f,.61f),.40f,6);
         foreach(float x in new[]{-4.65f,4.65f})foreach(float z in new[]{5f,11f,17f})
         {
             Box("BancoAssento",new Vector3(x,.46f,z),new Vector3(.65f,.13f,2.65f),wood,true);
@@ -172,9 +177,17 @@ public sealed partial class BochaRoom3D : IDisposable
             Box("Prateleira",new Vector3(4.6f,.35f+row*.49f,-1.39f),new Vector3(1.25f,.07f,.48f),wood);
             for(int i=0;i<3;i++)Primitive("BochaReserva",PrimitiveType.Sphere,new Vector3(4.23f+i*.37f,.56f+row*.49f,-1.38f),Vector3.one*.32f,Mat("reserva"+row,BochaCourtView.BallColor(row%2==0?BochaSide.Marcus:BochaSide.Tonao)));
         }
-        Box("QuadroPlacar",new Vector3(-5.66f,1.9f,1),new Vector3(.1f,1.15f,1.6f),wood);
-        Box("Lousa",new Vector3(-5.59f,1.9f,1),new Vector3(.025f,.94f,1.38f),Mat("lousa",new Color(.06f,.12f,.10f)));
+        Quadro("PlacarDeGiz", "PlacarSociedade", new Vector3(-5.56f, 1.92f, 1.55f), new Vector2(1.62f, 1.08f), -90f);
         BuildAtmosphere();
+    }
+
+    private void Quadro(string nome, string textura, Vector3 pos, Vector2 tamanho, float yaw)
+    {
+        var arte = Resources.Load<Texture2D>("Bocha/" + textura);
+        if (arte == null) return;
+        var moldura = Primitive(nome, PrimitiveType.Quad, pos, new Vector3(tamanho.x, tamanho.y, 1), Mat(textura, Color.white, arte));
+        moldura.transform.localRotation = Quaternion.Euler(0, yaw, 0);
+        moldura.GetComponent<Renderer>().shadowCastingMode = ShadowCastingMode.Off;
     }
     private Light Light(string name,LightType type,Vector3 at,Color color,float intensity,float range)
     {
@@ -187,7 +200,8 @@ public sealed partial class BochaRoom3D : IDisposable
         var l=g.AddComponent<LineRenderer>();l.useWorldSpace=false;l.positionCount=2;l.startWidth=l.endWidth=width;
         l.sharedMaterial=material;l.shadowCastingMode=ShadowCastingMode.Off;l.receiveShadows=false;return l;
     }
-    public void ResetWalking(){StandingPosition=new Vector3(0,1.62f,-1.7f);Yaw=0;Pitch=12;stepDistance=0;}
+    public void ResetWalking(){StandingPosition=new Vector3(0,1.62f,-1.7f);Yaw=0;Pitch=12;stepDistance=0;entryLook=0;}
+    internal void SetEntryLook(float weight) => entryLook = weight;
     public bool CanStand(Vector2 p)
     {
         if(p.x< -5.32f||p.x>5.32f||p.y< -2.76f||p.y>21.7f)return false;
@@ -218,7 +232,17 @@ public sealed partial class BochaRoom3D : IDisposable
         if(camera.orthographic)
         {camera.orthographicSize=Mathf.Max(7,13.3f/aspect);camera.transform.SetPositionAndRotation(new Vector3(0,27,10),Quaternion.LookRotation(Vector3.down,Vector3.left));}
         else if(view==BochaCameraView.Caminhando)
-        {camera.transform.SetPositionAndRotation(StandingPosition+Vector3.up*(Mathf.Sin(stepDistance*8)*.012f-.28f*prepareBlend),Quaternion.Euler(Mathf.Lerp(Pitch,19,prepareBlend),Yaw,-2.5f*prepareBlend));}
+        {
+            var pos = StandingPosition + Vector3.up * (Mathf.Sin(stepDistance * 8) * .012f - .28f * prepareBlend);
+            var rotation = Quaternion.Euler(Mathf.Lerp(Pitch, 19, prepareBlend), Yaw, -2.5f * prepareBlend);
+            if (entryLook > 0)
+            {
+                pos += new Vector3(0, .06f, -.25f) * entryLook;
+                rotation = Quaternion.Slerp(rotation, Quaternion.LookRotation(PendenteDaEntrada - pos), entryLook);
+                camera.fieldOfView = Mathf.Lerp(camera.fieldOfView, 53f, entryLook);
+            }
+            camera.transform.SetPositionAndRotation(pos, rotation);
+        }
         else if(view==BochaCameraView.Alvo)
         {
             var p=sim!=null&&sim.bolas.Count>0?sim.bolas[0].Centro:new Vector3(0,0,13);
@@ -305,7 +329,7 @@ public void SetActive(bool active){if(root!=null)root.SetActive(active);}
                 Box("ArandelaBraco",new Vector3(x-side*.31f,2.41f,z),new Vector3(.43f,.055f,.055f),brass);
                 Primitive("ArandelaBulbo",PrimitiveType.Sphere,new Vector3(x-side*.52f,2.53f,z),new Vector3(.12f,.24f,.12f),bulb);
                 Box("ArandelaChapeu",new Vector3(x-side*.52f,2.72f,z),new Vector3(.38f,.065f,.38f),iron);
-                Light("LuzArandela",LightType.Point,new Vector3(x-side*.62f,2.50f,z),new Color(1,.68f,.38f),1.65f,6.4f);
+                Light("LuzArandela",LightType.Point,new Vector3(x-side*.62f,2.50f,z),new Color(1,.77f,.51f),1.25f,5.2f);
             }
             // Exposed conduit joins the fixtures, with short drops to each fitting.
             Box("EletrodutoLateral",new Vector3(x-side*.11f,3.15f,10.5f),new Vector3(.035f,.035f,22.6f),iron);
@@ -315,10 +339,10 @@ public void SetActive(bool active){if(root!=null)root.SetActive(active);}
         foreach(float z in new[]{3f,17f})
         {
             Box("PendenteSecundarioCabo",new Vector3(0,3.92f,z),new Vector3(.025f,.54f,.025f),iron,false,true);
-            Box("PendenteSecundario",new Vector3(0,3.65f,z),new Vector3(.58f,.13f,1.05f),iron,false,true);
-            Box("PendenteSecundarioDifusor",new Vector3(0,3.57f,z),new Vector3(.48f,.025f,.91f),bulb,false,true);
-            var pool=Light("LuzApoioCancha",LightType.Spot,new Vector3(0,3.48f,z),new Color(1,.78f,.51f),2.2f,10);
-            pool.transform.localRotation=Quaternion.Euler(90,0,0);pool.spotAngle=112;pool.innerSpotAngle=75;
+            Box("PendenteSecundario",new Vector3(0,3.65f,z),new Vector3(.74f,.17f,1.05f),green,false,true);
+            Box("PendenteSecundarioDifusor",new Vector3(0,PendenteDaEntrada.y,z),new Vector3(.58f,.025f,.91f),bulb,false,true);
+            var pool=Light("LuzApoioCancha",LightType.Spot,new Vector3(0,3.48f,z),new Color(1,.79f,.53f),3.6f,11);
+            pool.transform.localRotation=Quaternion.Euler(90,0,0);pool.spotAngle=124;pool.innerSpotAngle=82;
         }
         // Lower entrance ceiling and a framed equipment bay break the long box.
         Box("SancaEntrada",new Vector3(0,3.92f,-1.65f),new Vector3(11.2f,.48f,2.9f),plaster,false,true);
@@ -328,24 +352,10 @@ public void SetActive(bool active){if(root!=null)root.SetActive(active);}
         Light("LuzEquipamentos",LightType.Point,new Vector3(4.2f,2.5f,-1.4f),new Color(.88f,.65f,.38f),.9f,4.3f);
 
         // Club noticeboard with overlapping, faded notices, away from the court.
-        Box("MuralMoldura",new Vector3(5.62f,2.04f,8f),new Vector3(.10f,1.22f,1.85f),timber);
-        Box("MuralCortica",new Vector3(5.55f,2.04f,8f),new Vector3(.035f,1.03f,1.65f),Mat("cortica",new Color(.35f,.24f,.13f)));
-        for(int i=0;i<5;i++)
-        {
-            float z=7.43f+i*.27f,y=1.87f+(i%2)*.29f;
-            var notice=Box("AvisoClube",new Vector3(5.52f,y,z),new Vector3(.016f,.36f,.24f),paper);
-            notice.transform.localRotation=Quaternion.Euler((i-2)*4,0,0);
-            for(int row=0;row<3;row++)Box("TintaAviso",new Vector3(5.508f,y+.07f-row*.065f,z),new Vector3(.005f,.012f,.15f-row*.02f),iron);
-            Primitive("PregoAviso",PrimitiveType.Sphere,new Vector3(5.50f,y+.13f,z),Vector3.one*.024f,brass);
-        }
+        Quadro("MuralDeAvisos", "MuralSociedade", new Vector3(5.51f, 2.04f, 8f), new Vector2(1.95f, 1.22f), 90f);
         // Long-wall framed pennants and a clock; muted club colors, no new lore.
         foreach(float z in new[]{7.3f,14.2f})
-        {
-            Box("QuadroMemoriaClube",new Vector3(-5.61f,2.30f,z),new Vector3(.10f,.84f,1.05f),timber);
-            Box("FundoQuadro",new Vector3(-5.54f,2.30f,z),new Vector3(.025f,.69f,.89f),paper);
-            Box("FlamulaClube",new Vector3(-5.52f,2.35f,z),new Vector3(.018f,.43f,.28f),green);
-            Box("FaixaFlamula",new Vector3(-5.505f,2.35f,z),new Vector3(.008f,.055f,.28f),brass);
-        }
+            Quadro("FlamulaClube", "FlamulaSociedade", new Vector3(-5.52f, 2.30f, z), new Vector2(.88f, 1.02f), -90f);
         var clock=Primitive("RelogioParede",PrimitiveType.Cylinder,new Vector3(0,2.72f,21.98f),new Vector3(.66f,.065f,.66f),iron);
         clock.transform.localRotation=Quaternion.Euler(90,0,0);
         var dial=Primitive("MostradorRelogio",PrimitiveType.Cylinder,new Vector3(0,2.72f,21.90f),new Vector3(.57f,.012f,.57f),paper);

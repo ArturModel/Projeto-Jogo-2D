@@ -35,6 +35,7 @@ public class AudioSettingsController : MonoBehaviour
     public static float VolumeEfeitos => Nivel(ChaveEfeitos) * GanhoOutrosEfeitosSinuca;
     public static float VolumeFala => Nivel(ChaveFala);
     public static float VolumeChuva => Nivel(ChaveChuva) * GanhoChuvaSinuca;
+    internal static float VolumeChuvaAmbiente => EmMinigame ? 0f : VolumeChuva;
     public static float VolumeImpactos => Nivel(ChaveImpactos);
 
     internal const float TrilhaDiretaMinigame = .10f;
@@ -183,14 +184,14 @@ public class AudioSettingsController : MonoBehaviour
     public void AlterarVolumeChuva(float valor) => AlterarNivel(ChaveChuva, valor);
     public void AlterarVolumeImpactos(float valor) => AlterarNivel(ChaveImpactos, valor);
 
-    private static void AtualizarChuvaMenu()
+    internal static void AtualizarChuvaMenu()
     {
         // A fonte legada estava no SFX, que agora controla só os outros efeitos.
         foreach (var fonte in Resources.FindObjectsOfTypeAll<AudioSource>())
             if (fonte.gameObject.scene.IsValid() && fonte.name == "MenuChuva")
             {
                 fonte.outputAudioMixerGroup = null;
-                fonte.volume = .25f * VolumeChuva;
+                fonte.volume = .25f * VolumeChuvaAmbiente;
             }
     }
 

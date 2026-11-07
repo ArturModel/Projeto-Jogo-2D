@@ -38,6 +38,7 @@ public sealed partial class SinucaRoom3D
         opponent.filter.sharedMesh = NativeMesh(opponent.rest);
         opponent.renderer.sharedMaterial = PixelMaterial(opponent.rest);
         PixelSources[opponent.definition.id] = opponent.rest;
+        BuildHauntedOpponent();
     }
 
     private bool OpponentWalkable(Vector2 p)
@@ -167,7 +168,9 @@ public sealed partial class SinucaRoom3D
         int frame = opponentShooting
             ? (opponentFacing == 0 ? 16 : opponentFacing == 1 ? 20 : 12) + opponentShotPose
             : opponentFacing * 4 + opponentWalkFrame;
-        opponent.filter.sharedMesh = NativeMesh(opponentSprites[frame]);
+        Sprite sprite = zeAssombrado && zeAssombradoSprite != null ? zeAssombradoSprite : opponentSprites[frame];
+        opponent.filter.sharedMesh = NativeMesh(sprite);
+        opponent.renderer.sharedMaterial = PixelMaterial(sprite);
     }
 
     public void CancelOpponentShot()

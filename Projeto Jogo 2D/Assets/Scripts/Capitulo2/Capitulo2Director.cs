@@ -74,6 +74,7 @@ public sealed class Capitulo2Director : MonoBehaviour
         // Veste os interiores de C2 com props autenticos existentes (Art/Props/).
         // So executa em cenas de interior; inofensivo se GameObjects esperados nao existirem.
         if (interior) SantaRitaPlaceDressing.ApplyC2();
+        if (SceneManager.GetActiveScene().name == "SociedadeBeiraRio") SantaRitaBochaAmbiente.Aplicar();
         AtualizarInvestigacao();
     }
 
@@ -137,7 +138,7 @@ public sealed class Capitulo2Director : MonoBehaviour
                     "Ouvi o padre e li o registro. Quero passar pelo jazigo e organizar o que lembro antes de voltar a Tonão.";
                 GameMessageUI.Instance.Show(falta, "MARCUS", "marcus"); return;
             }
-            Dialogo(d.lines, () => BochaMinigameUI.Instance.Abrir(ConcluirBocha)); return;
+            Dialogo(d.lines, () => BochaMinigameUI.Instance.AbrirDaSociedade(ConcluirBocha)); return;
         }
         if (d.kind == "radio")
         {

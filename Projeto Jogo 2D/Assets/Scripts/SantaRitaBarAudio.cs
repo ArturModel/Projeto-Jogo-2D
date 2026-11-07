@@ -50,7 +50,9 @@ public sealed class SantaRitaBarAudio : MonoBehaviour
             var source = layers[i];
             if(source==null)continue;
             if (pause != paused) { if (pause) source.Pause(); else source.UnPause(); }
-            float ganho = i == 0 ? AudioSettingsController.VolumeEfeitos : AudioSettingsController.VolumeChuva;
+            float ganho = AudioSettingsController.VolumeChuva;
+            if (i == 0) ganho = AudioSettingsController.VolumeEfeitos;
+            if (i == 2) ganho = AudioSettingsController.VolumeChuvaAmbiente;
             float target = active ? VolumeDaCamada(i, hand) * ganho : 0;
             if (!pause && target > 0 && !source.isPlaying) source.Play();
             source.volume = Mathf.MoveTowards(source.volume, target, Time.unscaledDeltaTime * .25f);

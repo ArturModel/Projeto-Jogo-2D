@@ -1,8 +1,89 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public sealed partial class SinucaRoom3D
 {
+    private readonly List<Light> blackoutLights = new List<Light>();
+    private readonly Plane[] opponentFrustum = new Plane[6];
+    private Sprite zeAssombradoSprite;
+    private bool zeAssombrado;
+    private Vector2 startleLook;
+    public float GripShake { get; set; }
+
+    public void SetStartleLook(Vector2 degrees)
+    {
+        if (startleLook == degrees) return;
+        startleLook = degrees;
+        UpdateCamera();
+        SyncFirstPersonCamera();
+    }
+
+    public void SetBlackout(bool active)
+    {
+        if (active)
+        {
+            if (blackoutLights.Count > 0) return;
+            foreach (var light in root.GetComponentsInChildren<Light>())
+            {
+                if (!light.enabled) continue;
+                blackoutLights.Add(light);
+                light.enabled = false;
+            }
+        }
+        else
+        {
+            foreach (var light in blackoutLights)
+                if (light != null) light.enabled = true;
+            blackoutLights.Clear();
+        }
+    }
+
+    private void BuildHauntedOpponent()
+    {
+        var texture = Resources.Load<Texture2D>("Art/Characters/Npc_Ze_Sinuca_Assombrado");
+        if (texture == null) return;
+        zeAssombradoSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
+            new Vector2(.5f, .12f), texture.width / 2f, 0, SpriteMeshType.FullRect);
+        zeAssombradoSprite.name = "ZeSinuca_Assombrado";
+        owned.Add(zeAssombradoSprite);
+        NativeMesh(zeAssombradoSprite);
+        PixelMaterial(zeAssombradoSprite);
+    }
+
+    public bool SetHauntedOpponent(bool active)
+    {
+        if (opponent == null || zeAssombradoSprite == null) return false;
+        if (active != zeAssombrado)
+        {
+            zeAssombrado = active;
+            UpdateOpponentView();
+        }
+        return true;
+    }
+
+    public bool OpponentInFrame
+    {
+        get
+        {
+            if (opponent == null) return false;
+            GeometryUtility.CalculateFrustumPlanes(camera, opponentFrustum);
+            return GeometryUtility.TestPlanesAABB(opponentFrustum, opponent.renderer.bounds);
+        }
+    }
+
+    public bool HauntedOpponentInFocus
+    {
+        get
+        {
+            if (!zeAssombrado) return false;
+            var upperBody = opponent.root.position + Vector3.up * 1.13f;
+            var point = camera.WorldToViewportPoint(upperBody);
+            return point.z > 0f && Mathf.Abs(point.x - .5f) < .19f && Mathf.Abs(point.y - .5f) < .29f;
+        }
+    }
+
+
     private Transform falseBall,underMemory,wetMarks,underBoards;
     private readonly Transform[] underDrops=new Transform[3];
     private Light inspectionLight;

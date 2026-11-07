@@ -8,6 +8,10 @@ public sealed partial class SinucaRoom3D
     private readonly List<Transform> contactActors = new List<Transform>();
     private readonly List<Transform> contactShadows = new List<Transform>();
     private readonly List<Renderer> overheadDetails = new List<Renderer>();
+    private readonly Transform[] janelasLaterais = new Transform[2];
+    private readonly GameObject[] marcasJanela = new GameObject[2];
+    private Material vidroJanela;
+    private float intensidadeChuvaJanela = -1f;
 
     // All additions stay above head height or within the existing wall clearance.
     // Entry, seating, service and play retain the shared physical plan.
@@ -33,8 +37,8 @@ public sealed partial class SinucaRoom3D
         foreach(float x in new[]{-3.6f,0f,3.6f})
             overheadDetails.Add(Box("LongarinaForro",new Vector3(x,2.99f,-1.8f),new Vector3(.10f,.08f,11.2f),timber).GetComponent<Renderer>());
 
-        BuildWindowBay("JanelaConversa",new Vector3(-5.31f,1.92f,-3.35f),90);
-        BuildWindowBay("JanelaLateral",new Vector3(5.31f,1.92f,-3.35f),-90);
+        BuildWindowBay(0,"JanelaConversa",new Vector3(-5.31f,1.92f,-3.35f),90);
+        BuildWindowBay(1,"JanelaLateral",new Vector3(5.31f,1.92f,-3.35f),-90);
         // The service zone reads as built cabinetry rather than a flat back wall.
         foreach(float x in new[]{-3.73f,-.43f})
             Box("MontantePrateleira",new Vector3(x,1.95f,3.46f),new Vector3(.09f,1.58f,.20f),timber);
@@ -74,14 +78,13 @@ public sealed partial class SinucaRoom3D
         ContactPatch("OclusaoMesaSinuca",Vector3.zero,new Vector2(3.45f,1.78f),.24f);
     }
 
-    private void BuildWindowBay(string name,Vector3 at,float yaw)
+    private void BuildWindowBay(int index,string name,Vector3 at,float yaw)
     {
         var bay=new GameObject(name).transform;bay.SetParent(scenery,false);bay.localPosition=at;bay.localRotation=Quaternion.Euler(0,yaw,0);
+        janelasLaterais[index] = bay;
         var frame=Mat("estruturaCarvalho",new Color(.28f,.21f,.13f),tiles[2]);
         var dark=Mat("profundidadeJanela",new Color(.018f,.030f,.037f),null,true);
-        var glass=Mat("vidroNoite",new Color(.065f,.105f,.13f),null,true);
-        Box("RebaixoJanela",Vector3.zero,new Vector3(1.86f,1.25f,.06f),dark,bay);
-        Box("VidroJanela",new Vector3(0,0,.035f),new Vector3(1.65f,1.06f,.02f),glass,bay);
+        Box("RebaixoJanela",new Vector3(0,0,-.02f),new Vector3(1.86f,1.25f,.06f),dark,bay);
         foreach(float x in new[]{-.91f,.91f})Box("OmbreiraJanela",new Vector3(x,0,.09f),new Vector3(.12f,1.35f,.20f),frame,bay);
         foreach(float y in new[]{-.62f,.62f})Box("VergaJanela",new Vector3(0,y,.09f),new Vector3(1.92f,.10f,.20f),frame,bay);
         Box("PeitorilJanela",new Vector3(0,-.66f,.18f),new Vector3(2.04f,.10f,.38f),frame,bay);
@@ -91,8 +94,67 @@ public sealed partial class SinucaRoom3D
         var shutter=new GameObject("FolhaVeneziana").transform;shutter.SetParent(bay,false);shutter.localPosition=new Vector3(-.91f,0,.18f);shutter.localRotation=Quaternion.Euler(0,-32,0);
         for(int i=0;i<9;i++)Box("LaminaVeneziana",new Vector3(.22f,-.49f+i*.12f,0),new Vector3(.45f,.075f,.055f),frame,shutter);
         foreach(float x in new[]{0f,.44f})Box("BordaVeneziana",new Vector3(x,0,0),new Vector3(.045f,1.18f,.065f),frame,shutter);
-        RoomFill(name+"_LuzExterior",at+bay.forward*.45f,new Color(.38f,.55f,.74f),.75f,4.6f);
+        RoomFill(name+"_LuzExterior",at+bay.forward*.31f,new Color(.44f,.56f,.70f),.28f,3.3f);
         CombineNet(bay);
+        BuildWetWindowPane(index, bay);
+        BuildWindowHandprint(index, bay);
+    }
+
+    private void BuildWetWindowPane(int index, Transform bay)
+    {
+        if (vidroJanela == null)
+        {
+            var shader = Resources.Load<Shader>("Art/Sinuca/JanelaMolhada");
+            var atlas = Resources.Load<Texture2D>("Art/Sinuca/JanelasLateraisExterior");
+            if (shader == null || atlas == null) return;
+            vidroJanela = new Material(shader) { name = "VidroMolhadoDasJanelas" };
+            vidroJanela.SetTexture("_BaseMap", atlas);
+            owned.Add(vidroJanela);
+        }
+
+        var vidro = Primitive("VidroJanela", PrimitiveType.Quad, new Vector3(0f, 0f, .019f),
+            new Vector3(1.65f, 1.06f, 1f), vidroJanela, bay).GetComponent<MeshRenderer>();
+        vidro.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+        vidro.shadowCastingMode = ShadowCastingMode.Off;
+        vidro.receiveShadows = false;
+        var atlasRow = new MaterialPropertyBlock();
+        atlasRow.SetFloat("_ViewRow", 1 - index);
+        vidro.SetPropertyBlock(atlasRow);
+    }
+
+    private void BuildWindowHandprint(int index, Transform bay)
+    {
+        var texture = Resources.Load<Texture2D>("Art/Sinuca/MarcaMaoVidro");
+        if (texture == null) return;
+        if (!materials.TryGetValue("marcaMaoVidro", out var material))
+        {
+            material = new Material(Resources.Load<Material>("Art/BarRef7/BarPixelCutout")) { name = "marcaMaoVidro" };
+            material.SetTexture("_BaseMap", texture);
+            material.SetColor("_BaseColor", new Color(.77f, .84f, .87f));
+            material.SetFloat("_Cutoff", .40f);
+            materials.Add("marcaMaoVidro", material);
+            owned.Add(material);
+        }
+
+        var marca = Primitive("MarcaDeMaoNoVidro", PrimitiveType.Quad, new Vector3(.27f, .27f, .048f),
+            new Vector3(.245f, .36f, 1f), material, bay);
+        marca.GetComponent<MeshRenderer>().shadowCastingMode = ShadowCastingMode.Off;
+        marca.SetActive(false);
+        marcasJanela[index] = marca;
+    }
+
+    public Vector3 WindowPosition(int index) => janelasLaterais[index].position;
+
+    public bool CanInspectWindow(int index)
+    {
+        if (!Walking) return false;
+        var delta = janelasLaterais[index].TransformPoint(.27f, .27f, .05f) - camera.transform.position;
+        return delta.sqrMagnitude <= 2.55f * 2.55f && Vector3.Dot(delta.normalized, camera.transform.forward) >= .91f;
+    }
+
+    public void ShowWindowHandprint(int index, bool visible)
+    {
+        if (marcasJanela[index] != null) marcasJanela[index].SetActive(visible);
     }
 
     private Transform ContactPatch(string name,Vector3 at,Vector2 size,float opacity)
@@ -112,6 +174,16 @@ public sealed partial class SinucaRoom3D
     }
     private void TickSalon()
     {
+        if (vidroJanela != null)
+        {
+            // Same stronger storm in the final hand as ChuvaMinigame. The clock lives in the shader.
+            float chuva = MenuPausa.ReduzirEfeitosIntensos ? .24f : SinucaMinigameUI.MaoEmCurso >= 3 ? .91f : .66f;
+            if (chuva != intensidadeChuvaJanela)
+            {
+                intensidadeChuvaJanela = chuva;
+                vidroJanela.SetFloat("_RainAmount", chuva);
+            }
+        }
         if(ceilingFan!=null&&!MenuPausa.Aberto&&Application.isFocused)
             ceilingFan.Rotate(0,Time.deltaTime*32,0,Space.Self);
         for(int i=0;i<contactActors.Count;i++)

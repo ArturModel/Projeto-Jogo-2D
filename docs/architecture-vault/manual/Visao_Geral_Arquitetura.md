@@ -184,3 +184,7 @@ BochaCourtView apresenta a sala persistente de BochaRoom3D em RenderTexture via 
 AudioSettingsController separa o ganho de referência do valor relativo persistido no perfil `audio_perfil_sinuca_`. Menu e pausa usam o mesmo perfil, aplicado aos mixers e às fontes diretas. MinigameDialogue usa SubtitleSettingsController e mantém a apresentação da fala e o áudio de sílabas em sinuca e bocha. As filas e a prioridade dos locutores ficam em cada jogo. [Plano](../../ai-plans/2026-11-07_BBCONTTI_mix-global-minigames.md).
 
 07/11/2026 — SantaRitaBarLayout mantém a planta de referência para SinucaRoom3D e define uma projeção 2D mais larga. SantaRitaBarLighting monta as luzes e sombras na exploração. SceneFader coordena a íris texturizada e SinucaRoom3D aplica um olhar de entrada sobre a câmera inicial antes da escolha de grupos. [Plano](../../ai-plans/2026-11-07_BBCONTTI_sinuca-sala-entrada.md).
+
+## Sinuca, console e janelas — 07/11/2026
+
+SinucaPerceptionSchedule controla cinco eventos e StartForced permite comandos manuais com o mesmo fluxo de apresentação. SinucaMinigameUI.Console oferece campo e botões. Sustos controla apagão, redistribuição, piscada e medo. Janela controla batidas e inspeção opcional por E. MinigamePerceptionAudio compartilha a síntese de coração com bocha. SinucaRoom3D.Salon monta um quad de vidro por lateral, material compartilhado e linha do atlas por MaterialPropertyBlock. JanelaMolhada calcula paralaxe de fundo/primeiro plano, chuva e gotas na GPU, com preferência de redução de efeitos.

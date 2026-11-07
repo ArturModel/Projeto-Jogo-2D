@@ -309,6 +309,12 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
             }
         }
         yield return CloseText();
+        if (id == "bocha")
+        {
+            float limite = Time.realtimeSinceStartup + 8f;
+            while (SceneFader.IsTransitioning && Time.realtimeSinceStartup < limite) yield return null;
+            Check(!SceneFader.IsTransitioning, "A passagem da bocha devolve os controles.");
+        }
     }
     private IEnumerator CloseText(){int tries=0;while(GameMessageUI.IsShowing&&tries++<100){GameMessageUI.Instance.Avancar();yield return new WaitForSecondsRealtime(.06f);}Check(!GameMessageUI.IsShowing,"Leitura encerra e devolve controle.");}
     private IEnumerator Capture(string name){yield return new WaitForEndOfFrame();ScreenCapture.CaptureScreenshot(Path.Combine(folder,name+".png"));yield return new WaitForSecondsRealtime(.15f);}
@@ -445,8 +451,12 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
         bool effects = AudioSettingsController.VolumeChuva > 0;
         Check(layers[0].volume < .001f && (effects ? layers[1].volume > 0 && layers[1].isPlaying : layers[1].volume == 0),
             "Segunda mão silencia murmúrio e toca água real, respeitando volume de efeitos.");
+        var chuva = Field<GameObject>(ui,"raiz").GetComponent<AudioSource>();
+        float volumeSegundaMao = chuva.volume;
         Invoke(ui,"ConfigurarMao",3); yield return new WaitForSecondsRealtime(1);
-        Check(layers[2].loop && layers[2].clip != null && (effects ? layers[2].volume > 0 : layers[2].volume == 0), "Terceira mão acrescenta camada de chuva.");
+        Check(chuva.loop && chuva.clip != null && layers[2].volume == 0 &&
+            (effects ? chuva.isPlaying && chuva.volume > volumeSegundaMao : chuva.volume == 0),
+            "Terceira mão intensifica a gravação de chuva sem sobrepor a camada antiga.");
         ui.Fechar();
         Check(!CheckpointSystem.HasCheckpoint, "Investigação e pausa usam apenas RAM/namespace de QA.");
     }

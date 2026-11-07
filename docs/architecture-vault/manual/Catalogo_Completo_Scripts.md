@@ -147,3 +147,6 @@ Inventário em 04/11/2026: **123 arquivos C# atuais (incluindo Mila, Atlas, R4, 
 
 - AudioSettingsController normaliza os seis sliders e fornece os ganhos calibrados para mixers, fontes diretas e eventos de impacto.
 - MinigameDialogue apresenta nome do locutor, revelação de caracteres, fundo, pausa e murmúrio por sílabas com as preferências globais.
+
+- Scripts/SinucaMinigameUI.Console.cs, SinucaMinigameUI.Sustos.cs e SinucaMinigameUI.Janela.cs compõem a apresentação das percepções da sinuca.
+- Scripts/MinigamePerceptionAudio.cs compartilha a síntese de coração entre bocha e sinuca.

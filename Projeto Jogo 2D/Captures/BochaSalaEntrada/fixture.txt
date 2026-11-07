@@ -1,0 +1,9 @@
+PASS ambiente e escada
+PASS mesa, caderno e prompt reposicionados
+PASS nove luzes locais
+PASS fechamento da íris começa em 2D
+FAIL entrada em primeira pessoa sem HUD e com entrada bloqueada
+PASS HUD restaurado
+PASS câmera entrega primeira pessoa de jogo
+PASS prática disponível após a passagem
+PASS retorno à exploração, sem vitória e armazenamento isolado
