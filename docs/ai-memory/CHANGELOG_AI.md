@@ -1,3 +1,7 @@
+# 07/11/2026 — Fala, legenda e mão na bocha
+
+Rodapé ligado à camada atual do HUD para concluir a atualização da partida e acionar a fala de Tonão. Avisos de espera retirados, legendas rebaixadas e mão de Marcus espelhada no Canvas. Fixture do Unity confirmou a reprodução do clipe compartilhado com a sinuca. [Plano executado](../ai-plans/2026-11-07_BBCONTTI_bocha-fala-legenda-mao.md).
+
 # 07/11/2026 — Saves de trabalho antes da sinuca e da bocha
 
 Slots 2 e 3 instalados no armazenamento local, junto à mesa do Bar do Zé e à cancha da Sociedade Beira-Rio, com os requisitos dos duelos satisfeitos. Save geral e slot 1 verificados byte a byte. Validação estática concluída. Carga pelo Unity pendente. [Plano executado](../ai-plans/2026-11-07_BBCONTTI_saves-pre-sinuca-bocha.md).

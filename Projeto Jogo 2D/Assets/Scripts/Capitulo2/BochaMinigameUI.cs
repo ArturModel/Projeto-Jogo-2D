@@ -26,7 +26,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
     private RectTransform cancha;
     private BochaCourtView vista;
     private BochaMapGraphic minimapa;
-    private TextMeshProUGUI placar, estado, estoque, medida, percepcao, numeroMao, forcaLabel, cameraLabel, gestoLabel;
+    private TextMeshProUGUI placar, estado, estoque, medida, percepcao, numeroMao, forcaLabel, cameraLabel, gestoLabel, controls;
     private readonly List<Image> typeButtons = new List<Image>();
     private readonly List<TextMeshProUGUI> typeLabels = new List<TextMeshProUGUI>();
     private BochaMatch partida;
@@ -96,6 +96,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
         var handGo=new GameObject("MaoBochaMarcus",typeof(RectTransform),typeof(CanvasRenderer),typeof(RawImage));
         handGo.transform.SetParent(viewport,false);maoBocha=handGo.GetComponent<RawImage>();
         maoBocha.texture=Resources.Load<Texture2D>("Bocha/MaoMarcusBocha");maoBocha.raycastTarget=false;
+        maoBocha.rectTransform.localScale = new Vector3(-1, 1, 1);
         maoBocha.rectTransform.sizeDelta=Vector2.one*tamanhoMao;posMao=new Vector2(133,-99);maoBocha.rectTransform.anchoredPosition=posMao;
         maoBocha.gameObject.SetActive(false);
         Painel(raiz.transform,"Cabecalho",new Vector2(0,160),new Vector2(640,40),Ink);
@@ -135,7 +136,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
         powerFill=Painel(sliderRoot,"Preenchimento",Vector2.zero,Vector2.zero,Gold);UIFactory.Stretch(powerFill);powerColor=powerFill.GetComponent<Image>();
         gestoLabel=Label(raiz.transform,"Gesto","SEGURE O CLIQUE\nSOLTE PARA LANÇAR",new Vector2(238,-134),new Vector2(143,34),12);
         cameraLabel=Label(raiz.transform,"CameraAtual","",new Vector2(0,-111),new Vector2(360,14),9.5f);
-        Label(raiz.transform,"Controles","A/D: posição · Mouse / ← →: mira · Clique/Espaço: segure e solte · Direito/C: cancelar · V: vistas",new Vector2(0,-167),new Vector2(624,20),11);
+        controls = Label(raiz.transform,"Controles","A/D: posição · Mouse / ← →: mira · Clique/Espaço: segure e solte · Direito/C: cancelar · V: vistas",new Vector2(0,-167),new Vector2(624,20),11);
         ConstruirFalaTonao();
         efeitos = CriarFonte();
         madeira = Resources.Load<AudioClip>("Audio/Foley/bocha") ?? Capitulo2Audio.CriarImpactoMadeira();
@@ -461,19 +462,21 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
         for(int i=0;i<typeButtons.Count;i++){typeButtons[i].GetComponent<Button>().interactable=PodeMirar();typeButtons[i].color=(int)tipo==i?new Color(.27f,.36f,.30f):new Color(.13f,.17f,.14f);typeLabels[i].color=(int)tipo==i?new Color(.98f,.87f,.61f):new Color(.74f,.76f,.67f);}
         bool walking=vista.View!=BochaCameraView.Superior;
         bool inspect=vista.View!=BochaCameraView.Lancamento;
-        foreach(string name in new[]{"Leitura","VER ALVO","VISTA GERAL","LANÇAMENTO","FaixaTurno","Estado","Comandos","ForcaLbl","Forca","Gesto","Percepcao"})
-        {var element=raiz.transform.Find(name);if(element!=null)element.gameObject.SetActive(!walking);}
+        foreach(string name in new[]{"Leitura","VER ALVO","VISTA GERAL","LANÇAMENTO","FaixaTurno","Estado","Comandos"})
+        {var element=controls.transform.parent.Find(name);if(element!=null)element.gameObject.SetActive(!walking);}
         for(int i=0;i<typeButtons.Count;i++)typeButtons[i].gameObject.SetActive(arrastando);
         forcaLabel.gameObject.SetActive(arrastando);powerFill.parent.gameObject.SetActive(arrastando);
-        var controls=raiz.transform.Find("Controles").GetComponent<TextMeshProUGUI>();
         controls.text=walking?"WASD: andar · Mouse: olhar · Segure clique na base: preparar · Puxe: força · Solte: lançar · Tab: mouse · Esc: pausa":"A/D: posição · Mouse: mira · Clique/Espaço: força · F: caminhar · V: vista geral";
-        gestoLabel.text=fase==Fase.Rolagem?"AGUARDE O REPOUSO\nPODE CONSULTAR VISTAS":fase==Fase.Tonando?"VEZ DE TONÃO\nOBSERVE A JOGADA":inspect?"LANÇAMENTO / V\nPARA VOLTAR À MIRA":fase==Fase.Carregando?"FORÇA SOBE E DESCE\nSOLTE PARA LANÇAR":"SEGURE O CLIQUE\nSOLTE PARA LANÇAR";
+        bool legendaVisivel = SubtitleSettingsController.LegendasAtivas && (dialogoMarcus.Ocupada || dialogoTonao.Ocupada);
+        percepcao.enabled = !walking && !legendaVisivel;
+        gestoLabel.enabled = !walking && PodeMirar();
+        gestoLabel.text=inspect?"LANÇAMENTO / V\nPARA VOLTAR À MIRA":fase==Fase.Carregando?"FORÇA SOBE E DESCE\nSOLTE PARA LANÇAR":"SEGURE O CLIQUE\nSOLTE PARA LANÇAR";
+        cameraLabel.enabled = !legendaVisivel;
         cameraLabel.text=vista.View==BochaCameraView.Superior?"VISTA SUPERIOR · LANÇAMENTO ou V para voltar":vista.View==BochaCameraView.Alvo?"VISTA DO BALIM · roda ajusta o zoom":"MIRA "+distanciaMira.ToString("F1")+" m · força define alcance · roda: zoom";
         if(walking)
         {
             cameraLabel.text=arrastando?"PUXE O MOUSE PARA TRÁS · 1 PONTO / 2 RAFA / 3 VOLO · DIREITO CANCELA":
-                fase==Fase.Tonando&&aiPreparada?shotIA.intencao:
-                !PodeMirar()?"CAMINHE LIVREMENTE · OBSERVE A JOGADA":vista.Room.AtLaunch?"SEGURE O BOTÃO ESQUERDO PARA PREPARAR":"SUA VEZ · VOLTE À BASE PARA LANÇAR";
+                !PodeMirar()?string.Empty:vista.Room.AtLaunch?"SEGURE O BOTÃO ESQUERDO PARA PREPARAR":"SUA VEZ · VOLTE À BASE PARA LANÇAR";
             cameraLabel.rectTransform.anchoredPosition=new Vector2(0,-105);
         }
         else cameraLabel.rectTransform.anchoredPosition=new Vector2(0,-111);

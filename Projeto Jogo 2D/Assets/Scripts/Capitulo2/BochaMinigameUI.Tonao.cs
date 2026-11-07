@@ -1,7 +1,7 @@
 public sealed partial class BochaMinigameUI
 {
-    // Acima das instruções e dos controles no rodapé da cancha.
-    private const float AlturaLegendaBocha = 118f;
+    // A base da legenda encosta na faixa de comandos do rodapé.
+    private const float AlturaLegendaBocha = 94f;
     private MinigameDialogue dialogoTonao;
     private int falasTonao;
     private float intervaloTonao;
