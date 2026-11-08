@@ -104,11 +104,9 @@ public static class SantaRitaBarLayout
     public static Sprite NativeSurface(bool wall)
     {
         if(wall&&nativeWall!=null)return nativeWall;if(!wall&&nativeFloor!=null)return nativeFloor;
-        var room=GameObject.Find("Interior4_BarDoZe");var source=room==null?null:room.transform.Find("Piso_Interior_BarDoZe");
-        var sheet=source==null?null:source.GetComponent<SpriteRenderer>().sprite.texture;
-        int height=wall?64:32;var t=new Texture2D(32,height,TextureFormat.RGBA32,false){name=wall?"ParedeNativaBar":"PisoNativoBar",filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Repeat};
-        if(sheet!=null)t.SetPixels(sheet.GetPixels(8*32,wall?12*32:6*32,32,height));
-        else{var fallback=Resources.Load<Texture2D>("Art/Tiles/Madeira");for(int y=0;y<height;y++)for(int x=0;x<32;x++)t.SetPixel(x,y,fallback.GetPixel(x%fallback.width,y%fallback.height));}
+        int height=wall?64:32;
+        var t=new Texture2D(32,height,TextureFormat.RGBA32,false){name=wall?"ParedeNativaBar":"PisoNativoBar",filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Repeat};
+        Capitulo1Director.PintarSuperficieNativaDoBar(t, wall);
         t.Apply();var sprite=Sprite.Create(t,new Rect(0,0,32,height),new Vector2(.5f,.5f),32,0,SpriteMeshType.FullRect);
         if(wall)nativeWall=sprite;else nativeFloor=sprite;return sprite;
     }

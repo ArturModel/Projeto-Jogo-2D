@@ -75,7 +75,7 @@ public sealed class SinucaTableView : RawImage, IPointerDownHandler,IPointerMove
     }
     public void Preaquecer(){EnsureRoom();}
     protected override void OnEnable(){base.OnEnable();worldCamera=Camera.main;if(worldCamera!=null){worldMask=worldCamera.cullingMask;worldCamera.cullingMask=0;}if(ready){EnsureRoom();Room.SetActive(true);}}
-    protected override void OnDisable(){if(worldCamera!=null)worldCamera.cullingMask=worldMask;if(Room!=null)Room.SetActive(false);base.OnDisable();}
+    protected override void OnDisable(){if(worldCamera!=null)worldCamera.cullingMask=worldMask;if(Room!=null && !BarDoZe3D.Aberto)Room.SetActive(false);base.OnDisable();}
     protected override void OnDestroy(){if(Room!=null)Room.Dispose();base.OnDestroy();}
     // The explicit override is also a stable profiling seam: only a 4-vertex quad now.
     protected override void OnPopulateMesh(VertexHelper vh){base.OnPopulateMesh(vh);}

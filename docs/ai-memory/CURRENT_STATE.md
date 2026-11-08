@@ -176,3 +176,16 @@ O ganho da sinuca confirmado pelo autor é a referência dos sliders a 100%. Mú
 ## Sinuca e integração local — 07/11/2026
 
 Apagão, Zé assombrado e batidas na janela integram os dois eventos anteriores. Console por aspas oferece comandos e botões no Editor e builds de desenvolvimento. Vistas laterais usam atlas com dois planos e shader de chuva/gotas. Autor confirmou teste no jogo e autorizou commit e push de todo o trabalho local. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-eventos-console-janelas.md). Graphify segue indisponível.
+
+08/11/2026 — A Rua Norte de EntradaDaCidade recebeu Tilemap modular com 52 peças de 64 px, fachada de porta única, sprites em escala com Marcus, luz com sombras por volumes XYZ e duas camadas de névoa em torno do bar. Quatro espécies de árvores recebem vento na copa e mantêm colisão nos troncos. [Plano executado](../ai-plans/2026-11-08_BBCONTTI_rua-norte-bar-ze.md).
+
+
+08/11/2026 — A porta da Rua Norte entra direto na exploração 3D do Bar do Zé. A máscara escura com névoa preserva os efeitos da rua até cobrir o quadro. Marcus abre pela maçaneta direita, e Zé permanece junto à mesa. A conversa no salão inicia a sinuca e o retorno do duelo preserva o lugar do jogador. [Plano e QA](../ai-plans/2026-11-08_BBCONTTI_bar-ze-entrada-3d.md).
+
+08/11/2026 — A Rua Norte ganhou uma camada adicional de altura e oclusão local para as 52 peças do terreno, validada em Play Mode com os presets originais. [Plano e evidências](../ai-plans/2026-11-08_BBCONTTI_relevo-adicional-rua-norte.md).
+
+
+08/11/2026 — Rua Norte: continuidade de grama, calçada e asfalto com mistura de cor e relevo nas juntas, e altura de trincas/poças limitada ao detalhe. Conferido em Play Mode. [Plano e evidências](../ai-plans/2026-11-08_BBCONTTI_continuidade-piso-rua-norte.md).
+
+
+08/11/2026 — O exterior do Bar do Zé é a referência de redesign de Santa Rita. [Guia visual](../../Docs/Guia_Visual_Santa_Rita.md) reúne escala, materiais, iluminação, efeitos, continuidade e QA. [Plano](../../Docs/ai-plans/2026-11-08_BBCONTTI_guia-visual-santa-rita.md).

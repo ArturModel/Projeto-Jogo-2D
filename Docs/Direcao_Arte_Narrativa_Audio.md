@@ -4,6 +4,8 @@ Atualização autorizada pelo autor em 21/10/2026. Esta direção prevalece sobr
 
 ## Arte
 
+[Guia visual de Santa Rita](Guia_Visual_Santa_Rita.md) é a referência prática para novos redesigns. Reúne o padrão da Rua Norte do Bar do Zé com escala, superfícies, luz, efeitos e critérios de comparação.
+
 Correção expressa do autor nesta revisão: mapa orienta geografia e conexões; composição de ruas, praça e mobiliário pode ser redesenhada para uso plausível. Centro é uma praça cívica/comercial em funcionamento. Remover exposição dedicada a Júlia da praça; memória e pistas ficam em fontes discretas e contextualizadas. Cemitério é cena externa independente. C1/C2 são organização de produção, com retorno pelos dois caminhos existentes.
 
 A imagem de referência fornecida pelo autor em 21/10 (`Docs/Referencias/Direcao_Visual_Aprovada.jpg`) define a meta ambiental: vegetação em camadas, matéria e desgaste legíveis, bordas orgânicas, arquitetura rural e luzes quentes localizadas. Marcus (`Assets/StreamingAssets/MarcusWalk.png`) ancora a escala dos atores; harmonizar seu acabamento com essa direção junto dos NPCs. Comparar cada personagem no tamanho nativo e na câmera do jogo. Não confundir resolução do arquivo com densidade real de desenho.

@@ -104,12 +104,11 @@ public sealed partial class SinucaRoom3D
         Box("RebocoFundo",new Vector3(0,2.18f,3.80f),new Vector3(10.9f,1.64f,.025f),plaster);
         Box("RebocoEsq",new Vector3(-5.40f,2.18f,-1.8f),new Vector3(.025f,1.64f,11.3f),plaster);
         Box("RebocoDir",new Vector3(5.40f,2.18f,-1.8f),new Vector3(.025f,1.64f,11.3f),plaster);
-        Box("RebocoFrente",new Vector3(0,2.18f,-7.44f),new Vector3(10.9f,1.64f,.025f),plaster);
-        foreach(float z in new[]{3.76f,-7.40f})
-        {
-            Box("RodapeHorizontal",new Vector3(0,.095f,z),new Vector3(10.9f,.19f,.055f),trim);
-            Box("AcabamentoLambril",new Vector3(0,1.37f,z),new Vector3(10.9f,.055f,.065f),trim);
-        }
+        ConstruirParedeDaEntrada("RebocoFrente", 2.18f, 1.64f, 10.9f, -7.44f, .025f, plaster);
+        Box("RodapeHorizontal", new Vector3(0,.095f,3.76f), new Vector3(10.9f,.19f,.055f), trim);
+        Box("AcabamentoLambril", new Vector3(0,1.37f,3.76f), new Vector3(10.9f,.055f,.065f), trim);
+        ConstruirParedeDaEntrada("RodapeFrente", .095f, .19f, 10.9f, -7.40f, .055f, trim);
+        ConstruirParedeDaEntrada("AcabamentoFrente", 1.37f, .055f, 10.9f, -7.40f, .065f, trim);
         foreach(float x in new[]{-5.36f,5.36f})
         {
             Box("RodapeLateral",new Vector3(x,.095f,-1.8f),new Vector3(.055f,.19f,11.3f),trim);
@@ -119,11 +118,7 @@ public sealed partial class SinucaRoom3D
         ceilingRenderer=Box("Forro",new Vector3(0,3.06f,-1.8f),new Vector3(10.9f,.09f,11.3f),Mat("forroFosco",new Color(.22f,.21f,.17f))).GetComponent<Renderer>();
         ceilingBeams=new Renderer[4];int beamIndex=0;
         foreach(float z in new[]{-6f,-3f,0f,3f})ceilingBeams[beamIndex++]=Box("VigaForro",new Vector3(0,2.96f,z),new Vector3(10.9f,.15f,.14f),trim).GetComponent<Renderer>();
-        // Door casing and panels establish scale at the otherwise empty entrance.
-        foreach(float x in new[]{-.59f,.59f})Box("BatentePorta",new Vector3(x,1.08f,-7.34f),new Vector3(.09f,2.16f,.10f),trim);
-        Box("VergaPorta",new Vector3(0,2.16f,-7.34f),new Vector3(1.27f,.10f,.10f),trim);
-        foreach(float y in new[]{.58f,1.50f})Box("AlmofadaPorta",new Vector3(0,y,-7.35f),new Vector3(.78f,.70f,.035f),Wood);
-        Sphere("MacanetaPorta",new Vector3(.39f,1.05f,-7.27f),.055f,Mat("lataoEnvelhecido",new Color(.38f,.28f,.12f)),scenery);
+        ConstruirPortaDoBar(trim);
         WallSconce(new Vector3(-5.23f,2.05f,-.6f),90);
         WallSconce(new Vector3(5.23f,2.05f,-5.25f),-90);
         WallSconce(new Vector3(1.80f,2.12f,-7.24f),0);

@@ -76,7 +76,7 @@ public sealed partial class Chapter2RuntimeVerification
   PayphoneCheckpoint.FecharModalSlots();Check(MenuPausa.Aberto&&Time.timeScale==0,"Cancelar carga retorna a pausa sem retomar partida");
   menu.AbrirCarregar();yield return null;yield return ClickR4(slots[4]);yield return new WaitForSecondsRealtime(2);yield return AwaitScene("EntradaDaCidade");
   Check(GameState.Numero("qa_slot_escolhido")==4&&!MenuPausa.Aberto&&Time.timeScale==1,"Carrega slot escolhido 5 em vez do ultimo slot 1");
-  Capitulo1Director.Instance.TransicionarPara(Capitulo1Director.ZonaId.Zona5_RuaNorteBar,new Vector2(513.5f,12.3f),1);yield return new WaitForSecondsRealtime(1.5f);var chair=GameObject.Find("Cadeira_Calcada_1").GetComponent<SpriteRenderer>();Check(chair.sprite==Resources.Load<Sprite>("Art/Props/CadeiraPlasticaBar")&&chair.bounds.size.x>.6f,"Cadeira da calcada deixa escala miniatura e compartilha arte do interior");yield return Capture("calcada-escala");
+  Capitulo1Director.Instance.TransicionarPara(Capitulo1Director.ZonaId.Zona5_RuaNorteBar,new Vector2(513.5f,12.3f),1);yield return new WaitForSecondsRealtime(1.5f);var chair=GameObject.Find("Cadeira_Calcada_1").GetComponent<SpriteRenderer>();Check(chair.sprite==Resources.Load<Sprite>("Art/RuaNorte/Cadeira")&&chair.bounds.size.x>=.6f&&chair.bounds.size.y<1f,"Cadeira da Rua Norte usa o novo sprite em escala de mobiliario");yield return Capture("calcada-escala");
  }
  private IEnumerator SinuquinhaPhysicalHand(SinucaMinigameUI ui)
  {

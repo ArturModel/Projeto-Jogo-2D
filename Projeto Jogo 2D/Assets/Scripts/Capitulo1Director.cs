@@ -351,12 +351,13 @@ public class Capitulo1Director : MonoBehaviour
         }
         else if (cena == "BarDoZe")
         {
-            zonaAtual = ZonaId.Interior_BarDoZe;
-            GarantirElementosBarDoZeCenaSeparada();
+            AplicarEstadoDaZona(ZonaId.Interior_BarDoZe, mostrarBanner: false);
+            BarDoZe3D.Abrir(animar: false);
+            return;
         }
         SantaRitaPlaceDressing.ApplyC1();
-        SantaRitaBarLayout.Apply();
         SantaRitaWorldLighting.Apply();
+        if (raizMundoCapitulo1 != null) SantaRitaRuaNorte.Finish(raizMundoCapitulo1.transform);
     }
 
     private void PrepararMusicasDasZonas()
@@ -495,7 +496,7 @@ public class Capitulo1Director : MonoBehaviour
 
         raizMundoCapitulo1 = new GameObject("MundoSantaRita_Cap1");
 
-        // 5. Constrói as 5 Zonas Externas e os 4 Interiores
+        // 5. Constrói as zonas externas e os interiores em 2D
         ConstruirZona1_Rodovia(raizMundoCapitulo1.transform);
         ConstruirZona2_Posto(raizMundoCapitulo1.transform);
         ConstruirInterior1_Posto(raizMundoCapitulo1.transform);
@@ -504,7 +505,6 @@ public class Capitulo1Director : MonoBehaviour
         ConstruirZona4_Bairro(raizMundoCapitulo1.transform);
         ConstruirInterior3_CasaDoAvo(raizMundoCapitulo1.transform);
         ConstruirZona5_RuaNorteBar(raizMundoCapitulo1.transform);
-        ConstruirInterior4_BarDoZe(raizMundoCapitulo1.transform);
 
         // 6. Posiciona o jogador na Zona inicial correta no próximo início de frame
         StartCoroutine(PosicionarJogadorInicialRoutine());
@@ -543,12 +543,25 @@ public class Capitulo1Director : MonoBehaviour
             }
         }
 
+        if (zonaDetectada == ZonaId.Interior_BarDoZe)
+        {
+            // Um checkpoint antigo pode conter as coordenadas do salão 2D.
+            player.TeleportarPara(new Vector2(518f, 12f), 0);
+            AplicarEstadoDaZona(zonaDetectada, mostrarBanner: false);
+            BarDoZe3D.Abrir(animar: false);
+            yield break;
+        }
         AplicarEstadoDaZona(zonaDetectada, mostrarBanner: true);
     }
 
     public void TransicionarPara(ZonaId destino, Vector2 posDestino, int direcaoDestino)
     {
-        if (!tabelaZonas.TryGetValue(destino, out InfoZona info))
+        if (destino == ZonaId.Interior_BarDoZe)
+        {
+            EntrarNoBar3D();
+            return;
+        }
+        if (!tabelaZonas.ContainsKey(destino))
         {
             return;
         }
@@ -567,19 +580,51 @@ public class Capitulo1Director : MonoBehaviour
             {
                 DispararChegadaCasaDoAvo();
             }
-            else if (destino == ZonaId.Interior_BarDoZe)
-            {
-                // O objetivo só muda quando Marcus tiver algo concreto para perguntar ao Zé.
-                GameState.Marcar(Flags.EntrouNoBarDoZe);
-                SinucaMinigameUI.Instance.PrepararSala();
-            }
+        });
+    }
+
+    private void EntrarNoBar3D()
+    {
+        if (BarDoZe3D.Aberto || SceneFader.IsTransitioning) return;
+        var fachada = GameObject.Find("Predio_Fachada_BarDoZe")?.GetComponent<SpriteRenderer>();
+        var foco = new Vector2(.5f, .5f);
+        var cameraRua = Camera.main;
+        if (fachada != null && cameraRua != null)
+        {
+            // Posição da maçaneta no sprite da Rua Norte (294, 249 em 526 × 314).
+            var limites = fachada.bounds;
+            var ponto = new Vector3(Mathf.Lerp(limites.min.x, limites.max.x, 294f / 526f),
+                Mathf.Lerp(limites.min.y, limites.max.y, 65f / 314f), limites.center.z);
+            var viewport = cameraRua.WorldToViewportPoint(ponto);
+            foco = new Vector2(Mathf.Clamp(viewport.x, .22f, .78f), Mathf.Clamp(viewport.y, .22f, .78f));
+        }
+        SceneFader.Instance.TransicionarParaBar(foco, () =>
+        {
+            BarDoZe3D.Abrir(animar: true, foco);
+            AplicarEstadoDaZona(ZonaId.Interior_BarDoZe, mostrarBanner: false);
+        });
+    }
+
+    internal void SairDoBar3D()
+    {
+        if (SceneFader.IsTransitioning) return;
+        if (SceneManager.GetActiveScene().name == "BarDoZe")
+        {
+            SceneTransition.Ir("EntradaDaCidade", "saida_bar_ze");
+            return;
+        }
+        SceneFader.Instance.TransicionarParaZona(() =>
+        {
+            BarDoZe3D.Fechar();
+            var player = FindAnyObjectByType<PlayerController>();
+            if (player != null) player.TeleportarPara(new Vector2(518f, 12f), 0);
+            AplicarEstadoDaZona(ZonaId.Zona5_RuaNorteBar, mostrarBanner: false);
         });
     }
 
     private void AplicarEstadoDaZona(ZonaId id, bool mostrarBanner)
     {
         zonaAtual = id;
-        if(id==ZonaId.Interior_BarDoZe)SantaRitaBarLayout.ConstrainArrival();
         if (!tabelaZonas.TryGetValue(id, out InfoZona info))
         {
             return;
@@ -588,13 +633,13 @@ public class Capitulo1Director : MonoBehaviour
         AjustarLuzGlobal(info.ehInterior, id == ZonaId.Interior_BarDoZe);
 
         Chuva chuva = FindAnyObjectByType<Chuva>();
-        if (chuva != null)
+        if (chuva != null && id != ZonaId.Interior_BarDoZe)
         {
             chuva.DefinirModoInterior(info.ehInterior);
         }
 
         CameraFollow camFollow = FindAnyObjectByType<CameraFollow>();
-        if (camFollow != null)
+        if (camFollow != null && id != ZonaId.Interior_BarDoZe)
         {
             camFollow.DefinirLimitesRegiao(info.min, info.max, info.orthoSize, snapImediato: true);
         }
@@ -964,6 +1009,21 @@ public class Capitulo1Director : MonoBehaviour
             (byte)Mathf.Clamp(c.b + delta, 0, 255),
             255
         );
+    }
+
+    internal static void PintarSuperficieNativaDoBar(Texture2D textura, bool parede)
+    {
+        if (!parede)
+        {
+            textura.SetPixels32(ExtrairBloco32(TilePiso.InteriorBar, 8, 6));
+            return;
+        }
+        // Mesmo recorte da pintura antiga. Gera apenas a faixa da parede, sem montar uma cena 2D.
+        var faixa = new Texture2D(18 * 32, 64, TextureFormat.RGBA32, false);
+        PintarAcabamentoArquitetonicoInterior(faixa, "BarDoZe", 18, 2, 32);
+        textura.SetPixels(faixa.GetPixels(8 * 32, 0, 32, 64));
+        if (Application.isPlaying) Destroy(faixa);
+        else DestroyImmediate(faixa);
     }
 
     private static Color32[] ExtrairBloco32(TilePiso tipo, int tileX=0, int tileY=0)
@@ -2290,21 +2350,24 @@ public class Capitulo1Director : MonoBehaviour
         Vector2 min = new Vector2(500f, 0f);
         Vector2 max = new Vector2(538f, 22f);
 
-        CriarPisoDeZona(z.transform, "Zona5_RuaNorteBar", min, 38, 22, (ux, uy) =>
+        if (!SantaRitaRuaNorte.BuildGround(z.transform, min, 38, 22))
         {
-            // Transição do barro do Bairro para o calçamento da Rua Norte (X = 0..6, Y = 8..11)
-            if (uy >= 8 && uy <= 11 && ux <= 4) return TilePiso.TerraRachada;
-            if (uy >= 8 && uy <= 11 && ux == 5) return TilePiso.AsfaltoParaTerra;
-            if (uy == 8) return (ux % 6 == 0) ? TilePiso.AsfaltoH_Poca : TilePiso.AsfaltoH_Trinca;
-            if (uy >= 9 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
-            // Calçada Sul de pedra (Y = 6..7) e Calçada Norte de pedra (Y = 12..13)
-            if (uy == 7) return TilePiso.CalcadaSul;
-            if (uy == 6) return TilePiso.Concreto;
-            if (uy == 12) return TilePiso.CalcadaNorte;
-            if (uy == 13) return TilePiso.Concreto;
-            if (uy == 14 && ux >= 12 && ux <= 24) return TilePiso.Concreto;
-            return TilePiso.Grama;
-        });
+            CriarPisoDeZona(z.transform, "Zona5_RuaNorteBar", min, 38, 22, (ux, uy) =>
+            {
+                // Transição do barro do Bairro para o calçamento da Rua Norte (X = 0..6, Y = 8..11)
+                if (uy >= 8 && uy <= 11 && ux <= 4) return TilePiso.TerraRachada;
+                if (uy >= 8 && uy <= 11 && ux == 5) return TilePiso.AsfaltoParaTerra;
+                if (uy == 8) return (ux % 6 == 0) ? TilePiso.AsfaltoH_Poca : TilePiso.AsfaltoH_Trinca;
+                if (uy >= 9 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
+                // Calçada Sul de pedra (Y = 6..7) e Calçada Norte de pedra (Y = 12..13)
+                if (uy == 7) return TilePiso.CalcadaSul;
+                if (uy == 6) return TilePiso.Concreto;
+                if (uy == 12) return TilePiso.CalcadaNorte;
+                if (uy == 13) return TilePiso.Concreto;
+                if (uy == 14 && ux >= 12 && ux <= 24) return TilePiso.Concreto;
+                return TilePiso.Grama;
+            });
+        }
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
 
@@ -2321,9 +2384,9 @@ public class Capitulo1Director : MonoBehaviour
         }
 
         // Caminhonete do Clube estacionada perto do Bar do Zé (Pista!)
-        ColocarProp(z.transform, "Caminhonete_Clube_Bar", new Vector3(509.5f, 11.4f, 0f), "Picape_Black", 32f, 1.15f,
-            new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
-        ColocarInteracao(z.transform, "Interacao_Caminhonete_Clube", new Vector3(509.5f, 10.6f, 0f),
+        ColocarProp(z.transform, "Caminhonete_Clube_Bar", new Vector3(509.1f, 10.95f, 0f), "Picape_Black", 32f, 1.15f,
+            new Vector2(3.4f, 1.05f), new Vector2(0f, 0.55f), 2);
+        ColocarInteracao(z.transform, "Interacao_Caminhonete_Clube", new Vector3(509.1f, 10.4f, 0f),
             InteracaoCapitulo1.TipoInteracao.CaminhoneteClubeBar, "");
 
         // FACHADA DO BAR DO ZÉ
@@ -2332,11 +2395,11 @@ public class Capitulo1Director : MonoBehaviour
         AdicionarLuzPonto(z.transform, new Vector3(518.0f, 14.8f, 0f), new Color(1.0f, 0.72f, 0.38f, 1f), 7.8f, 1.45f);
 
         // Mesas de bar, cadeiras de plástico e engradados na calçada do Bar do Zé
-        ColocarProp(z.transform, "Mesa_Calcada_Bar", new Vector3(513.5f, 13.4f, 0f), "RoundTable_Wood", 32f, 1.1f, new Vector2(1.0f, 0.8f), new Vector2(0f, 0.4f), 2);
-        ColocarProp(z.transform, "Cadeira_Calcada_1", new Vector3(512.4f, 13.4f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Cadeira_Calcada_2", new Vector3(514.6f, 13.4f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Engradados_Bar_Ext", new Vector3(521.8f, 13.5f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Dumpster_Bar_Ext", new Vector3(523.2f, 13.8f, 0f), "Dumpster", 32f, 1.1f, new Vector2(1.4f, 0.9f), new Vector2(0f, 0.45f), 2);
+        ColocarProp(z.transform, "Mesa_Calcada_Bar", new Vector3(512.9f, 13.7f, 0f), "RoundTable_Wood", 32f, 1.1f, new Vector2(1.0f, 0.8f), new Vector2(0f, 0.4f), 2);
+        ColocarProp(z.transform, "Cadeira_Calcada_1", new Vector3(512.0f, 13.25f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Cadeira_Calcada_2", new Vector3(513.85f, 13.18f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Engradados_Bar_Ext", new Vector3(521.55f, 13.33f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Dumpster_Bar_Ext", new Vector3(523.65f, 14.07f, 0f), "Dumpster", 32f, 1.1f, new Vector2(1.4f, 0.9f), new Vector2(0f, 0.45f), 2);
 
         ColocarInteracao(z.transform, "Placa_Letreiro_BarZe", new Vector3(515.8f, 13.1f, 0f),
             InteracaoCapitulo1.TipoInteracao.PlacaBarDoZe, "");
@@ -2394,73 +2457,6 @@ public class Capitulo1Director : MonoBehaviour
     // INTERIOR 4: BAR DO ZÉ (Sem tela azul, com Mesa de Sinuca, Zé, Frequentador!)
     // =========================================================================
 
-    private void ConstruirInterior4_BarDoZe(Transform raiz)
-    {
-        GameObject z = new GameObject("Interior4_BarDoZe");
-        z.transform.SetParent(raiz, false);
-        Vector2 min = new Vector2(500f, -60f);
-        Vector2 max = new Vector2(518f, -46f);
-
-        CriarPisoDeZona(z.transform, "Interior_BarDoZe", min, 18, 14, (ux, uy) =>
-        {
-            if (uy >= 12) return TilePiso.ParedeBar;
-            return TilePiso.InteriorBar;
-        });
-
-        CriarParedesPerimetro(z.transform, min, max, 1.0f);
-        AdicionarBoxCollider(z, new Vector2(509f, -47.2f), new Vector2(18f, 1.6f));
-
-        // Porta de saída no sul do Bar
-        SantaRitaExitThreshold.Create(z.transform,"SoleiraSaida_BarDoZe",new Vector2(509,-59.45f),"SaidaSociedade",2.3f,-10);
-        ColocarGatilhoTransicao(
-            z.transform,
-            "Saida_Interior_BarDoZe",
-            new Vector3(509.0f, -58.4f, 0f),
-            new Vector2(2.4f, 1.4f),
-            ZonaId.Zona5_RuaNorteBar,
-            new Vector2(518.0f, 12.0f),
-            0,
-            "Sair para a Rua Norte",
-            automatico: false
-        );
-
-        // Balcão do Bar, prateleiras de garrafas, mesas laterais e engradados
-        ColocarProp(z.transform, "Estante_Garrafas_1", new Vector3(503.5f, -49.0f, 0f), "Cabinet_Dark", 32f, 1.25f, new Vector2(1.6f, 0.9f), new Vector2(0f, 0.45f), 2);
-        ColocarProp(z.transform, "Estante_Garrafas_2", new Vector3(506.0f, -49.0f, 0f), "BoxesShelf", 32f, 1.25f, new Vector2(1.8f, 0.9f), new Vector2(0f, 0.45f), 2);
-        ColocarArteInterior(z.transform, "Balcao_Bar_Sprite", new Vector2(504.8f, -50.8f),
-            "Interior_BalcaoBar", "Balcao_Bar", 0.96f, new Vector2(3.8f, 1.0f));
-        ColocarInteracao(z.transform, "Balcao_Bar_Interacao", new Vector3(504.8f, -51.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe, "");
-
-        // Quadro de Regras da Sinuca na parede
-        ColocarProp(z.transform, "Quadro_Regras_Sprite", new Vector3(513.5f, -48.6f, 0f), "Quadro_Regras_Sinuca", 32f, 1.15f, Vector2.zero, Vector2.zero, 3);
-        ColocarInteracao(z.transform, "Quadro_Regras_Interacao", new Vector3(513.5f, -49.8f, 0f),
-            InteracaoCapitulo1.TipoInteracao.QuadroRegrasSinuca, "");
-
-        // Mesas laterais e engradados no canto do bar
-        ColocarProp(z.transform, "Mesa_Bar_Esq", new Vector3(503.2f, -55.0f, 0f), "RoundTable_Wood", 32f, 1.15f, new Vector2(1.1f, 0.8f), new Vector2(0f, 0.4f), 2);
-        ColocarProp(z.transform, "Cadeira_Bar_Esq", new Vector3(504.4f, -55.0f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Engradados_Bar_Int", new Vector3(515.2f, -55.5f, 0f), "BottlesCrate", 32f, 1.15f, new Vector2(1.0f, 0.7f), new Vector2(0f, 0.35f), 2);
-
-        // MESA DE SINUCA CENTRAL
-        ColocarProp(z.transform, "Mesa_Sinuca_Central", new Vector3(509.0f, -53.2f, 0f), "Mesa_Sinuca_TopDown", 32f, 1.15f,
-            new Vector2(3.2f, 1.6f), new Vector2(0f, 0.8f), 2);
-        ColocarInteracao(z.transform, "Mesa_Sinuca_Trigger", new Vector3(509.0f, -53.8f, 0f),
-            InteracaoCapitulo1.TipoInteracao.MesaSinucaBar, "");
-
-        // ZÉ (Boss do Cap. 1) ao lado da mesa de sinuca
-        ColocarInteracao(z.transform, "NPC_Ze_Interior", new Vector3(511.6f, -52.8f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcZeBar, "", "Npc_Ze", 32f, 1.0f, 2, solido: true);
-
-        // FREQUENTADOR perto do balcão
-        ColocarInteracao(z.transform, "NPC_Frequentador_Interior", new Vector3(505.8f, -52.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcFrequentadorBar, "", "Npc_Frequentador", 32f, 1.0f, 2, solido: true);
-    }
-
-    // =========================================================================
-    // SUPORTE ÀS CENAS SEPARADAS (Caso abertas diretamente no Editor)
-    // =========================================================================
-
     private void GarantirElementosCasaDoAvoCenaSeparada()
     {
         AjustarLuzGlobal(true);
@@ -2472,24 +2468,6 @@ public class Capitulo1Director : MonoBehaviour
             InteracaoCapitulo1.TipoInteracao.PistaNotaFiscal2004, "");
         ColocarInteracao(transform, "Pista_Desordem_Porta", new Vector3(-1.8f, -8.5f, 0f),
             InteracaoCapitulo1.TipoInteracao.PistaDesordemPorta, "");
-    }
-
-    private void GarantirElementosBarDoZeCenaSeparada()
-    {
-        AjustarLuzGlobal(true);
-        GameState.Marcar(Flags.EntrouNoBarDoZe);
-                SinucaMinigameUI.Instance.PrepararSala();
-
-        ColocarInteracao(transform, "NPC_Ze", new Vector3(2.0f, -4.5f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcZeBar, "", "Npc_Ze", 32f, 1.0f, 2, solido: true);
-        ColocarInteracao(transform, "NPC_Frequentador_Bar", new Vector3(-2.6f, -2.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.NpcFrequentadorBar, "", "Npc_Frequentador", 32f, 1.0f, 2, solido: true);
-        ColocarInteracao(transform, "Mesa_Sinuca_Trigger", new Vector3(0f, -4.8f, 0f),
-            InteracaoCapitulo1.TipoInteracao.MesaSinucaBar, "");
-        ColocarInteracao(transform, "Balcao_Bar_Trigger", new Vector3(-4.2f, -1.2f, 0f),
-            InteracaoCapitulo1.TipoInteracao.BalcaoBarDoZe, "");
-        ColocarInteracao(transform, "Quadro_Regras_Trigger", new Vector3(4.2f, 0.5f, 0f),
-            InteracaoCapitulo1.TipoInteracao.QuadroRegrasSinuca, "");
     }
 
     public static void AtualizarEstadoPortaoCentroNaCena()

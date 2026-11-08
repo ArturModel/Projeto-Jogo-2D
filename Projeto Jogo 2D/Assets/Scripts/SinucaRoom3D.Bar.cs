@@ -1,0 +1,267 @@
+using UnityEngine;
+using Tipo = InteracaoCapitulo1.TipoInteracao;
+
+public sealed partial class SinucaRoom3D
+{
+    private const float SoleiraBar = -7.40f;
+    internal const float DuracaoEntradaBar = 3.10f;
+    private static readonly Vector3 ChegadaBar = new Vector3(.10f, 1.62f, -5.72f);
+    private static readonly Vector2 OlharChegada = new Vector2(4f, 3f);
+    private Transform portaBar, macanetaExterior, maoMarcusPorta;
+    private Vector3 pontoDaMacanetaFechada;
+    private MeshRenderer chuvaDaEntrada;
+    private Material materialChuvaDaEntrada;
+    private Vector2 focoDaRua;
+    private bool abrindoBar, tocouFecho, tocouPorta;
+    internal Vector3 PosicaoExploracao => standingPosition;
+    internal Vector2 OlharExploracao => new Vector2(standingYaw, standingPitch);
+
+    private void ConstruirParedeDaEntrada(string nome, float y, float altura, float largura, float z, float profundidade, Material material)
+    {
+        const float metadeVao = .54f;
+        float lado = largura / 2f - metadeVao;
+        foreach (float sinal in new[] { -1f, 1f })
+            Box(nome + (sinal < 0 ? "Esq" : "Dir"), new Vector3(sinal * (metadeVao + lado / 2f), y, z),
+                new Vector3(lado, altura, profundidade), material);
+        float topo = y + altura / 2f;
+        if (topo > 2.14f)
+            Box(nome + "Acima", new Vector3(0f, (topo + 2.14f) / 2f, z),
+                new Vector3(metadeVao * 2f, topo - 2.14f, profundidade), material);
+    }
+
+    private void ConstruirPortaDoBar(Material guarnicao)
+    {
+        foreach (float x in new[] { -.58f, .58f })
+            Box("BatentePorta", new Vector3(x, 1.08f, SoleiraBar), new Vector3(.10f, 2.16f, .18f), guarnicao);
+        Box("VergaPorta", new Vector3(0f, 2.16f, SoleiraBar), new Vector3(1.27f, .10f, .18f), guarnicao);
+        portaBar = new GameObject("PortaBar_DobradicaEsquerda").transform;
+        portaBar.SetParent(scenery, false);
+        portaBar.localPosition = new Vector3(-.52f, 0f, SoleiraBar);
+        var pintura = Mat("pinturaAzulDaPorta", new Color(.22f, .33f, .36f), tiles[2]);
+        Box("FolhaDaPorta", new Vector3(.52f, 1.04f, 0f), new Vector3(1.04f, 2.08f, .085f), pintura, portaBar);
+        var latao = Mat("lataoEnvelhecido", new Color(.48f, .34f, .14f));
+        for (int lado = -1; lado <= 1; lado += 2)
+        {
+            float z = lado * .05f;
+            foreach (float y in new[] { .31f, .75f, 1.19f, 1.63f })
+            {
+                Box("MolduraDaAlmofada", new Vector3(.52f, y, z), new Vector3(.81f, .38f, .025f), guarnicao, portaBar);
+                Box("AlmofadaDaPorta", new Vector3(.52f, y, z + lado * .016f), new Vector3(.72f, .30f, .025f), lado < 0 ? pintura : Wood, portaBar);
+            }
+            Box("EspelhoDaMacaneta", new Vector3(.91f, 1.07f, z), new Vector3(.075f, .19f, .024f), latao, portaBar);
+            var macaneta = Sphere(lado < 0 ? "MacanetaExteriorDireita" : "MacanetaInterior",
+                new Vector3(.91f, 1.09f, lado * .090f), .080f, latao, portaBar).transform;
+            if (lado < 0)
+            {
+                macanetaExterior = macaneta;
+                pontoDaMacanetaFechada = root.transform.InverseTransformPoint(macaneta.position);
+            }
+        }
+        foreach (float y in new[] { .25f, 1.81f })
+            Cylinder("Dobradica", new Vector3(-.53f, y, SoleiraBar), .018f, .13f, latao, scenery);
+        RoomFill("LuzDaMarquise", new Vector3(.35f, 2.35f, -8.18f), new Color(.80f, .67f, .45f), 1.4f, 2.7f);
+        ConstruirChuvaDaEntrada();
+
+        var textura = Resources.Load<Texture2D>("Art/Characters/MarcusMaoMacaneta");
+        if (textura == null) return;
+        var sprite = Sprite.Create(textura, new Rect(0, 0, textura.width, textura.height),
+            new Vector2(7f / 48f, 18f / 32f), 119f, 0, SpriteMeshType.FullRect);
+        sprite.name = "MarcusMaoMacaneta";
+        owned.Add(sprite);
+        maoMarcusPorta = PixelObject("Marcus_SpritePegadaDaPorta", sprite, Vector3.zero, 1f, false);
+        maoMarcusPorta.gameObject.SetActive(false);
+    }
+
+    private void ConstruirChuvaDaEntrada()
+    {
+        var shader = Resources.Load<Shader>("Art/Sinuca/ChuvaEntradaBar");
+        if (shader == null || !shader.isSupported) return;
+        materialChuvaDaEntrada = new Material(shader) { name = "Gotas da Rua Norte 3D" };
+        owned.Add(materialChuvaDaEntrada);
+
+        const int quantidade = 520;
+        var vertices = new Vector3[quantidade * 4];
+        var cantos = new Vector2[vertices.Length];
+        var parametros = new System.Collections.Generic.List<Vector4>(vertices.Length);
+        var indices = new int[quantidade * 6];
+        var aleatorio = new System.Random(317);
+        float Sortear(float min, float max) => Mathf.Lerp(min, max, (float)aleatorio.NextDouble());
+
+        for (int i = 0; i < quantidade; i++)
+        {
+            // A faixa termina antes da fachada. Paredes e porta ocluem a chuva em profundidade.
+            var origem = new Vector3(Sortear(-2.25f, 2.45f), Sortear(0f, 1f), SoleiraBar - Sortear(.20f, 1.90f));
+            var gota = new Vector4(Sortear(1.60f, 2.65f), Sortear(.095f, .26f), Sortear(.0028f, .006f), Sortear(.28f, .62f));
+            int v = i * 4;
+            for (int j = 0; j < 4; j++)
+            {
+                vertices[v + j] = origem;
+                cantos[v + j] = new Vector2(j % 2 == 0 ? -1f : 1f, j / 2);
+                parametros.Add(gota);
+            }
+            int t = i * 6;
+            indices[t] = v;
+            indices[t + 1] = v + 2;
+            indices[t + 2] = v + 1;
+            indices[t + 3] = v + 1;
+            indices[t + 4] = v + 2;
+            indices[t + 5] = v + 3;
+        }
+
+        var malha = new Mesh { name = "Volume de chuva da calçada" };
+        malha.vertices = vertices;
+        malha.uv = cantos;
+        malha.SetUVs(1, parametros);
+        malha.triangles = indices;
+        malha.bounds = new Bounds(new Vector3(0f, 1.9f, SoleiraBar - 1.05f), new Vector3(6f, 3.9f, 1.8f));
+        owned.Add(malha);
+
+        var objeto = new GameObject("ChuvaRuaNorte_Entrada3D", typeof(MeshFilter), typeof(MeshRenderer));
+        objeto.transform.SetParent(scenery, false);
+        objeto.GetComponent<MeshFilter>().sharedMesh = malha;
+        chuvaDaEntrada = objeto.GetComponent<MeshRenderer>();
+        chuvaDaEntrada.sharedMaterial = materialChuvaDaEntrada;
+        chuvaDaEntrada.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        chuvaDaEntrada.receiveShadows = false;
+        chuvaDaEntrada.enabled = false;
+    }
+
+    internal void IniciarExploracaoDoBar(bool animar, Vector2 foco)
+    {
+        abrindoBar = animar;
+        if (chuvaDaEntrada != null) chuvaDaEntrada.enabled = animar;
+        focoDaRua = foco;
+        tocouFecho = tocouPorta = false;
+        CancelOpponentShot();
+        VoltarAExplorar(ChegadaBar, OlharChegada);
+        if (animar) AnimarEntradaDoBar(0f);
+    }
+
+    internal void VoltarAExplorar(Vector3 posicao, Vector2 olhar)
+    {
+        if (opponent != null)
+        {
+            opponent.root.localPosition = Plan(opponent.definition.position);
+            opponentHeading = Vector2.down;
+        }
+        standingPosition = posicao;
+        standingYaw = olhar.x;
+        standingPitch = olhar.y;
+        distanciaPasso = 0f;
+        entryLook = 0f;
+        mode = SinucaCameraView.Caminhando3D;
+        cameraInitialized = false;
+        foreach (var bola in balls) bola.gameObject.SetActive(false);
+        foreach (var marca in markedSigns) if (marca != null) marca.gameObject.SetActive(false);
+        foreach (var item in new[] { cue, bridgeAnchor, gripHand, guide.transform, guideBorder.transform, objectGuide.transform, objectArrow.transform, ghost })
+            if (item != null) item.gameObject.SetActive(false);
+        AtualizarExploracaoDoBar();
+    }
+
+    private static float CurvaDaEntrada(float tempo, float inicio, float fim) =>
+        Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(inicio, fim, tempo));
+
+    internal float AnimarEntradaDoBar(float segundos)
+    {
+        if (!abrindoBar) return 1f;
+        if (materialChuvaDaEntrada != null) materialChuvaDaEntrada.SetFloat("_Tempo", segundos);
+        float abrir = CurvaDaEntrada(segundos, .82f, 1.76f);
+        float fechar = CurvaDaEntrada(segundos, 2.60f, DuracaoEntradaBar);
+        portaBar.localRotation = Quaternion.Euler(0f, -98f * abrir * (1f - fechar), 0f);
+        if (!tocouFecho && segundos >= .80f)
+        {
+            tocouFecho = true;
+            SantaRitaSound.Play("door", .20f);
+        }
+        if (!tocouPorta && segundos >= 3.02f)
+        {
+            tocouPorta = true;
+            SantaRitaSound.Play("door", .10f, .88f);
+        }
+
+        float cruzar = CurvaDaEntrada(segundos, 1.10f, 2.76f);
+        var fora = new Vector3(.11f, 1.44f, -8.82f);
+        var posicao = Vector3.Lerp(fora, ChegadaBar, cruzar);
+        var deFora = Quaternion.LookRotation(pontoDaMacanetaFechada - fora);
+        var deDentro = Quaternion.Euler(OlharChegada.y, OlharChegada.x, 0f);
+        camera.orthographic = false;
+        camera.fieldOfView = Mathf.Lerp(55f, 62f, cruzar);
+        camera.transform.localPosition = posicao;
+        camera.transform.localRotation = deFora;
+        var raioNoFoco = camera.ViewportPointToRay(focoDaRua).direction;
+        var alinharComRua = Quaternion.FromToRotation(raioNoFoco, camera.transform.forward) * deFora;
+        var deForaCentrado = Quaternion.Slerp(alinharComRua, deFora, CurvaDaEntrada(segundos, .34f, .94f));
+        camera.transform.localRotation = Quaternion.Slerp(deForaCentrado, deDentro, CurvaDaEntrada(segundos, 1.20f, 2.68f));
+
+        AnimarMaoDeMarcus(segundos);
+        SyncFirstPersonCamera();
+        OrientPixelArt();
+        UpdateOpponentView();
+        TickSalon();
+        if (segundos >= DuracaoEntradaBar)
+        {
+            abrindoBar = false;
+            if (chuvaDaEntrada != null) chuvaDaEntrada.enabled = false;
+            AtualizarExploracaoDoBar();
+        }
+        return fechar;
+    }
+
+    private void AnimarMaoDeMarcus(float segundos)
+    {
+        if (maoMarcusPorta == null) return;
+        bool visivel = segundos > .42f && segundos < 1.73f;
+        maoMarcusPorta.gameObject.SetActive(visivel);
+        if (!visivel) return;
+
+        float pegada = CurvaDaEntrada(segundos, .42f, .80f) * (1f - CurvaDaEntrada(segundos, 1.38f, 1.73f));
+        var pulso = camera.ViewportToWorldPoint(new Vector3(.82f, -.16f, .57f));
+        var contato = Vector3.Lerp(pulso, macanetaExterior.position, pegada);
+        var pontoNaTela = camera.WorldToScreenPoint(contato);
+        var pulsoNaTela = camera.WorldToScreenPoint(pulso);
+        var eixo = pulsoNaTela - pontoNaTela;
+        float angulo = Mathf.Atan2(eixo.y, eixo.x) * Mathf.Rad2Deg;
+        maoMarcusPorta.rotation = camera.transform.rotation * Quaternion.AngleAxis(angulo, Vector3.forward);
+        PlaceHandDepth(maoMarcusPorta, contato, -.055f);
+    }
+
+    internal void AtualizarExploracaoDoBar()
+    {
+        TickSalon();
+        UpdateCamera();
+        SyncFirstPersonCamera();
+        AtualizarAtoresDoSalao();
+    }
+
+    private bool EmFoco(Vector3 ponto, float alcance, float alinhamento, out float precisao)
+    {
+        var origem = camera.transform.localPosition;
+        var delta = ponto - origem;
+        precisao = Vector3.Dot(camera.transform.forward, delta.normalized);
+        return delta.sqrMagnitude <= alcance * alcance && precisao >= alinhamento;
+    }
+
+    internal bool PodeSairDoBar() => EmFoco(new Vector3(0f, 1.30f, SoleiraBar), 2f, .80f, out _);
+
+    internal Tipo? InteracaoEmFoco()
+    {
+        Tipo? melhor = null;
+        float alinhamento = .90f;
+        void Considerar(Tipo tipo, Vector3 ponto, float alcance)
+        {
+            if (!EmFoco(ponto, alcance, alinhamento, out float precisao)) return;
+            alinhamento = precisao;
+            melhor = tipo;
+        }
+
+        if (opponent != null)
+            Considerar(Tipo.NpcZeBar, opponent.root.localPosition + Vector3.up * 1.35f, 2.35f);
+        if (freguesDoBar != null)
+            Considerar(Tipo.NpcFrequentadorBar, freguesDoBar.localPosition + Vector3.up * 1.06f, 2.1f);
+        Considerar(Tipo.BalcaoBarDoZe, new Vector3(-2.64f, 1.83f, 3.66f), 3.0f);
+        Considerar(Tipo.QuadroRegrasSinuca, new Vector3(2.9f, 1.83f, -7.24f), 2.0f);
+        return melhor;
+    }
+
+    private Transform freguesDoBar;
+}

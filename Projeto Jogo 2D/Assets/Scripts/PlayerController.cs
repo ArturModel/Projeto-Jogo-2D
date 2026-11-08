@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     public bool LanternaVisivel => DeveUsarLanternaAgora();
     public int DirecaoAtual => facingDirection;
     private readonly MarcusGait passada = new MarcusGait();
+    private bool folhaCaminhadaDirecional;
     private Vector2 ultimaPosicaoAnimacao;
     private int totalQuadros = 6;
     public int QuadroCaminhada { get; private set; }
@@ -76,7 +77,7 @@ public class PlayerController : MonoBehaviour
             corpo.sortingOrder = 10;
         }
         PrepararCaminhadaMarcus();
-        PrepararPosesLanterna();
+        if (!folhaCaminhadaDirecional) PrepararPosesLanterna();
         PrepararFeixeLanterna();
     }
 
@@ -121,11 +122,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private static bool ValidarFolhaMarcus(Texture2D sheet,int frames)
+    private static bool ValidarFolhaMarcus(Texture2D sheet,int frames,int linhas=3,bool repousoSeparado=true)
     {
-        if((frames!=8&&frames!=16)||sheet.width!=(frames+1)*64||sheet.height!=192)return false;
+        int colunas = frames + (repousoSeparado ? 1 : 0);
+        if (sheet.width != colunas * 64 || sheet.height != linhas * 64) return false;
+        if (repousoSeparado && frames != 8 && frames != 16) return false;
         var pixels=sheet.GetPixels32();
-        for(int row=0;row<3;row++)for(int f=0;f<=frames;f++)
+        for(int row=0;row<linhas;row++)for(int f=0;f<colunas;f++)
         {
             int count=0;
             for(int y=0;y<64;y++)for(int x=0;x<64;x++)
@@ -147,19 +150,30 @@ public class PlayerController : MonoBehaviour
         if (!ImageConversion.LoadImage(folha, File.ReadAllBytes(arquivo))) return;
         folha.filterMode = FilterMode.Point;
         folha.wrapMode = TextureWrapMode.Clamp;
+        folhaCaminhadaDirecional = folha.width == 192 && folha.height == 256;
+        int linhas = folhaCaminhadaDirecional ? 4 : 3;
         totalQuadros = folha.width >= 1088 ? 16 : folha.width >= 512 ? 8 : 6;
-        if(folha.width>=576&&!ValidarFolhaMarcus(folha,totalQuadros)){Debug.LogError("Folha de caminhada invalida.");return;}
-        quadrosCaminhada = new Sprite[3, totalQuadros];
-        for (int direcao = 0; direcao < 3; direcao++)
+        if (folhaCaminhadaDirecional) totalQuadros = 3;
+        if ((folhaCaminhadaDirecional || folha.width >= 576) &&
+            !ValidarFolhaMarcus(folha, totalQuadros, linhas, !folhaCaminhadaDirecional))
+        {
+            folhaCaminhadaDirecional = false;
+            Debug.LogError("Folha de caminhada inválida.");
+            Destroy(folha);
+            return;
+        }
+        quadrosCaminhada = new Sprite[linhas, totalQuadros];
+        for (int direcao = 0; direcao < linhas; direcao++)
             for (int passo = 0; passo < totalQuadros; passo++)
                 quadrosCaminhada[direcao, passo] = Sprite.Create(folha,
                     new Rect(passo * 64, folha.height - (direcao + 1) * 64, 64, 64),
                     new Vector2(0.5f, 0.125f), 32f, 0, SpriteMeshType.FullRect);
-        quadrosRepouso = new Sprite[3];
-        for (int direcao = 0; direcao < 3; direcao++)
+        quadrosRepouso = new Sprite[linhas];
+        for (int direcao = 0; direcao < linhas; direcao++)
             quadrosRepouso[direcao] = folha.width >= 576 ? Sprite.Create(folha,
                 new Rect(totalQuadros*64, folha.height - (direcao + 1) * 64, 64, 64),
-                new Vector2(.5f, .125f), 32f, 0, SpriteMeshType.FullRect) : quadrosCaminhada[direcao, 0];
+                new Vector2(.5f, .125f), 32f, 0, SpriteMeshType.FullRect) :
+                quadrosCaminhada[direcao, folhaCaminhadaDirecional ? 1 : 0];
 
         // A arte anterior trazia seis quadros no Animator, mas quase todos
         // eram cópias. O sprite novo já inclui as roupas em cada pose.
@@ -219,7 +233,7 @@ public class PlayerController : MonoBehaviour
         if (direcao >= DirDown && direcao <= DirRight)
         {
             facingDirection = direcao;
-            SetFacingScale(facingDirection == DirRight ? -1f : 1f);
+            SetFacingScale(facingDirection == DirRight && !folhaCaminhadaDirecional ? -1f : 1f);
         }
 
         CameraFollow camFollow = FindAnyObjectByType<CameraFollow>();
@@ -348,19 +362,8 @@ public class PlayerController : MonoBehaviour
             estadoAnimacao = novoEstado;
         }
 
-        // A arte "esquerda" é espelhada para representar "direita",
-        // já que o pack só traz o perfil voltado para um lado.
-        // Usamos a escala do transform (em vez de SpriteRenderer.flipX)
-        // para evitar qualquer conflito com o Animator.
-        if (facingDirection == DirRight)
-        {
-            SetFacingScale(-1f);
-        }
-        else if (facingDirection == DirLeft)
-        {
-            SetFacingScale(1f);
-        }
-        else SetFacingScale(1f); // Frente/costas têm mão e lente próprias, sem herdar o espelho do perfil.
+        // A folha de quatro direções tem um perfil direito próprio.
+        SetFacingScale(facingDirection == DirRight && !folhaCaminhadaDirecional ? -1f : 1f);
 
     }
 
@@ -391,9 +394,13 @@ public class PlayerController : MonoBehaviour
         int quadro = totalQuadros == 16 ? passada.QuadroDetalhado : totalQuadros == 8 ? QuadroCaminhada : QuadroCaminhada * totalQuadros / 8;
         if (quadrosCaminhada != null)
         {
-            int linha = facingDirection == DirUp ? 1 :
-                (facingDirection == DirLeft || facingDirection == DirRight ? 2 : 0);
-            bool equipada=linha!=1 && DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna!=null; // De costas, o corpo oculta o objeto; o feixe continua ativo.
+            int linha = folhaCaminhadaDirecional ? facingDirection : Mathf.Min(facingDirection, DirLeft);
+            bool equipada = linha != DirUp && DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna != null;
+            if (folhaCaminhadaDirecional)
+            {
+                // Dois contatos e uma passagem, todos recortes da mesma folha.
+                quadro = QuadroCaminhada switch { 0 or 1 => 0, 4 or 5 => 2, _ => 1 };
+            }
             corpo.sprite = !andando ?
                 (equipada?repousoComLanterna[linha]:quadrosRepouso[linha]) :
                 (equipada?quadrosCaminhadaComLanterna[linha,quadrosCaminhadaComLanterna.GetLength(1)==16?passada.QuadroDetalhado:QuadroCaminhada]:quadrosCaminhada[linha,quadro]);
@@ -410,7 +417,8 @@ public class PlayerController : MonoBehaviour
         flashlight.gameObject.SetActive(visivel);
         if (!visivel) return;
         // As coordenadas são as lentes desenhadas na folha Aseprite (64 px, pivô nos pés).
-        int bob = andando ? -Mathf.RoundToInt(Mathf.Pow(Mathf.Sin(quadro*Mathf.PI/(totalQuadros==16?8f:4f)),2)) : 0;
+        int bob = andando && !folhaCaminhadaDirecional
+            ? -Mathf.RoundToInt(Mathf.Pow(Mathf.Sin(quadro * Mathf.PI / (totalQuadros == 16 ? 8f : 4f)), 2)) : 0;
         Vector2 lente = facingDirection == DirDown ? new Vector2(40,46+bob) :
             facingDirection == DirUp ? new Vector2(40,28+bob) : new Vector2(16,36+bob);
         Vector2 offset = new Vector2((lente.x-32)/32f,(56-lente.y)/32f);

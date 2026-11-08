@@ -135,6 +135,9 @@ public class Chuva : MonoBehaviour
     // --- som --------------------------------------------------------
 
     private AudioSource fonteA, fonteB;
+    private AudioLowPassFilter filtroA, filtroB;
+    private float volumeSuaveA, volumeSuaveB;
+    private float oclusaoPortaBar = -1f;
 
     // =================================================================
 
@@ -179,10 +182,13 @@ public class Chuva : MonoBehaviour
         LiberarCamada(chao);
     }
 
-    public void DefinirModoInterior(bool emInterior)
+    public void DefinirModoInterior(bool emInterior) => DefinirModoInterior(emInterior, -1f);
+
+    internal void DefinirModoInterior(bool emInterior, float oclusaoBar)
     {
         desenharChuva = !emInterior;
         abafado = emInterior;
+        oclusaoPortaBar = oclusaoBar;
 
         if (alta != null && alta.render != null)
         {
@@ -193,25 +199,36 @@ public class Chuva : MonoBehaviour
             chao.render.enabled = !emInterior;
         }
 
-        AtualizarFiltroInterior(fonteA, emInterior);
-        AtualizarFiltroInterior(fonteB, emInterior);
+        AtualizarFiltros();
     }
 
-    private void AtualizarFiltroInterior(AudioSource fonte, bool emInterior)
+    internal void DefinirOclusaoPortaBar(float fechamento)
     {
-        if (fonte == null) return;
-        AudioLowPassFilter filtro = fonte.GetComponent<AudioLowPassFilter>();
-        if (emInterior)
+        fechamento = Mathf.Clamp01(fechamento);
+        if (oclusaoPortaBar == fechamento) return;
+        oclusaoPortaBar = fechamento;
+        AtualizarFiltros();
+    }
+
+    private void AtualizarFiltros()
+    {
+        bool bar = oclusaoPortaBar >= 0f;
+        bool filtrar = bar ? oclusaoPortaBar > 0f : abafado;
+        float corte = bar ? 22000f * Mathf.Pow(corteAbafado / 22000f, oclusaoPortaBar) : corteAbafado;
+        AjustarFiltro(fonteA, ref filtroA, filtrar, corte);
+        AjustarFiltro(fonteB, ref filtroB, filtrar, corte);
+    }
+
+    private static void AjustarFiltro(AudioSource fonte, ref AudioLowPassFilter filtro, bool filtrar, float corte)
+    {
+        if (filtrar && filtro == null && fonte != null)
         {
-            if (filtro == null) filtro = fonte.gameObject.AddComponent<AudioLowPassFilter>();
-            filtro.cutoffFrequency = corteAbafado;
+            filtro = fonte.gameObject.AddComponent<AudioLowPassFilter>();
             filtro.lowpassResonanceQ = 1f;
-            filtro.enabled = true;
         }
-        else if (filtro != null)
-        {
-            filtro.enabled = false;
-        }
+        if (filtro == null) return;
+        if (filtrar) filtro.cutoffFrequency = corte;
+        filtro.enabled = filtrar;
     }
 
     private void LateUpdate()
@@ -777,6 +794,7 @@ public class Chuva : MonoBehaviour
 
         fonteA = CriarFonte("SomChuvaA", 1f);
         fonteB = CriarFonte("SomChuvaB", 0.97f);
+        AtualizarFiltros();
 
         // segunda fonte começa no meio do loop e um pouco mais grave: as duas nunca
         // se alinham, e o ouvido não pega o ponto em que o arquivo recomeça
@@ -799,13 +817,6 @@ public class Chuva : MonoBehaviour
         fonte.volume = 0f;
         fonte.outputAudioMixerGroup = null; // ganho de chuva próprio, sem passar por Outros efeitos
 
-        if (abafado)
-        {
-            AudioLowPassFilter filtro = go.AddComponent<AudioLowPassFilter>();
-            filtro.cutoffFrequency = corteAbafado;
-            filtro.lowpassResonanceQ = 1f;
-        }
-
         return fonte;
     }
 
@@ -817,7 +828,10 @@ public class Chuva : MonoBehaviour
         float ganho = AudioSettingsController.VolumeChuvaAmbiente;
         float suave = 1f - Mathf.Exp(-2f * Time.unscaledDeltaTime);
 
-        fonteA.volume = Mathf.Lerp(fonteA.volume, volume * 0.75f * k * ganho, suave);
-        fonteB.volume = Mathf.Lerp(fonteB.volume, volume * 0.45f * k * ganho, suave);
+        volumeSuaveA = Mathf.Lerp(volumeSuaveA, volume * 0.75f * k * ganho, suave);
+        volumeSuaveB = Mathf.Lerp(volumeSuaveB, volume * 0.45f * k * ganho, suave);
+        float transmissao = Mathf.Lerp(1f, .40f, oclusaoPortaBar);
+        fonteA.volume = volumeSuaveA * transmissao;
+        fonteB.volume = volumeSuaveB * transmissao;
     }
 }

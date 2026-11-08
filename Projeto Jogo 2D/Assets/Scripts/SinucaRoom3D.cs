@@ -30,7 +30,7 @@ public sealed partial class SinucaRoom3D : IDisposable
     private readonly Transform[] markedSigns=new Transform[16];
     private Transform[] lampParts;
     private readonly Transform ghost,cue;
-    private Renderer wallLeft,wallRight,wallBack,wallFront;
+    private Renderer wallLeft,wallRight,wallBack;
     private Renderer ceilingRenderer;
     private Renderer[] ceilingBeams;
     private float yaw=8,topYaw,zoom=1,cueHeading;
@@ -135,8 +135,9 @@ public sealed partial class SinucaRoom3D : IDisposable
     {
         // A separate depth buffer is the usual FPS view-model treatment: the tabletop
         // cannot slice the wrists, while cue and hands still occlude each other in 3D.
-        foreach(var model in new[]{cue,bridgeAnchor})
-            foreach(var part in model.GetComponentsInChildren<Transform>(true))part.gameObject.layer=FirstPersonLayer;
+        foreach(var model in new[]{cue,bridgeAnchor,maoMarcusPorta})
+            if (model != null)
+                foreach(var part in model.GetComponentsInChildren<Transform>(true))part.gameObject.layer=FirstPersonLayer;
         firstPersonCamera=new GameObject("CameraTacoEMaos").AddComponent<Camera>();
         firstPersonCamera.transform.SetParent(root.transform,false);
         var overlay=firstPersonCamera.gameObject.AddComponent<UniversalAdditionalCameraData>();
@@ -244,7 +245,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         lampParts=scenery.GetComponentsInChildren<Transform>(true).Where(t=>t.name=="Cupula"||t.name=="FioLampada"||t.name=="Lampada").ToArray();
         foreach(var t in root.GetComponentsInChildren<Transform>(true))t.gameObject.layer=Layer;
         BuildFirstPersonLayer();
-        wallLeft=scenery.Find("LambrilEsq").GetComponent<Renderer>();wallRight=scenery.Find("LambrilDir").GetComponent<Renderer>();wallBack=scenery.Find("LambrilFundo").GetComponent<Renderer>();wallFront=scenery.Find("LambrilFrente").GetComponent<Renderer>();
+        wallLeft=scenery.Find("LambrilEsq").GetComponent<Renderer>();wallRight=scenery.Find("LambrilDir").GetComponent<Renderer>();wallBack=scenery.Find("LambrilFundo").GetComponent<Renderer>();
         StaticRendererCount=scenery.GetComponentsInChildren<MeshRenderer>().Length;UpdateCamera();
     }
     private LineRenderer NewGuide(string name,float width,Material material,int count)
@@ -368,7 +369,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         foreach(var detail in overheadDetails)detail.enabled=insideCeiling;
         OrientPixelArt();
         UpdateOpponentView();
-        if(wallLeft!=null){var p=camera.transform.localPosition;wallLeft.enabled=p.x>-5.3f;wallRight.enabled=p.x<5.3f;wallBack.enabled=p.z<3.7f;wallFront.enabled=p.z>-7.3f;}
+        if(wallLeft!=null){var p=camera.transform.localPosition;wallLeft.enabled=p.x>-5.3f;wallRight.enabled=p.x<5.3f;wallBack.enabled=p.z<3.7f;}
     }
     public Vector2 Project(Vector3 sim){var p=root.transform.TransformPoint(new Vector3(sim.x*MetresPerUnit,TableY+sim.y*MetresPerUnit,sim.z*MetresPerUnit));return camera.WorldToViewportPoint(p);}
     public bool RayHitsWhite(Vector2 viewport,Vector2 ball)
@@ -459,8 +460,23 @@ public sealed partial class SinucaRoom3D : IDisposable
             objectGuide.SetPosition(0,from);objectGuide.SetPosition(1,tip);objectArrow.SetPosition(0,tip-objectDir*.05f+arrowSide*.025f);objectArrow.SetPosition(1,tip);objectArrow.SetPosition(2,tip-objectDir*.05f-arrowSide*.025f);
         }
         for(int j=0;j<6;j++){float t=Time.unscaledTime-impactTime[j];float bounce=t<2?Mathf.Sin(t*22)*Mathf.Exp(-t*3)*.09f:0;nets[j].localScale=new Vector3(1,1+bounce,1);}
-        foreach(var a in actors){if(a.definition.kind!=SantaRitaBarLayout.Kind.Actor){a.renderer.enabled=SalonPropVisible(a.definition.id);continue;}if(a==opponent)continue;if(UpdateSalonPatron(a))continue;var sprite=a.seated?SantaRitaBarLayout.PatronPose(a.definition.key,a.definition.id,Time.time)??a.rest:a.rest;a.filter.sharedMesh=NativeMesh(sprite);a.renderer.sharedMaterial=PixelMaterial(sprite);}
+        AtualizarAtoresDoSalao();
+    }
 
+    private void AtualizarAtoresDoSalao()
+    {
+        foreach (var a in actors)
+        {
+            if (a.definition.kind != SantaRitaBarLayout.Kind.Actor)
+            {
+                a.renderer.enabled = SalonPropVisible(a.definition.id);
+                continue;
+            }
+            if (a == opponent || UpdateSalonPatron(a)) continue;
+            var sprite = a.seated ? SantaRitaBarLayout.PatronPose(a.definition.key, a.definition.id, Time.time) ?? a.rest : a.rest;
+            a.filter.sharedMesh = NativeMesh(sprite);
+            a.renderer.sharedMaterial = PixelMaterial(sprite);
+        }
     }
     public void SetActive(bool value){if(root!=null)root.SetActive(value);}
     public void Dispose(){UnityEngine.Object.Destroy(root);foreach(var o in owned)if(o!=null)UnityEngine.Object.Destroy(o);}

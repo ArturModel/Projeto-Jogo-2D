@@ -414,3 +414,25 @@ Assets/Scripts/SinucaMinigameUI.Sustos.cs#CriarEstaloApagao,Audio/Effects,Origin
 Assets/Scripts/SinucaMinigameUI.Sustos.cs#CriarImpactoSusto,Audio/Effects,Original runtime synthesis,Santa Rita project,Project original,N/A,N/A,Transient at the first sight of haunted Zé.
 Assets/Scripts/MinigamePerceptionAudio.cs#CriarCoracao,Audio/Effects,Existing Bocha synthesis shared with Sinuca,Santa Rita project,Project original,N/A,N/A,Double heartbeat pulse. Each game controls its cadence and gain.
 Assets/Scripts/SinucaMinigameUI.Janela.cs#CriarBatidasJanela,Audio/Effects,Original runtime synthesis,Santa Rita project,Project original,N/A,N/A,Three spaced glass taps panned toward the active side window.
+Assets/Resources/Art/RuaNorte/Araucaria.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Arbusto.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Arvore.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Bracatinga.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Cadeira.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Caixotes.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Contentor.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Engradado.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Fachada.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Mesa.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Orelhao.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Picape.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Pitangueira.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Portao.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Poste.png,Environment sprite,"OpenAI ImageGen with pixel crop, mask and foot pivot",OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+Assets/Resources/Art/RuaNorte/Superficie.png,PBR packed data,Height and roughness authored from the Rua Norte atlas,Santa Rita,Project asset,64,Point,"Linear RG normals, B roughness, A cavity"
+Assets/Resources/Art/RuaNorte/Terreno.png,Tile sheet,ImageGen surface studies with authored modular 64 px transitions,OpenAI ImageGen / Santa Rita,"Project asset, generated source",64,Point,Editable source in Arte/Producao/RuaNorte
+
+
+Assets/Resources/Art/Characters/MarcusMaoMacaneta.png,Character hand sprite,Hand-drawn pixel cel adapted to Marcus cuff,Santa Rita,Project asset,119,Point,First-person hand pinned to the right-side door handle
+
+Assets/Resources/Art/RuaNorte/Relevo.png,PBR packed data,Procedurally derived from Terreno and Superficie,Santa Rita,Project asset,64,Point,"Linear R height, GB gradients, A cavity"

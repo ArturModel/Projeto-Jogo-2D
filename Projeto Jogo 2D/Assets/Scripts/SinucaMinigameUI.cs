@@ -253,6 +253,13 @@ public partial class SinucaMinigameUI : MonoBehaviour
     internal void IniciarDueloDoBar(Action aoVencer, Action aoPerder)
     {
         if (IsShowing || SceneFader.IsTransitioning) return;
+        if (BarDoZe3D.Aberto)
+        {
+            BarDoZe3D.GuardarLugarParaPartida();
+            onDefeatCallback = aoPerder;
+            ComecarNovaSerie(aoVencer, preservarLugar: true);
+            return;
+        }
         var camera = Camera.main;
         var mesa = GameObject.Find("Mesa_Sinuca_Trigger");
         if (camera == null || mesa == null)
@@ -278,7 +285,11 @@ public partial class SinucaMinigameUI : MonoBehaviour
         });
     }
 
-    public void PrepararSala(){var view=GetComponentInChildren<SinucaTableView>(true);if(view!=null)view.Preaquecer();}
+    public SinucaRoom3D PrepararSala()
+    {
+        tableView3D.Preaquecer();
+        return tableView3D.Room;
+    }
     public void IniciarPraticaOpcional()
     {
         if (raiz == null)
@@ -303,6 +314,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         if (Application.isPlaying) SantaRitaBarAudio.DefinirContexto(false, 0);
         foreach (var voz in vozesSinuca) if (voz != null) voz.Stop();
         if (raiz != null) raiz.SetActive(false);
+        BarDoZe3D.VoltarDaPartida();
     }
 
     public void CancelarCargaAoSuspender()
@@ -826,7 +838,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         painelModal.SetActive(false);
     }
 
-    private void ComecarNovaSerie(Action aoVencerSerie, bool mostrarEscolha = true)
+    private void ComecarNovaSerie(Action aoVencerSerie, bool mostrarEscolha = true, bool preservarLugar = false)
     {
         StopAllCoroutines();
         if(tableView3D!=null)tableView3D.Room?.CancelOpponentShot();
@@ -850,7 +862,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
         ultimaAlturaTela = Screen.height;
 
         ConfigurarMao(1);
-        DefinirVistaInicial();
+        DefinirVistaInicial(reposicionar: !preservarLugar);
         ajudaInicialPendente=true;
         if (mostrarEscolha) MostrarEscolhaDosGrupos();
         else
@@ -939,14 +951,14 @@ public partial class SinucaMinigameUI : MonoBehaviour
         AtualizarVisualTacoEMira();
     }
 
-    private void DefinirVistaInicial()
+    private void DefinirVistaInicial(bool reposicionar = true)
     {
         if(painelOpcoes!=null)painelOpcoes.SetActive(false);
         if(painelAlvo!=null)painelAlvo.SetActive(false);
         AtualizarVisualTacoEMira();
         levantarAposTacada=-1;interfaceLivre=false;
         tableView3D.DefinirCamera(SinucaCameraView.Caminhando3D);
-        tableView3D.Room.ResetWalking();
+        if (reposicionar) tableView3D.Room.ResetWalking();
         tableView3D.DefinirZoom(1f);
         tableView3D.ReiniciarReferenciaPonteiro();
         AtualizarBotaoVistaCamera();

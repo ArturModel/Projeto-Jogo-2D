@@ -13,6 +13,11 @@ public sealed class SantaRitaRimLight : MonoBehaviour
     void LateUpdate()
     {
         if(rim==null||body==null)return;
+        if (SantaRitaRuaNorte.Active)
+        {
+            rim.enabled = false;
+            return;
+        }
         if(block==null)block=new MaterialPropertyBlock();
         if(Time.unscaledTime>nextScan){nextScan=Time.unscaledTime+2;lights=FindObjectsByType<Light2D>();}
         Light2D best=null;float strength=0;

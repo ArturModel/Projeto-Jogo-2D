@@ -12,8 +12,11 @@ public sealed partial class SinucaRoom3D
         var side=Mat("paredeLateralNativa",Color.white,tiles[1]);side.mainTextureScale=new Vector2(9.85f,1);
         Box("LambrilEsq",new Vector3(-5.46f,1.5f,-1.8f),new Vector3(.08f,3f,11.4f),side);
         Box("LambrilDir",new Vector3(5.46f,1.5f,-1.8f),new Vector3(.08f,3f,11.4f),side);
-        Box("LambrilFrente",new Vector3(0,1.5f,-7.5f),new Vector3(11,3f,.08f),wall);
-        Box("PortaSaida",new Vector3(0,1.03f,-7.43f),new Vector3(1.05f,2.06f,.10f),DarkWood);
+        ConstruirParedeDaEntrada("LambrilFrente", 1.5f, 3f, 11f, -7.5f, .08f, wall);
+        var rebocoDaRua = Mat("rebocoDaFachada", new Color(.52f,.42f,.32f));
+        var barraDaRua = Mat("barraAzulDaFachada", new Color(.19f,.29f,.32f));
+        ConstruirParedeDaEntrada("FachadaReboco", 1.91f, 2.18f, 11f, -7.55f, .03f, rebocoDaRua);
+        ConstruirParedeDaEntrada("FachadaBarraAzul", .41f, .82f, 11f, -7.55f, .03f, barraDaRua);
         BuildRoomArchitecture();
         foreach(var p in SantaRitaBarLayout.Props)
         {
@@ -25,6 +28,7 @@ public sealed partial class SinucaRoom3D
             {
                 if(BuildSolidProp(p))return;
                 var a=Character(p);
+                if (p.id == "NPC_Frequentador_Interior") freguesDoBar = a.root;
                 if(p.kind==SantaRitaBarLayout.Kind.Actor||p.id=="CuiaMesa"||p.id=="TermicaMesa")actors.Add(a);
                 if(p.id=="TapeteSinuca")a.root.localRotation=Quaternion.Euler(90,0,0);
             });

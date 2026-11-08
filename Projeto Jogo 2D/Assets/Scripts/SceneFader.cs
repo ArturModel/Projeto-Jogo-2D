@@ -198,15 +198,7 @@ public class SceneFader : MonoBehaviour
         group.blocksRaycasts = true;
         fadeImage.raycastTarget = true;
 
-        if (!MenuPausa.ReduzirEfeitosIntensos && sinucaIris == null)
-        {
-            var shader = Resources.Load<Shader>("Art/Sinuca/EntradaSinuca");
-            if (shader != null && shader.isSupported)
-            {
-                sinucaIris = new Material(shader);
-            }
-        }
-        bool cinematica = !MenuPausa.ReduzirEfeitosIntensos && sinucaIris != null;
+        bool cinematica = PrepararIris();
         Vector2 centro = Vector2.one * .5f;
         if (!cinematica)
             yield return FadeTo(1f, .45f);
@@ -260,6 +252,88 @@ public class SceneFader : MonoBehaviour
         if (abriu) mostrarEscolha();
     }
 
+    internal void TransicionarParaBar(Vector2 foco, Action abrirSala)
+    {
+        if (!isTransitioning) StartCoroutine(EntradaBar(foco, abrirSala));
+    }
+
+    private IEnumerator EntradaBar(Vector2 foco, Action abrirSala)
+    {
+        isTransitioning = true;
+        group.blocksRaycasts = true;
+        fadeImage.raycastTarget = true;
+
+        bool usarMascara = PrepararIris();
+        if (usarMascara)
+        {
+            sinucaIris.SetFloat("_MascaraBar", 1f);
+            sinucaIris.SetTexture("_Grao", SantaRitaBarLayout.NativeSurface(false).texture);
+            fadeImage.material = sinucaIris;
+            fadeImage.color = Color.white;
+            group.alpha = 1f;
+            const float fechar = .76f;
+            for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
+            {
+                AjustarMascaraBar(foco, Mathf.SmoothStep(0f, 1f, t / fechar));
+                yield return null;
+            }
+            AjustarMascaraBar(foco, 1f);
+        }
+        else yield return FadeTo(1f, .50f);
+
+        // Renderiza um quadro totalmente coberto ainda na Rua Norte. Só então
+        // troca a câmera e o contexto de chuva, névoa e iluminação do exterior.
+        yield return null;
+        bool abriu = false;
+        try
+        {
+            abrirSala();
+            abriu = true;
+        }
+        catch (Exception ex)
+        {
+            BarDoZe3D.Fechar();
+            Debug.LogException(ex);
+        }
+
+        // A câmera 3D já está alinhada pela maçaneta e precisa preencher sua textura.
+        yield return null;
+        float duracao = abriu ? SinucaRoom3D.DuracaoEntradaBar : .86f;
+        for (float t = 0f; t < duracao; t += Time.unscaledDeltaTime)
+        {
+            float cobertura = 1f - Mathf.SmoothStep(0f, 1f, t / .86f);
+            if (usarMascara)
+            {
+                float alinhar = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.34f, .94f, t));
+                AjustarMascaraBar(Vector2.Lerp(foco, Vector2.one * .5f, alinhar), cobertura);
+            }
+            else group.alpha = cobertura;
+            if (abriu) BarDoZe3D.AnimarEntrada(t);
+            yield return null;
+        }
+        if (abriu) BarDoZe3D.AnimarEntrada(SinucaRoom3D.DuracaoEntradaBar);
+        group.alpha = 0f;
+        RestaurarImagemFade();
+        isTransitioning = false;
+    }
+
+    private bool PrepararIris()
+    {
+        if (MenuPausa.ReduzirEfeitosIntensos) return false;
+        if (sinucaIris == null)
+        {
+            var shader = Resources.Load<Shader>("Art/Sinuca/EntradaSinuca");
+            if (shader != null && shader.isSupported) sinucaIris = new Material(shader);
+        }
+        return sinucaIris != null;
+    }
+
+    private void AjustarMascaraBar(Vector2 foco, float cobertura)
+    {
+        sinucaIris.SetFloat("_TempoNevoa", Time.unscaledTime);
+        AjustarIrisSinuca(foco, cobertura);
+    }
+
     private void AjustarIrisSinuca(Vector2 foco, float progresso)
     {
         float aspecto = (float)Screen.width / Mathf.Max(1, Screen.height);
@@ -270,6 +344,7 @@ public class SceneFader : MonoBehaviour
 
     private void RestaurarImagemFade()
     {
+        if (sinucaIris != null) sinucaIris.SetFloat("_MascaraBar", 0f);
         fadeImage.material = null;
         fadeImage.color = Color.black;
         fadeImage.raycastTarget = false;

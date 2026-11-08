@@ -188,3 +188,6 @@ AudioSettingsController separa o ganho de referência do valor relativo persisti
 ## Sinuca, console e janelas — 07/11/2026
 
 SinucaPerceptionSchedule controla cinco eventos e StartForced permite comandos manuais com o mesmo fluxo de apresentação. SinucaMinigameUI.Console oferece campo e botões. Sustos controla apagão, redistribuição, piscada e medo. Janela controla batidas e inspeção opcional por E. MinigamePerceptionAudio compartilha a síntese de coração com bocha. SinucaRoom3D.Salon monta um quad de vidro por lateral, material compartilhado e linha do atlas por MaterialPropertyBlock. JanelaMolhada calcula paralaxe de fundo/primeiro plano, chuva e gotas na GPU, com preferência de redução de efeitos.
+
+
+08/11/2026 — SantaRitaRuaNorte preenche uma textura linear de coordenadas e espelhamento do atlas a partir das células do Tilemap. LuzVolumetrica usa esse mapa para mesclar vizinhos sem borrar os pixels. Luz da fachada e foco de Marcus modulam o visual somente na Rua Norte. [Plano](../../ai-plans/2026-11-08_BBCONTTI_continuidade-piso-rua-norte.md).

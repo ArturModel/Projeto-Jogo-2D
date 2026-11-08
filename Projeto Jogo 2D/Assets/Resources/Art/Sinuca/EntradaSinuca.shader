@@ -6,6 +6,8 @@ Shader "SantaRita/Sinuca/Entrada"
         _Grao ("Madeira do bar", 2D) = "gray" {}
         _Foco ("Foco, aspecto e alcance", Vector) = (.5, .5, 1.78, 1)
         _Progresso ("Progresso", Range(0, 1)) = 0
+        [HideInInspector] _MascaraBar ("Máscara do bar", Float) = 0
+        [HideInInspector] _TempoNevoa ("Tempo da névoa", Float) = 0
     }
 
     SubShader
@@ -25,6 +27,8 @@ Shader "SantaRita/Sinuca/Entrada"
 
             float4 _Foco;
             float _Progresso;
+            float _MascaraBar;
+            float _TempoNevoa;
             sampler2D _Grao;
 
             struct Varyings
@@ -41,6 +45,24 @@ Shader "SantaRita/Sinuca/Entrada"
                 output.uv = input.texcoord.xy;
                 output.opacity = input.color.a;
                 return output;
+            }
+
+            float HashNevoa(float2 p)
+            {
+                float3 q = frac(float3(p.xyx) * .1031);
+                q += dot(q, q.yzx + 33.33);
+                return frac((q.x + q.y) * q.z);
+            }
+
+            float Nevoa(float2 p)
+            {
+                float2 i = floor(p);
+                float2 f = frac(p);
+                float2 t = f * f * (3.0 - 2.0 * f);
+                return lerp(
+                    lerp(HashNevoa(i), HashNevoa(i + float2(1, 0)), t.x),
+                    lerp(HashNevoa(i + float2(0, 1)), HashNevoa(i + 1), t.x),
+                    t.y);
             }
 
             half4 Frag(Varyings input) : SV_Target
@@ -63,6 +85,22 @@ Shader "SantaRita/Sinuca/Entrada"
                 half3 dark = half3(.011, .012, .015) + grain * half3(.083, .066, .049);
                 half3 color = dark * (1 - soot * .63);
                 color += (half3(.115, .080, .045) * penumbra + half3(.26, .168, .079) * ember) * (.55 + grain);
+                if (_MascaraBar > .5)
+                {
+                    float2 uv = input.uv * float2(_Foco.z * 2.3, 5.0);
+                    float t = _TempoNevoa;
+                    float ampla = Nevoa(uv + float2(-.34, .05) * t);
+                    float fina = Nevoa(uv * 2.4 + float2(.43, -.11) * t);
+                    half nevoa = smoothstep(.30, .80, .74 * ampla + .26 * fina);
+                    // Ondulação leve na borda. Nas pontas da curva o quadro fica
+                    // totalmente visível ou totalmente coberto, mesmo com névoa.
+                    float borda = distanceFromEdge + (nevoa - .5) * .13;
+                    shade = smoothstep(-.24, .24, borda);
+                    half beirada = smoothstep(-.12, .06, borda) * (1 - smoothstep(.06, .27, borda));
+                    color = half3(.007, .010, .013) + grain * half3(.023, .019, .016);
+                    color += nevoa * half3(.023, .029, .035);
+                    color += beirada * half3(.054, .044, .036) * (.38 + nevoa);
+                }
                 return half4(color, shade * input.opacity);
             }
             ENDHLSL

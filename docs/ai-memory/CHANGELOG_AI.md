@@ -1,3 +1,19 @@
+## 08/11/2026 — Guia visual de Santa Rita
+
+08/11/2026 — O exterior do Bar do Zé é a referência de redesign de Santa Rita. [Guia visual](../../Docs/Guia_Visual_Santa_Rita.md) reúne escala, materiais, iluminação, efeitos, continuidade e QA. [Plano](../../Docs/ai-plans/2026-11-08_BBCONTTI_guia-visual-santa-rita.md).
+
+## 08/11/2026 — Continuidade do piso da Rua Norte
+
+08/11/2026 — Rua Norte: continuidade de grama, calçada e asfalto com mistura de cor e relevo nas juntas, e altura de trincas/poças limitada ao detalhe. Conferido em Play Mode. [Plano e evidências](../ai-plans/2026-11-08_BBCONTTI_continuidade-piso-rua-norte.md).
+
+## 08/11/2026 — Relevo adicional da Rua Norte
+
+08/11/2026 — A Rua Norte ganhou uma camada adicional de altura e oclusão local para as 52 peças do terreno, validada em Play Mode com os presets originais. [Plano e evidências](../ai-plans/2026-11-08_BBCONTTI_relevo-adicional-rua-norte.md).
+
+# 08/11/2026 — Nova direção da Rua Norte
+
+A Rua Norte de EntradaDaCidade recebeu Tilemap modular com 52 peças de 64 px, fachada de porta única, sprites em escala com Marcus, luz com sombras por volumes XYZ e duas camadas de névoa em torno do bar. Quatro espécies de árvores recebem vento na copa e mantêm colisão nos troncos. [Plano executado](../ai-plans/2026-11-08_BBCONTTI_rua-norte-bar-ze.md).
+
 # 07/11/2026 — Fala, legenda e mão na bocha
 
 Rodapé ligado à camada atual do HUD para concluir a atualização da partida e acionar a fala de Tonão. Avisos de espera retirados, legendas rebaixadas e mão de Marcus espelhada no Canvas. Fixture do Unity confirmou a reprodução do clipe compartilhado com a sinuca. [Plano executado](../ai-plans/2026-11-07_BBCONTTI_bocha-fala-legenda-mao.md).
@@ -474,3 +490,6 @@ Ganho de referência .10, cerca de 3,6 dB acima do perfil inicial. As duas fonte
 ## 07/11/2026 — eventos, console e janelas da sinuca
 
 Cinco eventos, console com comandos e botões, reações de Marcus e janela com paralaxe e gotas na GPU. Autor testou e autorizou commit e push de todas as alterações locais, incluindo bocha e chuva. Compilação sem erros, 4.323.887 verificações da agenda e 136 da física. Graphify indisponível e índice antigo. [Plano](../ai-plans/2026-11-07_BBCONTTI_sinuca-eventos-console-janelas.md).
+
+
+- 08/11/2026 · Bar do Zé em primeira pessoa pela porta da Rua Norte. Revisão da máscara escura com névoa. [Plano e QA](../ai-plans/2026-11-08_BBCONTTI_bar-ze-entrada-3d.md).

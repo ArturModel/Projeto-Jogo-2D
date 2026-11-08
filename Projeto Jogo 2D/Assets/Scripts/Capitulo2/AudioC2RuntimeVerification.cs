@@ -11,12 +11,11 @@ public sealed partial class Chapter2RuntimeVerification
  private IEnumerator RunMarcusQA()
  {
   yield return new WaitForSecondsRealtime(2);
-  foreach(string n in new[]{"MarcusWalkFluido","MarcusLanterna"})
-  {
-   var sheet=new Texture2D(2,2,TextureFormat.RGBA32,false);ImageConversion.LoadImage(sheet,System.IO.File.ReadAllBytes(System.IO.Path.Combine(Application.streamingAssetsPath,n+".png")));
-   var validation=typeof(PlayerController).GetMethod("ValidarFolhaMarcus",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic);
-   Check((bool)validation.Invoke(null,new object[]{sheet,16}),"Todas as 51 poses tem corpo e bordas transparentes: "+n);Destroy(sheet);
-  }
+  var sheet=new Texture2D(2,2,TextureFormat.RGBA32,false);
+  ImageConversion.LoadImage(sheet,System.IO.File.ReadAllBytes(System.IO.Path.Combine(Application.streamingAssetsPath,"MarcusWalkFluido.png")));
+  var validation=typeof(PlayerController).GetMethod("ValidarFolhaMarcus",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic);
+  Check((bool)validation.Invoke(null,new object[]{sheet,3,4,false}),"Os 12 quadros da folha de Marcus têm corpo e bordas transparentes.");
+  Destroy(sheet);
   GameState.Marcar(Flags.ZeDerrotadoNaSinuca);GameState.Marcar(Flags.LanternaDoCarroObtida);
   SceneFader.Instance.LoadScene("CentroSantaRita");yield return AwaitScene("CentroSantaRita");yield return CloseText();yield return new WaitForSecondsRealtime(1);
 #if !UNITY_EDITOR
@@ -39,9 +38,11 @@ public sealed partial class Chapter2RuntimeVerification
       if(i%4==0)yield return Capture("marcus-"+key+"-"+equipped+"-"+i);
      }
      keyboard.MakeCurrent();InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return new WaitForSecondsRealtime(.4f);
-     Check(poses.Count>=3,"Poses mudam naturalmente: "+key+" lanterna="+equipped);
-     Check(body.sprite.texture==(equipped&&key!=Key.W?Field<Sprite[,]>(player,"quadrosCaminhadaComLanterna"):Field<Sprite[,]>(player,"quadrosCaminhada"))[0,0].texture,"Folha equipada correta: "+key+" lanterna="+equipped);
-     Check(body.sprite.texture.width==1088&&body.sprite.rect.width==64,"Repouso usa celula correta: "+key+" lanterna="+equipped);
+     int row = key == Key.S ? 0 : key == Key.W ? 1 : key == Key.A ? 2 : 3;
+     var atlas = Field<Sprite[,]>(player,"quadrosCaminhada");
+     Check(poses.Count==3 && poses.All(p=>p.texture==atlas[0,0].texture && p.rect.y==(3-row)*64),"Três poses da linha correta: "+key+" lanterna="+equipped);
+     Check(body.sprite==atlas[row,1] && body.sprite.texture.width==192 && body.sprite.rect.width==64,"Repouso mantém a pose central: "+key+" lanterna="+equipped);
+     Check(player.LanternaVisivel==equipped,"Feixe independente da folha: "+key+" lanterna="+equipped);
      yield return Capture("repouso-"+key+"-"+equipped);
     }
    }

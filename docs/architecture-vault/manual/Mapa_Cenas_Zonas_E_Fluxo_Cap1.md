@@ -47,3 +47,8 @@ Atlas (02/11/2026): cenas/zonas aprovadas não foram reconstruídas. O levantame
 
 
 04/11/2026 — Anexos de fitas, sem mudança na topologia: SantaRitaTapePlacement usa RetratoFamiliaCasaAvo na cena C1, foto_igreja na Igreja e cordas na Sociedade; Mila entrega a fita da oficina ao concluir o reparo. São anexos runtime em pontos existentes, não novas salas/cenas. Escola e fita futura de Amaro permanecem adiadas. [Plano](../../ai-plans/2026-11-04_PatrickDotto_mila-inventario-caderno.md).
+
+08/11/2026 — O exterior da Rua Norte é montado por SantaRitaRuaNorte no fluxo normal de EntradaDaCidade. O Tilemap, a luz e a névoa têm recursos próprios. A porta, o orelhão e as rotas pertencem ao Capitulo1Director. [Plano](../../ai-plans/2026-11-08_BBCONTTI_rua-norte-bar-ze.md).
+
+
+A entrada atual do Bar do Zé é a porta da Rua Norte em `EntradaDaCidade`. A zona muda durante a cobertura da máscara, e `BarDoZe3D` reutiliza `SinucaRoom3D` para exploração e duelo. A porta de saída devolve Marcus à calçada. A cena legada `BarDoZe` continua disponível para cargas antigas e abre a mesma exploração em 3D.
