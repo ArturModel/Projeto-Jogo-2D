@@ -57,6 +57,13 @@ public sealed class BochaMinigameUI : MonoBehaviour
             "A prática não grava progresso.",
             ("PRATICAR", () => Comecar(true)), ("DUELAR ATÉ 6 PONTOS", () => Comecar(false)), ("VOLTAR AO SALÃO", Fechar));
     }
+
+    public void IniciarPraticaOpcional()
+    {
+        Abrir(null);
+        Comecar(true);
+    }
+
     private void Construir()
     {
         Canvas canvas = UIFactory.CreateCanvas(transform,"BochaCanvas",8850);
