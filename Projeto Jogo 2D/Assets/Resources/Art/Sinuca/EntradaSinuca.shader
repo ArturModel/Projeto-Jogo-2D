@@ -7,6 +7,7 @@ Shader "SantaRita/Sinuca/Entrada"
         _Foco ("Foco, aspecto e alcance", Vector) = (.5, .5, 1.78, 1)
         _Progresso ("Progresso", Range(0, 1)) = 0
         [HideInInspector] _MascaraBar ("Máscara do bar", Float) = 0
+        [HideInInspector] _MascaraPosto ("Névoa do posto", Float) = 0
         [HideInInspector] _TempoNevoa ("Tempo da névoa", Float) = 0
     }
 
@@ -28,6 +29,7 @@ Shader "SantaRita/Sinuca/Entrada"
             float4 _Foco;
             float _Progresso;
             float _MascaraBar;
+            float _MascaraPosto;
             float _TempoNevoa;
             sampler2D _Grao;
 
@@ -85,7 +87,23 @@ Shader "SantaRita/Sinuca/Entrada"
                 half3 dark = half3(.011, .012, .015) + grain * half3(.083, .066, .049);
                 half3 color = dark * (1 - soot * .63);
                 color += (half3(.115, .080, .045) * penumbra + half3(.26, .168, .079) * ember) * (.55 + grain);
-                if (_MascaraBar > .5)
+                if (_MascaraPosto > .5)
+                {
+                    float2 p = input.uv * float2(_Foco.z, 1);
+                    float tempo = _TempoNevoa;
+                    float ampla = Nevoa(p * 4.3 + float2(-.31, .11) * tempo);
+                    float fina = Nevoa(p * 10.7 + float2(.37, -.19) * tempo);
+                    float veios = Nevoa((p + ampla * .13) * float2(7, 15) + float2(-.18, .16) * tempo);
+                    float fluxo = .54 * ampla + .29 * fina + .17 * veios;
+                    float frente = lerp(_Foco.w + .37, -.39, _Progresso);
+                    float borda = distanceFromLamp - frente + (fluxo - .5) * .27;
+                    shade = smoothstep(-.25, .21, borda);
+                    float penumbraFria = exp(-24 * borda * borda) * shade;
+                    color = lerp(half3(.008,.012,.016), half3(.038,.051,.062), fluxo);
+                    color += half3(.055,.069,.080) * penumbraFria * (.30 + .64 * fina);
+                    // A cobertura total preserva o movimento da névoa entre as duas câmeras.
+                }
+                else if (_MascaraBar > .5)
                 {
                     float2 uv = input.uv * float2(_Foco.z * 2.3, 5.0);
                     float t = _TempoNevoa;

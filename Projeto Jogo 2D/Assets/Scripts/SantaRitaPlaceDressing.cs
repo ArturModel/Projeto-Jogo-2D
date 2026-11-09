@@ -4,27 +4,9 @@ public static class SantaRitaPlaceDressing
 {
     public static void ApplyC1()
     {
-        var posto   = GameObject.Find("Interior1_Posto");
-        var mercado = GameObject.Find("Interior2_Mercadinho");
-        var casa    = GameObject.Find("Interior3_CasaDoAvo");
         var bar     = GameObject.Find("Interior4_BarDoZe");
 
-        Replace("Geladeira_Bebidas_Posto","Geladeira",2.4f);
-        Replace("Prateleira_Salgadinhos_Posto","Prateleira",2.4f);
-        Replace("Prateleira_Viagem_Posto","Prateleira",2.4f);
-        Replace("Caixa_Conveni\u00eancia_Posto","Caixa",3.8f);
-        Add(posto,"CafeParaViagem","Cafe",203.4f,-55.9f,2.5f);
-        Add(posto,"ChimarraoPlantao","Chimarrao",212.6f,-57.1f,1.7f);
 
-        Replace("Secos_Mercado_Noroeste","Prateleira",3.2f);
-        Replace("Secos_Mercado_Nordeste","Prateleira",3.2f);
-        Replace("Bebidas_Mercado","Geladeira",2.6f);
-        Replace("Caixa_Mercadinho","Caixa",3.8f);
-        Add(mercado,"EstoqueDaFrente","Prateleira",303.3f,-57f,2.2f);
-
-        Add(casa,"FogaoDaCozinha","Fogao",401.9f,-52.1f,1.5f);
-        Add(casa,"SofaDaSala","Sofa",413.9f,-56.4f,2.8f);
-        Replace("TV_Sala_Avo","Televisor",1.5f);
 
         if(bar==null||bar.transform.Find("BarCoerente")==null){
         Replace("Balcao_Bar_Sprite","BalcaoBar",4.1f);
@@ -34,7 +16,7 @@ public static class SantaRitaPlaceDressing
         Add(bar,"TelevisaoFutebol","Televisor",507.5f,-48.2f,1.5f);
         }
 
-        foreach (var n in new[]{"NPC_Frentista_Interior","NPC_Atendente_Interior","NPC_Ze_Interior","NPC_Frequentador_Interior"})
+        foreach (var n in new[]{"NPC_Ze_Interior","NPC_Frequentador_Interior"})
         {
             var g = GameObject.Find(n);
             if (g != null && g.GetComponent<SantaRitaBarPose>()==null && g.GetComponent<SantaRitaBarHost>()==null)
@@ -48,8 +30,6 @@ public static class SantaRitaPlaceDressing
         Replace("Mesa_Calcada_Bar","MesaPlasticaBar",1.35f);
         Replace("Cadeira_Calcada_1","CadeiraPlasticaBar",.65f);
         Replace("Cadeira_Calcada_2","CadeiraPlasticaBar",.65f);
-        Replace("Banqueta_Caida_Avo","CadeiraPlasticaBar",.65f);
-        Replace("TV_Posto","Televisor",1.2f);
         ApplyExteriorC1();
 
         var litMat = Resources.Load<Material>("Art/WorldLit");
@@ -295,7 +275,7 @@ public static class SantaRitaPlaceDressing
         }
 
         var z4 = GameObject.Find("Zona4_Bairro");
-        if (z4 != null)
+        if (z4 != null && z4.GetComponent<SantaRitaRuaNorte>() == null)
         {
             Add(z4,"Araucaria_Fundo_Avo_1","Araucaria",421.0f,29.0f,4.4f,true);
             Add(z4,"Araucaria_Fundo_Avo_2","Araucaria",434.0f,29.2f,4.2f,true);

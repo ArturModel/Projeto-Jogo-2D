@@ -66,7 +66,8 @@ public class InteracaoCapitulo1 : Interactable
         LimiarCentro,
         PortaEntradaBarDoZe,
         NpcFrequentadorBar,
-        CentroBloqueioObra
+        CentroBloqueioObra,
+        NpcMotoristaPosto
     }
 
     // Pistas novas do capítulo 1 (as antigas continuam em Flags, no GameState).
@@ -126,6 +127,8 @@ public class InteracaoCapitulo1 : Interactable
                     return "Ler a tabuleta da porta";
                 case TipoInteracao.NpcFrentista:
                     return "Falar com o frentista";
+                case TipoInteracao.NpcMotoristaPosto:
+                    return "Falar com o motorista";
                 case TipoInteracao.LivroRegistroPosto:
                     return "Ler o caderno do balcão";
                 case TipoInteracao.TvPortatilPosto:
@@ -199,6 +202,7 @@ public class InteracaoCapitulo1 : Interactable
             case TipoInteracao.CarroEstacionadoPosto: InteragirCarroPosto(); break;
             case TipoInteracao.VendaAntigaFechada: InteragirVendaAntiga(); break;
             case TipoInteracao.NpcFrentista: InteragirFrentista(); break;
+            case TipoInteracao.NpcMotoristaPosto: InteragirMotoristaPosto(); break;
             case TipoInteracao.LivroRegistroPosto: InteragirLivroPosto(); break;
             case TipoInteracao.TvPortatilPosto: InteragirTvPosto(); break;
             case TipoInteracao.PicapeEncruzilhada: InteragirPicapeEncruzilhada(); break;
@@ -243,7 +247,8 @@ public class InteracaoCapitulo1 : Interactable
 
     private static void Falar(Action aoFechar, params DialogoLinha[] linhas)
     {
-        GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>(linhas), aoFechar);
+        if (!SantaRitaFalasEntrada.TentarDizerNaZona(aoFechar, linhas))
+            GameMessageUI.Instance.ShowDialogue(new List<DialogoLinha>(linhas), aoFechar);
     }
 
     private static bool JaNoDiario(string id)
@@ -328,7 +333,7 @@ public class InteracaoCapitulo1 : Interactable
     {
         GameMessageUI.Instance.ShowInspection("BOMBA DE DIESEL", null,
             "O mostrador mecânico parou em 45,0 litros. O bico ainda pinga.",
-            pensamento: "Alguém encheu um tanque grande hoje. Caminhão, talvez.");
+            aoFechar: () => Falar(Marcus("Alguém encheu um tanque grande hoje. Caminhão, talvez.")));
     }
 
     private void InteragirCarroPosto()
@@ -396,6 +401,16 @@ public class InteracaoCapitulo1 : Interactable
         Falar(new DialogoLinha("FRENTISTA", "Sete e pouco, um litro de querosene. Foi a última vez que eu vi o teu avô.", "frentista"));
     }
 
+    private static void InteragirMotoristaPosto()
+    {
+        Falar(
+            Marcus("Tá esperando a chuva passar?"),
+            new DialogoLinha("MOTORISTA", "Tô desde que a água subiu na baixada. O rádio diz pra esperar.", "motorista"),
+            Marcus("Tô procurando o seu Adílio. Viu ele por aqui?"),
+            new DialogoLinha("MOTORISTA", "Eu cheguei de noite, guri. Pergunta pro rapaz do caixa, que ele tava no turno de manhã.", "motorista")
+        );
+    }
+
     private void InteragirLivroPosto()
     {
         GameState.Marcar(Pista_QuerosenePosto);
@@ -409,7 +424,7 @@ public class InteracaoCapitulo1 : Interactable
 
         GameMessageUI.Instance.ShowInspection("CADERNO DE PLANTÃO", "Bilhete",
             "TERÇA, 19/10/2004\n\n06:55  Leite e pão — D. Cida (fiado)\n07:40  Querosene 1 L — Seu Adílio, nº 40 (pago)\n12:10  Gasolina 20 L — picape da obra\n17:30  Diesel 45 L — caminhão de entrega\n19:05  Bomba 2 desligada (chuva)",
-            pensamento: "Querosene pro lampião. O vô se preparou pra passar a noite em casa.",
+            aoFechar: () => Falar(Marcus("Querosene pro lampião. O vô se preparou pra passar a noite em casa.")),
             etiqueta: Etiqueta(nova));
     }
 
@@ -417,7 +432,7 @@ public class InteracaoCapitulo1 : Interactable
     {
         GameMessageUI.Instance.ShowInspection("TV DO BALCÃO", "TV_Old",
             "Jornal regional, imagem chiando a cada trovão:\n\n\"...temporal na serra derrubou linhas telefônicas. Interurbano instável até amanhã...\"",
-            pensamento: "Por isso o celular não pega aqui.");
+            aoFechar: () => Falar(Marcus("Por isso o celular não pega aqui.")));
     }
 
     // =========================================================================
@@ -428,7 +443,7 @@ public class InteracaoCapitulo1 : Interactable
     {
         GameMessageUI.Instance.ShowInspection("PICAPE DE ENTREGA", null,
             "Picape do mercadinho, engradados vazios amarrados na caçamba.\n\nNo painel, um bloco de anotações:\n\"Qui — Bar do Zé (R. Norte), 6 engr.\"",
-            pensamento: "O mercadinho entrega até no bar lá de cima.");
+            aoFechar: () => Falar(Pensa("O mercadinho entrega até no bar lá de cima.")));
     }
 
     private void InteragirQuadroEncruzilhada()
@@ -549,7 +564,7 @@ public class InteracaoCapitulo1 : Interactable
     {
         GameMessageUI.Instance.ShowInspection("CADERNO DE VENDAS", "Bilhete",
             "OUTUBRO\n\nQui 14 — Bar do Zé (R. Norte): 6 engradados. Entregue às 16h.\nSeg 18 — Pão, leite, fumo.\nTer 19 — Adílio (nº 40): café, velas, fósforo. Pago. 18h10.",
-            pensamento: "Seis e dez. A última compra do dia.");
+            aoFechar: () => Falar(Pensa("Seis e dez. A última compra do dia.")));
     }
 
     private void InteragirPrateleirasMercadinho()
@@ -588,6 +603,16 @@ public class InteracaoCapitulo1 : Interactable
         );
     }
 
+    private static void InspecionarNoBairro(string titulo, string arte, string descricao,
+        Action aoFechar = null, string pensamento = null, string etiqueta = null)
+    {
+        GameMessageUI.Instance.ShowInspection(titulo, arte, descricao, () =>
+        {
+            aoFechar?.Invoke();
+            if (!string.IsNullOrEmpty(pensamento)) Falar(Pensa(pensamento));
+        }, etiqueta: etiqueta);
+    }
+
     private void InteragirMarcasBarro()
     {
         GameState.Marcar(Pista_PneusBairro);
@@ -598,7 +623,7 @@ public class InteracaoCapitulo1 : Interactable
             "Na esquina do nº 22, marcas fundas de pneu largo, ainda com água parada dentro. Um carro pesado subiu a rua do vô hoje à noite."
         );
 
-        GameMessageUI.Instance.ShowInspection("MARCAS NO BARRO", null,
+        InspecionarNoBairro("MARCAS NO BARRO", null,
             "Marcas de pneu largo, fundas, ainda com água parada dentro. A chuva não teve tempo de apagar.\n\nO rastro sobe a rua, na direção da casa do vô.",
             pensamento: "Carro pesado. E passou aqui hoje à noite.",
             etiqueta: Etiqueta(nova));
@@ -650,7 +675,7 @@ public class InteracaoCapitulo1 : Interactable
             "A xícara está pela metade e o bule ainda guarda calor. O vô nunca deixa café na xícara."
         );
 
-        GameMessageUI.Instance.ShowInspection("BULE E XÍCARA", "Interior_PiaAvo",
+        InspecionarNoBairro("BULE E XÍCARA", "Interior_PiaAvo",
             "Xícara pela metade, ainda morna por fora. O bule também guarda um resto de calor.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "O vô nunca deixa café pela metade. Ele estava aqui há pouco tempo.",
@@ -667,7 +692,7 @@ public class InteracaoCapitulo1 : Interactable
             "A paciência ficou no meio, com um ás fora do monte. O vô sempre termina o jogo antes de levantar."
         );
 
-        GameMessageUI.Instance.ShowInspection("PACIÊNCIA NA MESA", "Interior_MesaCartas",
+        InspecionarNoBairro("PACIÊNCIA NA MESA", "Interior_MesaCartas",
             "Partida de paciência no meio. Um ás largado fora do monte, virado pra cima.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Ele sempre termina a paciência antes de levantar. Alguma coisa fez ele largar o jogo.",
@@ -685,7 +710,7 @@ public class InteracaoCapitulo1 : Interactable
         );
         AtualizarLinhaDoTempo();
 
-        GameMessageUI.Instance.ShowInspection("CUPOM AMASSADO", "Bilhete",
+        InspecionarNoBairro("CUPOM AMASSADO", "Bilhete",
             "MERCADINHO SANTA RITA\n19/10/2004 — 18:10\nCafé torrado 500 g\nVelas (maço)\nFósforo\nTOTAL R$ 7,40\n\nNo verso, a lápis:\n\"Seu Adílio, aquele homem de capa voltou a perguntar onde o senhor mora. Não falei nada. Cuidado.\"",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Letra de mulher. Alguém no mercadinho tentou avisar o vô.",
@@ -708,7 +733,7 @@ public class InteracaoCapitulo1 : Interactable
             "Perto da porta: banco tombado e barro de dois pares de bota de sola grossa, maiores que o chinelo do vô. Entram e saem. O casaco de chuva dele continua no prego."
         );
 
-        GameMessageUI.Instance.ShowInspection("PERTO DA PORTA", null,
+        InspecionarNoBairro("PERTO DA PORTA", null,
             "O banco está tombado. No piso, barro molhado: dois pares de pegadas de bota, sola grossa, maiores que o chinelo do vô. Vão da porta até aqui e voltam.\n\nO casaco de chuva dele continua no prego.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Ninguém sai nesse temporal sem casaco. A não ser que não tenha tido tempo de pegar.",
@@ -717,7 +742,7 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirRetratoFamilia()
     {
-        GameMessageUI.Instance.ShowInspection("PORTA-RETRATO", "FramedPhoto",
+        InspecionarNoBairro("PORTA-RETRATO", "FramedPhoto",
             "Natal de 1997. O vô, a mãe e eu na varanda desta casa.\n\nAtrás, a letra dele: \"Que o guri volte.\"",
             pensamento: "Fui embora no ano seguinte. Não voltei.");
     }
@@ -733,7 +758,7 @@ public class InteracaoCapitulo1 : Interactable
         );
         AtualizarLinhaDoTempo();
 
-        GameMessageUI.Instance.ShowInspection("TELEFONE DA SALA", "TelefoneForaDoGancho",
+        InspecionarNoBairro("TELEFONE DA SALA", "TelefoneForaDoGancho",
             "O fone está pendurado pelo fio, quase no chão. O tom de ocupado sai baixinho do aparelho.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Começou a dar ocupado lá pelas oito e meia, quando eu ainda estava na estrada. Foi a essa hora que o fone caiu.",

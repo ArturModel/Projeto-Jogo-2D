@@ -265,6 +265,7 @@ public class CameraFollow : MonoBehaviour
             Mathf.Round(posicaoSuave.y / pixel) * pixel,
             -10f
         );
+
     }
 
     private void AtualizarZoomDeFala()

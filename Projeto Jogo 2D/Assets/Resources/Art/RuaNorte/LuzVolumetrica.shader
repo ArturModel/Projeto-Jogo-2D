@@ -13,6 +13,15 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
         _GroundReliefStrength("Intensidade do relevo adicional", Range(0, 1)) = 0
         _ContactStrength("Sombras de contato", Float) = 1
         _DoorReflection("Reflexo sob a porta", Float) = 1
+        _WetRoad("Reflexo nas poças", Float) = 0
+        _Bairro("Ruas de terra do bairro", Float) = 0
+        _Crosswalk("Faixa de pedestres", Float) = 0
+        _Entrance("Rodovia de entrada", Float) = 0
+        [NoScaleOffset] _EntranceWater("Poças da rodovia", 2D) = "black" {}
+        _Lightning("Clarão", Float) = 0
+        _Startle("Reação do Marcus", Float) = 0
+        [HideInInspector] _MirrorBounds("Limites do reflexo", Vector) = (0,0,0,0)
+        [NoScaleOffset] _MarcusFrame("Quadro refletido", 2D) = "black" {}
     }
     SubShader
     {
@@ -47,12 +56,28 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
             float _GroundReliefStrength;
             float _ContactStrength;
             float _DoorReflection;
+            float _Entrance;
+            float _Crosswalk;
+            float _Bairro;
+            float _WetRoad;
+            TEXTURE2D(_EntranceWater);
+            SAMPLER(sampler_EntranceWater);
+            float4 _EntranceWaterRect;
+            float _Lightning;
+            float _Startle;
+            TEXTURE2D(_MarcusFrame);
+            SAMPLER(sampler_MarcusFrame);
+            float4 _MirrorUV;
+            float4 _MirrorBounds;
+            float _MirrorFeet;
             float4 _Receiver;
             float4 _Wind;
             float _WindStrength;
             float4 _Origin;
             float4 _ViewFocus;
             float4 _Lamps[3];
+            float4 _FourthLamp;
+            float4 _FifthLamp;
             float4 _PlayerLamp;
             float2 _PlayerLampDirection;
             float4 _LampColors[3];
@@ -96,7 +121,7 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                                + sin(_Time.y * 2.11 + _Wind.z * .63) * .28;
                     world.x += _WindStrength * _Wind.x * crown * gust * sway;
                 }
-                output.positionCS = TransformWorldToHClip(world);
+                output.positionCS = TransformWorldToHClip(world + float3(0, _Startle, 0));
                 output.frame = output.positionCS.xy / output.positionCS.w;
                 output.uv = input.uv;
                 output.world = world.xy;
@@ -129,6 +154,13 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     {
                         float3 size = upper.xyz - lower.xyz;
                         float2 center = (lower.xy + upper.xy) * .5;
+                        if (lower.w > 3.5)
+                        {
+                            float occlusion = SombraElipsoide(surfacePosition, ray,
+                                float3(center, size.z * .40), size * float3(.50, .53, .53));
+                            visibility = min(visibility, 1 - .66 * occlusion);
+                            continue;
+                        }
                         center.y -= .22;
                         float body = SombraElipsoide(surfacePosition, ray,
                             float3(center, size.z * .31), size * float3(.50, .54, .31));
@@ -155,6 +187,7 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 float4 albedo;
                 float4 surface;
                 float4 relief;
+                float asphalt;
             };
 
             float2 RoadUnderPaint(float2 uv)
@@ -175,6 +208,11 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 result.albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv);
                 result.surface = SAMPLE_TEXTURE2D(_GroundSurface, sampler_GroundSurface, uv);
                 result.relief = SAMPLE_TEXTURE2D(_GroundRelief, sampler_GroundRelief, uv);
+                float atlasY = uv.y * _MainTex_TexelSize.w / GroundPixelsPerUnit;
+                float row = floor(atlasY);
+                // O tile de meio-fio tem calçada na metade superior do atlas e asfalto na inferior.
+                result.asphalt = row == 7 ? 1 - smoothstep(.47, .53, frac(atlasY)) :
+                    (row == 11 || (row >= 3 && row <= 5) ? 1 : 0);
                 result.surface.rg = (result.surface.rg * 2 - 1) * axis;
                 result.relief.gb = (result.relief.gb * 255 - 128) / 127 * axis;
                 return result;
@@ -185,7 +223,69 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 a.albedo = lerp(a.albedo, b.albedo, weight);
                 a.surface = lerp(a.surface, b.surface, weight);
                 a.relief = lerp(a.relief, b.relief, weight);
+                a.asphalt = lerp(a.asphalt, b.asphalt, weight);
                 return a;
+            }
+
+            GroundSample AmostraTrilha(float2 p, float side)
+            {
+                float variant = fmod(floor(p.x) + floor(p.y) * 3, 4);
+                float dirtRow = _MainTex_TexelSize.w / GroundPixelsPerUnit - 4;
+                float2 pixel = (float2(variant, dirtRow) + frac(p)) * GroundPixelsPerUnit;
+                GroundSample track = SampleGround((floor(pixel) + .5) * _MainTex_TexelSize.xy, float2(1, 1));
+                float ruts = 1 - smoothstep(.12, .38, abs(abs(side) - .83));
+                float grain = frac(sin(dot(floor(p * 32), float2(39.45, 17.23))) * 46293.1);
+                float gravel = smoothstep(.965, .997, grain) * (1 - ruts);
+                track.albedo.rgb *= lerp(1.13, .73, ruts) * lerp(.88, 1.12, grain);
+                track.albedo.rgb += gravel * float3(.13, .10, .067);
+                track.relief.r *= 1 - ruts * .32;
+                track.surface.b = lerp(track.surface.b, .56, ruts);
+                return track;
+            }
+
+            GroundSample TrilhaDaEncruzilhada(float2 p, GroundSample grass, out float dirt)
+            {
+                float distanceUp = p.y - 14;
+                float center = 20.5 + .48 * sin(distanceUp * .48) - .075 * distanceUp;
+                float side = p.x - center;
+                float width = lerp(2.55, 1.70, smoothstep(0, 3.8, distanceUp));
+                float edge = .14 * sin(p.y * 6.3 + side * 7.2) + .08 * sin(p.y * 15.7 - side * 9.6);
+                dirt = 1 - smoothstep(width - .43, width + .22, abs(side) + edge);
+                return BlendGround(grass, AmostraTrilha(p, side), dirt);
+            }
+
+            void CaminhoDeBarro(float2 p, float2 start, float2 end, float width, inout float dirt, inout float side)
+            {
+                float2 axis = normalize(end - start);
+                float2 relative = p - start;
+                float lengthAlong = dot(relative, axis);
+                float lengthTotal = length(end - start);
+                float bend = sin(lengthAlong * .57) * .21 + sin(lengthAlong * 1.26) * .10;
+                float across = dot(relative, float2(-axis.y, axis.x)) + bend;
+                float beyond = max(max(-lengthAlong, lengthAlong - lengthTotal), 0);
+                float rough = .11 * sin(p.x * 12.6 + p.y * 6.9) + .09 * sin(p.x * 4.9 - p.y * 7.1);
+                float distance = length(float2(across, beyond)) + rough;
+                float amount = 1 - smoothstep(width - .31, width + .30, distance);
+                if (amount > dirt || (amount > .95 && abs(across) < abs(side)))
+                {
+                    dirt = max(dirt, amount);
+                    side = across;
+                }
+            }
+
+            GroundSample TrilhaDoBairro(float2 p, GroundSample ground, out float dirt)
+            {
+                dirt = 0;
+                float side = 10;
+                CaminhoDeBarro(p, float2(20, -1), float2(20.1, 9.5), 1.7, dirt, side);
+                CaminhoDeBarro(p, float2(6.4, 9.35), float2(36.0, 9.7), 1.40, dirt, side);
+                CaminhoDeBarro(p, float2(19.3, 9.5), float2(18.45, 21.4), 1.85, dirt, side);
+                CaminhoDeBarro(p, float2(6.25, 21.45), float2(35.45, 21.55), 1.45, dirt, side);
+                CaminhoDeBarro(p, float2(35.05, 21.55), float2(35.55, 35), 2.12, dirt, side);
+                CaminhoDeBarro(p, float2(15.0, 9.55), float2(15.0, 12.35), .87, dirt, side);
+                CaminhoDeBarro(p, float2(25.85, 12.1), float2(24.5, 9.65), .98, dirt, side);
+                if (dirt > 0) return BlendGround(ground, AmostraTrilha(p, side), dirt);
+                return ground;
             }
 
             GroundSample NeighborGround(float2 cell, float2 local, float2 offset)
@@ -213,6 +313,7 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 // Varie a largura ao longo de cada junta, em coordenadas do mundo.
                 // As duas células usam a mesma faixa, inclusive em cantos com quatro tiles.
                 float2 span = .27 + .075 * sin(position.yx * 5.4 + round(position) * 2.3);
+                if (_Entrance > .5) span *= .40;
                 float2 blend = .5 * (1 - smoothstep(0, span, edgeDistance)) * valid;
                 seam = max(blend.x, blend.y);
                 GroundSample a = SampleGround(uv, axis);
@@ -236,13 +337,42 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     safePixel * _GroundRelief_TexelSize.xy, 0).r;
             }
 
-            float HeightExposure(float2 pixel, float2 tileMin, float groundHeight, float3 light)
+            float EntranceHeight(float2 position, float2 fallbackPixel, float2 fallbackTile, float2 cell)
+            {
+                float2 nextCell = floor(position);
+                if (all(nextCell == cell) || any(nextCell < 0) || any(nextCell >= _GroundCells_TexelSize.zw))
+                    return SampleHeight(fallbackPixel, fallbackTile);
+
+                float4 tile = SAMPLE_TEXTURE2D_LOD(_GroundCells, sampler_GroundCells,
+                    (nextCell + .5) * _GroundCells_TexelSize.xy, 0);
+                float2 local = lerp(frac(position), 1 - frac(position), step(.5, tile.ba));
+                float2 pixel = round(tile.rg * 255) * GroundPixelsPerUnit +
+                    min(floor(local * GroundPixelsPerUnit), GroundPixelsPerUnit - 1) + .5;
+                return SAMPLE_TEXTURE2D_LOD(_GroundRelief, sampler_GroundRelief,
+                    RoadUnderPaint(pixel * _GroundRelief_TexelSize.xy), 0).r;
+            }
+
+            float HeightExposure(float2 pixel, float2 tileMin, float2 position, float groundHeight,
+                float3 light, float2 worldDirection)
             {
                 float horizontal = max(length(light.xy), .01);
                 float2 direction = light.xy / horizontal;
                 float rise = light.z / (horizontal * GroundPixelsPerUnit * GroundHeightScale);
-                float nearBank = SampleHeight(pixel + direction * 2, tileMin) - 2 * rise;
-                float farBank = SampleHeight(pixel + direction * 5, tileMin) - 5 * rise;
+                float nearBank, farBank;
+                if (_Entrance > .5)
+                {
+                    float2 cell = floor(position);
+                    float2 stepWorld = worldDirection / (horizontal * GroundPixelsPerUnit);
+                    nearBank = EntranceHeight(position + stepWorld * 2, pixel + direction * 2, tileMin, cell);
+                    farBank = EntranceHeight(position + stepWorld * 5, pixel + direction * 5, tileMin, cell);
+                }
+                else
+                {
+                    nearBank = SampleHeight(pixel + direction * 2, tileMin);
+                    farBank = SampleHeight(pixel + direction * 5, tileMin);
+                }
+                nearBank -= 2 * rise;
+                farBank -= 5 * rise;
                 return 1 - smoothstep(.045, .25, max(nearBank, farBank) - groundHeight);
             }
 
@@ -257,7 +387,7 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     if (mode > .5)
                     {
                         float2 center = (_CasterMin[i].xy + _CasterMax[i].xy) * .5;
-                        if (mode > 2.5) center.y = lerp(_CasterMin[i].y, _CasterMax[i].y, .18);
+                        if (mode > 2.5) center.y = lerp(_CasterMin[i].y, _CasterMax[i].y, mode > 3.5 ? .22 : .18);
                         float2 radius = (_CasterMax[i].xy - _CasterMin[i].xy) * .5 + float2(.14, .13);
                         float2 delta = (xy - center) / radius;
                         float ellipse = saturate(1 - dot(delta, delta));
@@ -309,6 +439,9 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     ? normalize(lerp(float3(0, -.79, .61), float3(0, 0, 1), top * .85))
                     : float3(0, 0, 1);
                 bool groundPbr = !upright && _GroundSurfaceEnabled > .5;
+                float asphalt = 0;
+                float water = 0;
+                float2 waterLook = 0;
                 float4 ground = 0;
                 float4 detail = 0;
                 bool groundRelief = groundPbr && _GroundReliefStrength > 0;
@@ -317,6 +450,11 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 [branch] if (groundPbr)
                 {
                     GroundSample terrain = JoinGround(position, input.uv, axis, seam);
+                    float dirt = 0;
+                    if (_Crosswalk > .5 && xy.y >= 14 && xy.x >= 16 && xy.x < 25)
+                        terrain = TrilhaDaEncruzilhada(xy, terrain, dirt);
+                    if (_Bairro > .5)
+                        terrain = TrilhaDoBairro(xy, terrain, dirt);
                     float2 roadUV = RoadUnderPaint(input.uv);
                     float pixelY = input.uv.y * _MainTex_TexelSize.w;
                     float3 paint = 0;
@@ -326,12 +464,32 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     sprite.rgb = saturate(sprite.rgb + paint);
                     ground = terrain.surface;
                     detail = terrain.relief;
+                    asphalt = terrain.asphalt;
+                    if (_Crosswalk > .5 && xy.x >= 10 && xy.x < 14 && xy.y > 8.23 && xy.y < 11.77)
+                    {
+                        float barra = step(frac((xy.x - 10) / .8), .54);
+                        float desgaste = smoothstep(.06, .32, detail.r);
+                        sprite.rgb = lerp(sprite.rgb, float3(.63, .59, .48), barra * lerp(.55, .89, desgaste));
+                    }
+                    if (_WetRoad > .5 && max(asphalt, dirt) > 0)
+                    {
+                        float2 waterUV = (position - _EntranceWaterRect.xy) / _EntranceWaterRect.zw;
+                        if (all(waterUV >= 0) && all(waterUV < 1))
+                        {
+                            float3 pool = SAMPLE_TEXTURE2D(_EntranceWater, sampler_EntranceWater, waterUV).rgb;
+                            water = pool.r * max(asphalt, dirt);
+                            waterLook = pool.gb;
+                            ground.b = lerp(ground.b, .34, water);
+                            detail.gb *= 1 - .92 * water;
+                        }
+                    }
                 }
                 float terrainOcclusion = 1;
                 float terrainHeight = 0;
                 float3 ambientNormal = normal;
                 float2 detailSlope = 0;
-                float2 reliefPixel = input.uv * _GroundRelief_TexelSize.zw;
+                float2 reliefUV = _Entrance > .5 ? RoadUnderPaint(input.uv) : input.uv;
+                float2 reliefPixel = reliefUV * _GroundRelief_TexelSize.zw;
                 float2 tileMin = floor(reliefPixel / GroundPixelsPerUnit) * GroundPixelsPerUnit;
                 [branch] if (groundRelief)
                 {
@@ -339,6 +497,13 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     surfacePosition.z = max(.005, surfacePosition.z
                         + (terrainHeight - .31) * GroundHeightScale * _GroundReliefStrength);
                     detailSlope = detail.gb * (1.32 * _GroundReliefStrength);
+                    if (_Entrance > .5)
+                    {
+                        // Microtextura contínua no mundo, inclusive onde as normais dos tiles se misturam.
+                        float2 grain = frac(sin(float2(dot(xy, float2(137.5, 23.7)),
+                            dot(xy, float2(47.3, 197.1)))) * 8191) - .5;
+                        detailSlope += grain * (.34 * asphalt * (1 - water));
+                    }
                     terrainOcclusion = lerp(1, detail.a, .16 * _GroundReliefStrength);
                 }
                 if (groundPbr)
@@ -355,6 +520,13 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 float2 fromMarcus = (xy - _ViewFocus.xy) * float2(.75, 1);
                 float falloff = smoothstep(2.3, 7.0, length(fromMarcus));
                 light *= 1 - .32 * falloff * _ViewFocus.z;
+                if (_Entrance > .5)
+                {
+                    // Preserve os marcos no passeio e aprofunde a penumbra do bosque.
+                    light *= lerp(1, .43, smoothstep(14.3, 18.7, upright ? baseY : xy.y));
+
+                }
+                light += _Lightning * half3(.66, .80, 1.00);
                 if (groundPbr)
                 {
                     // Luz do céu rasante, visível nos relevos mesmo entre dois postes.
@@ -365,10 +537,11 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 }
                 half3 reflection = 0;
                 float practicalLight = 0;
-                [unroll] for (int l = 0; l < 4; l++)
+                [unroll] for (int l = 0; l < 6; l++)
                 {
                     bool handheld = l == 3;
-                    float4 lamp = handheld ? _PlayerLamp : _Lamps[min(l, 2)];
+                    float4 lamp = handheld ? _PlayerLamp :
+                        l == 4 ? _FourthLamp : l == 5 ? _FifthLamp : _Lamps[min(l, 2)];
                     if (lamp.w <= 0) continue;
                     float3 ray = lamp.xyz - surfacePosition;
                     float distanceToLamp = length(ray);
@@ -383,13 +556,16 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     float facing = saturate(dot(normal, toLight) * .87 + .13);
                     float shadow = VisibilidadeDaLuz(surfacePosition, ray, owner, handheld);
                     half3 lampColor = handheld ? half3(2.6, 2.25, 1.63) : _LampColors[min(l, 2)].rgb;
+                    if (_Entrance > .5 && !handheld && xy.y > lamp.y)
+                        shadow *= lerp(.79, 1, shadow * shadow);
                     half3 incident = lampColor * (fade * fade * shadow * (groundPbr ? 1.22 : 1));
                     float exposure = 1;
                     [branch] if (groundRelief && shadow > 0)
                     {
                         float3 lightUV = float3(axis * toLight.xy, toLight.z);
-                        exposure = lerp(1, HeightExposure(reliefPixel, tileMin, terrainHeight, lightUV),
-                            .23 * _GroundReliefStrength * (1 - 2 * seam));
+                        float seamExposure = _Entrance > .5 ? 1 : 1 - 2 * seam;
+                        exposure = lerp(1, HeightExposure(reliefPixel, tileMin, xy, terrainHeight, lightUV, toLight.xy),
+                            .23 * _GroundReliefStrength * seamExposure);
                     }
                     light += incident * facing * exposure;
                     practicalLight += incident.r * facing;
@@ -415,12 +591,44 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                         }
                     }
                 }
+                // Projeção planar do quadro atual, recortada pelo material da poça.
+                [branch] if (_WetRoad > .5 && groundPbr && _MirrorBounds.z > 0)
+                {
+                    float separation = _MirrorFeet - xy.y;
+                    float wet = water * (1 - smoothstep(.65, 1.1, separation));
+                    if (separation > 0 && wet > 0)
+                    {
+                        float ripple = sin(xy.y * 49 - _Time.y * 6.1) * .032;
+                        float2 projected = float2(xy.x + ripple, _MirrorFeet + separation * 1.8);
+                        float2 reflectedUV = (projected - _MirrorBounds.xy) / _MirrorBounds.zw;
+                        if (all(reflectedUV > 0) && all(reflectedUV < 1))
+                        {
+                            half4 frame = SAMPLE_TEXTURE2D(_MarcusFrame, sampler_MarcusFrame,
+                                _MirrorUV.xy + reflectedUV * _MirrorUV.zw);
+                            half3 image = frame.rgb * (half3(.39, .50, .64) + light * .55);
+                            reflection = lerp(reflection, image * .58, frame.a * wet * .76);
+                        }
+                    }
+                }
                 float contact = upright ? 1 : ContactOcclusion(xy);
                 // Nas bordas o olhar perde luz aos poucos. Luzes do cenário continuam
                 // marcando as referências mesmo quando a fachada sai do centro da câmera.
                 float edge = smoothstep(.50, 1.30, length(input.frame * float2(1, .86)));
                 float vignette = 1 - edge * .48 * _ViewFocus.z * (1 - .64 * saturate(practicalLight));
-                return half4((sprite.rgb * light + reflection) * contact * vignette, sprite.a);
+                float entranceGrade = 1;
+                if (_Entrance > .5)
+                {
+                    float far = smoothstep(14.2, 18.5, upright ? baseY : xy.y);
+                    entranceGrade = (1 - .20 * far - .47 * asphalt) * (1 - .13 * (1 - saturate(practicalLight)));
+                    reflection *= 1 - .18 * asphalt * (1 - water);
+                    // O brilho frio destaca a água sem clarear o asfalto que a circunda.
+                    float ripple = .5 + .5 * sin(xy.y * 47 + sin(xy.x * 12) * 1.1 - _Time.y * 2.5);
+                    half3 waterColor = lerp(half3(.53, .55, .56), half3(.24, .48, .73), waterLook.x);
+                    reflection += waterColor * water * waterLook.y *
+                        (.012 + .012 * ripple + .023 * saturate(practicalLight));
+                    entranceGrade = lerp(entranceGrade, 1, _Lightning * .85);
+                }
+                return half4((sprite.rgb * light * entranceGrade + reflection) * contact * vignette, sprite.a);
             }
             ENDHLSL
         }

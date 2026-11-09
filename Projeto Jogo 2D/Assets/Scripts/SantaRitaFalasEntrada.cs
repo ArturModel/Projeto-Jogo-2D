@@ -5,7 +5,10 @@ internal sealed class SantaRitaFalasEntrada : MonoBehaviour
 {
     private static SantaRitaFalasEntrada atual;
     private MinigameDialogue legenda;
-    private string[] falas;
+    private DialogoLinha[] falas;
+    private Capitulo1Director.ZonaId zonaDaFala;
+    private const float TomFrentista = .96f;
+    private const float TomMotorista = .62f;
     private int proxima;
     private Action aoTerminar;
     private bool interagindo;
@@ -16,7 +19,13 @@ internal sealed class SantaRitaFalasEntrada : MonoBehaviour
         MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
         PayphoneCheckpoint.IsSaveUIOpen || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing;
 
-    public static bool Interagindo => NaEntrada && atual.interagindo;
+    private static bool ZonaComFaixa => Capitulo1Director.ZonaAtual is
+        Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Interior_Posto or
+        Capitulo1Director.ZonaId.Zona3_Encruzilhada or Capitulo1Director.ZonaId.Interior_Mercadinho or
+        Capitulo1Director.ZonaId.Zona4_Bairro or Capitulo1Director.ZonaId.Interior_CasaDoAvo;
+
+    public static bool Interagindo => atual != null && atual.interagindo &&
+        atual.zonaDaFala == Capitulo1Director.ZonaAtual;
     public static float Zoom => NaEntrada && !OutraInterface && atual.legenda.Ocupada
         ? (Interagindo ? .06f : .025f) : 0f;
 
@@ -36,11 +45,24 @@ internal sealed class SantaRitaFalasEntrada : MonoBehaviour
     public static void DizerInteracao(Action aoFechar, params string[] falas)
     {
         if (!NaEntrada) return;
-        atual.falas = falas;
-        atual.proxima = 0;
-        atual.aoTerminar = aoFechar;
-        atual.interagindo = true;
-        atual.ProximaFala();
+        atual.Iniciar(aoFechar, Array.ConvertAll(falas, fala => new DialogoLinha("Marcus", fala)));
+    }
+
+    public static bool TentarDizerNaZona(Action aoFechar, params DialogoLinha[] falas)
+    {
+        if (!ZonaComFaixa || atual == null) return false;
+        atual.Iniciar(aoFechar, falas);
+        return true;
+    }
+
+    private void Iniciar(Action aoFechar, DialogoLinha[] linhas)
+    {
+        zonaDaFala = Capitulo1Director.ZonaAtual;
+        falas = linhas;
+        proxima = 0;
+        aoTerminar = aoFechar;
+        interagindo = true;
+        ProximaFala();
     }
 
     public static void Avancar()
@@ -51,7 +73,8 @@ internal sealed class SantaRitaFalasEntrada : MonoBehaviour
 
     private void Update()
     {
-        if (!NaEntrada || SceneFader.IsTransitioning)
+        bool foraDaZona = interagindo ? !Interagindo : !NaEntrada;
+        if (foraDaZona || SceneFader.IsTransitioning)
         {
             if (interagindo || legenda.Ocupada) Encerrar();
             return;
@@ -69,20 +92,36 @@ internal sealed class SantaRitaFalasEntrada : MonoBehaviour
 
     private void ProximaFala()
     {
-        if (proxima < falas.Length)
-            legenda.Dizer("Marcus", falas[proxima++], MinigameDialogue.MarcusPitch);
-        else
+        if (proxima >= falas.Length)
+        {
             Encerrar();
+            return;
+        }
+
+        var fala = falas[proxima++];
+        var (locutor, tom) = fala.falante switch
+        {
+            "FRENTISTA" => ("Frentista", TomFrentista),
+            "MOTORISTA" => ("Motorista", TomMotorista),
+            "ATENDENTE" => ("Atendente", 1.08f),
+            "DONA LURDES" => ("Dona Lurdes", 1.01f),
+            "VIZINHO" => ("Vizinho", .65f),
+            "SEU RAMIRO" => ("Seu Ramiro", .65f),
+            "MARCUS" => ("Marcus", MinigameDialogue.MarcusPitch),
+            _ => (fala.falante, MinigameDialogue.MarcusPitch)
+        };
+        legenda.Dizer(locutor, fala.texto, tom);
     }
 
     private void Encerrar()
     {
+        bool naZonaDaFala = Interagindo && !SceneFader.IsTransitioning;
         var callback = aoTerminar;
         legenda.Limpar();
         interagindo = false;
         aoTerminar = null;
         falas = null;
-        if (NaEntrada && !SceneFader.IsTransitioning) callback?.Invoke();
+        if (naZonaDaFala) callback?.Invoke();
     }
 
     private void OnDestroy()

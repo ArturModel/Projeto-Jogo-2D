@@ -48,6 +48,18 @@ public class PlayerController : MonoBehaviour
     private Vector2 currentVelocity;
     private int facingDirection = DirDown;
     private float interactTimer;
+    private float sustoAte;
+
+    internal bool CaminhandoParaEventoAmbiental => !BloqueiaEquipamento() && Application.isFocused &&
+        !GameMessageUI.IsShowing && !SantaRitaFalasEntrada.Interagindo &&
+        interactTimer <= 0 && moveInput.sqrMagnitude > 0 && currentVelocity.sqrMagnitude > .04f;
+
+    internal void ReagirAoRaio()
+    {
+        sustoAte = Time.time + .22f;
+        moveInput = Vector2.zero;
+        currentVelocity = Vector2.zero;
+    }
     private string estadoAnimacao;
     private SpriteRenderer corpo;
     private Sprite[,] quadrosCaminhada;
@@ -257,7 +269,10 @@ public class PlayerController : MonoBehaviour
         { GameState.AlternarLanterna(); focoLanternaPronto = false; }
         // Com a pausa, mapa, orelhão ou minigame de sinuca abertos, o jogador não anda nem interage por baixo.
         if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
-            Capitulo1Director.PainelFechamentoAberto)
+            Capitulo1Director.PainelFechamentoAberto ||
+            (SceneFader.IsTransitioning && Capitulo1Director.ZonaAtual is
+                Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Zona3_Encruzilhada or
+                Capitulo1Director.ZonaId.Zona4_Bairro))
         {
             moveInput = Vector2.zero;
             if (InteractionPrompt.Instance != null)
@@ -328,7 +343,7 @@ public class PlayerController : MonoBehaviour
         }
 
         bool isInteracting = interactTimer > 0f;
-        if (isInteracting || GameMessageUI.IsShowing || SantaRitaFalasEntrada.Interagindo)
+        if (isInteracting || GameMessageUI.IsShowing || SantaRitaFalasEntrada.Interagindo || Time.time < sustoAte)
         {
             moveInput = Vector2.zero;
         }
@@ -476,7 +491,10 @@ public class PlayerController : MonoBehaviour
     {
         if (GameMessageUI.IsShowing || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
             SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
-            Capitulo1Director.PainelFechamentoAberto)
+            Capitulo1Director.PainelFechamentoAberto ||
+            (SceneFader.IsTransitioning && Capitulo1Director.ZonaAtual is
+                Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Zona3_Encruzilhada or
+                Capitulo1Director.ZonaId.Zona4_Bairro))
         { currentVelocity = Vector2.zero; return; }
         // A velocidade nunca muda de uma vez: ganha e perde embalo aos poucos,
         // o que dá o peso de "cada passo é uma decisão".

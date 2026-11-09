@@ -254,10 +254,19 @@ public class SceneFader : MonoBehaviour
 
     internal void TransicionarParaBar(Vector2 foco, Action abrirSala)
     {
-        if (!isTransitioning) StartCoroutine(EntradaBar(foco, abrirSala));
+        TransicionarParaInterior3D(foco, abrirSala, BarDoZe3D.AnimarEntrada,
+            BarDoZe3D.Fechar, SinucaRoom3D.DuracaoEntradaBar);
     }
 
-    private IEnumerator EntradaBar(Vector2 foco, Action abrirSala)
+    internal void TransicionarParaInterior3D(Vector2 foco, Action abrirSala, Action<float> animarEntrada,
+        Action fecharSala, float duracaoEntrada)
+    {
+        if (!isTransitioning)
+            StartCoroutine(EntradaInterior3D(foco, abrirSala, animarEntrada, fecharSala, duracaoEntrada));
+    }
+
+    private IEnumerator EntradaInterior3D(Vector2 foco, Action abrirSala, Action<float> animarEntrada,
+        Action fecharSala, float duracaoEntrada)
     {
         isTransitioning = true;
         group.blocksRaycasts = true;
@@ -281,7 +290,7 @@ public class SceneFader : MonoBehaviour
         }
         else yield return FadeTo(1f, .50f);
 
-        // Renderiza um quadro totalmente coberto ainda na Rua Norte. Só então
+        // Renderiza um quadro totalmente coberto ainda na rua. Só então
         // troca a câmera e o contexto de chuva, névoa e iluminação do exterior.
         yield return null;
         bool abriu = false;
@@ -292,13 +301,13 @@ public class SceneFader : MonoBehaviour
         }
         catch (Exception ex)
         {
-            BarDoZe3D.Fechar();
+            fecharSala();
             Debug.LogException(ex);
         }
 
         // A câmera 3D já está alinhada pela maçaneta e precisa preencher sua textura.
         yield return null;
-        float duracao = abriu ? SinucaRoom3D.DuracaoEntradaBar : .86f;
+        float duracao = abriu ? duracaoEntrada : .86f;
         for (float t = 0f; t < duracao; t += Time.unscaledDeltaTime)
         {
             float cobertura = 1f - Mathf.SmoothStep(0f, 1f, t / .86f);
@@ -308,13 +317,97 @@ public class SceneFader : MonoBehaviour
                 AjustarMascaraBar(Vector2.Lerp(foco, Vector2.one * .5f, alinhar), cobertura);
             }
             else group.alpha = cobertura;
-            if (abriu) BarDoZe3D.AnimarEntrada(t);
+            if (abriu) animarEntrada(t);
             yield return null;
         }
-        if (abriu) BarDoZe3D.AnimarEntrada(SinucaRoom3D.DuracaoEntradaBar);
+        if (abriu) animarEntrada(duracaoEntrada);
         group.alpha = 0f;
         RestaurarImagemFade();
         isTransitioning = false;
+    }
+
+    internal void TransicionarPortaPosto(Vector2 foco, Action trocar, Func<Vector2> focoDepois,
+        Action<float> animar = null, float duracao = 0f,
+        Action<float> animarAntes = null, float antesDaNevoa = 0f)
+    {
+        if (!isTransitioning)
+            StartCoroutine(PortaPosto(foco, trocar, focoDepois, animar, duracao, animarAntes, antesDaNevoa));
+    }
+
+    private IEnumerator PortaPosto(Vector2 foco, Action trocar, Func<Vector2> focoDepois,
+        Action<float> animar, float duracao, Action<float> animarAntes, float antesDaNevoa)
+    {
+        isTransitioning = true;
+        group.blocksRaycasts = true;
+        fadeImage.raycastTarget = true;
+        bool nevoa = PrepararIris();
+        try
+        {
+            for (float t = 0f; t < antesDaNevoa; t += Time.unscaledDeltaTime)
+            {
+                animarAntes?.Invoke(t);
+                yield return null;
+            }
+
+            foco = LimitarFocoDaPorta(foco);
+            if (nevoa)
+            {
+                sinucaIris.SetFloat("_MascaraPosto", 1f);
+                sinucaIris.SetTexture("_Grao", SantaRitaBarLayout.NativeSurface(false).texture);
+                fadeImage.material = sinucaIris;
+                fadeImage.color = Color.white;
+                group.alpha = 1f;
+                const float fechar = .82f;
+                for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
+                {
+                    AjustarMascaraBar(foco, Mathf.SmoothStep(0f, 1f, t / fechar));
+                    animarAntes?.Invoke(antesDaNevoa + t);
+                    yield return null;
+                }
+                AjustarMascaraBar(foco, 1f);
+            }
+            else
+            {
+                const float fechar = .34f;
+                for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
+                {
+                    group.alpha = Mathf.SmoothStep(0f, 1f, t / fechar);
+                    animarAntes?.Invoke(antesDaNevoa + t);
+                    yield return null;
+                }
+                group.alpha = 1f;
+            }
+
+            yield return null;
+            trocar();
+            animar?.Invoke(0f);
+            yield return null;
+
+            foco = LimitarFocoDaPorta(focoDepois());
+            float revelar = nevoa ? .76f : .36f;
+            float total = Mathf.Max(duracao, revelar);
+            for (float t = 0f; t < total; t += Time.unscaledDeltaTime)
+            {
+                float cobertura = 1f - Mathf.SmoothStep(0f, 1f, t / revelar);
+                if (nevoa) AjustarMascaraBar(foco, cobertura);
+                else group.alpha = cobertura;
+                animar?.Invoke(t);
+                yield return null;
+            }
+            animar?.Invoke(total);
+        }
+        finally
+        {
+            if (sinucaIris != null) sinucaIris.SetFloat("_MascaraPosto", 0f);
+            group.alpha = 0f;
+            RestaurarImagemFade();
+            isTransitioning = false;
+        }
+    }
+
+    private static Vector2 LimitarFocoDaPorta(Vector2 foco)
+    {
+        return new Vector2(Mathf.Clamp(foco.x, .08f, .92f), Mathf.Clamp(foco.y, .08f, .92f));
     }
 
     private bool PrepararIris()

@@ -438,3 +438,19 @@ Assets/Resources/Art/Characters/MarcusMaoMacaneta.png,Character hand sprite,Hand
 Assets/Resources/Art/RuaNorte/Relevo.png,PBR packed data,Procedurally derived from Terreno and Superficie,Santa Rita,Project asset,64,Point,"Linear R height, GB gradients, A cavity"
 
 Assets/Resources/Art/RuaNorte/Entrada/ObjetosEntrada.png,Multi-sprite sheet,ImageGen with Rua Norte Picape as style reference and native-scale atlas export,Santa Rita,Project asset,64,Point,Maroon-brown sedan and entrance sign and bench and notice board and open suitcase
+
+Assets/Resources/Audio/TrovaoEntrada.ogg,Audio/SFX,https://commons.wikimedia.org/wiki/File:Thunder_Claps.ogg,Jonathan Hunt,CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/,N/A,N/A,"Recorte 3.55-11.55 s; mono; passa-altas 25 Hz; fades; limitacao de picos e ajuste de ganho; Ogg Vorbis; derivado sob CC BY-SA 4.0"
+Assets/Resources/Art/RuaNorte/Posto/Fachada.png,Sprite,ImageGen com captura do posto como referência e exportação em escala nativa,Santa Rita,Project asset,64,Point,Fachada do posto com porta dupla
+Assets/Resources/Art/RuaNorte/Posto/Venda.png,Sprite,ImageGen com captura do posto como referência e exportação em escala nativa,Santa Rita,Project asset,64,Point,Antiga venda fechada
+Assets/Resources/Art/RuaNorte/Posto/Picape.png,Sprite,ImageGen com captura do posto como referência e exportação em escala nativa,Santa Rita,Project asset,64,Point,Picape vermelha
+Assets/Resources/Art/RuaNorte/Posto/Sedan.png,Sprite,ImageGen com captura do posto como referência e exportação em escala nativa,Santa Rita,Project asset,64,Point,Sedã preto
+Assets/Resources/Art/RuaNorte/Mercadinho/Fachada.png,Sprite,ImageGen com fachada original e Posto,Santa Rita,Project asset,64,Point,Fachada do Mercadinho
+Assets/Resources/Art/RuaNorte/Mercadinho/Casa.png,Sprite,ImageGen com Antiga Venda,Santa Rita,Project asset,64,Point,Casa da esquina
+Assets/Resources/Art/RuaNorte/Mercadinho/Picape.png,Sprite,ImageGen com picape do Posto,Santa Rita,Project asset,64,Point,Picape de entregas
+Assets/Resources/Art/RuaNorte/Mercadinho/Carro.png,Sprite,ImageGen com sedã do Posto,Santa Rita,Project asset,64,Point,Hatch verde
+Assets/Resources/Art/RuaNorte/Bairro/Avo.png,Sprite,ImageGen com CasaAvo e casa da Encruzilhada,Santa Rita,Project asset,64,Point,Casa 40
+Assets/Resources/Art/RuaNorte/Bairro/Lurdes.png,Sprite,ImageGen com CasaSimples_A e casa da Encruzilhada,Santa Rita,Project asset,64,Point,Casa 14
+Assets/Resources/Art/RuaNorte/Bairro/Casa22.png,Sprite,ImageGen com CasaSimples_C e casa da Encruzilhada,Santa Rita,Project asset,64,Point,Casa 22
+Assets/Resources/Art/RuaNorte/Bairro/Casa32.png,Sprite,ImageGen com CasaSimples_B e casa da Encruzilhada,Santa Rita,Project asset,64,Point,Casa 32
+Assets/Resources/Art/RuaNorte/Bairro/Casa48.png,Sprite,ImageGen com CasaSimples_A e casa da Encruzilhada,Santa Rita,Project asset,64,Point,Casa 48
+Assets/Resources/Art/RuaNorte/Bairro/Van.png,Sprite,ImageGen com picape do Mercadinho,Santa Rita,Project asset,64,Point,Van do Bairro
