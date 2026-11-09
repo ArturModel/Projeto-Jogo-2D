@@ -1,27 +1,31 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 9"
-location: "L54"
+community: "Community 99"
+location: "L401"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_99
 ---
 
 # .Sync()
 
 ## Connections
-- [[dot-ChangeZoom()]] - `calls` [EXTRACTED]
-- [[dot-CourtPoint()]] - `calls` [EXTRACTED]
-- [[dot-OlharPendente()]] - `calls` [EXTRACTED]
-- [[dot-Project()]] - `calls` [EXTRACTED]
-- [[dot-SetState()]] - `calls` [EXTRACTED]
-- [[dot-SetView()]] - `calls` [EXTRACTED]
-- [[dot-Sync()_1]] - `calls` [EXTRACTED]
-- [[dot-Tick()_2]] - `calls` [EXTRACTED]
-- [[dot-UpdateCamera()_1]] - `calls` [EXTRACTED]
-- [[dot-Walk()]] - `calls` [EXTRACTED]
-- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[dot-AlignBridgeToShaft()]] - `calls` [EXTRACTED]
+- [[dot-AlignGripToShaft()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarAtoresDoSalao()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarEstadoRender()]] - `calls` [EXTRACTED]
+- [[dot-BridgeRailLift()]] - `calls` [EXTRACTED]
+- [[dot-PocketOuter()]] - `calls` [INFERRED]
+- [[dot-PocketPhysics()]] - `calls` [INFERRED]
+- [[dot-SyncFirstPersonCamera()]] - `calls` [EXTRACTED]
+- [[dot-TickSalon()]] - `calls` [INFERRED]
+- [[dot-UpdateCamera()]] - `calls` [EXTRACTED]
+- [[IList]] - `references` [EXTRACTED]
+- [[SinucaAimGuideData]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `method` [EXTRACTED]
+- [[SinucaVisualBall]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_99

@@ -75,6 +75,10 @@ public sealed class Capitulo2Director : MonoBehaviour
         // So executa em cenas de interior; inofensivo se GameObjects esperados nao existirem.
         if (interior) SantaRitaPlaceDressing.ApplyC2();
         if (SceneManager.GetActiveScene().name == "SociedadeBeiraRio") SantaRitaBochaAmbiente.Aplicar();
+        string local = SceneManager.GetActiveScene().name;
+        if (interior) gameObject.AddComponent<Capitulo2Interior3D>().Montar(local, jogador);
+        else gameObject.AddComponent<Capitulo2Exterior>().Montar(local == "CemiterioSantaRita", limiteMin, limiteMax);
+        if (GetComponent<SantaRitaFalasEntrada>() == null) gameObject.AddComponent<SantaRitaFalasEntrada>();
         AtualizarInvestigacao();
     }
 
@@ -104,7 +108,7 @@ public sealed class Capitulo2Director : MonoBehaviour
     public static bool ProntoParaBocha => GameState.Tem("c2_protocolo_adilio") &&
         GameState.Tem("c2_registro_manutencao") && GameState.Tem("c2_padre_testemunho") && GameState.Tem("c2_cemiterio_comparado");
 
-    public void Interagir(string id, Sprite arteExame = null)
+    public void Interagir(string id, Sprite arteExame = null, Capitulo2Interactable alvo = null)
     {
         if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
         if(id=="radio_test")
@@ -115,8 +119,10 @@ public sealed class Capitulo2Director : MonoBehaviour
         }
         if (id == "horarios" && !GameState.Tem(Flags.MapaDoCarroObtido))
         {
-            GameMessageUI.Instance.ShowInspection("LINHAS E RUAS DE SANTA RITA", "Bilhete",
-                "Ao lado dos horários, um porta-folhetos: ORIENTAÇÃO AO PASSAGEIRO — TERMINAL E CENTRO. O traçado das ruas indica as repartições e os caminhos para os bairros. Há exemplares para levar.\n\nCom as obras e as ruas diferentes do que lembro, isto vai me ajudar a procurar os lugares que o vô visitou.");
+            const string textoMapa = "Ao lado dos horários, um porta-folhetos: ORIENTAÇÃO AO PASSAGEIRO — TERMINAL E CENTRO. O traçado das ruas indica as repartições e os caminhos para os bairros. Há exemplares para levar.\n\nCom as obras e as ruas diferentes do que lembro, isto vai me ajudar a procurar os lugares que o vô visitou.";
+            if (ExaminarNoMundo(alvo, "LINHAS E RUAS DE SANTA RITA", textoMapa, null,
+                "R · PEGAR MAPA", () => GameState.Marcar(Flags.MapaDoCarroObtido))) return;
+            GameMessageUI.Instance.ShowInspection("LINHAS E RUAS DE SANTA RITA", "Bilhete", textoMapa);
             SantaRitaItemAction.Oferecer("PEGAR MAPA", () => GameState.Marcar(Flags.MapaDoCarroObtido));
             return;
         }
@@ -146,9 +152,11 @@ public sealed class Capitulo2Director : MonoBehaviour
             GameState.DefinirNumero("c2_radio_faixa", faixa);
             Capitulo2Audio.TocarRadio(faixa);
             string[] opcoes = { "FM / sinal distante", "AM / estática", "LOCAL / retorno de teste" };
-            GameMessageUI.Instance.ShowInspection("SELETOR DE FAIXA", "Radio", "Faixa selecionada: " + opcoes[faixa] +
-                "\n\nA etiqueta de Mila pede FAIXA LOCAL: o retorno de teste deve soar em dois tons curtos.",
-                () => { if (faixa == 2) { GameState.Marcar("c2_radio_restaurado"); Nota(d); } }, arteExame);
+            string seletor = "Faixa selecionada: " + opcoes[faixa] +
+                "\n\nA etiqueta de Mila pede FAIXA LOCAL: o retorno de teste deve soar em dois tons curtos.";
+            Action concluirFaixa = () => { if (faixa == 2) { GameState.Marcar("c2_radio_restaurado"); Nota(d); } };
+            if (!ExaminarNoMundo(alvo, "SELETOR DE FAIXA", seletor, concluirFaixa))
+                GameMessageUI.Instance.ShowInspection("SELETOR DE FAIXA", "Radio", seletor, concluirFaixa, arteExame);
             return;
         }
         if (d.kind == "epilogo")
@@ -196,9 +204,25 @@ public sealed class Capitulo2Director : MonoBehaviour
         {
             string texto = "";
             if (linhas != null) foreach (var l in linhas) texto += l.texto + "\n\n";
-            GameMessageUI.Instance.ShowInspection(d.title, string.IsNullOrEmpty(d.art) ? "Bilhete" : d.art, texto.Trim(), concluir, arteExame);
+            if (!ExaminarNoMundo(alvo, d.title, texto.Trim(), concluir))
+                GameMessageUI.Instance.ShowInspection(d.title, string.IsNullOrEmpty(d.art) ? "Bilhete" : d.art, texto.Trim(), concluir, arteExame);
         }
         else Dialogo(linhas, concluir);
+    }
+
+    private static bool ExaminarNoMundo(Capitulo2Interactable alvo, string titulo, string texto,
+        Action concluir, string comando = null, Action executar = null)
+    {
+        if (alvo == null) return false;
+        if (!Capitulo2Interior3D.TryFocus(alvo, out var camera, out var foco))
+        {
+            camera = Camera.main;
+            var sprite = alvo.RenderizadorDoIndicador;
+            foco = sprite != null ? sprite.bounds : new Bounds(alvo.transform.position + Vector3.up * .6f,
+                new Vector3(1.0f, 1.15f, 0));
+        }
+        return SantaRitaFalasEntrada.Examinar(camera, foco, titulo, texto, terminou: concluir,
+            comando: comando, acao: executar);
     }
 
     private static void Nota(C2InteractionData d)

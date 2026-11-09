@@ -12,8 +12,11 @@ tags:
 
 ## Connections
 - [[dot-AjustarAbertura()]] - `references` [EXTRACTED]
-- [[dot-CreateFog()]] - `references` [EXTRACTED]
+- [[dot-DesenharSilhuetasDaLuz()]] - `references` [EXTRACTED]
+- [[dot-FaixasDeVagalumes()]] - `references` [EXTRACTED]
 - [[dot-Lamp()_4]] - `references` [EXTRACTED]
+- [[dot-PrepararFlaresDosPostes()]] - `references` [EXTRACTED]
+- [[dot-ProjetarSombraDaLanterna()]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[SantaRitaRuaNorte]] - `references` [EXTRACTED]
 

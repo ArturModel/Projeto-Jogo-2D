@@ -35,13 +35,14 @@ internal sealed partial class Posto3D
             Caixa("Parede lateral", V(lado * 5.9f, 1.5f, .23f), V(.14f, 3f, 9.52f), parede);
             Caixa("Azulejos da lateral", V(lado * 5.79f, .49f, .23f), V(.06f, .98f, 9.35f), azulejo, solida: false);
             Caixa("Rodameio da lateral", V(lado * 5.74f, 1.01f, .23f), V(.06f, .083f, 9.38f), azul, solida: false);
-            Caixa("Fachada de reboco", V(lado * 3.35f, 1.5f, Soleira), V(5.10f, 3f, .15f), parede);
+            ParedeComJanela(lado * 3.35f - 2.55f, lado * 3.35f + 2.55f, Soleira, .15f, parede,
+                new Rect(lado * 3f - 1.29f, .995f, 2.58f, 1.31f));
             Caixa("Rodapé externo azul", V(lado * 3.35f, .39f, Soleira - .09f), V(5.09f, .78f, .05f), azul, solida: false);
             Caixa("Batente", V(lado * .81f, 1.18f, Soleira), V(.10f, 2.35f, .23f), azul);
         }
         Caixa("Verga", V(0, 2.68f, Soleira), V(1.66f, .64f, .18f), parede);
         Caixa("Soleira", V(0, -.016f, Soleira), V(1.60f, .042f, .40f), azulClaro, solida: false);
-        Caixa("Calçada sob o toldo", V(0, -.075f, -5.66f), V(11.8f, .13f, 2.40f), piso);
+        Caixa("Calçada sob o toldo", V(0, -.075f, -5.66f), V(11.8f, .13f, 2.40f), PisoMolhado(piso));
         for (int i = 0; i < 14; i++)
         {
             var lona = Caixa("Faixa do toldo", V(-2.21f + i * .34f, 2.75f, -5.13f), V(.34f, .045f, 1.56f),
@@ -58,10 +59,12 @@ internal sealed partial class Posto3D
         {
             Caixa("Chapa da luminária", V(x, 2.86f, z), V(1.26f, .09f, .29f), escura, solida: false);
             Caixa("Fluorescente", V(x, 2.795f, z), V(1.17f, .041f, .17f), tubo, solida: false);
-            Luz("Luz da mercearia", V(x, 2.66f, z), new Color(1f, .92f, .72f), 4.25f, 6f);
+            var pendente = Luz("Luz da mercearia", V(x, 2.66f, z), new Color(1f, .81f, .57f),
+                z < 0f ? 2.35f : 1.7f, 4.7f);
+            if (x > 0f && z > 0f) LuzInstavel.Instalar(pendente, .12f, 3.8f);
         }
-        Luz("Luz de atendimento", V(-.8f, 2.55f, 2.62f), new Color(1f, .76f, .48f), 2.4f, 4.6f);
-        Luz("Luz do toldo", V(.28f, 2.52f, -5.46f), new Color(.82f, .88f, .76f), 3.5f, 4.2f);
+        Luz("Luz de atendimento", V(-.8f, 2.55f, 2.62f), new Color(1f, .79f, .53f), 2.25f, 4.0f);
+        Luz("Luz do toldo", V(.28f, 2.52f, -5.46f), new Color(1f, .75f, .48f), 3.25f, 4.2f);
 
         Caixa("Balcão de madeira", V(-.50f, .51f, 2.61f), V(3.85f, 1.02f, .82f), azul);
         Caixa("Tampo de fórmica", V(-.50f, 1.055f, 2.61f), V(3.97f, .075f, .91f), pinho);
@@ -91,16 +94,11 @@ internal sealed partial class Posto3D
 
     private void ConstruirVitrinesMercadinho(Material caixilho, Material acabamento)
     {
-        var shader = Resources.Load<Shader>("Art/Sinuca/JanelaMolhada");
-        var atlas = Resources.Load<Texture2D>("Art/Sinuca/JanelasLateraisExterior");
-        if (shader == null || atlas == null) return;
-        var vidro = new Material(shader) { mainTexture = atlas };
-        recursos.Add(vidro);
+        var vidro = VidroExterior();
         foreach (float x in new[] { -3.0f, 3.0f })
         {
-            Caixa("Caixilho da vitrine", V(x, 1.65f, -4.385f), V(2.72f, 1.46f, .08f), caixilho, solida: false);
-            var janela = Quadro("Vidro molhado da vitrine", V(x, 1.65f, -4.33f), V(2.58f, 1.31f, 1f), vidro);
-            janela.Rotate(0f, 180f, 0f);
+            MolduraVazada(V(x,1.65f,-4.385f), 2.58f, 1.31f, caixilho);
+            Quadro("Vidro molhado da vitrine", V(x,1.65f,-4.36f), V(2.58f,1.31f,1f), vidro);
             Caixa("Travessa da vitrine", V(x, 1.65f, -4.29f), V(2.64f, .046f, .045f), acabamento, solida: false);
             Caixa("Montante da vitrine", V(x, 1.65f, -4.29f), V(.046f, 1.34f, .045f), acabamento, solida: false);
         }

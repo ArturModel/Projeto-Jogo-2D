@@ -1,14 +1,15 @@
 ---
 type: community
-members: 30
+members: 32
 ---
 
 # Community 43
 
-**Members:** 30 nodes
+**Members:** 32 nodes
 
 ## Members
 - [[dot-AbrirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-ApontarMiraParaBolaMaisProxima()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AtualizarRegraBolaMarcadaAntesDoTurno()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CanNominate()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[dot-Group()]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
@@ -32,6 +33,7 @@ members: 30
 - [[Phase_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[Reaction]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[Reaction_1]] - code
+- [[Result_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[Sequence_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
 - [[SinucaZeComments]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[SinuquinhaRules]] - code - Projeto Jogo 2D/Assets/Scripts/SinuquinhaRules.cs
@@ -48,19 +50,20 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_Community 21]]
-- 7 edges to [[_COMMUNITY_Community 3]]
-- 7 edges to [[_COMMUNITY_Community 0]]
+- 8 edges to [[_COMMUNITY_Community 3]]
+- 7 edges to [[_COMMUNITY_Community 114]]
 - 3 edges to [[_COMMUNITY_Community 35]]
-- 2 edges to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 100]]
+- 2 edges to [[_COMMUNITY_Community 100]]
+- 1 edge to [[_COMMUNITY_Community 92]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 - 1 edge to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 94]]
+- 1 edge to [[_COMMUNITY_Community 49]]
+- 1 edge to [[_COMMUNITY_Community 45]]
 
 ## Top bridge nodes
-- [[SinuquinhaRules]] - degree 27, connects to 6 communities
-- [[dot-Resolve()_1]] - degree 9, connects to 4 communities
-- [[dot-CanNominate()_1]] - degree 9, connects to 3 communities
+- [[SinuquinhaRules]] - degree 27, connects to 5 communities
+- [[dot-ApontarMiraParaBolaMaisProxima()]] - degree 5, connects to 4 communities
+- [[dot-Resolve()_1]] - degree 9, connects to 3 communities
+- [[dot-CanNominate()_1]] - degree 9, connects to 2 communities
 - [[dot-React()]] - degree 8, connects to 2 communities
-- [[SinucaZeComments]] - degree 7, connects to 2 communities

@@ -12,13 +12,13 @@ tags:
 # .AtualizarPosicaoMarcadoresDinamicos()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_3]] - `calls` [EXTRACTED]
 - [[dot-CentralizarNoJogador()]] - `calls` [EXTRACTED]
 - [[dot-Current()]] - `calls` [EXTRACTED]
 - [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
 - [[dot-Player()]] - `calls` [EXTRACTED]
-- [[dot-Project()_2]] - `calls` [INFERRED]
-- [[dot-Update()_29]] - `calls` [EXTRACTED]
+- [[dot-Project()_3]] - `calls` [INFERRED]
+- [[dot-Update()_28]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 

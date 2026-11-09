@@ -1,30 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/BarDoZe3D.cs"
 type: "code"
-community: "Community 50"
-location: "L545"
+community: "Community 24"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_24
 ---
 
 # .Abrir()
 
 ## Connections
-- [[dot-AtualizarDisponibilidadePlanta()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarIndicadorZoom()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
-- [[dot-Detail()]] - `calls` [INFERRED]
-- [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
-- [[dot-Rebuild()]] - `calls` [INFERRED]
-- [[dot-Run()_7]] - `calls` [INFERRED]
-- [[dot-RunAtlas()]] - `calls` [INFERRED]
-- [[dot-RunNotebook()]] - `calls` [INFERRED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Travel()]] - `calls` [INFERRED]
-- [[dot-Update()_29]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
+- [[dot-EntrarNoBar3D()]] - `calls` [EXTRACTED]
+- [[dot-PosicionarJogadorInicialRoutine()]] - `calls` [EXTRACTED]
+- [[BarDoZe3D]] - `method` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_24

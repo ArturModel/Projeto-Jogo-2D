@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 24"
-location: "L970"
+location: "L1194"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,6 +16,7 @@ tags:
 - [[dot-CarregarTextura()]] - `calls` [EXTRACTED]
 - [[dot-CriarPisoDeZona()]] - `calls` [EXTRACTED]
 - [[dot-NomeArquivoTile()]] - `calls` [EXTRACTED]
+- [[dot-PintarSuperficieNativaDoBar()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[Color32]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 14"
+community: "Community 84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_84
 ---
 
 # Func
@@ -13,7 +13,9 @@ tags:
 ## Connections
 - [[dot-CriarPisoDeZona()]] - `references` [EXTRACTED]
 - [[dot-Mostrar()]] - `references` [EXTRACTED]
+- [[dot-PortaPosto()]] - `references` [EXTRACTED]
+- [[dot-TransicionarPortaPosto()]] - `references` [EXTRACTED]
 - [[Pedido]] - `references` [EXTRACTED]
 - [[SinucaSpinSelector]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_84

@@ -12,9 +12,9 @@ tags:
 # .Light()
 
 ## Connections
-- [[dot-Building()_1]] - `calls` [EXTRACTED]
+- [[dot-Building()]] - `calls` [EXTRACTED]
 - [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_2]] - `calls` [EXTRACTED]
+- [[dot-Lamp()_3]] - `calls` [EXTRACTED]
 - [[dot-Phone()]] - `calls` [EXTRACTED]
 - [[Light2D]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]

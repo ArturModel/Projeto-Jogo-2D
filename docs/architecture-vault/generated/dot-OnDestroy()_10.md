@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/BarDoZe3D.cs"
 type: "code"
-community: "Community 42"
-location: "L288"
+community: "Community 19"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_19
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
-- [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
+- [[dot-LiberarSala()]] - `calls` [EXTRACTED]
+- [[BarDoZe3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_19

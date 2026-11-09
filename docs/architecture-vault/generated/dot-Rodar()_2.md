@@ -1,20 +1,29 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoDirector.cs"
 type: "code"
-community: "Community 94"
-location: "L154"
+community: "Community 95"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_94
+  - community/Community_95
 ---
 
 # .Rodar()
 
 ## Connections
-- [[dot-Aparecer()]] - `calls` [EXTRACTED]
-- [[dot-Enfileirar()]] - `calls` [EXTRACTED]
+- [[dot-AteOTempo()]] - `calls` [EXTRACTED]
+- [[dot-Curvar()]] - `calls` [EXTRACTED]
+- [[dot-Definir()_2]] - `calls` [INFERRED]
+- [[dot-Desacelerar()]] - `calls` [EXTRACTED]
+- [[dot-Disparar()]] - `calls` [INFERRED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
+- [[dot-Ligar()_1]] - `calls` [INFERRED]
+- [[dot-Limpar()_4]] - `calls` [EXTRACTED]
+- [[dot-Revelar()]] - `calls` [EXTRACTED]
+- [[dot-Start()_24]] - `calls` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
-- [[Legenda]] - `method` [EXTRACTED]
+- [[PrologoDirector]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_95

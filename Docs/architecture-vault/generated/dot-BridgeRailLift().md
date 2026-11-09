@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
 community: "Community 2"
-location: "L53"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-PoseOpponentShot()]] - `calls` [INFERRED]
-- [[dot-Sync()]] - `calls` [EXTRACTED]
+- [[dot-Sync()_2]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

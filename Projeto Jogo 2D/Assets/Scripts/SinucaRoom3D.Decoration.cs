@@ -3,6 +3,8 @@ using UnityEngine.Rendering;
 
 public sealed partial class SinucaRoom3D
 {
+    private Renderer fotoDoClube, regrasDaCasa;
+
     private void BuildSalonDecoration()
     {
         // Distribute the existing bar memorabilia by use, instead of lining every
@@ -12,14 +14,18 @@ public sealed partial class SinucaRoom3D
         PlaceWallArt("FiadoSoAmanha",new Vector3(-4.36f,1.98f,3.68f),180,.66f);
         PlaceWallArt("Calendario2004",new Vector3(3.7f,1.94f,3.68f),180,.53f);
         PlaceWallArt("Inter1994",new Vector3(2.50f,2.04f,3.68f),180,.94f,false);
-        NoticeBoard(new Vector3(2.90f,1.83f,-7.27f));
+        NoticeBoard(new Vector3(5.25f,1.83f,-3.35f), -90f);
+        fotoDoClube = MontarQuadroExaminavel("FotoDoClube1990", "FramedPhoto",
+            new Vector3(-2.64f, 1.83f, 3.66f), 180f, .70f);
+        regrasDaCasa = MontarQuadroExaminavel("RegrasDaCasa", "Quadro_Regras_Sinuca",
+            new Vector3(4.58f, 1.83f, -7.24f), 0f, .76f);
         WallClock(new Vector3(5.24f,2.23f,.15f),-90);
         BilliardsMemorabilia(new Vector3(5.25f,1.87f,1.98f));
 
         var wood=Mat("estruturaCarvalho",new Color(.28f,.21f,.13f),tiles[2]);
         var iron=Mat("ferroPintado",new Color(.055f,.065f,.060f));
         // A rail at the entrance and an umbrella stand explain the threshold.
-        var rail=new GameObject("ChapeleiraEntrada").transform;rail.SetParent(scenery,false);rail.localPosition=new Vector3(-2.65f,1.70f,-7.25f);
+        var rail=new GameObject("ChapeleiraEntrada").transform;rail.SetParent(scenery,false);rail.localPosition=new Vector3(-5.25f,1.70f,-3.35f);rail.localRotation=Quaternion.Euler(0,90f,0);
         Box("ReguaGanchos",Vector3.zero,new Vector3(1.65f,.12f,.08f),wood,rail);
         for(int i=0;i<5;i++)
         {
@@ -60,14 +66,23 @@ public sealed partial class SinucaRoom3D
         }
     }
 
+    private Renderer MontarQuadroExaminavel(string id, string recurso, Vector3 centro, float yaw, float largura)
+    {
+        var sprites = Resources.LoadAll<Sprite>("Cap1/" + recurso);
+        if (sprites.Length == 0) return null;
+        var quadro = PixelObject(id, sprites[0], centro, 1f, false);
+        FitWallArt(quadro, centro, yaw, largura, true);
+        return quadro.GetComponent<Renderer>();
+    }
+
     private void PlaceWallArt(string id,Vector3 centre,float yaw,float width,bool framed=true)
     {
         var art=dynamic.Find(id);if(art==null)return;
         FitWallArt(art,centre,yaw,width,framed);
     }
-    private void NoticeBoard(Vector3 centre)
+    private void NoticeBoard(Vector3 centre, float yaw)
     {
-        var board=new GameObject("AvisosDoBar").transform;board.SetParent(scenery,false);board.localPosition=centre;
+        var board=new GameObject("AvisosDoBar").transform;board.SetParent(scenery,false);board.localPosition=centre;board.localRotation=Quaternion.Euler(0,yaw,0);
         var wood=Mat("estruturaCarvalho",new Color(.28f,.21f,.13f),tiles[2]);
         Box("MolduraAvisos",Vector3.zero,new Vector3(1.28f,.88f,.06f),wood,board);
         Box("CorticaAvisos",new Vector3(0,0,.035f),new Vector3(1.18f,.78f,.025f),Mat("cortica",new Color(.35f,.25f,.13f)),board);

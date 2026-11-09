@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.Perception.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs"
 type: "code"
-community: "Community 129"
-location: "L6"
+community: "Community 152"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_129
+  - community/Community_152
 ---
 
 # Nenhuma
 
 ## Connections
-- [[Alucinacao]] - `case_of` [EXTRACTED]
+- [[Sombra]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_129
+#graphify/code #graphify/EXTRACTED #community/Community_152

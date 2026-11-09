@@ -1,22 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
-community: "Community 12"
-location: "L743"
+community: "Community 120"
+location: "L105"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_12
+  - graphify/INFERRED
+  - community/Community_120
 ---
 
 # .Configurar()
 
 ## Connections
-- [[dot-LinhaStepperResolucao()]] - `calls` [INFERRED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
-- [[TMP_Dropdown]] - `references` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
+- [[dot-ColocarInteracao()]] - `calls` [INFERRED]
+- [[dot-Update()_21]] - `calls` [INFERRED]
+- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[dot-UpdateCasaDoAvoScene()]] - `calls` [INFERRED]
+- [[InteracaoCapitulo1]] - `method` [EXTRACTED]
+- [[TipoInteracao_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/INFERRED #community/Community_120

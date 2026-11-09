@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
 type: "code"
 community: "Community 115"
-location: "L15"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -16,7 +16,7 @@ tags:
 - [[dot-EncerrarPercepcao()]] - `calls` [EXTRACTED]
 - [[dot-MarcusComenta()]] - `calls` [EXTRACTED]
 - [[dot-Tick()_1]] - `calls` [INFERRED]
-- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[dot-Update()_18]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

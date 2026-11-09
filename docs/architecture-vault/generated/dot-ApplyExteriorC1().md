@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs"
 type: "code"
 community: "Community 41"
-location: "L257"
+location: "L242"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,5 +16,6 @@ tags:
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
 - [[dot-Replace()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
+- [[SantaRitaRuaNorte]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_41

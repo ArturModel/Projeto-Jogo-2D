@@ -1,25 +1,25 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs"
 type: "code"
-community: "Community 126"
+community: "Community 115"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_126
+  - community/Community_115
 ---
 
 # OlharPrimeiraPessoa
 
 ## Connections
-- [[dot-Awake()_16]] - `references` [EXTRACTED]
-- [[dot-Awake()_7]] - `method` [EXTRACTED]
+- [[dot-Awake()_12]] - `references` [EXTRACTED]
+- [[dot-Awake()_2]] - `method` [EXTRACTED]
 - [[dot-LerEntrada()]] - `method` [EXTRACTED]
-- [[dot-Update()_17]] - `method` [EXTRACTED]
+- [[dot-Update()_8]] - `method` [EXTRACTED]
 - [[Deslocamento]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[OlharPrimeiraPessoa.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_126
+#graphify/code #graphify/EXTRACTED #community/Community_115

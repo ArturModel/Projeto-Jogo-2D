@@ -1,33 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 83"
-location: "L33"
+community: "Community 52"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_83
+  - community/Community_52
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Botao()_1]] - `calls` [EXTRACTED]
-- [[dot-Confirmar()]] - `calls` [EXTRACTED]
-- [[dot-GarantirModalCriado()]] - `calls` [INFERRED]
-- [[dot-Rect()_1]] - `calls` [EXTRACTED]
-- [[dot-Texto()_3]] - `calls` [EXTRACTED]
-- [[Action]] - `references` [EXTRACTED]
-- [[Button]] - `references` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
+- [[dot-Awake()_20]] - `calls` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
 - [[CanvasScaler]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[PayphoneRegistroTecla]] - `references` [EXTRACTED]
-- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
-- [[RawImage]] - `references` [EXTRACTED]
-- [[TextMeshProUGUI]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
+- [[MinigameDialogue]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/EXTRACTED #community/Community_52

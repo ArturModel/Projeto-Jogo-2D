@@ -15,6 +15,7 @@ tags:
 - [[dot-ConsumirEntrada()]] - `method` [EXTRACTED]
 - [[dot-Ir()]] - `method` [EXTRACTED]
 - [[dot-IrParaPosicao()]] - `method` [EXTRACTED]
+- [[dot-PrepararPosicao()]] - `method` [EXTRACTED]
 - [[SceneTransition.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

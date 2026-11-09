@@ -40,10 +40,10 @@ public sealed partial class Chapter2RuntimeVerification
      }
      keyboard.MakeCurrent();InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return new WaitForSecondsRealtime(.4f);
      int row = key == Key.S ? 0 : key == Key.W ? 1 : key == Key.A || cicloV20 ? 2 : 3;
-     var atlas = Field<Sprite[,]>(player,"quadrosCaminhada");
+     var atlas = (equipped ? Field<Sprite[,]>(player,"quadrosCaminhadaComLanterna") : null) ?? Field<Sprite[,]>(player,"quadrosCaminhada");
      int expectedFrames = cicloV20 ? 8 : 3;
      Check(poses.Count >= 3 && poses.Count <= expectedFrames && poses.All(p=>p.texture==atlas[0,0].texture && p.rect.y==(3-row)*64),"Poses da linha correta: "+key+" lanterna="+equipped);
-     var idle = Field<Sprite[]>(player,"quadrosRepouso");
+     var idle = (equipped ? Field<Sprite[]>(player,"repousoComLanterna") : null) ?? Field<Sprite[]>(player,"quadrosRepouso");
      Check(body.sprite==idle[row] && body.sprite.texture.width==(cicloV20 ? 576 : 192) && body.sprite.rect.width==64,"Repouso mantém a pose original: "+key+" lanterna="+equipped);
      Check(player.LanternaVisivel==equipped,"Feixe independente da folha: "+key+" lanterna="+equipped);
      yield return Capture("repouso-"+key+"-"+equipped);

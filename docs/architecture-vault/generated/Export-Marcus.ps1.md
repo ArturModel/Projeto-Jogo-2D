@@ -11,7 +11,4 @@ tags:
 
 # Export-Marcus.ps1
 
-## Connections
-- [[Invoke-MarcusExport()]] - `contains` [EXTRACTED]
-
 #graphify/code #graphify/EXTRACTED #community/Community_102

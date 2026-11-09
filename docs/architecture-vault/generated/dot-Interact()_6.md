@@ -1,18 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "Community 44"
-location: "L27"
+community: "Community 20"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_20
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Update()_27]] - `calls` [INFERRED]
-- [[Interactable]] - `method` [EXTRACTED]
+- [[Capitulo2Interactable]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_20

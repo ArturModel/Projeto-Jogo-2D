@@ -197,3 +197,17 @@ SinucaPerceptionSchedule controla cinco eventos e StartForced permite comandos m
 
 
 Na exploração, Shift aumenta a velocidade de caminhada em 25%. `PlayerController` compartilha a leitura de teclado e a aceleração com `Posto3D` e `BarDoZe3D`. E aciona a interação por pressionamento, com bloqueio de movimento durante diálogo ou interface modal.
+
+09/11/2026 — ExteriorInterior3D monta extensões locais de geometria no renderer 3D de Posto3D, SinucaRoom3D e BochaRoom3D. As paredes são divididas ao redor dos vãos. JanelaMolhada é uma sobreposição translúcida, com o exterior iluminado atrás dela. NevoaExterior3D integra densidade no volume, limitado pela profundidade da cena. [Plano](../../ai-plans/2026-11-09_BBCONTTI_exteriores-em-perspectiva.md).
+
+09/11/2026 — SinucaRoom3D monta as duas janelas na fachada, com recortes nas camadas da parede e um único exterior 3D compartilhado com a porta. O posicionamento de inspeção é derivado do transform de cada janela. [Plano](../../ai-plans/2026-11-09_BBCONTTI_janelas-fachada-bar.md).
+
+
+Na Zona5, SantaRitaRuaNorte.Bar monta a Rua Norte com os efeitos compartilhados dos exteriores. O portão fecha transversalmente a subida a partir da curva e a interação segue sob Capitulo1Director e InteracaoCapitulo1, com o desbloqueio condicionado à sinuca.
+
+09/11/2026 — O fader da porta aceita uma cena de destino para manter a máscara de névoa na saída de BarDoZe. SceneTransition prepara a posição de retorno antes da troca e SceneFader revela a Rua Norte depois do carregamento. [Plano](../../ai-plans/2026-11-09_BBCONTTI_saida-animada-bar.md).
+
+09/11/2026 — CameraFollow enquadra os renderers de inspeção e orelhões. SantaRitaInspecao define o tempo e a curva usados pela apresentação lateral. PayphoneJogoUI apresenta visor e teclas sobre a cena viva, e PayphoneCheckpoint mantém as operações por registro e o bloqueio durante o retorno da câmera. [Plano](../../ai-plans/2026-11-09_BBCONTTI_inspecoes-orelhao-em-cena.md).
+
+
+O orelhão no mundo usa o enquadramento ao vivo de SantaRitaInspecao. PayphoneJogoUI controla o gancho e a discagem. PayphoneCheckpoint persiste o slot escolhido quando o jogador recoloca o fone no modo Gravar. Esc cancela. A carga continua com seleção e confirmação explícitas.

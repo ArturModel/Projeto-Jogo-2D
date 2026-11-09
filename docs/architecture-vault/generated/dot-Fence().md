@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-BoundaryForest()]] - `calls` [EXTRACTED]
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Prop()_2]] - `calls` [EXTRACTED]
+- [[dot-Prop()_3]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

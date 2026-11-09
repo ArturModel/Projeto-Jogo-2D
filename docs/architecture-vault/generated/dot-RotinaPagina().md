@@ -16,8 +16,8 @@ tags:
 - [[dot-ConfigurarRetratoEFalante()]] - `calls` [EXTRACTED]
 - [[dot-Digitar()]] - `calls` [EXTRACTED]
 - [[dot-Fade()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
-- [[dot-Show()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_5]] - `calls` [EXTRACTED]
+- [[dot-Show()_2]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 

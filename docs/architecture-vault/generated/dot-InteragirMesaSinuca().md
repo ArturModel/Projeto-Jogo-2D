@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
 community: "Community 13"
-location: "L930"
+location: "L947"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,9 @@ tags:
 # .InteragirMesaSinuca()
 
 ## Connections
-- [[dot-Falar()]] - `calls` [EXTRACTED]
+- [[dot-Examinar()]] - `calls` [EXTRACTED]
 - [[dot-Interact()_2]] - `calls` [EXTRACTED]
 - [[dot-InteragirZe()]] - `calls` [EXTRACTED]
-- [[dot-Marcus()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 

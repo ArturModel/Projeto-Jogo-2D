@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
-community: "Community 16"
+community: "Community 94"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_94
 ---
 
 # Capitulo2Director
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-Apply()]] - `references` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `method` [EXTRACTED]
-- [[dot-Awake()_3]] - `references` [EXTRACTED]
-- [[dot-Awake()_11]] - `method` [EXTRACTED]
+- [[dot-Awake()_17]] - `references` [EXTRACTED]
+- [[dot-Awake()_29]] - `method` [EXTRACTED]
 - [[dot-Capture()_1]] - `references` [EXTRACTED]
 - [[dot-CarregarConteudo()]] - `method` [EXTRACTED]
 - [[dot-Cemetery()]] - `references` [EXTRACTED]
@@ -27,23 +27,24 @@ tags:
 - [[dot-Dados()]] - `method` [EXTRACTED]
 - [[dot-Dialogo()]] - `method` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
+- [[dot-ExaminarNoMundo()]] - `method` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
-- [[dot-Interagir()]] - `method` [EXTRACTED]
+- [[dot-Interagir()_1]] - `method` [EXTRACTED]
 - [[dot-Nota()]] - `method` [EXTRACTED]
 - [[dot-Ocorrencia()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_6]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_27]] - `method` [EXTRACTED]
 - [[dot-PosicaoNoMapa()]] - `method` [EXTRACTED]
 - [[dot-PrepararSessao()]] - `method` [EXTRACTED]
 - [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
 - [[dot-Start()_21]] - `method` [EXTRACTED]
-- [[dot-Update()_4]] - `method` [EXTRACTED]
+- [[dot-Update()_42]] - `method` [EXTRACTED]
 - [[dot-UpdateAccesses()]] - `references` [EXTRACTED]
 - [[C2InteractionData]] - `references` [EXTRACTED]
 - [[Capitulo2Director.cs]] - `contains` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
-- [[Instance_2]] - `defines` [EXTRACTED]
+- [[Instance_12]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[ProntoParaBocha]] - `defines` [EXTRACTED]
@@ -51,4 +52,4 @@ tags:
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_94

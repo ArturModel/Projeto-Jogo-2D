@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Opponent.cs"
 type: "code"
-community: "Community 2"
+community: "Community 115"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_115
 ---
 
 # .PrepareOpponentShot()
@@ -18,4 +18,4 @@ tags:
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_115

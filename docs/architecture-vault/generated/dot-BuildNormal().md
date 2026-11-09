@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
 type: "code"
-community: "Community 112"
-location: "L30"
+community: "Community 123"
+location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_112
+  - community/Community_123
 ---
 
 # .BuildNormal()
 
 ## Connections
-- [[dot-Build()]] - `calls` [EXTRACTED]
-- [[MenuAmbienteAuthoring]] - `method` [EXTRACTED]
+- [[dot-Build()_1]] - `calls` [EXTRACTED]
+- [[PrologoJogavelVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_112
+#graphify/code #graphify/EXTRACTED #community/Community_123

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Console.cs"
 type: "code"
-community: "Community 3"
+community: "Community 28"
 location: "L153"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_3
+  - community/Community_28
 ---
 
 # .ReiniciarConsoleSinuca()
@@ -16,4 +16,4 @@ tags:
 - [[dot-ReiniciarPercepcoesSinuca()]] - `calls` [INFERRED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_3
+#graphify/code #graphify/EXTRACTED #community/Community_28

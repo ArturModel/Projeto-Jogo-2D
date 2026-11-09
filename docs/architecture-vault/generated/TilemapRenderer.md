@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 20"
+community: "Community 141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_20
+  - community/Community_141
 ---
 
 # TilemapRenderer
@@ -13,6 +13,8 @@ tags:
 ## Connections
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-Apply()]] - `references` [EXTRACTED]
+- [[dot-Apply()_2]] - `references` [EXTRACTED]
+- [[dot-ApplyToScene()]] - `references` [EXTRACTED]
 - [[dot-BuildTilemap()]] - `references` [EXTRACTED]
 - [[dot-Capture()_1]] - `references` [EXTRACTED]
 - [[dot-DecorateTerrain()]] - `references` [EXTRACTED]
@@ -20,4 +22,4 @@ tags:
 - [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-Setup()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_20
+#graphify/code #graphify/EXTRACTED #community/Community_141

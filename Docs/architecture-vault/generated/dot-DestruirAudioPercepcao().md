@@ -12,7 +12,7 @@ tags:
 # .DestruirAudioPercepcao()
 
 ## Connections
-- [[dot-OnDestroy()_8]] - `calls` [INFERRED]
+- [[dot-OnDestroy()_11]] - `calls` [INFERRED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_28

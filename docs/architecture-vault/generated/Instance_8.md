@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
 community: "Community 38"
-location: "L13"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # Instance
 
 ## Connections
-- [[SantaRitaInventory]] - `defines` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `defines` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_38

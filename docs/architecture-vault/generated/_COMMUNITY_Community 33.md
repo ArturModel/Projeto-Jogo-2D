@@ -1,26 +1,26 @@
 ---
 type: community
-members: 37
+members: 36
 ---
 
 # Community 33
 
-**Members:** 37 nodes
+**Members:** 36 nodes
 
 ## Members
+- [[dot-Ativar()_2]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
 - [[dot-AtualizarAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Awake()_16]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Caixa()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Awake()_12]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-CentroVia()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Construir()_2]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Graphic()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Imagem()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Objeto()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-DistanciaEm()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-LerControles()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Objeto()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-OnApplicationFocus()_4]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Rect()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[dot-Rotulo()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-Texto()_1]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[CanvasRenderer]] - code
+- [[dot-TerraEm()]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[dot-Transmitir()]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
+- [[dot-Update()_27]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[Coroutine]] - code
 - [[Curva]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Direcao]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Distancia]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
@@ -37,9 +37,8 @@ members: 37
 - [[PortaLuvasCarro.cs]] - code - Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs
 - [[PosicaoLateral]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[PrologoJogavel]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
+- [[RadioCarro]] - code - Projeto Jogo 2D/Assets/Scripts/RadioCarro.cs
 - [[RadioLigado]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[Rect]] - code
-- [[RectMask2D]] - code
 - [[Rumo]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Suspenso]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
 - [[Tempo]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
@@ -54,36 +53,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Community 94]]
-- 8 edges to [[_COMMUNITY_Community 85]]
-- 5 edges to [[_COMMUNITY_Community 46]]
-- 5 edges to [[_COMMUNITY_Community 24]]
-- 3 edges to [[_COMMUNITY_Community 12]]
-- 3 edges to [[_COMMUNITY_Community 115]]
-- 3 edges to [[_COMMUNITY_Community 34]]
-- 2 edges to [[_COMMUNITY_Community 113]]
-- 2 edges to [[_COMMUNITY_Community 26]]
-- 2 edges to [[_COMMUNITY_Community 50]]
-- 1 edge to [[_COMMUNITY_Community 126]]
+- 8 edges to [[_COMMUNITY_Community 98]]
+- 6 edges to [[_COMMUNITY_Community 94]]
+- 4 edges to [[_COMMUNITY_Community 116]]
+- 4 edges to [[_COMMUNITY_Community 30]]
+- 4 edges to [[_COMMUNITY_Community 46]]
+- 3 edges to [[_COMMUNITY_Community 26]]
+- 2 edges to [[_COMMUNITY_Community 115]]
+- 2 edges to [[_COMMUNITY_Community 12]]
+- 2 edges to [[_COMMUNITY_Community 137]]
+- 2 edges to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 139]]
+- 1 edge to [[_COMMUNITY_Community 85]]
+- 1 edge to [[_COMMUNITY_Community 110]]
 - 1 edge to [[_COMMUNITY_Community 123]]
 - 1 edge to [[_COMMUNITY_Community 42]]
-- 1 edge to [[_COMMUNITY_Community 108]]
 - 1 edge to [[_COMMUNITY_Community 92]]
-- 1 edge to [[_COMMUNITY_Community 107]]
-- 1 edge to [[_COMMUNITY_Community 40]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 114]]
-- 1 edge to [[_COMMUNITY_Community 125]]
-- 1 edge to [[_COMMUNITY_Community 110]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 16]]
-- 1 edge to [[_COMMUNITY_Community 51]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 52]]
+- 1 edge to [[_COMMUNITY_Community 84]]
+- 1 edge to [[_COMMUNITY_Community 120]]
+- 1 edge to [[_COMMUNITY_Community 0]]
 - 1 edge to [[_COMMUNITY_Community 36]]
 
 ## Top bridge nodes
-- [[PrologoJogavel]] - degree 52, connects to 11 communities
-- [[Rect]] - degree 13, connects to 7 communities
-- [[dot-Imagem()_1]] - degree 9, connects to 5 communities
-- [[dot-Awake()_16]] - degree 9, connects to 4 communities
-- [[dot-Rect()]] - degree 8, connects to 3 communities
+- [[PrologoJogavel]] - degree 55, connects to 14 communities
+- [[dot-Awake()_12]] - degree 9, connects to 5 communities
+- [[PortaLuvasCarro]] - degree 6, connects to 3 communities
+- [[Coroutine]] - degree 4, connects to 3 communities
+- [[dot-Update()_27]] - degree 8, connects to 2 communities

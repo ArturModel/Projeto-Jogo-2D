@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 52"
+community: "Community 133"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_52
+  - community/Community_133
 ---
 
 # Fase
@@ -15,8 +15,8 @@ tags:
 - [[BochaMinigameUI]] - `contains` [EXTRACTED]
 - [[Carregando]] - `case_of` [EXTRACTED]
 - [[Mira]] - `case_of` [EXTRACTED]
-- [[Resultado_1]] - `case_of` [EXTRACTED]
+- [[Resultado]] - `case_of` [EXTRACTED]
 - [[Rolagem]] - `case_of` [EXTRACTED]
 - [[Tonando]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_52
+#graphify/code #graphify/EXTRACTED #community/Community_133

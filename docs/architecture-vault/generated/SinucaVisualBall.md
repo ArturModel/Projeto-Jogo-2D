@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarEstadoRender()]] - `references` [EXTRACTED]
 - [[dot-SincronizarMesa3D()]] - `calls` [INFERRED]
-- [[dot-Sync()]] - `references` [EXTRACTED]
+- [[dot-Sync()_2]] - `references` [EXTRACTED]
 - [[Quaternion]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaTableView.cs]] - `contains` [EXTRACTED]

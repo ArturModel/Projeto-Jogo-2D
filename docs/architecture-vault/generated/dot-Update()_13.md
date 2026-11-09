@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 119"
-location: "L29"
+community: "Community 126"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_119
+  - community/Community_126
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Interior()]] - `calls` [EXTRACTED]
-- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
+- [[dot-Attach()]] - `calls` [EXTRACTED]
+- [[Capitulo2Interactable]] - `references` [EXTRACTED]
+- [[InteracaoCapitulo1]] - `references` [EXTRACTED]
+- [[SantaRitaTapePlacement]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_119
+#graphify/code #graphify/EXTRACTED #community/Community_126

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 3"
-location: "L3137"
+location: "L3149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .GarantirColisoesGravadas()
 
 ## Connections
-- [[dot-Awake()_15]] - `calls` [EXTRACTED]
+- [[dot-Awake()_10]] - `calls` [EXTRACTED]
 - [[dot-TocarSomColisaoBola()]] - `calls` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]

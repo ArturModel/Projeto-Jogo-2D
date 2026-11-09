@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
 community: "Community 8"
-location: "L266"
+location: "L293"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_14]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_18]] - `calls` [EXTRACTED]
 - [[dot-MetadeDaTela()]] - `calls` [EXTRACTED]
 - [[dot-NovaGota()]] - `calls` [EXTRACTED]
 - [[dot-NovoRespingo()]] - `calls` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 24"
-location: "L635"
+location: "L844"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,8 +14,6 @@ tags:
 ## Connections
 - [[dot-AplicarEstadoDaZona()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirMundoMultiZonas()]] - `calls` [EXTRACTED]
-- [[dot-GarantirElementosBarDoZeCenaSeparada()]] - `calls` [EXTRACTED]
-- [[dot-GarantirElementosCasaDoAvoCenaSeparada()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[Light2D]] - `references` [EXTRACTED]
 

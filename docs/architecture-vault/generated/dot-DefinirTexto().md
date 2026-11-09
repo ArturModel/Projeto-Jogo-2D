@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 4"
+community: "Community 38"
 location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_38
 ---
 
 # .DefinirTexto()
@@ -15,7 +15,7 @@ tags:
 - [[dot-Assign()]] - `calls` [EXTRACTED]
 - [[dot-Swap()]] - `calls` [EXTRACTED]
 - [[dot-ToggleBookmark()]] - `calls` [EXTRACTED]
-- [[dot-Update()_29]] - `calls` [EXTRACTED]
+- [[dot-Update()_28]] - `calls` [EXTRACTED]
 - [[GameState]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_38

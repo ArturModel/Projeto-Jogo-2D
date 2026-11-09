@@ -15,7 +15,7 @@ tags:
 - [[dot-LuzDaMao()]] - `calls` [INFERRED]
 - [[dot-PodeMirar()]] - `calls` [EXTRACTED]
 - [[dot-TremorMao()]] - `calls` [INFERRED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_18]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

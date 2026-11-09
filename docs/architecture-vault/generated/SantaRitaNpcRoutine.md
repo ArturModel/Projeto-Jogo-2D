@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "Community 108"
+community: "Community 138"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_108
+  - community/Community_138
 ---
 
 # SantaRitaNpcRoutine
@@ -17,19 +17,19 @@ tags:
 - [[dot-Dynamic()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
 - [[dot-Interior()_1]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_3]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_4]] - `method` [EXTRACTED]
 - [[dot-NPC()]] - `references` [EXTRACTED]
 - [[dot-PrepareTools()]] - `method` [EXTRACTED]
 - [[dot-Rodoviaria()]] - `references` [EXTRACTED]
 - [[dot-Routine()]] - `references` [EXTRACTED]
 - [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-Sociedade()]] - `references` [EXTRACTED]
-- [[dot-Start()_4]] - `references` [EXTRACTED]
-- [[dot-Start()_3]] - `method` [EXTRACTED]
+- [[dot-Start()_7]] - `references` [EXTRACTED]
+- [[dot-Start()_6]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaNpcRoutine.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_108
+#graphify/code #graphify/EXTRACTED #community/Community_138

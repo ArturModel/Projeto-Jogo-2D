@@ -1,3 +1,23 @@
+## 09/11/2026 — Análise visual da Rodovia de Entrada (prints da parada e orelhão)
+
+09/11/2026 — Diagnóstico técnico e direção de arte sobre os dois prints da `Zona1_Rodovia` (`SantaRitaRuaNorte.Chegada.cs`, `LuzVolumetrica.shader`, `Nevoeiro.shader`), cobrindo simetria do muro de arrimo, transição da poça sob o poste, cone volumétrico, silhueta de fundo da mata e leitura de contraste do Marcus. Sem alteração de código ou cenas. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_analise-visual-rodovia.md).
+
+## 09/11/2026 — Paleta do sprite no orelhão
+
+09/11/2026 — A interface do orelhão recebeu casco laranja gasto e peças em aço quente com relevo neutro, usando a cúpula do sprite em cena como referência. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_orelhao-paleta-do-sprite.md).
+
+## 09/11/2026 — Orelhão com monofone interativo
+
+09/11/2026 — O orelhão no mundo usa a câmera ao vivo e confirma a gravação ao recolocar o fone depois da escolha do registro. Esc cancela e a carga continua explícita. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_orelhao-gancho.md).
+
+## 09/11/2026 — Redesign Realista da Lanterna e Sprite do Marcus (`MarcusLanterna.png` V20)
+
+09/11/2026 — Folha `MarcusLanterna.png` (`576x256`, 4 direções × 9 quadros) gerada via Python/Pillow (`Tools/Aseprite/gerar-marcus-lanterna.py`) a partir de `MarcusCaminhadaV20.png`, mantendo 100% da animação existente de pernas, tronco, cabeça e braço livre, com o braço da lanterna fixo/estável durante a caminhada e lanterna compacta (`3px`). `PlayerController.cs` atualizado para carregar `MarcusLanterna.png` nas 4 direções e projetar feixe halógeno realista com `ConeVolumetricoLanterna` (halo na lente, hotspot central aquecido e penumbra âmbar em 32 PPU). Shaders `LuzVolumetrica.shader` e `Nevoeiro.shader` (`SantaRitaRuaNorte.cs`) e lanterna 3D (`Posto3D.CasaDoAvo.cs`) atualizados com perfil halógeno em múltiplas camadas e dispersão volumétrica na neblina. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_lanterna-realista-marcus.md).
+
+## 09/11/2026 — Redesign diegético do orelhão (Painel Metálico Anos 2000)
+
+09/11/2026 — Interface do orelhão in-game (`PayphoneJogoUI.cs`) completamente redesenhada para uma estética diegética de telecomunicações públicas brasileiras (2004). Substituída a antiga caixa genérica por gabinete de aço escovado com parafusos, visor LCD verde-fósforo de telemetria em 3 linhas, ranhura com cartão telefônico indutivo de 20 créditos espetado, chaves seletoras táteis de GRAVAR/CARREGAR e teclado numérico metálico 3D em matriz telefônica 3x2 com indicador de status de slot e confirmação por clique duplo / Enter / #. Compilação C# zero erros. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_orelhao-painel-metalico.md).
+
 ## 08/11/2026 — Guia visual de Santa Rita
 
 08/11/2026 — O exterior do Bar do Zé é a referência de redesign de Santa Rita. [Guia visual](../../Docs/Guia_Visual_Santa_Rita.md) reúne escala, materiais, iluminação, efeitos, continuidade e QA. [Plano](../../Docs/ai-plans/2026-11-08_BBCONTTI_guia-visual-santa-rita.md).
@@ -541,3 +561,30 @@ Terreno e peças compartilhadas da Rua Norte, nova prancha a 64 PPU, passeio con
 09/11/2026 — Caminhada e corrida de exploração em 2D e 3D. Shift aumenta a velocidade em 25%, com aceleração e frenagem graduais. E deixou de interromper o movimento sem diálogo ou interface modal. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_corrida-e-controles.md).
 
 09/11/2026 — Prólogo com asfalto e vegetação da Rodovia, parada no recuo pavimentado, chuva intensa, névoa baixa e sombras projetadas. [Plano e evidência](../ai-plans/2026-11-09_BBCONTTI_prologo-rodovia.md).
+
+09/11/2026 — Rodovia composta por módulos de terreno e sprites com relevo. Materiais próprios preservados na reinicialização para corrigir o quadro cinza. [Plano e validação](../ai-plans/2026-11-09_BBCONTTI_rodovia-modular.md).
+
+09/11/2026 — Folha modular de seis detalhes da Rodovia preservada como arte-fonte para a próxima montagem. [Plano e procedência](../ai-plans/2026-11-09_BBCONTTI_folha-detalhes-rodovia.md).
+
+09/11/2026 — Posto e venda receberam detalhes modulares e reflexos localizados. Caixas e postes de fiação do passeio norte foram removidos. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_composicao-posto.md).
+
+09/11/2026 — Encruzilhada recebeu faixa no eixo da porta, subida de terra com módulos próprios e vala de drenagem no limite leste. Árvores com perfis separados de folhas e troncos foram integradas à Rodovia, ao Posto e à Encruzilhada. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_mercadinho-subida-vegetacao.md).
+
+09/11/2026 — Margens sul ganharam copas jovens, submata e chão de mata. Albedos normalizados por espécie e transmissão quente nas folhas. [Plano e capturas](../ai-plans/2026-11-09_BBCONTTI_submata-margens.md).
+
+09/11/2026 — A árvore caída substituiu a vala no limite leste da Encruzilhada. As três zonas receberam copas de fundo, com atenção à subida ao Bairro e ao fundo do Mercadinho. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_bloqueio-fundo-mata.md).
+09/11/2026 — O Bairro das Casas ganhou composição modular em cinco trechos de barro, quatro balizas reaproveitadas e mata contínua com bordas abertas nas saídas. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_bairro-estrada-mata.md).
+09/11/2026 — O Bairro recebeu 81 árvores adicionais e quatro postes residenciais. A mata tem menos luz ambiente e preserva os pontos quentes perto das lâmpadas. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_bairro-mata-densa-postes.md).
+09/11/2026 — Nova implantação do Bairro com estrada sinuosa, ramais residenciais, pátios próprios e mata recortada pelas vias. O interior nº 40 ganhou um eixo livre de circulação. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_reimplantar-bairro-casa.md).
+
+09/11/2026 — Os cinco interiores em perspectiva receberam vistas 3D pelos vãos reais. Rua, varanda e jardim têm profundidade, sprites voltados à câmera, chuva e luz dos postes com névoa. A porta da Bocha mostra o salão. [Plano e evidências](../ai-plans/2026-11-09_BBCONTTI_exteriores-em-perspectiva.md).
+
+09/11/2026 — As janelas do Bar do Zé passaram para a parede da porta e veem a mesma Rua Norte 3D. Quadro e chapeleira ficam nas laterais. [Plano e capturas](../ai-plans/2026-11-09_BBCONTTI_janelas-fachada-bar.md).
+
+
+09/11/2026 — Rua Norte do Bar do Zé recomposta com recuo, mesas, abrigo, orelhão separado e mata nas duas margens. A curva termina num portão de arte própria entre muros, ligado à subida do Centro. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_rua-norte-bar-e-portao.md).
+
+09/11/2026 — Saída 3D do Bar do Zé com mão na maçaneta interna, abertura, passo pela soleira e névoa contínua até a Rua Norte. A cena separada usa o mesmo fluxo. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_saida-animada-bar.md).
+
+09/11/2026 — Inspeções de C1 usam foco de câmera no cenário, leitura digitada e áudio de papel. Orelhões físicos usam a mesma aproximação com visor e teclas no canto do objeto. Validação isolada dos dois orelhões de C1, 15 verificações. [Plano](../ai-plans/2026-11-09_BBCONTTI_inspecoes-orelhao-em-cena.md).
+

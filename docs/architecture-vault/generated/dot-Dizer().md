@@ -1,21 +1,33 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
-community: "Community 103"
-location: "L55"
+community: "Community 116"
+location: "L67"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Community_103
+  - graphify/EXTRACTED
+  - community/Community_116
 ---
 
 # .Dizer()
 
 ## Connections
-- [[dot-AplicarPreferencias()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarFalaZe()]] - `calls` [INFERRED]
-- [[dot-FalarTonao()]] - `calls` [INFERRED]
-- [[dot-MarcusComenta()]] - `calls` [INFERRED]
-- [[MinigameDialogue]] - `method` [EXTRACTED]
+- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
+- [[dot-AoVencerZeNaSinuca()]] - `calls` [EXTRACTED]
+- [[dot-Ativar()]] - `calls` [EXTRACTED]
+- [[dot-Ativar()_3]] - `calls` [EXTRACTED]
+- [[dot-DispararFalasVencidas()]] - `calls` [EXTRACTED]
+- [[dot-Enfileirar()]] - `calls` [EXTRACTED]
+- [[dot-IniciarPartidaSinucaComZe()]] - `calls` [EXTRACTED]
+- [[dot-Legendar()]] - `calls` [EXTRACTED]
+- [[dot-Ligar()]] - `calls` [EXTRACTED]
+- [[dot-NarracaoEntradaCasaAvoRoutine()]] - `calls` [EXTRACTED]
+- [[dot-Ocorrencia()]] - `calls` [EXTRACTED]
+- [[dot-Rodar()_2]] - `calls` [EXTRACTED]
+- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
+- [[dot-Start()_23]] - `calls` [EXTRACTED]
+- [[dot-Transmitir()]] - `calls` [EXTRACTED]
+- [[dot-Update()_27]] - `calls` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_116

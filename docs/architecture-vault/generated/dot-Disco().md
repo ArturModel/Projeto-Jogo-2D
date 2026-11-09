@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
 community: "Community 46"
-location: "L265"
+location: "L391"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Disco()
 
 ## Connections
-- [[dot-Estrada()]] - `calls` [EXTRACTED]
+- [[dot-DesenharMarco()]] - `calls` [EXTRACTED]
 - [[dot-Quad()_1]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[PrologoEstradaGraphic]] - `method` [EXTRACTED]

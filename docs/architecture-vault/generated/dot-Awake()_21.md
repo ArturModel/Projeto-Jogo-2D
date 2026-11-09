@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFalasEntrada.cs"
 type: "code"
-community: "Community 5"
-location: "L40"
+community: "Community 52"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_52
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-Build()_5]] - `calls` [EXTRACTED]
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
+- [[MinigameDialogue]] - `calls` [INFERRED]
+- [[SantaRitaFalasEntrada]] - `method` [EXTRACTED]
+- [[SantaRitaInspecao]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_52

@@ -20,7 +20,7 @@ tags:
 - [[dot-ProximoTurno()]] - `calls` [EXTRACTED]
 - [[dot-Regras()]] - `calls` [EXTRACTED]
 - [[dot-ReiniciarTonao()]] - `calls` [INFERRED]
-- [[dot-ResetWalking()_1]] - `calls` [INFERRED]
+- [[dot-ResetWalking()_2]] - `calls` [INFERRED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 

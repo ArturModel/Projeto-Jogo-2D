@@ -1,19 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs"
 type: "code"
-community: "Community 8"
-location: "L593"
+community: "Community 52"
+location: "L122"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_8
+  - graphify/INFERRED
+  - community/Community_52
 ---
 
 # .Limpar()
 
 ## Connections
-- [[dot-Desenhar()]] - `calls` [EXTRACTED]
-- [[Camada_3]] - `references` [EXTRACTED]
-- [[Chuva]] - `method` [EXTRACTED]
+- [[dot-Atualizar()]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_1]] - `calls` [INFERRED]
+- [[dot-Examinar()_1]] - `calls` [INFERRED]
+- [[dot-Limpar()_4]] - `calls` [INFERRED]
+- [[dot-LimparFalaTonao()]] - `calls` [INFERRED]
+- [[dot-LimparFalaZe()]] - `calls` [INFERRED]
+- [[dot-ReiniciarPercepcoes()]] - `calls` [INFERRED]
+- [[MinigameDialogue]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/INFERRED #community/Community_52

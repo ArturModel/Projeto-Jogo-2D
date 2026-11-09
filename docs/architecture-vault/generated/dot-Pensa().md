@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
 community: "Community 13"
-location: "L240"
+location: "L255"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,9 +13,10 @@ tags:
 
 ## Connections
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
-- [[dot-InteragirAvisoObra()]] - `calls` [EXTRACTED]
+- [[dot-InteragirCadernoMercadinho()]] - `calls` [EXTRACTED]
 - [[dot-InteragirLimiarCentro()]] - `calls` [EXTRACTED]
 - [[dot-InteragirMalaAbandonada()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPicapeEncruzilhada()]] - `calls` [EXTRACTED]
 - [[dot-ZeDesconversa()]] - `calls` [EXTRACTED]
 - [[DialogoLinha]] - `references` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]

@@ -2,10 +2,10 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
 community: "Community 87"
-location: "L280"
+location: "L291"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_87
 ---
 
@@ -17,7 +17,9 @@ tags:
 - [[dot-BuildSalonDepth()]] - `calls` [INFERRED]
 - [[dot-BuildSolidProp()]] - `calls` [INFERRED]
 - [[dot-BuildTable()]] - `calls` [INFERRED]
-- [[dot-Lamp()_3]] - `calls` [INFERRED]
+- [[dot-ConstruirPortaDoBar()]] - `calls` [INFERRED]
+- [[dot-Lamp()_5]] - `calls` [INFERRED]
+- [[dot-MontarCampainhaDoBalcao()]] - `calls` [INFERRED]
 - [[dot-Tube()]] - `calls` [EXTRACTED]
 - [[dot-WallClock()]] - `calls` [INFERRED]
 - [[GameObject]] - `references` [EXTRACTED]
@@ -28,4 +30,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_87
+#graphify/code #graphify/INFERRED #community/Community_87

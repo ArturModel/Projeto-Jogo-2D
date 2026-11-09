@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 83"
+community: "Community 96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_83
+  - community/Community_96
 ---
 
 # PayphoneSlotInputWatcher
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/EXTRACTED #community/Community_96

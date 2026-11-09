@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Tonao.cs"
 type: "code"
-community: "Community 98"
+community: "Community 29"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_98
+  - community/Community_29
 ---
 
 # .AtualizarSpriteTonao()
@@ -16,4 +16,4 @@ tags:
 - [[dot-UpdateCamera()_1]] - `calls` [INFERRED]
 - [[BochaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_98
+#graphify/code #graphify/EXTRACTED #community/Community_29

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
 community: "Community 8"
-location: "L788"
+location: "L838"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[dot-MontarSom()]] - `calls` [EXTRACTED]
-- [[AudioLowPassFilter]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
 

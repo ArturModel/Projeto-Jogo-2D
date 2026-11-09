@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
 community: "Community 113"
-location: "L116"
+location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[dot-Boundary()]] - `calls` [EXTRACTED]
-- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
 - [[dot-ExplorationPosition()]] - `calls` [EXTRACTED]
 - [[dot-NativeSurface()]] - `calls` [EXTRACTED]
 - [[dot-OccupiedChair()]] - `calls` [EXTRACTED]

@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[dot-BuildRoom()]] - `references` [EXTRACTED]
-- [[dot-Lamp()_3]] - `references` [EXTRACTED]
+- [[dot-Lamp()_5]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_29

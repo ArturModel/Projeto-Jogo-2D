@@ -1,20 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 24"
-location: "L24"
+community: "Community 54"
+location: "L681"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_54
 ---
 
 # .Configurar()
 
 ## Connections
-- [[dot-ColocarGatilhoTransicao()]] - `calls` [INFERRED]
-- [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
-- [[ZonaId_1]] - `references` [EXTRACTED]
+- [[dot-LinhaStepperResolucao()]] - `calls` [INFERRED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
+- [[TMP_Dropdown]] - `references` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_54

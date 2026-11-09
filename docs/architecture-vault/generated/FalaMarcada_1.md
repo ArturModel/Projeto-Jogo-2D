@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 19"
+community: "Community 95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_95
 ---
 
 # FalaMarcada
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[PrologoDirector]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_95

@@ -1,24 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 114"
 location: "L150"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_114
 ---
 
 # .RunSinucaR4()
 
 ## Connections
-- [[dot-AwaitScene()]] - `calls` [INFERRED]
+- [[dot-AwaitScene()]] - `calls` [EXTRACTED]
 - [[dot-BrazilianRuleChecks()]] - `calls` [EXTRACTED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-ClickR4()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()]] - `calls` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `calls` [EXTRACTED]
 - [[dot-ExportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-FecharSeAberto()]] - `calls` [EXTRACTED]
@@ -52,4 +52,4 @@ tags:
 - [[SinucaTableView]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_114

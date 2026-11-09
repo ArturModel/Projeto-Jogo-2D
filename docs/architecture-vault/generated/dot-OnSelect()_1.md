@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "Community 54"
-location: "L296"
+location: "L689"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,7 @@ tags:
 # .OnSelect()
 
 ## Connections
-- [[dot-Selecionar()]] - `calls` [INFERRED]
 - [[BaseEventData]] - `references` [EXTRACTED]
-- [[PayphoneRegistroTecla]] - `method` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_54

@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/export-ze-sinuca.py"
 type: "rationale"
-community: "Community 32"
+community: "Community 129"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_129
 ---
 
 # Normalize the newly drawn atlas into 16 aligned cells. Never synthesize…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[export-ze-sinuca.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_32
+#graphify/rationale #graphify/EXTRACTED #community/Community_129

@@ -1,25 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Exterior.cs"
 type: "code"
-community: "Community 16"
-location: "L98"
+community: "Community 139"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_139
 ---
 
 # .Prop()
 
 ## Connections
-- [[dot-Art()_1]] - `calls` [EXTRACTED]
-- [[dot-Cemetery()]] - `calls` [EXTRACTED]
-- [[dot-Center()]] - `calls` [EXTRACTED]
-- [[dot-Interior()_1]] - `calls` [EXTRACTED]
-- [[dot-PaperOnTable()]] - `calls` [EXTRACTED]
-- [[BoxCollider2D]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
-- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
+- [[dot-Montar()_1]] - `calls` [EXTRACTED]
+- [[dot-Submata()]] - `calls` [EXTRACTED]
+- [[Capitulo2Exterior]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_139

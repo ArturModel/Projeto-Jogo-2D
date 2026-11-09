@@ -15,10 +15,10 @@ tags:
 - [[dot-ComecarModoPratica()]] - `calls` [INFERRED]
 - [[dot-ComecarNovaSerie()]] - `calls` [INFERRED]
 - [[dot-EncerrarPercepcaoDaMao()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_1]] - `calls` [INFERRED]
-- [[dot-OnDisable()_7]] - `calls` [INFERRED]
+- [[dot-Fechar()_4]] - `calls` [INFERRED]
+- [[dot-OnDisable()_5]] - `calls` [INFERRED]
 - [[dot-ReiniciarConsoleSinuca()]] - `calls` [INFERRED]
-- [[dot-Reset()_1]] - `calls` [INFERRED]
+- [[dot-Reset()]] - `calls` [INFERRED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Community_28

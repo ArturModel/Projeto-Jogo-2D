@@ -13,7 +13,6 @@ tags:
 ## Connections
 - [[dot-DesenharGota()]] - `references` [EXTRACTED]
 - [[dot-NovaGota()]] - `references` [EXTRACTED]
-- [[dot-NovoRespingo()]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_8

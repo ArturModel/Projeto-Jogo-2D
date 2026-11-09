@@ -1,11 +1,11 @@
 ---
 type: community
-members: 62
+members: 61
 ---
 
 # Community 3
 
-**Members:** 62 nodes
+**Members:** 61 nodes
 
 ## Members
 - [[dot-AbrirAjudaGuiada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -13,15 +13,16 @@ members: 62
 - [[dot-AbrirTutorialInicial()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AvaliarCandidatoZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AvancarSimulacaoPassoFixo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Awake()_15]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Awake()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CaminhoLivreEntre()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CriarImpactoSusto()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Sustos.cs
 - [[dot-CruzaCapturaCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-EnsureInstance()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-EnsureInstance()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-EscolherTacadaZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ExecutarComandoConsoleSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Console.cs
 - [[dot-FecharAjudaGuiada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-FecharConsoleSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Console.cs
+- [[dot-GanhoTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-GarantirClipsAudio()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-GarantirColisoesGravadas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-InicializarCacapas()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -33,7 +34,6 @@ members: 62
 - [[dot-RebaterTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-RegistrarQuedaNaCacapa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-RegistrarTabela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ReiniciarConsoleSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Console.cs
 - [[dot-RotateVector2()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-SimularFisicaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-SimularPrevisaoRapida()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -50,7 +50,6 @@ members: 62
 - [[BolaMesa_1]] - code
 - [[CameraAtual]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[ConsoleSinucaAberto]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Console.cs
-- [[CursorLockMode]] - code
 - [[EfeitoAtual]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[EmModoPratica]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[EmPe]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -59,7 +58,7 @@ members: 62
 - [[EventosAudioDisparados]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[FalaHistoria_1]] - code
 - [[FalaPercepcaoOcupada]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI_Perception.cs
-- [[Instance_5]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[Instance_4]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[IntensidadeTremor]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Sustos.cs
 - [[IsShowing_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[MaoEmCurso]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
@@ -79,42 +78,38 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 47 edges to [[_COMMUNITY_Community 21]]
-- 39 edges to [[_COMMUNITY_Community 100]]
+- 45 edges to [[_COMMUNITY_Community 100]]
+- 38 edges to [[_COMMUNITY_Community 21]]
 - 30 edges to [[_COMMUNITY_Community 49]]
-- 22 edges to [[_COMMUNITY_Community 85]]
-- 17 edges to [[_COMMUNITY_Community 28]]
-- 13 edges to [[_COMMUNITY_Community 115]]
-- 13 edges to [[_COMMUNITY_Community 0]]
-- 7 edges to [[_COMMUNITY_Community 43]]
+- 20 edges to [[_COMMUNITY_Community 85]]
+- 18 edges to [[_COMMUNITY_Community 28]]
+- 14 edges to [[_COMMUNITY_Community 115]]
+- 13 edges to [[_COMMUNITY_Community 114]]
+- 9 edges to [[_COMMUNITY_Community 54]]
+- 8 edges to [[_COMMUNITY_Community 43]]
 - 6 edges to [[_COMMUNITY_Community 99]]
-- 4 edges to [[_COMMUNITY_Community 107]]
-- 4 edges to [[_COMMUNITY_Community 95]]
-- 4 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 23]]
-- 2 edges to [[_COMMUNITY_Community 103]]
-- 2 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 94]]
-- 2 edges to [[_COMMUNITY_Community 36]]
+- 6 edges to [[_COMMUNITY_Community 39]]
+- 5 edges to [[_COMMUNITY_Community 52]]
+- 5 edges to [[_COMMUNITY_Community 92]]
+- 2 edges to [[_COMMUNITY_Community 124]]
+- 2 edges to [[_COMMUNITY_Community 45]]
+- 2 edges to [[_COMMUNITY_Community 143]]
 - 2 edges to [[_COMMUNITY_Community 31]]
-- 1 edge to [[_COMMUNITY_Community 106]]
-- 1 edge to [[_COMMUNITY_Community 127]]
-- 1 edge to [[_COMMUNITY_Community 32]]
-- 1 edge to [[_COMMUNITY_Community 121]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 19]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 - 1 edge to [[_COMMUNITY_Community 14]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 108]]
+- 1 edge to [[_COMMUNITY_Community 12]]
+- 1 edge to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 0]]
 - 1 edge to [[_COMMUNITY_Community 53]]
 - 1 edge to [[_COMMUNITY_Community 91]]
-- 1 edge to [[_COMMUNITY_Community 92]]
 - 1 edge to [[_COMMUNITY_Community 111]]
 - 1 edge to [[_COMMUNITY_Community 131]]
+- 1 edge to [[_COMMUNITY_Community 37]]
 
 ## Top bridge nodes
-- [[SinucaMinigameUI]] - degree 247, connects to 30 communities
+- [[SinucaMinigameUI]] - degree 247, connects to 25 communities
 - [[dot-AbrirAjudaGuiada()]] - degree 9, connects to 3 communities
 - [[dot-EscolherTacadaZe()]] - degree 7, connects to 3 communities
 - [[dot-IniciarMedoSinuca()]] - degree 5, connects to 3 communities
-- [[dot-TocarClipImpacto()]] - degree 8, connects to 2 communities
+- [[dot-SimularPrevisaoRapida()]] - degree 7, connects to 2 communities

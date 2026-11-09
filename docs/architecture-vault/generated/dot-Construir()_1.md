@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "Community 12"
-location: "L232"
+location: "L236"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Construir()
 
 ## Connections
-- [[dot-Awake()_4]] - `calls` [EXTRACTED]
+- [[dot-Awake()_3]] - `calls` [EXTRACTED]
 - [[dot-Botao()]] - `calls` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `calls` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
@@ -29,12 +29,12 @@ tags:
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[dot-SubPainel()]] - `calls` [EXTRACTED]
 - [[dot-Titulo()]] - `calls` [EXTRACTED]
-- [[dot-TituloPausa()]] - `calls` [EXTRACTED]
-- [[dot-Vincular()_3]] - `calls` [INFERRED]
 - [[dot-Vincular()_4]] - `calls` [INFERRED]
+- [[dot-Vincular()_5]] - `calls` [INFERRED]
 - [[AudioSettingsController]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
+- [[CanvasScaler]] - `references` [EXTRACTED]
 - [[GraphicRaycaster]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]

@@ -11,8 +11,14 @@ public static class SceneTransition
     private static Vector2? posicaoPendente;
     public static void IrParaPosicao(string cena, Vector2 posicao)
     {
-        entradaPendente = null; posicaoPendente = posicao;
+        PrepararPosicao(posicao);
         SceneFader.Instance.LoadScene(cena);
+    }
+
+    internal static void PrepararPosicao(Vector2 posicao)
+    {
+        entradaPendente = null;
+        posicaoPendente = posicao;
     }
 
     // Chamado pela porta. O nome tem que bater com o Id de um SpawnPoint na

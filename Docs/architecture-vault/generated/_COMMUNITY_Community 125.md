@@ -1,20 +1,28 @@
 ---
 type: community
-members: 7
+members: 15
 ---
 
 # Community 125
 
-**Members:** 7 nodes
+**Members:** 15 nodes
 
 ## Members
-- [[dot-Circle()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-MapPoint()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPopulateMesh()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Quad()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[BochaMapGraphic]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[BochaOculta]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[Simulation]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-BuildTilemap()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-BuildWaterMask()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-ComporDetalhesDoBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bairro.cs
+- [[dot-CreateEntranceGroundLookup()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-DecalqueDoBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bairro.cs
+- [[dot-GroundTile()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-GroundVariant()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-PatioDoBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bairro.cs
+- [[dot-SelectAvenueGround()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-SelectBairroGround()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bairro.cs
+- [[dot-SelectBarGround()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bar.cs
+- [[dot-SelectEncruzilhadaGround()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-SelectEntranceGround()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-SelectPostoGround()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[Ground_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,21 +32,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 48]]
-- 2 edges to [[_COMMUNITY_Community 93]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 46]]
+- 14 edges to [[_COMMUNITY_Community 89]]
+- 3 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 40]]
 - 2 edges to [[_COMMUNITY_Community 115]]
-- 1 edge to [[_COMMUNITY_Community 17]]
-- 1 edge to [[_COMMUNITY_Community 27]]
-- 1 edge to [[_COMMUNITY_Community 106]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 120]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 139]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 141]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 11]]
 
 ## Top bridge nodes
-- [[BochaMapGraphic]] - degree 13, connects to 6 communities
-- [[dot-Circle()]] - degree 5, connects to 3 communities
-- [[dot-Quad()]] - degree 5, connects to 3 communities
-- [[dot-OnPopulateMesh()_1]] - degree 6, connects to 2 communities
-- [[dot-MapPoint()]] - degree 4, connects to 2 communities
+- [[dot-BuildTilemap()]] - degree 12, connects to 4 communities
+- [[dot-ComporDetalhesDoBairro()]] - degree 6, connects to 4 communities
+- [[dot-DecalqueDoBairro()]] - degree 5, connects to 4 communities
+- [[dot-PatioDoBairro()]] - degree 5, connects to 3 communities
+- [[dot-CreateEntranceGroundLookup()]] - degree 5, connects to 3 communities

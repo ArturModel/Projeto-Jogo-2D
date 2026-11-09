@@ -12,12 +12,13 @@ tags:
 # .BuildRoom()
 
 ## Connections
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-BuildRoomArchitecture()]] - `calls` [INFERRED]
 - [[dot-BuildSalonDepth()]] - `calls` [INFERRED]
 - [[dot-BuildSolidProp()]] - `calls` [INFERRED]
 - [[dot-CaptureArt()]] - `calls` [INFERRED]
-- [[dot-Lamp()_3]] - `calls` [EXTRACTED]
+- [[dot-ConstruirParedeDaEntrada()]] - `calls` [INFERRED]
+- [[dot-Lamp()_5]] - `calls` [EXTRACTED]
 - [[dot-Mat()_1]] - `calls` [EXTRACTED]
 - [[dot-RoomFill()]] - `calls` [EXTRACTED]
 - [[dot-SpriteFor()]] - `calls` [EXTRACTED]

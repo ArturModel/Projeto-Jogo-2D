@@ -1,17 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/ChuvaMinigamesSmoke.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
 type: "code"
-community: "Community 95"
-location: "L31"
+community: "Community 6"
+location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_95
+  - community/Community_6
 ---
 
 # .Run()
 
 ## Connections
-- [[ChuvaMinigamesSmoke]] - `method` [EXTRACTED]
+- [[dot-ConfigureArt()]] - `calls` [EXTRACTED]
+- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
+- [[dot-Exterior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_2]] - `calls` [EXTRACTED]
+- [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_95
+#graphify/code #graphify/EXTRACTED #community/Community_6

@@ -295,7 +295,9 @@ TextureImporter:
     indices:
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 9052f4f51c2bb72f7e5eec45b6e1afa9, type: 3}
+      name: _SurfaceMap
     nameFileIdTable:
       Grama_1: 3489991765990530705
       Grama_2: 4751888099526514777

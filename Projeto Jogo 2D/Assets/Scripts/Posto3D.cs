@@ -88,7 +88,7 @@ internal sealed partial class Posto3D : MonoBehaviour
         vista.transform.SetParent(cenario, false);
         vista.cullingMask = RoomMask;
         vista.clearFlags = CameraClearFlags.SolidColor;
-        vista.backgroundColor = new Color(.025f, .041f, .057f);
+        vista.backgroundColor = new Color(.024f, .030f, .033f);
         vista.nearClipPlane = .025f;
         vista.farClipPlane = 35f;
         vista.depth = -10f;
@@ -98,12 +98,17 @@ internal sealed partial class Posto3D : MonoBehaviour
         pipeline.volumeLayerMask = 0;
         pipeline.renderPostProcessing = false;
 
+        rua = Camera.main;
         switch (interior)
         {
             case Interior.Mercadinho: ConstruirMercadinho(); break;
             case Interior.CasaDoAvo: ConstruirCasaDoAvo(); break;
             default: ConstruirSala(); break;
         }
+        var exterior = Casa ? ExteriorInterior3D.Local.Casa : interior == Interior.Mercadinho
+            ? ExteriorInterior3D.Local.Mercadinho : ExteriorInterior3D.Local.Posto;
+        ExteriorInterior3D.Montar(cenario, vista, Layer, V(0,0,Soleira-.03f), 180f, exterior);
+        if (Casa) ExteriorInterior3D.Montar(cenario, vista, Layer, V(0,0,4.98f), 0f, ExteriorInterior3D.Local.Jardim);
         canvas = UIFactory.CreateCanvas(transform, interior + "Canvas", 6400);
         var imagem = new GameObject("Vista" + interior, typeof(RectTransform), typeof(RawImage)).GetComponent<RawImage>();
         imagem.transform.SetParent(canvas.transform, false);
@@ -128,7 +133,6 @@ internal sealed partial class Posto3D : MonoBehaviour
         interacao = gameObject.AddComponent<InteracaoCapitulo1>();
         interacao.enabled = false;
 
-        rua = Camera.main;
         jogador = FindAnyObjectByType<PlayerController>();
         chuva = FindAnyObjectByType<Chuva>();
         if (rua != null)
@@ -187,7 +191,9 @@ internal sealed partial class Posto3D : MonoBehaviour
 
         var fora = new Vector3(Casa ? .06f : .36f, 1.45f, Soleira - 1.39f);
         float cruzar = Curva(tempo, 1.46f, 2.62f);
-        vista.transform.localPosition = Vector3.Lerp(fora, PontoDeChegada, cruzar);
+        var posicao = Vector3.Lerp(fora, PontoDeChegada, cruzar);
+        posicao.y += MovimentoDaSoleira(cruzar);
+        vista.transform.localPosition = posicao;
         var deFora = Quaternion.LookRotation(cenario.InverseTransformPoint(macaneta.position) - fora);
         vista.transform.localRotation = Quaternion.Slerp(deFora, Quaternion.Euler(pitch, yaw, 0f),
             Curva(tempo, 1.42f, 2.58f));
@@ -207,9 +213,15 @@ internal sealed partial class Posto3D : MonoBehaviour
 
         AnimarMao(tempo, .78f, 1.06f, 1.50f, 1.84f);
         if (chuva3D != null) chuva3D.enabled = tempo < DuracaoEntrada;
-        if (materialChuva != null) materialChuva.SetFloat("_Tempo", tempo);
+        if (materialChuva != null) materialChuva.SetFloat("_Tempo", Time.unscaledTime);
         if (chuva != null) chuva.DefinirOclusaoPortaBar(Casa ? .82f * fechar : fechar);
         OrientarPersonagens();
+    }
+
+    internal static float MovimentoDaSoleira(float passo)
+    {
+        if (MenuPausa.ReduzirEfeitosIntensos) return 0f;
+        return Mathf.Sin(passo * Mathf.PI * 4f) * Mathf.Sin(passo * Mathf.PI) * .026f;
     }
 
     internal static void PrepararSaida()
@@ -244,7 +256,7 @@ internal sealed partial class Posto3D : MonoBehaviour
         AnimarMao(tempo, .08f, .47f, .97f, 1.29f);
 
         if (chuva3D != null) chuva3D.enabled = abertura > 0f;
-        if (materialChuva != null) materialChuva.SetFloat("_Tempo", tempo);
+        if (materialChuva != null) materialChuva.SetFloat("_Tempo", Time.unscaledTime);
         if (chuva != null) chuva.DefinirOclusaoPortaBar(1f - abertura);
         OrientarPersonagens();
     }
@@ -397,6 +409,7 @@ internal sealed partial class Posto3D : MonoBehaviour
         else if (temAlvo)
         {
             Capturar(false);
+            interacao.DefinirFocoInterior(vista, foco.bounds);
             interacao.Interact();
         }
     }

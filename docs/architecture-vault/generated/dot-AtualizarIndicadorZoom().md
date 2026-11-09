@@ -12,7 +12,7 @@ tags:
 # .AtualizarIndicadorZoom()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_3]] - `calls` [EXTRACTED]
 - [[dot-AplicarZoomIncremental()]] - `calls` [EXTRACTED]
 - [[dot-CentralizarNoJogador()]] - `calls` [EXTRACTED]
 - [[dot-ResetarZoomEPan()]] - `calls` [EXTRACTED]

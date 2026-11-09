@@ -1,19 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 28"
-location: "L281"
+community: "Community 39"
+location: "L288"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_39
 ---
 
 # .PrepararSala()
 
 ## Connections
 - [[dot-IniciarDueloDoBar()]] - `calls` [EXTRACTED]
+- [[dot-Preaquecer()]] - `calls` [INFERRED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
-- [[SinucaTableView]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_39

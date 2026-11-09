@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Patrons.cs"
 type: "code"
-community: "Community 18"
+community: "Community 113"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_113
 ---
 
 # .SalonPropVisible()
 
 ## Connections
+- [[dot-AtualizarAtoresDoSalao()]] - `calls` [INFERRED]
 - [[dot-PatronFrame()]] - `calls` [EXTRACTED]
-- [[dot-Sync()]] - `calls` [INFERRED]
 - [[dot-TablePropVisible()]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_113

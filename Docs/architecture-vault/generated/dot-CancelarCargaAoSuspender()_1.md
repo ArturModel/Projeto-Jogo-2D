@@ -19,7 +19,7 @@ tags:
 - [[dot-Pausar()]] - `calls` [EXTRACTED]
 - [[dot-ReleaseMouse()]] - `calls` [INFERRED]
 - [[dot-SuspenderFalaTonao()]] - `calls` [INFERRED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_18]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

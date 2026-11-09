@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 29"
+community: "Community 114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_114
 ---
 
 # GameObject
@@ -15,16 +15,19 @@ tags:
 - [[dot-Add()_1]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
 - [[dot-AtualizarBotoes()]] - `references` [EXTRACTED]
-- [[dot-Botao()_2]] - `references` [EXTRACTED]
-- [[dot-Box()_1]] - `references` [EXTRACTED]
-- [[dot-Box()]] - `references` [EXTRACTED]
+- [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-Box()_2]] - `references` [EXTRACTED]
+- [[dot-Box()]] - `references` [EXTRACTED]
+- [[dot-Box()_1]] - `references` [EXTRACTED]
+- [[dot-Box()_3]] - `references` [EXTRACTED]
+- [[dot-Caixa()]] - `references` [EXTRACTED]
 - [[dot-Cast()]] - `references` [EXTRACTED]
+- [[dot-CivicBox()]] - `references` [EXTRACTED]
 - [[dot-ColocarArteInterior()]] - `references` [EXTRACTED]
 - [[dot-ColocarArvore()]] - `references` [EXTRACTED]
 - [[dot-ColocarPosteComLuz()]] - `references` [EXTRACTED]
 - [[dot-ColocarProp()]] - `references` [EXTRACTED]
-- [[dot-Construir()_3]] - `references` [EXTRACTED]
+- [[dot-Construir()_5]] - `references` [EXTRACTED]
 - [[dot-Create()]] - `references` [EXTRACTED]
 - [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
 - [[dot-CreateNpcObject()]] - `references` [EXTRACTED]
@@ -34,7 +37,11 @@ tags:
 - [[dot-Empty()]] - `references` [EXTRACTED]
 - [[dot-Executar()]] - `references` [EXTRACTED]
 - [[dot-Frame()]] - `references` [EXTRACTED]
+- [[dot-Geometria()]] - `references` [EXTRACTED]
 - [[dot-IntegratedFrameR4()]] - `references` [EXTRACTED]
+- [[dot-Lamp()_2]] - `references` [EXTRACTED]
+- [[dot-MeshSprite()]] - `references` [EXTRACTED]
+- [[dot-Objeto()]] - `references` [EXTRACTED]
 - [[dot-Panel()]] - `references` [EXTRACTED]
 - [[dot-Paper()]] - `references` [EXTRACTED]
 - [[dot-PocketSlab()]] - `references` [EXTRACTED]
@@ -42,11 +49,11 @@ tags:
 - [[dot-Primitive()]] - `references` [EXTRACTED]
 - [[dot-Primitive()_1]] - `references` [EXTRACTED]
 - [[dot-Prop()]] - `references` [EXTRACTED]
+- [[dot-Prop()_3]] - `references` [EXTRACTED]
 - [[dot-Prop()_2]] - `references` [EXTRACTED]
-- [[dot-Prop()_1]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
-- [[dot-Run()_5]] - `references` [EXTRACTED]
+- [[dot-Run()_2]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunNotebook()]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
@@ -62,11 +69,14 @@ tags:
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
 - [[dot-Sphere()]] - `references` [EXTRACTED]
+- [[dot-SpriteProp()]] - `references` [EXTRACTED]
+- [[dot-StyleInventorySurface()]] - `references` [EXTRACTED]
+- [[dot-TexturaSociedade()]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
 - [[dot-Tube()]] - `references` [EXTRACTED]
 - [[dot-VerificarFisicaDeterministicaEBicos()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_3]] - `references` [EXTRACTED]
 - [[dot-Vincular()_4]] - `references` [EXTRACTED]
+- [[dot-Vincular()_5]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BochaRoom3D]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
@@ -84,8 +94,9 @@ tags:
 - [[PayphoneRegistroUI]] - `references` [EXTRACTED]
 - [[SantaRitaAtlasView]] - `references` [EXTRACTED]
 - [[SantaRitaInventory]] - `references` [EXTRACTED]
+- [[SantaRitaRuaNorte]] - `references` [EXTRACTED]
 - [[SantaRitaTapeDeck]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_114

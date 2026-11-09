@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
 type: "code"
 community: "Community 110"
-location: "L148"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,7 @@ tags:
 - [[dot-ConfigurarBotaoPainel()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotao()]] - `calls` [EXTRACTED]
 - [[dot-Esticar()]] - `calls` [EXTRACTED]
-- [[dot-Start()_5]] - `calls` [EXTRACTED]
+- [[dot-Start()_2]] - `calls` [EXTRACTED]
 - [[dot-Texto()]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[MenuAmbiente]] - `method` [EXTRACTED]

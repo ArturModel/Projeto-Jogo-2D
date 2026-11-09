@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AbrirSelecaoCarregar()]] - `calls` [EXTRACTED]
 - [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_5]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_6]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]

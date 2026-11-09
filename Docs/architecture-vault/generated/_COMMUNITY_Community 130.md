@@ -1,20 +1,28 @@
 ---
 type: community
-members: 7
+members: 15
 ---
 
 # Community 130
 
-**Members:** 7 nodes
+**Members:** 15 nodes
 
 ## Members
-- [[dot-ActionButton()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Awake()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Cell()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Frame()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Label()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Place()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-TocarRadio()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
+- [[Bake linear Sprite secondary textures from the current pixel art. Requires…]] - rationale - Tools/Bake-SpriteSurfaces.py
+- [[Bake-SpriteSurfaces.py]] - code - Tools/Bake-SpriteSurfaces.py
+- [[Shift by one pixel without wrapping at the texture edge.]] - rationale - Tools/Bake-SpriteSurfaces.py
+- [[bake()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[bake_sheet()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[collections]] - concept
+- [[io]] - concept
+- [[link()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[main()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[neighbor()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[profile()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[re]] - concept
+- [[slope()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[texture_meta()]] - code - Tools/Bake-SpriteSurfaces.py
+- [[update()]] - code - Tools/Bake-SpriteSurfaces.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,23 +32,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 38]]
-- 9 edges to [[_COMMUNITY_Community 85]]
-- 6 edges to [[_COMMUNITY_Community 7]]
-- 5 edges to [[_COMMUNITY_Community 115]]
-- 4 edges to [[_COMMUNITY_Community 24]]
-- 2 edges to [[_COMMUNITY_Community 95]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 29]]
-- 2 edges to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 107]]
-- 1 edge to [[_COMMUNITY_Community 94]]
-- 1 edge to [[_COMMUNITY_Community 12]]
-- 1 edge to [[_COMMUNITY_Community 4]]
+- 3 edges to [[_COMMUNITY_Community 149]]
+- 3 edges to [[_COMMUNITY_Community 129]]
+- 2 edges to [[_COMMUNITY_Community 32]]
+- 1 edge to [[_COMMUNITY_Community 148]]
 
 ## Top bridge nodes
-- [[dot-Awake()_8]] - degree 18, connects to 6 communities
-- [[dot-Cell()]] - degree 10, connects to 5 communities
-- [[dot-Frame()]] - degree 10, connects to 5 communities
-- [[dot-ActionButton()]] - degree 9, connects to 5 communities
-- [[dot-Label()]] - degree 9, connects to 4 communities
+- [[Bake-SpriteSurfaces.py]] - degree 17, connects to 4 communities
+- [[main()]] - degree 8, connects to 1 community
+- [[re]] - degree 5, connects to 1 community
+- [[bake()]] - degree 4, connects to 1 community
+- [[neighbor()]] - degree 4, connects to 1 community

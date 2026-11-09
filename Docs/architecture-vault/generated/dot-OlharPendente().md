@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-SetEntryLook()_1]] - `calls` [EXTRACTED]
-- [[dot-Sync()_2]] - `calls` [EXTRACTED]
+- [[dot-Sync()_1]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_9

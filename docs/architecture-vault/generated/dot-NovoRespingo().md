@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
 community: "Community 8"
-location: "L368"
+location: "L401"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,8 +18,8 @@ tags:
 - [[dot-RespingoDePasso()]] - `calls` [EXTRACTED]
 - [[dot-Simular()]] - `calls` [EXTRACTED]
 - [[Chuva]] - `method` [EXTRACTED]
-- [[Gota_1]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[Respingo]] - `calls` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_8

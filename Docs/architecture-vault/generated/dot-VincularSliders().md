@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-DesvincularSliders()]] - `calls` [EXTRACTED]
-- [[dot-OnEnable()_8]] - `calls` [EXTRACTED]
+- [[dot-OnEnable()_4]] - `calls` [EXTRACTED]
 - [[dot-Vincular()_2]] - `calls` [EXTRACTED]
 - [[AudioSettingsController]] - `method` [EXTRACTED]
 

@@ -8,7 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
-- [[PATH_1]] - code - scripts/graphify-setup.sh
+- [[PATH_2]] - code - scripts/graphify-setup.sh
 - [[graphify-setup.sh]] - code - scripts/graphify-setup.sh
 - [[graphify-setup.sh script]] - code - scripts/graphify-setup.sh
 

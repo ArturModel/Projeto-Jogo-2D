@@ -34,7 +34,8 @@ internal sealed partial class Posto3D
         Caixa("Assoalho", V(0, -.075f, .23f), V(11.8f, .15f, 9.49f), assoalho);
         Caixa("Piso da cozinha", V(-3.94f, .006f, 2.74f), V(3.75f, .012f, 4.22f), cozinha, solida: false);
         Caixa("Forro", V(0, 2.98f, .23f), V(11.8f, .11f, 9.49f), teto);
-        Caixa("Parede dos fundos", V(0, 1.50f, 4.91f), V(11.8f, 3f, .14f), papel);
+        ParedeComJanela(-5.9f, 5.9f, 4.91f, .14f, papel,
+            new Rect(-4.855f, 1.165f, 1.47f, 1.09f), new Rect(2.905f, 1.165f, 1.47f, 1.09f));
         Caixa("Lambril dos fundos", V(0, .47f, 4.81f), V(11.68f, .94f, .07f), lambril, solida: false);
         Caixa("Rodameio", V(0, .96f, 4.76f), V(11.68f, .07f, .07f), nogueira, solida: false);
         foreach (float lado in new[] { -1f, 1f })
@@ -42,12 +43,14 @@ internal sealed partial class Posto3D
             Caixa("Parede lateral", V(lado * 5.87f, 1.50f, .23f), V(.13f, 3f, 9.49f), papel);
             Caixa("Lambril lateral", V(lado * 5.78f, .47f, .23f), V(.06f, .94f, 9.35f), lambril, solida: false);
             Caixa("Rodameio lateral", V(lado * 5.73f, .96f, .23f), V(.065f, .07f, 9.35f), nogueira, solida: false);
-            Caixa("Parede da frente", V(lado * 3.26f, 1.50f, Soleira), V(5.26f, 3f, .14f), papel);
+            float janelaX = lado < 0f ? -3.25f : 3.16f;
+            ParedeComJanela(lado * 3.26f - 2.63f, lado * 3.26f + 2.63f, Soleira, .14f, papel,
+                new Rect(janelaX - .735f, 1.165f, 1.47f, 1.09f));
             Caixa("Tábua de beiral", V(lado * 3.26f, 2.69f, Soleira - .26f), V(5.26f, .28f, .47f), nogueira, solida: false);
             Caixa("Batente da casa", V(lado * .62f, 1.12f, Soleira), V(.10f, 2.24f, .22f), pintura);
         }
         Caixa("Verga da porta", V(0, 2.59f, Soleira), V(1.26f, .82f, .15f), papel);
-        Caixa("Varanda molhada", V(0, -.125f, -5.32f), V(11.8f, .18f, 1.84f), assoalho);
+        Caixa("Varanda molhada", V(0, -.125f, -5.32f), V(11.8f, .18f, 1.84f), PisoMolhado(assoalho));
         Caixa("Soleira de madeira", V(0, -.012f, Soleira), V(1.22f, .049f, .43f), nogueira, solida: false);
         ConstruirPortaDaCasa(pintura, nogueira, latao);
         ConstruirChuva();
@@ -57,22 +60,22 @@ internal sealed partial class Posto3D
             Caixa("Viga", V(0, 2.84f, z), V(11.61f, .21f, .20f), lambril, solida: false);
             Caixa("Haste da luminária", V(-.50f, 2.65f, z), V(.028f, .20f, .028f), ferro, solida: false);
             Caixa("Luminária doméstica", V(-.50f, 2.53f, z), V(.38f, .085f, .38f), luz, solida: false);
-            var lampada = Luz("Luz quente da casa", V(-.50f, 2.44f, z), new Color(1f, .81f, .57f), 4.75f, 6.0f);
+            var lampada = Luz("Luz quente da casa", V(-.50f, 2.44f, z), new Color(1f, .76f, .48f), z < 0f ? 2.65f : 1.90f, 4.35f);
             if (z < 0f) luzDaSala = lampada;
         }
-        Luz("Luz da cozinha", V(-4.00f, 2.40f, 3.38f), new Color(1f, .88f, .65f), 3.2f, 4.35f);
-        Luz("Luz do quarto", V(4.22f, 2.43f, 2.47f), new Color(1f, .79f, .54f), 2.85f, 4.3f);
-        Luz("Lâmpada da varanda", V(.25f, 2.38f, -5.35f), new Color(.91f, .83f, .61f), 3.1f, 4.2f);
+        Luz("Luz da cozinha", V(-4.00f, 2.40f, 3.38f), new Color(1f, .82f, .60f), 1.9f, 3.85f);
+        Luz("Luz do quarto", V(4.22f, 2.43f, 2.47f), new Color(1f, .73f, .46f), 1.45f, 3.55f);
+        Luz("Lâmpada da varanda", V(.25f, 2.38f, -5.35f), new Color(1f, .77f, .51f), 3.0f, 4.2f);
         lanternaCasa = new GameObject("Lanterna de Marcus 3D").AddComponent<Light>();
         lanternaCasa.transform.SetParent(vista.transform, false);
         lanternaCasa.transform.localPosition = V(.14f, -.12f, .12f);
         lanternaCasa.type = LightType.Spot;
-        lanternaCasa.spotAngle = 41f;
-        lanternaCasa.innerSpotAngle = 19f;
+        lanternaCasa.spotAngle = 42f;
+        lanternaCasa.innerSpotAngle = 16f;
         lanternaCasa.cullingMask = RoomMask;
-        lanternaCasa.color = new Color(.78f, .88f, 1f);
-        lanternaCasa.range = 7.8f;
-        lanternaCasa.intensity = 5f;
+        lanternaCasa.color = new Color(.93f, .96f, 1f);
+        lanternaCasa.range = 7.2f;
+        lanternaCasa.intensity = 3.5f;
         lanternaCasa.shadows = LightShadows.Soft;
         lanternaCasa.enabled = false;
 
@@ -151,17 +154,10 @@ internal sealed partial class Posto3D
         janela.SetParent(cenario, false);
         janela.localPosition = V(x, 1.71f, z);
         janela.localRotation = Quaternion.Euler(0, yaw, 0);
-        Caixa("Moldura da janela", Vector3.zero, V(1.62f, 1.25f, .09f), madeira, janela, false);
-        var shader = Resources.Load<Shader>("Art/Sinuca/JanelaMolhada");
-        var atlas = Resources.Load<Texture2D>("Art/Sinuca/JanelasLateraisExterior");
-        if (shader != null && atlas != null)
-        {
-            var vidro = new Material(shader) { mainTexture = atlas };
-            recursos.Add(vidro);
-            var quadro = Quadro("Chuva atrás da janela", Vector3.zero, V(1.47f, 1.09f, 1f), vidro);
-            quadro.SetParent(janela, false);
-            quadro.localPosition = V(0, 0, -.06f);
-        }
+        MolduraVazada(Vector3.zero, 1.47f, 1.09f, madeira, janela);
+        var quadro = Quadro("Vidro da janela da casa", Vector3.zero, V(1.47f, 1.09f, 1f), VidroExterior());
+        quadro.SetParent(janela, false);
+        quadro.localPosition = V(0, 0, -.06f);
         Caixa("Travessa", V(0, 0, -.085f), V(1.50f, .045f, .042f), madeira, janela, false);
         Caixa("Montante", V(0, 0, -.085f), V(.045f, 1.13f, .042f), madeira, janela, false);
         Caixa("Peitoril", V(0, -.64f, -.056f), V(1.75f, .077f, .29f), madeira, janela, false);
@@ -206,35 +202,35 @@ internal sealed partial class Posto3D
     private void ConstruirSalaCasa(Material marrom, Material madeira, Material tecido, Material vermelho,
         Material creme, Material osso, Material ferro)
     {
-        Caixa("Tapete da sala", V(.18f, .011f, .64f), V(4.51f, .022f, 3.55f), vermelho, solida: false);
+        Caixa("Tapete da sala", V(-1.32f, .011f, -0.23f), V(4.51f, .022f, 3.55f), vermelho, solida: false);
         foreach (float lado in new[] { -1f, 1f })
         {
-            Caixa("Franja do tapete", V(.18f, .024f, .64f + lado * 1.70f), V(4.50f, .011f, .075f), creme, solida: false);
-            Caixa("Borda do tapete", V(.18f + lado * 2.18f, .024f, .64f), V(.071f, .011f, 3.38f), creme, solida: false);
+            Caixa("Franja do tapete", V(-1.32f, .024f, -.23f + lado * 1.70f), V(4.50f, .011f, .075f), creme, solida: false);
+            Caixa("Borda do tapete", V(-1.32f + lado * 2.18f, .024f, -.23f), V(.071f, .011f, 3.38f), creme, solida: false);
         }
-        Caixa("Mesa de paciência", V(.13f, .72f, 1.19f), V(1.90f, .11f, 1.16f), marrom);
-        foreach (float x in new[] { -.65f, .91f })
-        foreach (float z in new[] { .74f, 1.65f })
+        Caixa("Mesa de paciência", V(-1.37f, .72f, 0.32f), V(1.90f, .11f, 1.16f), marrom);
+        foreach (float x in new[] { -2.15f, -.59f })
+        foreach (float z in new[] { -.13f, .78f })
             Caixa("Pé da mesa", V(x, .34f, z), V(.10f, .68f, .10f), madeira);
-        Caixa("Cartas de paciência", V(.13f, .815f, 1.15f), V(1.29f, .088f, .64f), osso,
+        Caixa("Cartas de paciência", V(-1.37f, .815f, 0.28f), V(1.29f, .088f, .64f), osso,
             tipo: Tipo.PistaCartasCasaAvo).GetComponent<MeshRenderer>().enabled = false;
         for (int carta = 0; carta < 7; carta++)
         {
-            float x = -.47f + carta * .20f;
-            float z = 1.08f + (carta % 3) * .08f;
+            float x = -1.97f + carta * .20f;
+            float z = .21f + (carta % 3) * .08f;
             Caixa("Carta de baralho", V(x, .784f, z), V(.115f, .012f, .18f), osso, solida: false)
                 .transform.Rotate(0f, (carta % 4 - 1) * 9f, 0f);
-            Caixa("Naipe da carta", V(x, .792f, z), V(.040f, .004f, .048f), carta % 2 == 0 ? ferro : vermelho, solida: false);
+            Caixa("Naipe da carta", V(x, .792f, z), V(.040f, .004f, .050f), carta % 2 == 0 ? ferro : vermelho, solida: false);
         }
-        Caixa("Ás fora do monte", V(.71f, .784f, .81f), V(.113f, .012f, .179f), osso, solida: false)
+        Caixa("Ás fora do monte", V(-0.79f, .784f, -0.06f), V(.113f, .012f, .179f), osso, solida: false)
             .transform.Rotate(0f, 25f, 0f);
-        Caixa("Marca do ás", V(.71f, .792f, .81f), V(.043f, .004f, .050f), vermelho, solida: false);
+        Caixa("Marca do ás", V(-0.79f, .792f, -0.06f), V(.043f, .004f, .050f), vermelho, solida: false);
 
-        Caixa("Estrutura da poltrona", V(-2.65f, .29f, .79f), V(1.15f, .58f, .93f), madeira);
-        Caixa("Almofada da poltrona", V(-2.65f, .57f, .76f), V(.91f, .22f, .78f), tecido, solida: false);
-        Caixa("Encosto alto", V(-2.65f, .94f, 1.15f), V(1.10f, .77f, .24f), tecido, solida: false);
-        foreach (float x in new[] { -3.14f, -2.16f })
-            Caixa("Braço da poltrona", V(x, .66f, .77f), V(.18f, .24f, .82f), tecido, solida: false);
+        Caixa("Estrutura da poltrona", V(-3.16f, .29f, .94f), V(1.15f, .58f, .93f), madeira);
+        Caixa("Almofada da poltrona", V(-3.16f, .57f, .91f), V(.91f, .22f, .78f), tecido, solida: false);
+        Caixa("Encosto alto", V(-3.16f, .94f, 1.30f), V(1.10f, .77f, .24f), tecido, solida: false);
+        foreach (float x in new[] { -3.65f, -2.67f })
+            Caixa("Braço da poltrona", V(x, .66f, .92f), V(.18f, .24f, .82f), tecido, solida: false);
         Caixa("Rack da TV", V(-4.87f, .34f, -.29f), V(.72f, .68f, 1.22f), marrom);
         Caixa("TV de tubo desligada", V(-4.91f, .99f, -.30f), V(.58f, .62f, .94f), ferro);
         var tv = Arte("Frente da televisão", "Art/Props/Televisor", V(-4.60f, .99f, -.30f), .58f);
@@ -244,9 +240,9 @@ internal sealed partial class Posto3D
 
     private void ConstruirQuartoCasa(Material madeira, Material marrom, Material tecido, Material osso)
     {
-        Caixa("Estante que divide o quarto", V(2.99f, .62f, 2.81f), V(.43f, 1.24f, 1.45f), madeira);
+        Caixa("Estante que divide o quarto", V(3.56f, .62f, 2.81f), V(.43f, 1.24f, 1.45f), madeira);
         for (int i = 0; i < 3; i++)
-            Caixa("Prateleira da divisória", V(2.74f, .33f + i * .31f, 2.81f), V(.09f, .055f, 1.38f), marrom, solida: false);
+            Caixa("Prateleira da divisória", V(3.31f, .33f + i * .31f, 2.81f), V(.09f, .055f, 1.38f), marrom, solida: false);
         Caixa("Cama de solteiro", V(4.65f, .32f, 3.38f), V(1.58f, .62f, 2.66f), madeira);
         Caixa("Cabeceira", V(4.65f, .67f, 4.68f), V(1.68f, 1.33f, .14f), madeira);
         Caixa("Colchão", V(4.65f, .69f, 3.36f), V(1.48f, .17f, 2.54f), osso, solida: false);
@@ -268,10 +264,10 @@ internal sealed partial class Posto3D
 
     private void ConstruirDesordemCasa(Material madeira, Material tecido, Material barro, Material ferro)
     {
-        Caixa("Mesa lateral do telefone", V(4.39f, .40f, -2.89f), V(.97f, .80f, .75f), madeira);
-        Caixa("Telefone com o fone fora do gancho", V(4.39f, .86f, -2.80f), V(.71f, .17f, .53f), ferro,
+        Caixa("Mesa lateral do telefone", V(5.06f, .40f, -3.2f), V(.97f, .80f, .75f), madeira);
+        Caixa("Telefone com o fone fora do gancho", V(5.06f, .86f, -3.11f), V(.71f, .17f, .53f), ferro,
             tipo: Tipo.TelefoneCasaAvo);
-        Arte("Disco e fone pendurado", "Cap1/TelefoneForaDoGancho", V(4.39f, .64f, -3.25f), .72f);
+        Arte("Disco e fone pendurado", "Cap1/TelefoneForaDoGancho", V(5.06f, .64f, -3.56f), .72f);
         Caixa("Cabide do casaco", V(-1.69f, 1.84f, -4.35f), V(.76f, .08f, .17f), madeira, solida: false);
         var casaco = Caixa("Casaco de chuva no prego", V(-1.69f, 1.37f, -4.25f), V(.42f, .80f, .075f), tecido, solida: false);
         casaco.transform.Rotate(0f, 0f, -9f);
@@ -280,7 +276,7 @@ internal sealed partial class Posto3D
 
         var banco = new GameObject("Banco de madeira tombado").transform;
         banco.SetParent(cenario, false);
-        banco.localPosition = V(-1.66f, .26f, -2.91f);
+        banco.localPosition = V(-2.75f, .26f, -3.37f);
         banco.localRotation = Quaternion.Euler(69f, 18f, 13f);
         Caixa("Assento do banco caído", Vector3.zero, V(.63f, .095f, .37f), madeira, banco);
         foreach (float x in new[] { -.21f, .21f })

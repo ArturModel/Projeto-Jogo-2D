@@ -12,7 +12,7 @@ tags:
 # .ExitMatChecksR4()
 
 ## Connections
-- [[dot-AwaitScene()]] - `calls` [INFERRED]
+- [[dot-AwaitScene()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-FindNearest()]] - `calls` [EXTRACTED]

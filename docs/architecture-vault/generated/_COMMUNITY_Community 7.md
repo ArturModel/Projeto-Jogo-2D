@@ -1,35 +1,37 @@
 ---
 type: community
-members: 22
+members: 24
 ---
 
 # Community 7
 
-**Members:** 22 nodes
+**Members:** 24 nodes
 
 ## Members
-- [[dot-Boot()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Close()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Duration()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Ensure()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Interact()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-OnDestroy()_15]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-PlayPause()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Repair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Rewind()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Select()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Stop()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Update()_34]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[ClosedFrame_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Instance_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[IsOpen_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Playing]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Position]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Records]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[SantaRitaTapeDeck]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeCatalog]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeLine]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeRecord]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-AplicarMaterialDaMata()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-ComporBosqueDaRua()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-ComporFundoDaMata()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-ComporMataDoBar()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bar.cs
+- [[dot-ComporMataSul()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-DressBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bairro.cs
+- [[dot-DressBar()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bar.cs
+- [[dot-DressChair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-DressEncruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-DressEntrance()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-DressPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-DressProp()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-DressTree()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-FecharCopasDaEncruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-FecharMatasDaAvenida()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-InserirSubmata()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-InstalarPostesDoBairro()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bairro.cs
+- [[dot-Lamp()_4]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-Plant()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-PlantUnderstory()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[dot-PlantarFileiraDaAvenida()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs
+- [[dot-UpdateCasters()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
+- [[Light2D]] - code
+- [[Sombra_1]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,24 +41,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 94]]
-- 6 edges to [[_COMMUNITY_Community 130]]
-- 6 edges to [[_COMMUNITY_Community 50]]
-- 4 edges to [[_COMMUNITY_Community 92]]
-- 3 edges to [[_COMMUNITY_Community 117]]
-- 3 edges to [[_COMMUNITY_Community 38]]
-- 2 edges to [[_COMMUNITY_Community 85]]
-- 1 edge to [[_COMMUNITY_Community 95]]
+- 30 edges to [[_COMMUNITY_Community 89]]
+- 12 edges to [[_COMMUNITY_Community 40]]
+- 10 edges to [[_COMMUNITY_Community 139]]
+- 4 edges to [[_COMMUNITY_Community 11]]
+- 4 edges to [[_COMMUNITY_Community 20]]
+- 3 edges to [[_COMMUNITY_Community 46]]
+- 3 edges to [[_COMMUNITY_Community 8]]
+- 3 edges to [[_COMMUNITY_Community 120]]
+- 2 edges to [[_COMMUNITY_Community 150]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 115]]
 - 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 105]]
+- 1 edge to [[_COMMUNITY_Community 125]]
+- 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 87]]
 - 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 51]]
-- 1 edge to [[_COMMUNITY_Community 108]]
-- 1 edge to [[_COMMUNITY_Community 111]]
-- 1 edge to [[_COMMUNITY_Community 107]]
 
 ## Top bridge nodes
-- [[SantaRitaTapeDeck]] - degree 29, connects to 10 communities
-- [[dot-Select()_1]] - degree 6, connects to 4 communities
-- [[dot-Interact()_9]] - degree 5, connects to 4 communities
-- [[dot-PlayPause()]] - degree 9, connects to 3 communities
-- [[dot-Ensure()_1]] - degree 6, connects to 3 communities
+- [[Light2D]] - degree 28, connects to 13 communities
+- [[dot-DressProp()]] - degree 16, connects to 7 communities
+- [[dot-Plant()]] - degree 16, connects to 4 communities
+- [[dot-PlantUnderstory()]] - degree 8, connects to 4 communities
+- [[dot-InserirSubmata()]] - degree 11, connects to 3 communities

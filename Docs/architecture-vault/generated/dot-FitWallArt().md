@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Decoration.cs"
 type: "code"
 community: "Community 87"
-location: "L85"
+location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,10 @@ tags:
 # .FitWallArt()
 
 ## Connections
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-CombineNet()]] - `calls` [INFERRED]
 - [[dot-Mat()_1]] - `calls` [EXTRACTED]
+- [[dot-MontarQuadroExaminavel()]] - `calls` [EXTRACTED]
 - [[dot-PlaceWallArt()]] - `calls` [EXTRACTED]
 - [[MeshFilter]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
 community: "Community 87"
-location: "L268"
+location: "L279"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -24,8 +24,10 @@ tags:
 - [[dot-BuildTable()]] - `calls` [EXTRACTED]
 - [[dot-BuildUnderTableMemory()]] - `calls` [EXTRACTED]
 - [[dot-BuildWindowBay()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirPortaDoBar()]] - `calls` [EXTRACTED]
 - [[dot-FitWallArt()]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_3]] - `calls` [EXTRACTED]
+- [[dot-Lamp()_5]] - `calls` [EXTRACTED]
+- [[dot-MontarCampainhaDoBalcao()]] - `calls` [EXTRACTED]
 - [[dot-NoticeBoard()]] - `calls` [EXTRACTED]
 - [[dot-Panel()_1]] - `calls` [EXTRACTED]
 - [[dot-Ring()]] - `calls` [EXTRACTED]

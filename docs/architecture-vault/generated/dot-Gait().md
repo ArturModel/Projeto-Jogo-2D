@@ -1,22 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 44"
+community: "Community 27"
 location: "L237"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_27
 ---
 
 # .Gait()
 
 ## Connections
 - [[dot-Avancar()_1]] - `calls` [INFERRED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
-- [[dot-Reset()]] - `calls` [INFERRED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [EXTRACTED]
+- [[dot-Reset()_1]] - `calls` [INFERRED]
+- [[dot-Run()_5]] - `calls` [EXTRACTED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
 - [[MarcusGait]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_27

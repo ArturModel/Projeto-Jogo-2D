@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 127"
+community: "Community 39"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_127
+  - community/Community_39
 ---
 
 # SinucaCameraView
@@ -23,4 +23,4 @@ tags:
 - [[SinucaTableView.cs]] - `contains` [EXTRACTED]
 - [[VistaSuperior]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_127
+#graphify/code #graphify/EXTRACTED #community/Community_39

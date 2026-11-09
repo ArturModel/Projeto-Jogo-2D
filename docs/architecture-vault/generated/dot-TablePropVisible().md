@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 18"
+community: "Community 113"
 location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_113
 ---
 
 # .TablePropVisible()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-PatronFrame()]] - `calls` [EXTRACTED]
 - [[dot-SalonPropVisible()]] - `calls` [EXTRACTED]
-- [[dot-Update()_9]] - `calls` [EXTRACTED]
+- [[dot-Update()_6]] - `calls` [EXTRACTED]
 - [[SantaRitaBarLayout]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_113

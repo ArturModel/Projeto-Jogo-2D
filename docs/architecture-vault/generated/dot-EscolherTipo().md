@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarTela()]] - `calls` [EXTRACTED]
-- [[dot-Construir()_5]] - `calls` [EXTRACTED]
+- [[dot-Construir()_4]] - `calls` [EXTRACTED]
 - [[dot-EntradaTeclado()]] - `calls` [EXTRACTED]
 - [[dot-PodeMirar()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]

@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-AuditOldFeedback()]] - `method` [EXTRACTED]
-- [[dot-Check()_1]] - `method` [EXTRACTED]
+- [[dot-Check()_2]] - `method` [EXTRACTED]
 - [[dot-Gait()]] - `method` [EXTRACTED]
 - [[dot-Matches()]] - `method` [EXTRACTED]
 - [[dot-Narrative()]] - `method` [EXTRACTED]
 - [[dot-Physics()]] - `method` [EXTRACTED]
 - [[dot-Rules()]] - `method` [EXTRACTED]
-- [[dot-Run()_4]] - `method` [EXTRACTED]
+- [[dot-Run()_5]] - `method` [EXTRACTED]
 - [[dot-Saves()]] - `method` [EXTRACTED]
 - [[Chapter2Verification.cs]] - `contains` [EXTRACTED]
 

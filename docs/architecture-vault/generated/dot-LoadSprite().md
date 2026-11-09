@@ -12,14 +12,10 @@ tags:
 # .LoadSprite()
 
 ## Connections
-- [[dot-Build()_4]] - `calls` [EXTRACTED]
+- [[dot-Build()_6]] - `calls` [EXTRACTED]
 - [[dot-Build()_5]] - `calls` [EXTRACTED]
-- [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]
-- [[dot-IndicadorPausa()]] - `calls` [EXTRACTED]
 - [[dot-Rodar()]] - `calls` [EXTRACTED]
-- [[dot-Titulo()]] - `calls` [EXTRACTED]
-- [[dot-TituloPausa()]] - `calls` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 

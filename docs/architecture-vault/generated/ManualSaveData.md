@@ -21,5 +21,6 @@ tags:
 - [[dot-TryReadAndValidateFile()]] - `references` [EXTRACTED]
 - [[CheckpointSystem.cs]] - `contains` [EXTRACTED]
 - [[GameStateSnapshot]] - `references` [EXTRACTED]
+- [[PayphoneJogoUI]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_45

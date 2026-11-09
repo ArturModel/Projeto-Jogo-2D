@@ -1,21 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 24"
-location: "L1278"
+community: "Community 120"
+location: "L1502"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_120
 ---
 
 # .ColocarArteInterior()
 
 ## Connections
 - [[dot-ColocarProp()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior4_BarDoZe()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirZona3_Encruzilhada()]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
@@ -23,4 +20,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_120

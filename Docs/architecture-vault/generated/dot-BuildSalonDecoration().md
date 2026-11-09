@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Decoration.cs"
 type: "code"
 community: "Community 87"
-location: "L6"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,11 +13,12 @@ tags:
 
 ## Connections
 - [[dot-BilliardsMemorabilia()]] - `calls` [EXTRACTED]
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-BuildSalonDepth()]] - `calls` [INFERRED]
 - [[dot-CombineNet()]] - `calls` [INFERRED]
 - [[dot-Cylinder()]] - `calls` [INFERRED]
 - [[dot-Mat()_1]] - `calls` [EXTRACTED]
+- [[dot-MontarQuadroExaminavel()]] - `calls` [EXTRACTED]
 - [[dot-NoticeBoard()]] - `calls` [EXTRACTED]
 - [[dot-PlaceWallArt()]] - `calls` [EXTRACTED]
 - [[dot-Sphere()]] - `calls` [INFERRED]

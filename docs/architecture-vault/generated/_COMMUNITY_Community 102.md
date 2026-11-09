@@ -1,15 +1,14 @@
 ---
 type: community
-members: 2
+members: 1
 ---
 
 # Community 102
 
-**Members:** 2 nodes
+**Members:** 1 nodes
 
 ## Members
 - [[Export-Marcus.ps1]] - code - Tools/Aseprite/Export-Marcus.ps1
-- [[Invoke-MarcusExport()]] - code - Tools/Aseprite/Export-Marcus.ps1
 
 ## Live Query (requires Dataview plugin)
 

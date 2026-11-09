@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 83"
-location: "L579"
+community: "Community 57"
+location: "L115"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_83
+  - community/Community_57
 ---
 
 # .Posicionar()
 
 ## Connections
-- [[dot-GarantirModalCriado()]] - `calls` [EXTRACTED]
-- [[PayphoneCheckpoint]] - `method` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_17]] - `calls` [EXTRACTED]
+- [[dot-TryFocus()]] - `calls` [EXTRACTED]
+- [[Interactable]] - `references` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/EXTRACTED #community/Community_57

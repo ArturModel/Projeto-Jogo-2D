@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-BeginUnderTable()]] - `calls` [EXTRACTED]
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-Mat()_1]] - `calls` [EXTRACTED]
 - [[dot-Sphere()]] - `calls` [INFERRED]
 - [[dot-Tube()]] - `calls` [INFERRED]

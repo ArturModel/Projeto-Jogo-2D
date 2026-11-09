@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
 type: "code"
-community: "Community 9"
-location: "L294"
+community: "Community 29"
+location: "L317"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_29
 ---
 
 # .ClearTracks()
@@ -15,4 +15,4 @@ tags:
 - [[dot-SetState()]] - `calls` [EXTRACTED]
 - [[BochaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_29

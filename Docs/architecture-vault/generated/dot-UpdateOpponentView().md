@@ -5,13 +5,14 @@ community: "Community 2"
 location: "L149"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_2
 ---
 
 # .UpdateOpponentView()
 
 ## Connections
+- [[dot-AnimarEntradaDoBar()]] - `calls` [INFERRED]
 - [[dot-CancelOpponentShot()]] - `calls` [EXTRACTED]
 - [[dot-NativeMesh()]] - `calls` [INFERRED]
 - [[dot-PixelMaterial()]] - `calls` [INFERRED]
@@ -21,4 +22,4 @@ tags:
 - [[dot-UpdateCamera()]] - `calls` [INFERRED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/INFERRED #community/Community_2

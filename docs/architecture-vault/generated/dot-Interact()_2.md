@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
 community: "Community 13"
-location: "L191"
+location: "L205"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -30,6 +30,7 @@ tags:
 - [[dot-InteragirMarcasBarro()]] - `calls` [EXTRACTED]
 - [[dot-InteragirMesaSinuca()]] - `calls` [EXTRACTED]
 - [[dot-InteragirMoradorBairro()]] - `calls` [EXTRACTED]
+- [[dot-InteragirMotoristaPosto()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPicapeEncruzilhada()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPistaCafe()]] - `calls` [EXTRACTED]
 - [[dot-InteragirPistaCartas()]] - `calls` [EXTRACTED]
@@ -47,6 +48,8 @@ tags:
 - [[dot-InteragirVendaAntiga()]] - `calls` [EXTRACTED]
 - [[dot-InteragirVizinhaLurdes()]] - `calls` [EXTRACTED]
 - [[dot-InteragirZe()]] - `calls` [EXTRACTED]
+- [[dot-Update()_21]] - `calls` [INFERRED]
+- [[dot-Update()_19]] - `calls` [INFERRED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

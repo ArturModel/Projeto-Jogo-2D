@@ -1,18 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 50"
-location: "L27"
+community: "Community 27"
+location: "L143"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_27
 ---
 
 # .Check()
 
 ## Connections
-- [[dot-Run()_7]] - `calls` [EXTRACTED]
-- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
+- [[dot-Gait()]] - `calls` [EXTRACTED]
+- [[dot-Matches()]] - `calls` [EXTRACTED]
+- [[dot-Narrative()]] - `calls` [EXTRACTED]
+- [[dot-Physics()]] - `calls` [EXTRACTED]
+- [[dot-Rules()]] - `calls` [EXTRACTED]
+- [[dot-Saves()]] - `calls` [EXTRACTED]
+- [[Chapter2Verification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_27

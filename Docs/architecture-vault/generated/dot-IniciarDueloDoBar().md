@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
 - [[dot-ComecarNovaSerie()]] - `calls` [EXTRACTED]
+- [[dot-GuardarLugarParaPartida()]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [EXTRACTED]
 - [[dot-MostrarEscolhaDosGrupos()]] - `calls` [EXTRACTED]
 - [[dot-MostrarHudDaEntrada()]] - `calls` [EXTRACTED]

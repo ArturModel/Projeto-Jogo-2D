@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 28"
-location: "L864"
+location: "L876"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ComecarNovaSerie()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_4]] - `calls` [EXTRACTED]
 - [[dot-IniciarDueloDoBar()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 

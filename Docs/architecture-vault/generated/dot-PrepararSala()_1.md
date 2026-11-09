@@ -12,12 +12,12 @@ tags:
 # .PrepararSala()
 
 ## Connections
-- [[dot-Abrir()_3]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_5]] - `calls` [EXTRACTED]
 - [[dot-AbrirDaSociedade()]] - `calls` [EXTRACTED]
 - [[dot-LimparFalaTonao()]] - `calls` [INFERRED]
-- [[dot-Refresh()_1]] - `calls` [INFERRED]
+- [[dot-Refresh()_2]] - `calls` [INFERRED]
 - [[dot-ReiniciarTonao()]] - `calls` [INFERRED]
-- [[dot-ResetWalking()_1]] - `calls` [INFERRED]
+- [[dot-ResetWalking()_2]] - `calls` [INFERRED]
 - [[dot-SetState()]] - `calls` [INFERRED]
 - [[Action]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]

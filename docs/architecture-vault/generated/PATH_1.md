@@ -1,17 +1,17 @@
 ---
-source_file: "scripts/graphify-setup.sh"
+source_file: "scripts/graphify-refresh.sh"
 type: "code"
-community: "Community 65"
+community: "Community 64"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_65
+  - community/Community_64
 ---
 
 # PATH
 
 ## Connections
-- [[graphify-setup.sh]] - `defines` [EXTRACTED]
+- [[graphify-refresh.sh]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_65
+#graphify/code #graphify/EXTRACTED #community/Community_64

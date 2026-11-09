@@ -54,6 +54,7 @@ public class Capitulo1Director : MonoBehaviour
     private AudioSource musicaBairro;
     private AudioSource musicaBar;
 
+    private const float VolumeRodovia = 0.22f;
     private const float VolumeBairro = 0.48f;
     private const float VolumeCasaAvo = 0.32f;
     private const float VolumeBar = 0.48f;
@@ -355,6 +356,7 @@ public class Capitulo1Director : MonoBehaviour
         else if (cena == "BarDoZe")
         {
             AplicarEstadoDaZona(ZonaId.Interior_BarDoZe, mostrarBanner: false);
+            if (GetComponent<SantaRitaFalasEntrada>() == null) gameObject.AddComponent<SantaRitaFalasEntrada>();
             BarDoZe3D.Abrir(animar: false);
             return;
         }
@@ -404,7 +406,8 @@ public class Capitulo1Director : MonoBehaviour
             zonaAtual == ZonaId.Zona2_Posto || zonaAtual == ZonaId.Zona3_Encruzilhada || zonaAtual == ZonaId.Zona5_RuaNorteBar;
         bool interiorComTrilha = zonaAtual == ZonaId.Interior_CasaDoAvo ||
             zonaAtual == ZonaId.Interior_Posto || zonaAtual == ZonaId.Interior_Mercadinho;
-        float alvoBairro = exteriorComTrilha ? VolumeBairro : interiorComTrilha ? VolumeCasaAvo : 0f;
+        float alvoBairro = zonaAtual == ZonaId.Zona1_Rodovia ? VolumeRodovia :
+            exteriorComTrilha ? VolumeBairro : interiorComTrilha ? VolumeCasaAvo : 0f;
         if (musicaBairro != null)
         {
             var filtro = musicaBairro.GetComponent<AudioLowPassFilter>();
@@ -756,20 +759,24 @@ public class Capitulo1Director : MonoBehaviour
 
     internal void SairDoBar3D()
     {
-        if (SceneFader.IsTransitioning) return;
-        if (SceneManager.GetActiveScene().name == "BarDoZe")
-        {
-            SceneTransition.Ir("EntradaDaCidade", "saida_bar_ze");
-            return;
-        }
+        if (!BarDoZe3D.Aberto || SceneFader.IsTransitioning) return;
+        bool carregarRua = SceneManager.GetActiveScene().name == "BarDoZe";
+        InteractionPrompt.Instance.OcultarAgora();
         BarDoZe3D.PrepararSaida();
         SceneFader.Instance.TransicionarPortaPosto(BarDoZe3D.FocoDaPorta, () =>
         {
             BarDoZe3D.Fechar();
+            if (carregarRua)
+            {
+                SceneTransition.PrepararPosicao(new Vector2(518f, 11.8f));
+                return;
+            }
+
             var player = FindAnyObjectByType<PlayerController>();
             if (player != null) player.TeleportarPara(new Vector2(518f, 12f), 0);
             AplicarEstadoDaZona(ZonaId.Zona5_RuaNorteBar, mostrarBanner: false);
-        }, FocoDaPortaDoBarNaRua, animarAntes: BarDoZe3D.AnimarSaida, antesDaNevoa: .80f);
+        }, FocoDaPortaDoBarNaRua, animarAntes: BarDoZe3D.AnimarSaida,
+            antesDaNevoa: SinucaRoom3D.SaidaAntesDaNevoa, cenaDestino: carregarRua ? "EntradaDaCidade" : null);
     }
 
     private void AplicarEstadoDaZona(ZonaId id, bool mostrarBanner)
@@ -1827,7 +1834,7 @@ public class Capitulo1Director : MonoBehaviour
             new Vector2(2.9f, 1.2f), new Vector2(0f, 0.6f), 2);
         carro.GetComponent<SpriteRenderer>().flipX = true; // Frente voltada para a continuação da rodovia.
         ColocarInteracao(z.transform, "Carro_Marcus_Interacao", new Vector3(108.5f, 11.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CarroMarcus, "");
+            InteracaoCapitulo1.TipoInteracao.CarroMarcus, "").VincularIndicador(carro.GetComponent<SpriteRenderer>());
 
         // Placa de Entrada de Santa Rita
         ColocarProp(z.transform, "Placa_SantaRita", PlacaEntrada, "PlacaEntrada", 16f, 0.9f,
@@ -1838,10 +1845,10 @@ public class Capitulo1Director : MonoBehaviour
             new Vector2(1.6f, 0.6f), new Vector2(0f, 0.3f), 1);
         ColocarProp(z.transform, "Lixeira_Rodovia", new Vector3(121.2f, 13.2f, 0f), "TrashCan", 32f, 1.0f,
             new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 1);
-        ColocarProp(z.transform, "Placa_Horarios_Rodovia", QuadroEntrada, "RoadSign_Blank", 32f, 1.1f,
+        var quadro = ColocarProp(z.transform, "Placa_Horarios_Rodovia", QuadroEntrada, "RoadSign_Blank", 32f, 1.1f,
             Vector2.zero, Vector2.zero, 1);
-        ColocarInteracao(z.transform, "Interacao_PlacaRodovia", new Vector3(119.5f, 12.7f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PlacaRodoviaEntrada, "");
+        ColocarInteracao(z.transform, "Interacao_PlacaRodovia", new Vector3(119.5f, 13.2f, 0f),
+            InteracaoCapitulo1.TipoInteracao.PlacaRodoviaEntrada, "").VincularIndicador(quadro.GetComponent<SpriteRenderer>());
 
         // Orelhão #1 (Save Point da Entrada sobre a calçada)
         ColocarOrelhaoSave(z.transform, "Orelhao_Rodovia", "orelhao_entrada_rodovia", OrelhaoEntrada);
@@ -1941,33 +1948,29 @@ public class Capitulo1Director : MonoBehaviour
         ColocarInteracao(z.transform, "Bomba_Posto_Interacao", new Vector3(214.0f, 13.8f, 0f),
             InteracaoCapitulo1.TipoInteracao.BombaCombustivelPosto, "");
 
-        ColocarProp(z.transform, "Picape_No_Posto", new Vector3(207.8f, 13.4f, 0f), "Picape_Red", 32f, 1.15f,
+        var picapePosto = ColocarProp(z.transform, "Picape_No_Posto", new Vector3(207.8f, 13.4f, 0f), "Picape_Red", 32f, 1.15f,
             new Vector2(2.5f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Picape_Posto_Interacao", new Vector3(207.8f, 12.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CarroEstacionadoPosto, "");
+            InteracaoCapitulo1.TipoInteracao.CarroEstacionadoPosto, "").VincularIndicador(picapePosto.GetComponent<SpriteRenderer>());
 
         // Carro estacionado corretamente no meio-fio do asfalto
         ColocarProp(z.transform, "Sedan_Avenida_Posto", new Vector3(220.5f, 11.4f, 0f), "Sedan_Black", 32f, 1.15f,
             new Vector2(2.5f, 1.1f), new Vector2(0f, 0.55f), 2);
 
         // 2. ANTIGA VENDA (À direita do Posto na mesma avenida)
-        ColocarProp(z.transform, "Predio_Venda_Antiga", new Vector3(228.5f, 14.2f, 0f), "Venda", 16f, 0.90f,
+        var venda = ColocarProp(z.transform, "Predio_Venda_Antiga", new Vector3(228.5f, 14.2f, 0f), "Venda", 16f, 0.90f,
             new Vector2(6.2f, 2.2f), new Vector2(0f, 1.5f), 2);
-        ColocarProp(z.transform, "Caixotes_Venda", new Vector3(224.8f, 13.8f, 0f), "Caixotes", 16f, 0.85f,
-            new Vector2(1.2f, 0.8f), new Vector2(0f, 0.4f), 2);
         ColocarProp(z.transform, "Banco_Venda", new Vector3(232.2f, 13.6f, 0f), "Bench_Wood", 32f, 1.05f,
             new Vector2(1.5f, 0.6f), new Vector2(0f, 0.3f), 2);
         ColocarInteracao(z.transform, "Porta_Venda_Antiga", new Vector3(228.5f, 13.6f, 0f),
-            InteracaoCapitulo1.TipoInteracao.VendaAntigaFechada, "");
+            InteracaoCapitulo1.TipoInteracao.VendaAntigaFechada, "").VincularIndicador(venda.GetComponent<SpriteRenderer>());
 
-        // Postes de luz e fiação na calçada
+        // Postes de luz na calçada norte
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
         ColocarPosteComLuz(z.transform, "Poste_Z2_1", new Vector3(204.5f, 13.0f, 0f), luzAmbar);
         ColocarPosteComLuz(z.transform, "Poste_Z2_2", new Vector3(217.5f, 13.0f, 0f), luzAmbar);
         ColocarPosteComLuz(z.transform, "Poste_Z2_3", new Vector3(224.0f, 13.0f, 0f), luzAmbar);
         ColocarPosteComLuz(z.transform, "Poste_Z2_4", new Vector3(234.0f, 13.0f, 0f), luzAmbar);
-        ColocarProp(z.transform, "UtilityPole_Z2_1", new Vector3(216.0f, 13.4f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
-        ColocarProp(z.transform, "UtilityPole_Z2_2", new Vector3(233.0f, 13.4f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
 
         // Gatilhos de Transição Oeste (Zona 1) e Leste (Zona 3: Encruzilhada & Mercadinho)
         ColocarGatilhoTransicao(
@@ -2059,56 +2062,46 @@ public class Capitulo1Director : MonoBehaviour
             automatico: false
         );
 
-        // Engradados de bebida e lixeira ao lado do Mercadinho (sobre a calçada)
-        ColocarProp(z.transform, "Engradado_Merc_1", new Vector3(306.5f, 13.5f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Engradado_Merc_2", new Vector3(305.5f, 13.5f, 0f), "BeerCrate_Orange", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
+        // Lixeira ao lado do mercadinho
         ColocarProp(z.transform, "Lixeira_Mercadinho", new Vector3(315.4f, 13.5f, 0f), "TrashCan", 32f, 1.05f, new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 2);
 
         // Caminhonete estacionada junto ao meio-fio sul
-        ColocarProp(z.transform, "Picape_Encruzilhada_Sprite", new Vector3(326.0f, 7.2f, 0f), "Picape_Brown", 32f, 1.15f,
+        var picapeMercado = ColocarProp(z.transform, "Picape_Encruzilhada_Sprite", new Vector3(326.0f, 7.2f, 0f), "Picape_Brown", 32f, 1.15f,
             new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Picape_Encruzilhada_Interacao", new Vector3(326.0f, 6.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PicapeEncruzilhada, "");
+            InteracaoCapitulo1.TipoInteracao.PicapeEncruzilhada, "").VincularIndicador(picapeMercado.GetComponent<SpriteRenderer>());
 
         ColocarProp(z.transform, "Carro_Esquina", new Vector3(329.2f, 11.05f, 0f), "Sedan_Green", 32f, 1.1f,
             new Vector2(2.6f, 0.8f), new Vector2(0f, 0.45f), 2);
 
-        // 2. LADO DIREITO DA ENCRUZILHADA (Casa da esquina + Quadro de Avisos + Cerca)
-        ColocarProp(z.transform, "Casa_Esquina_Encruzilhada", new Vector3(330.5f, 14.0f, 0f), "CasaSimples_B", 16f, 0.90f,
-            new Vector2(5.6f, 2.2f), new Vector2(0f, 1.4f), 2);
-        ColocarProp(z.transform, "Cerca_Esquina", new Vector3(335.5f, 14.0f, 0f), "CercaMadeira", 16f, 0.9f,
-            new Vector2(3.4f, 0.6f), new Vector2(0f, 0.35f), 2);
+        // Casa da esquina, banco e quadro de avisos
+        ColocarProp(z.transform, "Casa_Esquina_Encruzilhada", new Vector3(330.84f, 14.0f, 0f), "CasaSimples_B", 16f, 1.17f,
+            new Vector2(6.6f, 2.6f), new Vector2(0f, 1.58f), 2);
         ColocarProp(z.transform, "Banco_Encruzilhada", new Vector3(326.5f, 13.3f, 0f), "Bench_Wood", 32f, 1.1f,
             new Vector2(1.5f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Mural_Encruzilhada", new Vector3(324.8f, 13.5f, 0f), "RoadSign_Blank", 32f, 1.15f,
+        var mural = ColocarProp(z.transform, "Mural_Encruzilhada", new Vector3(324.8f, 13.5f, 0f), "RoadSign_Blank", 32f, 1.15f,
             new Vector2(0.8f, 0.5f), new Vector2(0f, 0.25f), 2);
         ColocarInteracao(z.transform, "Quadro_Avisos_Interacao", new Vector3(324.8f, 12.9f, 0f),
-            InteracaoCapitulo1.TipoInteracao.QuadroAvisosEncruzilhada, "");
+            InteracaoCapitulo1.TipoInteracao.QuadroAvisosEncruzilhada, "").VincularIndicador(mural.GetComponent<SpriteRenderer>());
 
         // Placa de Seta no início da subida de barro para o Bairro das Casas
-        ColocarProp(z.transform, "Placa_Subida_Bairro", new Vector3(316.8f, 17.5f, 0f), "ArrowSign", 32f, 1.2f,
+        var placaBairro = ColocarProp(z.transform, "Placa_Subida_Bairro", new Vector3(316.8f, 17.5f, 0f), "ArrowSign", 32f, 1.2f,
             new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 2);
         ColocarInteracao(z.transform, "Placa_Subida_Interacao", new Vector3(316.8f, 16.9f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PlacaSetaBairro, "");
+            InteracaoCapitulo1.TipoInteracao.PlacaSetaBairro, "").VincularIndicador(placaBairro.GetComponent<SpriteRenderer>());
 
-        // Postes de luz e fiação na encruzilhada
+        // Postes de luz na encruzilhada
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
         ColocarPosteComLuz(z.transform, "Poste_Z3_1", new Vector3(304.5f, 13.0f, 0f), luzAmbar);
         ColocarPosteComLuz(z.transform, "Poste_Z3_2", new Vector3(316.5f, 13.0f, 0f), luzAmbar);
         ColocarPosteComLuz(z.transform, "Poste_Z3_3", new Vector3(323.5f, 13.0f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z3_4", new Vector3(317.2f, 21.0f, 0f), luzAmbar);
-        ColocarProp(z.transform, "UtilityPole_Z3_1", new Vector3(316.2f, 15.2f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
-        ColocarProp(z.transform, "UtilityPole_Z3_2", new Vector3(323.2f, 18.5f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
 
-        // Barricada de obra fechando a saída leste para o Centro
-        ColocarArteInterior(z.transform, "Interdicao_Centro_FaixaSul", new Vector2(336.5f, 7.8f),
-            "BarricadaCentro", "WoodFence", 1f, new Vector2(4.4f, 1.8f));
-        ColocarArteInterior(z.transform, "Interdicao_Centro_FaixaNorte", new Vector2(336.5f, 9.6f),
-            "BarricadaCentro", "WoodFence", 1f, new Vector2(4.4f, 1.8f));
-        ColocarArteInterior(z.transform, "Interdicao_Centro_Passeio", new Vector2(336.5f, 11.4f),
-            "BarricadaCentro", "WoodFence", 1f, new Vector2(4.4f, 1.8f));
-        ColocarInteracao(z.transform, "Interacao_Interdicao_Centro", new Vector3(333.6f, 10.1f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CentroBloqueioObra, "");
+        // A árvore caída e a margem fecham o trecho interditado da avenida.
+        SantaRitaRuaNorte.DelimitarObraDaEncruzilhada(z.transform, min, max.y - min.y);
+        var aviso = ColocarProp(z.transform, "Aviso_Obra_Drenagem", new Vector3(334.04f, 12.06f, 0f),
+            "RoadSign_Blank", 32f, .86f, Vector2.zero, Vector2.zero, 2);
+        ColocarInteracao(z.transform, "Interacao_Interdicao_Centro", new Vector3(333.94f, 11.72f, 0f),
+            InteracaoCapitulo1.TipoInteracao.CentroBloqueioObra, "").VincularIndicador(aviso.GetComponent<SpriteRenderer>());
 
         // Gatilhos de Transição: Oeste (-> Zona 2: Posto) e Noroeste pela estrada de terra (-> Zona 4: Bairro das Casas)
         ColocarGatilhoTransicao(
@@ -2147,88 +2140,49 @@ public class Capitulo1Director : MonoBehaviour
         Vector2 min = new Vector2(400f, 0f);
         Vector2 max = new Vector2(444f, 34f);
 
-        // SOMENTE RUAS DE BARRO E TERRA (Zero asfalto no Bairro das Casas, exatamente como na Imagem 5!)
         if (!SantaRitaRuaNorte.BuildGround(z.transform, min, 44, 34, bairro: true))
-            CriarPisoDeZona(z.transform, "Zona4_Bairro", min, 44, 34, (ux, uy) =>
+            CriarPisoDeZona(z.transform, "Zona4_Bairro", min, 44, 34, (x, y) =>
             {
-                // Entrada sul de barro (X = 18..22, Y = 0..10)
-                bool entradaSul = (ux >= 18 && ux <= 22 && uy <= 10);
-                // Rua Sul do Bairro (Y = 8..10, X = 6..36)
-                bool ruaSul = (uy >= 8 && uy <= 10 && ux >= 6 && ux <= 36);
-                // Avenida Central de Barro subindo (X = 16..20, Y = 10..22)
-                bool subidaCentral = (ux >= 16 && ux <= 20 && uy >= 10 && uy <= 22);
-                // Rua Principal da Casa do Avô Nº 40 (Y = 20..22, X = 6..38)
-                bool ruaCasaAvo = (uy >= 20 && uy <= 22 && ux >= 6 && ux <= 38);
-                // Subida Nordeste de Barro para a Rua Norte / Bar do Zé (X = 32..38, Y = 22..34)
-                bool subidaNordeste = (ux >= 32 && ux <= 38 && uy >= 22);
-
-                if (entradaSul || ruaSul || subidaCentral || ruaCasaAvo || subidaNordeste)
-                {
-                    return ((ux + uy) % 4 == 0) ? TilePiso.TerraRachada : TilePiso.Terra;
-                }
-
-                // Calçada / Passeio de pedra diante das casas (sequência: Rua de Barro -> Calçada -> Casas -> Grama/Árvores)
-                if ((uy >= 11 && uy <= 12 && ux >= 6 && ux <= 36) || (uy == 23 && ux >= 6 && ux <= 41))
-                {
-                    return TilePiso.Concreto;
-                }
-
-                return TilePiso.Grama;
+                var ponto = new Vector2(x + .5f, y + .5f);
+                if (SantaRitaRuaNorte.RuaDeTerraDoBairro(ponto)) return TilePiso.Terra;
+                return SantaRitaRuaNorte.PatioDoBairro(ponto) ? TilePiso.Concreto : TilePiso.Grama;
             });
-
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
 
-        // Árvores na grama atrás das casas do Bairro (Sul, Meio e Norte atrás da Casa do Avô Nº 40)
-        float[] arvoresSulBairro = { 404.0f, 409.5f, 414.5f, 425.5f, 431.5f, 438.0f };
-        for (int i = 0; i < arvoresSulBairro.Length; i++)
-        {
-            ColocarArvore(z.transform, "Arvore_Sul_Z4_" + i, new Vector3(arvoresSulBairro[i], 3.2f + (i % 2) * 1.1f, 0f), pequena: (i % 2 == 1));
-        }
-        float[] arvoresMeioBairro = { 404.5f, 413.5f, 425.0f, 436.5f };
-        for (int i = 0; i < arvoresMeioBairro.Length; i++)
-        {
-            ColocarArvore(z.transform, "Arvore_Meio_Z4_" + i, new Vector3(arvoresMeioBairro[i], 16.2f + (i % 2) * 0.8f, 0f), pequena: (i % 2 == 0));
-        }
-        float[] arvoresNorteBairro = { 404.0f, 408.5f, 415.0f, 420.5f, 427.0f, 430.5f, 441.0f };
-        for (int i = 0; i < arvoresNorteBairro.Length; i++)
-        {
-            ColocarArvore(z.transform, "Arvore_Norte_Z4_" + i, new Vector3(arvoresNorteBairro[i], 28.2f + (i % 2) * 1.2f, 0f), pequena: (i % 3 == 1));
-        }
-
         // --- QUARTEIRÃO SUL DO BAIRRO (Exploração da vizinhança antes de chegar na nº 40) ---
-        // Casa Nº 14 (Dona Lurdes) + Van na garagem de terra + Cercas de madeira (Imagem 5)
-        ColocarProp(z.transform, "Bairro_Casa_14", new Vector3(410.5f, 12.6f, 0f), "CasaSimples_A", 16f, 0.90f,
+        // Casa Nº 14 (Dona Lurdes) + Van na garagem de terra + Cercas de madeira
+        ColocarProp(z.transform, "Bairro_Casa_14", new Vector3(410.35f, 12.9f, 0f), "CasaSimples_A", 16f, 0.90f,
             new Vector2(5.4f, 2.0f), new Vector2(0f, 1.3f), 2);
-        ColocarProp(z.transform, "Cerca_Casa14", new Vector3(406.0f, 12.4f, 0f), "CercaMadeira", 16f, 0.85f,
+        ColocarProp(z.transform, "Cerca_Casa14", new Vector3(407.05f, 12.0f, 0f), "CercaMadeira", 16f, 0.85f,
             new Vector2(3.2f, 0.6f), new Vector2(0f, 0.35f), 2);
-        ColocarProp(z.transform, "Van_Garagem_Casa14", new Vector3(415.0f, 12.2f, 0f), "Van_White", 32f, 1.1f,
+        ColocarProp(z.transform, "Van_Garagem_Casa14", new Vector3(414.7f, 12.0f, 0f), "Van_White", 32f, 1.1f,
             new Vector2(2.4f, 1.2f), new Vector2(0f, 0.6f), 2);
-        ColocarInteracao(z.transform, "Porta_Casa_14_Lurdes", new Vector3(410.5f, 12.0f, 0f),
+        ColocarInteracao(z.transform, "Porta_Casa_14_Lurdes", new Vector3(410.35f, 11.6f, 0f),
             InteracaoCapitulo1.TipoInteracao.VizinhaDonaLurdes, "");
-        ColocarProp(z.transform, "Jardim_Casa14", new Vector3(407.5f, 13.6f, 0f), "PlanterBox", 32f, 1.15f,
+        ColocarProp(z.transform, "Jardim_Casa14", new Vector3(411.66f, 12.25f, 0f), "PlanterBox", 32f, 1.15f,
             Vector2.zero, Vector2.zero, 2);
 
-        // Casa Nº 22 (Lado direito da Rua Sul) + Rastros de pneu na lama
-        ColocarProp(z.transform, "Bairro_Casa_22", new Vector3(429.5f, 12.6f, 0f), "CasaSimples_C", 16f, 0.90f,
+        // Casa Nº 22 + Rastros de pneu na lama
+        ColocarProp(z.transform, "Bairro_Casa_22", new Vector3(431.65f, 16.1f, 0f), "CasaSimples_C", 16f, 0.90f,
             new Vector2(5.4f, 2.0f), new Vector2(0f, 1.3f), 2);
-        ColocarProp(z.transform, "Cerca_Casa22", new Vector3(434.2f, 12.4f, 0f), "CercaMadeira", 16f, 0.85f,
+        ColocarProp(z.transform, "Cerca_Casa22", new Vector3(434.3f, 15.55f, 0f), "CercaMadeira", 16f, 0.85f,
             new Vector2(3.2f, 0.6f), new Vector2(0f, 0.35f), 2);
-        ColocarProp(z.transform, "Caixotes_Casa22", new Vector3(425.8f, 12.2f, 0f), "Caixotes", 16f, 0.85f,
+        ColocarProp(z.transform, "Caixotes_Casa22", new Vector3(429.08f, 15.64f, 0f), "Caixotes", 16f, 0.85f,
             new Vector2(1.2f, 0.8f), new Vector2(0f, 0.4f), 2);
-        ColocarProp(z.transform, "Jardim_Casa22", new Vector3(432.5f, 13.6f, 0f), "PlanterBox", 32f, 1.15f,
+        ColocarProp(z.transform, "Jardim_Casa22", new Vector3(432.92f, 15.73f, 0f), "PlanterBox", 32f, 1.15f,
             Vector2.zero, Vector2.zero, 2);
-        ColocarInteracao(z.transform, "Pista_Rastros_Bairro", new Vector3(425.8f, 11.4f, 0f),
+        ColocarInteracao(z.transform, "Pista_Rastros_Bairro", new Vector3(430.6f, 13.42f, 0f),
             InteracaoCapitulo1.TipoInteracao.GalpaoBairroPista, "");
 
-        // --- QUARTEIRÃO NORTE DO BAIRRO (Rua da Casa do Avô Adílio — Nº 40, Imagem 5!) ---
-        // Casa Nº 32 (Esquerda) + Seu Ramiro na varanda
-        ColocarProp(z.transform, "Bairro_Casa_32", new Vector3(410.5f, 24.4f, 0f), "CasaSimples_B", 16f, 0.90f,
+        // --- QUARTEIRÃO NORTE DO BAIRRO (Rua da Casa do Avô Adílio — Nº 40) ---
+        // Casa Nº 32 e Seu Ramiro junto ao acesso
+        ColocarProp(z.transform, "Bairro_Casa_32", new Vector3(414.15f, 24.0f, 0f), "CasaSimples_B", 16f, 0.90f,
             new Vector2(5.4f, 2.0f), new Vector2(0f, 1.3f), 2);
-        ColocarProp(z.transform, "Cerca_Casa32", new Vector3(406.0f, 24.2f, 0f), "CercaMadeira", 16f, 0.85f,
+        ColocarProp(z.transform, "Cerca_Casa32", new Vector3(410.78f, 23.5f, 0f), "CercaMadeira", 16f, 0.85f,
             new Vector2(3.2f, 0.6f), new Vector2(0f, 0.35f), 2);
-        ColocarProp(z.transform, "Jardim_Casa32", new Vector3(408.0f, 25.4f, 0f), "PlanterBox", 32f, 1.15f,
+        ColocarProp(z.transform, "Jardim_Casa32", new Vector3(412.95f, 23.39f, 0f), "PlanterBox", 32f, 1.15f,
             Vector2.zero, Vector2.zero, 2);
-        ColocarInteracao(z.transform, "NPC_SeuRamiro_Bairro", new Vector3(414.8f, 23.4f, 0f),
+        ColocarInteracao(z.transform, "NPC_SeuRamiro_Bairro", new Vector3(415.56f, 23.15f, 0f),
             InteracaoCapitulo1.TipoInteracao.NpcMoradorBairro, "", "Npc_Ramiro", 32f, 1.0f, 2, solido: true);
 
         // CASA DO AVÔ ADÍLIO — Nº 40 (Destaque central no Bairro das Casas!)
@@ -2236,18 +2190,18 @@ public class Capitulo1Director : MonoBehaviour
             new Vector2(6.6f, 2.4f), new Vector2(0f, 1.6f), 2);
         AdicionarLuzPonto(z.transform, new Vector3(423.5f, 25.0f, 0f), new Color(1.0f, 0.86f, 0.56f, 1f), 7.5f, 1.35f);
 
-        ColocarProp(z.transform, "Cerca_Avo_Esq", new Vector3(418.2f, 24.2f, 0f), "CercaMadeira", 16f, 0.9f,
+        ColocarProp(z.transform, "Cerca_Avo_Esq", new Vector3(419.1f, 23.76f, 0f), "CercaMadeira", 16f, 0.9f,
             new Vector2(3.4f, 0.6f), new Vector2(0f, 0.35f), 2);
-        ColocarProp(z.transform, "Cerca_Avo_Dir", new Vector3(428.8f, 24.2f, 0f), "CercaMadeira", 16f, 0.9f,
+        ColocarProp(z.transform, "Cerca_Avo_Dir", new Vector3(428.2f, 24.18f, 0f), "CercaMadeira", 16f, 0.9f,
             new Vector2(3.4f, 0.6f), new Vector2(0f, 0.35f), 2);
-        ColocarProp(z.transform, "Jardim_Avo_40", new Vector3(420.0f, 25.5f, 0f), "PlanterBox", 32f, 1.2f,
+        ColocarProp(z.transform, "Jardim_Avo_40", new Vector3(425.41f, 23.86f, 0f), "PlanterBox", 32f, 1.2f,
             Vector2.zero, Vector2.zero, 2);
 
         // Caixa de Correio Nº 40
-        ColocarProp(z.transform, "CaixaCorreio_40_Sprite", new Vector3(426.6f, 23.6f, 0f), "CaixaCorreio", 16f, 0.9f,
+        var caixaCorreio = ColocarProp(z.transform, "CaixaCorreio_40_Sprite", new Vector3(426.54f, 22.63f, 0f), "CaixaCorreio", 16f, 0.9f,
             new Vector2(0.7f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarInteracao(z.transform, "CaixaCorreio_40_Interacao", new Vector3(426.6f, 23.0f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CaixaCorreioAvo, "");
+        ColocarInteracao(z.transform, "CaixaCorreio_40_Interacao", new Vector3(426.54f, 22.02f, 0f),
+            InteracaoCapitulo1.TipoInteracao.CaixaCorreioAvo, "").VincularIndicador(caixaCorreio.GetComponent<SpriteRenderer>());
 
         // Porta para entrar no INTERIOR DA CASA DO AVÔ ADÍLIO (Nº 40)
         ColocarGatilhoTransicao(
@@ -2263,17 +2217,17 @@ public class Capitulo1Director : MonoBehaviour
         );
 
         // Casa Nº 48 na curva nordeste rumo ao Bar do Zé
-        ColocarProp(z.transform, "Bairro_Casa_48", new Vector3(439.5f, 24.4f, 0f), "CasaSimples_A", 16f, 0.88f,
+        ColocarProp(z.transform, "Bairro_Casa_48", new Vector3(439.55f, 27.5f, 0f), "CasaSimples_A", 16f, 0.88f,
             new Vector2(5.2f, 2.0f), new Vector2(0f, 1.3f), 2);
-        ColocarProp(z.transform, "Seta_Subida_BarZe", new Vector3(433.2f, 26.5f, 0f), "ArrowSign", 32f, 1.15f, Vector2.zero, Vector2.zero, 2);
+        ColocarProp(z.transform, "Seta_Subida_BarZe", new Vector3(433.85f, 26.78f, 0f), "ArrowSign", 32f, 1.15f, Vector2.zero, Vector2.zero, 2);
 
-        // Postes de madeira e iluminação de comunidade (Imagem 5)
+        // Postes junto às curvas e aos acessos
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
-        ColocarPosteComLuz(z.transform, "Poste_Z4_1", new Vector3(416.5f, 11.4f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z4_2", new Vector3(423.5f, 11.4f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z4_3", new Vector3(416.5f, 23.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z4_4", new Vector3(431.5f, 23.2f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z4_5", new Vector3(434.2f, 29.5f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z4_1", new Vector3(416.8f, 9.96f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z4_2", new Vector3(424.65f, 8.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z4_3", new Vector3(422.0f, 22.68f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z4_4", new Vector3(431.33f, 22.36f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z4_5", new Vector3(434.16f, 29.63f, 0f), luzAmbar);
 
         // Gatilhos de Transição: Sul (-> Zona 3: Encruzilhada) e Nordeste (-> Zona 5: Rua Norte & Bar do Zé)
         ColocarGatilhoTransicao(
@@ -2313,10 +2267,15 @@ public class Capitulo1Director : MonoBehaviour
         Vector2 min = new Vector2(500f, 0f);
         Vector2 max = new Vector2(538f, 22f);
 
-        if (!SantaRitaRuaNorte.BuildGround(z.transform, min, 38, 22))
+        bool exteriorDoBar = SantaRitaRuaNorte.BuildGround(z.transform, min, 38, 22);
+        if (!exteriorDoBar)
         {
             CriarPisoDeZona(z.transform, "Zona5_RuaNorteBar", min, 38, 22, (ux, uy) =>
             {
+                // A boca da subida fica alinhada ao vão do portão.
+                if (ux >= 36) return TilePiso.Grama;
+                if (ux >= 31 && ux <= 34 && uy >= 12) return uy < 14 ? TilePiso.AsfaltoH_Trinca : TilePiso.TerraRachada;
+                if (ux >= 7 && ux <= 11 && uy == 12) return TilePiso.AsfaltoH_Trinca;
                 // Transição do barro do Bairro para o calçamento da Rua Norte (X = 0..6, Y = 8..11)
                 if (uy >= 8 && uy <= 11 && ux <= 4) return TilePiso.TerraRachada;
                 if (uy >= 8 && uy <= 11 && ux == 5) return TilePiso.AsfaltoParaTerra;
@@ -2334,38 +2293,36 @@ public class Capitulo1Director : MonoBehaviour
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
 
-        // Árvores na grama atrás do Bar do Zé e atrás da calçada sul
-        float[] arvoresNorteZ5 = { 504.0f, 509.0f, 524.5f, 529.5f, 534.5f };
-        for (int i = 0; i < arvoresNorteZ5.Length; i++)
+        if (!exteriorDoBar)
         {
-            ColocarArvore(z.transform, "Arvore_Norte_Z5_" + i, new Vector3(arvoresNorteZ5[i], 16.5f + (i % 2) * 0.9f, 0f), pequena: (i % 2 == 1));
-        }
-        float[] arvoresSulZ5 = { 504.5f, 511.0f, 517.5f, 524.0f, 530.5f };
-        for (int i = 0; i < arvoresSulZ5.Length; i++)
-        {
-            ColocarArvore(z.transform, "Arvore_Sul_Z5_" + i, new Vector3(arvoresSulZ5[i], 2.3f + (i % 2) * 0.9f, 0f), pequena: (i % 2 == 0));
+            for (int i = 0; i < 6; i++)
+            {
+                float x = 503f + i * 6.1f;
+                ColocarArvore(z.transform, "Arvore_Norte_Z5_" + i, new Vector3(x, 18.1f, 0f), pequena: i % 2 == 1);
+                ColocarArvore(z.transform, "Arvore_Sul_Z5_" + i, new Vector3(x + 1f, 3.1f, 0f), pequena: i % 2 == 0);
+            }
         }
 
         // Caminhonete do Clube estacionada perto do Bar do Zé (Pista!)
-        ColocarProp(z.transform, "Caminhonete_Clube_Bar", new Vector3(509.1f, 10.95f, 0f), "Picape_Black", 32f, 1.15f,
+        var picapeBar = ColocarProp(z.transform, "Caminhonete_Clube_Bar", new Vector3(509.02f, 12.00f, 0f), "Picape_Black", 32f, 1.15f,
             new Vector2(3.4f, 1.05f), new Vector2(0f, 0.55f), 2);
-        ColocarInteracao(z.transform, "Interacao_Caminhonete_Clube", new Vector3(509.1f, 10.4f, 0f),
-            InteracaoCapitulo1.TipoInteracao.CaminhoneteClubeBar, "");
+        ColocarInteracao(z.transform, "Interacao_Caminhonete_Clube", new Vector3(509.02f, 11.36f, 0f),
+            InteracaoCapitulo1.TipoInteracao.CaminhoneteClubeBar, "").VincularIndicador(picapeBar.GetComponent<SpriteRenderer>());
 
         // FACHADA DO BAR DO ZÉ
-        ColocarProp(z.transform, "Predio_Fachada_BarDoZe", new Vector3(518.0f, 14.0f, 0f), "Fachada_BarDoZe", 16f, 0.94f,
+        var fachadaBar = ColocarProp(z.transform, "Predio_Fachada_BarDoZe", new Vector3(518.0f, 14.0f, 0f), "Fachada_BarDoZe", 16f, 0.94f,
             new Vector2(6.0f, 2.2f), new Vector2(0f, 1.5f), 2);
         AdicionarLuzPonto(z.transform, new Vector3(518.0f, 14.8f, 0f), new Color(1.0f, 0.72f, 0.38f, 1f), 7.8f, 1.45f);
 
         // Mesas de bar, cadeiras de plástico e engradados na calçada do Bar do Zé
-        ColocarProp(z.transform, "Mesa_Calcada_Bar", new Vector3(512.9f, 13.7f, 0f), "RoundTable_Wood", 32f, 1.1f, new Vector2(1.0f, 0.8f), new Vector2(0f, 0.4f), 2);
-        ColocarProp(z.transform, "Cadeira_Calcada_1", new Vector3(512.0f, 13.25f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Cadeira_Calcada_2", new Vector3(513.85f, 13.18f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Engradados_Bar_Ext", new Vector3(521.55f, 13.33f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
-        ColocarProp(z.transform, "Dumpster_Bar_Ext", new Vector3(523.65f, 14.07f, 0f), "Dumpster", 32f, 1.1f, new Vector2(1.4f, 0.9f), new Vector2(0f, 0.45f), 2);
+        ColocarProp(z.transform, "Mesa_Calcada_Bar", new Vector3(513.12f, 14.24f, 0f), "RoundTable_Wood", 32f, 1.1f, new Vector2(1.0f, 0.8f), new Vector2(0f, 0.4f), 2);
+        ColocarProp(z.transform, "Cadeira_Calcada_1", new Vector3(512.09f, 13.87f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Cadeira_Calcada_2", new Vector3(514.12f, 13.90f, 0f), "PlasticChair_Red", 32f, 1.05f, new Vector2(0.6f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Engradados_Bar_Ext", new Vector3(524.13f, 14.69f, 0f), "BeerCrate_Blue", 32f, 1.1f, new Vector2(0.8f, 0.6f), new Vector2(0f, 0.3f), 2);
+        ColocarProp(z.transform, "Dumpster_Bar_Ext", new Vector3(536.85f, 14.91f, 0f), "Dumpster", 32f, 1.1f, new Vector2(1.4f, 0.9f), new Vector2(0f, 0.45f), 2);
 
-        ColocarInteracao(z.transform, "Placa_Letreiro_BarZe", new Vector3(515.8f, 13.1f, 0f),
-            InteracaoCapitulo1.TipoInteracao.PlacaBarDoZe, "");
+        ColocarInteracao(z.transform, "Placa_Letreiro_BarZe", new Vector3(515.57f, 13.30f, 0f),
+            InteracaoCapitulo1.TipoInteracao.PlacaBarDoZe, "").VincularIndicador(fachadaBar.GetComponent<SpriteRenderer>());
 
         // Porta para entrar no INTERIOR DO BAR DO ZÉ
         ColocarGatilhoTransicao(
@@ -2381,26 +2338,34 @@ public class Capitulo1Director : MonoBehaviour
         );
 
         // Orelhão #2 ao lado do Bar do Zé (Save Point antes do Boss!)
-        ColocarOrelhaoSave(z.transform, "Orelhao_BarDoZe", "orelhao_bar_do_ze", new Vector3(525.8f, 13.2f, 0f));
+        ColocarOrelhaoSave(z.transform, "Orelhao_BarDoZe", "orelhao_bar_do_ze", new Vector3(527.62f, 13.49f, 0f));
 
-        // PORTÃO DO CENTRO no final leste da Rua Norte
-        Vector3 posPortao = new Vector3(532.5f, 10.0f, 0f);
-        ColocarProp(z.transform, "Portao_Centro", posPortao, "Portao_Centro", 32f, 1.15f, Vector2.zero, Vector2.zero, 6);
+        // A rua dobra para a subida do Centro. As folhas fecham transversalmente esse acesso.
+        Vector3 posPortao = new Vector3(533.0f, 14.18f, 0f);
+        var portao = ColocarProp(z.transform, "Portao_Centro", posPortao, "Portao_Centro", 32f, 1.15f, Vector2.zero, Vector2.zero, 6);
+        for (int lado = -1; lado <= 1; lado += 2)
+        {
+            var pilar = portao.AddComponent<BoxCollider2D>();
+            pilar.size = new Vector2(.51f, .42f) / portao.transform.localScale.x;
+            pilar.offset = new Vector2(lado * 1.95f, .17f) / portao.transform.localScale.x;
+        }
 
         GameObject barreiraCentro = new GameObject("Barreira_Limiar_Centro");
         barreiraCentro.transform.SetParent(z.transform, false);
         barreiraCentro.transform.position = posPortao;
         BoxCollider2D colBarreira = barreiraCentro.AddComponent<BoxCollider2D>();
-        colBarreira.size = new Vector2(2.2f, 4.5f);
-        colBarreira.offset = new Vector2(0f, 0.5f);
+        colBarreira.size = new Vector2(3.60f, .43f);
+        colBarreira.offset = new Vector2(0f, .17f);
 
-        ColocarInteracao(z.transform, "Limiar_Centro_Trigger", posPortao + new Vector3(-1.0f, 0f, 0f),
-            InteracaoCapitulo1.TipoInteracao.LimiarCentro, "");
+        ColocarInteracao(z.transform, "Limiar_Centro_Trigger", posPortao + new Vector3(0f, -.91f, 0f),
+            InteracaoCapitulo1.TipoInteracao.LimiarCentro, "").VincularIndicador(portao.GetComponent<SpriteRenderer>());
 
         // Postes de luz na Rua Norte
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
-        ColocarPosteComLuz(z.transform, "Poste_Z5_1", new Vector3(505.5f, 13.0f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z5_2", new Vector3(527.5f, 13.0f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z5_1", new Vector3(506.28f, 12.88f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z5_2", new Vector3(525.70f, 12.80f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z5_3", new Vector3(511.03f, 12.85f, 0f), luzAmbar);
+        ColocarPosteComLuz(z.transform, "Poste_Z5_4", new Vector3(529.93f, 12.64f, 0f), luzAmbar);
 
         // Gatilho de Transição Oeste (-> Zona 4: Bairro das Casas)
         ColocarGatilhoTransicao(
@@ -2479,7 +2444,7 @@ public class Capitulo1Director : MonoBehaviour
         }
         else
         {
-            Legenda.Dizer("O portão fica aberto. O orelhão está ao lado do bar.", 4f);
+            SantaRitaFalasEntrada.DizerEspontanea("O portão fica aberto. O orelhão está ao lado do bar.", 4f);
         }
     }
 

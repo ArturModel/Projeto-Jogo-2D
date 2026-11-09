@@ -136,8 +136,18 @@ public sealed partial class BochaRoom3D : IDisposable
         }
         foreach(float z in new[]{-3.2f,22.2f})
         {
-            Box("ParedeCabeceira",new Vector3(0,2.15f,z),new Vector3(11.6f,4.3f,.18f),plaster);
-            Box("LambrilCabeceira",new Vector3(0,.58f,z>0?22.08f:-3.08f),new Vector3(11.6f,1.16f,.1f),wood);
+            Rect[] vaos = z > 0f
+                ? new[] { new Rect(-3.22f,1.65f,1.24f,1.1f), new Rect(1.98f,1.65f,1.24f,1.1f) }
+                : new[] { new Rect(-4.925f,0f,1.15f,2.2f) };
+            ExteriorInterior3D.Parede(-5.8f,5.8f,4.3f,vaos,
+                (a,b,y0,y1) => Box("ParedeCabeceira",new Vector3((a+b)*.5f,(y0+y1)*.5f,z),
+                    new Vector3(b-a,y1-y0,.18f),plaster));
+            if (z > 0f) Box("LambrilCabeceira",new Vector3(0,.58f,22.08f),new Vector3(11.6f,1.16f,.1f),wood);
+            else
+            {
+                Box("LambrilEntrada",new Vector3(-5.3625f,.58f,-3.08f),new Vector3(.875f,1.16f,.1f),wood);
+                Box("LambrilEntrada",new Vector3(1.0125f,.58f,-3.08f),new Vector3(9.575f,1.16f,.1f),wood);
+            }
         }
         Box("Forro",new Vector3(0,4.32f,9.5f),new Vector3(11.6f,.15f,25.4f),dark,false,true);
         foreach(float z in new[]{2f,10f,18f})
@@ -150,7 +160,7 @@ public sealed partial class BochaRoom3D : IDisposable
         Box("LuminariaCentral",new Vector3(0,3.51f,10),new Vector3(.85f,.16f,1.8f),dark,false,true);
         Box("DifusorQuente",new Vector3(0,3.42f,10),new Vector3(.73f,.025f,1.62f),Mat("lampada",new Color(1,.76f,.40f),null,true),false,true);
         Light("AmbienteFrio",LightType.Directional,Vector3.zero,new Color(.45f,.53f,.66f),.075f,0).transform.localRotation=Quaternion.Euler(52,-30,0);
-        var key=Light("LuzPrincipalCancha",LightType.Spot,new Vector3(0,3.32f,10),new Color(1,.84f,.65f),6.5f,19);
+        var key=Light("LuzPrincipalCancha",LightType.Spot,new Vector3(0,3.32f,10),new Color(1,.81f,.60f),6.1f,19);
         key.transform.localRotation=Quaternion.Euler(90,0,0);key.spotAngle=128;key.innerSpotAngle=78;
         key.shadows=LightShadows.Hard;key.shadowBias=.012f;key.shadowNormalBias=.025f;key.shadowStrength=.85f;
         key.gameObject.AddComponent<UniversalAdditionalLightData>().additionalLightsShadowResolutionTier=1;
@@ -161,15 +171,28 @@ public sealed partial class BochaRoom3D : IDisposable
             Box("BancoEncosto",new Vector3(x+Mathf.Sign(x)*.27f,.83f,z),new Vector3(.1f,.66f,2.65f),wood);
             foreach(float dz in new[]{-.95f,.95f})Box("PeBanco",new Vector3(x,.22f,z+dz),new Vector3(.5f,.44f,.1f),dark);
         }
-        foreach(float x in new[]{-2.6f,2.6f})
+        var vidroSociedade = new Material(Resources.Load<Shader>("Art/Sinuca/JanelaMolhada"));
+        owned.Add(vidroSociedade);
+        foreach (float x in new[] { -2.6f, 2.6f })
         {
-            Box("JanelaMoldura",new Vector3(x,2.2f,22.02f),new Vector3(1.45f,1.3f,.15f),wood);
-            Box("VidroNoite",new Vector3(x,2.2f,21.93f),new Vector3(1.24f,1.1f,.03f),Mat("vidro",new Color(.035f,.075f,.095f),null,true));
+            foreach (float sinal in new[] { -1f, 1f })
+            {
+                Box("OmbreiraJanela",new Vector3(x+sinal*.66f,2.2f,22.02f),new Vector3(.10f,1.32f,.19f),wood);
+                Box("VergaJanela",new Vector3(x,2.2f+sinal*.59f,22.02f),new Vector3(1.42f,.10f,.19f),wood);
+            }
+            var vidro = Primitive("Vidro da Sociedade", PrimitiveType.Quad,
+                new Vector3(x,2.2f,22.12f),new Vector3(1.24f,1.10f,1f),vidroSociedade);
+            vidro.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             Box("TravessaJanela",new Vector3(x,2.2f,21.90f),new Vector3(1.24f,.065f,.04f),wood);
             Box("MontanteJanela",new Vector3(x,2.2f,21.89f),new Vector3(.065f,1.1f,.04f),wood);
             Light("ReflexoNoite",LightType.Point,new Vector3(x,2,21),new Color(.30f,.43f,.61f),.24f,4);
         }
-        Box("PortaSalao",new Vector3(-4.35f,1.1f,-3.03f),new Vector3(1.15f,2.2f,.12f),wood);
+        Box("Base da porta do salão",new Vector3(-4.35f,.52f,-3.03f),new Vector3(1.15f,1.04f,.12f),wood);
+        foreach (float x in new[] { -4.88f, -3.82f })
+            Box("Montante da porta do salão",new Vector3(x,1.57f,-3.03f),new Vector3(.09f,1.22f,.12f),wood);
+        Box("Verga da porta do salão",new Vector3(-4.35f,2.17f,-3.03f),new Vector3(1.15f,.11f,.12f),wood);
+        ExteriorInterior3D.Montar(root.transform,camera,Layer,new Vector3(0,0,22.28f),0f,ExteriorInterior3D.Local.Sociedade);
+        ExteriorInterior3D.Montar(root.transform,camera,Layer,new Vector3(-4.35f,0,-3.22f),180f,ExteriorInterior3D.Local.Salao);
         Box("Macaneta",new Vector3(-3.94f,1.02f,-2.94f),new Vector3(.09f,.05f,.1f),Mat("metal",new Color(.50f,.45f,.27f)));
         Box("RackBochas",new Vector3(4.6f,.85f,-1.65f),new Vector3(1.25f,1.7f,.35f),dark,true);
         for(int row=0;row<3;row++)
@@ -329,7 +352,9 @@ public void SetActive(bool active){if(root!=null)root.SetActive(active);}
                 Box("ArandelaBraco",new Vector3(x-side*.31f,2.41f,z),new Vector3(.43f,.055f,.055f),brass);
                 Primitive("ArandelaBulbo",PrimitiveType.Sphere,new Vector3(x-side*.52f,2.53f,z),new Vector3(.12f,.24f,.12f),bulb);
                 Box("ArandelaChapeu",new Vector3(x-side*.52f,2.72f,z),new Vector3(.38f,.065f,.38f),iron);
-                Light("LuzArandela",LightType.Point,new Vector3(x-side*.62f,2.50f,z),new Color(1,.77f,.51f),1.25f,5.2f);
+                var arandela = Light("LuzArandela",LightType.Point,new Vector3(x-side*.62f,2.50f,z),
+                    new Color(1,.74f,.47f),.93f,4.5f);
+                if (x > 0f && z > 18f) LuzInstavel.Instalar(arandela, .16f, 7.1f);
             }
             // Exposed conduit joins the fixtures, with short drops to each fitting.
             Box("EletrodutoLateral",new Vector3(x-side*.11f,3.15f,10.5f),new Vector3(.035f,.035f,22.6f),iron);
@@ -341,7 +366,7 @@ public void SetActive(bool active){if(root!=null)root.SetActive(active);}
             Box("PendenteSecundarioCabo",new Vector3(0,3.92f,z),new Vector3(.025f,.54f,.025f),iron,false,true);
             Box("PendenteSecundario",new Vector3(0,3.65f,z),new Vector3(.74f,.17f,1.05f),green,false,true);
             Box("PendenteSecundarioDifusor",new Vector3(0,PendenteDaEntrada.y,z),new Vector3(.58f,.025f,.91f),bulb,false,true);
-            var pool=Light("LuzApoioCancha",LightType.Spot,new Vector3(0,3.48f,z),new Color(1,.79f,.53f),3.6f,11);
+            var pool=Light("LuzApoioCancha",LightType.Spot,new Vector3(0,3.48f,z),new Color(1,.77f,.52f),2.9f,10);
             pool.transform.localRotation=Quaternion.Euler(90,0,0);pool.spotAngle=124;pool.innerSpotAngle=82;
         }
         // Lower entrance ceiling and a framed equipment bay break the long box.

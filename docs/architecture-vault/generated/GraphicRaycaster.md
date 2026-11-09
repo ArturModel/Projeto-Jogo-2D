@@ -11,11 +11,11 @@ tags:
 # GraphicRaycaster
 
 ## Connections
-- [[dot-Awake()_17]] - `references` [EXTRACTED]
-- [[dot-Awake()_8]] - `references` [EXTRACTED]
-- [[dot-Build()_4]] - `references` [EXTRACTED]
+- [[dot-Awake()_13]] - `references` [EXTRACTED]
+- [[dot-Awake()_14]] - `references` [EXTRACTED]
+- [[dot-Build()_6]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
-- [[dot-Construir()_5]] - `references` [EXTRACTED]
+- [[dot-Construir()_4]] - `references` [EXTRACTED]
 - [[dot-Construir()_1]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]

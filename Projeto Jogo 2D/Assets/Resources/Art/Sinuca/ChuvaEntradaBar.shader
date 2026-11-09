@@ -3,6 +3,8 @@ Shader "SantaRita/Bar/ChuvaDaEntrada"
     Properties
     {
         _Tempo ("Tempo da entrada", Float) = 0
+        _ChuvaContinua ("Relógio do mundo", Float) = 0
+        _Luz ("Luz sobre a porta", Vector) = (.40, 2.08, -7.64, 0)
     }
 
     SubShader
@@ -21,7 +23,8 @@ Shader "SantaRita/Bar/ChuvaDaEntrada"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
-                float _Tempo;
+                float _Tempo, _ChuvaContinua;
+                float4 _Luz;
             CBUFFER_END
 
             struct Attributes
@@ -42,7 +45,8 @@ Shader "SantaRita/Bar/ChuvaDaEntrada"
             {
                 Varyings o;
                 float3 p = v.positionOS;
-                float altura = frac(p.y - _Tempo * v.gota.x) * 3.55;
+                float tempo = lerp(_Tempo, _Time.y, _ChuvaContinua);
+                float altura = frac(p.y - tempo * v.gota.x) * 3.55;
                 p.x -= altura * .18 + v.canto.y * v.gota.y * .18;
                 p.x += v.canto.x * v.gota.z;
                 p.y = altura + v.canto.y * v.gota.y;
@@ -51,8 +55,8 @@ Shader "SantaRita/Bar/ChuvaDaEntrada"
                 o.positionCS = TransformWorldToHClip(mundo);
                 float distancia = distance(mundo, GetCameraPositionWS());
                 half visibilidade = smoothstep(.22, .53, distancia) * smoothstep(0, .11, altura);
-                half luz = 1.0h - smoothstep(.25, 2.25, distance(p, float3(.40, 2.08, -7.64)));
-                o.cor = half4(lerp(half3(.44, .57, .68), half3(.81, .78, .66), luz),
+                half luz = 1.0h - smoothstep(.25, 2.25, distance(p, _Luz.xyz));
+                o.cor = half4(lerp(half3(.44, .57, .68), half3(.83, .69, .46), luz),
                     v.gota.w * visibilidade * lerp(.68h, 1.0h, luz));
                 o.cauda = 1.0h - v.canto.y;
                 return o;

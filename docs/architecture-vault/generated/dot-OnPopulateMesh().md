@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 106"
-location: "L22"
+community: "Community 39"
+location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_106
+  - community/Community_39
 ---
 
 # .OnPopulateMesh()
 
 ## Connections
-- [[dot-Disc()]] - `calls` [EXTRACTED]
-- [[dot-Shaft()]] - `calls` [EXTRACTED]
-- [[SinucaSpinSelector]] - `method` [EXTRACTED]
+- [[SinucaTableView]] - `method` [EXTRACTED]
 - [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_106
+#graphify/code #graphify/EXTRACTED #community/Community_39

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 114"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_114
 ---
 
 # .RunBochaPerspective()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [INFERRED]
 - [[dot-ActiveButton()]] - `calls` [INFERRED]
-- [[dot-AwaitScene()]] - `calls` [INFERRED]
+- [[dot-AwaitScene()]] - `calls` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-ChangeZoom()]] - `calls` [INFERRED]
@@ -53,4 +53,4 @@ tags:
 - [[Slider]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_114

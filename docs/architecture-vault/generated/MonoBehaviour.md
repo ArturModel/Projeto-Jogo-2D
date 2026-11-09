@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 108"
+community: "Community 54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_108
+  - community/Community_54
 ---
 
 # MonoBehaviour
@@ -14,6 +14,7 @@ tags:
 - [[dot-ApprovedScenes()]] - `references` [EXTRACTED]
 - [[AudioAmbiente]] - `inherits` [EXTRACTED]
 - [[AudioSettingsController]] - `inherits` [EXTRACTED]
+- [[BarDoZe3D]] - `inherits` [EXTRACTED]
 - [[BochaMinigameUI]] - `inherits` [EXTRACTED]
 - [[CamadaDeLuz]] - `inherits` [EXTRACTED]
 - [[CamadaParallax]] - `inherits` [EXTRACTED]
@@ -21,8 +22,11 @@ tags:
 - [[Capitulo1Director]] - `inherits` [EXTRACTED]
 - [[Capitulo2Audio]] - `inherits` [EXTRACTED]
 - [[Capitulo2Director]] - `inherits` [EXTRACTED]
+- [[Capitulo2Exterior]] - `inherits` [EXTRACTED]
 - [[Capitulo2Gate]] - `inherits` [EXTRACTED]
+- [[Capitulo2Interior3D]] - `inherits` [EXTRACTED]
 - [[Capitulo2Perception]] - `inherits` [EXTRACTED]
+- [[Capitulo2PublicRecordsDoor3D]] - `inherits` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `inherits` [EXTRACTED]
 - [[ChegadaEmSantaRita]] - `inherits` [EXTRACTED]
 - [[Chuva]] - `inherits` [EXTRACTED]
@@ -31,12 +35,14 @@ tags:
 - [[DentroDaCasaDoAvo]] - `inherits` [EXTRACTED]
 - [[DicaDeTecla]] - `inherits` [EXTRACTED]
 - [[EstradaScroller]] - `inherits` [EXTRACTED]
+- [[ExteriorInterior3D]] - `inherits` [EXTRACTED]
 - [[GameMessageUI]] - `inherits` [EXTRACTED]
 - [[HorizontalStepperNavigation]] - `inherits` [EXTRACTED]
 - [[Interactable]] - `inherits` [EXTRACTED]
 - [[InteractionPrompt]] - `inherits` [EXTRACTED]
 - [[Legenda]] - `inherits` [EXTRACTED]
 - [[LimpadorParabrisa]] - `inherits` [EXTRACTED]
+- [[LuzInstavel]] - `inherits` [EXTRACTED]
 - [[MainMenuActions]] - `inherits` [EXTRACTED]
 - [[MapaInterativoUI]] - `inherits` [EXTRACTED]
 - [[MarcusNotebookUI]] - `inherits` [EXTRACTED]
@@ -49,11 +55,13 @@ tags:
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[OlharPrimeiraPessoa]] - `inherits` [EXTRACTED]
 - [[OptionsPanelController]] - `inherits` [EXTRACTED]
+- [[PayphoneJogoUI]] - `inherits` [EXTRACTED]
 - [[PayphoneRegistroTecla]] - `inherits` [EXTRACTED]
 - [[PayphoneRegistroUI]] - `inherits` [EXTRACTED]
 - [[PayphoneSlotInputWatcher]] - `inherits` [EXTRACTED]
 - [[PlayerController]] - `inherits` [EXTRACTED]
 - [[PonteiroCarro]] - `inherits` [EXTRACTED]
+- [[Posto3D]] - `inherits` [EXTRACTED]
 - [[PrologoDirector]] - `inherits` [EXTRACTED]
 - [[PrologoJogavel]] - `inherits` [EXTRACTED]
 - [[PrologoRuntimeVerification]] - `inherits` [EXTRACTED]
@@ -66,8 +74,10 @@ tags:
 - [[SantaRitaBarLighting]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarPose]] - `inherits` [EXTRACTED]
 - [[SantaRitaExitThreshold]] - `inherits` [EXTRACTED]
+- [[SantaRitaFalasEntrada]] - `inherits` [EXTRACTED]
 - [[SantaRitaFootsteps]] - `inherits` [EXTRACTED]
 - [[SantaRitaForeground]] - `inherits` [EXTRACTED]
+- [[SantaRitaInteriorAudio]] - `inherits` [EXTRACTED]
 - [[SantaRitaInventory]] - `inherits` [EXTRACTED]
 - [[SantaRitaItemAction]] - `inherits` [EXTRACTED]
 - [[SantaRitaItemHover]] - `inherits` [EXTRACTED]
@@ -88,4 +98,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_108
+#graphify/code #graphify/EXTRACTED #community/Community_54

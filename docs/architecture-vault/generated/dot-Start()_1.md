@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
 community: "Community 107"
-location: "L90"
+location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Start()
 
 ## Connections
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[dot-Construir()]] - `calls` [EXTRACTED]
+- [[EstradaScroller]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_107

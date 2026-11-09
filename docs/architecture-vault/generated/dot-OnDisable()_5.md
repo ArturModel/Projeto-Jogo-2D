@@ -1,17 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 15"
-location: "L187"
+community: "Community 28"
+location: "L414"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_28
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[dot-CancelOpponentShot()]] - `calls` [INFERRED]
+- [[dot-EncerrarAjusteEfeito()]] - `calls` [INFERRED]
+- [[dot-LimparFalaZe()]] - `calls` [EXTRACTED]
+- [[dot-ReiniciarPercepcoesSinuca()]] - `calls` [INFERRED]
+- [[dot-RestaurarCursor()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_28

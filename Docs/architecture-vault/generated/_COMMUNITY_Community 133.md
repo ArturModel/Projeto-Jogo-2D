@@ -1,17 +1,19 @@
 ---
 type: community
-members: 4
+members: 6
 ---
 
 # Community 133
 
-**Members:** 4 nodes
+**Members:** 6 nodes
 
 ## Members
-- [[dot-Prepare()]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
-- [[SinucaRef7Authoring]] - code - Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs
-- [[UniversalRenderPipelineAsset]] - code
-- [[UniversalRendererData]] - code
+- [[Carregando]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[Fase]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[Mira]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[Resultado]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[Rolagem]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[Tonando]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -21,10 +23,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 17]]
 
 ## Top bridge nodes
-- [[dot-Prepare()]] - degree 5, connects to 2 communities
-- [[SinucaRef7Authoring]] - degree 2, connects to 1 community
+- [[Fase]] - degree 6, connects to 1 community

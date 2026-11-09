@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-EscolherTipo()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_18]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[Keyboard]] - `references` [EXTRACTED]
 

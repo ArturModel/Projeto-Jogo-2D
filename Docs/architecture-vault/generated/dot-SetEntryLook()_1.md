@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
 type: "code"
 community: "Community 9"
-location: "L204"
+location: "L227"
 tags:
   - graphify/code
   - graphify/EXTRACTED

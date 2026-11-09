@@ -27,14 +27,19 @@ public static class SantaRitaPlaceDressing
             }
         }
 
-        Replace("Mesa_Calcada_Bar","MesaPlasticaBar",1.35f);
-        Replace("Cadeira_Calcada_1","CadeiraPlasticaBar",.65f);
-        Replace("Cadeira_Calcada_2","CadeiraPlasticaBar",.65f);
+        var ruaDoBar = GameObject.Find("Zona5_RuaNorteBar");
+        if (ruaDoBar != null && ruaDoBar.GetComponent<SantaRitaRuaNorte>() == null)
+        {
+            Replace("Mesa_Calcada_Bar","MesaPlasticaBar",1.35f);
+            Replace("Cadeira_Calcada_1","CadeiraPlasticaBar",.65f);
+            Replace("Cadeira_Calcada_2","CadeiraPlasticaBar",.65f);
+        }
         ApplyExteriorC1();
 
         var litMat = Resources.Load<Material>("Art/WorldLit");
         foreach (var sr in Object.FindObjectsByType<SpriteRenderer>())
         {
+            if (SantaRitaRuaNorte.ControlaRenderDaRua(sr)) continue;
             var coherent=bar==null?null:bar.transform.Find("BarCoerente");
             if(coherent!=null&&sr.transform.IsChildOf(coherent))continue;
             if (sr.sprite != null && sr.transform.position.y < -40)
@@ -239,7 +244,6 @@ public static class SantaRitaPlaceDressing
         Replace("Banco_Venda",         "BancoPraca",      2.4f);
         Replace("Banco_Encruzilhada",  "BancoPraca",      2.4f);
         Replace("Mural_Encruzilhada",  "QuadroAvisos",    2.0f);
-        Replace("Caixotes_Venda",      "CargasMercado",   1.8f);
 
         var z1 = GameObject.Find("Zona1_Rodovia");
         if (z1 != null && z1.GetComponent<SantaRitaRuaNorte>() == null)
@@ -260,16 +264,22 @@ public static class SantaRitaPlaceDressing
             Add(z2,"Araucaria_Posto_Fundo","Araucaria",  220.0f,17.5f,4.2f,true);
             Add(z2,"Samambaia_Venda",      "Fern",       223.5f,13.8f,1.0f,false);
             Add(z2,"Arbusto_Venda",        "Shrub",      233.8f,14.0f,1.3f,false);
-            Add(z2,"Grelha_Posto",         "GrelhaDrenagem",213.2f,12.2f,1.0f,false);
-            Add(z2,"ApoioAgua_Posto",      "ApoioAguaQuente",209.5f,13.6f,0.9f,true);
+            if (z2.GetComponent<SantaRitaRuaNorte>() == null)
+            {
+                Add(z2,"Grelha_Posto",    "GrelhaDrenagem",213.2f,12.2f,1.0f,false);
+                Add(z2,"ApoioAgua_Posto", "ApoioAguaQuente",209.5f,13.6f,0.9f,true);
+            }
         }
 
         var z3 = GameObject.Find("Zona3_Encruzilhada");
         if (z3 != null)
         {
             Add(z3,"Araucaria_Encruzilhada",  "Araucaria",   328.0f,19.5f,4.0f,true);
-            Add(z3,"Cargas_Mercadinho_Calcada","CargasMercado",308.2f,13.4f,1.6f,true);
-            Add(z3,"Grelha_Encruzilhada",     "GrelhaDrenagem",313.5f,12.3f,1.0f,false);
+            if (z3.GetComponent<SantaRitaRuaNorte>() == null)
+            {
+                Add(z3,"Cargas_Mercadinho_Calcada","CargasMercado",308.2f,13.4f,1.6f,true);
+                Add(z3,"Grelha_Encruzilhada",     "GrelhaDrenagem",313.5f,12.3f,1.0f,false);
+            }
             Add(z3,"Flores_Canteiro_Esquina", "Flowers",     333.5f,13.5f,1.2f,false);
             Add(z3,"Samambaia_Esquina",       "Fern",        337.2f,13.8f,1.0f,false);
         }
@@ -286,7 +296,7 @@ public static class SantaRitaPlaceDressing
         }
 
         var z5 = GameObject.Find("Zona5_RuaNorteBar");
-        if (z5 != null)
+        if (z5 != null && z5.GetComponent<SantaRitaRuaNorte>() == null)
         {
             Add(z5,"Araucaria_BarDoZe",  "Araucaria",     521.0f,17.5f,4.2f,true);
             Add(z5,"Grelha_RuaNorte",    "GrelhaDrenagem",529.5f,12.2f,1.0f,false);

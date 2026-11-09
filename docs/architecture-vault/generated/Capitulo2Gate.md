@@ -12,10 +12,10 @@ tags:
 # Capitulo2Gate
 
 ## Connections
-- [[dot-Atualizar()_2]] - `method` [EXTRACTED]
+- [[dot-Atualizar()_3]] - `method` [EXTRACTED]
 - [[dot-Interior()_2]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_14]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_14]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_18]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_16]] - `method` [EXTRACTED]
 - [[dot-Prefeitura()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[Capitulo2Gate.cs]] - `contains` [EXTRACTED]

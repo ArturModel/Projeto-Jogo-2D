@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 85"
-location: "L457"
+location: "L469"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarCapturaCursor()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarPainelContextual()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
-- [[dot-Awake()_15]] - `calls` [EXTRACTED]
+- [[dot-Awake()_10]] - `calls` [EXTRACTED]
 - [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirAjusteEfeito()]] - `calls` [INFERRED]
 - [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
@@ -27,12 +27,12 @@ tags:
 - [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `calls` [EXTRACTED]
 - [[dot-CriarPainelHUD()]] - `calls` [EXTRACTED]
-- [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
+- [[dot-CriarTexto()_3]] - `calls` [EXTRACTED]
 - [[dot-EntradaMesaBloqueada()]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [EXTRACTED]
 - [[dot-IniciarPraticaOpcional()]] - `calls` [EXTRACTED]
 - [[dot-LimitarMiraApoiada()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_5]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[CanvasScaler]] - `references` [EXTRACTED]
 - [[ChuvaMinigame]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/export-tonao-bocha.py"
 type: "code"
-community: "Community 32"
+community: "Community 142"
 location: "L44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_142
 ---
 
 # chunk()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[aseprite()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+#graphify/code #graphify/EXTRACTED #community/Community_142

@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AbrirDaSociedade()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_5]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_6]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_93

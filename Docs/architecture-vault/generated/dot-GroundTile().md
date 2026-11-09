@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs"
 type: "code"
-community: "Community 89"
-location: "L115"
+community: "Community 125"
+location: "L447"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_125
 ---
 
 # .GroundTile()
@@ -18,4 +18,4 @@ tags:
 - [[Texture2D]] - `references` [EXTRACTED]
 - [[Tile]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_125

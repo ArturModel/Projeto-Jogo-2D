@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 24"
-location: "L2536"
+community: "Community 85"
+location: "L2425"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_85
 ---
 
 # .AbrirPainelFechamento()
@@ -16,4 +16,4 @@ tags:
 - [[dot-MostrarPainelFimCapitulo1()]] - `calls` [INFERRED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_85

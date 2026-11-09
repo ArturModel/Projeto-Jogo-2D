@@ -1,35 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
 type: "code"
-community: "Community 18"
-location: "L384"
+community: "Community 29"
+location: "L282"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_29
 ---
 
 # .Sync()
 
 ## Connections
-- [[dot-AlignBridgeToShaft()]] - `calls` [EXTRACTED]
-- [[dot-AlignGripToShaft()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarEstadoRender()]] - `calls` [EXTRACTED]
-- [[dot-BridgeRailLift()]] - `calls` [EXTRACTED]
-- [[dot-NativeMesh()]] - `calls` [INFERRED]
-- [[dot-PatronPose()]] - `calls` [EXTRACTED]
-- [[dot-PixelMaterial()]] - `calls` [INFERRED]
-- [[dot-PocketOuter()]] - `calls` [INFERRED]
-- [[dot-PocketPhysics()]] - `calls` [INFERRED]
-- [[dot-SalonPropVisible()]] - `calls` [INFERRED]
-- [[dot-SyncFirstPersonCamera()]] - `calls` [EXTRACTED]
-- [[dot-TickSalon()]] - `calls` [INFERRED]
-- [[dot-UpdateCamera()]] - `calls` [EXTRACTED]
-- [[dot-UpdateSalonPatron()]] - `calls` [INFERRED]
-- [[IList]] - `references` [EXTRACTED]
-- [[SinucaAimGuideData]] - `references` [EXTRACTED]
-- [[SinucaRoom3D]] - `method` [EXTRACTED]
-- [[SinucaVisualBall]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-AplicarQueda()]] - `calls` [INFERRED]
+- [[dot-BallColor()]] - `calls` [EXTRACTED]
+- [[dot-Mat()]] - `calls` [EXTRACTED]
+- [[dot-Sync()_1]] - `calls` [EXTRACTED]
+- [[BochaRoom3D]] - `method` [EXTRACTED]
+- [[BochaShot]] - `references` [EXTRACTED]
+- [[BochaSimulation]] - `references` [EXTRACTED]
+- [[Renderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_29

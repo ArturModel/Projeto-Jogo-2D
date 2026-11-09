@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "Community 12"
-location: "L525"
+location: "L472"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -23,7 +23,6 @@ tags:
 - [[dot-LinhaToggle()]] - `calls` [EXTRACTED]
 - [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
 - [[dot-Titulo()]] - `calls` [EXTRACTED]
-- [[dot-TituloPausa()]] - `calls` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]
 - [[TextAlignmentOptions]] - `references` [EXTRACTED]

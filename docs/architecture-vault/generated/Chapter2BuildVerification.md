@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
 type: "code"
-community: "Community 88"
+community: "Community 50"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_88
+  - community/Community_50
 ---
 
 # Chapter2BuildVerification
@@ -18,11 +18,11 @@ tags:
 - [[dot-RegisterCampaignScenes()]] - `method` [EXTRACTED]
 - [[dot-RequireSavedScenes()]] - `method` [EXTRACTED]
 - [[dot-Revision()]] - `method` [EXTRACTED]
-- [[dot-Run()_9]] - `method` [EXTRACTED]
+- [[dot-Run()_8]] - `method` [EXTRACTED]
 - [[dot-Scenes()]] - `method` [EXTRACTED]
 - [[dot-SourceHash()]] - `method` [EXTRACTED]
 - [[Chapter2BuildVerification.cs]] - `contains` [EXTRACTED]
 - [[Evidence]] - `defines` [EXTRACTED]
 - [[ForcarDevelopment]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_88
+#graphify/code #graphify/EXTRACTED #community/Community_50

@@ -469,3 +469,143 @@ Assets/Resources/Art/RuaNorte/Bairro/Casa32.png,Sprite,ImageGen com CasaSimples_
 Assets/Resources/Art/RuaNorte/Bairro/Casa48.png,Sprite,ImageGen com CasaSimples_A e casa da Encruzilhada,Santa Rita,Project asset,64,Point,Casa 48
 
 Assets/Resources/Art/RuaNorte/Bairro/Van.png,Sprite,ImageGen com picape do Mercadinho,Santa Rita,Project asset,64,Point,Van do Bairro
+
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Abrigo.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Balizadores.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Capim.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Defensa.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Folhas.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Grelha.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Lixeira.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Muro.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Pedras.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Pilar.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/PosteRede.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Samambaia.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Sebe.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/Terra.png,Sprite ou decalque,ImageGen integrado com recorte da folha,Santa Rita,Project asset,32,Point,Rodovia modular
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Abrigo.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Balizadores.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Capim.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Defensa.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Grelha.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Lixeira.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Muro.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/ObjetosEntrada.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Orelhao.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Pilar.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Poste.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/PosteRede.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Samambaia.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Relevos/Sebe.png,Relevo e rugosidade,Derivado do sprite e de perfil por material,Santa Rita,Project asset,32 ou atlas de origem,Point,Dados lineares
+Arte/Producao/EntradaDaCidade/Detalhes-Rodovia-ImageGen.png,Arte-fonte da Rodovia,Original gerado para Santa Rita,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,PNG RGBA com seis peças isoladas para recorte
+Assets/Resources/Audio/Foley/footstep_asphalt_000.wav,Audio/Foley,https://freesound.org/people/artemditkovsky/sounds/856942/,artemditkovsky,CC0 1.0,,,Recorte mono com filtro e fades; textura de sola molhada de bushi3593 (Freesound 215990; CC0 1.0) em camada leve.
+Assets/Resources/Audio/Foley/footstep_asphalt_001.wav,Audio/Foley,https://freesound.org/people/artemditkovsky/sounds/856942/,artemditkovsky,CC0 1.0,,,Recorte mono com filtro e fades; textura de sola molhada de bushi3593 (Freesound 215990; CC0 1.0) em camada leve.
+Assets/Resources/Audio/Foley/footstep_asphalt_002.wav,Audio/Foley,https://freesound.org/people/artemditkovsky/sounds/856942/,artemditkovsky,CC0 1.0,,,Recorte mono com filtro e fades; textura de sola molhada de bushi3593 (Freesound 215990; CC0 1.0) em camada leve.
+Assets/Resources/Audio/Foley/footstep_sidewalk_000.wav,Audio/Foley,https://freesound.org/people/bushi3593/sounds/215990/,bushi3593,CC0 1.0,,,Recorte de um contato em concreto molhado; filtro para vento; mono e fades.
+Assets/Resources/Audio/Foley/footstep_sidewalk_001.wav,Audio/Foley,https://freesound.org/people/bushi3593/sounds/215990/,bushi3593,CC0 1.0,,,Recorte de um contato em concreto molhado; filtro para vento; mono e fades.
+Assets/Resources/Audio/Foley/footstep_sidewalk_002.wav,Audio/Foley,https://freesound.org/people/bushi3593/sounds/215990/,bushi3593,CC0 1.0,,,Recorte de um contato em concreto molhado; filtro para vento; mono e fades.
+Assets/Resources/Audio/Foley/footstep_puddle_000.wav,Audio/Foley,https://freesound.org/people/ChristopherJngs/sounds/861369/,ChristopherJngs,CC0 1.0,,,Recorte de um passo em água rasa; mono; filtro e fade da cauda.
+Assets/Resources/Audio/Foley/footstep_puddle_001.wav,Audio/Foley,https://freesound.org/people/ChristopherJngs/sounds/861369/,ChristopherJngs,CC0 1.0,,,Recorte de um passo em água rasa; mono; filtro e fade da cauda.
+Assets/Resources/Audio/Foley/footstep_puddle_002.wav,Audio/Foley,https://freesound.org/people/ChristopherJngs/sounds/861369/,ChristopherJngs,CC0 1.0,,,Recorte de um passo em água rasa; mono; filtro e fade da cauda.
+Arte/Producao/EntradaDaCidade/Posto-Detalhes-ImageGen.png,Arte-fonte do posto,Original gerado para Santa Rita,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,Prancha RGBA original de seis peças
+Assets/Resources/Art/RuaNorte/Posto/BombaAnalogica.png,Detalhe modular do Posto,Recorte de Posto-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Posto/Relevos/BombaAnalogica.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Posto/JardineiraPosto.png,Detalhe modular do Posto,Recorte de Posto-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Posto/Relevos/JardineiraPosto.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Posto/ExtintorPosto.png,Detalhe modular do Posto,Recorte de Posto-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Posto/Relevos/ExtintorPosto.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Posto/CanaletaPosto.png,Detalhe modular do Posto,Recorte de Posto-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Posto/Relevos/CanaletaPosto.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Posto/TamborDeOleo.png,Detalhe modular do Posto,Recorte de Posto-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Posto/Relevos/TamborDeOleo.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/CanoDeChuva.png,Detalhe modular da Rodovia,Recorte de Detalhes-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/DrenoDeMuro.png,Detalhe modular da Rodovia,Recorte de Detalhes-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/LimitadorDaVaga.png,Detalhe modular da Rodovia,Recorte de Detalhes-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/HeraDoMuro.png,Detalhe modular da Rodovia,Recorte de Detalhes-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/PapelMolhado.png,Detalhe modular da Rodovia,Recorte de Detalhes-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Entrada/Modulos/CaixaEletrica.png,Detalhe modular da Rodovia,Recorte de Detalhes-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Arte/Producao/EntradaDaCidade/Mercadinho-Detalhes-ImageGen.png,Arte-fonte do Mercadinho,Original gerado para Santa Rita,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,Prancha RGBA original de seis peças
+Arte/Producao/EntradaDaCidade/Subida-Detalhes-ImageGen.png,Arte-fonte da subida de terra,Original gerado para Santa Rita,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,Prancha RGBA original de seis peças
+Assets/Resources/Art/RuaNorte/Mercadinho/BancaDeFrutas.png,Detalhe do Mercadinho,Recorte de Mercadinho-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/MedidorDaLoja.png,Detalhe do Mercadinho,Recorte de Mercadinho-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/LixeiraBaixa.png,Detalhe do Mercadinho,Recorte de Mercadinho-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/CavaleteDoMercadinho.png,Detalhe do Mercadinho,Recorte de Mercadinho-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/CanaletaDaLoja.png,Detalhe do Mercadinho,Recorte de Mercadinho-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/JardineiraDaLoja.png,Detalhe do Mercadinho,Recorte de Mercadinho-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Subida/CascalhoDaSubida.png,Detalhe da subida,Recorte de Subida-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Subida/SulcoDaSubida.png,Detalhe da subida,Recorte de Subida-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Subida/AguaDaSubida.png,Detalhe da subida,Recorte de Subida-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Subida/CapimDaSubida.png,Detalhe da subida,Recorte de Subida-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Subida/BueiroDaSubida.png,Detalhe da subida,Recorte de Subida-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Subida/BalizaDaSubida.png,Detalhe da subida,Recorte de Subida-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/BancaDeFrutas.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/MedidorDaLoja.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/LixeiraBaixa.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/CavaleteDoMercadinho.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/CanaletaDaLoja.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/JardineiraDaLoja.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/CapimDaSubida.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/BueiroDaSubida.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/BalizaDaSubida.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Arte/Producao/EntradaDaCidade/Arvores-Rodovia-ImageGen.png,Arte-fonte da vegetação,Original gerado para Santa Rita,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,Prancha RGBA com quatro espécies
+Assets/Resources/Art/RuaNorte/Vegetacao/Pitangueira.png,Árvore modular,Recorte de Arvores-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô no tronco
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/Pitangueira.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Vegetacao/Bracatinga.png,Árvore modular,Recorte de Arvores-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô no tronco
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/Bracatinga.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Vegetacao/Araucaria.png,Árvore modular,Recorte de Arvores-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô no tronco
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/Araucaria.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Vegetacao/Camboata.png,Árvore modular,Recorte de Arvores-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô no tronco
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/Camboata.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Arte/Producao/EntradaDaCidade/Submata-Rodovia-ImageGen.png,Arte-fonte da submata,Original gerado para Santa Rita,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,Prancha RGBA com seis peças
+Assets/Resources/Art/RuaNorte/Vegetacao/CamboataJovem.png,Detalhe da submata,Recorte de Submata-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Vegetacao/BracatingaJovem.png,Detalhe da submata,Recorte de Submata-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Vegetacao/MoitaDeBorda.png,Detalhe da submata,Recorte de Submata-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Vegetacao/SamambaiaDaMata.png,Detalhe da submata,Recorte de Submata-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Vegetacao/Folhico.png,Detalhe da submata,Recorte de Submata-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Vegetacao/GalhoCaido.png,Detalhe da submata,Recorte de Submata-Rodovia-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/CamboataJovem.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/BracatingaJovem.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/MoitaDeBorda.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Vegetacao/Relevos/SamambaiaDaMata.png,Perfil de folhas e madeira,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Arte/Producao/EntradaDaCidade/Bloqueio-Encruzilhada-ImageGen.png,Arte-fonte do bloqueio,Original gerado para Santa Rita,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,Prancha RGBA com quatro peças
+Assets/Resources/Art/RuaNorte/Mercadinho/Bloqueio/TroncoDoBloqueio.png,Detalhe do bloqueio,Recorte de Bloqueio-Encruzilhada-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Bloqueio/RaizDoBloqueio.png,Detalhe do bloqueio,Recorte de Bloqueio-Encruzilhada-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Bloqueio/RamosQuebrados.png,Detalhe do bloqueio,Recorte de Bloqueio-Encruzilhada-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Bloqueio/PedrasDoBloqueio.png,Detalhe do bloqueio,Recorte de Bloqueio-Encruzilhada-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Alfa e pivô na base
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/TroncoDoBloqueio.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/RaizDoBloqueio.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Mercadinho/Relevos/PedrasDoBloqueio.png,Relevo e rugosidade,Derivado do sprite com perfil por material,Santa Rita,Project asset,32,Point,Dados lineares
+Arte/Producao/EntradaDaCidade/Bairro-Detalhes-ImageGen.png,Folha de detalhes do Bairro,Arte original,OpenAI ImageGen,Generated for project - service terms; not CC0,N/A,N/A,Atlas fonte RGBA
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/SoleiraDePedra.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/SoleiraDePedra.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/BueiroDaVila.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/BueiroDaVila.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/CorreioDeMadeira.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/CorreioDeMadeira.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/VasosDaVaranda.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/VasosDaVaranda.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/RastrosNaLama.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/RastrosNaLama.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/BordaDePoca.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/BordaDePoca.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/CascalhoDaVila.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/CascalhoDaVila.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/BeiraDeBarro.png,Detalhe do Bairro,Recorte de Bairro-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bairro/Detalhes/Relevos/BeiraDeBarro.png,Relevo do Bairro,Derivado do recorte com rugosidade por material,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/CaixaTermica.png,Santa Rita Rua Norte,Recorte de Bar-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Relevos/CaixaTermica.png,Santa Rita Rua Norte,Normais e rugosidade derivadas do recorte,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Barril.png,Santa Rita Rua Norte,Recorte de Bar-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Relevos/Barril.png,Santa Rita Rua Norte,Normais e rugosidade derivadas do recorte,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/CavaleteBar.png,Santa Rita Rua Norte,Recorte de Bar-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Relevos/CavaleteBar.png,Santa Rita Rua Norte,Normais e rugosidade derivadas do recorte,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/EngradadosRetornaveis.png,Santa Rita Rua Norte,Recorte de Bar-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Relevos/EngradadosRetornaveis.png,Santa Rita Rua Norte,Normais e rugosidade derivadas do recorte,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/CoberturaZinco.png,Santa Rita Rua Norte,Recorte de Bar-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Relevos/CoberturaZinco.png,Santa Rita Rua Norte,Normais e rugosidade derivadas do recorte,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/JardineiraBar.png,Santa Rita Rua Norte,Recorte de Bar-Detalhes-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Relevos/JardineiraBar.png,Santa Rita Rua Norte,Normais e rugosidade derivadas do recorte,Santa Rita,Project asset,32,Point,Dados lineares
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/PortaoDoCentro.png,Santa Rita Rua Norte,Recorte de Bar-Portao-ImageGen.png,OpenAI ImageGen,Generated for project - service terms; not CC0,32,Point,Sprite modular
+Assets/Resources/Art/RuaNorte/Bar/Detalhes/Relevos/PortaoDoCentro.png,Santa Rita Rua Norte,Normais e rugosidade derivadas do recorte,Santa Rita,Project asset,32,Point,Dados lineares
+Arte/Producao/EntradaDaCidade/Bar-Detalhes-ImageGen.png,Santa Rita Rua Norte,Geração de arte-fonte por prompt,OpenAI ImageGen,Generated for project - service terms; not CC0,,Original,Prancha fonte
+Arte/Producao/EntradaDaCidade/Bar-Portao-ImageGen.png,Santa Rita Rua Norte,Geração de arte-fonte por prompt,OpenAI ImageGen,Generated for project - service terms; not CC0,,Original,Prancha fonte

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "Community 12"
-location: "L537"
+location: "L484"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,10 +13,9 @@ tags:
 
 ## Connections
 - [[dot-Construir()_1]] - `calls` [EXTRACTED]
-- [[dot-LoadSprite()]] - `calls` [EXTRACTED]
+- [[dot-Imagem()]] - `calls` [EXTRACTED]
 - [[dot-Posicionar()_1]] - `calls` [EXTRACTED]
 - [[dot-Rotulo()]] - `calls` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[TMP_Text]] - `references` [EXTRACTED]

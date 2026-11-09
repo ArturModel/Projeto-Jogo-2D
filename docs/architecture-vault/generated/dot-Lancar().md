@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRules.cs"
 type: "code"
 community: "Community 27"
-location: "L431"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,14 @@ tags:
 # .Lancar()
 
 ## Connections
-- [[dot-EfetuarLancamento()]] - `calls` [EXTRACTED]
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
-- [[BochaShot]] - `calls` [INFERRED]
+- [[dot-Lancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Physics()]] - `calls` [INFERRED]
+- [[dot-Proximo()]] - `calls` [EXTRACTED]
+- [[dot-Rules()]] - `calls` [INFERRED]
+- [[BochaBall]] - `calls` [INFERRED]
+- [[BochaMatch]] - `method` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
+- [[BochaSimulation]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_27

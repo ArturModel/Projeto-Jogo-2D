@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/ChuvaMinigamesSmoke.cs"
 type: "code"
-community: "Community 88"
-location: "L10"
+community: "Community 54"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_88
+  - community/Community_54
 ---
 
 # .Atualizar()
 
 ## Connections
-- [[dot-OnEnable()_14]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[Capitulo2Gate]] - `method` [EXTRACTED]
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-Check()_4]] - `calls` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[ChuvaMinigamesSmoke]] - `method` [EXTRACTED]
+- [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_88
+#graphify/code #graphify/EXTRACTED #community/Community_54

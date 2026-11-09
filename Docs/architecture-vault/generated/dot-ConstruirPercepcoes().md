@@ -12,7 +12,7 @@ tags:
 # .ConstruirPercepcoes()
 
 ## Connections
-- [[dot-Construir()_5]] - `calls` [INFERRED]
+- [[dot-Construir()_4]] - `calls` [INFERRED]
 - [[dot-CriarFonte()_1]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[MinigameDialogue]] - `calls` [INFERRED]

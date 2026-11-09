@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[dot-NovaGota()]] - `calls` [EXTRACTED]
-- [[dot-RespingoDePasso()]] - `calls` [EXTRACTED]
 - [[Chuva]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

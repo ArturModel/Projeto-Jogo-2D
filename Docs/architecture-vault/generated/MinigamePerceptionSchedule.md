@@ -1,20 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaPerceptionSchedule.cs"
 type: "code"
-community: "Community 49"
+community: "Community 28"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_28
 ---
 
 # MinigamePerceptionSchedule
 
 ## Connections
-- [[dot-Finish()_2]] - `method` [EXTRACTED]
+- [[dot-Finish()_3]] - `method` [EXTRACTED]
 - [[dot-Range()]] - `method` [EXTRACTED]
-- [[dot-Reset()_1]] - `method` [EXTRACTED]
+- [[dot-Reset()]] - `method` [EXTRACTED]
 - [[dot-Same()]] - `method` [EXTRACTED]
 - [[dot-StartForced()]] - `method` [EXTRACTED]
 - [[dot-Tick()_1]] - `method` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[SinucaPerceptionSchedule]] - `inherits` [EXTRACTED]
 - [[SinucaPerceptionSchedule.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_28

@@ -6,6 +6,9 @@ using UnityEngine.UI;
 internal sealed class MinigameDialogue
 {
     public const float MarcusPitch = .77f;
+    public const float ZePitch = 1f;
+
+    internal static readonly Color32 CorFundo = new Color32(10, 13, 11, 220);
 
     private const float TamanhoBase = 16f;
     private const float VolumeBase = .20f;
@@ -31,7 +34,7 @@ internal sealed class MinigameDialogue
         rect.sizeDelta = new Vector2(520, 48);
 
         fundo = objeto.GetComponent<Image>();
-        fundo.color = new Color32(10, 13, 11, 220);
+        fundo.color = CorFundo;
         fundo.raycastTarget = false;
         painel = objeto.GetComponent<CanvasGroup>();
         painel.blocksRaycasts = painel.interactable = false;
@@ -43,7 +46,7 @@ internal sealed class MinigameDialogue
         texto.rectTransform.sizeDelta = new Vector2(496, 42);
         texto.alignment = TextAlignmentOptions.Center;
         texto.color = new Color32(244, 233, 208, 255);
-        texto.richText = false;
+        texto.richText = true;
         texto.textWrappingMode = TextWrappingModes.Normal;
         texto.overflowMode = TextOverflowModes.Overflow;
 

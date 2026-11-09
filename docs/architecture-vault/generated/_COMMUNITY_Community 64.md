@@ -8,7 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
-- [[PATH]] - code - scripts/graphify-refresh.sh
+- [[PATH_1]] - code - scripts/graphify-refresh.sh
 - [[graphify-refresh.sh]] - code - scripts/graphify-refresh.sh
 - [[graphify-refresh.sh script]] - code - scripts/graphify-refresh.sh
 

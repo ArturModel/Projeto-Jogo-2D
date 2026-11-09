@@ -10,10 +10,17 @@ public sealed partial class SinucaRoom3D
         var wall=Mat("paredeNativa",Color.white,tiles[1]);wall.mainTextureScale=new Vector2(9.5f,1);
         Box("LambrilFundo",new Vector3(0,1.5f,3.86f),new Vector3(11,3f,.08f),wall);
         var side=Mat("paredeLateralNativa",Color.white,tiles[1]);side.mainTextureScale=new Vector2(9.85f,1);
-        Box("LambrilEsq",new Vector3(-5.46f,1.5f,-1.8f),new Vector3(.08f,3f,11.4f),side);
-        Box("LambrilDir",new Vector3(5.46f,1.5f,-1.8f),new Vector3(.08f,3f,11.4f),side);
-        ConstruirParedeDaEntrada("LambrilFrente", 1.5f, 3f, 11f, -7.5f, .08f, wall);
-        var rebocoDaRua = Mat("rebocoDaFachada", new Color(.52f,.42f,.32f));
+        Box("LambrilEsq", new Vector3(-5.46f,1.5f,-1.8f), new Vector3(.08f,3f,11.4f), side);
+        Box("LambrilDir", new Vector3(5.46f,1.5f,-1.8f), new Vector3(.08f,3f,11.4f), side);
+        var lambrilFrente = Mat("lambrilFachada", new Color(.49f,.39f,.28f), tiles[2]);
+        lambrilFrente.mainTextureScale = new Vector2(2.1f, 1f);
+        ConstruirParedeDaEntrada("LambrilFrente", 1.5f, 3f, 11f, -7.5f, .08f, lambrilFrente);
+        var rebocoDaRua = Mat("rebocoDaFachada", new Color(.49f,.43f,.34f));
+        rebocoDaRua.SetFloat("_RoomSurface", .8f);
+        var passeio = Mat("soleiraExternaMolhada", new Color(.29f,.28f,.24f), tiles[2]);
+        passeio.mainTextureScale = new Vector2(8f, 2f);
+        passeio.SetFloat("_WetThreshold", 1f);
+        Box("PasseioMolhado", new Vector3(0f,-.065f,-8.5f), new Vector3(11f,.12f,2.16f), passeio);
         var barraDaRua = Mat("barraAzulDaFachada", new Color(.19f,.29f,.32f));
         ConstruirParedeDaEntrada("FachadaReboco", 1.91f, 2.18f, 11f, -7.55f, .03f, rebocoDaRua);
         ConstruirParedeDaEntrada("FachadaBarraAzul", .41f, .82f, 11f, -7.55f, .03f, barraDaRua);
@@ -34,7 +41,7 @@ public sealed partial class SinucaRoom3D
             });
         }
         BuildSalonDepth();
-        var sun=new GameObject("LuzAmbiente3D").AddComponent<Light>();sun.transform.SetParent(root.transform,false);sun.type=LightType.Directional;sun.color=new Color(.57f,.65f,.77f);sun.intensity=.10f;sun.transform.localRotation=Quaternion.Euler(48,-32,0);sun.cullingMask=1<<Layer;sun.shadows=LightShadows.None;sun.shadowBias=.02f;
+        var sun=new GameObject("LuzAmbiente3D").AddComponent<Light>();sun.transform.SetParent(root.transform,false);sun.type=LightType.Directional;sun.color=new Color(.57f,.65f,.77f);sun.intensity=.065f;sun.transform.localRotation=Quaternion.Euler(48,-32,0);sun.cullingMask=1<<Layer;sun.shadows=LightShadows.None;sun.shadowBias=.02f;
         Lamp(PendantPosition);
         // Low-cost indirect spill: no shadow cubemaps, fog, or screen-space effects.
         RoomFill("ReflexoQuenteMesa",new Vector3(0,1.75f,0),new Color(1f,.78f,.51f),.18f,3.1f);
@@ -48,13 +55,14 @@ public sealed partial class SinucaRoom3D
         var light=new GameObject(name).AddComponent<Light>();light.transform.SetParent(root.transform,false);
         light.transform.localPosition=at;light.type=LightType.Point;light.color=color;
         light.intensity=intensity;light.range=range;light.cullingMask=1<<Layer;light.shadows=LightShadows.None;
+        if (name == "LuzDiscretaBalcao") LuzInstavel.Instalar(light, .14f, 5.2f);
     }
     private void Lamp(Vector3 at)
     {
         var shade=Mat("cupulaVerde",new Color(.09f,.18f,.10f));Cylinder("Cupula",at,.23f,.055f,shade);Cylinder("FioLampada",at+Vector3.up*.3f,.009f,.6f,DarkWood);
         Cylinder("Lampada",at+Vector3.down*.035f,.06f,.05f,Mat("lampada",new Color(.94f,.80f,.47f),null,true));
         var light=new GameObject("Incandescente").AddComponent<Light>();light.transform.SetParent(root.transform,false);light.transform.localPosition=at+Vector3.down*.15f;light.type=LightType.Spot;light.transform.localRotation=Quaternion.Euler(90,0,0);
-        light.color=new Color(1f,.88f,.70f);light.intensity=5.2f;light.range=4f;
+        light.color=new Color(1f,.82f,.61f);light.intensity=4.7f;light.range=4f;
         light.spotAngle=108f;light.innerSpotAngle=76f;light.cullingMask=1<<Layer;
         // One shadow map for the entire room, centered on the playable surface.
         light.shadows=LightShadows.Hard;

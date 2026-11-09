@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
 type: "code"
-community: "Community 120"
-location: "L41"
+community: "Community 137"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_120
+  - community/Community_137
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AnguloEm()]] - `calls` [EXTRACTED]
-- [[dot-AplicarAngulo()]] - `calls` [EXTRACTED]
-- [[LimpadorParabrisa]] - `method` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
+- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_120
+#graphify/code #graphify/EXTRACTED #community/Community_137

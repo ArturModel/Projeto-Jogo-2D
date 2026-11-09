@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs"
 type: "code"
-community: "Community 103"
-location: "L22"
+community: "Community 52"
+location: "L25"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_103
+  - community/Community_52
 ---
 
 # Ocupada
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MinigameDialogue]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_52

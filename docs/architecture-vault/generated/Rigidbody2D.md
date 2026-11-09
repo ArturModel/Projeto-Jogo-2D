@@ -11,9 +11,10 @@ tags:
 # Rigidbody2D
 
 ## Connections
-- [[dot-Awake()_20]] - `references` [EXTRACTED]
+- [[dot-GarantirInicializacao()]] - `references` [EXTRACTED]
 - [[dot-Place()]] - `references` [EXTRACTED]
 - [[dot-TeleportarPara()]] - `references` [EXTRACTED]
+- [[dot-Walking()]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_44

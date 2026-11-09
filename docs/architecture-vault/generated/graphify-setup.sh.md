@@ -12,7 +12,7 @@ tags:
 # graphify-setup.sh
 
 ## Connections
-- [[PATH_1]] - `defines` [EXTRACTED]
+- [[PATH_2]] - `defines` [EXTRACTED]
 - [[graphify-setup.sh script]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_65

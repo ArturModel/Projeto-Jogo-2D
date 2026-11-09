@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 92"
+community: "Community 23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_92
+  - community/Community_23
 ---
 
 # unityengine_scenemanagement
@@ -28,6 +28,7 @@ tags:
 - [[MilaRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
+- [[PayphoneJogoUI.cs]] - `imports` [EXTRACTED]
 - [[PayphoneRegistroUI.cs]] - `imports` [EXTRACTED]
 - [[PortalRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[PrologoRuntimeVerification.cs]] - `imports` [EXTRACTED]
@@ -43,7 +44,8 @@ tags:
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaTapeDeck.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaWorldLighting.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
 - [[TransicaoDeZonaTrigger.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_92
+#graphify/concept #graphify/EXTRACTED #community/Community_23

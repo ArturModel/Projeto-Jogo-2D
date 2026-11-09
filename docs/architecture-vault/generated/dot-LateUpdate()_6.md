@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLighting.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs"
 type: "code"
-community: "Community 114"
-location: "L71"
+community: "Community 139"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_114
+  - community/Community_139
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-PlaceShadow()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaBarLighting]] - `method` [EXTRACTED]
+- [[SantaRitaForeground]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+#graphify/code #graphify/EXTRACTED #community/Community_139

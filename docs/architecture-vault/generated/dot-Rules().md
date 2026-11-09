@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-Balim()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [EXTRACTED]
 - [[dot-CriarMao()]] - `calls` [INFERRED]
-- [[dot-Lancar()_1]] - `calls` [INFERRED]
+- [[dot-Lancar()]] - `calls` [INFERRED]
 - [[dot-Medir()]] - `calls` [EXTRACTED]
 - [[dot-Proximo()]] - `calls` [INFERRED]
 - [[dot-Resolver()]] - `calls` [INFERRED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
+- [[dot-Run()_5]] - `calls` [EXTRACTED]
 - [[BochaBall]] - `calls` [INFERRED]
 - [[BochaMatch]] - `calls` [INFERRED]
 - [[BochaSimulation]] - `calls` [INFERRED]

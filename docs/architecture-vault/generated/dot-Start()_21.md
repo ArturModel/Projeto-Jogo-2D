@@ -12,20 +12,23 @@ tags:
 # .Start()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()]] - `calls` [EXTRACTED]
 - [[dot-ApplyC2()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarInvestigacao()]] - `calls` [EXTRACTED]
 - [[dot-Definir()_1]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
 - [[dot-IrParaPosicao()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[CameraFollow]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
+- [[Capitulo2Exterior]] - `references` [EXTRACTED]
+- [[Capitulo2Interior3D]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaFalasEntrada]] - `references` [EXTRACTED]
 - [[SantaRitaRimLight]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_94

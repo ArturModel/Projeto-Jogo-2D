@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
 type: "code"
 community: "Community 110"
-location: "L360"
+location: "L372"
 tags:
   - graphify/code
   - graphify/EXTRACTED

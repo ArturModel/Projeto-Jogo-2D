@@ -13,6 +13,7 @@ tags:
 ## Connections
 - [[BochaBall]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
+- [[SantaRitaInspecao]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[SinucaVisualBall]] - `references` [EXTRACTED]

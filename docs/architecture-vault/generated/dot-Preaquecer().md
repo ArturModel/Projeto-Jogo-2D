@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
+- [[dot-PrepararSala()]] - `calls` [INFERRED]
 - [[dot-SincronizarMesa3D()]] - `calls` [INFERRED]
 - [[SinucaTableView]] - `method` [EXTRACTED]
 

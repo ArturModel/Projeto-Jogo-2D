@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaPerceptionSchedule.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs"
 type: "code"
-community: "Community 49"
-location: "L29"
+community: "Community 44"
+location: "L13"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_49
+  - graphify/INFERRED
+  - community/Community_44
 ---
 
 # .Reset()
 
 ## Connections
-- [[dot-Range()]] - `calls` [EXTRACTED]
-- [[dot-ReiniciarPercepcoes()]] - `calls` [INFERRED]
-- [[dot-ReiniciarPercepcoesSinuca()]] - `calls` [INFERRED]
-- [[MinigamePerceptionSchedule]] - `method` [EXTRACTED]
+- [[dot-AtualizarPassada()]] - `calls` [INFERRED]
+- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
+- [[dot-Gait()]] - `calls` [INFERRED]
+- [[dot-TeleportarPara()]] - `calls` [INFERRED]
+- [[MarcusGait]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/INFERRED #community/Community_44

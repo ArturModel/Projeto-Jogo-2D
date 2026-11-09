@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Avancar()_1]] - `method` [EXTRACTED]
 - [[dot-Gait()]] - `calls` [INFERRED]
-- [[dot-Reset()]] - `method` [EXTRACTED]
+- [[dot-Reset()_1]] - `method` [EXTRACTED]
 - [[MarcusGait.cs]] - `contains` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[Quadro]] - `defines` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 133"
+community: "Community 128"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_133
+  - community/Community_128
 ---
 
 # .Prepare()
@@ -18,4 +18,4 @@ tags:
 - [[UniversalRenderPipelineAsset]] - `references` [EXTRACTED]
 - [[UniversalRendererData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_133
+#graphify/code #graphify/EXTRACTED #community/Community_128

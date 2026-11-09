@@ -2,21 +2,24 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
 community: "Community 2"
-location: "L149"
+location: "L151"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_2
 ---
 
 # .SyncFirstPersonCamera()
 
 ## Connections
+- [[dot-AnimarEntradaDoBar()]] - `calls` [INFERRED]
+- [[dot-AnimarSaidaDoBar()]] - `calls` [INFERRED]
+- [[dot-AtualizarExploracaoDoBar()]] - `calls` [INFERRED]
 - [[dot-BeginUnderTable()]] - `calls` [INFERRED]
 - [[dot-BuildFirstPersonLayer()]] - `calls` [EXTRACTED]
 - [[dot-EndUnderTable()]] - `calls` [INFERRED]
 - [[dot-SetStartleLook()]] - `calls` [INFERRED]
-- [[dot-Sync()]] - `calls` [EXTRACTED]
+- [[dot-Sync()_2]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/INFERRED #community/Community_2

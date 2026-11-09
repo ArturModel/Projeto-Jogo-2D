@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 29"
-location: "L275"
+community: "Community 87"
+location: "L286"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_87
 ---
 
 # .Primitive()
 
 ## Connections
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-BuildWetWindowPane()]] - `calls` [EXTRACTED]
 - [[dot-BuildWindowHandprint()]] - `calls` [EXTRACTED]
 - [[dot-Sphere()]] - `calls` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_87

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Tonao.cs"
 type: "code"
-community: "Community 93"
+community: "Community 29"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_29
 ---
 
 # .ReiniciarTonao()
@@ -18,4 +18,4 @@ tags:
 - [[dot-PrepararSala()_1]] - `calls` [INFERRED]
 - [[BochaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_29

@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-project.py"
 type: "code"
-community: "Community 32"
+community: "Community 148"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_148
 ---
 
 # fingerprint()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[graphify-project.py]] - `contains` [EXTRACTED]
 - [[hashlib]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[sources()]] - `calls` [EXTRACTED]
 - [[validate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+#graphify/code #graphify/EXTRACTED #community/Community_148

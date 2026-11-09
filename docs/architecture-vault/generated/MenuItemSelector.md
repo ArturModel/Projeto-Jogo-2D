@@ -1,24 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
 type: "code"
-community: "Community 96"
+community: "Community 54"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_54
 ---
 
 # MenuItemSelector
 
 ## Connections
 - [[dot-MoverIndicador()]] - `method` [EXTRACTED]
-- [[dot-OnPointerEnter()_2]] - `method` [EXTRACTED]
-- [[dot-OnSelect()_2]] - `method` [EXTRACTED]
+- [[dot-OnPointerEnter()]] - `method` [EXTRACTED]
+- [[dot-OnSelect()]] - `method` [EXTRACTED]
 - [[dot-ReiniciarSelecao()]] - `method` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
 - [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_6]] - `method` [EXTRACTED]
+- [[dot-Vincular()_3]] - `method` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_54

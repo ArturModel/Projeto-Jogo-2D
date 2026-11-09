@@ -72,3 +72,15 @@ SceneFader faz a transição de névoa do posto com foco na porta. A saída anim
 A porta de Adílio abre em 3D dentro de EntradaDaCidade. Posto3D preserva os seis pontos de interação do interior; a cena CasaDoAvo legada também abre a sala 3D. [Plano](../../ai-plans/2026-11-09_BBCONTTI_reforma-bairro.md).
 
 09/11/2026 — Prologo projeta os mesmos marcos da Rodovia antes de usar a chegada saida_carro em EntradaDaCidade. O recuo é parte do asfalto da via. [Plano](../../ai-plans/2026-11-09_BBCONTTI_prologo-rodovia.md).
+
+09/11/2026 — A Rodovia usa SantaRitaRuaNorte.Chegada para montar módulos no terreno da Zona1_Rodovia. A arte acompanha o recuo, a parada, o orelhão e o acostamento até a ligação com o Posto. A decoração e a iluminação geral respeitam os renderers da composição após a primeira montagem. [Plano](../../ai-plans/2026-11-09_BBCONTTI_rodovia-modular.md).
+
+09/11/2026 — SantaRitaRuaNorte.Mercadinho monta a travessia e a subida da Zona3_Encruzilhada. A vala de obra e sua borda física limitam o leste, com o aviso e a rota ao Centro pela Rua Norte preservados. A entrada do Bairro continua no mesmo gatilho. As três zonas asfaltadas compostas usam árvores com perfis de copa e tronco. [Plano](../../ai-plans/2026-11-09_BBCONTTI_mercadinho-subida-vegetacao.md).
+
+09/11/2026 — O limite leste atual da Encruzilhada usa um tronco caído em sprites independentes e um EdgeCollider2D alinhado com a madeira e as margens. A rota ao Bairro e o aviso sobre o Centro permanecem. [Plano](../../ai-plans/2026-11-09_BBCONTTI_bloqueio-fundo-mata.md).
+09/11/2026 — O Bairro das Casas ganhou composição modular em cinco trechos de barro, quatro balizas reaproveitadas e mata contínua com bordas abertas nas saídas. [Plano e QA](../../ai-plans/2026-11-09_BBCONTTI_bairro-estrada-mata.md).
+09/11/2026 — O Bairro recebeu 81 árvores adicionais e quatro postes residenciais. A mata tem menos luz ambiente e preserva os pontos quentes perto das lâmpadas. [Plano e QA](../../ai-plans/2026-11-09_BBCONTTI_bairro-mata-densa-postes.md).
+09/11/2026 — Nova implantação do Bairro com estrada sinuosa, ramais residenciais, pátios próprios e mata recortada pelas vias. O interior nº 40 ganhou um eixo livre de circulação. [Plano e QA](../../ai-plans/2026-11-09_BBCONTTI_reimplantar-bairro-casa.md).
+
+
+09/11/2026 — Rua Norte do Bar do Zé recomposta com recuo, mesas, abrigo, orelhão separado e mata nas duas margens. A curva termina num portão de arte própria entre muros, ligado à subida do Centro. [Plano e QA](../../ai-plans/2026-11-09_BBCONTTI_rua-norte-bar-e-portao.md).

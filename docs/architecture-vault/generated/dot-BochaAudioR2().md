@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 114"
 location: "L192"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_114
 ---
 
 # .BochaAudioR2()
@@ -17,7 +17,7 @@ tags:
 - [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-Resolver()]] - `calls` [INFERRED]
-- [[dot-RespostaAbafada()]] - `calls` [EXTRACTED]
+- [[dot-RespostaAbafada()_1]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[dot-Step()]] - `calls` [INFERRED]
@@ -30,4 +30,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_114

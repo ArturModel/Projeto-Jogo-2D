@@ -12,16 +12,16 @@ tags:
 # .Interior()
 
 ## Connections
-- [[dot-Box()_1]] - `calls` [EXTRACTED]
+- [[dot-Box()_2]] - `calls` [EXTRACTED]
 - [[dot-IdDaCena()]] - `calls` [EXTRACTED]
 - [[dot-Interacao()]] - `calls` [EXTRACTED]
 - [[dot-LabelWorld()]] - `calls` [EXTRACTED]
 - [[dot-Light()_1]] - `calls` [EXTRACTED]
 - [[dot-NPC()_1]] - `calls` [EXTRACTED]
 - [[dot-Portal()_2]] - `calls` [EXTRACTED]
-- [[dot-Prop()_2]] - `calls` [EXTRACTED]
+- [[dot-Prop()_3]] - `calls` [EXTRACTED]
 - [[dot-RectTiles()]] - `calls` [EXTRACTED]
-- [[dot-Run()_8]] - `calls` [EXTRACTED]
+- [[dot-Run()_10]] - `calls` [EXTRACTED]
 - [[dot-Setup()]] - `calls` [EXTRACTED]
 - [[dot-Solid()_1]] - `calls` [EXTRACTED]
 - [[dot-Spawn()_2]] - `calls` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # .ParseLinhaAutomatica()
 
 ## Connections
-- [[dot-Show()_2]] - `calls` [EXTRACTED]
+- [[dot-Show()_3]] - `calls` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
 

@@ -15,6 +15,7 @@ tags:
 - [[dot-Add()_1]] - `calls` [EXTRACTED]
 - [[dot-ApplyExteriorC1()]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
+- [[dot-ControlaRenderDaRua()]] - `calls` [EXTRACTED]
 - [[dot-Replace()_1]] - `calls` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
 - [[SantaRitaBarHost]] - `references` [EXTRACTED]
@@ -22,6 +23,7 @@ tags:
 - [[SantaRitaForeground]] - `references` [EXTRACTED]
 - [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
+- [[SantaRitaRuaNorte]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_41

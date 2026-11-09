@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/SantaRitaBochaAmbiente.cs"
 type: "code"
-community: "Community 113"
+community: "Community 150"
 location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_113
+  - community/Community_150
 ---
 
 # .MontarSalaDeEspera()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()]] - `calls` [EXTRACTED]
 - [[dot-Mover()]] - `calls` [EXTRACTED]
 - [[dot-Ponto()]] - `calls` [EXTRACTED]
 - [[dot-SpriteNoMundo()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[SantaRitaBochaAmbiente]] - `method` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_113
+#graphify/code #graphify/EXTRACTED #community/Community_150

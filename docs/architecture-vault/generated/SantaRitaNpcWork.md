@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "Community 108"
+community: "Community 113"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_108
+  - community/Community_113
 ---
 
 # SantaRitaNpcWork
@@ -17,12 +17,12 @@ tags:
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
 - [[dot-Free()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_1]] - `references` [EXTRACTED]
 - [[dot-NPC()]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_1]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_2]] - `method` [EXTRACTED]
 - [[dot-RoutineR2()]] - `references` [EXTRACTED]
-- [[dot-Start()_4]] - `method` [EXTRACTED]
-- [[dot-Update()_5]] - `method` [EXTRACTED]
+- [[dot-Start()_7]] - `method` [EXTRACTED]
+- [[dot-Update()_7]] - `method` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaNpcWork.cs]] - `contains` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
@@ -32,4 +32,4 @@ tags:
 - [[StationIndex]] - `defines` [EXTRACTED]
 - [[Working]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_108
+#graphify/code #graphify/EXTRACTED #community/Community_113

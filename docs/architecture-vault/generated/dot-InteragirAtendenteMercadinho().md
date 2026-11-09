@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
 type: "code"
 community: "Community 13"
-location: "L453"
+location: "L472"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,11 +15,9 @@ tags:
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
 - [[dot-Falar()]] - `calls` [EXTRACTED]
 - [[dot-Interact()_2]] - `calls` [EXTRACTED]
-- [[dot-InteragirAtendenteMercadinho()]] - `calls` [EXTRACTED]
 - [[dot-JaNoDiario()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Marcus()]] - `calls` [EXTRACTED]
-- [[dot-Oferecer()]] - `calls` [EXTRACTED]
 - [[dot-Pensa()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [INFERRED]

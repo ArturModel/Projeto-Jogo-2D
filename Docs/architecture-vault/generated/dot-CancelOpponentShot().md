@@ -14,8 +14,9 @@ tags:
 ## Connections
 - [[dot-ComecarModoPratica()]] - `calls` [INFERRED]
 - [[dot-ComecarNovaSerie()]] - `calls` [INFERRED]
-- [[dot-Fechar()_1]] - `calls` [INFERRED]
-- [[dot-OnDisable()_7]] - `calls` [INFERRED]
+- [[dot-Fechar()_4]] - `calls` [INFERRED]
+- [[dot-IniciarExploracaoDoBar()]] - `calls` [INFERRED]
+- [[dot-OnDisable()_5]] - `calls` [INFERRED]
 - [[dot-PrepareOpponentShot()]] - `calls` [EXTRACTED]
 - [[dot-UpdateOpponentView()]] - `calls` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]

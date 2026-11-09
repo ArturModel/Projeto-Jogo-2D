@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-project.py"
 type: "code"
-community: "Community 32"
+community: "Community 148"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_148
 ---
 
 # graphify-project.py
@@ -17,7 +17,7 @@ tags:
 - [[fingerprint()]] - `contains` [EXTRACTED]
 - [[hashlib]] - `imports` [EXTRACTED]
 - [[json]] - `imports` [EXTRACTED]
-- [[main()]] - `contains` [EXTRACTED]
+- [[main()_1]] - `contains` [EXTRACTED]
 - [[os]] - `imports` [EXTRACTED]
 - [[pathlib]] - `imports_from` [EXTRACTED]
 - [[run()]] - `contains` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[validate()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+#graphify/code #graphify/EXTRACTED #community/Community_148

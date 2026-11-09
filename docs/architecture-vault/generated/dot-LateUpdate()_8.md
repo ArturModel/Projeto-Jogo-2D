@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
 community: "Community 38"
-location: "L85"
+location: "L139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,7 +17,8 @@ tags:
 - [[dot-Icon()]] - `calls` [EXTRACTED]
 - [[dot-Name()]] - `calls` [EXTRACTED]
 - [[dot-Quick()]] - `calls` [EXTRACTED]
-- [[dot-Rebuild()_1]] - `calls` [EXTRACTED]
+- [[dot-Rebuild()]] - `calls` [EXTRACTED]
+- [[dot-TopLeft()]] - `calls` [EXTRACTED]
 - [[SantaRitaInventory]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_38

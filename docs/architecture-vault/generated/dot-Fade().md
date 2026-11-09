@@ -12,7 +12,7 @@ tags:
 # .Fade()
 
 ## Connections
-- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_5]] - `calls` [EXTRACTED]
 - [[dot-RotinaPagina()]] - `calls` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]

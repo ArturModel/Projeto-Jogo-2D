@@ -12,7 +12,7 @@ tags:
 # .MostrarModal()
 
 ## Connections
-- [[dot-Botao()_2]] - `calls` [EXTRACTED]
+- [[dot-Botao()_1]] - `calls` [EXTRACTED]
 - [[dot-CancelarCargaAoSuspender()_1]] - `calls` [EXTRACTED]
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
 - [[dot-Derrota()]] - `calls` [EXTRACTED]

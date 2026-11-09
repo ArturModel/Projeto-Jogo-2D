@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-FalarTonao()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[dot-Update()_18]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[BochaShot]] - `references` [EXTRACTED]
 

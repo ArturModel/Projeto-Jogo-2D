@@ -78,7 +78,7 @@ public sealed partial class BochaMinigameUI : MonoBehaviour
         }
 
         vista.Preaquecer();
-        var luz = camera.WorldToScreenPoint(SantaRitaBochaAmbiente.PendenteDaEntrada);
+        var luz = Capitulo2Interior3D.PendenteNoEcra(camera);
         var foco = new Vector2(Mathf.Clamp01(luz.x / Screen.width), Mathf.Clamp01(luz.y / Screen.height));
         SceneFader.Instance.TransicionarParaMinigame(foco, Resources.Load<Texture2D>("Bocha/SaibroCancha"), () =>
         {

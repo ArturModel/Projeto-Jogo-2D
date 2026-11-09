@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 39"
+community: "Community 143"
 location: "L195"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_143
 ---
 
 # .PosicaoFinalBrancaComEfeito()
@@ -15,7 +15,7 @@ tags:
 - [[dot-Field()_1]] - `calls` [EXTRACTED]
 - [[dot-GetBall()]] - `calls` [EXTRACTED]
 - [[dot-Invoke()_1]] - `calls` [EXTRACTED]
-- [[dot-Run()_5]] - `calls` [EXTRACTED]
+- [[dot-Run()_2]] - `calls` [EXTRACTED]
 - [[dot-SetBall()]] - `calls` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[IList]] - `references` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_143

@@ -13,8 +13,10 @@ tags:
 ## Connections
 - [[dot-Mat()]] - `references` [EXTRACTED]
 - [[dot-Mat()_1]] - `references` [EXTRACTED]
+- [[dot-MaterialRecorte()]] - `references` [EXTRACTED]
 - [[dot-NovaImagem()]] - `references` [EXTRACTED]
 - [[dot-Panel()_1]] - `references` [EXTRACTED]
+- [[dot-Superficie()]] - `references` [EXTRACTED]
 - [[PrologoEstradaGraphic]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_87

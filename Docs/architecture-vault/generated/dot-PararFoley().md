@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-CancelarCargaAoSuspender()_1]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_5]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_6]] - `calls` [EXTRACTED]
 - [[dot-TentarAbrirBuraco()]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 

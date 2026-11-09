@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-LabelWorld()]] - `calls` [EXTRACTED]
-- [[dot-Prop()_2]] - `calls` [EXTRACTED]
+- [[dot-Prop()_3]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_6

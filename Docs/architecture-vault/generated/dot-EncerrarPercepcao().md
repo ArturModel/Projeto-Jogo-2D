@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarPercepcoes()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarQueda()]] - `calls` [EXTRACTED]
-- [[dot-Finish()_2]] - `calls` [INFERRED]
+- [[dot-Finish()_3]] - `calls` [INFERRED]
 - [[dot-ReiniciarPercepcoes()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 

@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneJogoUI.cs"
 type: "code"
-community: "Community 7"
-location: "L70"
+community: "Community 52"
+location: "L278"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_52
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Close()_1]] - `calls` [EXTRACTED]
-- [[dot-Duration()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
+- [[dot-MoverProgresso()]] - `calls` [EXTRACTED]
+- [[PayphoneJogoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_52

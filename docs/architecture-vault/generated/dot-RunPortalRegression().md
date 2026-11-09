@@ -12,7 +12,7 @@ tags:
 # .RunPortalRegression()
 
 ## Connections
-- [[dot-AwaitScene()]] - `calls` [INFERRED]
+- [[dot-AwaitScene()]] - `calls` [EXTRACTED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]

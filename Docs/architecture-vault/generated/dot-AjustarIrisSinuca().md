@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
 community: "Community 84"
-location: "L263"
+location: "L445"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .AjustarIrisSinuca()
 
 ## Connections
-- [[dot-EntradaMinigame()]] - `calls` [EXTRACTED]
+- [[dot-AjustarMascaraBar()]] - `calls` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

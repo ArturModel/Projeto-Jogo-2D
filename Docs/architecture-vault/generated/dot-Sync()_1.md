@@ -1,24 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 29"
-location: "L259"
+community: "Community 9"
+location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_9
 ---
 
 # .Sync()
 
 ## Connections
-- [[dot-AplicarQueda()]] - `calls` [INFERRED]
-- [[dot-BallColor()]] - `calls` [EXTRACTED]
-- [[dot-Mat()]] - `calls` [EXTRACTED]
-- [[dot-Sync()_2]] - `calls` [EXTRACTED]
-- [[BochaRoom3D]] - `method` [EXTRACTED]
-- [[BochaShot]] - `references` [EXTRACTED]
-- [[BochaSimulation]] - `references` [EXTRACTED]
-- [[Renderer]] - `references` [EXTRACTED]
+- [[dot-ChangeZoom()]] - `calls` [EXTRACTED]
+- [[dot-CourtPoint()]] - `calls` [EXTRACTED]
+- [[dot-OlharPendente()]] - `calls` [EXTRACTED]
+- [[dot-Project()]] - `calls` [EXTRACTED]
+- [[dot-SetState()]] - `calls` [EXTRACTED]
+- [[dot-SetView()]] - `calls` [EXTRACTED]
+- [[dot-Sync()]] - `calls` [EXTRACTED]
+- [[dot-Tick()_2]] - `calls` [EXTRACTED]
+- [[dot-UpdateCamera()_1]] - `calls` [EXTRACTED]
+- [[dot-Walk()]] - `calls` [EXTRACTED]
+- [[BochaCourtView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_9

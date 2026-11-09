@@ -1,11 +1,11 @@
 ---
 type: community
-members: 32
+members: 29
 ---
 
 # Community 31
 
-**Members:** 32 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[dot-AlterarNivel()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
@@ -17,18 +17,15 @@ members: 32
 - [[dot-AlterarVolumeMusica()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-AplicarVolumeEmMixer()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-AplicarVolumesGlobais()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-ClonarCategoria()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-ConstruirCategoriasMenu()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-DesvincularSliders()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-GanhoColisaoBola()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-GanhoTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-InicializarAudioGlobal()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-Nivel()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-OnDisable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-OnEnable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-OnDisable()_6]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-OnEnable()_4]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-PublicarAlteracao()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-SincronizarSliders()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
-- [[dot-Update()_25]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Update()_26]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-Vincular()_2]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[dot-VincularSliders()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
 - [[AudioMixer]] - code
@@ -49,20 +46,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 12]]
-- 3 edges to [[_COMMUNITY_Community 15]]
-- 2 edges to [[_COMMUNITY_Community 95]]
-- 2 edges to [[_COMMUNITY_Community 117]]
-- 2 edges to [[_COMMUNITY_Community 17]]
+- 3 edges to [[_COMMUNITY_Community 54]]
+- 3 edges to [[_COMMUNITY_Community 110]]
+- 2 edges to [[_COMMUNITY_Community 12]]
+- 2 edges to [[_COMMUNITY_Community 15]]
 - 2 edges to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 108]]
+- 2 edges to [[_COMMUNITY_Community 117]]
 - 1 edge to [[_COMMUNITY_Community 92]]
-- 1 edge to [[_COMMUNITY_Community 85]]
+- 1 edge to [[_COMMUNITY_Community 17]]
 - 1 edge to [[_COMMUNITY_Community 111]]
 
 ## Top bridge nodes
-- [[AudioSettingsController]] - degree 37, connects to 6 communities
+- [[AudioSettingsController]] - degree 37, connects to 7 communities
 - [[dot-AplicarVolumesGlobais()]] - degree 10, connects to 2 communities
-- [[dot-ConstruirCategoriasMenu()]] - degree 5, connects to 2 communities
-- [[dot-ClonarCategoria()]] - degree 4, connects to 2 communities
 - [[dot-GanhoColisaoBola()]] - degree 3, connects to 2 communities
+- [[dot-Vincular()_2]] - degree 7, connects to 1 community
+- [[AudioMixer]] - degree 5, connects to 1 community

@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 50"
-location: "L20"
+community: "Community 38"
+location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_38
 ---
 
 # .Update()
 
 ## Connections
-- [[PrologoJogavel]] - `references` [EXTRACTED]
-- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
+- [[dot-Close()]] - `calls` [EXTRACTED]
+- [[dot-Toggle()]] - `calls` [EXTRACTED]
+- [[SantaRitaInventory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_38

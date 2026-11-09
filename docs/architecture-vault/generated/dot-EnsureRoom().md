@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AtualizarEstadoRender()]] - `calls` [EXTRACTED]
-- [[dot-OnEnable()_9]] - `calls` [EXTRACTED]
+- [[dot-OnEnable()_5]] - `calls` [EXTRACTED]
 - [[dot-Preaquecer()]] - `calls` [EXTRACTED]
 - [[dot-ProjetarPontoMesaParaLocalUI()]] - `calls` [EXTRACTED]
 - [[dot-ScreenToTablePoint()]] - `calls` [EXTRACTED]

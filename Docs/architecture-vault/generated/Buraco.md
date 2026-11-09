@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.Perception.cs"
 type: "code"
-community: "Community 129"
+community: "Community 17"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_129
+  - community/Community_17
 ---
 
 # Buraco
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Alucinacao]] - `case_of` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_129
+#graphify/code #graphify/EXTRACTED #community/Community_17

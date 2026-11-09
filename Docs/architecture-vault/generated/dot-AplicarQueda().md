@@ -12,7 +12,7 @@ tags:
 # .AplicarQueda()
 
 ## Connections
-- [[dot-Sync()_1]] - `calls` [INFERRED]
+- [[dot-Sync()]] - `calls` [INFERRED]
 - [[BochaBall]] - `references` [EXTRACTED]
 - [[BochaRoom3D]] - `method` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]

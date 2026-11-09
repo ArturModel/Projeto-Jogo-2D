@@ -12,7 +12,7 @@ tags:
 # graphify-validate.sh
 
 ## Connections
-- [[PATH_2]] - `defines` [EXTRACTED]
+- [[PATH_3]] - `defines` [EXTRACTED]
 - [[graphify-validate.sh script]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_66

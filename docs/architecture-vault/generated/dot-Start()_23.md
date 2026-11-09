@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()_1]] - `calls` [EXTRACTED]
+- [[dot-Dizer()]] - `calls` [EXTRACTED]
 - [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]

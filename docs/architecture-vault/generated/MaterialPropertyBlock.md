@@ -1,18 +1,19 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 113"
+community: "Community 139"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_113
+  - community/Community_139
 ---
 
 # MaterialPropertyBlock
 
 ## Connections
+- [[dot-DesenharSilhuetasDaLuz()]] - `references` [EXTRACTED]
 - [[BochaRoom3D]] - `references` [EXTRACTED]
 - [[SantaRitaRimLight]] - `references` [EXTRACTED]
 - [[SantaRitaRuaNorte]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_113
+#graphify/code #graphify/EXTRACTED #community/Community_139

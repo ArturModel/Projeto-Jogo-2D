@@ -87,6 +87,15 @@ public class InteracaoCapitulo1 : Interactable
     [SerializeField] private TipoInteracao tipo;
     [SerializeField] private string promptCustomizado = "";
 
+    private Camera vistaInterior;
+    private Bounds focoInterior;
+
+    internal void DefinirFocoInterior(Camera vista, Bounds foco)
+    {
+        vistaInterior = vista;
+        focoInterior = foco;
+    }
+
     public TipoInteracao Tipo
     {
         get => tipo;
@@ -140,7 +149,9 @@ public class InteracaoCapitulo1 : Interactable
                 case TipoInteracao.PlacaSetaBairro:
                     return "Ler a placa";
                 case TipoInteracao.NpcAtendenteMercadinho:
-                    return "Falar com a atendente";
+                    return GameState.Tem(Flags.AchouReciboMercadinho) && !GameState.Tem("recibo_entregue") &&
+                        !GameState.Tem(Flags.OuviuRelatoAtendente) && !GameState.Tem(Flags.ZeDerrotadoNaSinuca) &&
+                        !GameState.Tem(Capitulo2Director.Vitoria) ? "Entregar o recibo" : "Falar com a atendente";
                 case TipoInteracao.CadernoFiadoMercadinho:
                     return "Ler o caderno de vendas";
                 case TipoInteracao.PrateleirasMercadinho:
@@ -310,19 +321,16 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirPlacaRodovia()
     {
-        GameMessageUI.Instance.ShowInspection("QUADRO DA PARADA", "RoadSign_Blank",
+        Examinar("QUADRO DA PARADA",
             "PARADA SANTA RITA — ENTRADA\n\nÚltimo ônibus: 19h40.\nLinhas noturnas suspensas durante a obra da avenida do Centro.\n\nColado no canto, um adesivo quase apagado:\n\"SANTA RITA JAMAIS ABANDONA OS SEUS\"",
-            aoFechar: () => SantaRitaFalasEntrada.DizerInteracao(null, "Esse adesivo está em todo canto desde que eu era guri."),
-            arteCustom: SantaRitaRuaNorte.ObjetoDaEntrada("QuadroParada"));
+            aoFechar: () => Falar(Marcus("Esse adesivo está em todo canto desde que eu era guri.")));
     }
 
     private void InteragirMalaAbandonada()
     {
-        SantaRitaFalasEntrada.DizerInteracao(null,
-            "Uma mala velha largada no passeio, aberta e vazia.",
-            "A etiqueta da rodoviária desmanchou com a chuva. Só sobrou o ano: 98.",
-            "Alguém saiu daqui com pressa. Ou nunca chegou a sair."
-        );
+        Examinar("MALA NO PASSEIO",
+            "Está aberta e vazia. A etiqueta da rodoviária desmanchou com a chuva. Só sobrou o ano: 98.",
+            aoFechar: () => Falar(Pensa("Alguém saiu daqui com pressa. Ou nunca chegou a sair.")));
     }
 
     // =========================================================================
@@ -331,22 +339,20 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirBombaPosto()
     {
-        GameMessageUI.Instance.ShowInspection("BOMBA DE DIESEL", null,
+        Examinar("BOMBA DE DIESEL",
             "O mostrador mecânico parou em 45,0 litros. O bico ainda pinga.",
             aoFechar: () => Falar(Marcus("Alguém encheu um tanque grande hoje. Caminhão, talvez.")));
     }
 
     private void InteragirCarroPosto()
     {
-        Falar(Marcus("A picape do posto. Galões vazios e uma lona encharcada na caçamba."));
+        Examinar("PICAPE DO POSTO", "Galões vazios e uma lona encharcada na caçamba.");
     }
 
     private void InteragirVendaAntiga()
     {
-        Falar(
-            Marcus("A venda onde o vô comprava fumo de corda quando eu era guri. Cadeado na porta."),
-            Marcus("Tem uma tabuleta pregada: \"MUDAMOS PRO MERCADINHO — na encruzilhada, seguindo a avenida\".")
-        );
+        Examinar("VENDA FECHADA", "Tem uma tabuleta na porta: MUDAMOS PRO MERCADINHO — na encruzilhada, seguindo a avenida.",
+            aoFechar: () => Falar(Marcus("Era aqui que o vô comprava fumo de corda.")));
     }
 
     private void InteragirFrentista()
@@ -422,7 +428,7 @@ public class InteracaoCapitulo1 : Interactable
         );
         AtualizarLinhaDoTempo();
 
-        GameMessageUI.Instance.ShowInspection("CADERNO DE PLANTÃO", "Bilhete",
+        Examinar("CADERNO DE PLANTÃO",
             "TERÇA, 19/10/2004\n\n06:55  Leite e pão — D. Cida (fiado)\n07:40  Querosene 1 L — Seu Adílio, nº 40 (pago)\n12:10  Gasolina 20 L — picape da obra\n17:30  Diesel 45 L — caminhão de entrega\n19:05  Bomba 2 desligada (chuva)",
             aoFechar: () => Falar(Marcus("Querosene pro lampião. O vô se preparou pra passar a noite em casa.")),
             etiqueta: Etiqueta(nova));
@@ -430,7 +436,7 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirTvPosto()
     {
-        GameMessageUI.Instance.ShowInspection("TV DO BALCÃO", "TV_Old",
+        Examinar("TV DO BALCÃO",
             "Jornal regional, imagem chiando a cada trovão:\n\n\"...temporal na serra derrubou linhas telefônicas. Interurbano instável até amanhã...\"",
             aoFechar: () => Falar(Marcus("Por isso o celular não pega aqui.")));
     }
@@ -441,29 +447,26 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirPicapeEncruzilhada()
     {
-        GameMessageUI.Instance.ShowInspection("PICAPE DE ENTREGA", null,
+        Examinar("PICAPE DE ENTREGA",
             "Picape do mercadinho, engradados vazios amarrados na caçamba.\n\nNo painel, um bloco de anotações:\n\"Qui — Bar do Zé (R. Norte), 6 engr.\"",
             aoFechar: () => Falar(Pensa("O mercadinho entrega até no bar lá de cima.")));
     }
 
     private void InteragirQuadroEncruzilhada()
     {
-        GameMessageUI.Instance.ShowInspection("MURAL DA ENCRUZILHADA", "RoadSign_Blank",
+        Examinar("MURAL DA ENCRUZILHADA",
             "AVISO DA PREFEITURA\nObra na avenida do Centro. O portão da Rua Norte fica trancado das 20h às 6h. Chave reserva no Bar do Zé.\n\nMissa de sétimo dia — sexta, 19h.\n\nVende-se fogão a lenha. Tratar no nº 22.");
     }
 
     private void InteragirPlacaSetaBairro()
     {
-        GameMessageUI.Instance.ShowInspection("PLACA DE DIREÇÃO", "ArrowSign",
+        Examinar("PLACA DE DIREÇÃO",
             "SUBIDA DE BARRO\nBairro das Casas — nº 10 a 50\n\nPELO ALTO DO BAIRRO\nRua Norte");
     }
 
     private void InteragirAvisoObra()
     {
-        Falar(
-            Marcus("\"AVENIDA INTERDITADA — OBRA. Pedestres para o Centro: portão da Rua Norte.\""),
-            Pensa("O caminho pro Centro é pelo alto. E de noite fica trancado.")
-        );
+        Examinar("AVENIDA INTERDITADA", "Obra na avenida. Pedestres para o Centro: portão da Rua Norte.");
     }
 
     private void InteragirAtendenteMercadinho()
@@ -496,14 +499,7 @@ public class InteracaoCapitulo1 : Interactable
 
         if (GameState.Tem(Flags.AchouReciboMercadinho))
         {
-            if (!GameState.Tem("recibo_entregue"))
-            {
-                GameMessageUI.Instance.ShowInspection("RECIBO DO MERCADINHO", "Bilhete",
-                    "O nome do estabelecimento e o aviso no verso são os mesmos do cupom encontrado na casa. Posso mostrar o papel à atendente.",
-                    () => { if(GameState.Tem("recibo_entregue")) InteragirAtendenteMercadinho(); });
-                SantaRitaItemAction.Oferecer("ENTREGAR RECIBO", () => GameState.Marcar("recibo_entregue"));
-                return;
-            }
+            GameState.Marcar("recibo_entregue");
             // Só quem leu o aviso no verso do cupom ganha a confiança dela.
             Falar(ConfirmarTestemunhoAtendente,
                 Marcus("Isto estava no chão da casa do meu avô. O aviso no verso é seu?"),
@@ -562,14 +558,14 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirCadernoMercadinho()
     {
-        GameMessageUI.Instance.ShowInspection("CADERNO DE VENDAS", "Bilhete",
+        Examinar("CADERNO DE VENDAS",
             "OUTUBRO\n\nQui 14 — Bar do Zé (R. Norte): 6 engradados. Entregue às 16h.\nSeg 18 — Pão, leite, fumo.\nTer 19 — Adílio (nº 40): café, velas, fósforo. Pago. 18h10.",
             aoFechar: () => Falar(Pensa("Seis e dez. A última compra do dia.")));
     }
 
     private void InteragirPrateleirasMercadinho()
     {
-        Falar(Marcus("Café Santa Rita, o mesmo pacote amarelo que o vô deixava em cima da geladeira."));
+        Examinar("PRATELEIRAS", "Café Santa Rita. O vô deixava um pacote amarelo desses em cima da geladeira.");
     }
 
     // =========================================================================
@@ -603,14 +599,15 @@ public class InteracaoCapitulo1 : Interactable
         );
     }
 
-    private static void InspecionarNoBairro(string titulo, string arte, string descricao,
-        Action aoFechar = null, string pensamento = null, string etiqueta = null)
+    private void Examinar(string titulo, string descricao, Action aoFechar = null,
+        string pensamento = null, string etiqueta = null, string comando = null, Action acao = null)
     {
-        GameMessageUI.Instance.ShowInspection(titulo, arte, descricao, () =>
-        {
-            aoFechar?.Invoke();
-            if (!string.IsNullOrEmpty(pensamento)) Falar(Pensa(pensamento));
-        }, etiqueta: etiqueta);
+        var renderer = RenderizadorDoIndicador;
+        var foco = vistaInterior != null ? focoInterior : renderer != null
+            ? renderer.bounds : new Bounds(transform.position, Vector3.one * .5f);
+        if (!SantaRitaFalasEntrada.Examinar(vistaInterior != null ? vistaInterior : Camera.main,
+            foco, titulo, descricao, pensamento, etiqueta, aoFechar, comando, acao))
+            Falar(aoFechar, Marcus(descricao));
     }
 
     private void InteragirMarcasBarro()
@@ -623,7 +620,7 @@ public class InteracaoCapitulo1 : Interactable
             "Na esquina do nº 22, marcas fundas de pneu largo, ainda com água parada dentro. Um carro pesado subiu a rua do vô hoje à noite."
         );
 
-        InspecionarNoBairro("MARCAS NO BARRO", null,
+        Examinar("MARCAS NO BARRO",
             "Marcas de pneu largo, fundas, ainda com água parada dentro. A chuva não teve tempo de apagar.\n\nO rastro sobe a rua, na direção da casa do vô.",
             pensamento: "Carro pesado. E passou aqui hoje à noite.",
             etiqueta: Etiqueta(nova));
@@ -658,7 +655,7 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirCaixaCorreioAvo()
     {
-        Falar(Marcus("\"ADÍLIO — Nº 40\", pintado à mão. É aqui."));
+        Examinar("CAIXA DE CORREIO", "ADÍLIO — Nº 40, pintado à mão.", aoFechar: () => Falar(Marcus("É aqui.")));
     }
 
     // =========================================================================
@@ -675,7 +672,7 @@ public class InteracaoCapitulo1 : Interactable
             "A xícara está pela metade e o bule ainda guarda calor. O vô nunca deixa café na xícara."
         );
 
-        InspecionarNoBairro("BULE E XÍCARA", "Interior_PiaAvo",
+        Examinar("BULE E XÍCARA",
             "Xícara pela metade, ainda morna por fora. O bule também guarda um resto de calor.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "O vô nunca deixa café pela metade. Ele estava aqui há pouco tempo.",
@@ -692,7 +689,7 @@ public class InteracaoCapitulo1 : Interactable
             "A paciência ficou no meio, com um ás fora do monte. O vô sempre termina o jogo antes de levantar."
         );
 
-        InspecionarNoBairro("PACIÊNCIA NA MESA", "Interior_MesaCartas",
+        Examinar("PACIÊNCIA NA MESA",
             "Partida de paciência no meio. Um ás largado fora do monte, virado pra cima.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Ele sempre termina a paciência antes de levantar. Alguma coisa fez ele largar o jogo.",
@@ -710,17 +707,17 @@ public class InteracaoCapitulo1 : Interactable
         );
         AtualizarLinhaDoTempo();
 
-        InspecionarNoBairro("CUPOM AMASSADO", "Bilhete",
+        bool podePegar = !GameState.Tem(Flags.AchouReciboMercadinho);
+        Examinar("CUPOM AMASSADO",
             "MERCADINHO SANTA RITA\n19/10/2004 — 18:10\nCafé torrado 500 g\nVelas (maço)\nFósforo\nTOTAL R$ 7,40\n\nNo verso, a lápis:\n\"Seu Adílio, aquele homem de capa voltou a perguntar onde o senhor mora. Não falei nada. Cuidado.\"",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Letra de mulher. Alguém no mercadinho tentou avisar o vô.",
-            etiqueta: Etiqueta(nova));
-        if (!GameState.Tem(Flags.AchouReciboMercadinho))
-            SantaRitaItemAction.Oferecer("PEGAR RECIBO", () => {
+            etiqueta: Etiqueta(nova), comando: "PEGAR RECIBO",
+            acao: podePegar ? () =>
+            {
                 GameState.Marcar(Flags.Pista_NotaFiscal2004);
                 SantaRitaSound.Play("inspect", .13f);
-                VerificarConclusaoPistasCasaAvo();
-            });
+            } : null);
     }
 
     private void InteragirPistaDesordem()
@@ -733,7 +730,7 @@ public class InteracaoCapitulo1 : Interactable
             "Perto da porta: banco tombado e barro de dois pares de bota de sola grossa, maiores que o chinelo do vô. Entram e saem. O casaco de chuva dele continua no prego."
         );
 
-        InspecionarNoBairro("PERTO DA PORTA", null,
+        Examinar("PERTO DA PORTA",
             "O banco está tombado. No piso, barro molhado: dois pares de pegadas de bota, sola grossa, maiores que o chinelo do vô. Vão da porta até aqui e voltam.\n\nO casaco de chuva dele continua no prego.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Ninguém sai nesse temporal sem casaco. A não ser que não tenha tido tempo de pegar.",
@@ -742,7 +739,7 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirRetratoFamilia()
     {
-        InspecionarNoBairro("PORTA-RETRATO", "FramedPhoto",
+        Examinar("PORTA-RETRATO",
             "Natal de 1997. O vô, a mãe e eu na varanda desta casa.\n\nAtrás, a letra dele: \"Que o guri volte.\"",
             pensamento: "Fui embora no ano seguinte. Não voltei.");
     }
@@ -758,7 +755,7 @@ public class InteracaoCapitulo1 : Interactable
         );
         AtualizarLinhaDoTempo();
 
-        InspecionarNoBairro("TELEFONE DA SALA", "TelefoneForaDoGancho",
+        Examinar("TELEFONE DA SALA",
             "O fone está pendurado pelo fio, quase no chão. O tom de ocupado sai baixinho do aparelho.",
             VerificarConclusaoPistasCasaAvo,
             pensamento: "Começou a dar ocupado lá pelas oito e meia, quando eu ainda estava na estrada. Foi a essa hora que o fone caiu.",
@@ -828,15 +825,12 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirCaminhoneteBar()
     {
-        Falar(
-            Marcus("Uma caminhonete velha com engradados vazios na caçamba. Deve ser do bar."),
-            Marcus("O chão embaixo dela está seco. Ela não saiu daqui desde antes da chuva.")
-        );
+        Examinar("CAMINHONETE DO BAR", "Engradados vazios na caçamba. O chão embaixo está seco. A caminhonete já estava aqui quando começou a chover.");
     }
 
     private void InteragirPlacaBar()
     {
-        Falar(Marcus("\"BAR DO ZÉ — SINUCA E BEBIDAS\". Luz amarela lá dentro e o estalo seco das bolas."));
+        Examinar("BAR DO ZÉ", "Sinuca e bebidas. Luz amarela lá dentro e o estalo seco das bolas.");
     }
 
     private void EntrarNoBar()
@@ -866,11 +860,8 @@ public class InteracaoCapitulo1 : Interactable
                 "PISTA",
                 "O portão da Rua Norte tem corrente nova e cadeado da prefeitura. Marcas de pneu largo passam rente a ele e seguem do outro lado. Alguém abriu esse portão hoje à noite."
             );
-            Falar(
-                Marcus("Portão de ferro. Corrente nova, cadeado da prefeitura."),
-                Marcus("No barro, marcas de pneu largo passam rente ao portão e continuam do outro lado."),
-                Pensa("Alguém abriu isso hoje à noite. E fechou de novo.")
-            );
+            Examinar("PORTÃO DO CENTRO", "Corrente nova e cadeado da prefeitura. No barro, marcas de pneu largo continuam do outro lado.",
+                aoFechar: () => Falar(Pensa("Alguém abriu isso hoje à noite. E fechou de novo.")));
             return;
         }
 
@@ -901,7 +892,7 @@ public class InteracaoCapitulo1 : Interactable
             "Atrás do balcão do Zé, uma foto do salão do Clube lotado, faixa 'NOITE DE JOGOS — 1990'. Zé aparece de avental, servindo."
         );
 
-        GameMessageUI.Instance.ShowInspection("ATRÁS DO BALCÃO", "FramedPhoto",
+        Examinar("ATRÁS DO BALCÃO",
             "Entre as garrafas, uma foto desbotada: o salão do Clube lotado, faixa \"NOITE DE JOGOS — 1990\". No canto, Zé de avental, servindo.\n\nEmbaixo, um caderno de fiado com metade dos nomes riscados.",
             pensamento: "Noventa. Eu estava nessa noite.",
             etiqueta: Etiqueta(nova));
@@ -909,7 +900,7 @@ public class InteracaoCapitulo1 : Interactable
 
     private void InteragirQuadroRegras()
     {
-        GameMessageUI.Instance.ShowInspection("REGRAS DA CASA", "Quadro_Regras_Sinuca",
+        Examinar("REGRAS DA CASA",
             "MELHOR DE TRÊS.\n\nQuinze bolas numeradas e a branca. Combine com Zé: lisas/listradas ou números 1–7/9–15.\n\nA primeira bola válida encaçapada define os grupos. Limpe seu grupo e deixe a preta 8 por último.\n\nFalta: branca na mão do outro. Preta antes da hora ou junto com a branca: perde a mão. Na saída, a preta volta à mesa.\n\nDa segunda mão em diante, Zé marca uma bola com X. Se ela cair, a tacada é anulada, a formação volta e a branca vai para o outro. A última bola do grupo e a preta nunca são bloqueadas.");
     }
 
@@ -961,7 +952,7 @@ public class InteracaoCapitulo1 : Interactable
             return;
         }
 
-        Falar(Marcus("Feltro remendado, tabela gasta. O Zé não tira o olho de mim."));
+        Examinar("MESA DE SINUCA", "Feltro remendado, tabela gasta. O Zé não tira o olho de mim.");
     }
 
     private void InteragirZe()

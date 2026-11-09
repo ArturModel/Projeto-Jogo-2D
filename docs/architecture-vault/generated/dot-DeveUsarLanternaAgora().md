@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
 community: "Community 44"
-location: "L96"
+location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,8 +15,8 @@ tags:
 - [[dot-AtualizarFeixeLanterna()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarPassada()]] - `calls` [EXTRACTED]
 - [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
-- [[dot-LateUpdate()_11]] - `calls` [EXTRACTED]
-- [[dot-Start()_15]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_9]] - `calls` [EXTRACTED]
+- [[dot-Start()_14]] - `calls` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_44

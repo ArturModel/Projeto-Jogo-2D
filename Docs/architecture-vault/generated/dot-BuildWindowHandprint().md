@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Salon.cs"
 type: "code"
-community: "Community 29"
-location: "L125"
+community: "Community 87"
+location: "L163"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_87
 ---
 
 # .BuildWindowHandprint()
@@ -20,4 +20,4 @@ tags:
 - [[Texture2D]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_87

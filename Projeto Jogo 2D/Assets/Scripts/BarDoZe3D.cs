@@ -152,6 +152,15 @@ internal sealed class BarDoZe3D : MonoBehaviour
             return;
         }
 
+        if (SantaRitaFalasEntrada.Interagindo)
+        {
+            velocidade = Vector2.zero;
+            CapturarCursor(false);
+            dica.text = "";
+            if (teclado != null && teclado.eKey.wasPressedThisFrame) SantaRitaFalasEntrada.Avancar();
+            return;
+        }
+
         CapturarCursor(true);
         if (teclado == null)
         {
@@ -171,7 +180,8 @@ internal sealed class BarDoZe3D : MonoBehaviour
 
         bool podeSair = sala.PodeSairDoBar();
         bool podeTocar = !podeSair && sala.PodeTocarCampainha();
-        var alvo = podeSair || podeTocar ? null : sala.InteracaoEmFoco();
+        Bounds enquadramento = default;
+        var alvo = podeSair || podeTocar ? null : sala.InteracaoEmFoco(out enquadramento);
         if (alvo.HasValue) interacao.Configurar(alvo.Value);
         dica.text = podeSair ? "·\n[E] Sair para a Rua Norte" :
             podeTocar ? "·\n[E] Tocar campainha do balcão" :
@@ -190,6 +200,7 @@ internal sealed class BarDoZe3D : MonoBehaviour
         else if (alvo.HasValue)
         {
             CapturarCursor(false);
+            interacao.DefinirFocoInterior(sala.camera, enquadramento);
             interacao.Interact();
         }
     }

@@ -2,10 +2,10 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
 community: "Community 0"
-location: "L292"
+location: "L293"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Community_0
 ---
 
@@ -14,22 +14,22 @@ tags:
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-ExitMatChecksR4()]] - `calls` [INFERRED]
-- [[dot-PauseLoadFiveSlots()]] - `calls` [INFERRED]
+- [[dot-ExitMatChecksR4()]] - `calls` [EXTRACTED]
+- [[dot-PauseLoadFiveSlots()]] - `calls` [EXTRACTED]
 - [[dot-PerformancePair()]] - `calls` [EXTRACTED]
 - [[dot-Run()]] - `calls` [EXTRACTED]
-- [[dot-RunAccesses()]] - `calls` [INFERRED]
-- [[dot-RunAudioC2()]] - `calls` [INFERRED]
-- [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
-- [[dot-RunMarcusQA()]] - `calls` [INFERRED]
-- [[dot-RunPortalRegression()]] - `calls` [INFERRED]
-- [[dot-RunR2()]] - `calls` [INFERRED]
-- [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
-- [[dot-RunSinucaR4()]] - `calls` [INFERRED]
-- [[dot-RunSinuquinha15()]] - `calls` [INFERRED]
-- [[dot-SlotsR2()]] - `calls` [INFERRED]
+- [[dot-RunAccesses()]] - `calls` [EXTRACTED]
+- [[dot-RunAudioC2()]] - `calls` [EXTRACTED]
+- [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunMarcusQA()]] - `calls` [EXTRACTED]
+- [[dot-RunPortalRegression()]] - `calls` [EXTRACTED]
+- [[dot-RunR2()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
+- [[dot-SlotsR2()]] - `calls` [EXTRACTED]
 - [[dot-Travel()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_0

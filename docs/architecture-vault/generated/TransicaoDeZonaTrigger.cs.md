@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 92"
+community: "Community 36"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_92
+  - community/Community_36
 ---
 
 # TransicaoDeZonaTrigger.cs
@@ -23,4 +23,4 @@ tags:
 - [[unityengine_scenemanagement]] - `imports` [EXTRACTED]
 - [[unityengine_ui]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_92
+#graphify/code #graphify/EXTRACTED #community/Community_36

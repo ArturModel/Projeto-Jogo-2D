@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 85"
-location: "L718"
+location: "L3282"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,20 @@ tags:
 # .Posicionar()
 
 ## Connections
-- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
-- [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-AtualizarPainelContextual()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarTextosHUD()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirAjusteEfeito()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirConsoleSinuca()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirOpcoesMesa()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirPainelEfeitoOpcional()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-CriarBolasNaMesa()]] - `calls` [EXTRACTED]
+- [[dot-CriarBotaoHUD()]] - `calls` [EXTRACTED]
+- [[dot-CriarPainelHUD()]] - `calls` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_85

@@ -1,19 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLighting.cs"
 type: "code"
-community: "Community 112"
-location: "L32"
+community: "Community 105"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_112
+  - community/Community_105
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-BuildNormal()]] - `calls` [EXTRACTED]
-- [[dot-BuildQA()]] - `calls` [EXTRACTED]
-- [[MenuAmbienteAuthoring]] - `method` [EXTRACTED]
+- [[dot-Point()]] - `calls` [EXTRACTED]
+- [[dot-Sconce()]] - `calls` [EXTRACTED]
+- [[dot-SpriteAt()]] - `calls` [EXTRACTED]
+- [[dot-Strip()]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[Rect]] - `references` [EXTRACTED]
+- [[SantaRitaBarLighting]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_112
+#graphify/code #graphify/EXTRACTED #community/Community_105

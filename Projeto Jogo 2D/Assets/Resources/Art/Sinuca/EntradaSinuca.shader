@@ -99,9 +99,18 @@ Shader "SantaRita/Sinuca/Entrada"
                     float borda = distanceFromLamp - frente + (fluxo - .5) * .27;
                     shade = smoothstep(-.25, .21, borda);
                     float penumbraFria = exp(-24 * borda * borda) * shade;
-                    color = lerp(half3(.008,.012,.016), half3(.038,.051,.062), fluxo);
-                    color += half3(.055,.069,.080) * penumbraFria * (.30 + .64 * fina);
-                    // A cobertura total preserva o movimento da névoa entre as duas câmeras.
+                    color = lerp(half3(.008,.011,.014), half3(.033,.042,.047), fluxo);
+                    color += half3(.073,.050,.029) * penumbraFria * (.35 + .55 * fina);
+
+                    // A few backlit streaks remain visible in the fog during the camera cut.
+                    float2 rainUV = float2((p.x + p.y * .14) * 115, p.y * 9 + tempo * 15);
+                    float2 rainCell = floor(rainUV);
+                    float2 drop = frac(rainUV);
+                    float streak = step(.965, HashNevoa(rainCell))
+                        * (1 - smoothstep(.025, .10, abs(drop.x - .5)))
+                        * smoothstep(.12, .66, drop.y) * (1 - smoothstep(.70, .98, drop.y));
+                    float halo = 1 - smoothstep(.05, .70, distanceFromLamp);
+                    color += streak * lerp(half3(.055,.073,.086), half3(.17,.113,.059), halo);
                 }
                 else if (_MascaraBar > .5)
                 {
@@ -119,6 +128,8 @@ Shader "SantaRita/Sinuca/Entrada"
                     color += nevoa * half3(.023, .029, .035);
                     color += beirada * half3(.054, .044, .036) * (.38 + nevoa);
                 }
+                if (_Progresso >= 1) shade = 1;
+                if (_Progresso <= 0) shade = 0;
                 return half4(color, shade * input.opacity);
             }
             ENDHLSL

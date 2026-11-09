@@ -12,9 +12,9 @@ tags:
 # .Garden()
 
 ## Connections
-- [[dot-Building()_1]] - `calls` [EXTRACTED]
+- [[dot-Building()]] - `calls` [EXTRACTED]
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Prop()_2]] - `calls` [EXTRACTED]
+- [[dot-Prop()_3]] - `calls` [EXTRACTED]
 - [[dot-Solid()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

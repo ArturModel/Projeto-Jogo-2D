@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ComentarJogadaTonao()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [INFERRED]
+- [[dot-Dizer()_1]] - `calls` [INFERRED]
 - [[dot-ReagirAoRepouso()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 

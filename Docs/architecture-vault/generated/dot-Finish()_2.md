@@ -1,23 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaPerceptionSchedule.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 49"
-location: "L79"
+community: "Community 38"
+location: "L31"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Community_49
+  - graphify/EXTRACTED
+  - community/Community_38
 ---
 
 # .Finish()
 
 ## Connections
-- [[dot-AtualizarAgendaPercepcoes()]] - `calls` [INFERRED]
-- [[dot-EncerrarPercepcao()]] - `calls` [INFERRED]
-- [[dot-EncerrarPercepcaoDaMao()]] - `calls` [INFERRED]
-- [[dot-Range()]] - `calls` [EXTRACTED]
-- [[dot-SairDeBaixoDaMesa()]] - `calls` [INFERRED]
-- [[dot-Same()]] - `calls` [EXTRACTED]
-- [[MinigamePerceptionSchedule]] - `method` [EXTRACTED]
+- [[dot-Guard()_1]] - `calls` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_38

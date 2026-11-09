@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
+community: "Community 37"
 location: "L433"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_37
 ---
 
 # .EfetuarLancamento()
@@ -16,15 +16,15 @@ tags:
 - [[dot-CaptureMouse()]] - `calls` [INFERRED]
 - [[dot-FinalizarGesto()]] - `calls` [EXTRACTED]
 - [[dot-GanhoTacada()]] - `calls` [EXTRACTED]
-- [[dot-Lancar()]] - `calls` [EXTRACTED]
-- [[dot-Lancar()_2]] - `calls` [INFERRED]
+- [[dot-Lancar()_2]] - `calls` [EXTRACTED]
+- [[dot-Lancar()_1]] - `calls` [INFERRED]
 - [[dot-PanBocha()]] - `calls` [EXTRACTED]
 - [[dot-PrepararPercepcaoDoLancamento()]] - `calls` [INFERRED]
 - [[dot-SetView()]] - `calls` [INFERRED]
 - [[dot-TocarFoley()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [EXTRACTED]
+- [[dot-Update()_18]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[BochaShot]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_37

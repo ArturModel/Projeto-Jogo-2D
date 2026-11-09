@@ -1,18 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs"
 type: "code"
-community: "Community 119"
-location: "L3"
+community: "Community 141"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_119
+  - community/Community_141
 ---
 
 # SantaRitaWorldLighting
 
 ## Connections
 - [[dot-Apply()_2]] - `method` [EXTRACTED]
+- [[dot-ApplyToScene()]] - `method` [EXTRACTED]
+- [[dot-EnablePostProcessing()]] - `method` [EXTRACTED]
+- [[dot-Install()_1]] - `method` [EXTRACTED]
+- [[dot-ReplaceStockMaterial()]] - `method` [EXTRACTED]
 - [[SantaRitaWorldLighting.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_119
+#graphify/code #graphify/EXTRACTED #community/Community_141

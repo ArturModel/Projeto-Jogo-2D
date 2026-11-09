@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Distancia()]] - `calls` [EXTRACTED]
 - [[dot-FalarTonao()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[dot-Update()_18]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

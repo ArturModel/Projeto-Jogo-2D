@@ -12,7 +12,7 @@ tags:
 # .ShowDialogue()
 
 ## Connections
-- [[dot-Show()_1]] - `calls` [EXTRACTED]
+- [[dot-Show()_2]] - `calls` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[DialogoLinha]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `method` [EXTRACTED]

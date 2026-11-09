@@ -87,6 +87,8 @@ public class Chuva : MonoBehaviour
         public float velocidade;
         public float comprimento; // rastro, em unidades
         public float peso;        // 0,5 longe ... 1,4 perto da câmera
+        public float respostaAoVento;
+        public float inclinacao;
         public bool respinga;     // gotas "perto da câmera" passam direto
     }
 
@@ -96,6 +98,7 @@ public class Chuva : MonoBehaviour
         public float t;
         public float duracao;
         public bool naPoca;
+        public bool dePasso;
         public float alfa;
         public Color cor;
     }
@@ -108,7 +111,8 @@ public class Chuva : MonoBehaviour
     private readonly List<Respingo> respingos = new List<Respingo>(MaxRespingos);
     private float acumulado;
     private float intensidade = 1f;
-    private float angulo;
+    private float inclinacaoVento;
+    private Color cinzaGota;
 
     // --- desenho ----------------------------------------------------
 
@@ -151,6 +155,10 @@ public class Chuva : MonoBehaviour
             ppu = pixelPerfect.assetsPPU;
         }
 
+        // A cor serializada ainda controla o brilho de base nas cenas existentes.
+        float cinza = Mathf.Clamp01(corGota.grayscale * .83f);
+        cinzaGota = new Color(cinza, cinza, cinza, 1f);
+        AtualizarClima();
         MontarSom();
         BuscarLuzes();
 
@@ -267,8 +275,10 @@ public class Chuva : MonoBehaviour
         float rajada = Mathf.Max(0f, Mathf.PerlinNoise(t * 0.18f, 7.7f) - 0.62f) * 2.6f;
         intensidade = Mathf.Clamp(1f + variacaoIntensidade * lenta + rajada * 0.35f, 0.35f, 1.6f);
 
-        float vento = Mathf.PerlinNoise(t * 0.06f, 11.3f) * 2f - 1f;
-        angulo = (ventoGraus + variacaoVento * vento + rajada * 6f) * Mathf.Deg2Rad;
+        float deriva = Mathf.PerlinNoise(t * .22f, 11.3f) * 2f - 1f;
+        float turbulencia = Mathf.PerlinNoise(t * .75f, 17.4f) * 2f - 1f;
+        float angulo = ventoGraus + variacaoVento * (deriva * 2.6f + turbulencia * .65f) + rajada * 12f;
+        inclinacaoVento = -Mathf.Tan(Mathf.Clamp(angulo, -38f, 38f) * Mathf.Deg2Rad);
     }
 
     // =================================================================
@@ -289,12 +299,12 @@ public class Chuva : MonoBehaviour
         }
 
         Vector2 meia = MetadeDaTela();
-        float tangente = Mathf.Tan(angulo);
+        float tangente = inclinacaoVento;
 
         // alvos cobrem a tela e uma faixa abaixo dela: sem isso, a parte de baixo
         // da tela teria menos traços (a gota é vista acima do ponto onde cai)
-        float xMin = centroTela.x - meia.x - Mathf.Max(0f, tangente) * AlturaMaxima - 1f;
-        float xMax = centroTela.x + meia.x - Mathf.Min(0f, tangente) * AlturaMaxima + 1f;
+        float xMin = centroTela.x - meia.x - Mathf.Max(0f, tangente) * AlturaMaxima * 1.2f - 1.5f;
+        float xMax = centroTela.x + meia.x - Mathf.Min(0f, tangente) * AlturaMaxima * 1.2f + 1.5f;
         float yMin = centroTela.y - meia.y - AlturaMaxima;
         float yMax = centroTela.y + meia.y;
 
@@ -308,16 +318,18 @@ public class Chuva : MonoBehaviour
         }
         acumulado = Mathf.Min(acumulado, 50f);
 
+        float resposta = 1f - Mathf.Exp(-5f * dt);
         for (int i = gotas.Count - 1; i >= 0; i--)
         {
             Gota g = gotas[i];
             g.altura -= g.velocidade * dt;
+            g.inclinacao = Mathf.Lerp(g.inclinacao, inclinacaoVento * g.respostaAoVento, resposta);
 
             if (g.altura <= 0f)
             {
                 if (g.respinga)
                 {
-                    NovoRespingo(g);
+                    NovoRespingo(g.alvo, g.peso);
                 }
 
                 gotas[i] = gotas[gotas.Count - 1];
@@ -358,7 +370,8 @@ public class Chuva : MonoBehaviour
             // perto da câmera: rápida, longa, passa direto sem respingar
             g.peso = 1.4f;
             g.velocidade = Random.Range(34f, 42f);
-            g.comprimento = Random.Range(0.8f, 1.15f);
+            g.comprimento = Random.Range(0.55f, 0.90f);
+            g.respostaAoVento = Random.Range(.60f, .78f);
             g.altura = Random.Range(5f, AlturaMaxima);
             g.respinga = false;
         }
@@ -366,7 +379,8 @@ public class Chuva : MonoBehaviour
         {
             g.peso = 0.5f; // longe
             g.velocidade = Random.Range(13f, 17f);
-            g.comprimento = Random.Range(0.18f, 0.28f);
+            g.comprimento = Random.Range(0.12f, 0.23f);
+            g.respostaAoVento = Random.Range(.95f, 1.20f);
             g.altura = Random.Range(3f, 6.5f);
             g.respinga = true;
         }
@@ -374,15 +388,17 @@ public class Chuva : MonoBehaviour
         {
             g.peso = Random.Range(0.75f, 1f);
             g.velocidade = Random.Range(18f, 27f);
-            g.comprimento = Random.Range(0.3f, 0.52f);
+            g.comprimento = Random.Range(0.22f, 0.44f);
+            g.respostaAoVento = Random.Range(.78f, 1.04f);
             g.altura = Random.Range(4f, 8f);
             g.respinga = true;
         }
 
+        g.inclinacao = inclinacaoVento * g.respostaAoVento;
         return g;
     }
 
-    private void NovoRespingo(Gota g)
+    private void NovoRespingo(Vector2 pos, float peso, bool passo = false, bool pocaDoPiso = false)
     {
         if (respingos.Count >= MaxRespingos)
         {
@@ -391,33 +407,41 @@ public class Chuva : MonoBehaviour
 
         // respingo fora da tela não é visto: nem gasta vaga
         Vector2 meia = MetadeDaTela();
-        if (Mathf.Abs(g.alvo.x - centroTela.x) > meia.x + 0.2f ||
-            Mathf.Abs(g.alvo.y - centroTela.y) > meia.y + 0.2f)
+        if (Mathf.Abs(pos.x - centroTela.x) > meia.x + 0.2f ||
+            Mathf.Abs(pos.y - centroTela.y) > meia.y + 0.2f)
         {
             return;
         }
 
-        var cover=Physics2D.OverlapPoint(g.alvo);
-        if(cover!=null&&!cover.isTrigger&&cover.GetComponentInParent<PlayerController>()==null)return;
-        bool naPoca = DentroDePoca(g.alvo);
-        Color luz = BrilhoEm(g.alvo, out float forca);
+        if (!passo)
+        {
+            var cobertura = Physics2D.OverlapPoint(pos);
+            if (cobertura != null && !cobertura.isTrigger &&
+                cobertura.GetComponentInParent<PlayerController>() == null) return;
+        }
+        bool naPoca = pocaDoPiso || DentroDePoca(pos);
+        Color luz = BrilhoEm(pos, out float forca);
 
         respingos.Add(new Respingo
         {
-            pos = g.alvo,
+            pos = pos,
             t = 0f,
-            duracao = naPoca ? Random.Range(0.45f, 0.62f) : Random.Range(0.13f, 0.19f),
+            duracao = naPoca ? (passo ? .58f : Random.Range(.40f, .52f)) : Random.Range(.12f, .17f),
             naPoca = naPoca,
+            dePasso = passo,
             // na poça escura a ondinha precisa de mais brilho para aparecer
-            alfa = Mathf.Clamp01((alfaBase * (naPoca ? 1.8f : 1.3f) + ganhoLuz * forca) * g.peso),
-            cor = Color.Lerp(corGota, luz, Mathf.Clamp01(forca) * 0.6f),
+            alfa = Mathf.Clamp01((alfaBase * (naPoca ? 1.8f : .9f) + ganhoLuz * forca * .60f) * peso),
+            cor = Color.Lerp(cinzaGota, luz, Mathf.Clamp01(forca) * .24f),
         });
     }
 
-    public void RespingoDePasso(Vector2 posicao)
-    { NovoRespingo(new Gota { alvo=posicao,peso=.75f }); }
+    public void RespingoDePasso(Vector2 posicao, bool naPoca = false)
+    {
+        if (isActiveAndEnabled && desenharChuva && chao != null)
+            NovoRespingo(posicao, naPoca ? 1.35f : .55f, passo: true, pocaDoPiso: naPoca);
+    }
 
-    private bool DentroDePoca(Vector2 p)
+    internal bool DentroDePoca(Vector2 p)
     {
         foreach (Poca poca in pocas)
         {
@@ -593,14 +617,22 @@ public class Chuva : MonoBehaviour
 
         foreach (Respingo r in respingos)
         {
-            if (r.naPoca) DesenharOndinha(r);
+            if (r.naPoca)
+            {
+                DesenharOndinha(r);
+                if (r.dePasso && r.t < .19f)
+                {
+                    Respingo jato = r;
+                    jato.duracao = .19f;
+                    DesenharRespingo(jato);
+                }
+            }
             else DesenharRespingo(r);
         }
 
-        float tangente = Mathf.Tan(angulo);
         foreach (Gota g in gotas)
         {
-            DesenharGota(g, tangente);
+            DesenharGota(g);
         }
 
         alta.textura.Apply(false, false);
@@ -650,10 +682,10 @@ public class Chuva : MonoBehaviour
             (byte)(total * 255f));
     }
 
-    private void DesenharGota(Gota g, float tangente)
+    private void DesenharGota(Gota g)
     {
-        Vector2 cabeca = g.alvo + new Vector2(tangente * g.altura, g.altura);
-        Vector2 cauda = g.alvo + new Vector2(tangente * (g.altura + g.comprimento), g.altura + g.comprimento);
+        Vector2 cabeca = g.alvo + new Vector2(g.inclinacao * g.altura, g.altura);
+        Vector2 cauda = cabeca + new Vector2(g.inclinacao, 1f) * g.comprimento;
 
         if (!ParaPixel(cabeca, out int x0, out int y0) & !ParaPixel(cauda, out int x1, out int y1))
         {
@@ -661,8 +693,8 @@ public class Chuva : MonoBehaviour
         }
 
         Color luz = BrilhoEm(cabeca, out float forca);
-        Color cor = Color.Lerp(corGota, luz, Mathf.Clamp01(forca) * 0.55f);
-        float alfa = (alfaBase + ganhoLuz * forca) * g.peso;
+        Color cor = Color.Lerp(cinzaGota, luz, Mathf.Clamp01(forca) * .22f);
+        float alfa = (alfaBase * .73f + ganhoLuz * Mathf.Clamp01(forca) * .52f) * g.peso;
 
         // Bresenham, com o rastro sumindo da cabeça para a cauda
         int dx = Mathf.Abs(x1 - x0), dy = -Mathf.Abs(y1 - y0);
@@ -673,7 +705,7 @@ public class Chuva : MonoBehaviour
 
         for (int n = 0; ; n++)
         {
-            float k = passos == 0 ? 1f : 1f - 0.75f * n / passos;
+            float k = passos == 0 ? 1f : Mathf.Lerp(1f, .10f, n / (float)passos);
             Pintar(alta, x, y, cor, alfa * k);
 
             if (x == x1 && y == y1) break;
@@ -717,7 +749,7 @@ public class Chuva : MonoBehaviour
         if (!ParaPixel(r.pos, out int cx, out int cy)) return;
 
         float fase = r.t / r.duracao;
-        float rx = 1f + 5f * fase;
+        float rx = 1f + (r.dePasso ? 10f : 5f) * fase;
         float ry = Mathf.Max(0.6f, rx * 0.45f); // perspectiva de cima: achatada
         float a = r.alfa * Mathf.Pow(1f - fase, 1.3f);
 

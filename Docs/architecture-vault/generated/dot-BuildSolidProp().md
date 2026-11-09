@@ -12,7 +12,7 @@ tags:
 # .BuildSolidProp()
 
 ## Connections
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-BuildRoom()_1]] - `calls` [INFERRED]
 - [[dot-CombineNet()]] - `calls` [INFERRED]
 - [[dot-Cylinder()]] - `calls` [INFERRED]

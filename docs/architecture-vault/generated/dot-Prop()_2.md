@@ -1,33 +1,25 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "Community 6"
-location: "L370"
+community: "Community 16"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_16
 ---
 
 # .Prop()
 
 ## Connections
-- [[dot-Box()_1]] - `calls` [EXTRACTED]
-- [[dot-Building()_1]] - `calls` [EXTRACTED]
-- [[dot-Depth()]] - `calls` [EXTRACTED]
-- [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Fence()]] - `calls` [EXTRACTED]
-- [[dot-Garden()]] - `calls` [EXTRACTED]
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_2]] - `calls` [EXTRACTED]
-- [[dot-NPC()_1]] - `calls` [EXTRACTED]
-- [[dot-Phone()]] - `calls` [EXTRACTED]
-- [[dot-Sign()]] - `calls` [EXTRACTED]
-- [[dot-Sprite()]] - `calls` [EXTRACTED]
-- [[dot-Tree()]] - `calls` [EXTRACTED]
+- [[dot-Art()_1]] - `calls` [EXTRACTED]
+- [[dot-Cemetery()]] - `calls` [EXTRACTED]
+- [[dot-Center()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
+- [[dot-PaperOnTable()]] - `calls` [EXTRACTED]
+- [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
-- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
+- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_16

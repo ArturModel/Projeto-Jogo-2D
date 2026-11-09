@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs"
 type: "code"
-community: "Community 18"
+community: "Community 87"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_87
 ---
 
 # .BuildPocketLining()
@@ -21,4 +21,4 @@ tags:
 - [[MeshRenderer]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_87

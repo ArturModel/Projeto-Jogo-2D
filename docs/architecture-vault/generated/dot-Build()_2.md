@@ -1,23 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
 type: "code"
-community: "Community 123"
-location: "L45"
+community: "Community 14"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_123
+  - community/Community_14
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-BuildNormal()_1]] - `calls` [EXTRACTED]
-- [[dot-BuildQA()_1]] - `calls` [EXTRACTED]
-- [[PrologoDirector]] - `references` [EXTRACTED]
-- [[PrologoJogavel]] - `references` [EXTRACTED]
-- [[PrologoJogavelVerification]] - `method` [EXTRACTED]
-- [[PrologoVideo]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[dot-Awake()_7]] - `calls` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
+- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
+- [[CanvasGroup]] - `references` [EXTRACTED]
+- [[ContentSizeFitter]] - `references` [EXTRACTED]
+- [[DicaDeTecla]] - `method` [EXTRACTED]
+- [[HorizontalLayoutGroup]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[LayoutElement]] - `references` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_123
+#graphify/code #graphify/EXTRACTED #community/Community_14

@@ -12,8 +12,9 @@ tags:
 # .AbrirDaSociedade()
 
 ## Connections
-- [[dot-Abrir()_3]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_5]] - `calls` [EXTRACTED]
 - [[dot-MostrarEscolhaInicial()]] - `calls` [EXTRACTED]
+- [[dot-PendenteNoEcra()]] - `calls` [EXTRACTED]
 - [[dot-Preaquecer()_1]] - `calls` [INFERRED]
 - [[dot-PrepararSala()_1]] - `calls` [EXTRACTED]
 - [[dot-RestaurarHud()]] - `calls` [EXTRACTED]

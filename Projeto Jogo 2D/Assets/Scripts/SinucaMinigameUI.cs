@@ -3068,7 +3068,7 @@ public partial class SinucaMinigameUI : MonoBehaviour
             intervaloFalaZe -= dt;
             if (string.IsNullOrEmpty(falaZePendente) || intervaloFalaZe > 0) return;
             dialogoZe.Dizer(locutorPendenteMarcus ? "Marcus" : "Zé", falaZePendente,
-                locutorPendenteMarcus ? MinigameDialogue.MarcusPitch : 1f);
+                locutorPendenteMarcus ? MinigameDialogue.MarcusPitch : MinigameDialogue.ZePitch);
             falaZePendente = null;
             falaZePendenteUrgente = false;
         }

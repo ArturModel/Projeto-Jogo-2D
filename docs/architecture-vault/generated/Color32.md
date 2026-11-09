@@ -19,6 +19,7 @@ tags:
 - [[dot-Raster()]] - `references` [EXTRACTED]
 - [[dot-Stamp()]] - `references` [EXTRACTED]
 - [[Camada_2]] - `references` [EXTRACTED]
+- [[MinigameDialogue]] - `references` [EXTRACTED]
 - [[SantaRitaAtlasAuthoring]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_24

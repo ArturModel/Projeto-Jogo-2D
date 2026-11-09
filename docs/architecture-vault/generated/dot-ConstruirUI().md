@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 85"
+community: "Community 34"
 location: "L127"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_85
+  - community/Community_34
 ---
 
 # .ConstruirUI()
@@ -17,11 +17,11 @@ tags:
 - [[dot-CriarBotaoAba()]] - `calls` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()]] - `calls` [EXTRACTED]
 - [[dot-GerarIconeJogador()]] - `calls` [EXTRACTED]
-- [[dot-Initialize()]] - `calls` [INFERRED]
 - [[dot-Initialize()_1]] - `calls` [INFERRED]
-- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
+- [[dot-Initialize()]] - `calls` [INFERRED]
+- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[ContentSizeFitter]] - `references` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[ScrollRect]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_85
+#graphify/code #graphify/EXTRACTED #community/Community_34

@@ -12,8 +12,8 @@ tags:
 # .ObterNomeAmigavelOrelhao()
 
 ## Connections
-- [[dot-AoClicarSlot()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarTextosDosSlots()]] - `calls` [EXTRACTED]
+- [[dot-Refresh()_1]] - `calls` [EXTRACTED]
 - [[dot-SaveSlot()]] - `calls` [EXTRACTED]
 - [[dot-Selecionar()]] - `calls` [EXTRACTED]
 - [[dot-TryParseAndValidateJson()]] - `calls` [EXTRACTED]

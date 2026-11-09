@@ -1,24 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLighting.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
 type: "code"
-community: "Community 114"
-location: "L17"
+community: "Community 123"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_114
+  - community/Community_123
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Point()]] - `calls` [EXTRACTED]
-- [[dot-Sconce()]] - `calls` [EXTRACTED]
-- [[dot-SpriteAt()]] - `calls` [EXTRACTED]
-- [[dot-Strip()]] - `calls` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[Rect]] - `references` [EXTRACTED]
-- [[SantaRitaBarLighting]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
+- [[dot-BuildNormal()]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()]] - `calls` [EXTRACTED]
+- [[PrologoDirector]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
+- [[PrologoJogavelVerification]] - `method` [EXTRACTED]
+- [[PrologoVideo]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+#graphify/code #graphify/EXTRACTED #community/Community_123

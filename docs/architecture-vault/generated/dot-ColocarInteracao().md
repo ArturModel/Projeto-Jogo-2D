@@ -1,30 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
-community: "Community 24"
-location: "L1464"
+community: "Community 120"
+location: "L1688"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_120
 ---
 
 # .ColocarInteracao()
 
 ## Connections
 - [[dot-CarregarSprite()]] - `calls` [EXTRACTED]
-- [[dot-Configurar()_2]] - `calls` [INFERRED]
-- [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior4_BarDoZe()]] - `calls` [EXTRACTED]
+- [[dot-Configurar()_1]] - `calls` [INFERRED]
 - [[dot-ConstruirZona1_Rodovia()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirZona2_Posto()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirZona3_Encruzilhada()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirZona4_Bairro()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirZona5_RuaNorteBar()]] - `calls` [EXTRACTED]
-- [[dot-GarantirElementosBarDoZeCenaSeparada()]] - `calls` [EXTRACTED]
-- [[dot-GarantirElementosCasaDoAvoCenaSeparada()]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `method` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `references` [EXTRACTED]
@@ -33,4 +27,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_120

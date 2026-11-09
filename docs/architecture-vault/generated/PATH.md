@@ -1,17 +1,16 @@
 ---
-source_file: "scripts/graphify-refresh.sh"
+source_file: ""
 type: "code"
-community: "Community 64"
-location: "L4"
+community: "Community 129"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_64
+  - community/Community_129
 ---
 
-# PATH
+# Path
 
 ## Connections
-- [[graphify-refresh.sh]] - `defines` [EXTRACTED]
+- [[gerar_marcus_lanterna()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_64
+#graphify/code #graphify/EXTRACTED #community/Community_129

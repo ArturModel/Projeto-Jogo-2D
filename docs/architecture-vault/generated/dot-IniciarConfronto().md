@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ComecarNovaSerie()]] - `calls` [INFERRED]
-- [[dot-EnsureInstance()]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 

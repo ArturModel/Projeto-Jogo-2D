@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Exterior.cs"
 type: "code"
-community: "Community 125"
-location: "L116"
+community: "Community 139"
+location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_125
+  - community/Community_139
 ---
 
 # .Quad()
 
 ## Connections
-- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
-- [[BochaMapGraphic]] - `method` [EXTRACTED]
-- [[Color]] - `references` [EXTRACTED]
-- [[Rect]] - `references` [EXTRACTED]
-- [[VertexHelper]] - `references` [EXTRACTED]
+- [[dot-Nevoa()]] - `calls` [EXTRACTED]
+- [[dot-Reflexo()]] - `calls` [EXTRACTED]
+- [[Capitulo2Exterior]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_125
+#graphify/code #graphify/EXTRACTED #community/Community_139

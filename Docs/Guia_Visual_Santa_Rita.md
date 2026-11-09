@@ -1,8 +1,10 @@
-# Guia visual de Santa Rita — referência do Bar do Zé
+# Guia visual de Santa Rita — Rodovia pós-prólogo
 
 **Referência de produção · 08/11/2026 · Unity 6000.6.0f1 · URP 2D**
 
-A Rua Norte, no exterior do Bar do Zé, é a cena de comparação para os próximos redesigns de **Santa Rita — A Noite das 03:17**. Reaplique a escala de Marcus, a continuidade dos materiais, a composição por função e a hierarquia de luz. Calibre a paleta, a umidade, a vegetação e a força dos efeitos conforme o lugar e a hora da cena.
+A Rodovia, primeira área após o prólogo, é a referência para iluminação, contraste e composição de **Santa Rita — A Noite das 03:17**. O exterior da Rua Norte documentado abaixo é um estudo de aplicação desse padrão. Reaplique a escala de Marcus, a continuidade dos materiais, a composição por função e a hierarquia de luz. Calibre a paleta, a umidade, a vegetação e a força dos efeitos conforme o lugar e a hora da cena.
+
+![Rodovia após o prólogo, referência escolhida pelo autor](Referencias/EntradaDaCidade/rodovia-padrao.png)
 
 ![Rua Norte em Play Mode. A luz da porta recorta o bar e chega ao asfalto. Grama, calçada e pista mantêm leitura própria, com bordas irregulares.](Referencias/BarDoZe/rua-norte-final.png)
 
@@ -117,6 +119,21 @@ O nevoeiro combina duas escalas de ruído, deslocamento pelo tempo e quantizaç�
 4. **Iluminar por hierarquia.** Comece com ambiente legível, acrescente fontes visíveis e confira sombra de contato e reflexo. Só depois aplique queda de luz, profundidade atmosférica e vinheta. Adapte intensidade, alcance e tonalidade às fontes do lugar.
 5. **Dar movimento localizado.** Vento atua na copa, chuva segue espaço e superfícies, névoa varia em altura e densidade. Proteja acessos, pista visual e interface. Use uma condição clara para desligar ou reduzir efeitos em jogo.
 6. **Validar e registrar.** Compare antes/depois na mesma escala, veja aproximação e afastamento em movimento e confirme acessos, colisão, ordenação e revisitas. Verifique pausa, efeitos reduzidos, resoluções e retorno de zona. Para entrega distribuível, repita no executável e meça custo com a câmera carregada. Anexe captura, valores finais e referências de autoria.
+
+### Ficha de revisão para cada nova área
+
+Preencha a ficha no plano da cena antes de produzir sprites. Compare a entrega com a imagem da Rodovia acima, no tamanho de jogo.
+
+| Verificação | O que registrar |
+| --- | --- |
+| Propósito e chegada | O que Marcus faz aqui, qual marco ele vê primeiro, por onde entra e como encontra a saída. |
+| Composição e escala | Enquadramento de chegada e de aproximação ao foco. Marque frente, área caminhável e fundo. Compare personagem, objetos e arquitetura na escala de Marcus. |
+| Fontes e contraste | Indique cada fonte visível e o que ela ilumina. Compare Marcus e um objeto sob luz e em sombra. Em noite chuvosa, procure luz âmbar localizada, sombra fria e reflexo apenas onde há material úmido. |
+| Materiais e profundidade | Compare piso, vegetação, fachada, objetos e personagem no mesmo quadro. Confira relevo na luz rasante, contato com o chão, pivô e ordenação em movimento. |
+| Acessos e efeitos | Mostre porta, pista e caminho em jogo com chuva e efeitos reduzidos. Confira a volta à área anterior. |
+| Evidência | Anexe a referência e capturas em câmera normal. Registre desvios de iluminação com a fonte que os justifica, por exemplo o fluorescente da conveniência. |
+
+**Montagem padrão.** Os exteriores noturnos do Capítulo 1 usam o material criado por `SantaRitaRuaNorte.BuildGround`. O shader `LuzVolumetrica` carrega o contraste da Rodovia no próprio cálculo de ambiente, fachos e resposta ao piso. Vincule o terreno, os sprites e os personagens à mesma luz. Ajuste a posição e o alcance das fontes visíveis, a máscara de umidade e os volumes de sombra conforme a planta. Em interiores 3D, aplique a mesma hierarquia com as fontes locais de `SalaLit` e use a vista da porta para comparar a passagem entre rua e sala.
 
 ### Limites observados
 

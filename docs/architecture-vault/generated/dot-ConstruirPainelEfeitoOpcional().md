@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 85"
-location: "L698"
+location: "L710"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-CriarBotaoHUD()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_5]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
 - [[dot-SelecionarEfeitoBranca()]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[Outline]] - `references` [EXTRACTED]

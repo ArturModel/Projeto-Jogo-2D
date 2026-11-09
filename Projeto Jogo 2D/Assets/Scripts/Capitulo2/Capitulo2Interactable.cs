@@ -16,5 +16,5 @@ public sealed class Capitulo2Interactable : Interactable
             return "Examinar";
         }
     }
-    public override void Interact() { if (Capitulo2Director.Instance != null) Capitulo2Director.Instance.Interagir(interactionId, arteExame); }
+    public override void Interact() { if (Capitulo2Director.Instance != null) Capitulo2Director.Instance.Interagir(interactionId, arteExame, this); }
 }

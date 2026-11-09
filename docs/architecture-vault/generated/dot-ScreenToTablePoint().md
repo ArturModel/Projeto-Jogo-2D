@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
 - [[dot-LerMouseCapturado()]] - `calls` [INFERRED]
-- [[dot-OnPointerDown()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPointerDown()]] - `calls` [EXTRACTED]
 - [[dot-OnPointerMove()]] - `calls` [EXTRACTED]
 - [[dot-OnPointerUp()]] - `calls` [EXTRACTED]
 - [[dot-RayToTable()]] - `calls` [EXTRACTED]

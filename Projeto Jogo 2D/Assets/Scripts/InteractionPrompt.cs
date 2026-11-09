@@ -97,6 +97,13 @@ public class InteractionPrompt : MonoBehaviour
         alvoAlpha = mostrar ? 1f : 0f;
     }
 
+    internal void OcultarAgora()
+    {
+        alvoAtual = null;
+        alvoAlpha = 0f;
+        group.alpha = 0f;
+    }
+
     private void LateUpdate()
     {
         group.alpha = Mathf.MoveTowards(group.alpha, alvoAlpha, velocidadeFade * Time.deltaTime);
@@ -115,7 +122,9 @@ public class InteractionPrompt : MonoBehaviour
         Renderer r = alvo.RenderizadorDoIndicador;
         if (r != null) topo = new Vector3(r.bounds.center.x, r.bounds.max.y, 0f);
 
-        Vector2 tela = cam.WorldToScreenPoint(topo);
+        Vector2 tela = Capitulo2Interior3D.TryFocus(alvo, out var camera3D, out var objeto3D)
+            ? camera3D.WorldToScreenPoint(objeto3D.center + Vector3.up * objeto3D.extents.y)
+            : cam.WorldToScreenPoint(topo);
         if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, tela, null, out Vector2 local)) return;
 
         float balanço = Mathf.Repeat(Time.unscaledTime, PeriodoBalanço) < PeriodoBalanço * 0.5f ? 0f : 1f;

@@ -36,33 +36,27 @@ internal sealed partial class Posto3D
             Caixa("Parede lateral", V(lado * 5f, 1.5f, 0), V(.14f, 3f, 9f), tinta);
             Caixa("Azulejo lateral", V(lado * 4.90f, .52f, 0), V(.065f, 1.04f, 8.94f), azulejo, solida: false);
             Caixa("Faixa lateral", V(lado * 4.86f, 1.07f, 0), V(.045f, .065f, 8.94f), petroleo, solida: false);
-            Caixa("Fachada", V(lado * 2.92f, 1.5f, Soleira), V(4.16f, 3f, .16f), tinta);
+            ParedeComJanela(lado * 2.92f - 2.08f, lado * 2.92f + 2.08f, Soleira, .16f, tinta,
+                new Rect(lado * 2.60f - 1.10f, 1.02f, 2.20f, 1.22f));
             Caixa("Faixa da fachada", V(lado * 2.92f, .36f, Soleira - .10f), V(4.14f, .72f, .055f), faixaExterna, solida: false);
             Caixa("Batente", V(lado * .81f, 1.18f, Soleira), V(.10f, 2.35f, .23f), ferragem);
         }
         Caixa("Verga da porta", V(0, 2.68f, Soleira), V(1.65f, .64f, .18f), tinta);
         Caixa("Guarnição superior", V(0, 2.09f, Soleira), V(1.70f, .09f, .23f), ferragem);
         Caixa("Soleira", V(0, -.015f, Soleira), V(1.59f, .04f, .38f), aluminio, solida: false);
-        Caixa("Pátio sob a marquise", V(0, -.07f, -6f), V(10f, .13f, 3.05f), ceramica);
+        Caixa("Pátio sob a marquise", V(0, -.07f, -6f), V(10f, .13f, 3.05f), PisoMolhado(ceramica));
         Caixa("Marquise", V(0, 2.91f, -5.54f), V(10.1f, .18f, 2.12f), forro);
         Caixa("Capacho de borracha", V(0, .014f, -3.8f), V(1.43f, .028f, .77f), escuro, solida: false);
         ConstruirPorta(ferragem, madeiraLoja, latao);
         ConstruirChuva();
 
-        var shaderVidro = Resources.Load<Shader>("Art/Sinuca/JanelaMolhada");
-        var atlasVidro = Resources.Load<Texture2D>("Art/Sinuca/JanelasLateraisExterior");
-        if (shaderVidro != null && atlasVidro != null)
+        var vidroVitrine = VidroExterior();
+        foreach (float x in new[] { -2.60f, 2.60f })
         {
-            var vidro = new Material(shaderVidro) { mainTexture = atlasVidro };
-            recursos.Add(vidro);
-            foreach (float x in new[] { -2.60f, 2.60f })
-            {
-                Caixa("Caixilho da vitrine", V(x, 1.63f, -4.385f), V(2.35f, 1.38f, .08f), aluminio, solida: false);
-                var janela = Quadro("Vitrine molhada", V(x, 1.63f, -4.33f), V(2.20f, 1.22f, 1f), vidro);
-                janela.Rotate(0f, 180f, 0f);
-                Caixa("Travessa da vitrine", V(x, 1.63f, -4.295f), V(2.24f, .035f, .035f), escuro, solida: false);
-                Caixa("Montante da vitrine", V(x, 1.63f, -4.295f), V(.035f, 1.24f, .035f), escuro, solida: false);
-            }
+            MolduraVazada(V(x, 1.63f, -4.385f), 2.20f, 1.22f, aluminio);
+            Quadro("Vidro da vitrine", V(x, 1.63f, -4.36f), V(2.20f, 1.22f, 1f), vidroVitrine);
+            Caixa("Travessa da vitrine", V(x, 1.63f, -4.295f), V(2.24f, .035f, .035f), escuro, solida: false);
+            Caixa("Montante da vitrine", V(x, 1.63f, -4.295f), V(.035f, 1.24f, .035f), escuro, solida: false);
         }
 
         foreach (float z in new[] { -2.25f, .8f, 3.2f })
@@ -70,18 +64,20 @@ internal sealed partial class Posto3D
             Caixa("Carcaça fluorescente", V(0, 2.84f, z), V(1.52f, .12f, .28f), escuro, solida: false);
             foreach (float dz in new[] { -.08f, .08f })
                 Caixa("Tubo fluorescente", V(0, 2.765f, z + dz), V(1.43f, .042f, .05f), luz, solida: false);
-            Luz("Luz fria do teto", V(0, 2.66f, z), new Color(.82f, .95f, .87f), 4.4f, 6.25f);
+            var tubo = Luz("Luz fria do teto", V(0, 2.66f, z), new Color(.76f, .83f, .79f),
+                z < 0f ? 2.20f : 1.28f, 4.25f);
+            if (z > 0f && z < 1f) LuzInstavel.Instalar(tubo, .18f, 1.7f);
         }
-        Luz("Luz quente do caixa", V(-1.7f, 2.45f, 2.65f), new Color(1f, .75f, .46f), 2.4f, 4.6f);
-        Luz("Luz fria do vidro", V(-3.2f, 2.03f, -3.8f), new Color(.54f, .75f, 1f), 1.4f, 3.5f);
-        Luz("Luz da marquise", V(.35f, 2.45f, -5.6f), new Color(.83f, .89f, .72f), 2.7f, 4f);
+        Luz("Luz quente do caixa", V(-1.7f, 2.45f, 2.65f), new Color(1f, .72f, .43f), 2.65f, 3.85f);
+        Luz("Luz fria do vidro", V(-3.2f, 2.03f, -3.8f), new Color(.51f, .63f, .75f), .92f, 3.5f);
+        Luz("Luz da marquise", V(.35f, 2.45f, -5.6f), new Color(1f, .76f, .48f), 3.3f, 4f);
         var ambiente = new GameObject("Luz rebatida do posto").AddComponent<Light>();
         ambiente.transform.SetParent(cenario, false);
         ambiente.transform.localRotation = Quaternion.Euler(45f, -37f, 0f);
         ambiente.type = LightType.Directional;
         ambiente.cullingMask = RoomMask;
         ambiente.color = new Color(.57f, .67f, .80f);
-        ambiente.intensity = .19f;
+        ambiente.intensity = .065f;
 
         Caixa("Balcão", V(-.55f, .51f, 2.25f), V(3.68f, 1.02f, .83f), petroleo);
         Caixa("Tampo de fórmica", V(-.55f, 1.055f, 2.25f), V(3.79f, .075f, .92f), madeiraLoja);
@@ -120,17 +116,33 @@ internal sealed partial class Posto3D
         Personagem("Motorista abrigado", "Art/Characters/Npc_Motorista", V(-3.72f, 0f, -2.72f), Tipo.NpcMotoristaPosto);
     }
 
+    private void ParedeComJanela(float esquerda, float direita, float z, float espessura, Material material, params Rect[] vaos)
+    {
+        ExteriorInterior3D.Parede(esquerda, direita, 3f, vaos, (a,b,y0,y1) =>
+            Caixa("Alvenaria ao redor da janela", V((a+b)*.5f,(y0+y1)*.5f,z), V(b-a,y1-y0,espessura), material));
+    }
+
+    private Material VidroExterior()
+    {
+        var vidro = new Material(Resources.Load<Shader>("Art/Sinuca/JanelaMolhada"));
+        recursos.Add(vidro);
+        return vidro;
+    }
+
+    private void MolduraVazada(Vector3 centro, float largura, float altura, Material madeira, Transform pai = null)
+    {
+        foreach (float lado in new[] { -1f, 1f })
+        {
+            Caixa("Ombreira do caixilho", centro + V(lado*(largura*.5f+.034f),0,0),
+                V(.09f,altura+.15f,.12f), madeira, pai, false);
+            Caixa("Travessa do caixilho", centro + V(0,lado*(altura*.5f+.034f),0),
+                V(largura+.13f,.09f,.12f), madeira, pai, false);
+        }
+    }
+
     private void ConstruirPorta(Material moldura, Material madeira, Material latao)
     {
-        var vidro = Superficie("Vidro âmbar da porta", new Color(.66f, .54f, .31f, .15f), unlit: true);
-        vidro.SetOverrideTag("RenderType", "Transparent");
-        vidro.SetFloat("_Surface", 1f);
-        vidro.SetInt("_SrcBlend", (int)BlendMode.SrcAlpha);
-        vidro.SetInt("_DstBlend", (int)BlendMode.OneMinusSrcAlpha);
-        vidro.SetInt("_ZWrite", 0);
-        vidro.SetInt("_Cull", 0);
-        vidro.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
-        vidro.renderQueue = (int)RenderQueue.Transparent;
+        var vidro = VidroExterior();
 
         var folhaFixa = new GameObject("Folha fixa de vidro").transform;
         folhaFixa.SetParent(cenario, false);
@@ -213,6 +225,7 @@ internal sealed partial class Posto3D
         var shader = Resources.Load<Shader>("Art/Sinuca/ChuvaEntradaBar");
         if (shader == null || !shader.isSupported) return;
         materialChuva = new Material(shader);
+        materialChuva.SetVector("_Luz", new Vector4(.35f, 2.25f, Soleira - .95f, 0f));
         recursos.Add(materialChuva);
         const int quantidade = 430;
         var vertices = new Vector3[quantidade * 4];
@@ -296,6 +309,14 @@ internal sealed partial class Posto3D
         }
         recursos.Add(material);
         return material;
+    }
+
+    private Material PisoMolhado(Material seco)
+    {
+        var molhado = new Material(seco) { name = seco.name + " — soleira molhada" };
+        molhado.SetFloat("_WetThreshold", 1f);
+        recursos.Add(molhado);
+        return molhado;
     }
 
     private Material MaterialRecorte(string nome, Texture textura)

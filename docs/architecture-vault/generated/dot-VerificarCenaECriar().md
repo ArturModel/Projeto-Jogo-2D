@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 50"
+community: "Community 137"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_137
 ---
 
 # .VerificarCenaECriar()
@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-AutoBootstrap()]] - `calls` [EXTRACTED]
 - [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()]] - `calls` [EXTRACTED]
 - [[dot-FecharSeAberto()]] - `calls` [EXTRACTED]
 - [[dot-OnSceneLoaded()_1]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_137

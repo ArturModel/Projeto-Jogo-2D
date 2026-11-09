@@ -34,11 +34,25 @@ public sealed partial class SinucaRoom3D
         if(billboard)pixelBillboards.Add(g.transform);
         return g.transform;
     }
+    private static void BindSpriteSurface(Material material, Sprite sprite)
+    {
+        int count = sprite.GetSecondaryTextureCount();
+        if (count == 0) return;
+        var textures = new SecondarySpriteTexture[count];
+        sprite.GetSecondaryTextures(textures);
+        foreach (var texture in textures)
+        {
+            if (texture.name != "_SurfaceMap") continue;
+            material.SetTexture("_SurfaceMap", texture.texture);
+            break;
+        }
+    }
+
     private Material PixelMaterial(Sprite sprite)
     {
         string key="pixel_"+sprite.texture.name;
         if(materials.TryGetValue(key,out var mat))return mat;
-        mat=new Material(Resources.Load<Material>("Art/BarRef7/BarPixelCutout")){name=key};mat.SetTexture("_BaseMap",sprite.texture);mat.SetColor("_BaseColor",new Color(.94f,.91f,.85f));mat.shader=Resources.Load<Shader>("Art/Sinuca/SalaLit");mat.SetFloat("_AlphaClip",1);mat.SetFloat("_ActorLighting",1);mat.SetFloat("_Cull",0);mat.SetFloat("_Smoothness",.03f);mat.EnableKeyword("_ALPHATEST_ON");mat.renderQueue=2450;materials.Add(key,mat);owned.Add(mat);return mat;
+        mat=new Material(Resources.Load<Material>("Art/BarRef7/BarPixelCutout")){name=key};mat.SetTexture("_BaseMap",sprite.texture);mat.SetColor("_BaseColor",new Color(.94f,.91f,.85f));mat.shader=Resources.Load<Shader>("Art/Sinuca/SalaLit");BindSpriteSurface(mat,sprite);mat.SetFloat("_AlphaClip",1);mat.SetFloat("_ActorLighting",1);mat.SetFloat("_Cull",0);mat.SetFloat("_Smoothness",.03f);mat.EnableKeyword("_ALPHATEST_ON");mat.renderQueue=2450;materials.Add(key,mat);owned.Add(mat);return mat;
     }
     private Mesh NativeMesh(Sprite sprite)
     {

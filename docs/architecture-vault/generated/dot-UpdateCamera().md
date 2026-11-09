@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
 community: "Community 2"
-location: "L336"
+location: "L347"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AplicarCameraInvestigacao()]] - `calls` [INFERRED]
+- [[dot-AtualizarExploracaoDoBar()]] - `calls` [EXTRACTED]
 - [[dot-BeginUnderTable()]] - `calls` [EXTRACTED]
 - [[dot-EndUnderTable()]] - `calls` [EXTRACTED]
 - [[dot-Orbit()]] - `calls` [EXTRACTED]
@@ -22,7 +23,7 @@ tags:
 - [[dot-SetMode()]] - `calls` [EXTRACTED]
 - [[dot-SetStartleLook()]] - `calls` [EXTRACTED]
 - [[dot-SetZoom()]] - `calls` [EXTRACTED]
-- [[dot-Sync()]] - `calls` [EXTRACTED]
+- [[dot-Sync()_2]] - `calls` [EXTRACTED]
 - [[dot-UpdateOpponentView()]] - `calls` [INFERRED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 

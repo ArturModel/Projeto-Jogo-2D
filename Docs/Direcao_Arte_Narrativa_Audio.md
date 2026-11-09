@@ -4,7 +4,7 @@ Atualização autorizada pelo autor em 21/10/2026. Esta direção prevalece sobr
 
 ## Arte
 
-[Guia visual de Santa Rita](Guia_Visual_Santa_Rita.md) é a referência prática para novos redesigns. Reúne o padrão da Rua Norte do Bar do Zé com escala, superfícies, luz, efeitos e critérios de comparação.
+[Guia visual de Santa Rita](Guia_Visual_Santa_Rita.md) é a referência prática para novos redesigns. Usa a Rodovia pós-prólogo como referência e inclui uma ficha de revisão por área para propósito, composição, escala, iluminação e validação em jogo.
 
 Correção expressa do autor nesta revisão: mapa orienta geografia e conexões; composição de ruas, praça e mobiliário pode ser redesenhada para uso plausível. Centro é uma praça cívica/comercial em funcionamento. Remover exposição dedicada a Júlia da praça; memória e pistas ficam em fontes discretas e contextualizadas. Cemitério é cena externa independente. C1/C2 são organização de produção, com retorno pelos dois caminhos existentes.
 

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
 type: "code"
 community: "Community 110"
-location: "L396"
+location: "L408"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-CriarPainelMinigames()]] - `calls` [EXTRACTED]
-- [[dot-Start()_5]] - `calls` [EXTRACTED]
+- [[dot-Start()_2]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[MenuAmbiente]] - `method` [EXTRACTED]
 - [[TMP_FontAsset]] - `references` [EXTRACTED]

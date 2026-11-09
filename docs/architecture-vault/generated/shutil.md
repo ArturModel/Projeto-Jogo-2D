@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 32"
+community: "Community 148"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_148
 ---
 
 # shutil
@@ -15,4 +15,4 @@ tags:
 - [[export-ze-sinuca.py]] - `imports` [EXTRACTED]
 - [[graphify-project.py]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_32
+#graphify/concept #graphify/EXTRACTED #community/Community_148

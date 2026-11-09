@@ -1,26 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs"
 type: "code"
-community: "Community 14"
-location: "L69"
+community: "Community 144"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_144
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_10]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[ContentSizeFitter]] - `references` [EXTRACTED]
-- [[DicaDeTecla]] - `method` [EXTRACTED]
-- [[HorizontalLayoutGroup]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[LayoutElement]] - `references` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
+- [[dot-BuildNormal()_1]] - `calls` [EXTRACTED]
+- [[dot-BuildQA()_2]] - `calls` [EXTRACTED]
+- [[MenuAmbienteAuthoring]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_144

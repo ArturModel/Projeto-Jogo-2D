@@ -1,21 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 42"
-location: "L235"
+community: "Community 27"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_42
+  - community/Community_27
 ---
 
 # .Mover()
 
 ## Connections
-- [[dot-ClickPonto()]] - `calls` [EXTRACTED]
-- [[dot-Hover()]] - `calls` [EXTRACTED]
-- [[dot-Roteiro()]] - `calls` [EXTRACTED]
-- [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-AvancarComContatos()]] - `calls` [EXTRACTED]
+- [[BochaSimulation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_42
+#graphify/code #graphify/EXTRACTED #community/Community_27

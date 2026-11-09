@@ -11,6 +11,7 @@ tags:
 # RectInt
 
 ## Connections
+- [[dot-RecorteDaFigura()]] - `references` [EXTRACTED]
 - [[dot-RectTiles()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_6

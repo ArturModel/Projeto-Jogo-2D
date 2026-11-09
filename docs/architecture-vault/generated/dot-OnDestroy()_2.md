@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLighting.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
 type: "code"
-community: "Community 114"
-location: "L140"
+community: "Community 106"
+location: "L111"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_114
+  - community/Community_106
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[SantaRitaBarLighting]] - `method` [EXTRACTED]
+- [[MarcusNotebookUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+#graphify/code #graphify/EXTRACTED #community/Community_106

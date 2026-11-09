@@ -1,18 +1,20 @@
 ---
 type: community
-members: 5
+members: 7
 ---
 
 # Community 126
 
-**Members:** 5 nodes
+**Members:** 7 nodes
 
 ## Members
-- [[dot-Awake()_7]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
-- [[dot-LerEntrada()]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
-- [[dot-Update()_17]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
-- [[Deslocamento]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
-- [[OlharPrimeiraPessoa]] - code - Projeto Jogo 2D/Assets/Scripts/OlharPrimeiraPessoa.cs
+- [[dot-Attach()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Install()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Place()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Update()_13]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Prompt_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[SantaRitaTapePickup]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[SantaRitaTapePlacement]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -22,12 +24,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 115]]
-- 1 edge to [[_COMMUNITY_Community 87]]
-- 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 108]]
-- 1 edge to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 38]]
+- 2 edges to [[_COMMUNITY_Community 92]]
+- 2 edges to [[_COMMUNITY_Community 117]]
+- 1 edge to [[_COMMUNITY_Community 103]]
+- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 139]]
+- 1 edge to [[_COMMUNITY_Community 120]]
+- 1 edge to [[_COMMUNITY_Community 115]]
 
 ## Top bridge nodes
-- [[OlharPrimeiraPessoa]] - degree 9, connects to 5 communities
-- [[dot-LerEntrada()]] - degree 3, connects to 1 community
+- [[SantaRitaTapePickup]] - degree 8, connects to 3 communities
+- [[dot-Attach()]] - degree 6, connects to 3 communities
+- [[SantaRitaTapePlacement]] - degree 5, connects to 2 communities
+- [[dot-Update()_13]] - degree 4, connects to 2 communities
+- [[dot-Place()_2]] - degree 5, connects to 1 community

@@ -16,7 +16,7 @@ public class AudioSettingsController : MonoBehaviour
     [SerializeField] private Slider volumeChuva;
     [SerializeField] private Slider volumeImpactos;
 
-    // O perfil da sinuca é o ganho a 100% nos dois menus.
+    // Os dois menus compartilham as preferências de volume.
     // A posição de cada controle é persistida separadamente do ganho legado.
     private const string Perfil = "audio_perfil_sinuca_";
     private const string ChaveMaster = "master";
@@ -27,11 +27,11 @@ public class AudioSettingsController : MonoBehaviour
     private const string ChaveChuva = "chuva";
     private const string ChaveImpactos = "impactos";
 
-    private const float GanhoMusicaSinuca = 0f;
+    private const float GanhoMusicaExploracao = .35f;
     private const float GanhoChuvaSinuca = .10f;
     private const float GanhoOutrosEfeitosSinuca = .078125f;
 
-    public static float VolumeMusica => Nivel(ChaveMusica) * GanhoMusicaSinuca;
+    public static float VolumeMusica => EmMinigame ? 0f : Nivel(ChaveMusica) * GanhoMusicaExploracao;
     public static float VolumeEfeitos => Nivel(ChaveEfeitos) * GanhoOutrosEfeitosSinuca;
     public static float VolumeFala => Nivel(ChaveFala);
     public static float VolumeChuva => Nivel(ChaveChuva) * GanhoChuvaSinuca;
@@ -76,8 +76,8 @@ public class AudioSettingsController : MonoBehaviour
         AudioListener.volume = Nivel(ChaveMaster);
         AtualizarChuvaMenu();
 
-        // Em prática, a música ainda vem do mixer do menu.
-        float ganhoMusica = VolumeMusica * .5f * (EmMinigame ? .35f : 1f);
+        // A trilha no mixer segue o mesmo contexto das fontes diretas.
+        float ganhoMusica = VolumeMusica * .5f;
         float efeitos = VolumeEfeitos;
 
         if (mixerExplicito != null)

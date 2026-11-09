@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     private float sustoAte;
 
     internal bool CaminhandoParaEventoAmbiental => !BloqueiaEquipamento() && !BloqueiaMovimento() &&
-        moveInput.sqrMagnitude > 0f && rb.linearVelocity.sqrMagnitude > .04f;
+        moveInput.sqrMagnitude > 0f && rb != null && rb.linearVelocity.sqrMagnitude > .04f;
 
     internal void ReagirAoRaio()
     {
@@ -82,32 +82,65 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
-        ultimaPosicaoAnimacao = rb.position;
-        corpo = GetComponent<SpriteRenderer>();
-        if (corpo != null)
-        {
-            // Garante que Marcus sempre fique ACIMA de móveis, balcões, carros e casas (que usam sortingOrder <= 4).
-            corpo.sortingOrder = 10;
-        }
-        PrepararCaminhadaMarcus();
-        if (!folhaCaminhadaDirecional) PrepararPosesLanterna();
+        GarantirInicializacao();
         PrepararFeixeLanterna();
+        if (flashlight != null) flashlight.gameObject.SetActive(false);
+    }
+
+    private void GarantirInicializacao()
+    {
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.gravityScale = 0f;
+                rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+                ultimaPosicaoAnimacao = rb.position;
+            }
+        }
+        if (corpo == null)
+        {
+            corpo = GetComponent<SpriteRenderer>();
+            if (corpo != null && corpo.sortingOrder < 10)
+            {
+                corpo.sortingOrder = 10;
+            }
+        }
+        if (quadrosCaminhada == null)
+        {
+            PrepararCaminhadaMarcus();
+        }
+        if (quadrosCaminhadaComLanterna == null)
+        {
+            PrepararPosesLanterna();
+        }
     }
 
     private void PrepararFeixeLanterna()
     {
         // Cenas C2 antigas copiavam o ator sem a luz externa do rig C1.
         // O equipamento pertence ao ator em todas as cenas, com uma única fonte.
-        if(flashlight==null)
-        {var go=new GameObject("FeixeLanternaMarcus");go.transform.SetParent(transform,false);flashlight=go.transform;}
-        var light=flashlight.GetComponent<Light2D>()??flashlight.gameObject.AddComponent<Light2D>();
-        light.lightType=Light2D.LightType.Point;light.pointLightInnerRadius=1.1f;light.pointLightOuterRadius=7.2f;
-        light.pointLightInnerAngle=28;light.pointLightOuterAngle=66;light.intensity=1.6f;
-        light.color=new Color(1,.94f,.78f);light.falloffIntensity=.4f;light.shadowIntensity=.85f;
-        flashlight.gameObject.SetActive(false);
+        if (flashlight == null)
+        {
+            var go = new GameObject("FeixeLanternaMarcus");
+            go.transform.SetParent(transform, false);
+            flashlight = go.transform;
+        }
+        Transform antigoCone = flashlight.Find("ConeVolumetricoLanterna");
+        if (antigoCone != null) Destroy(antigoCone.gameObject);
+
+        var light = flashlight.GetComponent<Light2D>();
+        if (light == null) light = flashlight.gameObject.AddComponent<Light2D>();
+        light.lightType = Light2D.LightType.Point;
+        light.pointLightInnerRadius = .45f;
+        light.pointLightOuterRadius = 6.2f;
+        light.pointLightInnerAngle = 20f;
+        light.pointLightOuterAngle = 56f;
+        light.intensity = 1.65f;
+        light.color = new Color(.93f, .96f, 1f);
+        light.falloffIntensity = .62f;
+        light.shadowIntensity = .88f;
     }
 
     private static bool DeveUsarLanternaAgora()
@@ -138,10 +171,10 @@ public class PlayerController : MonoBehaviour
     private static bool BloqueiaControles() => !Application.isFocused || MenuPausa.Aberto ||
         MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
         SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
-        Capitulo1Director.PainelFechamentoAberto ||
+        Capitulo1Director.PainelFechamentoAberto || BarDoZe3D.Aberto ||
         (SceneFader.IsTransitioning && Capitulo1Director.ZonaAtual is
             Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Zona3_Encruzilhada or
-            Capitulo1Director.ZonaId.Zona4_Bairro);
+            Capitulo1Director.ZonaId.Zona4_Bairro or Capitulo1Director.ZonaId.Zona5_RuaNorteBar);
 
     private bool BloqueiaMovimento() => BloqueiaControles() || GameMessageUI.IsShowing ||
         SantaRitaFalasEntrada.Interagindo || Time.time < sustoAte;
@@ -172,9 +205,10 @@ public class PlayerController : MonoBehaviour
         var sheet = new Texture2D(2,2,TextureFormat.RGBA32,false);
         ImageConversion.LoadImage(sheet, File.ReadAllBytes(path)); sheet.filterMode=FilterMode.Point; sheet.wrapMode=TextureWrapMode.Clamp;
         int frames=sheet.width/64-1;
-        if(!ValidarFolhaMarcus(sheet,frames)){Debug.LogError("Folha da lanterna invalida; preservando corpo sem retangulo opaco.");return;}
-        quadrosCaminhadaComLanterna = new Sprite[3,frames]; repousoComLanterna = new Sprite[3];
-        for(int row=0;row<3;row++) for(int frame=0;frame<=frames;frame++)
+        int linhas=Mathf.Max(1,sheet.height/64);
+        if(!ValidarFolhaMarcus(sheet,frames,linhas,true)){Debug.LogError("Folha da lanterna invalida; preservando corpo sem retangulo opaco.");return;}
+        quadrosCaminhadaComLanterna = new Sprite[linhas,frames]; repousoComLanterna = new Sprite[linhas];
+        for(int row=0;row<linhas;row++) for(int frame=0;frame<=frames;frame++)
         {
             var pose=Sprite.Create(sheet,new Rect(frame*64,sheet.height-(row+1)*64,64,64),new Vector2(.5f,.125f),32,0,SpriteMeshType.FullRect);
             if(frame<frames)quadrosCaminhadaComLanterna[row,frame]=pose;else repousoComLanterna[row]=pose;
@@ -308,6 +342,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        GarantirInicializacao();
         // Só um pressionamento novo, após foco e liberação da tecla. UI não muda a preferência.
         var teclado = Keyboard.current;
         if(teclado != null && !teclado.fKey.isPressed) focoLanternaPronto = Application.isFocused;
@@ -349,7 +384,7 @@ public class PlayerController : MonoBehaviour
         }
 
         bool temDirecao = moveInput.sqrMagnitude > 0f;
-        bool isMoving = temDirecao || rb.linearVelocity.sqrMagnitude > .0001f;
+        bool isMoving = temDirecao || (rb != null && rb.linearVelocity.sqrMagnitude > .0001f);
         bool isInteracting = !isMoving && interactTimer > 0f;
         if (temDirecao)
         {
@@ -389,6 +424,7 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
+        GarantirInicializacao();
         AtualizarPassada();
         if (corpo != null)
             corpo.sortingOrder = 1000 - Mathf.RoundToInt(transform.position.y * 10);
@@ -406,7 +442,7 @@ public class PlayerController : MonoBehaviour
         // A pausa conserva a pose; diálogo e parada voltam ao repouso sem som.
         if (Time.timeScale == 0 || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
             SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
-        bool andando = !BloqueiaMovimento() && (distancia >= .0001f || rb.linearVelocity.sqrMagnitude > .0001f);
+        bool andando = !BloqueiaMovimento() && (distancia >= .0001f || (rb != null && rb.linearVelocity.sqrMagnitude > .0001f));
         if(!andando)passada.Reset();
         int apoios = 0;
         passada.Avancar(andando ? distancia : 0f, () => apoios++);
@@ -415,7 +451,8 @@ public class PlayerController : MonoBehaviour
         if (quadrosCaminhada != null)
         {
             int linha = EspelharCaminhadaDireita ? Mathf.Min(facingDirection, DirLeft) : facingDirection;
-            bool equipada = linha != DirUp && DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna != null;
+            bool equipada = DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna != null &&
+                linha < quadrosCaminhadaComLanterna.GetLength(0);
             if (folhaCaminhadaDirecional && totalQuadros == 3)
             {
                 // Dois contatos e uma passagem, todos recortes da mesma folha.
@@ -441,6 +478,8 @@ public class PlayerController : MonoBehaviour
     {
         bool visivel = DeveUsarLanternaAgora();
         if (flashlight == null) return;
+        Transform antigoCone = flashlight.Find("ConeVolumetricoLanterna");
+        if (antigoCone != null) Destroy(antigoCone.gameObject);
         flashlight.gameObject.SetActive(visivel);
         if (!visivel) return;
         // As coordenadas são as lentes desenhadas na folha Aseprite (64 px, pivô nos pés).
@@ -450,8 +489,9 @@ public class PlayerController : MonoBehaviour
             facingDirection == DirUp ? new Vector2(40,28+bob) : new Vector2(16,36+bob);
         Vector2 offset = new Vector2((lente.x-32)/32f,(56-lente.y)/32f);
         if (facingDirection == DirRight) offset.x = -offset.x;
-        flashlight.position = SnapToPixel((Vector2)transform.position + offset);
         Vector2 direcao = FlashlightDirections[facingDirection];
+        const float recuoDaLuz = 6f / 32f;
+        flashlight.position = SnapToPixel((Vector2)transform.position + offset - direcao * recuoDaLuz);
         if(flashlight.parent==transform)flashlight.localScale=new Vector3(1/transform.localScale.x,1/transform.localScale.y,1);
         flashlight.rotation=Quaternion.Euler(0,0,Mathf.Atan2(direcao.y,direcao.x)*Mathf.Rad2Deg+flashlightAngleOffset);
     }
@@ -490,6 +530,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        GarantirInicializacao();
+        if (rb == null) return;
         if (BloqueiaMovimento())
         {
             PararMovimento();

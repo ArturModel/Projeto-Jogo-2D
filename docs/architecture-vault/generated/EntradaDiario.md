@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
 type: "code"
-community: "Community 4"
+community: "Community 45"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_45
 ---
 
 # EntradaDiario
@@ -15,11 +15,11 @@ tags:
 - [[dot-ExportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-ObterEntradasDiario()]] - `references` [EXTRACTED]
-- [[dot-Project()_3]] - `references` [EXTRACTED]
+- [[dot-Project()_2]] - `references` [EXTRACTED]
 - [[dot-RegistrarDiario()]] - `calls` [EXTRACTED]
 - [[dot-RunNotebook()]] - `calls` [INFERRED]
 - [[GameState]] - `references` [EXTRACTED]
 - [[GameState.cs]] - `contains` [EXTRACTED]
 - [[GameStateSnapshot]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_4
+#graphify/code #graphify/EXTRACTED #community/Community_45

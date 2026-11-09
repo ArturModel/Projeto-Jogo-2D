@@ -11,10 +11,12 @@ tags:
 # CanvasScaler
 
 ## Connections
+- [[dot-Awake()_13]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
-- [[dot-Construir()_5]] - `references` [EXTRACTED]
 - [[dot-Construir()_4]] - `references` [EXTRACTED]
 - [[dot-Construir()_3]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()_5]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `references` [EXTRACTED]
 

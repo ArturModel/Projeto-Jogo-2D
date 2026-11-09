@@ -1,21 +1,40 @@
 ---
 type: community
-members: 8
+members: 27
 ---
 
 # Community 40
 
-**Members:** 8 nodes
+**Members:** 27 nodes
 
 ## Members
-- [[dot-ApoiarPe()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
-- [[dot-ElevationAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[dot-FixedUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
-- [[dot-LateUpdate()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
-- [[dot-OnDisable()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[dot-OnEnable()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[dot-SpeedAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
-- [[SantaRitaShallowStairs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-AplicarRelevoDaRodovia()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-ComporAcostamentoDoPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Posto.cs
+- [[dot-ComporBloqueioDaAvenida()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs
+- [[dot-ComporCalcadasDoBar()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bar.cs
+- [[dot-ComporChegada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-ComporEncruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs
+- [[dot-ComporFrenteDoMercadinho()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs
+- [[dot-ComporMargemNorte()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-ComporMargemSul()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-ComporPasseioDaEncruzilhada()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs
+- [[dot-ComporPatioDoPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Posto.cs
+- [[dot-ComporPavimento()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-ComporPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Posto.cs
+- [[dot-ComporSubidaDeTerra()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs
+- [[dot-ComporTaludeDoPosto()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Posto.cs
+- [[dot-ConfigurarReflexoDoCarro()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-CriarVaoDeFiacao()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-DetalharBarro()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs
+- [[dot-EspalharDecalques()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-EspalharVegetacao()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-FixarDetalheDaRodovia()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-InstalarBalizasDeTerra()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs
+- [[dot-LimiteDaRodovia()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-ModuloDaRodovia()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-MontarDefensas()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
+- [[dot-ObjetoDoBar()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bar.cs
+- [[dot-RegistrarVolumeDaRodovia()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,23 +44,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 115]]
-- 1 edge to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 11]]
-- 1 edge to [[_COMMUNITY_Community 108]]
-- 1 edge to [[_COMMUNITY_Community 36]]
-- 1 edge to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 88]]
-- 1 edge to [[_COMMUNITY_Community 121]]
-- 1 edge to [[_COMMUNITY_Community 113]]
+- 29 edges to [[_COMMUNITY_Community 89]]
+- 12 edges to [[_COMMUNITY_Community 7]]
+- 12 edges to [[_COMMUNITY_Community 139]]
+- 5 edges to [[_COMMUNITY_Community 115]]
+- 3 edges to [[_COMMUNITY_Community 87]]
+- 3 edges to [[_COMMUNITY_Community 20]]
+- 2 edges to [[_COMMUNITY_Community 125]]
+- 2 edges to [[_COMMUNITY_Community 120]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 48]]
 
 ## Top bridge nodes
-- [[SantaRitaShallowStairs]] - degree 10, connects to 6 communities
-- [[dot-ApoiarPe()]] - degree 4, connects to 3 communities
-- [[dot-SpeedAt()]] - degree 5, connects to 2 communities
-- [[dot-LateUpdate()_9]] - degree 3, connects to 2 communities
-- [[dot-ElevationAt()]] - degree 3, connects to 1 community
+- [[dot-ModuloDaRodovia()]] - degree 32, connects to 8 communities
+- [[dot-ComporMargemNorte()]] - degree 13, connects to 4 communities
+- [[dot-AplicarRelevoDaRodovia()]] - degree 6, connects to 4 communities
+- [[dot-InstalarBalizasDeTerra()]] - degree 6, connects to 4 communities
+- [[dot-LimiteDaRodovia()]] - degree 13, connects to 3 communities

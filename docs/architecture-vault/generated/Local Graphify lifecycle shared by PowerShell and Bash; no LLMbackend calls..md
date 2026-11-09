@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/graphify-project.py"
 type: "rationale"
-community: "Community 32"
+community: "Community 148"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_148
 ---
 
 # Local Graphify lifecycle shared by PowerShell and Bash; no LLM/backend calls.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[graphify-project.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_32
+#graphify/rationale #graphify/EXTRACTED #community/Community_148

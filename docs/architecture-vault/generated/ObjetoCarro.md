@@ -12,10 +12,10 @@ tags:
 # ObjetoCarro
 
 ## Connections
-- [[dot-Ativar()]] - `method` [EXTRACTED]
-- [[dot-Awake()_13]] - `method` [EXTRACTED]
+- [[dot-Ativar()_1]] - `method` [EXTRACTED]
+- [[dot-Awake()_8]] - `method` [EXTRACTED]
 - [[dot-Procurar()_1]] - `references` [EXTRACTED]
-- [[dot-Update()_22]] - `method` [EXTRACTED]
+- [[dot-Update()_23]] - `method` [EXTRACTED]
 - [[Apontado]] - `defines` [EXTRACTED]
 - [[CelularCarro]] - `inherits` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

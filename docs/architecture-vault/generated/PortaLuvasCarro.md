@@ -12,8 +12,8 @@ tags:
 # PortaLuvasCarro
 
 ## Connections
-- [[dot-Ativar()_2]] - `method` [EXTRACTED]
-- [[dot-Awake()_16]] - `references` [EXTRACTED]
+- [[dot-Ativar()_3]] - `method` [EXTRACTED]
+- [[dot-Awake()_12]] - `references` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[PortaLuvasCarro.cs]] - `contains` [EXTRACTED]
 - [[PrologoJogavel]] - `references` [EXTRACTED]

@@ -1,19 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Pensamentos do protagonista em legenda, no rodapé.
-//
-// A GameMessageUI é uma caixa: serve para "alguém está falando com você".
-// Aqui é o contrário — é a cabeça do personagem, e não deve interromper o que
-// o jogador está fazendo. Por isso legenda simples, sem caixa e sem esperar
-// tecla.
-//
-// A fila com prioridade existe porque o prólogo mistura falas roteirizadas
-// (que têm hora marcada) com falas de interação opcional. Sem prioridade, mexer
-// no rádio na hora errada engoliria a fala que apresenta o sumiço do avô.
+// Falas roteirizadas podem interromper pensamentos opcionais no prólogo.
 public class Legenda : MonoBehaviour
 {
     public const int PrioridadeOpcional = 0;
@@ -49,8 +39,7 @@ public class Legenda : MonoBehaviour
     public static Vector2 ResolucaoUI = new Vector2(640f, 360f);
 
     private readonly List<Fala> fila = new List<Fala>();
-    private TextMeshProUGUI texto;
-    private CanvasGroup grupo;
+    private MinigameDialogue legenda;
     private Fala atual;
     private Coroutine rotina;
 
@@ -68,37 +57,16 @@ public class Legenda : MonoBehaviour
 
     private void Construir()
     {
-        Canvas canvas = UIFactory.CreateCanvas(transform, "LegendaCanvas", 500);
+        Canvas canvas = UIFactory.CreateCanvas(transform, "LegendaCanvas", 8700);
         CanvasScaler escala = canvas.GetComponent<CanvasScaler>();
         escala.referenceResolution = ResolucaoUI;
 
-        grupo = canvas.gameObject.AddComponent<CanvasGroup>();
-        grupo.alpha = 0f;
-        grupo.blocksRaycasts = false;
-        grupo.interactable = false;
-
-        texto = UIFactory.CreateLabel(canvas.transform, "Texto", 18f);
-        texto.alignment = TextAlignmentOptions.Bottom;
-        texto.textWrappingMode = TextWrappingModes.Normal;
-        texto.color = new Color(0.88f, 0.86f, 0.80f, 1f);
-
-        RectTransform r = texto.rectTransform;
-        r.anchorMin = new Vector2(0.5f, 0f);
-        r.anchorMax = new Vector2(0.5f, 0f);
-        r.pivot = new Vector2(0.5f, 0f);
-        r.anchoredPosition = new Vector2(0f, 26f);
-        r.sizeDelta = new Vector2(ResolucaoUI.x * 0.72f, 70f);
+        legenda = new MinigameDialogue(canvas.transform, "LegendaDoPrologo");
     }
 
     public static void Dizer(string frase, float duracao = 3f,
                              int prioridade = PrioridadeRoteiro)
     {
-        // Mesma configuração do painel de legendas do menu (e da pausa).
-        if (!SubtitleSettingsController.LegendasAtivas)
-        {
-            return;
-        }
-
         Instance.Enfileirar(frase, duracao, prioridade);
     }
 
@@ -112,6 +80,10 @@ public class Legenda : MonoBehaviour
         }
 
         instancia.fila.Clear();
+        if (instancia.rotina != null) instancia.StopCoroutine(instancia.rotina);
+        instancia.rotina = null;
+        instancia.atual = null;
+        instancia.legenda.Limpar();
     }
 
     private void Enfileirar(string frase, float duracao, int prioridade)
@@ -155,36 +127,20 @@ public class Legenda : MonoBehaviour
             atual = fila[0];
             fila.RemoveAt(0);
 
-            texto.text = atual.Texto;
-
-            // Lido a cada fala: mudar o tamanho na pausa vale já na próxima.
-            texto.fontSize = 18f * SubtitleSettingsController.MultiplicadorTamanho;
-
-            yield return Aparecer(1f, 0.25f);
-            yield return new WaitForSeconds(atual.Duracao);
-            yield return Aparecer(0f, 0.4f);
+            legenda.Dizer("Marcus", atual.Texto, MinigameDialogue.MarcusPitch, atual.Duracao);
+            while (legenda.Ocupada)
+            {
+                if (Time.timeScale == 0f || !Application.isFocused)
+                    legenda.Suspender();
+                else
+                    legenda.Atualizar(Time.deltaTime);
+                yield return null;
+            }
 
             atual = null;
-
-            // respiro entre falas: legenda emendada vira parede de texto
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(.2f);
         }
 
         rotina = null;
-    }
-
-    private IEnumerator Aparecer(float alvo, float tempo)
-    {
-        float inicio = grupo.alpha;
-        float t = 0f;
-
-        while (t < tempo)
-        {
-            t += Time.deltaTime;
-            grupo.alpha = Mathf.Lerp(inicio, alvo, t / tempo);
-            yield return null;
-        }
-
-        grupo.alpha = alvo;
     }
 }

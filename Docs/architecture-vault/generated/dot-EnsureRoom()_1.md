@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[dot-CourtPoint()]] - `calls` [EXTRACTED]
-- [[dot-OnEnable()_15]] - `calls` [EXTRACTED]
+- [[dot-OnEnable()_17]] - `calls` [EXTRACTED]
 - [[dot-Preaquecer()_1]] - `calls` [EXTRACTED]
 - [[dot-Project()]] - `calls` [EXTRACTED]
-- [[dot-ResetWalking()_1]] - `calls` [EXTRACTED]
+- [[dot-ResetWalking()_2]] - `calls` [EXTRACTED]
 - [[dot-SetActive()_1]] - `calls` [EXTRACTED]
 - [[dot-SetState()]] - `calls` [EXTRACTED]
 - [[dot-SetView()]] - `calls` [EXTRACTED]

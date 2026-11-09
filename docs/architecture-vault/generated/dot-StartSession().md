@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
 community: "Community 111"
-location: "L49"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED

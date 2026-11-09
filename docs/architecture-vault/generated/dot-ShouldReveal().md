@@ -12,8 +12,8 @@ tags:
 # .ShouldReveal()
 
 ## Connections
-- [[dot-LateUpdate()_12]] - `calls` [EXTRACTED]
-- [[dot-Start()_16]] - `calls` [EXTRACTED]
+- [[dot-LateUpdate()_11]] - `calls` [EXTRACTED]
+- [[dot-Start()_15]] - `calls` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_44

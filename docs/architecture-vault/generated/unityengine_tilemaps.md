@@ -24,6 +24,7 @@ tags:
 - [[SantaRitaRuaNorte.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaWorldLighting.cs]] - `imports` [EXTRACTED]
 - [[TileAleatorio.cs]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

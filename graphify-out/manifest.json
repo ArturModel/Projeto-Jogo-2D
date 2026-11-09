@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs": {
-    "mtime": 1794071231.8032882,
-    "seen": 1794172093.1462693,
-    "ast_hash": "93a15db7ae77fa4100d84f83f0407db8",
+    "mtime": 1794226241.9728312,
+    "seen": 1794266415.663675,
+    "ast_hash": "3fac28fedb73d0508d76cecaaaaa15ab",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs": {
@@ -30,10 +30,10 @@
     "semantic_hash": "abc1eaf88d433f8eb4e68b5105264c03"
   },
   "Projeto Jogo 2D/Assets/Scripts/CameraFollow.cs": {
-    "mtime": 1793983217.879463,
-    "seen": 1794172093.1462772,
-    "ast_hash": "eb0d47df31a08d93d412598ba988f0ca",
-    "semantic_hash": "eb0d47df31a08d93d412598ba988f0ca"
+    "mtime": 1794246504.6506863,
+    "seen": 1794266415.6636865,
+    "ast_hash": "cd3d3b05c63443b9ef6120c597256b71",
+    "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/CelularCarro.cs": {
     "mtime": 1793983217.9688416,
@@ -48,15 +48,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs": {
-    "mtime": 1793983217.973598,
-    "seen": 1794172093.146362,
-    "ast_hash": "4b3950114491cb90c664d265974e201b",
+    "mtime": 1794180214.4838521,
+    "seen": 1794266415.6637764,
+    "ast_hash": "bd1a649a3d684a7268efe8ad4131ebd3",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Chuva.cs": {
-    "mtime": 1794170934.380875,
-    "seen": 1794172093.1463645,
-    "ast_hash": "da951fac851ae5de73b14b0ef36de7fc",
+    "mtime": 1794225357.8948393,
+    "seen": 1794266415.6637785,
+    "ast_hash": "d1d69b7274c5ee40e44c47d2d2683c90",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs": {
@@ -96,15 +96,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Interactable.cs": {
-    "mtime": 1793983217.9863415,
-    "seen": 1794172093.1463885,
-    "ast_hash": "86d8df8bda4ffd17c088888b7ce9d433",
+    "mtime": 1794180697.3538659,
+    "seen": 1794266415.6638029,
+    "ast_hash": "e53049fefdcd5096ec3da95a180a5e15",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs": {
-    "mtime": 1793983217.988456,
-    "seen": 1794172093.1463907,
-    "ast_hash": "46265857b78ff00a4deb5ea403c30ffa",
+    "mtime": 1794266359.2199156,
+    "seen": 1794266415.663805,
+    "ast_hash": "c63ac523acea44f1e5519c027660d8df",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs": {
@@ -114,10 +114,10 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Legenda.cs": {
-    "mtime": 1793983217.9905403,
-    "seen": 1794172093.146396,
-    "ast_hash": "2c31ffd83f21521d0cfbed49d20db579",
-    "semantic_hash": "2c31ffd83f21521d0cfbed49d20db579"
+    "mtime": 1794245814.0711994,
+    "seen": 1794266415.663809,
+    "ast_hash": "fad445c3871ba8e685e19a2197d52d03",
+    "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/LimpadorParabrisa.cs": {
     "mtime": 1793983217.991528,
@@ -150,9 +150,9 @@
     "semantic_hash": "943beecc2a09bcd5e0ffc48a4f9b80ad"
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs": {
-    "mtime": 1794060879.432549,
-    "seen": 1794172093.146425,
-    "ast_hash": "f3c13c5e5e3b1b1b524c1ebb7935b73f",
+    "mtime": 1794192202.268571,
+    "seen": 1794266415.6638386,
+    "ast_hash": "f2890c588576b0bb28e00b3683ada323",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/ObjetoCarro.cs": {
@@ -174,15 +174,15 @@
     "semantic_hash": "7bbec983ccb92c5c96431ec89e18af77"
   },
   "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs": {
-    "mtime": 1794059923.6374016,
-    "seen": 1794172093.1464388,
-    "ast_hash": "3f96954f6592a848f0395cd227bf7427",
+    "mtime": 1794266288.3847394,
+    "seen": 1794266415.6638522,
+    "ast_hash": "c40568b4dd258a1d7a5b376ec6210297",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs": {
-    "mtime": 1793983218.0163958,
-    "seen": 1794172093.1464438,
-    "ast_hash": "c3bf40a6f01e8e8f4862dd6f06c2f3df",
+    "mtime": 1794265716.6518466,
+    "seen": 1794266415.663859,
+    "ast_hash": "ea38423e46cee3484f47f81f5559006c",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs": {
@@ -216,21 +216,21 @@
     "semantic_hash": "829cd5e24da256df9abbc5907e6cd72a"
   },
   "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs": {
-    "mtime": 1794062739.6613395,
-    "seen": 1794172093.146521,
-    "ast_hash": "32cbe97d22abe201eed59a540e839aa6",
+    "mtime": 1794243164.2180386,
+    "seen": 1794266415.6639636,
+    "ast_hash": "96b0c622c4b8612dd864a18c41e3242b",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SceneTransition.cs": {
-    "mtime": 1793983218.0509276,
-    "seen": 1794172093.1465235,
-    "ast_hash": "709c60ba774a6a97e05c48ddea5544e7",
+    "mtime": 1794243646.0742,
+    "seen": 1794266415.6639657,
+    "ast_hash": "9ecd1c67f1f21acb9ab401c8ae65a9b5",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs": {
-    "mtime": 1794072017.646031,
-    "seen": 1794172093.1465366,
-    "ast_hash": "c25fcd19fb06d8f105c4797877e06733",
+    "mtime": 1794245753.7860563,
+    "seen": 1794266415.6639786,
+    "ast_hash": "296451839871e22ec33ecd5a7ec097b6",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs": {
@@ -252,10 +252,10 @@
     "semantic_hash": "5343115f898fb130322cd29e162c223e"
   },
   "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs": {
-    "mtime": 1793983218.0644984,
-    "seen": 1794172093.1465826,
-    "ast_hash": "b3cd150ec67f9f835851526a9b0d52ba",
-    "semantic_hash": "b3cd150ec67f9f835851526a9b0d52ba"
+    "mtime": 1794192202.2624943,
+    "seen": 1794266415.6640253,
+    "ast_hash": "7c55b638c692721bddb1d826a96351d4",
+    "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs": {
     "mtime": 1793983218.065529,
@@ -384,9 +384,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs": {
-    "mtime": 1794171784.9557211,
-    "seen": 1794172093.1462796,
-    "ast_hash": "ae0dc80c084b57160887b991b89229bd",
+    "mtime": 1794245753.790515,
+    "seen": 1794266415.6636884,
+    "ast_hash": "d393bc92afb134300ed16f51c491575b",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs": {
@@ -396,15 +396,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs": {
-    "mtime": 1794062741.2155745,
-    "seen": 1794172093.1462922,
-    "ast_hash": "4e958b60afdca4255e0ec565385451cf",
+    "mtime": 1794241986.535646,
+    "seen": 1794266415.6637013,
+    "ast_hash": "51c7eafb49afca4ef4b63a66a31857d9",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs": {
-    "mtime": 1794071253.97568,
-    "seen": 1794172093.1462996,
-    "ast_hash": "e9637217805ede79844b95080beb1773",
+    "mtime": 1794266359.0722394,
+    "seen": 1794266415.663708,
+    "ast_hash": "7c5b879379a6585e9b07ecdcd72e5a1b",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs": {
@@ -438,9 +438,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs": {
-    "mtime": 1794062740.447174,
-    "seen": 1794172093.146321,
-    "ast_hash": "b1c7255df0fddfe180838ae82c2e04c2",
+    "mtime": 1794266359.137046,
+    "seen": 1794266415.6637268,
+    "ast_hash": "8d2f77b1c46ac6596c96bcce5a9bddc3",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs": {
@@ -450,9 +450,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs": {
-    "mtime": 1793983217.9357316,
-    "seen": 1794172093.1463258,
-    "ast_hash": "4ee304870c6fd9ff14c978afb6c67210",
+    "mtime": 1794266359.1808226,
+    "seen": 1794266415.663733,
+    "ast_hash": "43d7fb191f71a16ba9620fe7dd2abee9",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Perception.cs": {
@@ -474,9 +474,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs": {
-    "mtime": 1794071253.977745,
-    "seen": 1794172093.1463346,
-    "ast_hash": "96037f4b234b05222aafbd074e1d7de5",
+    "mtime": 1794193974.4928768,
+    "seen": 1794266415.663751,
+    "ast_hash": "af23aa2fd5dcfaefff76db7c4d8adb5b",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/InteriorAccessRuntimeVerification.cs": {
@@ -492,14 +492,14 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs": {
-    "mtime": 1794060878.9840128,
-    "seen": 1794172093.1463864,
-    "ast_hash": "d7e1408cb932a7894e2c95fd25836a62",
+    "mtime": 1794245814.073672,
+    "seen": 1794266415.6638012,
+    "ast_hash": "e5688739ee9daee19eef1c496c9d1713",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MarcusGait.cs": {
-    "mtime": 1793983217.9951873,
-    "seen": 1794172093.1464055,
+    "mtime": 1794174736.8217795,
+    "seen": 1794266415.6638205,
     "ast_hash": "ef6bfd3c8b33652186b3648c4126485b",
     "semantic_hash": ""
   },
@@ -510,9 +510,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs": {
-    "mtime": 1794171784.9908447,
-    "seen": 1794172093.1464727,
-    "ast_hash": "f95d04836dbc26e6c78888f22c939384",
+    "mtime": 1794180214.4790907,
+    "seen": 1794266415.6638966,
+    "ast_hash": "3ae11981cc46daf23ef54e4ea5a63e2b",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs": {
@@ -528,9 +528,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs": {
-    "mtime": 1794170934.380875,
-    "seen": 1794172093.1464837,
-    "ast_hash": "808830dee165d736ae8c7ec3b3ea4285",
+    "mtime": 1794226285.85979,
+    "seen": 1794266415.6639097,
+    "ast_hash": "73af42118787476e8c66b6a87610dfa2",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaForeground.cs": {
@@ -558,15 +558,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs": {
-    "mtime": 1793983218.040985,
-    "seen": 1794172093.1465,
-    "ast_hash": "1e5668b09b68f368c73d70eb44032ee4",
+    "mtime": 1794243134.3967936,
+    "seen": 1794266415.6639297,
+    "ast_hash": "3d836dad9932f080c90f3072f74d0181",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaRimLight.cs": {
-    "mtime": 1794171785.0114388,
-    "seen": 1794172093.1465025,
-    "ast_hash": "f7f7d799111405962878c6b3adea773e",
+    "mtime": 1794180214.4806788,
+    "seen": 1794266415.6639316,
+    "ast_hash": "f1d99e9390d4f120ba2c6421ef0364df",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs": {
@@ -588,15 +588,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs": {
-    "mtime": 1794059923.6307461,
-    "seen": 1794172093.1465137,
-    "ast_hash": "c45949b1219d9927cea997528f9e0e24",
+    "mtime": 1794194193.144244,
+    "seen": 1794266415.6639574,
+    "ast_hash": "3bf22b64667f9243657b97fb0f45abb2",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs": {
-    "mtime": 1793983218.0473351,
-    "seen": 1794172093.1465187,
-    "ast_hash": "c0bc7f0627058cc97e7e4bd44706e93d",
+    "mtime": 1794248493.9625504,
+    "seen": 1794266415.6639616,
+    "ast_hash": "8e317f328fd2e1a2376f63462a0ff99a",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs": {
@@ -750,9 +750,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs": {
-    "mtime": 1794018118.7771072,
-    "seen": 1794172093.1465676,
-    "ast_hash": "c2a3032190a623351c0d49781f85443d",
+    "mtime": 1794241986.53313,
+    "seen": 1794266415.6640122,
+    "ast_hash": "bc616e9a4ba793d31acbe9ea6bb47113",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BarSinucaR4RuntimeVerification.cs": {
@@ -762,15 +762,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs": {
-    "mtime": 1794060779.0927439,
-    "seen": 1794172093.146477,
-    "ast_hash": "f30145f4eb60c7ffcc6632569f00d3aa",
+    "mtime": 1794174364.39245,
+    "seen": 1794266415.663901,
+    "ast_hash": "bc1da4fbb66b6d9180af603799be63bc",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs": {
-    "mtime": 1793983218.0364532,
-    "seen": 1794172093.146491,
-    "ast_hash": "72d0aa1ff8b9f32ae0f05bcc073a28f3",
+    "mtime": 1794192202.2711306,
+    "seen": 1794266415.6639204,
+    "ast_hash": "d34043b15bd39d6084ac27b98a9c9d9c",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs": {
@@ -810,15 +810,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs": {
-    "mtime": 1794019086.0346577,
-    "seen": 1794172093.1465435,
-    "ast_hash": "d6fd405d6ea1d7f19d44b9d28a35cfbc",
+    "mtime": 1794229588.8181365,
+    "seen": 1794266415.6639853,
+    "ast_hash": "b9a1b55dc9ae0a7011984b32147f56f0",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs": {
-    "mtime": 1794061166.9478805,
-    "seen": 1794172093.1465561,
-    "ast_hash": "8cf3fdc994e6d217e7bd6929c0323cae",
+    "mtime": 1794242656.5199065,
+    "seen": 1794266415.664,
+    "ast_hash": "b262402a9be12aad8fba81c4242c65fa",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs": {
@@ -828,9 +828,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs": {
-    "mtime": 1794072295.597522,
-    "seen": 1794172093.146561,
-    "ast_hash": "00eeac96270e825c4d9419a5fb729886",
+    "mtime": 1794242151.3840938,
+    "seen": 1794266415.664005,
+    "ast_hash": "0f9ed418fc2c99f65cdb2b8b5477848b",
     "semantic_hash": ""
   },
   "Tools/Aseprite/bar-identidade-2d.lua": {
@@ -852,9 +852,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/AudioC2RuntimeVerification.cs": {
-    "mtime": 1794060111.2460718,
-    "seen": 1794172093.1462843,
-    "ast_hash": "7a32868753311bdee78d4c75e3522081",
+    "mtime": 1794248659.329215,
+    "seen": 1794266415.663694,
+    "ast_hash": "5a13c276565bc4ec40da54fb9c9bb651",
     "semantic_hash": ""
   },
   "Tools/Aseprite/bar-patrons.lua": {
@@ -864,9 +864,9 @@
     "semantic_hash": ""
   },
   "Tools/Aseprite/Export-Marcus.ps1": {
-    "mtime": 1793983219.0080304,
-    "seen": 1794172093.146591,
-    "ast_hash": "ad964ebbc4303d96e35d76c906f99646",
+    "mtime": 1794248110.5257435,
+    "seen": 1794266415.6640322,
+    "ast_hash": "fbb37a9f76224bbf00c369f4280d1a05",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs": {
@@ -876,21 +876,21 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs": {
-    "mtime": 1793983218.0207899,
-    "seen": 1794172093.146453,
-    "ast_hash": "7fcf2c2b7252e86d607589339179d251",
+    "mtime": 1794195533.9336946,
+    "seen": 1794266415.663879,
+    "ast_hash": "92cc2df6c41a3719fb3025bfe8e3ec2e",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs": {
-    "mtime": 1793983218.0207899,
-    "seen": 1794172093.1464553,
-    "ast_hash": "24c3564b2bf2de9dc806b4a7751fa9b9",
+    "mtime": 1794195344.9763875,
+    "seen": 1794266415.663881,
+    "ast_hash": "6017fcd376659e60e624532b447aae8c",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs": {
-    "mtime": 1793983218.023306,
-    "seen": 1794172093.1464581,
-    "ast_hash": "3826e1c68c694a47e304f348c8be05b1",
+    "mtime": 1794195118.5857646,
+    "seen": 1794266415.663883,
+    "ast_hash": "73ee159fa73239538fda55823a293e54",
     "semantic_hash": ""
   },
   "Tools/Audio/prepare-prologo-loops.py": {
@@ -900,27 +900,27 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs": {
-    "mtime": 1793983216.8440483,
-    "seen": 1794172093.1462197,
-    "ast_hash": "0e644a9ff74cf40133aa2d769b7d9c3c",
+    "mtime": 1794191908.628178,
+    "seen": 1794266415.663629,
+    "ast_hash": "d68ac4d90ebdade1af3fa17bf0eaf770",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs": {
-    "mtime": 1793983269.6879828,
-    "seen": 1794172093.1464128,
-    "ast_hash": "6efed74fcf538a060d49875694fa750e",
+    "mtime": 1794192202.2721276,
+    "seen": 1794266415.6638277,
+    "ast_hash": "242b03defc627f1168d32a9b21ebeffb",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs": {
-    "mtime": 1793983218.0019436,
-    "seen": 1794172093.146415,
-    "ast_hash": "bfe1523f954831608be186d050b26da3",
+    "mtime": 1794192720.7675755,
+    "seen": 1794266415.66383,
+    "ast_hash": "b8b6d7f259c9a7473bc02ed1ba19443d",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteRuntimeQA.cs": {
-    "mtime": 1793983218.0019436,
-    "seen": 1794172093.146418,
-    "ast_hash": "01faf731c10382f955968d002172996b",
+    "mtime": 1794192458.432658,
+    "seen": 1794266415.663832,
+    "ast_hash": "290f662b54d361048f1547d742b0619b",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs": {
@@ -972,9 +972,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs": {
-    "mtime": 1793983217.9980023,
-    "seen": 1794172093.1464105,
-    "ast_hash": "21b640686ac2a4783ad903d23096604b",
+    "mtime": 1794192202.2663724,
+    "seen": 1794266415.6638248,
+    "ast_hash": "5fb3831ca7607c3e62d5e60a371d1ed2",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtlas.cs": {
@@ -1086,9 +1086,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs": {
-    "mtime": 1794062977.5383172,
-    "seen": 1794172093.1463099,
-    "ast_hash": "fca23a8e58754110b240a233e58d0dcc",
+    "mtime": 1794241986.5351336,
+    "seen": 1794266415.6637166,
+    "ast_hash": "3fc7ffa66d935b72c973f1d0abb97fcc",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/Capitulo2/SantaRitaBochaAmbiente.cs": {
@@ -1104,9 +1104,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs": {
-    "mtime": 1794060208.9441228,
-    "seen": 1794172093.1464274,
-    "ast_hash": "88e467d123af604cf814921068ab2142",
+    "mtime": 1794246059.634165,
+    "seen": 1794266415.663841,
+    "ast_hash": "d8ae7f32d8a7ed11072b4bf1479e15ed",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/MinigamePerceptionAudio.cs": {
@@ -1122,9 +1122,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs": {
-    "mtime": 1794173335.7506533,
-    "seen": 1794173522.2418513,
-    "ast_hash": "beacba263321568b26ded06d22e3f71f",
+    "mtime": 1794249802.2479162,
+    "seen": 1794266415.663952,
+    "ast_hash": "839584c64cdfcaf759baaec8492dd045",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Console.cs": {
@@ -1164,15 +1164,15 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Decoration.cs": {
-    "mtime": 1794019699.6272302,
-    "seen": 1794172093.1465456,
-    "ast_hash": "0b4a42e96887b89731680af50492ab88",
+    "mtime": 1794245814.0390031,
+    "seen": 1794266415.663989,
+    "ast_hash": "ff64b744bad45dae85f5708c5bb679f6",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Furnishings.cs": {
-    "mtime": 1794019951.9615161,
-    "seen": 1794172093.1465478,
-    "ast_hash": "1e79d5bbc6334c4f0b9c46fccda3e18e",
+    "mtime": 1794174364.3949142,
+    "seen": 1794266415.6639912,
+    "ast_hash": "fd12e455cda2660db34a4b7dff07a32f",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Opponent.cs": {
@@ -1188,9 +1188,9 @@
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Salon.cs": {
-    "mtime": 1794073256.6017737,
-    "seen": 1794172093.1465538,
-    "ast_hash": "bf4bf8e63a2d6805671d31dec8789a8c",
+    "mtime": 1794242557.1706383,
+    "seen": 1794266415.663998,
+    "ast_hash": "b8c4a10277db1f3b18eedfbe82aa6705",
     "semantic_hash": ""
   },
   "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D_Perception.cs": {
@@ -1251,6 +1251,168 @@
     "mtime": 1794063323.349188,
     "seen": 1794172093.146713,
     "ast_hash": "112454df4511eefee9718fe611a749fb",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/BarDoZe3D.cs": {
+    "mtime": 1794245753.7931795,
+    "seen": 1794266415.6636782,
+    "ast_hash": "da4baa6cb4cb0ce9eea55dfcc37cf64f",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Exterior.cs": {
+    "mtime": 1794266358.8566835,
+    "seen": 1794266415.663729,
+    "ast_hash": "1988a5f0719f5bf321696950bbc255d8",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interior3D.Civicos.cs": {
+    "mtime": 1794266358.8731327,
+    "seen": 1794266415.6637347,
+    "ast_hash": "d053322f9790c5d09c0ddd8c76523716",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interior3D.Salas.cs": {
+    "mtime": 1794266358.879882,
+    "seen": 1794266415.663737,
+    "ast_hash": "14986d8c54b732ca336090a5e47744a5",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interior3D.Sociedade.cs": {
+    "mtime": 1794266358.8864324,
+    "seen": 1794266415.6637397,
+    "ast_hash": "84661e62fca3d1c76d48257b3fbd1527",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interior3D.cs": {
+    "mtime": 1794266358.8643298,
+    "seen": 1794266415.663742,
+    "ast_hash": "a0f983456e15fed214faf63f739da7e0",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/ExteriorInterior3D.cs": {
+    "mtime": 1794242557.171654,
+    "seen": 1794266415.6637948,
+    "ast_hash": "04843ebd6956447234124abbb5aa7d2d",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/LuzInstavel.cs": {
+    "mtime": 1794235132.4937198,
+    "seen": 1794266415.663813,
+    "ast_hash": "db384907ecffbb6d09c4ac18f5f0232f",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/PayphoneJogoUI.cs": {
+    "mtime": 1794266820.711645,
+    "seen": 1794266885.262934,
+    "ast_hash": "add580b7cc53aa15dc6c62151ab740aa",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Posto3D.CasaDoAvo.cs": {
+    "mtime": 1794249802.2505066,
+    "seen": 1794266415.6638658,
+    "ast_hash": "ce5c35f3a05f6ed73390272c0f5c96bb",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Posto3D.Cenario.cs": {
+    "mtime": 1794244619.4432886,
+    "seen": 1794266415.663868,
+    "ast_hash": "68b153bed3175286556a0bb3c4d4e512",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Posto3D.Detalhes.cs": {
+    "mtime": 1794194193.1427336,
+    "seen": 1794266415.66387,
+    "ast_hash": "68efdcec482ce847d03199b14d32e8c3",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Posto3D.Mercadinho.cs": {
+    "mtime": 1794244641.9085357,
+    "seen": 1794266415.6638725,
+    "ast_hash": "f2d3592321c8420724f9464015f703b9",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/Posto3D.cs": {
+    "mtime": 1794245753.7931795,
+    "seen": 1794266415.6638744,
+    "ast_hash": "6908d72c3d7170a7b985445173a3d2e4",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaFalasEntrada.cs": {
+    "mtime": 1794266359.273396,
+    "seen": 1794266415.6639073,
+    "ast_hash": "5d6556be7ddee66fc1fed2cb071ab2b4",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaInspecao.cs": {
+    "mtime": 1794266359.327487,
+    "seen": 1794266415.6639163,
+    "ast_hash": "09911d68adb234f9872a92c86649b3a9",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaInteriorAudio.cs": {
+    "mtime": 1794194193.1407068,
+    "seen": 1794266415.6639185,
+    "ast_hash": "8ae15820264b007f9adfeb2a3c2e41d5",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bairro.cs": {
+    "mtime": 1794245753.7926521,
+    "seen": 1794266415.663938,
+    "ast_hash": "b8527e809b02e2c7c2a18370ada4b551",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Bar.cs": {
+    "mtime": 1794244619.4412823,
+    "seen": 1794266415.6639402,
+    "ast_hash": "635d490b443acba235d0ed0a3f77628c",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Chegada.cs": {
+    "mtime": 1794242636.409497,
+    "seen": 1794266415.663942,
+    "ast_hash": "cbe29c330b77b0812615b759de606ae8",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Mercadinho.cs": {
+    "mtime": 1794234915.9195642,
+    "seen": 1794266415.6639442,
+    "ast_hash": "b998735287376dc21bd1ac6ba902f739",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Posto.cs": {
+    "mtime": 1794245753.7920828,
+    "seen": 1794266415.6639462,
+    "ast_hash": "ec9d720f0e730664a8443ba010b843e3",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Sombras.cs": {
+    "mtime": 1794249700.6099615,
+    "seen": 1794266415.663948,
+    "ast_hash": "081a862c82a8e74cb0bfebba339ac1bf",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.Vegetacao.cs": {
+    "mtime": 1794230415.5816405,
+    "seen": 1794266415.66395,
+    "ast_hash": "08547b5812b402f79a8e5104cbea48f3",
+    "semantic_hash": ""
+  },
+  "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Bar.cs": {
+    "mtime": 1794245753.794625,
+    "seen": 1794266415.6639872,
+    "ast_hash": "8de33328c065239b1f2acf696a5f3c64",
+    "semantic_hash": ""
+  },
+  "Tools/Aseprite/gerar-marcus-lanterna.py": {
+    "mtime": 1794249554.2912169,
+    "seen": 1794266415.6640718,
+    "ast_hash": "e0b4989de644a82193043580a3c1a96a",
+    "semantic_hash": ""
+  },
+  "Tools/Bake-SpriteSurfaces.py": {
+    "mtime": 1794229646.7709043,
+    "seen": 1794266415.6641395,
+    "ast_hash": "7e4c639f3d9e03da9ebc384229fe0ee1",
     "semantic_hash": ""
   }
 }

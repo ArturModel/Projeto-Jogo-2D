@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-MudarVista()]] - `calls` [EXTRACTED]
 - [[dot-PodeMirar()]] - `calls` [EXTRACTED]
-- [[dot-RespostaAbafada()_1]] - `calls` [EXTRACTED]
+- [[dot-RespostaAbafada()]] - `calls` [EXTRACTED]
 - [[dot-TocarFoley()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 

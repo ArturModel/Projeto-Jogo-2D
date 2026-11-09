@@ -1,26 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 28"
-location: "L292"
+community: "Community 137"
+location: "L569"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_28
+  - graphify/INFERRED
+  - community/Community_137
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-CancelOpponentShot()]] - `calls` [INFERRED]
-- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[dot-IntegratedFrameR4()]] - `calls` [INFERRED]
-- [[dot-LimparFalaZe()]] - `calls` [EXTRACTED]
-- [[dot-MostrarHudDaEntrada()]] - `calls` [EXTRACTED]
-- [[dot-ReiniciarPercepcoesSinuca()]] - `calls` [INFERRED]
-- [[dot-RestaurarCursor()]] - `calls` [EXTRACTED]
-- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-FecharSeAberto()]] - `calls` [EXTRACTED]
+- [[dot-Hide()]] - `calls` [INFERRED]
+- [[dot-Run()_6]] - `calls` [INFERRED]
+- [[dot-RunAtlas()]] - `calls` [INFERRED]
+- [[dot-RunNotebook()]] - `calls` [INFERRED]
+- [[dot-Travel()]] - `calls` [INFERRED]
+- [[dot-Update()_28]] - `calls` [EXTRACTED]
+- [[MapaInterativoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/INFERRED #community/Community_137

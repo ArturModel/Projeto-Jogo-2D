@@ -12,7 +12,7 @@ tags:
 # graphify-refresh.sh
 
 ## Connections
-- [[PATH]] - `defines` [EXTRACTED]
+- [[PATH_1]] - `defines` [EXTRACTED]
 - [[graphify-refresh.sh script]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_64

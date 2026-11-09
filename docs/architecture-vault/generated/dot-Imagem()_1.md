@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 33"
-location: "L144"
+community: "Community 98"
+location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_33
+  - community/Community_98
 ---
 
 # .Imagem()
 
 ## Connections
-- [[dot-Construir()_2]] - `calls` [EXTRACTED]
-- [[dot-Rect()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_6]] - `calls` [EXTRACTED]
+- [[dot-Rect()_1]] - `calls` [EXTRACTED]
 - [[PrologoJogavel]] - `method` [EXTRACTED]
 - [[RawImage]] - `references` [EXTRACTED]
 - [[Rect]] - `references` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_33
+#graphify/code #graphify/EXTRACTED #community/Community_98

@@ -12,7 +12,7 @@ tags:
 # .Wall()
 
 ## Connections
-- [[dot-Box()_1]] - `calls` [EXTRACTED]
+- [[dot-Box()_2]] - `calls` [EXTRACTED]
 - [[dot-Interior()_2]] - `calls` [EXTRACTED]
 - [[dot-Solid()_1]] - `calls` [EXTRACTED]
 - [[dot-Walls()_1]] - `calls` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # .ImpactoReal()
 
 ## Connections
-- [[dot-RespostaAbafada()_1]] - `calls` [EXTRACTED]
+- [[dot-RespostaAbafada()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

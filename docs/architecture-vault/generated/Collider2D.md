@@ -12,11 +12,11 @@ tags:
 
 ## Connections
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
-- [[dot-Atualizar()_2]] - `references` [EXTRACTED]
+- [[dot-Atualizar()_3]] - `references` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `references` [EXTRACTED]
-- [[dot-Awake()_26]] - `references` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()]] - `references` [EXTRACTED]
+- [[dot-Awake()_27]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()_2]] - `references` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()]] - `references` [EXTRACTED]
 - [[dot-OnTriggerEnter2D()_1]] - `references` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]

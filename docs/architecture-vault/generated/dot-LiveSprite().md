@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
 community: "Community 113"
-location: "L115"
+location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED

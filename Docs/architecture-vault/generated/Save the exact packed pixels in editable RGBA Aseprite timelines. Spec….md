@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/save-patrons-aseprite.py"
 type: "rationale"
-community: "Community 32"
+community: "Community 142"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_142
 ---
 
 # Save the exact packed pixels in editable RGBA Aseprite timelines. Spec:…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save-patrons-aseprite.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_32
+#graphify/rationale #graphify/EXTRACTED #community/Community_142

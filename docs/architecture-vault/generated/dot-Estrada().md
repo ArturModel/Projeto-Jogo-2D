@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
 community: "Community 46"
-location: "L59"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,16 +12,12 @@ tags:
 # .Estrada()
 
 ## Connections
-- [[dot-Cenario()]] - `calls` [EXTRACTED]
-- [[dot-Chao()]] - `calls` [EXTRACTED]
-- [[dot-Cor()]] - `calls` [EXTRACTED]
-- [[dot-Disco()]] - `calls` [EXTRACTED]
-- [[dot-Faixa()]] - `calls` [EXTRACTED]
-- [[dot-Linha()]] - `calls` [EXTRACTED]
-- [[dot-OnPopulateMesh()_3]] - `calls` [EXTRACTED]
-- [[dot-Projetar()]] - `calls` [EXTRACTED]
-- [[dot-Ruido()]] - `calls` [EXTRACTED]
-- [[dot-TerraEm()]] - `calls` [EXTRACTED]
+- [[dot-DesenharMarcos()]] - `calls` [EXTRACTED]
+- [[dot-DesenharSombras()]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
+- [[dot-PrepararCenarioRural()]] - `calls` [EXTRACTED]
+- [[dot-Projetar()_1]] - `calls` [EXTRACTED]
+- [[dot-QuadTextura()]] - `calls` [EXTRACTED]
 - [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_46

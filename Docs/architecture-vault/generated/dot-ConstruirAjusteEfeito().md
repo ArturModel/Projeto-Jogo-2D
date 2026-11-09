@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-ConstruirUI()_1]] - `calls` [INFERRED]
 - [[dot-CriarPainelHUD()]] - `calls` [INFERRED]
-- [[dot-CriarTexto()_2]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_5]] - `calls` [EXTRACTED]
+- [[dot-CriarTexto()_3]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
 - [[Graphic]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]

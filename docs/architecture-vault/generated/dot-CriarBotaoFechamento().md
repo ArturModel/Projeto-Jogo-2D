@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 85"
-location: "L2631"
+location: "L2520"
 tags:
   - graphify/code
   - graphify/EXTRACTED

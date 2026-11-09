@@ -18,7 +18,7 @@ tags:
 - [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
 - [[dot-ResetarZoomEPan()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Update()_29]] - `calls` [EXTRACTED]
+- [[dot-Update()_28]] - `calls` [EXTRACTED]
 - [[Canvas]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 

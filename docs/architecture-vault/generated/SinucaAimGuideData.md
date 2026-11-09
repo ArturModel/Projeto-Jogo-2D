@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarEstadoRender()]] - `references` [EXTRACTED]
 - [[dot-CalcularGuiaDeMira()]] - `references` [EXTRACTED]
 - [[dot-SincronizarMesa3D()]] - `calls` [INFERRED]
-- [[dot-Sync()]] - `references` [EXTRACTED]
+- [[dot-Sync()_2]] - `references` [EXTRACTED]
 - [[SinucaTableView.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

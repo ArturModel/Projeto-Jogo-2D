@@ -37,8 +37,13 @@ public sealed class BochaCourtView : RawImage, IPointerDownHandler, IDragHandler
     protected override void OnEnable()
     {
         base.OnEnable();worldCamera=Camera.main;
-        if(worldCamera!=null){worldMask=worldCamera.cullingMask;worldCamera.cullingMask=0;}
-        EnsureRoom();Room.SetActive(true);
+        EnsureRoom();
+        if (worldCamera != null)
+        {
+            worldMask = worldCamera.cullingMask;
+            worldCamera.cullingMask = 0;
+        }
+        Room.SetActive(true);
     }
     protected override void OnDisable()
     {

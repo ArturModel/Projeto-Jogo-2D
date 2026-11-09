@@ -12,9 +12,9 @@ Este registro substitui os resumos da branch que analisavam apenas C1. O progres
 - Ambientes recompostos por função. Marcus ancora escala/acabamento. Tiles, materiais, fachadas, flora, decalques e luz local; fontes Aseprite e procedência em `ASSET_SOURCES.csv`. Meta visual permanece sujeita ao autor.
 - Sociedade: salão e cancha horizontal na mesma cena, três degraus rasos, projeção de profundidade dos atores (15 px/escala até 90%), paredes/forro com recorte por aproximação, luz própria, bancos nas duas laterais e saibro 19 × 5,5.
 - Bocha: apresentação em perspectiva, minimapa, consulta geral, Ponto/Rafa/Volo, força oscilante segurando clique e lançamento ao soltar, linha de mira ajustada ao mouse, rastros, colisões/rebotes de cabeceira inclusive balim; mecânica da água removida.
-- Movimento e passos sincronizados no apoio. Lanterna manual F com poses, luz e preferência no snapshot. Músicas do autor preservadas, loops/atenuação por contexto e efeitos ligados a eventos.
+- Movimento e passos sincronizados no apoio. Lanterna manual F com folha direcional V20 (`MarcusLanterna.png` 576×256 com braço da lanterna fixo e lanterna compacta), cone volumétrico em 32 PPU, dispersão na neblina (`Nevoeiro.shader` / `LuzVolumetrica.shader`) e preferência no snapshot. Músicas do autor preservadas, loops/atenuação por contexto e efeitos ligados a eventos.
 - Saídas com soleira/capacho e ação Sair; portas C2 por E sem cooldown global manual, com bloqueio durante fade/leitura e antirretorno apenas em passagens automáticas.
-- GameState em RAM; salvar só no orelhão. Carga com escolha explícita de slot, inclusive após derrota em Sinuca/Bocha. Compatibilidade de saves anteriores preservada.
+- GameState em RAM; salvar só no orelhão. Apresentação do orelhão in-game reformulada como painel diegético de aço escovado com visor LCD verde-fósforo, cartão telefônico indutivo e matriz metálica 3x2. Carga com escolha explícita de slot, inclusive após derrota em Sinuca/Bocha. Compatibilidade de saves anteriores preservada.
 
 ## Evidências históricas, não testes novos desta integração
 
@@ -229,3 +229,34 @@ A zona inicial de EntradaDaCidade usa a família visual da Rua Norte. Cinco spri
 09/11/2026 — Caminhada e corrida de exploração em 2D e 3D. Shift aumenta a velocidade em 25%, com aceleração e frenagem graduais. E deixou de interromper o movimento sem diálogo ou interface modal. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_corrida-e-controles.md).
 
 09/11/2026 — O prólogo termina no recuo asfaltado da Rodovia, com a placa de Santa Rita e os postes nas mesmas posições. Chuva, névoa e sombras foram reforçadas. [Plano](../ai-plans/2026-11-09_BBCONTTI_prologo-rodovia.md).
+
+09/11/2026 — A Rodovia de Entrada usa muros, parada, defensas, vegetação, postes e fiação em módulos separados. Iluminação direcional, volumes de sombra e reflexos são locais à cena. A decoração geral respeita os materiais e a ordenação dessa composição. [Plano](../ai-plans/2026-11-09_BBCONTTI_rodovia-modular.md).
+
+09/11/2026 — Folha modular de seis detalhes da Rodovia preservada como arte-fonte para a próxima montagem. [Plano e procedência](../ai-plans/2026-11-09_BBCONTTI_folha-detalhes-rodovia.md).
+
+09/11/2026 — Posto e venda receberam detalhes modulares e reflexos localizados. Caixas e postes de fiação do passeio norte foram removidos. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_composicao-posto.md).
+
+09/11/2026 — Encruzilhada recebeu faixa no eixo da porta, subida de terra com módulos próprios e vala de drenagem no limite leste. Árvores com perfis separados de folhas e troncos foram integradas à Rodovia, ao Posto e à Encruzilhada. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_mercadinho-subida-vegetacao.md).
+
+09/11/2026 — Margens sul ganharam copas jovens, submata e chão de mata. Albedos normalizados por espécie e transmissão quente nas folhas. [Plano e capturas](../ai-plans/2026-11-09_BBCONTTI_submata-margens.md).
+
+09/11/2026 — A árvore caída substituiu a vala no limite leste da Encruzilhada. As três zonas receberam copas de fundo, com atenção à subida ao Bairro e ao fundo do Mercadinho. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_bloqueio-fundo-mata.md).
+09/11/2026 — O Bairro das Casas ganhou composição modular em cinco trechos de barro, quatro balizas reaproveitadas e mata contínua com bordas abertas nas saídas. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_bairro-estrada-mata.md).
+09/11/2026 — O Bairro recebeu 81 árvores adicionais e quatro postes residenciais. A mata tem menos luz ambiente e preserva os pontos quentes perto das lâmpadas. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_bairro-mata-densa-postes.md).
+09/11/2026 — Nova implantação do Bairro com estrada sinuosa, ramais residenciais, pátios próprios e mata recortada pelas vias. O interior nº 40 ganhou um eixo livre de circulação. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_reimplantar-bairro-casa.md).
+
+09/11/2026 — Os cinco interiores em perspectiva receberam vistas 3D pelos vãos reais. Rua, varanda e jardim têm profundidade, sprites voltados à câmera, chuva e luz dos postes com névoa. A porta da Bocha mostra o salão. [Plano e evidências](../ai-plans/2026-11-09_BBCONTTI_exteriores-em-perspectiva.md).
+
+09/11/2026 — As janelas do Bar do Zé passaram para a parede da porta e veem a mesma Rua Norte 3D. Quadro e chapeleira ficam nas laterais. [Plano e capturas](../ai-plans/2026-11-09_BBCONTTI_janelas-fachada-bar.md).
+
+
+09/11/2026 — Rua Norte do Bar do Zé recomposta com recuo, mesas, abrigo, orelhão separado e mata nas duas margens. A curva termina num portão de arte própria entre muros, ligado à subida do Centro. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_rua-norte-bar-e-portao.md).
+
+09/11/2026 — Saída 3D do Bar do Zé com mão na maçaneta interna, abertura, passo pela soleira e névoa contínua até a Rua Norte. A cena separada usa o mesmo fluxo. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_saida-animada-bar.md).
+
+09/11/2026 — Inspeções de C1 usam foco de câmera no cenário, leitura digitada e áudio de papel. Orelhões físicos usam a mesma aproximação com visor e teclas no canto do objeto. Validação isolada dos dois orelhões de C1, 15 verificações. [Plano](../ai-plans/2026-11-09_BBCONTTI_inspecoes-orelhao-em-cena.md).
+
+
+09/11/2026 — O orelhão no mundo usa a câmera ao vivo e confirma a gravação ao recolocar o fone depois da escolha do registro. Esc cancela e a carga continua explícita. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_orelhao-gancho.md).
+
+09/11/2026 — A interface do orelhão recebeu casco laranja gasto e peças em aço quente com relevo neutro, usando a cúpula do sprite em cena como referência. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_orelhao-paleta-do-sprite.md).

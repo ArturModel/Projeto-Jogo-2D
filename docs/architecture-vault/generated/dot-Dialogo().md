@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Director.cs"
 type: "code"
 community: "Community 94"
-location: "L210"
+location: "L234"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ConcluirBocha()]] - `calls` [EXTRACTED]
-- [[dot-Interagir()]] - `calls` [EXTRACTED]
+- [[dot-Interagir()_1]] - `calls` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[Capitulo2Director]] - `method` [EXTRACTED]
 - [[DialogoLinha]] - `references` [EXTRACTED]

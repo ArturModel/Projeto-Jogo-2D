@@ -1,0 +1,19 @@
+# Composição modular do quarteirão do Posto
+
+@BBCONTTI · 09/11/2026 · Unity 6000.6.0f1 / URP 2D  
+Status — montagem verificada no Editor.
+
+O pedido foi detalhar a segunda área com a mesma linguagem da Rodovia. O mapa do C1, a reforma anterior do Posto e o código em Capitulo1Director confirmaram que o quarteirão inclui a conveniência, a antiga venda e os dois acostamentos. A revisão seguinte pediu retirar as caixas e a fiação da calçada norte.
+
+- [x] Criar uma prancha de seis peças via ImageGen. Cinco tipos entraram na montagem a 32 pixels por unidade com relevo por material. Os engradados ficaram na arte-fonte após a revisão.
+- [x] Colocar a bomba no ponto de interação já existente, distribuir extintor, jardineiras e tambor, ajustar canaletas, poças, fiação sul e muros do talude.
+- [x] Remover as caixas e os dois postes de fiação da calçada norte na construção da zona. Preservar quatro luminárias, o banco e a fiação do acostamento sul.
+- [x] Conferir o exterior em Play Mode. Máscara direcional ativa, seis instâncias de peças novas com mapas de relevo, bomba com prompt existente, zero postes de fiação na calçada norte e quatro luminárias. [Game View da venda](../Evidencias/PostoReforma/posto-detalhes-venda-sem-caixas.png).
+- [x] Tentar refresh e validação do Graphify. O executável 0.9.96 estava ausente e o índice local não cobria todas as fontes.
+
+A montagem mora em `SantaRitaRuaNorte.Posto.cs`, com chamadas no acabamento do exterior e regras de composição compartilhadas com a Rodovia. A construção e as interações continuam em `Capitulo1Director.cs`. A fonte é `Arte/Producao/EntradaDaCidade/Posto-Detalhes-ImageGen.png`, com recortes e mapas em `Assets/Resources/Art/RuaNorte/Posto/`. A verificação foi no Editor.
+
+## Prompt da arte
+
+Use case: stylized-concept. One production sprite sheet, six separate environment props for an early-2000s rural Brazilian roadside filling station and convenience shop. Treat the attached Game View of a red-and-cream building in rain as a visual reference only for period, restrained realistic pixel art, proportions and elevated frontal orthographic viewpoint. Preserve the existing façade by designing only small freestanding or mountable objects. Genuine alpha-transparent background, exact 3 columns by 2 rows, one fully isolated cutout per cell, generous transparent margin around every sprite. Row 1 left to right: (1) one narrow analog old fuel pump with a charcoal mechanical meter and a visibly hanging black hose with transparent gap, chipped desaturated burgundy sides, cream face, frontal narrow profile, top visible, no lettering or branding; (2) one compact rectangular weathered dark iron and concrete planter box with short olive leaves, low horizontal profile, no decorative flowers; (3) one short freestanding red fire extinguisher enclosed in a narrow protective gray wall-mount bracket, cream inspection tag without lettering. Row 2 left to right: (4) one small low rectangular stack of two dark green beverage crates containing a few muted brown bottle necks, early 2000s country store delivery, frontal, top visible; (5) one low long horizontal dark iron trench drain, perspective shows mainly the top, regular gaps among the transverse bars and restrained metallic highlights, rectangular and straight along the x-axis; (6) one small simple wheeled galvanized steel oil drum, no logos, straight-on low horizontal dolly under a single squat drum, desaturated smoky dark brown/gray. Cohesive and tactile pixel clusters, measured highlights, neutral albedo for in-engine lighting, diffuse low-contrast shading within the objects, subtle wear at fasteners only, crisp silhouettes. No loose shadows, no ground plane, no reflections, no ambient occlusion rectangles, no rain, no architecture, no UI, no text, no borders or separator lines. Output exactly ONE square PNG atlas of six props.
+

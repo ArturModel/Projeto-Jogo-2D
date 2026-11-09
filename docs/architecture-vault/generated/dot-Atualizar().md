@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs"
 type: "code"
-community: "Community 103"
-location: "L68"
+community: "Community 52"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_103
+  - community/Community_52
 ---
 
 # .Atualizar()
@@ -15,8 +15,10 @@ tags:
 - [[dot-AplicarPreferencias()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarFalaTonao()]] - `calls` [INFERRED]
 - [[dot-AtualizarFalaZe()]] - `calls` [INFERRED]
-- [[dot-Limpar()_3]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_2]] - `calls` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [INFERRED]
 - [[dot-TocarSilaba()]] - `calls` [EXTRACTED]
+- [[dot-Update()_35]] - `calls` [INFERRED]
 - [[MinigameDialogue]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+#graphify/code #graphify/EXTRACTED #community/Community_52

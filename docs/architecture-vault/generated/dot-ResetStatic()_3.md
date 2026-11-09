@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
 community: "Community 111"
-location: "L227"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,8 @@ tags:
 # .ResetStatic()
 
 ## Connections
+- [[dot-SincronizarCenasNoEditor()]] - `calls` [EXTRACTED]
 - [[RuntimeInitializeOnLoadMethod]] - `references` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[SceneFader]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_111

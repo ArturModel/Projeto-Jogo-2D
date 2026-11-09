@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 21"
-location: "L1294"
+community: "Community 43"
+location: "L1306"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_21
+  - community/Community_43
 ---
 
 # .ApontarMiraParaBolaMaisProxima()
@@ -18,4 +18,4 @@ tags:
 - [[dot-ContinuarInicioTurno()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_21
+#graphify/code #graphify/EXTRACTED #community/Community_43

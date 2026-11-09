@@ -11,8 +11,8 @@ tags:
 # ContentSizeFitter
 
 ## Connections
-- [[dot-Build()_3]] - `references` [EXTRACTED]
-- [[dot-Build()_4]] - `references` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
+- [[dot-Build()_6]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_14

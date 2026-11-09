@@ -1,19 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
 type: "code"
-community: "Community 83"
-location: "L295"
+community: "Community 54"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_83
+  - community/Community_54
 ---
 
 # .OnPointerEnter()
 
 ## Connections
-- [[dot-Selecionar()]] - `calls` [INFERRED]
-- [[PayphoneRegistroTecla]] - `method` [EXTRACTED]
+- [[dot-MoverIndicador()]] - `calls` [EXTRACTED]
+- [[MenuItemSelector]] - `method` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/EXTRACTED #community/Community_54

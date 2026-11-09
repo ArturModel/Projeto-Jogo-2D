@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
 community: "Community 38"
-location: "L70"
+location: "L124"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Use()
 
 ## Connections
-- [[dot-Awake()_17]] - `calls` [EXTRACTED]
+- [[dot-Awake()_13]] - `calls` [EXTRACTED]
 - [[dot-Blocked()]] - `calls` [EXTRACTED]
 - [[dot-Quick()]] - `calls` [EXTRACTED]
 - [[dot-UseItem()]] - `calls` [EXTRACTED]

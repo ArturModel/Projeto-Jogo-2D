@@ -1,31 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 50"
-location: "L310"
+community: "Community 38"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_38
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
-- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[dot-Current()]] - `calls` [EXTRACTED]
-- [[dot-DefinirTexto()]] - `calls` [EXTRACTED]
-- [[dot-Detail()]] - `calls` [INFERRED]
-- [[dot-Fechar()_3]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Region()]] - `calls` [EXTRACTED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Texto()_2]] - `calls` [EXTRACTED]
-- [[dot-Turn()]] - `calls` [INFERRED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_38

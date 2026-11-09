@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[dot-Comecar()]] - `calls` [INFERRED]
-- [[dot-Fechar()_5]] - `calls` [INFERRED]
-- [[dot-Limpar()_3]] - `calls` [INFERRED]
+- [[dot-Fechar()_6]] - `calls` [INFERRED]
+- [[dot-Limpar()_2]] - `calls` [INFERRED]
 - [[dot-NovaMao()]] - `calls` [INFERRED]
 - [[dot-PrepararSala()_1]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]

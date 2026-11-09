@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
 community: "Community 44"
-location: "L83"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .PrepararFeixeLanterna()
 
 ## Connections
-- [[dot-Awake()_20]] - `calls` [EXTRACTED]
+- [[dot-Awake()_16]] - `calls` [EXTRACTED]
 - [[Light2D]] - `references` [EXTRACTED]
 - [[PlayerController]] - `method` [EXTRACTED]
 

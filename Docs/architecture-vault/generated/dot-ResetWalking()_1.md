@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 93"
-location: "L61"
+community: "Community 39"
+location: "L164"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_39
 ---
 
 # .ResetWalking()
 
 ## Connections
-- [[dot-EnsureRoom()_1]] - `calls` [EXTRACTED]
-- [[dot-NovaMao()]] - `calls` [INFERRED]
-- [[dot-PrepararSala()_1]] - `calls` [INFERRED]
-- [[dot-ResetWalking()_2]] - `calls` [EXTRACTED]
-- [[dot-SetView()]] - `calls` [EXTRACTED]
-- [[BochaCourtView]] - `method` [EXTRACTED]
+- [[dot-DefinirVistaInicial()]] - `calls` [INFERRED]
+- [[dot-SetMode()]] - `calls` [EXTRACTED]
+- [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_39

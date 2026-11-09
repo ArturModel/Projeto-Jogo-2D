@@ -12,6 +12,7 @@ tags:
 # .IrParaPosicao()
 
 ## Connections
+- [[dot-PrepararPosicao()]] - `calls` [EXTRACTED]
 - [[dot-Start()_21]] - `calls` [EXTRACTED]
 - [[SceneTransition]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

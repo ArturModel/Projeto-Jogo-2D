@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.Perception.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ExteriorInterior3D.cs"
 type: "code"
-community: "Community 17"
-location: "L173"
+community: "Community 127"
+location: "L275"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_127
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
+- [[ExteriorInterior3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_127

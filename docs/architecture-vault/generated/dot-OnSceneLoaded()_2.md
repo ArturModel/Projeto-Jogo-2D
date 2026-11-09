@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneJogoUI.cs"
 type: "code"
-community: "Community 84"
-location: "L181"
+community: "Community 117"
+location: "L273"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_84
+  - community/Community_117
 ---
 
 # .OnSceneLoaded()
 
 ## Connections
-- [[dot-FadeIn()]] - `calls` [EXTRACTED]
-- [[dot-RestaurarImagemFade()]] - `calls` [EXTRACTED]
+- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
 - [[LoadSceneMode]] - `references` [EXTRACTED]
+- [[PayphoneJogoUI]] - `method` [EXTRACTED]
 - [[Scene]] - `references` [EXTRACTED]
-- [[SceneFader]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+#graphify/code #graphify/EXTRACTED #community/Community_117

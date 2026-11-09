@@ -1,11 +1,11 @@
 ---
 type: community
-members: 36
+members: 38
 ---
 
 # Community 10
 
-**Members:** 36 nodes
+**Members:** 38 nodes
 
 ## Members
 - [[BalcaoBarDoZe]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -25,6 +25,7 @@ members: 36
 - [[NpcFrentista]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[NpcFrequentadorBar]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[NpcMoradorBairro]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[NpcMotoristaPosto]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[NpcZeBar]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[PicapeEncruzilhada]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[PistaCafeCasaAvo]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -39,6 +40,7 @@ members: 36
 - [[QuadroAvisosEncruzilhada]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[QuadroRegrasSinuca]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[RetratoFamiliaCasaAvo]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
+- [[SinucaRoom3D.Bar.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Bar.cs
 - [[TelefoneCasaAvo]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[TipoInteracao]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
 - [[TvPortatilPosto]] - code - Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs
@@ -53,7 +55,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 5 edges to [[_COMMUNITY_Community 36]]
 - 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 2]]
 
 ## Top bridge nodes
-- [[TipoInteracao]] - degree 36, connects to 1 community
+- [[TipoInteracao]] - degree 42, connects to 2 communities
+- [[SinucaRoom3D.Bar.cs]] - degree 3, connects to 2 communities

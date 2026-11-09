@@ -12,7 +12,7 @@ tags:
 # .IniciarPraticaOpcional()
 
 ## Connections
-- [[dot-Abrir()_3]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_5]] - `calls` [EXTRACTED]
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 

@@ -12,10 +12,11 @@ tags:
 # .BuildRoomArchitecture()
 
 ## Connections
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-BuildRoom()_1]] - `calls` [INFERRED]
+- [[dot-ConstruirParedeDaEntrada()]] - `calls` [INFERRED]
+- [[dot-ConstruirPortaDoBar()]] - `calls` [INFERRED]
 - [[dot-Mat()_1]] - `calls` [EXTRACTED]
-- [[dot-Sphere()]] - `calls` [INFERRED]
 - [[dot-WallSconce()]] - `calls` [EXTRACTED]
 - [[Renderer]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]

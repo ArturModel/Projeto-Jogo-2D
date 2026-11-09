@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [EXTRACTED]
-- [[dot-AwaitScene()]] - `calls` [INFERRED]
+- [[dot-AwaitScene()]] - `calls` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `calls` [EXTRACTED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
@@ -24,7 +24,7 @@ tags:
 - [[dot-FlashlightR2()]] - `calls` [EXTRACTED]
 - [[dot-FlashlightWalkR2()]] - `calls` [EXTRACTED]
 - [[dot-Ir()]] - `calls` [EXTRACTED]
-- [[dot-Limpar()]] - `calls` [EXTRACTED]
+- [[dot-Limpar()_1]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-Place()]] - `calls` [EXTRACTED]
 - [[dot-RoutineR2()]] - `calls` [EXTRACTED]

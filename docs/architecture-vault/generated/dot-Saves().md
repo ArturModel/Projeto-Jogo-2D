@@ -13,13 +13,13 @@ tags:
 
 ## Connections
 - [[dot-BeginIsolatedTests()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [EXTRACTED]
 - [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
 - [[dot-DescreverSlotIndisponivel()]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-RequestSpawnAtSlot()]] - `calls` [EXTRACTED]
-- [[dot-Run()_4]] - `calls` [EXTRACTED]
+- [[dot-Run()_5]] - `calls` [EXTRACTED]
 - [[dot-SaveSlot()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]

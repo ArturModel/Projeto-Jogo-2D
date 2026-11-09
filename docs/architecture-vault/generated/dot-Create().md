@@ -1,21 +1,17 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "Community 24"
+community: "Community 20"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_20
 ---
 
 # .Create()
 
 ## Connections
-- [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior4_BarDoZe()]] - `calls` [EXTRACTED]
 - [[dot-CreateExit()]] - `calls` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
@@ -25,4 +21,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_20

@@ -9,3 +9,12 @@ Create a single transparent 2x2 SPRITE SHEET for a rainy Brazilian small-town pi
 ## Prompt da mala
 
 A single transparent game sprite of an old open empty suitcase, viewed front-on from the slightly elevated top-down perspective of a 2D exploration game set in a small Brazilian town, 2004. The attached pickup sprite is a reference for the in-game finely textured pixel-art material and scale, no vehicle in the result. The suitcase is a small scuffed boxy 1980s hard-shell travel case, dark worn ochre brown shell, old oxidized corners and latch, restrained gray-brown fabric lining visible inside the empty open body, lid tilted back, a tiny torn off-white bus luggage sticker. Place hinge at the far edge; little handle at the near edge. Silhouette must immediately read as an OPEN abandoned suitcase from gameplay distance. One object on genuine transparent alpha, centered, full perimeter with margin, no ground, no mud, no grass, no halo, no cast shadow. Rich clustered pixel detailing and restrained highlights like the reference. Planned final size about 66 x 55 pixels at 64 pixels per game unit.
+
+
+## Rua Norte do Bar do Zé
+
+Ferramenta ImageGen integrada. O print do jogo orientou a perspectiva e a linguagem visual da folha. Os recortes têm pivôs na base, 32 PPU, filtro Point, com mapas de relevo à parte.
+
+**Bar-Detalhes-ImageGen.png** — Criar uma única folha 3×2 transparente com caixa térmica metálica azul-petróleo, barril, cavalete de cardápio, engradados retornáveis, cobertura de zinco e jardineira de pedra. Vista ortográfica 2.5D de frente, ambientação rural do sul do Brasil em 2004, pixels quadrados e materiais discretamente gastos, iluminação difusa sem sombras no chão, peças separadas por margens transparentes.
+
+**Bar-Portao-ImageGen.png** — Criar um portão viário municipal fechado de duas folhas, frontal ortográfico, com dois pilares de alvenaria, grades altas vazadas, faixa baixa de chapa verde escura, trinco discreto e placa esmaltada sem texto. Pixel art de vila rural de 2004, luz difusa, fundo e vãos transparentes, sem alas, piso ou sombra projetada.

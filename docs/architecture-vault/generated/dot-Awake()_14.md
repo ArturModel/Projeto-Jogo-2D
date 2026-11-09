@@ -1,17 +1,34 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 26"
-location: "L19"
+community: "Community 38"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_26
+  - community/Community_38
 ---
 
 # .Awake()
 
 ## Connections
-- [[PonteiroCarro]] - `method` [EXTRACTED]
+- [[dot-ActionButton()]] - `calls` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
+- [[dot-Frame()]] - `calls` [EXTRACTED]
+- [[dot-Label()]] - `calls` [EXTRACTED]
+- [[dot-Place()_3]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [EXTRACTED]
+- [[dot-Rewind()]] - `calls` [EXTRACTED]
+- [[dot-Select()]] - `calls` [EXTRACTED]
+- [[dot-Stop()]] - `calls` [EXTRACTED]
+- [[dot-TocarRadio()]] - `calls` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[GraphicRaycaster]] - `references` [EXTRACTED]
+- [[Image]] - `references` [EXTRACTED]
+- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
+- [[TapeCatalog]] - `references` [EXTRACTED]
+- [[TextAsset]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_26
+#graphify/code #graphify/EXTRACTED #community/Community_38

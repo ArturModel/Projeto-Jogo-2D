@@ -57,6 +57,7 @@ public class SceneFader : MonoBehaviour
     private TextMeshProUGUI bannerTitulo;
     private TextMeshProUGUI bannerSubtitulo;
     private bool isTransitioning;
+    private string cenaDurantePorta;
     public static bool IsTransitioning => instance != null && instance.isTransitioning;
     private Coroutine bannerRoutine;
 
@@ -180,6 +181,8 @@ public class SceneFader : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // A saída da cena do bar já tem a máscara opaca e a sua própria revelação.
+        if (scene.name == cenaDurantePorta) return;
         isTransitioning = false;
         StopAllCoroutines();
         RestaurarImagemFade();
@@ -204,20 +207,22 @@ public class SceneFader : MonoBehaviour
             yield return FadeTo(1f, .45f);
         else
         {
+            sinucaIris.SetFloat("_MascaraBar", 1f);
             sinucaIris.SetTexture("_Grao", grao ?? Texture2D.grayTexture);
             fadeImage.material = sinucaIris;
             fadeImage.color = Color.white;
             group.alpha = 1f;
-            const float fechar = 1.35f;
+            const float fechar = .92f;
             for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
             {
-                float alinhar = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(1.17f, fechar, t));
-                AjustarIrisSinuca(Vector2.Lerp(foco, centro, alinhar), Mathf.SmoothStep(0f, 1f, t / fechar));
+                float alinhar = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.48f, fechar, t));
+                AjustarMascaraBar(Vector2.Lerp(foco, centro, alinhar), Mathf.SmoothStep(0f, 1f, t / fechar));
                 yield return null;
             }
-            AjustarIrisSinuca(centro, 1f);
+            AjustarMascaraBar(centro, 1f);
         }
 
+        yield return null;
         bool abriu = false;
         try
         {
@@ -236,11 +241,11 @@ public class SceneFader : MonoBehaviour
         {
             for (float t = 0f; t < 2f; t += Time.unscaledDeltaTime)
             {
-                AjustarIrisSinuca(centro, 1f - Mathf.SmoothStep(0f, 1f, t / 1.15f));
+                AjustarMascaraBar(centro, 1f - Mathf.SmoothStep(0f, 1f, t / 1.15f));
                 if (abriu) olharPendente(1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.64f, 2f, t)));
                 yield return null;
             }
-            AjustarIrisSinuca(centro, 0f);
+            AjustarMascaraBar(centro, 0f);
             if (abriu) olharPendente(0f);
             group.alpha = 0f;
         }
@@ -275,12 +280,13 @@ public class SceneFader : MonoBehaviour
         bool usarMascara = PrepararIris();
         if (usarMascara)
         {
-            sinucaIris.SetFloat("_MascaraBar", 1f);
+            foco = LimitarFocoDaPorta(foco);
+            sinucaIris.SetFloat("_MascaraPosto", 1f);
             sinucaIris.SetTexture("_Grao", SantaRitaBarLayout.NativeSurface(false).texture);
             fadeImage.material = sinucaIris;
             fadeImage.color = Color.white;
             group.alpha = 1f;
-            const float fechar = .76f;
+            const float fechar = .67f;
             for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
             {
                 AjustarMascaraBar(foco, Mathf.SmoothStep(0f, 1f, t / fechar));
@@ -310,7 +316,7 @@ public class SceneFader : MonoBehaviour
         float duracao = abriu ? duracaoEntrada : .86f;
         for (float t = 0f; t < duracao; t += Time.unscaledDeltaTime)
         {
-            float cobertura = 1f - Mathf.SmoothStep(0f, 1f, t / .86f);
+            float cobertura = 1f - Mathf.SmoothStep(0f, 1f, t / (usarMascara ? .72f : .44f));
             if (usarMascara)
             {
                 float alinhar = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.34f, .94f, t));
@@ -328,14 +334,14 @@ public class SceneFader : MonoBehaviour
 
     internal void TransicionarPortaPosto(Vector2 foco, Action trocar, Func<Vector2> focoDepois,
         Action<float> animar = null, float duracao = 0f,
-        Action<float> animarAntes = null, float antesDaNevoa = 0f)
+        Action<float> animarAntes = null, float antesDaNevoa = 0f, string cenaDestino = null)
     {
         if (!isTransitioning)
-            StartCoroutine(PortaPosto(foco, trocar, focoDepois, animar, duracao, animarAntes, antesDaNevoa));
+            StartCoroutine(PortaPosto(foco, trocar, focoDepois, animar, duracao, animarAntes, antesDaNevoa, cenaDestino));
     }
 
     private IEnumerator PortaPosto(Vector2 foco, Action trocar, Func<Vector2> focoDepois,
-        Action<float> animar, float duracao, Action<float> animarAntes, float antesDaNevoa)
+        Action<float> animar, float duracao, Action<float> animarAntes, float antesDaNevoa, string cenaDestino)
     {
         isTransitioning = true;
         group.blocksRaycasts = true;
@@ -357,7 +363,7 @@ public class SceneFader : MonoBehaviour
                 fadeImage.material = sinucaIris;
                 fadeImage.color = Color.white;
                 group.alpha = 1f;
-                const float fechar = .82f;
+                const float fechar = .68f;
                 for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
                 {
                     AjustarMascaraBar(foco, Mathf.SmoothStep(0f, 1f, t / fechar));
@@ -380,11 +386,20 @@ public class SceneFader : MonoBehaviour
 
             yield return null;
             trocar();
+            if (!string.IsNullOrEmpty(cenaDestino))
+            {
+                cenaDurantePorta = cenaDestino;
+                CarregarCenaSegura(cenaDestino);
+                float limite = Time.realtimeSinceStartup + 15f;
+                while (SceneManager.GetActiveScene().name != cenaDestino && Time.realtimeSinceStartup < limite)
+                    yield return null;
+            }
+
             animar?.Invoke(0f);
             yield return null;
 
             foco = LimitarFocoDaPorta(focoDepois());
-            float revelar = nevoa ? .76f : .36f;
+            float revelar = nevoa ? .72f : .36f;
             float total = Mathf.Max(duracao, revelar);
             for (float t = 0f; t < total; t += Time.unscaledDeltaTime)
             {
@@ -398,7 +413,7 @@ public class SceneFader : MonoBehaviour
         }
         finally
         {
-            if (sinucaIris != null) sinucaIris.SetFloat("_MascaraPosto", 0f);
+            cenaDurantePorta = null;
             group.alpha = 0f;
             RestaurarImagemFade();
             isTransitioning = false;
@@ -437,7 +452,11 @@ public class SceneFader : MonoBehaviour
 
     private void RestaurarImagemFade()
     {
-        if (sinucaIris != null) sinucaIris.SetFloat("_MascaraBar", 0f);
+        if (sinucaIris != null)
+        {
+            sinucaIris.SetFloat("_MascaraBar", 0f);
+            sinucaIris.SetFloat("_MascaraPosto", 0f);
+        }
         fadeImage.material = null;
         fadeImage.color = Color.black;
         fadeImage.raycastTarget = false;

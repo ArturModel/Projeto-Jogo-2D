@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 24"
+community: "Community 140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_140
 ---
 
 # ZonaId
@@ -13,11 +13,12 @@ tags:
 ## Connections
 - [[dot-AplicarEstadoDaZona()]] - `references` [EXTRACTED]
 - [[dot-ColocarGatilhoTransicao()]] - `references` [EXTRACTED]
-- [[dot-Configurar()_3]] - `references` [EXTRACTED]
+- [[dot-Configurar()_2]] - `references` [EXTRACTED]
 - [[dot-TransicionarPara()]] - `references` [EXTRACTED]
 - [[dot-TryObterInfoZona()]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[InfoZona]] - `references` [EXTRACTED]
+- [[SantaRitaFalasEntrada]] - `references` [EXTRACTED]
 - [[TransicaoDeZonaTrigger]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_140

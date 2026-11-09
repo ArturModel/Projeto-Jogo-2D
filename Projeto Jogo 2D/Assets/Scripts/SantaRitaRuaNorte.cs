@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 using UnityEngine.Tilemaps;
 
 // Bancada visual da Rua Norte. As coordenadas e interações pertencem ao Capitulo1Director.
@@ -9,10 +10,10 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
 {
     private const string Art = "Art/RuaNorte/";
     private const int TileSize = 64;
-    private const int CasterLimit = 32;
+    private const int CasterLimit = 48;
     private enum Ground { Grass, Road, Walk, Dirt, Verge, Curb, DirtRoad, Crack, Puddle, Stripe, Drain, SideVerge, DirtVerge }
 
-    private enum Sombra { Projetada, Contato, Nenhuma, Veiculo, EdificioSuave }
+    private enum Sombra { Projetada, Contato, Nenhuma, Veiculo, EdificioSuave, ProjetadaSuave, Recorte }
 
     private readonly Dictionary<int, Tile> tiles = new();
     private readonly Vector4[] casterMin = new Vector4[CasterLimit];
@@ -21,20 +22,28 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     private Material lighting;
     private Texture2D groundCells;
     private Texture2D entranceWater;
+    private const int WaterPixelsPerUnit = 32;
+    private int firstWaterRow;
     private Sprite fogSprite;
     private SpriteRenderer backFog;
     private SpriteRenderer frontFog;
     private Material backFogMaterial;
     private Material frontFogMaterial;
+    private readonly List<Vector4> bocaisDosPostes = new();
+    private readonly List<(LensFlareComponentSRP flare, Vector4 fonte)> flaresDaRua = new();
+    private GameObject flaresDosPostes;
+    private LensFlareDataSRP perfilDosFlares;
     private SpriteRenderer player;
     private PlayerController playerController;
     private Material previousPlayerMaterial;
     private MaterialPropertyBlock previousPlayerProperties;
     private bool entrada;
+    private bool exteriorComposto;
     private bool posto;
     private bool encruzilhada;
     private bool bairro;
-    private bool AvenidaMolhada => entrada || posto || encruzilhada;
+    private bool RuaDoBar => !entrada && !posto && !encruzilhada && !bairro;
+    private bool AvenidaMolhada => !bairro;
     private static SantaRitaRuaNorte playerLightingOwner;
     private float caminhadaAteRaio;
     private float inicioRaio = float.NegativeInfinity;
@@ -52,6 +61,12 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     public static bool EntradaAtiva => entradaAtual != null &&
         Capitulo1Director.ZonaAtual == Capitulo1Director.ZonaId.Zona1_Rodovia;
     private static SantaRitaRuaNorte entradaAtual;
+
+    internal static bool ControlaRenderDaRua(SpriteRenderer renderer)
+    {
+        var exterior = renderer.GetComponentInParent<SantaRitaRuaNorte>();
+        return exterior != null && exterior.exteriorComposto;
+    }
     private static Sprite[] objetosEntrada;
 
     public static Sprite ObjetoDaEntrada(string nome)
@@ -95,6 +110,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         }
         look.lighting.SetFloat("_WetRoad", 1);
         if (bairro) look.lighting.SetFloat("_Bairro", 1);
+        if (look.RuaDoBar) look.lighting.SetFloat("_BarStreet", 1);
         look.lighting.SetVector("_Origin", new Vector4(min.x, min.y, 0, 0));
         var surface = Resources.Load<Texture2D>(Art + "Superficie");
         if (surface != null && surface.width == atlas.width && surface.height == atlas.height)
@@ -115,15 +131,40 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     public static void Finish(Transform world)
     {
         var look = world.Find("Zona5_RuaNorteBar")?.GetComponent<SantaRitaRuaNorte>();
-        if (look != null) { look.Dress(); look.PrepararTemporal(); }
+        if (look != null && !look.exteriorComposto)
+        {
+            look.DressBar();
+            look.PrepararTemporal();
+            look.exteriorComposto = true;
+        }
         var entrada = world.Find("Zona1_Rodovia")?.GetComponent<SantaRitaRuaNorte>();
-        if (entrada != null) { entrada.DressEntrance(); entrada.PrepararTemporal(); }
+        if (entrada != null && !entrada.exteriorComposto)
+        {
+            entrada.DressEntrance();
+            entrada.PrepararTemporal();
+            entrada.exteriorComposto = true;
+        }
         var posto = world.Find("Zona2_Posto")?.GetComponent<SantaRitaRuaNorte>();
-        if (posto != null) { posto.DressPosto(); posto.PrepararTemporal(); }
+        if (posto != null && !posto.exteriorComposto)
+        {
+            posto.DressPosto();
+            posto.PrepararTemporal();
+            posto.exteriorComposto = true;
+        }
         var encruzilhada = world.Find("Zona3_Encruzilhada")?.GetComponent<SantaRitaRuaNorte>();
-        if (encruzilhada != null) { encruzilhada.DressEncruzilhada(); encruzilhada.PrepararTemporal(); }
+        if (encruzilhada != null && !encruzilhada.exteriorComposto)
+        {
+            encruzilhada.DressEncruzilhada();
+            encruzilhada.PrepararTemporal();
+            encruzilhada.exteriorComposto = true;
+        }
         var bairro = world.Find("Zona4_Bairro")?.GetComponent<SantaRitaRuaNorte>();
-        if (bairro != null) { bairro.DressBairro(); bairro.PrepararTemporal(); }
+        if (bairro != null && !bairro.exteriorComposto)
+        {
+            bairro.DressBairro();
+            bairro.PrepararTemporal();
+            bairro.exteriorComposto = true;
+        }
     }
 
     private void BuildTilemap(Texture2D atlas, int width, int height)
@@ -150,7 +191,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
                 else if (encruzilhada) SelectEncruzilhadaGround(x, y, out kind, out flipX, out flipY);
                 else if (posto) SelectPostoGround(x, y, out kind, out flipX, out flipY);
                 else if (entrada) SelectEntranceGround(x, y, out kind, out flipX, out flipY);
-                else SelectGround(x, y, out kind, out flipX, out flipY);
+                else SelectBarGround(x, y, out kind, out flipX, out flipY);
                 int cell = y * width + x;
                 int variant = GroundVariant(cell);
                 cells[cell] = GroundTile(atlas, kind, variant, flipX, flipY);
@@ -173,40 +214,12 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         BuildWaterMask(width);
     }
 
-    private static void SelectGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)
-    {
-        flipX = false;
-        flipY = false;
-        switch (y)
-        {
-            case 6: kind = x < 6 ? Ground.Grass : Ground.Verge; flipY = true; return;
-            case 7: kind = x < 6 ? Ground.DirtVerge : Ground.Curb; flipY = true; return;
-            case 12: kind = x < 6 ? Ground.DirtVerge : Ground.Curb; return;
-            case 13: kind = x < 6 ? Ground.Grass : (x == 29 ? Ground.Drain : Ground.Walk); return;
-            case 14:
-                kind = x >= 11 && x <= 24 ? Ground.Walk :
-                    (x == 10 || x == 25 ? Ground.SideVerge : Ground.Verge);
-                flipX = x == 25;
-                return;
-            case 15:
-                kind = x >= 11 && x <= 24 ? Ground.Verge : Ground.Grass;
-                return;
-        }
-
-        if (y < 8 || y > 11) { kind = Ground.Grass; return; }
-        if (x < 5) { kind = Ground.Dirt; return; }
-        if (x == 5) { kind = Ground.DirtRoad; return; }
-        if (y == 10 && x % 5 < 2) { kind = Ground.Stripe; return; }
-        int wear = (x * 19 + y * 13 + x * y) % 17;
-        kind = y != 10 && wear < 2 ? Ground.Puddle : (wear < 6 ? Ground.Crack : Ground.Road);
-    }
-
     private void BuildWaterMask(int width)
     {
         // Posições locais à rodovia. Cada poça tem escala, perfil e brilho próprios.
-        const int pixelsPerUnit = 32;
-        int firstRow = bairro ? 0 : 8;
-        int rows = bairro || encruzilhada ? (int)size.y - firstRow : 4;
+        const int pixelsPerUnit = WaterPixelsPerUnit;
+        int firstRow = firstWaterRow = bairro ? 0 : 8;
+        int rows = bairro || encruzilhada ? (int)size.y - firstRow : 5;
         int textureWidth = width * pixelsPerUnit;
         int textureHeight = rows * pixelsPerUnit;
         var pixels = new Color32[textureWidth * textureHeight];
@@ -225,7 +238,21 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             (33.55f, 8.90f, .52f, .20f,  .12f, .90f, .65f)
         };
 
+        if (entrada)
+        {
+            puddles = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(puddles, new[]
+            {
+                (6.61f, 11.83f, .48f, .73f, .19f, .29f, .96f),
+                (16.49f, 11.94f, .58f, .77f, -.19f, .25f, .97f),
+                (29.65f, 12.02f, .65f, .61f, .17f, .34f, .96f),
+                (9.18f, 11.89f, 1.13f, .28f, .05f, .57f, .83f),
+                (12.52f, 8.22f, .82f, .14f, .05f, .77f, .76f),
+                (23.47f, 8.20f, .53f, .13f, -.07f, .59f, .72f)
+            }));
+        }
+        if (RuaDoBar) puddles = PocasDoBar;
         if (bairro) puddles = PocasDoBairro;
+        if (posto) puddles = PocasDoPosto;
         if (encruzilhada)
         {
             puddles = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(puddles, new[]
@@ -273,9 +300,21 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             wrapMode = TextureWrapMode.Clamp
         };
         entranceWater.SetPixels32(pixels);
-        entranceWater.Apply(false, true);
+        entranceWater.Apply(false, false); // O contato do pé lê a mesma cobertura que o shader.
         lighting.SetTexture("_EntranceWater", entranceWater);
         lighting.SetVector("_EntranceWaterRect", new Vector4(0, firstRow, width, rows));
+    }
+
+    internal float CoberturaDePoca(Vector2 posicao)
+    {
+        if (entranceWater == null || !ZonaAtiva) return 0f;
+
+        Vector2 local = posicao - origin - Vector2.up * firstWaterRow;
+        int x = Mathf.FloorToInt(local.x * WaterPixelsPerUnit);
+        int y = Mathf.FloorToInt(local.y * WaterPixelsPerUnit);
+        if (x < 0 || y < 0 || x >= entranceWater.width || y >= entranceWater.height) return 0f;
+
+        return entranceWater.GetPixel(x, y).r;
     }
 
     private static int GroundVariant(int cell)
@@ -310,6 +349,22 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
 
     private static void SelectEntranceGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)
     {
+        SelectAvenueGround(x, y, out kind, out flipX, out flipY);
+        if (kind == Ground.Crack && (x * 17 + y * 23) % 5 != 0) kind = Ground.Road;
+        bool parada = x >= 18 && x <= 20;
+        bool orelhao = x == 26 || x == 27;
+        if (y == 13) kind = Ground.Walk;
+        if (y == 14 && (parada || orelhao)) kind = Ground.Walk;
+        if (y == 14 && (x == 17 || x == 21 || x == 25 || x == 28))
+        {
+            kind = Ground.SideVerge;
+            flipX = x == 21 || x == 28;
+        }
+        if (y == 15 && (parada || orelhao)) kind = Ground.Verge;
+    }
+
+    private static void SelectAvenueGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)
+    {
         flipX = false;
         flipY = y < 8;
         bool recuo = x >= 6 && x <= 12;
@@ -335,13 +390,13 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
 
     private static void SelectPostoGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)
     {
-        SelectEntranceGround(x, y, out kind, out flipX, out flipY);
+        SelectAvenueGround(x, y, out kind, out flipX, out flipY);
         bool patio = (x >= 7 && x <= 16) || (x >= 24 && x <= 32);
         flipX = false;
         switch (y)
         {
             case 12: kind = Ground.Curb; break;
-            case 13: kind = x == 15 || x == 30 ? Ground.Drain : Ground.Walk; break;
+            case 13: kind = Ground.Walk; break;
             case 14:
                 bool edge = x == 6 || x == 17 || x == 23 || x == 33;
                 kind = patio ? Ground.Walk : edge ? Ground.SideVerge : Ground.Verge;
@@ -349,11 +404,12 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
                 break;
             case 15: kind = patio ? Ground.Verge : Ground.Grass; break;
         }
+        if (kind == Ground.Crack && (x + 2 * y) % 4 != 0) kind = Ground.Road;
     }
 
     private static void SelectEncruzilhadaGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)
     {
-        SelectEntranceGround(x, y, out kind, out flipX, out flipY);
+        SelectAvenueGround(x, y, out kind, out flipX, out flipY);
         bool eixoDaSubida = x >= 18 && x <= 22;
         bool patio = (x >= 6 && x <= 15) || (x >= 27 && x <= 34);
 
@@ -372,7 +428,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         }
         else if (y == 13)
         {
-            kind = x == 13 || x == 27 ? Ground.Drain : Ground.Walk;
+            kind = Ground.Walk;
         }
         else if (y == 14)
         {
@@ -382,7 +438,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         {
             kind = Ground.Verge;
         }
-        else if (y == 10 && x >= 10 && x < 14)
+        else if (y == 10 && x >= 8 && x < 14)
         {
             kind = Ground.Road;
         }
@@ -402,62 +458,6 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         return tile;
     }
 
-    private void Dress()
-    {
-        casterCount = 0;
-        for (int i = 0; i < 5; i++)
-        {
-            DressTree("Arvore_Norte_Z5_" + i, i % 2 != 0 ? "Araucaria" : "Arvore", .84f + i * .045f);
-            DressTree("Arvore_Sul_Z5_" + i, i % 2 == 0 ? "Pitangueira" : "Arvore", .78f + i * .033f);
-        }
-        DressTree("Araucaria_BarDoZe", "Araucaria", 1.05f);
-        Plant("Bosque_Oeste", "Bracatinga", 502f, 18.6f, .92f);
-        Plant("Bosque_Ombro", "Pitangueira", 512.35f, 17.05f, .83f);
-        Plant("Bosque_Fundo", "Bracatinga", 520.55f, 19.2f, .96f);
-        Plant("Bosque_Leste", "Pitangueira", 535.55f, 17.1f, .86f);
-        Plant("Bosque_Sul", "Pitangueira", 507.9f, 3.55f, .78f);
-        Plant("Bosque_Sudeste", "Bracatinga", 533.6f, 4.2f, .9f);
-
-        // Sub-bosque baixo nos pés das árvores e nas bordas do calçamento.
-        PlantUnderstory("Moita_Ombro", new Vector2(511.58f, 16.82f), .62f, false);
-        PlantUnderstory("Moita_Oeste", new Vector2(510.32f, 16.55f), .49f, true);
-        PlantUnderstory("Moita_Leste", new Vector2(524.15f, 16.22f), .73f, true);
-        PlantUnderstory("Moita_Fundo", new Vector2(525.23f, 16.58f), .53f, false);
-
-        DressProp("Predio_Fachada_BarDoZe", "Fachada", new Vector3(7.2f, 3.1f, 3.8f), 1f, .82f);
-        DressProp("Caminhonete_Clube_Bar", "Picape", new Vector3(3.9f, 1.35f, 1.65f));
-        DressProp("Mesa_Calcada_Bar", "Mesa", new Vector3(.86f, .66f, .76f));
-        DressChair("Cadeira_Calcada_1", new Vector2(512.26f, 13.29f), false);
-        DressChair("Cadeira_Calcada_2", new Vector2(513.53f, 13.40f), true);
-        DressProp("Engradados_Bar_Ext", "Engradado", new Vector3(.65f, .45f, .51f));
-        DressProp("Dumpster_Bar_Ext", "Contentor", new Vector3(1.24f, .7f, .91f));
-        DressProp("Caixas_BarDoZe_Ext", "Caixotes", new Vector3(.64f, .55f, .93f));
-        DressProp("Orelhao_BarDoZe", "Orelhao", new Vector3(.25f, .25f, 1.4f));
-        DressProp("Portao_Centro", "Portao", new Vector3(4.0f, .42f, 1.8f));
-        DressProp("Poste_Z5_1", "Poste", new Vector3(.17f, .2f, 3.15f));
-        DressProp("Poste_Z5_2", "Poste", new Vector3(.17f, .2f, 3.15f));
-        DressProp("Arbusto_RuaNorte", "Arbusto", new Vector3(.95f, .6f, .65f));
-        var drain = transform.Find("Grelha_RuaNorte");
-        if (drain != null) drain.gameObject.SetActive(false);
-
-        foreach (var light in GetComponentsInChildren<Light2D>(true))
-            light.enabled = false;
-
-        lighting.SetVectorArray("_Lamps", new[]
-        {
-            Lamp("Poste_Z5_1", .66f, -.42f, 3.18f, 7.25f),
-            Lamp("Predio_Fachada_BarDoZe", 0f, -.85f, 2.82f, 7.0f),
-            Lamp("Poste_Z5_2", .66f, -.42f, 3.18f, 6.9f)
-        });
-        lighting.SetVectorArray("_LampColors", new[]
-        {
-            new Vector4(2.00f, 1.52f, .92f, 1),
-            new Vector4(2.05f, 1.28f, .57f, 1),
-            new Vector4(1.82f, 1.44f, .87f, 1)
-        });
-        UpdateCasters(false);
-    }
-
     private void DressEntrance()
     {
         casterCount = 0;
@@ -472,16 +472,16 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         PlantUnderstory("Moita_Entrada_Placa", new Vector2(115.4f, 14.9f), .48f, true);
         PlantUnderstory("Moita_Entrada_Sul", new Vector2(106.5f, 5.35f), .69f, true);
         PlantUnderstory("Moita_Entrada_Acostamento", new Vector2(124.5f, 5.15f), .58f, false);
-        DressProp("Carro_Marcus_Sprite", "Entrada/CarroMarcus", new Vector3(3.65f, .78f, 1.54f), sombra: Sombra.Veiculo);
-        DressProp("Placa_SantaRita", "Entrada/PlacaSantaRita", new Vector3(2.6f, .34f, 2.45f));
-        DressProp("Banco_Rodovia", "Entrada/BancoRodovia", new Vector3(1.65f, .48f, .86f), sombra: Sombra.Contato);
-        DressProp("Placa_Horarios_Rodovia", "Entrada/QuadroParada", new Vector3(.8f, .2f, 1.82f), sombra: Sombra.Contato);
+        var carro = DressProp("Carro_Marcus_Sprite", "Entrada/CarroMarcus", new Vector3(3.65f, .78f, 1.54f), sombra: Sombra.Veiculo);
+        DressProp("Placa_SantaRita", "Entrada/PlacaSantaRita", new Vector3(2.6f, .34f, 2.45f), sombra: Sombra.Recorte);
+        DressProp("Banco_Rodovia", "Entrada/BancoRodovia", new Vector3(1.65f, .48f, .86f), sombra: Sombra.Recorte);
+        DressProp("Placa_Horarios_Rodovia", "Entrada/QuadroParada", new Vector3(.8f, .2f, 1.82f), sombra: Sombra.Recorte);
         DressProp("Orelhao_Rodovia", "Orelhao", new Vector3(.25f, .25f, 1.4f));
         DressProp("Mala_Abandonada_Rodovia", "Entrada/MalaRodovia", new Vector3(.82f, .36f, .76f), sombra: Sombra.Contato);
-        DressProp("Lixeira_Rodovia", null, new Vector3(.23f, .21f, .75f), sombra: Sombra.Contato);
+        DressProp("Lixeira_Rodovia", null, new Vector3(.47f, .31f, .75f), sombra: Sombra.ProjetadaSuave);
         DressProp("Seta_Para_Posto", null, new Vector3(.23f, .2f, 1.25f), sombra: Sombra.Contato);
         for (int x = 104; x <= 130; x += 6)
-            DressProp("CercaSul_" + x, null, new Vector3(2.2f, .35f, .83f), sombra: Sombra.Contato);
+            DressProp("CercaSul_" + x, null, new Vector3(2.2f, .35f, .83f), sombra: Sombra.Nenhuma);
         for (int i = 1; i <= 3; i++)
             DressProp("Poste_Z1_" + i, "Poste", new Vector3(.17f, .2f, 3.15f));
 
@@ -501,6 +501,9 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             new Vector4(2.10f, 1.64f, 1.01f, 1),
             new Vector4(1.70f, 1.40f, .92f, 1)
         });
+        ComporChegada(carro);
+        ComporBosqueDaRua();
+        luzesDeRecorte = lamps;
         UpdateCasters(false);
     }
 
@@ -512,6 +515,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             DressTree("Arvore_Norte_Z2_" + i, i % 3 == 1 ? "Araucaria" : "Arvore", .82f + i * .028f);
             DressTree("Arvore_Sul_Z2_" + i, i % 2 == 0 ? "Pitangueira" : "Bracatinga", .80f + i * .026f);
         }
+        DressTree("Araucaria_Posto_Fundo", "Araucaria", 1.03f);
         PlantUnderstory("Moita_Posto_Oeste", new Vector2(205.9f, 15.3f), .62f, false);
         PlantUnderstory("Moita_Posto_Leste", new Vector2(219.2f, 15.9f), .49f, true);
         PlantUnderstory("Moita_Venda", new Vector2(233.4f, 15.2f), .71f, false);
@@ -519,24 +523,22 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         var facade = DressProp("Predio_Posto", "Posto/Fachada", new Vector3(7.2f, 2.1f, 3.8f), heightFactor: .82f);
         if (facade != null) facade.color = Color.white;
         DressProp("Predio_Venda_Antiga", "Posto/Venda", new Vector3(6.2f, 2.1f, 3.25f), heightFactor: .83f);
-        DressProp("Picape_No_Posto", "Posto/Picape", new Vector3(3.65f, 1.10f, 1.65f), sombra: Sombra.Veiculo);
+        var picape = DressProp("Picape_No_Posto", "Posto/Picape", new Vector3(3.65f, 1.10f, 1.65f), sombra: Sombra.Veiculo);
         DressProp("Sedan_Avenida_Posto", "Posto/Sedan", new Vector3(3.44f, .97f, 1.43f), sombra: Sombra.Veiculo);
-        DressProp("Banco_Venda", "Entrada/BancoRodovia", new Vector3(1.65f, .48f, .86f), sombra: Sombra.Contato);
-        DressProp("Caixotes_Venda", "Caixotes", new Vector3(1.2f, .70f, .93f), sombra: Sombra.Contato);
+        DressProp("Banco_Venda", "Entrada/BancoRodovia", new Vector3(1.65f, .48f, .86f), sombra: Sombra.Recorte);
         for (int i = 1; i <= 4; i++)
             DressProp("Poste_Z2_" + i, "Poste", new Vector3(.17f, .2f, 3.15f));
-        for (int i = 1; i <= 2; i++)
-            DressProp("UtilityPole_Z2_" + i, null, new Vector3(.22f, .20f, 2.6f));
 
         foreach (var light in GetComponentsInChildren<Light2D>(true))
             light.enabled = false;
 
-        lighting.SetVectorArray("_Lamps", new[]
+        var lamps = new[]
         {
             Lamp("Poste_Z2_1", .66f, -.42f, 3.18f, 8.2f),
             Lamp("Predio_Posto", -.4f, -.45f, 2.75f, 7.4f),
             Lamp("Poste_Z2_2", .66f, -.42f, 3.18f, 8.3f)
-        });
+        };
+        lighting.SetVectorArray("_Lamps", lamps);
         lighting.SetVectorArray("_LampColors", new[]
         {
             new Vector4(1.89f, 1.48f, .97f, 1),
@@ -545,6 +547,9 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         });
         lighting.SetVector("_FourthLamp", Lamp("Poste_Z2_3", .66f, -.42f, 3.18f, 8.2f));
         lighting.SetVector("_FifthLamp", Lamp("Poste_Z2_4", .66f, -.42f, 3.18f, 8.2f));
+        ComporPosto(facade, picape);
+        ComporBosqueDaRua();
+        luzesDeRecorte = lamps;
         UpdateCasters(false);
     }
 
@@ -556,6 +561,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         for (int i = 0; i < 6; i++)
             DressTree("Arvore_Sul_Z3_" + i, i % 2 == 0 ? "Pitangueira" : "Bracatinga", .82f + i * .025f);
 
+        DressTree("Araucaria_Encruzilhada", "Araucaria", 1.03f);
         Plant("Arvore_Subida_Oeste", "Bracatinga", 315.4f, 22.5f, .92f);
         Plant("Arvore_Subida_Leste", "Araucaria", 325.0f, 23.1f, .9f);
         PlantUnderstory("Moita_Mercadinho", new Vector2(315.8f, 16.5f), .68f, false);
@@ -563,31 +569,31 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         PlantUnderstory("Moita_Esquina", new Vector2(334.4f, 16.9f), .62f, false);
         PlantUnderstory("Moita_Sul", new Vector2(314.7f, 4.8f), .8f, true);
 
-        DressProp("Predio_Mercadinho", "Mercadinho/Fachada", new Vector3(7.2f, 2.4f, 5.6f), heightFactor: .86f);
-        DressProp("Casa_Esquina_Encruzilhada", "Mercadinho/Casa", new Vector3(5.15f, 1.75f, 2.65f), heightFactor: .83f, sombra: Sombra.EdificioSuave);
+        var fachada = DressProp("Predio_Mercadinho", "Mercadinho/Fachada", new Vector3(7.2f, 2.4f, 5.6f), heightFactor: .86f);
+        DressProp("Casa_Esquina_Encruzilhada", "Mercadinho/Casa", new Vector3(6.62f, 2.0f, 3.10f),
+            scale: 1.30f, heightFactor: .83f, sombra: Sombra.EdificioSuave);
         DressProp("Picape_Encruzilhada_Sprite", "Mercadinho/Picape", new Vector3(3.7f, 1.1f, 1.55f), sombra: Sombra.Veiculo);
-        DressProp("Carro_Esquina", "Mercadinho/Carro", new Vector3(3.25f, .97f, 1.4f), sombra: Sombra.Veiculo);
-        DressProp("Banco_Encruzilhada", "Entrada/BancoRodovia", new Vector3(1.65f, .48f, .86f), sombra: Sombra.Contato);
-        DressProp("Engradado_Merc_1", "Caixotes", new Vector3(.9f, .55f, .93f), sombra: Sombra.Contato);
-        DressProp("Engradado_Merc_2", "Engradado", new Vector3(.65f, .45f, .51f), sombra: Sombra.Contato);
-        DressProp("Lixeira_Mercadinho", "Contentor", new Vector3(1.24f, .7f, .91f));
+        var carro = DressProp("Carro_Esquina", "Mercadinho/Carro", new Vector3(3.25f, .97f, 1.4f), sombra: Sombra.Veiculo);
+        DressProp("Banco_Encruzilhada", "Entrada/BancoRodovia", new Vector3(1.65f, .48f, .86f), sombra: Sombra.Recorte);
+        if (DressProp("Lixeira_Mercadinho", "Mercadinho/LixeiraBaixa", new Vector3(.63f, .37f, .63f),
+                sombra: Sombra.ProjetadaSuave) == null)
+            DressProp("Lixeira_Mercadinho", "Contentor", new Vector3(1.24f, .7f, .91f));
         DressProp("Mural_Encruzilhada", null, new Vector3(.72f, .2f, 1.8f));
-        DressProp("Cerca_Esquina", null, new Vector3(3.4f, .45f, 1.1f));
+        DressProp("Aviso_Obra_Drenagem", null, new Vector3(.40f, .14f, .68f));
         DressProp("Placa_Subida_Bairro", null, new Vector3(.23f, .2f, 1.25f));
-        for (int i = 1; i <= 4; i++)
+        for (int i = 1; i <= 3; i++)
             DressProp("Poste_Z3_" + i, "Poste", new Vector3(.17f, .2f, 3.15f));
-        for (int i = 1; i <= 2; i++)
-            DressProp("UtilityPole_Z3_" + i, null, new Vector3(.22f, .20f, 2.6f));
 
         foreach (var light in GetComponentsInChildren<Light2D>(true))
             light.enabled = false;
 
-        lighting.SetVectorArray("_Lamps", new[]
+        var lamps = new[]
         {
             Lamp("Poste_Z3_1", .66f, -.42f, 3.18f, 8.2f),
             Lamp("Predio_Mercadinho", .08f, -.45f, 2.75f, 7.5f),
             Lamp("Poste_Z3_2", .66f, -.42f, 3.18f, 8.2f)
-        });
+        };
+        lighting.SetVectorArray("_Lamps", lamps);
         lighting.SetVectorArray("_LampColors", new[]
         {
             new Vector4(1.89f, 1.48f, .97f, 1),
@@ -595,19 +601,17 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             new Vector4(1.85f, 1.46f, .94f, 1)
         });
         lighting.SetVector("_FourthLamp", Lamp("Poste_Z3_3", .66f, -.42f, 3.18f, 8.2f));
-        lighting.SetVector("_FifthLamp", Lamp("Poste_Z3_4", .66f, -.42f, 3.18f, 8.2f));
+        ComporEncruzilhada(fachada, carro);
+        ComporBosqueDaRua();
+        luzesDeRecorte = lamps;
         UpdateCasters(false);
     }
 
-    private void DressChair(string name, Vector2 feet, bool faceLeft)
+    private void DressChair(string name, bool faceLeft)
     {
-        var chair = transform.Find(name);
-        if (chair == null) return;
-        chair.position = feet;
         var renderer = DressProp(name, "Cadeira", new Vector3(.45f, .38f, .78f));
         if (renderer == null) return;
         renderer.flipX = faceLeft;
-        renderer.sortingOrder = 1000 - Mathf.RoundToInt(feet.y * 10);
         renderer.color = new Color(.88f, .94f, .96f);
     }
 
@@ -630,36 +634,55 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
 
     private Vector4 Lamp(string prop, float xOffset, float yOffset, float height, float reach)
     {
-        Vector2 at = (Vector2)transform.Find(prop).position - origin;
+        var objeto = transform.Find(prop);
+        Vector2 at = (Vector2)objeto.position - origin;
+        if (height > 3f && objeto.TryGetComponent<SpriteRenderer>(out var poste))
+        {
+            // Centro do vidro âmbar na arte de 72 × 216 px, medido a partir da base.
+            var bounds = poste.bounds;
+            float x = poste.flipX ? 1f - 58f / 72f : 58f / 72f;
+            float bocalX = Mathf.Lerp(bounds.min.x, bounds.max.x, x) - origin.x;
+            float bocalY = Mathf.Lerp(bounds.min.y, bounds.max.y, 200f / 216f) - origin.y;
+            bocaisDosPostes.Add(new Vector4(bocalX, bocalY, at.y, 1f));
+        }
         return new Vector4(at.x + xOffset, at.y + yOffset, height, reach);
     }
 
-    private void Plant(string name, string art, float x, float y, float scale)
+    private void Plant(string name, string art, float x, float y, float scale, bool espelhar = false, bool temTroncoSolido = true)
     {
         var tree = transform.Find(name);
         if (tree == null)
         {
-            var obj = new GameObject(name, typeof(SpriteRenderer), typeof(BoxCollider2D), typeof(SantaRitaForeground));
+            var obj = new GameObject(name, typeof(SpriteRenderer));
             tree = obj.transform;
             tree.SetParent(transform, false);
             tree.position = new Vector3(x, y, 0);
             obj.GetComponent<SpriteRenderer>().sortingOrder = 1000 - Mathf.RoundToInt(y * 10);
-            var collider = obj.GetComponent<BoxCollider2D>();
-            collider.size = new Vector2(.62f, .43f) * scale;
-            collider.offset = new Vector2(0, .23f) * scale;
+            if (temTroncoSolido)
+            {
+                var collider = obj.AddComponent<BoxCollider2D>();
+                collider.size = new Vector2(.62f, .43f) * scale;
+                collider.offset = new Vector2(0, .23f) * scale;
+                obj.AddComponent<SantaRitaForeground>();
+            }
         }
-        DressTree(name, art, scale);
+        DressTree(name, art, scale, espelhar);
     }
 
-    private void DressTree(string name, string art, float scale)
+    private void DressTree(string name, string art, float scale, bool espelhar = false)
     {
-        var renderer = DressProp(name, art, new Vector3(.53f, .63f, 2.85f) * scale, scale,
-            sombra: AvenidaMolhada || bairro ? Sombra.Nenhuma : Sombra.Projetada);
+        string especie = art == "Arvore" ? "Camboata" : art;
+        string caminho = "Vegetacao/" + especie;
+        bool novaArvore = Resources.Load<Sprite>(Art + caminho) != null;
+        var renderer = DressProp(name, novaArvore ? caminho : art, new Vector3(.53f, .63f, 2.85f) * scale, scale,
+            sombra: novaArvore ? Sombra.Nenhuma : Sombra.Projetada);
         if (renderer == null) return;
+        if (espelhar) renderer.flipX = true;
         renderer.color = new Color(.87f, .94f, .93f);
+        if (novaArvore && AplicarMaterialDaMata(renderer, especie, .092f * scale)) return;
         renderer.GetPropertyBlock(receiverProperties);
-        receiverProperties.SetVector("_Wind", new Vector4(.092f * scale,
-            renderer.bounds.size.y, renderer.transform.position.x * .79f, 0));
+        receiverProperties.SetVector("_Wind", new Vector4(.092f * scale, renderer.bounds.size.y,
+            renderer.transform.position.x * .79f, 0));
         renderer.SetPropertyBlock(receiverProperties);
     }
 
@@ -672,7 +695,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         if (renderer == null) return null;
         if (art != null)
         {
-            var sprite = art.StartsWith("Entrada/", System.StringComparison.Ordinal)
+            var sprite = art.StartsWith("Entrada/", System.StringComparison.Ordinal) && art.IndexOf('/', "Entrada/".Length) < 0
                 ? ObjetoDaEntrada(art.Substring("Entrada/".Length))
                 : Resources.Load<Sprite>(Art + art);
             if (sprite == null) return null;
@@ -693,15 +716,17 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
 
         Vector2 at = (Vector2)prop.position - origin;
         int id = -1;
-        if (casterCount < CasterLimit - 1)
+        int limite = AvenidaMolhada ? CasterLimit : 32;
+        if (casterCount < limite - 1 && sombra != Sombra.Nenhuma)
         {
             id = casterCount++;
             casterMin[id] = new Vector4(at.x - volume.x * .5f, at.y + .04f, 0, (float)sombra);
             casterMax[id] = new Vector4(at.x + volume.x * .5f, at.y + volume.y, volume.z, 0);
         }
-        if (AvenidaMolhada) renderer.sortingOrder = 1000 - Mathf.RoundToInt(prop.position.y * 10);
+        renderer.sortingOrder = 1000 - Mathf.RoundToInt(prop.position.y * 10);
         renderer.sharedMaterial = lighting;
         SetReceiver(renderer, prop.position.y, heightFactor, id);
+        AplicarRelevoDaRodovia(renderer);
         return renderer;
     }
 
@@ -725,9 +750,27 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         }
 
         DressFog();
-        var lamps = lighting.GetVectorArray("_Lamps");
-        if (backFogMaterial != null) backFogMaterial.SetVectorArray("_EntranceLamps", lamps);
-        if (frontFogMaterial != null) frontFogMaterial.SetVectorArray("_EntranceLamps", lamps);
+        var fontes = new Vector4[bairro ? 9 : 5];
+        for (int i = 0; i < Mathf.Min(bocaisDosPostes.Count, fontes.Length); i++)
+            fontes[i] = bocaisDosPostes[i];
+        if (frontFogMaterial != null)
+        {
+            frontFogMaterial.SetVectorArray("_EntranceLamps", fontes);
+            frontFogMaterial.SetInteger("_EntranceLampCount", fontes.Length);
+        }
+        PrepararFlaresDosPostes(fontes);
+        if (bairro || RuaDoBar) return;
+
+        // Uma fonte de alcance curto junto à parada, à bomba ou à banca de frutas.
+        Vector4 accent = entrada ? new Vector4(119.58f, 13.56f, 1.94f, 4.7f)
+            : posto ? new Vector4(212.2f, 13.24f, 2.46f, 5.1f)
+            : new Vector4(308.12f, 13.31f, 2.22f, 4.9f);
+        accent.x -= origin.x;
+        accent.y -= origin.y;
+        lighting.SetVector("_AccentLamp", accent);
+        lighting.SetVector("_AccentColor", entrada ? new Vector4(1.28f, 1.53f, 1.72f, 0)
+            : posto ? new Vector4(2.00f, 1.47f, .89f, 0)
+            : new Vector4(2.08f, 1.23f, .63f, 0));
     }
 
     private void DressFog()
@@ -736,21 +779,14 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         {
             var shader = Resources.Load<Shader>(Art + "Nevoeiro");
             if (shader == null || !shader.isSupported) return;
-            var house = new Vector4(origin.x + size.x * .5f, 15.8f, 0f, 0f);
-            if (!AvenidaMolhada)
-            {
-                var facade = transform.Find(bairro ? "Predio_CasaDoAvo_40" : "Predio_Fachada_BarDoZe").GetComponent<SpriteRenderer>();
-                var baseAt = facade.transform.position;
-                house = new Vector4(baseAt.x, baseAt.y, facade.bounds.extents.x, 3.1f);
-            }
             var texture = Texture2D.whiteTexture;
             fogSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
                 Vector2.zero, texture.width, 0, SpriteMeshType.FullRect);
-            backFog = CreateFog("Nevoeiro sobre o bosque", shader, house, false);
+            backFog = CreateFog("Relâmpago atrás da rua", shader, false);
             backFogMaterial = backFog.sharedMaterial;
-            frontFog = CreateFog(entrada ? "Névoa baixa entre os postes" : "Nevoeiro junto à soleira",
-                shader, house, true);
+            frontFog = CreateFog("Vagalumes e luz dispersa", shader, true);
             frontFogMaterial = frontFog.sharedMaterial;
+            frontFogMaterial.SetVectorArray("_FireflyPatches", FaixasDeVagalumes());
         }
         backFog.sortingOrder = 2030;
         if (frontFog != null) frontFog.sortingOrder = 2031;
@@ -758,7 +794,22 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         if (frontFog != null) frontFog.sharedMaterial = frontFogMaterial;
     }
 
-    private SpriteRenderer CreateFog(string name, Shader shader, Vector4 house, bool front)
+    private Vector4[] FaixasDeVagalumes()
+    {
+        // Retângulos em coordenadas locais, seguindo as bordas do bosque e as moitas.
+        if (entrada) return new[] { new Vector4(2, 15, 16, 19), new Vector4(21, 15, 35, 19),
+            new Vector4(1, 3, 18, 5.9f), new Vector4(20, 3, 35, 5.7f) };
+        if (bairro) return new[] { new Vector4(2, 3.2f, 17, 7.4f), new Vector4(23, 3.4f, 40, 7.4f),
+            new Vector4(21.8f, 16.2f, 33, 19.4f), new Vector4(27.3f, 28.6f, 33, 32) };
+        if (RuaDoBar) return new[] { new Vector4(1, 15.1f, 10, 20), new Vector4(26, 15.5f, 37, 20.7f),
+            new Vector4(2, 3, 19, 5.8f), new Vector4(22, 3, 36, 5.8f) };
+        if (posto) return new[] { new Vector4(1, 15.5f, 8, 20.6f), new Vector4(16, 15.5f, 24, 21),
+            new Vector4(27, 18, 37, 21), new Vector4(2, 3.2f, 36, 5.8f) };
+        return new[] { new Vector4(1, 17.7f, 16, 24.8f), new Vector4(15.8f, 16, 19.6f, 25),
+            new Vector4(22, 16.3f, 27, 25), new Vector4(2, 3, 38, 5.7f) };
+    }
+
+    private SpriteRenderer CreateFog(string name, Shader shader, bool front)
     {
         var obj = new GameObject(name);
         obj.transform.SetParent(transform, false);
@@ -768,9 +819,8 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         renderer.sprite = fogSprite;
         var material = new Material(shader);
         material.SetVector("_Ground", new Vector4(origin.x, origin.y, size.x, size.y));
-        material.SetVector("_Bar", house);
         material.SetFloat("_Front", front ? 1 : 0);
-        material.SetFloat("_Entrance", AvenidaMolhada ? 1 : 0);
+        material.SetFloat("_Entrance", 1);
         renderer.sharedMaterial = material;
         return renderer;
     }
@@ -779,6 +829,8 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     {
         if (lighting == null || receiverProperties == null) return;
         bool effects = ZonaAtiva && !MenuPausa.ReduzirEfeitosIntensos;
+        if (flaresDosPostes != null && flaresDosPostes.activeSelf != effects)
+            flaresDosPostes.SetActive(effects);
         if (trovao != null) AtualizarTrovao(effects);
         if (backFog != null)
         {
@@ -790,11 +842,14 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         {
             if (player != null) { RestorePlayer(); UpdateCasters(false); }
             lighting.SetVector("_ViewFocus", Vector4.zero);
+            lighting.SetVector("_PlayerLamp", Vector4.zero);
+            DesativarSombraDaLanterna();
             inicioRaio = float.NegativeInfinity;
             lighting.SetFloat("_Lightning", 0);
             lighting.SetVector("_MirrorBounds", Vector4.zero);
             return;
         }
+        if (luzesDeRecorte != null) ProjetarSombrasDaRua();
         if (player == null)
         {
             var actor = FindAnyObjectByType<PlayerController>();
@@ -808,20 +863,25 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             player.sharedMaterial = lighting;
         }
         Vector2 focus = (Vector2)player.transform.position - origin;
+        if (effects) AtualizarFlaresDosPostes(focus);
         lighting.SetVector("_ViewFocus", new Vector4(focus.x, focus.y + .7f, effects ? 1f : .35f, 0));
         SetReceiver(player, player.transform.position.y, .94f, casterCount);
         UpdateCasters(true);
         AtualizarClimaDaRua(effects);
         AtualizarReflexoDoMarcus();
-        if (AvenidaMolhada || bairro)
+        if (playerController.ObterFeixeLanterna(out var lente, out var direcao))
         {
-            if (playerController.ObterFeixeLanterna(out var lente, out var direcao))
-            {
-                Vector2 ponto = lente - origin;
-                lighting.SetVector("_PlayerLamp", new Vector4(ponto.x, ponto.y, lente.y - player.transform.position.y, 6.2f));
-                lighting.SetVector("_PlayerLampDirection", direcao);
-            }
-            else lighting.SetVector("_PlayerLamp", Vector4.zero);
+            Vector2 ponto = lente - origin;
+            float alturaLuz = Mathf.Max(1.05f, lente.y - player.transform.position.y + .42f);
+            var lamp = new Vector4(ponto.x, ponto.y, alturaLuz, 6.2f);
+            lighting.SetVector("_PlayerLamp", lamp);
+            lighting.SetVector("_PlayerLampDirection", direcao);
+            ProjetarSombraDaLanterna(lamp);
+        }
+        else
+        {
+            lighting.SetVector("_PlayerLamp", Vector4.zero);
+            DesativarSombraDaLanterna();
         }
     }
 
@@ -923,6 +983,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             casterMax[casterCount] = new Vector4(at.x + .22f, at.y + .16f, 1.54f, 0);
         }
         lighting.SetInt("_CasterCount", casterCount + (withPlayer ? 1 : 0));
+        lighting.SetInt("_ArrivalPlayerCaster", withPlayer ? casterCount : -1);
         lighting.SetVectorArray("_CasterMin", casterMin);
         lighting.SetVectorArray("_CasterMax", casterMax);
     }
@@ -939,6 +1000,88 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         player = null;
     }
 
+    private void PrepararFlaresDosPostes(Vector4[] fontes)
+    {
+        perfilDosFlares = ScriptableObject.CreateInstance<LensFlareDataSRP>();
+        perfilDosFlares.elements = new[]
+        {
+            new LensFlareDataElementSRP
+            {
+                tint = new Color(1f, .61f, .24f),
+                sizeXY = new Vector2(1f, .12f),
+                uniformScale = 1.06f,
+                localIntensity = .23f,
+                edgeOffset = .72f,
+                fallOff = .79f
+            },
+            new LensFlareDataElementSRP
+            {
+                tint = new Color(1f, .70f, .32f),
+                sizeXY = new Vector2(.14f, 1f),
+                uniformScale = .44f,
+                rotation = 22f,
+                localIntensity = .12f,
+                edgeOffset = .72f,
+                fallOff = .79f
+            },
+            new LensFlareDataElementSRP
+            {
+                position = .48f,
+                flareType = SRPLensFlareType.Polygon,
+                sideCount = 6,
+                sdfRoundness = .38f,
+                tint = new Color(1f, .64f, .34f),
+                uniformScale = .25f,
+                localIntensity = .095f,
+                edgeOffset = .58f,
+                fallOff = .78f
+            },
+            new LensFlareDataElementSRP
+            {
+                position = .74f,
+                flareType = SRPLensFlareType.Polygon,
+                sideCount = 6,
+                sdfRoundness = .5f,
+                tint = new Color(1f, .56f, .26f),
+                uniformScale = .39f,
+                localIntensity = .065f,
+                edgeOffset = .76f,
+                fallOff = .78f
+            }
+        };
+
+        flaresDosPostes = new GameObject("Reflexos na lente dos postes");
+        flaresDosPostes.transform.SetParent(transform, false);
+        flaresDosPostes.SetActive(false);
+        foreach (var fonte in fontes)
+        {
+            if (fonte.w <= 0) continue;
+            var emissor = new GameObject("Lens flare");
+            emissor.transform.SetParent(flaresDosPostes.transform, false);
+            emissor.transform.position = origin + new Vector2(fonte.x, fonte.y);
+            var flare = emissor.AddComponent<LensFlareComponentSRP>();
+            flare.lensFlareData = perfilDosFlares;
+            flare.attenuationByLightShape = false;
+            flare.scaleByDistanceCurve = AnimationCurve.Constant(0f, 1f, 1f);
+            flare.radialScreenAttenuationCurve = AnimationCurve.EaseInOut(.5f, 1f, 1f, 0f);
+            flare.intensity = 0f;
+            flaresDaRua.Add((flare, fonte));
+        }
+    }
+
+    private void AtualizarFlaresDosPostes(Vector2 posicao)
+    {
+        foreach (var (flare, fonte) in flaresDaRua)
+        {
+            float lateral = Mathf.Abs(posicao.x - fonte.x);
+            float abaixo = fonte.z - posicao.y;
+            float entrada = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(-.12f, .42f, abaixo));
+            float saida = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(1.45f, 2.65f, abaixo));
+            float largura = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.30f, 1.55f, lateral));
+            flare.intensity = entrada * saida * largura;
+        }
+    }
+
     private void OnDestroy()
     {
         if (entradaAtual == this) entradaAtual = null;
@@ -950,9 +1093,22 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         }
         Destroy(groundCells);
         Destroy(entranceWater);
+        if (sombrasDosPostes != null)
+        {
+            sombrasDosPostes.Release();
+            Destroy(sombrasDosPostes);
+        }
+        LiberarRecursosSombraLanterna();
+        foreach (var sprite in spritesDaFiacao)
+        {
+            Destroy(sprite.texture);
+            Destroy(sprite);
+        }
         Destroy(fogSprite);
         Destroy(backFogMaterial);
         Destroy(frontFogMaterial);
+        Destroy(perfilDosFlares);
+        Destroy(spriteDasLuminariasDaSubida);
         Destroy(lighting);
     }
 }

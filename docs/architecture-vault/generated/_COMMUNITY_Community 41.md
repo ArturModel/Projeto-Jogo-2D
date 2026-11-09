@@ -1,11 +1,11 @@
 ---
 type: community
-members: 16
+members: 17
 ---
 
 # Community 41
 
-**Members:** 16 nodes
+**Members:** 17 nodes
 
 ## Members
 - [[dot-Add()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
@@ -21,6 +21,7 @@ members: 16
 - [[dot-ApplyOficinaRadio()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
 - [[dot-ApplyPrefeitura()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
 - [[dot-ApplyRodoviaria()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
+- [[dot-ControlaRenderDaRua()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaRuaNorte.cs
 - [[dot-Replace()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
 - [[SantaRitaPlaceDressing]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
 - [[SantaRitaPlaceDressing.cs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaPlaceDressing.cs
@@ -33,18 +34,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Community 113]]
-- 3 edges to [[_COMMUNITY_Community 108]]
-- 3 edges to [[_COMMUNITY_Community 29]]
-- 2 edges to [[_COMMUNITY_Community 16]]
+- 7 edges to [[_COMMUNITY_Community 139]]
+- 3 edges to [[_COMMUNITY_Community 89]]
+- 2 edges to [[_COMMUNITY_Community 120]]
 - 2 edges to [[_COMMUNITY_Community 20]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 113]]
+- 1 edge to [[_COMMUNITY_Community 138]]
+- 1 edge to [[_COMMUNITY_Community 141]]
 - 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 114]]
 - 1 edge to [[_COMMUNITY_Community 94]]
 - 1 edge to [[_COMMUNITY_Community 36]]
 
 ## Top bridge nodes
+- [[dot-ApplyC1()]] - degree 13, connects to 6 communities
 - [[dot-Add()_1]] - degree 16, connects to 4 communities
-- [[dot-ApplyC1()]] - degree 11, connects to 4 communities
 - [[dot-ApplyC2()]] - degree 13, connects to 3 communities
 - [[dot-Replace()_1]] - degree 6, connects to 3 communities
-- [[SantaRitaPlaceDressing.cs]] - degree 2, connects to 1 community
+- [[dot-ControlaRenderDaRua()]] - degree 4, connects to 3 communities

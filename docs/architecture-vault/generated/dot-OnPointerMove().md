@@ -12,7 +12,7 @@ tags:
 # .OnPointerMove()
 
 ## Connections
-- [[dot-OnDrag()_1]] - `calls` [EXTRACTED]
+- [[dot-OnDrag()]] - `calls` [EXTRACTED]
 - [[dot-ScreenToTablePoint()]] - `calls` [EXTRACTED]
 - [[dot-ScreenToViewPoint()]] - `calls` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]

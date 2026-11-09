@@ -1,20 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaFalasEntrada.cs"
 type: "code"
-community: "Community 83"
-location: "L590"
+community: "Community 52"
+location: "L98"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_83
+  - graphify/INFERRED
+  - community/Community_52
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
-- [[dot-SolicitarRegistro()]] - `calls` [EXTRACTED]
-- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
-- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
+- [[dot-Atualizar()_1]] - `calls` [INFERRED]
+- [[dot-Atualizar()]] - `calls` [INFERRED]
+- [[dot-Cancelar()]] - `calls` [INFERRED]
+- [[dot-Confirmar()]] - `calls` [INFERRED]
+- [[dot-Encerrar()_1]] - `calls` [EXTRACTED]
+- [[dot-ProximaFala()]] - `calls` [EXTRACTED]
+- [[dot-Suspender()]] - `calls` [INFERRED]
+- [[SantaRitaFalasEntrada]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/INFERRED #community/Community_52

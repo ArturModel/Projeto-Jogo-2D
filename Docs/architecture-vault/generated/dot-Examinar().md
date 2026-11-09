@@ -1,0 +1,48 @@
+---
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteracaoCapitulo1.cs"
+type: "code"
+community: "Community 13"
+location: "L602"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_13
+---
+
+# .Examinar()
+
+## Connections
+- [[dot-Examinar()_1]] - `calls` [EXTRACTED]
+- [[dot-Falar()]] - `calls` [EXTRACTED]
+- [[dot-InteragirAvisoObra()]] - `calls` [EXTRACTED]
+- [[dot-InteragirBalcaoBar()]] - `calls` [EXTRACTED]
+- [[dot-InteragirBombaPosto()]] - `calls` [EXTRACTED]
+- [[dot-InteragirCadernoMercadinho()]] - `calls` [EXTRACTED]
+- [[dot-InteragirCaixaCorreioAvo()]] - `calls` [EXTRACTED]
+- [[dot-InteragirCaminhoneteBar()]] - `calls` [EXTRACTED]
+- [[dot-InteragirCarroPosto()]] - `calls` [EXTRACTED]
+- [[dot-InteragirLimiarCentro()]] - `calls` [EXTRACTED]
+- [[dot-InteragirLivroPosto()]] - `calls` [EXTRACTED]
+- [[dot-InteragirMalaAbandonada()]] - `calls` [EXTRACTED]
+- [[dot-InteragirMarcasBarro()]] - `calls` [EXTRACTED]
+- [[dot-InteragirMesaSinuca()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPicapeEncruzilhada()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPistaCafe()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPistaCartas()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPistaDesordem()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPistaNotaFiscal()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPlacaBar()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPlacaRodovia()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPlacaSetaBairro()]] - `calls` [EXTRACTED]
+- [[dot-InteragirPrateleirasMercadinho()]] - `calls` [EXTRACTED]
+- [[dot-InteragirQuadroEncruzilhada()]] - `calls` [EXTRACTED]
+- [[dot-InteragirQuadroRegras()]] - `calls` [EXTRACTED]
+- [[dot-InteragirRetratoFamilia()]] - `calls` [EXTRACTED]
+- [[dot-InteragirTelefoneCasaAvo()]] - `calls` [EXTRACTED]
+- [[dot-InteragirTvPosto()]] - `calls` [EXTRACTED]
+- [[dot-InteragirVendaAntiga()]] - `calls` [EXTRACTED]
+- [[dot-Marcus()]] - `calls` [EXTRACTED]
+- [[Action]] - `references` [EXTRACTED]
+- [[InteracaoCapitulo1]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_13

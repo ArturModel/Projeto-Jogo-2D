@@ -8,8 +8,8 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
-- [[dot-Awake()_9]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
-- [[dot-Update()_18]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
+- [[dot-Awake()_6]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
+- [[dot-Update()_14]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
 - [[ChuvaRolando]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
 - [[ChuvaRolando.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaRolando.cs
 
@@ -22,7 +22,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Community 87]]
-- 1 edge to [[_COMMUNITY_Community 108]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_Community 36]]
 
 ## Top bridge nodes

@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/SantaRitaBochaAmbiente.cs"
 type: "code"
-community: "Community 113"
+community: "Community 150"
 location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_113
+  - community/Community_150
 ---
 
 # .SpriteNoMundo()
 
 ## Connections
-- [[dot-Aplicar()_1]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()]] - `calls` [EXTRACTED]
 - [[dot-CriarSprite()]] - `calls` [EXTRACTED]
 - [[dot-MontarSalaDeEspera()]] - `calls` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_113
+#graphify/code #graphify/EXTRACTED #community/Community_150

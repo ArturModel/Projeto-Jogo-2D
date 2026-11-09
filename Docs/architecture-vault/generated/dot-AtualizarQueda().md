@@ -16,7 +16,7 @@ tags:
 - [[dot-MarcusComenta()]] - `calls` [EXTRACTED]
 - [[dot-PanBocha()]] - `calls` [INFERRED]
 - [[dot-TocarAlucinacao()]] - `calls` [EXTRACTED]
-- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[dot-Update()_18]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

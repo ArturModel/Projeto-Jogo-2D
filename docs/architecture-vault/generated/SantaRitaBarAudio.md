@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
-community: "Community 116"
+community: "Community 54"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_116
+  - community/Community_54
 ---
 
 # SantaRitaBarAudio
@@ -14,13 +14,13 @@ tags:
 ## Connections
 - [[dot-CriarTextura()]] - `method` [EXTRACTED]
 - [[dot-DefinirContexto()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_3]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_5]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_19]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_12]] - `method` [EXTRACTED]
 - [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
-- [[dot-Update()_10]] - `method` [EXTRACTED]
+- [[dot-Update()_39]] - `method` [EXTRACTED]
 - [[dot-VolumeDaCamada()]] - `method` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarAudio.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_116
+#graphify/code #graphify/EXTRACTED #community/Community_54

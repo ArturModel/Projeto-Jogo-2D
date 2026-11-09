@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
-community: "Community 2"
-location: "L134"
+community: "Community 155"
+location: "L135"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_155
 ---
 
 # .BuildFirstPersonLayer()
@@ -19,4 +19,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[UniversalAdditionalCameraData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_155

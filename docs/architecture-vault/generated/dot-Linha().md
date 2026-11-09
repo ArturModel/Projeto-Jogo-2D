@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
 community: "Community 46"
-location: "L260"
+location: "L386"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Linha()
 
 ## Connections
-- [[dot-Estrada()]] - `calls` [EXTRACTED]
+- [[dot-CortinaChuva()]] - `calls` [EXTRACTED]
 - [[dot-Quad()_1]] - `calls` [EXTRACTED]
 - [[dot-Vidro()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]

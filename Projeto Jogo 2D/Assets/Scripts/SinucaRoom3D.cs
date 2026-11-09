@@ -30,7 +30,8 @@ public sealed partial class SinucaRoom3D : IDisposable
     private readonly Transform[] markedSigns=new Transform[16];
     private Transform[] lampParts;
     private readonly Transform ghost,cue;
-    private Renderer wallLeft,wallRight,wallBack;
+    private Renderer[] wallLeft, wallRight;
+    private Renderer wallBack;
     private Renderer ceilingRenderer;
     private Renderer[] ceilingBeams;
     private float yaw=8,topYaw,zoom=1,cueHeading;
@@ -239,7 +240,7 @@ public sealed partial class SinucaRoom3D : IDisposable
         var table=Resources.Load<Sprite>("Art/Props/MesaSinuca").texture;var sum=Color.black;int count=0;
         foreach(var c in table.GetPixels())if(c.a>.9f&&c.g>c.r*1.3f&&c.g>c.b*1.15f){sum+=c;count++;}
         Color cloth=count>0?sum/count:new Color(.12f,.32f,.20f);for(int y=0;y<8;y++)for(int x=0;x<8;x++)felt.SetPixel(x,y,cloth*(1+(((x*13+y*7)%5)-2)*.008f));felt.Apply();tiles[3]=felt;owned.Add(felt);
-        camera=new GameObject("CameraSinuca3D").AddComponent<Camera>();camera.transform.SetParent(root.transform,false);camera.cullingMask=1<<Layer;camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.065f,.047f,.03f);camera.nearClipPlane=.015f;camera.farClipPlane=35;camera.depth=-10;camera.allowHDR=false;
+        camera=new GameObject("CameraSinuca3D").AddComponent<Camera>();camera.transform.SetParent(root.transform,false);camera.cullingMask=1<<Layer;camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.024f,.030f,.033f);camera.nearClipPlane=.015f;camera.farClipPlane=35;camera.depth=-10;camera.allowHDR=false;
         var data=camera.gameObject.AddComponent<UniversalAdditionalCameraData>();data.SetRenderer(1);data.renderPostProcessing=false;data.renderShadows=true;data.volumeLayerMask=0;
         Target=new RenderTexture(width,height,24,RenderTextureFormat.ARGB32){name="Sinuca_Offscreen",antiAliasing=2,filterMode=FilterMode.Bilinear};Target.Create();camera.targetTexture=Target;owned.Add(Target);
         BuildRoom();CaptureArt("Mesa_Sinuca_Central",BuildTable);for(int n=0;n<16;n++){balls[n]=Sphere("Bola_"+n,new Vector3(0,TableY+SinucaTableView.BallRadius*MetresPerUnit,0),SinucaTableView.BallRadius*2*MetresPerUnit,BallMaterial(n),dynamic).transform;}
@@ -252,7 +253,9 @@ public sealed partial class SinucaRoom3D : IDisposable
         lampParts=scenery.GetComponentsInChildren<Transform>(true).Where(t=>t.name=="Cupula"||t.name=="FioLampada"||t.name=="Lampada").ToArray();
         foreach(var t in root.GetComponentsInChildren<Transform>(true))t.gameObject.layer=Layer;
         BuildFirstPersonLayer();
-        wallLeft=scenery.Find("LambrilEsq").GetComponent<Renderer>();wallRight=scenery.Find("LambrilDir").GetComponent<Renderer>();wallBack=scenery.Find("LambrilFundo").GetComponent<Renderer>();
+        wallLeft = scenery.Find("LambrilEsq").GetComponentsInChildren<Renderer>();
+        wallRight = scenery.Find("LambrilDir").GetComponentsInChildren<Renderer>();
+        wallBack = scenery.Find("LambrilFundo").GetComponent<Renderer>();
         StaticRendererCount=scenery.GetComponentsInChildren<MeshRenderer>().Length;UpdateCamera();
     }
     private LineRenderer NewGuide(string name,float width,Material material,int count)
@@ -376,7 +379,13 @@ public sealed partial class SinucaRoom3D : IDisposable
         foreach(var detail in overheadDetails)detail.enabled=insideCeiling;
         OrientPixelArt();
         UpdateOpponentView();
-        if(wallLeft!=null){var p=camera.transform.localPosition;wallLeft.enabled=p.x>-5.3f;wallRight.enabled=p.x<5.3f;wallBack.enabled=p.z<3.7f;}
+        if (wallLeft != null)
+        {
+            var p = camera.transform.localPosition;
+            foreach (var painel in wallLeft) painel.enabled = p.x > -5.3f;
+            foreach (var painel in wallRight) painel.enabled = p.x < 5.3f;
+            wallBack.enabled = p.z < 3.7f;
+        }
     }
     public Vector2 Project(Vector3 sim){var p=root.transform.TransformPoint(new Vector3(sim.x*MetresPerUnit,TableY+sim.y*MetresPerUnit,sim.z*MetresPerUnit));return camera.WorldToViewportPoint(p);}
     public bool RayHitsWhite(Vector2 viewport,Vector2 ball)

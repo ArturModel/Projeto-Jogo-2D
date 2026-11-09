@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs"
 type: "code"
-community: "Community 0"
+community: "Community 114"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_114
 ---
 
 # .RunSinuca3DPerspective()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AguardarEntradaSinuca()]] - `calls` [EXTRACTED]
 - [[dot-AjustarZoom()]] - `calls` [INFERRED]
-- [[dot-AwaitScene()]] - `calls` [INFERRED]
+- [[dot-AwaitScene()]] - `calls` [EXTRACTED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
 - [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Click()]] - `calls` [EXTRACTED]
@@ -46,4 +46,4 @@ tags:
 - [[SinucaTableView]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_114

@@ -4,7 +4,12 @@ using Tipo = InteracaoCapitulo1.TipoInteracao;
 public sealed partial class SinucaRoom3D
 {
     private const float SoleiraBar = -7.40f;
+    private const float JanelaFachadaX = 3.48f;
+    private const float JanelaFachadaY = 1.71f;
+    private const float JanelaFachadaLargura = 1.76f;
+    private const float JanelaFachadaAltura = .96f;
     internal const float DuracaoEntradaBar = 3.10f;
+    internal const float SaidaAntesDaNevoa = 1.27f;
     private static readonly Vector3 ChegadaBar = new Vector3(.10f, 1.62f, -5.72f);
     private static readonly Vector2 OlharChegada = new Vector2(4f, 3f);
     private Transform portaBar, macanetaExterior, maoMarcusPorta;
@@ -21,10 +26,35 @@ public sealed partial class SinucaRoom3D
     private void ConstruirParedeDaEntrada(string nome, float y, float altura, float largura, float z, float profundidade, Material material)
     {
         const float metadeVao = .54f;
-        float lado = largura / 2f - metadeVao;
+        float baseParede = y - altura * .5f;
+        float topoParede = y + altura * .5f;
+        float baseJanela = Mathf.Max(baseParede, JanelaFachadaY - JanelaFachadaAltura * .5f);
+        float topoJanela = Mathf.Min(topoParede, JanelaFachadaY + JanelaFachadaAltura * .5f);
+
+        void Trecho(float x0, float x1, float y0, float y1)
+        {
+            if (x1 <= x0 || y1 <= y0) return;
+            Box(nome, new Vector3((x0 + x1) * .5f, (y0 + y1) * .5f, z),
+                new Vector3(x1 - x0, y1 - y0, profundidade), material);
+        }
+
         foreach (float sinal in new[] { -1f, 1f })
-            Box(nome + (sinal < 0 ? "Esq" : "Dir"), new Vector3(sinal * (metadeVao + lado / 2f), y, z),
-                new Vector3(lado, altura, profundidade), material);
+        {
+            float a = sinal < 0f ? -largura * .5f : metadeVao;
+            float b = sinal < 0f ? -metadeVao : largura * .5f;
+            if (baseJanela >= topoJanela)
+            {
+                Trecho(a, b, baseParede, topoParede);
+                continue;
+            }
+
+            float esquerda = sinal * JanelaFachadaX - JanelaFachadaLargura * .5f;
+            float direita = esquerda + JanelaFachadaLargura;
+            Trecho(a, esquerda, baseParede, topoParede);
+            Trecho(direita, b, baseParede, topoParede);
+            Trecho(esquerda, direita, baseParede, baseJanela);
+            Trecho(esquerda, direita, topoJanela, topoParede);
+        }
         float topo = y + altura / 2f;
         if (topo > 2.14f)
             Box(nome + "Acima", new Vector3(0f, (topo + 2.14f) / 2f, z),
@@ -62,7 +92,7 @@ public sealed partial class SinucaRoom3D
         }
         foreach (float y in new[] { .25f, 1.81f })
             Cylinder("Dobradica", new Vector3(-.53f, y, SoleiraBar), .018f, .13f, latao, scenery);
-        RoomFill("LuzDaMarquise", new Vector3(.35f, 2.35f, -8.18f), new Color(.80f, .67f, .45f), 1.4f, 2.7f);
+        RoomFill("LuzDaMarquise", new Vector3(.35f, 2.35f, -8.18f), new Color(1f, .78f, .53f), 2.25f, 3.0f);
         ConstruirChuvaDaEntrada();
 
         var textura = Resources.Load<Texture2D>("Art/Characters/MarcusMaoMacaneta");
@@ -168,7 +198,7 @@ public sealed partial class SinucaRoom3D
     internal float AnimarEntradaDoBar(float segundos)
     {
         if (!abrindoBar) return 1f;
-        if (materialChuvaDaEntrada != null) materialChuvaDaEntrada.SetFloat("_Tempo", segundos);
+        if (materialChuvaDaEntrada != null) materialChuvaDaEntrada.SetFloat("_Tempo", Time.unscaledTime);
         float abrir = CurvaDaEntrada(segundos, .82f, 1.76f);
         float fechar = CurvaDaEntrada(segundos, 2.60f, DuracaoEntradaBar);
         portaBar.localRotation = Quaternion.Euler(0f, -98f * abrir * (1f - fechar), 0f);
@@ -186,6 +216,7 @@ public sealed partial class SinucaRoom3D
         float cruzar = CurvaDaEntrada(segundos, 1.10f, 2.76f);
         var fora = new Vector3(.11f, 1.44f, -8.82f);
         var posicao = Vector3.Lerp(fora, ChegadaBar, cruzar);
+        posicao.y += Posto3D.MovimentoDaSoleira(cruzar);
         var deFora = Quaternion.LookRotation(pontoDaMacanetaFechada - fora);
         var deDentro = Quaternion.Euler(OlharChegada.y, OlharChegada.x, 0f);
         camera.orthographic = false;
@@ -197,7 +228,7 @@ public sealed partial class SinucaRoom3D
         var deForaCentrado = Quaternion.Slerp(alinharComRua, deFora, CurvaDaEntrada(segundos, .34f, .94f));
         camera.transform.localRotation = Quaternion.Slerp(deForaCentrado, deDentro, CurvaDaEntrada(segundos, 1.20f, 2.68f));
 
-        AnimarMaoDeMarcus(segundos);
+        AnimarMaoDeMarcus(segundos, macanetaExterior, .42f, .80f, 1.38f, 1.73f);
         SyncFirstPersonCamera();
         OrientPixelArt();
         UpdateOpponentView();
@@ -229,34 +260,46 @@ public sealed partial class SinucaRoom3D
 
     internal float AnimarSaidaDoBar(float tempo)
     {
-        float abertura = CurvaDaEntrada(tempo, .29f, 1.08f);
+        const float pegar = .44f;
+        float abertura = CurvaDaEntrada(tempo, pegar, 1.15f);
         portaBar.localRotation = Quaternion.Euler(0f, -98f * abertura, 0f);
-        if (!tocouPorta && tempo >= .29f)
+        if (!tocouPorta && tempo >= pegar)
         {
             tocouPorta = true;
             SantaRitaSound.Play("door", .18f);
         }
-        float passo = CurvaDaEntrada(tempo, .54f, 1.39f);
-        var soleira = new Vector3(.18f, 1.62f, SoleiraBar + .25f);
-        camera.transform.localPosition = Vector3.Lerp(inicioDaSaidaDoBar, soleira, passo);
-        camera.transform.localRotation = Quaternion.Slerp(olharDaSaidaDoBar, Quaternion.Euler(5f, 180f, 0f), passo);
+        // Keep the moving handle in frame while Marcus pushes the leaf clear of his path.
+        float passo = CurvaDaEntrada(tempo, .96f, 1.56f);
+        var soleira = new Vector3(.23f, 1.62f, SoleiraBar - .16f);
+        var recuo = inicioDaSaidaDoBar;
+        recuo.z = Mathf.Max(recuo.z, SoleiraBar + .86f);
+        var posicao = Vector3.Lerp(Vector3.Lerp(inicioDaSaidaDoBar, recuo, CurvaDaEntrada(tempo, 0f, pegar)), soleira, passo);
+        posicao.y += Posto3D.MovimentoDaSoleira(passo);
+        camera.transform.localPosition = posicao;
+        var alvo = macanetaInterior.position - camera.transform.position;
+        var olhandoMao = Quaternion.Slerp(olharDaSaidaDoBar, Quaternion.LookRotation(alvo),
+            CurvaDaEntrada(tempo, 0f, pegar));
+        camera.transform.localRotation = Quaternion.Slerp(olhandoMao, Quaternion.Euler(5f, 180f, 0f),
+            CurvaDaEntrada(tempo, .76f, 1.48f));
+
+        AnimarMaoDeMarcus(tempo, macanetaInterior, .06f, pegar, .86f, 1.23f);
         if (chuvaDaEntrada != null) chuvaDaEntrada.enabled = abertura > 0f;
-        if (materialChuvaDaEntrada != null) materialChuvaDaEntrada.SetFloat("_Tempo", tempo);
+        if (materialChuvaDaEntrada != null) materialChuvaDaEntrada.SetFloat("_Tempo", Time.unscaledTime);
         SyncFirstPersonCamera();
         OrientPixelArt();
         return abertura;
     }
 
-    private void AnimarMaoDeMarcus(float segundos)
+    private void AnimarMaoDeMarcus(float segundos, Transform macaneta, float inicio, float pegar, float soltar, float fim)
     {
         if (maoMarcusPorta == null) return;
-        bool visivel = segundos > .42f && segundos < 1.73f;
+        bool visivel = segundos > inicio && segundos < fim;
         maoMarcusPorta.gameObject.SetActive(visivel);
         if (!visivel) return;
 
-        float pegada = CurvaDaEntrada(segundos, .42f, .80f) * (1f - CurvaDaEntrada(segundos, 1.38f, 1.73f));
+        float pegada = CurvaDaEntrada(segundos, inicio, pegar) * (1f - CurvaDaEntrada(segundos, soltar, fim));
         var pulso = camera.ViewportToWorldPoint(new Vector3(.82f, -.16f, .57f));
-        var contato = Vector3.Lerp(pulso, macanetaExterior.position, pegada);
+        var contato = Vector3.Lerp(pulso, macaneta.position, pegada);
         var pontoNaTela = camera.WorldToScreenPoint(contato);
         var pulsoNaTela = camera.WorldToScreenPoint(pulso);
         var eixo = pulsoNaTela - pontoNaTela;
@@ -283,23 +326,28 @@ public sealed partial class SinucaRoom3D
 
     internal bool PodeSairDoBar() => EmFoco(new Vector3(0f, 1.30f, SoleiraBar), 2f, .80f, out _);
 
-    internal Tipo? InteracaoEmFoco()
+    internal Tipo? InteracaoEmFoco(out Bounds enquadramento)
     {
         Tipo? melhor = null;
+        Bounds foco = default;
         float alinhamento = .90f;
-        void Considerar(Tipo tipo, Vector3 ponto, float alcance)
+        void Considerar(Tipo tipo, Bounds bounds, float alcance)
         {
-            if (!EmFoco(ponto, alcance, alinhamento, out float precisao)) return;
+            if (!EmFoco(root.transform.InverseTransformPoint(bounds.center), alcance, alinhamento, out float precisao)) return;
             alinhamento = precisao;
             melhor = tipo;
+            foco = bounds;
         }
 
         if (opponent != null)
-            Considerar(Tipo.NpcZeBar, opponent.root.localPosition + Vector3.up * 1.35f, 2.35f);
+            Considerar(Tipo.NpcZeBar, new Bounds(opponent.root.position + Vector3.up * 1.35f, Vector3.one * .4f), 2.35f);
         if (freguesDoBar != null)
-            Considerar(Tipo.NpcFrequentadorBar, freguesDoBar.localPosition + Vector3.up * 1.06f, 2.1f);
-        Considerar(Tipo.BalcaoBarDoZe, new Vector3(-2.64f, 1.83f, 3.66f), 3.0f);
-        Considerar(Tipo.QuadroRegrasSinuca, new Vector3(2.9f, 1.83f, -7.24f), 2.0f);
+            Considerar(Tipo.NpcFrequentadorBar, new Bounds(freguesDoBar.position + Vector3.up * 1.06f, Vector3.one * .4f), 2.1f);
+        if (fotoDoClube != null)
+            Considerar(Tipo.BalcaoBarDoZe, fotoDoClube.bounds, 3.3f);
+        if (regrasDaCasa != null)
+            Considerar(Tipo.QuadroRegrasSinuca, regrasDaCasa.bounds, 2.15f);
+        enquadramento = foco;
         return melhor;
     }
 

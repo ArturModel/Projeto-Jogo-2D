@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
 type: "code"
-community: "Community 13"
+community: "Community 30"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_30
 ---
 
 # DialogoLinha
@@ -18,17 +18,21 @@ tags:
 - [[dot-ConfigurarRetratoEFalante()]] - `references` [EXTRACTED]
 - [[dot-Dialogo()]] - `references` [EXTRACTED]
 - [[dot-DialogueR2()]] - `references` [EXTRACTED]
-- [[dot-Interagir()]] - `calls` [INFERRED]
+- [[dot-DizerInteracao()]] - `calls` [INFERRED]
+- [[dot-Iniciar()]] - `references` [EXTRACTED]
+- [[dot-Interagir()_1]] - `calls` [INFERRED]
 - [[dot-InteragirAtendenteMercadinho()]] - `calls` [INFERRED]
 - [[dot-InteragirFrentista()]] - `calls` [INFERRED]
 - [[dot-InteragirFrequentadorBar()]] - `calls` [INFERRED]
 - [[dot-InteragirMoradorBairro()]] - `calls` [INFERRED]
+- [[dot-InteragirMotoristaPosto()]] - `calls` [INFERRED]
 - [[dot-InteragirVizinhaLurdes()]] - `calls` [INFERRED]
 - [[dot-InteragirZe()]] - `calls` [INFERRED]
 - [[dot-Marcus()]] - `references` [EXTRACTED]
+- [[dot-NarracaoEntradaCasaAvoRoutine()]] - `calls` [INFERRED]
 - [[dot-ParseLinhaAutomatica()]] - `calls` [EXTRACTED]
 - [[dot-Pensa()]] - `references` [EXTRACTED]
-- [[dot-Show()_1]] - `references` [EXTRACTED]
+- [[dot-Show()_2]] - `references` [EXTRACTED]
 - [[dot-ShowDialogue()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `calls` [EXTRACTED]
 - [[dot-TentarTransicionar()]] - `calls` [INFERRED]
@@ -37,6 +41,7 @@ tags:
 - [[C2InteractionData]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[GameMessageUI.cs]] - `contains` [EXTRACTED]
+- [[SantaRitaFalasEntrada]] - `references` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_30

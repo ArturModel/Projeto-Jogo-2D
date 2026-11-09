@@ -15,7 +15,7 @@ tags:
 - [[dot-AtualizarAjusteEfeito()]] - `calls` [EXTRACTED]
 - [[dot-CancelarCargaAoSuspender()]] - `calls` [INFERRED]
 - [[dot-LerMouseCapturado()]] - `calls` [INFERRED]
-- [[dot-OnDisable()_7]] - `calls` [INFERRED]
+- [[dot-OnDisable()_5]] - `calls` [INFERRED]
 - [[dot-OnMesaPointerUp()]] - `calls` [INFERRED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 

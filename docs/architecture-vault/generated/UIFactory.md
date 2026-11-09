@@ -12,12 +12,14 @@ tags:
 # UIFactory
 
 ## Connections
+- [[dot-ApplyWeatheredSurface()]] - `method` [EXTRACTED]
 - [[dot-CreateBox()]] - `method` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `method` [EXTRACTED]
 - [[dot-CreateLabel()]] - `method` [EXTRACTED]
 - [[dot-LoadSprite()]] - `method` [EXTRACTED]
 - [[dot-Stretch()]] - `method` [EXTRACTED]
 - [[Font_1]] - `defines` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
 - [[TMP_FontAsset]] - `references` [EXTRACTED]
 - [[UIFactory.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

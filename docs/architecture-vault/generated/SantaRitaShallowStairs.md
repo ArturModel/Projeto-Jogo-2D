@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs"
 type: "code"
-community: "Community 40"
+community: "Community 8"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_8
 ---
 
 # SantaRitaShallowStairs
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
 - [[dot-ElevationAt()]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_10]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_10]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_17]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_15]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-SpeedAt()]] - `method` [EXTRACTED]
 - [[List]] - `references` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[Rect]] - `references` [EXTRACTED]
 - [[SantaRitaShallowStairs.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_8

@@ -1,18 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MarcusNotebookUI.cs"
 type: "code"
-community: "Community 30"
-location: "L379"
+community: "Community 106"
+location: "L138"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_30
+  - community/Community_106
 ---
 
 # .Show()
 
 ## Connections
-- [[dot-Show()_2]] - `calls` [EXTRACTED]
-- [[GameMessageUI]] - `method` [EXTRACTED]
+- [[dot-BuildPages()]] - `calls` [EXTRACTED]
+- [[dot-Numero()]] - `calls` [EXTRACTED]
+- [[dot-Refresh()]] - `calls` [EXTRACTED]
+- [[dot-RestoreBookmark()]] - `calls` [EXTRACTED]
+- [[dot-SelecionarAba()]] - `calls` [INFERRED]
+- [[MarcusNotebookUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_30
+#graphify/code #graphify/EXTRACTED #community/Community_106

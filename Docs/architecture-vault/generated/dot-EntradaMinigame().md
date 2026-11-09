@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
 community: "Community 84"
-location: "L195"
+location: "L198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,14 +12,14 @@ tags:
 # .EntradaMinigame()
 
 ## Connections
-- [[dot-AjustarIrisSinuca()]] - `calls` [EXTRACTED]
+- [[dot-AjustarMascaraBar()]] - `calls` [EXTRACTED]
 - [[dot-FadeTo()]] - `calls` [EXTRACTED]
+- [[dot-PrepararIris()]] - `calls` [EXTRACTED]
 - [[dot-RestaurarImagemFade()]] - `calls` [EXTRACTED]
 - [[dot-TransicionarParaMinigame()]] - `calls` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[SceneFader]] - `method` [EXTRACTED]
-- [[Shader]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 

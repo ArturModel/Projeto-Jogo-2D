@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
 type: "code"
 community: "Community 99"
-location: "L326"
+location: "L337"
 tags:
   - graphify/code
   - graphify/EXTRACTED

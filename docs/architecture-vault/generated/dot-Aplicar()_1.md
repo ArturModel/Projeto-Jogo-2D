@@ -1,26 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/SantaRitaBochaAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 113"
-location: "L9"
+community: "Community 27"
+location: "L153"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_113
+  - community/Community_27
 ---
 
 # .Aplicar()
 
 ## Connections
-- [[dot-MontarSalaDeEspera()]] - `calls` [EXTRACTED]
-- [[dot-Ponto()]] - `calls` [EXTRACTED]
-- [[dot-Sombra()]] - `calls` [EXTRACTED]
-- [[dot-SpriteNoMundo()]] - `calls` [EXTRACTED]
-- [[dot-Start()_21]] - `calls` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[SantaRitaBochaAmbiente]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-Colidir()]] - `calls` [EXTRACTED]
+- [[dot-Forcas()]] - `calls` [EXTRACTED]
+- [[dot-Rebater()]] - `calls` [EXTRACTED]
+- [[dot-Velocidade()]] - `calls` [EXTRACTED]
+- [[BochaBall]] - `references` [EXTRACTED]
+- [[BochaSimulation]] - `method` [EXTRACTED]
+- [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_113
+#graphify/code #graphify/EXTRACTED #community/Community_27

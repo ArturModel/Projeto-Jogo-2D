@@ -35,6 +35,7 @@ public class PayphoneCheckpoint : Interactable
     private static AudioSource s_audioSource;
     private static AudioClip s_clipAtenderDiscar;
     private static AudioClip s_clipConfirmarGancho;
+    private static AudioClip s_clipRetirarFone, s_clipReporFone;
     private static PayphoneCheckpoint s_orelhaoAtivo;
     private static Vector2 s_savePosAtivo;
     private static bool s_modoApenasCarregar;
@@ -48,6 +49,14 @@ public class PayphoneCheckpoint : Interactable
     private enum Presentation { List, MainMenu, World }
     private static Presentation s_presentation;
     private static GameObject s_host;
+    private static int s_frameAbertura;
+
+    internal static bool Enquadramento2D(Camera vista, out Bounds foco, out float intensidade)
+    {
+        foco = default;
+        intensidade = 0f;
+        return s_orelhaoUI != null && s_orelhaoUI.Enquadramento2D(vista, out foco, out intensidade);
+    }
     private static readonly AudioClip[] s_tonsRegistro = new AudioClip[5];
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -85,7 +94,6 @@ public class PayphoneCheckpoint : Interactable
         s_orelhaoAtivo = this;
         s_modoApenasCarregar = false;
 
-        TocarSomAtenderOrelhao();
         AbrirModalSlots(false);
     }
 
@@ -133,6 +141,62 @@ public class PayphoneCheckpoint : Interactable
         s_audioSource.clip = s_clipAtenderDiscar;
         s_audioSource.volume = vol * 0.9f;
         s_audioSource.Play();
+    }
+
+    internal static void TocarFoneRetirado()
+    {
+        GarantirAudioOrelhao();
+        if (s_clipRetirarFone == null)
+            s_clipRetirarFone = GerarSomDoFone(true);
+        TocarClipeDoFone(s_clipRetirarFone);
+    }
+
+    private static void TocarFoneReposto()
+    {
+        GarantirAudioOrelhao();
+        if (s_clipReporFone == null)
+            s_clipReporFone = GerarSomDoFone(false);
+        TocarClipeDoFone(s_clipReporFone);
+    }
+
+    private static void TocarClipeDoFone(AudioClip clip)
+    {
+        s_audioSource.Stop();
+        s_audioSource.clip = clip;
+        s_audioSource.volume = AudioSettingsController.VolumeEfeitos;
+        s_audioSource.Play();
+    }
+
+    // Síntese original: contato do plástico, mola do gancho e a entrada da linha.
+    private static AudioClip GerarSomDoFone(bool retirar)
+    {
+        const int rate = 22050;
+        float duracao = retirar ? .85f : .20f;
+        var samples = new float[Mathf.RoundToInt(rate * duracao)];
+        uint rng = 0x5A17C9E3u;
+        float ruidoFiltrado = 0;
+        for (int i = 0; i < samples.Length; i++)
+        {
+            float t = i / (float)rate;
+            rng = unchecked(rng * 1664525u + 1013904223u);
+            float ruido = (rng & 0xffff) / 32768f - 1f;
+            ruidoFiltrado = Mathf.Lerp(ruidoFiltrado, ruido, .22f);
+            float batida = Mathf.Exp(-t * 53f) * Mathf.Clamp01(t / .003f);
+            float corpo = Mathf.Sin(2 * Mathf.PI * (retirar ? 230 : 170) * t) * .32f + ruidoFiltrado * .23f;
+            float molaT = Mathf.Max(0, t - .044f);
+            float mola = Mathf.Clamp01(molaT / .002f) * Mathf.Exp(-molaT * 95f);
+            float sinal = corpo * batida + mola * (.15f * Mathf.Sin(2 * Mathf.PI * 910f * molaT) + .13f * ruido);
+            if (retirar)
+            {
+                float linha = Mathf.Clamp01((t - .13f) / .025f) * Mathf.Clamp01((duracao - t) / .19f);
+                sinal += linha * (.085f * Mathf.Sin(2 * Mathf.PI * 425f * t) + .028f * ruidoFiltrado);
+            }
+            samples[i] = sinal;
+        }
+
+        var clip = AudioClip.Create(retirar ? "Orelhao_RetirarFone" : "Orelhao_ReporFone", samples.Length, 1, rate, false);
+        clip.SetData(samples, 0);
+        return clip;
     }
 
     public static void TocarSomConfirmarGancho()
@@ -315,7 +379,7 @@ public class PayphoneCheckpoint : Interactable
     private static void AbrirModalSlots(bool apenasCarregar)
     {
         var presentation = Presentation.List;
-        if (!apenasCarregar && PayphoneJogoUI.HasArt)
+        if (!apenasCarregar)
             presentation = Presentation.World;
         else if (SceneManager.GetActiveScene().name == "MainMenu" && PayphoneRegistroUI.TemArte)
             presentation = Presentation.MainMenu;
@@ -340,7 +404,14 @@ public class PayphoneCheckpoint : Interactable
         s_modalGo.SetActive(true);
         IsSaveUIOpen = true;
         if (s_aparelhoUI != null) s_aparelhoUI.Abrir(apenasCarregar);
-        else if (s_orelhaoUI != null) s_orelhaoUI.Open();
+        else if (s_orelhaoUI != null)
+        {
+            s_frameAbertura = Time.frameCount;
+            var render = s_orelhaoAtivo.RenderizadorDoIndicador;
+            var foco = render != null ? render.bounds :
+                new Bounds(s_orelhaoAtivo.transform.position + Vector3.up * .65f, new Vector3(.6f, 1.3f));
+            s_orelhaoUI.Open(Camera.main, foco);
+        }
         else
         {
             var first = System.Array.Find(s_botoesSlot, b => b != null && b.interactable);
@@ -393,13 +464,14 @@ public class PayphoneCheckpoint : Interactable
 
         if (presentation == Presentation.World)
         {
+            s_modalGo.GetComponent<Image>().enabled = false;
             s_modalGo.SetActive(false);
             s_orelhaoUI = s_modalGo.AddComponent<PayphoneJogoUI>();
             s_orelhaoUI.Build((slot, carregar) =>
             {
                 s_modoApenasCarregar = carregar;
                 AoClicarSlot(slot);
-            }, Desligar);
+            }, CancelarOrelhaoDoJogo);
             return;
         }
 
@@ -515,9 +587,12 @@ public class PayphoneCheckpoint : Interactable
             bool direto = s_aparelhoUI != null || s_orelhaoUI != null;
             if (direto)
             {
-                IsSaveUIOpen = false;
                 if (s_orelhaoUI != null) s_orelhaoUI.AwaitScene();
-                else s_aparelhoUI.AguardarCarga();
+                else
+                {
+                    IsSaveUIOpen = false;
+                    s_aparelhoUI.AguardarCarga();
+                }
             }
             else FecharModalSlots();
             antes?.Invoke();
@@ -533,8 +608,8 @@ public class PayphoneCheckpoint : Interactable
 
         if (s_orelhaoAtivo == null) return;
 
-        // Modo Salvar no Orelhão
-        TocarSomConfirmarGancho();
+        // Recolocar o fone confirma o registro escolhido no aparelho.
+        TocarFoneReposto();
 
         GameState.DefinirNumero(
             Flags.OrelhaoUsos,
@@ -553,14 +628,11 @@ public class PayphoneCheckpoint : Interactable
             idOrelhao
         );
 
-        FecharModalSlots();
-
-        string nomeLocal = CheckpointSystem.ObterNomeAmigavelOrelhao(idOrelhao, SceneManager.GetActiveScene().name);
-        GameMessageUI.Instance.Show(
-            $"{falaEscolhida}\n<size=75%><color=#88E098>[ Salvo no SLOT {slotIndex + 1} — {nomeLocal} ]</color></size>",
-            "Marcus",
-            "marcus"
-        );
+        FecharComRetorno(() =>
+        {
+            Legenda.Dizer($"Salvo no registro {slotIndex + 1:00}. {falaEscolhida}",
+                3.5f, Legenda.PrioridadeCritica);
+        });
     }
 
     private string ProximaFalaContextual()
@@ -635,12 +707,26 @@ public class PayphoneCheckpoint : Interactable
     {
         private void Update()
         {
-            if (!IsSaveUIOpen || Keyboard.current == null) return;
+            var teclado = Keyboard.current;
+            if (!IsSaveUIOpen || teclado == null) return;
             if ((s_aparelhoUI != null && s_aparelhoUI.Ocupado) || (s_orelhaoUI != null && s_orelhaoUI.Busy)) return;
 
-            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            if (teclado.escapeKey.wasPressedThisFrame)
             {
-                Desligar();
+                if (s_orelhaoUI != null) CancelarOrelhaoDoJogo();
+                else Desligar();
+                return;
+            }
+
+            if (s_orelhaoUI != null && Time.frameCount != s_frameAbertura && teclado.eKey.wasPressedThisFrame)
+            {
+                s_orelhaoUI.AcionarGancho();
+                return;
+            }
+
+            if (s_orelhaoUI != null && (teclado.enterKey.wasPressedThisFrame || teclado.numpadEnterKey.wasPressedThisFrame))
+            {
+                s_orelhaoUI.Commit();
                 return;
             }
 
@@ -657,10 +743,28 @@ public class PayphoneCheckpoint : Interactable
         }
     }
 
+    private static void CancelarOrelhaoDoJogo()
+    {
+        if (s_orelhaoUI.FoneForaDoGancho) TocarFoneReposto();
+        FecharComRetorno();
+    }
+
     private static void Desligar()
     {
         TocarSomConfirmarGancho();
-        FecharModalSlots();
+        FecharComRetorno();
+    }
+
+    private static void FecharComRetorno(System.Action aoFechar = null)
+    {
+        void Finalizar()
+        {
+            FecharModalSlots();
+            aoFechar?.Invoke();
+        }
+
+        if (s_orelhaoUI != null) s_orelhaoUI.Close(Finalizar);
+        else Finalizar();
     }
 
     private static void SolicitarRegistro(int slot)

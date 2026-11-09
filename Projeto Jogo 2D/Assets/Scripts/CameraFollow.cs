@@ -224,7 +224,6 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        AtualizarZoomDeFala();
         if (target == null)
         {
             var player = FindAnyObjectByType<PlayerController>();
@@ -258,6 +257,23 @@ public class CameraFollow : MonoBehaviour
             velocidadeAtual = Vector3.zero;
         }
 
+        if (PayphoneCheckpoint.Enquadramento2D(cam, out var objeto, out float intensidade) ||
+            SantaRitaFalasEntrada.Enquadramento2D(cam, out objeto, out intensidade))
+        {
+            float alturaNormal = cam.orthographicSize;
+            float alturaDoQuadro = Mathf.Min(alturaNormal, Mathf.Max(alturaNormal * .43f,
+                objeto.extents.y * 1.5f, objeto.extents.x / (cam.aspect * .32f)));
+            float zoom = Mathf.Pow(alturaNormal / alturaDoQuadro, intensidade) - 1f;
+            Vector3 foco = objeto.center + Vector3.right * (alturaDoQuadro * cam.aspect * .39f);
+            foco = AplicarClampBordas(foco, alturaDoQuadro);
+            Vector3 posicao = Vector3.Lerp(posicaoSuave, foco, intensidade);
+            posicao.z = -10f;
+            transform.position = posicao;
+            AtualizarZoomDeFala(zoom);
+            return;
+        }
+
+        AtualizarZoomDeFala(0f);
         float pixel = 1f / Mathf.Max(1, pixelsPerUnit);
 
         transform.position = new Vector3(
@@ -268,14 +284,16 @@ public class CameraFollow : MonoBehaviour
 
     }
 
-    private void AtualizarZoomDeFala()
+    private void AtualizarZoomDeFala(float zoomInspecao)
     {
         if (cam == null || !cam.orthographic) return;
-        float desejado = MenuPausa.ReduzirEfeitosIntensos ? 0f : SantaRitaFalasEntrada.Zoom;
+        float desejado = zoomInspecao > 0f ? zoomInspecao :
+            MenuPausa.ReduzirEfeitosIntensos ? 0f : SantaRitaFalasEntrada.Zoom;
         if (desejado == 0f && zoomDeFala == 0f) return;
 
         // Mantém o recorte da Pixel Perfect Camera, que escreve orthographicSize a cada render.
-        zoomDeFala = Mathf.Lerp(zoomDeFala, desejado, 1f - Mathf.Exp(-9f * Time.deltaTime));
+        zoomDeFala = zoomInspecao > 0f ? desejado :
+            Mathf.Lerp(zoomDeFala, desejado, 1f - Mathf.Exp(-9f * Time.deltaTime));
         if (desejado == 0f && zoomDeFala < .0001f)
         {
             LimparZoomDeFala();
@@ -298,11 +316,11 @@ public class CameraFollow : MonoBehaviour
 
     private void OnDisable() => LimparZoomDeFala();
 
-    private Vector3 AplicarClampBordas(Vector3 pos)
+    private Vector3 AplicarClampBordas(Vector3 pos, float altura = 0f)
     {
         if (!usarLimitesDaCena) return pos;
 
-        float halfHeight = (cam != null && cam.orthographic) ? cam.orthographicSize : 5.4f;
+        float halfHeight = altura > 0f ? altura : cam != null && cam.orthographic ? cam.orthographicSize : 5.4f;
         float aspect = (cam != null && cam.aspect > 0.1f) ? cam.aspect : (16f / 9f);
         float halfWidth = halfHeight * aspect;
 

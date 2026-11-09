@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI_Perception.cs"
 type: "code"
-community: "Community 36"
+community: "Community 92"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_92
 ---
 
 # SinucaMinigameUI_Perception.cs
@@ -18,4 +18,4 @@ tags:
 - [[unityengine]] - `imports` [EXTRACTED]
 - [[unityengine_inputsystem]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_92

@@ -1,12 +1,12 @@
 ---
 source_file: "Tools/Aseprite/save-patrons-aseprite.py"
 type: "code"
-community: "Community 32"
+community: "Community 142"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_32
+  - community/Community_142
 ---
 
 # save-patrons-aseprite.py
@@ -21,4 +21,4 @@ tags:
 - [[sys]] - `imports` [EXTRACTED]
 - [[zlib]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+#graphify/code #graphify/EXTRACTED #community/Community_142

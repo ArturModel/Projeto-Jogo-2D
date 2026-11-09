@@ -16,7 +16,7 @@ tags:
 - [[dot-AtualizarPercepcoesSinuca()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [INFERRED]
 - [[dot-FalaHistoriaEnfileirar()]] - `calls` [EXTRACTED]
-- [[dot-Finish()_2]] - `calls` [INFERRED]
+- [[dot-Finish()_3]] - `calls` [INFERRED]
 - [[dot-Update()_1]] - `calls` [INFERRED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 

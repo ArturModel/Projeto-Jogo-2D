@@ -12,7 +12,7 @@ tags:
 # .MostrarEscolhaInicial()
 
 ## Connections
-- [[dot-Abrir()_3]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_5]] - `calls` [EXTRACTED]
 - [[dot-AbrirDaSociedade()]] - `calls` [EXTRACTED]
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
 - [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]

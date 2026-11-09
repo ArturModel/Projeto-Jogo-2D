@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Salon.cs"
 type: "code"
 community: "Community 87"
-location: "L18"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .BuildSalonDepth()
 
 ## Connections
-- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-Box()_3]] - `calls` [EXTRACTED]
 - [[dot-BuildRoom()_1]] - `calls` [INFERRED]
 - [[dot-BuildSalonDecoration()]] - `calls` [INFERRED]
 - [[dot-BuildSalonPatrons()]] - `calls` [INFERRED]
@@ -20,7 +20,10 @@ tags:
 - [[dot-ContactPatch()]] - `calls` [EXTRACTED]
 - [[dot-Cylinder()]] - `calls` [INFERRED]
 - [[dot-Mat()_1]] - `calls` [EXTRACTED]
+- [[dot-Montar()]] - `calls` [EXTRACTED]
+- [[dot-MontarCampainhaDoBalcao()]] - `calls` [EXTRACTED]
 - [[dot-Plan()]] - `calls` [INFERRED]
+- [[dot-RoomFill()]] - `calls` [INFERRED]
 - [[Renderer]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 

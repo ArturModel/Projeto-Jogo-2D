@@ -2,10 +2,10 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
 community: "Community 8"
-location: "L182"
+location: "L193"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_8
 ---
 
@@ -13,7 +13,9 @@ tags:
 
 ## Connections
 - [[dot-AplicarEstadoDaZona()]] - `calls` [INFERRED]
-- [[dot-AtualizarFiltroInterior()]] - `calls` [EXTRACTED]
+- [[dot-DefinirModoInterior()_1]] - `calls` [EXTRACTED]
+- [[dot-LiberarRua()]] - `calls` [INFERRED]
+- [[dot-LiberarSala()]] - `calls` [INFERRED]
 - [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/INFERRED #community/Community_8

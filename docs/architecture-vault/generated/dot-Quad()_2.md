@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbienteGraphic.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
 community: "Community 48"
-location: "L143"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,10 @@ tags:
 # .Quad()
 
 ## Connections
-- [[dot-Caixa()_1]] - `calls` [EXTRACTED]
-- [[dot-Linha()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_2]] - `calls` [EXTRACTED]
+- [[BochaMapGraphic]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[MenuAmbienteGraphic]] - `method` [EXTRACTED]
-- [[Vector3]] - `references` [EXTRACTED]
+- [[Rect]] - `references` [EXTRACTED]
 - [[VertexHelper]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_48

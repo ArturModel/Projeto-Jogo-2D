@@ -1,19 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 83"
-location: "L205"
+community: "Community 28"
+location: "L303"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_83
+  - community/Community_28
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-FecharModalSlots()]] - `calls` [INFERRED]
-- [[dot-Recuar()]] - `calls` [EXTRACTED]
-- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
+- [[dot-CancelOpponentShot()]] - `calls` [INFERRED]
+- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `calls` [INFERRED]
+- [[dot-LimparFalaZe()]] - `calls` [EXTRACTED]
+- [[dot-MostrarHudDaEntrada()]] - `calls` [EXTRACTED]
+- [[dot-ReiniciarPercepcoesSinuca()]] - `calls` [INFERRED]
+- [[dot-RestaurarCursor()]] - `calls` [EXTRACTED]
+- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
+- [[dot-VoltarDaPartida()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+#graphify/code #graphify/EXTRACTED #community/Community_28

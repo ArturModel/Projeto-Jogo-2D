@@ -1,22 +1,23 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 85"
+community: "Community 12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_85
+  - community/Community_12
 ---
 
 # RectTransform
 
 ## Connections
+- [[dot-AlinharNoTopo()]] - `references` [EXTRACTED]
 - [[dot-Apresentar()]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
-- [[dot-Botao()_1]] - `references` [EXTRACTED]
+- [[dot-Botao()_2]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
-- [[dot-Build()_3]] - `references` [EXTRACTED]
-- [[dot-Build()_4]] - `references` [EXTRACTED]
+- [[dot-Build()_2]] - `references` [EXTRACTED]
+- [[dot-Build()_6]] - `references` [EXTRACTED]
 - [[dot-Build()_5]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Click()_1]] - `references` [EXTRACTED]
@@ -51,22 +52,22 @@ tags:
 - [[dot-Imagem()_1]] - `references` [EXTRACTED]
 - [[dot-Indicador()]] - `references` [EXTRACTED]
 - [[dot-IndicadorPausa()]] - `references` [EXTRACTED]
-- [[dot-Initialize()]] - `references` [EXTRACTED]
+- [[dot-Initialize()_1]] - `references` [EXTRACTED]
 - [[dot-LinhaSlider()]] - `references` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
 - [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]
 - [[dot-MostrarModal()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
+- [[dot-Place()_1]] - `references` [EXTRACTED]
 - [[dot-Place()_3]] - `references` [EXTRACTED]
-- [[dot-Place()_2]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_2]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_1]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_3]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_5]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
 - [[dot-PosicionarNoTopo()]] - `references` [EXTRACTED]
-- [[dot-Rect()_1]] - `references` [EXTRACTED]
 - [[dot-Rect()]] - `references` [EXTRACTED]
+- [[dot-Rect()_1]] - `references` [EXTRACTED]
 - [[dot-Roteiro()]] - `references` [EXTRACTED]
 - [[dot-RunAtlas()]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
@@ -74,15 +75,15 @@ tags:
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
 - [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
-- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Start()_2]] - `references` [EXTRACTED]
 - [[dot-Stretch()]] - `references` [EXTRACTED]
 - [[dot-SubPainel()]] - `references` [EXTRACTED]
 - [[dot-Titulo()]] - `references` [EXTRACTED]
-- [[dot-TituloPausa()]] - `references` [EXTRACTED]
+- [[dot-TopLeft()]] - `references` [EXTRACTED]
 - [[dot-Travel()]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()_6]] - `references` [EXTRACTED]
 - [[dot-Vincular()_3]] - `references` [EXTRACTED]
+- [[dot-Vincular()_4]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[DicaDeTecla]] - `references` [EXTRACTED]
@@ -93,9 +94,11 @@ tags:
 - [[MenuAmbiente]] - `references` [EXTRACTED]
 - [[MenuItemSelector]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `references` [EXTRACTED]
+- [[PayphoneJogoUI]] - `references` [EXTRACTED]
 - [[PayphoneRegistroUI]] - `references` [EXTRACTED]
 - [[PrologoJogavel]] - `references` [EXTRACTED]
 - [[SantaRitaAtlasView]] - `references` [EXTRACTED]
+- [[SantaRitaInspecao]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_85
+#graphify/code #graphify/EXTRACTED #community/Community_12

@@ -1,18 +1,18 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcRoutine.cs"
 type: "code"
-community: "Community 108"
+community: "Community 138"
 location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_108
+  - community/Community_138
 ---
 
 # .PrepareTools()
 
 ## Connections
-- [[dot-Start()_3]] - `calls` [EXTRACTED]
+- [[dot-Start()_6]] - `calls` [EXTRACTED]
 - [[SantaRitaNpcRoutine]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_108
+#graphify/code #graphify/EXTRACTED #community/Community_138

@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ChuvaMinigame.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
 type: "code"
-community: "Community 95"
-location: "L21"
+community: "Community 88"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_95
+  - community/Community_88
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[dot-AtualizarChuvaMenu()]] - `calls` [EXTRACTED]
-- [[ChuvaMinigame]] - `method` [EXTRACTED]
+- [[dot-Atualizar()_3]] - `calls` [EXTRACTED]
+- [[Capitulo2Gate]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_95
+#graphify/code #graphify/EXTRACTED #community/Community_88

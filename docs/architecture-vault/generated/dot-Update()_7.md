@@ -1,24 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs"
 type: "code"
-community: "Community 110"
-location: "L211"
+community: "Community 113"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_110
+  - community/Community_113
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AtualizarBotoes()]] - `calls` [EXTRACTED]
-- [[dot-FecharMenuMinigames()]] - `calls` [EXTRACTED]
-- [[dot-FocoDoBotao()]] - `calls` [EXTRACTED]
-- [[dot-InteragirCenario()]] - `calls` [EXTRACTED]
-- [[dot-LegendaDoFoco()]] - `calls` [EXTRACTED]
-- [[dot-PonteiroNoQuadro()]] - `calls` [EXTRACTED]
-- [[dot-PontoDoFoco()]] - `calls` [EXTRACTED]
-- [[MenuAmbiente]] - `method` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_110
+#graphify/code #graphify/EXTRACTED #community/Community_113

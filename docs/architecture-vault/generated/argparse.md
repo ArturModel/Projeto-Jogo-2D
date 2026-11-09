@@ -11,9 +11,11 @@ tags:
 # argparse
 
 ## Connections
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[Bake-SpriteSurfaces.py]] - `imports` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()]] - `calls` [EXTRACTED]
 - [[prepare-prologo-loops.py]] - `imports` [EXTRACTED]
 - [[qwen_audition.py]] - `imports` [EXTRACTED]
 - [[tape_scene.py]] - `imports` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 39"
+community: "Community 143"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_143
 ---
 
 # Sinuca3DVerification
@@ -16,10 +16,10 @@ tags:
 - [[dot-GetBall()]] - `method` [EXTRACTED]
 - [[dot-Invoke()_1]] - `method` [EXTRACTED]
 - [[dot-PosicaoFinalBrancaComEfeito()]] - `method` [EXTRACTED]
-- [[dot-Run()_5]] - `method` [EXTRACTED]
+- [[dot-Run()_2]] - `method` [EXTRACTED]
 - [[dot-RunMenu()]] - `method` [EXTRACTED]
 - [[dot-Set()_1]] - `method` [EXTRACTED]
 - [[dot-SetBall()]] - `method` [EXTRACTED]
 - [[Sinuca3DVerification.cs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_143

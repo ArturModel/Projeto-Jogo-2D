@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneJogoUI.cs"
 type: "code"
-community: "Community 8"
-location: "L164"
+community: "Community 51"
+location: "L266"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_51
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[Chuva]] - `method` [EXTRACTED]
+- [[PayphoneJogoUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_51

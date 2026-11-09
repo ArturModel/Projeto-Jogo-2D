@@ -1,29 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 50"
-location: "L96"
+community: "Community 3"
+location: "L342"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_50
+  - community/Community_3
 ---
 
 # .EnsureInstance()
 
 ## Connections
-- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
-- [[dot-InicializarPontos()]] - `calls` [EXTRACTED]
-- [[dot-Run()_7]] - `calls` [EXTRACTED]
-- [[dot-RunAtlas()]] - `calls` [EXTRACTED]
-- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
-- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
-- [[dot-Start()_21]] - `calls` [EXTRACTED]
-- [[dot-Start()_15]] - `calls` [EXTRACTED]
-- [[dot-Travel()]] - `calls` [EXTRACTED]
-- [[dot-UseItem()]] - `calls` [EXTRACTED]
-- [[dot-VerificarCenaECriar()]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-IniciarConfronto()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_50
+#graphify/code #graphify/EXTRACTED #community/Community_3

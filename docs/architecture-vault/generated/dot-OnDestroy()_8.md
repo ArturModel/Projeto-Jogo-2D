@@ -1,20 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Exterior.cs"
 type: "code"
-community: "Community 28"
-location: "L403"
+community: "Community 139"
+location: "L270"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_139
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[dot-DestruirAudioPercepcao()]] - `calls` [INFERRED]
-- [[dot-LimparFalaZe()]] - `calls` [EXTRACTED]
-- [[dot-RestaurarCursor()]] - `calls` [EXTRACTED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[Capitulo2Exterior]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_139

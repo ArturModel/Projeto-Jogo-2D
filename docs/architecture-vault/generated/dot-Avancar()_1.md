@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarPassada()]] - `calls` [INFERRED]
 - [[dot-Gait()]] - `calls` [INFERRED]
-- [[dot-Reset()]] - `calls` [EXTRACTED]
+- [[dot-Reset()_1]] - `calls` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[MarcusGait]] - `method` [EXTRACTED]
 

@@ -8,18 +8,18 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
-- [[dot-AplicarPreferencias()]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
-- [[dot-Atualizar()]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
-- [[dot-AtualizarFalaTonao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.Tonao.cs
-- [[dot-AtualizarFalaZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirFalaTonao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.Tonao.cs
-- [[dot-CriarSilabas()]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
-- [[dot-Dizer()]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
-- [[dot-MarcusComenta()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.Perception.cs
-- [[dot-Suspender()]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
-- [[dot-TocarSilaba()]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
-- [[MinigameDialogue]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
-- [[Ocupada]] - code - Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs
+- [[dot-Interact()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-Interact()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[dot-OnDisable()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnDrawGizmosSelected()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-OnEnable()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[dot-VincularIndicador()]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[Interactable]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[InteractionRadius]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[Prompt]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[Prompt_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
+- [[RenderizadorDoIndicador]] - code - Projeto Jogo 2D/Assets/Scripts/Interactable.cs
+- [[SantaRitaBarProp]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,20 +29,32 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Community 17]]
-- 4 edges to [[_COMMUNITY_Community 93]]
-- 2 edges to [[_COMMUNITY_Community 51]]
-- 2 edges to [[_COMMUNITY_Community 107]]
-- 2 edges to [[_COMMUNITY_Community 3]]
-- 2 edges to [[_COMMUNITY_Community 85]]
-- 1 edge to [[_COMMUNITY_Community 95]]
-- 1 edge to [[_COMMUNITY_Community 57]]
-- 1 edge to [[_COMMUNITY_Community 92]]
-- 1 edge to [[_COMMUNITY_Community 100]]
+- 3 edges to [[_COMMUNITY_Community 57]]
+- 3 edges to [[_COMMUNITY_Community 20]]
+- 2 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 52]]
+- 1 edge to [[_COMMUNITY_Community 136]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 145]]
+- 1 edge to [[_COMMUNITY_Community 96]]
+- 1 edge to [[_COMMUNITY_Community 126]]
+- 1 edge to [[_COMMUNITY_Community 140]]
+- 1 edge to [[_COMMUNITY_Community 54]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 115]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 114]]
+- 1 edge to [[_COMMUNITY_Community 113]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 139]]
 
 ## Top bridge nodes
-- [[MinigameDialogue]] - degree 20, connects to 9 communities
-- [[dot-AtualizarFalaZe()]] - degree 5, connects to 2 communities
-- [[dot-ConstruirFalaTonao()]] - degree 3, connects to 2 communities
-- [[dot-Atualizar()]] - degree 6, connects to 1 community
-- [[dot-MarcusComenta()]] - degree 5, connects to 1 community
+- [[Interactable]] - degree 30, connects to 17 communities
+- [[SantaRitaBarProp]] - degree 6, connects to 3 communities
+- [[dot-Interact()_1]] - degree 3, connects to 2 communities
+- [[dot-Interact()]] - degree 2, connects to 1 community
+- [[dot-VincularIndicador()]] - degree 2, connects to 1 community

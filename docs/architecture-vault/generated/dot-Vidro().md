@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
 community: "Community 46"
-location: "L205"
+location: "L326"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,9 @@ tags:
 
 ## Connections
 - [[dot-Cor()]] - `calls` [EXTRACTED]
+- [[dot-CortinaChuva()]] - `calls` [EXTRACTED]
 - [[dot-Linha()]] - `calls` [EXTRACTED]
-- [[dot-OnPopulateMesh()_3]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
 - [[dot-Quad()_1]] - `calls` [EXTRACTED]
 - [[dot-Ruido()]] - `calls` [EXTRACTED]
 - [[PrologoEstradaGraphic]] - `method` [EXTRACTED]

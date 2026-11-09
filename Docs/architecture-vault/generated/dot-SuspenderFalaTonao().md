@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-CancelarCargaAoSuspender()_1]] - `calls` [INFERRED]
 - [[dot-Suspender()]] - `calls` [INFERRED]
-- [[dot-Update()_19]] - `calls` [INFERRED]
+- [[dot-Update()_18]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Community_17
