@@ -111,7 +111,7 @@ internal sealed partial class Posto3D
         Arte("Engradado", "Cap1/BottlesCrate", V(-4.13f, .28f, -1.38f), .56f);
         Arte("Caixas de estoque", "Cap1/CardboardBoxes_Stack", V(4.22f, .55f, -1.85f), 1.1f);
         Arte("Relógio do plantão", "Cap1/WallClock", V(-.46f, 2.28f, 4.39f), .40f);
-        Arte("Ventilador antigo", "Cap1/Fan_Wall", V(2.28f, 2.22f, 4.39f), .54f);
+        MontarVentilador();
         Letreiro("Placa de serviço", "CONVENIÊNCIA\nCAFÉ  •  QUEROSENE", V(-2.1f, 2.13f, 4.38f), madeiraLoja, 1.42f, .53f);
         Letreiro("Placa de saída", "SAÍDA", V(0, 2.44f, -4.375f), petroleo, .86f, .25f, 180f);
         Letreiro("Placa de café", "CAFÉ", V(-4.89f, 1.87f, -.39f), madeiraLoja, .69f, .28f, -90f);
@@ -135,12 +135,13 @@ internal sealed partial class Posto3D
         var folhaFixa = new GameObject("Folha fixa de vidro").transform;
         folhaFixa.SetParent(cenario, false);
         folhaFixa.localPosition = V(-.78f, 0f, Soleira);
-        saidaFixa = MontarFolha(folhaFixa, 1f, moldura, madeira, vidro, latao, out _);
+        MontarFolha(folhaFixa, 1f, moldura, madeira, vidro, latao, out _);
 
         porta = new GameObject("Dobradiça direita da porta").transform;
         porta.SetParent(cenario, false);
         porta.localPosition = V(.78f, 0f, Soleira);
         saida = MontarFolha(porta, -1f, moldura, madeira, vidro, latao, out macaneta);
+        MontarSino(latao);
 
         Quadro("Bandeira de vidro", V(0, 2.235f, Soleira), V(1.52f, .22f, 1f), vidro);
         Caixa("Travessa da bandeira", V(0, 2.37f, Soleira), V(1.69f, .058f, .13f), moldura, solida: false);
@@ -386,7 +387,7 @@ internal sealed partial class Posto3D
             ? new RectInt(esquerda, fundo, direita - esquerda + 1, topo - fundo + 1)
             : new RectInt(0, 0, textura.width, textura.height);
     }
-    private void Luz(string nome, Vector3 pos, Color cor, float intensidade, float alcance)
+    private Light Luz(string nome, Vector3 pos, Color cor, float intensidade, float alcance)
     {
         var luz = new GameObject(nome).AddComponent<Light>();
         luz.transform.SetParent(cenario, false);
@@ -396,6 +397,7 @@ internal sealed partial class Posto3D
         luz.intensity = intensidade;
         luz.range = alcance;
         luz.cullingMask = RoomMask;
+        return luz;
     }
 
     private void Letreiro(string nome, string mensagem, Vector3 pos, Material material, float largura, float altura, float yaw = 0f)

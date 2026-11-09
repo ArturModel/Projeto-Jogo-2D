@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class PayphoneCheckpoint : Interactable
 {
     public static bool IsSaveUIOpen { get; private set; }
+    public static int ClosedFrame { get; private set; } = -1;
 
     [Header("Identificador Estável do Orelhão")]
     [SerializeField] private string payphoneId = "orelhao_encruzilhada";
@@ -43,12 +44,19 @@ public class PayphoneCheckpoint : Interactable
     private static TextMeshProUGUI s_tituloModal;
     private static TextMeshProUGUI s_subtituloModal;
     private static PayphoneRegistroUI s_aparelhoUI;
+    private static PayphoneJogoUI s_orelhaoUI;
+    private enum Presentation { List, MainMenu, World }
+    private static Presentation s_presentation;
+    private static GameObject s_host;
     private static readonly AudioClip[] s_tonsRegistro = new AudioClip[5];
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void ResetStatic()
     {
         IsSaveUIOpen = false;
+        ClosedFrame = -1;
+        s_host = null;
+        s_orelhaoUI = null;
         s_modalGo = null;
         s_aparelhoUI = null;
         s_audioSource = null;
@@ -70,7 +78,7 @@ public class PayphoneCheckpoint : Interactable
 
     public override void Interact()
     {
-        if (IsSaveUIOpen) return;
+        if (IsSaveUIOpen || SceneFader.IsTransitioning) return;
 
         var player = FindAnyObjectByType<PlayerController>();
         s_savePosAtivo = player != null ? (Vector2)player.transform.position : (Vector2)transform.position;
@@ -89,7 +97,7 @@ public class PayphoneCheckpoint : Interactable
     // Cancelar uma escolha feita na derrota devolve ao resultado, sem retomar o duelo perdido.
     public static void AbrirSelecaoCarregar(System.Action aoCancelar, System.Action antesDeCarregar)
     {
-        if (IsSaveUIOpen) return;
+        if (IsSaveUIOpen || SceneFader.IsTransitioning) return;
         s_orelhaoAtivo = null;
         s_modoApenasCarregar = true;
         s_aoCancelar = aoCancelar;
@@ -306,7 +314,12 @@ public class PayphoneCheckpoint : Interactable
 
     private static void AbrirModalSlots(bool apenasCarregar)
     {
-        GarantirModalCriado();
+        var presentation = Presentation.List;
+        if (!apenasCarregar && PayphoneJogoUI.HasArt)
+            presentation = Presentation.World;
+        else if (SceneManager.GetActiveScene().name == "MainMenu" && PayphoneRegistroUI.TemArte)
+            presentation = Presentation.MainMenu;
+        GarantirModalCriado(presentation);
         s_modoApenasCarregar = apenasCarregar;
 
         if (s_tituloModal != null)
@@ -327,6 +340,12 @@ public class PayphoneCheckpoint : Interactable
         s_modalGo.SetActive(true);
         IsSaveUIOpen = true;
         if (s_aparelhoUI != null) s_aparelhoUI.Abrir(apenasCarregar);
+        else if (s_orelhaoUI != null) s_orelhaoUI.Open();
+        else
+        {
+            var first = System.Array.Find(s_botoesSlot, b => b != null && b.interactable);
+            UnityEngine.EventSystems.EventSystem.current?.SetSelectedGameObject(first != null ? first.gameObject : null);
+        }
     }
 
     public static void FecharModalSlots()
@@ -336,17 +355,30 @@ public class PayphoneCheckpoint : Interactable
             if (s_aparelhoUI != null) s_aparelhoUI.Fechar();
             else s_modalGo.SetActive(false);
         }
+        ClosedFrame = Time.frameCount;
         IsSaveUIOpen = false;
+        s_orelhaoAtivo = null;
         var cancelar = s_aoCancelar;
         s_aoCancelar = s_antesDeCarregar = null;
         cancelar?.Invoke();
     }
 
-    private static void GarantirModalCriado()
+    private static void GarantirModalCriado(Presentation presentation)
     {
-        if (s_modalGo != null) return;
+        if (s_modalGo != null && s_presentation == presentation) return;
+        if (s_host != null)
+        {
+            s_host.SetActive(false);
+            Destroy(s_host);
+        }
+        s_presentation = presentation;
+        s_orelhaoUI = null;
+        s_aparelhoUI = null;
+        s_tituloModal = s_subtituloModal = null;
+        System.Array.Clear(s_botoesSlot, 0, s_botoesSlot.Length);
+        System.Array.Clear(s_textosSlot, 0, s_textosSlot.Length);
 
-        var host = new GameObject("PayphoneSaveSlotsUI");
+        var host = s_host = new GameObject("PayphoneSaveSlotsUI");
         if (Application.isPlaying)
             DontDestroyOnLoad(host);
         host.AddComponent<PayphoneSlotInputWatcher>();
@@ -359,7 +391,19 @@ public class PayphoneCheckpoint : Interactable
         UIFactory.Stretch(s_modalGo.GetComponent<RectTransform>());
         s_modalGo.GetComponent<Image>().color = new Color(0.01f, 0.02f, 0.03f, 0.86f);
 
-        if (PayphoneRegistroUI.TemArte)
+        if (presentation == Presentation.World)
+        {
+            s_modalGo.SetActive(false);
+            s_orelhaoUI = s_modalGo.AddComponent<PayphoneJogoUI>();
+            s_orelhaoUI.Build((slot, carregar) =>
+            {
+                s_modoApenasCarregar = carregar;
+                AoClicarSlot(slot);
+            }, Desligar);
+            return;
+        }
+
+        if (presentation == Presentation.MainMenu)
         {
             s_aparelhoUI = host.AddComponent<PayphoneRegistroUI>();
             s_aparelhoUI.Construir(canvas.transform, s_modalGo, AoClicarSlot, FecharModalSlots, s_botoesSlot, s_textosSlot);
@@ -421,18 +465,14 @@ public class PayphoneCheckpoint : Interactable
 
         var btnFechar = btnFecharGo.GetComponent<Button>();
         btnFechar.targetGraphic = imgFechar;
-        btnFechar.onClick.AddListener(() =>
-        {
-            TocarSomConfirmarGancho();
-            FecharModalSlots();
-        });
+        btnFechar.onClick.AddListener(Desligar);
 
         s_modalGo.SetActive(false);
     }
 
     private static void AtualizarTextosDosSlots()
     {
-        if (s_aparelhoUI != null) return; // O visor frontal tem sua própria consulta.
+        if (s_aparelhoUI != null || s_orelhaoUI != null) return;
         for (int i = 0; i < CheckpointSystem.TotalSlots; i++)
         {
             if (s_textosSlot[i] == null) continue;
@@ -464,17 +504,20 @@ public class PayphoneCheckpoint : Interactable
         {
             if (!CheckpointSystem.TryLoadSlot(slotIndex, out _))
             {
+                if (s_orelhaoUI != null) s_orelhaoUI.LoadFailed();
+                else AtualizarTextosDosSlots();
                 return;
             }
             TocarSomConfirmarGancho();
             var antes = s_antesDeCarregar;
             var cancelar = s_aoCancelar;
             s_aoCancelar = s_antesDeCarregar = null;
-            bool direto = s_aparelhoUI != null;
+            bool direto = s_aparelhoUI != null || s_orelhaoUI != null;
             if (direto)
             {
                 IsSaveUIOpen = false;
-                s_aparelhoUI.AguardarCarga();
+                if (s_orelhaoUI != null) s_orelhaoUI.AwaitScene();
+                else s_aparelhoUI.AguardarCarga();
             }
             else FecharModalSlots();
             antes?.Invoke();
@@ -482,10 +525,13 @@ public class PayphoneCheckpoint : Interactable
             {
                 IsSaveUIOpen = true;
                 s_aoCancelar = cancelar;
-                s_aparelhoUI.FalhaAoCarregar();
+                if (s_orelhaoUI != null) s_orelhaoUI.LoadFailed();
+                else s_aparelhoUI.FalhaAoCarregar();
             }
             return;
         }
+
+        if (s_orelhaoAtivo == null) return;
 
         // Modo Salvar no Orelhão
         TocarSomConfirmarGancho();
@@ -590,12 +636,11 @@ public class PayphoneCheckpoint : Interactable
         private void Update()
         {
             if (!IsSaveUIOpen || Keyboard.current == null) return;
-            if (s_aparelhoUI != null && s_aparelhoUI.Ocupado) return;
+            if ((s_aparelhoUI != null && s_aparelhoUI.Ocupado) || (s_orelhaoUI != null && s_orelhaoUI.Busy)) return;
 
             if (Keyboard.current.escapeKey.wasPressedThisFrame)
             {
-                TocarSomConfirmarGancho();
-                FecharModalSlots();
+                Desligar();
                 return;
             }
 
@@ -612,9 +657,16 @@ public class PayphoneCheckpoint : Interactable
         }
     }
 
+    private static void Desligar()
+    {
+        TocarSomConfirmarGancho();
+        FecharModalSlots();
+    }
+
     private static void SolicitarRegistro(int slot)
     {
-        if (s_aparelhoUI != null) s_aparelhoUI.Confirmar(slot);
+        if (s_orelhaoUI != null) s_orelhaoUI.SelectRecord(slot);
+        else if (s_aparelhoUI != null) s_aparelhoUI.Confirmar(slot);
         else AoClicarSlot(slot);
     }
 }

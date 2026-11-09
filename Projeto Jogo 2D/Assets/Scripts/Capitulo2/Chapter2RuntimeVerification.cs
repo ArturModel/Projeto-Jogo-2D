@@ -242,8 +242,9 @@ public sealed partial class Chapter2RuntimeVerification : MonoBehaviour
             while(Vector2.Distance(initial,player.transform.position)<=2.1f&&Time.realtimeSinceStartup<limit){keyboard.MakeCurrent();InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.W));yield return null;}
             InputSystem.QueueStateEvent(keyboard,new KeyboardState());
             limit=Time.realtimeSinceStartup+2;
-            do{yield return null;}while(Field<Vector2>(player,"currentVelocity").sqrMagnitude>.0001f&&Time.realtimeSinceStartup<limit);
-            Check(Field<Vector2>(player,"currentVelocity").sqrMagnitude<=.0001f,"Soltar input encerra desaceleracao em ate dois segundos");
+            var body = player.GetComponent<Rigidbody2D>();
+            do{yield return null;}while(body.linearVelocity.sqrMagnitude>.0001f&&Time.realtimeSinceStartup<limit);
+            Check(body.linearVelocity.sqrMagnitude<=.0001f,"Soltar input encerra desaceleracao em ate dois segundos");
             yield return new WaitForSecondsRealtime(.2f);
             Check(Vector2.Distance(initial,player.transform.position)>2,"Input real move Marcus usando os quadros da folha direcional.");
             Check(contacts.Count>=3 && contacts.All(q=>q==0||q==4),"Cada evento de passo coincide com quadro de apoio 0/4: "+string.Join(",",contacts));

@@ -194,3 +194,38 @@ Apagão, Zé assombrado e batidas na janela integram os dois eventos anteriores.
 ## Rodovia de Entrada — 08/11/2026
 
 A zona inicial de EntradaDaCidade usa a família visual da Rua Norte. Cinco sprites específicos ocupam a mesma folha. A fala de Marcus usa a legenda da sinuca com zoom suave de 2,5% ou 6%, conforme o gatilho. A mala aparece no passeio sul, o orelhão mantém seu checkpoint e a lanterna vem do carro. [Plano e QA](../ai-plans/2026-11-08_BBCONTTI_reforma-entrada-cidade.md).
+
+
+08/11/2026 — A Rodovia da Entrada ganhou contraste no shader local, névoa fria com dispersão âmbar nos postes, reflexo planar do quadro corrente de Marcus nas poças e relâmpago ocasional durante a caminhada. O clarão e o susto respeitam a opção de reduzir efeitos intensos. [Plano](../ai-plans/2026-11-08_BBCONTTI_contraste-e-clima-da-entrada.md).
+
+
+08/11/2026 — A Rodovia recebeu poças em formas, tamanhos e tons próprios e um trovão gravado com cauda após o clarão. [Plano](../ai-plans/2026-11-08_BBCONTTI_pocas-variadas-trovao.md).
+
+
+08/11/2026 — O exterior do posto compartilha o Tilemap e a iluminação local da Entrada. A conveniência usa Posto3D, porta animada na chuva e falas dos atendentes no formato de legenda do Bar do Zé. [Plano e evidências](../ai-plans/2026-11-08_BBCONTTI_reforma-posto.md).
+
+
+08/11/2026 — O posto por dentro e por fora usa a faixa de fala da Entrada, com tons distintos de murmúrio para Marcus, frentista e motorista. [Plano e verificação](../ai-plans/2026-11-08_BBCONTTI_falas-posto.md).
+
+
+08/11/2026 — Posto3D projeta a câmera da rua e o sprite de Marcus em planos para a passagem entre o exterior e o interior. [Plano e verificação](../ai-plans/2026-11-08_BBCONTTI_transicao-posto.md).
+
+
+08/11/2026 — O posto usa a transição de névoa entre a rua original e a conveniência 3D. [Plano e verificação](../ai-plans/2026-11-08_BBCONTTI_nevoa-posto.md).
+
+
+08/11/2026 — Atalhos e bolsa no canto superior esquerdo, pausa lateral e cena própria de salvamento com cursor de mão e chuva em movimento. [Plano e validação](../ai-plans/2026-11-08_BBCONTTI_interface-orelhao.md).
+
+
+09/11/2026 — A arte do orelhão da exploração agora usa pixels mais marcados, ocre gasto e asfalto carvão sob luz fraca. [Plano e validação](../ai-plans/2026-11-09_BBCONTTI_arte-sombria-orelhao.md).
+
+
+09/11/2026 — Bairro das Casas usa o acabamento das ruas reformadas. O interior nº 40 usa o controlador 3D compartilhado de Posto e Mercadinho. [Plano](../ai-plans/2026-11-09_BBCONTTI_reforma-bairro.md).
+
+
+09/11/2026 — Orelhão em cores originais e camada de chuva e névoa a 22% da opacidade anterior. [Plano e validação](../ai-plans/2026-11-09_BBCONTTI_orelhao-clima-suave.md).
+
+
+09/11/2026 — Caminhada e corrida de exploração em 2D e 3D. Shift aumenta a velocidade em 25%, com aceleração e frenagem graduais. E deixou de interromper o movimento sem diálogo ou interface modal. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_corrida-e-controles.md).
+
+09/11/2026 — O prólogo termina no recuo asfaltado da Rodovia, com a placa de Santa Rita e os postes nas mesmas posições. Chuva, névoa e sombras foram reforçadas. [Plano](../ai-plans/2026-11-09_BBCONTTI_prologo-rodovia.md).

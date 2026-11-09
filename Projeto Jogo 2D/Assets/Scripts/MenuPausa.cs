@@ -53,6 +53,7 @@ public class MenuPausa : MonoBehaviour
     }
 
     private GameObject raiz;
+    private CanvasGroup entrada;
     private CanvasGroup painelOpcoes;
     private GameObject primeiroBotao;
     private AudioSource fonteSom;
@@ -73,7 +74,9 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
-        if (SceneFader.IsTransitioning || PayphoneCheckpoint.IsSaveUIOpen || SantaRitaInventory.ClosedFrame==Time.frameCount || SantaRitaTapeDeck.ClosedFrame==Time.frameCount) return;
+        if (Aberto && entrada != null)
+            entrada.alpha = Mathf.MoveTowards(entrada.alpha, 1f, Time.unscaledDeltaTime / .14f);
+        if (SceneFader.IsTransitioning || PayphoneCheckpoint.IsSaveUIOpen || PayphoneCheckpoint.ClosedFrame == Time.frameCount || SantaRitaInventory.ClosedFrame==Time.frameCount || SantaRitaTapeDeck.ClosedFrame==Time.frameCount) return;
         if (Keyboard.current == null ||
             !Keyboard.current.escapeKey.wasPressedThisFrame ||
             quadroDoUltimoEsc == Time.frameCount)
@@ -113,6 +116,7 @@ public class MenuPausa : MonoBehaviour
         Aberto = true;
         aguardandoConfirmacaoSaida = false;
         AtualizarTextoStatusSave();
+        if (!raiz.activeSelf) entrada.alpha = 0;
         raiz.SetActive(true);
         Time.timeScale = 0f;
 
@@ -245,10 +249,12 @@ public class MenuPausa : MonoBehaviour
         fonteSom.ignoreListenerPause = true;
 
         Canvas canvas = UIFactory.CreateCanvas(raiz.transform, "PausaCanvas", 9500);
+        canvas.GetComponent<CanvasScaler>().screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
+        entrada = canvas.gameObject.AddComponent<CanvasGroup>();
         canvas.gameObject.AddComponent<GraphicRaycaster>();
         Transform tela = canvas.transform;
 
-        Image fundo = Imagem(tela, "Fundo", new Color(0f, 0f, 0f, escurecimento));
+        Image fundo = Imagem(tela, "Fundo", new Color(.015f, .027f, .032f, escurecimento * .68f));
         UIFactory.Stretch(fundo.rectTransform);
 
         // escurece um pouco mais quando as configurações estão abertas
@@ -258,10 +264,12 @@ public class MenuPausa : MonoBehaviour
         overlay.alpha = 0f;
         overlay.blocksRaycasts = false;
 
-        // --- caixa da pausa (placa de ferro oxidada à esquerda) --------
+        // Menu e configurações compartilham a mesma posição no centro.
         CanvasGroup pausa = CaixaPausa(tela, "PainelPausa", new Vector2(LarguraPausa, AlturaPausa),
                                        out RectTransform pausaRect);
-        TituloPausa(pausaRect, "PAUSADO", 96f, LarguraPausa);
+        Rotulo(pausaRect, "S A N T A   R I T A", 10f, new Vector2(0f, 118f),
+            new Vector2(180f, 12f), TextAlignmentOptions.Center).color = corDestaque;
+        Titulo(pausaRect, "Pausa", 95f, LarguraPausa);
         RectTransform indPausa = IndicadorPausa(pausaRect);
 
         Button continuar = BotaoPausa(pausaRect, "Continuar", 44f, indPausa);
@@ -282,7 +290,7 @@ public class MenuPausa : MonoBehaviour
         sair.onClick.AddListener(Sair);
         primeiroBotao = continuar.gameObject;
 
-        // --- caixa das configurações (mesma placa de ferro à esquerda) --
+        // Configurações usam a mesma superfície do menu.
         painelOpcoes = CaixaPausa(tela, "PainelOpcoes", new Vector2(LarguraPausa, AlturaPausa),
                                   out RectTransform opcoesRect);
         TMP_Text tituloOpcoes = Titulo(opcoesRect, "CONFIGURAÇÕES", 92f, LarguraPausa);
@@ -407,79 +415,20 @@ public class MenuPausa : MonoBehaviour
         GameObject go = new GameObject(nome, typeof(RectTransform), typeof(Image), typeof(CanvasGroup));
         go.transform.SetParent(pai, false);
         Image img = go.GetComponent<Image>();
-        Sprite spr = UIFactory.LoadSprite("PainelPausa_Fundo");
-        if (spr != null)
-        {
-            img.sprite = spr;
-            img.type = Image.Type.Simple;
-            img.color = Color.white;
-        }
-        else
-        {
-            img.color = new Color(0.12f, 0.11f, 0.10f, 0.95f);
-        }
-        img.raycastTarget = true;
+        UIFactory.ApplyWeatheredSurface(img, .96f);
         rect = go.GetComponent<RectTransform>();
-        Posicionar(rect, new Vector2(-160f, 0f), tamanho);
+        Posicionar(rect, Vector2.zero, tamanho);
         return go.GetComponent<CanvasGroup>();
-    }
-
-    private TMP_Text TituloPausa(RectTransform pai, string texto, float y, float largura)
-    {
-        Sprite sprTitulo = UIFactory.LoadSprite("PainelPausa_Titulo");
-        if (sprTitulo != null)
-        {
-            GameObject tituloGo = new GameObject("TituloGrafico", typeof(RectTransform), typeof(Image));
-            tituloGo.transform.SetParent(pai, false);
-            Image tituloImg = tituloGo.GetComponent<Image>();
-            tituloImg.sprite = sprTitulo;
-            tituloImg.color = Color.white;
-            tituloImg.raycastTarget = false;
-            // O sprite de título contém o carimbo estilizado 'PAUSADO' e a linha vermelha rústica original.
-            // Proporções: 243x78 px -> em UI proporcional à placa 246x280 fica 132x42 px.
-            Posicionar((RectTransform)tituloGo.transform, new Vector2(0f, 85f), new Vector2(132f, 42f));
-            return null;
-        }
-
-        TMP_Text titulo = Rotulo(pai, texto, 28f, new Vector2(0f, y),
-                                 new Vector2(largura - 40f, 34f), TextAlignmentOptions.Center);
-        titulo.color = new Color(0.88f, 0.85f, 0.78f, 1f);
-
-        Sprite sprLinha = UIFactory.LoadSprite("PainelPausa_Linha");
-        if (sprLinha != null)
-        {
-            GameObject linhaGo = new GameObject("LinhaVermelha", typeof(RectTransform), typeof(Image));
-            linhaGo.transform.SetParent(pai, false);
-            Image linhaImg = linhaGo.GetComponent<Image>();
-            linhaImg.sprite = sprLinha;
-            linhaImg.color = Color.white;
-            linhaImg.raycastTarget = false;
-            Posicionar((RectTransform)linhaGo.transform, new Vector2(0f, y - 18f), new Vector2(110f, 3f));
-        }
-
-        return titulo;
     }
 
     private RectTransform IndicadorPausa(RectTransform pai)
     {
-        GameObject go = new GameObject("IndicadorSelecao", typeof(RectTransform), typeof(Image));
-        go.transform.SetParent(pai, false);
-        Image img = go.GetComponent<Image>();
-        Sprite spr = UIFactory.LoadSprite("PainelPausa_Selecao");
-        if (spr != null)
-        {
-            img.sprite = spr;
-            img.type = Image.Type.Simple;
-            img.color = Color.white;
-        }
-        else
-        {
-            img.color = new Color(0.88f, 0.78f, 0.62f, 0.9f);
-        }
-        img.raycastTarget = false;
-        RectTransform rt = go.GetComponent<RectTransform>();
-        Posicionar(rt, new Vector2(0f, 44f), new Vector2(196f, 30f));
-        return rt;
+        var imagem = Imagem(pai, "IndicadorSelecao", Color.white);
+        UIFactory.ApplyWeatheredSurface(imagem, .92f);
+        imagem.color = new Color(1.55f, 1.18f, .74f, .92f);
+        imagem.raycastTarget = false;
+        Posicionar(imagem.rectTransform, new Vector2(0f, 44f), new Vector2(196f, 25f));
+        return imagem.rectTransform;
     }
 
     private void SelecionavelPausa(Selectable s, Graphic alvo, RectTransform indicador)
@@ -487,9 +436,9 @@ public class MenuPausa : MonoBehaviour
         s.targetGraphic = alvo;
         ColorBlock cores = s.colors;
         cores.normalColor = new Color(0.86f, 0.84f, 0.78f, 1f);
-        cores.highlightedColor = new Color(0.12f, 0.10f, 0.08f, 1f);
-        cores.selectedColor = new Color(0.12f, 0.10f, 0.08f, 1f);
-        cores.pressedColor = new Color(0.25f, 0.18f, 0.14f, 1f);
+        cores.highlightedColor = corDestaque;
+        cores.selectedColor = corDestaque;
+        cores.pressedColor = Color.white;
         cores.fadeDuration = 0.05f;
         s.colors = cores;
 
@@ -503,10 +452,8 @@ public class MenuPausa : MonoBehaviour
         Posicionar((RectTransform)go.transform, new Vector2(0f, y), new Vector2(196f, 30f));
         go.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0f);
 
-        // Alinhado à esquerda com recuo de 37f para posicionar o texto ao lado da seta do papiro.
-        // Assim 'Continuar', 'Configurações', 'Menu Principal' e 'Sair' formam uma coluna uniforme e fiel ao protótipo.
-        TMP_Text rotulo = Rotulo(go.transform, texto, 20f, new Vector2(14f, 0f),
-                                 new Vector2(150f, 26f), TextAlignmentOptions.MidlineLeft);
+        TMP_Text rotulo = Rotulo(go.transform, texto, 18f, new Vector2(4f, 0f),
+                                 new Vector2(176f, 26f), TextAlignmentOptions.MidlineLeft);
 
         Button botao = go.GetComponent<Button>();
         SelecionavelPausa(botao, rotulo, indicador);
@@ -540,18 +487,9 @@ public class MenuPausa : MonoBehaviour
                                  new Vector2(largura - 30f, 32f), TextAlignmentOptions.Center);
         titulo.color = new Color(0.88f, 0.85f, 0.78f, 1f);
 
-        Sprite sprLinha = UIFactory.LoadSprite("PainelPausa_Linha");
-        if (sprLinha != null)
-        {
-            GameObject linhaGo = new GameObject("LinhaVermelha", typeof(RectTransform), typeof(Image));
-            linhaGo.transform.SetParent(pai, false);
-            Image linhaImg = linhaGo.GetComponent<Image>();
-            linhaImg.sprite = sprLinha;
-            linhaImg.color = Color.white;
-            linhaImg.raycastTarget = false;
-            Posicionar((RectTransform)linhaGo.transform, new Vector2(0f, y - 18f), new Vector2(110f, 3f));
-        }
-
+        Image linha = Imagem(pai, "Filete", new Color(.73f, .54f, .31f, .52f));
+        linha.raycastTarget = false;
+        Posicionar(linha.rectTransform, new Vector2(0f, y - 18f), new Vector2(largura - 48f, 1f));
         return titulo;
     }
 

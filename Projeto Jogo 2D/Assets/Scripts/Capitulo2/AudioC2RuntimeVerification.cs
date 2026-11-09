@@ -14,7 +14,8 @@ public sealed partial class Chapter2RuntimeVerification
   var sheet=new Texture2D(2,2,TextureFormat.RGBA32,false);
   ImageConversion.LoadImage(sheet,System.IO.File.ReadAllBytes(System.IO.Path.Combine(Application.streamingAssetsPath,"MarcusWalkFluido.png")));
   var validation=typeof(PlayerController).GetMethod("ValidarFolhaMarcus",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic);
-  Check((bool)validation.Invoke(null,new object[]{sheet,3,4,false}),"Os 12 quadros da folha de Marcus têm corpo e bordas transparentes.");
+  bool cicloV20 = sheet.width == 576 && sheet.height == 256;
+  Check((bool)validation.Invoke(null,new object[]{sheet,cicloV20 ? 8 : 3,4,cicloV20}),"Os quadros da folha de Marcus têm corpo e bordas transparentes.");
   Destroy(sheet);
   GameState.Marcar(Flags.ZeDerrotadoNaSinuca);GameState.Marcar(Flags.LanternaDoCarroObtida);
   SceneFader.Instance.LoadScene("CentroSantaRita");yield return AwaitScene("CentroSantaRita");yield return CloseText();yield return new WaitForSecondsRealtime(1);
@@ -38,10 +39,12 @@ public sealed partial class Chapter2RuntimeVerification
       if(i%4==0)yield return Capture("marcus-"+key+"-"+equipped+"-"+i);
      }
      keyboard.MakeCurrent();InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return new WaitForSecondsRealtime(.4f);
-     int row = key == Key.S ? 0 : key == Key.W ? 1 : key == Key.A ? 2 : 3;
+     int row = key == Key.S ? 0 : key == Key.W ? 1 : key == Key.A || cicloV20 ? 2 : 3;
      var atlas = Field<Sprite[,]>(player,"quadrosCaminhada");
-     Check(poses.Count==3 && poses.All(p=>p.texture==atlas[0,0].texture && p.rect.y==(3-row)*64),"Três poses da linha correta: "+key+" lanterna="+equipped);
-     Check(body.sprite==atlas[row,1] && body.sprite.texture.width==192 && body.sprite.rect.width==64,"Repouso mantém a pose central: "+key+" lanterna="+equipped);
+     int expectedFrames = cicloV20 ? 8 : 3;
+     Check(poses.Count >= 3 && poses.Count <= expectedFrames && poses.All(p=>p.texture==atlas[0,0].texture && p.rect.y==(3-row)*64),"Poses da linha correta: "+key+" lanterna="+equipped);
+     var idle = Field<Sprite[]>(player,"quadrosRepouso");
+     Check(body.sprite==idle[row] && body.sprite.texture.width==(cicloV20 ? 576 : 192) && body.sprite.rect.width==64,"Repouso mantém a pose original: "+key+" lanterna="+equipped);
      Check(player.LanternaVisivel==equipped,"Feixe independente da folha: "+key+" lanterna="+equipped);
      yield return Capture("repouso-"+key+"-"+equipped);
     }

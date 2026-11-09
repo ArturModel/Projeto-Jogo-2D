@@ -44,7 +44,7 @@ public sealed class MenuAmbienteRuntimeQA : MonoBehaviour
 
     IEnumerator ExecutarProtegido()
     {
-        pasta = "C:/Temp/SantaRitaMenu/Evidencias";
+        pasta = Path.Combine(Environment.GetEnvironmentVariable("SANTA_RITA_MENU_QA_OUTPUT") ?? "C:/Temp/SantaRitaMenu", "Evidencias");
         Directory.CreateDirectory(pasta);
         comportamentoOriginal = InputSystem.settings.backgroundBehavior;
         runInBackgroundOriginal = Application.runInBackground;
@@ -185,14 +185,54 @@ public sealed class MenuAmbienteRuntimeQA : MonoBehaviour
         {
             orelhao.Interact();
             yield return Esperar(.3f);
-            var aparelho = FindAnyObjectByType<PayphoneRegistroUI>();
-            Registrar(aparelho != null && !aparelho.SomenteCarregar, "Modo de gravação integrado ao mesmo aparelho");
+            Registrar(FindAnyObjectByType<PayphoneJogoUI>() != null && FindAnyObjectByType<PayphoneRegistroUI>() == null,
+                "Orelhão da exploração usa cena própria");
+            var weather = GameObject.Find("ChuvaNoOrelhao").GetComponent<MenuAmbienteGraphic>();
+            Canvas.ForceUpdateCanvases();
+            var weatherMesh = weather.canvasRenderer != null ? weather.canvasRenderer.GetMesh() : null;
+            Registrar(weatherMesh != null && weatherMesh.vertexCount > 900,
+                "Chuva e névoa enviam geometria ao CanvasRenderer");
+            float weatherTime = weather.Tempo;
+            yield return Esperar(.12f);
+            Registrar(weather.Tempo > weatherTime, "Clima avança durante a consulta ao orelhão");
             Registrar(!CheckpointSystem.TryLoadSlot(1, out _), "Abrir o aparelho não salva automaticamente");
-            yield return Tecla(Key.Digit2);
-            yield return Capturar("09-Gravando");
+            yield return Click("BtnSlot_2");
+            Registrar(!CheckpointSystem.TryLoadSlot(1, out _), "Selecionar um registro não grava");
+            yield return Capturar("09-OrelhaoJogo");
+            yield return Click("ConfirmarRegistro");
             yield return Esperar(.65f);
             Registrar(CheckpointSystem.TryLoadSlot(1, out var gravado) && gravado.sceneName == "EntradaDaCidade", "Tecla 2 grava somente no slot confirmado");
             Registrar(!PayphoneCheckpoint.IsSaveUIOpen, "Fim de gravação fecha o aparelho");
+            SceneManager.LoadScene("EntradaDaCidade");
+            yield return Esperar(1.2f);
+            yield return Capturar("09a-Inventario");
+            yield return Tecla(Key.I);
+            yield return Esperar(.2f);
+            Registrar(SantaRitaInventory.IsOpen, "I abre bolsa junto aos atalhos");
+            yield return Capturar("09b-Bolsa");
+            yield return Tecla(Key.Escape);
+            yield return Tecla(Key.Escape);
+            yield return Esperar(.2f);
+            Registrar(MenuPausa.Aberto && !SantaRitaInventory.IsOpen, "ESC fecha a bolsa e o próximo abre a pausa");
+            yield return Capturar("09c-Pausa");
+            yield return Click("Carregar Jogo");
+            Registrar(PayphoneCheckpoint.IsSaveUIOpen && GameObject.Find("BtnSlot_2") != null &&
+                FindAnyObjectByType<PayphoneRegistroUI>() == null && FindAnyObjectByType<PayphoneJogoUI>() == null,
+                "Pausa oferece lista de carga sem cena do orelhão");
+            yield return Tecla(Key.Escape);
+            Registrar(MenuPausa.Aberto && !PayphoneCheckpoint.IsSaveUIOpen, "Cancelar a carga retorna à pausa");
+            yield return Tecla(Key.Escape);
+            FindAnyObjectByType<PayphoneCheckpoint>().Interact();
+            yield return Esperar(.3f);
+            yield return Click("ModoCarregar");
+            Registrar(!GameObject.Find("BtnSlot_1").GetComponent<Button>().interactable,
+                "Carga no orelhão desabilita registros vazios");
+            yield return Tecla(Key.Digit2);
+            Registrar(PayphoneCheckpoint.IsSaveUIOpen && !SceneFader.IsTransitioning, "Tecla 2 seleciona sem carregar");
+            yield return Tecla(Key.Enter);
+            yield return Esperar(2.5f);
+            Registrar(!PayphoneCheckpoint.IsSaveUIOpen && SceneManager.GetActiveScene().name == "EntradaDaCidade",
+                "Confirmar carga no orelhão retorna à exploração");
             SceneManager.LoadScene("MainMenu");
             yield return Esperar(1.3f);
             yield return Click("btn_continuar");

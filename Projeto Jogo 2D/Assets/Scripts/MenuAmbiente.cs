@@ -21,7 +21,7 @@ public sealed class MenuAmbiente : MonoBehaviour
     CanvasGroup principal, opcoes, identidade;
     TMP_Text legenda;
     MenuAmbienteGraphic atmosfera, vinheta;
-    readonly Dictionary<Button, RawImage> linhas = new Dictionary<Button, RawImage>();
+    readonly Dictionary<Button, Image> placas = new Dictionary<Button, Image>();
     readonly Dictionary<Button, float> enfases = new Dictionary<Button, float>();
     readonly Dictionary<string, Transform> objetos = new Dictionary<string, Transform>();
     readonly List<Button> botoesPrincipais = new List<Button>();
@@ -87,16 +87,12 @@ public sealed class MenuAmbiente : MonoBehaviour
             if (t.parent != principal.transform) continue;
             ConfigurarBotao(b, IndicePrincipal(t.name));
             botoesPrincipais.Add(b);
-            var linha = NovaImagem("TracoDeFoco", t, null);
-            linha.color = new Color(1f, .73f, .34f, 0f);
-            linha.rectTransform.anchorMin = linha.rectTransform.anchorMax = new Vector2(0, 0);
-            linha.rectTransform.pivot = Vector2.zero;
-            linha.rectTransform.anchoredPosition = new Vector2(0, 2);
-            linhas.Add(b, linha); enfases.Add(b, 0);
+            CriarPlacaFoco(b);
         }
         var botaoMinigames = CriarBotao("btn_minigames", "MINIGAMES", principal.transform, 3,
             AbrirMenuMinigames);
         botoesPrincipais.Add(botaoMinigames);
+        CriarPlacaFoco(botaoMinigames);
         CriarPainelMinigames(botaoMinigames.GetComponentInChildren<TMP_Text>().font);
         if (objetos.TryGetValue("OptionSelector", out var seletor)) seletor.gameObject.SetActive(false);
         foreach (var t in principal.GetComponentsInChildren<TMP_Text>(true))
@@ -107,9 +103,14 @@ public sealed class MenuAmbiente : MonoBehaviour
         Esticar(raiz.GetComponent<RectTransform>());
         identidade = raiz.GetComponent<CanvasGroup>();
         identidade.blocksRaycasts = false;
-        Texto("SantaRita", raiz.transform, font, "SANTA RITA", 64, new Vector2(.075f, .75f), new Vector2(480, 76), new Color(.94f, .9f, .76f));
+        var filete = NovaImagem("FileteIdentidade", raiz.transform, null);
+        filete.color = new Color(.88f, .65f, .36f, .68f);
+        filete.rectTransform.anchorMin = filete.rectTransform.anchorMax = new Vector2(.078f, .602f);
+        filete.rectTransform.pivot = new Vector2(0, .5f);
+        filete.rectTransform.sizeDelta = new Vector2(104, 1.5f);
+        Texto("SantaRita", raiz.transform, font, "SANTA RITA", 60, new Vector2(.075f, .75f), new Vector2(440, 76), new Color(.94f, .9f, .76f));
         Texto("Subtitulo", raiz.transform, font, "A NOITE DAS 03:17", 22, new Vector2(.078f, .665f), new Vector2(410, 36), new Color(.72f, .69f, .57f));
-        legenda = Texto("Contexto", raiz.transform, font, "", 24, new Vector2(.078f, .12f), new Vector2(510, 60), new Color(.65f, .7f, .69f));
+        legenda = Texto("Contexto", raiz.transform, font, "", 19, new Vector2(.078f, .105f), new Vector2(465, 45), new Color(.65f, .7f, .69f));
         temSave = CheckpointSystem.HasCheckpoint;
         Pronto = true;
         if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject == null)
@@ -188,7 +189,6 @@ public sealed class MenuAmbiente : MonoBehaviour
         menuMinigames = false;
         painelMinigames.SetActive(false);
         foreach (var botao in botoesPrincipais) botao.gameObject.SetActive(true);
-        EventSystem.current?.SetSelectedGameObject(Obter<Button>("btn_minigames").gameObject);
     }
 
     static void ConfigurarBotao(Button b, int i)
@@ -197,14 +197,14 @@ public sealed class MenuAmbiente : MonoBehaviour
         r.anchorMin = r.anchorMax = new Vector2(.078f, .50f - i * .077f);
         r.pivot = new Vector2(0, .5f);
         r.anchoredPosition = Vector2.zero;
-        r.sizeDelta = new Vector2(310, 44);
+        r.sizeDelta = new Vector2(246, 41);
         var label = b.GetComponentInChildren<TMP_Text>();
-        label.fontSize = 30;
+        label.fontSize = 27;
         label.alignment = TextAlignmentOptions.MidlineLeft;
         label.enableAutoSizing = false;
         label.text = label.text.Trim();
         Esticar(label.rectTransform);
-        label.margin = Vector4.zero;
+        label.margin = new Vector4(12, 0, 6, 0);
         label.raycastTarget = false;
     }
 
@@ -303,14 +303,26 @@ public sealed class MenuAmbiente : MonoBehaviour
         else if (p.y < .29f) atmosfera.Responder(p, tempo);
     }
 
+    void CriarPlacaFoco(Button button)
+    {
+        var plate = new GameObject("PlacaDeSelecao", typeof(RectTransform), typeof(Image)).GetComponent<Image>();
+        plate.transform.SetParent(button.transform, false);
+        plate.transform.SetAsFirstSibling();
+        Esticar(plate.rectTransform);
+        UIFactory.ApplyWeatheredSurface(plate, 0);
+        plate.raycastTarget = false;
+        placas.Add(button, plate);
+        enfases.Add(button, 0);
+    }
+
     void AtualizarBotoes(GameObject selecionado, float dt)
     {
-        foreach (var par in linhas)
+        foreach (var item in placas)
         {
-            float f = Mathf.MoveTowards(enfases[par.Key], selecionado == par.Key.gameObject ? 1 : 0, dt * 5);
-            enfases[par.Key] = f;
-            par.Value.rectTransform.sizeDelta = new Vector2(Mathf.Lerp(0, 140, f), 1);
-            par.Value.color = new Color(.94f, .73f, .4f, f * .75f);
+            float target = selecionado == item.Key.gameObject ? 1f : 0f;
+            float emphasis = Mathf.MoveTowards(enfases[item.Key], target, dt * 7f);
+            enfases[item.Key] = emphasis;
+            item.Value.color = new Color(1.22f, 1.12f, .86f, emphasis * .84f);
         }
     }
 

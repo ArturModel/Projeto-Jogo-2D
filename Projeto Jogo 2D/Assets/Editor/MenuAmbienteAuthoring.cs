@@ -25,7 +25,7 @@ public sealed class MenuAmbienteTextureImporter : AssetPostprocessor
 // Ferramenta opt-in: não abre nem salva cenas e não inicia build ao importar.
 public static class MenuAmbienteAuthoring
 {
-    public const string Output = "C:/Temp/SantaRitaMenu";
+    public static string Output => Environment.GetEnvironmentVariable("SANTA_RITA_MENU_QA_OUTPUT") ?? "C:/Temp/SantaRitaMenu";
     public static void BuildQA() { Build(true); }
     public static void BuildNormal() { Build(false); }
 

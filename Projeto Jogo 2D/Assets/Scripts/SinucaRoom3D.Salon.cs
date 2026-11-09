@@ -4,7 +4,8 @@ using UnityEngine.Rendering;
 
 public sealed partial class SinucaRoom3D
 {
-    private Transform ceilingFan;
+    private Transform ceilingFan, campainhaBalcao;
+    private float tempoCampainha = 1f;
     private readonly List<Transform> contactActors = new List<Transform>();
     private readonly List<Transform> contactShadows = new List<Transform>();
     private readonly List<Renderer> overheadDetails = new List<Renderer>();
@@ -19,6 +20,9 @@ public sealed partial class SinucaRoom3D
     {
         BuildSalonDecoration();
         BuildSalonPatrons();
+        MontarCampainhaDoBalcao();
+        RoomFill("Luz baixa da mesa da janela", new Vector3(3.56f, 2.46f, -3.10f),
+            new Color(1f, .75f, .49f), .87f, 4.5f);
         var timber=Mat("estruturaCarvalho",new Color(.28f,.21f,.13f),tiles[2]);
         var stone=Mat("basePilares",new Color(.30f,.29f,.25f));
         foreach(float z in new[]{-6.8f,-1.7f,3.45f})
@@ -76,6 +80,34 @@ public sealed partial class SinucaRoom3D
             contactShadows.Add(ContactPatch("Contato_"+a.definition.id,a.root.localPosition,new Vector2(.75f,.48f),.35f));
         }
         ContactPatch("OclusaoMesaSinuca",Vector3.zero,new Vector2(3.45f,1.78f),.24f);
+    }
+
+    private void MontarCampainhaDoBalcao()
+    {
+        var latao = Mat("lataoCampainha", new Color(.57f, .40f, .19f));
+        var baseEscura = Mat("baseCampainha", new Color(.17f, .13f, .10f));
+        var balcao = scenery.Find("Balcao_Bar_Sprite");
+        if (balcao == null) return;
+        var ponto = balcao.localPosition + new Vector3(1.03f, 1.066f, -.26f);
+        Cylinder("BaseCampainha", ponto, .105f, .032f, baseEscura, scenery);
+        Cylinder("CopaCampainha", ponto + Vector3.up * .047f, .081f, .065f, latao, scenery);
+        campainhaBalcao = Cylinder("BotaoCampainha", ponto + Vector3.up * .099f, .022f, .045f, latao, scenery).transform;
+    }
+
+    internal void ConfigurarSomDoSalao(Transform dono)
+    {
+        if (ceilingFan != null)
+            SantaRitaInteriorAudio.Criar(dono, ceilingFan, camera.transform, "MotorVentilador", 6.5f, .39f);
+    }
+
+    internal bool PodeTocarCampainha() => campainhaBalcao != null &&
+        EmFoco(root.transform.InverseTransformPoint(campainhaBalcao.position), 2.15f, .982f, out _);
+
+    internal void TocarCampainha()
+    {
+        if (tempoCampainha < .22f) return;
+        tempoCampainha = 0f;
+        SantaRitaInteriorAudio.Tocar("CampainhaBalcao", campainhaBalcao.position, camera.transform, .82f);
     }
 
     private void BuildWindowBay(int index,string name,Vector3 at,float yaw)
@@ -184,8 +216,15 @@ public sealed partial class SinucaRoom3D
                 vidroJanela.SetFloat("_RainAmount", chuva);
             }
         }
-        if(ceilingFan!=null&&!MenuPausa.Aberto&&Application.isFocused)
-            ceilingFan.Rotate(0,Time.deltaTime*32,0,Space.Self);
+        if (MenuPausa.Aberto || !Application.isFocused) return;
+        if (ceilingFan != null) ceilingFan.Rotate(0f, Time.deltaTime * 32f, 0f, Space.Self);
+        if (campainhaBalcao != null && tempoCampainha < .22f)
+        {
+            float antes = Mathf.Sin(Mathf.PI * Mathf.Clamp01(tempoCampainha / .22f));
+            tempoCampainha += Time.deltaTime;
+            float depois = Mathf.Sin(Mathf.PI * Mathf.Clamp01(tempoCampainha / .22f));
+            campainhaBalcao.localPosition += Vector3.down * (.017f * (depois - antes));
+        }
         for(int i=0;i<contactActors.Count;i++)
         {
             var p=contactActors[i].localPosition;contactShadows[i].localPosition=new Vector3(p.x,.007f,p.z);

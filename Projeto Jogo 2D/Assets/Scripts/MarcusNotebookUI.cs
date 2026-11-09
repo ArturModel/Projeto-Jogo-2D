@@ -97,9 +97,14 @@ public sealed class MarcusNotebookUI : MonoBehaviour
         leaf=(RectTransform)flip.transform;leaf.pivot=new Vector2(0,.5f);leaf.anchoredPosition=Vector2.zero;
         var texture=Resources.Load<Texture2D>("Notebook/Leaf");var raw=flip.GetComponent<RawImage>();raw.texture=texture;raw.raycastTarget=false;
         paperGroup=flip.AddComponent<CanvasGroup>();paperGroup.blocksRaycasts=false;flip.SetActive(false);
-        toast=Panel("AvisoCaderno",parent,new Vector2(-213,-126),new Vector2(174,30),new Color(.09f,.08f,.065f,.97f));
-        var icon=new GameObject("Caderninho",typeof(RectTransform),typeof(RawImage));icon.transform.SetParent(toast.transform,false);Place((RectTransform)icon.transform,new Vector2(-70,0),new Vector2(21,20));icon.GetComponent<RawImage>().texture=surface;icon.GetComponent<RawImage>().raycastTarget=false;
-        var label=UIFactory.CreateLabel(toast.transform,"Aviso",14);Place(label.rectTransform,new Vector2(12,0),new Vector2(142,26));label.text="Caderno atualizado";label.alignment=TextAlignmentOptions.Center;label.color=new Color(.86f,.8f,.64f);
+        toast=Panel("AvisoCaderno",parent,Vector2.zero,new Vector2(154,28),Color.white);
+        var noticeRect = (RectTransform)toast.transform;
+        noticeRect.anchorMin = noticeRect.anchorMax = noticeRect.pivot = Vector2.one;
+        noticeRect.anchoredPosition = new Vector2(-14, -14);
+        UIFactory.ApplyWeatheredSurface(toast.GetComponent<Image>(), .90f);
+        toast.GetComponent<Image>().raycastTarget = false;
+        var icon=new GameObject("Caderninho",typeof(RectTransform),typeof(RawImage));icon.transform.SetParent(toast.transform,false);Place((RectTransform)icon.transform,new Vector2(-60,0),new Vector2(18,17));icon.GetComponent<RawImage>().texture=surface;icon.GetComponent<RawImage>().raycastTarget=false;
+        var label=UIFactory.CreateLabel(toast.transform,"Aviso",14);Place(label.rectTransform,new Vector2(11,0),new Vector2(119,24));label.text="Caderno atualizado";label.alignment=TextAlignmentOptions.Center;label.color=new Color(.86f,.8f,.64f);
         noticeGroup=toast.AddComponent<CanvasGroup>();noticeGroup.blocksRaycasts=false;toast.SetActive(false);book.SetActive(false);
         GameState.OnDiarioAtualizado+=Changed;GameState.OnSnapshotRestaurado+=Restored;Restored();
     }

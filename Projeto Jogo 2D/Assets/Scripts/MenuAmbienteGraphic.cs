@@ -3,9 +3,10 @@ using UnityEngine.UI;
 
 // Chuva em perspectiva e luz pintada em geometria UI; sem vídeo, blur,
 // textura recriada por frame, RNG global ou alocação por gota.
+[RequireComponent(typeof(CanvasRenderer))]
 public sealed class MenuAmbienteGraphic : MaskableGraphic
 {
-    public enum Camada { Ambiente, Leitura }
+    public enum Camada { Ambiente, Leitura, ChuvaOrelhao }
     public Camada Tipo;
     public float Tempo, LuzClube, LuzTelefone, Saida, Brilho = 1;
     public Vector2 Foco;
@@ -20,6 +21,7 @@ public sealed class MenuAmbienteGraphic : MaskableGraphic
     {
         vh.Clear(); area = rectTransform.rect;
         if (Tipo == Camada.Leitura) { Leitura(vh); return; }
+        if (Tipo == Camada.ChuvaOrelhao) { ClimaOrelhao(vh); return; }
         // A placa de base tem textura rica; o azul da noite fica sobre a imagem.
         Caixa(vh, 0, 0, 1, 1, new Color(.005f, .018f, .035f, .25f));
         float vacilo = .5f + .5f * Mathf.Sin(Tempo * .57f);
@@ -55,6 +57,46 @@ public sealed class MenuAmbienteGraphic : MaskableGraphic
             Caixa(vh, x, 0, x + .025f, 1, new Color(.006f, .012f, .022f, a));
         }
         Caixa(vh, 0, 0, 1, 1, new Color(0, 0, 0, Saida * .9f));
+    }
+
+    void ClimaOrelhao(VertexHelper vh)
+    {
+        float intensity = Mathf.Clamp(Brilho, .45f, 1.45f);
+        for (int i = 0; i < 7; i++)
+        {
+            float x = .16f + .15f * Mathf.Sin(Tempo * (.14f + i * .012f) + i * 1.7f);
+            float y = .09f + .10f * i;
+            var cor = new Color(.33f, .46f, .48f, intensity * (.21f - i * .014f));
+            Halo(vh, new Vector2(x, y), new Vector2(.28f, .10f + i * .006f), cor);
+        }
+        Halo(vh, new Vector2(.65f + .07f * Mathf.Sin(Tempo * .23f), .035f),
+            new Vector2(.62f, .19f), new Color(.37f, .47f, .51f, .20f * intensity));
+
+        for (int i = 0; i < 238; i++)
+        {
+            float depth = Hash(i * 5 + 9);
+            float speed = .36f + depth * depth * 1.18f;
+            float x = Mathf.Repeat(Hash(i * 23 + 13) - Tempo * speed * .046f, 1);
+            float y = Mathf.Repeat(Hash(i * 7 + 17) - Tempo * speed, 1);
+            float length = .013f + depth * depth * .053f;
+            float lamp = Mathf.Clamp01(1 - Mathf.Abs(x - .64f) * 2.9f);
+            Color water = Color.Lerp(new Color(.58f, .67f, .70f), new Color(.78f, .75f, .68f), lamp * .68f);
+            water.a = intensity * (.105f + depth * .23f);
+            Linha(vh, new Vector2(x, y), new Vector2(Mathf.Min(1, x + length * .073f), Mathf.Min(1, y + length)),
+                .50f + depth * .92f, water);
+        }
+
+        for (int i = 0; i < 15; i++)
+        {
+            float phase = Mathf.Repeat(Tempo * (1.9f + Hash(i * 23)) + Hash(i * 19), 1);
+            if (phase > .30f) continue;
+            float x = .66f + Hash(i * 13 + 1) * .22f;
+            float y = .938f - Mathf.Pow((x - .766f) * 6.5f, 2) * .22f;
+            float jump = Mathf.Sin(phase * Mathf.PI / .3f) * .012f;
+            var splash = new Color(.93f, .84f, .68f, .64f * (1 - phase / .3f) * intensity);
+            Linha(vh, new Vector2(x, y), new Vector2(x + .004f, y + jump), .85f, splash);
+            Linha(vh, new Vector2(x, y), new Vector2(x - .003f, y + jump * .68f), .8f, splash);
+        }
     }
 
     void Chuva(VertexHelper vh)

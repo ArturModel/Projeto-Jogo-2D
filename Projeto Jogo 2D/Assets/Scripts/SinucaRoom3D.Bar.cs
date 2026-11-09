@@ -8,7 +8,9 @@ public sealed partial class SinucaRoom3D
     private static readonly Vector3 ChegadaBar = new Vector3(.10f, 1.62f, -5.72f);
     private static readonly Vector2 OlharChegada = new Vector2(4f, 3f);
     private Transform portaBar, macanetaExterior, maoMarcusPorta;
-    private Vector3 pontoDaMacanetaFechada;
+    private Vector3 pontoDaMacanetaFechada, inicioDaSaidaDoBar;
+    private Quaternion olharDaSaidaDoBar;
+    private Transform macanetaInterior;
     private MeshRenderer chuvaDaEntrada;
     private Material materialChuvaDaEntrada;
     private Vector2 focoDaRua;
@@ -56,6 +58,7 @@ public sealed partial class SinucaRoom3D
                 macanetaExterior = macaneta;
                 pontoDaMacanetaFechada = root.transform.InverseTransformPoint(macaneta.position);
             }
+            else macanetaInterior = macaneta;
         }
         foreach (float y in new[] { .25f, 1.81f })
             Cylinder("Dobradica", new Vector3(-.53f, y, SoleiraBar), .018f, .13f, latao, scenery);
@@ -132,6 +135,7 @@ public sealed partial class SinucaRoom3D
         if (chuvaDaEntrada != null) chuvaDaEntrada.enabled = animar;
         focoDaRua = foco;
         tocouFecho = tocouPorta = false;
+        portaBar.localRotation = Quaternion.identity;
         CancelOpponentShot();
         VoltarAExplorar(ChegadaBar, OlharChegada);
         if (animar) AnimarEntradaDoBar(0f);
@@ -205,6 +209,42 @@ public sealed partial class SinucaRoom3D
             AtualizarExploracaoDoBar();
         }
         return fechar;
+    }
+
+    internal Vector2 FocoDaPortaDoBar
+    {
+        get
+        {
+            Vector3 ponto = camera.WorldToViewportPoint(macanetaInterior.position);
+            return ponto.z > 0f ? new Vector2(ponto.x, ponto.y) : Vector2.one * .5f;
+        }
+    }
+
+    internal void PrepararSaidaDoBar()
+    {
+        inicioDaSaidaDoBar = camera.transform.localPosition;
+        olharDaSaidaDoBar = camera.transform.localRotation;
+        tocouPorta = false;
+    }
+
+    internal float AnimarSaidaDoBar(float tempo)
+    {
+        float abertura = CurvaDaEntrada(tempo, .29f, 1.08f);
+        portaBar.localRotation = Quaternion.Euler(0f, -98f * abertura, 0f);
+        if (!tocouPorta && tempo >= .29f)
+        {
+            tocouPorta = true;
+            SantaRitaSound.Play("door", .18f);
+        }
+        float passo = CurvaDaEntrada(tempo, .54f, 1.39f);
+        var soleira = new Vector3(.18f, 1.62f, SoleiraBar + .25f);
+        camera.transform.localPosition = Vector3.Lerp(inicioDaSaidaDoBar, soleira, passo);
+        camera.transform.localRotation = Quaternion.Slerp(olharDaSaidaDoBar, Quaternion.Euler(5f, 180f, 0f), passo);
+        if (chuvaDaEntrada != null) chuvaDaEntrada.enabled = abertura > 0f;
+        if (materialChuvaDaEntrada != null) materialChuvaDaEntrada.SetFloat("_Tempo", tempo);
+        SyncFirstPersonCamera();
+        OrientPixelArt();
+        return abertura;
     }
 
     private void AnimarMaoDeMarcus(float segundos)

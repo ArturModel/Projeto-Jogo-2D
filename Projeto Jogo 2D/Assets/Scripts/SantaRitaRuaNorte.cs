@@ -152,8 +152,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
                 else if (entrada) SelectEntranceGround(x, y, out kind, out flipX, out flipY);
                 else SelectGround(x, y, out kind, out flipX, out flipY);
                 int cell = y * width + x;
-                uint hash = (uint)cell * 2654435761u;
-                int variant = (int)((hash ^ (hash >> 16)) & 3u);
+                int variant = GroundVariant(cell);
                 cells[cell] = GroundTile(atlas, kind, variant, flipX, flipY);
                 atlasCells[cell] = new Color32((byte)variant, (byte)(atlas.height / TileSize - (int)kind - 1),
                     flipX ? (byte)255 : (byte)0, flipY ? (byte)255 : (byte)0);
@@ -277,6 +276,36 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         entranceWater.Apply(false, true);
         lighting.SetTexture("_EntranceWater", entranceWater);
         lighting.SetVector("_EntranceWaterRect", new Vector4(0, firstRow, width, rows));
+    }
+
+    private static int GroundVariant(int cell)
+    {
+        uint hash = (uint)cell * 2654435761u;
+        return (int)((hash ^ (hash >> 16)) & 3u);
+    }
+
+    // O prólogo consulta as mesmas células da Rodovia em perspectiva.
+    internal static Texture2D CreateEntranceGroundLookup(Texture2D atlas)
+    {
+        const int width = 36, height = 20;
+        var lookup = new Texture2D(width, height, TextureFormat.RGBA32, false, true)
+        {
+            name = "Piso da Rodovia no prólogo",
+            filterMode = FilterMode.Point,
+            wrapMode = TextureWrapMode.Clamp
+        };
+        var pixels = new Color32[width * height];
+        for (int y = 0; y < height; y++)
+        for (int x = 0; x < width; x++)
+        {
+            SelectEntranceGround(x, y, out var kind, out bool flipX, out bool flipY);
+            int cell = y * width + x;
+            pixels[cell] = new Color32((byte)GroundVariant(cell), (byte)(atlas.height / TileSize - (int)kind - 1),
+                flipX ? (byte)255 : (byte)0, flipY ? (byte)255 : (byte)0);
+        }
+        lookup.SetPixels32(pixels);
+        lookup.Apply(false, true);
+        return lookup;
     }
 
     private static void SelectEntranceGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)

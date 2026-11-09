@@ -191,3 +191,9 @@ SinucaPerceptionSchedule controla cinco eventos e StartForced permite comandos m
 
 
 08/11/2026 — SantaRitaRuaNorte preenche uma textura linear de coordenadas e espelhamento do atlas a partir das células do Tilemap. LuzVolumetrica usa esse mapa para mesclar vizinhos sem borrar os pixels. Luz da fachada e foco de Marcus modulam o visual somente na Rua Norte. [Plano](../../ai-plans/2026-11-08_BBCONTTI_continuidade-piso-rua-norte.md).
+
+
+08/11/2026 — PayphoneCheckpoint encaminha a exploração para PayphoneJogoUI, o menu principal para PayphoneRegistroUI e a pausa/derrota para a lista de carga. O close-up controla seleção, confirmação, cursor e chuva em Canvas. A persistência passa pelo CheckpointSystem, com registro escolhido e save manual exclusivo no orelhão. [Plano](../../ai-plans/2026-11-08_BBCONTTI_interface-orelhao.md).
+
+
+Na exploração, Shift aumenta a velocidade de caminhada em 25%. `PlayerController` compartilha a leitura de teclado e a aceleração com `Posto3D` e `BarDoZe3D`. E aciona a interação por pressionamento, com bloqueio de movimento durante diálogo ou interface modal.

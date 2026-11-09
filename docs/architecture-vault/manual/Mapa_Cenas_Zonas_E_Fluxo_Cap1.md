@@ -55,3 +55,20 @@ A entrada atual do Bar do Zé é a porta da Rua Norte em `EntradaDaCidade`. A zo
 
 
 08/11/2026 — A Rodovia da Entrada usa a montagem visual compartilhada com a Rua Norte. SantaRitaFalasEntrada apresenta as falas de chegada e as interações do carro, quadro e mala. O passeio sul atravessa a posição da mala. O ID do orelhão e as rotas da Rodovia permanecem os mesmos. [Plano](../../ai-plans/2026-11-08_BBCONTTI_reforma-entrada-cidade.md).
+
+
+08/11/2026 — A Rodovia da Entrada ganhou contraste no shader local, névoa fria com dispersão âmbar nos postes, reflexo planar do quadro corrente de Marcus nas poças e relâmpago ocasional durante a caminhada. O clarão e o susto respeitam a opção de reduzir efeitos intensos. [Plano](../../ai-plans/2026-11-08_BBCONTTI_contraste-e-clima-da-entrada.md).
+
+
+A conveniência do posto abre dentro de EntradaDaCidade. Porta_Entrar_Posto encaminha a ZonaId.Interior_Posto pelo SceneFader, e Posto3D controla câmera, sala, interações e retorno à calçada. SantaRitaRuaNorte prepara o acabamento do exterior da zona. [Plano e evidências](../../ai-plans/2026-11-08_BBCONTTI_reforma-posto.md).
+
+
+Posto3D direciona a câmera da avenida para uma textura durante a passagem, desenha a projeção da rua e Marcus na câmera de perspectiva e restaura a câmera original ao fim. [Plano](../../ai-plans/2026-11-08_BBCONTTI_transicao-posto.md).
+
+
+SceneFader faz a transição de névoa do posto com foco na porta. A saída anima a folha em Posto3D antes de cobrir o quadro. [Plano](../../ai-plans/2026-11-08_BBCONTTI_nevoa-posto.md).
+
+
+A porta de Adílio abre em 3D dentro de EntradaDaCidade. Posto3D preserva os seis pontos de interação do interior; a cena CasaDoAvo legada também abre a sala 3D. [Plano](../../ai-plans/2026-11-09_BBCONTTI_reforma-bairro.md).
+
+09/11/2026 — Prologo projeta os mesmos marcos da Rodovia antes de usar a chegada saida_carro em EntradaDaCidade. O recuo é parte do asfalto da via. [Plano](../../ai-plans/2026-11-09_BBCONTTI_prologo-rodovia.md).

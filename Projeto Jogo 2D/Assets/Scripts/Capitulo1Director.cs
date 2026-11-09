@@ -729,6 +729,16 @@ public class Capitulo1Director : MonoBehaviour
     private void EntrarNoBar3D()
     {
         if (BarDoZe3D.Aberto || SceneFader.IsTransitioning) return;
+        var foco = FocoDaPortaDoBarNaRua();
+        SceneFader.Instance.TransicionarParaBar(foco, () =>
+        {
+            BarDoZe3D.Abrir(animar: true, foco);
+            AplicarEstadoDaZona(ZonaId.Interior_BarDoZe, mostrarBanner: false);
+        });
+    }
+
+    private static Vector2 FocoDaPortaDoBarNaRua()
+    {
         var fachada = GameObject.Find("Predio_Fachada_BarDoZe")?.GetComponent<SpriteRenderer>();
         var foco = new Vector2(.5f, .5f);
         var cameraRua = Camera.main;
@@ -741,11 +751,7 @@ public class Capitulo1Director : MonoBehaviour
             var viewport = cameraRua.WorldToViewportPoint(ponto);
             foco = new Vector2(Mathf.Clamp(viewport.x, .22f, .78f), Mathf.Clamp(viewport.y, .22f, .78f));
         }
-        SceneFader.Instance.TransicionarParaBar(foco, () =>
-        {
-            BarDoZe3D.Abrir(animar: true, foco);
-            AplicarEstadoDaZona(ZonaId.Interior_BarDoZe, mostrarBanner: false);
-        });
+        return foco;
     }
 
     internal void SairDoBar3D()
@@ -756,13 +762,14 @@ public class Capitulo1Director : MonoBehaviour
             SceneTransition.Ir("EntradaDaCidade", "saida_bar_ze");
             return;
         }
-        SceneFader.Instance.TransicionarParaZona(() =>
+        BarDoZe3D.PrepararSaida();
+        SceneFader.Instance.TransicionarPortaPosto(BarDoZe3D.FocoDaPorta, () =>
         {
             BarDoZe3D.Fechar();
             var player = FindAnyObjectByType<PlayerController>();
             if (player != null) player.TeleportarPara(new Vector2(518f, 12f), 0);
             AplicarEstadoDaZona(ZonaId.Zona5_RuaNorteBar, mostrarBanner: false);
-        });
+        }, FocoDaPortaDoBarNaRua, animarAntes: BarDoZe3D.AnimarSaida, antesDaNevoa: .80f);
     }
 
     private void AplicarEstadoDaZona(ZonaId id, bool mostrarBanner)
@@ -1764,6 +1771,17 @@ public class Capitulo1Director : MonoBehaviour
     // ZONA 1: RODOVIA DE ENTRADA (Chegada de Marcus, Asfalto + Barro na Borda)
     // =========================================================================
 
+    // Marcos da rodovia vistos também do para-brisa no prólogo.
+    internal static readonly Vector2 CarroEntrada = new Vector2(108.5f, 12.2f);
+    internal static readonly Vector2 PlacaEntrada = new Vector2(113.5f, 13.4f);
+    internal static readonly Vector2 BancoEntrada = new Vector2(119.5f, 13.2f);
+    internal static readonly Vector2 QuadroEntrada = new Vector2(119.5f, 13.9f);
+    internal static readonly Vector2 OrelhaoEntrada = new Vector2(126.5f, 13.1f);
+    internal static readonly Vector2[] PostesEntrada =
+    {
+        new Vector2(106f, 13f), new Vector2(116f, 13f), new Vector2(129f, 13f)
+    };
+
     private void ConstruirZona1_Rodovia(Transform raiz)
     {
         GameObject z = new GameObject("Zona1_Rodovia");
@@ -1805,27 +1823,28 @@ public class Capitulo1Director : MonoBehaviour
         }
 
         // Carro de Marcus estacionado no recuo pavimentado da rodovia (nunca na grama!)
-        ColocarProp(z.transform, "Carro_Marcus_Sprite", new Vector3(108.5f, 12.2f, 0f), "Sedan_Brown", 32f, 1.15f,
+        var carro = ColocarProp(z.transform, "Carro_Marcus_Sprite", CarroEntrada, "Sedan_Brown", 32f, 1.15f,
             new Vector2(2.9f, 1.2f), new Vector2(0f, 0.6f), 2);
+        carro.GetComponent<SpriteRenderer>().flipX = true; // Frente voltada para a continuação da rodovia.
         ColocarInteracao(z.transform, "Carro_Marcus_Interacao", new Vector3(108.5f, 11.4f, 0f),
             InteracaoCapitulo1.TipoInteracao.CarroMarcus, "");
 
         // Placa de Entrada de Santa Rita
-        ColocarProp(z.transform, "Placa_SantaRita", new Vector3(113.5f, 13.4f, 0f), "PlacaEntrada", 16f, 0.9f,
+        ColocarProp(z.transform, "Placa_SantaRita", PlacaEntrada, "PlacaEntrada", 16f, 0.9f,
             new Vector2(2.4f, 0.8f), new Vector2(0f, 0.4f), 2);
 
         // Abrigo / Parada de Ônibus na Calçada + Quadro de Avisos
-        ColocarProp(z.transform, "Banco_Rodovia", new Vector3(119.5f, 13.2f, 0f), "Bench_Wood", 32f, 1.1f,
+        ColocarProp(z.transform, "Banco_Rodovia", BancoEntrada, "Bench_Wood", 32f, 1.1f,
             new Vector2(1.6f, 0.6f), new Vector2(0f, 0.3f), 1);
         ColocarProp(z.transform, "Lixeira_Rodovia", new Vector3(121.2f, 13.2f, 0f), "TrashCan", 32f, 1.0f,
             new Vector2(0.6f, 0.5f), new Vector2(0f, 0.25f), 1);
-        ColocarProp(z.transform, "Placa_Horarios_Rodovia", new Vector3(119.5f, 13.9f, 0f), "RoadSign_Blank", 32f, 1.1f,
+        ColocarProp(z.transform, "Placa_Horarios_Rodovia", QuadroEntrada, "RoadSign_Blank", 32f, 1.1f,
             Vector2.zero, Vector2.zero, 1);
         ColocarInteracao(z.transform, "Interacao_PlacaRodovia", new Vector3(119.5f, 12.7f, 0f),
             InteracaoCapitulo1.TipoInteracao.PlacaRodoviaEntrada, "");
 
         // Orelhão #1 (Save Point da Entrada sobre a calçada)
-        ColocarOrelhaoSave(z.transform, "Orelhao_Rodovia", "orelhao_entrada_rodovia", new Vector3(126.5f, 13.1f, 0f));
+        ColocarOrelhaoSave(z.transform, "Orelhao_Rodovia", "orelhao_entrada_rodovia", OrelhaoEntrada);
 
         // Mala no passeio sul. A leitura acontece pelo lado da pista.
         GameObject mala = ColocarProp(z.transform, "Mala_Abandonada_Rodovia", new Vector3(122.5f, 6.6f, 0f),
@@ -1835,9 +1854,8 @@ public class Capitulo1Director : MonoBehaviour
 
         // Postes de luz e fiação sobre a calçada de pedra
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_1", new Vector3(106.0f, 13.0f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_2", new Vector3(116.0f, 13.0f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_3", new Vector3(129.0f, 13.0f, 0f), luzAmbar);
+        for (int i = 0; i < PostesEntrada.Length; i++)
+            ColocarPosteComLuz(z.transform, "Poste_Z1_" + (i + 1), PostesEntrada[i], luzAmbar);
 
         // Cerca de madeira entre a calçada sul e a mata sul
         for (int x = 104; x <= 130; x += 6)

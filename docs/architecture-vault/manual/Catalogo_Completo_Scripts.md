@@ -80,6 +80,7 @@ Inventário em 04/11/2026: **123 arquivos C# atuais (incluindo Mila, Atlas, R4, 
 | [Scripts/OlharPrimeiraPessoa.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/OlharPrimeiraPessoa.cs) | `OlharPrimeiraPessoa` |
 | [Scripts/OptionsPanelController.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/OptionsPanelController.cs) | `OptionsPanelController` |
 | [Scripts/PayphoneCheckpoint.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/PayphoneCheckpoint.cs) | `PayphoneCheckpoint`, `PayphoneSlotInputWatcher` |
+| [Scripts/PayphoneJogoUI.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/PayphoneJogoUI.cs) | \`PayphoneJogoUI\` |
 | [Scripts/PlayerController.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/PlayerController.cs) | `PlayerController` |
 | [Scripts/PonteiroCarro.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/PonteiroCarro.cs) | `PonteiroCarro` |
 | [Scripts/PortaLuvasCarro.cs](../../../Projeto%20Jogo%202D/Assets/Scripts/PortaLuvasCarro.cs) | `PortaLuvasCarro` |

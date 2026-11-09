@@ -17,6 +17,7 @@ public sealed class SantaRitaInventory : MonoBehaviour
     private Canvas canvas;private GameObject belt,bag;private Transform grid;
     private Image[] pictures=new Image[5];private Button[] buttons=new Button[5];
     private Sprite[] icons;private TextMeshProUGUI tooltip,description;private string selected="";private int hovered=-1;
+    private CanvasGroup bagGroup; private float bagEntrance;
     private string stamp="";private readonly Dictionary<string,Sprite> extras=new Dictionary<string,Sprite>();
     public static readonly string[] Catalog={"lanterna","mapa","recibo","tocador","fita01","fita02","fita03","fita_sociedade","bilhete"};
     public static bool Owns(string id)
@@ -50,23 +51,76 @@ public sealed class SantaRitaInventory : MonoBehaviour
     private static void StartSession(){if(FindAnyObjectByType<SantaRitaInventory>()==null){var g=new GameObject("Inventario");DontDestroyOnLoad(g);g.AddComponent<SantaRitaInventory>();}}
     private void Awake()
     {
-        Instance=this;canvas=UIFactory.CreateCanvas(transform,"Itens",8600);canvas.gameObject.AddComponent<GraphicRaycaster>();icons=LoadIcons();
-        belt=Frame(canvas.transform,"CincoAtalhos",new Vector2(0,-159),new Vector2(150,34));
-        for(int i=0;i<5;i++){int n=i;buttons[i]=Cell(belt.transform,"Atalho"+i,new Vector2((i-2)*28,0),25,()=>{if(IsOpen){if(selected!="")Assign(n,selected);stamp="";}else Use(n);});pictures[i]=Picture(buttons[i].transform);var h=buttons[i].gameObject.AddComponent<SantaRitaItemHover>();h.enter=()=>hovered=n;h.exit=()=>hovered=-1;}
-        tooltip=Label(canvas.transform,"Dica",new Vector2(0,-132),new Vector2(300,16),11);
-        var open=Cell(canvas.transform,"AbrirBolsa",new Vector2(91,-159),25,()=>Toggle());Label(open.transform,"I",Vector2.zero,new Vector2(24,24),14).text="I";
-        bag=Frame(canvas.transform,"Bolsa",new Vector2(0,12),new Vector2(490,270));
-        Label(bag.transform,"Titulo",new Vector2(0,112),new Vector2(460,25),20).text="PERTENCES";
-        Label(bag.transform,"Orientacao",new Vector2(0,87),new Vector2(450,20),12).text="Escolha e use/examine. Clique em outro objeto para trocar ou num atalho de baixo.";
-        var g=new GameObject("Grade",typeof(RectTransform));g.transform.SetParent(bag.transform,false);grid=g.transform;
-        description=Label(bag.transform,"Descricao",new Vector2(0,-65),new Vector2(440,45),14);
-        ActionButton(bag.transform,"Usar / examinar",new Vector2(-110,-110),()=>{if(selected!=""){string id=selected;Close();UseItem(id);}});
-        ActionButton(bag.transform,"Fechar [I/Esc]",new Vector2(110,-110),Close);
+        Instance = this;
+        canvas = UIFactory.CreateCanvas(transform, "Itens", 8600);
+        canvas.GetComponent<CanvasScaler>().screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
+        canvas.gameObject.AddComponent<GraphicRaycaster>();
+        icons = LoadIcons();
+
+        belt = Frame(canvas.transform, "CincoAtalhos", Vector2.zero, new Vector2(198, 30));
+        StyleInventorySurface(belt, .78f);
+        TopLeft((RectTransform)belt.transform, 14, 14);
+        for (int i = 0; i < SlotCount; i++)
+        {
+            int slot = i;
+            buttons[i] = Cell(belt.transform, "Atalho" + i, new Vector2(-84 + i * 25, 0), 22, () =>
+            {
+                if (!IsOpen) { Use(slot); return; }
+                if (selected != "") Assign(slot, selected);
+                stamp = "";
+            });
+            StyleInventorySurface(buttons[i].gameObject, .54f);
+            pictures[i] = Picture(buttons[i].transform);
+            var hover = buttons[i].gameObject.AddComponent<SantaRitaItemHover>();
+            hover.enter = () => hovered = slot;
+            hover.exit = () => hovered = -1;
+        }
+
+        var open = Cell(belt.transform, "AbrirBolsa", new Vector2(63, 0), 22, Toggle);
+        StyleInventorySurface(open.gameObject, .91f);
+        ((RectTransform)open.transform).sizeDelta = new Vector2(62, 22);
+        Label(open.transform, "Acao", Vector2.zero, new Vector2(60, 20), 12).text = "BOLSA  [I]";
+        tooltip = Label(canvas.transform, "Dica", Vector2.zero, new Vector2(220, 16), 11);
+        TopLeft(tooltip.rectTransform, 15, 46);
+        tooltip.alignment = TextAlignmentOptions.MidlineLeft;
+
+        bag = Frame(canvas.transform, "Bolsa", Vector2.zero, new Vector2(238, 203));
+        StyleInventorySurface(bag, .94f);
+        TopLeft((RectTransform)bag.transform, 14, 56);
+        bagGroup = bag.AddComponent<CanvasGroup>();
+        var title = Label(bag.transform, "Titulo", new Vector2(0, 83), new Vector2(210, 23), 19);
+        title.text = "Pertences";
+        title.color = new Color(.95f, .80f, .58f);
+        var divider = new GameObject("Costura", typeof(RectTransform), typeof(Image)).GetComponent<Image>();
+        divider.transform.SetParent(bag.transform, false);
+        Place(divider.rectTransform, new Vector2(0, 69), new Vector2(210, 1));
+        divider.color = new Color(.75f, .55f, .30f, .44f);
+        divider.raycastTarget = false;
+        title.alignment = TextAlignmentOptions.MidlineLeft;
+        var g = new GameObject("Grade", typeof(RectTransform));
+        g.transform.SetParent(bag.transform, false);
+        grid = g.transform;
+        description = Label(bag.transform, "Descricao", new Vector2(0, -51), new Vector2(210, 27), 12);
+        description.alignment = TextAlignmentOptions.MidlineLeft;
+        var use = ActionButton(bag.transform, "Usar / examinar", new Vector2(-45, -79),
+            () => { if (selected != "") { string id = selected; Close(); UseItem(id); } });
+        StyleInventorySurface(use.gameObject, .92f);
+        ((RectTransform)use.transform).sizeDelta = new Vector2(118, 23);
+        var close = ActionButton(bag.transform, "Fechar [Esc]", new Vector2(63, -79), Close);
+        StyleInventorySurface(close.gameObject, .74f);
+        ((RectTransform)close.transform).sizeDelta = new Vector2(88, 23);
         bag.SetActive(false);
     }
-    public void Toggle(){if(IsOpen){Close();return;}if(Blocked())return;MapaInterativoUI.FecharSeAberto();bag.SetActive(true);stamp="";Rebuild();}
-    public void Close(){if(IsOpen)ClosedFrame=Time.frameCount;bag.SetActive(false);selected="";}
-    private bool Blocked()=>MenuPausa.Aberto||GameMessageUI.IsShowing||PayphoneCheckpoint.IsSaveUIOpen||SinucaMinigameUI.IsShowing||BochaMinigameUI.IsShowing||SantaRitaTapeDeck.IsOpen;
+
+    private static void TopLeft(RectTransform rect, float x, float y)
+    {
+        rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0, 1);
+        rect.anchoredPosition = new Vector2(x, -y);
+    }
+
+    public void Toggle(){if(IsOpen){Close();return;}if(Blocked())return;MapaInterativoUI.FecharSeAberto();bagEntrance = 0; bagGroup.alpha = 0; bag.SetActive(true);stamp="";Rebuild();}
+    public void Close(){if(IsOpen)ClosedFrame=Time.frameCount;bag.SetActive(false);selected=""; hovered=-1;}
+    private bool Blocked()=>SceneFader.IsTransitioning||MenuPausa.Aberto||GameMessageUI.IsShowing||PayphoneCheckpoint.IsSaveUIOpen||SinucaMinigameUI.IsShowing||BochaMinigameUI.IsShowing||SantaRitaTapeDeck.IsOpen;
     public void Use(int i){if(i<0||i>=5||Blocked()||MapaInterativoUI.IsShowing)return;UseItem(Quick(i));}
     public void UseItem(string id)
     {
@@ -79,25 +133,48 @@ public sealed class SantaRitaInventory : MonoBehaviour
     private void Update()
     {
         var k=Keyboard.current;if(k==null)return;
-        if(k.iKey.wasPressedThisFrame)Toggle();
+        if(canvas.enabled && k.iKey.wasPressedThisFrame)Toggle();
         else if(IsOpen&&k.escapeKey.wasPressedThisFrame)Close();
     }
     private void LateUpdate()
     {
         string scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         bool show=scene!="MainMenu"&&scene!="Prologo"&&!Blocked()&&!MapaInterativoUI.IsShowing;
-        canvas.enabled=show;if(!show&&IsOpen)Close();
+        canvas.enabled=show;
+        if (!show) { if (IsOpen) Close(); hovered = -1; return; }
         for(int i=0;i<5;i++){var id=Quick(i);pictures[i].sprite=Icon(id);pictures[i].enabled=pictures[i].sprite!=null;}
-        tooltip.text=IsOpen?"ACESSO RÁPIDO — clique para trocar o objeto":hovered>=0&&Quick(hovered)!=""?Name(Quick(hovered)):"";
-        if(IsOpen)Rebuild();
+        tooltip.text = IsOpen ? "Clique num atalho para equipar" :
+            hovered >= 0 && Quick(hovered) != "" ? Name(Quick(hovered)) : "";
+        if (IsOpen)
+        {
+            bagEntrance = Mathf.MoveTowards(bagEntrance, 1, Time.unscaledDeltaTime / .12f);
+            bagGroup.alpha = bagEntrance;
+            TopLeft((RectTransform)bag.transform, 14, Mathf.Lerp(60, 64, bagEntrance));
+            Rebuild();
+        }
     }
     private void Rebuild()
     {
         string key=string.Join("|",Contents())+":"+selected+":"+string.Join("|",Enumerable.Range(0,5).Select(Quick));if(key==stamp)return;stamp=key;
         foreach(Transform child in grid)Destroy(child.gameObject);
         var items=Contents();
-        for(int i=0;i<20;i++){string id=i<items.Length?items[i]:"";var b=Cell(grid,"Objeto"+i,new Vector2((i%5-2)*43,49-(i/5)*30),27,()=>{if(selected!=""&&id!=""&&selected!=id){Swap(selected,id);selected="";}else selected=id;stamp="";});var picture=Picture(b.transform);picture.sprite=Icon(id);picture.enabled=picture.sprite!=null;b.GetComponent<Image>().color=id!=""&&selected==id?new Color(.32f,.28f,.19f):new Color(.11f,.115f,.102f);}
-        description.text=selected==""?(items.Length==0?"A bolsa está vazia.":"Os espaços vazios ficam livres para os próximos achados."):Name(selected)+"\nUsar/examinar abre o objeto; os cinco atalhos podem ser reorganizados.";
+        for (int i = 0; i < 20; i++)
+        {
+            string id = i < items.Length ? items[i] : "";
+            var cell = Cell(grid, "Objeto" + i, new Vector2((i % 5 - 2) * 39, 52 - i / 5 * 24), 22, () =>
+            {
+                if (selected != "" && id != "" && selected != id) { Swap(selected, id); selected = ""; }
+                else selected = id;
+                stamp = "";
+            });
+            StyleInventorySurface(cell.gameObject, id == "" ? .48f : .92f);
+            if (id != "" && selected == id) cell.image.color = new Color(1.65f, 1.24f, .72f);
+            var picture = Picture(cell.transform);
+            picture.sprite = Icon(id);
+            picture.enabled = picture.sprite != null;
+        }
+        description.text = selected == "" ? (items.Length == 0 ? "A bolsa está vazia." : "Selecione um objeto para examinar.") :
+            Name(selected) + "\nEscolha outro objeto para trocar de lugar.";
     }
     public Sprite Icon(string id)
     {
@@ -107,6 +184,12 @@ public sealed class SantaRitaInventory : MonoBehaviour
         var texture=Resources.Load<Texture2D>("Tapes/"+(id.StartsWith("fita")?"Cassette":id=="tocador"?"Recorder":"Letter"));
         if(texture==null)return null;var sprite=Sprite.Create(texture,new Rect(0,0,texture.width,texture.height),new Vector2(.5f,.5f),32);extras[id]=sprite;return sprite;
     }
+    private static void StyleInventorySurface(GameObject frame, float opacity)
+    {
+        frame.transform.Find("Couro").gameObject.SetActive(false);
+        UIFactory.ApplyWeatheredSurface(frame.GetComponent<Image>(), opacity);
+    }
+
     public static GameObject Frame(Transform parent,string name,Vector2 pos,Vector2 size)
     {
         var go=new GameObject(name,typeof(RectTransform),typeof(Image));go.transform.SetParent(parent,false);Place((RectTransform)go.transform,pos,size);go.GetComponent<Image>().color=new Color(.48f,.40f,.31f);

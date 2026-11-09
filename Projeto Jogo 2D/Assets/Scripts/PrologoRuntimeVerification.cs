@@ -91,7 +91,9 @@ public sealed class PrologoRuntimeVerification : MonoBehaviour
         yield return Captura("05-aproximacao");
         while(p!=null && p.Tempo<PrologoJogavel.Parado+.3f)yield return null;
         Check(p!=null && p.Velocidade==0 && p.Estacionamento==1,"Carro estaciona no recuo");
-        Check(p!=null && p.PosicaoLateral>4.5f && p.Terra==1,"Carro deixa a estrada de terra para o recuo");
+        Check(p!=null && Mathf.Abs(p.PosicaoLateral - PrologoJogavel.LateralEntrada(Capitulo1Director.CarroEntrada.y))<.01f &&
+            Mathf.Abs(p.Distancia - PrologoJogavel.DistanciaParada)<.01f && p.Terra==0,
+            "Carro para no recuo asfaltado da Rodovia nas coordenadas da cena seguinte");
         if(p!=null)
         {
             float d=p.Distancia;

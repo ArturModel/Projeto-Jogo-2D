@@ -19,6 +19,7 @@ internal sealed class BarDoZe3D : MonoBehaviour
     private int frameCaptura;
     private Vector3 posicaoAntesDaPartida;
     private Vector2 olharAntesDaPartida;
+    private Vector2 velocidade;
 
     internal static void Abrir(bool animar, Vector2 foco = default)
     {
@@ -56,6 +57,7 @@ internal sealed class BarDoZe3D : MonoBehaviour
 
         sala.SetViewportAspect(Screen.width / (float)Mathf.Max(1, Screen.height));
         sala.IniciarExploracaoDoBar(animar, foco);
+        sala.ConfigurarSomDoSalao(transform);
         sala.SetActive(true);
         if (cameraRua != null) cameraRua.cullingMask = 0;
         chuvaDaRua = FindAnyObjectByType<Chuva>();
@@ -69,6 +71,17 @@ internal sealed class BarDoZe3D : MonoBehaviour
         float fechamento = atual.sala.AnimarEntradaDoBar(segundos);
         if (atual.chuvaDaRua != null) atual.chuvaDaRua.DefinirOclusaoPortaBar(fechamento);
     }
+
+    internal static void PrepararSaida() => atual?.sala.PrepararSaidaDoBar();
+
+    internal static void AnimarSaida(float segundos)
+    {
+        if (atual == null) return;
+        float abertura = atual.sala.AnimarSaidaDoBar(segundos);
+        if (atual.chuvaDaRua != null) atual.chuvaDaRua.DefinirOclusaoPortaBar(1f - abertura);
+    }
+
+    internal static Vector2 FocoDaPorta => atual == null ? Vector2.one * .5f : atual.sala.FocoDaPortaDoBar;
 
     internal static void GuardarLugarParaPartida()
     {
@@ -114,11 +127,16 @@ internal sealed class BarDoZe3D : MonoBehaviour
 
     private void Update()
     {
-        if (SinucaMinigameUI.IsShowing) return;
+        if (SinucaMinigameUI.IsShowing)
+        {
+            velocidade = Vector2.zero;
+            return;
+        }
         sala.SetViewportAspect(Screen.width / (float)Mathf.Max(1, Screen.height));
         if (SceneFader.IsTransitioning || MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
             SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen || !Application.isFocused || Time.timeScale == 0f)
         {
+            velocidade = Vector2.zero;
             CapturarCursor(false);
             dica.text = "";
             return;
@@ -127,6 +145,7 @@ internal sealed class BarDoZe3D : MonoBehaviour
         var teclado = Keyboard.current;
         if (GameMessageUI.IsShowing)
         {
+            velocidade = Vector2.zero;
             CapturarCursor(false);
             dica.text = "";
             if (teclado != null && teclado.eKey.wasPressedThisFrame) GameMessageUI.Instance.Avancar();
@@ -134,21 +153,28 @@ internal sealed class BarDoZe3D : MonoBehaviour
         }
 
         CapturarCursor(true);
-        if (teclado == null) return;
-        var movimento = new Vector2(
-            (teclado.dKey.isPressed || teclado.rightArrowKey.isPressed ? 1f : 0f) -
-            (teclado.aKey.isPressed || teclado.leftArrowKey.isPressed ? 1f : 0f),
-            (teclado.wKey.isPressed || teclado.upArrowKey.isPressed ? 1f : 0f) -
-            (teclado.sKey.isPressed || teclado.downArrowKey.isPressed ? 1f : 0f));
+        if (teclado == null)
+        {
+            velocidade = Vector2.zero;
+            return;
+        }
+
+        const float caminhada = 1.65f;
+        float dt = Mathf.Min(Time.deltaTime, .05f);
+        float maximo = caminhada;
+        if (PlayerController.ShiftPressionado(teclado)) maximo *= PlayerController.MultiplicadorCorrida;
+        velocidade = PlayerController.AjustarVelocidade(velocidade, PlayerController.LerDirecao(teclado) * maximo, dt);
         var mouse = Mouse.current;
         var olhar = mouse != null && frameCaptura != Time.frameCount ? mouse.delta.ReadValue() : Vector2.zero;
-        sala.MovePlayer(movimento, olhar, Time.deltaTime);
+        sala.MoverJogador(velocidade, olhar, dt);
         sala.AtualizarExploracaoDoBar();
 
         bool podeSair = sala.PodeSairDoBar();
-        var alvo = podeSair ? null : sala.InteracaoEmFoco();
+        bool podeTocar = !podeSair && sala.PodeTocarCampainha();
+        var alvo = podeSair || podeTocar ? null : sala.InteracaoEmFoco();
         if (alvo.HasValue) interacao.Configurar(alvo.Value);
         dica.text = podeSair ? "·\n[E] Sair para a Rua Norte" :
+            podeTocar ? "·\n[E] Tocar campainha do balcão" :
             alvo.HasValue ? "·\n[E] " + interacao.Prompt : "·";
         if (!teclado.eKey.wasPressedThisFrame && (mouse == null || !mouse.leftButton.wasPressedThisFrame || frameCaptura == Time.frameCount))
             return;
@@ -156,6 +182,10 @@ internal sealed class BarDoZe3D : MonoBehaviour
         {
             CapturarCursor(false);
             Capitulo1Director.Instance.SairDoBar3D();
+        }
+        else if (podeTocar)
+        {
+            sala.TocarCampainha();
         }
         else if (alvo.HasValue)
         {

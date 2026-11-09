@@ -192,14 +192,21 @@ public sealed partial class SinucaRoom3D : IDisposable
         }
         return true;
     }
-    public void MovePlayer(Vector2 input,Vector2 look,float dt)
+    public void MovePlayer(Vector2 input, Vector2 look, float dt)
+    {
+        MoverJogador(Vector2.ClampMagnitude(input, 1f) * 1.65f, look, dt);
+    }
+
+    internal void MoverJogador(Vector2 velocidade, Vector2 look, float dt)
     {
         if(!Walking)return;
         var anterior = standingPosition;
         standingYaw+=look.x*.13f;standingPitch=Mathf.Clamp(standingPitch-look.y*.10f,-42,68);
         float radians=standingYaw*Mathf.Deg2Rad;
-        Vector3 delta=new Vector3(input.x*Mathf.Cos(radians)+input.y*Mathf.Sin(radians),0,input.y*Mathf.Cos(radians)-input.x*Mathf.Sin(radians));
-        delta=Vector3.ClampMagnitude(delta,1)*1.65f*Mathf.Clamp(dt,0,.05f);
+        float seno = Mathf.Sin(radians);
+        float cosseno = Mathf.Cos(radians);
+        Vector3 delta = new Vector3(velocidade.x * cosseno + velocidade.y * seno, 0f,
+            velocidade.y * cosseno - velocidade.x * seno) * Mathf.Clamp(dt, 0f, .05f);
         // Small axis-separated sweeps slide along furniture without tunnelling.
         int steps=Mathf.Max(1,Mathf.CeilToInt(delta.magnitude/.035f));delta/=steps;
         for(int i=0;i<steps;i++)

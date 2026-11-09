@@ -7,10 +7,14 @@ using UnityEngine.Rendering.Universal;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movimento")]
-    // Passo cadenciado, deliberado: sem corrida, com peso ao iniciar e parar.
     [SerializeField] private float moveSpeed = 2.4f;
-    [SerializeField] private float acceleration = 14f;
-    [SerializeField] private float deceleration = 20f;
+    [SerializeField, Min(1f)] private float runMultiplier = MultiplicadorCorrida;
+    [SerializeField] private float acceleration = AceleracaoPadrao;
+    [SerializeField] private float deceleration = FrenagemPadrao;
+
+    internal const float MultiplicadorCorrida = 1.25f;
+    private const float AceleracaoPadrao = 14f;
+    private const float FrenagemPadrao = 20f;
 
     [Header("Animação opcional")]
     [SerializeField] private Animator animator;
@@ -45,21 +49,20 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private Vector2 currentVelocity;
+    private bool querCorrer;
     private int facingDirection = DirDown;
     private float interactTimer;
     private float sustoAte;
 
-    internal bool CaminhandoParaEventoAmbiental => !BloqueiaEquipamento() && Application.isFocused &&
-        !GameMessageUI.IsShowing && !SantaRitaFalasEntrada.Interagindo &&
-        interactTimer <= 0 && moveInput.sqrMagnitude > 0 && currentVelocity.sqrMagnitude > .04f;
+    internal bool CaminhandoParaEventoAmbiental => !BloqueiaEquipamento() && !BloqueiaMovimento() &&
+        moveInput.sqrMagnitude > 0f && rb.linearVelocity.sqrMagnitude > .04f;
 
     internal void ReagirAoRaio()
     {
         sustoAte = Time.time + .22f;
-        moveInput = Vector2.zero;
-        currentVelocity = Vector2.zero;
+        PararMovimento();
     }
+
     private string estadoAnimacao;
     private SpriteRenderer corpo;
     private Sprite[,] quadrosCaminhada;
@@ -71,6 +74,7 @@ public class PlayerController : MonoBehaviour
     public int DirecaoAtual => facingDirection;
     private readonly MarcusGait passada = new MarcusGait();
     private bool folhaCaminhadaDirecional;
+    private bool EspelharCaminhadaDireita => !folhaCaminhadaDirecional || totalQuadros == 8;
     private Vector2 ultimaPosicaoAnimacao;
     private int totalQuadros = 6;
     public int QuadroCaminhada { get; private set; }
@@ -116,7 +120,50 @@ public class PlayerController : MonoBehaviour
         PayphoneCheckpoint.IsSaveUIOpen || SceneFader.IsTransitioning || Time.timeScale == 0 ||
         Capitulo1Director.PainelFechamentoAberto;
 
-    private void OnApplicationFocus(bool foco) { focoLanternaPronto = false; }
+    private void OnApplicationFocus(bool foco)
+    {
+        focoLanternaPronto = false;
+        if (!foco) PararMovimento();
+    }
+
+    private void OnDisable() => PararMovimento();
+
+    private void PararMovimento()
+    {
+        moveInput = Vector2.zero;
+        querCorrer = false;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+    }
+
+    private static bool BloqueiaControles() => !Application.isFocused || MenuPausa.Aberto ||
+        MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
+        SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
+        Capitulo1Director.PainelFechamentoAberto ||
+        (SceneFader.IsTransitioning && Capitulo1Director.ZonaAtual is
+            Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Zona3_Encruzilhada or
+            Capitulo1Director.ZonaId.Zona4_Bairro);
+
+    private bool BloqueiaMovimento() => BloqueiaControles() || GameMessageUI.IsShowing ||
+        SantaRitaFalasEntrada.Interagindo || Time.time < sustoAte;
+
+    internal static Vector2 LerDirecao(Keyboard teclado)
+    {
+        return new Vector2(
+            (teclado.dKey.isPressed || teclado.rightArrowKey.isPressed ? 1f : 0f) -
+            (teclado.aKey.isPressed || teclado.leftArrowKey.isPressed ? 1f : 0f),
+            (teclado.wKey.isPressed || teclado.upArrowKey.isPressed ? 1f : 0f) -
+            (teclado.sKey.isPressed || teclado.downArrowKey.isPressed ? 1f : 0f)).normalized;
+    }
+
+    internal static bool ShiftPressionado(Keyboard teclado) =>
+        teclado.leftShiftKey.isPressed || teclado.rightShiftKey.isPressed;
+
+    internal static Vector2 AjustarVelocidade(Vector2 atual, Vector2 alvo, float deltaTime,
+        float acelerar = AceleracaoPadrao, float frear = FrenagemPadrao)
+    {
+        bool freando = Vector2.Dot(atual, alvo - atual) < 0f;
+        return Vector2.MoveTowards(atual, alvo, (freando ? frear : acelerar) * deltaTime);
+    }
 
     private void PrepararPosesLanterna()
     {
@@ -162,12 +209,13 @@ public class PlayerController : MonoBehaviour
         if (!ImageConversion.LoadImage(folha, File.ReadAllBytes(arquivo))) return;
         folha.filterMode = FilterMode.Point;
         folha.wrapMode = TextureWrapMode.Clamp;
-        folhaCaminhadaDirecional = folha.width == 192 && folha.height == 256;
+        bool direcionalLegada = folha.width == 192 && folha.height == 256;
+        folhaCaminhadaDirecional = direcionalLegada || (folha.width == 576 && folha.height == 256);
         int linhas = folhaCaminhadaDirecional ? 4 : 3;
         totalQuadros = folha.width >= 1088 ? 16 : folha.width >= 512 ? 8 : 6;
-        if (folhaCaminhadaDirecional) totalQuadros = 3;
+        if (direcionalLegada) totalQuadros = 3;
         if ((folhaCaminhadaDirecional || folha.width >= 576) &&
-            !ValidarFolhaMarcus(folha, totalQuadros, linhas, !folhaCaminhadaDirecional))
+            !ValidarFolhaMarcus(folha, totalQuadros, linhas, !direcionalLegada))
         {
             folhaCaminhadaDirecional = false;
             Debug.LogError("Folha de caminhada inválida.");
@@ -233,11 +281,9 @@ public class PlayerController : MonoBehaviour
         if (rb != null)
         {
             rb.position = destino;
-            rb.linearVelocity = Vector2.zero;
         }
         transform.position = destino;
-        currentVelocity = Vector2.zero;
-        moveInput = Vector2.zero;
+        PararMovimento();
         ultimaPosicaoAnimacao = destino;
         passada.Reset();
         estadoAnimacao = null;
@@ -245,7 +291,7 @@ public class PlayerController : MonoBehaviour
         if (direcao >= DirDown && direcao <= DirRight)
         {
             facingDirection = direcao;
-            SetFacingScale(facingDirection == DirRight && !folhaCaminhadaDirecional ? -1f : 1f);
+            SetFacingScale(facingDirection == DirRight && EspelharCaminhadaDireita ? -1f : 1f);
         }
 
         CameraFollow camFollow = FindAnyObjectByType<CameraFollow>();
@@ -267,90 +313,45 @@ public class PlayerController : MonoBehaviour
         if(teclado != null && !teclado.fKey.isPressed) focoLanternaPronto = Application.isFocused;
         if(teclado != null && focoLanternaPronto && Application.isFocused && !BloqueiaEquipamento() && teclado.fKey.wasPressedThisFrame)
         { GameState.AlternarLanterna(); focoLanternaPronto = false; }
-        // Com a pausa, mapa, orelhão ou minigame de sinuca abertos, o jogador não anda nem interage por baixo.
-        if (Keyboard.current == null || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
-            Capitulo1Director.PainelFechamentoAberto ||
-            (SceneFader.IsTransitioning && Capitulo1Director.ZonaAtual is
-                Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Zona3_Encruzilhada or
-                Capitulo1Director.ZonaId.Zona4_Bairro))
+        if (teclado == null || BloqueiaControles())
         {
-            moveInput = Vector2.zero;
-            if (InteractionPrompt.Instance != null)
-            {
-                InteractionPrompt.Instance.SetTarget(null);
-            }
+            PararMovimento();
+            InteractionPrompt.Instance.SetTarget(null);
             return;
         }
 
-        float horizontal = 0f;
-        float vertical = 0f;
+        interactTimer = Mathf.Max(0f, interactTimer - Time.deltaTime);
+        bool dialogo = GameMessageUI.IsShowing || SantaRitaFalasEntrada.Interagindo;
+        Interactable alvo = dialogo ? null : Interactable.FindNearest(transform.position);
+        InteractionPrompt.Instance.SetTarget(alvo);
 
-        if (Keyboard.current.aKey.isPressed ||
-            Keyboard.current.leftArrowKey.isPressed)
+        if (teclado.eKey.wasPressedThisFrame)
         {
-            horizontal -= 1f;
-        }
-
-        if (Keyboard.current.dKey.isPressed ||
-            Keyboard.current.rightArrowKey.isPressed)
-        {
-            horizontal += 1f;
-        }
-
-        if (Keyboard.current.sKey.isPressed ||
-            Keyboard.current.downArrowKey.isPressed)
-        {
-            vertical -= 1f;
-        }
-
-        if (Keyboard.current.wKey.isPressed ||
-            Keyboard.current.upArrowKey.isPressed)
-        {
-            vertical += 1f;
-        }
-
-        moveInput =
-            new Vector2(horizontal, vertical).normalized;
-
-        Interactable alvo = Interactable.FindNearest(transform.position);
-        InteractionPrompt.Instance.SetTarget(SantaRitaFalasEntrada.Interagindo ? null : alvo);
-
-        if (interactTimer > 0f)
-        {
-            interactTimer -= Time.deltaTime;
-        }
-        else if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            // Com a caixa de diálogo aberta, o E serve para avançar a leitura,
-            // não para interagir de novo com o mesmo objeto.
             if (GameMessageUI.IsShowing)
-            {
                 GameMessageUI.Instance.Avancar();
-            }
             else if (SantaRitaFalasEntrada.Interagindo)
-            {
                 SantaRitaFalasEntrada.Avancar();
-            }
-            else
+            else if (alvo != null)
             {
                 interactTimer = interactDuration;
-
-                if (alvo != null)
-                {
-                    alvo.Interact();
-                }
+                alvo.Interact();
             }
         }
 
-        bool isInteracting = interactTimer > 0f;
-        if (isInteracting || GameMessageUI.IsShowing || SantaRitaFalasEntrada.Interagindo || Time.time < sustoAte)
+        if (dialogo || BloqueiaMovimento())
         {
-            moveInput = Vector2.zero;
+            PararMovimento();
+        }
+        else
+        {
+            moveInput = LerDirecao(teclado);
+            querCorrer = ShiftPressionado(teclado);
         }
 
-        bool isMoving = !isInteracting && moveInput.sqrMagnitude > 0f;
-
-        if (isMoving)
+        bool temDirecao = moveInput.sqrMagnitude > 0f;
+        bool isMoving = temDirecao || rb.linearVelocity.sqrMagnitude > .0001f;
+        bool isInteracting = !isMoving && interactTimer > 0f;
+        if (temDirecao)
         {
             facingDirection =
                 Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y)
@@ -382,7 +383,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // A folha de quatro direções tem um perfil direito próprio.
-        SetFacingScale(facingDirection == DirRight && !folhaCaminhadaDirecional ? -1f : 1f);
+        SetFacingScale(facingDirection == DirRight && EspelharCaminhadaDireita ? -1f : 1f);
 
     }
 
@@ -405,17 +406,17 @@ public class PlayerController : MonoBehaviour
         // A pausa conserva a pose; diálogo e parada voltam ao repouso sem som.
         if (Time.timeScale == 0 || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
             SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
-        bool andando = !GameMessageUI.IsShowing && (distancia >= .0001f || currentVelocity.sqrMagnitude > .0001f);
+        bool andando = !BloqueiaMovimento() && (distancia >= .0001f || rb.linearVelocity.sqrMagnitude > .0001f);
         if(!andando)passada.Reset();
         int apoios = 0;
-        passada.Avancar(GameMessageUI.IsShowing ? 0 : distancia, () => apoios++);
+        passada.Avancar(andando ? distancia : 0f, () => apoios++);
         QuadroCaminhada = passada.Quadro;
         int quadro = totalQuadros == 16 ? passada.QuadroDetalhado : totalQuadros == 8 ? QuadroCaminhada : QuadroCaminhada * totalQuadros / 8;
         if (quadrosCaminhada != null)
         {
-            int linha = folhaCaminhadaDirecional ? facingDirection : Mathf.Min(facingDirection, DirLeft);
+            int linha = EspelharCaminhadaDireita ? Mathf.Min(facingDirection, DirLeft) : facingDirection;
             bool equipada = linha != DirUp && DeveUsarLanternaAgora() && quadrosCaminhadaComLanterna != null;
-            if (folhaCaminhadaDirecional)
+            if (folhaCaminhadaDirecional && totalQuadros == 3)
             {
                 // Dois contatos e uma passagem, todos recortes da mesma folha.
                 quadro = QuadroCaminhada switch { 0 or 1 => 0, 4 or 5 => 2, _ => 1 };
@@ -489,27 +490,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameMessageUI.IsShowing || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
-            SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen ||
-            Capitulo1Director.PainelFechamentoAberto ||
-            (SceneFader.IsTransitioning && Capitulo1Director.ZonaAtual is
-                Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Zona3_Encruzilhada or
-                Capitulo1Director.ZonaId.Zona4_Bairro))
-        { currentVelocity = Vector2.zero; return; }
-        // A velocidade nunca muda de uma vez: ganha e perde embalo aos poucos,
-        // o que dá o peso de "cada passo é uma decisão".
-        Vector2 targetVelocity = moveInput * (moveSpeed * SantaRitaShallowStairs.SpeedAt(rb.position));
+        if (BloqueiaMovimento())
+        {
+            PararMovimento();
+            return;
+        }
 
-        float rate = targetVelocity.sqrMagnitude > currentVelocity.sqrMagnitude
-            ? acceleration
-            : deceleration;
-
-        currentVelocity = Vector2.MoveTowards(
-            currentVelocity,
-            targetVelocity,
-            rate * Time.fixedDeltaTime
-        );
-
-        rb.MovePosition(rb.position + currentVelocity * Time.fixedDeltaTime);
+        float velocidade = moveSpeed * (querCorrer ? runMultiplier : 1f);
+        velocidade *= SantaRitaShallowStairs.SpeedAt(rb.position);
+        Vector2 alvo = moveInput * velocidade;
+        rb.linearVelocity = AjustarVelocidade(rb.linearVelocity, alvo, Time.fixedDeltaTime, acceleration, deceleration);
     }
 }

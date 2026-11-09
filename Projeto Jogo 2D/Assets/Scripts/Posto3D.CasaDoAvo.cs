@@ -57,7 +57,8 @@ internal sealed partial class Posto3D
             Caixa("Viga", V(0, 2.84f, z), V(11.61f, .21f, .20f), lambril, solida: false);
             Caixa("Haste da luminária", V(-.50f, 2.65f, z), V(.028f, .20f, .028f), ferro, solida: false);
             Caixa("Luminária doméstica", V(-.50f, 2.53f, z), V(.38f, .085f, .38f), luz, solida: false);
-            Luz("Luz quente da casa", V(-.50f, 2.44f, z), new Color(1f, .81f, .57f), 4.75f, 6.0f);
+            var lampada = Luz("Luz quente da casa", V(-.50f, 2.44f, z), new Color(1f, .81f, .57f), 4.75f, 6.0f);
+            if (z < 0f) luzDaSala = lampada;
         }
         Luz("Luz da cozinha", V(-4.00f, 2.40f, 3.38f), new Color(1f, .88f, .65f), 3.2f, 4.35f);
         Luz("Luz do quarto", V(4.22f, 2.43f, 2.47f), new Color(1f, .79f, .54f), 2.85f, 4.3f);
@@ -79,7 +80,8 @@ internal sealed partial class Posto3D
         MontarJanelaCasa(3.64f, 4.74f, nogueira, tecido);
         MontarJanelaCasa(-3.25f, -4.34f, nogueira, tecido, 180f);
         MontarJanelaCasa(3.16f, -4.34f, nogueira, tecido, 180f);
-        Arte("Relógio de madeira", "Cap1/WallClock", V(-1.65f, 2.28f, 4.72f), .46f);
+        MontarRelogioDaCasa(nogueira, latao);
+        MontarInterruptorDaCasa(osso, ferro);
         Caixa("Moldura do retrato de família", V(.54f, 1.69f, 4.71f), V(.62f, .46f, .12f), nogueira,
             tipo: Tipo.RetratoFamiliaCasaAvo);
         Arte("Retrato de Natal de 1997", "Cap1/FramedPhoto", V(.54f, 1.69f, 4.64f), .43f);
@@ -303,13 +305,14 @@ internal sealed partial class Posto3D
         objeto.GetComponent<Collider>().enabled = false;
     }
 
-    private void PassosCasa(float distancia, float posicaoZ, float posicaoX)
+    private void PassosNoInterior(float distancia, float posicaoZ, float posicaoX)
     {
         distanciaPasso += distancia;
         if (distanciaPasso < .58f) return;
-        distanciaPasso = 0f;
+        distanciaPasso -= .58f;
         variantePasso = (variantePasso + 1) % 3;
-        string piso = posicaoX < -2.10f && posicaoZ > .64f ? "concrete" : "wood";
+        bool madeira = Casa && !(posicaoX < -2.10f && posicaoZ > .64f);
+        string piso = madeira ? "wood" : "concrete";
         SantaRitaSound.Play("footstep_" + piso + "_00" + variantePasso, .14f, 1f, .09f);
     }
 }

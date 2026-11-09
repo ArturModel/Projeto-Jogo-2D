@@ -83,9 +83,7 @@ internal sealed partial class Posto3D
         Prateleira(V(4.65f, 0f, -.18f), azul, pinho, bege, azulClaro);
         Caixa("Frente dos secos e suprimentos", V(4.35f, .98f, -.18f), V(.13f, 1.78f, 1.88f), azul,
             tipo: Tipo.PrateleirasMercadinho).GetComponent<MeshRenderer>().enabled = false;
-        Caixa("Geladeira de bebidas", V(4.99f, 1.06f, -2.63f), V(.99f, 2.12f, 1.36f), bege);
-        var geladeira = Arte("Frente da geladeira", "Art/Props/Geladeira", V(4.475f, 1.06f, -2.63f), 1.96f);
-        if (geladeira != null) geladeira.Rotate(0f, 90f, 0f);
+        MontarGeladeiraMercadinho(bege, escura);
         Arte("Engradado de reposição", "Cap1/BeerCrate_Orange", V(4.25f, .28f, -3.69f), .58f);
         ConstruirHortifruti(pinho, azul, bege);
         ConstruirPortaDeposito(azul, azulClaro, latao);

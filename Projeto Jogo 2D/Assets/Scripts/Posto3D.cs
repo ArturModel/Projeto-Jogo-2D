@@ -15,6 +15,7 @@ internal sealed partial class Posto3D : MonoBehaviour
     private const int RoomMask = 1 << Layer;
     private const float Soleira = -4.5f;
     private const float EyeHeight = 1.61f;
+    private const float VelocidadeCaminhada = 2.45f;
     private static readonly Vector3 Chegada = new Vector3(.31f, EyeHeight, -2.94f);
     private static Posto3D atual;
     internal static bool Aberto => atual != null;
@@ -41,12 +42,13 @@ internal sealed partial class Posto3D : MonoBehaviour
     private Transform cenario, porta, macaneta, mao;
     private MeshRenderer chuva3D;
     private Material materialChuva;
-    private Collider saida, saidaFixa;
+    private Collider saida;
     private PlayerController jogador;
     private bool jogadorAtivo, ruaOcluida, tocouFecho, tocouPorta, cursorVisivel;
     private CursorLockMode cursorAnterior;
     private float yaw, pitch;
     private Vector2 focoEntrada;
+    private Vector2 velocidade;
     private Vector3 inicioDaSaida;
     internal enum Interior { Posto, Mercadinho, CasaDoAvo }
     private bool tocouSaida;
@@ -181,6 +183,8 @@ internal sealed partial class Posto3D : MonoBehaviour
             SantaRitaSound.Play("door", .10f, .88f);
         }
 
+        if (tempo >= 1.43f) SoarSino();
+
         var fora = new Vector3(Casa ? .06f : .36f, 1.45f, Soleira - 1.39f);
         float cruzar = Curva(tempo, 1.46f, 2.62f);
         vista.transform.localPosition = Vector3.Lerp(fora, PontoDeChegada, cruzar);
@@ -213,6 +217,7 @@ internal sealed partial class Posto3D : MonoBehaviour
         if (atual == null) return;
         atual.inicioDaSaida = atual.vista.transform.localPosition;
         atual.tocouSaida = false;
+        atual.sinoTocou = false;
     }
 
     internal static void AnimarSaida(float tempo)
@@ -230,6 +235,8 @@ internal sealed partial class Posto3D : MonoBehaviour
             tocouSaida = true;
             SantaRitaSound.Play("door", .18f);
         }
+
+        if (tempo >= .79f) SoarSino();
 
         float passo = Curva(tempo, .83f, 1.62f);
         var soleira = new Vector3(Casa ? .06f : .38f, EyeHeight, Soleira + .23f);
@@ -289,10 +296,14 @@ internal sealed partial class Posto3D : MonoBehaviour
 
     private void Update()
     {
+        if (!MenuPausa.Aberto && Application.isFocused && Time.timeScale > 0f)
+            AnimarDetalhes(Time.deltaTime);
         vista.aspect = Screen.width / (float)Mathf.Max(1, Screen.height);
         if (SceneFader.IsTransitioning || MenuPausa.Aberto || MapaInterativoUI.IsShowing ||
-            SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen || !Application.isFocused || Time.timeScale == 0f)
+            SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen || PayphoneCheckpoint.IsSaveUIOpen ||
+            !Application.isFocused || Time.timeScale == 0f)
         {
+            velocidade = Vector2.zero;
             Capturar(false);
             dica.text = "";
             return;
@@ -301,6 +312,7 @@ internal sealed partial class Posto3D : MonoBehaviour
         var teclado = Keyboard.current;
         if (GameMessageUI.IsShowing)
         {
+            velocidade = Vector2.zero;
             Capturar(false);
             dica.text = "";
             if (teclado != null && teclado.eKey.wasPressedThisFrame) GameMessageUI.Instance.Avancar();
@@ -309,6 +321,7 @@ internal sealed partial class Posto3D : MonoBehaviour
 
         if (SantaRitaFalasEntrada.Interagindo)
         {
+            velocidade = Vector2.zero;
             Capturar(false);
             dica.text = "";
             if (teclado != null && teclado.eKey.wasPressedThisFrame) SantaRitaFalasEntrada.Avancar();
@@ -316,7 +329,11 @@ internal sealed partial class Posto3D : MonoBehaviour
         }
 
         Capturar(true);
-        if (teclado == null) return;
+        if (teclado == null)
+        {
+            velocidade = Vector2.zero;
+            return;
+        }
         if (lanternaCasa != null)
         {
             if (teclado.fKey.wasPressedThisFrame) GameState.AlternarLanterna();
@@ -327,24 +344,23 @@ internal sealed partial class Posto3D : MonoBehaviour
         yaw += olhar.x * .12f;
         pitch = Mathf.Clamp(pitch - olhar.y * .12f, -68f, 68f);
         vista.transform.localRotation = Quaternion.Euler(pitch, yaw, 0f);
-        var entrada = new Vector2(
-            (teclado.dKey.isPressed || teclado.rightArrowKey.isPressed ? 1f : 0f) -
-            (teclado.aKey.isPressed || teclado.leftArrowKey.isPressed ? 1f : 0f),
-            (teclado.wKey.isPressed || teclado.upArrowKey.isPressed ? 1f : 0f) -
-            (teclado.sKey.isPressed || teclado.downArrowKey.isPressed ? 1f : 0f));
+        Vector2 entrada = PlayerController.LerDirecao(teclado);
+        float maximo = VelocidadeCaminhada;
+        if (PlayerController.ShiftPressionado(teclado)) maximo *= PlayerController.MultiplicadorCorrida;
+        float dt = Mathf.Min(Time.deltaTime, .05f);
+        Vector3 alvo = Quaternion.Euler(0f, yaw, 0f) * new Vector3(entrada.x, 0f, entrada.y) * maximo;
+        velocidade = PlayerController.AjustarVelocidade(velocidade, new Vector2(alvo.x, alvo.z), dt);
         Vector3 antesDoPasso = vista.transform.localPosition;
-        Mover(Quaternion.Euler(0f, yaw, 0f) * new Vector3(entrada.normalized.x, 0f, entrada.normalized.y) * (2.45f * Time.deltaTime));
-        if (Casa)
-        {
-            var depoisDoPasso = vista.transform.localPosition;
-            PassosCasa(Vector3.Distance(antesDoPasso, depoisDoPasso), depoisDoPasso.z, depoisDoPasso.x);
-        }
+        Mover(new Vector3(velocidade.x, 0f, velocidade.y) * dt);
+        var depoisDoPasso = vista.transform.localPosition;
+        PassosNoInterior(Vector3.Distance(antesDoPasso, depoisDoPasso), depoisDoPasso.z, depoisDoPasso.x);
         OrientarPersonagens();
 
         Collider foco = null;
-        if (Physics.Raycast(vista.transform.position, vista.transform.forward, out var hit, 2.55f, RoomMask))
+        if (Physics.Raycast(vista.transform.position, vista.transform.forward, out var hit, 2.55f, RoomMask, QueryTriggerInteraction.Collide))
             foco = hit.collider;
-        bool podeSair = foco != null && (foco == saida || foco == saidaFixa);
+        bool podeSair = foco != null && foco == saida;
+        string promptFisico = PromptFisico(foco);
         bool podeAbrirDeposito = foco != null && foco == portaDeposito;
         bool temAlvo = foco != null && alvos.TryGetValue(foco, out _);
         if (temAlvo) interacao.Configurar(alvos[foco]);
@@ -355,6 +371,7 @@ internal sealed partial class Posto3D : MonoBehaviour
             _ => "·\n[E] Sair para a avenida"
         } :
             podeAbrirDeposito ? "·\n[E] Abrir a porta de serviço" :
+            promptFisico != null ? "·\n[E] " + promptFisico :
             temAlvo ? "·\n[E] " + interacao.Prompt : "·";
         if (!teclado.eKey.wasPressedThisFrame &&
             (mouse == null || !mouse.leftButton.wasPressedThisFrame || frameCaptura == Time.frameCount)) return;
@@ -373,6 +390,10 @@ internal sealed partial class Posto3D : MonoBehaviour
             Capturar(false);
             acessoDeposito.Interact();
         }
+        else if (promptFisico != null)
+        {
+            AcionarObjeto(foco);
+        }
         else if (temAlvo)
         {
             Capturar(false);
@@ -381,6 +402,15 @@ internal sealed partial class Posto3D : MonoBehaviour
     }
 
     private void Mover(Vector3 delta)
+    {
+        // Limita cada teste de cápsula para conservar a colisão em corrida.
+        int passos = Mathf.Max(1, Mathf.CeilToInt(delta.magnitude / .04f));
+        Vector3 passo = delta / passos;
+        for (int i = 0; i < passos; i++)
+            MoverPasso(passo);
+    }
+
+    private void MoverPasso(Vector3 delta)
     {
         Vector3 pe = vista.transform.position - Vector3.up * EyeHeight;
         Vector3 baixo = pe + Vector3.up * .26f;
@@ -393,9 +423,14 @@ internal sealed partial class Posto3D : MonoBehaviour
             baixo += lateral;
             alto += lateral;
         }
+        else if (lateral.x != 0f)
+            velocidade.x = 0f;
+
         var longitudinal = new Vector3(0f, 0f, delta.z);
         if (longitudinal.z != 0f && !Physics.CheckCapsule(baixo + longitudinal, alto + longitudinal, raio, RoomMask, QueryTriggerInteraction.Ignore))
             vista.transform.position += longitudinal;
+        else if (longitudinal.z != 0f)
+            velocidade.y = 0f;
     }
 
     private void OrientarPersonagens()

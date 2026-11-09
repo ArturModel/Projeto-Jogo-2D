@@ -1,0 +1,7 @@
+Fixture do Editor avança o relógio para fotografar a posição produzida pelo fluxo real. Sem reposicionamento ou saves.
+final-02-terra tempo=23,81 distância=285,70 terra=1,00 lateral=0,00 velocidade=12,00
+final-03-aproximacao tempo=39,61 distância=460,08 terra=0,00 lateral=-2,87 velocidade=4,90
+final-04-parado tempo=44,41 distância=468,00 terra=0,00 lateral=-4,18 velocidade=0,00
+final-04b-parado tempo=48,11 distância=468,00 terra=0,00 lateral=-4,18 velocidade=0,00
+Estável após parar=True
+EntradaDaCidade carro=(108.50, 12.20, 0.00) frenteLeste=True placa=(113.50, 13.40, 0.00) jogador=(112.00, 10.20, 0.00) concluido=True

@@ -500,3 +500,44 @@ Cinco eventos, console com comandos e botões, reações de Marcus e janela com 
 Terreno e peças compartilhadas da Rua Norte, nova prancha a 64 PPU, passeio contínuo junto à mala, fala da sinuca aplicada ao Marcus e ajuste da VT323. O sedã usa contato sob os pneus e projeção arredondada. [Plano e QA](../ai-plans/2026-11-08_BBCONTTI_reforma-entrada-cidade.md).
 
 - 08/11/2026 · A legenda recria clipes de fala descartados. Play Mode confirmou PCM e reprodução. [Plano](../ai-plans/2026-11-08_BBCONTTI_cache-voz-legenda.md).
+
+
+08/11/2026 — A Rodovia da Entrada ganhou contraste no shader local, névoa fria com dispersão âmbar nos postes, reflexo planar do quadro corrente de Marcus nas poças e relâmpago ocasional durante a caminhada. O clarão e o susto respeitam a opção de reduzir efeitos intensos. [Plano](../ai-plans/2026-11-08_BBCONTTI_contraste-e-clima-da-entrada.md).
+
+
+08/11/2026 — Ajustadas as juntas da pista, a faixa de meio-fio e a leitura das poças na Rodovia. [Plano](../ai-plans/2026-11-08_BBCONTTI_juntas-asfalto-pocas.md).
+
+
+08/11/2026 — A Rodovia recebeu poças em formas, tamanhos e tons próprios e um trovão gravado com cauda após o clarão. [Plano](../ai-plans/2026-11-08_BBCONTTI_pocas-variadas-trovao.md).
+
+
+08/11/2026 — Substituído o trovão da Rodovia por um recorte de Jonathan Hunt com cauda de 8 s. [Plano](../ai-plans/2026-11-08_BBCONTTI_substituicao-trovao.md).
+
+
+08/11/2026 — Reforma do posto e da antiga venda com piso e postes da Entrada, quatro sprites novos e conveniência híbrida 3D com porta animada e legendas. [Plano e evidências](../ai-plans/2026-11-08_BBCONTTI_reforma-posto.md).
+
+
+08/11/2026 — O posto por dentro e por fora usa a faixa de fala da Entrada, com tons distintos de murmúrio para Marcus, frentista e motorista. [Plano e verificação](../ai-plans/2026-11-08_BBCONTTI_falas-posto.md).
+
+
+08/11/2026 — A transição do posto aproxima a câmera de Marcus e projeta a rua 2D na câmera de perspectiva, com passagem reversa pela porta. [Plano e verificação](../ai-plans/2026-11-08_BBCONTTI_transicao-posto.md).
+
+
+08/11/2026 — A porta do posto usa névoa escura com foco na maçaneta e abertura da porta antes da cobertura na saída. [Plano e verificação](../ai-plans/2026-11-08_BBCONTTI_nevoa-posto.md).
+
+
+08/11/2026 — Revisão de inventário e menus, orelhão de exploração com cinco registros e confirmação explícita. [Plano](../ai-plans/2026-11-08_BBCONTTI_interface-orelhao.md).
+
+
+09/11/2026 — Orelhão redesenhado com os materiais e a iluminação sombria da exploração. [Plano](../ai-plans/2026-11-09_BBCONTTI_arte-sombria-orelhao.md).
+
+
+09/11/2026 — Reforma do Bairro, casa de Adílio 3D e correção do shader das ruas. [Plano](../ai-plans/2026-11-09_BBCONTTI_reforma-bairro.md).
+
+
+09/11/2026 — Orelhão em cores originais e camada de chuva e névoa a 22% da opacidade anterior. [Plano e validação](../ai-plans/2026-11-09_BBCONTTI_orelhao-clima-suave.md).
+
+
+09/11/2026 — Caminhada e corrida de exploração em 2D e 3D. Shift aumenta a velocidade em 25%, com aceleração e frenagem graduais. E deixou de interromper o movimento sem diálogo ou interface modal. [Plano e QA](../ai-plans/2026-11-09_BBCONTTI_corrida-e-controles.md).
+
+09/11/2026 — Prólogo com asfalto e vegetação da Rodovia, parada no recuo pavimentado, chuva intensa, névoa baixa e sombras projetadas. [Plano e evidência](../ai-plans/2026-11-09_BBCONTTI_prologo-rodovia.md).
