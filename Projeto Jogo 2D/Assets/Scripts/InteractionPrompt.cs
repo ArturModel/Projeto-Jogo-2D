@@ -32,6 +32,7 @@ public class InteractionPrompt : MonoBehaviour
 
     private CanvasGroup group;
     private RectTransform canvasRect;
+    private Image tecla;
     private RectTransform teclaRect;
     private Interactable alvoAtual;
 
@@ -72,7 +73,7 @@ public class InteractionPrompt : MonoBehaviour
 
         GameObject go = new GameObject("TeclaE", typeof(RectTransform), typeof(Image));
         go.transform.SetParent(canvas.transform, false);
-        Image tecla = go.GetComponent<Image>();
+        tecla = go.GetComponent<Image>();
         tecla.sprite = UIFactory.LoadSprite("TeclaE");
         tecla.raycastTarget = false;
         tecla.SetNativeSize();
@@ -85,7 +86,14 @@ public class InteractionPrompt : MonoBehaviour
     public void SetTarget(Interactable alvo)
     {
         bool mostrar = alvo != null && !GameMessageUI.IsShowing;
-        if (mostrar) alvoAtual = alvo;
+        if (mostrar)
+        {
+            alvoAtual = alvo;
+            bool entrada = Capitulo1Director.ZonaAtual == Capitulo1Director.ZonaId.Zona1_Rodovia &&
+                alvo.GetComponentInParent<SantaRitaFalasEntrada>() != null;
+            teclaRect.localScale = Vector3.one * (entrada ? .7f : 1f);
+            tecla.color = entrada ? new Color32(214, 215, 195, 224) : Color.white;
+        }
         alvoAlpha = mostrar ? 1f : 0f;
     }
 
@@ -104,7 +112,7 @@ public class InteractionPrompt : MonoBehaviour
 
         // Topo do sprite do objeto; sem sprite, um pouco acima do pivô.
         Vector3 topo = alvo.transform.position + Vector3.up;
-        Renderer r = alvo.GetComponentInChildren<Renderer>();
+        Renderer r = alvo.RenderizadorDoIndicador;
         if (r != null) topo = new Vector3(r.bounds.center.x, r.bounds.max.y, 0f);
 
         Vector2 tela = cam.WorldToScreenPoint(topo);

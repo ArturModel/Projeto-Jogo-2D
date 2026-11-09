@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.Perception.cs"
 type: "code"
-community: "Community 23"
-location: "L41"
+community: "Community 17"
+location: "L173"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_17
 ---
 
 # .OnDestroy()
 
 ## Connections
-- [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_17

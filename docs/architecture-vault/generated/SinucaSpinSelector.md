@@ -1,25 +1,27 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
-community: "Community 28"
+community: "Community 106"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_106
 ---
 
 # SinucaSpinSelector
 
 ## Connections
-- [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
+- [[dot-ConstruirAjusteEfeito()]] - `references` [EXTRACTED]
+- [[dot-ConstruirOpcoesMesa()]] - `references` [EXTRACTED]
 - [[dot-Disc()]] - `method` [EXTRACTED]
 - [[dot-OnDrag()]] - `method` [EXTRACTED]
 - [[dot-OnPointerDown()]] - `method` [EXTRACTED]
-- [[dot-OnPopulateMesh()_1]] - `method` [EXTRACTED]
+- [[dot-OnPopulateMesh()]] - `method` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-Select()]] - `method` [EXTRACTED]
 - [[dot-SetContact()]] - `method` [EXTRACTED]
+- [[dot-Shaft()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[Contact]] - `defines` [EXTRACTED]
 - [[Func]] - `references` [EXTRACTED]
@@ -30,4 +32,4 @@ tags:
 - [[SinucaSpinSelector.cs]] - `contains` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_106

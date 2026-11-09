@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 24"
-location: "L336"
+location: "L335"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,13 +12,14 @@ tags:
 # .ConfigurarCenaAtual()
 
 ## Connections
-- [[dot-Apply()_3]] - `calls` [EXTRACTED]
-- [[dot-Apply()_5]] - `calls` [EXTRACTED]
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
+- [[dot-Apply()_2]] - `calls` [EXTRACTED]
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarEstadoPortaoCentroNaCena()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirMundoMultiZonas()]] - `calls` [EXTRACTED]
 - [[dot-EnsureForCurrentScene()]] - `calls` [INFERRED]
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-Finish()_1]] - `calls` [EXTRACTED]
 - [[dot-GarantirElementosBarDoZeCenaSeparada()]] - `calls` [EXTRACTED]
 - [[dot-GarantirElementosCasaDoAvoCenaSeparada()]] - `calls` [EXTRACTED]
 - [[dot-PrepararMusicasDasZonas()]] - `calls` [EXTRACTED]

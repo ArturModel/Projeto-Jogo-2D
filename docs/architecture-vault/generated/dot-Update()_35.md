@@ -1,21 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneCheckpoint.cs"
 type: "code"
-community: "Community 95"
-location: "L60"
+community: "Community 83"
+location: "L590"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_95
+  - community/Community_83
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[AudioLowPassFilter]] - `references` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[dot-FecharModalSlots()]] - `calls` [EXTRACTED]
+- [[dot-SolicitarRegistro()]] - `calls` [EXTRACTED]
+- [[dot-TocarSomConfirmarGancho()]] - `calls` [EXTRACTED]
+- [[PayphoneSlotInputWatcher]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_95
+#graphify/code #graphify/EXTRACTED #community/Community_83

@@ -1,19 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Community 5"
-location: "L20"
+community: "Community 94"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_94
 ---
 
 # .Start()
 
 ## Connections
-- [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
-- [[Shader]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[dot-DefinirObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()_1]] - `calls` [EXTRACTED]
+- [[dot-EnsureForCurrentScene()]] - `calls` [EXTRACTED]
+- [[dot-ObterObjetivo()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[ChegadaEmSantaRita]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_94

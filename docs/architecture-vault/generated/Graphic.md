@@ -11,6 +11,7 @@ tags:
 # Graphic
 
 ## Connections
+- [[dot-ConstruirAjusteEfeito()]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
 - [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]

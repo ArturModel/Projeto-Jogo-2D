@@ -12,6 +12,7 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
         _GroundRelief("Altura, gradientes XY e oclusão", 2D) = "black" {}
         _GroundReliefStrength("Intensidade do relevo adicional", Range(0, 1)) = 0
         _ContactStrength("Sombras de contato", Float) = 1
+        _DoorReflection("Reflexo sob a porta", Float) = 1
     }
     SubShader
     {
@@ -45,12 +46,15 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
             float _GroundSurfaceEnabled;
             float _GroundReliefStrength;
             float _ContactStrength;
+            float _DoorReflection;
             float4 _Receiver;
             float4 _Wind;
             float _WindStrength;
             float4 _Origin;
             float4 _ViewFocus;
             float4 _Lamps[3];
+            float4 _PlayerLamp;
+            float2 _PlayerLampDirection;
             float4 _LampColors[3];
             float4 _CasterMin[32];
             float4 _CasterMax[32];
@@ -100,23 +104,50 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 return output;
             }
 
-            bool Occluded(float3 surfacePosition, float3 ray, int owner)
+            float SombraElipsoide(float3 surfacePosition, float3 ray, float3 center, float3 radius)
+            {
+                // Distância do segmento de luz ao centro no espaço normalizado do elipsoide.
+                float3 offset = (surfacePosition - center) / radius;
+                float3 segment = ray / radius;
+                float t = clamp(-dot(offset, segment) / max(dot(segment, segment), .0001), .015, .985);
+                float3 closest = offset + t * segment;
+                return 1 - smoothstep(.64, 1.14, dot(closest, closest));
+            }
+
+            float VisibilidadeDaLuz(float3 surfacePosition, float3 ray, int owner, bool handheld)
             {
                 // Segmento em XYZ entre a superfície e a fonte, em unidades do mundo.
+                float visibility = 1;
                 float3 signRay = step(0.0, ray) * 2.0 - 1.0;
                 float3 inverse = signRay / max(abs(ray), 0.0001);
                 [loop] for (int i = 0; i < _CasterCount; i++)
                 {
-                    if (i == owner) continue;
-                    float3 a = (_CasterMin[i].xyz - surfacePosition) * inverse;
-                    float3 b = (_CasterMax[i].xyz - surfacePosition) * inverse;
+                    if (i == owner || (handheld && i == _CasterCount - 1)) continue;
+                    float4 lower = _CasterMin[i];
+                    float4 upper = _CasterMax[i];
+                    if (lower.w > 2.5)
+                    {
+                        float3 size = upper.xyz - lower.xyz;
+                        float2 center = (lower.xy + upper.xy) * .5;
+                        center.y -= .22;
+                        float body = SombraElipsoide(surfacePosition, ray,
+                            float3(center, size.z * .31), size * float3(.50, .54, .31));
+                        float roof = SombraElipsoide(surfacePosition, ray,
+                            float3(center, size.z * .62), size * float3(.30, .41, .30));
+                        // Carroceria e cabine formam uma única projeção.
+                        visibility = min(visibility, 1 - .88 * max(body, roof));
+                        continue;
+                    }
+                    if (lower.w > .5) continue;
+                    float3 a = (lower.xyz - surfacePosition) * inverse;
+                    float3 b = (upper.xyz - surfacePosition) * inverse;
                     float3 nearT = min(a, b);
                     float3 farT = max(a, b);
                     float enter = max(max(nearT.x, nearT.y), nearT.z);
                     float exit = min(min(farT.x, farT.y), farT.z);
-                    if (max(enter, 0.015) < min(exit, 0.985)) return true;
+                    if (max(enter, 0.015) < min(exit, 0.985)) return 0;
                 }
-                return false;
+                return visibility;
             }
 
             struct GroundSample
@@ -220,6 +251,19 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 float contact = 0;
                 [loop] for (int i = 0; i < _CasterCount; i++)
                 {
+                    // Contato elíptico para objetos pequenos e veículos.
+                    float mode = _CasterMin[i].w;
+                    if (mode > 1.5 && mode < 2.5) continue;
+                    if (mode > .5)
+                    {
+                        float2 center = (_CasterMin[i].xy + _CasterMax[i].xy) * .5;
+                        if (mode > 2.5) center.y = lerp(_CasterMin[i].y, _CasterMax[i].y, .18);
+                        float2 radius = (_CasterMax[i].xy - _CasterMin[i].xy) * .5 + float2(.14, .13);
+                        float2 delta = (xy - center) / radius;
+                        float ellipse = saturate(1 - dot(delta, delta));
+                        contact = max(contact, .62 * ellipse * ellipse);
+                        continue;
+                    }
                     float2 nearest = clamp(xy, _CasterMin[i].xy, _CasterMax[i].xy);
                     float2 gap = (nearest - xy) * float2(1, .78);
                     float spread = .13 + min(.22, _CasterMax[i].z * .055);
@@ -321,16 +365,25 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                 }
                 half3 reflection = 0;
                 float practicalLight = 0;
-                [unroll] for (int l = 0; l < 3; l++)
+                [unroll] for (int l = 0; l < 4; l++)
                 {
-                    float3 ray = _Lamps[l].xyz - surfacePosition;
+                    bool handheld = l == 3;
+                    float4 lamp = handheld ? _PlayerLamp : _Lamps[min(l, 2)];
+                    if (lamp.w <= 0) continue;
+                    float3 ray = lamp.xyz - surfacePosition;
                     float distanceToLamp = length(ray);
-                    float fade = saturate(1.0 - distanceToLamp / _Lamps[l].w);
+                    float fade = saturate(1.0 - distanceToLamp / lamp.w);
+                    if (handheld)
+                    {
+                        float cone = dot(-ray.xy / max(length(ray.xy), .01), _PlayerLampDirection);
+                        fade *= smoothstep(.69, .94, cone);
+                    }
                     if (fade <= 0) continue;
                     float3 toLight = ray / max(distanceToLamp, .01);
                     float facing = saturate(dot(normal, toLight) * .87 + .13);
-                    float shadow = Occluded(surfacePosition, ray, owner) ? .0 : 1.0;
-                    half3 incident = _LampColors[l].rgb * (fade * fade * shadow * (groundPbr ? 1.22 : 1));
+                    float shadow = VisibilidadeDaLuz(surfacePosition, ray, owner, handheld);
+                    half3 lampColor = handheld ? half3(2.6, 2.25, 1.63) : _LampColors[min(l, 2)].rgb;
+                    half3 incident = lampColor * (fade * fade * shadow * (groundPbr ? 1.22 : 1));
                     float exposure = 1;
                     [branch] if (groundRelief && shadow > 0)
                     {
@@ -350,7 +403,7 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                         float specular = GroundSpecular(wetNormal, toLight, roughness);
                         float softLimit = lerp(specular, specular / (1 + 3 * specular), _GroundReliefStrength);
                         reflection += incident * softLimit * 1.25 * exposure;
-                        if (l == 1)
+                        if (l == 1 && _DoorReflection > .5)
                         {
                             // Brilho quebrado pela água sob a porta. O desenho segue o piso,
                             // com trechos curtos e horizontais entre os grãos do asfalto.

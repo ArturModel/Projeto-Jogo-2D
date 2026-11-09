@@ -15,7 +15,6 @@ tags:
 - [[dot-Empty()]] - `calls` [INFERRED]
 - [[dot-EncloseCourt()]] - `calls` [INFERRED]
 - [[dot-Solid()]] - `calls` [EXTRACTED]
-- [[Face]] - `calls` [INFERRED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `references` [EXTRACTED]
 - [[SantaRitaC2Consolidation]] - `method` [EXTRACTED]

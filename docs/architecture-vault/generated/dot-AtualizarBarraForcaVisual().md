@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 100"
-location: "L1381"
+location: "L1702"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,6 +15,7 @@ tags:
 - [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
 - [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarMao()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
 - [[dot-DispararTacadaCarregada()]] - `calls` [EXTRACTED]
 - [[dot-IniciarCargaPorDispositivo()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]

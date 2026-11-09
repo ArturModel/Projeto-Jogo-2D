@@ -1,19 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 49"
-location: "L764"
+community: "Community 21"
+location: "L980"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_21
 ---
 
 # .AtualizarBotaoVistaCamera()
 
 ## Connections
-- [[dot-AlternarVistaCamera()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarPainelContextual()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarTextosHUD()]] - `calls` [EXTRACTED]
+- [[dot-DefinirVistaInicial()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_21

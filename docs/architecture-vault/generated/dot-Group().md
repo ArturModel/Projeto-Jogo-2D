@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[dot-AtualizarTextosHUD()]] - `calls` [EXTRACTED]
 - [[dot-CanNominate()_1]] - `calls` [EXTRACTED]
+- [[dot-React()]] - `calls` [EXTRACTED]
 - [[dot-Resolve()_1]] - `calls` [EXTRACTED]
 - [[SinuquinhaRules]] - `method` [EXTRACTED]
 

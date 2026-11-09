@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2R2RuntimeVerification.cs"
 type: "code"
-community: "Community 99"
+community: "Community 27"
 location: "L207"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_27
 ---
 
 # .AIPerformanceR2()
 
 ## Connections
 - [[dot-Balim()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Escolher()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
@@ -21,4 +21,4 @@ tags:
 - [[BochaSimulation]] - `calls` [INFERRED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_27

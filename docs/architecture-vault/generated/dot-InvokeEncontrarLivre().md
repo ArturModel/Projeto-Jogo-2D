@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs"
 type: "code"
 community: "Community 0"
-location: "L315"
+location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED

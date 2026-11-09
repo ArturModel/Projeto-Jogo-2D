@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuAmbiente.cs"
 type: "code"
-community: "Community 19"
-location: "L146"
+community: "Community 110"
+location: "L376"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_110
 ---
 
 # .OnApplicationFocus()
 
 ## Connections
-- [[AudioAmbiente]] - `method` [EXTRACTED]
+- [[MenuAmbiente]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_110

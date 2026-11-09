@@ -12,7 +12,7 @@ tags:
 # .ApplyExteriorC1()
 
 ## Connections
-- [[dot-Add()]] - `calls` [EXTRACTED]
+- [[dot-Add()_1]] - `calls` [EXTRACTED]
 - [[dot-ApplyC1()]] - `calls` [EXTRACTED]
 - [[dot-Replace()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]

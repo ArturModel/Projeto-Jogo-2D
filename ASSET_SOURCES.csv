@@ -436,3 +436,5 @@ Assets/Resources/Art/RuaNorte/Terreno.png,Tile sheet,ImageGen surface studies wi
 Assets/Resources/Art/Characters/MarcusMaoMacaneta.png,Character hand sprite,Hand-drawn pixel cel adapted to Marcus cuff,Santa Rita,Project asset,119,Point,First-person hand pinned to the right-side door handle
 
 Assets/Resources/Art/RuaNorte/Relevo.png,PBR packed data,Procedurally derived from Terreno and Superficie,Santa Rita,Project asset,64,Point,"Linear R height, GB gradients, A cavity"
+
+Assets/Resources/Art/RuaNorte/Entrada/ObjetosEntrada.png,Multi-sprite sheet,ImageGen with Rua Norte Picape as style reference and native-scale atlas export,Santa Rita,Project asset,64,Point,Maroon-brown sedan and entrance sign and bench and notice board and open suitcase

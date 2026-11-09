@@ -1,28 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 17"
-location: "L316"
+community: "Community 21"
+location: "L3215"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_21
 ---
 
 # .MostrarModal()
 
 ## Connections
-- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
-- [[dot-Botao()_2]] - `calls` [EXTRACTED]
-- [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
-- [[dot-Comecar()]] - `calls` [EXTRACTED]
-- [[dot-Derrota()]] - `calls` [EXTRACTED]
-- [[dot-Label()]] - `calls` [EXTRACTED]
-- [[dot-Painel()]] - `calls` [EXTRACTED]
-- [[dot-Pausar()]] - `calls` [EXTRACTED]
-- [[dot-Regras()]] - `calls` [EXTRACTED]
-- [[dot-ResolverMao()]] - `calls` [EXTRACTED]
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
+- [[dot-AbrirAjudaGuiada()]] - `calls` [EXTRACTED]
+- [[dot-AoClicarBotaoPraticaOuDuelo()]] - `calls` [EXTRACTED]
+- [[dot-ConcluirMao()]] - `calls` [EXTRACTED]
+- [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
+- [[dot-ConcluirSerieVitoria()]] - `calls` [EXTRACTED]
+- [[dot-IniciarTurnoAtual()]] - `calls` [EXTRACTED]
+- [[dot-MostrarEscolhaDosGrupos()]] - `calls` [EXTRACTED]
+- [[dot-ResolverFimDaTacada()]] - `calls` [EXTRACTED]
+- [[RectTransform]] - `references` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[UnityAction]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_21

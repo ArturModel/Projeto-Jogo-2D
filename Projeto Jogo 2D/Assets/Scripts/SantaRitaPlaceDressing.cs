@@ -256,17 +256,16 @@ public static class SantaRitaPlaceDressing
     // ── C1 Exterior ───────────────────────────────────────────────────────
     private static void ApplyExteriorC1()
     {
-        Replace("Banco_Rodovia",       "BancoPraca",      2.4f);
         Replace("Banco_Venda",         "BancoPraca",      2.4f);
         Replace("Banco_Encruzilhada",  "BancoPraca",      2.4f);
-        Replace("Placa_Horarios_Rodovia","QuadroAvisos",  1.9f);
         Replace("Mural_Encruzilhada",  "QuadroAvisos",    2.0f);
-        Replace("Caixotes_Barro_Sul",  "CaixasManutencao",1.5f);
         Replace("Caixotes_Venda",      "CargasMercado",   1.8f);
 
         var z1 = GameObject.Find("Zona1_Rodovia");
-        if (z1 != null)
+        if (z1 != null && z1.GetComponent<SantaRitaRuaNorte>() == null)
         {
+            Replace("Banco_Rodovia", "BancoPraca", 2.4f);
+            Replace("Placa_Horarios_Rodovia", "QuadroAvisos", 1.9f);
             Add(z1,"Araucaria_Rodovia_1",  "Araucaria",  101.5f,16.5f,4.2f,true);
             Add(z1,"Araucaria_Rodovia_2",  "Araucaria",  126.0f,16.8f,4.0f,true);
             Add(z1,"Arbusto_Rodovia_Sul_1","Shrub",      106.5f, 5.6f,1.3f,false);

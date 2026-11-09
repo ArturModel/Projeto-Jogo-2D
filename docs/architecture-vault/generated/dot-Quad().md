@@ -1,24 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
-community: "Community 23"
-location: "L274"
+community: "Community 125"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_125
 ---
 
 # .Quad()
 
 ## Connections
-- [[dot-Chao()]] - `calls` [EXTRACTED]
-- [[dot-Disco()]] - `calls` [EXTRACTED]
-- [[dot-Linha()]] - `calls` [EXTRACTED]
-- [[dot-QuadTextura()]] - `calls` [EXTRACTED]
-- [[dot-Vidro()]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
+- [[BochaMapGraphic]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
-- [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[Rect]] - `references` [EXTRACTED]
+- [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_125

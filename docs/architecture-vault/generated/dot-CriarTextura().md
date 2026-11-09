@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarAudio.cs"
 type: "code"
 community: "Community 116"
-location: "L61"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED

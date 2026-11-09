@@ -12,7 +12,7 @@ tags:
 # .UpdateCasaDoAvoScene()
 
 ## Connections
-- [[dot-Configurar()_1]] - `calls` [INFERRED]
+- [[dot-Configurar()_2]] - `calls` [INFERRED]
 - [[dot-CreateSceneSpriteObject()]] - `calls` [EXTRACTED]
 - [[dot-RemoveIfExists()]] - `calls` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]

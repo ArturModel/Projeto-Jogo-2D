@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
 community: "Community 50"
-location: "L34"
+location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Check()
 
 ## Connections
-- [[dot-Start()_23]] - `calls` [EXTRACTED]
-- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
+- [[dot-Run()_7]] - `calls` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_50

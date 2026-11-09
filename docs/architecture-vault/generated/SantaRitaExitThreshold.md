@@ -1,24 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaExitThreshold.cs"
 type: "code"
-community: "Community 44"
+community: "Community 113"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_113
 ---
 
 # SantaRitaExitThreshold
 
 ## Connections
-- [[dot-Apply()_3]] - `references` [EXTRACTED]
-- [[dot-Awake()_19]] - `method` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Awake()_3]] - `method` [EXTRACTED]
 - [[dot-Create()]] - `method` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_10]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_9]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_8]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_4]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_3]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_3]] - `method` [EXTRACTED]
 - [[dot-OnMat()]] - `method` [EXTRACTED]
 - [[dot-RunAccesses()]] - `references` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
@@ -28,4 +28,4 @@ tags:
 - [[SantaRitaExitThreshold.cs]] - `contains` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_113

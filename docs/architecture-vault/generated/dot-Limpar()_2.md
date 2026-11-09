@@ -1,22 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 45"
-location: "L297"
+community: "Community 8"
+location: "L593"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_8
 ---
 
 # .Limpar()
 
 ## Connections
-- [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
-- [[dot-DialogueR2()]] - `calls` [EXTRACTED]
-- [[dot-IniciarViagem()]] - `calls` [EXTRACTED]
-- [[dot-ResetarMemoriaSilencioso()]] - `calls` [EXTRACTED]
-- [[dot-RunR2()]] - `calls` [EXTRACTED]
-- [[GameState]] - `method` [EXTRACTED]
+- [[dot-Desenhar()]] - `calls` [EXTRACTED]
+- [[Camada_3]] - `references` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_8

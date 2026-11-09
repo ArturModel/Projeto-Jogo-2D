@@ -47,21 +47,15 @@ public class ChegadaEmSantaRita : MonoBehaviour
             yield break;
         }
 
+        bool tinhaLanterna = GameState.Tem(Flags.LanternaDoCarroObtida);
         yield return new WaitForSeconds(esperaAntesDaFala);
+        if (tinhaLanterna != GameState.Tem(Flags.LanternaDoCarroObtida)) yield break;
 
-        if (!GameState.Tem(Flags.LanternaDoCarroObtida))
-        {
-            if (!GameMessageUI.IsShowing)
-                Legenda.Dizer("\"Escuro demais. A lanterna ficou no porta-luvas.\"", 4f);
-            yield break;
-        }
-
-        Legenda.Dizer(
-            GameState.Tem(Flags.PrologoAbriuPortaLuvas)
-                ? comSabendoOEndereco
-                : semSaberOEndereco,
-            3.8f
-        );
+        if (!tinhaLanterna)
+            SantaRitaFalasEntrada.DizerEspontanea("Escuro demais. A lanterna ficou no porta-luvas.", 2.2f);
+        else
+            SantaRitaFalasEntrada.DizerEspontanea(
+                GameState.Tem(Flags.PrologoAbriuPortaLuvas) ? comSabendoOEndereco : semSaberOEndereco, 2.2f);
     }
 }
 

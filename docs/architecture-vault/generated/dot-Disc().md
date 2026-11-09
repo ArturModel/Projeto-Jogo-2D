@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
-community: "Community 28"
-location: "L28"
+community: "Community 106"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_106
 ---
 
 # .Disc()
 
 ## Connections
-- [[dot-OnPopulateMesh()_1]] - `calls` [EXTRACTED]
+- [[dot-OnPopulateMesh()]] - `calls` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[SinucaSpinSelector]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 - [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_106

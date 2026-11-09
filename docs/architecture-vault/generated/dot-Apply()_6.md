@@ -1,23 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaRuralPaths.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "Community 88"
-location: "L12"
+community: "Community 44"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_88
+  - community/Community_44
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-Center()]] - `calls` [EXTRACTED]
-- [[dot-Paint()]] - `calls` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[SantaRitaRuralPaths]] - `method` [EXTRACTED]
-- [[Stretch]] - `calls` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_12]] - `calls` [EXTRACTED]
+- [[dot-Start()_16]] - `calls` [EXTRACTED]
+- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_88
+#graphify/code #graphify/EXTRACTED #community/Community_44

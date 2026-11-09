@@ -12,8 +12,8 @@ tags:
 # .TentarTransicionar()
 
 ## Connections
-- [[dot-Interact()_7]] - `calls` [EXTRACTED]
-- [[dot-OnTriggerEnter2D()_2]] - `calls` [EXTRACTED]
+- [[dot-Interact()_5]] - `calls` [EXTRACTED]
+- [[dot-OnTriggerEnter2D()_1]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[DialogoLinha]] - `calls` [INFERRED]
 - [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]

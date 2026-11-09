@@ -15,7 +15,7 @@ tags:
 - [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
 - [[dot-Region()]] - `calls` [EXTRACTED]
 - [[dot-ToAtlas()]] - `calls` [INFERRED]
-- [[dot-UV()]] - `calls` [EXTRACTED]
+- [[dot-UV()_1]] - `calls` [EXTRACTED]
 - [[MapaInterativoUI]] - `method` [EXTRACTED]
 - [[PontoMapa]] - `calls` [EXTRACTED]
 

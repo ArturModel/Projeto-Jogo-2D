@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 34"
+community: "Community 51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_51
 ---
 
 # TextAlignmentOptions
@@ -16,4 +16,4 @@ tags:
 - [[dot-CriarTexto()_2]] - `references` [EXTRACTED]
 - [[dot-Rotulo()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_51

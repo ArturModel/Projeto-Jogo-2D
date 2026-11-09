@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
 community: "Community 98"
-location: "L7"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,9 +14,12 @@ tags:
 ## Connections
 - [[dot-MudarVista()]] - `references` [EXTRACTED]
 - [[dot-SetView()]] - `references` [EXTRACTED]
+- [[dot-UpdateCamera()_1]] - `references` [EXTRACTED]
 - [[Alvo]] - `case_of` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 - [[BochaCourtView.cs]] - `contains` [EXTRACTED]
+- [[BochaRoom3D]] - `references` [EXTRACTED]
+- [[Caminhando]] - `case_of` [EXTRACTED]
 - [[Lancamento]] - `case_of` [EXTRACTED]
 - [[Superior]] - `case_of` [EXTRACTED]
 

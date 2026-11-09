@@ -1,18 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PonteiroCarro.cs"
 type: "code"
-community: "Community 6"
-location: "L35"
+community: "Community 26"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_26
 ---
 
 # .Procurar()
 
 ## Connections
-- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
-- [[SpawnPoint]] - `method` [EXTRACTED]
+- [[dot-Update()_23]] - `calls` [EXTRACTED]
+- [[ObjetoCarro]] - `references` [EXTRACTED]
+- [[PonteiroCarro]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_26

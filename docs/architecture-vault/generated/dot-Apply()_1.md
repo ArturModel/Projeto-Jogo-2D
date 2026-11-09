@@ -1,42 +1,37 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 11"
-location: "L188"
+community: "Community 113"
+location: "L116"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Community_113
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-Abrigo()]] - `calls` [EXTRACTED]
-- [[dot-Costura()]] - `calls` [EXTRACTED]
-- [[dot-CreateExit()]] - `calls` [INFERRED]
-- [[dot-Deposito()]] - `calls` [EXTRACTED]
-- [[dot-Igreja()]] - `calls` [EXTRACTED]
-- [[dot-Oficina()]] - `calls` [EXTRACTED]
-- [[dot-OtherRooms()]] - `calls` [EXTRACTED]
-- [[dot-Pilot()]] - `calls` [EXTRACTED]
-- [[dot-Portal()]] - `calls` [EXTRACTED]
-- [[dot-Prefeitura()]] - `calls` [EXTRACTED]
-- [[dot-Rodoviaria()]] - `calls` [EXTRACTED]
-- [[dot-Safe()]] - `calls` [EXTRACTED]
-- [[dot-Sociedade()]] - `calls` [EXTRACTED]
-- [[dot-Spawn()]] - `calls` [EXTRACTED]
-- [[dot-Walls()]] - `calls` [EXTRACTED]
-- [[Capitulo2Director]] - `references` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
+- [[dot-Boundary()]] - `calls` [EXTRACTED]
+- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
+- [[dot-ExplorationPosition()]] - `calls` [EXTRACTED]
+- [[dot-NativeSurface()]] - `calls` [EXTRACTED]
+- [[dot-OccupiedChair()]] - `calls` [EXTRACTED]
+- [[dot-SpriteFor()]] - `calls` [EXTRACTED]
+- [[dot-Surface()]] - `calls` [EXTRACTED]
+- [[BoxCollider2D]] - `references` [EXTRACTED]
+- [[InteracaoCapitulo1]] - `references` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaC2Consolidation]] - `method` [EXTRACTED]
-- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
+- [[SantaRitaBarHost]] - `references` [EXTRACTED]
+- [[SantaRitaBarLayout]] - `method` [EXTRACTED]
+- [[SantaRitaBarLighting]] - `references` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `references` [EXTRACTED]
+- [[SantaRitaBarPose]] - `references` [EXTRACTED]
+- [[SantaRitaBarProp]] - `references` [EXTRACTED]
+- [[SantaRitaExitThreshold]] - `references` [EXTRACTED]
+- [[SantaRitaNpcWork]] - `references` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
-- [[Tile]] - `references` [EXTRACTED]
-- [[Tilemap]] - `references` [EXTRACTED]
-- [[TilemapRenderer]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[Station]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Community_113

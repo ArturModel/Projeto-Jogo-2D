@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: "Community 23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_23
 ---
 
 # unityengine_inputsystem
@@ -38,7 +38,11 @@ tags:
 - [[SantaRitaInventory.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaTapeDeck.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Console.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Janela.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Spin.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI_Perception.cs]] - `imports` [EXTRACTED]
 - [[Sinuquinha15Verification.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/Community_23

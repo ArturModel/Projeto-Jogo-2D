@@ -1,18 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 85"
-location: "L95"
+community: "Community 99"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_85
+  - community/Community_99
 ---
 
 # .AtualizarEstadoRender()
 
 ## Connections
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
+- [[dot-SetViewportAspect()]] - `calls` [EXTRACTED]
 - [[dot-SincronizarMesa3D()]] - `calls` [INFERRED]
 - [[dot-Sync()]] - `calls` [EXTRACTED]
 - [[IList]] - `references` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[SinucaVisualBall]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_85
+#graphify/code #graphify/EXTRACTED #community/Community_99

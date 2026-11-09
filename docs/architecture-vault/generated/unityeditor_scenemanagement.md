@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[Chapter2BuildVerification.cs]] - `imports` [EXTRACTED]
+- [[ChuvaMinigamesSmoke.cs]] - `imports` [EXTRACTED]
 - [[PrologoJogavelVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaArtProduction.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.Access.cs]] - `imports` [EXTRACTED]

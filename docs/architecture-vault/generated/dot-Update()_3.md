@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
 type: "code"
-community: "Community 117"
-location: "L103"
+community: "Community 107"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_117
+  - community/Community_107
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Attach()]] - `calls` [EXTRACTED]
-- [[Capitulo2Interactable]] - `references` [EXTRACTED]
-- [[InteracaoCapitulo1]] - `references` [EXTRACTED]
-- [[SantaRitaTapePlacement]] - `method` [EXTRACTED]
+- [[dot-CenaDoCapitulo2()]] - `calls` [EXTRACTED]
+- [[AudioClip]] - `references` [EXTRACTED]
+- [[AudioLowPassFilter]] - `references` [EXTRACTED]
+- [[AudioSource]] - `references` [EXTRACTED]
+- [[Capitulo2Audio]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_117
+#graphify/code #graphify/EXTRACTED #community/Community_107

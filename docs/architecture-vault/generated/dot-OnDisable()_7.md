@@ -1,18 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 39"
-location: "L71"
+community: "Community 28"
+location: "L402"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_39
+  - community/Community_28
 ---
 
 # .OnDisable()
 
 ## Connections
-- [[dot-SetActive()]] - `calls` [EXTRACTED]
-- [[SinucaTableView]] - `method` [EXTRACTED]
+- [[dot-CancelOpponentShot()]] - `calls` [INFERRED]
+- [[dot-EncerrarAjusteEfeito()]] - `calls` [INFERRED]
+- [[dot-LimparFalaZe()]] - `calls` [EXTRACTED]
+- [[dot-ReiniciarPercepcoesSinuca()]] - `calls` [INFERRED]
+- [[dot-RestaurarCursor()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_39
+#graphify/code #graphify/EXTRACTED #community/Community_28

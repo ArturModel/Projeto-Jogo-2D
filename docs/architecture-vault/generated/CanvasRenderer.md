@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 92"
+community: "Community 33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_92
+  - community/Community_33
 ---
 
 # CanvasRenderer
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[dot-Graphic()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_92
+#graphify/code #graphify/EXTRACTED #community/Community_33

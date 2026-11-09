@@ -1,24 +1,21 @@
 ---
 type: community
-members: 11
+members: 8
 ---
 
 # Community 40
 
-**Members:** 11 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[dot-Atualizar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
-- [[dot-Awake()_17]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
-- [[dot-OnDestroy()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
-- [[dot-OnDisable()_8]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
-- [[dot-OnEnable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
-- [[Capitulo2Gate]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
-- [[Capitulo2Gate.cs]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs
-- [[Collider2D]] - code
-- [[SantaRitaActorElevation]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
-- [[VisualDepth]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
-- [[VisualScale]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
+- [[dot-ApoiarPe()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaFootsteps.cs
+- [[dot-ElevationAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-FixedUpdate()]] - code - Projeto Jogo 2D/Assets/Scripts/PlayerController.cs
+- [[dot-LateUpdate()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs
+- [[dot-OnDisable()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-OnEnable()_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[dot-SpeedAt()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
+- [[SantaRitaShallowStairs]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaShallowStairs.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,24 +25,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Community 6]]
-- 3 edges to [[_COMMUNITY_Community 16]]
-- 3 edges to [[_COMMUNITY_Community 13]]
-- 2 edges to [[_COMMUNITY_Community 11]]
-- 2 edges to [[_COMMUNITY_Community 57]]
-- 2 edges to [[_COMMUNITY_Community 44]]
 - 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 18]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 115]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 11]]
+- 1 edge to [[_COMMUNITY_Community 108]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 88]]
+- 1 edge to [[_COMMUNITY_Community 121]]
 - 1 edge to [[_COMMUNITY_Community 113]]
-- 1 edge to [[_COMMUNITY_Community 109]]
-- 1 edge to [[_COMMUNITY_Community 24]]
 
 ## Top bridge nodes
-- [[SantaRitaActorElevation]] - degree 16, connects to 10 communities
-- [[Collider2D]] - degree 10, connects to 6 communities
-- [[dot-Awake()_17]] - degree 6, connects to 4 communities
-- [[Capitulo2Gate]] - degree 8, connects to 3 communities
-- [[dot-Atualizar()]] - degree 5, connects to 2 communities
+- [[SantaRitaShallowStairs]] - degree 10, connects to 6 communities
+- [[dot-ApoiarPe()]] - degree 4, connects to 3 communities
+- [[dot-SpeedAt()]] - degree 5, connects to 2 communities
+- [[dot-LateUpdate()_9]] - degree 3, connects to 2 communities
+- [[dot-ElevationAt()]] - degree 3, connects to 1 community

@@ -1,20 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs"
 type: "code"
-community: "Community 23"
-location: "L47"
+community: "Community 106"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_106
 ---
 
 # .OnPopulateMesh()
 
 ## Connections
-- [[dot-Estrada()]] - `calls` [EXTRACTED]
-- [[dot-Vidro()]] - `calls` [EXTRACTED]
-- [[PrologoEstradaGraphic]] - `method` [EXTRACTED]
+- [[dot-Disc()]] - `calls` [EXTRACTED]
+- [[dot-Shaft()]] - `calls` [EXTRACTED]
+- [[SinucaSpinSelector]] - `method` [EXTRACTED]
 - [[VertexHelper]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_106

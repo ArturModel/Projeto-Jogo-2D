@@ -1,21 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
 type: "code"
-community: "Community 29"
-location: "L91"
+community: "Community 5"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_29
+  - community/Community_5
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Ensure()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Oferecer()]] - `calls` [EXTRACTED]
-- [[dot-Owns()]] - `calls` [EXTRACTED]
-- [[SantaRitaTapePickup]] - `method` [EXTRACTED]
+- [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
+- [[ItemDeCena]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/EXTRACTED #community/Community_5

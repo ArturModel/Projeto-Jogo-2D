@@ -1,30 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaAtmosphere.cs"
 type: "code"
-community: "Community 16"
-location: "L248"
+community: "Community 119"
+location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_119
 ---
 
 # .Interior()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
-- [[dot-Art()_1]] - `calls` [EXTRACTED]
-- [[dot-Interaction()_1]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_1]] - `calls` [EXTRACTED]
-- [[dot-Move()]] - `calls` [EXTRACTED]
-- [[dot-PaperOnTable()]] - `calls` [EXTRACTED]
-- [[dot-Prop()_1]] - `calls` [EXTRACTED]
-- [[dot-Replace()]] - `calls` [EXTRACTED]
-- [[dot-Routine()]] - `calls` [EXTRACTED]
-- [[BoxCollider2D]] - `references` [EXTRACTED]
-- [[Capitulo2Portal]] - `references` [EXTRACTED]
-- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
-- [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-Start()_9]] - `calls` [EXTRACTED]
+- [[dot-Update()_13]] - `calls` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_119

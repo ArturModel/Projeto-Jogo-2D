@@ -1,19 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/ItemDeCena.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
 type: "code"
-community: "Community 13"
-location: "L28"
+community: "Community 20"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_13
+  - community/Community_20
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarPistaLegada()]] - `calls` [EXTRACTED]
-- [[ItemDeCena]] - `method` [EXTRACTED]
+- [[Capitulo2Interactable]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_13
+#graphify/code #graphify/EXTRACTED #community/Community_20

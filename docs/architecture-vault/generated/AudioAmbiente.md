@@ -1,33 +1,33 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs"
 type: "code"
-community: "Community 19"
+community: "Community 109"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_109
 ---
 
 # AudioAmbiente
 
 ## Connections
 - [[dot-AteOTempo()]] - `references` [EXTRACTED]
-- [[dot-Awake()_7]] - `method` [EXTRACTED]
+- [[dot-Awake()_1]] - `method` [EXTRACTED]
 - [[dot-ConfigurarLoop()]] - `method` [EXTRACTED]
 - [[dot-Curvar()]] - `references` [EXTRACTED]
-- [[dot-Definir()_1]] - `method` [EXTRACTED]
+- [[dot-Definir()_2]] - `method` [EXTRACTED]
 - [[dot-Disparar()]] - `method` [EXTRACTED]
-- [[dot-OnApplicationFocus()_2]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_4]] - `method` [EXTRACTED]
+- [[dot-OnApplicationFocus()_1]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_1]] - `method` [EXTRACTED]
 - [[dot-Pitch()]] - `method` [EXTRACTED]
 - [[dot-Tocando()]] - `method` [EXTRACTED]
-- [[dot-Update()_11]] - `method` [EXTRACTED]
+- [[dot-Update()_6]] - `method` [EXTRACTED]
 - [[AudioAmbiente.cs]] - `contains` [EXTRACTED]
 - [[Camada_3]] - `references` [EXTRACTED]
-- [[Camada_2]] - `contains` [EXTRACTED]
+- [[Camada]] - `contains` [EXTRACTED]
 - [[Dictionary]] - `references` [EXTRACTED]
-- [[Instance_4]] - `defines` [EXTRACTED]
+- [[Instance]] - `defines` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_109

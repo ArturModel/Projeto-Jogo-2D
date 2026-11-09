@@ -1,44 +1,28 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/BochaPerspectiveVerification.cs"
 type: "code"
-community: "Community 29"
-location: "L36"
+community: "Community 27"
+location: "L9"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
-  - community/Community_29
+  - graphify/INFERRED
+  - community/Community_27
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [INFERRED]
-- [[dot-Assign()]] - `calls` [EXTRACTED]
-- [[dot-Check()]] - `calls` [EXTRACTED]
-- [[dot-Contents()]] - `calls` [EXTRACTED]
-- [[dot-Ensure()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_4]] - `calls` [INFERRED]
-- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-Open()]] - `calls` [INFERRED]
-- [[dot-Owns()]] - `calls` [EXTRACTED]
-- [[dot-PlayPause()]] - `calls` [INFERRED]
-- [[dot-Quick()]] - `calls` [EXTRACTED]
-- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
-- [[dot-Repair()]] - `calls` [INFERRED]
-- [[dot-Rewind()]] - `calls` [INFERRED]
-- [[dot-SaveSlot()]] - `calls` [EXTRACTED]
-- [[dot-Start()_19]] - `calls` [EXTRACTED]
-- [[dot-Swap()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
-- [[GameStateSnapshot]] - `calls` [INFERRED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[Keyboard]] - `references` [EXTRACTED]
-- [[MarcusNotebookUI]] - `references` [EXTRACTED]
-- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
-- [[SantaRitaTapePickup]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[dot-Balim()]] - `calls` [EXTRACTED]
+- [[dot-Clone()_1]] - `calls` [INFERRED]
+- [[dot-CriarMao()]] - `calls` [INFERRED]
+- [[dot-ForcaNoTempo()]] - `calls` [EXTRACTED]
+- [[dot-Lancar()_2]] - `calls` [INFERRED]
+- [[dot-Preparar()_1]] - `calls` [EXTRACTED]
+- [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
+- [[dot-Step()]] - `calls` [INFERRED]
+- [[BochaBall]] - `calls` [INFERRED]
+- [[BochaMatch]] - `calls` [INFERRED]
+- [[BochaPerspectiveVerification]] - `method` [EXTRACTED]
+- [[BochaSimulation]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_29
+#graphify/code #graphify/INFERRED #community/Community_27

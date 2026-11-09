@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 3"
-location: "L1597"
+location: "L1984"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,8 @@ tags:
 ## Connections
 - [[dot-AvaliarCandidatoZe()]] - `calls` [EXTRACTED]
 - [[dot-CanNominate()_1]] - `calls` [INFERRED]
+- [[dot-CruzaCapturaCacapa()]] - `calls` [EXTRACTED]
+- [[dot-IntegrarPano()]] - `calls` [EXTRACTED]
 - [[dot-PertoDeCacapa()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

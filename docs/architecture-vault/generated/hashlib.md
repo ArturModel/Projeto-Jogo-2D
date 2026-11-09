@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[fingerprint()]] - `calls` [EXTRACTED]
 - [[graphify-project.py]] - `imports` [EXTRACTED]
+- [[prepare-sinuca-impacts.py]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_32

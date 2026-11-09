@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Light()]] - `calls` [EXTRACTED]
+- [[dot-Light()_1]] - `calls` [EXTRACTED]
 - [[dot-Prop()_2]] - `calls` [EXTRACTED]
 - [[PayphoneCheckpoint]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]

@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 24"
+community: "Community 16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_16
 ---
 
 # BoxCollider2D
 
 ## Connections
-- [[dot-Add()]] - `references` [EXTRACTED]
+- [[dot-Add()_1]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
-- [[dot-Apply()_3]] - `references` [EXTRACTED]
+- [[dot-Apply()_1]] - `references` [EXTRACTED]
 - [[dot-Boundary()]] - `references` [EXTRACTED]
 - [[dot-Box()_1]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
@@ -30,10 +30,13 @@ tags:
 - [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
 - [[dot-CreateNpcObject()]] - `references` [EXTRACTED]
 - [[dot-DetectarLimitesDaRegiao()]] - `references` [EXTRACTED]
+- [[dot-DressProp()]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
-- [[dot-Interior()]] - `references` [EXTRACTED]
+- [[dot-Interior()_1]] - `references` [EXTRACTED]
+- [[dot-MontarSalaDeEspera()]] - `references` [EXTRACTED]
 - [[dot-Objeto()]] - `references` [EXTRACTED]
+- [[dot-Plant()]] - `references` [EXTRACTED]
 - [[dot-Portal()_2]] - `references` [EXTRACTED]
 - [[dot-Portal()_1]] - `references` [EXTRACTED]
 - [[dot-Prop()]] - `references` [EXTRACTED]
@@ -45,4 +48,4 @@ tags:
 - [[dot-Solid()]] - `references` [EXTRACTED]
 - [[dot-UpdateEntradaDaCidadeScene()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_16

@@ -1,19 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 99"
+community: "Community 27"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_27
 ---
 
 # BochaBall
 
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [INFERRED]
-- [[dot-Aplicar()]] - `references` [EXTRACTED]
+- [[dot-AbrirBuraco()]] - `references` [EXTRACTED]
+- [[dot-Aplicar()_2]] - `references` [EXTRACTED]
+- [[dot-AplicarQueda()]] - `references` [EXTRACTED]
 - [[dot-Balim()]] - `method` [EXTRACTED]
 - [[dot-BestShot()]] - `calls` [INFERRED]
 - [[dot-BochaAudioR2()]] - `calls` [INFERRED]
@@ -24,10 +26,12 @@ tags:
 - [[dot-Lancar()_1]] - `calls` [INFERRED]
 - [[dot-Physics()]] - `calls` [INFERRED]
 - [[dot-Posicao()]] - `references` [EXTRACTED]
+- [[dot-PrepararPercepcaoDoLancamento()]] - `references` [EXTRACTED]
 - [[dot-Rebater()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
-- [[dot-Run()_8]] - `calls` [INFERRED]
+- [[dot-Run()_3]] - `calls` [INFERRED]
 - [[dot-Velocidade()]] - `references` [EXTRACTED]
+- [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BochaSide]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 - [[BochaSimulation.cs]] - `contains` [EXTRACTED]
@@ -35,6 +39,6 @@ tags:
 - [[Quaternion]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
-- [[Velocidade_2]] - `defines` [EXTRACTED]
+- [[Velocidade_1]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_27

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs"
 type: "code"
-community: "Community 23"
+community: "Community 46"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_23
+  - community/Community_46
 ---
 
 # PrologoEstradaGraphic
@@ -20,14 +20,14 @@ tags:
 - [[dot-Faixa()]] - `method` [EXTRACTED]
 - [[dot-Graphic()]] - `references` [EXTRACTED]
 - [[dot-Linha()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_7]] - `method` [EXTRACTED]
-- [[dot-OnPopulateMesh()]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_12]] - `method` [EXTRACTED]
+- [[dot-OnPopulateMesh()_3]] - `method` [EXTRACTED]
 - [[dot-Projetar()]] - `method` [EXTRACTED]
-- [[dot-Quad()]] - `method` [EXTRACTED]
+- [[dot-Quad()_1]] - `method` [EXTRACTED]
 - [[dot-QuadTextura()]] - `method` [EXTRACTED]
 - [[dot-Ruido()]] - `method` [EXTRACTED]
 - [[dot-SpriteCenario()]] - `method` [EXTRACTED]
-- [[dot-Start()_22]] - `method` [EXTRACTED]
+- [[dot-Start()_13]] - `method` [EXTRACTED]
 - [[dot-Vertice()]] - `method` [EXTRACTED]
 - [[dot-Vidro()]] - `method` [EXTRACTED]
 - [[MaskableGraphic]] - `inherits` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[VertexHelper]] - `references` [EXTRACTED]
 - [[mainTexture]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_23
+#graphify/code #graphify/EXTRACTED #community/Community_46

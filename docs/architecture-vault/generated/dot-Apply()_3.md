@@ -1,35 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
 type: "code"
-community: "Community 18"
-location: "L108"
+community: "Community 16"
+location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_16
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-Boundary()]] - `calls` [EXTRACTED]
-- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
-- [[dot-NativeSurface()]] - `calls` [EXTRACTED]
-- [[dot-OccupiedChair()]] - `calls` [EXTRACTED]
-- [[dot-SpriteFor()]] - `calls` [EXTRACTED]
-- [[dot-Surface()]] - `calls` [EXTRACTED]
-- [[BoxCollider2D]] - `references` [EXTRACTED]
-- [[InteracaoCapitulo1]] - `references` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[SantaRitaBarHost]] - `references` [EXTRACTED]
-- [[SantaRitaBarLayout]] - `method` [EXTRACTED]
-- [[SantaRitaBarPatron]] - `references` [EXTRACTED]
-- [[SantaRitaBarPose]] - `references` [EXTRACTED]
-- [[SantaRitaBarProp]] - `references` [EXTRACTED]
-- [[SantaRitaExitThreshold]] - `references` [EXTRACTED]
-- [[SantaRitaNpcWork]] - `references` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
+- [[dot-Begin()]] - `calls` [EXTRACTED]
+- [[dot-Cemetery()]] - `calls` [EXTRACTED]
+- [[dot-Center()]] - `calls` [EXTRACTED]
+- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
+- [[dot-KeepOverTable()]] - `calls` [EXTRACTED]
+- [[dot-Replace()]] - `calls` [EXTRACTED]
+- [[MenuItem]] - `references` [EXTRACTED]
+- [[SantaRitaForeground]] - `references` [EXTRACTED]
+- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
-- [[Station]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_16

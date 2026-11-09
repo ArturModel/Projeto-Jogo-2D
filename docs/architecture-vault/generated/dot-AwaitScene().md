@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-ExitMatChecksR4()]] - `calls` [INFERRED]
 - [[dot-PauseLoadFiveSlots()]] - `calls` [INFERRED]
 - [[dot-PerformancePair()]] - `calls` [EXTRACTED]

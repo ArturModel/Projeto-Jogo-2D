@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
-community: "Community 99"
-location: "L52"
+community: "Community 27"
+location: "L53"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_99
+  - community/Community_27
 ---
 
 # .Clone()
@@ -16,7 +16,7 @@ tags:
 - [[dot-Clone()]] - `calls` [INFERRED]
 - [[dot-Escolher()]] - `calls` [INFERRED]
 - [[dot-Physics()]] - `calls` [INFERRED]
-- [[dot-Run()_8]] - `calls` [INFERRED]
+- [[dot-Run()_3]] - `calls` [INFERRED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_99
+#graphify/code #graphify/INFERRED #community/Community_27

@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoRuntimeVerification.cs"
 type: "code"
-community: "Community 54"
-location: "L752"
+community: "Community 50"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_54
+  - community/Community_50
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-Avancar()_1]] - `calls` [EXTRACTED]
-- [[dot-Retroceder()]] - `calls` [EXTRACTED]
-- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
+- [[PrologoJogavel]] - `references` [EXTRACTED]
+- [[PrologoRuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_54
+#graphify/code #graphify/EXTRACTED #community/Community_50

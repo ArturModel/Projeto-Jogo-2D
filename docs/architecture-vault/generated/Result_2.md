@@ -11,6 +11,7 @@ tags:
 # Result
 
 ## Connections
+- [[dot-React()]] - `references` [EXTRACTED]
 - [[dot-Resolve()]] - `references` [EXTRACTED]
 - [[dot-Resolve()_1]] - `references` [EXTRACTED]
 

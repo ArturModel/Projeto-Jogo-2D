@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 45"
-location: "L379"
+community: "Community 4"
+location: "L385"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_4
 ---
 
 # .C1InvestigationRegression()
 
 ## Connections
 - [[dot-C1LoadSmoke()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [EXTRACTED]
-- [[dot-Field()_2]] - `calls` [EXTRACTED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-ObterEntradasDiario()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_4

@@ -2,18 +2,18 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs"
 type: "code"
 community: "Community 9"
-location: "L48"
+location: "L62"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Community_9
 ---
 
 # .ChangeZoom()
 
 ## Connections
-- [[dot-Construir()_3]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
+- [[dot-Sync()_2]] - `calls` [EXTRACTED]
 - [[BochaCourtView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_9

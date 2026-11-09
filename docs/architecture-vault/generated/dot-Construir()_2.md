@@ -1,33 +1,27 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 15"
-location: "L33"
+community: "Community 33"
+location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_33
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Botao()_1]] - `calls` [EXTRACTED]
-- [[dot-Confirmar()]] - `calls` [EXTRACTED]
-- [[dot-GarantirModalCriado()]] - `calls` [INFERRED]
+- [[dot-Awake()_16]] - `calls` [EXTRACTED]
+- [[dot-Caixa()]] - `calls` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
+- [[dot-Graphic()]] - `calls` [EXTRACTED]
+- [[dot-Imagem()_1]] - `calls` [EXTRACTED]
 - [[dot-Rect()]] - `calls` [EXTRACTED]
-- [[dot-Texto()]] - `calls` [EXTRACTED]
-- [[Action]] - `references` [EXTRACTED]
-- [[Button]] - `references` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[CanvasScaler]] - `references` [EXTRACTED]
-- [[GameObject]] - `references` [EXTRACTED]
+- [[dot-Stretch()]] - `calls` [EXTRACTED]
+- [[dot-Texto()_1]] - `calls` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[PayphoneRegistroTecla]] - `references` [EXTRACTED]
-- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
-- [[RawImage]] - `references` [EXTRACTED]
-- [[TextMeshProUGUI]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[RectMask2D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_33

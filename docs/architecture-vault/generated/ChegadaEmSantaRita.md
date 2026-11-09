@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/ChegadaEmSantaRita.cs"
 type: "code"
-community: "Community 57"
+community: "Community 108"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_57
+  - community/Community_108
 ---
 
 # ChegadaEmSantaRita
 
 ## Connections
-- [[dot-Start()_5]] - `method` [EXTRACTED]
+- [[dot-Start()_22]] - `method` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+#graphify/code #graphify/EXTRACTED #community/Community_108

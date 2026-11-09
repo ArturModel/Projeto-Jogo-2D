@@ -1,22 +1,44 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
 type: "code"
-community: "Community 6"
-location: "L30"
+community: "Community 50"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_50
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-ConfigureArt()]] - `calls` [EXTRACTED]
-- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
-- [[dot-Exterior()]] - `calls` [EXTRACTED]
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
+- [[dot-Abrir()_1]] - `calls` [INFERRED]
+- [[dot-Assign()]] - `calls` [EXTRACTED]
+- [[dot-Check()_2]] - `calls` [EXTRACTED]
+- [[dot-Contents()]] - `calls` [EXTRACTED]
+- [[dot-Ensure()_1]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_3]] - `calls` [INFERRED]
+- [[dot-ImportarSnapshot()]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Open()]] - `calls` [INFERRED]
+- [[dot-Owns()]] - `calls` [EXTRACTED]
+- [[dot-PlayPause()]] - `calls` [INFERRED]
+- [[dot-Quick()]] - `calls` [EXTRACTED]
+- [[dot-RegistrarNotaDiario()]] - `calls` [EXTRACTED]
+- [[dot-Repair()]] - `calls` [INFERRED]
+- [[dot-Rewind()]] - `calls` [INFERRED]
+- [[dot-SaveSlot()]] - `calls` [EXTRACTED]
+- [[dot-Start()_18]] - `calls` [EXTRACTED]
+- [[dot-Swap()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
+- [[GameStateSnapshot]] - `calls` [INFERRED]
+- [[IEnumerator]] - `references` [EXTRACTED]
+- [[Keyboard]] - `references` [EXTRACTED]
+- [[MarcusNotebookUI]] - `references` [EXTRACTED]
+- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
+- [[SantaRitaTapePickup]] - `references` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_50

@@ -1,24 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
 type: "code"
-community: "Community 40"
+community: "Community 88"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_88
 ---
 
 # Capitulo2Gate
 
 ## Connections
-- [[dot-Atualizar()]] - `method` [EXTRACTED]
+- [[dot-Atualizar()_2]] - `method` [EXTRACTED]
 - [[dot-Interior()_2]] - `references` [EXTRACTED]
-- [[dot-OnDisable()_8]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_7]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_14]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_14]] - `method` [EXTRACTED]
 - [[dot-Prefeitura()]] - `references` [EXTRACTED]
 - [[dot-Scenes()]] - `references` [EXTRACTED]
 - [[Capitulo2Gate.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_88

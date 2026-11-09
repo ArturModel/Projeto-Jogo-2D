@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
 type: "code"
-community: "Community 34"
+community: "Community 85"
 location: "L292"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_85
 ---
 
 # .CriarBotaoAba()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-CriarTexto()]] - `calls` [EXTRACTED]
-- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `calls` [EXTRACTED]
 - [[dot-Stretch()]] - `calls` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[UnityAction]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_85

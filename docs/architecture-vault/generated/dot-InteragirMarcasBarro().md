@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Anotar()]] - `calls` [EXTRACTED]
 - [[dot-Etiqueta()]] - `calls` [EXTRACTED]
-- [[dot-Interact()_3]] - `calls` [EXTRACTED]
+- [[dot-Interact()_2]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 

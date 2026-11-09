@@ -12,7 +12,7 @@ tags:
 # .IniciarPartidaSinucaComZe()
 
 ## Connections
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()_1]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

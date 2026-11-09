@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
 type: "code"
-community: "Community 7"
+community: "Community 85"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_85
 ---
 
 # .Stretch()
@@ -14,10 +14,13 @@ tags:
 ## Connections
 - [[dot-Build()_4]] - `calls` [EXTRACTED]
 - [[dot-Button()]] - `calls` [EXTRACTED]
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
-- [[dot-Construir()]] - `calls` [EXTRACTED]
 - [[dot-Construir()_5]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
+- [[dot-ConstruirConsoleSinuca()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirEscolhaAlvo()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirOpcoesMesa()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
@@ -38,4 +41,4 @@ tags:
 - [[RectTransform]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_85

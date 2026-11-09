@@ -13,5 +13,6 @@ tags:
 ## Connections
 - [[preparar()]] - `calls` [EXTRACTED]
 - [[prepare-prologo-loops.py]] - `imports` [EXTRACTED]
+- [[prepare-sinuca-impacts.py]] - `imports` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_32

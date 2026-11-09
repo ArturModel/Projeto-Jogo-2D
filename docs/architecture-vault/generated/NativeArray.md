@@ -11,6 +11,6 @@ tags:
 # NativeArray
 
 ## Connections
-- [[Camada_1]] - `references` [EXTRACTED]
+- [[Camada_2]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_8

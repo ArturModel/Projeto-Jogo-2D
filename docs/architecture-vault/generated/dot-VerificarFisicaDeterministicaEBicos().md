@@ -1,24 +1,24 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs"
 type: "code"
-community: "Community 48"
-location: "L343"
+community: "Community 0"
+location: "L352"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # .VerificarFisicaDeterministicaEBicos()
 
 ## Connections
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
-- [[dot-Field()_2]] - `calls` [EXTRACTED]
-- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[IList]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

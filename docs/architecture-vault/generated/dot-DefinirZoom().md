@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
 community: "Community 39"
-location: "L78"
+location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,8 @@ tags:
 
 ## Connections
 - [[dot-AjustarZoom()]] - `calls` [EXTRACTED]
-- [[dot-Run()_1]] - `calls` [INFERRED]
+- [[dot-DefinirVistaInicial()]] - `calls` [INFERRED]
+- [[dot-Run()_5]] - `calls` [INFERRED]
 - [[dot-RunSinuca3DPerspective()]] - `calls` [INFERRED]
 - [[dot-SetZoom()]] - `calls` [EXTRACTED]
 - [[SinucaTableView]] - `method` [EXTRACTED]

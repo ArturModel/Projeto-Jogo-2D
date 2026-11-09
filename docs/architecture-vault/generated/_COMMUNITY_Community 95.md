@@ -1,31 +1,25 @@
 ---
 type: community
-members: 18
+members: 12
 ---
 
 # Community 95
 
-**Members:** 18 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[dot-ConfigurarLoop()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
-- [[dot-CriarAmbiencia()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-CriarImpactoMadeira()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-Ensure()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
-- [[dot-Install()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
-- [[dot-OnEnable()_13]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-RespostaAbafada()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-Start()_25]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs
-- [[dot-TocarRadio()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-Update()_35]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[dot-Update()_36]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
-- [[dot-Vincular()_5]] - code - Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs
-- [[AudioClip]] - code
+- [[dot-Atualizar()_3]] - code - Projeto Jogo 2D/Assets/Editor/ChuvaMinigamesSmoke.cs
+- [[dot-AtualizarChuvaMenu()]] - code - Projeto Jogo 2D/Assets/Scripts/AudioSettingsController.cs
+- [[dot-Awake()_29]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaMinigame.cs
+- [[dot-Check()_4]] - code - Projeto Jogo 2D/Assets/Editor/ChuvaMinigamesSmoke.cs
+- [[dot-OnDisable()_16]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaMinigame.cs
+- [[dot-OnEnable()_16]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaMinigame.cs
+- [[dot-Run()_10]] - code - Projeto Jogo 2D/Assets/Editor/ChuvaMinigamesSmoke.cs
+- [[dot-Update()_38]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaMinigame.cs
 - [[AudioSource]] - code
-- [[Camada_2]] - code - Projeto Jogo 2D/Assets/Scripts/AudioAmbiente.cs
-- [[Capitulo2Audio]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs
-- [[EventsPlayed]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
-- [[SantaRitaSound]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs
+- [[ChuvaMinigame]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaMinigame.cs
+- [[ChuvaMinigame.cs]] - code - Projeto Jogo 2D/Assets/Scripts/ChuvaMinigame.cs
+- [[ChuvaMinigamesSmoke]] - code - Projeto Jogo 2D/Assets/Editor/ChuvaMinigamesSmoke.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -35,36 +29,35 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Community 17]]
-- 6 edges to [[_COMMUNITY_Community 0]]
-- 5 edges to [[_COMMUNITY_Community 12]]
-- 5 edges to [[_COMMUNITY_Community 56]]
-- 5 edges to [[_COMMUNITY_Community 13]]
-- 4 edges to [[_COMMUNITY_Community 24]]
-- 4 edges to [[_COMMUNITY_Community 8]]
-- 4 edges to [[_COMMUNITY_Community 48]]
-- 3 edges to [[_COMMUNITY_Community 116]]
-- 3 edges to [[_COMMUNITY_Community 19]]
-- 3 edges to [[_COMMUNITY_Community 3]]
-- 3 edges to [[_COMMUNITY_Community 96]]
-- 2 edges to [[_COMMUNITY_Community 29]]
-- 2 edges to [[_COMMUNITY_Community 54]]
-- 2 edges to [[_COMMUNITY_Community 57]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 6]]
-- 1 edge to [[_COMMUNITY_Community 117]]
-- 1 edge to [[_COMMUNITY_Community 123]]
-- 1 edge to [[_COMMUNITY_Community 20]]
-- 1 edge to [[_COMMUNITY_Community 21]]
-- 1 edge to [[_COMMUNITY_Community 34]]
+- 4 edges to [[_COMMUNITY_Community 107]]
+- 4 edges to [[_COMMUNITY_Community 3]]
+- 4 edges to [[_COMMUNITY_Community 0]]
+- 3 edges to [[_COMMUNITY_Community 109]]
+- 3 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 8]]
+- 2 edges to [[_COMMUNITY_Community 116]]
+- 2 edges to [[_COMMUNITY_Community 121]]
+- 2 edges to [[_COMMUNITY_Community 31]]
+- 2 edges to [[_COMMUNITY_Community 83]]
+- 2 edges to [[_COMMUNITY_Community 93]]
+- 2 edges to [[_COMMUNITY_Community 96]]
+- 2 edges to [[_COMMUNITY_Community 130]]
+- 1 edge to [[_COMMUNITY_Community 103]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 54]]
 - 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 85]]
+- 1 edge to [[_COMMUNITY_Community 108]]
+- 1 edge to [[_COMMUNITY_Community 136]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 49]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 
 ## Top bridge nodes
-- [[AudioSource]] - degree 36, connects to 16 communities
-- [[AudioClip]] - degree 29, connects to 13 communities
-- [[Capitulo2Audio]] - degree 13, connects to 5 communities
-- [[SantaRitaSound]] - degree 11, connects to 5 communities
-- [[dot-Update()_35]] - degree 5, connects to 2 communities
+- [[AudioSource]] - degree 45, connects to 20 communities
+- [[ChuvaMinigame]] - degree 9, connects to 3 communities
+- [[ChuvaMinigamesSmoke]] - degree 5, connects to 1 community
+- [[dot-AtualizarChuvaMenu()]] - degree 5, connects to 1 community
+- [[dot-Atualizar()_3]] - degree 4, connects to 1 community

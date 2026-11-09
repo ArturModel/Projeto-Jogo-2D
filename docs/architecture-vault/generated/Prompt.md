@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 109"
-location: "L7"
+community: "Community 113"
+location: "L202"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_109
+  - community/Community_113
 ---
 
 # Prompt
 
 ## Connections
-- [[Capitulo2Interactable]] - `defines` [EXTRACTED]
+- [[SantaRitaBarPatron]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_109
+#graphify/code #graphify/EXTRACTED #community/Community_113

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
 community: "Community 39"
-location: "L49"
+location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,7 +16,7 @@ tags:
 - [[dot-AlternarCamera()]] - `method` [EXTRACTED]
 - [[dot-AngularScreenSign()]] - `method` [EXTRACTED]
 - [[dot-AtualizarEstadoRender()]] - `method` [EXTRACTED]
-- [[dot-Awake()_16]] - `method` [EXTRACTED]
+- [[dot-Awake()_18]] - `method` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CorDaBola()]] - `method` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `method` [EXTRACTED]
@@ -24,9 +24,9 @@ tags:
 - [[dot-EnsureRoom()]] - `method` [EXTRACTED]
 - [[dot-InicializarOverlays()]] - `method` [EXTRACTED]
 - [[dot-OnDestroy()_9]] - `method` [EXTRACTED]
-- [[dot-OnDisable()_7]] - `method` [EXTRACTED]
+- [[dot-OnDisable()_9]] - `method` [EXTRACTED]
 - [[dot-OnDrag()_1]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_6]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_9]] - `method` [EXTRACTED]
 - [[dot-OnPointerDown()_1]] - `method` [EXTRACTED]
 - [[dot-OnPointerMove()]] - `method` [EXTRACTED]
 - [[dot-OnPointerUp()]] - `method` [EXTRACTED]
@@ -38,12 +38,14 @@ tags:
 - [[dot-ProjetarPontoMesaParaLocalUI()]] - `method` [EXTRACTED]
 - [[dot-RecentrarCamera()]] - `method` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-ReiniciarReferenciaPonteiro()]] - `method` [EXTRACTED]
+- [[dot-Run()_5]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-RunSinuquinha15()]] - `references` [EXTRACTED]
 - [[dot-ScreenSinuca()]] - `references` [EXTRACTED]
 - [[dot-ScreenToTablePoint()]] - `method` [EXTRACTED]
+- [[dot-ScreenToViewPoint()]] - `method` [EXTRACTED]
 - [[dot-SinuquinhaKeyboard()]] - `references` [EXTRACTED]
 - [[dot-SinuquinhaMarked()]] - `references` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]

@@ -1,24 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Scenery.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
 type: "code"
-community: "Community 2"
-location: "L4"
+community: "Community 29"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_29
 ---
 
 # .BuildRoom()
 
 ## Connections
+- [[dot-BallColor()]] - `calls` [EXTRACTED]
 - [[dot-Box()]] - `calls` [EXTRACTED]
-- [[dot-CaptureArt()]] - `calls` [INFERRED]
-- [[dot-Lamp()_2]] - `calls` [EXTRACTED]
-- [[dot-Mat()]] - `calls` [INFERRED]
-- [[dot-OccupiedChair()]] - `calls` [EXTRACTED]
-- [[dot-SpriteFor()]] - `calls` [EXTRACTED]
-- [[Light]] - `references` [EXTRACTED]
-- [[SinucaRoom3D]] - `method` [EXTRACTED]
+- [[dot-BuildAtmosphere()]] - `calls` [EXTRACTED]
+- [[dot-Light()]] - `calls` [EXTRACTED]
+- [[dot-Mat()]] - `calls` [EXTRACTED]
+- [[dot-Primitive()]] - `calls` [EXTRACTED]
+- [[dot-Quadro()]] - `calls` [EXTRACTED]
+- [[BochaRoom3D]] - `method` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
+- [[UniversalAdditionalLightData]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_29

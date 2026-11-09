@@ -1,29 +1,30 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuca3DRuntimeVerification.cs"
 type: "code"
-community: "Community 48"
+community: "Community 0"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # .RunSinuca3DPerspective()
 
 ## Connections
+- [[dot-AguardarEntradaSinuca()]] - `calls` [EXTRACTED]
 - [[dot-AjustarZoom()]] - `calls` [INFERRED]
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Click()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
 - [[dot-DefinirCamera()]] - `calls` [INFERRED]
 - [[dot-DefinirZoom()]] - `calls` [INFERRED]
 - [[dot-EscolherMelhorTacadaNormalMarcus()]] - `calls` [EXTRACTED]
-- [[dot-Field()_2]] - `calls` [EXTRACTED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [EXTRACTED]
-- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-InvokeEncontrarLivre()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-ObterEntradasDiario()]] - `calls` [EXTRACTED]
@@ -45,4 +46,4 @@ tags:
 - [[SinucaTableView]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

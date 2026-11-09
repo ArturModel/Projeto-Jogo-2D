@@ -1620,21 +1620,24 @@ public class Capitulo1Director : MonoBehaviour
         Vector2 min = new Vector2(100f, 0f);
         Vector2 max = new Vector2(136f, 20f);
 
-        CriarPisoDeZona(z.transform, "Zona1_Rodovia", min, 36, 20, (ux, uy) =>
+        z.AddComponent<SantaRitaFalasEntrada>();
+        if (!SantaRitaRuaNorte.BuildGround(z.transform, min, 36, 20, entrada: true))
         {
-            // 1. Asfalto/Rua central (Y = 8..11)
-            if (uy >= 8 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
-            // 2. Calçada de pedra contínua na margem Norte (Y = 12..13) e Sul (Y = 6..7)
-            if (uy == 12) return TilePiso.CalcadaNorte;
-            if (uy == 13) return TilePiso.Concreto;
-            // Recuo pavimentado junto à calçada para o carro marrom de Marcus
-            if (uy == 14 && ux >= 6 && ux <= 12) return TilePiso.Concreto;
-            if (uy == 7) return TilePiso.CalcadaSul;
-            if (uy == 6 && ux >= 18 && ux <= 26) return TilePiso.Terra; // acostamento de barro onde caiu a mala
-            if (uy == 6) return TilePiso.Concreto;
-            // 3. Atrás da calçada: Grama natural contínua (com árvores colocadas abaixo!)
-            return TilePiso.Grama;
-        });
+            CriarPisoDeZona(z.transform, "Zona1_Rodovia", min, 36, 20, (ux, uy) =>
+            {
+                // 1. Asfalto/Rua central (Y = 8..11)
+                if (uy >= 8 && uy <= 11) return TilePiso.AsfaltoH_Trinca;
+                // 2. Calçada de pedra contínua na margem Norte (Y = 12..13) e Sul (Y = 6..7)
+                if (uy == 12) return TilePiso.CalcadaNorte;
+                if (uy == 13) return TilePiso.Concreto;
+                // Recuo pavimentado junto à calçada para o carro marrom de Marcus
+                if (uy == 14 && ux >= 6 && ux <= 12) return TilePiso.Concreto;
+                if (uy == 7) return TilePiso.CalcadaSul;
+                if (uy == 6) return TilePiso.Concreto;
+                // 3. Atrás da calçada: Grama natural contínua (com árvores colocadas abaixo!)
+                return TilePiso.Grama;
+            });
+        }
 
         CriarParedesPerimetro(z.transform, min, max, 1.5f);
 
@@ -1652,7 +1655,7 @@ public class Capitulo1Director : MonoBehaviour
 
         // Carro de Marcus estacionado no recuo pavimentado da rodovia (nunca na grama!)
         ColocarProp(z.transform, "Carro_Marcus_Sprite", new Vector3(108.5f, 12.2f, 0f), "Sedan_Brown", 32f, 1.15f,
-            new Vector2(2.6f, 1.2f), new Vector2(0f, 0.6f), 2);
+            new Vector2(2.9f, 1.2f), new Vector2(0f, 0.6f), 2);
         ColocarInteracao(z.transform, "Carro_Marcus_Interacao", new Vector3(108.5f, 11.4f, 0f),
             InteracaoCapitulo1.TipoInteracao.CarroMarcus, "");
 
@@ -1673,20 +1676,17 @@ public class Capitulo1Director : MonoBehaviour
         // Orelhão #1 (Save Point da Entrada sobre a calçada)
         ColocarOrelhaoSave(z.transform, "Orelhao_Rodovia", "orelhao_entrada_rodovia", new Vector3(126.5f, 13.1f, 0f));
 
-        // Pista na margem sul: Mala e caixotes abandonados
-        ColocarProp(z.transform, "Caixotes_Barro_Sul", new Vector3(122.5f, 6.6f, 0f), "Caixotes", 16f, 0.85f,
-            new Vector2(1.4f, 0.8f), new Vector2(0f, 0.4f), 1);
+        // Mala no passeio sul. A leitura acontece pelo lado da pista.
+        GameObject mala = ColocarProp(z.transform, "Mala_Abandonada_Rodovia", new Vector3(122.5f, 6.6f, 0f),
+            "Caixotes", 16f, 1f, new Vector2(.88f, .52f), new Vector2(0f, .26f), 1);
         ColocarInteracao(z.transform, "Interacao_MalaEstrada", new Vector3(122.5f, 7.3f, 0f),
-            InteracaoCapitulo1.TipoInteracao.MalaAbandonadaEstrada, "");
+            InteracaoCapitulo1.TipoInteracao.MalaAbandonadaEstrada, "").VincularIndicador(mala.GetComponent<SpriteRenderer>());
 
         // Postes de luz e fiação sobre a calçada de pedra
         Color luzAmbar = new Color(1.0f, 0.82f, 0.52f, 1f);
         ColocarPosteComLuz(z.transform, "Poste_Z1_1", new Vector3(106.0f, 13.0f, 0f), luzAmbar);
         ColocarPosteComLuz(z.transform, "Poste_Z1_2", new Vector3(116.0f, 13.0f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_3", new Vector3(125.0f, 13.0f, 0f), luzAmbar);
-        ColocarPosteComLuz(z.transform, "Poste_Z1_4", new Vector3(133.0f, 13.0f, 0f), luzAmbar);
-        ColocarProp(z.transform, "UtilityPole_Z1_1", new Vector3(111.0f, 13.3f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
-        ColocarProp(z.transform, "UtilityPole_Z1_2", new Vector3(129.5f, 13.3f, 0f), "UtilityPole", 32f, 1.1f, new Vector2(0.4f, 0.4f), Vector2.zero, 2);
+        ColocarPosteComLuz(z.transform, "Poste_Z1_3", new Vector3(129.0f, 13.0f, 0f), luzAmbar);
 
         // Cerca de madeira entre a calçada sul e a mata sul
         for (int x = 104; x <= 130; x += 6)

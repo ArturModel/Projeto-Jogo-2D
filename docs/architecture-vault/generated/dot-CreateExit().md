@@ -12,7 +12,7 @@ tags:
 # .CreateExit()
 
 ## Connections
-- [[dot-Apply()_1]] - `calls` [INFERRED]
+- [[dot-Apply()]] - `calls` [INFERRED]
 - [[dot-Create()]] - `calls` [EXTRACTED]
 - [[dot-Deposito()]] - `calls` [INFERRED]
 - [[dot-UpdateAccesses()]] - `calls` [EXTRACTED]

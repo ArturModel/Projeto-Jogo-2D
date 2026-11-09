@@ -1,26 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLighting.cs"
 type: "code"
-community: "Community 14"
-location: "L69"
+community: "Community 114"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_14
+  - community/Community_114
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_5]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
-- [[CanvasGroup]] - `references` [EXTRACTED]
-- [[ContentSizeFitter]] - `references` [EXTRACTED]
-- [[DicaDeTecla]] - `method` [EXTRACTED]
-- [[HorizontalLayoutGroup]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[LayoutElement]] - `references` [EXTRACTED]
-- [[RectTransform]] - `references` [EXTRACTED]
+- [[dot-Point()]] - `calls` [EXTRACTED]
+- [[dot-Sconce()]] - `calls` [EXTRACTED]
+- [[dot-SpriteAt()]] - `calls` [EXTRACTED]
+- [[dot-Strip()]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[Rect]] - `references` [EXTRACTED]
+- [[SantaRitaBarLighting]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_14
+#graphify/code #graphify/EXTRACTED #community/Community_114

@@ -1,46 +1,53 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 12"
+community: "Community 85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_85
 ---
 
 # Image
 
 ## Connections
 - [[dot-AtualizarDestaqueBotoesEfeito()]] - `references` [EXTRACTED]
-- [[dot-Awake()_15]] - `references` [EXTRACTED]
+- [[dot-Awake()_8]] - `references` [EXTRACTED]
 - [[dot-Botao()_2]] - `references` [EXTRACTED]
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
 - [[dot-BotaoSeta()]] - `references` [EXTRACTED]
-- [[dot-Build()_1]] - `references` [EXTRACTED]
-- [[dot-Build()_4]] - `references` [EXTRACTED]
 - [[dot-Build()_3]] - `references` [EXTRACTED]
+- [[dot-Build()_4]] - `references` [EXTRACTED]
+- [[dot-Build()_5]] - `references` [EXTRACTED]
 - [[dot-BuildOverlay()]] - `references` [EXTRACTED]
 - [[dot-Button()]] - `references` [EXTRACTED]
-- [[dot-Caixa()_1]] - `references` [EXTRACTED]
+- [[dot-Caixa()]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Cell()]] - `references` [EXTRACTED]
+- [[dot-Construir()_5]] - `references` [EXTRACTED]
 - [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-Construir()_2]] - `references` [EXTRACTED]
-- [[dot-Construir()_5]] - `references` [EXTRACTED]
+- [[dot-ConstruirAjusteEfeito()]] - `references` [EXTRACTED]
+- [[dot-ConstruirConsoleSinuca()]] - `references` [EXTRACTED]
 - [[dot-ConstruirEscolhaAlvo()]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
+- [[dot-ConstruirOpcoesMesa()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelEfeitoOpcional()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelFechamento()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
 - [[dot-CreateBox()]] - `references` [EXTRACTED]
 - [[dot-CriarBolasNaMesa()]] - `references` [EXTRACTED]
+- [[dot-CriarBotao()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
+- [[dot-CriarPainelHUD()]] - `references` [EXTRACTED]
+- [[dot-CriarPainelMinigames()]] - `references` [EXTRACTED]
+- [[dot-CriarPalpebraSinuca()]] - `references` [EXTRACTED]
 - [[dot-DrawIndex()]] - `references` [EXTRACTED]
 - [[dot-Frame()]] - `references` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
@@ -53,9 +60,9 @@ tags:
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
 - [[dot-MontarCortina()]] - `references` [EXTRACTED]
 - [[dot-MontarTela()]] - `references` [EXTRACTED]
-- [[dot-MostrarModal()]] - `references` [EXTRACTED]
+- [[dot-MostrarModal()_1]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
-- [[dot-Panel()_1]] - `references` [EXTRACTED]
+- [[dot-Panel()]] - `references` [EXTRACTED]
 - [[dot-Picture()]] - `references` [EXTRACTED]
 - [[dot-Rebuild()]] - `references` [EXTRACTED]
 - [[dot-Rebuild()_1]] - `references` [EXTRACTED]
@@ -64,7 +71,7 @@ tags:
 - [[dot-RunSinucaR4()]] - `references` [EXTRACTED]
 - [[dot-SelecionarAba()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
-- [[dot-Start()_2]] - `references` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
 - [[dot-Titulo()]] - `references` [EXTRACTED]
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
 - [[dot-Vincular()]] - `references` [EXTRACTED]
@@ -73,12 +80,14 @@ tags:
 - [[DicaDeTecla]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
+- [[MinigameDialogue]] - `references` [EXTRACTED]
 - [[PayphoneRegistroUI]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `references` [EXTRACTED]
 - [[PrologoJogavel]] - `references` [EXTRACTED]
 - [[SantaRitaInventory]] - `references` [EXTRACTED]
 - [[SantaRitaTapeDeck]] - `references` [EXTRACTED]
+- [[SceneFader]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SubtitleSettingsController]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_85

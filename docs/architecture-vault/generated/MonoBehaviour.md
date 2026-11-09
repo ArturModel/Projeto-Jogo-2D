@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 57"
+community: "Community 108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_57
+  - community/Community_108
 ---
 
 # MonoBehaviour
@@ -26,6 +26,7 @@ tags:
 - [[Chapter2RuntimeVerification]] - `inherits` [EXTRACTED]
 - [[ChegadaEmSantaRita]] - `inherits` [EXTRACTED]
 - [[Chuva]] - `inherits` [EXTRACTED]
+- [[ChuvaMinigame]] - `inherits` [EXTRACTED]
 - [[ChuvaRolando]] - `inherits` [EXTRACTED]
 - [[DentroDaCasaDoAvo]] - `inherits` [EXTRACTED]
 - [[DicaDeTecla]] - `inherits` [EXTRACTED]
@@ -62,6 +63,7 @@ tags:
 - [[SantaRitaAtmosphere]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarAudio]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarHost]] - `inherits` [EXTRACTED]
+- [[SantaRitaBarLighting]] - `inherits` [EXTRACTED]
 - [[SantaRitaBarPose]] - `inherits` [EXTRACTED]
 - [[SantaRitaExitThreshold]] - `inherits` [EXTRACTED]
 - [[SantaRitaFootsteps]] - `inherits` [EXTRACTED]
@@ -74,6 +76,7 @@ tags:
 - [[SantaRitaRimLight]] - `inherits` [EXTRACTED]
 - [[SantaRitaRoomCutaway]] - `inherits` [EXTRACTED]
 - [[SantaRitaRoomLayout]] - `inherits` [EXTRACTED]
+- [[SantaRitaRuaNorte]] - `inherits` [EXTRACTED]
 - [[SantaRitaShallowStairs]] - `inherits` [EXTRACTED]
 - [[SantaRitaSound]] - `inherits` [EXTRACTED]
 - [[SantaRitaTapeDeck]] - `inherits` [EXTRACTED]
@@ -85,4 +88,4 @@ tags:
 - [[SubtitleSettingsController]] - `inherits` [EXTRACTED]
 - [[VideoSettingsController]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+#graphify/code #graphify/EXTRACTED #community/Community_108

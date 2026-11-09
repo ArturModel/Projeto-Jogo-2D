@@ -12,7 +12,7 @@ tags:
 # .Use()
 
 ## Connections
-- [[dot-Awake()_14]] - `calls` [EXTRACTED]
+- [[dot-Awake()_17]] - `calls` [EXTRACTED]
 - [[dot-Blocked()]] - `calls` [EXTRACTED]
 - [[dot-Quick()]] - `calls` [EXTRACTED]
 - [[dot-UseItem()]] - `calls` [EXTRACTED]

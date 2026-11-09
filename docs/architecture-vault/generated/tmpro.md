@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: "Community 92"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_92
 ---
 
 # tmpro
@@ -23,6 +23,7 @@ tags:
 - [[MenuAmbiente.cs]] - `imports` [EXTRACTED]
 - [[MenuAmbienteRuntimeQA.cs]] - `imports` [EXTRACTED]
 - [[MenuPausa.cs]] - `imports` [EXTRACTED]
+- [[MinigameDialogue.cs]] - `imports` [EXTRACTED]
 - [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[OptionsPanelController.cs]] - `imports` [EXTRACTED]
 - [[PayphoneCheckpoint.cs]] - `imports` [EXTRACTED]
@@ -36,6 +37,8 @@ tags:
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaTapeDeck.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Console.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Spin.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]
 - [[SinucaTableView.cs]] - `imports` [EXTRACTED]
 - [[SubtitleSettingsController.cs]] - `imports` [EXTRACTED]
@@ -43,4 +46,4 @@ tags:
 - [[UIFactory.cs]] - `imports` [EXTRACTED]
 - [[VideoSettingsController.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/Community_92

@@ -1,25 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
-location: "L227"
+community: "Community 9"
+location: "L411"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_9
 ---
 
 # .AtualizarMira()
 
 ## Connections
-- [[dot-Arrastar()]] - `calls` [EXTRACTED]
 - [[dot-CourtPoint()]] - `calls` [INFERRED]
-- [[dot-IniciarArraste()]] - `calls` [EXTRACTED]
-- [[dot-MoverMira()]] - `calls` [EXTRACTED]
-- [[dot-SoltarArraste()]] - `calls` [EXTRACTED]
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[Camera]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_9

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 21"
-location: "L2055"
+location: "L2471"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,7 +17,10 @@ tags:
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirMao()]] - `calls` [EXTRACTED]
 - [[dot-EncontrarPosicaoLivreDeterministica()]] - `calls` [EXTRACTED]
-- [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
+- [[dot-EnfileirarFalaZe()]] - `calls` [EXTRACTED]
+- [[dot-MostrarModal()]] - `calls` [EXTRACTED]
+- [[dot-PararTremorSinuca()]] - `calls` [INFERRED]
+- [[dot-React()]] - `calls` [INFERRED]
 - [[dot-Refuse()_1]] - `calls` [INFERRED]
 - [[dot-ReporBrasileira()]] - `calls` [EXTRACTED]
 - [[dot-Resolve()_1]] - `calls` [INFERRED]

@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/UIFactory.cs"
 type: "code"
-community: "Community 12"
+community: "Community 85"
 location: "L30"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_85
 ---
 
 # .LoadSprite()
 
 ## Connections
 - [[dot-Build()_4]] - `calls` [EXTRACTED]
-- [[dot-Build()_3]] - `calls` [EXTRACTED]
+- [[dot-Build()_5]] - `calls` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `calls` [EXTRACTED]
 - [[dot-CreateBox()]] - `calls` [EXTRACTED]
 - [[dot-IndicadorPausa()]] - `calls` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[UIFactory]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_85

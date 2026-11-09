@@ -1,23 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/DicaDeTecla.cs"
 type: "code"
-community: "Community 57"
-location: "L64"
+community: "Community 14"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_57
+  - community/Community_14
 ---
 
 # .Build()
 
 ## Connections
-- [[dot-Awake()_20]] - `calls` [EXTRACTED]
+- [[dot-Awake()_10]] - `calls` [EXTRACTED]
 - [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-LoadSprite()]] - `calls` [EXTRACTED]
+- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
 - [[CanvasGroup]] - `references` [EXTRACTED]
+- [[ContentSizeFitter]] - `references` [EXTRACTED]
+- [[DicaDeTecla]] - `method` [EXTRACTED]
+- [[HorizontalLayoutGroup]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[InteractionPrompt]] - `method` [EXTRACTED]
+- [[LayoutElement]] - `references` [EXTRACTED]
 - [[RectTransform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+#graphify/code #graphify/EXTRACTED #community/Community_14

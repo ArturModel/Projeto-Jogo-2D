@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 53"
-location: "L45"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
 community: "Community 27"
-location: "L69"
+location: "L70"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Forcas()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()_2]] - `calls` [EXTRACTED]
 - [[dot-Step()]] - `calls` [EXTRACTED]
 - [[BochaSimulation]] - `method` [EXTRACTED]
 

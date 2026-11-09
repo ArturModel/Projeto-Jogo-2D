@@ -1,34 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 38"
-location: "L24"
+community: "Community 3"
+location: "L341"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_3
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ActionButton()]] - `calls` [EXTRACTED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-Frame()]] - `calls` [EXTRACTED]
-- [[dot-Label()_2]] - `calls` [EXTRACTED]
-- [[dot-Place()_2]] - `calls` [EXTRACTED]
-- [[dot-PlayPause()]] - `calls` [EXTRACTED]
-- [[dot-Rewind()]] - `calls` [EXTRACTED]
-- [[dot-Select()_1]] - `calls` [EXTRACTED]
-- [[dot-Stop()]] - `calls` [EXTRACTED]
-- [[dot-TocarRadio()]] - `calls` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
-- [[Image]] - `references` [EXTRACTED]
-- [[SantaRitaTapeDeck]] - `method` [EXTRACTED]
-- [[TMP_Text]] - `references` [EXTRACTED]
-- [[TapeCatalog]] - `references` [EXTRACTED]
-- [[TextAsset]] - `references` [EXTRACTED]
-- [[Texture2D]] - `references` [EXTRACTED]
+- [[dot-ConstruirUI()_1]] - `calls` [EXTRACTED]
+- [[dot-GarantirColisoesGravadas()]] - `calls` [EXTRACTED]
+- [[dot-InicializarCacapas()]] - `calls` [EXTRACTED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_3

@@ -12,7 +12,7 @@ tags:
 # .Art()
 
 ## Connections
-- [[dot-Interior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
 - [[dot-Prop()_1]] - `calls` [EXTRACTED]
 - [[dot-Replace()]] - `calls` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]

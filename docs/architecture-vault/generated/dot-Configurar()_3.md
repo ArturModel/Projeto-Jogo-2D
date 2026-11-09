@@ -1,18 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/TransicaoDeZonaTrigger.cs"
 type: "code"
-community: "Community 6"
-location: "L19"
+community: "Community 24"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_24
 ---
 
 # .Configurar()
 
 ## Connections
-- [[dot-AtualizarSpawnPointExistente()]] - `calls` [INFERRED]
-- [[SpawnPoint]] - `method` [EXTRACTED]
+- [[dot-ColocarGatilhoTransicao()]] - `calls` [INFERRED]
+- [[TransicaoDeZonaTrigger]] - `method` [EXTRACTED]
+- [[Vector2]] - `references` [EXTRACTED]
+- [[ZonaId_1]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_24

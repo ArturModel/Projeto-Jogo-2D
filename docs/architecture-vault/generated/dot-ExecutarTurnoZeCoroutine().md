@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 21"
-location: "L1457"
+location: "L1809"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # .ExecutarTurnoZeCoroutine()
 
 ## Connections
+- [[dot-ApresentacaoZeSuspensa()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarVisualTacoEMira()]] - `calls` [EXTRACTED]
 - [[dot-ContinuarInicioTurno()]] - `calls` [EXTRACTED]
 - [[dot-EscolherPosicaoBrancaZe()]] - `calls` [EXTRACTED]

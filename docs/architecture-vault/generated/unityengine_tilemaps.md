@@ -21,6 +21,7 @@ tags:
 - [[SantaRitaFootsteps.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaRuaNorte.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `imports` [EXTRACTED]
 - [[TileAleatorio.cs]] - `imports` [EXTRACTED]

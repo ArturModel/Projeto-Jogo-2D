@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
-location: "L256"
+community: "Community 93"
+location: "L472"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_93
 ---
 
 # .Derrota()
@@ -14,10 +14,9 @@ tags:
 ## Connections
 - [[dot-AbrirSelecaoCarregar()]] - `calls` [EXTRACTED]
 - [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
-- [[dot-Fechar()_2]] - `calls` [EXTRACTED]
-- [[dot-MostrarModal()]] - `calls` [EXTRACTED]
-- [[dot-Pausar()]] - `calls` [EXTRACTED]
+- [[dot-Fechar()_5]] - `calls` [EXTRACTED]
+- [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_93

@@ -1,16 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 48"
+community: "Community 0"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # Button
 
 ## Connections
+- [[dot-AbrirMenuMinigames()]] - `references` [EXTRACTED]
 - [[dot-ActionButton()]] - `references` [EXTRACTED]
 - [[dot-ActiveButton()]] - `references` [EXTRACTED]
 - [[dot-AtualizarTela()]] - `references` [EXTRACTED]
@@ -24,13 +25,18 @@ tags:
 - [[dot-Click()]] - `references` [EXTRACTED]
 - [[dot-ClickR4()]] - `references` [EXTRACTED]
 - [[dot-ConfigurarBotao()]] - `references` [EXTRACTED]
+- [[dot-ConfigurarBotaoPainel()]] - `references` [EXTRACTED]
+- [[dot-Construir()_5]] - `references` [EXTRACTED]
 - [[dot-Construir()_3]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-ConstruirEscolhaAlvo()]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
+- [[dot-ConstruirOpcoesMesa()]] - `references` [EXTRACTED]
+- [[dot-CriarBotao()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
+- [[dot-FecharMenuMinigames()]] - `references` [EXTRACTED]
 - [[dot-GarantirModalCriado()]] - `references` [EXTRACTED]
 - [[dot-InteragirCenario()]] - `references` [EXTRACTED]
 - [[dot-Oferecer()]] - `references` [EXTRACTED]
@@ -47,7 +53,7 @@ tags:
 - [[dot-SinuquinhaMarked()]] - `references` [EXTRACTED]
 - [[dot-SinuquinhaSeriesFixture()]] - `references` [EXTRACTED]
 - [[dot-SlotsR2()]] - `references` [EXTRACTED]
-- [[dot-Start()_2]] - `references` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 - [[MarcusNotebookUI]] - `references` [EXTRACTED]
 - [[MenuAmbiente]] - `references` [EXTRACTED]
@@ -57,4 +63,4 @@ tags:
 - [[SantaRitaTapeDeck]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

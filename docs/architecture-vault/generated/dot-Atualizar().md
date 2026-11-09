@@ -1,21 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Gate.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MinigameDialogue.cs"
 type: "code"
-community: "Community 40"
-location: "L10"
+community: "Community 103"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_103
 ---
 
 # .Atualizar()
 
 ## Connections
-- [[dot-OnEnable()_7]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[Capitulo2Gate]] - `method` [EXTRACTED]
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-AplicarPreferencias()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarFalaTonao()]] - `calls` [INFERRED]
+- [[dot-AtualizarFalaZe()]] - `calls` [INFERRED]
+- [[dot-Limpar()_3]] - `calls` [EXTRACTED]
+- [[dot-TocarSilaba()]] - `calls` [EXTRACTED]
+- [[MinigameDialogue]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_103

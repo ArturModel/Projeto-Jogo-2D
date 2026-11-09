@@ -1,17 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaSound.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 95"
-location: "L41"
+community: "Community 94"
+location: "L167"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_95
+  - community/Community_94
 ---
 
 # .Update()
 
 ## Connections
-- [[SantaRitaSound]] - `method` [EXTRACTED]
+- [[dot-AtualizarAudio()]] - `calls` [EXTRACTED]
+- [[dot-CentroVia()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()_1]] - `calls` [EXTRACTED]
+- [[dot-Encerrar()_2]] - `calls` [EXTRACTED]
+- [[dot-LerControles()]] - `calls` [EXTRACTED]
+- [[dot-Tem()]] - `calls` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_95
+#graphify/code #graphify/EXTRACTED #community/Community_94

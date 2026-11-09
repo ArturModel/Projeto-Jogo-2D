@@ -11,7 +11,7 @@ tags:
 # TMP_Dropdown
 
 ## Connections
-- [[dot-Configurar()]] - `references` [EXTRACTED]
+- [[dot-Configurar()_1]] - `references` [EXTRACTED]
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-Vincular()_1]] - `references` [EXTRACTED]
 - [[HorizontalStepperNavigation]] - `references` [EXTRACTED]

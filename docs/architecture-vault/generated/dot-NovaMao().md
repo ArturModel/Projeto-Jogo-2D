@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
-location: "L126"
+community: "Community 93"
+location: "L210"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_93
 ---
 
 # .NovaMao()
@@ -16,10 +16,12 @@ tags:
 - [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
 - [[dot-CriarMao()]] - `calls` [INFERRED]
+- [[dot-LimparFalaTonao()]] - `calls` [INFERRED]
 - [[dot-ProximoTurno()]] - `calls` [EXTRACTED]
 - [[dot-Regras()]] - `calls` [EXTRACTED]
+- [[dot-ReiniciarTonao()]] - `calls` [INFERRED]
+- [[dot-ResetWalking()_1]] - `calls` [INFERRED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
-- [[dot-SetView()]] - `calls` [INFERRED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_93

@@ -1,22 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/PortaLuvasCarro.cs"
 type: "code"
-community: "Community 94"
+community: "Community 33"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_94
+  - community/Community_33
 ---
 
 # PortaLuvasCarro
 
 ## Connections
-- [[dot-Ativar()_1]] - `method` [EXTRACTED]
-- [[dot-Awake()_28]] - `references` [EXTRACTED]
+- [[dot-Ativar()_2]] - `method` [EXTRACTED]
+- [[dot-Awake()_16]] - `references` [EXTRACTED]
 - [[ObjetoCarro]] - `inherits` [EXTRACTED]
 - [[PortaLuvasCarro.cs]] - `contains` [EXTRACTED]
 - [[PrologoJogavel]] - `references` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+#graphify/code #graphify/EXTRACTED #community/Community_33

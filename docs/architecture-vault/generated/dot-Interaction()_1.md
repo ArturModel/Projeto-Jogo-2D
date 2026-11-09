@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Cemetery()]] - `calls` [EXTRACTED]
 - [[dot-Center()]] - `calls` [EXTRACTED]
-- [[dot-Interior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
 - [[Capitulo2Interactable]] - `references` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 

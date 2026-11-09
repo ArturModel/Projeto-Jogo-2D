@@ -1,27 +1,28 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
 type: "code"
-community: "Community 2"
-location: "L90"
+community: "Community 29"
+location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_29
 ---
 
 # .Primitive()
 
 ## Connections
 - [[dot-Box()]] - `calls` [EXTRACTED]
-- [[dot-Cylinder()]] - `calls` [EXTRACTED]
-- [[dot-Sphere()]] - `calls` [EXTRACTED]
+- [[dot-BuildAtmosphere()]] - `calls` [EXTRACTED]
+- [[dot-BuildRoom()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirTonao()]] - `calls` [EXTRACTED]
+- [[dot-Quadro()]] - `calls` [EXTRACTED]
+- [[BochaRoom3D]] - `method` [EXTRACTED]
 - [[Collider]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
-- [[MeshRenderer]] - `references` [EXTRACTED]
 - [[PrimitiveType]] - `references` [EXTRACTED]
-- [[SinucaRoom3D]] - `method` [EXTRACTED]
-- [[Transform]] - `references` [EXTRACTED]
+- [[Renderer]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_29

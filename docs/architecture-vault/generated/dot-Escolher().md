@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs"
 type: "code"
-community: "Community 99"
-location: "L10"
+community: "Community 27"
+location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_99
+  - community/Community_27
 ---
 
 # .Escolher()
@@ -20,11 +20,11 @@ tags:
 - [[dot-MelhorDistancia()]] - `calls` [EXTRACTED]
 - [[dot-Preparar()_1]] - `calls` [EXTRACTED]
 - [[dot-RepousarParaPrevisao()]] - `calls` [INFERRED]
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
+- [[dot-Update()_19]] - `calls` [EXTRACTED]
 - [[BochaAI]] - `method` [EXTRACTED]
 - [[BochaBall]] - `calls` [INFERRED]
 - [[BochaShot]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `references` [EXTRACTED]
 - [[Random]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_99
+#graphify/code #graphify/EXTRACTED #community/Community_27

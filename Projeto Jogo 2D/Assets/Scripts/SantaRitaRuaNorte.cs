@@ -12,6 +12,8 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
     private const int CasterLimit = 32;
     private enum Ground { Grass, Road, Walk, Dirt, Verge, Curb, DirtRoad, Crack, Puddle, Stripe, Drain, SideVerge, DirtVerge }
 
+    private enum Sombra { Projetada, Contato, Nenhuma, Veiculo }
+
     private readonly Dictionary<int, Tile> tiles = new();
     private readonly Vector4[] casterMin = new Vector4[CasterLimit];
     private readonly Vector4[] casterMax = new Vector4[CasterLimit];
@@ -24,15 +26,29 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
     private Material backFogMaterial;
     private Material frontFogMaterial;
     private SpriteRenderer player;
+    private PlayerController playerController;
     private Material previousPlayerMaterial;
     private MaterialPropertyBlock previousPlayerProperties;
+    private bool entrada;
     private int casterCount;
     private Vector2 origin;
     private Vector2 size;
 
     public static bool Active => Capitulo1Director.ZonaAtual == Capitulo1Director.ZonaId.Zona5_RuaNorteBar;
+    public static bool EntradaAtiva => entradaAtual != null &&
+        Capitulo1Director.ZonaAtual == Capitulo1Director.ZonaId.Zona1_Rodovia;
+    private static SantaRitaRuaNorte entradaAtual;
+    private static Sprite[] objetosEntrada;
 
-    public static bool BuildGround(Transform zone, Vector2 min, int width, int height)
+    public static Sprite ObjetoDaEntrada(string nome)
+    {
+        objetosEntrada ??= Resources.LoadAll<Sprite>(Art + "Entrada/ObjetosEntrada");
+        return System.Array.Find(objetosEntrada, sprite => sprite.name == nome);
+    }
+
+    private bool ZonaAtiva => entrada ? EntradaAtiva : Active;
+
+    public static bool BuildGround(Transform zone, Vector2 min, int width, int height, bool entrada = false)
     {
         var atlas = Resources.Load<Texture2D>(Art + "Terreno");
         var shader = Resources.Load<Shader>(Art + "LuzVolumetrica");
@@ -42,7 +58,10 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         look.receiverProperties = new MaterialPropertyBlock();
         look.origin = min;
         look.size = new Vector2(width, height);
-        look.lighting = new Material(shader) { name = "Luz local da Rua Norte" };
+        look.entrada = entrada;
+        if (entrada) entradaAtual = look;
+        look.lighting = new Material(shader) { name = entrada ? "Luz local da entrada" : "Luz local da Rua Norte" };
+        if (entrada) look.lighting.SetFloat("_DoorReflection", 0);
         look.lighting.SetVector("_Origin", new Vector4(min.x, min.y, 0, 0));
         var surface = Resources.Load<Texture2D>(Art + "Superficie");
         if (surface != null && surface.width == atlas.width && surface.height == atlas.height)
@@ -64,15 +83,17 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
     {
         var look = world.Find("Zona5_RuaNorteBar")?.GetComponent<SantaRitaRuaNorte>();
         if (look != null) look.Dress();
+        var entrada = world.Find("Zona1_Rodovia")?.GetComponent<SantaRitaRuaNorte>();
+        if (entrada != null) entrada.DressEntrance();
     }
 
     private void BuildTilemap(Texture2D atlas, int width, int height)
     {
-        var grid = new GameObject("Grade Rua Norte", typeof(Grid));
+        var grid = new GameObject("Grade " + name, typeof(Grid));
         grid.transform.SetParent(transform, false);
         grid.transform.position = origin;
 
-        var floor = new GameObject("Piso_Zona5_RuaNorteBar", typeof(Tilemap), typeof(TilemapRenderer));
+        var floor = new GameObject("Piso_" + name, typeof(Tilemap), typeof(TilemapRenderer));
         floor.transform.SetParent(grid.transform, false);
         var map = floor.GetComponent<Tilemap>();
         var renderer = floor.GetComponent<TilemapRenderer>();
@@ -84,7 +105,10 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         {
             for (int x = 0; x < width; x++)
             {
-                SelectGround(x, y, out Ground kind, out bool flipX, out bool flipY);
+                Ground kind;
+                bool flipX, flipY;
+                if (entrada) SelectEntranceGround(x, y, out kind, out flipX, out flipY);
+                else SelectGround(x, y, out kind, out flipX, out flipY);
                 int cell = y * width + x;
                 uint hash = (uint)cell * 2654435761u;
                 int variant = (int)((hash ^ (hash >> 16)) & 3u);
@@ -98,7 +122,7 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         // O shader usa a mesma seleção de tiles para ler os dois lados de cada junta.
         groundCells = new Texture2D(width, height, TextureFormat.RGBA32, false, true)
         {
-            name = "Vizinhança do piso da Rua Norte",
+            name = "Vizinhança do piso de " + name,
             filterMode = FilterMode.Point,
             wrapMode = TextureWrapMode.Clamp
         };
@@ -133,6 +157,31 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         if (y == 10 && x % 5 < 2) { kind = Ground.Stripe; return; }
         int wear = (x * 19 + y * 13 + x * y) % 17;
         kind = y != 10 && wear < 2 ? Ground.Puddle : (wear < 6 ? Ground.Crack : Ground.Road);
+    }
+
+    private static void SelectEntranceGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)
+    {
+        flipX = false;
+        flipY = y < 8;
+        bool recuo = x >= 6 && x <= 12;
+        switch (y)
+        {
+            case 5: kind = Ground.Verge; return;
+            case 6: kind = Ground.Walk; return;
+            case 7: kind = Ground.Curb; return;
+            case 12: kind = recuo ? Ground.Road : Ground.Curb; return;
+            case 13: kind = x == 26 ? Ground.Drain : Ground.Walk; return;
+            case 14:
+                kind = recuo ? Ground.Walk : (x == 5 || x == 13 ? Ground.SideVerge : Ground.Verge);
+                flipX = x == 13;
+                return;
+            case 15: kind = recuo ? Ground.Verge : Ground.Grass; return;
+        }
+
+        if (y < 8 || y > 11) { kind = Ground.Grass; return; }
+        if (y == 10 && x % 5 < 2) { kind = Ground.Stripe; return; }
+        int wear = (x * 19 + y * 13 + x * y) % 17;
+        kind = y != 10 && wear < 2 ? Ground.Puddle : (wear < 5 ? Ground.Crack : Ground.Road);
     }
 
     private Tile GroundTile(Texture2D atlas, Ground kind, int variant, bool flipX, bool flipY)
@@ -206,6 +255,52 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         DressFog();
     }
 
+    private void DressEntrance()
+    {
+        casterCount = 0;
+        for (int i = 0; i < 6; i++)
+        {
+            DressTree("Arvore_Norte_Z1_" + i, i % 3 == 1 ? "Araucaria" : "Arvore", .81f + i * .03f);
+            DressTree("Arvore_Sul_Z1_" + i, i % 2 == 0 ? "Pitangueira" : "Bracatinga", .76f + i * .027f);
+        }
+        Plant("Bosque_Entrada_Oeste", "Araucaria", 101.5f, 17.5f, .89f);
+        Plant("Bosque_Entrada_Leste", "Araucaria", 126f, 17.2f, .92f);
+        PlantUnderstory("Moita_Entrada_Oeste", new Vector2(104.4f, 15.2f), .64f, false);
+        PlantUnderstory("Moita_Entrada_Placa", new Vector2(115.4f, 14.9f), .48f, true);
+        PlantUnderstory("Moita_Entrada_Sul", new Vector2(106.5f, 5.35f), .69f, true);
+        PlantUnderstory("Moita_Entrada_Acostamento", new Vector2(124.5f, 5.15f), .58f, false);
+        DressProp("Carro_Marcus_Sprite", "Entrada/CarroMarcus", new Vector3(3.65f, .78f, 1.54f), sombra: Sombra.Veiculo);
+        DressProp("Placa_SantaRita", "Entrada/PlacaSantaRita", new Vector3(2.6f, .34f, 2.45f));
+        DressProp("Banco_Rodovia", "Entrada/BancoRodovia", new Vector3(1.65f, .48f, .86f), sombra: Sombra.Contato);
+        DressProp("Placa_Horarios_Rodovia", "Entrada/QuadroParada", new Vector3(.8f, .2f, 1.82f), sombra: Sombra.Contato);
+        DressProp("Orelhao_Rodovia", "Orelhao", new Vector3(.25f, .25f, 1.4f));
+        DressProp("Mala_Abandonada_Rodovia", "Entrada/MalaRodovia", new Vector3(.82f, .36f, .76f), sombra: Sombra.Contato);
+        DressProp("Lixeira_Rodovia", null, new Vector3(.23f, .21f, .75f), sombra: Sombra.Contato);
+        DressProp("Seta_Para_Posto", null, new Vector3(.23f, .2f, 1.25f), sombra: Sombra.Contato);
+        for (int x = 104; x <= 130; x += 6)
+            DressProp("CercaSul_" + x, null, new Vector3(2.2f, .35f, .83f), sombra: Sombra.Contato);
+        for (int i = 1; i <= 3; i++)
+            DressProp("Poste_Z1_" + i, "Poste", new Vector3(.17f, .2f, 3.15f));
+
+        foreach (var light in GetComponentsInChildren<Light2D>(true))
+            light.enabled = false;
+
+        lighting.SetVectorArray("_Lamps", new[]
+        {
+            Lamp("Poste_Z1_1", .66f, -.42f, 3.18f, 8.2f),
+            Lamp("Poste_Z1_2", .66f, -.42f, 3.18f, 8.2f),
+            Lamp("Poste_Z1_3", .66f, -.42f, 3.18f, 8.6f)
+        });
+        lighting.SetVectorArray("_LampColors", new[]
+        {
+            new Vector4(1.89f, 1.48f, .97f, 1),
+            new Vector4(2.10f, 1.64f, 1.01f, 1),
+            new Vector4(1.70f, 1.40f, .92f, 1)
+        });
+        UpdateCasters(false);
+        DressFog();
+    }
+
     private void DressChair(string name, Vector2 feet, bool faceLeft)
     {
         var chair = transform.Find(name);
@@ -222,7 +317,7 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
     {
         var sprite = Resources.Load<Sprite>(Art + "Arbusto");
         if (sprite == null) return;
-        var obj = new GameObject(name, typeof(SpriteRenderer));
+        var obj = transform.Find(name)?.gameObject ?? new GameObject(name, typeof(SpriteRenderer));
         obj.transform.SetParent(transform, false);
         obj.transform.position = feet;
         obj.transform.localScale = new Vector3(scale, scale, 1);
@@ -260,7 +355,8 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
 
     private void DressTree(string name, string art, float scale)
     {
-        var renderer = DressProp(name, art, new Vector3(.53f, .63f, 2.85f) * scale, scale);
+        var renderer = DressProp(name, art, new Vector3(.53f, .63f, 2.85f) * scale, scale,
+            sombra: entrada ? Sombra.Nenhuma : Sombra.Projetada);
         if (renderer == null) return;
         renderer.color = new Color(.87f, .94f, .93f);
         renderer.GetPropertyBlock(receiverProperties);
@@ -269,17 +365,24 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         renderer.SetPropertyBlock(receiverProperties);
     }
 
-    private SpriteRenderer DressProp(string name, string art, Vector3 volume, float scale = 1f, float heightFactor = 1f)
+    private SpriteRenderer DressProp(string name, string art, Vector3 volume, float scale = 1f,
+        float heightFactor = 1f, Sombra sombra = Sombra.Projetada)
     {
         var prop = transform.Find(name);
         if (prop == null) return null;
-        var sprite = Resources.Load<Sprite>(Art + art);
         var renderer = prop.GetComponent<SpriteRenderer>() ?? prop.GetComponentInChildren<SpriteRenderer>(true);
-        if (sprite == null || renderer == null) return null;
-        renderer.sprite = sprite;
+        if (renderer == null) return null;
+        if (art != null)
+        {
+            var sprite = art.StartsWith("Entrada/", System.StringComparison.Ordinal)
+                ? ObjetoDaEntrada(art.Substring("Entrada/".Length))
+                : Resources.Load<Sprite>(Art + art);
+            if (sprite == null) return null;
+            renderer.sprite = sprite;
+        }
 
         // A escala dos sprites novos é de 64 pixels por unidade. Compense os colisores existentes.
-        if (renderer.transform == prop)
+        if (art != null && renderer.transform == prop)
         {
             Vector3 ratio = prop.localScale / scale;
             foreach (var box in prop.GetComponents<BoxCollider2D>())
@@ -295,9 +398,10 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         if (casterCount < CasterLimit - 1)
         {
             id = casterCount++;
-            casterMin[id] = new Vector4(at.x - volume.x * .5f, at.y + .04f, 0, 0);
+            casterMin[id] = new Vector4(at.x - volume.x * .5f, at.y + .04f, 0, (float)sombra);
             casterMax[id] = new Vector4(at.x + volume.x * .5f, at.y + volume.y, volume.z, 0);
         }
+        if (entrada) renderer.sortingOrder = 1000 - Mathf.RoundToInt(prop.position.y * 10);
         renderer.sharedMaterial = lighting;
         SetReceiver(renderer, prop.position.y, heightFactor, id);
         return renderer;
@@ -316,21 +420,28 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         {
             var shader = Resources.Load<Shader>(Art + "Nevoeiro");
             if (shader == null || !shader.isSupported) return;
-            var facade = transform.Find("Predio_Fachada_BarDoZe").GetComponent<SpriteRenderer>();
-            var baseAt = facade.transform.position;
-            var house = new Vector4(baseAt.x, baseAt.y, facade.bounds.extents.x, 3.1f);
+            var house = new Vector4(origin.x + size.x * .5f, 15.8f, 0f, 0f);
+            if (!entrada)
+            {
+                var facade = transform.Find("Predio_Fachada_BarDoZe").GetComponent<SpriteRenderer>();
+                var baseAt = facade.transform.position;
+                house = new Vector4(baseAt.x, baseAt.y, facade.bounds.extents.x, 3.1f);
+            }
             var texture = Texture2D.whiteTexture;
             fogSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
                 Vector2.zero, texture.width, 0, SpriteMeshType.FullRect);
             backFog = CreateFog("Nevoeiro sobre o bosque", shader, house, false);
             backFogMaterial = backFog.sharedMaterial;
-            frontFog = CreateFog("Nevoeiro junto à soleira", shader, house, true);
-            frontFogMaterial = frontFog.sharedMaterial;
+            if (!entrada)
+            {
+                frontFog = CreateFog("Nevoeiro junto à soleira", shader, house, true);
+                frontFogMaterial = frontFog.sharedMaterial;
+            }
         }
         backFog.sortingOrder = 2030;
-        frontFog.sortingOrder = 2031;
+        if (frontFog != null) frontFog.sortingOrder = 2031;
         backFog.sharedMaterial = backFogMaterial;
-        frontFog.sharedMaterial = frontFogMaterial;
+        if (frontFog != null) frontFog.sharedMaterial = frontFogMaterial;
     }
 
     private SpriteRenderer CreateFog(string name, Shader shader, Vector4 house, bool front)
@@ -352,14 +463,14 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
     private void LateUpdate()
     {
         if (lighting == null || receiverProperties == null) return;
-        bool effects = Active && !MenuPausa.ReduzirEfeitosIntensos;
+        bool effects = ZonaAtiva && !MenuPausa.ReduzirEfeitosIntensos;
         if (backFog != null)
         {
             backFog.enabled = effects;
-            frontFog.enabled = effects;
+            if (frontFog != null) frontFog.enabled = effects;
         }
         lighting.SetFloat("_WindStrength", effects ? 1 : 0);
-        if (!Active)
+        if (!ZonaAtiva)
         {
             if (player != null) { RestorePlayer(); UpdateCasters(false); }
             lighting.SetVector("_ViewFocus", Vector4.zero);
@@ -369,6 +480,7 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         {
             var actor = FindAnyObjectByType<PlayerController>();
             if (actor == null || !actor.TryGetComponent(out player)) return;
+            playerController = actor;
             previousPlayerMaterial = player.sharedMaterial;
             previousPlayerProperties = new MaterialPropertyBlock();
             player.GetPropertyBlock(previousPlayerProperties);
@@ -378,6 +490,16 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
         lighting.SetVector("_ViewFocus", new Vector4(focus.x, focus.y + .7f, effects ? 1f : .35f, 0));
         SetReceiver(player, player.transform.position.y, .94f, casterCount);
         UpdateCasters(true);
+        if (entrada)
+        {
+            if (playerController.ObterFeixeLanterna(out var lente, out var direcao))
+            {
+                Vector2 ponto = lente - origin;
+                lighting.SetVector("_PlayerLamp", new Vector4(ponto.x, ponto.y, lente.y - player.transform.position.y, 6.2f));
+                lighting.SetVector("_PlayerLampDirection", direcao);
+            }
+            else lighting.SetVector("_PlayerLamp", Vector4.zero);
+        }
     }
 
     private void UpdateCasters(bool withPlayer)
@@ -406,6 +528,7 @@ public sealed class SantaRitaRuaNorte : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (entradaAtual == this) entradaAtual = null;
         RestorePlayer();
         foreach (var tile in tiles.Values)
         {

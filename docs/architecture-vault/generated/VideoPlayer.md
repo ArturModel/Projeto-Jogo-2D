@@ -1,20 +1,20 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 19"
+community: "Community 94"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_94
 ---
 
 # VideoPlayer
 
 ## Connections
 - [[dot-Roteiro()]] - `references` [EXTRACTED]
-- [[dot-Start()_23]] - `references` [EXTRACTED]
-- [[dot-Start()_2]] - `references` [EXTRACTED]
-- [[dot-Start()_15]] - `references` [EXTRACTED]
+- [[dot-Start()_19]] - `references` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
+- [[dot-Start()_24]] - `references` [EXTRACTED]
 - [[PrologoVideo]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_94

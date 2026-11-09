@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "Community 12"
-location: "L44"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED

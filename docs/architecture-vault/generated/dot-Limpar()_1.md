@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-ExecutarProtegido()]] - `calls` [EXTRACTED]
-- [[dot-OnDestroy()_11]] - `calls` [EXTRACTED]
+- [[dot-OnDestroy()_10]] - `calls` [EXTRACTED]
 - [[MenuAmbienteRuntimeQA]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_42

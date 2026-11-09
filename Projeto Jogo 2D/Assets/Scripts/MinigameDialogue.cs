@@ -10,7 +10,7 @@ internal sealed class MinigameDialogue
     private const float TamanhoBase = 16f;
     private const float VolumeBase = .20f;
     private const float TempoFade = .3f;
-    private static AudioClip[] silabas;
+    private static readonly AudioClip[] silabas = new AudioClip[4];
 
     private readonly CanvasGroup painel;
     private readonly Image fundo;
@@ -102,6 +102,13 @@ internal sealed class MinigameDialogue
         painel.alpha = SubtitleSettingsController.LegendasAtivas ? opacidade : 0;
     }
 
+    public bool RevelarRestante()
+    {
+        if (!Ocupada || caractere >= texto.textInfo.characterCount) return false;
+        texto.maxVisibleCharacters = caractere = texto.textInfo.characterCount;
+        return true;
+    }
+
     public void Suspender()
     {
         opacidade = 0;
@@ -126,32 +133,35 @@ internal sealed class MinigameDialogue
     private void TocarSilaba()
     {
         if (voz.volume <= .001f || voz.isPlaying) return;
-        if (silabas == null) silabas = CriarSilabas();
+        // O Play Mode pode descartar o clipe e preservar o cache estático.
+        var clip = silabas[silaba];
+        if (clip == null)
+        {
+            clip = CriarSilaba(silaba);
+            silabas[silaba] = clip;
+        }
+        silaba = (silaba + 3) % silabas.Length;
         voz.pitch = pitch;
-        voz.clip = silabas[(silaba++ * 3) % silabas.Length];
+        voz.clip = clip;
         voz.Play();
     }
 
-    private static AudioClip[] CriarSilabas()
+    private static AudioClip CriarSilaba(int variante)
     {
         // Síntese original da sinuca. Cada locutor varia o tom da mesma base.
         const int hz = 22050;
-        var clips = new AudioClip[4];
-        for (int variante = 0; variante < clips.Length; variante++)
+        var amostras = new float[(int)(hz * .075f)];
+        float fundamental = 112 + variante * 9;
+        for (int i = 0; i < amostras.Length; i++)
         {
-            var amostras = new float[(int)(hz * .075f)];
-            float fundamental = 112 + variante * 9;
-            for (int i = 0; i < amostras.Length; i++)
-            {
-                float fase = 2 * Mathf.PI * fundamental * i / hz;
-                float envelope = Mathf.Pow(Mathf.Max(0, Mathf.Sin(Mathf.PI * i / (amostras.Length - 1))), 1.5f);
-                float onda = Mathf.Sin(fase) * .48f + Mathf.Sin(fase * 2) * .24f
-                    + Mathf.Sin(fase * (variante % 2 == 0 ? 5 : 6)) * .12f;
-                amostras[i] = onda * envelope * .65f;
-            }
-            clips[variante] = AudioClip.Create("SR_Minigame_Murmurio_" + variante, amostras.Length, 1, hz, false);
-            clips[variante].SetData(amostras, 0);
+            float fase = 2 * Mathf.PI * fundamental * i / hz;
+            float envelope = Mathf.Pow(Mathf.Max(0, Mathf.Sin(Mathf.PI * i / (amostras.Length - 1))), 1.5f);
+            float onda = Mathf.Sin(fase) * .48f + Mathf.Sin(fase * 2) * .24f
+                + Mathf.Sin(fase * (variante % 2 == 0 ? 5 : 6)) * .12f;
+            amostras[i] = onda * envelope * .65f;
         }
-        return clips;
+        var clip = AudioClip.Create("SR_Minigame_Murmurio_" + variante, amostras.Length, 1, hz, false);
+        clip.SetData(amostras, 0);
+        return clip;
     }
 }

@@ -1,30 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MapaInterativoUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
 type: "code"
-community: "Community 34"
-location: "L545"
+community: "Community 83"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_83
 ---
 
 # .Abrir()
 
 ## Connections
-- [[dot-AtualizarDisponibilidadePlanta()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarIndicadorZoom()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicaoMarcadoresDinamicos()]] - `calls` [EXTRACTED]
-- [[dot-Detail()]] - `calls` [INFERRED]
-- [[dot-LimitarPanDoMapa()]] - `calls` [EXTRACTED]
-- [[dot-Rebuild()]] - `calls` [INFERRED]
-- [[dot-Run()_3]] - `calls` [INFERRED]
-- [[dot-RunAtlas()]] - `calls` [INFERRED]
-- [[dot-RunNotebook()]] - `calls` [INFERRED]
-- [[dot-SelecionarAba()]] - `calls` [EXTRACTED]
-- [[dot-Tem()]] - `calls` [EXTRACTED]
-- [[dot-Travel()]] - `calls` [INFERRED]
-- [[dot-Update()_23]] - `calls` [EXTRACTED]
-- [[MapaInterativoUI]] - `method` [EXTRACTED]
+- [[dot-AbrirModalSlots()]] - `calls` [INFERRED]
+- [[dot-Aproximar()]] - `calls` [EXTRACTED]
+- [[dot-Atualizar()_1]] - `calls` [EXTRACTED]
+- [[dot-Selecionar()]] - `calls` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_83

@@ -12,9 +12,9 @@ tags:
 # CamadaParallax
 
 ## Connections
-- [[dot-Awake()_2]] - `method` [EXTRACTED]
-- [[dot-LateUpdate()_3]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_4]] - `method` [EXTRACTED]
+- [[dot-Awake()_6]] - `method` [EXTRACTED]
+- [[dot-LateUpdate()_7]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_6]] - `method` [EXTRACTED]
 - [[CamadaParallax.cs]] - `contains` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]

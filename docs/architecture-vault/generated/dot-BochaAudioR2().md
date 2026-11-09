@@ -12,12 +12,12 @@ tags:
 # .BochaAudioR2()
 
 ## Connections
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-Click()]] - `calls` [EXTRACTED]
-- [[dot-Field()_2]] - `calls` [EXTRACTED]
-- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-Resolver()]] - `calls` [INFERRED]
-- [[dot-RespostaAbafada()_1]] - `calls` [EXTRACTED]
+- [[dot-RespostaAbafada()]] - `calls` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `calls` [INFERRED]
 - [[dot-RunR2()]] - `calls` [EXTRACTED]
 - [[dot-Step()]] - `calls` [INFERRED]

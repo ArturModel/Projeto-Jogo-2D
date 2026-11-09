@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 3"
-location: "L291"
+location: "L356"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .InicializarCacapas()
 
 ## Connections
-- [[dot-Awake()_13]] - `calls` [EXTRACTED]
+- [[dot-Awake()_15]] - `calls` [EXTRACTED]
 - [[dot-IniciarDuelo()]] - `calls` [EXTRACTED]
 - [[dot-IniciarPraticaOpcional()]] - `calls` [EXTRACTED]
 - [[BicoCacapa]] - `calls` [EXTRACTED]

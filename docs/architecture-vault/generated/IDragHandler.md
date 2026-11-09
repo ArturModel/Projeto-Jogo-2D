@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 28"
+community: "Community 106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_28
+  - community/Community_106
 ---
 
 # IDragHandler
@@ -15,4 +15,4 @@ tags:
 - [[SinucaSpinSelector]] - `implements` [EXTRACTED]
 - [[SinucaTableView]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_28
+#graphify/code #graphify/EXTRACTED #community/Community_106

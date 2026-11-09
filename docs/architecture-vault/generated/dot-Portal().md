@@ -12,7 +12,7 @@ tags:
 # .Portal()
 
 ## Connections
-- [[dot-Apply()_1]] - `calls` [EXTRACTED]
+- [[dot-Apply()]] - `calls` [EXTRACTED]
 - [[dot-Deposito()]] - `calls` [EXTRACTED]
 - [[dot-Empty()]] - `calls` [EXTRACTED]
 - [[Capitulo2Portal]] - `references` [EXTRACTED]

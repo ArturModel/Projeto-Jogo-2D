@@ -1,24 +1,24 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoVideo.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 19"
-location: "L59"
+community: "Community 44"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_44
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-Encerrar()_3]] - `calls` [EXTRACTED]
-- [[dot-Legendar()]] - `calls` [EXTRACTED]
-- [[dot-MontarTela()]] - `calls` [EXTRACTED]
-- [[IEnumerator]] - `references` [EXTRACTED]
-- [[PonteiroCarro]] - `references` [EXTRACTED]
-- [[PrologoDirector]] - `references` [EXTRACTED]
-- [[PrologoVideo]] - `method` [EXTRACTED]
-- [[VideoPlayer]] - `references` [EXTRACTED]
+- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
+- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
+- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
+- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
+- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_44

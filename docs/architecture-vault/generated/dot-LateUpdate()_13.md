@@ -1,23 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 8"
-location: "L217"
+community: "Community 5"
+location: "L92"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_8
+  - community/Community_5
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[dot-AtualizarClima()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarSom()]] - `calls` [EXTRACTED]
-- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
-- [[dot-Desenhar()]] - `calls` [EXTRACTED]
-- [[dot-GarantirCamadas()]] - `calls` [EXTRACTED]
-- [[dot-Simular()]] - `calls` [EXTRACTED]
-- [[Chuva]] - `method` [EXTRACTED]
+- [[dot-Posicionar()_2]] - `calls` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_8
+#graphify/code #graphify/EXTRACTED #community/Community_5

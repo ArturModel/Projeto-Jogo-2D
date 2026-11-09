@@ -12,7 +12,7 @@ tags:
 # .Safe()
 
 ## Connections
-- [[dot-Apply()_1]] - `calls` [EXTRACTED]
+- [[dot-Apply()]] - `calls` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `calls` [EXTRACTED]
 - [[dot-Exteriors()]] - `calls` [EXTRACTED]
 - [[dot-PrepareArt()]] - `calls` [EXTRACTED]

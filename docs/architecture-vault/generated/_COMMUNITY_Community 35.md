@@ -21,7 +21,7 @@ members: 21
 - [[Opening]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
 - [[OptionalColor]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
 - [[Phase]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
-- [[Result]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
+- [[Result_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
 - [[Result_2]] - code
 - [[Sequence]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaBrasileiraRules.cs
 - [[Sequence_2]] - code
@@ -38,14 +38,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Community 48]]
-- 2 edges to [[_COMMUNITY_Community 43]]
-- 1 edge to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 1]]
+- 6 edges to [[_COMMUNITY_Community 0]]
+- 3 edges to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 34]]
+- 1 edge to [[_COMMUNITY_Community 36]]
 
 ## Top bridge nodes
 - [[SinucaBrasileiraRules]] - degree 19, connects to 2 communities
 - [[dot-Resolve()]] - degree 6, connects to 1 community
-- [[Result]] - degree 3, connects to 1 community
+- [[Result_1]] - degree 3, connects to 1 community
+- [[Result_2]] - degree 3, connects to 1 community
 - [[dot-Refuse()]] - degree 2, connects to 1 community
-- [[Result_2]] - degree 2, connects to 1 community

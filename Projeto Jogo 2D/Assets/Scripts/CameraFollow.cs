@@ -25,6 +25,7 @@ public class CameraFollow : MonoBehaviour
     private Vector3 velocidadeAtual;
     private Vector3 posicaoSuave;
     private Camera cam;
+    private float zoomDeFala;
     private bool limitesDetectados;
     private bool limitesManualmenteDefinidos;
 
@@ -80,6 +81,7 @@ public class CameraFollow : MonoBehaviour
         limitesManualmenteDefinidos = true;
         limiteMin = novoMin;
         limiteMax = novoMax;
+        LimparZoomDeFala();
 
         if (novoOrthoSize > 1f && cam != null && cam.orthographic)
         {
@@ -222,6 +224,7 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
+        AtualizarZoomDeFala();
         if (target == null)
         {
             var player = FindAnyObjectByType<PlayerController>();
@@ -263,6 +266,36 @@ public class CameraFollow : MonoBehaviour
             -10f
         );
     }
+
+    private void AtualizarZoomDeFala()
+    {
+        if (cam == null || !cam.orthographic) return;
+        float desejado = MenuPausa.ReduzirEfeitosIntensos ? 0f : SantaRitaFalasEntrada.Zoom;
+        if (desejado == 0f && zoomDeFala == 0f) return;
+
+        // Mantém o recorte da Pixel Perfect Camera, que escreve orthographicSize a cada render.
+        zoomDeFala = Mathf.Lerp(zoomDeFala, desejado, 1f - Mathf.Exp(-9f * Time.deltaTime));
+        if (desejado == 0f && zoomDeFala < .0001f)
+        {
+            LimparZoomDeFala();
+            return;
+        }
+
+        cam.ResetProjectionMatrix();
+        Matrix4x4 projecao = cam.projectionMatrix;
+        projecao.m00 *= 1f + zoomDeFala;
+        projecao.m11 *= 1f + zoomDeFala;
+        cam.projectionMatrix = projecao;
+    }
+
+    private void LimparZoomDeFala()
+    {
+        if (zoomDeFala == 0f) return;
+        zoomDeFala = 0f;
+        if (cam != null) cam.ResetProjectionMatrix();
+    }
+
+    private void OnDisable() => LimparZoomDeFala();
 
     private Vector3 AplicarClampBordas(Vector3 pos)
     {

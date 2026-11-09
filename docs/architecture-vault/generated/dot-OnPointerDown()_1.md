@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
 community: "Community 39"
-location: "L97"
+location: "L104"
 tags:
   - graphify/code
   - graphify/EXTRACTED

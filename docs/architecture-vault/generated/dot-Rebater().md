@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
 community: "Community 27"
-location: "L173"
+location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Rebater()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()_2]] - `calls` [EXTRACTED]
 - [[dot-AvancarComContatos()]] - `calls` [EXTRACTED]
 - [[dot-Notificar()]] - `calls` [EXTRACTED]
 - [[dot-Velocidade()]] - `calls` [EXTRACTED]

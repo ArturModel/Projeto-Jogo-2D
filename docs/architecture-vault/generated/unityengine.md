@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: "Community 36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_36
 ---
 
 # unityengine
@@ -18,9 +18,13 @@ tags:
 - [[BarSinucaR4RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaAI.cs]] - `imports` [EXTRACTED]
 - [[BochaCourtView.cs]] - `imports` [EXTRACTED]
+- [[BochaMinigameUI.Perception.cs]] - `imports` [EXTRACTED]
 - [[BochaMinigameUI.cs]] - `imports` [EXTRACTED]
 - [[BochaPerspectiveRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaPerspectiveVerification.cs]] - `imports` [EXTRACTED]
+- [[BochaRoom3D.Perception.cs]] - `imports` [EXTRACTED]
+- [[BochaRoom3D.Tonao.cs]] - `imports` [EXTRACTED]
+- [[BochaRoom3D.cs]] - `imports` [EXTRACTED]
 - [[BochaRules.cs]] - `imports` [EXTRACTED]
 - [[BochaShot.cs]] - `imports` [EXTRACTED]
 - [[BochaSimulation.cs]] - `imports` [EXTRACTED]
@@ -42,6 +46,8 @@ tags:
 - [[CheckpointSystem.cs]] - `imports` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `imports` [EXTRACTED]
 - [[Chuva.cs]] - `imports` [EXTRACTED]
+- [[ChuvaMinigame.cs]] - `imports` [EXTRACTED]
+- [[ChuvaMinigamesSmoke.cs]] - `imports` [EXTRACTED]
 - [[ChuvaRolando.cs]] - `imports` [EXTRACTED]
 - [[DentroDaCasaDoAvo.cs]] - `imports` [EXTRACTED]
 - [[DicaDeTecla.cs]] - `imports` [EXTRACTED]
@@ -70,6 +76,8 @@ tags:
 - [[MenuPausa.cs]] - `imports` [EXTRACTED]
 - [[MilaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[MilaRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[MinigameDialogue.cs]] - `imports` [EXTRACTED]
+- [[MinigamePerceptionAudio.cs]] - `imports` [EXTRACTED]
 - [[NotebookRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[ObjetoCarro.cs]] - `imports` [EXTRACTED]
 - [[OlharPrimeiraPessoa.cs]] - `imports` [EXTRACTED]
@@ -96,6 +104,8 @@ tags:
 - [[SantaRitaAtmosphere.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaBarAudio.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaBarLayout.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaBarLighting.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaBochaAmbiente.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.Access.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaC2Consolidation.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaChapter1Builder.cs]] - `imports` [EXTRACTED]
@@ -116,6 +126,7 @@ tags:
 - [[SantaRitaRimLight.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRoomCutaway.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRoomLayout.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaRuaNorte.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRuralPaths.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaShallowStairs.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `imports` [EXTRACTED]
@@ -125,13 +136,24 @@ tags:
 - [[SceneTransition.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Console.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Janela.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Spin.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Sustos.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI_Perception.cs]] - `imports` [EXTRACTED]
 - [[SinucaRef7Authoring.cs]] - `imports` [EXTRACTED]
 - [[SinucaRef7RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SinucaRoom3D.Actors.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Decoration.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Furnishings.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Opponent.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Patrons.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Salon.cs]] - `imports` [EXTRACTED]
 - [[SinucaRoom3D.Scenery.cs]] - `imports` [EXTRACTED]
 - [[SinucaRoom3D.Table.cs]] - `imports` [EXTRACTED]
 - [[SinucaRoom3D.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D_Perception.cs]] - `imports` [EXTRACTED]
 - [[SinucaSpinSelector.cs]] - `imports` [EXTRACTED]
 - [[SinucaTableView.cs]] - `imports` [EXTRACTED]
 - [[Sinuquinha15Verification.cs]] - `imports` [EXTRACTED]
@@ -142,4 +164,4 @@ tags:
 - [[UIFactory.cs]] - `imports` [EXTRACTED]
 - [[VideoSettingsController.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/Community_36

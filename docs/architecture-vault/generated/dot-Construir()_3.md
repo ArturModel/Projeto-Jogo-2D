@@ -1,38 +1,33 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PayphoneRegistroUI.cs"
 type: "code"
-community: "Community 17"
-location: "L60"
+community: "Community 83"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_83
 ---
 
 # .Construir()
 
 ## Connections
-- [[dot-Botao()_2]] - `calls` [EXTRACTED]
-- [[dot-ChangeZoom()]] - `calls` [INFERRED]
-- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
-- [[dot-CriarImpactoMadeira()]] - `calls` [EXTRACTED]
-- [[dot-EscolherTipo()]] - `calls` [EXTRACTED]
-- [[dot-Label()]] - `calls` [EXTRACTED]
-- [[dot-MudarVista()]] - `calls` [EXTRACTED]
-- [[dot-Painel()]] - `calls` [EXTRACTED]
-- [[dot-PodeConsultar()]] - `calls` [EXTRACTED]
-- [[dot-Regras()]] - `calls` [EXTRACTED]
-- [[dot-Stretch()]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[AudioSource]] - `references` [EXTRACTED]
-- [[BochaCourtView]] - `references` [EXTRACTED]
-- [[BochaMapGraphic]] - `references` [EXTRACTED]
-- [[BochaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-Botao()_1]] - `calls` [EXTRACTED]
+- [[dot-Confirmar()]] - `calls` [EXTRACTED]
+- [[dot-GarantirModalCriado()]] - `calls` [INFERRED]
+- [[dot-Rect()_1]] - `calls` [EXTRACTED]
+- [[dot-Texto()_3]] - `calls` [EXTRACTED]
+- [[Action]] - `references` [EXTRACTED]
 - [[Button]] - `references` [EXTRACTED]
+- [[CanvasGroup]] - `references` [EXTRACTED]
 - [[CanvasScaler]] - `references` [EXTRACTED]
-- [[GraphicRaycaster]] - `references` [EXTRACTED]
+- [[GameObject]] - `references` [EXTRACTED]
 - [[Image]] - `references` [EXTRACTED]
-- [[RectMask2D]] - `references` [EXTRACTED]
+- [[PayphoneRegistroTecla]] - `references` [EXTRACTED]
+- [[PayphoneRegistroUI]] - `method` [EXTRACTED]
+- [[RawImage]] - `references` [EXTRACTED]
 - [[TextMeshProUGUI]] - `references` [EXTRACTED]
+- [[Texture2D]] - `references` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_83

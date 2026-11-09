@@ -189,3 +189,8 @@ Apagão, Zé assombrado e batidas na janela integram os dois eventos anteriores.
 
 
 08/11/2026 — O exterior do Bar do Zé é a referência de redesign de Santa Rita. [Guia visual](../../Docs/Guia_Visual_Santa_Rita.md) reúne escala, materiais, iluminação, efeitos, continuidade e QA. [Plano](../../Docs/ai-plans/2026-11-08_BBCONTTI_guia-visual-santa-rita.md).
+
+
+## Rodovia de Entrada — 08/11/2026
+
+A zona inicial de EntradaDaCidade usa a família visual da Rua Norte. Cinco sprites específicos ocupam a mesma folha. A fala de Marcus usa a legenda da sinuca com zoom suave de 2,5% ou 6%, conforme o gatilho. A mala aparece no passeio sul, o orelhão mantém seu checkpoint e a lanterna vem do carro. [Plano e QA](../ai-plans/2026-11-08_BBCONTTI_reforma-entrada-cidade.md).

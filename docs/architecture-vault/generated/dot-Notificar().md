@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
 community: "Community 27"
-location: "L190"
+location: "L192"
 tags:
   - graphify/code
   - graphify/EXTRACTED

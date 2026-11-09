@@ -13,7 +13,7 @@ public sealed class SantaRitaRimLight : MonoBehaviour
     void LateUpdate()
     {
         if(rim==null||body==null)return;
-        if (SantaRitaRuaNorte.Active)
+        if (SantaRitaRuaNorte.Active || SantaRitaRuaNorte.EntradaAtiva)
         {
             rim.enabled = false;
             return;

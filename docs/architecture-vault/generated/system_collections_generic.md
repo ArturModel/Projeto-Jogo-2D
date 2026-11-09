@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: "Community 36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_36
 ---
 
 # system_collections_generic
@@ -14,9 +14,9 @@ tags:
 - [[AudioAmbiente.cs]] - `imports` [EXTRACTED]
 - [[BarSinucaR4RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[BochaAI.cs]] - `imports` [EXTRACTED]
-- [[BochaCourtView.cs]] - `imports` [EXTRACTED]
 - [[BochaMinigameUI.cs]] - `imports` [EXTRACTED]
 - [[BochaPerspectiveVerification.cs]] - `imports` [EXTRACTED]
+- [[BochaRoom3D.cs]] - `imports` [EXTRACTED]
 - [[BochaSimulation.cs]] - `imports` [EXTRACTED]
 - [[CamadaDeLuz.cs]] - `imports` [EXTRACTED]
 - [[Capitulo1Director.cs]] - `imports` [EXTRACTED]
@@ -50,17 +50,25 @@ tags:
 - [[SantaRitaNotebookAuthoring.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaProductionVerification.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaRoomLayout.cs]] - `imports` [EXTRACTED]
+- [[SantaRitaRuaNorte.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaShallowStairs.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaSound.cs]] - `imports` [EXTRACTED]
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DVerification.cs]] - `imports` [EXTRACTED]
 - [[SinucaBrasileiraRules.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Sustos.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI_Perception.cs]] - `imports` [EXTRACTED]
+- [[SinucaPerceptionSchedule.cs]] - `imports` [EXTRACTED]
 - [[SinucaRef7RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[SinucaRoom3D.Actors.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Opponent.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Patrons.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D.Salon.cs]] - `imports` [EXTRACTED]
 - [[SinucaRoom3D.Table.cs]] - `imports` [EXTRACTED]
 - [[SinucaRoom3D.cs]] - `imports` [EXTRACTED]
+- [[SinucaRoom3D_Perception.cs]] - `imports` [EXTRACTED]
 - [[SinucaTableView.cs]] - `imports` [EXTRACTED]
 - [[Sinuquinha15Verification.cs]] - `imports` [EXTRACTED]
 - [[SinuquinhaRules.cs]] - `imports` [EXTRACTED]
@@ -68,4 +76,4 @@ tags:
 - [[TransicaoDeZonaTrigger.cs]] - `imports` [EXTRACTED]
 - [[VideoSettingsController.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/Community_36

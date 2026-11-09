@@ -1,18 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Interactable.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs"
 type: "code"
-community: "Community 44"
-location: "L27"
+community: "Community 7"
+location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_7
 ---
 
 # .Interact()
 
 ## Connections
-- [[dot-Update()_26]] - `calls` [INFERRED]
-- [[Interactable]] - `method` [EXTRACTED]
+- [[dot-Ensure()_1]] - `calls` [EXTRACTED]
+- [[dot-Marcar()]] - `calls` [EXTRACTED]
+- [[dot-Oferecer()]] - `calls` [EXTRACTED]
+- [[dot-Owns()]] - `calls` [EXTRACTED]
+- [[SantaRitaTapePickup]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_7

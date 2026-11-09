@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 34"
+community: "Community 85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_85
 ---
 
 # UnityAction
@@ -14,9 +14,10 @@ tags:
 - [[dot-ActionButton()]] - `references` [EXTRACTED]
 - [[dot-Button()]] - `references` [EXTRACTED]
 - [[dot-Cell()]] - `references` [EXTRACTED]
+- [[dot-CriarBotao()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoAba()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
-- [[dot-MostrarModal()_1]] - `references` [EXTRACTED]
+- [[dot-MostrarModal()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_85

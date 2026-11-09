@@ -1,39 +1,58 @@
 ---
 type: community
-members: 26
+members: 45
 ---
 
 # Community 29
 
-**Members:** 26 nodes
+**Members:** 45 nodes
 
 ## Members
-- [[dot-Boot()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Close()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Duration()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Ensure()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-HasItem()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-Interact()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-OnDestroy()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Open()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Owns()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[dot-PlayPause()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Repair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Rewind()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Run()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs
-- [[dot-Select()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Stop()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[dot-Update()_20]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[ClosedFrame]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Instance_6]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[IsOpen]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Playing]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Position]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[Records]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[SantaRitaTapeDeck]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeCatalog]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeLine]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
-- [[TapeRecord]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-AbrirBuraco()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[dot-AjustarAbertura()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[dot-AnimarQueda()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[dot-AplicarQueda()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[dot-BallColor()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Box()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-BuildAtmosphere()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-BuildRoom()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-BuildWetWindowPane()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Salon.cs
+- [[dot-BuildWindowHandprint()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Salon.cs
+- [[dot-CaptureArt()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-ConstruirTonao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Tonao.cs
+- [[dot-CriarFigura()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[dot-FecharBuraco()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[dot-Light()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-Line()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-LuzDaMao()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-Mat()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-MostrarFigura()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[dot-NewGuide()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Primitive()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-Primitive()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-Quadro()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-RecordContacts()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-Start()_13]] - code - Projeto Jogo 2D/Assets/Scripts/PrologoEstradaGraphic.cs
+- [[dot-Sync()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[AtLaunch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[BochaRoom3D]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[Bounds]] - code
+- [[FiguraEmFoco]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.Perception.cs
+- [[GameObject]] - code
+- [[LightType]] - code
+- [[LineRenderer]] - code
+- [[Material]] - code
+- [[Object]] - code
+- [[Pitch]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[PrimitiveType]] - code
+- [[RenderTexture]] - code
+- [[Renderer]] - code
+- [[Shader]] - code
+- [[StandingPosition]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[Texture2D]] - code
+- [[TrackCount]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[UniversalAdditionalLightData]] - code
+- [[Yaw]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,27 +62,66 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Community 38]]
-- 12 edges to [[_COMMUNITY_Community 13]]
-- 4 edges to [[_COMMUNITY_Community 117]]
-- 4 edges to [[_COMMUNITY_Community 1]]
-- 4 edges to [[_COMMUNITY_Community 45]]
-- 3 edges to [[_COMMUNITY_Community 48]]
+- 33 edges to [[_COMMUNITY_Community 87]]
+- 21 edges to [[_COMMUNITY_Community 24]]
+- 20 edges to [[_COMMUNITY_Community 18]]
+- 15 edges to [[_COMMUNITY_Community 2]]
+- 15 edges to [[_COMMUNITY_Community 0]]
+- 11 edges to [[_COMMUNITY_Community 9]]
+- 10 edges to [[_COMMUNITY_Community 113]]
+- 9 edges to [[_COMMUNITY_Community 11]]
+- 8 edges to [[_COMMUNITY_Community 20]]
+- 8 edges to [[_COMMUNITY_Community 5]]
+- 7 edges to [[_COMMUNITY_Community 46]]
+- 6 edges to [[_COMMUNITY_Community 93]]
+- 6 edges to [[_COMMUNITY_Community 34]]
+- 6 edges to [[_COMMUNITY_Community 57]]
+- 6 edges to [[_COMMUNITY_Community 89]]
+- 5 edges to [[_COMMUNITY_Community 27]]
+- 4 edges to [[_COMMUNITY_Community 119]]
+- 4 edges to [[_COMMUNITY_Community 17]]
+- 4 edges to [[_COMMUNITY_Community 83]]
+- 4 edges to [[_COMMUNITY_Community 84]]
+- 3 edges to [[_COMMUNITY_Community 110]]
+- 3 edges to [[_COMMUNITY_Community 114]]
+- 3 edges to [[_COMMUNITY_Community 16]]
+- 3 edges to [[_COMMUNITY_Community 98]]
 - 3 edges to [[_COMMUNITY_Community 36]]
-- 3 edges to [[_COMMUNITY_Community 50]]
-- 2 edges to [[_COMMUNITY_Community 95]]
-- 2 edges to [[_COMMUNITY_Community 51]]
+- 3 edges to [[_COMMUNITY_Community 38]]
+- 3 edges to [[_COMMUNITY_Community 51]]
+- 3 edges to [[_COMMUNITY_Community 85]]
+- 3 edges to [[_COMMUNITY_Community 41]]
+- 3 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 115]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 37]]
+- 2 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 8]]
+- 2 edges to [[_COMMUNITY_Community 130]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 2 edges to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 107]]
 - 1 edge to [[_COMMUNITY_Community 12]]
-- 1 edge to [[_COMMUNITY_Community 57]]
-- 1 edge to [[_COMMUNITY_Community 24]]
-- 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 34]]
-- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 121]]
+- 1 edge to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 3]]
 - 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 94]]
+- 1 edge to [[_COMMUNITY_Community 96]]
+- 1 edge to [[_COMMUNITY_Community 108]]
+- 1 edge to [[_COMMUNITY_Community 123]]
+- 1 edge to [[_COMMUNITY_Community 125]]
+- 1 edge to [[_COMMUNITY_Community 133]]
+- 1 edge to [[_COMMUNITY_Community 136]]
+- 1 edge to [[_COMMUNITY_Community 33]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 88]]
 
 ## Top bridge nodes
-- [[dot-Run()_3]] - degree 28, connects to 10 communities
-- [[SantaRitaTapeDeck]] - degree 29, connects to 8 communities
-- [[dot-Interact()_8]] - degree 5, connects to 3 communities
-- [[dot-Owns()]] - degree 11, connects to 2 communities
-- [[dot-PlayPause()]] - degree 9, connects to 2 communities
+- [[GameObject]] - degree 76, connects to 29 communities
+- [[Texture2D]] - degree 52, connects to 26 communities
+- [[Material]] - degree 54, connects to 20 communities
+- [[BochaRoom3D]] - degree 66, connects to 17 communities
+- [[Shader]] - degree 12, connects to 5 communities

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
 community: "Community 39"
-location: "L82"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,8 +14,9 @@ tags:
 ## Connections
 - [[dot-AngularScreenSign()]] - `calls` [EXTRACTED]
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
+- [[dot-OnMesaPointerDown()]] - `calls` [INFERRED]
 - [[dot-Project()_1]] - `calls` [EXTRACTED]
-- [[dot-Run()_1]] - `calls` [INFERRED]
+- [[dot-Run()_5]] - `calls` [INFERRED]
 - [[dot-ScreenSinuca()]] - `calls` [INFERRED]
 - [[SinucaTableView]] - `method` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]

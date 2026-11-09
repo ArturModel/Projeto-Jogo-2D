@@ -1,18 +1,18 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 19"
+community: "Community 118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_118
 ---
 
 # Fileira
 
 ## Connections
-- [[dot-Construir()_4]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `references` [EXTRACTED]
+- [[dot-Construir()]] - `references` [EXTRACTED]
+- [[dot-Posicionar()]] - `references` [EXTRACTED]
 - [[EstradaScroller]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_118

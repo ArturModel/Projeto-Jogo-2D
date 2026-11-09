@@ -1,24 +1,27 @@
 ---
 type: community
-members: 11
+members: 14
 ---
 
 # Community 28
 
-**Members:** 11 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[dot-Disc()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnDrag()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnPointerDown()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-OnPopulateMesh()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-Select()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[dot-SetContact()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[Contact]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
-- [[IDragHandler]] - code
-- [[IPointerDownHandler]] - code
-- [[MaskableGraphic]] - code
-- [[SinucaSpinSelector]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaSpinSelector.cs
+- [[dot-CancelOpponentShot()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Opponent.cs
+- [[dot-ComecarNovaSerie()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-DestruirAudioPercepcao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI_Perception.cs
+- [[dot-Fechar()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-IniciarDuelo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-IniciarDueloDoBar()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-LimparFalaZe()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-MostrarEscolhaDosGrupos()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-MostrarHudDaEntrada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-OnDestroy()_8]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-OnDisable()_7]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-PrepararSala()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-ReiniciarPercepcoesSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI_Perception.cs
+- [[dot-RestaurarCursor()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,22 +31,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Community 9]]
-- 4 edges to [[_COMMUNITY_Community 46]]
-- 3 edges to [[_COMMUNITY_Community 6]]
-- 2 edges to [[_COMMUNITY_Community 23]]
-- 2 edges to [[_COMMUNITY_Community 39]]
-- 1 edge to [[_COMMUNITY_Community 30]]
-- 1 edge to [[_COMMUNITY_Community 14]]
-- 1 edge to [[_COMMUNITY_Community 3]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 21]]
+- 17 edges to [[_COMMUNITY_Community 3]]
+- 12 edges to [[_COMMUNITY_Community 21]]
+- 4 edges to [[_COMMUNITY_Community 2]]
+- 4 edges to [[_COMMUNITY_Community 0]]
+- 4 edges to [[_COMMUNITY_Community 100]]
+- 3 edges to [[_COMMUNITY_Community 49]]
+- 3 edges to [[_COMMUNITY_Community 30]]
+- 2 edges to [[_COMMUNITY_Community 94]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 113]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 85]]
+- 1 edge to [[_COMMUNITY_Community 93]]
 
 ## Top bridge nodes
-- [[SinucaSpinSelector]] - degree 17, connects to 7 communities
-- [[dot-Disc()]] - degree 5, connects to 3 communities
-- [[MaskableGraphic]] - degree 5, connects to 3 communities
-- [[dot-SetContact()]] - degree 3, connects to 2 communities
-- [[IDragHandler]] - degree 3, connects to 2 communities
+- [[dot-ComecarNovaSerie()]] - degree 17, connects to 5 communities
+- [[dot-Fechar()_1]] - degree 10, connects to 5 communities
+- [[dot-IniciarDuelo()]] - degree 10, connects to 5 communities
+- [[dot-IniciarDueloDoBar()]] - degree 10, connects to 5 communities
+- [[dot-LimparFalaZe()]] - degree 10, connects to 4 communities

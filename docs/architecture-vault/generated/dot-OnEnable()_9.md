@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SpawnPoint.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
-community: "Community 6"
-location: "L25"
+community: "Community 39"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_39
 ---
 
 # .OnEnable()
 
 ## Connections
-- [[SpawnPoint]] - `method` [EXTRACTED]
+- [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
+- [[dot-SetActive()]] - `calls` [EXTRACTED]
+- [[SinucaTableView]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_39

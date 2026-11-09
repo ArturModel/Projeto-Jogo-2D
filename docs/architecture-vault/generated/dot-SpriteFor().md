@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
 community: "Community 18"
-location: "L88"
+location: "L96"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,9 @@ tags:
 # .SpriteFor()
 
 ## Connections
-- [[dot-Apply()_3]] - `calls` [EXTRACTED]
-- [[dot-BuildRoom()]] - `calls` [EXTRACTED]
+- [[dot-Apply()_1]] - `calls` [EXTRACTED]
+- [[dot-BuildRoom()_1]] - `calls` [EXTRACTED]
+- [[dot-BuildSolidProp()]] - `calls` [EXTRACTED]
 - [[dot-Character()]] - `calls` [EXTRACTED]
 - [[dot-LiveSprite()]] - `calls` [EXTRACTED]
 - [[dot-PatronPose()]] - `calls` [EXTRACTED]

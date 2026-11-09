@@ -1,19 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuItemSelector.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 96"
-location: "L47"
+community: "Community 54"
+location: "L751"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_96
+  - community/Community_54
 ---
 
 # .OnSelect()
 
 ## Connections
-- [[dot-MoverIndicador()]] - `calls` [EXTRACTED]
 - [[BaseEventData]] - `references` [EXTRACTED]
-- [[MenuItemSelector]] - `method` [EXTRACTED]
+- [[HorizontalStepperNavigation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_96
+#graphify/code #graphify/EXTRACTED #community/Community_54

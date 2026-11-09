@@ -12,10 +12,10 @@ tags:
 # .Replace()
 
 ## Connections
-- [[dot-Apply()_2]] - `calls` [EXTRACTED]
+- [[dot-Apply()_3]] - `calls` [EXTRACTED]
 - [[dot-Art()_1]] - `calls` [EXTRACTED]
 - [[dot-Cemetery()]] - `calls` [EXTRACTED]
-- [[dot-Interior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
 - [[BoxCollider2D]] - `references` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]

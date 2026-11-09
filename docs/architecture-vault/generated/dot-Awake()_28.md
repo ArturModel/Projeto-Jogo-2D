@@ -1,8 +1,8 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Legenda.cs"
 type: "code"
 community: "Community 94"
-location: "L68"
+location: "L57"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,14 +12,7 @@ tags:
 # .Awake()
 
 ## Connections
-- [[dot-Construir()_5]] - `calls` [EXTRACTED]
-- [[dot-Objeto()]] - `calls` [EXTRACTED]
-- [[CelularCarro]] - `references` [EXTRACTED]
-- [[MenuPausa]] - `references` [EXTRACTED]
-- [[OlharPrimeiraPessoa]] - `references` [EXTRACTED]
-- [[PonteiroCarro]] - `references` [EXTRACTED]
-- [[PortaLuvasCarro]] - `references` [EXTRACTED]
-- [[PrologoJogavel]] - `method` [EXTRACTED]
-- [[RadioCarro]] - `references` [EXTRACTED]
+- [[dot-Construir()_4]] - `calls` [EXTRACTED]
+- [[Legenda]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_94

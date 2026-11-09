@@ -1,38 +1,35 @@
 ---
 type: community
-members: 25
+members: 22
 ---
 
 # Community 7
 
-**Members:** 25 nodes
+**Members:** 22 nodes
 
 ## Members
-- [[dot-AbrirPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-Awake()_24]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-Build()_4]] - code - Projeto Jogo 2D/Assets/Scripts/GameMessageUI.cs
-- [[dot-ConstruirEscolhaAlvo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirModal()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirPainelEfeitoOpcional()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConstruirPainelFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-ConstruirUI()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CorDaBola()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
-- [[dot-CreateBox()]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
-- [[dot-CriarBolasNaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarBotaoFechamento()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs
-- [[dot-CriarBotaoHUD()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarSpriteCirculo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-CriarTexto()_2]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-LateUpdate()_12]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs
-- [[dot-Oferecer()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs
-- [[dot-Posicionar()_5]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Stretch()]] - code - Projeto Jogo 2D/Assets/Scripts/UIFactory.cs
-- [[dot-SubPainel()]] - code - Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs
-- [[BolaMesa]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[GraphicRaycaster]] - code
-- [[Outline]] - code
-- [[RectTransform]] - code
-- [[SantaRitaItemAction]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs
+- [[dot-Boot()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Close()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Duration()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Ensure()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Interact()_9]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-OnDestroy()_15]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-PlayPause()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Repair()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Rewind()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Select()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Stop()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[dot-Update()_34]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[ClosedFrame_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Instance_10]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[IsOpen_2]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Playing]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Position]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[Records]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[SantaRitaTapeDeck]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[TapeCatalog]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[TapeLine]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
+- [[TapeRecord]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaTapeDeck.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,46 +39,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 32 edges to [[_COMMUNITY_Community 12]]
-- 16 edges to [[_COMMUNITY_Community 51]]
-- 15 edges to [[_COMMUNITY_Community 34]]
-- 13 edges to [[_COMMUNITY_Community 3]]
-- 10 edges to [[_COMMUNITY_Community 57]]
-- 8 edges to [[_COMMUNITY_Community 24]]
-- 8 edges to [[_COMMUNITY_Community 48]]
-- 8 edges to [[_COMMUNITY_Community 15]]
-- 6 edges to [[_COMMUNITY_Community 30]]
-- 5 edges to [[_COMMUNITY_Community 13]]
-- 5 edges to [[_COMMUNITY_Community 38]]
-- 5 edges to [[_COMMUNITY_Community 56]]
-- 4 edges to [[_COMMUNITY_Community 110]]
-- 4 edges to [[_COMMUNITY_Community 17]]
-- 4 edges to [[_COMMUNITY_Community 6]]
-- 3 edges to [[_COMMUNITY_Community 14]]
-- 3 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 83]]
-- 3 edges to [[_COMMUNITY_Community 21]]
-- 3 edges to [[_COMMUNITY_Community 42]]
-- 3 edges to [[_COMMUNITY_Community 23]]
-- 3 edges to [[_COMMUNITY_Community 92]]
-- 2 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 50]]
-- 1 edge to [[_COMMUNITY_Community 28]]
-- 1 edge to [[_COMMUNITY_Community 33]]
-- 1 edge to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 85]]
-- 1 edge to [[_COMMUNITY_Community 96]]
-- 1 edge to [[_COMMUNITY_Community 100]]
-- 1 edge to [[_COMMUNITY_Community 19]]
-- 1 edge to [[_COMMUNITY_Community 2]]
-- 1 edge to [[_COMMUNITY_Community 29]]
-- 1 edge to [[_COMMUNITY_Community 8]]
-- 1 edge to [[_COMMUNITY_Community 18]]
+- 7 edges to [[_COMMUNITY_Community 94]]
+- 6 edges to [[_COMMUNITY_Community 130]]
+- 6 edges to [[_COMMUNITY_Community 50]]
+- 4 edges to [[_COMMUNITY_Community 92]]
+- 3 edges to [[_COMMUNITY_Community 117]]
+- 3 edges to [[_COMMUNITY_Community 38]]
+- 2 edges to [[_COMMUNITY_Community 85]]
 - 1 edge to [[_COMMUNITY_Community 95]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 51]]
+- 1 edge to [[_COMMUNITY_Community 108]]
+- 1 edge to [[_COMMUNITY_Community 111]]
+- 1 edge to [[_COMMUNITY_Community 107]]
 
 ## Top bridge nodes
-- [[RectTransform]] - degree 78, connects to 22 communities
-- [[dot-Stretch()]] - degree 25, connects to 9 communities
-- [[dot-ConstruirUI()_1]] - degree 23, connects to 7 communities
-- [[dot-CriarBotaoHUD()]] - degree 15, connects to 7 communities
-- [[dot-Build()_4]] - degree 14, connects to 7 communities
+- [[SantaRitaTapeDeck]] - degree 29, connects to 10 communities
+- [[dot-Select()_1]] - degree 6, connects to 4 communities
+- [[dot-Interact()_9]] - degree 5, connects to 4 communities
+- [[dot-PlayPause()]] - degree 9, connects to 3 communities
+- [[dot-Ensure()_1]] - degree 6, connects to 3 communities

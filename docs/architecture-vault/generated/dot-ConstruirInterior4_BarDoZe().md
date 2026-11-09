@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo1Director.cs"
 type: "code"
 community: "Community 24"
-location: "L2398"
+location: "L2401"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[dot-AdicionarBoxCollider()]] - `calls` [EXTRACTED]
-- [[dot-AdicionarLuzPonto()]] - `calls` [EXTRACTED]
 - [[dot-ColocarArteInterior()]] - `calls` [EXTRACTED]
 - [[dot-ColocarGatilhoTransicao()]] - `calls` [EXTRACTED]
 - [[dot-ColocarInteracao()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaGeography.cs"
 type: "code"
-community: "Community 34"
+community: "Community 115"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_34
+  - community/Community_115
 ---
 
 # .CenaC2()
@@ -16,4 +16,4 @@ tags:
 - [[dot-IdDaCena()]] - `calls` [EXTRACTED]
 - [[SantaRitaGeography]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_34
+#graphify/code #graphify/EXTRACTED #community/Community_115

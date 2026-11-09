@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
-location: "L271"
+community: "Community 93"
+location: "L488"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_93
 ---
 
 # .Regras()
@@ -14,12 +14,11 @@ tags:
 ## Connections
 - [[dot-CancelarCarga()]] - `calls` [EXTRACTED]
 - [[dot-Comecar()]] - `calls` [EXTRACTED]
-- [[dot-Construir()_3]] - `calls` [EXTRACTED]
-- [[dot-MostrarModal()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_5]] - `calls` [EXTRACTED]
+- [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
 - [[dot-NovaMao()]] - `calls` [EXTRACTED]
-- [[dot-Pausar()]] - `calls` [EXTRACTED]
 - [[dot-Regras()]] - `calls` [EXTRACTED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_93

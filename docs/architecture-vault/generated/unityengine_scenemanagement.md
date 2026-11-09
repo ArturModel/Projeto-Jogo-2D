@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: "Community 92"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_92
 ---
 
 # unityengine_scenemanagement
@@ -19,6 +19,7 @@ tags:
 - [[Chapter2R2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[Chapter2RuntimeVerification.cs]] - `imports` [EXTRACTED]
 - [[ChegadaEmSantaRita.cs]] - `imports` [EXTRACTED]
+- [[ChuvaMinigamesSmoke.cs]] - `imports` [EXTRACTED]
 - [[InteracaoCapitulo1.cs]] - `imports` [EXTRACTED]
 - [[InteractionPrompt.cs]] - `imports` [EXTRACTED]
 - [[InteriorAccessRuntimeVerification.cs]] - `imports` [EXTRACTED]
@@ -45,4 +46,4 @@ tags:
 - [[SceneFader.cs]] - `imports` [EXTRACTED]
 - [[TransicaoDeZonaTrigger.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/Community_92

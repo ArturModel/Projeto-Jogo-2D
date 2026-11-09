@@ -15,7 +15,7 @@ tags:
 - [[dot-AteOTempo()]] - `calls` [EXTRACTED]
 - [[dot-Curvar()]] - `calls` [EXTRACTED]
 - [[dot-Desacelerar()]] - `calls` [EXTRACTED]
-- [[dot-Dizer()]] - `calls` [EXTRACTED]
+- [[dot-Dizer()_1]] - `calls` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_19

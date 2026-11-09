@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SceneFader.cs"
 type: "code"
 community: "Community 84"
-location: "L513"
+location: "L608"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # .FadeTo()
 
 ## Connections
+- [[dot-EntradaMinigame()]] - `calls` [EXTRACTED]
 - [[dot-FadeIn()]] - `calls` [EXTRACTED]
 - [[dot-TransitionRoutine()]] - `calls` [EXTRACTED]
 - [[dot-TransitionSuaveRoutine()]] - `calls` [EXTRACTED]

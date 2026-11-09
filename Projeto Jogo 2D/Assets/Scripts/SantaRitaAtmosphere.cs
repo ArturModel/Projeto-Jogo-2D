@@ -24,12 +24,12 @@ public sealed class SantaRitaAtmosphere : MonoBehaviour
         material.SetFloat("_Surface",1);material.SetFloat("_Blend",0);material.SetFloat("_SrcBlend",5);material.SetFloat("_DstBlend",10);material.SetFloat("_ZWrite",0);
         material.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");material.renderQueue=3000;
         var renderer=mist.GetComponent<ParticleSystemRenderer>();renderer.sharedMaterial=material;renderer.sortingOrder=2100;
-        if(!MenuPausa.ReduzirEfeitosIntensos && !Interior() && !SantaRitaRuaNorte.Active)mist.Play();
+        if(!MenuPausa.ReduzirEfeitosIntensos && !Interior() && !SantaRitaRuaNorte.Active && !SantaRitaRuaNorte.EntradaAtiva)mist.Play();
     }
     private void Update()
     {
         if(mist==null)return;
-        bool disabled=MenuPausa.ReduzirEfeitosIntensos || Interior() || SantaRitaRuaNorte.Active;
+        bool disabled=MenuPausa.ReduzirEfeitosIntensos || Interior() || SantaRitaRuaNorte.Active || SantaRitaRuaNorte.EntradaAtiva;
         if(disabled && mist.isPlaying)mist.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
         else if(!disabled && !mist.isPlaying)mist.Play();
     }

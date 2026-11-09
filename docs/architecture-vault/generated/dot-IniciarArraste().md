@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
 community: "Community 17"
-location: "L200"
+location: "L402"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,8 @@ tags:
 # .IniciarArraste()
 
 ## Connections
-- [[dot-AtualizarMira()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarTela()]] - `calls` [EXTRACTED]
-- [[dot-PodeMirar()]] - `calls` [EXTRACTED]
+- [[dot-CaptureMouse()]] - `calls` [INFERRED]
+- [[dot-IniciarGesto()]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 - [[PointerEventData]] - `references` [EXTRACTED]
 

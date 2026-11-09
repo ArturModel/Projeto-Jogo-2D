@@ -82,9 +82,6 @@ public class Legenda : MonoBehaviour
         texto.textWrappingMode = TextWrappingModes.Normal;
         texto.color = new Color(0.88f, 0.86f, 0.80f, 1f);
 
-        // sombra dura, para a legenda ler contra o para-brisa claro ou o asfalto
-        texto.fontMaterial.EnableKeyword("UNDERLAY_ON");
-
         RectTransform r = texto.rectTransform;
         r.anchorMin = new Vector2(0.5f, 0f);
         r.anchorMax = new Vector2(0.5f, 0f);

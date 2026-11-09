@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 24"
+community: "Community 44"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_24
+  - community/Community_44
 ---
 
 # Camera
@@ -13,16 +13,19 @@ tags:
 ## Connections
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
 - [[dot-AtualizarMira()]] - `references` [EXTRACTED]
-- [[dot-Awake()_10]] - `references` [EXTRACTED]
+- [[dot-Awake()_19]] - `references` [EXTRACTED]
+- [[dot-BuildFirstPersonLayer()]] - `references` [EXTRACTED]
 - [[dot-CourtPoint()]] - `references` [EXTRACTED]
 - [[dot-GarantirFundoEscuroCamera()]] - `references` [EXTRACTED]
-- [[dot-LateUpdate()_7]] - `references` [EXTRACTED]
+- [[dot-LateUpdate()_10]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-ScreenToTablePoint()]] - `references` [EXTRACTED]
+- [[BochaCourtView]] - `references` [EXTRACTED]
+- [[BochaRoom3D]] - `references` [EXTRACTED]
 - [[CameraFollow]] - `references` [EXTRACTED]
 - [[Chuva]] - `references` [EXTRACTED]
 - [[PonteiroCarro]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[SinucaTableView]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_24
+#graphify/code #graphify/EXTRACTED #community/Community_44

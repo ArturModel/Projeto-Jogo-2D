@@ -1,15 +1,15 @@
 ---
 type: community
-members: 34
+members: 35
 ---
 
 # Community 11
 
-**Members:** 34 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[dot-Abrigo()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
-- [[dot-Apply()_1]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
+- [[dot-Apply()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[dot-Art()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[dot-Cast()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[dot-CompactCourt()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
@@ -41,7 +41,8 @@ members: 34
 - [[dot-UpdateAccesses()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
 - [[dot-Walls()]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.cs
 - [[SantaRitaC2Consolidation]] - code - Projeto Jogo 2D/Assets/Editor/SantaRitaC2Consolidation.Access.cs
-- [[Tile]] - code
+- [[ShadowCaster2D]] - code
+- [[Station]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaNpcWork.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -51,26 +52,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Community 20]]
-- 17 edges to [[_COMMUNITY_Community 16]]
-- 14 edges to [[_COMMUNITY_Community 18]]
-- 11 edges to [[_COMMUNITY_Community 24]]
-- 11 edges to [[_COMMUNITY_Community 6]]
-- 5 edges to [[_COMMUNITY_Community 113]]
-- 5 edges to [[_COMMUNITY_Community 13]]
-- 5 edges to [[_COMMUNITY_Community 48]]
-- 4 edges to [[_COMMUNITY_Community 109]]
+- 26 edges to [[_COMMUNITY_Community 20]]
+- 16 edges to [[_COMMUNITY_Community 113]]
+- 14 edges to [[_COMMUNITY_Community 16]]
+- 9 edges to [[_COMMUNITY_Community 108]]
+- 9 edges to [[_COMMUNITY_Community 29]]
+- 8 edges to [[_COMMUNITY_Community 115]]
+- 6 edges to [[_COMMUNITY_Community 24]]
+- 3 edges to [[_COMMUNITY_Community 44]]
 - 2 edges to [[_COMMUNITY_Community 1]]
-- 2 edges to [[_COMMUNITY_Community 40]]
-- 2 edges to [[_COMMUNITY_Community 44]]
-- 1 edge to [[_COMMUNITY_Community 106]]
-- 1 edge to [[_COMMUNITY_Community 9]]
-- 1 edge to [[_COMMUNITY_Community 23]]
-- 1 edge to [[_COMMUNITY_Community 88]]
+- 2 edges to [[_COMMUNITY_Community 88]]
+- 1 edge to [[_COMMUNITY_Community 40]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 46]]
 
 ## Top bridge nodes
-- [[dot-Apply()_1]] - degree 26, connects to 7 communities
-- [[dot-Exteriors()]] - degree 21, connects to 7 communities
-- [[dot-DrawCourtStair()]] - degree 11, connects to 7 communities
-- [[dot-EncloseCourt()]] - degree 23, connects to 6 communities
+- [[dot-Apply()]] - degree 26, connects to 7 communities
+- [[dot-EncloseCourt()]] - degree 23, connects to 5 communities
+- [[dot-Exteriors()]] - degree 21, connects to 5 communities
 - [[dot-Solid()]] - degree 16, connects to 5 communities
+- [[dot-DrawCourtStair()]] - degree 10, connects to 5 communities

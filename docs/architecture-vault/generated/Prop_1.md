@@ -11,6 +11,7 @@ tags:
 # Prop
 
 ## Connections
+- [[dot-BuildSolidProp()]] - `references` [EXTRACTED]
 - [[dot-Character()]] - `references` [EXTRACTED]
 - [[dot-LivePosition()]] - `references` [EXTRACTED]
 - [[dot-LiveSprite()]] - `references` [EXTRACTED]

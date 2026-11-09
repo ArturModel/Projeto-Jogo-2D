@@ -1,22 +1,22 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/SinucaRef7RuntimeVerification.cs"
 type: "code"
-community: "Community 48"
+community: "Community 0"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # .Ref7Checks()
 
 ## Connections
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-DefinirCamera()]] - `calls` [INFERRED]
-- [[dot-Field()_2]] - `calls` [EXTRACTED]
-- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
+- [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-NativeSurface()]] - `calls` [EXTRACTED]
 - [[dot-PointerSinuca()]] - `calls` [INFERRED]
 - [[dot-RunSinucaR4()]] - `calls` [INFERRED]
@@ -36,4 +36,4 @@ tags:
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 - [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

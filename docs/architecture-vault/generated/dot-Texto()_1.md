@@ -1,21 +1,22 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/GameState.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PrologoJogavel.cs"
 type: "code"
-community: "Community 38"
-location: "L118"
+community: "Community 33"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_38
+  - community/Community_33
 ---
 
 # .Texto()
 
 ## Connections
-- [[dot-Contents()]] - `calls` [EXTRACTED]
-- [[dot-Player()]] - `calls` [EXTRACTED]
-- [[dot-Quick()]] - `calls` [EXTRACTED]
-- [[dot-Update()_23]] - `calls` [EXTRACTED]
-- [[GameState]] - `method` [EXTRACTED]
+- [[dot-Construir()_2]] - `calls` [EXTRACTED]
+- [[dot-CreateLabel()]] - `calls` [EXTRACTED]
+- [[PrologoJogavel]] - `method` [EXTRACTED]
+- [[Rect]] - `references` [EXTRACTED]
+- [[TMP_Text]] - `references` [EXTRACTED]
+- [[Transform]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+#graphify/code #graphify/EXTRACTED #community/Community_33

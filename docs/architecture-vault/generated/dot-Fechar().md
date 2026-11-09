@@ -1,21 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
-community: "Community 100"
-location: "L238"
+community: "Community 12"
+location: "L125"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_100
+  - community/Community_12
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
-- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
-- [[dot-IntegratedFrameR4()]] - `calls` [INFERRED]
-- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-AbrirCarregar()]] - `calls` [EXTRACTED]
+- [[dot-Sair()_2]] - `calls` [EXTRACTED]
+- [[dot-Update()_14]] - `calls` [EXTRACTED]
+- [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
+- [[MenuPausa]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_100
+#graphify/code #graphify/EXTRACTED #community/Community_12

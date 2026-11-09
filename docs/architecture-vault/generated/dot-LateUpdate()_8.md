@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-Blocked()]] - `calls` [EXTRACTED]
-- [[dot-Close()_1]] - `calls` [EXTRACTED]
+- [[dot-Close()]] - `calls` [EXTRACTED]
 - [[dot-Icon()]] - `calls` [EXTRACTED]
 - [[dot-Name()]] - `calls` [EXTRACTED]
 - [[dot-Quick()]] - `calls` [EXTRACTED]

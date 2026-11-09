@@ -1,27 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2BuildVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/SinucaRef7Authoring.cs"
 type: "code"
-community: "Community 6"
-location: "L157"
+community: "Community 45"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_45
 ---
 
 # .Run()
 
 ## Connections
-- [[dot-ApprovedScenes()]] - `calls` [EXTRACTED]
-- [[dot-BuildFinalLivingWorld()]] - `calls` [EXTRACTED]
-- [[dot-BuildNormal()_2]] - `calls` [EXTRACTED]
-- [[dot-BuildQA()_3]] - `calls` [EXTRACTED]
-- [[dot-BuildQA()_2]] - `calls` [EXTRACTED]
-- [[dot-RegisterCampaignScenes()]] - `calls` [EXTRACTED]
-- [[dot-RequireSavedScenes()]] - `calls` [EXTRACTED]
-- [[dot-Revision()]] - `calls` [EXTRACTED]
-- [[dot-Scenes()]] - `calls` [EXTRACTED]
-- [[dot-SourceHash()]] - `calls` [EXTRACTED]
-- [[Chapter2BuildVerification]] - `method` [EXTRACTED]
+- [[SinucaPixelPreviewSession]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_45

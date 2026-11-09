@@ -12,6 +12,7 @@ tags:
 
 ## Connections
 - [[dot-BeginIsolatedTests()]] - `references` [EXTRACTED]
+- [[BochaRoom3D]] - `implements` [EXTRACTED]
 - [[Chapter2RuntimeVerification]] - `references` [EXTRACTED]
 - [[IsolatedSaveScope]] - `implements` [EXTRACTED]
 - [[MenuAmbienteRuntimeQA]] - `references` [EXTRACTED]

@@ -11,6 +11,11 @@ public abstract class Interactable : MonoBehaviour
     [Header("Interação")]
     [SerializeField] private float interactionRadius = 1.6f;
 
+    private Renderer renderizadorDoIndicador;
+    internal void VincularIndicador(Renderer renderer) => renderizadorDoIndicador = renderer;
+    internal Renderer RenderizadorDoIndicador => renderizadorDoIndicador != null
+        ? renderizadorDoIndicador : GetComponentInChildren<Renderer>();
+
     public float InteractionRadius => interactionRadius;
     public virtual bool CanInteractAt(Vector2 position) => Vector2.Distance(position,transform.position)<=interactionRadius;
 

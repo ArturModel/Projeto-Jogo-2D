@@ -1,20 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/CamadaDeLuz.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/SantaRitaBochaAmbiente.cs"
 type: "code"
-community: "Community 93"
-location: "L71"
+community: "Community 113"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_93
+  - community/Community_113
 ---
 
 # .Aplicar()
 
 ## Connections
-- [[dot-Awake()_27]] - `calls` [EXTRACTED]
-- [[dot-Definir()_2]] - `calls` [EXTRACTED]
-- [[dot-Update()_34]] - `calls` [EXTRACTED]
-- [[CamadaDeLuz]] - `method` [EXTRACTED]
+- [[dot-MontarSalaDeEspera()]] - `calls` [EXTRACTED]
+- [[dot-Ponto()]] - `calls` [EXTRACTED]
+- [[dot-Sombra()]] - `calls` [EXTRACTED]
+- [[dot-SpriteNoMundo()]] - `calls` [EXTRACTED]
+- [[dot-Start()_21]] - `calls` [EXTRACTED]
+- [[Light2D]] - `references` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[SantaRitaBochaAmbiente]] - `method` [EXTRACTED]
+- [[Sprite]] - `references` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+#graphify/code #graphify/EXTRACTED #community/Community_113

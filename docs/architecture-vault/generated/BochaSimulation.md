@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
 community: "Community 27"
-location: "L34"
+location: "L35"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AIPerformanceR2()]] - `calls` [INFERRED]
-- [[dot-Aplicar()]] - `method` [EXTRACTED]
+- [[dot-Aplicar()_2]] - `method` [EXTRACTED]
 - [[dot-AvancarComContatos()]] - `method` [EXTRACTED]
 - [[dot-BestShot()]] - `references` [EXTRACTED]
 - [[dot-BochaAudioR2()]] - `references` [EXTRACTED]
@@ -28,21 +28,24 @@ tags:
 - [[dot-Lancar()_2]] - `references` [EXTRACTED]
 - [[dot-Medir()]] - `references` [EXTRACTED]
 - [[dot-MelhorDistancia()]] - `references` [EXTRACTED]
-- [[dot-Mover()]] - `method` [EXTRACTED]
+- [[dot-Mover()_1]] - `method` [EXTRACTED]
 - [[dot-Notificar()]] - `method` [EXTRACTED]
 - [[dot-Physics()]] - `calls` [INFERRED]
 - [[dot-Posicao()]] - `method` [EXTRACTED]
 - [[dot-Proximo()]] - `references` [EXTRACTED]
 - [[dot-Rebater()]] - `method` [EXTRACTED]
+- [[dot-RecordContacts()]] - `references` [EXTRACTED]
 - [[dot-RepousarParaPrevisao()]] - `method` [EXTRACTED]
 - [[dot-Resolver()]] - `references` [EXTRACTED]
 - [[dot-Rules()]] - `calls` [INFERRED]
 - [[dot-Run()]] - `references` [EXTRACTED]
-- [[dot-Run()_8]] - `calls` [INFERRED]
+- [[dot-Run()_3]] - `calls` [INFERRED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-SetState()]] - `references` [EXTRACTED]
 - [[dot-Step()]] - `method` [EXTRACTED]
+- [[dot-Sync()_1]] - `references` [EXTRACTED]
 - [[dot-TestarPlano()]] - `method` [EXTRACTED]
+- [[dot-UpdateCamera()_1]] - `references` [EXTRACTED]
 - [[dot-Velocidade()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]
 - [[BochaBall]] - `references` [EXTRACTED]

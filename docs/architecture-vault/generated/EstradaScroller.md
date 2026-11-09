@@ -1,21 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/EstradaScroller.cs"
 type: "code"
-community: "Community 19"
+community: "Community 118"
 location: "L13"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_19
+  - community/Community_118
 ---
 
 # EstradaScroller
 
 ## Connections
-- [[dot-Construir()_4]] - `method` [EXTRACTED]
-- [[dot-Ligar()_1]] - `method` [EXTRACTED]
-- [[dot-Posicionar()_1]] - `method` [EXTRACTED]
-- [[dot-Start()_13]] - `method` [EXTRACTED]
+- [[dot-Construir()]] - `method` [EXTRACTED]
+- [[dot-Ligar()]] - `method` [EXTRACTED]
+- [[dot-Posicionar()]] - `method` [EXTRACTED]
+- [[dot-Start()_8]] - `method` [EXTRACTED]
 - [[dot-Update()_12]] - `method` [EXTRACTED]
 - [[Curvatura]] - `defines` [EXTRACTED]
 - [[EstradaScroller.cs]] - `contains` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[PrologoDirector]] - `references` [EXTRACTED]
 - [[Velocidade]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_19
+#graphify/code #graphify/EXTRACTED #community/Community_118

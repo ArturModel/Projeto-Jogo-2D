@@ -1,28 +1,28 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Table.cs"
 type: "code"
-community: "Community 2"
+community: "Community 87"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_87
 ---
 
 # .BuildTable()
 
 ## Connections
-- [[dot-Box()]] - `calls` [EXTRACTED]
+- [[dot-Box()_2]] - `calls` [EXTRACTED]
+- [[dot-BuildPocketLining()]] - `calls` [EXTRACTED]
 - [[dot-CombineNet()]] - `calls` [INFERRED]
 - [[dot-Cylinder()]] - `calls` [INFERRED]
-- [[dot-Mat()]] - `calls` [INFERRED]
+- [[dot-Mat()_1]] - `calls` [EXTRACTED]
 - [[dot-PocketOuter()]] - `calls` [EXTRACTED]
-- [[dot-PocketPhysics()]] - `calls` [EXTRACTED]
-- [[dot-Ring()]] - `calls` [EXTRACTED]
-- [[dot-Sphere()]] - `calls` [EXTRACTED]
+- [[dot-PocketSlab()]] - `calls` [EXTRACTED]
+- [[dot-Ring()]] - `calls` [INFERRED]
+- [[dot-Sphere()]] - `calls` [INFERRED]
 - [[dot-Tube()]] - `calls` [INFERRED]
-- [[MeshFilter]] - `references` [EXTRACTED]
 - [[MeshRenderer]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_87

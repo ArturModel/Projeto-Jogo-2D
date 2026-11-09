@@ -1,27 +1,29 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
 type: "code"
-community: "Community 2"
-location: "L83"
+community: "Community 29"
+location: "L89"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_29
 ---
 
 # .Mat()
 
 ## Connections
-- [[dot-BallMaterial()]] - `calls` [INFERRED]
-- [[dot-BuildCue()]] - `calls` [INFERRED]
-- [[dot-BuildRoom()]] - `calls` [INFERRED]
-- [[dot-BuildTable()]] - `calls` [INFERRED]
-- [[dot-Lamp()_2]] - `calls` [INFERRED]
-- [[dot-Panel()]] - `calls` [EXTRACTED]
-- [[dot-Ring()]] - `calls` [EXTRACTED]
+- [[dot-BuildAtmosphere()]] - `calls` [EXTRACTED]
+- [[dot-BuildRoom()]] - `calls` [EXTRACTED]
+- [[dot-ConstruirTonao()]] - `calls` [EXTRACTED]
+- [[dot-CriarFigura()]] - `calls` [EXTRACTED]
+- [[dot-CriarInteriorBuraco()]] - `calls` [EXTRACTED]
+- [[dot-Quadro()]] - `calls` [EXTRACTED]
+- [[dot-RecordContacts()]] - `calls` [EXTRACTED]
+- [[dot-Sync()_1]] - `calls` [EXTRACTED]
+- [[BochaRoom3D]] - `method` [EXTRACTED]
 - [[Color]] - `references` [EXTRACTED]
 - [[Material]] - `references` [EXTRACTED]
-- [[SinucaRoom3D]] - `method` [EXTRACTED]
+- [[Shader]] - `references` [EXTRACTED]
 - [[Texture]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_29

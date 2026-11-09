@@ -12,7 +12,7 @@ tags:
 # .LoadIcons()
 
 ## Connections
-- [[dot-Awake()_14]] - `calls` [EXTRACTED]
+- [[dot-Awake()_17]] - `calls` [EXTRACTED]
 - [[SantaRitaInventory]] - `method` [EXTRACTED]
 - [[Sprite]] - `references` [EXTRACTED]
 - [[Texture2D]] - `references` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaSimulation.cs"
 type: "code"
 community: "Community 27"
-location: "L150"
+location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .Velocidade()
 
 ## Connections
-- [[dot-Aplicar()]] - `calls` [EXTRACTED]
+- [[dot-Aplicar()_2]] - `calls` [EXTRACTED]
 - [[dot-Rebater()]] - `calls` [EXTRACTED]
 - [[BochaBall]] - `references` [EXTRACTED]
 - [[BochaSimulation]] - `method` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # .LimitarPanDoMapa()
 
 ## Connections
-- [[dot-Abrir()_2]] - `calls` [EXTRACTED]
+- [[dot-Abrir()_1]] - `calls` [EXTRACTED]
 - [[dot-AplicarZoomIncremental()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarZoomMapa()]] - `calls` [EXTRACTED]
 - [[dot-CentralizarNoJogador()]] - `calls` [EXTRACTED]

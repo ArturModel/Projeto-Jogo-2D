@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
 community: "Community 17"
-location: "L141"
+location: "L226"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,14 +12,13 @@ tags:
 # .PodeMirar()
 
 ## Connections
-- [[dot-Arrastar()]] - `calls` [EXTRACTED]
+- [[dot-AtualizarMao()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarTela()]] - `calls` [EXTRACTED]
 - [[dot-EscolherTipo()]] - `calls` [EXTRACTED]
-- [[dot-IniciarArraste()]] - `calls` [EXTRACTED]
-- [[dot-MoverMira()]] - `calls` [EXTRACTED]
+- [[dot-FinalizarGesto()]] - `calls` [EXTRACTED]
+- [[dot-IniciarGesto()]] - `calls` [EXTRACTED]
 - [[dot-PodeConsultar()]] - `calls` [EXTRACTED]
-- [[dot-SoltarArraste()]] - `calls` [EXTRACTED]
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
+- [[dot-Update()_19]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_17

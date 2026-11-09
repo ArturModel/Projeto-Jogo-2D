@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[dot-Disparar()]] - `calls` [INFERRED]
 - [[dot-DispararFalasVencidas()]] - `calls` [EXTRACTED]
-- [[dot-Rodar()_2]] - `calls` [EXTRACTED]
+- [[dot-Rodar()_1]] - `calls` [EXTRACTED]
 - [[AudioAmbiente]] - `references` [EXTRACTED]
 - [[IEnumerator]] - `references` [EXTRACTED]
 - [[PrologoDirector]] - `method` [EXTRACTED]

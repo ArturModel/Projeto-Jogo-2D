@@ -1,24 +1,26 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 18"
+community: "Community 20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_20
 ---
 
 # Sprite
 
 ## Connections
-- [[dot-Add()]] - `references` [EXTRACTED]
+- [[dot-Add()_1]] - `references` [EXTRACTED]
+- [[dot-Aplicar()_1]] - `references` [EXTRACTED]
 - [[dot-Apply()_4]] - `references` [EXTRACTED]
+- [[dot-Apply()]] - `references` [EXTRACTED]
 - [[dot-Apply()_1]] - `references` [EXTRACTED]
-- [[dot-Apply()_3]] - `references` [EXTRACTED]
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Art()]] - `references` [EXTRACTED]
 - [[dot-Art()_1]] - `references` [EXTRACTED]
-- [[dot-Awake()_17]] - `references` [EXTRACTED]
+- [[dot-Awake()_26]] - `references` [EXTRACTED]
+- [[dot-Build()_1]] - `references` [EXTRACTED]
 - [[dot-BusStationRoutine()]] - `references` [EXTRACTED]
 - [[dot-CarregarArteInspecao()]] - `references` [EXTRACTED]
 - [[dot-CarregarSprite()]] - `references` [EXTRACTED]
@@ -29,16 +31,19 @@ tags:
 - [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
 - [[dot-CreateNpcObject()]] - `references` [EXTRACTED]
 - [[dot-CreateSceneSpriteObject()]] - `references` [EXTRACTED]
+- [[dot-CriarFigura()]] - `references` [EXTRACTED]
+- [[dot-CriarSprite()]] - `references` [EXTRACTED]
 - [[dot-CriarSpriteCirculo()]] - `references` [EXTRACTED]
 - [[dot-DecorateTerrain()]] - `references` [EXTRACTED]
 - [[dot-DrawCourtStair()]] - `references` [EXTRACTED]
+- [[dot-DressProp()]] - `references` [EXTRACTED]
 - [[dot-EdgeTile()]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
 - [[dot-GerarIconeJogador()]] - `references` [EXTRACTED]
 - [[dot-GerarRetratoPixelArt()]] - `references` [EXTRACTED]
 - [[dot-Icon()]] - `references` [EXTRACTED]
-- [[dot-Interact()_6]] - `references` [EXTRACTED]
+- [[dot-Interact()_1]] - `references` [EXTRACTED]
 - [[dot-Interagir()]] - `references` [EXTRACTED]
 - [[dot-LiveSprite()]] - `references` [EXTRACTED]
 - [[dot-LoadIcons()]] - `references` [EXTRACTED]
@@ -56,13 +61,16 @@ tags:
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Replace()_1]] - `references` [EXTRACTED]
 - [[dot-ResolverRetrato()]] - `references` [EXTRACTED]
-- [[dot-Run()_2]] - `references` [EXTRACTED]
+- [[dot-Run()_1]] - `references` [EXTRACTED]
 - [[dot-RunMarcusQA()]] - `references` [EXTRACTED]
 - [[dot-ShowInspection()]] - `references` [EXTRACTED]
 - [[dot-Solid()_1]] - `references` [EXTRACTED]
+- [[dot-Sombra()]] - `references` [EXTRACTED]
 - [[dot-Sprite()]] - `references` [EXTRACTED]
+- [[dot-SpriteAt()]] - `references` [EXTRACTED]
 - [[dot-SpriteFor()]] - `references` [EXTRACTED]
-- [[dot-Start()_11]] - `references` [EXTRACTED]
+- [[dot-SpriteNoMundo()]] - `references` [EXTRACTED]
+- [[dot-Start()_6]] - `references` [EXTRACTED]
 - [[dot-Surface()]] - `references` [EXTRACTED]
 - [[dot-Tile()]] - `references` [EXTRACTED]
 - [[dot-UpdateCasaDoAvoScene()]] - `references` [EXTRACTED]
@@ -73,16 +81,19 @@ tags:
 - [[DialogoLinha]] - `references` [EXTRACTED]
 - [[Fileira]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
+- [[PatronVisual]] - `references` [EXTRACTED]
 - [[PlayerController]] - `references` [EXTRACTED]
 - [[SantaRitaActorElevation]] - `references` [EXTRACTED]
 - [[SantaRitaBarLayout]] - `references` [EXTRACTED]
+- [[SantaRitaBarLighting]] - `references` [EXTRACTED]
 - [[SantaRitaBarPatron]] - `references` [EXTRACTED]
 - [[SantaRitaC2Consolidation]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
 - [[SantaRitaInventory]] - `references` [EXTRACTED]
 - [[SantaRitaNpcRoutine]] - `references` [EXTRACTED]
 - [[SantaRitaNpcWork]] - `references` [EXTRACTED]
+- [[SantaRitaRuaNorte]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 - [[TileAleatorio]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_20

@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 21"
-location: "L2156"
+location: "L2576"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,8 +16,10 @@ tags:
 - [[dot-ConcluirSerieDerrota()]] - `calls` [EXTRACTED]
 - [[dot-ConcluirSerieVitoria()]] - `calls` [EXTRACTED]
 - [[dot-ConfigurarMao()]] - `calls` [EXTRACTED]
+- [[dot-EncerrarPercepcaoDaMao()]] - `calls` [INFERRED]
 - [[dot-IniciarTurnoAtual()]] - `calls` [EXTRACTED]
-- [[dot-MostrarModal()_1]] - `calls` [EXTRACTED]
+- [[dot-LimparFalaZe()]] - `calls` [EXTRACTED]
+- [[dot-MostrarModal()]] - `calls` [EXTRACTED]
 - [[dot-ResolverFimDaTacada()]] - `calls` [EXTRACTED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 

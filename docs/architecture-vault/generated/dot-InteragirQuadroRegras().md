@@ -12,7 +12,7 @@ tags:
 # .InteragirQuadroRegras()
 
 ## Connections
-- [[dot-Interact()_3]] - `calls` [EXTRACTED]
+- [[dot-Interact()_2]] - `calls` [EXTRACTED]
 - [[InteracaoCapitulo1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_13

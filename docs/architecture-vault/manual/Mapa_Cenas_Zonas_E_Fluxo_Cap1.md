@@ -52,3 +52,6 @@ Atlas (02/11/2026): cenas/zonas aprovadas não foram reconstruídas. O levantame
 
 
 A entrada atual do Bar do Zé é a porta da Rua Norte em `EntradaDaCidade`. A zona muda durante a cobertura da máscara, e `BarDoZe3D` reutiliza `SinucaRoom3D` para exploração e duelo. A porta de saída devolve Marcus à calçada. A cena legada `BarDoZe` continua disponível para cargas antigas e abre a mesma exploração em 3D.
+
+
+08/11/2026 — A Rodovia da Entrada usa a montagem visual compartilhada com a Rua Norte. SantaRitaFalasEntrada apresenta as falas de chegada e as interações do carro, quadro e mala. O passeio sul atravessa a posição da mala. O ID do orelhão e as rotas da Rodovia permanecem os mesmos. [Plano](../../ai-plans/2026-11-08_BBCONTTI_reforma-entrada-cidade.md).

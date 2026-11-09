@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaAI.cs"
 type: "code"
-community: "Community 89"
+community: "Community 135"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_89
+  - community/Community_135
 ---
 
 # BochaAI
@@ -17,4 +17,4 @@ tags:
 - [[UltimaDecisaoMs]] - `defines` [EXTRACTED]
 - [[UltimosCandidatos]] - `defines` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_89
+#graphify/code #graphify/EXTRACTED #community/Community_135

@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[dot-CriarTextura()]] - `method` [EXTRACTED]
 - [[dot-DefinirContexto()]] - `method` [EXTRACTED]
-- [[dot-OnDestroy()_1]] - `method` [EXTRACTED]
-- [[dot-OnEnable()_3]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_3]] - `method` [EXTRACTED]
+- [[dot-OnEnable()_5]] - `method` [EXTRACTED]
 - [[dot-SinucaPauseRegression()]] - `references` [EXTRACTED]
-- [[dot-Update()_2]] - `method` [EXTRACTED]
+- [[dot-Update()_10]] - `method` [EXTRACTED]
 - [[dot-VolumeDaCamada()]] - `method` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]

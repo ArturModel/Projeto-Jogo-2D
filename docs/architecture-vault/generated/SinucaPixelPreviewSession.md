@@ -12,9 +12,9 @@ tags:
 # SinucaPixelPreviewSession
 
 ## Connections
-- [[dot-OnDestroy()_12]] - `method` [EXTRACTED]
-- [[dot-Run()_4]] - `method` [EXTRACTED]
-- [[dot-Start()_21]] - `method` [EXTRACTED]
+- [[dot-OnDestroy()_11]] - `method` [EXTRACTED]
+- [[dot-Run()_6]] - `method` [EXTRACTED]
+- [[dot-Start()_17]] - `method` [EXTRACTED]
 - [[IDisposable]] - `references` [EXTRACTED]
 - [[MonoBehaviour]] - `inherits` [EXTRACTED]
 - [[SinucaRef7Authoring.cs]] - `contains` [EXTRACTED]

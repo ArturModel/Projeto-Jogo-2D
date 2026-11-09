@@ -493,3 +493,10 @@ Cinco eventos, console com comandos e botões, reações de Marcus e janela com 
 
 
 - 08/11/2026 · Bar do Zé em primeira pessoa pela porta da Rua Norte. Revisão da máscara escura com névoa. [Plano e QA](../ai-plans/2026-11-08_BBCONTTI_bar-ze-entrada-3d.md).
+
+
+## 08/11/2026 — reforma da Rodovia de Entrada
+
+Terreno e peças compartilhadas da Rua Norte, nova prancha a 64 PPU, passeio contínuo junto à mala, fala da sinuca aplicada ao Marcus e ajuste da VT323. O sedã usa contato sob os pneus e projeção arredondada. [Plano e QA](../ai-plans/2026-11-08_BBCONTTI_reforma-entrada-cidade.md).
+
+- 08/11/2026 · A legenda recria clipes de fala descartados. Play Mode confirmou PCM e reprodução. [Plano](../ai-plans/2026-11-08_BBCONTTI_cache-voz-legenda.md).

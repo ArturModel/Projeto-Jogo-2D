@@ -1,17 +1,19 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/MilaRuntimeVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 36"
-location: "L28"
+community: "Community 39"
+location: "L213"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_36
+  - community/Community_39
 ---
 
 # .Field()
 
 ## Connections
-- [[MilaRuntimeVerification]] - `method` [EXTRACTED]
+- [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
+- [[dot-Run()_5]] - `calls` [EXTRACTED]
+- [[Sinuca3DVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_36
+#graphify/code #graphify/EXTRACTED #community/Community_39

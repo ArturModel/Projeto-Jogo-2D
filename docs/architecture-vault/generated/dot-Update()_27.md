@@ -1,24 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
 type: "code"
-community: "Community 49"
-location: "L1100"
+community: "Community 44"
+location: "L237"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_49
+  - community/Community_44
 ---
 
 # .Update()
 
 ## Connections
-- [[dot-AlternarVistaCamera()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarMiraJogador()]] - `calls` [EXTRACTED]
-- [[dot-AtualizarPosicionamentoBranca()]] - `calls` [EXTRACTED]
-- [[dot-AvancarSimulacaoPassoFixo()]] - `calls` [EXTRACTED]
-- [[dot-CancelarCargaAoSuspender()]] - `calls` [EXTRACTED]
-- [[dot-Orbit()_1]] - `calls` [INFERRED]
-- [[SinucaMinigameUI]] - `method` [EXTRACTED]
+- [[dot-AlternarLanterna()]] - `calls` [EXTRACTED]
+- [[dot-BloqueiaEquipamento()]] - `calls` [EXTRACTED]
+- [[dot-FindNearest()]] - `calls` [EXTRACTED]
+- [[dot-Interact()_6]] - `calls` [INFERRED]
+- [[dot-SetFacingScale()]] - `calls` [EXTRACTED]
+- [[dot-UpdateAnimator()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+#graphify/code #graphify/EXTRACTED #community/Community_44

@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 17"
-location: "L133"
+community: "Community 93"
+location: "L217"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_17
+  - community/Community_93
 ---
 
 # .ProximoTurno()
@@ -15,8 +15,7 @@ tags:
 - [[dot-NovaMao()]] - `calls` [EXTRACTED]
 - [[dot-Proximo()]] - `calls` [INFERRED]
 - [[dot-ResolverMao()]] - `calls` [EXTRACTED]
-- [[dot-SetView()]] - `calls` [INFERRED]
-- [[dot-Update()_7]] - `calls` [EXTRACTED]
+- [[dot-Update()_19]] - `calls` [EXTRACTED]
 - [[BochaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_17
+#graphify/code #graphify/EXTRACTED #community/Community_93

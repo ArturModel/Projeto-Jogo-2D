@@ -1,17 +1,24 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 2"
+community: "Community 87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_87
 ---
 
 # Light
 
 ## Connections
-- [[dot-BuildRoom()]] - `references` [EXTRACTED]
-- [[dot-Lamp()_2]] - `references` [EXTRACTED]
+- [[dot-BuildFirstPersonLayer()]] - `references` [EXTRACTED]
+- [[dot-BuildRoom()_1]] - `references` [EXTRACTED]
+- [[dot-BuildUnderTableMemory()]] - `references` [EXTRACTED]
+- [[dot-Lamp()_3]] - `references` [EXTRACTED]
+- [[dot-Light()]] - `references` [EXTRACTED]
+- [[dot-RoomFill()]] - `references` [EXTRACTED]
+- [[dot-SetBlackout()]] - `references` [EXTRACTED]
+- [[BochaRoom3D]] - `references` [EXTRACTED]
+- [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_87

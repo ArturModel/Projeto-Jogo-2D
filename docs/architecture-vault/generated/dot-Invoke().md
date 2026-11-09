@@ -1,19 +1,37 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Chapter2RuntimeVerification.cs"
 type: "code"
-community: "Community 114"
-location: "L219"
+community: "Community 0"
+location: "L347"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_114
+  - community/Community_0
 ---
 
 # .Invoke()
 
 ## Connections
-- [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
-- [[dot-Run()_1]] - `calls` [EXTRACTED]
-- [[Sinuca3DVerification]] - `method` [EXTRACTED]
+- [[dot-BochaAudioR2()]] - `calls` [EXTRACTED]
+- [[dot-DefeatUI()]] - `calls` [EXTRACTED]
+- [[dot-FullBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `calls` [EXTRACTED]
+- [[dot-Ref7Checks()]] - `calls` [EXTRACTED]
+- [[dot-Run()]] - `calls` [EXTRACTED]
+- [[dot-RunBochaPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunNotebook()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuca3DPerspective()]] - `calls` [EXTRACTED]
+- [[dot-RunSinucaR4()]] - `calls` [EXTRACTED]
+- [[dot-RunSinuquinha15()]] - `calls` [EXTRACTED]
+- [[dot-SeriesFixtureR4()]] - `calls` [EXTRACTED]
+- [[dot-SimularPosicaoFinalBrancaPosImpacto()]] - `calls` [EXTRACTED]
+- [[dot-SinucaPauseRegression()]] - `calls` [EXTRACTED]
+- [[dot-SinucaRegression()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaMarked()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaPhysicalHand()]] - `calls` [EXTRACTED]
+- [[dot-SinuquinhaSeriesFixture()]] - `calls` [EXTRACTED]
+- [[dot-SlotsR2()]] - `calls` [EXTRACTED]
+- [[dot-VerificarFisicaDeterministicaEBicos()]] - `calls` [EXTRACTED]
+- [[Chapter2RuntimeVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+#graphify/code #graphify/EXTRACTED #community/Community_0

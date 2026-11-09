@@ -1,48 +1,52 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 48"
+community: "Community 29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_29
 ---
 
 # GameObject
 
 ## Connections
 - [[dot-AbrirPainel()]] - `references` [EXTRACTED]
-- [[dot-Add()]] - `references` [EXTRACTED]
+- [[dot-Add()_1]] - `references` [EXTRACTED]
 - [[dot-AdicionarBoxCollider()]] - `references` [EXTRACTED]
 - [[dot-AtualizarBotoes()]] - `references` [EXTRACTED]
 - [[dot-Botao()_2]] - `references` [EXTRACTED]
 - [[dot-Box()_1]] - `references` [EXTRACTED]
 - [[dot-Box()]] - `references` [EXTRACTED]
+- [[dot-Box()_2]] - `references` [EXTRACTED]
 - [[dot-Cast()]] - `references` [EXTRACTED]
 - [[dot-ColocarArteInterior()]] - `references` [EXTRACTED]
 - [[dot-ColocarArvore()]] - `references` [EXTRACTED]
 - [[dot-ColocarPosteComLuz()]] - `references` [EXTRACTED]
 - [[dot-ColocarProp()]] - `references` [EXTRACTED]
-- [[dot-Construir()_2]] - `references` [EXTRACTED]
+- [[dot-Construir()_3]] - `references` [EXTRACTED]
 - [[dot-Create()]] - `references` [EXTRACTED]
 - [[dot-CreateBuildingObject()]] - `references` [EXTRACTED]
 - [[dot-CreateNpcObject()]] - `references` [EXTRACTED]
 - [[dot-CreateSceneSpriteObject()]] - `references` [EXTRACTED]
+- [[dot-CriarPainelHUD()]] - `references` [EXTRACTED]
 - [[dot-Cylinder()]] - `references` [EXTRACTED]
 - [[dot-Empty()]] - `references` [EXTRACTED]
 - [[dot-Executar()]] - `references` [EXTRACTED]
 - [[dot-Frame()]] - `references` [EXTRACTED]
 - [[dot-IntegratedFrameR4()]] - `references` [EXTRACTED]
-- [[dot-Panel()_1]] - `references` [EXTRACTED]
+- [[dot-Panel()]] - `references` [EXTRACTED]
 - [[dot-Paper()]] - `references` [EXTRACTED]
+- [[dot-PocketSlab()]] - `references` [EXTRACTED]
 - [[dot-PosicaoFinalBrancaComEfeito()]] - `references` [EXTRACTED]
 - [[dot-Primitive()]] - `references` [EXTRACTED]
+- [[dot-Primitive()_1]] - `references` [EXTRACTED]
 - [[dot-Prop()]] - `references` [EXTRACTED]
 - [[dot-Prop()_2]] - `references` [EXTRACTED]
 - [[dot-Prop()_1]] - `references` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `references` [EXTRACTED]
 - [[dot-Ring()]] - `references` [EXTRACTED]
-- [[dot-Run()_1]] - `references` [EXTRACTED]
+- [[dot-Run()_5]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
 - [[dot-RunNotebook()]] - `references` [EXTRACTED]
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
@@ -64,12 +68,14 @@ tags:
 - [[dot-Vincular()_3]] - `references` [EXTRACTED]
 - [[dot-Vincular()_4]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
+- [[BochaRoom3D]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
 - [[Capitulo1Director]] - `references` [EXTRACTED]
 - [[Capitulo2Audio]] - `references` [EXTRACTED]
 - [[GameMessageUI]] - `references` [EXTRACTED]
 - [[MapaInterativoUI]] - `references` [EXTRACTED]
 - [[MarcusNotebookUI]] - `references` [EXTRACTED]
+- [[MenuAmbiente]] - `references` [EXTRACTED]
 - [[MenuItemSelector]] - `references` [EXTRACTED]
 - [[MenuPanelTransition]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `references` [EXTRACTED]
@@ -82,4 +88,4 @@ tags:
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_29

@@ -1,17 +1,17 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 11"
+community: "Community 20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_11
+  - community/Community_20
 ---
 
 # Tile
 
 ## Connections
-- [[dot-Apply()_1]] - `references` [EXTRACTED]
+- [[dot-Apply()]] - `references` [EXTRACTED]
 - [[dot-ApplyMacroTiles()]] - `references` [EXTRACTED]
 - [[dot-Center()]] - `references` [EXTRACTED]
 - [[dot-CompactCourt()]] - `references` [EXTRACTED]
@@ -19,9 +19,11 @@ tags:
 - [[dot-EdgeTile()]] - `references` [EXTRACTED]
 - [[dot-EncloseCourt()]] - `references` [EXTRACTED]
 - [[dot-Exteriors()]] - `references` [EXTRACTED]
+- [[dot-GroundTile()]] - `references` [EXTRACTED]
 - [[dot-Paint()]] - `references` [EXTRACTED]
 - [[dot-Sociedade()]] - `references` [EXTRACTED]
 - [[dot-Tile()]] - `references` [EXTRACTED]
 - [[SantaRitaChapter2Authoring]] - `references` [EXTRACTED]
+- [[SantaRitaRuaNorte]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_11
+#graphify/code #graphify/EXTRACTED #community/Community_20

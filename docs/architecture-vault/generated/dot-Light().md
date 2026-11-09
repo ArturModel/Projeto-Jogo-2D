@@ -1,23 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaChapter2Authoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs"
 type: "code"
-community: "Community 6"
-location: "L443"
+community: "Community 29"
+location: "L192"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_29
 ---
 
 # .Light()
 
 ## Connections
-- [[dot-Building()_1]] - `calls` [EXTRACTED]
-- [[dot-Interior()_2]] - `calls` [EXTRACTED]
-- [[dot-Lamp()_3]] - `calls` [EXTRACTED]
-- [[dot-Phone()]] - `calls` [EXTRACTED]
-- [[Light2D]] - `references` [EXTRACTED]
-- [[SantaRitaChapter2Authoring]] - `method` [EXTRACTED]
-- [[Vector2]] - `references` [EXTRACTED]
+- [[dot-BuildAtmosphere()]] - `calls` [EXTRACTED]
+- [[dot-BuildRoom()]] - `calls` [EXTRACTED]
+- [[BochaRoom3D]] - `method` [EXTRACTED]
+- [[Color]] - `references` [EXTRACTED]
+- [[Light]] - `references` [EXTRACTED]
+- [[LightType]] - `references` [EXTRACTED]
+- [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_29

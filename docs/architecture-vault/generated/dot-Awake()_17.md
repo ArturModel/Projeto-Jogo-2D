@@ -1,22 +1,31 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaActorElevation.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs"
 type: "code"
-community: "Community 40"
-location: "L24"
+community: "Community 38"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_40
+  - community/Community_38
 ---
 
 # .Awake()
 
 ## Connections
-- [[Collider2D]] - `references` [EXTRACTED]
-- [[Material]] - `references` [EXTRACTED]
-- [[PlayerController]] - `references` [EXTRACTED]
-- [[SantaRitaActorElevation]] - `method` [EXTRACTED]
-- [[Sprite]] - `references` [EXTRACTED]
-- [[SpriteRenderer]] - `references` [EXTRACTED]
+- [[dot-ActionButton()]] - `calls` [EXTRACTED]
+- [[dot-Assign()]] - `calls` [EXTRACTED]
+- [[dot-Cell()]] - `calls` [EXTRACTED]
+- [[dot-Close()]] - `calls` [EXTRACTED]
+- [[dot-CreateCanvas()]] - `calls` [EXTRACTED]
+- [[dot-Frame()]] - `calls` [EXTRACTED]
+- [[dot-Label()]] - `calls` [EXTRACTED]
+- [[dot-LoadIcons()]] - `calls` [EXTRACTED]
+- [[dot-Picture()]] - `calls` [EXTRACTED]
+- [[dot-Toggle()]] - `calls` [EXTRACTED]
+- [[dot-Use()_1]] - `calls` [EXTRACTED]
+- [[dot-UseItem()]] - `calls` [EXTRACTED]
+- [[GraphicRaycaster]] - `references` [EXTRACTED]
+- [[SantaRitaInventory]] - `method` [EXTRACTED]
+- [[SantaRitaItemHover]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_40
+#graphify/code #graphify/EXTRACTED #community/Community_38

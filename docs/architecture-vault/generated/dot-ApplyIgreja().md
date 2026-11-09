@@ -12,7 +12,7 @@ tags:
 # .ApplyIgreja()
 
 ## Connections
-- [[dot-Add()]] - `calls` [EXTRACTED]
+- [[dot-Add()_1]] - `calls` [EXTRACTED]
 - [[dot-ApplyC2()]] - `calls` [EXTRACTED]
 - [[SantaRitaPlaceDressing]] - `method` [EXTRACTED]
 

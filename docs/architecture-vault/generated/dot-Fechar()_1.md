@@ -1,21 +1,26 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
-community: "Community 12"
-location: "L121"
+community: "Community 28"
+location: "L292"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_12
+  - community/Community_28
 ---
 
 # .Fechar()
 
 ## Connections
-- [[dot-AbrirCarregar()]] - `calls` [EXTRACTED]
-- [[dot-Sair()_2]] - `calls` [EXTRACTED]
-- [[dot-Update()_4]] - `calls` [EXTRACTED]
-- [[dot-VoltarAoMenu()]] - `calls` [EXTRACTED]
-- [[MenuPausa]] - `method` [EXTRACTED]
+- [[dot-CancelOpponentShot()]] - `calls` [INFERRED]
+- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
+- [[dot-DefinirContexto()]] - `calls` [EXTRACTED]
+- [[dot-IntegratedFrameR4()]] - `calls` [INFERRED]
+- [[dot-LimparFalaZe()]] - `calls` [EXTRACTED]
+- [[dot-MostrarHudDaEntrada()]] - `calls` [EXTRACTED]
+- [[dot-ReiniciarPercepcoesSinuca()]] - `calls` [INFERRED]
+- [[dot-RestaurarCursor()]] - `calls` [EXTRACTED]
+- [[dot-RunAutomatedVerification()]] - `calls` [INFERRED]
+- [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_12
+#graphify/code #graphify/EXTRACTED #community/Community_28

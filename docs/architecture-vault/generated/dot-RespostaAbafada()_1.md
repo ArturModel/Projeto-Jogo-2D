@@ -1,20 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Capitulo2Audio.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs"
 type: "code"
-community: "Community 95"
-location: "L19"
+community: "Community 17"
+location: "L624"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_95
+  - community/Community_17
 ---
 
 # .RespostaAbafada()
 
 ## Connections
-- [[dot-BochaAudioR2()]] - `calls` [EXTRACTED]
+- [[dot-ImpactoReal()]] - `calls` [EXTRACTED]
+- [[dot-PodeConsultar()]] - `calls` [EXTRACTED]
 - [[dot-RespostaAbafada()]] - `calls` [EXTRACTED]
-- [[AudioClip]] - `references` [EXTRACTED]
-- [[Capitulo2Audio]] - `method` [EXTRACTED]
+- [[BochaMinigameUI]] - `method` [EXTRACTED]
+- [[IEnumerator]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_95
+#graphify/code #graphify/EXTRACTED #community/Community_17

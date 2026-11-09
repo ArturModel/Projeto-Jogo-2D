@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[dot-EncloseCourt()]] - `calls` [INFERRED]
-- [[dot-Interior()]] - `calls` [EXTRACTED]
+- [[dot-Interior()_1]] - `calls` [EXTRACTED]
 - [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 

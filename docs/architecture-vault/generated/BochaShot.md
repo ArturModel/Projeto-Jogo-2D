@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-BestShot()]] - `references` [EXTRACTED]
+- [[dot-ComentarJogadaTonao()]] - `references` [EXTRACTED]
 - [[dot-EfetuarLancamento()]] - `references` [EXTRACTED]
 - [[dot-Escolher()]] - `references` [EXTRACTED]
 - [[dot-Lancar()_2]] - `references` [EXTRACTED]
@@ -20,7 +21,9 @@ tags:
 - [[dot-Matches()]] - `calls` [INFERRED]
 - [[dot-Preparar()_1]] - `calls` [EXTRACTED]
 - [[dot-Preparar()]] - `references` [EXTRACTED]
+- [[dot-PrepararTonao()]] - `references` [EXTRACTED]
 - [[dot-SetState()]] - `references` [EXTRACTED]
+- [[dot-Sync()_1]] - `references` [EXTRACTED]
 - [[BochaCourtView]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BochaShot.cs]] - `contains` [EXTRACTED]

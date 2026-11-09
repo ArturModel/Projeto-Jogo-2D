@@ -298,7 +298,7 @@ public class PlayerController : MonoBehaviour
             new Vector2(horizontal, vertical).normalized;
 
         Interactable alvo = Interactable.FindNearest(transform.position);
-        InteractionPrompt.Instance.SetTarget(alvo);
+        InteractionPrompt.Instance.SetTarget(SantaRitaFalasEntrada.Interagindo ? null : alvo);
 
         if (interactTimer > 0f)
         {
@@ -312,6 +312,10 @@ public class PlayerController : MonoBehaviour
             {
                 GameMessageUI.Instance.Avancar();
             }
+            else if (SantaRitaFalasEntrada.Interagindo)
+            {
+                SantaRitaFalasEntrada.Avancar();
+            }
             else
             {
                 interactTimer = interactDuration;
@@ -324,7 +328,7 @@ public class PlayerController : MonoBehaviour
         }
 
         bool isInteracting = interactTimer > 0f;
-        if (isInteracting || GameMessageUI.IsShowing)
+        if (isInteracting || GameMessageUI.IsShowing || SantaRitaFalasEntrada.Interagindo)
         {
             moveInput = Vector2.zero;
         }
@@ -408,6 +412,13 @@ public class PlayerController : MonoBehaviour
         // Pose já aplicada neste frame: som e imagem compartilham o contato.
         for (int i = 0; i < apoios; i++) PeApoiou?.Invoke();
         AtualizarFeixeLanterna(totalQuadros==16?passada.QuadroDetalhado:QuadroCaminhada, andando);
+    }
+
+    internal bool ObterFeixeLanterna(out Vector2 lente, out Vector2 direcao)
+    {
+        lente = flashlight != null ? (Vector2)flashlight.position : Vector2.zero;
+        direcao = FlashlightDirections[facingDirection];
+        return flashlight != null && flashlight.gameObject.activeInHierarchy;
     }
 
     private void AtualizarFeixeLanterna(int quadro, bool andando)

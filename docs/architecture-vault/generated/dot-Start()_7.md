@@ -1,20 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/VideoSettingsController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 15"
-location: "L20"
+community: "Community 113"
+location: "L233"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_15
+  - community/Community_113
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-AplicarBrilho()]] - `calls` [EXTRACTED]
-- [[dot-AplicarResolucaoAtual()]] - `calls` [EXTRACTED]
-- [[dot-PrepararResolucoes()]] - `calls` [EXTRACTED]
-- [[VideoSettingsController]] - `method` [EXTRACTED]
+- [[SantaRitaBarPose]] - `method` [EXTRACTED]
+- [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_15
+#graphify/code #graphify/EXTRACTED #community/Community_113

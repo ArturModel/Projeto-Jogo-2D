@@ -12,7 +12,7 @@ tags:
 # MainMenuActions
 
 ## Connections
-- [[dot-Awake()]] - `method` [EXTRACTED]
+- [[dot-Awake()_2]] - `method` [EXTRACTED]
 - [[dot-Continuar()]] - `method` [EXTRACTED]
 - [[dot-Encerrar()]] - `method` [EXTRACTED]
 - [[dot-IniciarViagem()]] - `method` [EXTRACTED]

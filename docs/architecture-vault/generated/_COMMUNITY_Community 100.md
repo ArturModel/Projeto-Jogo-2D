@@ -1,35 +1,49 @@
 ---
 type: community
-members: 22
+members: 36
 ---
 
 # Community 100
 
-**Members:** 22 nodes
+**Members:** 36 nodes
 
 ## Members
-- [[dot-ApontarMiraParaBolaMaisProxima()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarAnguloMiraParaPonto()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AlternarOpcoesMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AlternarPainelEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AlternarVistaCamera()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-ArrastarEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Spin.cs
+- [[dot-AtualizarAjusteEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Spin.cs
 - [[dot-AtualizarBarraForcaVisual()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AtualizarCapturaCursor()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AtualizarCargaForca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AtualizarConsoleSinuca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Console.cs
+- [[dot-AtualizarForcaPuxada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-AtualizarMiraJogador()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarPosicionamentoBranca()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-AtualizarVisualTacoEMira()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-AtualizarPainelContextual()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-BeginStroke()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-CalcularForcaPuxada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-CanReachWhite()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
+- [[dot-CancelarCargaAoSuspender()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-CancelarCargaAtiva()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-ConfirmarBrancaNaMao()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-CentroDaMesaNaTela()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-DispararTacadaCarregada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-EncerrarAjusteEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.Spin.cs
+- [[dot-EntradaMesaBloqueada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ExecutarTacada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-ExecutarTacadaComEfeito()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-Fechar()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-IniciarCargaPorDispositivo()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-LerMouseCapturado()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-LevantarDaMesa()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-LimitarMiraApoiada()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-OnApplicationFocus()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-OnMesaPointerDown()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-OnMesaPointerMove()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-OnMesaPointerUp()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
 - [[dot-OnMesaScrollZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-OscilarCarga()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
-- [[dot-PosicionarBrancaEm()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-ReiniciarReferenciaPonteiro()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs
+- [[dot-SuavizarMira()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[dot-Update()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs
+- [[Canvas]] - code
 - [[DispositivoCarga_1]] - code
-- [[InputButton]] - code
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,21 +53,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 24 edges to [[_COMMUNITY_Community 3]]
-- 20 edges to [[_COMMUNITY_Community 21]]
-- 7 edges to [[_COMMUNITY_Community 6]]
+- 39 edges to [[_COMMUNITY_Community 3]]
+- 25 edges to [[_COMMUNITY_Community 21]]
+- 11 edges to [[_COMMUNITY_Community 39]]
+- 10 edges to [[_COMMUNITY_Community 85]]
+- 10 edges to [[_COMMUNITY_Community 115]]
 - 5 edges to [[_COMMUNITY_Community 49]]
-- 3 edges to [[_COMMUNITY_Community 39]]
-- 3 edges to [[_COMMUNITY_Community 85]]
+- 4 edges to [[_COMMUNITY_Community 28]]
+- 3 edges to [[_COMMUNITY_Community 2]]
+- 2 edges to [[_COMMUNITY_Community 99]]
+- 1 edge to [[_COMMUNITY_Community 38]]
+- 1 edge to [[_COMMUNITY_Community 0]]
 - 1 edge to [[_COMMUNITY_Community 43]]
-- 1 edge to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 45]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 114]]
+- 1 edge to [[_COMMUNITY_Community 103]]
+- 1 edge to [[_COMMUNITY_Community 34]]
 
 ## Top bridge nodes
-- [[dot-AtualizarVisualTacoEMira()]] - degree 22, connects to 5 communities
+- [[dot-Update()_1]] - degree 19, connects to 5 communities
+- [[dot-OnMesaPointerDown()]] - degree 19, connects to 4 communities
+- [[dot-CancelarCargaAtiva()]] - degree 17, connects to 4 communities
+- [[dot-CancelarCargaAoSuspender()]] - degree 16, connects to 4 communities
 - [[dot-ExecutarTacadaComEfeito()]] - degree 10, connects to 4 communities
-- [[dot-Fechar()]] - degree 5, connects to 4 communities
-- [[dot-CancelarCargaAtiva()]] - degree 14, connects to 3 communities
-- [[dot-OnMesaPointerDown()]] - degree 9, connects to 3 communities

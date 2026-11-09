@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 1"
+community: "Community 23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_23
 ---
 
 # unityengine_eventsystems
@@ -24,8 +24,9 @@ tags:
 - [[PayphoneRegistroUI.cs]] - `imports` [EXTRACTED]
 - [[SantaRitaInventory.cs]] - `imports` [EXTRACTED]
 - [[Sinuca3DRuntimeVerification.cs]] - `imports` [EXTRACTED]
+- [[SinucaMinigameUI.Console.cs]] - `imports` [EXTRACTED]
 - [[SinucaMinigameUI.cs]] - `imports` [EXTRACTED]
 - [[SinucaSpinSelector.cs]] - `imports` [EXTRACTED]
 - [[SinucaTableView.cs]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/Community_23

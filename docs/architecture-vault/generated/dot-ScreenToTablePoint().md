@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaTableView.cs"
 type: "code"
 community: "Community 39"
-location: "L86"
+location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-EnsureRoom()]] - `calls` [EXTRACTED]
+- [[dot-LerMouseCapturado()]] - `calls` [INFERRED]
 - [[dot-OnPointerDown()_1]] - `calls` [EXTRACTED]
 - [[dot-OnPointerMove()]] - `calls` [EXTRACTED]
 - [[dot-OnPointerUp()]] - `calls` [EXTRACTED]

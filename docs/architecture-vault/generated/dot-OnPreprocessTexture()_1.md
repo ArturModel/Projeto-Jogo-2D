@@ -1,17 +1,17 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/PrologoJogavelVerification.cs"
+source_file: "Projeto Jogo 2D/Assets/Editor/MenuAmbienteAuthoring.cs"
 type: "code"
-community: "Community 1"
-location: "L11"
+community: "Community 112"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_112
 ---
 
 # .OnPreprocessTexture()
 
 ## Connections
-- [[PrologoTextureImporter]] - `method` [EXTRACTED]
+- [[MenuAmbienteTextureImporter]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_112

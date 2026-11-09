@@ -1,20 +1,21 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaBarLayout.cs"
 type: "code"
-community: "Community 18"
+community: "Community 113"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_18
+  - community/Community_113
 ---
 
 # SantaRitaBarLayout
 
 ## Connections
-- [[dot-Apply()_3]] - `method` [EXTRACTED]
+- [[dot-Apply()_1]] - `method` [EXTRACTED]
 - [[dot-Boundary()]] - `method` [EXTRACTED]
 - [[dot-ConstrainArrival()]] - `method` [EXTRACTED]
+- [[dot-ExplorationPosition()]] - `method` [EXTRACTED]
 - [[dot-LivePosition()]] - `method` [EXTRACTED]
 - [[dot-LiveSprite()]] - `method` [EXTRACTED]
 - [[dot-NativeSurface()]] - `method` [EXTRACTED]
@@ -34,4 +35,4 @@ tags:
 - [[Sprite]] - `references` [EXTRACTED]
 - [[Vector2]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_18
+#graphify/code #graphify/EXTRACTED #community/Community_113

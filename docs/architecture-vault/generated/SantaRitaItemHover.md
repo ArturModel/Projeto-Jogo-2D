@@ -12,7 +12,7 @@ tags:
 # SantaRitaItemHover
 
 ## Connections
-- [[dot-Awake()_14]] - `references` [EXTRACTED]
+- [[dot-Awake()_17]] - `references` [EXTRACTED]
 - [[dot-OnPointerEnter()_1]] - `method` [EXTRACTED]
 - [[dot-OnPointerExit()]] - `method` [EXTRACTED]
 - [[Action]] - `references` [EXTRACTED]

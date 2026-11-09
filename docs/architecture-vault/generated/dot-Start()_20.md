@@ -1,24 +1,21 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/PlayerController.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/Chuva.cs"
 type: "code"
-community: "Community 44"
-location: "L176"
+community: "Community 8"
+location: "L141"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_44
+  - community/Community_8
 ---
 
 # .Start()
 
 ## Connections
-- [[dot-ConsumePendingSpawn()]] - `calls` [EXTRACTED]
-- [[dot-ConsumirEntrada()]] - `calls` [EXTRACTED]
-- [[dot-DeveUsarLanternaAgora()]] - `calls` [EXTRACTED]
-- [[dot-EnsureInstance()_1]] - `calls` [EXTRACTED]
-- [[dot-Marcar()]] - `calls` [EXTRACTED]
-- [[dot-TeleportarPara()]] - `calls` [EXTRACTED]
-- [[PlayerController]] - `method` [EXTRACTED]
-- [[SantaRitaRoomLayout]] - `references` [EXTRACTED]
+- [[dot-BuscarLuzes()]] - `calls` [EXTRACTED]
+- [[dot-MontarSom()]] - `calls` [EXTRACTED]
+- [[dot-Simular()]] - `calls` [EXTRACTED]
+- [[Chuva]] - `method` [EXTRACTED]
+- [[PixelPerfectCamera]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+#graphify/code #graphify/EXTRACTED #community/Community_8

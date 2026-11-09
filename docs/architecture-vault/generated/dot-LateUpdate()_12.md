@@ -1,17 +1,20 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaItemAction.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaRoomCutaway.cs"
 type: "code"
-community: "Community 7"
-location: "L26"
+community: "Community 44"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_44
 ---
 
 # .LateUpdate()
 
 ## Connections
-- [[SantaRitaItemAction]] - `method` [EXTRACTED]
+- [[dot-Apply()_6]] - `calls` [EXTRACTED]
+- [[dot-ShouldReveal()]] - `calls` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaRoomCutaway]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_44

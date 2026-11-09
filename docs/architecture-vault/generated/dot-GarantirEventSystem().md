@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPausa.cs"
 type: "code"
 community: "Community 12"
-location: "L362"
+location: "L373"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # .GarantirEventSystem()
 
 ## Connections
-- [[dot-Construir()]] - `calls` [EXTRACTED]
+- [[dot-Construir()_1]] - `calls` [EXTRACTED]
 - [[EventSystem]] - `references` [EXTRACTED]
 - [[InputSystemUIInputModule]] - `references` [EXTRACTED]
 - [[MenuPausa]] - `method` [EXTRACTED]

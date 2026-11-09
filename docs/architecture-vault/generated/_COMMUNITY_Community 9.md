@@ -1,60 +1,54 @@
 ---
 type: community
-members: 47
+members: 41
 ---
 
 # Community 9
 
-**Members:** 47 nodes
+**Members:** 41 nodes
 
 ## Members
-- [[dot-Awake()_26]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-BallColor()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Box()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-CameraBasis()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Arrastar()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-AtualizarMira()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-Awake()_27]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-CanStand()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
 - [[dot-ChangeZoom()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-ClearTracks()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
 - [[dot-CourtPoint()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-CriarSala()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Disc()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Line()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Dispose()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-EnsureRoom()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-MoverMira()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-OlharPendente()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnDestroy()_20]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnDisable()_15]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-OnDrag()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-OnEnable()_15]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-OnPointerDown()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-OnPointerEnter()_1]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
 - [[dot-OnPointerExit()]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
 - [[dot-OnPointerMove()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-OnPointerUp()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-OnPopulateMesh()_5]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[dot-OnScroll()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Plan()]] - code - Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.cs
-- [[dot-Project()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-ProjectReady()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Quad()_3]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-RecordContacts()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Ring()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-RoomLight()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-ScreenBocha()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaPerspectiveRuntimeVerification.cs
-- [[dot-SolidV()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Sphere()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Tick()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Triangle()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[dot-Unit()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Preaquecer()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-RecordContacts()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-SetActive()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-SetEntryLook()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
+- [[dot-SetState()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-SoltarArraste()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaMinigameUI.cs
+- [[dot-Sync()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Tick()_2]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Walk()]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
+- [[dot-Walk()_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaRoom3D.cs
 - [[AimDistance]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[BochaCourtView]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[Face]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[Face_1]] - code
 - [[IPointerEnterHandler]] - code
 - [[IPointerExitHandler]] - code
 - [[PointerEventData]] - code
+- [[Room_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[SantaRitaItemHover]] - code - Projeto Jogo 2D/Assets/Scripts/SantaRitaInventory.cs
-- [[Track]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[Track_1]] - code
-- [[TrackCount]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[V]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[V_1]] - code
-- [[Vector3]] - code
+- [[TrackCount_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[View]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 - [[Zoom_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
-- [[mainTexture_1]] - code - Projeto Jogo 2D/Assets/Scripts/Capitulo2/BochaCourtView.cs
 
 ## Live Query (requires Dataview plugin)
 
@@ -64,37 +58,29 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Community 17]]
-- 11 edges to [[_COMMUNITY_Community 2]]
-- 11 edges to [[_COMMUNITY_Community 24]]
-- 10 edges to [[_COMMUNITY_Community 6]]
-- 10 edges to [[_COMMUNITY_Community 39]]
-- 10 edges to [[_COMMUNITY_Community 23]]
-- 6 edges to [[_COMMUNITY_Community 27]]
-- 6 edges to [[_COMMUNITY_Community 28]]
-- 5 edges to [[_COMMUNITY_Community 0]]
-- 5 edges to [[_COMMUNITY_Community 5]]
-- 5 edges to [[_COMMUNITY_Community 46]]
-- 3 edges to [[_COMMUNITY_Community 96]]
-- 2 edges to [[_COMMUNITY_Community 122]]
+- 16 edges to [[_COMMUNITY_Community 17]]
+- 11 edges to [[_COMMUNITY_Community 29]]
+- 8 edges to [[_COMMUNITY_Community 39]]
+- 6 edges to [[_COMMUNITY_Community 0]]
+- 5 edges to [[_COMMUNITY_Community 93]]
+- 5 edges to [[_COMMUNITY_Community 106]]
+- 5 edges to [[_COMMUNITY_Community 115]]
+- 3 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 27]]
 - 2 edges to [[_COMMUNITY_Community 37]]
+- 2 edges to [[_COMMUNITY_Community 83]]
 - 2 edges to [[_COMMUNITY_Community 30]]
-- 2 edges to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 4]]
-- 1 edge to [[_COMMUNITY_Community 98]]
-- 1 edge to [[_COMMUNITY_Community 15]]
-- 1 edge to [[_COMMUNITY_Community 11]]
+- 2 edges to [[_COMMUNITY_Community 98]]
+- 2 edges to [[_COMMUNITY_Community 96]]
+- 1 edge to [[_COMMUNITY_Community 110]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 - 1 edge to [[_COMMUNITY_Community 38]]
-- 1 edge to [[_COMMUNITY_Community 57]]
-- 1 edge to [[_COMMUNITY_Community 99]]
-- 1 edge to [[_COMMUNITY_Community 13]]
-- 1 edge to [[_COMMUNITY_Community 48]]
-- 1 edge to [[_COMMUNITY_Community 83]]
-- 1 edge to [[_COMMUNITY_Community 85]]
+- 1 edge to [[_COMMUNITY_Community 108]]
+- 1 edge to [[_COMMUNITY_Community 23]]
 
 ## Top bridge nodes
-- [[BochaCourtView]] - degree 60, connects to 13 communities
-- [[Vector3]] - degree 53, connects to 12 communities
+- [[BochaCourtView]] - degree 48, connects to 13 communities
 - [[PointerEventData]] - degree 22, connects to 5 communities
+- [[dot-EnsureRoom()_1]] - degree 11, connects to 4 communities
+- [[dot-Sync()_2]] - degree 11, connects to 4 communities
 - [[SantaRitaItemHover]] - degree 8, connects to 4 communities
-- [[dot-BallColor()]] - degree 5, connects to 3 communities

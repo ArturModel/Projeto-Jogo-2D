@@ -11,6 +11,7 @@ tags:
 # Scene
 
 ## Connections
+- [[dot-AoCarregarCena()]] - `references` [EXTRACTED]
 - [[dot-DepoisDaCarga()]] - `references` [EXTRACTED]
 - [[dot-LimparAoTrocarCena()]] - `references` [EXTRACTED]
 - [[dot-OnScene()]] - `references` [EXTRACTED]

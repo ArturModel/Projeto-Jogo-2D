@@ -16,7 +16,6 @@ tags:
 - [[dot-ConstruirInterior1_Posto()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior2_Mercadinho()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirInterior3_CasaDoAvo()]] - `calls` [EXTRACTED]
-- [[dot-ConstruirInterior4_BarDoZe()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirZona2_Posto()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirZona3_Encruzilhada()]] - `calls` [EXTRACTED]
 - [[dot-ConstruirZona4_Bairro()]] - `calls` [EXTRACTED]

@@ -14,11 +14,11 @@ tags:
 ## Connections
 - [[dot-MoverIndicador()]] - `method` [EXTRACTED]
 - [[dot-OnPointerEnter()_2]] - `method` [EXTRACTED]
-- [[dot-OnSelect()]] - `method` [EXTRACTED]
+- [[dot-OnSelect()_2]] - `method` [EXTRACTED]
 - [[dot-ReiniciarSelecao()]] - `method` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
 - [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
-- [[dot-Vincular()_5]] - `method` [EXTRACTED]
+- [[dot-Vincular()_6]] - `method` [EXTRACTED]
 - [[AudioClip]] - `references` [EXTRACTED]
 - [[AudioSource]] - `references` [EXTRACTED]
 - [[GameObject]] - `references` [EXTRACTED]

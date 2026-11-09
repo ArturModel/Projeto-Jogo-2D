@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[dot-AdicionarLuzPonto()]] - `calls` [EXTRACTED]
+- [[dot-BuildGround()]] - `calls` [EXTRACTED]
 - [[dot-ColocarArvore()]] - `calls` [EXTRACTED]
 - [[dot-ColocarGatilhoTransicao()]] - `calls` [EXTRACTED]
 - [[dot-ColocarInteracao()]] - `calls` [EXTRACTED]

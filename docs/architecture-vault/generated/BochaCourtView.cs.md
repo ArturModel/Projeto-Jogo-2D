@@ -16,7 +16,6 @@ tags:
 - [[BochaCourtView]] - `contains` [EXTRACTED]
 - [[BochaMapGraphic]] - `contains` [EXTRACTED]
 - [[system]] - `imports` [EXTRACTED]
-- [[system_collections_generic]] - `imports` [EXTRACTED]
 - [[unityengine]] - `imports` [EXTRACTED]
 - [[unityengine_eventsystems]] - `imports` [EXTRACTED]
 - [[unityengine_ui]] - `imports` [EXTRACTED]

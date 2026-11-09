@@ -12,7 +12,7 @@ tags:
 # SantaRitaLivingWorldAuthoring
 
 ## Connections
-- [[dot-Apply()_2]] - `method` [EXTRACTED]
+- [[dot-Apply()_3]] - `method` [EXTRACTED]
 - [[dot-Art()_1]] - `method` [EXTRACTED]
 - [[dot-Begin()]] - `method` [EXTRACTED]
 - [[dot-Cemetery()]] - `method` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[dot-CreateCemetery()]] - `method` [EXTRACTED]
 - [[dot-Delete()]] - `method` [EXTRACTED]
 - [[dot-Interaction()_1]] - `method` [EXTRACTED]
-- [[dot-Interior()]] - `method` [EXTRACTED]
+- [[dot-Interior()_1]] - `method` [EXTRACTED]
 - [[dot-KeepOverTable()]] - `method` [EXTRACTED]
 - [[dot-Lamp()_1]] - `method` [EXTRACTED]
 - [[dot-Move()]] - `method` [EXTRACTED]

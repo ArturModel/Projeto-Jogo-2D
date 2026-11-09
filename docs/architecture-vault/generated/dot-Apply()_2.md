@@ -1,27 +1,23 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Editor/SantaRitaLivingWorldAuthoring.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/SantaRitaWorldLighting.cs"
 type: "code"
-community: "Community 16"
-location: "L154"
+community: "Community 119"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_16
+  - community/Community_119
 ---
 
 # .Apply()
 
 ## Connections
-- [[dot-Begin()]] - `calls` [EXTRACTED]
-- [[dot-Cemetery()]] - `calls` [EXTRACTED]
-- [[dot-Center()]] - `calls` [EXTRACTED]
-- [[dot-CreateCemetery()]] - `calls` [EXTRACTED]
-- [[dot-Interior()]] - `calls` [EXTRACTED]
-- [[dot-KeepOverTable()]] - `calls` [EXTRACTED]
-- [[dot-Replace()]] - `calls` [EXTRACTED]
-- [[MenuItem]] - `references` [EXTRACTED]
-- [[SantaRitaForeground]] - `references` [EXTRACTED]
-- [[SantaRitaLivingWorldAuthoring]] - `method` [EXTRACTED]
+- [[dot-ConfigurarCenaAtual()]] - `calls` [EXTRACTED]
+- [[Material]] - `references` [EXTRACTED]
+- [[PlayerController]] - `references` [EXTRACTED]
+- [[SantaRitaAtmosphere]] - `references` [EXTRACTED]
+- [[SantaRitaRimLight]] - `references` [EXTRACTED]
+- [[SantaRitaWorldLighting]] - `method` [EXTRACTED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_16
+#graphify/code #graphify/EXTRACTED #community/Community_119

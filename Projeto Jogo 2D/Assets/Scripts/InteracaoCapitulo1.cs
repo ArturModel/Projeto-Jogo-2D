@@ -279,7 +279,7 @@ public class InteracaoCapitulo1 : Interactable
 
         if (!primeiraVez)
         {
-            Falar(Marcus("Não pega. Afogou na baixada e vai ficar aí até a água baixar."));
+            SantaRitaFalasEntrada.DizerInteracao(null, "Não pega. Afogou na baixada e vai ficar aí até a água baixar.");
             return;
         }
 
@@ -293,13 +293,13 @@ public class InteracaoCapitulo1 : Interactable
             "O motor afogou na baixada alagada da entrada. Sigo a pé. Levei a lanterna. Ainda lembro o endereço: 'Bairro das Casas, 40. Segue o asfalto e sobe no barro.'"
         );
 
-        Falar(() =>
+        SantaRitaFalasEntrada.DizerInteracao(() =>
         {
             DicaDeTecla.Mostrar("F", "Lanterna", () => GameState.LanternaLigada);
         },
-            Marcus("Afogou de vez na baixada. Daqui eu sigo a pé."),
-            Marcus("A lanterna ainda estava no porta-luvas. Melhor levar."),
-            Marcus("Ainda lembro do vô explicando: \"Bairro das Casas, 40. Segue o asfalto e sobe no barro.\"")
+            "Afogou de vez na baixada. Daqui eu sigo a pé.",
+            "A lanterna ainda estava no porta-luvas. Melhor levar.",
+            "Ainda lembro do vô explicando: \"Bairro das Casas, 40. Segue o asfalto e sobe no barro.\""
         );
     }
 
@@ -307,15 +307,16 @@ public class InteracaoCapitulo1 : Interactable
     {
         GameMessageUI.Instance.ShowInspection("QUADRO DA PARADA", "RoadSign_Blank",
             "PARADA SANTA RITA — ENTRADA\n\nÚltimo ônibus: 19h40.\nLinhas noturnas suspensas durante a obra da avenida do Centro.\n\nColado no canto, um adesivo quase apagado:\n\"SANTA RITA JAMAIS ABANDONA OS SEUS\"",
-            pensamento: "Esse adesivo está em todo canto desde que eu era guri.");
+            aoFechar: () => SantaRitaFalasEntrada.DizerInteracao(null, "Esse adesivo está em todo canto desde que eu era guri."),
+            arteCustom: SantaRitaRuaNorte.ObjetoDaEntrada("QuadroParada"));
     }
 
     private void InteragirMalaAbandonada()
     {
-        Falar(
-            Marcus("Uma mala velha atolada no barro, aberta e vazia."),
-            Marcus("A etiqueta da rodoviária desmanchou com a chuva. Só sobrou o ano: 98."),
-            Pensa("Alguém saiu daqui com pressa. Ou nunca chegou a sair.")
+        SantaRitaFalasEntrada.DizerInteracao(null,
+            "Uma mala velha largada no passeio, aberta e vazia.",
+            "A etiqueta da rodoviária desmanchou com a chuva. Só sobrou o ano: 98.",
+            "Alguém saiu daqui com pressa. Ou nunca chegou a sair."
         );
     }
 

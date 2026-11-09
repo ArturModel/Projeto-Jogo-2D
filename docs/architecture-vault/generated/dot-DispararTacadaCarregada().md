@@ -2,7 +2,7 @@
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaMinigameUI.cs"
 type: "code"
 community: "Community 100"
-location: "L1441"
+location: "L1782"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,8 +14,11 @@ tags:
 ## Connections
 - [[dot-AtualizarBarraForcaVisual()]] - `calls` [EXTRACTED]
 - [[dot-AtualizarCargaForca()]] - `calls` [EXTRACTED]
+- [[dot-BeginStroke()]] - `calls` [INFERRED]
+- [[dot-CancelarCargaAtiva()]] - `calls` [EXTRACTED]
 - [[dot-ExecutarTacadaComEfeito()]] - `calls` [EXTRACTED]
 - [[dot-OnMesaPointerUp()]] - `calls` [EXTRACTED]
+- [[dot-ReiniciarReferenciaPonteiro()]] - `calls` [INFERRED]
 - [[SinucaMinigameUI]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_100

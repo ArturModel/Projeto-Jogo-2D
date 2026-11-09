@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community 7"
+community: "Community 85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_85
 ---
 
 # RectTransform
@@ -15,16 +15,21 @@ tags:
 - [[dot-Botao()]] - `references` [EXTRACTED]
 - [[dot-Botao()_1]] - `references` [EXTRACTED]
 - [[dot-BotaoPausa()]] - `references` [EXTRACTED]
-- [[dot-Build()_1]] - `references` [EXTRACTED]
-- [[dot-Build()_4]] - `references` [EXTRACTED]
 - [[dot-Build()_3]] - `references` [EXTRACTED]
+- [[dot-Build()_4]] - `references` [EXTRACTED]
+- [[dot-Build()_5]] - `references` [EXTRACTED]
 - [[dot-CaixaPausa()]] - `references` [EXTRACTED]
 - [[dot-Click()_1]] - `references` [EXTRACTED]
 - [[dot-ClickR4()]] - `references` [EXTRACTED]
 - [[dot-ConfigurarBotao()]] - `references` [EXTRACTED]
-- [[dot-Construir()]] - `references` [EXTRACTED]
+- [[dot-ConfigurarBotaoPainel()]] - `references` [EXTRACTED]
+- [[dot-Construir()_1]] - `references` [EXTRACTED]
+- [[dot-ConstruirAjusteEfeito()]] - `references` [EXTRACTED]
+- [[dot-ConstruirCategoriasMenu()]] - `references` [EXTRACTED]
+- [[dot-ConstruirConsoleSinuca()]] - `references` [EXTRACTED]
 - [[dot-ConstruirEscolhaAlvo()]] - `references` [EXTRACTED]
 - [[dot-ConstruirModal()]] - `references` [EXTRACTED]
+- [[dot-ConstruirOpcoesMesa()]] - `references` [EXTRACTED]
 - [[dot-ConstruirPainelEfeitoOpcional()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()]] - `references` [EXTRACTED]
 - [[dot-ConstruirUI()_1]] - `references` [EXTRACTED]
@@ -33,6 +38,9 @@ tags:
 - [[dot-CriarBotaoControleMapa()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoFechamento()]] - `references` [EXTRACTED]
 - [[dot-CriarBotaoHUD()]] - `references` [EXTRACTED]
+- [[dot-CriarPainelHUD()]] - `references` [EXTRACTED]
+- [[dot-CriarPainelMinigames()]] - `references` [EXTRACTED]
+- [[dot-CriarPalpebraSinuca()]] - `references` [EXTRACTED]
 - [[dot-CriarTextoFechamento()]] - `references` [EXTRACTED]
 - [[dot-Discando()]] - `references` [EXTRACTED]
 - [[dot-DrawIndex()]] - `references` [EXTRACTED]
@@ -48,17 +56,17 @@ tags:
 - [[dot-LinhaStepperResolucao()]] - `references` [EXTRACTED]
 - [[dot-LinhaToggle()]] - `references` [EXTRACTED]
 - [[dot-MostrarImediatamente()]] - `references` [EXTRACTED]
-- [[dot-MostrarModal()_1]] - `references` [EXTRACTED]
+- [[dot-MostrarModal()]] - `references` [EXTRACTED]
 - [[dot-Painel()]] - `references` [EXTRACTED]
 - [[dot-Place()_3]] - `references` [EXTRACTED]
 - [[dot-Place()_2]] - `references` [EXTRACTED]
-- [[dot-Posicionar()_2]] - `references` [EXTRACTED]
-- [[dot-Posicionar()]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_4]] - `references` [EXTRACTED]
+- [[dot-Posicionar()_1]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_3]] - `references` [EXTRACTED]
 - [[dot-Posicionar()_5]] - `references` [EXTRACTED]
 - [[dot-PosicionarNoTopo()]] - `references` [EXTRACTED]
-- [[dot-Rect()]] - `references` [EXTRACTED]
 - [[dot-Rect()_1]] - `references` [EXTRACTED]
+- [[dot-Rect()]] - `references` [EXTRACTED]
 - [[dot-Roteiro()]] - `references` [EXTRACTED]
 - [[dot-RunAtlas()]] - `references` [EXTRACTED]
 - [[dot-RunBochaPerspective()]] - `references` [EXTRACTED]
@@ -66,14 +74,14 @@ tags:
 - [[dot-RunSinuca3DPerspective()]] - `references` [EXTRACTED]
 - [[dot-Selecionavel()]] - `references` [EXTRACTED]
 - [[dot-SelecionavelPausa()]] - `references` [EXTRACTED]
-- [[dot-Start()_2]] - `references` [EXTRACTED]
+- [[dot-Start()_5]] - `references` [EXTRACTED]
 - [[dot-Stretch()]] - `references` [EXTRACTED]
 - [[dot-SubPainel()]] - `references` [EXTRACTED]
 - [[dot-Titulo()]] - `references` [EXTRACTED]
 - [[dot-TituloPausa()]] - `references` [EXTRACTED]
 - [[dot-Travel()]] - `references` [EXTRACTED]
 - [[dot-TrocarPainel()_1]] - `references` [EXTRACTED]
-- [[dot-Vincular()_5]] - `references` [EXTRACTED]
+- [[dot-Vincular()_6]] - `references` [EXTRACTED]
 - [[dot-Vincular()_3]] - `references` [EXTRACTED]
 - [[BochaMinigameUI]] - `references` [EXTRACTED]
 - [[BolaMesa]] - `references` [EXTRACTED]
@@ -90,4 +98,4 @@ tags:
 - [[SantaRitaAtlasView]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_85

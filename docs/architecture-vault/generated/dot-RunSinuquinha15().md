@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/Capitulo2/Sinuquinha15Verification.cs"
 type: "code"
-community: "Community 48"
+community: "Community 0"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_48
+  - community/Community_0
 ---
 
 # .RunSinuquinha15()
@@ -15,12 +15,12 @@ tags:
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-CanNominate()_1]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-ClickR4()]] - `calls` [INFERRED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
-- [[dot-Field()_2]] - `calls` [EXTRACTED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [EXTRACTED]
-- [[dot-Invoke()_1]] - `calls` [EXTRACTED]
+- [[dot-Invoke()]] - `calls` [EXTRACTED]
 - [[dot-PauseLoadFiveSlots()]] - `calls` [EXTRACTED]
 - [[dot-Ref7Checks()]] - `calls` [INFERRED]
 - [[dot-Resolve()_1]] - `calls` [INFERRED]
@@ -43,4 +43,4 @@ tags:
 - [[SinuquinhaRules]] - `calls` [INFERRED]
 - [[SpriteRenderer]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_48
+#graphify/code #graphify/EXTRACTED #community/Community_0

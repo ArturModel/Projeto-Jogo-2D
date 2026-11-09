@@ -1,19 +1,19 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Sinuca3DVerification.cs"
 type: "code"
-community: "Community 114"
+community: "Community 39"
 location: "L222"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_114
+  - community/Community_39
 ---
 
 # .GetBall()
 
 ## Connections
 - [[dot-PosicaoFinalBrancaComEfeito()]] - `calls` [EXTRACTED]
-- [[dot-Run()_1]] - `calls` [EXTRACTED]
+- [[dot-Run()_5]] - `calls` [EXTRACTED]
 - [[Sinuca3DVerification]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+#graphify/code #graphify/EXTRACTED #community/Community_39

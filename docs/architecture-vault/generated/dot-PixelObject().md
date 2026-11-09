@@ -1,18 +1,20 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Scripts/SinucaRoom3D.Actors.cs"
 type: "code"
-community: "Community 2"
-location: "L27"
+community: "Community 18"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_18
 ---
 
 # .PixelObject()
 
 ## Connections
+- [[dot-BuildSolidProp()]] - `calls` [INFERRED]
 - [[dot-Character()]] - `calls` [EXTRACTED]
+- [[dot-HandSprite()]] - `calls` [INFERRED]
 - [[dot-NativeMesh()]] - `calls` [EXTRACTED]
 - [[dot-PixelMaterial()]] - `calls` [EXTRACTED]
 - [[MeshFilter]] - `references` [EXTRACTED]
@@ -22,4 +24,4 @@ tags:
 - [[Transform]] - `references` [EXTRACTED]
 - [[Vector3]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_18

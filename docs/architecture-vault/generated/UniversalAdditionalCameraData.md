@@ -11,6 +11,8 @@ tags:
 # UniversalAdditionalCameraData
 
 ## Connections
+- [[dot-BuildFirstPersonLayer()]] - `references` [EXTRACTED]
+- [[BochaRoom3D]] - `references` [EXTRACTED]
 - [[SinucaRoom3D]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

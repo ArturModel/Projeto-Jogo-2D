@@ -12,7 +12,7 @@ tags:
 # .Abrigo()
 
 ## Connections
-- [[dot-Apply()_1]] - `calls` [EXTRACTED]
+- [[dot-Apply()]] - `calls` [EXTRACTED]
 - [[dot-Interaction()]] - `calls` [EXTRACTED]
 - [[dot-Lamp()]] - `calls` [EXTRACTED]
 - [[dot-Paper()]] - `calls` [EXTRACTED]

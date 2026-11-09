@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[dot-AwaitScene()]] - `calls` [INFERRED]
 - [[dot-Capture()]] - `calls` [EXTRACTED]
-- [[dot-Check()_1]] - `calls` [EXTRACTED]
+- [[dot-Check()]] - `calls` [EXTRACTED]
 - [[dot-CloseText()]] - `calls` [INFERRED]
-- [[dot-Field()_2]] - `calls` [EXTRACTED]
+- [[dot-Field()]] - `calls` [EXTRACTED]
 - [[dot-Finish()]] - `calls` [EXTRACTED]
 - [[dot-Marcar()]] - `calls` [EXTRACTED]
 - [[dot-PatronPose()]] - `calls` [EXTRACTED]

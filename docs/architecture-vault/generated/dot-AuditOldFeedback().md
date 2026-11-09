@@ -1,12 +1,12 @@
 ---
 source_file: "Projeto Jogo 2D/Assets/Editor/Chapter2Verification.cs"
 type: "code"
-community: "Community 45"
+community: "Community 94"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_45
+  - community/Community_94
 ---
 
 # .AuditOldFeedback()
@@ -22,11 +22,11 @@ tags:
 - [[dot-ObjetivoAtual()]] - `calls` [EXTRACTED]
 - [[dot-ObterEntradasDiario()]] - `calls` [EXTRACTED]
 - [[dot-RegistrarDiario()]] - `calls` [EXTRACTED]
-- [[dot-Run()_9]] - `calls` [EXTRACTED]
+- [[dot-Run()_4]] - `calls` [EXTRACTED]
 - [[dot-SaveSlot()]] - `calls` [EXTRACTED]
 - [[dot-Tem()]] - `calls` [EXTRACTED]
 - [[dot-TryLoadSlot()]] - `calls` [EXTRACTED]
-- [[dot-UV()_1]] - `calls` [EXTRACTED]
+- [[dot-UV()]] - `calls` [EXTRACTED]
 - [[dot-VerificarConclusaoPistasCasaAvo()]] - `calls` [EXTRACTED]
 - [[dot-VolumeDaCamada()]] - `calls` [EXTRACTED]
 - [[Chapter2Verification]] - `method` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[MenuItem]] - `references` [EXTRACTED]
 - [[SinucaMinigameUI]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+#graphify/code #graphify/EXTRACTED #community/Community_94

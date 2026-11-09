@@ -1,18 +1,18 @@
 ---
-source_file: "Projeto Jogo 2D/Assets/Scripts/MenuPanelTransition.cs"
+source_file: "Projeto Jogo 2D/Assets/Scripts/InteractionPrompt.cs"
 type: "code"
-community: "Community 57"
-location: "L29"
+community: "Community 5"
+location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_57
+  - community/Community_5
 ---
 
 # .Awake()
 
 ## Connections
-- [[dot-ConfigurarGrupo()]] - `calls` [EXTRACTED]
-- [[MenuPanelTransition]] - `method` [EXTRACTED]
+- [[dot-Build()_5]] - `calls` [EXTRACTED]
+- [[InteractionPrompt]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+#graphify/code #graphify/EXTRACTED #community/Community_5
