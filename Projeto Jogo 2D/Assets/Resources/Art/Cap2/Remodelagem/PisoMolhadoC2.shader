@@ -2,9 +2,10 @@ Shader "SantaRita/Cap2/PisoMolhado"
 {
     Properties
     {
-        [PerRendererData] _MainTex("Silhueta", 2D) = "white" {}
+        [PerRendererData] _SilhouetteTex("Silhueta", 2D) = "white" {}
         _Tint("Cor", Color) = (0,0,0,.2)
         _Wet("Reflexo", Float) = 0
+        _Feather("Suavizar ponta da sombra", Float) = 0
     }
     SubShader
     {
@@ -19,17 +20,19 @@ Shader "SantaRita/Cap2/PisoMolhado"
             #pragma vertex Vert
             #pragma fragment Frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-            TEXTURE2D(_MainTex);
-            SAMPLER(sampler_MainTex);
+            TEXTURE2D(_SilhouetteTex);
+            SAMPLER(sampler_SilhouetteTex);
             float4 _Tint;
             float _Wet;
-            struct Input { float3 pos : POSITION; float2 uv : TEXCOORD0; };
-            struct Output { float4 pos : SV_POSITION; float2 uv : TEXCOORD0; };
+            float _Feather;
+            struct Input { float3 pos : POSITION; float2 uv : TEXCOORD0; float depth : TEXCOORD1; };
+            struct Output { float4 pos : SV_POSITION; float2 uv : TEXCOORD0; float depth : TEXCOORD1; };
             Output Vert(Input v)
             {
                 Output o;
                 o.pos = TransformObjectToHClip(v.pos);
                 o.uv = v.uv;
+                o.depth = v.depth;
                 return o;
             }
             half4 Frag(Output i) : SV_Target
@@ -41,8 +44,9 @@ Shader "SantaRita/Cap2/PisoMolhado"
                 float wet = (1 - smoothstep(.01,.68,abs(p.x + .10 * ripple)))
                     * (1 - smoothstep(.17,.99,abs(p.y)))
                     * smoothstep(.35,.99,scatter) * (.56 + .31 * ripple);
-                float mask = lerp(SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv).a,wet,_Wet);
-                return half4(_Tint.rgb,_Tint.a * mask);
+                float mask = lerp(SAMPLE_TEXTURE2D(_SilhouetteTex,sampler_SilhouetteTex,i.uv).a,wet,_Wet);
+                float fade = 1 - .78 * smoothstep(.12,.99,i.depth) * _Feather;
+                return half4(_Tint.rgb,_Tint.a * mask * fade);
             }
             ENDHLSL
         }

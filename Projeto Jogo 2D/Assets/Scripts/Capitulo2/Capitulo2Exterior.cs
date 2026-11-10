@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-internal sealed class Capitulo2Exterior : MonoBehaviour
+internal sealed partial class Capitulo2Exterior : MonoBehaviour
 {
     private const string Art = "Art/Cap2/Remodelagem/";
     private static readonly HashSet<string> Fachadas = new()
@@ -15,28 +15,43 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
     private readonly List<UnityEngine.Object> recursos = new();
     private readonly List<Vector2> fontes = new();
     private Material lit, shadow;
+    private PlayerController controladorMarcus;
+    private SpriteRenderer marcus;
+    private Material materialMarcus;
+    private Texture texturaMarcus;
     private string pasta;
 
     internal void Montar(bool cemiterio, Vector2 min, Vector2 max)
     {
         lit = Resources.Load<Material>("Art/WorldLit");
         if (lit == null) return;
+        Material worldPbr = lit;
+        if (!cemiterio)
+        {
+            var shader = Shader.Find(SantaRitaWorldLighting.StockSpriteShader);
+            if (shader != null)
+            {
+                lit = new Material(shader);
+                recursos.Add(lit);
+            }
+        }
         pasta = Art + (cemiterio ? "Cemiterio/" : "Centro/");
-        var existentes = FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None);
+        var existentes = FindObjectsByType<SpriteRenderer>();
         foreach (var sprite in existentes)
         {
             if (sprite.gameObject.scene != gameObject.scene || sprite.sprite == null) continue;
+            if (!cemiterio && sprite.sharedMaterial == worldPbr) sprite.sharedMaterial = lit;
             if (sprite.name == "Poste") Trocar(sprite, "Art/RuaNorte/Poste", 1.12f);
             if (sprite.name.StartsWith("Arvore", StringComparison.Ordinal))
             {
-                string[] especies = { "Pitangueira", "Camboata", "Bracatinga", "Araucaria" };
                 Vector2 at = sprite.transform.position;
+                if (!cemiterio && NaPraca(at)) continue;
+                string[] especies = { "Pitangueira", "Camboata", "Bracatinga", "Araucaria" };
                 int variation = Mathf.Abs(Mathf.RoundToInt(at.x * 19 + at.y * 37)) % especies.Length;
-                if (Trocar(sprite, "Art/RuaNorte/Vegetacao/" + especies[variation], Mathf.Clamp(sprite.bounds.size.x, 2.7f, 5.3f)))
+                if (Trocar(sprite, "Art/RuaNorte/Vegetacao/" + especies[variation], Mathf.Clamp(sprite.bounds.size.x, 2.7f, 5.3f)) &&
+                    cemiterio)
                     sprite.color = Color.Lerp(Color.white, new Color(.68f, .75f, .76f), .36f + variation * .11f);
             }
-            if (!cemiterio && sprite.name.StartsWith("BancoPraca_", StringComparison.Ordinal))
-                Trocar(sprite, pasta + "Banco", 2f);
             if (!cemiterio && sprite.name == "QuadroAvisosDaPraca")
                 Trocar(sprite, pasta + "Quadro", 1.63f);
             if (cemiterio && sprite.name.StartsWith("Sepultura_", StringComparison.Ordinal))
@@ -47,11 +62,38 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
             }
         }
 
+        if (!cemiterio)
+        {
+            PavimentarCentro(existentes);
+            controladorMarcus = FindAnyObjectByType<PlayerController>();
+            if (controladorMarcus != null && controladorMarcus.gameObject.scene == gameObject.scene &&
+                controladorMarcus.TryGetComponent(out marcus))
+                materialMarcus = IsolarTextura(marcus);
+            ComporPraca(existentes);
+            ComporDetalhesGeradosDaPraca();
+            ComporMargensDoCentro();
+            IntegrarObjetosDasRuas(existentes);
+        }
+
         foreach (var sprite in existentes)
         {
-            if (sprite == null || sprite.gameObject.scene != gameObject.scene || sprite.sprite == null) continue;
-            if (sprite.name == "Poste") fontes.Add(new Vector2(sprite.bounds.max.x - .18f, sprite.bounds.max.y - .22f));
-            if (Fachadas.Contains(sprite.name))
+            if (sprite == null || !sprite.gameObject.activeInHierarchy ||
+                sprite.gameObject.scene != gameObject.scene || sprite.sprite == null) continue;
+            if (sprite.name == "Poste")
+            {
+                var lamp = new Vector2(sprite.bounds.max.x - .18f, sprite.bounds.max.y - .22f);
+                fontes.Add(lamp);
+                if (!cemiterio)
+                {
+                    bool praca = NaPraca(sprite.transform.position);
+                    LuzPraca("Luz do poste", lamp - Vector2.up * 1.8f, praca ? 4.8f : 4.1f,
+                        praca ? .69f : .54f, Ambar);
+                    Vector2 pe = sprite.transform.position;
+                    PecaPraca("Desgaste junto ao poste", "Art/RuaNorte/Entrada/Modulos/Folhas",
+                        pe.x, pe.y, .85f, noPiso: true);
+                }
+            }
+            if (Fachadas.Contains(sprite.name) && (cemiterio || sprite.name != "Igreja"))
             {
                 Vector2 at = sprite.transform.position;
                 // A fonte fica acima da soleira; o gatilho e a fachada conservam seus IDs.
@@ -81,25 +123,19 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
         }
         else
         {
-            foreach (float y in new[] { 43f, 50f, 57f })
+            foreach (var at in new[] { new Vector2(66.08f, 20.83f), new Vector2(69.99f, 20.83f) })
             {
-                Prop("Floreira da praça", "Floreira", new Vector2(35.7f, y - 1.45f));
-                Prop("Floreira da praça", "Floreira", new Vector2(55.25f, y - 1.45f));
+                if (GramaNoCentro(at)) continue;
+                var balizador = Prop("Balizador da soleira", "Balizador", at);
+                if (balizador != null)
+                    ConfigurarSpriteVolumetricoPraca(balizador, balizador.bounds.min.y, .85f, 0f, 0f, .25f, modoOclusor: -1);
             }
-            Prop("Canteiro do acesso à Prefeitura", "Canteiro", new Vector2(85.05f, 65.63f));
-            Prop("Canteiro do acesso à Prefeitura", "Canteiro", new Vector2(90.92f, 65.63f));
-            Prop("Canteiro do acesso à Rodoviária", "Canteiro", new Vector2(71.66f, 21.54f));
-            foreach (var at in new[] { new Vector2(40.9f, 63.14f), new Vector2(48.6f, 63.14f),
-                new Vector2(66.08f, 20.83f), new Vector2(69.99f, 20.83f) })
-                Prop("Balizador da soleira", "Balizador", at);
-            foreach (var at in new[] { new Vector2(40.90f, 60.55f), new Vector2(56.72f, 38.85f),
-                new Vector2(71.78f, 30.76f), new Vector2(26.65f, 21.33f), new Vector2(28.2f, 40.91f) })
-                Prop("Ralo de sarjeta", "Ralo", at, plano: true);
-            Submata(new Vector2(22.6f, 80.45f), new Vector2(20.56f, 83.28f), new Vector2(30.05f, 85.2f),
-                new Vector2(40.72f, 69.31f), new Vector2(51.27f, 67.38f), new Vector2(9.1f, 12.9f));
+            foreach (var at in new[] { new Vector2(71.78f, 30.76f), new Vector2(26.65f, 21.33f), new Vector2(28.2f, 40.91f) })
+                if (!GramaNoCentro(at)) Prop("Ralo de sarjeta", "Ralo", at, plano: true);
+            IluminarPisoDoCentro();
         }
 
-        var projection = Resources.Load<Shader>("Art/Cap2/Remodelagem/PisoMolhadoC2");
+        var projection = cemiterio ? Resources.Load<Shader>("Art/Cap2/Remodelagem/PisoMolhadoC2") : null;
         if (projection != null)
         {
             shadow = new Material(projection);
@@ -108,12 +144,20 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
             {
                 if (sprite == null || sprite.gameObject.scene != gameObject.scene || sprite.sprite == null) continue;
                 if (Fachadas.Contains(sprite.name) || sprite.name.StartsWith("Sepultura_") ||
-                    sprite.name.StartsWith("BancoPraca_") || sprite.name.StartsWith("Arvore") ||
-                    sprite.name == "Poste") Projetar(sprite);
+                    sprite.name.StartsWith("Arvore") || sprite.name == "Poste") Projetar(sprite);
             }
             foreach (var p in fontes) Reflexo(p - new Vector2(.02f, 3.12f));
         }
-        Nevoa(min, max);
+        Nevoa(min, max, cemiterio);
+    }
+
+    private Material IsolarTextura(SpriteRenderer renderer)
+    {
+        // A fachada e o corpo animado têm bindings independentes do material comum.
+        var material = new Material(lit) { mainTexture = renderer.sprite?.texture };
+        renderer.sharedMaterial = material;
+        recursos.Add(material);
+        return material;
     }
 
     private bool Trocar(SpriteRenderer target, string caminho, float largura)
@@ -162,7 +206,7 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
 
     private void Projetar(SpriteRenderer sprite)
     {
-        if (fontes.Count == 0 || !sprite.enabled) return;
+        if (!sprite.enabled || !sprite.gameObject.activeInHierarchy) return;
         Vector2 at = sprite.transform.position;
         Vector2 direction = Vector2.zero;
         float nearest = 10f;
@@ -181,9 +225,9 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
         float yMin = sprite.sprite.bounds.min.y;
         for (int i = 0; i < pts.Length; i++)
         {
-            float y = (pts[i].y - yMin) * scale.y;
-            vertices[i] = new Vector3(pts[i].x * scale.x * (sprite.flipX ? -1 : 1) + y * direction.x * .54f,
-                y * (direction.y * .48f + .12f), 0);
+            float altura = (pts[i].y - yMin) * scale.y;
+            vertices[i] = new Vector3(pts[i].x * scale.x * (sprite.flipX ? -1 : 1) + altura * direction.x * .54f,
+                altura * (direction.y * .48f + .12f), 0);
         }
         var mesh = new Mesh { name = "Silhueta " + sprite.name, vertices = vertices, uv = sprite.sprite.uv };
         mesh.triangles = Array.ConvertAll(sprite.sprite.triangles, n => (int)n);
@@ -196,12 +240,12 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
         renderer.sharedMaterial = shadow;
         renderer.sortingOrder = -1600;
         var props = new MaterialPropertyBlock();
-        props.SetTexture("_MainTex", sprite.sprite.texture);
+        props.SetTexture("_SilhouetteTex", sprite.sprite.texture);
         props.SetColor("_Tint", new Color(.030f, .043f, .051f, Mathf.Lerp(.26f, .04f, nearest / 10f)));
         renderer.SetPropertyBlock(props);
     }
 
-    private void Reflexo(Vector2 at)
+    private void Reflexo(Vector2 at, float intensidade = .26f)
     {
         var obj = new GameObject("Brilho de piso molhado", typeof(SpriteRenderer));
         obj.transform.SetParent(transform, false);
@@ -213,7 +257,7 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
         renderer.sharedMaterial = shadow;
         var props = new MaterialPropertyBlock();
         props.SetFloat("_Wet", 1);
-        props.SetColor("_Tint", new Color(.90f, .60f, .32f, .26f));
+        props.SetColor("_Tint", new Color(.90f, .60f, .32f, intensidade));
         renderer.SetPropertyBlock(props);
         clima.Add(renderer);
     }
@@ -228,7 +272,7 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
         return quad;
     }
 
-    private void Nevoa(Vector2 min, Vector2 max)
+    private void Nevoa(Vector2 min, Vector2 max, bool cemiterio)
     {
         var shader = Resources.Load<Shader>("Art/RuaNorte/Nevoeiro");
         if (shader == null) return;
@@ -248,14 +292,27 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
             material.SetFloat("_Entrance", 1);
             material.SetFloat("_Front", i);
             material.SetFloat("_BeamStrength", .54f);
-            var lamps = new Vector4[9];
-            for (int j = 0; j < Mathf.Min(9, fontes.Count); j++)
+            if (!cemiterio)
+            {
+                material.SetFloat("_BeamLean", 0);
+                material.SetFloat("_PracaDaMatriz", 1);
+            }
+            if (!cemiterio && i == 1 && materialDoPiso != null)
+            {
+                material.SetTexture("_FireflyTerrain", materialDoPiso.GetTexture("_GroundCells"));
+                material.SetVector("_FireflyTerrainInfo",
+                    new Vector4(origemDoPiso.x, origemDoPiso.y, LinhaDoAtlas(PisoCentro.Grama), 0));
+                material.SetFloat("_UseFireflyTerrain", 1);
+            }
+            var lamps = new Vector4[16];
+            int count = Mathf.Min(lamps.Length, fontes.Count);
+            for (int j = 0; j < count; j++)
             {
                 Vector2 p = fontes[j] - min;
                 lamps[j] = new Vector4(p.x, p.y, p.y - 2.5f, 1);
             }
             material.SetVectorArray("_EntranceLamps", lamps);
-            material.SetInteger("_EntranceLampCount", Mathf.Min(9, fontes.Count));
+            material.SetInteger("_EntranceLampCount", count);
             renderer.sharedMaterial = material;
             clima.Add(renderer);
         }
@@ -263,7 +320,18 @@ internal sealed class Capitulo2Exterior : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (marcus != null && marcus.sprite != null && marcus.sprite.texture != texturaMarcus)
+        {
+            texturaMarcus = marcus.sprite.texture;
+            if (materialMarcus != null) materialMarcus.mainTexture = texturaMarcus;
+        }
         bool enabled = !MenuPausa.ReduzirEfeitosIntensos;
+        if (materialDoPiso != null)
+        {
+            materialDoPiso.SetFloat("_WindStrength", enabled ? 1f : 0f);
+            AtualizarLuzesDinamicasDaPraca(enabled);
+            SantaRitaRuaNorte.AtualizarReflexoDoMarcus(materialDoPiso, enabled ? marcus : null, origemDoPiso);
+        }
         foreach (var renderer in clima) renderer.enabled = enabled;
     }
 

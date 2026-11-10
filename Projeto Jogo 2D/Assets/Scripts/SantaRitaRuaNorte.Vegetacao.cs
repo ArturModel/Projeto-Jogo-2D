@@ -252,7 +252,13 @@ public sealed partial class SantaRitaRuaNorte
     {
         var relevo = Resources.Load<Texture2D>(PastaDaMata + "Relevos/" + especie);
         if (relevo == null) return false;
+        ConfigurarCopa(renderer, especie, relevo, vento, receiverProperties);
+        return true;
+    }
 
+    internal static void ConfigurarCopa(SpriteRenderer renderer, string especie, Texture2D relevo,
+        float vento, MaterialPropertyBlock propriedades)
+    {
         // Compensação em luz linear a partir da luminosidade mediana das copas de origem.
         var paleta = especie switch
         {
@@ -265,13 +271,12 @@ public sealed partial class SantaRitaRuaNorte
             "SamambaiaDaMata" => new Vector4(.71f, .77f, .94f, .90f),
             _ => new Vector4(.87f, .91f, 1f, .93f)
         };
-        renderer.GetPropertyBlock(receiverProperties);
-        receiverProperties.SetTexture("_PropSurface", relevo);
-        receiverProperties.SetFloat("_PropSurfaceEnabled", 1);
-        receiverProperties.SetVector("_CanopyTone", paleta);
-        receiverProperties.SetVector("_Wind", new Vector4(vento, renderer.bounds.size.y,
+        renderer.GetPropertyBlock(propriedades);
+        propriedades.SetTexture("_PropSurface", relevo);
+        propriedades.SetFloat("_PropSurfaceEnabled", 1);
+        propriedades.SetVector("_CanopyTone", paleta);
+        propriedades.SetVector("_Wind", new Vector4(vento, renderer.bounds.size.y,
             renderer.transform.position.x * .79f, 1));
-        renderer.SetPropertyBlock(receiverProperties);
-        return true;
+        renderer.SetPropertyBlock(propriedades);
     }
 }

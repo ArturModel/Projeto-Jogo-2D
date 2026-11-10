@@ -16,6 +16,8 @@ public sealed class SantaRitaArtImporter : AssetPostprocessor
         importer.textureCompression=TextureImporterCompression.Uncompressed;importer.isReadable=true;
         var settings=new TextureImporterSettings();importer.ReadTextureSettings(settings);settings.spriteAlignment=(int)SpriteAlignment.Custom;
         settings.spritePivot=(assetPath.Contains("/Tiles/")||assetPath.EndsWith("/TapeteBar.png")) ? new Vector2(.5f,.5f) : new Vector2(.5f,.125f);
+        if (assetPath == "Assets/Resources/Art/Cap2/Remodelagem/Matriz/MuretaPedra.png")
+            settings.spritePivot = new Vector2(.5f, 0f);
         importer.SetTextureSettings(settings);
     }
 }

@@ -218,12 +218,8 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     private void BuildWaterMask(int width)
     {
         // Posições locais à rodovia. Cada poça tem escala, perfil e brilho próprios.
-        const int pixelsPerUnit = WaterPixelsPerUnit;
         int firstRow = firstWaterRow = bairro ? 0 : 8;
         int rows = bairro || encruzilhada ? (int)size.y - firstRow : 5;
-        int textureWidth = width * pixelsPerUnit;
-        int textureHeight = rows * pixelsPerUnit;
-        var pixels = new Color32[textureWidth * textureHeight];
         var puddles = new (float x, float y, float rx, float ry, float tilt, float blue, float shine)[]
         {
             (1.40f, 9.55f, .43f, .22f, -.16f, .65f, .69f),
@@ -267,6 +263,19 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             }));
         }
 
+        entranceWater = CriarMascaraDePocas("Máscara das poças de " + name, width, firstRow, rows,
+            WaterPixelsPerUnit, puddles, legivel: true);
+        lighting.SetTexture("_EntranceWater", entranceWater);
+        lighting.SetVector("_EntranceWaterRect", new Vector4(0, firstRow, width, rows));
+    }
+
+    internal static Texture2D CriarMascaraDePocas(string nome, int width, int firstRow, int rows,
+        int pixelsPerUnit, (float x, float y, float rx, float ry, float tilt, float blue, float shine)[] puddles,
+        bool legivel)
+    {
+        int textureWidth = width * pixelsPerUnit;
+        int textureHeight = rows * pixelsPerUnit;
+        var pixels = new Color32[textureWidth * textureHeight];
         for (int i = 0; i < puddles.Length; i++)
         {
             var pool = puddles[i];
@@ -295,16 +304,15 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             }
         }
 
-        entranceWater = new Texture2D(textureWidth, textureHeight, TextureFormat.RGBA32, false, true)
+        var mask = new Texture2D(textureWidth, textureHeight, TextureFormat.RGBA32, false, true)
         {
-            name = "Máscara das poças de " + name,
+            name = nome,
             filterMode = FilterMode.Point,
             wrapMode = TextureWrapMode.Clamp
         };
-        entranceWater.SetPixels32(pixels);
-        entranceWater.Apply(false, false); // O contato do pé lê a mesma cobertura que o shader.
-        lighting.SetTexture("_EntranceWater", entranceWater);
-        lighting.SetVector("_EntranceWaterRect", new Vector4(0, firstRow, width, rows));
+        mask.SetPixels32(pixels);
+        mask.Apply(false, !legivel);
+        return mask;
     }
 
     internal float CoberturaDePoca(Vector2 posicao)
@@ -640,14 +648,19 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         Vector2 at = (Vector2)objeto.position - origin;
         if (height > 3f && objeto.TryGetComponent<SpriteRenderer>(out var poste))
         {
-            // Centro do vidro âmbar na arte de 72 × 216 px, medido a partir da base.
-            var bounds = poste.bounds;
-            float x = poste.flipX ? 1f - 58f / 72f : 58f / 72f;
-            float bocalX = Mathf.Lerp(bounds.min.x, bounds.max.x, x) - origin.x;
-            float bocalY = Mathf.Lerp(bounds.min.y, bounds.max.y, 200f / 216f) - origin.y;
-            bocaisDosPostes.Add(new Vector4(bocalX, bocalY, at.y, 1f));
+            Vector2 bocal = BocalDoPoste(poste) - origin;
+            bocaisDosPostes.Add(new Vector4(bocal.x, bocal.y, at.y, 1f));
         }
         return new Vector4(at.x + xOffset, at.y + yOffset, height, reach);
+    }
+
+    internal static Vector2 BocalDoPoste(SpriteRenderer poste)
+    {
+        // Centro do vidro âmbar na arte de 72 × 216 px, medido a partir da base.
+        var bounds = poste.bounds;
+        float x = poste.flipX ? 1f - 58f / 72f : 58f / 72f;
+        return new Vector2(Mathf.Lerp(bounds.min.x, bounds.max.x, x),
+            Mathf.Lerp(bounds.min.y, bounds.max.y, 200f / 216f));
     }
 
     private void Plant(string name, string art, float x, float y, float scale, bool espelhar = false, bool temTroncoSolido = true)
@@ -760,7 +773,6 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             frontFogMaterial.SetVectorArray("_EntranceLamps", fontes);
             frontFogMaterial.SetInteger("_EntranceLampCount", fontes.Length);
         }
-        PrepararFlaresDosPostes(fontes);
         if (bairro || RuaDoBar) return;
 
         // Uma fonte de alcance curto junto à parada, à bomba ou à banca de frutas.
@@ -831,8 +843,6 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     {
         if (lighting == null || receiverProperties == null) return;
         bool effects = ZonaAtiva && !MenuPausa.ReduzirEfeitosIntensos;
-        if (flaresDosPostes != null && flaresDosPostes.activeSelf != effects)
-            flaresDosPostes.SetActive(effects);
         if (trovao != null) AtualizarTrovao(effects);
         if (backFog != null)
         {
@@ -865,7 +875,6 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             player.sharedMaterial = lighting;
         }
         Vector2 focus = (Vector2)player.transform.position - origin;
-        if (effects) AtualizarFlaresDosPostes(focus);
         lighting.SetVector("_ViewFocus", new Vector4(focus.x, focus.y + .7f, effects ? 1f : .35f, 0));
         SetReceiver(player, player.transform.position.y, .94f, casterCount);
         UpdateCasters(true);
@@ -956,7 +965,12 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
 
     private void AtualizarReflexoDoMarcus()
     {
-        var frame = player.sprite;
+        AtualizarReflexoDoMarcus(lighting, player, origin);
+    }
+
+    internal static void AtualizarReflexoDoMarcus(Material lighting, SpriteRenderer player, Vector2 origin)
+    {
+        var frame = player != null ? player.sprite : null;
         if (frame == null || frame.packed)
         {
             lighting.SetVector("_MirrorBounds", Vector4.zero);

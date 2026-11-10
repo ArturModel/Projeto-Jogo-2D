@@ -11,6 +11,197 @@ public sealed class C2InteractionData
     public DialogoLinha[] lines, repeat, after, whenFlag;
     public C2DialogueBranch[] branches;
 }
+
+/// <summary>Ferramenta de inspeção do mapa, disponível apenas em builds de desenvolvimento.</summary>
+public sealed class CentroFreeCameraConsole : MonoBehaviour
+{
+    private static readonly Vector2 LimiteMin = new Vector2(-20f, -8f);
+    private static readonly Vector2 LimiteMax = new Vector2(96f, 85f);
+    private const float VelocidadeBase = 28f;
+    private const float MultiplicadorShift = 4f;
+
+    private Camera cameraMapa;
+    private CameraFollow cameraFollow;
+    private PlayerController jogador;
+    private Rigidbody2D corpoJogador;
+    private bool painelAberto;
+    private bool cameraLivre;
+    private bool cameraFollowEstavaAtiva;
+    private bool jogadorEstavaAtivo;
+    private bool cursorEstavaVisivel;
+    private CursorLockMode cursorTinhaLock;
+    private float fatorZoom = 1f;
+
+    private void Awake()
+    {
+        if (!Debug.isDebugBuild)
+        {
+            Destroy(this);
+            return;
+        }
+
+        cameraMapa = Camera.main;
+        if (cameraMapa == null) cameraMapa = FindAnyObjectByType<Camera>();
+        cameraFollow = cameraMapa != null ? cameraMapa.GetComponent<CameraFollow>() : null;
+        jogador = FindAnyObjectByType<PlayerController>();
+        corpoJogador = jogador != null ? jogador.GetComponent<Rigidbody2D>() : null;
+        cursorEstavaVisivel = Cursor.visible;
+        cursorTinhaLock = Cursor.lockState;
+    }
+
+    private void Update()
+    {
+        if (!Debug.isDebugBuild || cameraMapa == null) return;
+        var teclado = UnityEngine.InputSystem.Keyboard.current;
+        if (teclado == null) return;
+
+        bool aspas = teclado.quoteKey.wasPressedThisFrame || teclado.backquoteKey.wasPressedThisFrame;
+        if (aspas)
+        {
+            painelAberto = !painelAberto;
+            AtualizarCursor();
+        }
+
+        if (teclado.escapeKey.wasPressedThisFrame)
+        {
+            if (painelAberto)
+            {
+                painelAberto = false;
+                AtualizarCursor();
+            }
+            else if (cameraLivre)
+            {
+                RestaurarMarcus();
+            }
+        }
+
+        if (!cameraLivre || !Application.isFocused) return;
+
+        Vector2 direcao = Vector2.zero;
+        if (teclado.aKey.isPressed || teclado.leftArrowKey.isPressed) direcao.x -= 1f;
+        if (teclado.dKey.isPressed || teclado.rightArrowKey.isPressed) direcao.x += 1f;
+        if (teclado.sKey.isPressed || teclado.downArrowKey.isPressed) direcao.y -= 1f;
+        if (teclado.wKey.isPressed || teclado.upArrowKey.isPressed) direcao.y += 1f;
+
+        float velocidade = VelocidadeBase * (teclado.leftShiftKey.isPressed || teclado.rightShiftKey.isPressed
+            ? MultiplicadorShift : 1f);
+        Vector3 posicao = cameraMapa.transform.position;
+        posicao += (Vector3)(direcao.normalized * velocidade * Time.unscaledDeltaTime);
+        posicao.x = Mathf.Clamp(posicao.x, LimiteMin.x - 8f, LimiteMax.x + 8f);
+        posicao.y = Mathf.Clamp(posicao.y, LimiteMin.y - 8f, LimiteMax.y + 8f);
+        cameraMapa.transform.position = posicao;
+
+        if (UnityEngine.InputSystem.Mouse.current != null)
+        {
+            float scroll = UnityEngine.InputSystem.Mouse.current.scroll.ReadValue().y;
+            if (Mathf.Abs(scroll) > .01f)
+                AjustarZoom(Mathf.Sign(scroll));
+        }
+
+        if (teclado.equalsKey.wasPressedThisFrame || teclado.numpadPlusKey.wasPressedThisFrame)
+            AjustarZoom(1f);
+        if (teclado.minusKey.wasPressedThisFrame || teclado.numpadMinusKey.wasPressedThisFrame)
+            AjustarZoom(-1f);
+    }
+
+    private void LateUpdate()
+    {
+        if (!Debug.isDebugBuild || !cameraLivre || cameraMapa == null) return;
+        cameraMapa.ResetProjectionMatrix();
+        Matrix4x4 projecao = cameraMapa.projectionMatrix;
+        projecao.m00 *= fatorZoom;
+        projecao.m11 *= fatorZoom;
+        cameraMapa.projectionMatrix = projecao;
+    }
+
+    private void OnGUI()
+    {
+        if (!Debug.isDebugBuild || !painelAberto) return;
+
+        float largura = Mathf.Min(500f, Screen.width - 32f);
+        float altura = cameraLivre ? 236f : 204f;
+        var janela = new Rect((Screen.width - largura) * .5f, (Screen.height - altura) * .5f,
+            largura, altura);
+        GUILayout.BeginArea(janela, GUI.skin.box);
+        GUILayout.Space(10f);
+        GUILayout.Label("CONSOLE DO CENTRO", GUI.skin.label);
+        GUILayout.Space(12f);
+
+        if (!cameraLivre)
+        {
+            GUILayout.Label("Inspecione a praça inteira com a câmera livre.");
+            GUILayout.Space(12f);
+            if (GUILayout.Button("Ativar câmera livre", GUILayout.Height(42f)))
+                AtivarCameraLivre();
+        }
+        else
+        {
+            GUILayout.Label("Câmera livre ativa · Zoom atual: " + (cameraMapa.orthographicSize / fatorZoom).ToString("0.0"));
+            GUILayout.Label("WASD / setas: mover   ·   Shift: velocidade 4×   ·   roda do mouse: zoom");
+            GUILayout.Label("+ / - também ajustam o zoom. Esc fecha o console; Esc novamente retorna a Marcus.");
+            GUILayout.Space(12f);
+            if (GUILayout.Button("Voltar para Marcus", GUILayout.Height(38f)))
+                RestaurarMarcus();
+        }
+
+        GUILayout.FlexibleSpace();
+        GUILayout.Label("Aspas: abrir/fechar console   ·   Esc: fechar", GUI.skin.box);
+        GUILayout.EndArea();
+    }
+
+    private void AtivarCameraLivre()
+    {
+        if (cameraMapa == null || !cameraMapa.orthographic) return;
+
+        cameraFollowEstavaAtiva = cameraFollow != null && cameraFollow.enabled;
+        jogadorEstavaAtivo = jogador != null && jogador.enabled;
+        if (cameraFollow != null) cameraFollow.enabled = false;
+        if (corpoJogador != null) corpoJogador.linearVelocity = Vector2.zero;
+        if (jogador != null) jogador.enabled = false;
+
+        cameraMapa.ResetProjectionMatrix();
+        fatorZoom = 1f;
+        cameraLivre = true;
+        AtualizarCursor();
+    }
+
+    private void AjustarZoom(float direcao)
+    {
+        fatorZoom = Mathf.Clamp(fatorZoom * Mathf.Pow(1.15f, direcao), .045f, 12f);
+    }
+
+    private void RestaurarMarcus()
+    {
+        cameraLivre = false;
+        painelAberto = false;
+        if (jogador != null) jogador.enabled = jogadorEstavaAtivo;
+        if (cameraFollow != null)
+        {
+            cameraFollow.enabled = cameraFollowEstavaAtiva;
+            if (cameraFollowEstavaAtiva) cameraFollow.SnapImediatoParaAlvo();
+        }
+        cameraMapa.ResetProjectionMatrix();
+        AtualizarCursor();
+    }
+
+    private void AtualizarCursor()
+    {
+        if (!painelAberto && !cameraLivre)
+        {
+            Cursor.visible = cursorEstavaVisivel;
+            Cursor.lockState = cursorTinhaLock;
+            return;
+        }
+
+        Cursor.visible = painelAberto;
+        Cursor.lockState = painelAberto ? CursorLockMode.None : CursorLockMode.Confined;
+    }
+
+    private void OnDestroy()
+    {
+        if (cameraLivre) RestaurarMarcus();
+    }
+}
 [Serializable] public sealed class C2DialogueBranch
 {
     public string[] require, exclude;
@@ -35,6 +226,16 @@ public sealed class Capitulo2Director : MonoBehaviour
     private static bool reconciliando;
     private static readonly Dictionary<string, C2InteractionData> conteudo = new Dictionary<string, C2InteractionData>();
 
+#if UNITY_EDITOR
+    internal static bool ExploracaoNoEditor { get; private set; }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    private static void DetectarPlayDireto() =>
+        ExploracaoNoEditor = SceneManager.GetActiveScene().name == "CentroSantaRita";
+#else
+    internal static bool ExploracaoNoEditor => false;
+#endif
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void PrepararSessao()
     {
@@ -52,20 +253,22 @@ public sealed class Capitulo2Director : MonoBehaviour
     {
         yield return null; // Player.Start consome porta/checkpoint antes do enquadramento.
         jogador = FindAnyObjectByType<PlayerController>();
-        if(jogador!=null&&jogador.GetComponent<SantaRitaRimLight>()==null)jogador.gameObject.AddComponent<SantaRitaRimLight>();
-        if (SceneManager.GetActiveScene().name == "CentroSantaRita" && jogador != null &&
+        if (jogador != null && SceneManager.GetActiveScene().name != "CentroSantaRita" &&
+            jogador.GetComponent<SantaRitaRimLight>() == null)
+            jogador.gameObject.AddComponent<SantaRitaRimLight>();
+        if (!ExploracaoNoEditor && SceneManager.GetActiveScene().name == "CentroSantaRita" && jogador != null &&
             jogador.transform.position.y > 83 && jogador.transform.position.x > 43)
         {
             // Saves antigos gravavam o cemitério dentro do Centro. Não mover nem sobrescrever o arquivo.
             SceneTransition.IrParaPosicao("CemiterioSantaRita", jogador.transform.position); yield break;
         }
-        if (!GameState.Tem(Flags.ZeDerrotadoNaSinuca))
+        if (!ExploracaoNoEditor && !GameState.Tem(Flags.ZeDerrotadoNaSinuca))
         {
             GameMessageUI.Instance.Show("Zé ainda guarda a passagem da Rua Norte. Preciso falar com ele antes de seguir.", "MARCUS", "marcus",
                 () => SceneTransition.Ir("EntradaDaCidade", "saida_bar_ze"));
             yield break;
         }
-        GameState.Marcar("c2_iniciado");
+        if (!ExploracaoNoEditor) GameState.Marcar("c2_iniciado");
         var camera = FindAnyObjectByType<CameraFollow>();
         if (camera != null) camera.DefinirLimitesRegiao(limiteMin, limiteMax, interior ? 4.7f : 5.5f, true);
         var chuva = FindAnyObjectByType<Chuva>(); if (chuva != null) chuva.DefinirModoInterior(interior);
@@ -78,7 +281,11 @@ public sealed class Capitulo2Director : MonoBehaviour
         string local = SceneManager.GetActiveScene().name;
         if (interior) gameObject.AddComponent<Capitulo2Interior3D>().Montar(local, jogador);
         else gameObject.AddComponent<Capitulo2Exterior>().Montar(local == "CemiterioSantaRita", limiteMin, limiteMax);
-        if (GetComponent<SantaRitaFalasEntrada>() == null) gameObject.AddComponent<SantaRitaFalasEntrada>();
+        if (local == "CentroSantaRita" && Debug.isDebugBuild &&
+            GetComponent<CentroFreeCameraConsole>() == null)
+            gameObject.AddComponent<CentroFreeCameraConsole>();
+        if (!ExploracaoNoEditor && GetComponent<SantaRitaFalasEntrada>() == null)
+            gameObject.AddComponent<SantaRitaFalasEntrada>();
         AtualizarInvestigacao();
     }
 

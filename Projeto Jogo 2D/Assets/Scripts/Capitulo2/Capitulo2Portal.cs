@@ -19,7 +19,8 @@ public sealed class Capitulo2Portal : Interactable
         // Apenas passagens por contato precisam evitar o retorno automático.
         // Um relógio reiniciado também não deve manter um bloqueio antigo.
         if (automatico && agora >= ultimoCorte && agora - ultimoCorte < 1.5f) return;
-        if (!string.IsNullOrEmpty(flagNecessaria) && !GameState.Tem(flagNecessaria))
+        if (!Capitulo2Director.ExploracaoNoEditor &&
+            !string.IsNullOrEmpty(flagNecessaria) && !GameState.Tem(flagNecessaria))
         { GameMessageUI.Instance.Show(avisoBloqueio, "MARCUS", "marcus"); return; }
         ultimoCorte = agora;
         SceneTransition.Ir(cenaDestino, entradaDestino);

@@ -159,29 +159,38 @@ public sealed partial class SantaRitaRuaNorte
             // Os carros já projetam a carroceria e a cabine como volumes separados.
             int id = (int)receiver.z - 1;
             if (id >= 0 && casterMin[id].w == (float)Sombra.Veiculo) continue;
-            var bounds = renderer.bounds;
-            float foot = receiver.x - origin.y;
-            float left = bounds.min.x - origin.x;
-            float right = bounds.max.x - origin.x;
-            float nearestX = Mathf.Clamp(lamp.x, left, right);
-            if (new Vector2(nearestX - lamp.x, foot - lamp.y).sqrMagnitude > lamp.w * lamp.w) continue;
-
-            var texture = sprite.texture;
-            var rect = sprite.rect;
-            bool flip = renderer.flipX ^ (renderer.transform.lossyScale.x < 0);
-            float height = Mathf.Max(.01f, (bounds.max.y - receiver.x) * receiver.y);
             float depth = id >= 0 ? Mathf.Clamp((casterMax[id].y - casterMin[id].y) * .4f, .08f, .42f) : .17f;
             float density = receiverProperties.GetVector("_Wind").x > 0 ? .66f : 1f;
-            props.SetTexture("_ShadowSprite", texture);
-            props.SetVector("_ShadowUV", new Vector4((flip ? rect.xMax : rect.xMin) / texture.width,
-                rect.yMin / texture.height, (flip ? -rect.width : rect.width) / texture.width, rect.height / texture.height));
-            props.SetVector("_ShadowFoot", new Vector4(left, right, foot, depth));
-            props.SetVector("_ShadowHeight", new Vector4(height, density, 0, 0));
-            pass.DrawMesh(quad, Matrix4x4.identity, material, 0, 0, props);
+            DesenharSilhuetaDaLuz(pass, quad, material, props, renderer, origin, lamp, receiver.x,
+                receiver.y, depth, density);
         }
     }
 
-    private static Mesh CriarMalhaDeProjecao()
+    internal static void DesenharSilhuetaDaLuz(CommandBuffer pass, Mesh quad, Material material,
+        MaterialPropertyBlock props, SpriteRenderer renderer, Vector2 origin, Vector4 lamp,
+        float baseY, float inclinacao, float depth, float density)
+    {
+        var bounds = renderer.bounds;
+        float foot = baseY - origin.y;
+        float left = bounds.min.x - origin.x;
+        float right = bounds.max.x - origin.x;
+        float nearestX = Mathf.Clamp(lamp.x, left, right);
+        if (new Vector2(nearestX - lamp.x, foot - lamp.y).sqrMagnitude > lamp.w * lamp.w) return;
+
+        var sprite = renderer.sprite;
+        var texture = sprite.texture;
+        var rect = sprite.rect;
+        bool flip = renderer.flipX ^ (renderer.transform.lossyScale.x < 0);
+        float height = Mathf.Max(.01f, (bounds.max.y - baseY) * inclinacao);
+        props.SetTexture("_ShadowSprite", texture);
+        props.SetVector("_ShadowUV", new Vector4((flip ? rect.xMax : rect.xMin) / texture.width,
+            rect.yMin / texture.height, (flip ? -rect.width : rect.width) / texture.width, rect.height / texture.height));
+        props.SetVector("_ShadowFoot", new Vector4(left, right, foot, depth));
+        props.SetVector("_ShadowHeight", new Vector4(height, density, 0, 0));
+        pass.DrawMesh(quad, Matrix4x4.identity, material, 0, 0, props);
+    }
+
+    internal static Mesh CriarMalhaDeProjecao()
     {
         // A subdivisão vertical mantém a projeção estável perto da altura da lâmpada.
         const int rows = 12;

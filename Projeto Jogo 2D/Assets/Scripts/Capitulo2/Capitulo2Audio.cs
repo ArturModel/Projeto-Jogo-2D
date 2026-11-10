@@ -7,12 +7,17 @@ public sealed class Capitulo2Audio : MonoBehaviour
 {
     private static Capitulo2Audio instance;
     private readonly AudioSource[] fontes = new AudioSource[3];
+    private AudioSource fonteHinoMatriz;
+    private PlayerController jogadorCentro;
     private int regiao;
+    private static AudioClip hinoMatriz;
     private void OnEnable()
     {
         instance=this;
         foreach(var old in GetComponents<AudioSource>())old.Stop();
         for(int i=0;i<fontes.Length;i++){var child=transform.Find("TrilhaC2_"+i);if(child!=null)fontes[i]=child.GetComponent<AudioSource>();}
+        var canto = transform.Find("HinoMatriz_SinteseOriginal");
+        if(canto!=null)fonteHinoMatriz=canto.GetComponent<AudioSource>();
     }
     private static AudioClip resposta;
     private static GameObject radioFeedback;
@@ -63,6 +68,7 @@ public sealed class Capitulo2Audio : MonoBehaviour
         bool ativo = Capitulo2Director.CenaDoCapitulo2(scene);
         regiao=scene=="CemiterioSantaRita"||scene=="AbrigoCemiterio"?1:scene=="SociedadeBeiraRio"?2:0;
         bool interior=Capitulo2Director.Instance!=null&&Capitulo2Director.Instance.interior;
+        float proximidadeIgreja = ProximidadeDaMatriz(scene);
         for (int i = 0; i < fontes.Length; i++)
         {
             if (ativo && i == regiao && fontes[i] == null)
@@ -75,6 +81,8 @@ public sealed class Capitulo2Audio : MonoBehaviour
             var f = fontes[i]; if (f == null) continue;
             if(f.clip==null){f.clip=Resources.Load<AudioClip>("Audio/"+new[]{"Centro","Cemiterio","Bocha"}[i]+"_loop");if(f.clip==null)continue;}
             float alvo = ativo && i == regiao ? .25f : 0;
+            if(scene=="CentroSantaRita"&&i==0&&proximidadeIgreja>0f)
+                alvo*=Mathf.Lerp(1f,.62f,proximidadeIgreja);
             if(interior)alvo*=.65f;
             var filter=f.GetComponent<AudioLowPassFilter>();
             if(filter!=null)filter.cutoffFrequency=Mathf.MoveTowards(filter.cutoffFrequency,interior?1800f:22000f,Time.unscaledDeltaTime*16000f);
@@ -87,6 +95,100 @@ public sealed class Capitulo2Audio : MonoBehaviour
             f.volume = Mathf.MoveTowards(f.volume, alvo, Time.unscaledDeltaTime * .24f);
             if (alvo == 0 && f.volume == 0 && f.isPlaying) f.Stop();
         }
+        AtualizarHinoDaMatriz(scene,ativo,interior,proximidadeIgreja);
+    }
+
+    private float ProximidadeDaMatriz(string scene)
+    {
+        if(scene=="IgrejaMatriz")return 1f;
+        if(scene!="CentroSantaRita")return 0f;
+        if(jogadorCentro==null)jogadorCentro=FindAnyObjectByType<PlayerController>();
+        if(jogadorCentro==null)return 0f;
+        float distancia=Vector2.Distance(jogadorCentro.transform.position,new Vector2(46f,63.35f));
+        return Mathf.SmoothStep(0f,1f,Mathf.InverseLerp(18f,7f,distancia));
+    }
+
+    private void AtualizarHinoDaMatriz(string scene,bool ativo,bool interior,float proximidade)
+    {
+        bool localMatriz=scene=="CentroSantaRita"||scene=="IgrejaMatriz";
+        if(fonteHinoMatriz==null&&(ativo&&localMatriz))
+        {
+            var go=new GameObject("HinoMatriz_SinteseOriginal");
+            go.transform.SetParent(transform,false);
+            go.transform.position=new Vector3(46f,65.2f,0f);
+            fonteHinoMatriz=go.AddComponent<AudioSource>();
+            fonteHinoMatriz.clip=CriarHinoMatrizSintetizado();
+            fonteHinoMatriz.loop=true;
+            fonteHinoMatriz.playOnAwake=false;
+            fonteHinoMatriz.spatialBlend=.35f;
+            fonteHinoMatriz.rolloffMode=AudioRolloffMode.Logarithmic;
+            fonteHinoMatriz.minDistance=4f;
+            fonteHinoMatriz.maxDistance=20f;
+            fonteHinoMatriz.priority=64;
+            fonteHinoMatriz.volume=0f;
+            fonteHinoMatriz.gameObject.AddComponent<AudioLowPassFilter>().cutoffFrequency=4600f;
+        }
+        if(fonteHinoMatriz==null)return;
+
+        float alvo=ativo&&localMatriz?proximidade*.50f:0f;
+        if(interior)alvo*=.82f;
+        if(GameMessageUI.IsShowing||SantaRitaTapeDeck.IsOpen)alvo*=.67f;
+        // O hino é uma ambiência diegética da igreja; o controle de música pode
+        // ficar zerado sem silenciar os sons do mundo.
+        alvo*=AudioSettingsController.VolumeEfeitos;
+        if(alvo>0f&&!fonteHinoMatriz.isPlaying)fonteHinoMatriz.Play();
+        fonteHinoMatriz.volume=Mathf.MoveTowards(fonteHinoMatriz.volume,alvo,Time.unscaledDeltaTime*.22f);
+        var filtro=fonteHinoMatriz.GetComponent<AudioLowPassFilter>();
+        if(filtro!=null)
+        {
+            float corte=localMatriz?Mathf.Lerp(1150f,4600f,proximidade):1150f;
+            if(interior)corte=3200f;
+            filtro.cutoffFrequency=Mathf.MoveTowards(filtro.cutoffFrequency,corte,Time.unscaledDeltaTime*9000f);
+        }
+        if(alvo==0f&&fonteHinoMatriz.volume==0f&&fonteHinoMatriz.isPlaying)fonteHinoMatriz.Stop();
+    }
+
+    // Motivo original de órgão sintetizado para a Matriz; audição e aprovação do autor pendentes.
+    private static AudioClip CriarHinoMatrizSintetizado()
+    {
+        if(hinoMatriz!=null)return hinoMatriz;
+        const int hz=22050,segundos=16;
+        int[] melodia={60,64,67,72,71,69,67,64};
+        int[][] acordes={
+            new[]{48,55,60,64},
+            new[]{41,48,53,57},
+            new[]{43,50,55,59},
+            new[]{48,55,60,64}
+        };
+        var dados=new float[hz*segundos];
+        for(int i=0;i<dados.Length;i++)
+        {
+            float t=i/(float)hz;
+            int compasso=Mathf.Min(3,(int)(t/4f));
+            int nota=Mathf.Min(7,(int)(t/2f));
+            float tempoNota=t%2f;
+            float ataque=Mathf.SmoothStep(0f,1f,tempoNota/.10f);
+            float saida=1f-Mathf.SmoothStep(1.78f,2f,tempoNota);
+            float borda=Mathf.Min(t%4f,4f-t%4f);
+            float entradaLoop=Mathf.SmoothStep(0f,1f,t/.12f);
+            float saidaLoop=1f-Mathf.SmoothStep(segundos-.12f,segundos,t);
+            float soma=0f;
+            foreach(int midi in acordes[compasso])
+                soma+=OndaOrgao(FrequenciaMidi(midi),t)*.025f*Mathf.SmoothStep(0f,1f,borda/.28f);
+            soma+=OndaOrgao(FrequenciaMidi(melodia[nota]),t)*.06f*ataque*saida;
+            dados[i]=Mathf.Clamp(soma*entradaLoop*saidaLoop,-.42f,.42f);
+        }
+        hinoMatriz=AudioClip.Create("C2_HinoMatriz_SinteseOriginal_16s",dados.Length,1,hz,false);
+        hinoMatriz.SetData(dados,0);
+        return hinoMatriz;
+    }
+
+    private static float FrequenciaMidi(int nota)=>440f*Mathf.Pow(2f,(nota-69)/12f);
+
+    private static float OndaOrgao(float frequencia,float t)
+    {
+        float fase=2f*Mathf.PI*frequencia*t;
+        return (Mathf.Sin(fase)+.16f*Mathf.Sin(fase*2f)+.04f*Mathf.Sin(fase*3f)+.01f*Mathf.Sin(fase*4f))/1.21f;
     }
 
     private static AudioClip CriarAmbiencia(int tipo)

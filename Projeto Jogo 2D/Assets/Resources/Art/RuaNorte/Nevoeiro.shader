@@ -5,6 +5,10 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
         _Front("Faixa de primeiro plano", Float) = 0
         _Entrance("Rodovia de entrada", Float) = 0
         _BeamStrength("Intensidade do cone", Float) = 1
+        _PracaDaMatriz("Atenuação na Praça da Matriz", Float) = 0
+        _BeamLean("Inclinação lateral do cone", Float) = .06
+        _FireflyTerrain("Máscara de vegetação", 2D) = "black" {}
+        _UseFireflyTerrain("Usar máscara de vegetação", Float) = 0
     }
     SubShader
     {
@@ -20,13 +24,21 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
             #pragma vertex Vert
             #pragma fragment Frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "NevoaCentro.hlsl"
 
             float4 _Ground; // origem XY e extensão
             float _Front;
             float _Entrance;
             float _BeamStrength;
+            float _PracaDaMatriz;
+            float _BeamLean;
             float4 _FireflyPatches[4];
-            float4 _EntranceLamps[9];
+            TEXTURE2D(_FireflyTerrain);
+            SAMPLER(sampler_FireflyTerrain);
+            float4 _FireflyTerrain_TexelSize;
+            float4 _FireflyTerrainInfo;
+            float _UseFireflyTerrain;
+            float4 _EntranceLamps[16];
             int _EntranceLampCount;
             float4 _Lightning;
 
@@ -72,12 +84,19 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
                     float4 patch = _FireflyPatches[i];
                     inside = inside || (all(center >= patch.xy) && all(center < patch.zw));
                 }
-                if (!inside) return 0;
-
                 float phase = jitter.y * 6.283;
                 float pulse = smoothstep(.12, .98, sin(time * lerp(.56, 1.15, seed) + phase));
                 float2 drift = float2(sin(time * .83 + phase), cos(time * .67 + phase)) * float2(.15, .13);
                 float2 pointAt = (floor((center + drift) * 32) + .5) / 32;
+                if (_UseFireflyTerrain > .5)
+                {
+                    float2 tile = floor(pointAt + _Ground.xy - _FireflyTerrainInfo.xy);
+                    if (any(tile < 0) || any(tile >= _FireflyTerrain_TexelSize.zw)) return 0;
+                    float row = SAMPLE_TEXTURE2D_LOD(_FireflyTerrain, sampler_FireflyTerrain,
+                        (tile + .5) * _FireflyTerrain_TexelSize.xy, 0).g;
+                    inside = abs(row * 255 - _FireflyTerrainInfo.z) < .5;
+                }
+                if (!inside) return 0;
                 float d = length(local - pointAt);
                 float spark = 1 - smoothstep(.008, .030, d);
                 float halo = (1 - smoothstep(.020, .061, d)) * .08;
@@ -127,7 +146,7 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
 
                         float down = -delta.y;
                         float width = .13 + pow(max(down, 0), 1.14) * .68;
-                        float lateral = (delta.x + down * .06) / width;
+                        float lateral = (delta.x + down * _BeamLean) / width;
                         float edge = exp2(- lateral * lateral * 2.35) * (1 - smoothstep(.18, 1.08, abs(lateral)));
                         float reach = smoothstep(-.10, .06, down) * (1 - smoothstep(1.05, 3.25, down));
                         if (edge * reach <= .001) continue;
@@ -149,7 +168,8 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
                     half3 fogColor = lerp(half3(1.00, .53, .21), half3(1.42, .92, .46),
                         golden / max(total, .001));
                     fogColor = lerp(fogColor, flash, saturate(strike + _Lightning.z * .62));
-                    float opacity = saturate(total * _BeamStrength);
+                    float opacity = saturate(total * _BeamStrength *
+                        (1 - .77 * _PracaDaMatriz * AreaDaPracaDaMatriz(input.world)));
                     half3 color = lerp(fogColor, half3(.80, .89, .37), firefly / max(opacity + firefly, .001));
                     return half4(color, limit * saturate(opacity + firefly));
                 }

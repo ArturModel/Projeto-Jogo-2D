@@ -7,6 +7,8 @@ Shader "SantaRita/Sprites/WorldPBR"
         _NormalMap("Normal Map", 2D) = "bump" {}
         [PerRendererData] [NoScaleOffset] _SurfaceMap("Normal XY, roughness, metallic", 2D) = "white" {}
         [MaterialToggle] _ZWrite("ZWrite", Float) = 0
+        [PerRendererData] _CentroFogReceiver("Base e altura da névoa", Vector) = (0,0,0,0)
+        _CentroFogStrength("Névoa do Centro", Float) = 0
 
         // Legacy properties. They're here so that materials using this shader can gracefully fallback to the legacy sprite shader.
         [HideInInspector] _Color("Tint", Color) = (1,1,1,1)
@@ -32,6 +34,7 @@ Shader "SantaRita/Sprites/WorldPBR"
 
             #pragma vertex LitVertex
             #pragma fragment LitFragment
+            #pragma target 3.5
 
             #include_with_pragmas "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/ShapeLightShared.hlsl"
 
@@ -51,15 +54,19 @@ Shader "SantaRita/Sprites/WorldPBR"
             {
                 COMMON_2D_LIT_OUTPUTS
                 half4 color        : COLOR;
+                float2 fogWorld    : TEXCOORD7;
             };
 
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Lit2DCommon.hlsl"
             #include "SpriteSurface.hlsl"
+            #include "RuaNorte/NevoaCentro.hlsl"
             float4 _MainTex_TexelSize;
+            float4 _CentroFogReceiver;
 
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
+                float _CentroFogStrength;
             CBUFFER_END
 
             Varyings LitVertex(Attributes input)
@@ -70,6 +77,7 @@ Shader "SantaRita/Sprites/WorldPBR"
 
                 Varyings o = CommonLitVertex(input);
                 o.color = input.color * _Color * unity_SpriteColor;
+                o.fogWorld = TransformObjectToWorld(input.positionOS).xy;
 
                 return o;
             }
@@ -90,6 +98,7 @@ Shader "SantaRita/Sprites/WorldPBR"
                 float3 f0 = lerp(.04, main.rgb, material.metallic);
                 float3 sheen = SpriteSpecular(normalTS, sky, float3(0, 0, 1), material.roughness, f0);
                 half3 surfaceColor = main.rgb * relief * (1 - .21 * material.metallic) + sheen * .37;
+                if (_CentroFogReceiver.w > .5) surfaceColor = main.rgb;
 
                 SurfaceData2D surface;
                 InputData2D lightInput;
@@ -100,7 +109,17 @@ Shader "SantaRita/Sprites/WorldPBR"
                 SETUP_DEBUG_TEXTURE_DATA_2D_NO_TS(lightInput, input.positionWS, input.positionCS, _MainTex);
                 surface.normalWS = input.normalWS;
                 #endif
-                return CombinedShapeLightShared(surface, lightInput);
+                half4 lit = CombinedShapeLightShared(surface, lightInput);
+                [branch] if (_CentroFogStrength > 0 && _CentroFogReceiver.y > 0)
+                {
+                    float altura = max(0, (input.fogWorld.y - _CentroFogReceiver.x) * _CentroFogReceiver.y);
+                    float3 posicao = float3(input.fogWorld.x, _CentroFogReceiver.x, altura);
+                    float opacidade = DensidadeDaNevoaCentro(posicao, _Time.y, _CentroFogStrength);
+                    // Conserva o tom quente das luzes 2D que iluminam este material.
+                    half3 luzLocal = max(0, (lit.rgb + .02) / (surfaceColor + .08) - .38);
+                    lit.rgb = lerp(lit.rgb, CorDaNevoaCentro(luzLocal), opacidade);
+                }
+                return lit;
             }
             ENDHLSL
         }
@@ -139,6 +158,7 @@ Shader "SantaRita/Sprites/WorldPBR"
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START( UnityPerMaterial )
                 half4 _Color;
+                float _CentroFogStrength;
             CBUFFER_END
 
             Varyings NormalsRenderingVertex(Attributes input)
@@ -202,6 +222,7 @@ Shader "SantaRita/Sprites/WorldPBR"
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
+                float _CentroFogStrength;
             CBUFFER_END
 
             Varyings UnlitVertex(Attributes input)
