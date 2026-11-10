@@ -259,4 +259,8 @@ A zona inicial de EntradaDaCidade usa a família visual da Rua Norte. Cinco spri
 
 09/11/2026 — O orelhão no mundo usa a câmera ao vivo e confirma a gravação ao recolocar o fone depois da escolha do registro. Esc cancela e a carga continua explícita. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_orelhao-gancho.md).
 
+09/11/2026 — Rodovia de Entrada (`Zona1_Rodovia`) recomposta: muros sem costura espelhada e com pilares/hera nas juntas, mata norte fechada em três camadas sem buracos pretos, poça sob o poste com halo úmido orgânico, cone volumétrico gaussiano nos postes, ancoragem de base nos objetos da calçada e *rim light* frio sutil em Marcus na faixa escura da pista. Checkpoint Git local criado antes das mudanças; 0 erros C#. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_recomposicao-visual-rodovia.md).
+
 09/11/2026 — A interface do orelhão recebeu casco laranja gasto e peças em aço quente com relevo neutro, usando a cúpula do sprite em cena como referência. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_orelhao-paleta-do-sprite.md).
+
+09/11/2026 — Removido o highlight de borda indevido de Marcus fora da luz dos postes (`LuzVolumetrica.shader` e `SantaRitaRimLight.cs`) e aplicado o mesmo tratamento de recomposição visual da Rodovia às quatro cenas seguintes da Rua Norte (`Zona2_Posto`, `Zona3_Encruzilhada`, `Zona4_Bairro` e `Zona5_RuaNorteBar`): muros sem costura espelhada com pilares/drenos/hera, fechamento de vazios na mata de fundo, ancoragem orgânica de base em objetos/fundações e calibração de poças d'água no asfalto e no barro. Compilação C# 0 erros. [Plano executado](../ai-plans/2026-11-09_BBCONTTI_recomposicao-cenas-c1-rua-norte.md).

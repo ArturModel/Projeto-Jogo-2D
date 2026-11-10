@@ -19,16 +19,16 @@ public sealed partial class SantaRitaRuaNorte
     private void ComporMargemNorte()
     {
         // O muro acompanha o recuo do carro e termina antes da área de embarque.
-        var muros = new[]
+        var muros = new (Vector2 pe, bool flip)[]
         {
-            new Vector2(102.15f, 14.18f), new Vector2(104.53f, 14.18f),
-            new Vector2(107.20f, 15.20f), new Vector2(109.58f, 15.20f), new Vector2(111.96f, 15.20f),
-            new Vector2(114.32f, 14.36f), new Vector2(116.70f, 14.36f),
-            new Vector2(123.25f, 14.41f), new Vector2(125.63f, 14.41f)
+            (new Vector2(102.15f, 14.18f), false), (new Vector2(104.53f, 14.18f), false),
+            (new Vector2(107.20f, 15.20f), false), (new Vector2(109.58f, 15.20f), false), (new Vector2(111.96f, 15.20f), false),
+            (new Vector2(114.32f, 14.36f), true),  (new Vector2(116.70f, 14.36f), true),
+            (new Vector2(123.25f, 14.41f), false), (new Vector2(125.63f, 14.41f), false)
         };
         for (int i = 0; i < muros.Length; i++)
         {
-            var muro = ModuloDaRodovia("Muro de arrimo", "Muro", muros[i], flip: i % 2 != 0,
+            var muro = ModuloDaRodovia("Muro de arrimo", "Muro", muros[i].pe, flip: muros[i].flip,
                 volume: new Vector3(2.42f, .36f, .92f));
             if (muro == null) continue;
             LimiteDaRodovia(muro.transform, new Vector2(0, .24f), new Vector2(2.42f, .30f));
@@ -38,8 +38,9 @@ public sealed partial class SantaRitaRuaNorte
         var pilares = new[]
         {
             new Vector2(101.02f, 14.12f), new Vector2(105.71f, 14.12f),
-            new Vector2(106.03f, 15.13f), new Vector2(113.17f, 15.13f),
-            new Vector2(117.79f, 14.29f), new Vector2(122.12f, 14.34f), new Vector2(126.72f, 14.34f)
+            new Vector2(106.03f, 15.13f), new Vector2(109.58f, 15.13f), new Vector2(113.17f, 15.13f),
+            new Vector2(115.51f, 14.29f), new Vector2(117.79f, 14.29f),
+            new Vector2(122.12f, 14.34f), new Vector2(124.44f, 14.34f), new Vector2(126.72f, 14.34f)
         };
         for (int i = 0; i < pilares.Length; i++)
         {
@@ -82,24 +83,30 @@ public sealed partial class SantaRitaRuaNorte
 
         Plant("Bosque da curva", "Bracatinga", 133.38f, 16.80f, 1.07f);
         Plant("Copa junto à parada", "Pitangueira", 121.93f, 15.31f, .95f);
+        Plant("Copa sobre o muro central", "CamboataJovem", 124.85f, 15.42f, .92f, espelhar: true, temTroncoSolido: false);
+        Plant("Copa atrás do orelhão", "BracatingaJovem", 127.60f, 15.36f, .89f, espelhar: false, temTroncoSolido: false);
+        Plant("Copa junto ao poste leste", "Pitangueira", 130.65f, 15.48f, .94f, espelhar: true, temTroncoSolido: false);
         Plant("Copa atrás do recuo", "Bracatinga", 109.36f, 16.29f, 1.06f);
         EspalharVegetacao("Sebe", new (float x, float y, float escala)[]
         {
-            (101.3f, 14.92f, 1.05f), (105.55f, 15.43f, 1.15f), (107.53f, 15.81f, 1.04f),
-            (111.65f, 15.65f, 1.06f), (114.75f, 14.99f, 1.10f), (117.33f, 15.0f, .83f),
-            (121.83f, 14.94f, .92f), (124.25f, 15.17f, 1.05f), (127.31f, 14.78f, .95f),
-            (129.18f, 14.85f, 1.09f), (132.34f, 15.02f, 1.06f), (135.10f, 14.77f, 1.13f)
+            (101.3f, 14.92f, 1.05f), (103.4f, 14.96f, .98f), (105.55f, 15.43f, 1.15f), (107.53f, 15.81f, 1.04f),
+            (109.6f, 15.72f, 1.02f), (111.65f, 15.65f, 1.06f), (114.75f, 14.99f, 1.10f), (116.15f, 14.94f, .96f),
+            (117.33f, 15.0f, .83f), (121.83f, 14.94f, .96f), (123.10f, 15.08f, 1.04f), (124.45f, 15.17f, 1.12f),
+            (125.88f, 15.04f, 1.02f), (127.31f, 14.82f, 1.01f), (129.18f, 14.88f, 1.12f), (130.80f, 14.95f, 1.04f),
+            (132.34f, 15.02f, 1.08f), (133.75f, 14.89f, 1.02f), (135.10f, 14.77f, 1.13f)
         });
         EspalharVegetacao("Samambaia", new (float x, float y, float escala)[]
         {
             (100.85f, 13.98f, .81f), (104.11f, 14.12f, .73f), (105.56f, 14.99f, 1.07f),
             (110.57f, 15.08f, .88f), (113.1f, 14.18f, .71f), (115.31f, 14.29f, .72f),
-            (117.90f, 14.42f, .89f), (121.41f, 14.35f, .80f), (122.77f, 14.30f, .74f),
-            (126.7f, 14.24f, .75f), (129.41f, 14.37f, 1.03f), (134.21f, 14.27f, .85f)
+            (117.90f, 14.42f, .89f), (121.41f, 14.35f, .82f), (122.77f, 14.30f, .78f),
+            (124.42f, 14.28f, .88f), (126.7f, 14.24f, .79f), (128.15f, 14.18f, .74f),
+            (129.41f, 14.37f, 1.03f), (131.85f, 14.25f, .82f), (134.21f, 14.27f, .85f)
         });
         EspalharVegetacao("HeraDoMuro", new (float x, float y, float escala)[]
         {
-            (108.03f, 15.15f, 1f), (117.39f, 14.30f, .86f), (125.05f, 14.35f, 1f)
+            (103.34f, 14.16f, .88f), (108.03f, 15.15f, 1f), (111.20f, 15.14f, .92f),
+            (117.39f, 14.30f, .86f), (123.85f, 14.36f, .94f), (125.35f, 14.35f, 1f)
         });
     }
 
@@ -158,27 +165,33 @@ public sealed partial class SantaRitaRuaNorte
         EspalharDecalques("Terra", new (float x, float y, float escala)[]
         {
             (101.96f, 13.99f, 1.0f), (105.74f, 14.6f, 1.05f), (113.10f, 14.43f, 1.1f),
-            (117.20f, 14.4f, .95f), (122.02f, 14.04f, .88f), (128.61f, 14.26f, 1.05f),
+            (117.20f, 14.4f, .95f), (118.12f, 13.95f, .62f), (121.18f, 13.16f, .52f),
+            (122.02f, 14.04f, .88f), (124.44f, 14.28f, .72f), (126.48f, 13.08f, .54f),
+            (127.72f, 13.92f, .60f), (128.98f, 13.02f, .52f), (128.61f, 14.26f, 1.05f),
             (134.19f, 14.02f, 1.02f), (103.1f, 5.58f, .98f), (108.62f, 5.60f, 1.16f),
             (115.46f, 5.59f, 1.03f), (120.73f, 5.45f, .91f), (125.75f, 5.56f, 1.02f),
             (132.28f, 5.62f, 1.10f)
         }, .68f);
         EspalharDecalques("Folhas", new (float x, float y, float escala)[]
         {
-            (103.32f, 12.32f, .61f), (115.55f, 12.30f, .66f),
-            (129.57f, 12.30f, .61f), (121.25f, 7.50f, .62f)
+            (103.32f, 12.32f, .61f), (115.55f, 12.30f, .66f), (120.92f, 12.34f, .58f),
+            (126.35f, 13.06f, .48f), (129.57f, 12.30f, .61f), (133.90f, 12.32f, .55f),
+            (121.25f, 7.50f, .62f)
         }, .49f);
         EspalharDecalques("Pedras", new (float x, float y, float escala)[]
         {
-            (105.61f, 14.55f, .68f), (113.71f, 14.09f, .61f), (122.1f, 14.01f, .70f),
+            (105.61f, 14.55f, .68f), (113.71f, 14.09f, .61f), (118.08f, 13.94f, .55f),
+            (122.1f, 14.01f, .70f), (124.48f, 14.22f, .64f), (127.68f, 13.90f, .58f),
             (128.58f, 14.15f, .81f), (134.47f, 13.93f, .66f), (108.21f, 5.84f, .73f),
             (120.65f, 5.68f, .62f), (126.42f, 5.84f, .79f)
         }, .92f);
         EspalharVegetacao("Capim", new (float x, float y, float escala)[]
         {
             (102.7f, 14.02f, .54f), (105.81f, 14.41f, .68f), (108.84f, 15.10f, .50f),
-            (112.43f, 14.96f, .56f), (116.18f, 14.10f, .57f), (122.06f, 14.10f, .63f),
-            (128.55f, 14.16f, .70f), (131.53f, 14.13f, .50f), (134.81f, 14.09f, .71f),
+            (112.43f, 14.96f, .56f), (116.18f, 14.10f, .57f), (118.02f, 13.98f, .48f),
+            (122.06f, 14.10f, .63f), (124.42f, 14.31f, .58f), (126.74f, 14.22f, .56f),
+            (127.98f, 13.96f, .46f), (128.55f, 14.16f, .70f), (131.53f, 14.13f, .50f),
+            (134.81f, 14.09f, .71f),
             (104.33f, 5.67f, .65f), (107.02f, 5.72f, .71f), (112.77f, 5.61f, .58f),
             (118.12f, 5.63f, .68f), (123.71f, 5.64f, .58f), (128.99f, 5.72f, .64f),
             (133.22f, 5.65f, .63f)

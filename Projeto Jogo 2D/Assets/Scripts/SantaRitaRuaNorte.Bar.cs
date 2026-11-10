@@ -7,17 +7,17 @@ public sealed partial class SantaRitaRuaNorte
 
     private static readonly (float x, float y, float rx, float ry, float tilt, float blue, float shine)[] PocasDoBar =
     {
-        (4.35f, 9.5f, .51f, .24f, .11f, .53f, .76f),
-        (7.04f, 11.76f, .55f, .39f, .18f, .42f, .96f),
+        (4.35f, 9.5f, .54f, .26f, .11f, .58f, .76f),
+        (7.04f, 11.76f, .62f, .41f, .18f, .56f, .85f),
         (10.45f, 8.64f, .86f, .21f, -.16f, .75f, .77f),
-        (12.81f, 11.48f, .66f, .43f, -.12f, .43f, .98f),
-        (15.55f, 9.4f, .60f, .30f, .14f, .86f, .80f),
-        (18.16f, 11.26f, 1.02f, .38f, -.10f, .49f, .98f),
-        (20.29f, 8.45f, .65f, .19f, .07f, .63f, .75f),
-        (22.55f, 11.27f, .72f, .42f, .15f, .40f, .97f),
-        (26.84f, 9.43f, 1.04f, .41f, -.12f, .78f, .84f),
-        (29.98f, 11.54f, .66f, .43f, .15f, .46f, .97f),
-        (33.43f, 11.83f, .62f, .49f, .12f, .72f, .84f)
+        (12.81f, 11.48f, .72f, .42f, -.12f, .56f, .86f),
+        (15.55f, 9.4f, .60f, .30f, .14f, .82f, .79f),
+        (18.16f, 11.26f, 1.02f, .38f, -.10f, .58f, .86f),
+        (20.29f, 8.45f, .65f, .19f, .07f, .64f, .75f),
+        (22.55f, 11.27f, .76f, .42f, .15f, .55f, .85f),
+        (26.84f, 9.43f, 1.04f, .41f, -.12f, .76f, .82f),
+        (29.98f, 11.54f, .70f, .43f, .15f, .58f, .85f),
+        (33.43f, 11.83f, .64f, .48f, .12f, .70f, .82f)
     };
 
     private static void SelectBarGround(int x, int y, out Ground kind, out bool flipX, out bool flipY)
@@ -117,8 +117,12 @@ public sealed partial class SantaRitaRuaNorte
         for (int lado = -1; lado <= 1; lado += 2)
         {
             var muro = ModuloDaRodovia("Ala de pedra do portão", "Muro", acesso + new Vector2(lado * 3.38f, .04f),
-                .94f, flip: lado > 0, volume: new Vector3(2.35f, .34f, .74f));
+                .94f, flip: false, volume: new Vector3(2.35f, .34f, .74f));
             if (muro != null) LimiteDaRodovia(muro.transform, new Vector2(0, .18f), new Vector2(2.44f, .40f));
+            ModuloDaRodovia("Pilar do portão", "Pilar", acesso + new Vector2(lado * 2.22f, -.02f),
+                .96f, volume: new Vector3(.38f, .32f, 1.02f));
+            ModuloDaRodovia("Pilar externo da ala", "Pilar", acesso + new Vector2(lado * 4.54f, -.02f),
+                .96f, volume: new Vector3(.38f, .32f, 1.02f));
         }
 
         foreach (float x in new[] { 506.12f, 511.71f, 518.88f, 525.11f, 529.0f })
@@ -127,13 +131,60 @@ public sealed partial class SantaRitaRuaNorte
             ModuloDaRodovia("Drenagem sul · Rua Norte", "Grelha", new Vector2(x, 7.17f), .88f, plano: true);
 
         foreach (float x in new[] { 503.61f, 506.45f, 509.29f })
-            ModuloDaRodovia("Arrimo da margem norte", "Muro", new Vector2(x, 15.40f),
-                1.14f, volume: new Vector3(2.72f, .29f, .84f));
+        {
+            var muroNorte = ModuloDaRodovia("Arrimo da margem norte", "Muro", new Vector2(x, 15.40f),
+                1.14f, flip: false, volume: new Vector3(2.72f, .29f, .84f));
+            if (muroNorte != null && x < 507f)
+                FixarDetalheDaRodovia(muroNorte, "Dreno do arrimo norte", "DrenoDeMuro", new Vector2(.46f, .08f));
+        }
+        foreach (float x in new[] { 502.25f, 505.03f, 507.87f, 510.65f, 522.16f, 525.36f })
+            ModuloDaRodovia("Pilar do arrimo norte", "Pilar", new Vector2(x, x > 520f ? 15.62f : 15.32f),
+                1.04f, volume: new Vector3(.40f, .32f, 1.02f));
+
         InserirSubmata("MoitaDeBorda", new Vector2(527.12f, 15.35f), .92f, true);
         InserirSubmata("SamambaiaDaMata", new Vector2(528.42f, 14.97f), .80f, false);
         foreach (float x in new[] { 508.46f, 511.22f, 521.85f, 524.58f, 527.30f })
             ModuloDaRodovia("Arrimo da margem sul", "Muro", new Vector2(x, 5.56f),
-                1.10f, flip: x > 520f, volume: new Vector3(2.65f, .34f, .81f));
+                1.10f, flip: false, volume: new Vector3(2.65f, .34f, .81f));
+        foreach (float x in new[] { 507.14f, 509.84f, 512.54f, 520.52f, 523.22f, 525.94f, 528.64f })
+            ModuloDaRodovia("Pilar do arrimo sul", "Pilar", new Vector2(x, 5.48f),
+                1.02f, volume: new Vector3(.39f, .32f, .98f));
+
+        EspalharVegetacao("HeraDoMuro", new (float x, float y, float escala)[]
+        {
+            (504.12f, 15.34f, .98f), (508.85f, 15.34f, .96f), (523.76f, 15.64f, 1.02f),
+            (508.92f, 5.52f, .94f), (522.45f, 5.52f, .98f), (526.85f, 5.52f, .94f)
+        });
+        EspalharVegetacao("Samambaia", new (float x, float y, float escala)[]
+        {
+            (502.65f, 15.26f, .76f), (506.95f, 15.28f, .72f), (510.35f, 14.88f, .74f),
+            (521.95f, 14.82f, .76f), (525.65f, 14.85f, .78f), (507.45f, 5.50f, .74f),
+            (512.35f, 5.50f, .72f), (520.85f, 5.50f, .76f), (528.35f, 5.50f, .74f)
+        });
+        EspalharVegetacao("Sebe", new (float x, float y, float escala)[]
+        {
+            (503.85f, 16.08f, .96f), (507.45f, 16.06f, 1.02f), (510.15f, 15.98f, .94f),
+            (522.45f, 16.32f, .96f), (525.45f, 16.28f, 1.00f), (509.45f, 4.92f, .98f),
+            (523.15f, 4.90f, 1.04f), (526.85f, 4.92f, .96f)
+        });
+        EspalharDecalques("Terra", new (float x, float y, float escala)[]
+        {
+            (510.03f, 14.60f, .78f), (511.09f, 14.92f, .84f), (513.65f, 13.85f, .88f),
+            (515.52f, 13.84f, .68f), (522.91f, 14.72f, .86f), (524.45f, 14.68f, .88f),
+            (526.85f, 13.78f, .76f), (507.20f, 12.68f, .72f), (518.60f, 12.68f, .74f),
+            (528.20f, 12.68f, .72f)
+        }, .35f);
+        EspalharDecalques("Pedras", new (float x, float y, float escala)[]
+        {
+            (509.65f, 14.55f, .58f), (511.65f, 14.88f, .56f), (522.15f, 14.58f, .60f),
+            (525.35f, 14.58f, .60f), (529.85f, 14.12f, .64f), (535.85f, 14.12f, .64f)
+        }, .55f);
+        EspalharVegetacao("Capim", new (float x, float y, float escala)[]
+        {
+            (507.35f, 12.74f, .55f), (509.75f, 14.64f, .58f), (518.75f, 12.74f, .54f),
+            (522.05f, 14.62f, .58f), (526.95f, 13.82f, .56f), (528.35f, 12.74f, .55f),
+            (508.65f, 5.64f, .64f), (521.95f, 5.64f, .66f), (527.15f, 5.64f, .64f)
+        });
         for (int i = 0; i < 13; i++)
         {
             float x = 502.55f + i * 2.68f;
@@ -162,9 +213,9 @@ public sealed partial class SantaRitaRuaNorte
             {
                 float px = x + (float)sorte.NextDouble() * .75f;
                 if (norte && px > 530.25f && px < 535.65f) continue;
-                float y = faixa switch { 0 => 1.15f, 1 => 4.22f, 2 => 15.96f, 3 => 18.65f, _ => 21.14f };
+                float y = faixa switch { 0 => 1.15f, 1 => 4.22f, 2 => 15.86f, 3 => 17.95f, _ => 20.14f };
                 if (faixa == 2 && px > 510.7f && px < 529.1f)
-                    y += px > 513.8f && px < 525.2f ? 1.32f : .61f;
+                    y += px > 513.8f && px < 525.2f ? .74f : .42f;
                 float py = y + (float)sorte.NextDouble() * .58f;
                 string especie = especies[sorte.Next(especies.Length)];
                 float escala = .88f + (float)sorte.NextDouble() * .27f;

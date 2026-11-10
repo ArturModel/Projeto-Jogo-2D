@@ -45,34 +45,39 @@ public sealed partial class SantaRitaRuaNorte
 
     private static readonly (float x, float y, string especie, float escala)[] FundoDaRodovia =
     {
-        (1.32f, 19.28f, "Camboata", 1.12f), (6.87f, 18.47f, "Bracatinga", 1.07f),
-        (9.96f, 19.13f, "Araucaria", 1.08f), (13.13f, 19.63f, "Bracatinga", 1.05f),
-        (17.94f, 18.84f, "Camboata", 1.10f), (20.81f, 19.47f, "Araucaria", 1.07f),
-        (23.45f, 18.45f, "Bracatinga", 1.04f), (28.51f, 19.50f, "Camboata", 1.11f),
-        (32.09f, 18.71f, "Araucaria", 1.17f), (34.81f, 19.32f, "Bracatinga", 1.06f)
+        (1.32f, 18.85f, "Camboata", 1.12f), (4.15f, 17.65f, "CamboataJovem", .98f),
+        (6.87f, 18.25f, "Bracatinga", 1.07f), (9.96f, 18.75f, "Araucaria", 1.08f),
+        (13.13f, 19.10f, "Bracatinga", 1.05f), (15.40f, 17.45f, "BracatingaJovem", .96f),
+        (17.94f, 18.40f, "Camboata", 1.10f), (20.81f, 18.95f, "Araucaria", 1.07f),
+        (23.45f, 17.95f, "Bracatinga", 1.04f), (26.15f, 17.55f, "CamboataJovem", 1.02f),
+        (28.51f, 18.85f, "Camboata", 1.11f), (30.40f, 17.60f, "BracatingaJovem", .98f),
+        (32.09f, 18.35f, "Araucaria", 1.17f), (34.81f, 18.80f, "Bracatinga", 1.06f)
     };
 
     private static readonly (float x, float y, string especie, float escala)[] FundoDoPosto =
     {
-        (2.26f, 20.26f, "Camboata", 1.13f), (5.46f, 21.28f, "Araucaria", 1.17f),
-        (8.05f, 19.54f, "Bracatinga", 1.06f), (11.77f, 20.39f, "Camboata", 1.04f),
-        (14.33f, 21.51f, "Araucaria", 1.19f), (18.61f, 20.58f, "Bracatinga", 1.05f),
-        (21.21f, 21.30f, "Camboata", 1.10f), (25.24f, 19.61f, "Araucaria", 1.14f),
-        (28.13f, 20.46f, "Bracatinga", 1.03f), (31.50f, 21.26f, "Camboata", 1.14f),
-        (33.32f, 19.84f, "Pitangueira", 1.06f), (36.43f, 20.90f, "Araucaria", 1.19f)
+        (2.26f, 18.85f, "Camboata", 1.13f), (4.85f, 17.75f, "CamboataJovem", 1.01f),
+        (5.46f, 20.10f, "Araucaria", 1.17f), (8.05f, 18.54f, "Bracatinga", 1.06f),
+        (11.77f, 19.39f, "Camboata", 1.04f), (14.33f, 20.21f, "Araucaria", 1.19f),
+        (16.95f, 17.65f, "BracatingaJovem", .98f), (18.61f, 19.38f, "Bracatinga", 1.05f),
+        (21.21f, 18.70f, "Camboata", 1.10f), (23.45f, 17.55f, "CamboataJovem", 1.02f),
+        (25.24f, 19.11f, "Araucaria", 1.14f), (28.13f, 19.46f, "Bracatinga", 1.03f),
+        (31.50f, 19.96f, "Camboata", 1.14f), (33.32f, 18.44f, "Pitangueira", 1.06f),
+        (35.10f, 17.60f, "BracatingaJovem", 1.00f), (36.43f, 19.70f, "Araucaria", 1.19f)
     };
 
     private static readonly (float x, float y, string especie, float escala)[] FundoDaEncruzilhada =
     {
-        (2.14f, 22.31f, "Bracatinga", 1.09f), (5.28f, 24.83f, "Araucaria", 1.20f),
-        (7.59f, 20.26f, "Camboata", 1.04f), (8.38f, 23.54f, "Bracatinga", 1.06f),
-        (10.48f, 25.43f, "Camboata", 1.14f), (11.14f, 21.66f, "Pitangueira", 1.04f),
-        (13.88f, 20.73f, "Bracatinga", 1.09f), (13.04f, 23.42f, "Araucaria", 1.17f),
-        (15.05f, 25.26f, "Camboata", 1.12f), (16.63f, 21.43f, "CamboataJovem", 1.04f),
-        (24.02f, 22.73f, "CamboataJovem", 1.11f), (24.54f, 25.31f, "Araucaria", 1.18f),
-        (26.58f, 20.05f, "Camboata", 1.07f), (27.25f, 23.23f, "Bracatinga", 1.13f),
-        (29.95f, 25.36f, "Camboata", 1.16f), (31.03f, 21.72f, "Pitangueira", 1.05f),
-        (33.81f, 24.32f, "Araucaria", 1.18f), (37.92f, 23.06f, "Bracatinga", 1.08f)
+        (2.14f, 19.31f, "Bracatinga", 1.09f), (4.65f, 17.85f, "CamboataJovem", 1.02f),
+        (5.28f, 21.83f, "Araucaria", 1.20f), (7.59f, 19.26f, "Camboata", 1.04f),
+        (8.38f, 21.54f, "Bracatinga", 1.06f), (10.48f, 23.43f, "Camboata", 1.14f),
+        (11.14f, 19.66f, "Pitangueira", 1.04f), (13.88f, 19.73f, "Bracatinga", 1.09f),
+        (13.04f, 22.42f, "Araucaria", 1.17f), (15.05f, 24.26f, "Camboata", 1.12f),
+        (16.63f, 20.43f, "CamboataJovem", 1.04f), (24.02f, 20.73f, "CamboataJovem", 1.11f),
+        (24.54f, 24.31f, "Araucaria", 1.18f), (26.58f, 18.85f, "Camboata", 1.07f),
+        (27.25f, 21.83f, "Bracatinga", 1.13f), (29.95f, 23.86f, "Camboata", 1.16f),
+        (31.03f, 19.72f, "Pitangueira", 1.05f), (33.81f, 22.32f, "Araucaria", 1.18f),
+        (35.85f, 18.45f, "CamboataJovem", 1.04f), (37.92f, 21.06f, "Bracatinga", 1.08f)
     };
 
     // Fileiras desencontradas atrás das construções e nas margens da subida.
@@ -167,9 +172,9 @@ public sealed partial class SantaRitaRuaNorte
         PlantarFileiraDaAvenida("borda sul", 2.88f, 1.38f, 1.95f, baixa: true, fase: posto ? 1 : 3);
 
         // No norte, as árvores começam atrás da parada e das fachadas.
-        PlantarFileiraDaAvenida("borda norte", posto ? 16.88f : 16.38f, .62f, 2.65f,
+        PlantarFileiraDaAvenida("borda norte", posto ? 16.32f : 16.05f, .62f, 2.15f,
             baixa: false, fase: posto ? 3 : 1);
-        PlantarFileiraDaAvenida("fundo norte", posto ? 19.72f : 18.60f, 1.77f, 2.65f,
+        PlantarFileiraDaAvenida("fundo norte", posto ? 18.42f : 18.10f, 1.45f, 2.25f,
             baixa: false, fase: posto ? 0 : 2);
     }
 

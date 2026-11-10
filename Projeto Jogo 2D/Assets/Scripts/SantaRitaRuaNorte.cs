@@ -60,6 +60,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     public static bool Active => Capitulo1Director.ZonaAtual == Capitulo1Director.ZonaId.Zona5_RuaNorteBar;
     public static bool EntradaAtiva => entradaAtual != null &&
         Capitulo1Director.ZonaAtual == Capitulo1Director.ZonaId.Zona1_Rodovia;
+    public static bool EmZonaDaRuaNorte => playerLightingOwner != null || Active || EntradaAtiva;
     private static SantaRitaRuaNorte entradaAtual;
 
     internal static bool ControlaRenderDaRua(SpriteRenderer renderer)
@@ -242,9 +243,9 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         {
             puddles = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(puddles, new[]
             {
-                (6.61f, 11.83f, .48f, .73f, .19f, .29f, .96f),
-                (16.49f, 11.94f, .58f, .77f, -.19f, .25f, .97f),
-                (29.65f, 12.02f, .65f, .61f, .17f, .34f, .96f),
+                (6.61f, 11.83f, .52f, .68f, .19f, .34f, .92f),
+                (16.49f, 11.94f, .62f, .72f, -.19f, .32f, .93f),
+                (29.38f, 11.86f, .78f, .44f, .14f, .48f, .88f),
                 (9.18f, 11.89f, 1.13f, .28f, .05f, .57f, .83f),
                 (12.52f, 8.22f, .82f, .14f, .05f, .77f, .76f),
                 (23.47f, 8.20f, .53f, .13f, -.07f, .59f, .72f)
@@ -257,11 +258,12 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
         {
             puddles = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(puddles, new[]
             {
-                (19.47f, 15.43f, .36f, .63f, -.08f, .45f, .86f),
-                (21.17f, 17.36f, .37f, .58f, .04f, .54f, .81f),
-                (19.64f, 20.18f, .30f, .77f, .06f, .38f, .75f),
-                (20.80f, 22.48f, .41f, .72f, -.07f, .55f, .84f),
-                (19.15f, 24.81f, .30f, .49f, .10f, .47f, .82f)
+                (7.85f, 11.82f, .86f, .46f, -.14f, .54f, .84f),
+                (19.47f, 15.43f, .42f, .68f, -.08f, .52f, .82f),
+                (21.17f, 17.36f, .44f, .62f, .04f, .58f, .79f),
+                (19.64f, 20.18f, .36f, .78f, .06f, .48f, .76f),
+                (20.80f, 22.48f, .46f, .74f, -.07f, .58f, .81f),
+                (19.15f, 24.81f, .34f, .54f, .10f, .52f, .78f)
             }));
         }
 

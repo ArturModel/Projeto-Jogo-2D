@@ -36,6 +36,17 @@ public sealed partial class SantaRitaRuaNorte
                 new Vector2(2.94f, 1.36f), ObjetosDoMercadinho);
             FixarDetalheDaRodovia(fachada, "Cano lateral do mercadinho", "CanoDeChuva", new Vector2(-2.98f, .10f));
         }
+        EspalharDecalques("Terra", new (float x, float y, float escala)[]
+        {
+            (307.65f, 13.56f, .88f), (312.90f, 13.38f, .68f), (314.27f, 13.65f, .82f),
+            (325.10f, 13.52f, .84f), (330.40f, 14.32f, .92f), (305.20f, 12.68f, .72f),
+            (316.10f, 12.68f, .74f), (326.80f, 12.68f, .74f)
+        }, .34f);
+        EspalharDecalques("Pedras", new (float x, float y, float escala)[]
+        {
+            (306.95f, 13.52f, .56f), (314.65f, 13.62f, .58f), (324.62f, 13.48f, .60f),
+            (329.15f, 14.28f, .62f), (332.85f, 14.34f, .64f)
+        }, .54f);
     }
 
     private void ComporSubidaDeTerra()
@@ -129,15 +140,44 @@ public sealed partial class SantaRitaRuaNorte
         foreach (var pe in new[] { new Vector2(302.45f, 14.19f), new Vector2(304.83f, 14.19f),
                      new Vector2(325.36f, 14.79f) })
         {
-            var muro = ModuloDaRodovia("Muro baixo da encruzilhada", "Muro", pe, flip: i++ % 2 == 0,
+            var muro = ModuloDaRodovia("Muro baixo da encruzilhada", "Muro", pe, flip: false,
                 volume: new Vector3(2.39f, .33f, .92f));
-            if (muro != null) LimiteDaRodovia(muro.transform, new Vector2(0, .22f), new Vector2(2.39f, .30f));
+            if (muro != null)
+            {
+                LimiteDaRodovia(muro.transform, new Vector2(0, .22f), new Vector2(2.39f, .30f));
+                if (i == 0 || i == 2)
+                    FixarDetalheDaRodovia(muro, "Dreno do muro da encruzilhada", "DrenoDeMuro",
+                        new Vector2(i == 0 ? -.42f : .48f, .08f));
+            }
+            i++;
         }
+        foreach (var pe in new[] {
+            new Vector2(301.26f, 14.13f), new Vector2(303.64f, 14.13f), new Vector2(306.02f, 14.13f),
+            new Vector2(324.17f, 14.73f), new Vector2(326.55f, 14.73f) })
+            ModuloDaRodovia("Arremate do muro da encruzilhada", "Pilar", pe, volume: new Vector3(.39f, .32f, 1.00f));
+
+        EspalharVegetacao("HeraDoMuro", new (float x, float y, float escala)[]
+        {
+            (302.15f, 14.14f, .96f), (304.62f, 14.14f, 1.00f), (325.24f, 14.74f, .98f)
+        });
+        EspalharVegetacao("Samambaia", new (float x, float y, float escala)[]
+        {
+            (301.55f, 14.08f, .74f), (303.85f, 14.10f, .68f), (306.28f, 14.12f, .72f),
+            (324.42f, 14.68f, .76f), (326.78f, 14.70f, .70f), (333.85f, 15.12f, .82f)
+        });
         EspalharVegetacao("Sebe", new (float x, float y, float escala)[]
         {
-            (302.76f, 14.97f, .92f), (305.48f, 14.88f, 1.03f), (325.01f, 15.55f, .94f),
-            (334.40f, 16.04f, 1.12f), (336.45f, 17.01f, .89f), (312.75f, 5.05f, .94f),
-            (324.14f, 5.03f, 1.12f), (331.04f, 4.92f, .99f)
+            (302.36f, 14.97f, .94f), (304.12f, 14.94f, .90f), (305.68f, 14.88f, 1.03f),
+            (315.42f, 15.18f, .92f), (325.01f, 15.55f, .98f), (327.15f, 15.62f, .94f),
+            (334.40f, 16.04f, 1.12f), (336.45f, 17.01f, .89f), (304.45f, 5.02f, .96f),
+            (312.75f, 5.05f, .94f), (324.14f, 5.03f, 1.12f), (331.04f, 4.92f, .99f)
+        });
+        EspalharVegetacao("Capim", new (float x, float y, float escala)[]
+        {
+            (305.38f, 12.74f, .54f), (307.12f, 13.58f, .56f), (314.75f, 13.68f, .58f),
+            (316.24f, 12.74f, .55f), (324.85f, 13.56f, .58f), (326.96f, 12.74f, .54f),
+            (304.85f, 5.66f, .66f), (314.65f, 5.64f, .68f), (323.85f, 5.62f, .70f),
+            (332.45f, 5.64f, .66f)
         });
         MontarDefensas(new[] { 303.46f, 306.04f, 315.03f, 317.61f, 323.06f, 333.20f }, 5.53f);
         SpriteRenderer anterior = null;
@@ -155,8 +195,10 @@ public sealed partial class SantaRitaRuaNorte
             ModuloDaRodovia("Dreno do passeio sul", "Grelha", new Vector2(x, 7.20f), .88f, plano: true);
         EspalharDecalques("Folhas", new (float x, float y, float escala)[]
         {
-            (303.99f, 12.43f, .64f), (314.41f, 12.40f, .63f), (328.64f, 12.41f, .66f)
-        }, .45f);
+            (303.99f, 12.43f, .64f), (307.72f, 12.42f, .58f), (314.41f, 12.40f, .63f),
+            (324.38f, 12.42f, .60f), (328.64f, 12.41f, .66f), (315.18f, 7.22f, .62f),
+            (328.52f, 7.22f, .64f)
+        }, .46f);
     }
 
     internal static void DelimitarObraDaEncruzilhada(Transform zona, Vector2 origem, float altura)

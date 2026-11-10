@@ -35,21 +35,21 @@ public sealed partial class SantaRitaRuaNorte
 
     private static readonly (float x, float y, float rx, float ry, float tilt, float blue, float shine)[] PocasDoBairro =
     {
-        (19.47f, 3.4f, .30f, .72f, -.18f, .45f, .90f),
-        (21.1f, 6.0f, .37f, .63f, .23f, .63f, .81f),
-        (13.5f, 8.76f, .81f, .30f, .12f, .52f, .85f),
-        (18.70f, 8.95f, .66f, .27f, -.06f, .66f, .74f),
-        (24.65f, 10.6f, .36f, .68f, .20f, .45f, .90f),
-        (28.65f, 12.98f, .85f, .29f, .08f, .49f, .92f),
-        (25.99f, 15.18f, .32f, .75f, -.18f, .56f, .85f),
-        (23.65f, 18.42f, .38f, .71f, -.16f, .53f, .86f),
-        (15.95f, 20.94f, .73f, .25f, .07f, .63f, .83f),
-        (22.24f, 21.3f, .84f, .31f, -.14f, .54f, .82f),
-        (28.1f, 20.37f, .90f, .31f, -.07f, .52f, .96f),
-        (32.4f, 22.14f, .69f, .31f, .24f, .54f, .84f),
-        (35.25f, 26.52f, .37f, .82f, .09f, .39f, .88f),
-        (36.15f, 29.6f, .43f, .75f, -.16f, .54f, .86f),
-        (34.92f, 31.91f, .28f, .71f, .03f, .56f, .88f)
+        (19.47f, 3.4f, .34f, .72f, -.18f, .54f, .84f),
+        (21.1f, 6.0f, .40f, .65f, .23f, .63f, .80f),
+        (13.5f, 8.76f, .84f, .32f, .12f, .56f, .82f),
+        (18.70f, 8.95f, .68f, .29f, -.06f, .66f, .74f),
+        (24.65f, 10.6f, .39f, .68f, .20f, .54f, .84f),
+        (28.65f, 12.98f, .85f, .31f, .08f, .56f, .85f),
+        (25.99f, 15.18f, .35f, .75f, -.18f, .58f, .83f),
+        (23.65f, 18.42f, .40f, .71f, -.16f, .56f, .84f),
+        (15.95f, 20.94f, .75f, .27f, .07f, .63f, .81f),
+        (22.24f, 21.3f, .86f, .33f, -.14f, .58f, .80f),
+        (28.1f, 20.37f, .90f, .33f, -.07f, .58f, .86f),
+        (32.4f, 22.14f, .71f, .33f, .24f, .58f, .82f),
+        (35.25f, 26.52f, .39f, .82f, .09f, .52f, .84f),
+        (36.15f, 29.6f, .45f, .75f, -.16f, .56f, .83f),
+        (34.92f, 31.91f, .32f, .71f, .03f, .58f, .84f)
     };
 
     private static float DistanciaDaRuaDoBairro(Vector2 posicao)
@@ -216,6 +216,46 @@ public sealed partial class SantaRitaRuaNorte
                 .87f, flip: x > 420f, volume: new Vector3(.45f, .30f, .43f), pasta: DetalhesDoBairro);
             if (vasos != null) transform.Find(jardim)?.gameObject.SetActive(false);
         }
+
+        // Arremates de pilares, hera e ancoragem orgânica nas muretas e fundações dos lotes.
+        foreach (string nomeCerca in new[] { "Cerca_Casa14", "Cerca_Casa22", "Cerca_Casa32", "Cerca_Avo_Esq", "Cerca_Avo_Dir" })
+        {
+            var cerca = transform.Find(nomeCerca);
+            if (cerca == null) continue;
+            Vector2 c = cerca.position;
+            ModuloDaRodovia("Pilar esquerdo · " + nomeCerca, "Pilar", c + new Vector2(-1.54f, -.04f),
+                .96f, volume: new Vector3(.38f, .30f, .96f));
+            ModuloDaRodovia("Pilar direito · " + nomeCerca, "Pilar", c + new Vector2(1.54f, -.04f),
+                .96f, volume: new Vector3(.38f, .30f, .96f));
+            ModuloDaRodovia("Hera da mureta · " + nomeCerca, "HeraDoMuro", c + new Vector2(-.28f, -.03f), .94f);
+            ModuloDaRodovia("Samambaia da mureta · " + nomeCerca, "Samambaia", c + new Vector2(1.18f, -.08f), .72f);
+        }
+
+        EspalharDecalques("Terra", new (float x, float y, float escala)[]
+        {
+            (410.35f, 10.48f, .95f), (431.65f, 13.60f, .95f), (414.15f, 21.88f, .95f),
+            (423.50f, 22.22f, 1.02f), (439.55f, 25.70f, .95f), (421.15f, 21.95f, .78f),
+            (430.45f, 14.15f, .82f), (408.65f, 10.88f, .72f), (429.30f, 14.42f, .72f),
+            (412.78f, 22.45f, .72f), (437.95f, 26.10f, .72f)
+        }, .36f);
+        EspalharDecalques("Pedras", new (float x, float y, float escala)[]
+        {
+            (408.85f, 10.62f, .62f), (412.10f, 10.68f, .58f), (430.12f, 13.78f, .64f),
+            (433.15f, 13.82f, .60f), (412.85f, 22.02f, .62f), (415.85f, 22.06f, .58f),
+            (420.65f, 22.12f, .64f), (426.25f, 22.15f, .64f), (438.15f, 25.82f, .60f)
+        }, .56f);
+        EspalharVegetacao("Samambaia", new (float x, float y, float escala)[]
+        {
+            (407.65f, 12.45f, .78f), (413.15f, 12.55f, .74f), (429.15f, 15.65f, .76f),
+            (434.10f, 15.72f, .80f), (411.85f, 23.45f, .76f), (416.95f, 23.52f, .78f),
+            (419.95f, 24.10f, .84f), (426.95f, 24.12f, .82f), (437.35f, 27.15f, .78f)
+        });
+        EspalharVegetacao("Capim", new (float x, float y, float escala)[]
+        {
+            (408.45f, 10.85f, .58f), (411.95f, 10.52f, .56f), (429.45f, 14.38f, .58f),
+            (430.65f, 14.08f, .62f), (412.62f, 22.38f, .58f), (421.05f, 21.88f, .60f),
+            (425.85f, 22.05f, .58f), (437.80f, 26.05f, .58f), (441.65f, 25.78f, .62f)
+        });
     }
 
     private SpriteRenderer DecalqueDoBairro(string arte, Vector2 pos, float escala, float angulo, float opacidade,

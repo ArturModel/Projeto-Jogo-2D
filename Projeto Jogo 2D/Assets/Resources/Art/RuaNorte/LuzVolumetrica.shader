@@ -600,10 +600,11 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     }
                     float2 nearest = clamp(xy, _CasterMin[i].xy, _CasterMax[i].xy);
                     float2 gap = (nearest - xy) * float2(1, .78);
-                    float spread = .13 + min(.22, _CasterMax[i].z * .055);
+                    float width = _CasterMax[i].x - _CasterMin[i].x;
+                    float spread = .15 + min(.24, _CasterMax[i].z * .058) + (width < .35 ? .06 : 0);
                     float distanceSquared = dot(gap, gap);
                     float fade = saturate(1 - distanceSquared / (spread * spread));
-                    contact = max(contact, fade * fade);
+                    contact = max(contact, fade * fade * (width < .35 ? 1.15 : 1.0));
                 }
                 return 1 - contact * .58 * _ContactStrength;
             }
@@ -660,7 +661,7 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     ? normalize(lerp(float3(0, -.79, .61), float3(0, 0, 1), top * .85))
                     : float3(0, 0, 1);
                 bool propSurface = _PropSurfaceEnabled > .5;
-                bool generatedSurface = abs(_Receiver.y) > .001;
+                bool generatedSurface = abs(_Receiver.y) > .001 && owner != _ArrivalPlayerCaster;
                 float propRoughness = 1;
                 float propMetallic = 0;
                 float foliage = 0;
@@ -738,8 +739,10 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                             float3 pool = SAMPLE_TEXTURE2D(_EntranceWater, sampler_EntranceWater, waterUV).rgb;
                             water = pool.r * max(asphalt, dirt);
                             waterLook = pool.gb;
-                            ground.b = lerp(ground.b, .34, water);
-                            detail.gb *= 1 - .92 * water;
+                            float dampEdge = smoothstep(.05, .55, water) * (1 - smoothstep(.55, .95, water));
+                            sprite.rgb *= 1 - (.16 * dampEdge + .11 * smoothstep(.35, .95, water)) * max(asphalt, dirt * .75);
+                            ground.b = lerp(ground.b, .30, smoothstep(.12, .88, water));
+                            detail.gb *= 1 - .92 * smoothstep(.20, .90, water);
                         }
                     }
                 }
@@ -989,9 +992,10 @@ Shader "SantaRita/RuaNorte/LuzVolumetrica"
                     reflection *= 1 - .18 * asphalt * (1 - water);
                     // O brilho frio destaca a água sem clarear o asfalto que a circunda.
                     float ripple = .5 + .5 * sin(xy.y * 47 + sin(xy.x * 12) * 1.1 - _Time.y * 2.5);
-                    half3 waterColor = lerp(half3(.53, .55, .56), half3(.24, .48, .73), waterLook.x);
-                    reflection += waterColor * water * waterLook.y *
-                        (.012 + .012 * ripple + .023 * saturate(practicalLight));
+                    float innerPool = smoothstep(.28, .92, water);
+                    half3 waterColor = lerp(half3(.34, .39, .44), half3(.20, .42, .66), waterLook.x);
+                    reflection += waterColor * innerPool * waterLook.y *
+                        (.006 + .008 * ripple + .018 * saturate(practicalLight));
                 }
                 half3 color = (sprite.rgb * light * nightGrade + reflection) * contact;
                 [branch] if (_Entrance > .5 && groundPbr && _WindStrength > 0 && practicalLight > .10)

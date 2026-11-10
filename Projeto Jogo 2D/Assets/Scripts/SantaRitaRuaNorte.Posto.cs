@@ -7,17 +7,17 @@ public sealed partial class SantaRitaRuaNorte
     private static readonly (float x, float y, float rx, float ry, float tilt, float blue, float shine)[] PocasDoPosto =
     {
         (3.42f, 9.09f, .86f, .29f, -.16f, .70f, .71f),
-        (5.12f, 11.84f, .35f, .59f, .10f, .32f, 1.00f),
-        (8.13f, 11.72f, 1.05f, .29f, -.13f, .59f, .75f),
-        (11.50f, 11.18f, .82f, .33f, .08f, .26f, 1.00f),
-        (12.23f, 9.62f, .53f, .21f, -.19f, .60f, .82f),
-        (15.30f, 11.87f, .68f, .27f, .12f, .52f, .86f),
-        (18.09f, 11.45f, .57f, .36f, -.21f, .38f, 1.00f),
+        (5.12f, 11.84f, .44f, .52f, .10f, .56f, .85f),
+        (8.13f, 11.72f, 1.05f, .29f, -.13f, .62f, .75f),
+        (11.50f, 11.18f, .86f, .35f, .08f, .54f, .88f),
+        (12.23f, 9.62f, .53f, .21f, -.19f, .64f, .79f),
+        (15.30f, 11.87f, .72f, .29f, .12f, .58f, .84f),
+        (18.09f, 11.45f, .64f, .38f, -.21f, .56f, .86f),
         (20.84f, 10.45f, 1.04f, .34f, .12f, .65f, .75f),
-        (24.57f, 11.81f, .54f, .46f, .15f, .37f, 1.00f),
-        (27.64f, 9.34f, .68f, .23f, -.17f, .61f, .73f),
-        (29.45f, 11.49f, 1.09f, .36f, -.07f, .65f, .87f),
-        (34.74f, 11.78f, .51f, .47f, -.08f, .33f, .96f)
+        (24.57f, 11.81f, .62f, .44f, .15f, .55f, .86f),
+        (27.64f, 9.34f, .68f, .23f, -.17f, .63f, .73f),
+        (29.45f, 11.49f, 1.09f, .36f, -.07f, .65f, .84f),
+        (34.74f, 11.78f, .58f, .44f, -.08f, .54f, .85f)
     };
 
     private void ComporPosto(SpriteRenderer fachada, SpriteRenderer picape)
@@ -60,11 +60,29 @@ public sealed partial class SantaRitaRuaNorte
 
         foreach (float x in new[] { 203.92f, 209.22f, 216.26f, 221.62f, 226.74f, 232.41f, 236.86f })
             ModuloDaRodovia("Boca de lobo da avenida", "Grelha", new Vector2(x, 12.53f), plano: true);
+        EspalharDecalques("Terra", new (float x, float y, float escala)[]
+        {
+            (209.72f, 14.00f, .86f), (212.20f, 13.18f, .78f), (216.72f, 13.90f, .82f),
+            (227.60f, 13.55f, .88f), (230.22f, 14.14f, .85f), (205.10f, 12.68f, .72f),
+            (218.10f, 12.68f, .74f), (224.55f, 12.68f, .72f), (234.70f, 12.68f, .74f)
+        }, .34f);
+        EspalharDecalques("Pedras", new (float x, float y, float escala)[]
+        {
+            (209.18f, 13.96f, .58f), (216.38f, 13.88f, .62f), (222.15f, 14.48f, .64f),
+            (227.15f, 13.48f, .56f), (230.78f, 14.12f, .58f), (235.12f, 14.16f, .62f)
+        }, .54f);
         EspalharDecalques("Folhas", new (float x, float y, float escala)[]
         {
-            (203.64f, 12.42f, .61f), (216.47f, 12.38f, .64f), (226.60f, 12.41f, .62f),
-            (234.64f, 7.20f, .69f)
+            (203.64f, 12.42f, .61f), (209.54f, 13.92f, .58f), (216.47f, 12.38f, .64f),
+            (221.48f, 12.42f, .60f), (226.60f, 12.41f, .62f), (230.05f, 14.08f, .57f),
+            (234.64f, 7.20f, .69f), (212.15f, 7.22f, .62f)
         }, .48f);
+        EspalharVegetacao("Capim", new (float x, float y, float escala)[]
+        {
+            (205.28f, 12.74f, .54f), (209.10f, 14.04f, .58f), (216.98f, 13.94f, .56f),
+            (218.26f, 12.74f, .54f), (224.72f, 12.74f, .55f), (229.62f, 14.18f, .58f),
+            (234.88f, 12.74f, .54f)
+        });
     }
 
     private void ComporTaludeDoPosto()
@@ -78,30 +96,37 @@ public sealed partial class SantaRitaRuaNorte
         for (int i = 0; i < trechos.Length; i++)
         {
             var (x, y) = trechos[i];
-            var muro = ModuloDaRodovia("Muro baixo do talude", "Muro", new Vector2(x, y), flip: i % 2 != 0,
+            var muro = ModuloDaRodovia("Muro baixo do talude", "Muro", new Vector2(x, y), flip: false,
                 volume: new Vector3(2.39f, .33f, .92f));
             if (muro == null) continue;
             LimiteDaRodovia(muro.transform, new Vector2(0, .22f), new Vector2(2.40f, .30f));
-            if (i == 1 || i == 3)
-                FixarDetalheDaRodovia(muro, "Dreno do talude", "DrenoDeMuro", new Vector2(.52f, .08f));
+            if (i == 0 || i == 1 || i == 3 || i == 5)
+                FixarDetalheDaRodovia(muro, "Dreno do talude", "DrenoDeMuro",
+                    new Vector2(i % 2 == 0 ? -.44f : .52f, .08f));
         }
-        foreach (var pe in new[] { new Vector2(201.48f, 14.12f), new Vector2(206.19f, 14.12f),
-                     new Vector2(217.52f, 14.60f), new Vector2(224.67f, 14.60f), new Vector2(233.61f, 14.20f) })
+        foreach (var pe in new[] {
+            new Vector2(201.48f, 14.12f), new Vector2(203.84f, 14.12f), new Vector2(206.19f, 14.12f),
+            new Vector2(217.52f, 14.60f), new Vector2(219.90f, 14.60f), new Vector2(222.28f, 14.60f), new Vector2(224.67f, 14.60f),
+            new Vector2(233.61f, 14.20f), new Vector2(235.97f, 14.20f), new Vector2(238.35f, 14.20f) })
             ModuloDaRodovia("Arremate do talude", "Pilar", pe, volume: new Vector3(.39f, .32f, 1.00f));
 
         EspalharVegetacao("Sebe", new (float x, float y, float escala)[]
         {
-            (202.33f, 14.98f, .86f), (205.78f, 14.98f, .92f),
-            (219.22f, 15.38f, 1.04f), (222.24f, 15.42f, .99f), (235.38f, 15.00f, 1.06f)
+            (202.33f, 14.98f, .92f), (204.12f, 15.04f, .88f), (205.78f, 14.98f, .95f),
+            (218.35f, 15.36f, .94f), (220.42f, 15.42f, 1.04f), (222.84f, 15.40f, .99f),
+            (234.48f, 15.02f, .96f), (236.68f, 15.00f, 1.06f)
         });
         EspalharVegetacao("Samambaia", new (float x, float y, float escala)[]
         {
-            (201.87f, 14.06f, .73f), (206.49f, 14.24f, .62f), (219.74f, 14.56f, .82f),
-            (222.72f, 14.53f, .68f), (234.46f, 14.22f, .74f), (236.60f, 14.21f, .65f)
+            (201.87f, 14.06f, .73f), (203.95f, 14.10f, .68f), (206.49f, 14.24f, .62f),
+            (217.85f, 14.54f, .72f), (219.74f, 14.56f, .82f), (222.72f, 14.53f, .68f),
+            (224.42f, 14.55f, .70f), (234.46f, 14.22f, .74f), (236.60f, 14.21f, .65f)
         });
         EspalharVegetacao("HeraDoMuro", new (float x, float y, float escala)[]
         {
-            (203.60f, 14.13f, 1f), (220.53f, 14.62f, 1f), (235.56f, 14.25f, .96f)
+            (202.95f, 14.14f, .94f), (204.85f, 14.13f, .98f), (219.12f, 14.62f, .95f),
+            (221.45f, 14.62f, 1f), (223.68f, 14.61f, .92f), (235.16f, 14.25f, .96f),
+            (237.32f, 14.24f, .92f)
         });
     }
 

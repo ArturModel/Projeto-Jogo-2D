@@ -126,21 +126,21 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
                         halo = max(halo, glow * glow);
 
                         float down = -delta.y;
-                        float width = .17 + max(down, 0) * .87;
-                        float lateral = (delta.x + down * .08) / width;
-                        float edge = 1 - smoothstep(.12, 1.11, abs(lateral));
-                        float reach = smoothstep(-.12, .04, down) * (1 - smoothstep(1.12, 3.30, down));
+                        float width = .13 + pow(max(down, 0), 1.14) * .68;
+                        float lateral = (delta.x + down * .06) / width;
+                        float edge = exp2(- lateral * lateral * 2.35) * (1 - smoothstep(.18, 1.08, abs(lateral)));
+                        float reach = smoothstep(-.10, .06, down) * (1 - smoothstep(1.05, 3.25, down));
                         if (edge * reach <= .001) continue;
 
                         // A densidade varia em filamentos que abrem a partir do vidro.
-                        float rays = Noise(float2(lateral * 4.8 + lamp.x, down * .53 - t * .12));
-                        float pockets = lerp(.72, 1.23, smoothstep(.10, .92, rays));
-                        scatter = max(scatter, edge * reach * pockets);
+                        float rays = Noise(float2(lateral * 4.2 + lamp.x, down * .58 - t * .14));
+                        float pockets = lerp(.76, 1.20, smoothstep(.12, .90, rays));
+                        scatter = max(scatter, edge * reach * pockets * exp2(-max(down, 0) * .38));
 
                         // O miolo quente se alarga e perde energia antes das bordas.
-                        float shaft = 1 - smoothstep(.04, .56, abs(lateral + .045 * (rays - .5)));
-                        float concentration = exp2(-max(down, 0) * 1.65);
-                        core = max(core, shaft * reach * concentration * lerp(.87, 1.10, rays));
+                        float shaft = exp2(- lateral * lateral * 5.2) * (1 - smoothstep(.04, .52, abs(lateral + .035 * (rays - .5))));
+                        float concentration = exp2(-max(down, 0) * 1.85);
+                        core = max(core, shaft * reach * concentration * lerp(.89, 1.08, rays));
                     }
 
                     float amber = scatter * lerp(.13, .24, density);
