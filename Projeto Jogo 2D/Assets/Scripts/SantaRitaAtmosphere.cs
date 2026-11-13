@@ -6,8 +6,12 @@ public sealed class SantaRitaAtmosphere : MonoBehaviour
     private ParticleSystem mist;
     private Material material;
     private Texture2D texture;
+    private bool isCentroScene;
     private void Start()
     {
+        isCentroScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "CentroSantaRita";
+        if (isCentroScene && gameObject.scene.name == "CentroSantaRita") { enabled = false; return; }
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged += OnActiveSceneChanged;
         var go=new GameObject("NevoaBaixa");go.transform.SetParent(transform,false);
         mist=go.AddComponent<ParticleSystem>();mist.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
         var main=mist.main;main.loop=true;main.maxParticles=18;main.startLifetime=12;main.startSpeed=.12f;
@@ -24,15 +28,21 @@ public sealed class SantaRitaAtmosphere : MonoBehaviour
         material.SetFloat("_Surface",1);material.SetFloat("_Blend",0);material.SetFloat("_SrcBlend",5);material.SetFloat("_DstBlend",10);material.SetFloat("_ZWrite",0);
         material.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");material.renderQueue=3000;
         var renderer=mist.GetComponent<ParticleSystemRenderer>();renderer.sharedMaterial=material;renderer.sortingOrder=2100;
-        if(!MenuPausa.ReduzirEfeitosIntensos && !Interior() && !SantaRitaRuaNorte.Active && !SantaRitaRuaNorte.EntradaAtiva)mist.Play();
+        if(!DesativarNevoaDeParticulas())mist.Play();
     }
     private void Update()
     {
         if(mist==null)return;
-        bool disabled=MenuPausa.ReduzirEfeitosIntensos || Interior() || SantaRitaRuaNorte.Active || SantaRitaRuaNorte.EntradaAtiva;
+        bool disabled=DesativarNevoaDeParticulas();
         if(disabled && mist.isPlaying)mist.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
         else if(!disabled && !mist.isPlaying)mist.Play();
     }
-    private void OnDestroy(){if(material!=null)Destroy(material);if(texture!=null)Destroy(texture);}
+    private void OnActiveSceneChanged(UnityEngine.SceneManagement.Scene _, UnityEngine.SceneManagement.Scene next) =>
+        isCentroScene = next.name == "CentroSantaRita";
+    private void OnDestroy(){UnityEngine.SceneManagement.SceneManager.activeSceneChanged -= OnActiveSceneChanged;if(material!=null)Destroy(material);if(texture!=null)Destroy(texture);}
+    // O Centro já possui névoa própria; estas partículas grandes aparecem por cima dela.
+    private bool DesativarNevoaDeParticulas()=>
+        isCentroScene ||
+        MenuPausa.ReduzirEfeitosIntensos || Interior() || SantaRitaRuaNorte.Active || SantaRitaRuaNorte.EntradaAtiva;
     private static bool Interior()=>Capitulo1Director.EstaEmInterior||(Capitulo2Director.Instance!=null&&Capitulo2Director.Instance.interior);
 }

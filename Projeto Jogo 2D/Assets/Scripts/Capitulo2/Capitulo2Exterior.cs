@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 internal sealed partial class Capitulo2Exterior : MonoBehaviour
@@ -14,12 +15,23 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
     private readonly List<SpriteRenderer> clima = new();
     private readonly List<UnityEngine.Object> recursos = new();
     private readonly List<Vector2> fontes = new();
+    private readonly List<(LensFlareComponentSRP flare, Vector2 bulb)> flaresDosPostes = new();
+    private LensFlareDataSRP perfilDosFlares;
     private Material lit, shadow;
     private PlayerController controladorMarcus;
     private SpriteRenderer marcus;
     private Material materialMarcus;
     private Texture texturaMarcus;
     private string pasta;
+    private PecaCentroCena[] pecasDaCena;
+    private AguaCentro aguaCentro;
+    private Camera cameraPrincipal;
+    private Material materialDispersao;
+    private readonly List<(Vector2 bulb, Vector4 local)> fontesDispersao = new();
+    private readonly Vector4[] dispersaoVisiveis = new Vector4[LimiteLuzesCentro];
+    private bool dispersaoInicializada;
+    private float ultimaDispCamMinX, ultimaDispCamMaxX, ultimaDispCamMinY, ultimaDispCamMaxY;
+    private int ultimoClimaAtivo = -1;
 
     internal void Montar(bool cemiterio, Vector2 min, Vector2 max)
     {
@@ -36,13 +48,18 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
             }
         }
         pasta = Art + (cemiterio ? "Cemiterio/" : "Centro/");
-        var existentes = FindObjectsByType<SpriteRenderer>();
+        pecasDaCena = cemiterio ? Array.Empty<PecaCentroCena>() : GetComponentsInChildren<PecaCentroCena>(true);
+        var sinalizacao = transform.Find("Sinalização fixa do Centro");
+        if (!cemiterio && sinalizacao != null)
+            foreach (var renderer in sinalizacao.GetComponentsInChildren<SpriteRenderer>(true))
+                renderer.sharedMaterial = lit;
+        var existentes = Array.FindAll(FindObjectsByType<SpriteRenderer>(), s => s.GetComponent<PecaCentroCena>() == null);
         foreach (var sprite in existentes)
         {
             if (sprite.gameObject.scene != gameObject.scene || sprite.sprite == null) continue;
             if (!cemiterio && sprite.sharedMaterial == worldPbr) sprite.sharedMaterial = lit;
             if (sprite.name == "Poste") Trocar(sprite, "Art/RuaNorte/Poste", 1.12f);
-            if (sprite.name.StartsWith("Arvore", StringComparison.Ordinal))
+            if (cemiterio && sprite.name.StartsWith("Arvore", StringComparison.Ordinal))
             {
                 Vector2 at = sprite.transform.position;
                 if (!cemiterio && NaPraca(at)) continue;
@@ -52,8 +69,6 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
                     cemiterio)
                     sprite.color = Color.Lerp(Color.white, new Color(.68f, .75f, .76f), .36f + variation * .11f);
             }
-            if (!cemiterio && sprite.name == "QuadroAvisosDaPraca")
-                Trocar(sprite, pasta + "Quadro", 1.63f);
             if (cemiterio && sprite.name.StartsWith("Sepultura_", StringComparison.Ordinal))
             {
                 Vector2 at = sprite.transform.position;
@@ -69,6 +84,8 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
             if (controladorMarcus != null && controladorMarcus.gameObject.scene == gameObject.scene &&
                 controladorMarcus.TryGetComponent(out marcus))
                 materialMarcus = IsolarTextura(marcus);
+            var mapaAgua = Array.Find(FindObjectsByType<UnityEngine.Tilemaps.Tilemap>(), m => m.gameObject.scene == gameObject.scene && m.name == "Água e madeira do Centro");
+            aguaCentro = AguaCentro.Instalar(mapaAgua, controladorMarcus != null ? controladorMarcus.transform : null);
             ComporPraca(existentes);
             ComporDetalhesGeradosDaPraca();
             ComporMargensDoCentro();
@@ -93,7 +110,8 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
                         pe.x, pe.y, .85f, noPiso: true);
                 }
             }
-            if (Fachadas.Contains(sprite.name) && (cemiterio || sprite.name != "Igreja"))
+            if (Fachadas.Contains(sprite.name) && (cemiterio || sprite.name != "Igreja") &&
+                (cemiterio || transform.Find("Luzes fixas do Centro") == null))
             {
                 Vector2 at = sprite.transform.position;
                 // A fonte fica acima da soleira; o gatilho e a fachada conservam seus IDs.
@@ -106,6 +124,7 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
                 light.intensity = .59f;
                 light.pointLightInnerRadius = .55f;
                 light.pointLightOuterRadius = 4.2f;
+                if (!cemiterio) light.shadowsEnabled = false;
             }
         }
 
@@ -132,7 +151,11 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
             }
             foreach (var at in new[] { new Vector2(71.78f, 30.76f), new Vector2(26.65f, 21.33f), new Vector2(28.2f, 40.91f) })
                 if (!GramaNoCentro(at)) Prop("Ralo de sarjeta", "Ralo", at, plano: true);
+            IntegrarDetalhesDosAcessos();
+            CriarFontesDeIluminacaoVivas();
+            IntegrarLuzDasEntradasAoPiso();
             IluminarPisoDoCentro();
+            if (aguaCentro != null) aguaCentro.SincronizarLuzesDoCentro(luzesVolumetricasPraca, origemDoPiso, materialDoPiso);
         }
 
         var projection = cemiterio ? Resources.Load<Shader>("Art/Cap2/Remodelagem/PisoMolhadoC2") : null;
@@ -182,16 +205,41 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
 
     private SpriteRenderer Prop(string nome, string arte, Vector2 at, bool plano = false)
     {
+        var existente = BuscarPecaDaCena(nome, at);
+        if (existente != null)
+        {
+            var rendererExistente = existente.GetComponent<SpriteRenderer>();
+            if (rendererExistente != null) rendererExistente.sharedMaterial = lit;
+            return rendererExistente;
+        }
         var sprite = Resources.Load<Sprite>(arte.StartsWith("Art/", StringComparison.Ordinal) ? arte : pasta + arte);
         if (sprite == null) return null;
         var obj = new GameObject(nome, typeof(SpriteRenderer));
         obj.transform.SetParent(transform, false);
         obj.transform.position = at;
+#if UNITY_EDITOR
+        if (gameObject.scene.name == "CentroSantaRita")
+        {
+            var origem = obj.AddComponent<PecaCentroCena>();
+            origem.nomeDeOrigem = nome;
+            origem.posicaoDeOrigem = at;
+        }
+#endif
         var renderer = obj.GetComponent<SpriteRenderer>();
         renderer.sprite = sprite;
         renderer.sharedMaterial = lit;
         renderer.sortingOrder = plano ? -1700 : 1000 - Mathf.RoundToInt(at.y * 10);
         return renderer;
+    }
+
+    private PecaCentroCena BuscarPecaDaCena(string nome, Vector2 origem)
+    {
+        if (pecasDaCena == null) return null;
+        foreach (var peca in pecasDaCena)
+            if (peca != null && peca.nomeDeOrigem == nome &&
+                (peca.posicaoDeOrigem - origem).sqrMagnitude < .0001f)
+                return peca;
+        return null;
     }
 
     private void Submata(params Vector2[] positions)
@@ -291,7 +339,7 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
             material.SetVector("_Ground", new Vector4(min.x, min.y, extent.x, extent.y));
             material.SetFloat("_Entrance", 1);
             material.SetFloat("_Front", i);
-            material.SetFloat("_BeamStrength", .54f);
+            material.SetFloat("_BeamStrength", cemiterio ? .54f : .52f);
             if (!cemiterio)
             {
                 material.SetFloat("_BeamLean", 0);
@@ -304,17 +352,166 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
                     new Vector4(origemDoPiso.x, origemDoPiso.y, LinhaDoAtlas(PisoCentro.Grama), 0));
                 material.SetFloat("_UseFireflyTerrain", 1);
             }
-            var lamps = new Vector4[16];
+            var lamps = new Vector4[LimiteLuzesCentro];
             int count = Mathf.Min(lamps.Length, fontes.Count);
+            if (!cemiterio && i == 1)
+            {
+                fontesDispersao.Clear();
+                materialDispersao = material;
+                dispersaoInicializada = false;
+            }
             for (int j = 0; j < count; j++)
             {
                 Vector2 p = fontes[j] - min;
-                lamps[j] = new Vector4(p.x, p.y, p.y - 2.5f, 1);
+                var packed = new Vector4(p.x, p.y, p.y - 2.5f, 1);
+                lamps[j] = packed;
+                if (!cemiterio && i == 1) fontesDispersao.Add((fontes[j], packed));
             }
             material.SetVectorArray("_EntranceLamps", lamps);
             material.SetInteger("_EntranceLampCount", count);
             renderer.sharedMaterial = material;
             clima.Add(renderer);
+        }
+        if (!cemiterio) PrepararFlaresDosPostes();
+    }
+
+    private void PrepararFlaresDosPostes()
+    {
+        if (fontes.Count == 0 || perfilDosFlares != null) return;
+        perfilDosFlares = ScriptableObject.CreateInstance<LensFlareDataSRP>();
+        perfilDosFlares.elements = new[]
+        {
+            new LensFlareDataElementSRP
+            {
+                tint = new Color(1f, .61f, .24f),
+                sizeXY = new Vector2(1f, .12f),
+                uniformScale = 1.06f,
+                localIntensity = .23f,
+                edgeOffset = .72f,
+                fallOff = .79f
+            },
+            new LensFlareDataElementSRP
+            {
+                tint = new Color(1f, .70f, .32f),
+                sizeXY = new Vector2(.14f, 1f),
+                uniformScale = .44f,
+                rotation = 22f,
+                localIntensity = .12f,
+                edgeOffset = .72f,
+                fallOff = .79f
+            },
+            new LensFlareDataElementSRP
+            {
+                position = .48f,
+                flareType = SRPLensFlareType.Polygon,
+                sideCount = 6,
+                sdfRoundness = .38f,
+                tint = new Color(1f, .64f, .34f),
+                uniformScale = .25f,
+                localIntensity = .095f,
+                edgeOffset = .58f,
+                fallOff = .78f
+            },
+            new LensFlareDataElementSRP
+            {
+                position = .74f,
+                flareType = SRPLensFlareType.Polygon,
+                sideCount = 6,
+                sdfRoundness = .5f,
+                tint = new Color(1f, .56f, .26f),
+                uniformScale = .39f,
+                localIntensity = .065f,
+                edgeOffset = .76f,
+                fallOff = .78f
+            }
+        };
+        recursos.Add(perfilDosFlares);
+
+        var grupoFlares = new GameObject("Reflexos na lente dos postes");
+        grupoFlares.transform.SetParent(transform, false);
+        foreach (var bulb in fontes)
+        {
+            var emissor = new GameObject("Lens flare");
+            emissor.transform.SetParent(grupoFlares.transform, false);
+            emissor.transform.position = new Vector3(bulb.x, bulb.y, 0f);
+            var flare = emissor.AddComponent<LensFlareComponentSRP>();
+            flare.lensFlareData = perfilDosFlares;
+            flare.attenuationByLightShape = false;
+            flare.scaleByDistanceCurve = AnimationCurve.Constant(0f, 1f, 1f);
+            flare.radialScreenAttenuationCurve = AnimationCurve.EaseInOut(.5f, 1f, 1f, 0f);
+            flare.intensity = .36f;
+            flaresDosPostes.Add((flare, bulb));
+        }
+    }
+
+    private void AtualizarDispersaoNevoa(bool enabled, bool temCam, float camMinX, float camMaxX, float camMinY, float camMaxY)
+    {
+        if (!enabled || !temCam || materialDispersao == null || fontesDispersao.Count == 0) return;
+        if (dispersaoInicializada &&
+            Mathf.Abs(camMinX - ultimaDispCamMinX) < .25f &&
+            Mathf.Abs(camMaxX - ultimaDispCamMaxX) < .25f &&
+            Mathf.Abs(camMinY - ultimaDispCamMinY) < .25f &&
+            Mathf.Abs(camMaxY - ultimaDispCamMaxY) < .25f)
+            return;
+
+        ultimaDispCamMinX = camMinX;
+        ultimaDispCamMaxX = camMaxX;
+        ultimaDispCamMinY = camMinY;
+        ultimaDispCamMaxY = camMaxY;
+        dispersaoInicializada = true;
+
+        float minX = camMinX - 1f;
+        float maxX = camMaxX + 1f;
+        float minY = camMinY - 1f;
+        float maxY = camMaxY + 1f;
+        int visiveis = 0;
+        for (int i = 0; i < fontesDispersao.Count; i++)
+        {
+            var (bulb, local) = fontesDispersao[i];
+            // Em Nevoeiro.shader, o cone/halo de cada poste atua somente em [-2.4,+2.4] x [-3.6,+0.6].
+            if (bulb.x + 2.4f < minX || bulb.x - 2.4f > maxX ||
+                bulb.y + .6f < minY || bulb.y - 3.6f > maxY) continue;
+            dispersaoVisiveis[visiveis++] = local;
+        }
+        materialDispersao.SetVectorArray("_EntranceLamps", dispersaoVisiveis);
+        materialDispersao.SetInteger("_EntranceLampCount", visiveis);
+    }
+
+    private void AtualizarFlaresDosPostes(bool enabled, bool temCam, float camMinX, float camMaxX, float camMinY, float camMaxY)
+    {
+        if (flaresDosPostes.Count == 0) return;
+        bool temMarcus = enabled && marcus != null;
+        Vector2 posMarcus = temMarcus ? (Vector2)marcus.bounds.center : Vector2.zero;
+        float minX = camMinX - 3.5f;
+        float maxX = camMaxX + 3.5f;
+        float minY = camMinY - 3.5f;
+        float maxY = camMaxY + 3.5f;
+        foreach (var (flare, bulb) in flaresDosPostes)
+        {
+            if (flare == null) continue;
+            if (!enabled)
+            {
+                if (flare.enabled) flare.enabled = false;
+                flare.intensity = 0f;
+                continue;
+            }
+            bool naTela = !temCam || (bulb.x >= minX && bulb.x <= maxX && bulb.y >= minY && bulb.y <= maxY);
+            if (flare.enabled != naTela) flare.enabled = naTela;
+            if (!naTela) continue;
+            float boost = 0f;
+            if (temMarcus)
+            {
+                float lateral = Mathf.Abs(posMarcus.x - bulb.x);
+                float abaixo = bulb.y - posMarcus.y;
+                if (lateral < 1.85f && abaixo > -.15f && abaixo < 3.10f)
+                {
+                    float entrada = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(-.15f, .45f, abaixo));
+                    float saida = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(1.65f, 3.10f, abaixo));
+                    float largura = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(.35f, 1.85f, lateral));
+                    boost = entrada * saida * largura;
+                }
+            }
+            flare.intensity = Mathf.Lerp(.36f, .92f, boost);
         }
     }
 
@@ -326,13 +523,37 @@ internal sealed partial class Capitulo2Exterior : MonoBehaviour
             if (materialMarcus != null) materialMarcus.mainTexture = texturaMarcus;
         }
         bool enabled = !MenuPausa.ReduzirEfeitosIntensos;
+        if (cameraPrincipal == null || !cameraPrincipal.isActiveAndEnabled)
+            cameraPrincipal = Camera.main;
+        bool temCam = cameraPrincipal != null;
+        float camMinX = 0f, camMaxX = 0f, camMinY = 0f, camMaxY = 0f;
+        if (temCam)
+        {
+            float meiaAltura = cameraPrincipal.orthographic ? cameraPrincipal.orthographicSize : 6f;
+            float meiaLargura = meiaAltura * Mathf.Max(.5f, cameraPrincipal.aspect);
+            Vector3 posCam = cameraPrincipal.transform.position;
+            camMinX = posCam.x - meiaLargura;
+            camMaxX = posCam.x + meiaLargura;
+            camMinY = posCam.y - meiaAltura;
+            camMaxY = posCam.y + meiaAltura;
+        }
         if (materialDoPiso != null)
         {
-            materialDoPiso.SetFloat("_WindStrength", enabled ? 1f : 0f);
+            if (ultimoClimaAtivo != (enabled ? 1 : 0))
+                materialDoPiso.SetFloat("_WindStrength", enabled ? 1f : 0f);
+            if (temCam) AtualizarVisibilidadeCentro(camMinX, camMaxX, camMinY, camMaxY);
             AtualizarLuzesDinamicasDaPraca(enabled);
             SantaRitaRuaNorte.AtualizarReflexoDoMarcus(materialDoPiso, enabled ? marcus : null, origemDoPiso);
         }
-        foreach (var renderer in clima) renderer.enabled = enabled;
+        AtualizarIluminacaoViva(enabled);
+        AtualizarDispersaoNevoa(enabled, temCam, camMinX, camMaxX, camMinY, camMaxY);
+        int estadoClima = enabled ? 1 : 0;
+        if (ultimoClimaAtivo != estadoClima)
+        {
+            foreach (var renderer in clima) renderer.enabled = enabled;
+            ultimoClimaAtivo = estadoClima;
+        }
+        AtualizarFlaresDosPostes(enabled, temCam, camMinX, camMaxX, camMinY, camMaxY);
     }
 
     private void OnDestroy()

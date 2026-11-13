@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Tilemaps;
 
 public class CameraFollow : MonoBehaviour
@@ -65,7 +66,18 @@ public class CameraFollow : MonoBehaviour
             // Nunca exibe o azul padrão da Unity em interiores ou bordas de cena
             cam.clearFlags = CameraClearFlags.SolidColor;
             cam.backgroundColor = new Color(0.03f, 0.03f, 0.04f, 1f);
+            // Mantém o 2D preenchendo a tela na mesma proporção do 3D sem barras laterais.
+            var ppc = cam.GetComponent<PixelPerfectCamera>();
+            if (ppc != null && ppc.cropFrame != PixelPerfectCamera.CropFrame.None)
+                ppc.cropFrame = PixelPerfectCamera.CropFrame.None;
         }
+    }
+
+    internal Vector3 ObterPosicaoSeguraPara(Vector3 alvoPos)
+    {
+        Vector3 p = AplicarClampBordas(alvoPos + offset);
+        p.z = transform.position.z;
+        return p;
     }
 
     /// <summary>

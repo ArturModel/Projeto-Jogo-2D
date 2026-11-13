@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator outfitAnimator;
 
     // 0 = Baixo, 1 = Cima, 2 = Esquerda, 3 = Direita
-    private const int DirDown = 0;
-    private const int DirUp = 1;
-    private const int DirLeft = 2;
-    private const int DirRight = 3;
+    internal const int DirDown = 0;
+    internal const int DirUp = 1;
+    internal const int DirLeft = 2;
+    internal const int DirRight = 3;
 
     [Header("Interação")]
     [SerializeField] private float interactDuration = 0.6f;
@@ -77,6 +77,9 @@ public class PlayerController : MonoBehaviour
     private bool EspelharCaminhadaDireita => !folhaCaminhadaDirecional || totalQuadros == 8;
     private Vector2 ultimaPosicaoAnimacao;
     private int totalQuadros = 6;
+    private bool caminhadaRoteirizada;
+    private int? ordemSpriteRoteirizada;
+    private float alfaSpriteRoteirizada = 1f;
     public int QuadroCaminhada { get; private set; }
     public event System.Action PeApoiou;
 
@@ -143,14 +146,14 @@ public class PlayerController : MonoBehaviour
         light.shadowIntensity = .88f;
     }
 
-    private static bool DeveUsarLanternaAgora()
+    private bool DeveUsarLanternaAgora()
     {
-        return GameState.LanternaLigada && Application.isFocused && !BloqueiaEquipamento();
+        return GameState.LanternaLigada && Application.isFocused && !BloqueiaEquipamento(!caminhadaRoteirizada);
     }
 
-    private static bool BloqueiaEquipamento() => MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
+    private static bool BloqueiaEquipamento(bool checarTransicao = true) => MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
         GameMessageUI.IsShowing || SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing ||
-        PayphoneCheckpoint.IsSaveUIOpen || SceneFader.IsTransitioning || Time.timeScale == 0 ||
+        PayphoneCheckpoint.IsSaveUIOpen || (checarTransicao && SceneFader.IsTransitioning) || Time.timeScale == 0 ||
         Capitulo1Director.PainelFechamentoAberto;
 
     private void OnApplicationFocus(bool foco)
@@ -176,8 +179,32 @@ public class PlayerController : MonoBehaviour
             Capitulo1Director.ZonaId.Zona2_Posto or Capitulo1Director.ZonaId.Zona3_Encruzilhada or
             Capitulo1Director.ZonaId.Zona4_Bairro or Capitulo1Director.ZonaId.Zona5_RuaNorteBar);
 
-    private bool BloqueiaMovimento() => BloqueiaControles() || GameMessageUI.IsShowing ||
+    private bool BloqueiaMovimento() => caminhadaRoteirizada || BloqueiaControles() || GameMessageUI.IsShowing ||
         SantaRitaFalasEntrada.Interagindo || Time.time < sustoAte;
+
+    internal void DefinirCaminhadaRoteirizada(bool ativa, int? direcao = null, int? sortingOrder = null, float alpha = 1f)
+    {
+        GarantirInicializacao();
+        caminhadaRoteirizada = ativa;
+        ordemSpriteRoteirizada = ativa ? sortingOrder : null;
+        alfaSpriteRoteirizada = ativa ? Mathf.Clamp01(alpha) : 1f;
+        PararMovimento();
+        if (direcao.HasValue)
+        {
+            facingDirection = Mathf.Clamp(direcao.Value, DirDown, DirRight);
+            SetFacingScale(facingDirection == DirRight && EspelharCaminhadaDireita ? -1f : 1f);
+        }
+        if (corpo != null)
+        {
+            Color c = corpo.color;
+            c.a = ativa ? alfaSpriteRoteirizada : 1f;
+            corpo.color = c;
+            if (ordemSpriteRoteirizada.HasValue)
+                corpo.sortingOrder = ordemSpriteRoteirizada.Value;
+        }
+        if (!ativa)
+            ultimaPosicaoAnimacao = transform.position;
+    }
 
     internal static Vector2 LerDirecao(Keyboard teclado)
     {
@@ -427,7 +454,16 @@ public class PlayerController : MonoBehaviour
         GarantirInicializacao();
         AtualizarPassada();
         if (corpo != null)
-            corpo.sortingOrder = 1000 - Mathf.RoundToInt(transform.position.y * 10);
+        {
+            corpo.sortingOrder = ordemSpriteRoteirizada ?? (1000 - Mathf.RoundToInt(transform.position.y * 10));
+            Color c = corpo.color;
+            float alvoAlfa = caminhadaRoteirizada ? alfaSpriteRoteirizada : 1f;
+            if (!Mathf.Approximately(c.a, alvoAlfa))
+            {
+                c.a = alvoAlfa;
+                corpo.color = c;
+            }
+        }
         // Supressão temporária não altera a preferência guardada no GameState.
         bool usarLanterna = DeveUsarLanternaAgora();
         if (flashlight != null && flashlight.gameObject.activeSelf != usarLanterna)
@@ -442,7 +478,7 @@ public class PlayerController : MonoBehaviour
         // A pausa conserva a pose; diálogo e parada voltam ao repouso sem som.
         if (Time.timeScale == 0 || MenuPausa.Aberto || MapaInterativoUI.IsShowing || SantaRitaInventory.IsOpen || SantaRitaTapeDeck.IsOpen ||
             SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
-        bool andando = !BloqueiaMovimento() && (distancia >= .0001f || (rb != null && rb.linearVelocity.sqrMagnitude > .0001f));
+        bool andando = (caminhadaRoteirizada || !BloqueiaMovimento()) && (distancia >= .0001f || (rb != null && rb.linearVelocity.sqrMagnitude > .0001f));
         if(!andando)passada.Reset();
         int apoios = 0;
         passada.Avancar(andando ? distancia : 0f, () => apoios++);

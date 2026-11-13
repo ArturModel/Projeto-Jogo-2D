@@ -39,9 +39,11 @@ internal sealed class SantaRitaInteriorAudio : MonoBehaviour
         Vector3 delta = origem.position - ouvinte.position;
         float proximidade = 1f - Mathf.SmoothStep(0f, 1f, delta.magnitude / alcance);
         bool minigame = SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing;
-        float alvo = Ligado && !minigame ? ganho * proximidade * AudioSettingsController.VolumeEfeitos : 0f;
+        float sairCena = SceneFader.AtenuacaoAudioSaidaCena;
+        float alvo = Ligado && !minigame ? ganho * proximidade * AudioSettingsController.VolumeEfeitos * (1f - sairCena) : 0f;
         if (GameMessageUI.IsShowing) alvo *= .4f;
-        fonte.volume = Mathf.MoveTowards(fonte.volume, alvo, Time.unscaledDeltaTime * .13f);
+        float vel = sairCena > .001f ? .85f : .13f;
+        fonte.volume = Mathf.MoveTowards(fonte.volume, alvo, Time.unscaledDeltaTime * vel);
         fonte.panStereo = Pan(ouvinte, delta);
         if (alvo > 0f && !fonte.isPlaying)
         {

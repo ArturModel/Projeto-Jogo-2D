@@ -284,13 +284,29 @@ public sealed class Capitulo2Director : MonoBehaviour
         if (local == "CentroSantaRita" && Debug.isDebugBuild &&
             GetComponent<CentroFreeCameraConsole>() == null)
             gameObject.AddComponent<CentroFreeCameraConsole>();
-        if (!ExploracaoNoEditor && GetComponent<SantaRitaFalasEntrada>() == null)
+        if (GetComponent<SantaRitaFalasEntrada>() == null)
             gameObject.AddComponent<SantaRitaFalasEntrada>();
         AtualizarInvestigacao();
     }
 
     private void OnDestroy()
     { if (Instance == this) Instance = null; }
+
+    internal static void RestaurarParaCena(Scene scene)
+    {
+        if (!scene.IsValid() || !scene.isLoaded) return;
+        foreach (var root in scene.GetRootGameObjects())
+        {
+            if (root == null) continue;
+            var dir = root.GetComponentInChildren<Capitulo2Director>(true);
+            if (dir != null)
+            {
+                Instance = dir;
+                AtualizarInvestigacao();
+                return;
+            }
+        }
+    }
 
     private void Update()
     {
@@ -320,7 +336,7 @@ public sealed class Capitulo2Director : MonoBehaviour
         if (GameMessageUI.IsShowing || BochaMinigameUI.IsShowing || PayphoneCheckpoint.IsSaveUIOpen) return;
         if(id=="radio_test")
         {
-            if(!GameState.Tem("c2_conheceu_mila")){GameMessageUI.Instance.Show("O aparelho está na bancada de trabalho. Vou pedir antes de mexer.","MARCUS","marcus");return;}
+            if(!GameState.Tem("c2_conheceu_mila")){FalaRapida("O aparelho está na bancada de trabalho. Vou pedir antes de mexer.");return;}
             if(GameState.Tem("item.tocador")){SantaRitaTapeDeck.Ensure().Open();return;}
             SantaRitaTapeDeck.Ensure().Repair();return;
         }
@@ -336,7 +352,7 @@ public sealed class Capitulo2Director : MonoBehaviour
         C2InteractionData d = Dados(id);
         if (d == null) { Debug.LogError("Interação C2 sem conteúdo: " + id); return; }
         if(id=="protocolo"&&!GameState.Tem("c2_prefeitura_atendimento"))
-        {GameMessageUI.Instance.Show("Os papéis estão voltados para o lado da funcionária. Vou pedir para consultar o pedido do vô.","MARCUS","marcus");return;}
+        {FalaRapida("Os papéis estão voltados para o lado da funcionária. Vou pedir para consultar o pedido do vô.");return;}
         if (d.kind == "bocha")
         {
             if (GameState.Tem(Vitoria)) { Dialogo(d.after); return; }
@@ -349,7 +365,7 @@ public sealed class Capitulo2Director : MonoBehaviour
                     !GameState.Tem("c2_padre_testemunho") ?
                     "O registro conta as tentativas, mas não diz quem conseguia ouvir Júlia. Preciso encontrar alguém que estivesse perto dela." :
                     "Ouvi o padre e li o registro. Quero passar pelo jazigo e organizar o que lembro antes de voltar a Tonão.";
-                GameMessageUI.Instance.Show(falta, "MARCUS", "marcus"); return;
+                FalaRapida(falta); return;
             }
             Dialogo(d.lines, () => BochaMinigameUI.Instance.AbrirDaSociedade(ConcluirBocha)); return;
         }
@@ -438,8 +454,19 @@ public sealed class Capitulo2Director : MonoBehaviour
         GameState.RegistrarNotaDiario("c2_" + d.id, d.title, d.category,
             d.diary + (string.IsNullOrEmpty(d.source) ? "" : "\n\nFonte: " + d.source));
     }
+    private static void FalaRapida(string texto, Action cb = null)
+    {
+        var linha = new DialogoLinha("MARCUS", texto, "marcus");
+        if (Capitulo2Interior3D.Atual != null && SantaRitaFalasEntrada.TentarDizerNaZona(cb, linha)) return;
+        GameMessageUI.Instance.Show(texto, "MARCUS", "marcus", cb);
+    }
+
     private static void Dialogo(DialogoLinha[] lines, Action cb = null)
-    { if (lines == null || lines.Length == 0) cb?.Invoke(); else GameMessageUI.Instance.Show(lines, cb); }
+    {
+        if (lines == null || lines.Length == 0) { cb?.Invoke(); return; }
+        if (Capitulo2Interior3D.Atual != null && SantaRitaFalasEntrada.TentarDizerNaZona(cb, lines)) return;
+        GameMessageUI.Instance.Show(lines, cb);
+    }
     private static void Ocorrencia(string flag, string texto)
     {
         if (GameState.Tem(flag)) return;

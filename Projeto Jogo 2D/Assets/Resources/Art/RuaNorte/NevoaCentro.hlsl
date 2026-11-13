@@ -1,74 +1,60 @@
 #ifndef SANTA_RITA_NEVOA_CENTRO_INCLUDED
 #define SANTA_RITA_NEVOA_CENTRO_INCLUDED
 
-float HashDaNevoaCentro(float3 celula)
+float HashDaNevoaCentro(float2 celula)
 {
-    celula = frac(celula * float3(.1031, .11369, .13787));
-    celula += dot(celula, celula.yxz + 19.19);
-    return frac((celula.x + celula.y) * celula.z);
+    celula = frac(celula * float2(.1031, .11369));
+    celula += dot(celula, celula.yx + 33.33);
+    return frac((celula.x + celula.y) * celula.x);
 }
 
-float RuidoDaNevoaCentro(float3 posicao)
+float Ruido2DDaNevoaCentro(float2 posicao)
 {
-    float3 base = floor(posicao);
-    float3 t = frac(posicao);
+    float2 base = floor(posicao);
+    float2 t = frac(posicao);
     t = t * t * (3 - 2 * t);
-    float frente = lerp(
-        lerp(HashDaNevoaCentro(base), HashDaNevoaCentro(base + float3(1, 0, 0)), t.x),
-        lerp(HashDaNevoaCentro(base + float3(0, 1, 0)), HashDaNevoaCentro(base + float3(1, 1, 0)), t.x), t.y);
-    base.z += 1;
-    float fundo = lerp(
-        lerp(HashDaNevoaCentro(base), HashDaNevoaCentro(base + float3(1, 0, 0)), t.x),
-        lerp(HashDaNevoaCentro(base + float3(0, 1, 0)), HashDaNevoaCentro(base + float3(1, 1, 0)), t.x), t.y);
-    return lerp(frente, fundo, t.z);
+    float a = HashDaNevoaCentro(base);
+    float b = HashDaNevoaCentro(base + float2(1, 0));
+    float c = HashDaNevoaCentro(base + float2(0, 1));
+    float d = HashDaNevoaCentro(base + float2(1, 1));
+    return lerp(lerp(a, b, t.x), lerp(c, d, t.x), t.y);
 }
 
 float AreaDaPracaDaMatriz(float2 p)
 {
-    return 1 - smoothstep(.72, 1.22, length((p - float2(46, 55.5)) / float2(12.5, 17)));
+    return 1 - smoothstep(.72, 1.28, length((p - float2(46, 55.5)) / float2(12.5, 17)));
 }
 
 float AreaDaNevoaCentro(float2 p)
 {
-    // O ar cruza o asfalto e perde densidade gradualmente entre os primeiros troncos.
-    float oeste = (1 - smoothstep(2.7, 9.4, abs(p.x - 31.5))) *
-        smoothstep(19, 25, p.y) * (1 - smoothstep(80, 86, p.y));
-    float leste = (1 - smoothstep(2.7, 9.4, abs(p.x - 60.5))) *
-        smoothstep(17, 23, p.y) * (1 - smoothstep(77, 83, p.y));
-    float travessa = (1 - smoothstep(2.5, 7.4, abs(p.y - 37.5))) *
-        smoothstep(26, 32, p.x) * (1 - smoothstep(76, 82, p.x));
-    float adro = (1 - smoothstep(.56, 1.15, length((p - float2(46, 58.5)) / float2(15, 12))));
-    return max(adro, max(max(oeste, leste), travessa) * .82);
+    // Cobertura contínua no mapa inteiro, sem bordas recortadas por rua.
+    // A névoa apenas rarefaz de modo orgânico ao redor da praça iluminada e nas casas ao centro.
+    float macro = Ruido2DDaNevoaCentro(p * .045 + float2(4.1, 1.7));
+    float praca = AreaDaPracaDaMatriz(p);
+    return lerp(.74, 1.0, macro) * lerp(1.0, .62, praca);
 }
 
 float DensidadeDaNevoaCentro(float3 superficie, float tempo, float intensidade)
 {
-    float cobertura = AreaDaNevoaCentro(superficie.xy) * (1 - smoothstep(.18, 1.48, superficie.z));
-    // A praça continua mais limpa que as estradas, mas a bacia e o piso ao redor
-    // recebem a mesma camada baixa de ar úmido que atravessa o restante do Centro.
-    cobertura *= lerp(1, .72, AreaDaPracaDaMatriz(superficie.xy));
+    float altura = 1 - smoothstep(.18, 2.85, superficie.z);
+    if (altura <= .002 || intensidade <= .001) return 0;
+
+    float cobertura = AreaDaNevoaCentro(superficie.xy) * altura;
     if (cobertura <= .002) return 0;
 
-    // O receptor em pé encontra o ar que passa na sua frente, antes da sua própria base.
-    float3 p = superficie + float3(-tempo * .43, tempo * .13 - superficie.z * .56, 0);
-    float desvio = RuidoDaNevoaCentro(p * float3(.15, .20, .7) + 27.2) - .5;
-    p.xy += desvio * float2(2.4, 1.6);
-    p *= float3(.33, .53, 1.48);
-
-    // Três alturas da camada baixa. O deslocamento em Y acompanha a vista oblíqua do jogo.
-    float perto = RuidoDaNevoaCentro(p + float3(0, -.16, .28));
-    float meio = RuidoDaNevoaCentro(p + float3(.08, -.38, .72));
-    float alto = RuidoDaNevoaCentro(p + float3(.22, -.66, 1.29));
-    float massa = perto * .52 + meio * .32 + alto * .16;
-    float borda = RuidoDaNevoaCentro(p * 2.27 + 11.6);
-    float densidade = smoothstep(.22, .83, massa * .82 + borda * .18);
-    return 1 - exp2(-intensidade * cobertura * (.055 + .84 * densidade));
+    // Duas oitavas 2D leves com deriva e leve cisalhamento pela altura em Y.
+    float2 p = superficie.xy + float2(-tempo * .36, tempo * .11 - superficie.z * .44);
+    float macro = Ruido2DDaNevoaCentro(p * .16 + float2(7.3, 2.9));
+    float detalhe = Ruido2DDaNevoaCentro(p * .44 + float2(macro * 1.15 - tempo * .08, 5.1));
+    float massa = macro * .64 + detalhe * .36;
+    float densidade = smoothstep(.24, .88, massa);
+    return 1 - exp2(-intensidade * cobertura * (.035 + .68 * densidade));
 }
 
 half3 CorDaNevoaCentro(half3 luzLocal)
 {
-    // Cinza frio no escuro, com a cor de cada luminária já atenuada pela sua sombra.
-    return half3(.123, .139, .153) + min(luzLocal, 1.45) * half3(.38, .37, .36);
+    // Azul-ardósia profundo na sombra para manter contraste cinemático, aquecendo sob cada luminária.
+    return half3(.068, .086, .116) + min(luzLocal, 2.00) * half3(.48, .41, .34);
 }
 
 #endif

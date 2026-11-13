@@ -33,42 +33,108 @@ public sealed class SantaRitaFootsteps : MonoBehaviour
             Capitulo1Director.ZonaId.Interior_BarDoZe ? "wood" : "concrete";
 
         float agua = 0f;
+        float ganhoSuperficie = -1f;
+        float pitchBase = 1f;
         if (SantaRitaShallowStairs.SpeedAt(posicao) >= 1f)
-            superficie = MaterialDoPiso(posicao, superficie, exterior, out agua);
+            superficie = MaterialDoPiso(posicao, superficie, exterior, out agua, out ganhoSuperficie, out pitchBase);
         else
             superficie = "concrete";
 
         if (exterior)
         {
+            if (cena == "CentroSantaRita" && agua < .35f)
+                agua = Mathf.Max(agua, CentroImersaoAmbiente.CoberturaDePocaCentro(posicao));
             if (rain == null) rain = FindAnyObjectByType<Chuva>();
             if (rain != null)
             {
                 if (rain.DentroDePoca(posicao)) agua = 1f;
                 rain.RespingoDePasso(posicao, agua >= .35f);
             }
+            if (cena == "CentroSantaRita" && agua < .35f && superficie == "wood")
+                CentroImersaoAmbiente.NotificarPassoMadeiraCentro(posicao);
         }
 
-        float volume = superficie == "grass" ? .13f : .18f;
+        float volume = ganhoSuperficie >= 0f ? ganhoSuperficie : (superficie == "grass" ? .13f : .18f);
         if (agua >= .35f)
         {
             superficie = "puddle";
+            pitchBase = 1f;
             volume = Mathf.Lerp(.63f, .90f, Mathf.InverseLerp(.35f, 1f, agua));
         }
-        else if (superficie == "asphalt")
+        else if (ganhoSuperficie < 0f && superficie == "asphalt")
             volume = .76f;
-        else if (superficie == "sidewalk")
+        else if (ganhoSuperficie < 0f && superficie == "sidewalk")
             volume = .55f;
 
         variant = (variant + 1) % 3;
-        float pitch = variant == 0 ? 1f : variant == 1 ? .97f : 1.03f;
+        float pitch = pitchBase * (variant == 0 ? 1f : variant == 1 ? .97f : 1.03f);
         SantaRitaSound.Play("footstep_" + superficie + "_00" + variant, volume, pitch, .12f);
     }
 
-    private string MaterialDoPiso(Vector2 posicao, string fallback, bool exterior, out float agua)
+    private Tilemap mapaAguaMadeiraCentro;
+    private Tilemap mapaPavimentosCentro;
+
+    private string MaterialDoPiso(Vector2 posicao, string fallback, bool exterior, out float agua,
+        out float ganhoCustom, out float pitchBase)
     {
         agua = 0f;
+        ganhoCustom = -1f;
+        pitchBase = 1f;
         // O cenário do Capítulo 1 monta os tilemaps ao carregar a cena.
-        maps ??= FindObjectsByType<Tilemap>();
+        if (maps == null)
+        {
+            maps = FindObjectsByType<Tilemap>();
+            foreach (var m in maps)
+            {
+                if (m == null) continue;
+                if (m.name == "Água e madeira do Centro") mapaAguaMadeiraCentro = m;
+                else if (m.name == "Pavimentos do Centro") mapaPavimentosCentro = m;
+            }
+        }
+
+        if (exterior && mapaAguaMadeiraCentro != null && mapaAguaMadeiraCentro.gameObject.activeInHierarchy)
+        {
+            var tilePonte = mapaAguaMadeiraCentro.GetTile(mapaAguaMadeiraCentro.WorldToCell(posicao));
+            if (tilePonte != null && tilePonte.name == "Madeira")
+            {
+                ganhoCustom = .46f;
+                pitchBase = .91f;
+                return "wood";
+            }
+        }
+
+        if (exterior && mapaPavimentosCentro != null && mapaPavimentosCentro.gameObject.activeInHierarchy)
+        {
+            var tileCentro = mapaPavimentosCentro.GetTile(mapaPavimentosCentro.WorldToCell(posicao));
+            if (tileCentro != null)
+            {
+                switch (tileCentro.name)
+                {
+                    case "Asfalto":
+                        return "asphalt";
+                    case "Fissura":
+                        pitchBase = .94f;
+                        return "asphalt";
+                    case "Calcada":
+                        return "sidewalk";
+                    case "Adro":
+                        ganhoCustom = .58f;
+                        pitchBase = .92f;
+                        return "sidewalk";
+                    case "Pedregulho":
+                        ganhoCustom = .36f;
+                        pitchBase = 1.14f;
+                        return "concrete";
+                    case "Terra":
+                        ganhoCustom = .22f;
+                        pitchBase = .88f;
+                        return "grass";
+                    case "Grama":
+                        return "grass";
+                }
+            }
+        }
+
         foreach (var map in maps)
         {
             if (map == null || !map.gameObject.activeInHierarchy) continue;

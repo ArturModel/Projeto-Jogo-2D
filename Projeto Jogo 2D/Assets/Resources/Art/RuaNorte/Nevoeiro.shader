@@ -38,7 +38,7 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
             float4 _FireflyTerrain_TexelSize;
             float4 _FireflyTerrainInfo;
             float _UseFireflyTerrain;
-            float4 _EntranceLamps[16];
+            float4 _EntranceLamps[88];
             int _EntranceLampCount;
             float4 _Lightning;
 
@@ -70,24 +70,18 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
 
             float Fireflies(float2 local, float time)
             {
-                const float2 cellSize = float2(1.46, 1.36);
+                const float2 cellSize = float2(2.15, 1.95);
                 float2 cell = floor(local / cellSize);
                 float2 id = cell + _Ground.xy;
                 float seed = Hash(id + 3.9);
-                if (seed < .19) return 0;
+                if (seed < .60) return 0;
 
                 float2 jitter = float2(Hash(id + 8.3), Hash(id + 11.7));
                 float2 center = (cell + .26 + .48 * jitter) * cellSize;
-                bool inside = false;
-                [unroll] for (int i = 0; i < 4; i++)
-                {
-                    float4 patch = _FireflyPatches[i];
-                    inside = inside || (all(center >= patch.xy) && all(center < patch.zw));
-                }
                 float phase = jitter.y * 6.283;
-                float pulse = smoothstep(.12, .98, sin(time * lerp(.56, 1.15, seed) + phase));
                 float2 drift = float2(sin(time * .83 + phase), cos(time * .67 + phase)) * float2(.15, .13);
                 float2 pointAt = (floor((center + drift) * 32) + .5) / 32;
+                bool inside = false;
                 if (_UseFireflyTerrain > .5)
                 {
                     float2 tile = floor(pointAt + _Ground.xy - _FireflyTerrainInfo.xy);
@@ -96,11 +90,21 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
                         (tile + .5) * _FireflyTerrain_TexelSize.xy, 0).g;
                     inside = abs(row * 255 - _FireflyTerrainInfo.z) < .5;
                 }
+                else
+                {
+                    [unroll] for (int i = 0; i < 4; i++)
+                    {
+                        float4 patch = _FireflyPatches[i];
+                        inside = inside || (all(center >= patch.xy) && all(center < patch.zw));
+                    }
+                }
                 if (!inside) return 0;
+                float pulse = smoothstep(.12, .98, sin(time * lerp(.56, 1.15, seed) + phase));
                 float d = length(local - pointAt);
-                float spark = 1 - smoothstep(.008, .030, d);
-                float halo = (1 - smoothstep(.020, .061, d)) * .08;
-                return pulse * (spark + halo);
+                float spark = 1 - smoothstep(.008, .034, d);
+                float innerGlow = (1 - smoothstep(.022, .11, d)) * .22;
+                float airScatter = (1 - smoothstep(.06, .42, d)) * .065;
+                return pulse * (spark + innerGlow + airScatter);
             }
 
             half4 Frag(Varyings input) : SV_Target
@@ -108,13 +112,7 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
                 float2 local = input.world - _Ground.xy;
                 float2 border = min(local, _Ground.zw - local);
                 float limit = smoothstep(0, 2, min(border.x, border.y));
-                float2 p = floor(input.world * 32.0 + .5) / 32.0;
                 float t = _Time.y;
-                float breeze = t * .31 + sin(t * .73) * .16;
-                float2 advected = p - float2(breeze, sin(p.x * .52 - t * .55) * .24);
-                float broad = Noise(advected * float2(.37, .91));
-                float filament = Noise(advected * float2(.91, 2.5) + 27.4);
-                float density = smoothstep(.35, .79, broad * .72 + filament * .28);
 
                 float y = input.world.y;
                 float strike = 0;
@@ -130,7 +128,7 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
 
                 if (_Front > .5)
                 {
-                    float firefly = Fireflies(local, t) * .39;
+                    float firefly = Fireflies(local, t) * .56;
                     if (_Entrance < .5) return half4(.80, .89, .37, limit * firefly);
                     float halo = 0;
                     float scatter = 0;
@@ -141,6 +139,7 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
                         if (lamp.w <= 0) continue;
                         float2 bulb = _Ground.xy + lamp.xy;
                         float2 delta = input.world - bulb;
+                        if (abs(delta.x) > 2.4 || delta.y > .6 || delta.y < -3.6) continue;
                         float glow = 1 - smoothstep(.035, .41, length(delta * float2(1, 1.55)));
                         halo = max(halo, glow * glow);
 
@@ -162,18 +161,37 @@ Shader "SantaRita/RuaNorte/Nevoeiro"
                         core = max(core, shaft * reach * concentration * lerp(.89, 1.08, rays));
                     }
 
+                    float density = 0;
+                    if (scatter > 0)
+                    {
+                        float2 p = floor(input.world * 32.0 + .5) / 32.0;
+                        float breeze = t * .31 + sin(t * .73) * .16;
+                        float2 advected = p - float2(breeze, sin(p.x * .52 - t * .55) * .24);
+                        float broad = Noise(advected * float2(.37, .91));
+                        float filament = Noise(advected * float2(.91, 2.5) + 27.4);
+                        density = smoothstep(.35, .79, broad * .72 + filament * .28);
+                    }
                     float amber = scatter * lerp(.13, .24, density);
                     float golden = core * .39 + halo * .25;
                     float total = amber + golden;
                     half3 fogColor = lerp(half3(1.00, .53, .21), half3(1.42, .92, .46),
                         golden / max(total, .001));
                     fogColor = lerp(fogColor, flash, saturate(strike + _Lightning.z * .62));
-                    float opacity = saturate(total * _BeamStrength *
-                        (1 - .77 * _PracaDaMatriz * AreaDaPracaDaMatriz(input.world)));
-                    half3 color = lerp(fogColor, half3(.80, .89, .37), firefly / max(opacity + firefly, .001));
+                    float haloBoost = lerp(1.0, 1.35, _PracaDaMatriz);
+                    float opacity = saturate((amber + golden * haloBoost) * _BeamStrength *
+                        (1 - .25 * _PracaDaMatriz * AreaDaPracaDaMatriz(input.world)));
+                    half3 color = lerp(fogColor, half3(.86, .96, .42), firefly / max(opacity + firefly, .001));
                     return half4(color, limit * saturate(opacity + firefly));
                 }
 
+                if (_PracaDaMatriz > .5)
+                {
+                    float3 sup = float3(input.world.x, input.world.y, .45);
+                    float nevoa = DensidadeDaNevoaCentro(sup, t, .11) * limit;
+                    half3 corNevoa = CorDaNevoaCentro(0);
+                    half3 mistColor = lerp(corNevoa, flash, saturate(strike));
+                    return half4(mistColor, saturate(max(nevoa, limit * strike * .92)));
+                }
                 return half4(flash, limit * strike * .92);
             }
             ENDHLSL

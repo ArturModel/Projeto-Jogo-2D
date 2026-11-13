@@ -144,6 +144,16 @@ internal sealed class SantaRitaFalasEntrada : MonoBehaviour
             "ZÉ" => ("Zé", MinigameDialogue.ZePitch),
             "FREGUÊS" => ("Freguês", .86f),
             "MARCUS" => ("Marcus", MinigameDialogue.MarcusPitch),
+            "PADRE" or "PADRE BENTO" or "BENTO" => ("Padre Bento", .68f),
+            "CLARICE" => ("Clarice", 1.12f),
+            "MILA" => ("Mila", 1.18f),
+            "CELINA" => ("Celina", 1.04f),
+            "DÁRIO" or "DARIO" => ("Dário", .84f),
+            "NAIR" => ("Nair", 1.06f),
+            "TONÃO" or "TONAO" => ("Tonão", .64f),
+            "PASSAGEIRA" => ("Passageira", 1.14f),
+            "CHICO" => ("Chico", .76f),
+            "AMARO" => ("Amaro", .72f),
             _ => (fala.falante, MinigameDialogue.MarcusPitch)
         };
         legenda.Dizer(locutor, fala.texto, tom);

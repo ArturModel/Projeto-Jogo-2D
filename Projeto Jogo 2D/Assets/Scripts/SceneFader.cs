@@ -53,12 +53,42 @@ public class SceneFader : MonoBehaviour
     private CanvasGroup group;
     private Image fadeImage;
     private Material sinucaIris;
+    private CanvasGroup bridgeGroup;
+    private RawImage bridgeImage;
+    private Camera bridgeCamera;
+    private AudioListener bridgeListener;
+    private RenderTexture bridgeTexture;
+    private RenderTexture portalBackdropTexture;
+    internal RenderTexture PortalBackdropTexture => portalBackdropTexture;
     private CanvasGroup bannerGroup;
     private TextMeshProUGUI bannerTitulo;
     private TextMeshProUGUI bannerSubtitulo;
     private bool isTransitioning;
     private string cenaDurantePorta;
     public static bool IsTransitioning => instance != null && instance.isTransitioning;
+    internal static float AtenuacaoAudioSaidaCena { get; private set; }
+    internal static float ProgressoAudioPortal { get; private set; }
+    internal static bool TransicaoAudioParaInterior { get; private set; }
+    internal static bool EmTransicaoAudioPortal { get; private set; }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetarEstadoAudioTransicao() => LimparEstadoAudioTransicao();
+
+    internal static void DefinirEstadoAudioPortal(bool emPortal, bool paraInterior, float saidaCena, float progressoPortal)
+    {
+        EmTransicaoAudioPortal = emPortal;
+        TransicaoAudioParaInterior = paraInterior;
+        AtenuacaoAudioSaidaCena = Mathf.Clamp01(saidaCena);
+        ProgressoAudioPortal = Mathf.Clamp01(progressoPortal);
+    }
+
+    internal static void LimparEstadoAudioTransicao()
+    {
+        EmTransicaoAudioPortal = false;
+        TransicaoAudioParaInterior = false;
+        AtenuacaoAudioSaidaCena = 0f;
+        ProgressoAudioPortal = 0f;
+    }
     private Coroutine bannerRoutine;
 
     private void Awake()
@@ -84,6 +114,16 @@ public class SceneFader : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         if (sinucaIris != null) Destroy(sinucaIris);
+        if (bridgeTexture != null)
+        {
+            bridgeTexture.Release();
+            Destroy(bridgeTexture);
+        }
+        if (portalBackdropTexture != null)
+        {
+            portalBackdropTexture.Release();
+            Destroy(portalBackdropTexture);
+        }
         if (instance == this)
         {
             instance = null;
@@ -120,6 +160,45 @@ public class SceneFader : MonoBehaviour
         rect.anchorMax = Vector2.one;
         rect.offsetMin = Vector2.zero;
         rect.offsetMax = Vector2.zero;
+
+        GameObject bridgeCanvasObj = new GameObject("BridgeCanvas");
+        bridgeCanvasObj.transform.SetParent(transform, false);
+
+        Canvas bridgeCanvas = bridgeCanvasObj.AddComponent<Canvas>();
+        bridgeCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        bridgeCanvas.sortingOrder = 9998;
+
+        bridgeGroup = bridgeCanvasObj.AddComponent<CanvasGroup>();
+        bridgeGroup.alpha = 0f;
+        bridgeGroup.blocksRaycasts = false;
+        bridgeGroup.interactable = false;
+
+        GameObject bridgeObj = new GameObject("BridgeFrame", typeof(RectTransform), typeof(RawImage));
+        bridgeObj.transform.SetParent(bridgeCanvasObj.transform, false);
+        bridgeImage = bridgeObj.GetComponent<RawImage>();
+        bridgeImage.color = Color.white;
+        bridgeImage.raycastTarget = false;
+        RectTransform bridgeRt = bridgeImage.rectTransform;
+        bridgeRt.anchorMin = Vector2.zero;
+        bridgeRt.anchorMax = Vector2.one;
+        bridgeRt.offsetMin = Vector2.zero;
+        bridgeRt.offsetMax = Vector2.zero;
+        bridgeObj.SetActive(false);
+
+        // Mantem uma camera e AudioListener de fallback no Display 1 enquanto o BridgeCanvas cobre a troca de cena.
+        GameObject bridgeCamObj = new GameObject("BridgeFallbackCamera");
+        bridgeCamObj.transform.SetParent(transform, false);
+        bridgeCamera = bridgeCamObj.AddComponent<Camera>();
+        bridgeCamera.cullingMask = 0;
+        bridgeCamera.clearFlags = CameraClearFlags.SolidColor;
+        bridgeCamera.backgroundColor = Color.black;
+        bridgeCamera.depth = -100f;
+        bridgeCamera.allowHDR = false;
+        bridgeCamera.allowMSAA = false;
+        bridgeCamera.useOcclusionCulling = false;
+        bridgeCamera.enabled = false;
+        bridgeListener = bridgeCamObj.AddComponent<AudioListener>();
+        bridgeListener.enabled = false;
 
         // Letreiro cinematográfico de Zona / Interior (estilo OMORI / Darkwood / Pokémon)
         GameObject bannerCanvasObj = new GameObject("AreaBannerCanvas");
@@ -183,10 +262,111 @@ public class SceneFader : MonoBehaviour
     {
         // A saída da cena do bar já tem a máscara opaca e a sua própria revelação.
         if (scene.name == cenaDurantePorta) return;
+        LimparEstadoAudioTransicao();
         isTransitioning = false;
         StopAllCoroutines();
+        DefinirFallbackAudioListener(false);
+        DefinirAlphaBridge(0f);
         RestaurarImagemFade();
         StartCoroutine(FadeIn());
+    }
+
+    internal bool IniciarTransicaoExterna(string cenaAlvo)
+    {
+        if (isTransitioning) return false;
+        isTransitioning = true;
+        cenaDurantePorta = cenaAlvo;
+        group.blocksRaycasts = true;
+        group.alpha = 0f;
+        if (fadeImage != null) fadeImage.raycastTarget = true;
+        return true;
+    }
+
+    internal void AtualizarDestinoExterno(string cenaAlvo)
+    {
+        cenaDurantePorta = cenaAlvo;
+    }
+
+    internal void CapturarBridge(RenderTexture origem)
+    {
+        if (origem == null || bridgeImage == null || bridgeGroup == null) return;
+        CopiarRT(origem, ref bridgeTexture, "BridgeFrameRT", FilterMode.Point);
+        bridgeImage.texture = bridgeTexture;
+        bridgeImage.color = Color.white;
+        bridgeImage.gameObject.SetActive(true);
+        bridgeGroup.alpha = 1f;
+        bridgeGroup.blocksRaycasts = true;
+        if (bridgeCamera != null) bridgeCamera.enabled = true;
+    }
+
+    internal void DefinirFallbackAudioListener(bool ativo)
+    {
+        if (bridgeListener != null) bridgeListener.enabled = ativo;
+    }
+
+    internal void CapturarPortalBackdrop(RenderTexture origem)
+    {
+        if (origem == null) return;
+        CopiarRT(origem, ref portalBackdropTexture, "PortalBackdropRT", FilterMode.Bilinear);
+    }
+
+    private void CopiarRT(RenderTexture origem, ref RenderTexture destino, string nome, FilterMode filter)
+    {
+        int w = Mathf.Max(16, origem.width);
+        int h = Mathf.Max(16, origem.height);
+        if (destino == null || destino.width != w || destino.height != h)
+        {
+            if (destino != null)
+            {
+                destino.Release();
+                Destroy(destino);
+            }
+            destino = new RenderTexture(w, h, 0, RenderTextureFormat.ARGB32)
+            {
+                filterMode = filter,
+                name = nome,
+            };
+            destino.Create();
+        }
+        Graphics.Blit(origem, destino);
+    }
+
+    internal void DefinirAlphaBridge(float alpha)
+    {
+        if (bridgeGroup == null || bridgeImage == null) return;
+        if (alpha <= 0.001f)
+        {
+            bridgeGroup.alpha = 0f;
+            bridgeGroup.blocksRaycasts = false;
+            bridgeImage.gameObject.SetActive(false);
+            if (bridgeCamera != null) bridgeCamera.enabled = false;
+        }
+        else
+        {
+            if (bridgeCamera != null) bridgeCamera.enabled = true;
+            bridgeImage.gameObject.SetActive(true);
+            bridgeGroup.alpha = Mathf.Clamp01(alpha);
+        }
+    }
+
+    internal Coroutine ExecutarTransicaoExterna(IEnumerator rotina)
+    {
+        return StartCoroutine(rotina);
+    }
+
+    internal void ConcluirTransicaoExterna()
+    {
+        cenaDurantePorta = null;
+        isTransitioning = false;
+        LimparEstadoAudioTransicao();
+        DefinirFallbackAudioListener(false);
+        DefinirAlphaBridge(0f);
+        if (group != null)
+        {
+            group.blocksRaycasts = false;
+            group.alpha = 0f;
+        }
+        RestaurarImagemFade();
     }
 
     internal void TransicionarParaMinigame(Vector2 foco, Texture2D grao, Action abrirSala, Action<float> olharPendente, Action mostrarEscolha)
@@ -347,10 +527,17 @@ public class SceneFader : MonoBehaviour
         group.blocksRaycasts = true;
         fadeImage.raycastTarget = true;
         bool nevoa = PrepararIris();
+        bool paraInterior = !string.IsNullOrEmpty(cenaDestino) && Capitulo2Interior3D.EhCenaInterior3D(cenaDestino);
+        bool portalCap2 = paraInterior || cenaDestino == "CentroSantaRita";
         try
         {
             for (float t = 0f; t < antesDaNevoa; t += Time.unscaledDeltaTime)
             {
+                if (portalCap2 && antesDaNevoa > .001f)
+                {
+                    float pAntes = Mathf.SmoothStep(0f, .52f, t / antesDaNevoa);
+                    DefinirEstadoAudioPortal(true, paraInterior, Mathf.SmoothStep(0f, .5f, Mathf.InverseLerp(antesDaNevoa * .35f, antesDaNevoa, t)), pAntes);
+                }
                 animarAntes?.Invoke(t);
                 yield return null;
             }
@@ -366,7 +553,13 @@ public class SceneFader : MonoBehaviour
                 const float fechar = .68f;
                 for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
                 {
-                    AjustarMascaraBar(foco, Mathf.SmoothStep(0f, 1f, t / fechar));
+                    float kFechar = Mathf.SmoothStep(0f, 1f, t / fechar);
+                    AjustarMascaraBar(foco, kFechar);
+                    if (portalCap2)
+                        DefinirEstadoAudioPortal(true, paraInterior, Mathf.Lerp(antesDaNevoa > .001f ? .5f : 0f, 1f, kFechar),
+                            Mathf.Lerp(antesDaNevoa > .001f ? .52f : 0f, .62f, kFechar));
+                    else
+                        AtenuacaoAudioSaidaCena = kFechar;
                     animarAntes?.Invoke(antesDaNevoa + t);
                     yield return null;
                 }
@@ -377,12 +570,20 @@ public class SceneFader : MonoBehaviour
                 const float fechar = .34f;
                 for (float t = 0f; t < fechar; t += Time.unscaledDeltaTime)
                 {
-                    group.alpha = Mathf.SmoothStep(0f, 1f, t / fechar);
+                    float kFechar = Mathf.SmoothStep(0f, 1f, t / fechar);
+                    group.alpha = kFechar;
+                    if (portalCap2)
+                        DefinirEstadoAudioPortal(true, paraInterior, Mathf.Lerp(antesDaNevoa > .001f ? .5f : 0f, 1f, kFechar),
+                            Mathf.Lerp(antesDaNevoa > .001f ? .52f : 0f, .62f, kFechar));
+                    else
+                        AtenuacaoAudioSaidaCena = kFechar;
                     animarAntes?.Invoke(antesDaNevoa + t);
                     yield return null;
                 }
                 group.alpha = 1f;
             }
+            if (portalCap2) DefinirEstadoAudioPortal(true, paraInterior, 1f, .62f);
+            else AtenuacaoAudioSaidaCena = 1f;
 
             yield return null;
             trocar();
@@ -393,8 +594,16 @@ public class SceneFader : MonoBehaviour
                 float limite = Time.realtimeSinceStartup + 15f;
                 while (SceneManager.GetActiveScene().name != cenaDestino && Time.realtimeSinceStartup < limite)
                     yield return null;
+                if (animar != null)
+                {
+                    float esperaMontagem = Time.realtimeSinceStartup + 2f;
+                    while (Capitulo2Interior3D.Atual == null && Time.realtimeSinceStartup < esperaMontagem)
+                        yield return null;
+                }
             }
 
+            if (portalCap2) DefinirEstadoAudioPortal(true, paraInterior, 0f, .62f);
+            else AtenuacaoAudioSaidaCena = 0f;
             animar?.Invoke(0f);
             yield return null;
 
@@ -406,6 +615,8 @@ public class SceneFader : MonoBehaviour
                 float cobertura = 1f - Mathf.SmoothStep(0f, 1f, t / revelar);
                 if (nevoa) AjustarMascaraBar(foco, cobertura);
                 else group.alpha = cobertura;
+                if (portalCap2)
+                    DefinirEstadoAudioPortal(true, paraInterior, 0f, Mathf.Lerp(.62f, 1f, Mathf.SmoothStep(0f, 1f, t / total)));
                 animar?.Invoke(t);
                 yield return null;
             }
@@ -413,6 +624,7 @@ public class SceneFader : MonoBehaviour
         }
         finally
         {
+            LimparEstadoAudioTransicao();
             cenaDurantePorta = null;
             group.alpha = 0f;
             RestaurarImagemFade();
@@ -723,6 +935,43 @@ public class SceneFader : MonoBehaviour
 #endif
     }
 
+    internal static AsyncOperation PrepararCargaAssincrona(string sceneName, LoadSceneMode mode = LoadSceneMode.Single)
+    {
+        AsyncOperation op = null;
+        if (Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            op = SceneManager.LoadSceneAsync(sceneName, mode);
+        }
+        else
+        {
+            SincronizarCenasNoEditor();
+            if (Application.CanStreamedLevelBeLoaded(sceneName))
+                op = SceneManager.LoadSceneAsync(sceneName, mode);
+            else
+            {
+                string caminhoCena = ResolverCaminhoCena(sceneName);
+                if (!string.IsNullOrEmpty(caminhoCena) && Application.CanStreamedLevelBeLoaded(caminhoCena))
+                    op = SceneManager.LoadSceneAsync(caminhoCena, mode);
+                else if (Application.isEditor && !string.IsNullOrEmpty(caminhoCena))
+                {
+                    try
+                    {
+                        Type esmType = Type.GetType("UnityEditor.SceneManagement.EditorSceneManager, UnityEditor.CoreModule")
+                                    ?? Type.GetType("UnityEditor.SceneManagement.EditorSceneManager, UnityEditor");
+                        MethodInfo m = esmType?.GetMethod("LoadSceneAsyncInPlayMode",
+                            BindingFlags.Public | BindingFlags.Static, null,
+                            new[] { typeof(string), typeof(LoadSceneParameters) }, null);
+                        if (m != null)
+                            op = m.Invoke(null, new object[] { caminhoCena, new LoadSceneParameters(mode) }) as AsyncOperation;
+                    }
+                    catch { }
+                }
+            }
+        }
+        if (op != null) op.allowSceneActivation = false;
+        return op;
+    }
+
     public static void CarregarCenaSegura(string sceneName)
     {
         SincronizarCenasNoEditor();
@@ -796,14 +1045,18 @@ public class SceneFader : MonoBehaviour
     {
         float start = group.alpha;
         float elapsed = 0f;
+        bool atenuarSaida = !EmTransicaoAudioPortal && isTransitioning && target >= .99f;
 
         while (elapsed < duration)
         {
             elapsed += Time.unscaledDeltaTime;
-            group.alpha = Mathf.Lerp(start, target, elapsed / duration);
+            float k = Mathf.Clamp01(elapsed / Mathf.Max(.0001f, duration));
+            group.alpha = Mathf.Lerp(start, target, k);
+            if (atenuarSaida) AtenuacaoAudioSaidaCena = Mathf.SmoothStep(0f, 1f, k);
             yield return null;
         }
 
         group.alpha = target;
+        if (atenuarSaida) AtenuacaoAudioSaidaCena = 1f;
     }
 }

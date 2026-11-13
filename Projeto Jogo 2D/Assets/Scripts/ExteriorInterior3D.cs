@@ -4,9 +4,16 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-internal sealed class ExteriorInterior3D : MonoBehaviour
+internal sealed partial class ExteriorInterior3D : MonoBehaviour
 {
-    internal enum Local { Posto, Mercadinho, Casa, Jardim, Bar, Sociedade = 6, Salao }
+    internal enum Local
+    {
+        Posto, Mercadinho, Casa, Jardim, Bar, Sociedade = 6, Salao,
+        IgrejaPraca, PrefeituraFrente, PrefeituraFundos,
+        RodoviariaFrente, RodoviariaPlataforma,
+        DepositoPatio, OficinaRua, CostureiraRua,
+        SociedadeBeiraRio, CemiterioFrente, CemiterioFundos
+    }
     private readonly List<Transform> sprites = new List<Transform>();
     private readonly List<UnityEngine.Object> recursos = new List<UnityEngine.Object>();
     private Camera vista;
@@ -29,13 +36,18 @@ internal sealed class ExteriorInterior3D : MonoBehaviour
     internal static void Parede(float esquerda, float direita, float altura, Rect[] vaos,
         Action<float, float, float, float> trecho)
     {
+        var ordenados = new Rect[vaos.Length];
+        Array.Copy(vaos, ordenados, vaos.Length);
+        Array.Sort(ordenados, (a, b) => a.xMin.CompareTo(b.xMin));
+
         float inicio = esquerda;
-        foreach (Rect vao in vaos)
+        foreach (Rect vao in ordenados)
         {
-            trecho(inicio, vao.xMin, 0, altura);
+            float x0 = Mathf.Max(inicio, vao.xMin);
+            trecho(inicio, x0, 0, altura);
             if (vao.yMin > 0f) trecho(vao.xMin, vao.xMax, 0, vao.yMin);
             if (vao.yMax < altura) trecho(vao.xMin, vao.xMax, vao.yMax, altura);
-            inicio = vao.xMax;
+            inicio = Mathf.Max(inicio, vao.xMax);
         }
         trecho(inicio, direita, 0, altura);
     }
@@ -47,6 +59,7 @@ internal sealed class ExteriorInterior3D : MonoBehaviour
             MontarSalao(layer);
             return;
         }
+        if (ConstruirCentro(layer, local)) return;
 
         bool terra = local == Local.Casa || local == Local.Jardim;
         bool jardim = local == Local.Jardim;

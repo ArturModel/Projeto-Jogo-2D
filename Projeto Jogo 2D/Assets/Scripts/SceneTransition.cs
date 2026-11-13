@@ -21,6 +21,12 @@ public static class SceneTransition
         posicaoPendente = posicao;
     }
 
+    internal static void PrepararEntrada(string entrada)
+    {
+        entradaPendente = entrada;
+        posicaoPendente = null;
+    }
+
     // Chamado pela porta. O nome tem que bater com o Id de um SpawnPoint na
     // cena de destino.
     public static void Ir(string cena, string entrada)

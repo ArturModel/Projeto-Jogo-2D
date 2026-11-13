@@ -132,8 +132,22 @@ public class Chuva : MonoBehaviour
 
     // --- luz --------------------------------------------------------
 
+    private struct LuzPontoCache
+    {
+        public Vector2 pos;
+        public Vector2 up;
+        public Color cor;
+        public float raioSq;
+        public float invRaio;
+        public float intensidadeFator;
+        public float abertura;
+        public float miolo;
+        public bool temCone;
+    }
+
     private readonly List<Light2D> luzesPintadas = new List<Light2D>();
     private readonly List<Light2D> luzesPonto = new List<Light2D>();
+    private readonly List<LuzPontoCache> luzesVisiveis = new List<LuzPontoCache>(32);
     private float proximaBuscaLuz;
 
     // --- som --------------------------------------------------------
@@ -141,7 +155,22 @@ public class Chuva : MonoBehaviour
     private AudioSource fonteA, fonteB;
     private AudioLowPassFilter filtroA, filtroB;
     private float volumeSuaveA, volumeSuaveB;
+    private float ultimoTimeA, ultimoTimeB;
     private float oclusaoPortaBar = -1f;
+
+    private struct HandoffAudioChuva
+    {
+        public bool valido;
+        public float tempoUnscaled;
+        public AudioClip clip;
+        public float timeA, timeB;
+        public float volA, volB;
+    }
+
+    private static HandoffAudioChuva handoffAudio;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetarHandoffAudio() => handoffAudio = default;
 
     // =================================================================
 
@@ -174,18 +203,75 @@ public class Chuva : MonoBehaviour
 
     private void OnDisable()
     {
+        RegistrarHandoffAudio();
         if (fonteA != null) fonteA.Stop();
         if (fonteB != null) fonteB.Stop();
     }
 
     private void OnEnable()
     {
-        if (fonteA != null && som != null) fonteA.Play();
-        if (fonteB != null && som != null) fonteB.Play();
+        if (fonteA != null && som != null)
+        {
+            if (!AplicarHandoffAudio())
+            {
+                fonteA.Play();
+                if (fonteB != null) fonteB.Play();
+            }
+        }
+    }
+
+    private void RegistrarHandoffAudio()
+    {
+        if (!SceneFader.IsTransitioning || som == null) return;
+        if (volumeSuaveA <= 0.0005f && volumeSuaveB <= 0.0005f) return;
+        handoffAudio = new HandoffAudioChuva
+        {
+            valido = true,
+            tempoUnscaled = Time.unscaledTime,
+            clip = som,
+            timeA = ultimoTimeA,
+            timeB = ultimoTimeB,
+            volA = volumeSuaveA,
+            volB = volumeSuaveB
+        };
+    }
+
+    private bool AplicarHandoffAudio()
+    {
+        bool usarHandoff = handoffAudio.valido && handoffAudio.clip == som &&
+                           Time.unscaledTime - handoffAudio.tempoUnscaled <= 3f;
+        if (!usarHandoff)
+        {
+            handoffAudio = default;
+            return false;
+        }
+
+        float avanco = Mathf.Max(0f, Time.unscaledTime - handoffAudio.tempoUnscaled);
+        volumeSuaveA = handoffAudio.volA;
+        volumeSuaveB = handoffAudio.volB;
+        float transmissao = Mathf.Lerp(1f, .40f, oclusaoPortaBar);
+        fonteA.volume = volumeSuaveA * transmissao;
+        if (fonteB != null) fonteB.volume = volumeSuaveB * transmissao;
+        fonteA.Play();
+        if (fonteB != null) fonteB.Play();
+        if (som.length > .05f)
+        {
+            fonteA.time = Mathf.Repeat(handoffAudio.timeA + avanco, som.length);
+            ultimoTimeA = fonteA.time;
+            if (fonteB != null)
+            {
+                fonteB.time = Mathf.Repeat(handoffAudio.timeB + avanco, som.length);
+                ultimoTimeB = fonteB.time;
+            }
+        }
+        handoffAudio = default;
+        return true;
     }
 
     private void OnDestroy()
     {
+        if (!handoffAudio.valido || Time.unscaledTime - handoffAudio.tempoUnscaled > .05f)
+            RegistrarHandoffAudio();
         LiberarCamada(alta);
         LiberarCamada(chao);
     }
@@ -257,6 +343,7 @@ public class Chuva : MonoBehaviour
 
         GarantirCamadas();
         centroTela = cam.transform.position;
+        PrepararLuzesVisiveis();
 
         Simular(dt);
         Desenhar();
@@ -493,6 +580,47 @@ public class Chuva : MonoBehaviour
         }
     }
 
+    private void PrepararLuzesVisiveis()
+    {
+        luzesVisiveis.Clear();
+        if (luzesPonto.Count == 0) return;
+
+        Vector2 meia = MetadeDaTela();
+        float alcanceHorizontal = meia.x + AlturaMaxima * 1.5f + 3f;
+        float minX = centroTela.x - alcanceHorizontal;
+        float maxX = centroTela.x + alcanceHorizontal;
+        float minY = centroTela.y - meia.y - AlturaMaxima - 2f;
+        float maxY = centroTela.y + meia.y + 3f;
+
+        for (int i = 0; i < luzesPonto.Count; i++)
+        {
+            Light2D luz = luzesPonto[i];
+            if (luz == null || !luz.isActiveAndEnabled) continue;
+            float raio = luz.pointLightOuterRadius;
+            float intensidadeLuz = luz.intensity;
+            if (raio <= 0f || intensidadeLuz <= 0.001f) continue;
+
+            Transform tr = luz.transform;
+            Vector2 pos = tr.position;
+            if (pos.x + raio < minX || pos.x - raio > maxX ||
+                pos.y + raio < minY || pos.y - raio > maxY) continue;
+
+            float abertura = luz.pointLightOuterAngle * 0.5f;
+            luzesVisiveis.Add(new LuzPontoCache
+            {
+                pos = pos,
+                up = tr.up,
+                cor = luz.color,
+                raioSq = raio * raio,
+                invRaio = 1f / raio,
+                intensidadeFator = intensidadeLuz * 0.45f,
+                abertura = abertura,
+                miolo = luz.pointLightInnerAngle * 0.5f,
+                temCone = abertura < 179f
+            });
+        }
+    }
+
     // Quanta luz chega num ponto do mundo, e de que cor.
     private Color BrilhoEm(Vector2 p, out float forca)
     {
@@ -518,29 +646,25 @@ public class Chuva : MonoBehaviour
             forca += c.r * 0.3f + c.g * 0.59f + c.b * 0.11f;
         }
 
-        foreach (Light2D luz in luzesPonto)
+        for (int i = 0; i < luzesVisiveis.Count; i++)
         {
-            if (luz == null) continue;
-
-            Vector2 delta = p - (Vector2)luz.transform.position;
-            float raio = luz.pointLightOuterRadius;
-            float distancia = delta.magnitude;
-
-            if (distancia >= raio) continue;
+            LuzPontoCache luz = luzesVisiveis[i];
+            Vector2 delta = p - luz.pos;
+            float distanciaQuadrada = delta.sqrMagnitude;
+            if (distanciaQuadrada >= luz.raioSq) continue;
+            float distancia = Mathf.Sqrt(distanciaQuadrada);
 
             float cone = 1f;
-            float abertura = luz.pointLightOuterAngle * 0.5f;
-
-            if (abertura < 179f && distancia > 0.01f)
+            if (luz.temCone && distancia > 0.01f)
             {
-                float desvio = Vector2.Angle(luz.transform.up, delta);
-                float miolo = luz.pointLightInnerAngle * 0.5f;
-                if (desvio >= abertura) continue;
-                cone = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(miolo, abertura, desvio));
+                float desvio = Vector2.Angle(luz.up, delta);
+                if (desvio >= luz.abertura) continue;
+                cone = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(luz.miolo, luz.abertura, desvio));
             }
 
-            float valor = Mathf.Pow(1f - distancia / raio, 1.5f) * cone * luz.intensity * 0.45f;
-            soma += luz.color * valor;
+            float u = 1f - distancia * luz.invRaio;
+            float valor = u * Mathf.Sqrt(u) * cone * luz.intensidadeFator;
+            soma += luz.cor * valor;
             forca += valor;
         }
 
@@ -785,9 +909,12 @@ public class Chuva : MonoBehaviour
             int rx = Mathf.CeilToInt(poca.raio.x * ppu);
             int ry = Mathf.CeilToInt(poca.raio.y * ppu);
 
-            for (int y = -ry; y <= ry; y++)
+            // Pixels fora da textura seriam descartados por Pintar; não os percorra.
+            int yMin = Mathf.Max(-ry, -cy), yMax = Mathf.Min(ry, altura - 1 - cy);
+            int xMin = Mathf.Max(-rx, -cx), xMax = Mathf.Min(rx, largura - 1 - cx);
+            for (int y = yMin; y <= yMax; y++)
             {
-                for (int x = -rx; x <= rx; x++)
+                for (int x = xMin; x <= xMax; x++)
                 {
                     float nx = x / (float)rx, ny = y / (float)ry;
                     float d = nx * nx + ny * ny;
@@ -828,6 +955,8 @@ public class Chuva : MonoBehaviour
         fonteB = CriarFonte("SomChuvaB", 0.97f);
         AtualizarFiltros();
 
+        if (AplicarHandoffAudio()) return;
+
         // segunda fonte começa no meio do loop e um pouco mais grave: as duas nunca
         // se alinham, e o ouvido não pega o ponto em que o arquivo recomeça
         fonteA.Play();
@@ -863,7 +992,11 @@ public class Chuva : MonoBehaviour
         volumeSuaveA = Mathf.Lerp(volumeSuaveA, volume * 0.75f * k * ganho, suave);
         volumeSuaveB = Mathf.Lerp(volumeSuaveB, volume * 0.45f * k * ganho, suave);
         float transmissao = Mathf.Lerp(1f, .40f, oclusaoPortaBar);
+        if (!SceneFader.EmTransicaoAudioPortal && SceneFader.AtenuacaoAudioSaidaCena > .001f)
+            transmissao *= 1f - SceneFader.AtenuacaoAudioSaidaCena;
         fonteA.volume = volumeSuaveA * transmissao;
         fonteB.volume = volumeSuaveB * transmissao;
+        if (fonteA.isPlaying) ultimoTimeA = fonteA.time;
+        if (fonteB != null && fonteB.isPlaying) ultimoTimeB = fonteB.time;
     }
 }

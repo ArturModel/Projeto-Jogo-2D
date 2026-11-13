@@ -91,10 +91,12 @@ internal sealed class FontePracaAnimada : MonoBehaviour
             ? transform.position - ouvinte.position
             : Vector2.right * Alcance;
         float proximidade = 1f - Mathf.SmoothStep(0f, 1f, deslocamento.magnitude / Alcance);
-        float volume = .65f * proximidade * AudioSettingsController.VolumeEfeitos;
+        float sairCena = SceneFader.AtenuacaoAudioSaidaCena;
+        float volume = .65f * proximidade * AudioSettingsController.VolumeEfeitos * (1f - sairCena);
         if (SinucaMinigameUI.IsShowing || BochaMinigameUI.IsShowing) volume = 0f;
         if (GameMessageUI.IsShowing) volume *= .4f;
-        audioLocal.volume = Mathf.MoveTowards(audioLocal.volume, volume, Time.unscaledDeltaTime * .2f);
+        float vel = sairCena > .001f ? .8f : (SceneFader.EmTransicaoAudioPortal ? .35f : .2f);
+        audioLocal.volume = Mathf.MoveTowards(audioLocal.volume, volume, Time.unscaledDeltaTime * vel);
         audioLocal.panStereo = Mathf.Clamp(deslocamento.x / Alcance, -.65f, .65f);
         if (volume > 0 && !audioLocal.isPlaying) audioLocal.Play();
         if (volume == 0 && audioLocal.volume == 0 && audioLocal.isPlaying) audioLocal.Stop();

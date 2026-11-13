@@ -12,12 +12,14 @@ internal sealed partial class Capitulo2Exterior
     private const float QuadroX = 38.85f;
     private const float OrelhaoX = 53.15f;
     private const float MobiliaDoAdroY = 60.40f;
-    private const int LimiteLuzesCentro = 32;
+    // Praça, postes e as seis entradas compartilham o mesmo piso e recortes de sombra.
+    private const int LimiteLuzesCentro = 88;
     private const int LimiteOclusoresCentro = 96;
-    private const float DensidadeNevoaCentro = .30f;
+    private const float DensidadeNevoaCentro = .16f;
     private int indiceLuzEntradaMatriz = -1;
     private static readonly Color Ambar = new(1f, .74f, .47f);
     private readonly List<(Vector3 pos, float raio, Color cor)> luzesVolumetricasPraca = new();
+    private readonly List<(Light2D light, Vector2 origin, float baseIntensity, float phase, bool firefly)> luzesVivasDoCentro = new();
     private readonly List<Vector4> oclusoresMin = new();
     private readonly List<Vector4> oclusoresMax = new();
     private readonly Vector4[] bufferMin = new Vector4[LimiteOclusoresCentro];
@@ -37,6 +39,18 @@ internal sealed partial class Capitulo2Exterior
     private float ultimaDensidadeNevoaCenario = -1f;
     private Vector4 ultimoRecorteDaLanterna;
     private int indiceOclusorMarcus = -1;
+    private readonly Vector4[] todosPostesCentro = new Vector4[LimiteLuzesCentro];
+    private readonly Vector4[] todasCoresCentro = new Vector4[LimiteLuzesCentro];
+    private int totalPostesCentro;
+    private readonly Vector4[] postesVisiveisBuffer = new Vector4[LimiteLuzesCentro];
+    private readonly Vector4[] coresVisiveisBuffer = new Vector4[LimiteLuzesCentro];
+    private readonly float[] oclusoresVisiveisBuffer = new float[LimiteOclusoresCentro];
+    private readonly float[] oclusoresProjetadosBuffer = new float[LimiteOclusoresCentro];
+    private bool visibilidadeCentroInicializada;
+    private float ultimaVisCamMinX, ultimaVisCamMaxX, ultimaVisCamMinY, ultimaVisCamMaxY;
+    private Collider2D colliderPesMarcus;
+    private bool buscouColliderMarcus;
+    private bool marcusOclusorInicializado;
 
     private static bool NaPraca(Vector2 p) =>
         p.x >= 34f && p.x <= 58f && p.y >= 39f && p.y <= 70f;
@@ -47,15 +61,6 @@ internal sealed partial class Capitulo2Exterior
 
     private void ComporPraca(SpriteRenderer[] existentes)
     {
-        int bancoIdx = 0;
-        Vector2[] posicoesBancos =
-        {
-            new(41.45f, 50.45f),
-            new(50.55f, 50.45f),
-            new(41.45f, 61.10f),
-            new(50.55f, 61.10f)
-        };
-
         // Reposiciona gatilhos, portais e NPCs da praça em simetria ao redor de x = 46.0f,
         // mantendo todos os IDs e fluxos narrativos intactos.
         foreach (var tr in FindObjectsByType<Transform>())
@@ -63,30 +68,6 @@ internal sealed partial class Capitulo2Exterior
             if (tr == null || tr.gameObject.scene != gameObject.scene) continue;
             switch (tr.name)
             {
-                case "Porta_Porta_IgrejaMatriz":
-                    tr.position = new Vector3(CentroEixoX, 63.35f, tr.position.z);
-                    break;
-                case "Spawn_volta_IgrejaMatriz":
-                    tr.position = new Vector3(CentroEixoX, 61.45f, tr.position.z);
-                    break;
-                case "Examinar_avisos_praca":
-                    tr.position = new Vector3(QuadroX, MobiliaDoAdroY - .40f, tr.position.z);
-                    break;
-                case "Examinar_orientacao":
-                    tr.position = new Vector3(43.20f, 42.10f, tr.position.z);
-                    break;
-                case "NPC_chico":
-                    tr.position = new Vector3(42.55f, 42.35f, tr.position.z);
-                    break;
-                case "MoradorNoBanco":
-                    tr.position = new Vector3(41.10f, 50.52f, tr.position.z);
-                    break;
-                case "VizinhaNaPraca":
-                    tr.position = new Vector3(41.80f, 50.52f, tr.position.z);
-                    break;
-                case "Examinar_moradores_praca":
-                    tr.position = new Vector3(41.45f, 50.10f, tr.position.z);
-                    break;
                 case "AO_Igreja":
                 case "AO_FontePublica":
                 case "AO_QuadroAvisosDaPraca":
@@ -122,17 +103,13 @@ internal sealed partial class Capitulo2Exterior
                     if (child.name is "ShadowFootprint" or "AO_Igreja")
                         child.gameObject.SetActive(false);
 
-                sprite.transform.position = new Vector3(CentroEixoX, 64.55f, sprite.transform.position.z);
-                Trocar(sprite, Matriz + "Fachada", 8.35f);
-                sprite.sortingOrder = 1000 - Mathf.RoundToInt(64.55f * 10);
-                var box = sprite.GetComponent<BoxCollider2D>();
-                if (box != null)
-                {
-                    float s = sprite.transform.localScale.x;
-                    box.size = new Vector2(7.70f / s, 3.60f / s);
-                    box.offset = new Vector2(0f, 1.15f / s);
-                }
+                // A fachada, sua colisão e os acessos são editados diretamente na cena.
                 ConfigurarSpriteVolumetricoPraca(sprite, 63.52f, .86f, 2.85f, .96f, .42f, modoOclusor: 0);
+                // A fachada mantém a iluminação e as demais sombras, sem o volume de Marcus.
+                var fachadaProps = new MaterialPropertyBlock();
+                sprite.GetPropertyBlock(fachadaProps);
+                fachadaProps.SetFloat("_IgnorePlayerShadow", 1f);
+                sprite.SetPropertyBlock(fachadaProps);
                 continue;
             }
 
@@ -140,52 +117,39 @@ internal sealed partial class Capitulo2Exterior
             {
                 foreach (var caster in sprite.GetComponentsInChildren<ShadowCaster2D>(true))
                     caster.enabled = false;
-                sprite.transform.position = new Vector3(CentroEixoX, 50.45f, sprite.transform.position.z);
-                sprite.sortingOrder = 1000 - Mathf.RoundToInt(50.45f * 10);
                 float baseFonte = sprite.bounds.min.y + 1f / 32f;
-                ConfigurarSpriteVolumetricoPraca(sprite, baseFonte, .78f, 1.85f, 2.25f, .92f, modoOclusor: 3);
+                ConfigurarSpriteVolumetricoPraca(sprite, baseFonte, .78f, 0f, 0f, .40f, modoOclusor: -1, projetarSilhueta: false);
                 RegistrarLuzVolumetricaPraca("Reflexo frio da água da fonte",
-                    new Vector3(CentroEixoX, baseFonte + .42f, 1.10f), 2.8f, .12f,
-                    new Color(.56f, .72f, .88f), new Color(.20f, .29f, .40f));
+                    new Vector3(CentroEixoX, baseFonte + .25f, 2.65f), 5.6f, .62f,
+                    new Color(.62f, .82f, 1f), new Color(1.45f, 1.82f, 2.30f));
+                RegistrarLuzVolumetricaPraca("Luz · Coroa da Fonte Pública",
+                    new Vector3(CentroEixoX, baseFonte - .65f, 2.00f), 5.4f, .52f,
+                    new Color(1f, .84f, .60f), new Color(1.55f, 1.24f, .86f));
                 FontePracaAnimada.Instalar(sprite, controladorMarcus != null ? controladorMarcus.transform : null);
                 continue;
             }
 
             if (nome == "BancoPublico")
             {
-                Vector2 destino = bancoIdx < posicoesBancos.Length
-                    ? posicoesBancos[bancoIdx++]
-                    : new Vector2(p.x < CentroEixoX ? 41.45f : 50.55f, p.y);
-                sprite.transform.position = new Vector3(destino.x, destino.y, sprite.transform.position.z);
-                Trocar(sprite, Matriz + "BancoFerro", 2.15f);
-                sprite.sortingOrder = 1000 - Mathf.RoundToInt(destino.y * 10);
-                ConfigurarSpriteVolumetricoPraca(sprite, destino.y - .32f, .72f, .92f, .62f, .36f, modoOclusor: 5);
+                ConfigurarSpriteVolumetricoPraca(sprite, p.y - .32f, .72f, .42f, .58f, .30f, modoOclusor: 5, projetarSilhueta: false);
                 continue;
             }
 
             if (nome == "QuadroAvisosDaPraca")
             {
-                sprite.transform.position = new Vector3(QuadroX, MobiliaDoAdroY, sprite.transform.position.z);
-                Trocar(sprite, pasta + "Quadro", 1.63f);
-                sprite.sortingOrder = 1000 - Mathf.RoundToInt(MobiliaDoAdroY * 10);
-                ConfigurarSpriteVolumetricoPraca(sprite, MobiliaDoAdroY - .60f, .82f, 1.55f, .52f, .34f, modoOclusor: 5);
+                ConfigurarSpriteVolumetricoPraca(sprite, p.y - .60f, .82f, 1.55f, .52f, .34f, modoOclusor: 5);
                 continue;
             }
 
             if (nome == "orelhao_centro_matriz")
             {
-                sprite.transform.position = new Vector3(OrelhaoX, MobiliaDoAdroY, sprite.transform.position.z);
-                sprite.sortingOrder = 1000 - Mathf.RoundToInt(MobiliaDoAdroY * 10);
-                ConfigurarSpriteVolumetricoPraca(sprite, MobiliaDoAdroY - .70f, .88f, 2.05f, .58f, .44f, modoOclusor: 5);
+                ConfigurarSpriteVolumetricoPraca(sprite, p.y - .70f, .88f, 2.05f, .58f, .44f, modoOclusor: 5);
                 continue;
             }
 
             if (nome == "LixeiraDaPraca")
             {
-                sprite.transform.position = new Vector3(49.45f, 42.35f, sprite.transform.position.z);
-                Trocar(sprite, "Art/RuaNorte/Entrada/Modulos/Lixeira", .72f);
-                sprite.sortingOrder = 1000 - Mathf.RoundToInt(42.35f * 10);
-                ConfigurarSpriteVolumetricoPraca(sprite, 42.02f, .76f, .88f, .42f, .38f, modoOclusor: 5);
+                ConfigurarSpriteVolumetricoPraca(sprite, p.y - .33f, .76f, .88f, .42f, .38f, modoOclusor: 5);
                 continue;
             }
 
@@ -208,13 +172,6 @@ internal sealed partial class Capitulo2Exterior
             }
         }
 
-        foreach (var light in FindObjectsByType<Light2D>())
-        {
-            if (light.gameObject.scene == gameObject.scene && NaPraca(light.transform.position) &&
-                (light.name is "LuzQuente" or "LuminariaDeUso"))
-                light.enabled = false;
-        }
-
         // Mantém o limiar livre para a porta continuar totalmente visível e acessível.
         var votivos = PecaPraca("Votivos sob a janela", "Votivos", CentroEixoX + 2.32f, 64.38f, .74f);
         if (votivos != null)
@@ -229,21 +186,21 @@ internal sealed partial class Capitulo2Exterior
             OcuparBasePraca(vaso, new Vector2(1.05f, .42f));
             ConfigurarSpriteVolumetricoPraca(vaso, 63.10f, .78f, 1.18f, .92f, .44f, modoOclusor: 5);
             RegistrarLuzVolumetricaPraca("Luz rasante da Matriz", new Vector3(x, 63.15f, 1.65f), 4.8f, .48f,
-                new Color(1f, .81f, .60f), new Color(1.28f, .99f, .70f));
+                new Color(1f, .81f, .56f), new Color(1.65f, 1.22f, .76f));
         }
         indiceLuzEntradaMatriz = luzesVolumetricasPraca.Count;
         RegistrarLuzVolumetricaPraca("Luz da entrada da Matriz", new Vector3(CentroEixoX, 63.05f, 2.15f), 8.8f, 1.20f,
-            Ambar, new Color(3.00f, 2.08f, 1.30f));
-        RegistrarLuzVolumetricaPraca("Luz difusa da fachada da Matriz", new Vector3(CentroEixoX, 66.25f, 1.55f),
-            5.6f, .42f, new Color(1f, .84f, .64f), new Color(1.42f, 1.08f, .76f));
-        RegistrarLuzVolumetricaPraca("Contraluz fria do bosque da Matriz", new Vector3(CentroEixoX, 71.8f, 2.6f),
-            9.4f, .25f, new Color(.48f, .60f, .84f), new Color(.58f, .73f, 1.04f));
+            Ambar, new Color(3.45f, 2.38f, 1.44f));
+        RegistrarLuzVolumetricaPraca("Luz difusa da fachada da Matriz", new Vector3(CentroEixoX, 62.35f, 5.15f),
+            8.4f, .86f, new Color(1f, .84f, .62f), new Color(1.52f, 1.28f, .98f));
+        RegistrarLuzVolumetricaPraca("Contraluz fria do bosque da Matriz", new Vector3(CentroEixoX, 65.40f, 7.60f),
+            10.5f, .34f, new Color(.56f, .70f, .96f), new Color(.84f, 1.04f, 1.38f));
 
         // Luzes do quadro de avisos e do orelhão (com balizadores de proteção idênticos ao Cap. 1).
         RegistrarLuzVolumetricaPraca("Luz do quadro de avisos", new Vector3(QuadroX, MobiliaDoAdroY - .40f, 1.95f), 4.2f, .52f,
-            new Color(1f, .78f, .52f), new Color(1.42f, 1.06f, .68f));
+            new Color(1f, .78f, .52f), new Color(1.78f, 1.26f, .76f));
         RegistrarLuzVolumetricaPraca("Luz do orelhão da Matriz", new Vector3(OrelhaoX, MobiliaDoAdroY - .40f, 2.15f), 4.6f, .62f,
-            new Color(.96f, .82f, .58f), new Color(1.52f, 1.18f, .78f));
+            new Color(.96f, .82f, .58f), new Color(1.86f, 1.40f, .86f));
         foreach (float dx in new[] { -.58f, .58f })
         {
             var balizaOrelhao = PecaPraca("Balizador do orelhão", "Art/RuaNorte/Entrada/Modulos/Balizadores",
@@ -261,13 +218,21 @@ internal sealed partial class Capitulo2Exterior
         ComporCanteirosEMatagalDaPraca();
 
         // Balizadores de ferro fora do caminho central, alinhados às bordas do eixo de tijolinho e do adro.
-        foreach (float y in new[] { 42.60f, 46.60f, 54.40f, 58.60f })
+        foreach (float y in new[] { 42.60f, 46.60f, 50.50f, 54.40f, 58.60f })
         {
             BalizadorPraca(42.82f, y);
             BalizadorPraca(49.18f, y);
         }
-        BalizadorPraca(40.15f, 61.60f);
-        BalizadorPraca(51.85f, 61.60f);
+        foreach (float y in new[] { 41.80f, 61.60f })
+        {
+            BalizadorPraca(40.15f, y);
+            BalizadorPraca(51.85f, y);
+        }
+        foreach (float y in new[] { 50.50f, 61.60f })
+        {
+            BalizadorPraca(36.20f, y);
+            BalizadorPraca(55.80f, y);
+        }
 
         // Quatro postes altos simétricos nas alamedas laterais da praça.
         PostePraca(35.55f, 44.60f, true, "Poste sudoeste da Matriz");
@@ -366,6 +331,9 @@ internal sealed partial class Capitulo2Exterior
 
         foreach (var (cx, cy, oeste, norte) in canteiros)
         {
+            // Cada quadrante tem um arranjo próprio, mantendo as plantas dentro do canteiro.
+            float variacaoX = norte ? (oeste ? .22f : -.28f) : (oeste ? -.12f : .18f);
+            float variacaoY = norte ? (oeste ? -.18f : .15f) : (oeste ? .08f : -.14f);
             var curvo = PecaPraca("Canteiro curvo de granito", "CanteiroCurvo", cx, cy - 1.45f, 2.65f);
             if (curvo != null)
             {
@@ -374,7 +342,7 @@ internal sealed partial class Capitulo2Exterior
             }
 
             var vasoNorte = PecaPraca("Floreira norte do canteiro", centroProps + (norte ? "Canteiro" : "Floreira"),
-                cx + (oeste ? -.75f : .75f), cy + 1.25f, norte ? 1.32f : .88f);
+                cx + (oeste ? -.75f : .75f) + variacaoX, cy + 1.25f, norte ? 1.32f : .88f);
             if (vasoNorte != null)
             {
                 OcuparBasePraca(vasoNorte, new Vector2(norte ? 1.08f : .68f, .36f));
@@ -382,32 +350,32 @@ internal sealed partial class Capitulo2Exterior
             }
 
             var moitaExterna = PecaPraca("Moita externa do canteiro", veg + "MoitaDeBorda",
-                cx + (oeste ? -.88f : .88f), cy + .32f, 1.18f);
+                cx + (oeste ? -.88f : .88f) + variacaoX, cy + .32f + variacaoY, norte ? 1.05f : 1.18f);
             if (moitaExterna != null)
             {
                 ConfigurarVegetacaoVolumetricaPraca(moitaExterna, "MoitaDeBorda",
-                    new Vector2(cx + (oeste ? -.88f : .88f), cy + .32f), .62f);
+                    new Vector2(cx + (oeste ? -.88f : .88f) + variacaoX, cy + .32f + variacaoY), .62f);
             }
 
             var moita = PecaPraca("Moita baixa do canteiro", veg + "MoitaDeBorda",
-                cx + (oeste ? .62f : -.62f), cy + .25f, 1.15f);
+                cx + (oeste ? .62f : -.62f) - variacaoX, cy + .25f - variacaoY, oeste ? 1.15f : .98f);
             if (moita != null)
             {
-                ConfigurarVegetacaoVolumetricaPraca(moita, "MoitaDeBorda", new Vector2(cx, cy + .25f), .62f);
+                ConfigurarVegetacaoVolumetricaPraca(moita, "MoitaDeBorda", new Vector2(cx, cy + .25f - variacaoY), .62f);
             }
 
             var samambaia = PecaPraca("Samambaia da mata no canteiro", veg + "SamambaiaDaMata",
-                cx + (oeste ? -.82f : .82f), cy - .55f, 1.04f);
+                cx + (oeste ? -.82f : .82f) - variacaoX, cy - .55f + variacaoY, norte ? .90f : 1.04f);
             if (samambaia != null)
             {
-                ConfigurarVegetacaoVolumetricaPraca(samambaia, "SamambaiaDaMata", new Vector2(cx, cy - .55f), .58f);
+                ConfigurarVegetacaoVolumetricaPraca(samambaia, "SamambaiaDaMata", new Vector2(cx, cy - .55f + variacaoY), .58f);
             }
 
             var samambaia2 = PecaPraca("Samambaia interna do canteiro", veg + "SamambaiaDaMata",
-                cx + (oeste ? .55f : -.55f), cy - .78f, .92f);
+                cx + (oeste ? .55f : -.55f) + variacaoX, cy - .78f - variacaoY, oeste ? .92f : 1.08f);
             if (samambaia2 != null)
             {
-                ConfigurarVegetacaoVolumetricaPraca(samambaia2, "SamambaiaDaMata", new Vector2(cx, cy - .78f), .55f);
+                ConfigurarVegetacaoVolumetricaPraca(samambaia2, "SamambaiaDaMata", new Vector2(cx, cy - .78f - variacaoY), .55f);
             }
 
             var folhico = PecaPraca("Folhiço do canteiro", veg + "Folhico", cx, cy - .15f, 1.48f, noPiso: true);
@@ -445,7 +413,15 @@ internal sealed partial class Capitulo2Exterior
             ("Pitangueira", 40.8f, 74.0f, 2.85f),
             ("CamboataJovem", 44.0f, 73.6f, 2.55f),
             ("Bracatinga", 48.2f, 74.2f, 3.05f),
-            ("Pitangueira", 51.8f, 73.4f, 2.75f)
+            ("Pitangueira", 51.8f, 73.4f, 2.75f),
+            ("Camboata", 35.4f, 68.2f, 3.6f),
+            ("Bracatinga", 38.2f, 70.5f, 3.7f),
+            ("Pitangueira", 41.8f, 71.8f, 3.4f),
+            ("Camboata", 44.8f, 72.5f, 3.8f),
+            ("Bracatinga", 49.8f, 71.6f, 3.8f),
+            ("Pitangueira", 53.0f, 71.4f, 3.4f),
+            ("Camboata", 56.3f, 70.4f, 3.8f),
+            ("BracatingaJovem", 57.1f, 67.8f, 2.6f)
         };
         PlantarArvoresNoGramado("Árvore distante atrás da Matriz", bosqueDistante);
 
@@ -530,7 +506,8 @@ internal sealed partial class Capitulo2Exterior
         var r = Prop(nome, arte.StartsWith("Art/", StringComparison.Ordinal) ? arte : Matriz + arte,
             new Vector2(x, y), noPiso);
         if (r == null) return null;
-        r.transform.localScale = Vector3.one * (largura / r.sprite.bounds.size.x);
+        if (r.GetComponent<PecaCentroCena>() == null)
+            r.transform.localScale = Vector3.one * (largura / r.sprite.bounds.size.x);
         return r;
     }
 
@@ -547,9 +524,9 @@ internal sealed partial class Capitulo2Exterior
         float alturaDoBocal = lamp.y - baseY;
         ConfigurarSpriteVolumetricoPraca(r, baseY, 1f, alturaDoBocal, .24f, .24f, modoOclusor: 5,
             superficie: Resources.Load<Texture2D>("Art/RuaNorte/Entrada/Relevos/Poste"));
-        luzesVolumetricasPraca.Add((new Vector3(lamp.x, baseY, alturaDoBocal), 8.6f,
-            new Color(1.92f, 1.48f, .96f)));
-        LuzPraca("Luz · " + nome, lamp - Vector2.up * 1.65f, 4.9f, .72f, Ambar);
+        luzesVolumetricasPraca.Add((new Vector3(lamp.x, baseY, alturaDoBocal), 9.8f,
+            new Color(2.95f, 2.15f, 1.24f)));
+        LuzPraca("Luz · " + nome, lamp - Vector2.up * 1.65f, 5.4f, 1.05f, Ambar);
     }
 
     private void BalizadorPraca(float x, float y)
@@ -560,8 +537,8 @@ internal sealed partial class Capitulo2Exterior
         OcuparBasePraca(r, new Vector2(.26f, .26f));
         var pe = new Vector2(x, y);
         ConfigurarSpriteVolumetricoPraca(r, y - .18f, .82f, .86f, .24f, .24f, modoOclusor: 5);
-        luzesVolumetricasPraca.Add((new Vector3(x, y - .10f, .82f), 3.35f, new Color(1.58f, 1.14f, .68f)));
-        LuzPraca("Luz baixa do passeio", pe + Vector2.up * .48f, 2.45f, .44f, Ambar);
+        luzesVolumetricasPraca.Add((new Vector3(x, y - .10f, .82f), 3.70f, new Color(2.15f, 1.48f, .80f)));
+        LuzPraca("Luz baixa do passeio", pe + Vector2.up * .48f, 2.75f, .72f, Ambar);
     }
 
     private void RegistrarLuzVolumetricaPraca(string nome, Vector3 mundoXYZ, float raio, float potencia2D,
@@ -716,6 +693,7 @@ internal sealed partial class Capitulo2Exterior
     private static void OcuparBasePraca(SpriteRenderer r, Vector2 tamanho)
     {
         if (r == null) return;
+        if (r.GetComponent<PecaCentroCena>() != null) return;
         var collider = r.gameObject.AddComponent<BoxCollider2D>();
         collider.size = tamanho / r.transform.localScale.x;
         collider.offset = Vector2.up * (.11f / r.transform.localScale.x);
@@ -723,6 +701,7 @@ internal sealed partial class Capitulo2Exterior
 
     private void LuzPraca(string nome, Vector2 p, float raio, float potencia, Color cor)
     {
+        if (transform.Find("Luzes fixas do Centro") != null) return;
         var obj = new GameObject(nome, typeof(Light2D));
         obj.transform.SetParent(transform, false);
         obj.transform.position = p;
@@ -733,6 +712,7 @@ internal sealed partial class Capitulo2Exterior
         light.pointLightInnerRadius = raio * .16f;
         light.pointLightOuterRadius = raio;
         light.falloffIntensity = .64f;
+        light.shadowsEnabled = false;
     }
 
     // As linhas da Rua Norte ficam intactas. Os dois pisos da Matriz são
@@ -841,6 +821,7 @@ internal sealed partial class Capitulo2Exterior
         int largura = limites.size.x, altura = limites.size.y;
         origemDoPiso = original.CellToWorld(limites.min);
         materialDoPiso.SetVector("_Origin", origemDoPiso);
+        if (PrepararPavimentoDaCena(original, existentes, limites)) return;
         var atlasTiles = TilesDaRuaNorte(atlas);
         var pavimentos = new TileBase[largura * altura];
         var outros = new TileBase[pavimentos.Length];
@@ -906,6 +887,59 @@ internal sealed partial class Capitulo2Exterior
         materialDoPiso.SetTexture("_GroundCells", lookup);
         EspalharPedregulhoDaMatriz();
 
+        AjustarLegadosDoPavimento(original, existentes);
+    }
+
+    private bool PrepararPavimentoDaCena(Tilemap original, SpriteRenderer[] existentes, BoundsInt limites)
+    {
+        var pisoTransform = original.transform.parent.Find("Pavimentos do Centro");
+        var especiaisTransform = original.transform.parent.Find("Água e madeira do Centro");
+        if (pisoTransform == null || especiaisTransform == null) return false;
+        pisoDoCentro = pisoTransform.GetComponent<Tilemap>();
+        var especiais = especiaisTransform.GetComponent<Tilemap>();
+        if (pisoDoCentro == null || especiais == null) return false;
+        pisoDoCentro.GetComponent<TilemapRenderer>().sharedMaterial = materialDoPiso;
+        especiais.GetComponent<TilemapRenderer>().sharedMaterial = lit;
+
+        int largura = limites.size.x, altura = limites.size.y;
+        var vizinhanca = new Color32[largura * altura];
+        Array.Fill(vizinhanca, new Color32(255, 0, 0, 0));
+        var baseRenderer = original.GetComponent<TilemapRenderer>();
+        foreach (var c in limites.allPositionsWithin)
+        {
+            var tile = pisoDoCentro.GetTile(c);
+            var sprite = pisoDoCentro.GetSprite(c);
+            if (tile != null && sprite != null && Enum.TryParse(tile.name, out PisoCentro piso))
+            {
+                int index = (c.y - limites.yMin) * largura + c.x - limites.xMin;
+                vizinhanca[index] = new Color32((byte)Mathf.RoundToInt(sprite.rect.x / 64f),
+                    (byte)LinhaDoAtlas(piso), 0, 0);
+            }
+            if (original.GetTile(c) == null) continue;
+            int x = c.x, y = c.y;
+            bool naVertical = PistaVertical(x, y), naHorizontal = PistaHorizontal(x, y);
+            if (naVertical != naHorizontal &&
+                (naVertical ? (x == 60 || x == 31 && y < 78) && (y & 3) == 1 :
+                    y == 37 && (x & 3) == 1 && (x < 42 || x >= 50)))
+                FaixaPraca(x, y, naVertical, baseRenderer.sortingLayerID, baseRenderer.sortingOrder + 1);
+        }
+        FaixaTravessiaMatriz(baseRenderer.sortingLayerID, baseRenderer.sortingOrder + 1);
+        var lookup = new Texture2D(largura, altura, TextureFormat.RGBA32, false, true)
+        {
+            name = "Vizinhança dos pavimentos do Centro", filterMode = FilterMode.Point,
+            wrapMode = TextureWrapMode.Clamp
+        };
+        lookup.SetPixels32(vizinhanca);
+        lookup.Apply(false, true);
+        recursos.Add(lookup);
+        materialDoPiso.SetTexture("_GroundCells", lookup);
+        EspalharPedregulhoDaMatriz();
+        return true;
+    }
+
+    private void AjustarLegadosDoPavimento(Tilemap original, SpriteRenderer[] existentes)
+    {
+        var baseRenderer = original.GetComponent<TilemapRenderer>();
         baseRenderer.enabled = false;
         foreach (var legado in FindObjectsByType<TilemapRenderer>())
             if (legado.gameObject.scene == gameObject.scene && legado.name == "DetalhesTerreno")
@@ -931,6 +965,7 @@ internal sealed partial class Capitulo2Exterior
 
     private void FaixaTravessiaMatriz(int layer, int order)
     {
+        if (transform.Find("Sinalização fixa do Centro") != null) return;
         for (int i = -3; i <= 3; i++)
         {
             float x = CentroEixoX + i * .74f;
@@ -1091,6 +1126,13 @@ internal sealed partial class Capitulo2Exterior
             (59.2f, 76.6f, .42f, .68f, .16f, .68f, .76f),
             (24.5f, 22.4f, .77f, .32f, .24f, .34f, .76f),
             (13.5f, 16.3f, .58f, .29f, .18f, .35f, .65f),
+            // Poças pequenas junto aos acessos, fora das soleiras e das portas.
+            (24.5f, 47.35f, .60f, .22f, -.12f, .48f, .72f),
+            (16.6f, 31.55f, .53f, .20f, .10f, .46f, .70f),
+            (25.0f, 26.35f, .42f, .19f, -.18f, .48f, .70f),
+            (65.2f, 19.4f, .48f, .22f, .12f, .54f, .75f),
+            (75.0f, 62.15f, .60f, .22f, -.10f, .51f, .72f),
+            (11.8f, 3.75f, .52f, .21f, .15f, .43f, .68f),
             (27.5f, 83.65f, .67f, .30f, -.18f, .39f, .66f),
             (30.4f, 81.85f, .45f, .32f, -.36f, .47f, .70f)
         };
@@ -1115,22 +1157,23 @@ internal sealed partial class Capitulo2Exterior
         PrepararPocasDoCentro(celulas.width, celulas.height);
 
         // Cada luminária afeta o piso e os sprites no mesmo sistema de coordenadas.
-        var postes = new Vector4[LimiteLuzesCentro];
-        var cores = new Vector4[LimiteLuzesCentro];
         int quantidade = 0;
 
         foreach (var (pos, raio, cor) in luzesVolumetricasPraca)
         {
-            if (quantidade >= postes.Length) break;
-            postes[quantidade] = new Vector4(pos.x - origemDoPiso.x, pos.y - origemDoPiso.y, pos.z, raio);
-            cores[quantidade] = new Vector4(cor.r, cor.g, cor.b, 1f);
+            if (quantidade >= todosPostesCentro.Length) break;
+            todosPostesCentro[quantidade] = new Vector4(pos.x - origemDoPiso.x, pos.y - origemDoPiso.y, pos.z, raio);
+            todasCoresCentro[quantidade] = new Vector4(cor.r, cor.g, cor.b, 1f);
             quantidade++;
         }
+        totalPostesCentro = quantidade;
+        visibilidadeCentroInicializada = false;
 
         materialDoPiso.SetInteger("_TownLampCount", quantidade);
         materialDoPiso.SetFloat("_TownChurchLamp", indiceLuzEntradaMatriz);
-        materialDoPiso.SetVectorArray("_TownLamps", postes);
-        materialDoPiso.SetVectorArray("_TownLampColors", cores);
+        materialDoPiso.SetFloat("_TownCullingActive", 0f);
+        materialDoPiso.SetVectorArray("_TownLamps", todosPostesCentro);
+        materialDoPiso.SetVectorArray("_TownLampColors", todasCoresCentro);
 
         // Reserva o oclusor dinâmico do Marcus e vincula seu SpriteRenderer ao shader volumétrico na praça.
         indiceOclusorMarcus = oclusoresMin.Count;
@@ -1146,7 +1189,72 @@ internal sealed partial class Capitulo2Exterior
         materialDoPiso.SetVectorArray("_CasterMin", bufferMin);
         materialDoPiso.SetVectorArray("_CasterMax", bufferMax);
 
-        PrepararRecortesDaPraca(postes, quantidade);
+        PrepararRecortesDaPraca(todosPostesCentro, quantidade);
+    }
+
+    private void IntegrarLuzDasEntradasAoPiso()
+    {
+        // As fachadas já têm luzes 2D para os sprites. Estas fontes representam a
+        // luz que sai das portas/janelas no mesmo sistema que ilumina o chão molhado
+        // e projeta as silhuetas na Rua Norte. A base fica junto à soleira, não na
+        // posição do topo desenhado do prédio.
+        (string nome, Vector3 pos, float raio, Color cor)[] entradas =
+        {
+            ("Fundos_MesmoMercadinho", new Vector3(20.2f, 49.55f, 1.8f), 5.8f, new Color(1.90f, 1.30f, .74f)),
+            ("OficinaRadio", new Vector3(10.0f, 33.15f, 1.8f), 5.4f, new Color(1.88f, 1.36f, .82f)),
+            ("CasaCostura", new Vector3(21.8f, 28.05f, 1.65f), 5.2f, new Color(1.84f, 1.30f, .76f)),
+            ("Rodoviaria", new Vector3(68.0f, 21.55f, 2.0f), 6.7f, new Color(2.08f, 1.60f, 1.06f)),
+            ("Prefeitura", new Vector3(88.0f, 65.55f, 2.1f), 6.7f, new Color(2.12f, 1.62f, 1.06f)),
+            ("Sociedade", new Vector3(4.35f, 4.55f, 1.9f), 5.6f, new Color(1.85f, 1.28f, .74f))
+        };
+        foreach (var (nome, pos, raio, cor) in entradas)
+        {
+            var fachada = transform.Find(nome);
+            if (fachada == null || !fachada.gameObject.activeInHierarchy) continue;
+            luzesVolumetricasPraca.Add((pos, raio, cor));
+        }
+
+        var postes = transform.Find("Postes dos acessos");
+        if (postes == null) return;
+        foreach (var poste in postes.GetComponentsInChildren<SpriteRenderer>())
+        {
+            Vector2 bocal = SantaRitaRuaNorte.BocalDoPoste(poste);
+            float baseY = poste.bounds.min.y;
+            ConfigurarSpriteVolumetricoPraca(poste, baseY, 1f, bocal.y - baseY,
+                0f, .24f, modoOclusor: -1);
+            luzesVolumetricasPraca.Add((new Vector3(bocal.x, baseY, bocal.y - baseY),
+                6.8f, new Color(2.05f, 1.38f, .76f)));
+            fontes.Add(bocal);
+        }
+    }
+
+    private void IntegrarDetalhesDosAcessos()
+    {
+        var grupo = transform.Find("Pisos e margens das entradas");
+        if (grupo == null) return;
+        foreach (var detalhe in grupo.GetComponentsInChildren<SpriteRenderer>())
+        {
+            ConfigurarSpriteVolumetricoPraca(detalhe, detalhe.transform.position.y,
+                0f, 0f, 0f, 0f, modoOclusor: -1, projetarSilhueta: false);
+            // O decalque tem textura própria; não deve ser lido como tile do atlas.
+            var propriedades = new MaterialPropertyBlock();
+            detalhe.GetPropertyBlock(propriedades);
+            propriedades.SetFloat("_GroundSurfaceEnabled", 0f);
+            detalhe.SetPropertyBlock(propriedades);
+        }
+
+        // Vasos, caixas e balizadores também recebem luz e projetam a própria
+        // silhueta, sem consumir os volumes reservados para a praça e Marcus.
+        foreach (string nome in new[] { "Acessos e detalhes das casas", "Acabamento das entradas · 2026" })
+        {
+            var decoracao = transform.Find(nome);
+            if (decoracao == null) continue;
+            foreach (var r in decoracao.GetComponentsInChildren<SpriteRenderer>())
+            {
+                if (!r.enabled || r.sprite == null || r.sortingOrder < -1000 || r.sharedMaterial == materialDoPiso) continue;
+                ConfigurarSpriteVolumetricoPraca(r, r.bounds.min.y, .85f, 0f, 0f, .28f, modoOclusor: -1);
+            }
+        }
     }
 
     private void PrepararRecortesDaPraca(Vector4[] luzes, int quantidade)
@@ -1303,6 +1411,76 @@ internal sealed partial class Capitulo2Exterior
         nevoaSobreMarcus.SetPropertyBlock(propriedadesNevoaMarcus);
     }
 
+    private void AtualizarVisibilidadeCentro(float camMinX, float camMaxX, float camMinY, float camMaxY)
+    {
+        if (materialDoPiso == null || totalPostesCentro == 0) return;
+        if (visibilidadeCentroInicializada &&
+            Mathf.Abs(camMinX - ultimaVisCamMinX) < .25f &&
+            Mathf.Abs(camMaxX - ultimaVisCamMaxX) < .25f &&
+            Mathf.Abs(camMinY - ultimaVisCamMinY) < .25f &&
+            Mathf.Abs(camMaxY - ultimaVisCamMaxY) < .25f)
+            return;
+
+        ultimaVisCamMinX = camMinX;
+        ultimaVisCamMaxX = camMaxX;
+        ultimaVisCamMinY = camMinY;
+        ultimaVisCamMaxY = camMaxY;
+        visibilidadeCentroInicializada = true;
+
+        const float margemLuz = 2.0f;
+        float localMinX = camMinX - margemLuz - origemDoPiso.x;
+        float localMaxX = camMaxX + margemLuz - origemDoPiso.x;
+        float localMinY = camMinY - margemLuz - origemDoPiso.y;
+        float localMaxY = camMaxY + margemLuz - origemDoPiso.y;
+
+        int visLamps = 0;
+        for (int i = 0; i < totalPostesCentro; i++)
+        {
+            Vector4 lamp = todosPostesCentro[i];
+            float r = lamp.w;
+            if (lamp.x + r < localMinX || lamp.x - r > localMaxX ||
+                lamp.y + r < localMinY || lamp.y - r > localMaxY)
+                continue;
+            postesVisiveisBuffer[visLamps] = lamp;
+            Vector4 cor = todasCoresCentro[i];
+            cor.w = i; // Preserva o índice original da fatia de _TownShadows e _TownChurchLamp.
+            coresVisiveisBuffer[visLamps] = cor;
+            visLamps++;
+        }
+
+        const float margemOclusor = 12.0f;
+        float occMinX = localMinX - margemOclusor;
+        float occMaxX = localMaxX + margemOclusor;
+        float occMinY = localMinY - margemOclusor;
+        float occMaxY = localMaxY + margemOclusor;
+
+        int visCasters = 0;
+        int projCasters = 0;
+        int totalOclusores = oclusoresMin.Count;
+        for (int i = 0; i < totalOclusores; i++)
+        {
+            if (i != indiceOclusorMarcus)
+            {
+                Vector4 cMin = oclusoresMin[i];
+                Vector4 cMax = oclusoresMax[i];
+                if (cMax.x < occMinX || cMin.x > occMaxX ||
+                    cMax.y < occMinY || cMin.y > occMaxY)
+                    continue;
+            }
+            oclusoresVisiveisBuffer[visCasters++] = i;
+            if (oclusoresMax[i].w <= .5f) oclusoresProjetadosBuffer[projCasters++] = i;
+        }
+
+        materialDoPiso.SetVectorArray("_TownLamps", postesVisiveisBuffer);
+        materialDoPiso.SetVectorArray("_TownLampColors", coresVisiveisBuffer);
+        materialDoPiso.SetInteger("_TownLampCount", visLamps);
+        materialDoPiso.SetFloatArray("_TownVisibleCasterIds", oclusoresVisiveisBuffer);
+        materialDoPiso.SetInteger("_TownVisibleCasterCount", visCasters);
+        materialDoPiso.SetFloatArray("_TownProjectedCasterIds", oclusoresProjetadosBuffer);
+        materialDoPiso.SetInteger("_TownProjectedCasterCount", projCasters);
+        materialDoPiso.SetFloat("_TownCullingActive", 1f);
+    }
+
     private void AtualizarLuzesDinamicasDaPraca(bool efeitosAtivos)
     {
         if (materialDoPiso == null) return;
@@ -1314,46 +1492,216 @@ internal sealed partial class Capitulo2Exterior
             ultimaDensidadeNevoaCenario = densidade;
         }
 
+        Vector4 focoAtual = Vector4.zero;
         if (marcus != null)
         {
             Bounds bm = marcus.bounds;
-            var colliderPes = marcus.GetComponent<Collider2D>();
+            if (!buscouColliderMarcus)
+            {
+                colliderPesMarcus = marcus.GetComponent<Collider2D>();
+                buscouColliderMarcus = true;
+            }
             // O limite do sprite oscila entre quadros da animação; o collider mantém a
             // referência da sombra projetada presa ao chão durante caminhada e repouso.
-            float pesY = colliderPes != null ? colliderPes.bounds.min.y + .05f : marcus.transform.position.y;
+            float pesY = colliderPesMarcus != null ? colliderPesMarcus.bounds.min.y + .05f : marcus.transform.position.y;
             AtualizarNevoaSobreMarcus(efeitosAtivos, pesY);
             Vector2 centroMarcus = new(bm.center.x, pesY);
             bool marcusNaPraca = NaPraca(centroMarcus);
 
             // Foco da câmera/olhar na praça e atualização do volume 3D do Marcus para sombras projetadas no piso.
             Vector2 focoRelativo = centroMarcus - origemDoPiso;
-            materialDoPiso.SetVector("_ViewFocus", new Vector4(focoRelativo.x, focoRelativo.y, marcusNaPraca ? .85f : .35f, 0f));
+            focoAtual = new Vector4(focoRelativo.x, focoRelativo.y, marcusNaPraca ? .85f : .35f, 0f);
+            materialDoPiso.SetVector("_ViewFocus", focoAtual);
 
             if (indiceOclusorMarcus >= 0)
             {
-                bufferMin[indiceOclusorMarcus] = new Vector4(bm.min.x - origemDoPiso.x, pesY - .12f - origemDoPiso.y, 0f, 0f);
-                bufferMax[indiceOclusorMarcus] = new Vector4(bm.max.x - origemDoPiso.x, pesY + .12f - origemDoPiso.y,
+                Vector4 mMin = new(bm.min.x - origemDoPiso.x, pesY - .12f - origemDoPiso.y, 0f, 0f);
+                Vector4 mMax = new(bm.max.x - origemDoPiso.x, pesY + .12f - origemDoPiso.y,
                     Mathf.Max(.9f, bm.size.y * .94f), 0f);
-                materialDoPiso.SetVectorArray("_CasterMin", bufferMin);
-                materialDoPiso.SetVectorArray("_CasterMax", bufferMax);
+                if (!marcusOclusorInicializado || mMin != bufferMin[indiceOclusorMarcus] || mMax != bufferMax[indiceOclusorMarcus])
+                {
+                    bufferMin[indiceOclusorMarcus] = mMin;
+                    bufferMax[indiceOclusorMarcus] = mMax;
+                    materialDoPiso.SetVectorArray("_CasterMin", bufferMin);
+                    materialDoPiso.SetVectorArray("_CasterMax", bufferMax);
+                    marcusOclusorInicializado = true;
+                }
             }
         }
 
+        Vector4 luzLanterna = Vector4.zero;
+        Vector2 dirLanterna = Vector2.zero;
         if (efeitosAtivos && controladorMarcus != null &&
             controladorMarcus.ObterFeixeLanterna(out Vector2 origemLanterna, out Vector2 direcaoLanterna))
         {
             const float alcanceLanterna = 6.2f;
             Vector2 rel = origemLanterna - origemDoPiso;
             float alturaLuz = marcus != null ? Mathf.Max(1.05f, origemLanterna.y - marcus.transform.position.y + .42f) : 1.05f;
-            var luz = new Vector4(rel.x, rel.y, alturaLuz, alcanceLanterna);
-            materialDoPiso.SetVector("_PlayerLamp", luz);
-            materialDoPiso.SetVector("_PlayerLampDirection", direcaoLanterna);
-            ProjetarRecorteDaLanterna(luz);
+            luzLanterna = new Vector4(rel.x, rel.y, alturaLuz, alcanceLanterna);
+            dirLanterna = direcaoLanterna;
+            materialDoPiso.SetVector("_PlayerLamp", luzLanterna);
+            materialDoPiso.SetVector("_PlayerLampDirection", dirLanterna);
+            ProjetarRecorteDaLanterna(luzLanterna);
         }
         else
         {
             materialDoPiso.SetVector("_PlayerLamp", Vector4.zero);
             materialDoPiso.SetFloat("_PlayerShadowEnabled", 0f);
+        }
+
+        if (aguaCentro != null) aguaCentro.AtualizarLuzDinamica(materialDoPiso, efeitosAtivos, focoAtual, luzLanterna, dirLanterna);
+    }
+
+    private void CriarFontesDeIluminacaoVivas()
+    {
+        var raizVivas = transform.Find("Luzes vivas do Centro")?.gameObject
+            ?? new GameObject("Luzes vivas do Centro");
+        raizVivas.transform.SetParent(transform, false);
+
+        var fixas = transform.Find("Luzes fixas do Centro");
+        bool temFixas = fixas != null;
+
+        Light2D CriarPonto(string nome, Vector2 pos, float inner, float outer, float intensidade, Color cor)
+        {
+            var go = new GameObject(nome, typeof(Light2D));
+            go.transform.SetParent(raizVivas.transform, false);
+            go.transform.position = pos;
+            var l = go.GetComponent<Light2D>();
+            l.lightType = Light2D.LightType.Point;
+            l.pointLightInnerRadius = inner;
+            l.pointLightOuterRadius = outer;
+            l.intensity = intensidade;
+            l.color = cor;
+            l.shadowsEnabled = false;
+            return l;
+        }
+
+        void GarantirLuzEstavel(string nome, Vector2 pos, float inner, float outer, float intensidade, Color cor)
+        {
+            if (temFixas)
+            {
+                foreach (var existente in fixas.GetComponentsInChildren<Light2D>(true))
+                    if (Vector2.Distance(existente.transform.position, pos) < .55f &&
+                        string.Equals(existente.name, nome, StringComparison.Ordinal))
+                        return;
+            }
+            CriarPonto(nome, pos, inner, outer, intensidade, cor);
+        }
+
+        // 1. Vagalumes com iluminação real (vegetação, margens do ribeirão, canteiros e mata oeste)
+        Color corVagalume = new(.78f, .98f, .44f);
+        Vector2[] vagalumes =
+        {
+            new(16.2f, 10.4f), new(18.5f, 38.5f), new(22.0f, 59.5f),
+            new(39.0f, 55.5f), new(53.0f, 45.0f), new(66.5f, 47.0f)
+        };
+        for (int i = 0; i < vagalumes.Length; i++)
+        {
+            float baseInt = .34f + (i % 2) * .06f;
+            var l = CriarPonto("Vagalume iluminado", vagalumes[i], .22f, 2.75f, baseInt, corVagalume);
+            luzesVivasDoCentro.Add((l, vagalumes[i], baseInt, i * 1.37f, true));
+        }
+
+        // 2. Altar de velas votivas da Igreja (tremulação viva + reflexo quente no piso)
+        Vector2 posVelas = new(48.32f, 64.42f);
+        var luzVelas = CriarPonto("Luz · Velas votivas da Igreja", posVelas, .32f, 3.4f, .64f, new Color(1f, .70f, .34f));
+        luzesVivasDoCentro.Add((luzVelas, posVelas, .64f, 0f, false));
+        luzesVolumetricasPraca.Add((new Vector3(posVelas.x, posVelas.y - .35f, .65f), 4.0f, new Color(1.90f, 1.24f, .58f)));
+
+        // 3. Balizadores do meio-fio e acessos que ainda não tinham foco baixo próprio
+        Color corBalizador = new(1f, .70f, .38f);
+        Vector2[] balizadoresMeioFio =
+        {
+            new(28.41f, 42.13f), new(28.41f, 65.13f), new(34.59f, 71.13f),
+            new(63.59f, 22.13f), new(63.59f, 49.13f), new(63.59f, 64.13f),
+            new(57.41f, 70.13f)
+        };
+        foreach (var b in balizadoresMeioFio)
+        {
+            GarantirLuzEstavel("Luz · Balizador do passeio", b + new Vector2(0f, .44f), .30f, 2.65f, .54f, corBalizador);
+            luzesVolumetricasPraca.Add((new Vector3(b.x, b.y - .08f, .78f), 3.25f, new Color(1.45f, 1.00f, .52f)));
+        }
+        Vector2[] balizadoresAcesso =
+        {
+            new(7.80f, 4.80f), new(10.00f, 1.45f), new(14.80f, 8.00f), new(19.30f, 15.10f),
+            new(28.60f, 20.60f), new(33.20f, 21.40f), new(28.50f, 5.20f), new(26.50f, 30.00f),
+            new(25.50f, 45.40f), new(27.30f, 49.70f), new(64.80f, 21.80f), new(71.50f, 60.90f),
+            new(78.00f, 60.90f), new(83.00f, 61.40f)
+        };
+        foreach (var b in balizadoresAcesso)
+            GarantirLuzEstavel("Luz · Balizador de acesso", b + new Vector2(0f, .44f), .28f, 2.45f, .48f, corBalizador);
+
+        // 4. Cabines de orelhão (domo frio-suave contrastando com o âmbar da rua)
+        Color corOrelhao = new(.84f, .93f, 1f);
+        GarantirLuzEstavel("Luz · Cabine orelhão Beira-Rio", new Vector2(12.70f, 6.25f), .52f, 4.25f, .86f, corOrelhao);
+        luzesVolumetricasPraca.Add((new Vector3(12.70f, 4.55f, 1.75f), 4.6f, new Color(1.45f, 1.65f, 1.92f)));
+        GarantirLuzEstavel("Luz · Cabine orelhão Matriz", new Vector2(53.15f, 62.05f), .52f, 4.25f, .82f, corOrelhao);
+
+        // 5. Lanternas da ponte de madeira sul e reflexo da beira do ribeirão na água
+        (Vector2 pos, float raio, Color shader)[] lanternasAgua =
+        {
+            (new Vector2(43.80f, -3.20f), 5.6f, new Color(2.10f, 1.45f, .78f)),
+            (new Vector2(48.20f, -3.20f), 5.6f, new Color(2.10f, 1.45f, .78f)),
+            (new Vector2(19.00f, 8.20f), 5.2f, new Color(1.75f, 1.24f, .68f))
+        };
+        foreach (var (pos, raio, shader) in lanternasAgua)
+        {
+            GarantirLuzEstavel("Luz · Lanterna da ponte e ribeirão", pos + new Vector2(0f, .65f), .45f, 4.2f, .78f, Ambar);
+            luzesVolumetricasPraca.Add((new Vector3(pos.x, pos.y, 1.15f), raio, shader));
+        }
+
+        // 6. Janelas acesas e abrigos das fachadas do Centro
+        Color corJanela = new(1f, .74f, .42f);
+        Color corVitral = new(.98f, .78f, .52f);
+        (Vector2 pos, float raio, float pot, Color cor)[] janelas =
+        {
+            (new Vector2(2.40f, 7.60f), 4.0f, .70f, corJanela),
+            (new Vector2(7.60f, 7.60f), 4.0f, .70f, corJanela),
+            (new Vector2(10.00f, 35.80f), 3.8f, .66f, corJanela),
+            (new Vector2(12.60f, 35.80f), 3.8f, .66f, corJanela),
+            (new Vector2(20.20f, 30.80f), 3.8f, .64f, corJanela),
+            (new Vector2(23.40f, 30.80f), 3.8f, .64f, corJanela),
+            (new Vector2(17.60f, 52.60f), 4.2f, .68f, corJanela),
+            (new Vector2(22.80f, 52.60f), 4.2f, .68f, corJanela),
+            (new Vector2(65.40f, 24.40f), 4.4f, .76f, corJanela),
+            (new Vector2(70.60f, 24.40f), 4.4f, .76f, corJanela),
+            (new Vector2(85.80f, 69.20f), 4.3f, .72f, corJanela),
+            (new Vector2(90.20f, 69.20f), 4.3f, .72f, corJanela),
+            (new Vector2(43.40f, 67.20f), 4.4f, .68f, corVitral),
+            (new Vector2(48.60f, 67.20f), 4.4f, .68f, corVitral)
+        };
+        foreach (var (pos, raio, pot, cor) in janelas)
+            GarantirLuzEstavel("Luz · Janela habitada", pos, .55f, raio, pot, cor);
+
+        luzesVolumetricasPraca.Add((new Vector3(68.00f, 21.85f, 1.45f), 5.4f, new Color(1.85f, 1.32f, .74f)));
+    }
+
+    private void AtualizarIluminacaoViva(bool efeitosAtivos)
+    {
+        if (luzesVivasDoCentro.Count == 0) return;
+        float t = Time.time;
+        foreach (var (light, origin, baseIntensity, phase, firefly) in luzesVivasDoCentro)
+        {
+            if (light == null) continue;
+            if (!efeitosAtivos)
+            {
+                light.intensity = firefly ? 0f : baseIntensity;
+                light.transform.position = origin;
+                continue;
+            }
+            if (firefly)
+            {
+                float driftX = Mathf.Sin(t * .78f + phase) * .58f + Mathf.Cos(t * 1.43f + phase * 1.7f) * .22f;
+                float driftY = Mathf.Cos(t * .64f + phase * 1.3f) * .42f + Mathf.Sin(t * 1.91f + phase) * .18f;
+                light.transform.position = origin + new Vector2(driftX, driftY);
+                float pulso = .55f + .45f * Mathf.Sin(t * 2.15f + phase * 2.1f);
+                light.intensity = baseIntensity * Mathf.Lerp(.55f, 1.32f, pulso);
+            }
+            else
+            {
+                float tremulo = Mathf.PerlinNoise(t * 4.8f + phase, 1.3f);
+                light.intensity = baseIntensity * Mathf.Lerp(.82f, 1.18f, tremulo);
+            }
         }
     }
 
@@ -1365,16 +1713,24 @@ internal sealed partial class Capitulo2Exterior
         const string modulos = "Art/RuaNorte/Entrada/Modulos/";
         (float x, float y, bool direita)[] postes =
         {
-            (28.40f, 43.7f, true), (34.45f, 51.2f, false), (28.45f, 72.5f, true),
-            (57.55f, 51.2f, true), (63.50f, 57.2f, false), (57.45f, 68.1f, true),
-            (63.50f, 74.2f, false), (63.55f, 26.6f, false), (68.65f, 40.55f, true),
-            (75.45f, 34.45f, false), (13.25f, 11.0f, false), (18.40f, 46.75f, true)
+            // Avenida Oeste (x=29..33): postes alternados e alinhados ao meio-fio
+            (34.45f, 24.50f, false), (34.45f, 32.50f, false), (28.45f, 43.70f, true),
+            (34.45f, 51.20f, false), (28.45f, 56.50f, true), (34.45f, 64.00f, false),
+            (28.45f, 72.50f, true), (34.45f, 78.50f, false),
+            // Avenida Leste (x=58..62): distribuição regular até o acesso da Rodoviária e Cemitério
+            (57.55f, 23.00f, true), (63.55f, 28.50f, false), (63.55f, 42.50f, false),
+            (57.55f, 51.20f, true), (63.55f, 57.20f, false), (57.55f, 67.50f, true),
+            (63.55f, 74.20f, false),
+            // Transversal Sul/Central (y=35..39): enquadramento simétrico da faixa sem obstruir Chico/canteiros
+            (37.50f, 40.55f, true), (42.20f, 34.45f, true), (49.80f, 34.45f, false),
+            (54.50f, 40.55f, false), (68.65f, 40.55f, true), (75.45f, 34.45f, false)
         };
         foreach (var (x, y, direita) in postes)
         {
             Vector2 pe = new(x, y);
             string piso = terreno.GetTile(terreno.WorldToCell(pe))?.name;
-            if (piso != "Calcada" || Physics2D.OverlapCircle(pe, .20f) != null) continue;
+            if (BuscarPecaDaCena("Poste do passeio", pe) == null &&
+                (piso != "Calcada" || Physics2D.OverlapCircle(pe, .20f) != null)) continue;
             PostePraca(x, y, direita, "Poste do passeio");
             PecaPraca("Folhas ao pé do poste", modulos + "Folhas", x + .16f, y - .12f, .83f, noPiso: true);
             PecaPraca("Ralo junto ao passeio", Art + "Centro/Ralo", x + (direita ? .28f : -.28f),
@@ -1425,7 +1781,8 @@ internal sealed partial class Capitulo2Exterior
         foreach (var (especie, x, y, largura) in arvores)
         {
             Vector2 pe = new(x, y);
-            if (!GramaNoCentro(pe) || Physics2D.OverlapCircle(pe, .25f) != null) continue;
+            if (BuscarPecaDaCena(nome, pe) == null &&
+                (!GramaNoCentro(pe) || Physics2D.OverlapCircle(pe, .25f) != null)) continue;
             var arvore = PecaPraca(nome, vegetacao + especie, x, y, largura);
             if (arvore == null) continue;
             ConfigurarVegetacaoVolumetricaPraca(arvore, especie, pe, largura / 3f);
@@ -1497,8 +1854,8 @@ internal sealed partial class Capitulo2Exterior
         {
             Vector2 pe = new(x, y);
             string piso = terreno.GetTile(terreno.WorldToCell(pe))?.name;
-            if (piso is not ("Calcada" or "Pedregulho") ||
-                Physics2D.OverlapBox(pe, new Vector2(largura, .42f), 0) != null) continue;
+            if (BuscarPecaDaCena(nome, pe) == null && (piso is not ("Calcada" or "Pedregulho") ||
+                Physics2D.OverlapBox(pe, new Vector2(largura, .42f), 0) != null)) continue;
             var peca = PecaPraca(nome, props + sprite, x, y, largura);
             OcuparBasePraca(peca, new Vector2(largura * .83f, .40f));
             if (peca != null)
@@ -1508,6 +1865,7 @@ internal sealed partial class Capitulo2Exterior
 
     private void FaixaPraca(int x, int y, bool vertical, int layer, int order)
     {
+        if (transform.Find("Sinalização fixa do Centro") != null) return;
         var go = new GameObject("Pintura gasta da pista", typeof(SpriteRenderer));
         go.transform.SetParent(transform, false);
         go.transform.position = new Vector2(x + .5f, y + .5f);

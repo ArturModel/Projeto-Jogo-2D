@@ -275,7 +275,8 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     {
         int textureWidth = width * pixelsPerUnit;
         int textureHeight = rows * pixelsPerUnit;
-        var pixels = new Color32[textureWidth * textureHeight];
+        // Apenas RGB e usado no shader (_EntranceWater.rgb) e em CoberturaDePoca (.r).
+        var bytes = new byte[textureWidth * textureHeight * 3];
         for (int i = 0; i < puddles.Length; i++)
         {
             var pool = puddles[i];
@@ -289,6 +290,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             byte shine = (byte)Mathf.RoundToInt(pool.shine * 255);
             for (int y = minY; y < maxY; y++)
             {
+                int rowOffset = y * textureWidth;
                 for (int x = minX; x < maxX; x++)
                 {
                     float offsetX = (x + .5f) / pixelsPerUnit - pool.x;
@@ -299,18 +301,24 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
                     float chips = Mathf.PerlinNoise(x * .15f + seed, y * .21f) - .5f;
                     float radius = u * u + v * v + warp * 1.15f + chips * .25f;
                     byte coverage = (byte)Mathf.RoundToInt((1 - Mathf.SmoothStep(0, 1, (radius - .73f) / .32f)) * 255);
-                    if (coverage != 0) pixels[y * textureWidth + x] = new Color32(coverage, blue, shine, 255);
+                    if (coverage != 0)
+                    {
+                        int idx = (rowOffset + x) * 3;
+                        bytes[idx] = coverage;
+                        bytes[idx + 1] = blue;
+                        bytes[idx + 2] = shine;
+                    }
                 }
             }
         }
 
-        var mask = new Texture2D(textureWidth, textureHeight, TextureFormat.RGBA32, false, true)
+        var mask = new Texture2D(textureWidth, textureHeight, TextureFormat.RGB24, false, true)
         {
             name = nome,
             filterMode = FilterMode.Point,
             wrapMode = TextureWrapMode.Clamp
         };
-        mask.SetPixels32(pixels);
+        mask.SetPixelData(bytes, 0);
         mask.Apply(false, !legivel);
         return mask;
     }
@@ -773,6 +781,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             frontFogMaterial.SetVectorArray("_EntranceLamps", fontes);
             frontFogMaterial.SetInteger("_EntranceLampCount", fontes.Length);
         }
+        PrepararFlaresDosPostes(fontes);
         if (bairro || RuaDoBar) return;
 
         // Uma fonte de alcance curto junto à parada, à bomba ou à banca de frutas.
@@ -843,6 +852,8 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
     {
         if (lighting == null || receiverProperties == null) return;
         bool effects = ZonaAtiva && !MenuPausa.ReduzirEfeitosIntensos;
+        if (flaresDosPostes != null && flaresDosPostes.activeSelf != effects)
+            flaresDosPostes.SetActive(effects);
         if (trovao != null) AtualizarTrovao(effects);
         if (backFog != null)
         {
@@ -875,6 +886,7 @@ public sealed partial class SantaRitaRuaNorte : MonoBehaviour
             player.sharedMaterial = lighting;
         }
         Vector2 focus = (Vector2)player.transform.position - origin;
+        if (effects) AtualizarFlaresDosPostes(focus);
         lighting.SetVector("_ViewFocus", new Vector4(focus.x, focus.y + .7f, effects ? 1f : .35f, 0));
         SetReceiver(player, player.transform.position.y, .94f, casterCount);
         UpdateCasters(true);

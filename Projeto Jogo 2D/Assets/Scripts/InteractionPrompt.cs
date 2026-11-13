@@ -106,6 +106,11 @@ public class InteractionPrompt : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (SceneFader.IsTransitioning)
+        {
+            group.alpha = 0f;
+            return;
+        }
         group.alpha = Mathf.MoveTowards(group.alpha, alvoAlpha, velocidadeFade * Time.deltaTime);
 
         if (alvoAtual == null || group.alpha <= 0f) return;

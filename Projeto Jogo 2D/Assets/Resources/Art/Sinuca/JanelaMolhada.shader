@@ -9,7 +9,7 @@ Shader "SantaRita/Sinuca/JanelaMolhada"
         Tags { "RenderPipeline"="UniversalPipeline" "Queue"="Transparent+15" "RenderType"="Transparent" }
         Cull Off
         ZWrite Off
-        Blend SrcAlpha OneMinusSrcAlpha
+        Blend SrcAlpha OneMinusSrcAlpha, Zero One
 
         Pass
         {

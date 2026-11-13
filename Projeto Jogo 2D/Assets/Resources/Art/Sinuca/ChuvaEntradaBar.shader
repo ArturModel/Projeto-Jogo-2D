@@ -15,7 +15,7 @@ Shader "SantaRita/Bar/ChuvaDaEntrada"
             Cull Off
             ZWrite Off
             ZTest LEqual
-            Blend SrcAlpha OneMinusSrcAlpha
+            Blend SrcAlpha OneMinusSrcAlpha, Zero One
 
             HLSLPROGRAM
             #pragma vertex Vert

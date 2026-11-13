@@ -54,18 +54,20 @@ public static class SantaRitaWorldLighting
         ConfigurarPerfilDaMatriz(profile);
 
         Volume volume = null;
+        Volume globalVolume = null;
         foreach (var root in scene.GetRootGameObjects())
         {
             foreach (var candidate in root.GetComponentsInChildren<Volume>(true))
             {
+                if (candidate.isGlobal && globalVolume == null)
+                    globalVolume = candidate;
                 if (candidate.name == "Foco_Cinematico_Igreja")
-                {
                     volume = candidate;
-                    break;
-                }
             }
-            if (volume != null) break;
         }
+
+        if (globalVolume != null && globalVolume.sharedProfile != null)
+            ConfigurarPerfilGlobalCentro(globalVolume.sharedProfile);
 
         if (volume == null)
         {
@@ -85,46 +87,42 @@ public static class SantaRitaWorldLighting
         volume.sharedProfile = profile;
     }
 
-    private static void ConfigurarPerfilDaMatriz(VolumeProfile profile)
-    {
-        if (!profile.TryGet<Bloom>(out var bloom)) bloom = profile.Add<Bloom>(true);
-        bloom.active = true;
-        bloom.threshold.Override(1.05f);
-        bloom.intensity.Override(.36f);
-        bloom.scatter.Override(.65f);
-        bloom.tint.Override(new Color(1f, .88f, .74f, 1f));
+    private static void ConfigurarPerfilGlobalCentro(VolumeProfile profile) =>
+        ConfigurarPerfilCentroSuave(profile, -.10f, .22f, .16f);
 
-        // ACES was crushing the mids/shadows as the player entered this local volume.
-        // Keep the church focus luminous without changing the plaza's overall exposure curve.
+    private static void ConfigurarPerfilDaMatriz(VolumeProfile profile) =>
+        ConfigurarPerfilCentroSuave(profile, -.08f, .26f, .15f);
+
+    private static void ConfigurarPerfilCentroSuave(VolumeProfile profile, float exposicao,
+        float intensidadeBloom, float intensidadeVignette)
+    {
         if (profile.TryGet<Tonemapping>(out var tonemapping)) tonemapping.active = false;
+        if (profile.TryGet<SplitToning>(out var split)) split.active = false;
+        if (profile.TryGet<ShadowsMidtonesHighlights>(out var smh)) smh.active = false;
+        if (profile.TryGet<ChromaticAberration>(out var chroma)) chroma.active = false;
+        if (profile.TryGet<FilmGrain>(out var grain)) grain.active = false;
 
         if (!profile.TryGet<ColorAdjustments>(out var color)) color = profile.Add<ColorAdjustments>(true);
         color.active = true;
-        color.postExposure.Override(.20f);
-        color.contrast.Override(-2f);
-        color.saturation.Override(-4f);
+        color.postExposure.Override(exposicao);
+        color.contrast.Override(10f);
+        color.colorFilter.Override(Color.white);
+        color.saturation.Override(-8f);
+
+        if (!profile.TryGet<Bloom>(out var bloom)) bloom = profile.Add<Bloom>(true);
+        bloom.active = true;
+        bloom.threshold.Override(.90f);
+        bloom.intensity.Override(intensidadeBloom);
+        bloom.scatter.Override(.52f);
+        bloom.tint.Override(new Color(1f, .93f, .84f, 1f));
 
         if (!profile.TryGet<Vignette>(out var vignette)) vignette = profile.Add<Vignette>(true);
-        vignette.active = false;
-        vignette.intensity.Override(0f);
-        vignette.smoothness.Override(.62f);
-        vignette.center.Override(new Vector2(.5f, .53f));
-
-        if (!profile.TryGet<FilmGrain>(out var grain)) grain = profile.Add<FilmGrain>(true);
-        grain.active = true;
-        grain.type.Override(FilmGrainLookup.Medium1);
-        grain.intensity.Override(.025f);
-        grain.response.Override(.78f);
-
-        if (!profile.TryGet<SplitToning>(out var split)) split = profile.Add<SplitToning>(true);
-        split.active = false;
-        split.shadows.Override(new Color(.46f, .49f, .54f, 1f));
-        split.highlights.Override(new Color(1f, .84f, .68f, 1f));
-        split.balance.Override(12f);
-
-        if (!profile.TryGet<ChromaticAberration>(out var chroma)) chroma = profile.Add<ChromaticAberration>(true);
-        chroma.active = true;
-        chroma.intensity.Override(0f);
+        vignette.active = true;
+        vignette.color.Override(Color.black);
+        vignette.center.Override(new Vector2(.5f, .5f));
+        vignette.intensity.Override(intensidadeVignette);
+        vignette.smoothness.Override(.56f);
+        vignette.rounded.Override(false);
     }
 
     private static void DesativarSombraLegadaDaIgreja(Scene scene)

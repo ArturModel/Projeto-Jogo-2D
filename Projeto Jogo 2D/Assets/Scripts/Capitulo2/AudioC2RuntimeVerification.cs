@@ -90,14 +90,14 @@ public sealed partial class Chapter2RuntimeVerification
    int region=scene=="CemiterioSantaRita"||scene=="AbrigoCemiterio"?1:scene=="SociedadeBeiraRio"?2:0;var audio=FindAnyObjectByType<Capitulo2Audio>();Check(audio!=null,"Gerenciador de audio ativo: "+scene);var sources=audio.GetComponentsInChildren<AudioSource>();var f=sources.Single(x=>x.gameObject.name=="TrilhaC2_"+region);
    string name=new[]{"Centro","Cemiterio","Bocha"}[region];bool inside=Capitulo2Director.Instance.interior;
    Check(f.clip!=null&&f.clip.name==name+"_loop"&&f.loop && f.isPlaying == (ganhoMusica > 0),"Trilha exclusiva em loop: "+scene);
-   Check(Mathf.Abs(f.volume-(inside?.1625f:.25f)*ganhoMusica)<.01f,"Volume contextual: "+scene);
-   Check(Mathf.Abs(f.GetComponent<AudioLowPassFilter>().cutoffFrequency-(inside?1800:22000))<5,"Filtro contextual: "+scene);
+   Check(Mathf.Abs(f.volume-(inside?Capitulo2Audio.VolumeInteriorEsperado:Capitulo2Audio.VolumeBaseExterior)*ganhoMusica)<.012f,"Volume contextual: "+scene);
+   Check(Mathf.Abs(f.GetComponent<AudioLowPassFilter>().cutoffFrequency-(inside?Capitulo2Audio.CorteInteriorHz:22000f))<10,"Filtro contextual: "+scene);
    Check(sources.Where(x=>x!=f).All(x=>x.volume<.001f),"Sem sobreposicao de outra regiao: "+scene);
    if(region==0){if(centro!=null)Check(f==centro,"Mesma fonte continua entre cenas do Centro");centro=f;}
    if(scene=="CemiterioSantaRita"||scene=="SociedadeBeiraRio"||scene=="IgrejaMatriz")yield return Capture(scene);
    if(scene=="SociedadeBeiraRio")
    {
-    BochaMinigameUI.Instance.Abrir(null);yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-AudioSettingsController.TrilhaDiretaMinigame*ganhoMusica)<.01f,"Bocha reduz musica ao entrar no jogo");yield return Capture("bocha-musica-reduzida");BochaMinigameUI.Instance.Fechar();yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-.1625f*ganhoMusica)<.01f,"Bocha devolve volume ao sair do jogo");
+    BochaMinigameUI.Instance.Abrir(null);yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-AudioSettingsController.TrilhaDiretaMinigame*ganhoMusica)<.01f,"Bocha reduz musica ao entrar no jogo");yield return Capture("bocha-musica-reduzida");BochaMinigameUI.Instance.Fechar();yield return new WaitForSecondsRealtime(1.5f);Check(Mathf.Abs(f.volume-Capitulo2Audio.VolumeInteriorEsperado*ganhoMusica)<.012f,"Bocha devolve volume ao sair do jogo");
    }
    if (ganhoMusica > 0)
    {

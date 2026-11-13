@@ -62,6 +62,61 @@ public sealed class Capitulo2Audio : MonoBehaviour
         instance.regiao = Mathf.Clamp(assinatura, 0, 2);
     }
 
+    public const float VolumeBaseExterior = .25f;
+    public const float FatorInterior = .34f;
+    public const float CorteInteriorHz = 900f;
+    public static float VolumeInteriorEsperado => VolumeBaseExterior * FatorInterior;
+
+    private float duckingTemporario;
+    private float fatorZonaAtual = 1f;
+    private float corteZonaAtual = 22000f;
+    private float proximoRecalculoZona;
+
+    public static void NotificarEventoSonoro(float intensidade)
+    {
+        if (instance == null) return;
+        instance.duckingTemporario = Mathf.Max(instance.duckingTemporario, Mathf.Clamp01(intensidade));
+    }
+
+    private void AtualizarZonaDinamica(string scene, bool interior)
+    {
+        if (interior || scene != "CentroSantaRita")
+        {
+            fatorZonaAtual = Mathf.MoveTowards(fatorZonaAtual, 1f, Time.unscaledDeltaTime * .6f);
+            corteZonaAtual = Mathf.MoveTowards(corteZonaAtual, 22000f, Time.unscaledDeltaTime * 9000f);
+            return;
+        }
+        if (Time.unscaledTime >= proximoRecalculoZona)
+        {
+            proximoRecalculoZona = Time.unscaledTime + .2f;
+            if (jogadorCentro == null) jogadorCentro = FindAnyObjectByType<PlayerController>();
+        }
+        if (jogadorCentro == null) return;
+        Vector2 p = jogadorCentro.transform.position;
+        float alvoFator = 1f;
+        float alvoCorte = 22000f;
+        if (p.y < 14f) // Beira-Rio / ponte de madeira / Sociedade: destaca o rio e a brisa noturna
+        {
+            float tRio = Mathf.InverseLerp(14f, 2f, p.y);
+            alvoFator = Mathf.Lerp(1f, .78f, tRio);
+            alvoCorte = Mathf.Lerp(22000f, 13000f, tRio);
+        }
+        else if (p.x > 40f && p.y > 74f) // Aproximacao norte rumo ao cemiterio
+        {
+            float tCem = Mathf.InverseLerp(74f, 83f, p.y);
+            alvoFator = Mathf.Min(alvoFator, Mathf.Lerp(1f, .74f, tCem));
+            alvoCorte = Mathf.Min(alvoCorte, Mathf.Lerp(22000f, 9200f, tCem));
+        }
+        else if (p.x < 22f) // Setor oeste / mata e rua de chao
+        {
+            float tOeste = Mathf.InverseLerp(22f, 8f, p.x);
+            alvoFator = Mathf.Min(alvoFator, Mathf.Lerp(1f, .83f, tOeste));
+            alvoCorte = Mathf.Min(alvoCorte, Mathf.Lerp(22000f, 14500f, tOeste));
+        }
+        fatorZonaAtual = Mathf.MoveTowards(fatorZonaAtual, alvoFator, Time.unscaledDeltaTime * .35f);
+        corteZonaAtual = Mathf.MoveTowards(corteZonaAtual, alvoCorte, Time.unscaledDeltaTime * 5000f);
+    }
+
     private void Update()
     {
         string scene=SceneManager.GetActiveScene().name;
@@ -69,6 +124,11 @@ public sealed class Capitulo2Audio : MonoBehaviour
         regiao=scene=="CemiterioSantaRita"||scene=="AbrigoCemiterio"?1:scene=="SociedadeBeiraRio"?2:0;
         bool interior=Capitulo2Director.Instance!=null&&Capitulo2Director.Instance.interior;
         float proximidadeIgreja = ProximidadeDaMatriz(scene);
+        duckingTemporario = Mathf.MoveTowards(duckingTemporario, 0f, Time.unscaledDeltaTime * .28f);
+        AtualizarZonaDinamica(scene, interior);
+        bool dialogoOuLeitura = GameMessageUI.IsShowing || SantaRitaFalasEntrada.Interagindo ||
+            PayphoneCheckpoint.IsSaveUIOpen || SantaRitaTapeDeck.IsOpen;
+        bool menuOuMapa = MapaInterativoUI.IsShowing || MenuPausa.Aberto;
         for (int i = 0; i < fontes.Length; i++)
         {
             if (ativo && i == regiao && fontes[i] == null)
@@ -80,19 +140,64 @@ public sealed class Capitulo2Audio : MonoBehaviour
             }
             var f = fontes[i]; if (f == null) continue;
             if(f.clip==null){f.clip=Resources.Load<AudioClip>("Audio/"+new[]{"Centro","Cemiterio","Bocha"}[i]+"_loop");if(f.clip==null)continue;}
-            float alvo = ativo && i == regiao ? .25f : 0;
+            bool portalSuave = SceneFader.EmTransicaoAudioPortal;
+            bool portalParaInterior = SceneFader.TransicaoAudioParaInterior;
+            float portalP = SceneFader.ProgressoAudioPortal;
+            float fatorExt = (!interior && ativo && i == regiao) ? fatorZonaAtual : 1f;
+            float corteExt = corteZonaAtual;
+            float alvo = ativo && i == regiao ? VolumeBaseExterior : 0;
+            float alvoCorte = interior ? CorteInteriorHz : corteExt;
             if(scene=="CentroSantaRita"&&i==0&&proximidadeIgreja>0f)
-                alvo*=Mathf.Lerp(1f,.62f,proximidadeIgreja);
-            if(interior)alvo*=.65f;
+            {
+                float mixIgreja = portalSuave && portalParaInterior ? proximidadeIgreja * (1f - portalP) : proximidadeIgreja;
+                fatorExt*=Mathf.Lerp(1f,.54f,mixIgreja);
+                if(!interior)corteExt=Mathf.Min(corteExt,Mathf.Lerp(22000f,11500f,mixIgreja));
+                alvoCorte=interior?CorteInteriorHz:corteExt;
+            }
+            if(!interior&&ativo&&i==regiao)
+            {
+                alvo*=fatorExt;
+                alvo*=1f-.015f*(1f-Mathf.Cos(Time.unscaledTime*.35f)); // leve respiro organico na trilha
+                if(duckingTemporario>0.001f)
+                {
+                    alvo*=Mathf.Lerp(1f,.72f,duckingTemporario);
+                    alvoCorte=Mathf.Min(alvoCorte,Mathf.Lerp(22000f,4200f,duckingTemporario));
+                }
+            }
+            else if(scene=="CentroSantaRita"&&i==0&&proximidadeIgreja>0f)
+            {
+                alvo*=Mathf.Lerp(1f,.54f,proximidadeIgreja);
+            }
+            if(portalSuave&&ativo&&i==regiao)
+            {
+                if(portalParaInterior)
+                {
+                    alvo=VolumeBaseExterior*Mathf.Lerp(fatorExt,FatorInterior,portalP);
+                    alvoCorte=Mathf.Lerp(corteExt,CorteInteriorHz,portalP);
+                }
+                else
+                {
+                    alvo=VolumeBaseExterior*Mathf.Lerp(FatorInterior,fatorExt,portalP);
+                    alvoCorte=Mathf.Lerp(CorteInteriorHz,corteExt,portalP);
+                }
+            }
+            else if(interior)alvo*=FatorInterior;
+            if(dialogoOuLeitura){alvo*=.54f;if(!interior)alvoCorte=Mathf.Min(alvoCorte,3600f);}
+            else if(menuOuMapa){alvo*=.72f;if(!interior)alvoCorte=Mathf.Min(alvoCorte,5200f);}
+            if(SceneFader.IsTransitioning&&!portalSuave)alvo*=.62f;
             var filter=f.GetComponent<AudioLowPassFilter>();
-            if(filter!=null)filter.cutoffFrequency=Mathf.MoveTowards(filter.cutoffFrequency,interior?1800f:22000f,Time.unscaledDeltaTime*16000f);
+            if(filter!=null)
+            {
+                float taxa=portalSuave?12f:(interior?9f:5.5f);
+                filter.cutoffFrequency=Mathf.Lerp(filter.cutoffFrequency,alvoCorte,1f-Mathf.Exp(-Time.unscaledDeltaTime*taxa));
+                if(Mathf.Abs(filter.cutoffFrequency-alvoCorte)<2f)filter.cutoffFrequency=alvoCorte;
+            }
             if (alvo > 0 && BochaMinigameUI.IsShowing)
                 alvo = AudioSettingsController.TrilhaDiretaMinigame;
-            else if (GameMessageUI.IsShowing || SantaRitaTapeDeck.IsOpen)
-                alvo *= .67f;
             alvo *= AudioSettingsController.VolumeMusica;
             if (alvo > 0 && !f.isPlaying) f.Play();
-            f.volume = Mathf.MoveTowards(f.volume, alvo, Time.unscaledDeltaTime * .24f);
+            float velVolume = alvo < f.volume ? .42f : (portalSuave ? .36f : .22f);
+            f.volume = Mathf.MoveTowards(f.volume, alvo, Time.unscaledDeltaTime * velVolume);
             if (alvo == 0 && f.volume == 0 && f.isPlaying) f.Stop();
         }
         AtualizarHinoDaMatriz(scene,ativo,interior,proximidadeIgreja);
@@ -130,9 +235,11 @@ public sealed class Capitulo2Audio : MonoBehaviour
         }
         if(fonteHinoMatriz==null)return;
 
-        float alvo=ativo&&localMatriz?proximidade*.50f:0f;
-        if(interior)alvo*=.82f;
-        if(GameMessageUI.IsShowing||SantaRitaTapeDeck.IsOpen)alvo*=.67f;
+        bool dentroDaIgreja = scene == "IgrejaMatriz";
+        fonteHinoMatriz.spatialBlend = dentroDaIgreja ? 0f : .35f;
+        float alvo=ativo&&localMatriz?proximidade*(dentroDaIgreja?.95f:.78f):0f;
+        if(interior&&!dentroDaIgreja)alvo*=.82f;
+        if(GameMessageUI.IsShowing||SantaRitaFalasEntrada.Interagindo||SantaRitaTapeDeck.IsOpen)alvo*=.62f;
         // O hino é uma ambiência diegética da igreja; o controle de música pode
         // ficar zerado sem silenciar os sons do mundo.
         alvo*=AudioSettingsController.VolumeEfeitos;
@@ -141,54 +248,103 @@ public sealed class Capitulo2Audio : MonoBehaviour
         var filtro=fonteHinoMatriz.GetComponent<AudioLowPassFilter>();
         if(filtro!=null)
         {
-            float corte=localMatriz?Mathf.Lerp(1150f,4600f,proximidade):1150f;
-            if(interior)corte=3200f;
+            float corte=dentroDaIgreja?6800f:(localMatriz?Mathf.Lerp(1150f,4600f,proximidade):1150f);
+            if(interior&&!dentroDaIgreja)corte=3200f;
             filtro.cutoffFrequency=Mathf.MoveTowards(filtro.cutoffFrequency,corte,Time.unscaledDeltaTime*9000f);
         }
         if(alvo==0f&&fonteHinoMatriz.volume==0f&&fonteHinoMatriz.isPlaying)fonteHinoMatriz.Stop();
     }
 
-    // Motivo original de órgão sintetizado para a Matriz; audição e aprovação do autor pendentes.
+    // Cama sacra e cantabile de orgao de tubos em Do menor (Cm9 - Abmaj7 - Fm9 - Gsus4/G7),
+    // em harmonia com Centro_loop e sem ecos discretos ou modulacao FM acumulativa.
     private static AudioClip CriarHinoMatrizSintetizado()
     {
-        if(hinoMatriz!=null)return hinoMatriz;
-        const int hz=22050,segundos=16;
-        int[] melodia={60,64,67,72,71,69,67,64};
-        int[][] acordes={
-            new[]{48,55,60,64},
-            new[]{41,48,53,57},
-            new[]{43,50,55,59},
-            new[]{48,55,60,64}
-        };
-        var dados=new float[hz*segundos];
-        for(int i=0;i<dados.Length;i++)
+        if (hinoMatriz != null) return hinoMatriz;
+        const int hz = 22050, segundos = 24;
+        int total = hz * segundos;
+        var dados = new float[total];
+
+        int[][] acordes =
         {
-            float t=i/(float)hz;
-            int compasso=Mathf.Min(3,(int)(t/4f));
-            int nota=Mathf.Min(7,(int)(t/2f));
-            float tempoNota=t%2f;
-            float ataque=Mathf.SmoothStep(0f,1f,tempoNota/.10f);
-            float saida=1f-Mathf.SmoothStep(1.78f,2f,tempoNota);
-            float borda=Mathf.Min(t%4f,4f-t%4f);
-            float entradaLoop=Mathf.SmoothStep(0f,1f,t/.12f);
-            float saidaLoop=1f-Mathf.SmoothStep(segundos-.12f,segundos,t);
-            float soma=0f;
-            foreach(int midi in acordes[compasso])
-                soma+=OndaOrgao(FrequenciaMidi(midi),t)*.025f*Mathf.SmoothStep(0f,1f,borda/.28f);
-            soma+=OndaOrgao(FrequenciaMidi(melodia[nota]),t)*.06f*ataque*saida;
-            dados[i]=Mathf.Clamp(soma*entradaLoop*saidaLoop,-.42f,.42f);
+            new[] { 48, 55, 62, 63 }, // Cm9
+            new[] { 44, 51, 58, 60 }, // Abmaj7
+            new[] { 41, 48, 55, 56 }, // Fm9
+            new[] { 43, 50, 55, 60 }, // Gsus4
+            new[] { 43, 50, 53, 59 }  // G7 (prepara Cm9)
+        };
+        // Frases lentas e meditativas (inicio, duracao, midi): 24s totais em Do menor
+        var notasMelodia = new (float ini, float dur, int midi)[]
+        {
+            (0.2f, 3.3f, 67),  // G4
+            (3.2f, 3.1f, 65),  // F4
+            (6.0f, 3.4f, 63),  // Eb4
+            (9.1f, 3.2f, 62),  // D4
+            (12.0f, 3.4f, 60), // C4
+            (15.1f, 3.2f, 63), // Eb4
+            (18.0f, 5.8f, 62)  // D4 sustentado sobre Gsus4->G7
+        };
+
+        for (int i = 0; i < total; i++)
+        {
+            float t = i / (float)hz;
+            float soma = 0f;
+
+            // 5 blocos harmonicos com ataque e soltura longos (crossfade natural sem cliques nem staccato)
+            soma += ContribuirAcordeLegato(acordes[0], t, 0f, 6f, fade: .85f);
+            soma += ContribuirAcordeLegato(acordes[1], t, 6f, 12f, fade: .85f);
+            soma += ContribuirAcordeLegato(acordes[2], t, 12f, 18f, fade: .85f);
+            soma += ContribuirAcordeLegato(acordes[3], t, 18f, 21f, fade: .75f);
+            soma += ContribuirAcordeLegato(acordes[4], t, 21f, 24f, fade: .85f);
+
+            for (int n = 0; n < notasMelodia.Length; n++)
+            {
+                var nota = notasMelodia[n];
+                if (t < nota.ini || t > nota.ini + nota.dur) continue;
+                float u = t - nota.ini;
+                float env = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0f, .42f, u)) *
+                            (1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(nota.dur - .65f, nota.dur, u)));
+                float f = FrequenciaMidi(nota.midi);
+                soma += OndaOrgaoCamara(f, u) * .18f * env;
+            }
+
+            // Respiro suave de fole (8 ciclos exatos em 24s) e pedal grave sutil em Do2
+            float fole = .93f + .07f * Mathf.Sin(2f * Mathf.PI * t / 3f);
+            float pedalDo = OndaOrgaoCamara(FrequenciaMidi(36), t) * .085f;
+            float entradaLoop = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0f, .45f, t));
+            float saidaLoop = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(segundos - .45f, segundos, t));
+            dados[i] = Mathf.Clamp((soma * fole + pedalDo) * entradaLoop * saidaLoop, -.75f, .75f);
         }
-        hinoMatriz=AudioClip.Create("C2_HinoMatriz_SinteseOriginal_16s",dados.Length,1,hz,false);
-        hinoMatriz.SetData(dados,0);
+
+        hinoMatriz = AudioClip.Create("C2_HinoMatriz_DoMenor_24s", total, 1, hz, false);
+        hinoMatriz.SetData(dados, 0);
         return hinoMatriz;
+    }
+
+    private static float ContribuirAcordeLegato(int[] notas, float t, float inicio, float fim, float fade)
+    {
+        float mar = fade * .6f;
+        if (t < inicio - mar || t > fim + mar) return 0f;
+        float ent = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(inicio - mar, inicio + fade, t));
+        float sai = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(fim - fade, fim + mar, t));
+        float env = ent * sai;
+        if (env <= .0001f) return 0f;
+        float s = 0f;
+        float localT = t - (inicio - mar);
+        for (int k = 0; k < notas.Length; k++)
+            s += OndaOrgaoCamara(FrequenciaMidi(notas[k]), localT);
+        return (s / notas.Length) * .34f * env;
     }
 
     private static float FrequenciaMidi(int nota)=>440f*Mathf.Pow(2f,(nota-69)/12f);
 
-    private static float OndaOrgao(float frequencia,float t)
+    private static float OndaOrgaoCamara(float frequencia, float t)
     {
-        float fase=2f*Mathf.PI*frequencia*t;
-        return (Mathf.Sin(fase)+.16f*Mathf.Sin(fase*2f)+.04f*Mathf.Sin(fase*3f)+.01f*Mathf.Sin(fase*4f))/1.21f;
+        float fase = 2f * Mathf.PI * frequencia * t;
+        // Timbre quente e limpo de tubos flautados (sem batimentos rapidos nem modulacao FM acumulativa).
+        return (Mathf.Sin(fase) * .78f
+              + Mathf.Sin(fase * 2f) * .16f
+              + Mathf.Sin(fase * 3f) * .045f
+              + Mathf.Sin(fase * 4f) * .012f) / .997f;
     }
 
     private static AudioClip CriarAmbiencia(int tipo)
